@@ -1,414 +1,246 @@
 import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings, Sparkles, Rocket, Home } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const MicroSAASServicesPage: React.FC = () => {
-  const microSAAS = [
-    {
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
-      title: 'AI Content Generator',
-      description: 'Generate high-quality content automatically using advanced AI technology.',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization'],
-      pricing: 'Starting at $29/month',
-      link: '/ai-content-generator',
-      popular: true
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-green-500" />,
-      title: 'Task Management Pro',
-      description: 'Streamline your workflow with intelligent task management and automation.',
-      features: ['Smart scheduling', 'Team collaboration', 'Progress tracking'],
-      pricing: 'Starting at $19/month',
-      link: '/task-management',
-      popular: false
-    },
-    {
-      icon: <DollarSign className="w-8 h-8 text-purple-500" />,
-      title: 'Expense Tracker AI',
-      description: 'Automatically track and categorize expenses with AI-powered insights.',
-      features: ['Receipt scanning', 'Smart categorization', 'Budget alerts'],
-      pricing: 'Starting at $15/month',
-      link: '/expense-tracker',
-      popular: true
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'Password Manager',
-      description: 'Secure password management with advanced encryption and AI features.',
-      features: ['Zero-knowledge encryption', 'Password generator', 'Breach monitoring'],
-      pricing: 'Starting at $9/month',
-      link: '/password-manager',
-      popular: false
-    },
-    {
-      icon: <Brain className="w-8 h-8 text-orange-500" />,
-      title: 'AI Analytics Dashboard',
-      description: 'Transform your data into actionable insights with AI-powered analytics.',
-      features: ['Real-time analytics', 'Custom dashboards', 'Predictive insights'],
-      pricing: 'Starting at $39/month',
-      link: '/analytics-dashboard',
-=======
-import { CheckCircle, ArrowRight, Brain, Database, Shield, Code, Smartphone, Globe, MessageCircle, Zap, DollarSign, Users, Clock, Star } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
-export default function MicroSaasServicesPage() {
+export default function MicroSAASServicesPage() {
   const services = [
     {
-      icon: <Brain className="w-8 h-8 text-blue-500" />,
+      icon: <Globe className="w-8 h-8 text-emerald-400" />,
+      title: 'AI Carbon Footprint Tracker',
+      description: 'Track and reduce your carbon footprint with AI-powered insights and personalized recommendations.',
+      features: ['Real-time carbon tracking', 'AI-powered analysis', 'Personalized recommendations', 'Carbon offset marketplace', 'Progress monitoring', 'Environmental impact reports'],
+      price: '$9.99/month',
+      link: '/ai-carbon-footprint-tracker',
+      popular: true,
+      gradient: 'from-emerald-500 to-green-600'
+    },
+    {
+      icon: <Home className="w-8 h-8 text-blue-400" />,
+      title: 'AI Smart Home Energy Manager',
+      description: 'Optimize your home energy consumption with AI-powered automation and real-time monitoring.',
+      features: ['Energy optimization', 'Device control', 'Real-time monitoring', 'Cost reduction', 'Automated routines', 'Mobile app access'],
+      price: '$14.99/month',
+      link: '/ai-smart-home-energy-manager',
+      popular: true,
+      gradient: 'from-blue-500 to-cyan-600'
+    },
+    {
+      icon: <DollarSign className="w-8 h-8 text-green-400" />,
+      title: 'AI Personal Finance Optimizer',
+      description: 'Take control of your finances with AI-powered budgeting, investment recommendations, and financial planning.',
+      features: ['Smart budgeting', 'Investment optimization', 'Expense tracking', 'Financial goals', 'Credit monitoring', 'Tax optimization'],
+      price: '$12.99/month',
+      link: '/ai-personal-finance-optimizer',
+      popular: true,
+      gradient: 'from-green-500 to-emerald-600'
+    },
+    {
+      icon: <Brain className="w-8 h-8 text-purple-400" />,
       title: 'AI Task Manager',
-      description: 'Intelligent task management with AI-powered prioritization and automated scheduling.',
-      features: ['Smart task prioritization', 'Automated scheduling', 'Progress tracking', 'Team collaboration', 'Deadline management', 'Productivity insights'],
-      price: '$19/month',
-      link: '/ai-task-manager',
-      popular: true
-    },
-    {
-      icon: <Database className="w-8 h-8 text-green-500" />,
-      title: 'AI Expense Tracker',
-      description: 'Automated expense tracking with receipt scanning and intelligent categorization.',
-      features: ['Receipt scanning', 'Auto-categorization', 'Budget alerts', 'Tax preparation', 'Expense reports', 'Multi-currency support'],
-      price: '$15/month',
-      link: '/ai-expense-tracker',
-      popular: true
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-purple-500" />,
-      title: 'AI Password Manager',
-      description: 'Secure password management with AI-powered security recommendations.',
-      features: ['Secure storage', 'Password generation', 'Security alerts', 'Multi-device sync', 'Breach monitoring', 'Two-factor authentication'],
-      price: '$12/month',
-      link: '/ai-password-manager',
-      popular: false
-    },
-    {
-      icon: <Code className="w-8 h-8 text-orange-500" />,
-      title: 'AI Invoice Generator',
-      description: 'Automated invoice creation with AI-powered templates and payment tracking.',
-      features: ['Auto-invoice generation', 'Payment tracking', 'Custom templates', 'Tax calculations', 'Client management', 'Recurring billing'],
-      price: '$25/month',
-      link: '/ai-invoice-generator',
-      popular: true
-    },
-    {
-      icon: <Smartphone className="w-8 h-8 text-red-500" />,
-      title: 'AI Health Tracker',
-      description: 'Personal health monitoring with AI insights and wellness recommendations.',
-      features: ['Health metrics tracking', 'AI insights', 'Wellness recommendations', 'Goal setting', 'Progress monitoring', 'Health reports'],
-      price: '$18/month',
-      link: '/ai-health-tracker',
-      popular: false
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-cyan-500" />,
-      title: 'AI Smart Calendar',
-      description: 'Intelligent calendar management with AI-powered scheduling optimization.',
-      features: ['Smart scheduling', 'Meeting optimization', 'Time blocking', 'Integration sync', 'Conflict resolution', 'Availability sharing'],
-      price: '$22/month',
-      link: '/ai-smart-calendar',
-      popular: false
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-500" />,
-      title: 'AI Content Writer',
-      description: 'AI-powered content creation for blogs, social media, and marketing materials.',
-      features: ['Content generation', 'SEO optimization', 'Brand voice training', 'Multi-language support', 'Plagiarism detection', 'Content scheduling'],
+      description: 'Intelligent task management with AI-powered prioritization and productivity insights.',
+      features: ['Smart prioritization', 'Time tracking', 'Productivity analytics', 'Team collaboration', 'Goal setting', 'Progress monitoring'],
       price: '$29/month',
-      link: '/ai-content-writer',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
-      popular: true
+      link: '/ai-task-manager',
+      popular: false,
+      gradient: 'from-purple-500 to-pink-600'
     },
     {
-      icon: <Users className="w-8 h-8 text-indigo-500" />,
-<<<<<<< HEAD
-      title: 'Team Collaboration Hub',
-      description: 'Enhance team productivity with integrated communication and project management.',
-      features: ['Real-time chat', 'File sharing', 'Project tracking'],
-      pricing: 'Starting at $25/month',
-      link: '/team-collaboration',
-=======
-      title: 'AI Lead Generator',
-      description: 'Automated lead discovery and qualification with CRM integration.',
-      features: ['Lead discovery', 'Qualification scoring', 'CRM integration', 'Follow-up automation', 'Contact enrichment', 'Lead nurturing'],
+      icon: <Shield className="w-8 h-8 text-orange-400" />,
+      title: 'AI Password Manager',
+      description: 'Secure password management with AI-powered security recommendations and breach monitoring.',
+      features: ['Secure storage', 'Password generation', 'Breach monitoring', 'Multi-device sync', 'Security audit', 'Two-factor authentication'],
       price: '$39/month',
-      link: '/ai-lead-generator',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
-      popular: false
+      link: '/ai-password-manager',
+      popular: false,
+      gradient: 'from-orange-500 to-red-600'
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-pink-400" />,
+      title: 'AI Climate Solutions Pro',
+      description: 'Comprehensive climate solutions for businesses with AI-powered environmental impact analysis.',
+      features: ['Environmental analysis', 'Sustainability reporting', 'Carbon offset programs', 'Green energy optimization', 'Compliance tracking', 'Impact measurement'],
+      price: '$99/month',
+      link: '/ai-climate-solutions-pro',
+      popular: false,
+      gradient: 'from-pink-500 to-rose-600'
     }
   ];
 
-  const benefits = [
+  const features = [
     {
-<<<<<<< HEAD
-      title: 'Cost Effective',
-      description: 'Affordable solutions that deliver maximum value for your investment',
-      icon: <DollarSign className="w-6 h-6 text-green-500" />
+      icon: <Zap className="w-6 h-6 text-cyan-400" />,
+      title: 'AI-Powered Intelligence',
+      description: 'All our micro SAAS solutions are powered by advanced AI algorithms for superior performance.'
     },
     {
-      title: 'Easy Integration',
-      description: 'Seamlessly integrate with your existing tools and workflows',
-      icon: <Settings className="w-6 h-6 text-blue-500" />
+      icon: <Shield className="w-6 h-6 text-emerald-400" />,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance with industry standards.'
     },
     {
-      title: 'Scalable Solutions',
-      description: 'Grow your business with solutions that scale with your needs',
-      icon: <Zap className="w-6 h-6 text-purple-500" />
+      icon: <Globe className="w-6 h-6 text-purple-400" />,
+      title: 'Global Accessibility',
+      description: 'Access your solutions from anywhere in the world with our global cloud infrastructure.'
     },
     {
+      icon: <Star className="w-6 h-6 text-yellow-400" />,
       title: '24/7 Support',
-      description: 'Round-the-clock support to ensure your success',
-      icon: <Shield className="w-6 h-6 text-red-500" />
+      description: 'Round-the-clock support from our team of experts to ensure your success.'
     }
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      company: 'StartupCo',
-      content: 'The AI Content Generator saved us hours every week. Highly recommended!',
+      name: 'Jennifer Walsh',
+      company: 'Environmental Consultant',
+      content: 'The AI Carbon Tracker helped me reduce my carbon footprint by 40% in just 6 months. The personalized recommendations are incredibly effective.',
       rating: 5
     },
     {
-      name: 'Mike Chen',
-      company: 'TechFlow',
-      content: 'Excellent value for money. The expense tracker is incredibly accurate.',
+      name: 'David Kim',
+      company: 'Smart Home Owner',
+      content: 'The AI Smart Home Manager reduced my electricity bill by 35% while making my home more comfortable. The automation features are incredible.',
       rating: 5
     },
     {
-      name: 'Emily Davis',
-      company: 'DataDriven Inc.',
-      content: 'The analytics dashboard provided insights we never knew existed.',
+      name: 'Sarah Chen',
+      company: 'Financial Advisor',
+      content: 'The AI Finance Optimizer helped my clients increase their savings by 40% on average. The personalized recommendations are incredibly accurate.',
       rating: 5
-=======
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Affordable Solutions',
-      description: 'Get powerful AI-powered tools at fraction of the cost of enterprise solutions.'
-    },
-    {
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Easy Setup',
-      description: 'Quick and easy setup with no technical expertise required.'
-    },
-    {
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Scalable',
-      description: 'Start small and scale up as your business grows.'
-    },
-    {
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Regular Updates',
-      description: 'Continuous improvements and new features added regularly.'
     }
-  ];
-
-  const pricing = [
-    {
-      plan: 'Starter',
-      price: '$9',
-      period: '/month',
-      description: 'Perfect for individuals and small teams',
-      features: ['1 AI tool', 'Basic support', 'Standard features', 'Email support'],
-      popular: false
-    },
-    {
-      plan: 'Professional',
-      price: '$29',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: ['3 AI tools', 'Priority support', 'Advanced features', 'Phone & email support'],
-      popular: true
-    },
-    {
-      plan: 'Enterprise',
-      price: '$59',
-      period: '/month',
-      description: 'Complete solution for large organizations',
-      features: ['All AI tools', '24/7 support', 'Custom features', 'Dedicated account manager'],
-      popular: false
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
-    }
-  ];
-
-  const stats = [
-    { number: '10,000+', label: 'Active Users' },
-    { number: '99.9%', label: 'Uptime' },
-    { number: '50+', label: 'AI Tools' },
-    { number: '24/7', label: 'Support' }
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Micro SaaS Services - Zion Tech Group</title>
-        <meta name="description" content="Discover our collection of powerful micro SaaS applications designed to streamline your business operations and boost productivity." />
-        <meta name="keywords" content="micro SaaS, SaaS applications, business tools, productivity software, AI tools" />
-      </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+        <div className="absolute top-40 left-1/2 w-80 h-80 bg-rose-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+      </div>
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Micro SaaS Services
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Powerful, focused applications designed to solve specific business challenges. 
-            Get the tools you need without the complexity of enterprise software.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/ai-services"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
-              View AI Services
-            </Link>
-=======
-    <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>Micro SAAS Services - Zion Tech Group</title>
-        <meta name="description" content="Powerful, affordable micro applications designed to solve specific business problems with AI intelligence." />
-        <meta name="keywords" content="micro saas, ai tools, business software, productivity, automation" />
+        <meta name="description" content="Specialized micro SAAS solutions including AI carbon tracking, smart home management, finance optimization, and more. Transform your daily tasks with AI-powered tools." />
+        <meta name="keywords" content="micro SAAS, AI tools, carbon tracking, smart home, finance optimization, productivity tools" />
       </Helmet>
-      
+
       {/* Hero Section */}
-      <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <section className="relative pt-20 px-4 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-              Micro SAAS Services
+          <div className="text-center mb-12 sm:mb-16">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 mb-6">
+              <Rocket className="w-4 h-4 text-pink-400 mr-2" />
+              <span className="text-pink-300 text-sm font-medium">Specialized AI Solutions</span>
+            </div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+              Micro SAAS
+              <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-rose-400 bg-clip-text text-transparent animate-pulse">
+                {' '}Solutions
+              </span>
             </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Powerful, affordable micro applications designed to solve specific business problems with AI intelligence.
+            <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
+              Specialized software-as-a-service solutions designed for specific business needs and personal productivity. 
+              Transform your daily tasks with AI-powered micro applications that deliver big results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              <Link 
+                to="/contact" 
+                className="group bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-pink-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-pink-500/25 transform hover:scale-105"
               >
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
-                to="/about"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              <Link 
+                to="#services" 
+                className="group border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
               >
-                Learn More
+                Explore Solutions
               </Link>
             </div>
-          </div>
-
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20 mt-12">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center px-2">
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
-              </div>
-            ))}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
           </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Services Section */}
+      <section id="services" className="py-12 sm:py-16 lg:py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Our Micro SaaS Applications
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 px-4">
+              Our <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Micro SAAS Solutions</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Focused solutions for specific business needs
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+              Specialized AI-powered tools designed to solve specific problems and enhance productivity
             </p>
           </div>
           
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSAAS.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
-                <div className="flex items-center justify-between mb-4">
-                  {service.icon}
-                  {service.popular && (
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs px-3 py-1 rounded-full">
-                      Popular
-                    </span>
-                  )}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
             {services.map((service, index) => (
-              <Link key={index} to={service.link} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 group relative">
+              <Link key={index} to={service.link} className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10">
                 {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
-                      <Star className="w-4 h-4 mr-1" />
+                  <div className="absolute -top-3 -right-3">
+                    <div className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
                       Popular
-                    </span>
+                    </div>
                   </div>
                 )}
-                <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <ul className="space-y-2 mb-4">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} shadow-lg`}>
+                    {service.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-pink-300 transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                <ul className="space-y-2 mb-6">
+                  {service.features.slice(0, 4).map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <div className="flex items-center justify-between">
-                  <span className="text-lg font-semibold text-white">{service.pricing}</span>
-                  <Link 
-                    to={service.link}
-                    className="text-purple-400 hover:text-purple-300 transition-colors flex items-center"
-                  >
+                  <span className="text-pink-400 font-semibold">{service.price}</span>
+                  <div className="flex items-center text-pink-400 group-hover:text-pink-300 transition-colors font-medium">
                     Learn More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      {/* Features Section */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Why Choose Micro SaaS?
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 px-4">
+              Why Choose Our <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Micro SAAS?</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Focused solutions that deliver maximum value
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+              We deliver specialized solutions with cutting-edge AI technology and expert support
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4">
-                  {benefit.icon}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="text-center group">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300 border border-pink-500/30">
+                  {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-pink-300 transition-colors">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -416,78 +248,30 @@ export default function MicroSaasServicesPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              What Our Users Say
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real feedback from real users
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
-                  <p className="font-semibold text-white">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.company}</p>
-                </div>
-=======
-      {/* Pricing Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Simple, Transparent Pricing
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 px-4">
+              What Our <span className="bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">Users Say</span>
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the plan that fits your needs. All plans include our core features.
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
+              Don't just take our word for it - hear from users who have transformed their daily tasks
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            {pricing.map((plan, index) => (
-              <div key={index} className={`bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''}`}>
-                {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>
-                  </div>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{plan.plan}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-3xl font-bold text-gray-900">{plan.price}</span>
-                    <span className="text-gray-600 ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-600 text-sm">{plan.description}</p>
-                </div>
-                <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 sm:p-8 border border-white/10 hover:border-white/20 transition-all duration-300 group hover:scale-105">
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <span key={i} className="text-yellow-400 text-lg">★</span>
                   ))}
-                </ul>
-                <Link
-                  to="/contact"
-                  className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
-                      : 'border-2 border-gray-300 text-gray-700 hover:border-blue-500 hover:text-blue-600'
-                  }`}
-                >
-                  Get Started
-                </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
+                </div>
+                <p className="text-gray-300 mb-6 italic leading-relaxed">"{testimonial.content}"</p>
+                <div className="border-t border-white/10 pt-4">
+                  <p className="font-semibold text-white">{testimonial.name}</p>
+                  <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -495,43 +279,36 @@ export default function MicroSaasServicesPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-=======
-      <section className="py-12 sm:py-16 lg:py-20 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
-            Ready to Boost Your Productivity?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Start using our micro SaaS applications today and experience the difference.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Start Free Trial
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link 
-              to="/it-services" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-            >
-              Explore IT Services
-            </Link>
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-pink-600/20 to-purple-600/20 rounded-3xl p-8 sm:p-12 lg:p-16 border border-pink-500/30 backdrop-blur-sm">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 px-4">
+                Ready to Transform Your Daily Tasks?
+              </h2>
+              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto px-4 leading-relaxed">
+                Discover the power of AI-powered micro SAAS solutions. Start your free trial today 
+                and experience the difference intelligent automation can make.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="group bg-white text-pink-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-white/25 transform hover:scale-105"
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link 
+                  to="/ai-services" 
+                  className="group border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+                >
+                  Explore AI Services
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default MicroSAASServicesPage;
-=======
 }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508

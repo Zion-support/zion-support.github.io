@@ -1,76 +1,79 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, MessageCircle, Brain, Zap, Users, BarChart3, Shield, Sparkles, Star } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Leaf, TrendingDown, Globe, Zap, Shield, Star, Sparkles, Brain, Cpu, Server } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AIChatbotBuilderPage() {
+export default function AICarbonFootprintTrackerPage() {
   const features = [
     {
-      icon: <MessageCircle className="w-8 h-8 text-cyan-400" />,
-      title: 'Natural Conversations',
-      description: 'Create chatbots that understand context and engage in natural, human-like conversations with advanced NLP capabilities.'
-    },
-    {
       icon: <Brain className="w-8 h-8 text-emerald-400" />,
-      title: 'AI-Powered Intelligence',
-      description: 'Leverage cutting-edge AI models to provide intelligent responses and learn from every interaction.'
+      title: 'AI-Powered Carbon Analysis',
+      description: 'Advanced machine learning algorithms analyze your carbon footprint across all activities and provide personalized reduction strategies.',
+      benefits: ['Real-time carbon tracking', 'Predictive analytics', 'Personalized recommendations', 'Automated reporting']
     },
     {
-      icon: <Zap className="w-8 h-8 text-purple-400" />,
-      title: 'Easy Integration',
-      description: 'Seamlessly integrate with your existing systems, websites, and messaging platforms with simple APIs.'
+      icon: <Globe className="w-8 h-8 text-blue-400" />,
+      title: 'Multi-Source Data Integration',
+      description: 'Seamlessly integrates with your bank accounts, utility bills, travel apps, and shopping platforms for comprehensive tracking.',
+      benefits: ['Bank integration', 'Utility bill scanning', 'Travel tracking', 'Shopping analysis']
     },
     {
-      icon: <Shield className="w-8 h-8 text-orange-400" />,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance with industry standards.'
+      icon: <TrendingDown className="w-8 h-8 text-green-400" />,
+      title: 'Smart Reduction Strategies',
+      description: 'Get AI-generated actionable insights to reduce your carbon footprint with measurable impact tracking.',
+      benefits: ['Personalized tips', 'Impact measurement', 'Goal setting', 'Progress tracking']
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-purple-400" />,
+      title: 'Carbon Offset Marketplace',
+      description: 'Connect with verified carbon offset projects and make direct contributions to environmental initiatives.',
+      benefits: ['Verified projects', 'Direct contributions', 'Impact tracking', 'Tax benefits']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$49',
+      price: '$9.99',
       period: '/month',
-      description: 'Perfect for small businesses getting started with chatbots',
+      description: 'Perfect for individuals starting their sustainability journey',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic AI responses',
+        'Basic carbon tracking',
+        'Monthly reports',
+        '5 data source connections',
         'Email support',
-        'Standard integrations',
-        'Analytics dashboard'
+        'Mobile app access'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$99',
+      price: '$19.99',
       period: '/month',
-      description: 'Advanced features for growing businesses',
+      description: 'Advanced features for environmentally conscious professionals',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI capabilities',
+        'Advanced AI analysis',
+        'Weekly detailed reports',
+        'Unlimited data sources',
         'Priority support',
-        'Custom integrations',
-        'Advanced analytics',
-        'Multi-language support',
-        'API access'
+        'Carbon offset marketplace',
+        'Team collaboration (up to 5 users)'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$199',
+      price: '$49.99',
       period: '/month',
-      description: 'Complete solution for large organizations',
+      description: 'Comprehensive solution for organizations and large families',
       features: [
-        'Unlimited conversations',
-        'Custom AI training',
+        'Enterprise-grade AI',
+        'Real-time dashboards',
+        'Custom integrations',
         'Dedicated support',
-        'White-label options',
-        'Advanced security',
-        'Custom development',
-        'SLA guarantee'
+        'Advanced analytics',
+        'Unlimited team members',
+        'API access',
+        'Custom reporting'
       ],
       popular: false
     }
@@ -78,21 +81,21 @@ export default function AIChatbotBuilderPage() {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      company: 'E-commerce Store',
-      content: 'Our AI chatbot handles 80% of customer inquiries automatically, improving response times and customer satisfaction significantly.',
+      name: 'Sarah Chen',
+      company: 'Environmental Consultant',
+      content: 'This AI carbon tracker helped me reduce my carbon footprint by 40% in just 6 months. The personalized recommendations are incredibly effective.',
       rating: 5
     },
     {
-      name: 'Michael Chen',
-      company: 'SaaS Startup',
-      content: 'The chatbot integration was seamless and our lead generation increased by 150%. Highly recommended!',
+      name: 'Michael Rodriguez',
+      company: 'Tech Startup CEO',
+      content: 'As a company, we needed to track our environmental impact. This tool made it easy to monitor and improve our sustainability metrics.',
       rating: 5
     },
     {
-      name: 'Emily Rodriguez',
-      company: 'Healthcare Provider',
-      content: 'The AI chatbot provides accurate medical information and appointment scheduling, freeing up our staff for more complex tasks.',
+      name: 'Emily Johnson',
+      company: 'Climate Activist',
+      content: 'The carbon offset marketplace is a game-changer. I can now directly contribute to verified environmental projects with confidence.',
       rating: 5
     }
   ];
@@ -106,36 +109,30 @@ export default function AIChatbotBuilderPage() {
         <div className="absolute top-40 left-1/2 w-80 h-80 bg-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
       </div>
 
-      <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group</title>
-        <meta name="description" content="Build intelligent chatbots for customer support, lead generation, and automation. Create AI-powered conversational experiences that engage your customers." />
-        <meta name="keywords" content="AI chatbot, chatbot builder, customer support, lead generation, conversational AI, automation" />
-      </Helmet>
-
       {/* Hero Section */}
       <section className="relative pt-20 px-4 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-green-500/20 border border-emerald-500/30 mb-6">
-              <MessageCircle className="w-4 h-4 text-emerald-400 mr-2" />
-              <span className="text-emerald-300 text-sm font-medium">AI-Powered Conversational Solutions</span>
+              <Leaf className="w-4 h-4 text-emerald-400 mr-2" />
+              <span className="text-emerald-300 text-sm font-medium">AI-Powered Sustainability Solutions</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-              AI Chatbot
+              AI Carbon Footprint
               <span className="bg-gradient-to-r from-emerald-400 via-green-400 to-teal-400 bg-clip-text text-transparent animate-pulse">
-                {' '}Builder
+                {' '}Tracker
               </span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
-              Create intelligent chatbots that understand context, engage naturally, and provide exceptional 
-              customer experiences. Build, deploy, and scale AI-powered conversational solutions in minutes.
+              Track, analyze, and reduce your carbon footprint with AI-powered insights. Make data-driven decisions 
+              to create a more sustainable future for yourself and the planet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
                 className="group bg-gradient-to-r from-emerald-600 to-green-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-emerald-700 hover:to-green-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-emerald-500/25 transform hover:scale-105"
               >
-                Start Building
+                Start Your Journey
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
@@ -157,7 +154,7 @@ export default function AIChatbotBuilderPage() {
               Powerful <span className="bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">Features</span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-              Build chatbots with advanced AI capabilities and seamless integration options
+              Comprehensive carbon tracking and reduction tools powered by artificial intelligence
             </p>
           </div>
           
@@ -172,9 +169,17 @@ export default function AIChatbotBuilderPage() {
                 <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-emerald-300 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-300 mb-6 leading-relaxed">
                   {feature.description}
                 </p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -189,7 +194,7 @@ export default function AIChatbotBuilderPage() {
               Simple <span className="bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">Pricing</span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-              Choose the plan that fits your chatbot needs
+              Choose the plan that fits your sustainability goals
             </p>
           </div>
           
@@ -244,10 +249,10 @@ export default function AIChatbotBuilderPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 px-4">
-              What Our <span className="bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">Clients Say</span>
+              What Our <span className="bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text text-transparent">Users Say</span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-              Don't just take our word for it - hear from businesses that have transformed with our chatbot solutions
+              Join thousands of users making a positive environmental impact
             </p>
           </div>
 
@@ -276,25 +281,25 @@ export default function AIChatbotBuilderPage() {
           <div className="text-center">
             <div className="bg-gradient-to-r from-emerald-600/20 to-green-600/20 rounded-3xl p-8 sm:p-12 lg:p-16 border border-emerald-500/30 backdrop-blur-sm">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 px-4">
-                Ready to Build Your AI Chatbot?
+                Ready to Reduce Your Carbon Footprint?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-3xl mx-auto px-4 leading-relaxed">
-                Start building intelligent chatbots that engage your customers and drive business growth. 
-                Get started with our easy-to-use platform today.
+                Join the movement towards a more sustainable future. Start tracking your carbon footprint today 
+                and make a real difference for the planet.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="group bg-white text-emerald-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-white/25 transform hover:scale-105"
                 >
-                  Start Building Now
+                  Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
-                  to="/ai-services" 
+                  to="#features" 
                   className="group border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
                 >
-                  Explore AI Services
+                  Learn More
                 </Link>
               </div>
             </div>

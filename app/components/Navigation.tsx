@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, Rocket, Sparkles, Home, DollarSign } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -14,92 +14,6 @@ export default function Navigation() {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   }
 
-<<<<<<< HEAD
-  const services = [
-    {
-      title: 'AI Services',
-      href: '/ai-services',
-<<<<<<< HEAD
-      icon: Brain,
-      description: 'Artificial Intelligence Solutions'
-=======
-      icon: <Brain className="w-4 h-4" />,
-      description: 'Advanced AI solutions',
-      submenu: [
-        { title: 'AI Content Generator', href: '/ai-content-generator' },
-        { title: 'AI Chatbot Builder', href: '/ai-chatbot-builder' },
-        { title: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
-        { title: 'AI Email Assistant', href: '/ai-email-assistant' },
-        { title: 'AI Voice Assistant', href: '/ai-voice-assistant' },
-        { title: 'AI Automation', href: '/ai-automation' }
-      ]
->>>>>>> cursor/website-audit-and-update-with-deployment-c78e
-    },
-    {
-      title: 'IT Services',
-      href: '/it-services',
-<<<<<<< HEAD
-      icon: Server,
-      description: 'Information Technology Solutions'
-=======
-      icon: <Code className="w-4 h-4" />,
-      description: 'Comprehensive IT solutions',
-      submenu: [
-        { title: 'Cloud Migration', href: '/cloud-migration' },
-        { title: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
-        { title: 'DevOps & CI/CD', href: '/devops-cicd' },
-        { title: 'Data Analytics', href: '/data-analytics' },
-        { title: 'Mobile Development', href: '/mobile-development' },
-        { title: 'Web Development', href: '/web-development' }
-      ]
-    },
-    {
-      title: 'Micro SaaS',
-      href: '/micro-saas-services',
-      icon: <Smartphone className="w-4 h-4" />,
-      description: 'Specialized software solutions'
-    },
-    {
-      title: '5G Implementation',
-      href: '/5g-implementation',
-      icon: <Wifi className="w-4 h-4" />,
-      description: 'Next-generation connectivity'
->>>>>>> cursor/website-audit-and-update-with-deployment-c78e
-    },
-    {
-      title: 'Cloud Services',
-      href: '/cloud-services',
-      icon: Cloud,
-      description: 'Cloud Computing Solutions'
-    },
-    {
-      title: 'Micro SaaS',
-      href: '/micro-saas-services',
-      icon: Code,
-      description: 'Micro Software as a Service'
-    },
-    {
-      title: '5G Implementation',
-      href: '/5g-implementation',
-      icon: Wifi,
-      description: '5G Network Implementation'
-    },
-    {
-      title: 'Digital Transformation',
-      href: '/digital-transformation',
-      icon: Globe,
-      description: 'Transform your digital presence'
-    }
-  ]
-
-  const aiServices = [
-    { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
-    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'AI Task Manager', path: '/ai-task-manager', icon: <Database className="w-4 h-4" /> },
-    { name: 'AI Expense Tracker', path: '/ai-expense-tracker', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Password Manager', path: '/ai-password-manager', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Automated Reporting', path: '/ai-automated-reporting', icon: <Globe className="w-4 h-4" /> }
-=======
   const aiServices = [
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
     { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', icon: <Zap className="w-4 h-4" /> },
@@ -117,7 +31,7 @@ export default function Navigation() {
     { name: 'DevOps & CI/CD', path: '/devops-cicd', icon: <Server className="w-4 h-4" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <Database className="w-4 h-4" /> },
     { name: 'Mobile Development', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'Blockchain Solutions', path: '/blockchain', icon: <Globe className="w-4 h-4" /> },
+    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
     { name: 'Quantum Computing', path: '/quantum-computing-solutions', icon: <Cpu className="w-4 h-4" /> }
   ]
 
@@ -128,32 +42,33 @@ export default function Navigation() {
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator', icon: <Code className="w-4 h-4" /> },
     { name: 'AI Health Tracker', path: '/ai-health-tracker', icon: <Smartphone className="w-4 h-4" /> },
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar', icon: <Globe className="w-4 h-4" /> },
-    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro', icon: <Globe className="w-4 h-4" /> }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
+    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro', icon: <Globe className="w-4 h-4" /> },
+    { name: 'AI Carbon Tracker', path: '/ai-carbon-footprint-tracker', icon: <Globe className="w-4 h-4" /> },
+    { name: 'AI Smart Home Manager', path: '/ai-smart-home-energy-manager', icon: <Home className="w-4 h-4" /> },
+    { name: 'AI Finance Optimizer', path: '/ai-personal-finance-optimizer', icon: <DollarSign className="w-4 h-4" /> }
   ]
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-slate-900/95 backdrop-blur-lg border-b border-cyan-500/20 sticky top-0 z-50 shadow-2xl shadow-cyan-500/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" />
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-cyan-500/25 transition-all duration-300 group-hover:scale-105">
+              <Zap className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900">Zion Tech</span>
+            <div>
+              <span className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">Zion Tech</span>
+              <div className="text-xs text-cyan-400 font-medium">Group</div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
-            <Link to="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+            <Link to="/" className="text-gray-300 hover:text-cyan-300 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/5">
               Home
             </Link>
-<<<<<<< HEAD
-            <Link to="/about" className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-=======
-            <Link to="/about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
+            <Link to="/about" className="text-gray-300 hover:text-cyan-300 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/5">
               About
             </Link>
 
@@ -161,66 +76,28 @@ export default function Navigation() {
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('ai')}
-<<<<<<< HEAD
-                className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-=======
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
+                className="text-gray-300 hover:text-cyan-300 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/5 flex items-center"
               >
+                <Brain className="w-4 h-4 mr-2" />
                 AI Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
-<<<<<<< HEAD
               
-<<<<<<< HEAD
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
               {activeDropdown === 'ai' && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                  {aiServices.map((service, index) => (
-                    <Link key={index} to={service.path} className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
-                      {service.icon}
-                      <span className="ml-3">{service.name}</span>
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-2xl shadow-2xl border border-cyan-500/20 py-4 z-50">
+                  <div className="px-4 py-2 border-b border-cyan-500/20">
+                    <Link to="/ai-services" className="text-cyan-400 font-semibold text-sm hover:text-cyan-300 transition-colors">
+                      All AI Services
                     </Link>
-                  ))}
-<<<<<<< HEAD
-=======
-              {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-white/10 backdrop-blur-lg rounded-lg border border-white/20 shadow-lg z-50">
+                  </div>
                   <div className="py-2">
-                    {services.map((service, index) => (
-                      <div key={index}>
-                        <Link
-                          to={service.href}
-                          className="flex items-center px-4 py-3 text-white hover:bg-white/10 transition-colors"
-                          onClick={() => setIsServicesOpen(false)}
-                        >
-                          <div className="mr-3">{service.icon}</div>
-                          <div className="flex-1">
-                            <div className="font-medium">{service.title}</div>
-                            <div className="text-sm text-gray-300">{service.description}</div>
-                          </div>
-                        </Link>
-                        {service.submenu && (
-                          <div className="ml-8 pl-4 border-l border-white/20">
-                            {service.submenu.map((subItem, subIndex) => (
-                              <Link
-                                key={subIndex}
-                                to={subItem.href}
-                                className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
-                                onClick={() => setIsServicesOpen(false)}
-                              >
-                                {subItem.title}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </div>
+                    {aiServices.map((service, index) => (
+                      <Link key={index} to={service.path} className="flex items-center px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-cyan-500/10 transition-all duration-300 group" onClick={() => setActiveDropdown(null)}>
+                        <div className="text-cyan-400 group-hover:text-cyan-300 mr-3">{service.icon}</div>
+                        <span>{service.name}</span>
+                      </Link>
                     ))}
                   </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-c78e
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
                 </div>
               )}
             </div>
@@ -229,64 +106,76 @@ export default function Navigation() {
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('it')}
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                className="text-gray-300 hover:text-cyan-300 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/5 flex items-center"
               >
+                <Server className="w-4 h-4 mr-2" />
                 IT Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               
               {activeDropdown === 'it' && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                  {services.slice(1).map((service, index) => (
-                    <Link key={index} to={service.href} className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
-                      <service.icon className="w-4 h-4" />
-                      <span className="ml-3">{service.title}</span>
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-2xl shadow-2xl border border-cyan-500/20 py-4 z-50">
+                  <div className="px-4 py-2 border-b border-cyan-500/20">
+                    <Link to="/it-services" className="text-cyan-400 font-semibold text-sm hover:text-cyan-300 transition-colors">
+                      All IT Services
                     </Link>
-                  ))}
+                  </div>
+                  <div className="py-2">
+                    {itServices.map((service, index) => (
+                      <Link key={index} to={service.path} className="flex items-center px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-cyan-500/10 transition-all duration-300 group" onClick={() => setActiveDropdown(null)}>
+                        <div className="text-cyan-400 group-hover:text-cyan-300 mr-3">{service.icon}</div>
+                        <span>{service.name}</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
 
-<<<<<<< HEAD
-            <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
-              Contact
-=======
             {/* Micro SAAS Dropdown */}
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('saas')}
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                className="text-gray-300 hover:text-cyan-300 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/5 flex items-center"
               >
+                <Rocket className="w-4 h-4 mr-2" />
                 Micro SAAS
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {activeDropdown === 'saas' && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                  <Link to="/micro-saas-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 font-semibold">All Micro SAAS</Link>
-                  {microSaasServices.map((service, index) => (
-                    <Link key={index} to={service.path} className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-purple-50">
-                      {service.icon}
-                      <span className="ml-3">{service.name}</span>
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-2xl shadow-2xl border border-cyan-500/20 py-4 z-50">
+                  <div className="px-4 py-2 border-b border-cyan-500/20">
+                    <Link to="/micro-saas-services" className="text-cyan-400 font-semibold text-sm hover:text-cyan-300 transition-colors">
+                      All Micro SAAS
                     </Link>
-                  ))}
+                  </div>
+                  <div className="py-2">
+                    {microSaasServices.map((service, index) => (
+                      <Link key={index} to={service.path} className="flex items-center px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-cyan-500/10 transition-all duration-300 group" onClick={() => setActiveDropdown(null)}>
+                        <div className="text-cyan-400 group-hover:text-cyan-300 mr-3">{service.icon}</div>
+                        <span>{service.name}</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
 
-            <Link to="/5g-implementation" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+            <Link to="/5g-implementation" className="text-gray-300 hover:text-cyan-300 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/5 flex items-center">
+              <Wifi className="w-4 h-4 mr-2" />
               5G Solutions
             </Link>
             
-            <Link to="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
+            <Link to="/contact" className="text-gray-300 hover:text-cyan-300 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/5">
               Contact
             </Link>
             
             <Link 
               to="/contact" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+              className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-2 rounded-xl text-sm font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25 transform hover:scale-105 flex items-center"
             >
+              <Sparkles className="w-4 h-4 mr-2" />
               Get Started
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
             </Link>
           </div>
 
@@ -294,11 +183,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-<<<<<<< HEAD
-              className="text-gray-900 hover:text-purple-600 p-2 rounded-md transition-colors"
-=======
-              className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
+              className="text-gray-300 hover:text-cyan-300 p-2 rounded-lg transition-all duration-300 hover:bg-white/5"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -308,94 +193,40 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-<<<<<<< HEAD
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-              <Link to="/" className="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-lg rounded-2xl mt-2 border border-cyan-500/20">
+              <Link to="/" className="text-gray-300 hover:text-cyan-300 block px-3 py-2 rounded-lg text-base font-medium transition-all duration-300" onClick={() => setIsOpen(false)}>
                 Home
               </Link>
-              <Link to="/about" className="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-=======
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-lg mt-2">
-              <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">
-                Home
-              </Link>
-              <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
+              <Link to="/about" className="text-gray-300 hover:text-cyan-300 block px-3 py-2 rounded-lg text-base font-medium transition-all duration-300" onClick={() => setIsOpen(false)}>
                 About
               </Link>
               
               {/* AI Services Mobile */}
               <div className="px-3 py-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">AI Services</p>
-                {aiServices.map((service, index) => (
-                  <Link key={index} to={service.path} className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
-                    {service.name}
-                  </Link>
-                ))}
-=======
-                <div className="text-white font-medium mb-2">Services</div>
-                <div className="space-y-1 ml-4">
-                  {services.map((service, index) => (
-                    <div key={index}>
-                      <Link
-                        to={service.href}
-                        className="flex items-center text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        <div className="mr-2">{service.icon}</div>
-                        {service.title}
-                      </Link>
-                      {service.submenu && (
-                        <div className="ml-6 space-y-1">
-                          {service.submenu.map((subItem, subIndex) => (
-                            <Link
-                              key={subIndex}
-                              to={subItem.href}
-                              className="block text-gray-400 hover:text-white px-3 py-1 rounded-md text-xs"
-                              onClick={() => setIsOpen(false)}
-                            >
-                              {subItem.title}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-=======
-                <div className="text-gray-300 font-medium mb-2">AI Services</div>
-                <div className="ml-4 space-y-1">
-                  <Link to="/ai-services" className="text-gray-400 hover:text-white block py-1 text-sm" onClick={() => setIsOpen(false)}>All AI Services</Link>
+                <div className="text-cyan-400 font-medium mb-2 flex items-center">
+                  <Brain className="w-4 h-4 mr-2" />
+                  AI Services
+                </div>
+                <div className="ml-6 space-y-1">
+                  <Link to="/ai-services" className="text-gray-400 hover:text-cyan-300 block py-1 text-sm font-medium" onClick={() => setIsOpen(false)}>All AI Services</Link>
                   {aiServices.slice(0, 4).map((service, index) => (
-                    <Link key={index} to={service.path} className="text-gray-400 hover:text-white block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                    <Link key={index} to={service.path} className="text-gray-400 hover:text-cyan-300 block py-1 text-sm" onClick={() => setIsOpen(false)}>
                       {service.name}
                     </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
                   ))}
                 </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-c78e
               </div>
 
               {/* IT Services Mobile */}
               <div className="px-3 py-2">
-<<<<<<< HEAD
-                <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">IT Services</p>
-                {services.slice(1).map((service, index) => (
-                  <Link key={index} to={service.href} className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
-                    {service.title}
-                  </Link>
-                ))}
-              </div>
-
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center"
-=======
-                <div className="text-gray-300 font-medium mb-2">IT Services</div>
-                <div className="ml-4 space-y-1">
-                  <Link to="/it-services" className="text-gray-400 hover:text-white block py-1 text-sm" onClick={() => setIsOpen(false)}>All IT Services</Link>
+                <div className="text-cyan-400 font-medium mb-2 flex items-center">
+                  <Server className="w-4 h-4 mr-2" />
+                  IT Services
+                </div>
+                <div className="ml-6 space-y-1">
+                  <Link to="/it-services" className="text-gray-400 hover:text-cyan-300 block py-1 text-sm font-medium" onClick={() => setIsOpen(false)}>All IT Services</Link>
                   {itServices.slice(0, 4).map((service, index) => (
-                    <Link key={index} to={service.path} className="text-gray-400 hover:text-white block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                    <Link key={index} to={service.path} className="text-gray-400 hover:text-cyan-300 block py-1 text-sm" onClick={() => setIsOpen(false)}>
                       {service.name}
                     </Link>
                   ))}
@@ -404,30 +235,33 @@ export default function Navigation() {
 
               {/* Micro SAAS Mobile */}
               <div className="px-3 py-2">
-                <div className="text-gray-300 font-medium mb-2">Micro SAAS</div>
-                <div className="ml-4 space-y-1">
-                  <Link to="/micro-saas-services" className="text-gray-400 hover:text-white block py-1 text-sm" onClick={() => setIsOpen(false)}>All Micro SAAS</Link>
+                <div className="text-cyan-400 font-medium mb-2 flex items-center">
+                  <Rocket className="w-4 h-4 mr-2" />
+                  Micro SAAS
+                </div>
+                <div className="ml-6 space-y-1">
+                  <Link to="/micro-saas-services" className="text-gray-400 hover:text-cyan-300 block py-1 text-sm font-medium" onClick={() => setIsOpen(false)}>All Micro SAAS</Link>
                   {microSaasServices.slice(0, 4).map((service, index) => (
-                    <Link key={index} to={service.path} className="text-gray-400 hover:text-white block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                    <Link key={index} to={service.path} className="text-gray-400 hover:text-cyan-300 block py-1 text-sm" onClick={() => setIsOpen(false)}>
                       {service.name}
                     </Link>
                   ))}
                 </div>
               </div>
 
-              <Link to="/5g-implementation" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              <Link to="/5g-implementation" className="text-gray-300 hover:text-cyan-300 block px-3 py-2 rounded-lg text-base font-medium transition-all duration-300" onClick={() => setIsOpen(false)}>
                 5G Solutions
               </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors">
+              <Link to="/contact" className="text-gray-300 hover:text-cyan-300 block px-3 py-2 rounded-lg text-base font-medium transition-all duration-300" onClick={() => setIsOpen(false)}>
                 Contact
               </Link>
               
               <Link 
                 to="/contact" 
-                className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 rounded-lg text-base font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center mt-4"
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
+                className="block bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-3 py-3 rounded-xl text-base font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 text-center mt-4 shadow-lg"
                 onClick={() => setIsOpen(false)}
               >
+                <Sparkles className="w-4 h-4 inline mr-2" />
                 Get Started
               </Link>
             </div>
