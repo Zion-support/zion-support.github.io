@@ -166,7 +166,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       clearTimeout(reportTimer)
       setIsMonitoring(false)
     }
-  }, [])
+  }, [metrics])
 
   // Performance optimization suggestions
   const getPerformanceSuggestions = (): string[] => {
