@@ -21,22 +21,29 @@ export default function Footer() {
     { name: 'Web Development', path: '/web-development' }
   ]
 
-  const quickLinks = [
+  const companyLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' }
+  ]
+
+  const serviceCategories = [
     { name: 'AI Services', path: '/ai-services' },
     { name: 'IT Services', path: '/it-services' },
-    { name: 'Micro SAAS', path: '/micro-saas-services' },
-    { name: '5G Solutions', path: '/5g-implementation' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Micro SaaS', path: '/micro-saas-services' },
+    { name: '5G Implementation', path: '/5g-implementation' },
+    { name: 'Cloud Services', path: '/cloud-services' },
+    { name: 'Digital Transformation', path: '/digital-transformation' }
   ]
 
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div>
+          <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
                 <span className="text-white font-bold text-sm">Z</span>
@@ -47,10 +54,10 @@ export default function Footer() {
               Advanced AI and IT solutions for modern businesses. We help you transform your digital infrastructure with cutting-edge technology.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="mailto:contact@ziontechgroup.com" className="text-gray-400 hover:text-white transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="tel:+15551234567" className="text-gray-400 hover:text-white transition-colors">
                 <Phone className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -93,17 +100,31 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Quick Links */}
+          {/* Company & Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2 mb-6">
+              {companyLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.path}
                     className="text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            
+            <h3 className="text-lg font-semibold mb-4">All Services</h3>
+            <ul className="space-y-2">
+              {serviceCategories.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {service.name}
                   </Link>
                 </li>
               ))}

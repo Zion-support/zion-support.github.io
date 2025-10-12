@@ -1,12 +1,39 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-const optimizePerformance = () => {
-  console.log('Starting performance optimization...');
+console.log('Starting performance optimization...');
+
+// Create optimized bundle analysis
+const distDir = path.join(__dirname, '..', 'dist');
+if (fs.existsSync(distDir)) {
+  console.log('✓ Dist directory found');
   
-  // Create performance monitoring script
-  const performanceScript = `
+  // Check bundle sizes
+  const assetsDir = path.join(distDir, 'assets');
+  if (fs.existsSync(assetsDir)) {
+    const files = fs.readdirSync(assetsDir);
+    let totalSize = 0;
+    
+    files.forEach(file => {
+      const filePath = path.join(assetsDir, file);
+      const stats = fs.statSync(filePath);
+      totalSize += stats.size;
+      console.log(`  ${file}: ${(stats.size / 1024).toFixed(2)} KB`);
+    });
+    
+    console.log(`Total bundle size: ${(totalSize / 1024).toFixed(2)} KB`);
+    
+    // Performance recommendations
+    if (totalSize > 500000) { // 500KB
+      console.log('⚠️  Bundle size is large. Consider code splitting.');
+    } else {
+      console.log('✓ Bundle size is optimized');
+    }
+  }
+}
+
+// Create performance monitoring script
+const performanceScript = `
 // Performance monitoring
 const performanceObserver = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
@@ -53,47 +80,13 @@ new PerformanceObserver((entryList) => {
 }).observe({ entryTypes: ['layout-shift'] });
 `;
 
-  // Write performance script to public directory
-  const publicDir = path.join(__dirname, '..', 'public');
-  const performancePath = path.join(publicDir, 'performance.js');
-  fs.writeFileSync(performancePath, performanceScript);
-  
-  console.log('Performance monitoring script created');
-  console.log('Performance optimization completed');
-};
-
-optimizePerformance();
-=======
-console.log('Starting performance optimization...');
-
-// Create optimized bundle analysis
-const distDir = path.join(__dirname, '..', 'dist');
-if (fs.existsSync(distDir)) {
-  console.log('✓ Dist directory found');
-  
-  // Check bundle sizes
-  const assetsDir = path.join(distDir, 'assets');
-  if (fs.existsSync(assetsDir)) {
-    const files = fs.readdirSync(assetsDir);
-    let totalSize = 0;
-    
-    files.forEach(file => {
-      const filePath = path.join(assetsDir, file);
-      const stats = fs.statSync(filePath);
-      totalSize += stats.size;
-      console.log(`  ${file}: ${(stats.size / 1024).toFixed(2)} KB`);
-    });
-    
-    console.log(`Total bundle size: ${(totalSize / 1024).toFixed(2)} KB`);
-    
-    // Performance recommendations
-    if (totalSize > 500000) { // 500KB
-      console.log('⚠️  Bundle size is large. Consider code splitting.');
-    } else {
-      console.log('✓ Bundle size is optimized');
-    }
-  }
+// Write performance script to public directory
+const publicDir = path.join(__dirname, '..', 'public');
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir, { recursive: true });
 }
+const performancePath = path.join(publicDir, 'performance.js');
+fs.writeFileSync(performancePath, performanceScript);
 
 // Generate performance report
 const performanceReport = {
@@ -120,4 +113,3 @@ fs.writeFileSync(
 );
 
 console.log('Performance optimization completed');
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d

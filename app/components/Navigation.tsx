@@ -20,13 +20,25 @@ export default function Navigation() {
       title: 'AI Services',
       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
-      description: 'Advanced AI solutions'
+      description: 'Advanced AI solutions',
+      subServices: [
+        { name: 'AI Content Generator', href: '/ai-content-generator' },
+        { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder' },
+        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
+        { name: 'AI Email Assistant', href: '/ai-email-assistant' }
+      ]
     },
     {
       title: 'IT Services',
       href: '/it-services',
       icon: <Code className="w-4 h-4" />,
-      description: 'Comprehensive IT solutions'
+      description: 'Comprehensive IT solutions',
+      subServices: [
+        { name: 'Cloud Migration', href: '/cloud-migration' },
+        { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
+        { name: 'DevOps & CI/CD', href: '/devops-cicd' },
+        { name: 'Data Analytics', href: '/data-analytics' }
+      ]
     },
     {
       title: 'Micro SaaS',
@@ -45,6 +57,12 @@ export default function Navigation() {
       href: '/cloud-services',
       icon: <Cloud className="w-4 h-4" />,
       description: 'Professional cloud solutions'
+    },
+    {
+      title: 'Digital Transformation',
+      href: '/digital-transformation',
+      icon: <Cpu className="w-4 h-4" />,
+      description: 'Transform your business digitally'
     }
   ]
 
@@ -86,21 +104,36 @@ export default function Navigation() {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white/10 backdrop-blur-lg rounded-lg border border-white/20 shadow-lg z-50">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white/10 backdrop-blur-lg rounded-lg border border-white/20 shadow-lg z-50">
                   <div className="py-2">
                     {services.map((service, index) => (
-                      <Link
-                        key={index}
-                        to={service.href}
-                        className="flex items-center px-4 py-3 text-white hover:bg-white/10 transition-colors"
-                        onClick={() => setIsServicesOpen(false)}
-                      >
-                        <div className="mr-3">{service.icon}</div>
-                        <div>
-                          <div className="font-medium">{service.title}</div>
-                          <div className="text-sm text-gray-300">{service.description}</div>
-                        </div>
-                      </Link>
+                      <div key={index} className="px-4 py-3 hover:bg-white/10 transition-colors">
+                        <Link
+                          to={service.href}
+                          className="flex items-center text-white"
+                          onClick={() => setIsServicesOpen(false)}
+                        >
+                          <div className="mr-3">{service.icon}</div>
+                          <div className="flex-1">
+                            <div className="font-medium">{service.title}</div>
+                            <div className="text-sm text-gray-300">{service.description}</div>
+                          </div>
+                        </Link>
+                        {service.subServices && (
+                          <div className="ml-8 mt-2 space-y-1">
+                            {service.subServices.map((subService, subIndex) => (
+                              <Link
+                                key={subIndex}
+                                to={subService.href}
+                                className="block text-sm text-gray-300 hover:text-white transition-colors py-1"
+                                onClick={() => setIsServicesOpen(false)}
+                              >
+                                {subService.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -156,15 +189,30 @@ export default function Navigation() {
                 <div className="text-white font-medium mb-2">Services</div>
                 <div className="space-y-1 ml-4">
                   {services.map((service, index) => (
-                    <Link
-                      key={index}
-                      to={service.href}
-                      className="flex items-center text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div className="mr-2">{service.icon}</div>
-                      {service.title}
-                    </Link>
+                    <div key={index}>
+                      <Link
+                        to={service.href}
+                        className="flex items-center text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <div className="mr-2">{service.icon}</div>
+                        {service.title}
+                      </Link>
+                      {service.subServices && (
+                        <div className="ml-6 space-y-1">
+                          {service.subServices.map((subService, subIndex) => (
+                            <Link
+                              key={subIndex}
+                              to={subService.href}
+                              className="block text-gray-400 hover:text-white px-3 py-1 rounded-md text-xs"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {subService.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>
