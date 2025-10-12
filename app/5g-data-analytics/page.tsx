@@ -1,39 +1,10 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, BarChart3, Zap, Globe, Cpu, Clock, TrendingUp } from 'lucide-react';
+import { CheckCircle, ArrowRight, BarChart3, Zap, Clock, TrendingUp } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 export default function FiveGDataAnalyticsPage() {
   const features = [
-    {
-      title: "Feature 1",
-      description: "Description of feature 1"
-    },
-    {
-      title: "Feature 2",
-      description: "Description of feature 2"
-    }
-  ];
-
-  const analyticsFeatures = [
-    {
-      title: "Real-time Analytics",
-      description: "Get instant insights from your data"
-    },
-    {
-      title: "Advanced Reporting",
-      description: "Comprehensive reports and dashboards"
-    }
-  ];
-
-  const benefits = [
-    "Improved data visibility",
-    "Better decision making",
-    "Cost optimization"
-  ];
-
-  return (
-
     {
       title: 'Real-time Insights',
       description: 'Get instant insights into network performance and user experience',
@@ -56,139 +27,158 @@ export default function FiveGDataAnalyticsPage() {
     }
   ];
 
+  const benefits = [
+    'Improved data visibility',
+    'Better decision making',
+    'Cost optimization',
+    'Enhanced network performance',
+    'Proactive issue resolution',
+    'Scalable analytics platform'
+  ];
+
+  const stats = [
+    { label: 'Data Points Processed', value: '1M+', icon: <BarChart3 className="w-8 h-8 text-blue-500" /> },
+    { label: 'Network Uptime', value: '99.9%', icon: <Clock className="w-8 h-8 text-green-500" /> },
+    { label: 'Cost Savings', value: '30%', icon: <TrendingUp className="w-8 h-8 text-purple-500" /> },
+    { label: 'Response Time', value: '<1ms', icon: <Zap className="w-8 h-8 text-orange-500" /> }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
+    <>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced 5G data analytics platform with real-time monitoring, performance analytics, predictive maintenance, and traffic analysis for network optimization." />
-        <meta name="keywords" content="5G data analytics, network monitoring, performance analytics, predictive maintenance, traffic analysis, 5G optimization" />
+        <meta name="description" content="Advanced 5G data analytics solutions for network optimization, performance monitoring, and business intelligence." />
+        <meta name="keywords" content="5G analytics, data analytics, network optimization, performance monitoring, business intelligence" />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              5G Data Analytics
+              5G Data
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent"> Analytics</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Advanced analytics platform for 5G networks with real-time monitoring, performance optimization, 
-              predictive maintenance, and comprehensive insights to maximize your network efficiency.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Unlock the full potential of your 5G network with advanced data analytics, real-time insights, and AI-powered optimization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
               >
-                Get Free Consultation
-                <ArrowRight className="w-5 h-5 ml-2" />
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link 
-                to="/5g-implementation" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              <Link
+                to="/about"
+                className="border border-gray-300 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                Back to 5G Services
+                Learn More
               </Link>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Services Grid */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Analytics Services</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Complete data analytics solutions for 5G networks
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-20">
-            {analyticsServices.map((service, index) => (
-              {features.map((feature, index) => (
-
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                <div className="mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="text-2xl font-bold text-white mb-4">{service.pricing}</div>
-                <Link 
-                  to="/contact"
-                  className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-                >
-                  Get Quote
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Analytics Features</h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Powerful features for comprehensive 5G network analytics
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {analyticsFeatures.map((feature, index) => (
-              {features.map((feature, index) => (
-
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
-                <div className="mb-4 flex justify-center">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 text-sm">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Optimize Your 5G Network?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Get a free analytics assessment and discover how we can optimize your 5G network performance.
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Advanced Analytics Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive 5G data analytics solutions designed for modern networks.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact" 
-                  className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Get Free Assessment
-                </Link>
-                <Link 
-                  to="/5g-implementation" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                >
-                  View All 5G Services
-                </Link>
-              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 hover:bg-white/20 transition-all duration-300 border border-white/20">
+                  <div className="mb-6">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-  );
-};
+        </section>
 
-export default FiveGDataAnalyticsPage;
+        {/* Stats Section */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="mb-4 flex justify-center">{stat.icon}</div>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-gray-300">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our 5G Analytics?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the benefits of advanced 5G data analytics for your network.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <div className="bg-gradient-to-r from-cyan-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <p className="text-gray-300 text-lg">
+                    {benefit}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Optimize Your 5G Network?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our 5G data analytics solutions can transform your network performance.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Start Analytics Journey
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/about"
+                className="border border-gray-300 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                Learn About Us
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
