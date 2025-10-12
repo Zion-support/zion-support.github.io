@@ -156,7 +156,7 @@ export default function AICodeAssistantProPage() {
   ]
 
   return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>AI Code Assistant Pro - Zion Tech Group | Intelligent Code Generation</title>
         <meta name="description" content="Revolutionary AI-powered code assistant with intelligent generation, debugging, and analysis. Increase development speed by 300%. Starting at $29/month." />
