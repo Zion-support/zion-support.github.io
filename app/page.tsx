@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 'use client';
 
 import React, { Suspense } from 'react';
-
-
-import { Brain, ArrowRight, MessageSquare } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, TrendingUp, Sparkles, Layers, Target, Award, Lightbulb, Wifi, Smartphone, Monitor, Server, Cpu2, CircuitBoard, Atom, Satellite, Wrench, Settings, BarChart, PieChart, LineChart, Activity, Eye, Search, Filter, Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, X, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10, FileText, Package } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import FuturisticBackground from './components/FuturisticBackground';
 import FuturisticCard from './components/FuturisticCard';
 import FuturisticButton from './components/FuturisticButton';
-
-// Note: Lazy loading components will be implemented in future iterations
 
 export default function HomePage() {
   const stats = [
@@ -20,17 +17,9 @@ export default function HomePage() {
     { number: '50+', label: 'Countries Served', icon: <Globe className="w-6 h-6" /> },
     { number: '300%', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6" /> },
     { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> },
-    { number: '48hr', label: 'Response Time', icon: <MessageSquare className="w-6 h-6" /> }
+    { number: '48hr', label: 'Response Time', icon: <MessageCircle className="w-6 h-6" /> }
   ];
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, TrendingUp, Sparkles, Layers, Target, Award, Lightbulb, Wifi, Smartphone, Monitor, Server, Cpu2, CircuitBoard, Atom, Satellite, Wrench, Settings, BarChart, PieChart, LineChart, Activity, Eye, Search, Filter, Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, X, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10, FileText, Package } from 'lucide-react'
-import { Link } from 'react-router-dom'
 
-const HomePage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -74,59 +63,10 @@ const HomePage: React.FC = () => {
       price: 'Starting at $99/month',
       link: '/micro-saas'
     }
-  ]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
+  ];
 
   const microSaasServices = [
     {
-<<<<<<< HEAD
-      title: 'AI Content Generation',
-      description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      link: '/ai-content-generator',
-      features: ['Automated content creation', 'SEO optimization', 'Multi-language support'],
-      price: 'Starting at $99/month'
-    },
-    {
-      title: 'AI CRM Assistant',
-      description: 'Boost sales by 45% with AI-powered lead scoring, email automation, and predictive analytics.',
-      icon: <Users className="w-8 h-8 text-purple-400" />,
-      link: '/ai-crm-assistant',
-      features: ['AI lead scoring', 'Email automation', 'Predictive analytics'],
-      price: 'Starting at $49/month'
-    },
-    {
-      title: 'AI Social Media Manager',
-      description: 'Increase engagement by 200% with AI-powered social media automation and content generation.',
-      icon: <MessageSquare className="w-8 h-8 text-pink-400" />,
-      link: '/ai-social-media-manager',
-      features: ['AI content generation', 'Smart scheduling', 'Analytics insights'],
-      price: 'Starting at $29/month'
-    },
-    {
-      title: 'AI Cybersecurity Suite',
-      description: 'Protect your business with 99.9% threat detection accuracy using advanced AI security.',
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      link: '/ai-cybersecurity-suite',
-      features: ['AI threat detection', 'Zero trust security', 'Automated response'],
-      price: 'Starting at $199/month'
-    },
-    {
-      title: 'AI Smart City Solutions',
-      description: 'Transform urban infrastructure with AI-powered smart city technologies and IoT integration.',
-      icon: <Globe className="w-8 h-8 text-green-400" />,
-      link: '/ai-smart-city-solutions',
-      features: ['Traffic optimization', 'Energy management', 'IoT integration'],
-      price: 'Starting at $50,000/project'
-    },
-    {
-      title: '5G Implementation',
-      description: 'Leverage the power of 5G technology for ultra-fast connectivity and IoT solutions.',
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      link: '/5g-implementation',
-      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing'],
-      price: 'Starting at $5,000/project'
-=======
       icon: <BarChart3 className="w-6 h-6 text-cyan-400" />,
       title: 'AI Analytics Dashboard',
       description: 'Real-time business intelligence with AI-powered insights and predictive analytics.',
@@ -189,8 +129,105 @@ const HomePage: React.FC = () => {
       price: '$199/month',
       features: ['Real-time tracking', 'Predictive analytics', 'Automated reordering', 'Multi-location'],
       link: '/micro-saas/inventory-management'
+    },
+    // New Real Micro SAAS Services
+    {
+      icon: <Camera className="w-6 h-6 text-rose-400" />,
+      title: 'AI Video Editor Pro',
+      description: 'Professional video editing with AI-powered auto-cuts, transitions, and effects.',
+      price: '$199/month',
+      features: ['AI auto-editing', 'Smart transitions', 'Voice sync', '4K export'],
+      link: '/micro-saas/ai-video-editor'
+    },
+    {
+      icon: <Mic className="w-6 h-6 text-violet-400" />,
+      title: 'AI Voice Cloning Studio',
+      description: 'Create realistic voice clones for content creation and personalization.',
+      price: '$299/month',
+      features: ['Voice training', 'Multi-language', 'Emotion control', 'API access'],
+      link: '/micro-saas/ai-voice-cloning'
+    },
+    {
+      icon: <Headphones className="w-6 h-6 text-amber-400" />,
+      title: 'AI Music Composer',
+      description: 'Generate original music tracks with AI for videos, podcasts, and content.',
+      price: '$149/month',
+      features: ['Genre selection', 'Mood matching', 'Royalty-free', 'Custom length'],
+      link: '/micro-saas/ai-music-composer'
+    },
+    {
+      icon: <Eye className="w-6 h-6 text-teal-400" />,
+      title: 'AI Image Generator',
+      description: 'Create stunning images from text descriptions using advanced AI models.',
+      price: '$89/month',
+      features: ['Text-to-image', 'Style transfer', 'High resolution', 'Batch generation'],
+      link: '/micro-saas/ai-image-generator'
+    },
+    {
+      icon: <Search className="w-6 h-6 text-lime-400" />,
+      title: 'AI SEO Optimizer',
+      description: 'Automatically optimize your content for search engines with AI insights.',
+      price: '$79/month',
+      features: ['Keyword analysis', 'Content suggestions', 'Rank tracking', 'Competitor analysis'],
+      link: '/micro-saas/ai-seo-optimizer'
+    },
+    {
+      icon: <Share className="w-6 h-6 text-sky-400" />,
+      title: 'Social Media AI Manager',
+      description: 'Automate social media posting with AI-generated content and optimal timing.',
+      price: '$129/month',
+      features: ['Auto-posting', 'Content generation', 'Best time analysis', 'Engagement tracking'],
+      link: '/micro-saas/social-media-ai-manager'
+    },
+    {
+      icon: <Wifi className="w-6 h-6 text-emerald-400" />,
+      title: 'IoT Device Manager',
+      description: 'Centralized management for all your IoT devices with AI monitoring.',
+      price: '$159/month',
+      features: ['Device monitoring', 'Automated alerts', 'Energy optimization', 'Security scanning'],
+      link: '/micro-saas/iot-device-manager'
+    },
+    {
+      icon: <Heart className="w-6 h-6 text-red-400" />,
+      title: 'AI Health Tracker',
+      description: 'Personal health monitoring with AI insights and predictive analytics.',
+      price: '$99/month',
+      features: ['Vital monitoring', 'Health predictions', 'Doctor alerts', 'Wellness plans'],
+      link: '/micro-saas/ai-health-tracker'
+    },
+    {
+      icon: <Bookmark className="w-6 h-6 text-indigo-400" />,
+      title: 'AI Learning Platform',
+      description: 'Personalized learning experience with AI-curated content and progress tracking.',
+      price: '$119/month',
+      features: ['Adaptive learning', 'Progress tracking', 'Skill assessment', 'Certification'],
+      link: '/micro-saas/ai-learning-platform'
+    },
+    {
+      icon: <Flag className="w-6 h-6 text-orange-400" />,
+      title: 'AI Project Manager',
+      description: 'Intelligent project management with AI-powered task prioritization and resource allocation.',
+      price: '$179/month',
+      features: ['Smart scheduling', 'Resource optimization', 'Risk assessment', 'Progress prediction'],
+      link: '/micro-saas/ai-project-manager'
+    },
+    {
+      icon: <Settings className="w-6 h-6 text-gray-400" />,
+      title: 'AI Workflow Automator',
+      description: 'Automate complex business workflows with AI-powered decision making.',
+      price: '$249/month',
+      features: ['Workflow design', 'AI decisions', 'Integration APIs', 'Custom triggers'],
+      link: '/micro-saas/ai-workflow-automator'
+    },
+    {
+      icon: <Target className="w-6 h-6 text-pink-400" />,
+      title: 'AI Lead Scoring Engine',
+      description: 'Advanced lead scoring with AI to identify high-value prospects automatically.',
+      price: '$199/month',
+      features: ['Behavioral analysis', 'Scoring algorithms', 'CRM integration', 'Predictive modeling'],
+      link: '/micro-saas/ai-lead-scoring'
     }
-  ]
+  ];
 
   const aiServices = [
     {
@@ -224,11 +261,92 @@ const HomePage: React.FC = () => {
       price: '$79/month',
       features: ['AI prioritization', 'Smart scheduling', 'Progress tracking', 'Team collaboration'],
       link: '/ai-task-manager'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
+    },
+    // Additional AI Services
+    {
+      icon: <Brain className="w-6 h-6 text-blue-400" />,
+      title: 'AI Code Assistant',
+      description: 'AI-powered coding assistant that helps developers write better code faster.',
+      price: '$149/month',
+      features: ['Code completion', 'Bug detection', 'Refactoring suggestions', 'Multi-language support'],
+      link: '/ai-code-assistant'
+    },
+    {
+      icon: <Eye className="w-6 h-6 text-green-400" />,
+      title: 'AI Computer Vision',
+      description: 'Advanced image and video analysis with AI-powered computer vision capabilities.',
+      price: '$299/month',
+      features: ['Object detection', 'Facial recognition', 'Image classification', 'Video analysis'],
+      link: '/ai-computer-vision'
+    },
+    {
+      icon: <MessageCircle className="w-6 h-6 text-yellow-400" />,
+      title: 'AI Translation Service',
+      description: 'Real-time translation service with AI-powered language processing.',
+      price: '$99/month',
+      features: ['100+ languages', 'Real-time translation', 'Document translation', 'API access'],
+      link: '/ai-translation-service'
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6 text-pink-400" />,
+      title: 'AI Financial Advisor',
+      description: 'Personalized financial advice and investment recommendations powered by AI.',
+      price: '$199/month',
+      features: ['Portfolio analysis', 'Risk assessment', 'Investment suggestions', 'Market predictions'],
+      link: '/ai-financial-advisor'
     }
   ];
 
-<<<<<<< HEAD
+  const itServices = [
+    {
+      icon: <Cloud className="w-6 h-6 text-blue-400" />,
+      title: 'Cloud Migration Services',
+      description: 'Seamless migration to cloud platforms with zero downtime and enhanced security.',
+      price: 'Starting at $2,999/project',
+      features: ['AWS/Azure/GCP', 'Zero downtime', 'Security hardening', 'Cost optimization'],
+      link: '/cloud-migration'
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-red-400" />,
+      title: 'Cybersecurity Solutions',
+      description: 'Comprehensive security solutions to protect your digital infrastructure.',
+      price: 'Starting at $499/month',
+      features: ['Threat monitoring', 'Penetration testing', 'Security audits', 'Incident response'],
+      link: '/cybersecurity'
+    },
+    {
+      icon: <Database className="w-6 h-6 text-green-400" />,
+      title: 'Database Management',
+      description: 'Expert database administration and optimization services.',
+      price: 'Starting at $299/month',
+      features: ['Performance tuning', 'Backup solutions', 'Security hardening', '24/7 monitoring'],
+      link: '/database-management'
+    },
+    {
+      icon: <Network className="w-6 h-6 text-purple-400" />,
+      title: 'Network Infrastructure',
+      description: 'Design and implement robust network infrastructure solutions.',
+      price: 'Starting at $1,999/project',
+      features: ['Network design', 'Security implementation', 'Performance optimization', 'Monitoring setup'],
+      link: '/network-infrastructure'
+    },
+    {
+      icon: <Server className="w-6 h-6 text-orange-400" />,
+      title: 'Server Management',
+      description: 'Complete server administration and maintenance services.',
+      price: 'Starting at $199/month',
+      features: ['Server monitoring', 'Performance tuning', 'Security updates', 'Backup management'],
+      link: '/server-management'
+    },
+    {
+      icon: <Wifi className="w-6 h-6 text-cyan-400" />,
+      title: '5G Implementation',
+      description: 'Next-generation 5G network implementation and optimization.',
+      price: 'Starting at $5,999/project',
+      features: ['5G infrastructure', 'IoT integration', 'Edge computing', 'Performance optimization'],
+      link: '/5g-implementation'
+    }
+  ];
 
   const testimonials = [
     {
@@ -250,16 +368,6 @@ const HomePage: React.FC = () => {
       rating: 5
     }
   ];
-=======
-  const stats = [
-    { number: '1000+', label: 'Projects Completed', icon: <Rocket className="w-6 h-6 text-cyan-400" /> },
-    { number: '500+', label: 'Happy Clients', icon: <Users className="w-6 h-6 text-emerald-400" /> },
-    { number: '24/7', label: 'Support Available', icon: <Clock className="w-6 h-6 text-blue-400" /> },
-    { number: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6 text-purple-400" /> },
-    { number: '50+', label: 'Micro SAAS Solutions', icon: <Layers className="w-6 h-6 text-orange-400" /> },
-    { number: '30+', label: 'AI Services', icon: <Brain className="w-6 h-6 text-pink-400" /> }
-  ]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
 
   return (
     <>
@@ -329,7 +437,8 @@ const HomePage: React.FC = () => {
               "@type": "ContactPoint",
               "telephone": "+1-302-464-0950",
               "contactType": "customer service",
-              "email": "kleber@ziontechgroup.com"
+              "email": "kleber@ziontechgroup.com",
+              "availableLanguage": "English"
             },
             "sameAs": [
               "https://linkedin.com/company/ziontechgroup",
