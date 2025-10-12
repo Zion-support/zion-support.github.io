@@ -509,4 +509,626 @@ export const itServices: Service[] = [
   }
 ];
 
-export const allServices = [...aiServices, ...microSaasServices, ...itServices];
+// Additional AI Services
+export const additionalAiServices: Service[] = [
+  {
+    id: 'ai-smart-scheduler',
+    name: 'AI Smart Scheduler',
+    description: 'Intelligent scheduling that learns from your patterns and optimizes meetings automatically',
+    longDescription: 'Revolutionize your time management with our AI-powered scheduling assistant. It learns from your preferences, automatically finds optimal meeting times, handles conflicts, and integrates with all major calendar platforms. Reduce scheduling friction by 80% and never miss important meetings again.',
+    price: '$79/month',
+    marketPrice: '$120-200/month',
+    features: [
+      'Smart meeting optimization',
+      'Multi-calendar integration',
+      'Time zone management',
+      'Conflict resolution',
+      'Meeting analytics',
+      'Team coordination',
+      'Recurring meeting management',
+      'Mobile app support'
+    ],
+    benefits: [
+      'Save 5+ hours per week on scheduling',
+      'Reduce meeting conflicts by 90%',
+      'Improve meeting attendance rates',
+      'Optimize team productivity'
+    ],
+    capabilities: [
+      'Calendar synchronization',
+      'Meeting room booking',
+      'Attendee availability checking',
+      'Automated reminders',
+      'Meeting preparation suggestions',
+      'Follow-up scheduling'
+    ],
+    icon: 'Calendar',
+    path: '/ai-smart-scheduler',
+    category: 'ai',
+    popular: true,
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-ecommerce-optimizer-pro',
+    name: 'AI E-commerce Optimizer Pro',
+    description: 'Boost sales by up to 40% with AI-powered e-commerce optimization and personalization',
+    longDescription: 'Transform your online store with our comprehensive AI e-commerce optimization platform. Increase conversions, reduce cart abandonment, and personalize the shopping experience for each customer. Our AI analyzes behavior patterns and automatically optimizes product recommendations, pricing, and checkout flow.',
+    price: '$399/month',
+    marketPrice: '$600-1000/month',
+    features: [
+      'Dynamic pricing optimization',
+      'Personalized product recommendations',
+      'Cart abandonment recovery',
+      'A/B testing automation',
+      'Customer segmentation',
+      'Inventory optimization',
+      'Search and filter enhancement',
+      'Mobile experience optimization'
+    ],
+    benefits: [
+      'Increase conversion rates by 40%',
+      'Reduce cart abandonment by 35%',
+      'Boost average order value by 25%',
+      'Improve customer lifetime value'
+    ],
+    capabilities: [
+      'Product recommendation engine',
+      'Price optimization algorithms',
+      'Customer behavior analysis',
+      'Checkout flow optimization',
+      'Email marketing automation',
+      'Performance analytics dashboard'
+    ],
+    icon: 'ShoppingCart',
+    path: '/ai-ecommerce-optimizer-pro',
+    category: 'ai',
+    popular: true,
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-3d-generation',
+    name: 'AI 3D Generation Studio',
+    description: 'Create stunning 3D models and animations with AI-powered generation tools',
+    longDescription: 'Revolutionize 3D content creation with our AI-powered 3D generation platform. Create photorealistic 3D models, animations, and environments from simple text descriptions or 2D images. Perfect for game development, architectural visualization, product design, and marketing materials.',
+    price: '$599/month',
+    marketPrice: '$800-1500/month',
+    features: [
+      'Text-to-3D model generation',
+      'Image-to-3D conversion',
+      'Animation keyframe generation',
+      'Material and texture creation',
+      'Lighting optimization',
+      'Rendering acceleration',
+      'VR/AR compatibility',
+      'Export to major 3D formats'
+    ],
+    benefits: [
+      'Reduce 3D creation time by 70%',
+      'Lower production costs by 50%',
+      'Enable non-technical users to create 3D content',
+      'Accelerate product development cycles'
+    ],
+    capabilities: [
+      '3D model generation',
+      'Character animation',
+      'Environment creation',
+      'Product visualization',
+      'Architectural rendering',
+      'Game asset creation'
+    ],
+    icon: 'Box',
+    path: '/ai-3d-generation',
+    category: 'ai',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-accounting-assistant',
+    name: 'AI Accounting Assistant Pro',
+    description: 'Automate accounting tasks with AI-powered financial management and reporting',
+    longDescription: 'Streamline your financial operations with our intelligent accounting assistant. Automatically categorize transactions, generate financial reports, detect anomalies, and ensure compliance. Integrates with all major accounting software and provides real-time insights into your business finances.',
+    price: '$199/month',
+    marketPrice: '$300-500/month',
+    features: [
+      'Automated transaction categorization',
+      'Real-time financial reporting',
+      'Expense tracking and approval',
+      'Tax preparation assistance',
+      'Invoice generation and management',
+      'Bank reconciliation automation',
+      'Compliance monitoring',
+      'Financial forecasting'
+    ],
+    benefits: [
+      'Reduce accounting time by 60%',
+      'Eliminate manual data entry errors',
+      'Improve financial accuracy',
+      'Ensure regulatory compliance'
+    ],
+    capabilities: [
+      'Bookkeeping automation',
+      'Financial statement generation',
+      'Tax document preparation',
+      'Expense management',
+      'Cash flow analysis',
+      'Audit trail maintenance'
+    ],
+    icon: 'Calculator',
+    path: '/ai-accounting-assistant',
+    category: 'ai',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-agricultural-intelligence-pro',
+    name: 'AI Agricultural Intelligence Pro',
+    description: 'Optimize farming operations with AI-powered crop monitoring and yield prediction',
+    longDescription: 'Transform modern agriculture with our comprehensive AI platform for smart farming. Monitor crop health, predict yields, optimize irrigation, detect diseases early, and maximize harvest efficiency. Uses satellite imagery, IoT sensors, and machine learning to provide actionable insights for sustainable farming.',
+    price: '$299/month',
+    marketPrice: '$500-800/month',
+    features: [
+      'Satellite crop monitoring',
+      'Yield prediction algorithms',
+      'Disease and pest detection',
+      'Irrigation optimization',
+      'Weather pattern analysis',
+      'Soil health assessment',
+      'Harvest timing recommendations',
+      'Sustainability tracking'
+    ],
+    benefits: [
+      'Increase crop yields by 25%',
+      'Reduce water usage by 30%',
+      'Minimize pesticide use by 40%',
+      'Improve farm profitability'
+    ],
+    capabilities: [
+      'Crop health monitoring',
+      'Precision agriculture',
+      'Resource optimization',
+      'Risk assessment',
+      'Compliance reporting',
+      'Market analysis'
+    ],
+    icon: 'TreePine',
+    path: '/ai-agricultural-intelligence-pro',
+    category: 'ai',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
+];
+
+// Additional Micro SAAS Services
+export const additionalMicroSaasServices: Service[] = [
+  {
+    id: 'ai-url-shortener',
+    name: 'AI URL Shortener Pro',
+    description: 'Smart URL shortening with analytics, customization, and AI-powered insights',
+    longDescription: 'Create branded short links with advanced analytics and AI-powered insights. Track clicks, demographics, device types, and geographic data. Automatically optimize link performance and provide actionable recommendations to improve your marketing campaigns.',
+    price: '$29/month',
+    marketPrice: '$50-100/month',
+    features: [
+      'Custom branded domains',
+      'Advanced click analytics',
+      'Geographic tracking',
+      'Device and browser insights',
+      'QR code generation',
+      'Bulk link management',
+      'API integration',
+      'Link expiration controls'
+    ],
+    benefits: [
+      'Improve click-through rates by 20%',
+      'Gain detailed audience insights',
+      'Enhance brand recognition',
+      'Optimize marketing campaigns'
+    ],
+    capabilities: [
+      'Link shortening and management',
+      'Analytics and reporting',
+      'Custom branding',
+      'QR code generation',
+      'API access',
+      'Team collaboration'
+    ],
+    icon: 'Link',
+    path: '/ai-url-shortener',
+    category: 'micro-saas',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-password-manager',
+    name: 'AI Password Manager Enterprise',
+    description: 'Secure password management with AI-powered security recommendations',
+    longDescription: 'Protect your organization with our enterprise-grade password manager featuring AI-powered security analysis. Automatically detect weak passwords, suggest improvements, monitor for breaches, and ensure compliance with security policies. Includes team management and advanced reporting.',
+    price: '$99/month',
+    marketPrice: '$150-300/month',
+    features: [
+      'AI-powered password analysis',
+      'Breach monitoring and alerts',
+      'Team password sharing',
+      'Multi-factor authentication',
+      'Password generation',
+      'Security policy enforcement',
+      'Compliance reporting',
+      'SSO integration'
+    ],
+    benefits: [
+      'Reduce security risks by 80%',
+      'Improve password hygiene',
+      'Ensure compliance',
+      'Simplify team management'
+    ],
+    capabilities: [
+      'Password storage and encryption',
+      'Security analysis',
+      'Team collaboration',
+      'Compliance management',
+      'Integration with business tools',
+      'Audit and reporting'
+    ],
+    icon: 'Key',
+    path: '/ai-password-manager',
+    category: 'micro-saas',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-qr-generator',
+    name: 'AI QR Code Generator Pro',
+    description: 'Create dynamic QR codes with AI-powered analytics and customization',
+    longDescription: 'Generate beautiful, trackable QR codes with our AI-powered platform. Create dynamic QR codes that can be updated without reprinting, track scans in real-time, and get AI-powered insights about your audience. Perfect for marketing campaigns, events, and business operations.',
+    price: '$49/month',
+    marketPrice: '$80-150/month',
+    features: [
+      'Dynamic QR code generation',
+      'Real-time scan tracking',
+      'Custom design and branding',
+      'Bulk QR code creation',
+      'Analytics dashboard',
+      'Geographic tracking',
+      'Device detection',
+      'API integration'
+    ],
+    benefits: [
+      'Track campaign performance',
+      'Update content without reprinting',
+      'Gain audience insights',
+      'Improve engagement rates'
+    ],
+    capabilities: [
+      'QR code generation',
+      'Analytics and tracking',
+      'Custom branding',
+      'Bulk operations',
+      'API access',
+      'Team management'
+    ],
+    icon: 'QrCode',
+    path: '/ai-qr-generator',
+    category: 'micro-saas',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-invoice-generator',
+    name: 'AI Invoice Generator Pro',
+    description: 'Automate invoice creation with AI-powered templates and smart data extraction',
+    longDescription: 'Streamline your billing process with our intelligent invoice generator. Create professional invoices automatically, extract data from contracts and emails, track payments, and send automated reminders. Integrates with accounting software and provides detailed analytics.',
+    price: '$79/month',
+    marketPrice: '$120-250/month',
+    features: [
+      'AI-powered template generation',
+      'Automated data extraction',
+      'Payment tracking',
+      'Automated reminders',
+      'Multi-currency support',
+      'Tax calculation',
+      'Client portal',
+      'Accounting integration'
+    ],
+    benefits: [
+      'Reduce invoice creation time by 70%',
+      'Improve payment collection',
+      'Eliminate manual errors',
+      'Enhance professional image'
+    ],
+    capabilities: [
+      'Invoice creation and management',
+      'Payment processing',
+      'Client communication',
+      'Financial reporting',
+      'Tax compliance',
+      'Integration with business tools'
+    ],
+    icon: 'FileText',
+    path: '/ai-invoice-generator',
+    category: 'micro-saas',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'ai-social-media-scheduler',
+    name: 'AI Social Media Scheduler Pro',
+    description: 'Intelligent social media management with AI-powered content optimization',
+    longDescription: 'Master social media with our AI-powered scheduling and optimization platform. Automatically find the best times to post, optimize content for each platform, generate engaging captions, and track performance across all major social networks. Increase engagement and grow your following.',
+    price: '$149/month',
+    marketPrice: '$200-400/month',
+    features: [
+      'AI-powered posting optimization',
+      'Content generation assistance',
+      'Multi-platform scheduling',
+      'Hashtag optimization',
+      'Engagement analytics',
+      'Competitor analysis',
+      'Content calendar',
+      'Team collaboration'
+    ],
+    benefits: [
+      'Increase engagement by 45%',
+      'Save 10+ hours per week',
+      'Grow follower base faster',
+      'Improve content performance'
+    ],
+    capabilities: [
+      'Social media scheduling',
+      'Content optimization',
+      'Analytics and reporting',
+      'Hashtag research',
+      'Competitor monitoring',
+      'Team management'
+    ],
+    icon: 'Share2',
+    path: '/ai-social-media-scheduler',
+    category: 'micro-saas',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
+];
+
+// Additional IT Services
+export const additionalItServices: Service[] = [
+  {
+    id: '5g-implementation',
+    name: '5G Network Implementation',
+    description: 'Complete 5G network deployment and optimization services',
+    longDescription: 'Transform your connectivity with our comprehensive 5G implementation services. We design, deploy, and optimize 5G networks for businesses, providing ultra-fast speeds, low latency, and massive device connectivity. Perfect for IoT deployments, smart cities, and high-performance applications.',
+    price: '$2,999/month',
+    marketPrice: '$4000-8000/month',
+    features: [
+      '5G network design and planning',
+      'Infrastructure deployment',
+      'Performance optimization',
+      'IoT device integration',
+      'Security implementation',
+      'Monitoring and maintenance',
+      'Compliance certification',
+      '24/7 technical support'
+    ],
+    benefits: [
+      'Achieve 10x faster data speeds',
+      'Enable real-time applications',
+      'Support massive IoT deployments',
+      'Future-proof your infrastructure'
+    ],
+    capabilities: [
+      '5G network architecture',
+      'IoT connectivity solutions',
+      'Edge computing deployment',
+      'Network security',
+      'Performance monitoring',
+      'Compliance management'
+    ],
+    icon: 'Wifi',
+    path: '/5g-implementation',
+    category: 'it',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'blockchain-solutions',
+    name: 'Blockchain Development & Integration',
+    description: 'Custom blockchain solutions for secure, transparent business processes',
+    longDescription: 'Leverage blockchain technology to enhance security, transparency, and efficiency in your business processes. We develop custom blockchain solutions, smart contracts, and integrate existing systems with blockchain networks. Perfect for supply chain, finance, healthcare, and identity management.',
+    price: '$1,999/month',
+    marketPrice: '$3000-6000/month',
+    features: [
+      'Custom blockchain development',
+      'Smart contract creation',
+      'DApp development',
+      'System integration',
+      'Security auditing',
+      'Token development',
+      'DeFi solutions',
+      'Compliance consulting'
+    ],
+    benefits: [
+      'Enhance data security',
+      'Improve transparency',
+      'Reduce transaction costs',
+      'Enable new business models'
+    ],
+    capabilities: [
+      'Blockchain architecture design',
+      'Smart contract development',
+      'Cryptocurrency integration',
+      'Supply chain solutions',
+      'Identity management',
+      'Financial applications'
+    ],
+    icon: 'Shield',
+    path: '/blockchain-solutions',
+    category: 'it',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'iot-development',
+    name: 'IoT Development & Integration',
+    description: 'Complete IoT solutions from device development to cloud integration',
+    longDescription: 'Build connected solutions with our comprehensive IoT development services. We design and develop IoT devices, create cloud platforms for data management, and integrate everything into your existing systems. Perfect for smart homes, industrial monitoring, and connected products.',
+    price: '$1,499/month',
+    marketPrice: '$2000-4000/month',
+    features: [
+      'IoT device development',
+      'Sensor integration',
+      'Cloud platform development',
+      'Data analytics and visualization',
+      'Mobile app development',
+      'Security implementation',
+      'Device management',
+      'Scalability planning'
+    ],
+    benefits: [
+      'Enable smart operations',
+      'Improve efficiency and monitoring',
+      'Create new revenue streams',
+      'Enhance customer experience'
+    ],
+    capabilities: [
+      'Hardware development',
+      'Firmware programming',
+      'Cloud integration',
+      'Data processing',
+      'Mobile applications',
+      'System monitoring'
+    ],
+    icon: 'Cpu',
+    path: '/iot-development',
+    category: 'it',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'devops-automation',
+    name: 'DevOps Automation & CI/CD',
+    description: 'Streamline development workflows with automated DevOps pipelines',
+    longDescription: 'Accelerate your software delivery with our comprehensive DevOps automation services. We set up CI/CD pipelines, implement infrastructure as code, configure monitoring and logging, and optimize your entire development workflow. Reduce deployment time and improve reliability.',
+    price: '$1,299/month',
+    marketPrice: '$1800-3500/month',
+    features: [
+      'CI/CD pipeline setup',
+      'Infrastructure as Code',
+      'Container orchestration',
+      'Automated testing',
+      'Monitoring and alerting',
+      'Security scanning',
+      'Performance optimization',
+      'Disaster recovery'
+    ],
+    benefits: [
+      'Reduce deployment time by 80%',
+      'Improve code quality',
+      'Increase system reliability',
+      'Enable faster feature delivery'
+    ],
+    capabilities: [
+      'Pipeline automation',
+      'Infrastructure management',
+      'Container deployment',
+      'Monitoring setup',
+      'Security implementation',
+      'Performance optimization'
+    ],
+    icon: 'Settings',
+    path: '/devops-automation',
+    category: 'it',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  },
+  {
+    id: 'mobile-app-development',
+    name: 'Mobile App Development',
+    description: 'Native and cross-platform mobile applications for iOS and Android',
+    longDescription: 'Create powerful mobile applications that engage users and drive business growth. We develop both native and cross-platform apps using the latest technologies. From concept to deployment, we handle UI/UX design, development, testing, and app store optimization.',
+    price: '$2,499/month',
+    marketPrice: '$3500-7000/month',
+    features: [
+      'Native iOS and Android development',
+      'Cross-platform solutions',
+      'UI/UX design',
+      'API integration',
+      'Push notifications',
+      'Offline functionality',
+      'App store optimization',
+      'Maintenance and updates'
+    ],
+    benefits: [
+      'Reach mobile users effectively',
+      'Improve customer engagement',
+      'Create new revenue streams',
+      'Enhance brand presence'
+    ],
+    capabilities: [
+      'iOS app development',
+      'Android app development',
+      'Cross-platform development',
+      'UI/UX design',
+      'Backend integration',
+      'App store deployment'
+    ],
+    icon: 'Smartphone',
+    path: '/mobile-app-development',
+    category: 'it',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+    }
+  }
+];
+
+// Combine all services
+export const allServices = [
+  ...aiServices, 
+  ...microSaasServices, 
+  ...itServices,
+  ...additionalAiServices,
+  ...additionalMicroSaasServices,
+  ...additionalItServices
+];

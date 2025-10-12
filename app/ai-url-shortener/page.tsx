@@ -1,106 +1,106 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, CheckCircle, ShoppingCart, TrendingUp, Users, Target, BarChart3, Zap, Shield, Phone, Mail, MapPin } from 'lucide-react'
+import { ArrowRight, CheckCircle, Link, BarChart3, Globe, Smartphone, QrCode, Zap, Shield, Phone, Mail, MapPin } from 'lucide-react'
 import { NeonText, NeonCard, NeonButton } from '../components/NeonEffects'
 
-export default function AIEcommerceOptimizerProPage() {
+export default function AIURLShortenerPage() {
   const features = [
     {
-      icon: <TrendingUp className="w-8 h-8 text-green-400" />,
-      title: 'Dynamic Pricing Optimization',
-      description: 'AI automatically adjusts prices based on demand, competition, and customer behavior'
+      icon: <Link className="w-8 h-8 text-cyan-400" />,
+      title: 'Custom Branded Domains',
+      description: 'Create short links with your own custom domain for enhanced brand recognition'
     },
     {
-      icon: <Users className="w-8 h-8 text-blue-400" />,
-      title: 'Personalized Recommendations',
-      description: 'Show each customer exactly what they want with AI-powered product recommendations'
-    },
-    {
-      icon: <ShoppingCart className="w-8 h-8 text-purple-400" />,
-      title: 'Cart Abandonment Recovery',
-      description: 'Automatically recover lost sales with intelligent email sequences and incentives'
-    },
-    {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
-      title: 'Customer Segmentation',
-      description: 'Automatically segment customers and create targeted campaigns for each group'
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-cyan-400" />,
+      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
       title: 'Advanced Analytics',
-      description: 'Get deep insights into customer behavior, conversion funnels, and revenue optimization'
+      description: 'Track clicks, demographics, device types, and geographic data in real-time'
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-blue-400" />,
+      title: 'Geographic Tracking',
+      description: 'See exactly where your clicks are coming from with detailed location insights'
+    },
+    {
+      icon: <Smartphone className="w-8 h-8 text-purple-400" />,
+      title: 'Device & Browser Insights',
+      description: 'Understand your audience with detailed device and browser analytics'
+    },
+    {
+      icon: <QrCode className="w-8 h-8 text-orange-400" />,
+      title: 'QR Code Generation',
+      description: 'Automatically generate QR codes for your short links for offline marketing'
     },
     {
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: 'A/B Testing Automation',
-      description: 'Continuously test and optimize every aspect of your store automatically'
+      title: 'Bulk Link Management',
+      description: 'Create and manage hundreds of links at once with our bulk tools'
     }
   ]
 
   const benefits = [
-    'Increase conversion rates by 40%',
-    'Reduce cart abandonment by 35%',
-    'Boost average order value by 25%',
-    'Improve customer lifetime value',
-    'Save 15+ hours per week on optimization',
-    'Generate 30% more revenue from existing traffic'
+    'Improve click-through rates by 20%',
+    'Gain detailed audience insights',
+    'Enhance brand recognition',
+    'Optimize marketing campaigns',
+    'Track campaign performance in real-time',
+    'Save time with bulk link management'
   ]
 
   const capabilities = [
-    'Product recommendation engine',
-    'Price optimization algorithms',
-    'Customer behavior analysis',
-    'Checkout flow optimization',
-    'Email marketing automation',
-    'Performance analytics dashboard',
-    'Inventory optimization',
-    'Search and filter enhancement'
+    'Link shortening and management',
+    'Analytics and reporting',
+    'Custom branding',
+    'QR code generation',
+    'API access',
+    'Team collaboration',
+    'Link expiration controls',
+    'Bulk operations'
   ]
 
   const pricing = [
     {
       name: 'Starter',
-      price: '$399',
+      price: '$29',
       period: '/month',
-      description: 'Perfect for small e-commerce stores',
+      description: 'Perfect for individuals and small teams',
       features: [
-        'Up to 1,000 products',
-        'Basic AI recommendations',
-        'Cart abandonment recovery',
-        'Email automation',
+        'Up to 1,000 links',
         'Basic analytics',
-        'Email support'
+        'Custom domain',
+        'QR code generation',
+        'Email support',
+        'API access'
       ]
     },
     {
       name: 'Professional',
-      price: '$699',
+      price: '$79',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 products',
-        'Advanced AI optimization',
-        'Dynamic pricing',
-        'Customer segmentation',
+        'Up to 10,000 links',
         'Advanced analytics',
+        'Multiple custom domains',
+        'Team collaboration',
         'Priority support',
-        'API access'
+        'Bulk operations',
+        'Link expiration'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$199',
       period: '/month',
-      description: 'For large e-commerce operations',
+      description: 'For large organizations',
       features: [
-        'Unlimited products',
+        'Unlimited links',
         'AI-powered insights',
+        'White-label options',
         'Custom integrations',
-        'Advanced security',
         'Dedicated support',
-        'Custom reporting',
-        'White-label options'
+        'Advanced security',
+        'Custom reporting'
       ]
     }
   ]
@@ -108,9 +108,9 @@ export default function AIEcommerceOptimizerProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title>AI E-commerce Optimizer Pro - Zion Tech Group | Boost Sales by 40%</title>
-        <meta name="description" content="Transform your online store with AI E-commerce Optimizer Pro. Increase conversions by 40%, reduce cart abandonment by 35%, and boost revenue with AI-powered optimization." />
-        <meta name="keywords" content="e-commerce optimization, AI recommendations, cart abandonment, conversion optimization, Zion Tech Group" />
+        <title>AI URL Shortener Pro - Zion Tech Group | Smart Link Management</title>
+        <meta name="description" content="Create branded short links with AI-powered analytics and insights. Track clicks, demographics, and optimize your marketing campaigns with our intelligent URL shortener." />
+        <meta name="keywords" content="URL shortener, link management, analytics, QR codes, marketing tools, Zion Tech Group" />
       </Helmet>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -118,15 +118,15 @@ export default function AIEcommerceOptimizerProPage() {
         <div className="text-center mb-16">
           <div className="mb-6">
             <span className="text-cyan-400 text-sm font-semibold tracking-wider uppercase bg-cyan-400/10 px-3 py-1 rounded-full">
-              AI Services
+              Micro SAAS
             </span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            <NeonText intensity="high">AI E-commerce Optimizer Pro</NeonText>
+            <NeonText intensity="high">AI URL Shortener Pro</NeonText>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Boost sales by up to 40% with AI-powered e-commerce optimization and personalization. 
-            Transform your online store with intelligent recommendations, dynamic pricing, and automated optimization.
+            Create branded short links with advanced analytics and AI-powered insights. 
+            Track clicks, demographics, device types, and geographic data to optimize your marketing campaigns.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <NeonButton 
@@ -135,7 +135,7 @@ export default function AIEcommerceOptimizerProPage() {
               onClick={() => window.location.href = '/contact'}
               className="group"
             >
-              Start Optimizing Today
+              Start Shortening Links
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </NeonButton>
             <NeonButton 
@@ -143,12 +143,12 @@ export default function AIEcommerceOptimizerProPage() {
               size="lg"
               onClick={() => window.location.href = '/contact'}
             >
-              Request Demo
+              Try Free Demo
             </NeonButton>
           </div>
           <div className="text-center">
-            <p className="text-cyan-400 font-semibold text-lg">Starting at $399/month</p>
-            <p className="text-gray-400 text-sm">Market Price: $600-1000/month</p>
+            <p className="text-cyan-400 font-semibold text-lg">Starting at $29/month</p>
+            <p className="text-gray-400 text-sm">Market Price: $50-100/month</p>
           </div>
         </div>
 
@@ -156,10 +156,10 @@ export default function AIEcommerceOptimizerProPage() {
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              <NeonText intensity="medium">Proven Results</NeonText>
+              <NeonText intensity="medium">Why Choose Our URL Shortener?</NeonText>
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Join thousands of successful e-commerce businesses using our AI optimization
+              Advanced features that give you complete control over your links
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -179,7 +179,7 @@ export default function AIEcommerceOptimizerProPage() {
               <NeonText intensity="medium">Powerful Features</NeonText>
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Everything you need to optimize your e-commerce performance
+              Everything you need to manage and optimize your links
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -202,7 +202,7 @@ export default function AIEcommerceOptimizerProPage() {
               <NeonText intensity="medium">What You Can Do</NeonText>
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Comprehensive e-commerce optimization capabilities
+              Comprehensive link management and analytics capabilities
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -221,10 +221,10 @@ export default function AIEcommerceOptimizerProPage() {
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              <NeonText intensity="medium">Flexible Pricing</NeonText>
+              <NeonText intensity="medium">Simple Pricing</NeonText>
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Choose the plan that matches your store size and growth goals
+              Choose the plan that fits your link management needs
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -269,10 +269,10 @@ export default function AIEcommerceOptimizerProPage() {
         {/* Contact Section */}
         <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            <NeonText intensity="high">Ready to Boost Your Sales?</NeonText>
+            <NeonText intensity="high">Ready to Optimize Your Links?</NeonText>
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contact us today to learn how AI E-commerce Optimizer Pro can transform your online store and increase your revenue.
+            Contact us today to learn how AI URL Shortener Pro can improve your marketing campaigns and provide valuable insights.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">

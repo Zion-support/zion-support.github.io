@@ -1,58 +1,77 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { Calendar, Clock, Users, Zap, CheckCircle, ArrowRight, Brain, Smartphone, Globe, Shield, BarChart3, Star, Sparkles } from 'lucide-react'
-import Layout from '../layout'
+import { ArrowRight, CheckCircle, Calendar, Clock, Users, Zap, Shield, BarChart3, Phone, Mail, MapPin } from 'lucide-react'
+import { NeonText, NeonCard, NeonButton } from '../components/NeonEffects'
 
-export default function AISmartScheduler() {
+export default function AISmartSchedulerPage() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Scheduling',
-      description: 'Intelligent scheduling that learns from your patterns and preferences'
+      icon: <Calendar className="w-8 h-8 text-cyan-400" />,
+      title: 'Smart Meeting Optimization',
+      description: 'AI learns your preferences and automatically finds the best meeting times for all participants'
     },
     {
-      icon: <Users className="w-6 h-6 text-purple-400" />,
+      icon: <Clock className="w-8 h-8 text-purple-400" />,
+      title: 'Time Zone Management',
+      description: 'Automatically handles time zone conversions and suggests optimal times for global teams'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-green-400" />,
       title: 'Team Coordination',
-      description: 'Seamlessly coordinate meetings across multiple time zones and schedules'
+      description: 'Coordinate complex meetings with multiple participants and resource requirements'
     },
     {
-      icon: <Zap className="w-6 h-6 text-yellow-400" />,
-      title: 'Auto-Optimization',
-      description: 'Automatically finds the best meeting times for maximum productivity'
+      icon: <Zap className="w-8 h-8 text-orange-400" />,
+      title: 'Conflict Resolution',
+      description: 'Intelligently resolves scheduling conflicts and suggests alternative times'
     },
     {
-      icon: <Globe className="w-6 h-6 text-green-400" />,
-      title: 'Global Integration',
-      description: 'Works with all major calendar platforms and time zones'
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: 'Security & Privacy',
+      description: 'Enterprise-grade security with end-to-end encryption and compliance standards'
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-blue-400" />,
+      title: 'Analytics & Insights',
+      description: 'Detailed analytics on meeting patterns, productivity, and optimization opportunities'
     }
   ]
 
-  const pricingPlans = [
+  const benefits = [
+    'Save 5+ hours per week on scheduling tasks',
+    'Reduce meeting conflicts by 90%',
+    'Improve meeting attendance rates by 25%',
+    'Optimize team productivity and collaboration',
+    'Eliminate double-booking incidents',
+    'Streamline calendar management across platforms'
+  ]
+
+  const pricing = [
     {
       name: 'Starter',
-      price: '$29',
+      price: '$79',
       period: '/month',
-      description: 'Perfect for individuals and small teams',
+      description: 'Perfect for small teams',
       features: [
-        'Up to 5 team members',
-        'Basic AI scheduling',
+        'Up to 10 team members',
+        'Basic AI optimization',
         'Calendar integration',
         'Email notifications',
-        'Mobile app access'
-      ],
-      popular: false
+        'Basic analytics',
+        'Email support'
+      ]
     },
     {
       name: 'Professional',
-      price: '$79',
+      price: '$149',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 25 team members',
+        'Up to 50 team members',
         'Advanced AI optimization',
+        'Multi-calendar support',
         'Custom meeting templates',
-        'Analytics dashboard',
+        'Advanced analytics',
         'Priority support',
         'API access'
       ],
@@ -60,136 +79,134 @@ export default function AISmartScheduler() {
     },
     {
       name: 'Enterprise',
-      price: '$199',
+      price: '$299',
       period: '/month',
       description: 'For large organizations',
       features: [
         'Unlimited team members',
-        'Custom AI training',
-        'White-label options',
-        'Advanced analytics',
+        'AI-powered insights',
+        'Custom integrations',
+        'Advanced security',
         'Dedicated support',
-        'Custom integrations'
-      ],
-      popular: false
-    }
-  ]
-
-  const testimonials = [
-    {
-      name: 'Sarah Chen',
-      company: 'TechStart Inc.',
-      content: 'This AI scheduler saved us 10+ hours per week. The intelligent optimization is incredible.',
-      rating: 5
-    },
-    {
-      name: 'Michael Rodriguez',
-      company: 'Global Consulting',
-      content: 'Finally, a scheduling tool that actually understands our complex team dynamics.',
-      rating: 5
-    },
-    {
-      name: 'Emily Watson',
-      company: 'RemoteFirst Co.',
-      content: 'The time zone handling is flawless. Our international team coordination has never been smoother.',
-      rating: 5
+        'Custom reporting',
+        'White-label options'
+      ]
     }
   ]
 
   return (
-    <Layout
-      title="AI Smart Scheduler - Intelligent Meeting Optimization | Zion Tech Group"
-      description="Revolutionary AI-powered scheduling tool that optimizes meetings, coordinates teams, and maximizes productivity. Start your free trial today."
-      keywords="AI scheduler, meeting optimization, team coordination, calendar management, productivity tools"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet>
+        <title>AI Smart Scheduler - Zion Tech Group | Intelligent Meeting Optimization</title>
+        <meta name="description" content="Revolutionize your scheduling with AI Smart Scheduler. Automatically optimize meetings, reduce conflicts, and boost team productivity. Save 5+ hours per week." />
+        <meta name="keywords" content="AI scheduler, meeting optimization, calendar management, team productivity, Zion Tech Group" />
+      </Helmet>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
-                <Sparkles className="w-4 h-4 mr-2" />
-                AI-Powered Scheduling
-              </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Smart Scheduler
-              </h1>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your scheduling chaos into organized efficiency with our intelligent AI-powered scheduler. 
-                Optimize meetings, coordinate teams, and maximize productivity automatically.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-                >
-                  Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <Link
-                  to="#demo"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                >
-                  Watch Demo
-                </Link>
-              </div>
-            </div>
+        <div className="text-center mb-16">
+          <div className="mb-6">
+            <span className="text-cyan-400 text-sm font-semibold tracking-wider uppercase bg-cyan-400/10 px-3 py-1 rounded-full">
+              AI Services
+            </span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <NeonText intensity="high">AI Smart Scheduler</NeonText>
+          </h1>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Intelligent scheduling that learns from your patterns and optimizes meetings automatically. 
+            Reduce scheduling friction by 80% and never miss important meetings again.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <NeonButton 
+              variant="primary" 
+              size="lg"
+              onClick={() => window.location.href = '/contact'}
+              className="group"
+            >
+              Get Started Today
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </NeonButton>
+            <NeonButton 
+              variant="secondary" 
+              size="lg"
+              onClick={() => window.location.href = '/contact'}
+            >
+              Schedule Demo
+            </NeonButton>
+          </div>
+          <div className="text-center">
+            <p className="text-cyan-400 font-semibold text-lg">Starting at $79/month</p>
+            <p className="text-gray-400 text-sm">Market Price: $120-200/month</p>
+          </div>
+        </div>
+
+        {/* Key Benefits */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              <NeonText intensity="medium">Key Benefits</NeonText>
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Transform your scheduling process with AI-powered intelligence
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <NeonCard key={index} className="flex items-center group hover:scale-105 transition-all duration-300">
+                <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0" />
+                <span className="text-gray-300 font-medium">{benefit}</span>
+              </NeonCard>
+            ))}
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Intelligent Scheduling Features
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Powered by advanced AI to make scheduling effortless and efficient
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    {feature.icon}
-                    <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-300">{feature.description}</p>
+        {/* Features */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              <NeonText intensity="medium">Powerful Features</NeonText>
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Everything you need to optimize your scheduling workflow
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <NeonCard key={index} className="text-center group hover:scale-105 transition-all duration-300">
+                <div className="mb-4 flex justify-center">
+                  {feature.icon}
                 </div>
-              ))}
-            </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </NeonCard>
+            ))}
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-purple-900/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Simple, Transparent Pricing
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Choose the plan that fits your team size and needs
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-cyan-400/40 scale-105 shadow-2xl shadow-cyan-500/20' 
-                    : 'border-cyan-500/20 hover:border-cyan-400/40'
-                }`}>
-                  {plan.popular && (
-                    <div className="inline-flex items-center px-3 py-1 bg-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-4">
-                      <Star className="w-4 h-4 mr-1" />
+        {/* Pricing */}
+        <section className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              <NeonText intensity="medium">Simple Pricing</NeonText>
+            </h2>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Choose the plan that fits your team size and needs
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+              <NeonCard key={index} className={`relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
-                    </div>
-                  )}
+                    </span>
+                  </div>
+                )}
+                <div className="text-center p-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-6">{plan.description}</p>
+                  <p className="text-gray-400 mb-4">{plan.description}</p>
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400">{plan.period}</span>
@@ -197,85 +214,74 @@ export default function AISmartScheduler() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
-                    }`}
+                  <NeonButton 
+                    variant={plan.popular ? "primary" : "secondary"}
+                    size="lg"
+                    onClick={() => window.location.href = '/contact'}
+                    className="w-full"
                   >
                     Get Started
-                  </Link>
+                  </NeonButton>
                 </div>
-              ))}
-            </div>
+              </NeonCard>
+            ))}
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Trusted by Teams Worldwide
-              </h2>
-              <p className="text-gray-300">
-                See what our customers say about AI Smart Scheduler
-              </p>
+        {/* Contact Section */}
+        <section className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            <NeonText intensity="high">Ready to Transform Your Scheduling?</NeonText>
+          </h2>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Contact us today to learn more about AI Smart Scheduler and how it can benefit your organization.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="text-center">
+              <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+              <p className="text-white font-semibold">Call Us</p>
+              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                +1 302 464 0950
+              </a>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.company}</div>
-                  </div>
-                </div>
-              ))}
+            <div className="text-center">
+              <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+              <p className="text-white font-semibold">Email Us</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div className="text-center">
+              <MapPin className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+              <p className="text-white font-semibold">Visit Us</p>
+              <p className="text-gray-300 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Ready to Transform Your Scheduling?
-              </h2>
-              <p className="text-lg text-gray-300 mb-8">
-                Join thousands of teams already using AI Smart Scheduler to optimize their productivity
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                >
-                  Start Your Free Trial
-                </Link>
-                <Link
-                  to="/about"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                >
-                  Learn More
-                </Link>
-              </div>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <NeonButton 
+              variant="accent" 
+              size="lg"
+              onClick={() => window.location.href = '/contact'}
+              className="bg-white text-purple-600 hover:bg-gray-100"
+            >
+              Get Free Consultation
+            </NeonButton>
+            <NeonButton 
+              variant="secondary" 
+              size="lg"
+              onClick={() => window.location.href = '/services'}
+              className="border-2 border-white text-white hover:bg-white/10"
+            >
+              View All Services
+            </NeonButton>
           </div>
         </section>
       </div>
-    </Layout>
+    </div>
   )
 }
