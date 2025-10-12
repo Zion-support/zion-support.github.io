@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-'use client'
-import React from 'react'
-import SEOHead from './components/SEOHead'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
-import { Link } from 'react-router-dom'
-=======
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
 
 export default function HomePage() {
   const stats = [
@@ -29,58 +20,12 @@ export default function HomePage() {
     },
     {
       icon: <Shield className="w-8 h-8 text-green-500" />,
-<<<<<<< HEAD
-      title: 'Cybersecurity',
-      description: 'Protect your digital assets with our advanced security solutions and compliance management.'
-    },
-    {
-      icon: <Cloud className="w-8 h-8 text-purple-500" />,
-      title: 'Cloud Migration',
-      description: 'Seamlessly migrate to the cloud with zero downtime and enhanced performance.'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-orange-500" />,
-      title: 'Data Analytics',
-      description: 'Unlock insights from your data with our advanced analytics and visualization tools.'
-    },
-    {
-      icon: <Code className="w-8 h-8 text-red-500" />,
-      title: 'DevOps & CI/CD',
-      description: 'Streamline your development process with automated deployment and continuous integration.'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-cyan-500" />,
-      title: 'Global Reach',
-      description: 'Scale your business worldwide with our international deployment and support services.'
-    }
-  ]
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. The results exceeded our expectations.',
-      rating: 5
-=======
       title: 'IT Services & Solutions',
       description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
       benefits: ['Cloud Migration - Starting at $2,500', 'Cybersecurity - $1,500/month', 'Mobile Development - Starting at $5,000', 'Data Analytics - $2,000/month'],
       link: '/it-services'
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
     },
     {
-      name: 'Michael Chen',
-      company: 'DataFlow Solutions',
-      content: 'Their AI solutions helped us automate 80% of our processes. Incredible efficiency gains.',
-      rating: 5
-    },
-    {
-<<<<<<< HEAD
-      name: 'Emily Rodriguez',
-      company: 'InnovateTech',
-      content: 'Professional, reliable, and innovative. Zion Tech Group is our go-to technology partner.',
-      rating: 5
-=======
       icon: <Cloud className="w-8 h-8 text-orange-500" />,
       title: 'Cloud Services',
       description: 'Professional cloud services including migration, infrastructure setup, security, and optimization.',
@@ -100,7 +45,27 @@ export default function HomePage() {
       description: 'Transform your business for the digital age with comprehensive digital transformation services.',
       benefits: ['Process Automation - $2,000/month', 'Digital Workforce - $1,500/month', 'Customer Experience - $1,800/month', 'Data Strategy - $2,500/month'],
       link: '/digital-transformation'
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      content: 'Zion Tech Group transformed our entire IT infrastructure. The results exceeded our expectations.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      company: 'DataFlow Solutions',
+      content: 'Their AI solutions helped us automate 80% of our processes. Incredible efficiency gains.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'InnovateTech',
+      content: 'Professional, reliable, and innovative. Zion Tech Group is our go-to technology partner.',
+      rating: 5
     }
   ];
 
