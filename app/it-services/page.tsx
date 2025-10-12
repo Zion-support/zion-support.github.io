@@ -391,42 +391,6 @@ const ITServicesPage: React.FC = () => {
   const filteredServices = selectedCategory === 'All' 
     ? itServices 
     : itServices.filter(service => service.category === selectedCategory);
-<<<<<<< HEAD
-=======
-      description: 'Modern web applications built with cutting-edge technologies',
-      features: ['React/Next.js', 'Node.js backend', 'Database design', 'API development'],
-      price: 'Starting at $3,000/project'
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'iOS and Android applications for all business needs',
-      features: ['Native development', 'Cross-platform', 'App store deployment', 'Maintenance'],
-      price: 'Starting at $5,000/app'
-    },
-    {
-      icon: Database,
-      title: 'Database Management',
-      description: 'Data processing, storage, and analytics solutions',
-      features: ['Database design', 'Performance optimization', 'Data migration', 'Backup solutions'],
-      price: 'Starting at $1,200/month'
-    },
-    {
-      icon: Settings,
-      title: 'DevOps & CI/CD',
-      description: 'Automated deployment and continuous integration pipelines',
-      features: ['CI/CD setup', 'Container orchestration', 'Monitoring', 'Automated testing'],
-      price: 'Starting at $2,000/month'
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
-    { number: '50+', label: 'Happy Clients', icon: Users },
-    { number: '99%', label: 'Client Satisfaction', icon: Star },
-    { number: '24/7', label: 'Support Available', icon: Award },
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
 
   return (
     <>
@@ -734,7 +698,3 @@ const ITServicesPage: React.FC = () => {
 };
 
 export default ItServicesPage;
-<<<<<<< HEAD
-=======
-export default ITServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
