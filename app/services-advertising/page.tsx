@@ -1,64 +1,201 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-  ]
+'use client';
+
+import React from 'react';
+import { 
+  CheckCircle, 
+  ArrowRight, 
+  Target, 
+  BarChart3, 
+  Users, 
+  DollarSign,
+  Clock,
+  Zap,
+  Globe,
+  Brain,
+  Shield,
+  Settings
+} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
+const ServicesAdvertisingPage: React.FC = () => {
+  const services = [
+    {
+      icon: <Target className="w-8 h-8 text-blue-500" />,
+      title: 'Digital Marketing',
+      description: 'Comprehensive digital marketing strategies to grow your business',
+      features: ['SEO optimization', 'Social media marketing', 'Content marketing', 'PPC advertising']
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-green-500" />,
+      title: 'Analytics & Reporting',
+      description: 'Data-driven insights to optimize your marketing campaigns',
+      features: ['Campaign tracking', 'Performance analytics', 'ROI measurement', 'Custom reports']
+    },
+    {
+      icon: <Users className="w-8 h-8 text-purple-500" />,
+      title: 'Brand Development',
+      description: 'Build a strong brand identity that resonates with your audience',
+      features: ['Brand strategy', 'Visual identity', 'Brand guidelines', 'Market positioning']
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-orange-500" />,
+      title: 'Online Presence',
+      description: 'Establish and maintain a strong online presence across platforms',
+      features: ['Website optimization', 'Social media management', 'Online reputation', 'Local SEO']
+    }
+  ];
+
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
+    {
+      icon: <DollarSign className="w-6 h-6 text-green-500" />,
+      title: 'Increased Revenue',
+      description: 'Drive more sales and revenue with targeted advertising campaigns'
+    },
+    {
+      icon: <Users className="w-6 h-6 text-blue-500" />,
+      title: 'Brand Awareness',
+      description: 'Build brand recognition and reach new customers effectively'
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6 text-purple-500" />,
+      title: 'Measurable Results',
+      description: 'Track and measure the success of your advertising campaigns'
+    },
+    {
+      icon: <Target className="w-6 h-6 text-orange-500" />,
+      title: 'Targeted Reach',
+      description: 'Reach the right audience with precision-targeted advertising'
+    }
+  ];
+
   return (
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Services Advertising - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive advertising and marketing services to promote your business. Digital marketing, brand development, and online presence solutions." />
+        <meta name="keywords" content="advertising services, digital marketing, brand development, online presence, marketing strategy" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Services
+            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent"> Advertising</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Promote your services with comprehensive advertising and marketing solutions. 
+            From digital marketing to brand development, we help you reach your target audience effectively.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link 
+              to="/pricing" 
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              View Pricing
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Advertising Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive advertising and marketing solutions to promote your services and grow your business.
             </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
-}
-  ];const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];return (</h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>))}
-          </div>
-        </div>
-      </section>
+
       {/* Benefits Section */}
-              </div>))}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Advertising Services?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our advertising services deliver measurable results and help you reach your business goals.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4 mx-auto">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-          </div>
-        </div>
-      </section>
+
       {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Promote Your Services?
+              </h2>
+              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                Let's discuss how our advertising services can help you reach more customers and grow your business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact" 
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Get Marketing Plan
+                </Link>
+                <Link 
+                  to="/contact" 
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                >
+                  Contact Marketing Team
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-    </div>)};export default PagePage
+    </div>
+  );
+};
+
+export default ServicesAdvertisingPage;

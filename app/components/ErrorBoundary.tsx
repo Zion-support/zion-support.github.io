@@ -1,11 +1,7 @@
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
-import { AlertTriangle, RefreshCw } from 'lucide-react';
-=======
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
 
 interface Props {
   children: ReactNode;
@@ -15,6 +11,7 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
+  errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -29,33 +26,6 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-<<<<<<< HEAD
-    
-    // Log error to monitoring service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message,
-        fatal: false
-      });
-    }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-          <div className="text-center">
-            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
-            <h1 className="text-4xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center mx-auto"
-            >
-              <RefreshCw className="w-4 h-4 mr-2" />
-              Try Again
-            </button>
-=======
     this.setState({ error, errorInfo });
   }
 
@@ -139,7 +109,6 @@ class ErrorBoundary extends Component<Props, State> {
                 </button>
               </div>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
           </div>
         </div>
       );
