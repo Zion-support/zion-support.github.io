@@ -36,6 +36,10 @@ import AIChatbotBuilderPage from './app/ai-chatbot-builder/page'
 import AIExpenseTrackerPage from './app/ai-expense-tracker/page'
 import AIPasswordManagerPage from './app/ai-password-manager/page'
 import AITaskManagerPage from './app/ai-task-manager/page'
+import AIVoiceAssistantPage from './app/ai-voice-assistant/page'
+import AIInvoiceGeneratorPage from './app/ai-invoice-generator/page'
+import AIHealthTrackerPage from './app/ai-health-tracker/page'
+import AISmartCalendarPage from './app/ai-smart-calendar/page'
 import BusinessIntelligencePage from './app/business-intelligence/page'
 import ITConsultingPage from './app/it-consulting/page'
 import ITServicesPage from './app/it-services/page'
@@ -100,6 +104,10 @@ const App: React.FC = () => {
                   <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
                   <Route path="/ai-password-manager" element={<AIPasswordManagerPage />} />
                   <Route path="/ai-task-manager" element={<AITaskManagerPage />} />
+                  <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                  <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
+                  <Route path="/ai-health-tracker" element={<AIHealthTrackerPage />} />
+                  <Route path="/ai-smart-calendar" element={<AISmartCalendarPage />} />
                   <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
                   
                   {/* IT Services */}
