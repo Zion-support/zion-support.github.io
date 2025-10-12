@@ -1,10 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
-import { Share2, ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async'
 import { Calendar, Share2, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Clock, Globe, Brain } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import { Link } from 'react-router-dom'
 
 const AISocialSchedulerPage: React.FC = () => {

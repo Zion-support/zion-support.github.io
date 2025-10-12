@@ -1,10 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async'
 import { Network, Zap, Shield, Globe, BarChart3, CheckCircle, ArrowRight, Cpu, Smartphone } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import { Link } from 'react-router-dom'
 
 const FiveGSolutionsPage: React.FC = () => {

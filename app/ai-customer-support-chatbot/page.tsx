@@ -4,11 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
 const AiCustomerSupportChatbotPage: React.FC = () => {
-=======
-const Page: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
   return (
     <>
       <Helmet>
@@ -83,8 +79,4 @@ const Page: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AiCustomerSupportChatbotPage;
-=======
-export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d

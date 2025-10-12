@@ -1,13 +1,10 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, ShoppingCart } from 'lucide-react';
-=======
 import { ArrowRight, CheckCircle, Users, Shield, Cloud, Code, BarChart, CheckSquare, DollarSign, Settings, Workflow, Link as LinkIcon, Wifi, TrendingUp, ShoppingCart, Cpu, Database, Smartphone } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
-const ItServicesPage: React.FC = () => {
+const ITServicesPage: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -45,9 +42,8 @@ const ItServicesPage: React.FC = () => {
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       category: 'Security'
-<<<<<<< HEAD
-
-const ITServicesPage: React.FC = () => {
+    }
+  ];
   const services = [
     {
       icon: Cloud,
@@ -66,8 +62,6 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $1,500',
       color: 'from-red-500 to-orange-500',
       link: '/cybersecurity-solutions'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
     },
     {
       icon: Code,
@@ -397,13 +391,8 @@ const ITServicesPage: React.FC = () => {
   const filteredServices = selectedCategory === 'All' 
     ? itServices 
     : itServices.filter(service => service.category === selectedCategory);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      description: 'Modern web applications built with cutting-edge technologies',
-      features: ['React/Next.js', 'Node.js backend', 'Database design', 'API development'],
-      price: 'Starting at $3,000/project'
-    },
+
+  const additionalServices = [
     {
       icon: Smartphone,
       title: 'Mobile Development',
@@ -433,9 +422,6 @@ const ITServicesPage: React.FC = () => {
     { number: '99%', label: 'Client Satisfaction', icon: Star },
     { number: '24/7', label: 'Support Available', icon: Award },
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
   return (
     <>
@@ -448,7 +434,7 @@ const ITServicesPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative overflow-hidden pt-20 pb-16">
-          <div className="absolute inset-0 opacity-20"></div>
+          <div className="absolute inset-0 opacity-20" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className={`text-4xl md:text-6xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -577,10 +563,6 @@ const ITServicesPage: React.FC = () => {
             <div className="mt-8 text-gray-400">
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-          </div>
-        </section>
-<<<<<<< HEAD
             </div>
           </div>
         </section>
@@ -738,18 +720,9 @@ const ITServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
       </div>
     </>
   );
 };
 
-export default ItServicesPage;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default ITServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d

@@ -1,12 +1,8 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Server, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Star, Users, TrendingUp } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

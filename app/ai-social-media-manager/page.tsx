@@ -3,10 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 const Page: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
   return (
     <>
       <Helmet>
@@ -77,12 +74,8 @@ const Page: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-}
-=======
     </>
   );
 };
 
 export default Page;
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d

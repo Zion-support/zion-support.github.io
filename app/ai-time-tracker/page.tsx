@@ -1,10 +1,6 @@
 import React from 'react'
-<<<<<<< HEAD
-import { ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async'
 import { Clock, Timer, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Target, Brain, Shield } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import { Link } from 'react-router-dom'
 
 const AITimeTrackerPage: React.FC = () => {

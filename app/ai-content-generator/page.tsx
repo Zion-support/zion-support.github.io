@@ -1,11 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { ArrowRight, Palette, Brain } from 'lucide-react'
-=======
 import { ArrowRight, Brain, FileText, CheckCircle, Star, Clock, Users, BarChart3, Sparkles, Target, Globe, Shield, MessageCircle, Mail, Phone, MapPin, Play, Copy, Share, Palette, Type } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
 export default function AIContentGeneratorPage() {
 

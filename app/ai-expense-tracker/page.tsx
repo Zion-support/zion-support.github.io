@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Receipt, ArrowRight, Bot, RotateCcw, RotateCw } from 'lucide-react'
 import { Link } from 'react-router-dom'
   )
 }
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, Brain, TrendingUp } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 
 const Page: React.FC = () => {
   const features = [

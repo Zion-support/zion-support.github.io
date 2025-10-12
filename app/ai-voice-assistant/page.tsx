@@ -349,14 +349,8 @@ export default function AIVoiceAssistant() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </>
   );
 };
 
 export default AIVoiceAssistantPage;
-=======
-    </Layout>
-  )
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
