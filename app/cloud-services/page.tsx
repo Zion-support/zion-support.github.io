@@ -1,7 +1,8 @@
 import React from 'react';
 import { CheckCircle, ArrowRight, Cloud, Server, Shield, Database, Globe, Zap, Users, Clock, DollarSign, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 const CloudServicesPage: React.FC = () => {
   const cloudServices = [
@@ -83,6 +84,8 @@ const CloudServicesPage: React.FC = () => {
         <meta name="keywords" content="cloud services, cloud migration, AWS, Azure, GCP, cloud infrastructure, cloud security, cloud optimization" />
       </Helmet>
       
+      <Navigation />
+      
       {/* Hero Section */}
       <section className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
@@ -94,19 +97,19 @@ const CloudServicesPage: React.FC = () => {
               Transform your business with our comprehensive cloud services. From migration to optimization, we've got you covered.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
+              <a 
+                href="/contact" 
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Get Free Cloud Assessment
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
-                to="/about" 
+              </a>
+              <a 
+                href="/about" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
                 Learn More
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -189,13 +192,13 @@ const CloudServicesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  to="/contact"
+                <a 
+                  href="/contact"
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Get Quote
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
+                </a>
               </div>
             ))}
           </div>
@@ -257,23 +260,25 @@ const CloudServicesPage: React.FC = () => {
                 Get a free cloud assessment and discover how we can optimize your infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact" 
+                <a 
+                  href="/contact" 
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Free Assessment
-                </Link>
-                <Link 
-                  to="/about" 
+                </a>
+                <a 
+                  href="/about" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
                   Learn About Us
-                </Link>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 };
