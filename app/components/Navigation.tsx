@@ -8,6 +8,7 @@ const Navigation: React.FC = () => {
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi } from 'lucide-react'
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Smartphone, Brain, Cpu, Wifi } from 'lucide-react'
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Server, Wifi } from 'lucide-react'
+import { Menu, X, Brain, Cloud, Code, Wifi, ChevronDown } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -82,6 +83,10 @@ const Navigation = () => {
               <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent group-hover:from-purple-300 group-hover:to-blue-300 transition-all duration-300">
                 Zion Tech Group
               </span>
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
+  }
+
   const services = [
     {
       title: 'AI Services',
@@ -342,6 +347,35 @@ const Navigation = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2"
+          {/* Desktop Navigation */}
+          <div className="hidden lg:block">
+            <div className="ml-10 flex items-baseline space-x-8">
+              {services.map((service) => (
+                <div key={service.title} className="relative group">
+                  <button
+                    onClick={() => toggleDropdown(service.title)}
+                    className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center transition-colors"
+                  >
+                    {service.icon}
+                    <span className="ml-2">{service.title}</span>
+                    <ChevronDown className="w-4 h-4 ml-1" />
+                  </button>
+                  
+                  {activeDropdown === service.title && (
+                    <div className="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-lg py-2 z-50">
+                      <div className="px-4 py-2 border-b border-gray-200">
+                        <h3 className="text-sm font-semibold text-gray-900">{service.title}</h3>
+                        <p className="text-xs text-gray-500">{service.description}</p>
+                      </div>
+                      <div className="py-2">
+                        {service.submenu.map((item) => (
+                          <Link
+                            key={item.title}
+                            to={item.href}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            {item.title}
                           </Link>
                         ))}
                       </div>

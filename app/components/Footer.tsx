@@ -167,6 +167,8 @@ export default function Footer() {
             <ul className="space-y-2">
             <h3 className="text-lg font-semibold mb-4 text-white">AI Services</h3>
             <ul className="space-y-2">
+            <h3 className="text-lg font-semibold mb-4">AI Services</h3>
+            <ul className="space-y-2">
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link 
@@ -430,4 +432,5 @@ export default function Footer() {
 export default Footer
 }
 };
+}
 }

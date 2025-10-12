@@ -326,6 +326,32 @@ export default function ContactPage() {
 }
     setTimeout(() => {
       setStatus({ type: 'success', message: 'Thank you! Your message has been sent successfully.' })
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Here you would typically send the form data to your backend
+    console.log('Form submitted:', formData);
+    setIsSubmitted(true);
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
       setFormData({
         name: '',
         email: '',
@@ -692,4 +718,5 @@ export default function ContactPage() {
 }
 
 export default ContactPage
+}
 }
