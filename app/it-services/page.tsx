@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -75,12 +74,10 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $1,500',
       color: 'from-red-500 to-orange-500',
       link: '/cybersecurity-solutions'
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
     },
     {
       icon: Code,
       title: 'Web Development',
-<<<<<<< HEAD
       description: 'Modern, responsive web applications built to scale',
       price: 'Starting at $8,000',
       features: [
@@ -251,7 +248,6 @@ const ITServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>IT Services - Zion Tech Group | Comprehensive IT Solutions</title>
         <meta name="description" content="Professional IT services including cloud infrastructure, cybersecurity, web development, mobile apps, and DevOps. Transform your business with our expert IT solutions." />
         <meta name="keywords" content="IT services, cloud computing, cybersecurity, web development, mobile development, DevOps, database management, IT support" />

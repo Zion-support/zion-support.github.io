@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 'use client';
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -186,20 +183,15 @@ const HomePage: React.FC = () => {
                 Leading technology company providing cutting-edge artificial intelligence, cloud infrastructure, 
                 cybersecurity, and custom software development services to businesses worldwide.
               </p>
-<<<<<<< HEAD
               <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <Link
-=======
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link 
                   to="/ai-services"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
                 >
                   Explore Our Solutions
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link 
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
+                <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
@@ -226,23 +218,8 @@ const HomePage: React.FC = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4">
                     <stat.icon className="h-8 w-8 text-white" />
                   </div>
-<<<<<<< HEAD
                   <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-400">{stat.label}</div>
-=======
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
-                  <Link 
-                    to="/ai-services"
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-block"
-                  >
-                    Learn More →
-                  </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
                 </div>
               ))}
             </div>
