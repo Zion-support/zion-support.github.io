@@ -7,6 +7,7 @@ import Footer from './app/components/Footer'
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import ErrorBoundary from './app/components/ErrorBoundary'
 import OptimizedLoading from './app/components/OptimizedLoading'
@@ -76,6 +77,8 @@ function App() {
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-7aba
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
 import ErrorBoundary from './app/components/ErrorBoundary'
 import LoadingSpinner from './app/components/LoadingSpinner'
 import SEOHead from './app/components/SEOHead'
@@ -90,10 +93,16 @@ const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
 const MicroSAASServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
 const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
 const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'))
+<<<<<<< HEAD
 const CareersPage = React.lazy(() => import('./app/careers/page'))
 const BlogPage = React.lazy(() => import('./app/blog/page'))
 const PrivacyPolicyPage = React.lazy(() => import('./app/privacy-policy/page'))
 const TermsOfServicePage = React.lazy(() => import('./app/terms-of-service/page'))
+=======
+const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
+const AnalyticsPage = React.lazy(() => import('./app/analytics/page'))
+const AutomationPage = React.lazy(() => import('./app/automation/page'))
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
 
 // Loading component for Suspense
 const PageLoader = () => (
@@ -176,6 +185,9 @@ function App() {
                 <Route path="/cloud-services" element={<CloudServicesPage />} />
                 <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                 <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                <Route path="/analytics" element={<AnalyticsPage />} />
+                <Route path="/automation" element={<AutomationPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/careers" element={<CareersPage />} />
                 <Route path="/blog" element={<BlogPage />} />
@@ -203,7 +215,10 @@ function App() {
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-7aba
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
   )
 }
 

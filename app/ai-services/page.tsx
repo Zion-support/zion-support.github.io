@@ -6,6 +6,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, Eye, MessageSquare, BarChart3 } from 'lucide-react';
 =======
 import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star } from 'lucide-react';
@@ -18,6 +19,9 @@ import { CheckCircle, ArrowRight, Brain, Database, Shield, Code, Smartphone, Glo
 >>>>>>> cursor/analyze-improve-and-deploy-application-b46d
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-51d9
+=======
+import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, Eye, MessageSquare, BarChart3 } from 'lucide-react';
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, ArrowRight, Star, Brain, Zap, Shield, Globe, BarChart3, MessageSquare, Users, Code, Eye, FileText, Target, Clock, DollarSign, TrendingUp, Database, Cloud, Smartphone } from 'lucide-react';
@@ -472,8 +476,11 @@ export default function AIServicesPage() {
       service: 'AI Content Generation'
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     }
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
   ];
 
   const stats = [
@@ -481,6 +488,7 @@ export default function AIServicesPage() {
     { number: '99.9%', label: 'Accuracy' },
     { number: '24/7', label: 'Support' },
     { number: '50+', label: 'Languages' }
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-da90
 =======
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
@@ -504,6 +512,8 @@ export default function AIServicesPage() {
     }
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-51d9
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
   ];
 
   const process = [
@@ -581,6 +591,7 @@ export default function AIServicesPage() {
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -774,6 +785,38 @@ export default function AIServicesPage() {
                 <p className="text-gray-300">{benefit.description}</p>
               </div>
             ))}
+=======
+        <meta name="description" content="Discover our comprehensive AI services including content generation, chatbots, analytics, and more. Transform your business with cutting-edge artificial intelligence solutions." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, chatbot, analytics, automation" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI Services That
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Transform</span>
+            <br />
+            Your Business
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Leverage the power of artificial intelligence to automate processes, gain insights, and drive growth. 
+            Our comprehensive AI solutions are designed to meet your specific business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+            <Link
+              to="/ai-services#services"
+              className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Explore Services
+            </Link>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
           </div>
 >>>>>>> cursor/analyze-improve-and-deploy-application-b46d
         </div>
@@ -783,6 +826,9 @@ export default function AIServicesPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1171,6 +1217,7 @@ export default function AIServicesPage() {
               >
                 View All Services
               </Link>
+<<<<<<< HEAD
 =======
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -1407,6 +1454,8 @@ export default function AIServicesPage() {
                   Learn More
                 </Link>
               </div>
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
             </div>
           </div>
         </section>
@@ -1428,6 +1477,7 @@ export default function AIServicesPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AIServicesPage;
 =======
 export default AIServicesPage;
@@ -1444,3 +1494,6 @@ export default AIServicesPage;
 =======
 export default AIServicesPage;
 >>>>>>> cursor/website-audit-and-update-with-deployment-7aba
+=======
+export default AIServicesPage;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-7149
