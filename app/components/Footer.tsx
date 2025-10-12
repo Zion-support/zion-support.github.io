@@ -21,6 +21,7 @@ export default function Footer() {
     { name: 'System Integration', path: '/system-integration' }
   ]
 
+<<<<<<< HEAD
   const companyLinks = [
     { name: 'About Us', path: '/about' },
     { name: 'Our Team', path: '/team' },
@@ -37,12 +38,27 @@ export default function Footer() {
     { name: 'Status Page', path: '/status' },
     { name: 'Contact Support', path: '/contact' },
     { name: 'Community', path: '/community' }
+=======
+  const legalPages = [
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' }
+  ]
+
+  const quickLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'AI Services', path: '/ai-services' },
+    { name: 'IT Services', path: '/it-services' },
+    { name: 'Micro SAAS', path: '/micro-saas-services' },
+    { name: '5G Solutions', path: '/5g-implementation' },
+    { name: 'Contact', path: '/contact' }
+>>>>>>> cursor/website-audit-and-update-with-deployment-c78e
   ]
 
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
@@ -126,6 +142,23 @@ export default function Footer() {
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal Pages */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <ul className="space-y-2">
+              {legalPages.map((page) => (
+                <li key={page.name}>
+                  <Link
+                    to={page.path}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {page.name}
                   </Link>
                 </li>
               ))}
