@@ -1,5 +1,9 @@
 'use client';
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect } from 'react';
+=======
+import React, { createContext, useContext, useState, useEffect } from 'react';
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
 
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;

@@ -1,7 +1,11 @@
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, Cpu, ArrowRight, BarChart, Shield, Globe, Database, Smartphone, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, TrendingUp, Calendar, CheckCircle, ShoppingCart, Star, Award, Sparkles } from 'lucide-react';
+=======
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, Cpu, ArrowRight, BarChart, Shield, Globe, Database, Smartphone, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, TrendingUp, Calendar, CheckCircle, ShoppingCart, Star, Award, Sparkles, Github, Linkedin, Twitter } from 'lucide-react';
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -28,14 +32,23 @@ const Footer: React.FC = () => {
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
     { name: 'Data Analytics', url: '/data-analytics', description: 'Business intelligence' },
     { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android' },
+<<<<<<< HEAD
+=======
+    { name: 'Web Development', url: '/web-development', description: 'Modern web apps' },
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
     { name: 'API Development', url: '/api-development', description: 'API solutions' },
     { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
     { name: 'IT Support', url: '/it-support', description: '24/7 technical support' },
+<<<<<<< HEAD
     { name: 'Data Analytics & BI', url: '/data-analytics-bi', description: 'Business intelligence' },
     { name: 'Custom Software', url: '/custom-software', description: 'Tailored solutions' },
     { name: 'Blockchain Development', url: '/blockchain-development', description: 'Blockchain solutions' },
     { name: 'IoT Development', url: '/iot-development', description: 'IoT solutions' },
     { name: 'E-commerce Development', url: '/e-commerce-development', description: 'E-commerce platforms' }
+=======
+    { name: 'Database Management', url: '/database-management', description: 'Database optimization' },
+    { name: 'Custom Software', url: '/custom-software', description: 'Tailored solutions' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
   ];
 
   const microSaasServices = [
@@ -45,8 +58,6 @@ const Footer: React.FC = () => {
     { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', description: 'Cloud backup & recovery' },
     { name: 'Zion Content Studio', url: '/zion-content-studio', description: 'Content creation platform' },
     { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', description: 'Smart CRM solution' },
-    { name: 'Zion Data Sync', url: '/zion-data-sync', description: 'Data synchronization' },
-    { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', description: 'Lead generation tool' },
     { name: 'Zion Project Master', url: '/zion-project-master', description: 'Project management' },
     { name: 'Zion Email Automation', url: '/zion-email-automation', description: 'Email marketing' },
     { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', description: 'Inventory management' },
@@ -58,9 +69,13 @@ const Footer: React.FC = () => {
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
     { name: 'Case Studies', url: '/case-studies' },
+<<<<<<< HEAD
     { name: 'Partners', url: '/partners' },
     { name: 'Press', url: '/press' },
     { name: 'Status', url: '/status' }
+=======
+    { name: 'Partners', url: '/partners' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
   ];
 
   const resourceLinks = [
@@ -78,12 +93,17 @@ const Footer: React.FC = () => {
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' },
-    { name: 'Compliance', url: '/compliance' },
-    { name: 'GDPR', url: '/gdpr' }
+    { name: 'Compliance', url: '/compliance' }
+  ];
+
+  const socialLinks = [
+    { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: Github },
+    { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: Twitter }
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -276,6 +296,22 @@ const Footer: React.FC = () => {
               <div className="flex items-center text-gray-400 text-sm">
                 <Shield className="h-4 w-4 mr-2" />
                 Enterprise Security
+<<<<<<< HEAD
+=======
+              </div>
+              <div className="flex items-center space-x-4">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-purple-500 transition-colors duration-200 group"
+                  >
+                    <social.icon className="w-4 h-4 text-gray-400 group-hover:text-white" />
+                  </a>
+                ))}
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
               </div>
             </div>
           </div>
