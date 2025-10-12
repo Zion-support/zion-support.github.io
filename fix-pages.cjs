@@ -1,10 +1,29 @@
-import React from 'react';
+const fs = require('fs');
+const path = require('path');
+
+// Function to fix a page file
+function fixPageFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if the file has the common pattern of missing function declaration
+    if (content.includes('  ];') && content.includes('    <div className="min-h-screen')) {
+      console.log(`Fixing ${filePath}`);
+      
+      // Extract the page name from the file path
+      const pageName = path.basename(path.dirname(filePath));
+      const componentName = pageName.split('-').map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join('') + 'Page';
+      
+      // Create the fixed content
+      const fixedContent = `import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-export default function ApiDevelopmentPage() {
+export default function ${componentName}() {
   const features = [
     {
       title: 'Professional Services',
@@ -26,9 +45,9 @@ export default function ApiDevelopmentPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Api Development - Zion Tech Group</title>
-        <meta name="description" content="Professional api development services and solutions." />
-        <meta name="keywords" content="api, development, services, solutions, technology" />
+        <title>${pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Zion Tech Group</title>
+        <meta name="description" content="Professional ${pageName.replace(/-/g, ' ')} services and solutions." />
+        <meta name="keywords" content="${pageName.replace(/-/g, ', ')}, services, solutions, technology" />
       </Helmet>
       
       <Navigation />
@@ -37,10 +56,10 @@ export default function ApiDevelopmentPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Api Development
+              ${pageName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional api development services to help your business succeed and grow.
+              Professional ${pageName.replace(/-/g, ' ')} services to help your business succeed and grow.
             </p>
           </div>
           
@@ -65,7 +84,7 @@ export default function ApiDevelopmentPage() {
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our api development services.
+                Contact us today to learn more about our ${pageName.replace(/-/g, ' ')} services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
@@ -83,4 +102,52 @@ export default function ApiDevelopmentPage() {
       <Footer />
     </div>
   );
+}`;
+      
+      fs.writeFileSync(filePath, fixedContent);
+      return true;
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+  return false;
 }
+
+// Find all page.tsx files in the app directory
+function findPageFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        traverse(fullPath);
+      } else if (item === 'page.tsx') {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+const appDir = '/workspace/app';
+const pageFiles = findPageFiles(appDir);
+
+console.log(`Found ${pageFiles.length} page files`);
+
+let fixedCount = 0;
+for (const file of pageFiles) {
+  if (fixPageFile(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files`);
