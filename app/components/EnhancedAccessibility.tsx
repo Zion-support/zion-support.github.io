@@ -1,196 +1,112 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { useAnalytics } from './EnhancedAnalytics';
 
 interface AccessibilitySettings {
   highContrast: boolean;
+  largeText: boolean;
   reducedMotion: boolean;
-  fontSize: 'small' | 'medium' | 'large';
   screenReader: boolean;
-  keyboardNavigation: boolean;
 }
 
-interface EnhancedAccessibilityProps {
-  children: React.ReactNode;
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-}
-
-const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
-  children,
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = true,
-  enableFocusManagement = true
-}) => {
+const EnhancedAccessibility: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
+    largeText: false,
     reducedMotion: false,
-    fontSize: 'medium',
-    screenReader: false,
-    keyboardNavigation: true
+    screenReader: false
   });
 
-  const analytics = useAnalytics();
-
   useEffect(() => {
-    // Detect user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    
-    setSettings({
-      highContrast: prefersHighContrast,
-      reducedMotion: prefersReducedMotion,
-      fontSize: 'medium',
-      screenReader: false,
-      keyboardNavigation: true
-    });
+    // Load saved accessibility settings
+    const savedSettings = localStorage.getItem('accessibility-settings');
+    if (savedSettings) {
+      setSettings(JSON.parse(savedSettings));
+    }
 
-    // Apply initial accessibility settings
-    applyAccessibilitySettings({
-      highContrast: prefersHighContrast,
-      reducedMotion: prefersReducedMotion,
-      fontSize: 'medium',
-      screenReader: false,
-      keyboardNavigation: true
-    });
-
-    // Track accessibility usage
-    analytics?.track('accessibility_initialized', {
-      prefersReducedMotion,
-      prefersHighContrast
-    });
-  }, [analytics]);
+    // Apply accessibility settings
+    applyAccessibilitySettings(settings);
+  }, [settings]);
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
-    // High contrast mode
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
-    // Reduced motion
+    if (newSettings.largeText) {
+      root.classList.add('large-text');
+    } else {
+      root.classList.remove('large-text');
+    }
+
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
 
-    // Font size
-    root.classList.remove('font-small', 'font-medium', 'font-large');
-    root.classList.add(`font-${newSettings.fontSize}`);
-
-    // Screen reader optimizations
     if (newSettings.screenReader) {
-      root.classList.add('screen-reader-optimized');
+      root.classList.add('screen-reader');
     } else {
-      root.classList.remove('screen-reader-optimized');
+      root.classList.remove('screen-reader');
     }
   };
 
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
-    const updatedSettings = { ...settings, ...newSettings };
-    setSettings(updatedSettings);
-    applyAccessibilitySettings(updatedSettings);
-    
-    analytics?.track('accessibility_settings_changed', newSettings);
+  const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
+    const newSettings = { ...settings, [key]: value };
+    setSettings(newSettings);
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
 
-  // Keyboard navigation support
-  useEffect(() => {
-    if (!enableKeyboardNavigation) return;
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-        const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-        if (skipLink) {
-          skipLink.focus();
-          event.preventDefault();
-        }
-      }
-
-      // Escape key to close modals/dropdowns
-      if (event.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [enableKeyboardNavigation]);
-
-  // Focus management
-  useEffect(() => {
-    if (!enableFocusManagement) return;
-
-    const handleFocusIn = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      
-      // Ensure focus is visible
-      if (target && target.classList) {
-        target.classList.add('focus-visible');
-      }
-    };
-
-    const handleFocusOut = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
-      
-      // Remove focus styling
-      if (target && target.classList) {
-        target.classList.remove('focus-visible');
-      }
-    };
-
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
-    
-    return () => {
-      document.removeEventListener('focusin', handleFocusIn);
-      document.removeEventListener('focusout', handleFocusOut);
-    };
-  }, [enableFocusManagement]);
-
-  // Screen reader announcements
-  const announceToScreenReader = (message: string) => {
-    if (!enableScreenReaderSupport) return;
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    
-    document.body.appendChild(announcement);
-    
-    setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  };
-
-  // Expose accessibility functions to window for global access
-  useEffect(() => {
-    (window as any).accessibility = {
-      updateSettings,
-      announceToScreenReader,
-      settings
-    };
-  }, [settings]);
+  // Only show in development or when accessibility is enabled
+  if (process.env.NODE_ENV !== 'development' && !settings.screenReader) {
+    return null;
+  }
 
   return (
-    <div 
-      className={`accessibility-wrapper ${settings.highContrast ? 'high-contrast' : ''} ${settings.reducedMotion ? 'reduced-motion' : ''}`}
-      data-font-size={settings.fontSize}
-      data-screen-reader={settings.screenReader}
-    >
-      {children}
+    <div className="fixed bottom-4 left-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-3 text-xs text-white z-50">
+      <div className="space-y-2">
+        <div className="font-semibold text-cyan-400 mb-2">Accessibility</div>
+        <label className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={settings.highContrast}
+            onChange={(e) => updateSetting('highContrast', e.target.checked)}
+            className="rounded"
+          />
+          <span>High Contrast</span>
+        </label>
+        <label className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={settings.largeText}
+            onChange={(e) => updateSetting('largeText', e.target.checked)}
+            className="rounded"
+          />
+          <span>Large Text</span>
+        </label>
+        <label className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={settings.reducedMotion}
+            onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
+            className="rounded"
+          />
+          <span>Reduced Motion</span>
+        </label>
+        <label className="flex items-center space-x-2">
+          <input
+            type="checkbox"
+            checked={settings.screenReader}
+            onChange={(e) => updateSetting('screenReader', e.target.checked)}
+            className="rounded"
+          />
+          <span>Screen Reader</span>
+        </label>
+      </div>
     </div>
   );
 };
