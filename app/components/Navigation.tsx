@@ -54,15 +54,15 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="bg-white shadow-lg fixed w-full top-0 z-50">
+    <nav className="bg-white/90 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 border-b border-white/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
+            <Link to="/" className="flex items-center group">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2 group-hover:scale-110 transition-transform duration-300 animate-glow">
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+              <span className="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">Zion Tech Group</span>
             </Link>
           </div>
 
@@ -70,28 +70,30 @@ export default function Navigation() {
             <div className="ml-10 flex items-baseline space-x-8">
               <Link
                 to="/"
-                className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 relative group"
               >
                 Home
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
               <Link
                 to="/about"
-                className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 relative group"
               >
                 About
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
               
               <div className="relative">
                 <button
                   onClick={toggleServices}
-                  className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors flex items-center"
+                  className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 flex items-center group"
                 >
                   Services
                   <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 
                 {isServicesOpen && (
-                  <div className="absolute left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                  <div className="absolute left-0 mt-2 w-80 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl border border-white/20 py-2 z-50 animate-fade-in">
                     <div className="grid grid-cols-2 gap-2 p-4">
                       {services.map((service) => {
                         const IconComponent = service.icon
@@ -99,12 +101,12 @@ export default function Navigation() {
                           <Link
                             key={service.href}
                             to={service.href}
-                            className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                            className="flex items-center p-3 rounded-lg hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50 transition-all duration-300 group hover:scale-105"
                             onClick={() => setIsServicesOpen(false)}
                           >
-                            <IconComponent className="w-5 h-5 text-purple-600 mr-3" />
+                            <IconComponent className="w-5 h-5 text-purple-600 mr-3 group-hover:text-purple-700 transition-colors" />
                             <div>
-                              <div className="font-medium text-gray-900">{service.title}</div>
+                              <div className="font-medium text-gray-900 group-hover:text-purple-600 transition-colors">{service.title}</div>
                               <div className="text-sm text-gray-500">{service.description}</div>
                             </div>
                           </Link>
@@ -117,9 +119,10 @@ export default function Navigation() {
 
               <Link
                 to="/contact"
-                className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-all duration-300 hover:scale-105 relative group"
               >
                 Contact
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-pink-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
             </div>
           </div>
