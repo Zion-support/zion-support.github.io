@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-'use client';
-
-import React, { Suspense } from 'react';
-
-
-import { Brain, ArrowRight, MessageSquare } from 'lucide-react';
-import FuturisticBackground from './components/FuturisticBackground';
-import FuturisticCard from './components/FuturisticCard';
-import FuturisticButton from './components/FuturisticButton';
-
-// Note: Lazy loading components will be implemented in future iterations
-
-export default function HomePage() {
-  const stats = [
-    { number: '1,200+', label: 'Projects Completed', icon: <Users className="w-6 h-6" /> },
-    { number: '99.8%', label: 'Client Satisfaction', icon: <Star className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Globe className="w-6 h-6" /> },
-    { number: '150+', label: 'Expert Team Members', icon: <Users className="w-6 h-6" /> },
-    { number: '50+', label: 'Countries Served', icon: <Globe className="w-6 h-6" /> },
-    { number: '300%', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> },
-    { number: '48hr', label: 'Response Time', icon: <MessageSquare className="w-6 h-6" /> }
-  ];
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from './components/Navigation'
@@ -75,58 +50,20 @@ const HomePage: React.FC = () => {
       link: '/micro-saas'
     }
   ]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
+
+  const stats = [
+    { number: '1,200+', label: 'Projects Completed', icon: <Users className="w-6 h-6" /> },
+    { number: '99.8%', label: 'Client Satisfaction', icon: <Star className="w-6 h-6" /> },
+    { number: '24/7', label: 'Support Available', icon: <Globe className="w-6 h-6" /> },
+    { number: '150+', label: 'Expert Team Members', icon: <Users className="w-6 h-6" /> },
+    { number: '50+', label: 'Countries Served', icon: <Globe className="w-6 h-6" /> },
+    { number: '300%', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6" /> },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> },
+    { number: '48hr', label: 'Response Time', icon: <MessageCircle className="w-6 h-6" /> }
+  ];
 
   const microSaasServices = [
     {
-<<<<<<< HEAD
-      title: 'AI Content Generation',
-      description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      link: '/ai-content-generator',
-      features: ['Automated content creation', 'SEO optimization', 'Multi-language support'],
-      price: 'Starting at $99/month'
-    },
-    {
-      title: 'AI CRM Assistant',
-      description: 'Boost sales by 45% with AI-powered lead scoring, email automation, and predictive analytics.',
-      icon: <Users className="w-8 h-8 text-purple-400" />,
-      link: '/ai-crm-assistant',
-      features: ['AI lead scoring', 'Email automation', 'Predictive analytics'],
-      price: 'Starting at $49/month'
-    },
-    {
-      title: 'AI Social Media Manager',
-      description: 'Increase engagement by 200% with AI-powered social media automation and content generation.',
-      icon: <MessageSquare className="w-8 h-8 text-pink-400" />,
-      link: '/ai-social-media-manager',
-      features: ['AI content generation', 'Smart scheduling', 'Analytics insights'],
-      price: 'Starting at $29/month'
-    },
-    {
-      title: 'AI Cybersecurity Suite',
-      description: 'Protect your business with 99.9% threat detection accuracy using advanced AI security.',
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      link: '/ai-cybersecurity-suite',
-      features: ['AI threat detection', 'Zero trust security', 'Automated response'],
-      price: 'Starting at $199/month'
-    },
-    {
-      title: 'AI Smart City Solutions',
-      description: 'Transform urban infrastructure with AI-powered smart city technologies and IoT integration.',
-      icon: <Globe className="w-8 h-8 text-green-400" />,
-      link: '/ai-smart-city-solutions',
-      features: ['Traffic optimization', 'Energy management', 'IoT integration'],
-      price: 'Starting at $50,000/project'
-    },
-    {
-      title: '5G Implementation',
-      description: 'Leverage the power of 5G technology for ultra-fast connectivity and IoT solutions.',
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      link: '/5g-implementation',
-      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing'],
-      price: 'Starting at $5,000/project'
-=======
       icon: <BarChart3 className="w-6 h-6 text-cyan-400" />,
       title: 'AI Analytics Dashboard',
       description: 'Real-time business intelligence with AI-powered insights and predictive analytics.',
@@ -224,11 +161,8 @@ const HomePage: React.FC = () => {
       price: '$79/month',
       features: ['AI prioritization', 'Smart scheduling', 'Progress tracking', 'Team collaboration'],
       link: '/ai-task-manager'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
     }
   ];
-
-<<<<<<< HEAD
 
   const testimonials = [
     {
@@ -250,16 +184,6 @@ const HomePage: React.FC = () => {
       rating: 5
     }
   ];
-=======
-  const stats = [
-    { number: '1000+', label: 'Projects Completed', icon: <Rocket className="w-6 h-6 text-cyan-400" /> },
-    { number: '500+', label: 'Happy Clients', icon: <Users className="w-6 h-6 text-emerald-400" /> },
-    { number: '24/7', label: 'Support Available', icon: <Clock className="w-6 h-6 text-blue-400" /> },
-    { number: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6 text-purple-400" /> },
-    { number: '50+', label: 'Micro SAAS Solutions', icon: <Layers className="w-6 h-6 text-orange-400" /> },
-    { number: '30+', label: 'AI Services', icon: <Brain className="w-6 h-6 text-pink-400" /> }
-  ]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
 
   return (
     <>
