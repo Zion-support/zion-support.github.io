@@ -1,38 +1,42 @@
 'use client';
 
-
 import React from 'react';
-
 import { Helmet } from 'react-helmet-async';
-import {Truck, Package} from 'lucide-react';
-
+import { Truck, Package, TrendingUp, Shield, CheckCircle } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
 export default function AISupplyChainOptimizerPage() {
   const features = [
+    {
       title: 'Predictive Demand Forecasting',
       description: 'AI algorithms analyze historical data, market trends, and external factors to predict demand with 92% accuracy.',
-      icon: <TrendingUp className="w-5 h-5ml-2" />,
+      icon: <TrendingUp className="w-5 h-5 ml-2" />,
       benefits: ['Demand prediction', 'Seasonal analysis', 'Market trend insights', 'Inventory optimization']
     },
+    {
       title: 'Smart Route Optimization',
       description: 'Advanced logistics algorithms optimize delivery routes, reduce fuel costs, and improve delivery times.',
-      icon: <Truck className="w-5 h-5ml-2" />,
+      icon: <Truck className="w-5 h-5 ml-2" />,
       benefits: ['Route optimization', 'Fuel cost reduction', 'Delivery time improvement', 'Real-time tracking']
     },
+    {
       title: 'Automated Inventory Management',
       description: 'Intelligent inventory control with automated reordering, stock level monitoring, and waste reduction.',
-      icon: <Package className="w-5 h-5ml-2" />,
+      icon: <Package className="w-5 h-5 ml-2" />,
       benefits: ['Auto reordering', 'Stock monitoring', 'Waste reduction', 'Cost optimization']
     },
+    {
       title: 'Risk Management & Compliance',
       description: 'Comprehensive risk assessment and compliance monitoring to ensure supply chain resilience.',
-      icon: <Shield className="w-5 h-5ml-2" />,
+      icon: <Shield className="w-5 h-5 ml-2" />,
       benefits: ['Risk assessment', 'Compliance monitoring', 'Disruption alerts', 'Mitigation strategies']
+    }
   ];
+
   const pricingPlans = [
+    {
       name: 'Starter',
       price: '$199',
       period: '/month',
@@ -46,170 +50,234 @@ export default function AISupplyChainOptimizerPage() {
       ],
       popular: false
     },
+    {
       name: 'Professional',
       price: '$599',
       period: '/month',
-      description: 'Advanced features for growing companies',
+      description: 'Ideal for growing enterprises',
       features: [
         'Up to 25 warehouses',
         'Advanced AI forecasting',
         'Multi-modal optimization',
         'Priority support',
         'Custom integrations',
-        'Real-time analytics'
+        'Analytics dashboard'
       ],
       popular: true
     },
+    {
       name: 'Enterprise',
-      price: '$1,999',
+      price: '$1,299',
       period: '/month',
-      description: 'Complete solution for large organizations',
+      description: 'For large-scale operations',
       features: [
         'Unlimited warehouses',
         'Custom AI models',
-        'White-label options',
-        'Dedicated account manager',
+        'White-label solutions',
+        'Dedicated support',
         'API access',
-        'Advanced security'
+        'Custom training'
       ],
       popular: false
+    }
   ];
+
   const testimonials = [
-      name: 'Robert Chen',
-      role: 'Supply Chain Director',
-      company: 'Global Logistics Inc.',
-      content: 'AI Supply Chain Optimizer reduced our logistics costs by 35% and improved delivery times by 40%. The predictive analytics are game-changing.',
+    {
+      name: 'David Kim',
+      company: 'Global Logistics Corp',
+      content: 'Our supply chain efficiency improved by 40% within the first quarter. The AI predictions are incredibly accurate.',
       rating: 5
     },
-      name: 'Maria Rodriguez',
-      role: 'Operations Manager',
-      company: 'RetailMax Corp',
-      content: 'The automated inventory management saved us from stockouts and overstocking. Our inventory turnover improved by 50%.',
+    {
+      name: 'Maria Santos',
+      company: 'RetailMax Inc',
+      content: 'The automated inventory management saved us from stockouts and overstock situations. Game changer!',
       rating: 5
     },
+    {
       name: 'James Wilson',
-      role: 'CEO',
-      company: 'Manufacturing Solutions',
-      content: 'This AI tool transformed our entire supply chain. We can now predict disruptions before they happen and optimize accordingly.',
+      company: 'Manufacturing Plus',
+      content: 'Route optimization reduced our fuel costs by 25% and improved delivery times significantly.',
       rating: 5
+    }
   ];
-  const stats = [
 
-    { number: '35%', label: 'Cost Reduction', icon: <TrendingUp className="w-6h-6" / /> },
-    { number: '92%', label: 'Forecast Accuracy', icon: <Target className="w-6h-6" / /> },
-    { number: '500+', label: 'Companies Using', icon: <Globe className="w-6h-6" / /> },
-    { number: '40%', label: 'Delivery Improvement', icon: <Clock className="w-6h-6" / /> 
-
-  ];
   return (
-
-        <title>5G Data Analytics - Zion Tech Group</title>
-
-        {/* Hero Section */
-
-              <h1 className="text-3 xl sm:text-4 xl md:text-5 xl lg:text-6 xl font-boldtext-whitemb-6">AI Supply Chain Optimizer
-                Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
-
-                and intelligent inventory management. Reduce costs by 35% and improve efficiency by 40%.
-
-                  variant="primary"
-                  size="lg"
- window.open('/contact', '_blank')
+    <>
+      <Helmet>
+        <title>AI Supply Chain Optimizer - Zion Tech Group</title>
+        <meta name="description" content="Revolutionize your supply chain with AI-powered optimization, predictive analytics, and automated inventory management." />
+      </Helmet>
+      
+      <FuturisticBackground>
+        <div className="min-h-screen">
+          {/* Hero Section */}
+          <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto text-center">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-400/20 text-cyan-400 text-sm font-medium mb-6">
+                <Truck className="w-4 h-4 mr-2" />
+                AI-Powered Supply Chain
+              </div>
+              
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+                AI Supply Chain Optimizer
+              </h1>
+              
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your supply chain operations with intelligent AI that predicts demand, optimizes routes, 
+                and automates inventory management for maximum efficiency and cost savings.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <FuturisticButton href="/contact" variant="primary">
                   Start Free Trial
-
-                  variant="ghost"
-                  size="lg"
-window.open('#demo', '_blank')
+                </FuturisticButton>
+                <FuturisticButton href="#demo" variant="secondary">
                   Watch Demo
+                </FuturisticButton>
+              </div>
+            </div>
+          </section>
 
-            {/* Stats */
+          {/* Features Section */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                  Advanced Supply Chain Intelligence
+                </h2>
+                <p className="text-gray-300 text-lg">
+                  Harness the power of AI to optimize every aspect of your supply chain
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {features.map((feature, index) => (
+                  <FuturisticCard key={index} className="p-6">
+                    <div className="flex items-center mb-4">
+                      {feature.icon}
+                      <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
+                    </div>
+                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </FuturisticCard>
+                ))}
+              </div>
+            </div>
+          </section>
 
- (
-    
-                  <div className="flex items-centerjustify-centermb-2">{stat.icon
+          {/* Pricing Section */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                  Flexible Pricing Plans
+                </h2>
+                <p className="text-gray-300 text-lg">
+                  Choose the plan that scales with your business
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                {pricingPlans.map((plan, index) => (
+                  <FuturisticCard key={index} className={`p-8 ${plan.popular ? 'border-cyan-400' : ''}`}>
+                    {plan.popular && (
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                          Most Popular
+                        </span>
+                      </div>
+                    )}
+                    
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-300 mb-6">{plan.description}</p>
+                    
+                    <div className="mb-6">
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400">{plan.period}</span>
+                    </div>
+                    
+                    <ul className="space-y-3 mb-8">
+                      {plan.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300">
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <FuturisticButton 
+                      href="/contact" 
+                      variant={plan.popular ? 'primary' : 'secondary'}
+                      className="w-full"
+                    >
+                      Get Started
+                    </FuturisticButton>
+                  </FuturisticCard>
+                ))}
+              </div>
+            </div>
+          </section>
 
-                  <div className="text-3 xl font-boldtext-whitemb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+          {/* Testimonials */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl font-bold text-white mb-4">
+                  Trusted by Industry Leaders
+                </h2>
+                <p className="text-gray-300 text-lg">
+                  See how we're transforming supply chains worldwide
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                {testimonials.map((testimonial, index) => (
+                  <FuturisticCard key={index} className="p-6">
+                    <div className="flex mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <CheckCircle key={i} className="w-5 h-5 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-sm text-gray-400">{testimonial.company}</div>
+                  </FuturisticCard>
+                ))}
+              </div>
+            </div>
+          </section>
 
-              ))
-
-        {/* Features Section */
-    
-              <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4">Advanced AI Features
-                Cutting-edge artificial intelligence meets supply chain expertise to optimize your operations
-
- (
-
-                    {feature.icon
-    
-                    <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
-
-                  <p className="text-gray-300mb-6">{feature.description}</p>
-
- (
-
-                        {benefit
-                    ))
-
-              ))
-
-        {/* Pricing Section */
-    
-              <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4">Choose Your Plan
-                Scalable pricing options to match your supply chain needs
-
- (
-                  {plan.popular && (
-
-                      <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
-
-                  )
-
-                    <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                      <span className="text-4 xlfont-boldtext-white">{plan.price}</span>
-                      <span className="text-gray-400ml-1">{plan.period}</span>
-                    <p className="text-gray-300text-sm">{plan.description}</p>
-
- (
-
-                        {feature
-                    ))
-
-                    variant="{plan.popular" ? "primary" : "ghost"
-                    className="w-full"
-window.open('/contact', '_blank')
-                    Get Started
-
-              ))
-
-        {/* Testimonials Section */
-    
-              <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4">What Our Clients Say
-                Join hundreds of companies optimizing their supply chains
-
- (
-
- (
-                    ))
-
-                  <blockquote className="text-gray-300mb-6italic">"{testimonial.content}"
-                    <p className="font-semiboldtext-white">{testimonial.name}</p>
-                    <p className="text-gray-400text-sm">{testimonial.role}</p>
-                    <p className="text-gray-500text-sm">{testimonial.company}</p>
-
-              ))
-
-        {/* CTA Section */
-    
-              <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Optimize Your Supply Chain?
-                Start your free 14-day trial today. No credit card required. Join 500+ companies optimizing their supply chains.
-
-                  variant="primary"
-                  size="lg"
-window.open('/contact', '_blank')
-
-                  Start Free Trial
-                
-                  variant="secondary"
-                  size="lg"
-window.open('/contact', '_blank')
+          {/* CTA Section */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Ready to Optimize Your Supply Chain?
+              </h2>
+              <p className="text-gray-300 text-lg mb-8">
+                Join leading companies using AI to revolutionize their supply chain operations
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <FuturisticButton href="/contact" variant="primary">
+                  Start Your Free Trial
+                </FuturisticButton>
+                <FuturisticButton href="/about" variant="secondary">
+                  Learn More
+                </FuturisticButton>
+              </div>
+            </div>
+          </section>
+        </div>
+      </FuturisticBackground>
+    </>
+  );
+}
