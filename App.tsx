@@ -1,42 +1,8 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-<<<<<<< HEAD
+import { HelmetProvider } from 'react-helmet-async'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
-<<<<<<< HEAD
-import HomePage from './app/page'
-import AboutPage from './app/about/page'
-import ContactPage from './app/contact/page'
-import AIServicesPage from './app/ai-services/page'
-import ITServicesPage from './app/it-services/page'
-import MicroSaasServicesPage from './app/micro-saas-services/page'
-import FiveGImplementationPage from './app/5g-implementation/page'
-import CloudServicesPage from './app/cloud-services/page'
-import DigitalTransformationPage from './app/digital-transformation/page'
-
-function App() {
-  return (
-    <Router>
-      <div className="min-h-screen bg-gray-50">
-        <Navigation />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="/ai-services" element={<AIServicesPage />} />
-          <Route path="/it-services" element={<ITServicesPage />} />
-          <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-          <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-          <Route path="/cloud-services" element={<CloudServicesPage />} />
-          <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
-=======
-=======
-import { HelmetProvider } from 'react-helmet-async'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
 import ErrorBoundary from './app/components/ErrorBoundary'
 import LoadingSpinner from './app/components/LoadingSpinner'
 
@@ -68,15 +34,16 @@ function App() {
     <HelmetProvider>
       <ErrorBoundary>
         <Router>
-<<<<<<< HEAD
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <SEOHead />
             <Navigation />
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
+                <Route path="/contact" element={<ContactPage />} />
                 <Route path="/ai-services" element={<AIServicesPage />} />
+                <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
+                <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
                 <Route path="/it-services" element={<ITServicesPage />} />
                 <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
                 <Route path="/cloud-services" element={<CloudServicesPage />} />
@@ -85,7 +52,6 @@ function App() {
                 <Route path="/ai-meeting-assistant" element={<AIMeetingAssistantPage />} />
                 <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
                 <Route path="/ai-customer-support-bot" element={<AICustomerSupportBotPage />} />
-                <Route path="/contact" element={<ContactPage />} />
                 {/* 404 Route */}
                 <Route path="*" element={
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -99,45 +65,15 @@ function App() {
                         Go Home
                       </a>
                     </div>
-=======
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/ai-services" element={<AIServicesPage />} />
-              <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-              <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
-              <Route path="/it-services" element={<ITServicesPage />} />
-              <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
-              <Route path="/cloud-services" element={<CloudServicesPage />} />
-              <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-              <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-              {/* 404 Route */}
-              <Route path="*" element={
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-                  <div className="text-center">
-                    <h1 className="text-6xl font-bold text-white mb-4">404</h1>
-                    <p className="text-xl text-gray-300 mb-8">Page not found</p>
-                    <a 
-                      href="/" 
-                      className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                    >
-                      Go Home
-                    </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
                   </div>
-                </div>
-              } />
-            </Routes>
-          </Suspense>
+                } />
+              </Routes>
+            </Suspense>
+            <Footer />
+          </div>
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
   )
 }
 
