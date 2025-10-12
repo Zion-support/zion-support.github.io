@@ -1,6 +1,12 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Share2, MessageSquare } from 'lucide-react'
+import { 
+  ArrowRight, Calendar, BarChart3, Users, Zap, CheckCircle, 
+  Clock, Target, TrendingUp, Share2, MessageSquare, Image, 
+  Video, FileText, Hash, AtSign, Globe, Smartphone, Monitor,
+  DollarSign, Star, Shield, Lock, RefreshCw, Settings
+} from 'lucide-react'
 
 export default function AISocialMediaSchedulerPage() {
   const features = [

@@ -1,9 +1,20 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Cloud, Shield, BarChart3, Zap, Database, Network, Search, Target, Settings, Server, CheckCircle, Sparkles, Play, Star, Clock, MessageCircle, Phone, Mail, MapPin } from 'lucide-react'
+import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { 
+  ArrowRight, Zap, Cloud, CheckCircle, Star, Clock, BarChart3, 
+  Sparkles, Target, Award, Lightbulb, Globe, Shield, MessageCircle, 
+  Mail, Phone, MapPin, Play, Pause, Download, Upload, Edit, Copy, 
+  Share, Bookmark, Heart, ThumbsUp, RefreshCw, Settings, Database, 
+  Lock, TrendingUp, PieChart, LineChart, Activity, Eye, Search, 
+  Filter, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, 
+  Mic, Headphones, Speaker, Volume2, VolumeX, FileText, Package,
+  Server, Network, Cpu, HardDrive, Layers, Monitor, Smartphone,
+  Laptop, Tablet, Router, Wifi, Database as DatabaseIcon
+} from 'lucide-react'
 
 export default function CloudMigrationPage() {
+  const [selectedPlan, setSelectedPlan] = useState('pro')
 
   const features = [
     {

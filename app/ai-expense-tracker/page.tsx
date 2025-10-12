@@ -1,18 +1,20 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
 
-export default function AIExpenseTrackerPage() {
+const Page: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Expense Tracker - Zion Tech Group</title>
-        <meta name="description" content="Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI solutions, expense tracking, IT services, Zion Tech Group" />
-        <meta property="og:title" content="AI Expense Tracker - Zion Tech Group" />
-        <meta property="og:description" content="Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <title> - Zion Tech Group</title>
+        <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
+        <meta property="og:title" content=" - Zion Tech Group" />
+        <meta property="og:description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-expense-tracker" />
       </Helmet>
@@ -23,11 +25,11 @@ export default function AIExpenseTrackerPage() {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                AI Expense Tracker
+                
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs.
+              Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link 
@@ -77,4 +79,16 @@ export default function AIExpenseTrackerPage() {
       </div>
     </>
   );
+};
+=======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-6024
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { DollarSign, TrendingUp, PieChart, BarChart3, Receipt, CreditCard, Smartphone, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Clock, Globe, Award, Target, Lightbulb, Bot, Brain, Cpu, Database, Cloud, Lock, Eye, Search, Filter, Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10, FileText, Package } from 'lucide-react'
+import { Link } from 'react-router-dom'
+  )
 }
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
+
+export default Page;

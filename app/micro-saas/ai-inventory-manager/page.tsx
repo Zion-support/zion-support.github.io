@@ -1,6 +1,13 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Bot, Truck, ShoppingCart } from 'lucide-react'
+import { 
+  ArrowRight, Package, BarChart3, Zap, CheckCircle, 
+  Clock, Target, TrendingUp, PieChart, Smartphone, Shield, 
+  Lock, RefreshCw, Settings, Bot, FileText, AlertTriangle,
+  CheckSquare, Star, Globe, Monitor, Smartphone as Mobile, 
+  Truck, ShoppingCart, DollarSign, Activity
+} from 'lucide-react'
 
 export default function AIInventoryManagerPage() {
   const features = [
