@@ -18,28 +18,28 @@ import {
 const Footer = () => {
   const aiServices = [
     { name: 'AI Content Generator', path: '/ai-content-generator' },
+    { name: 'AI CRM Platform', path: '/ai-crm' },
     { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-    { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
-    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
-    { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
-    { name: 'AI Automation Suite', path: '/ai-automation' },
-    { name: 'AI Project Manager', path: '/ai-project-manager' },
+    { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
+    { name: 'AI Customer Insights', path: '/ai-customer-insights' },
+    { name: 'AI Blockchain Analytics', path: '/ai-blockchain-analytics' },
+    { name: 'AI Email Marketing', path: '/ai-email-marketing' },
+    { name: 'AI Document Processing', path: '/ai-document-processing' },
     { name: 'AI 3D Generation', path: '/ai-3d-generation' },
     { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
   ];
 
   const itServices = [
+    { name: 'Cloud Migration', path: '/cloud-migration' },
     { name: 'Web Development', path: '/web-development' },
     { name: 'Mobile Development', path: '/mobile-development' },
-    { name: 'DevOps', path: '/devops' },
-    { name: 'Cloud Migration', path: '/cloud-migration' },
     { name: 'API Development', path: '/api-development' },
     { name: 'Database Management', path: '/database-management' },
     { name: 'Network Infrastructure', path: '/network-infrastructure' },
     { name: 'Cybersecurity', path: '/cybersecurity' },
+    { name: 'DevOps Solutions', path: '/devops-solutions' },
     { name: 'System Integration', path: '/system-integration' },
     { name: 'Data Analytics', path: '/data-analytics' },
     { name: 'IoT Solutions', path: '/iot-solutions' },
@@ -47,14 +47,18 @@ const Footer = () => {
   ];
 
   const microSaasServices = [
-    { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard' },
+    { name: 'AI Content Generator', path: '/ai-content-generator' },
+    { name: 'AI CRM Platform', path: '/ai-crm' },
+    { name: 'Smart Analytics', path: '/smart-analytics' },
+    { name: 'AI Automated Testing', path: '/ai-automated-testing' },
+    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+    { name: 'AI Project Management', path: '/ai-project-management' },
+    { name: 'AI Customer Support', path: '/ai-customer-support' },
+    { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
     { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler' },
     { name: 'Chat Analytics', path: '/micro-saas/chat-analytics' },
-    { name: 'Content Generator', path: '/micro-saas/content-generator' },
     { name: 'Document Processor', path: '/micro-saas/document-processor' },
-    { name: 'Email Marketing', path: '/micro-saas/email-marketing' },
-    { name: 'Expense Tracker', path: '/micro-saas/expense-tracker' },
-    { name: 'Inventory Management', path: '/micro-saas/inventory-management' }
+    { name: 'Expense Tracker', path: '/micro-saas/expense-tracker' }
   ];
 
   const fiveGServices = [
@@ -63,7 +67,8 @@ const Footer = () => {
     { name: '5G Edge Computing', path: '/5g-edge-computing' },
     { name: '5G Private Networks', path: '/5g-private-networks' },
     { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
-    { name: '5G Data Analytics', path: '/5g-data-analytics' }
+    { name: '5G Data Analytics', path: '/5g-data-analytics' },
+    { name: '5G Implementation', path: '/5g-implementation' }
   ];
 
   return (

@@ -310,10 +310,12 @@ const HomePage: React.FC = () => {
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        {/* Animated Background Elements */}
+        {/* Enhanced Animated Background Elements */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.4)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.3)_0%,transparent_60%)] animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(16,185,129,0.2)_0%,transparent_40%)] animate-pulse" style={{ animationDelay: '3s' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(245,158,11,0.2)_0%,transparent_40%)] animate-pulse" style={{ animationDelay: '4s' }} />
         
         {/* Enhanced Floating Elements with Neon Effects */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-cyan-400/20 rounded-full blur-xl animate-bounce shadow-lg shadow-cyan-400/30" style={{ animationDelay: '0.5s' }} />
@@ -321,22 +323,41 @@ const HomePage: React.FC = () => {
         <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-pink-400/20 rounded-full blur-xl animate-bounce shadow-lg shadow-pink-400/30" style={{ animationDelay: '2.5s' }} />
         <div className="absolute top-60 right-1/3 w-8 h-8 bg-emerald-400/20 rounded-full blur-xl animate-bounce shadow-lg shadow-emerald-400/30" style={{ animationDelay: '3s' }} />
         <div className="absolute bottom-40 right-10 w-14 h-14 bg-orange-400/20 rounded-full blur-xl animate-bounce shadow-lg shadow-orange-400/30" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-80 left-1/3 w-10 h-10 bg-blue-400/20 rounded-full blur-xl animate-bounce shadow-lg shadow-blue-400/30" style={{ animationDelay: '4s' }} />
+        <div className="absolute bottom-60 right-1/3 w-6 h-6 bg-yellow-400/20 rounded-full blur-xl animate-bounce shadow-lg shadow-yellow-400/30" style={{ animationDelay: '2s' }} />
         
-        {/* Animated Grid Pattern with Neon Glow */}
+        {/* Enhanced Animated Grid Pattern with Neon Glow */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(147,51,234,0.05)_2px,transparent_2px),linear-gradient(90deg,rgba(147,51,234,0.05)_2px,transparent_2px)] bg-[size:100px_100px] animate-pulse" style={{ animationDelay: '1s' }} />
         
-        {/* Futuristic Circuit Pattern */}
+        {/* Enhanced Futuristic Circuit Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-cyan-400/30 rounded-full animate-spin" style={{ animationDuration: '20s' }} />
           <div className="absolute top-3/4 right-1/4 w-24 h-24 border border-purple-400/30 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 border border-pink-400/30 rounded-full animate-spin" style={{ animationDuration: '10s' }} />
+          <div className="absolute top-1/6 right-1/6 w-20 h-20 border border-emerald-400/30 rounded-full animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }} />
+          <div className="absolute bottom-1/6 left-1/6 w-28 h-28 border border-orange-400/30 rounded-full animate-spin" style={{ animationDuration: '18s' }} />
         </div>
         
-        {/* Neon Lines */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-transparent via-pink-400 to-transparent animate-pulse" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-transparent via-emerald-400 to-transparent animate-pulse" style={{ animationDelay: '3s' }} />
+        {/* Enhanced Neon Lines with Glow Effects */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse shadow-lg shadow-cyan-400/50" />
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse shadow-lg shadow-purple-400/50" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-transparent via-pink-400 to-transparent animate-pulse shadow-lg shadow-pink-400/50" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-transparent via-emerald-400 to-transparent animate-pulse shadow-lg shadow-emerald-400/50" style={{ animationDelay: '3s' }} />
+        
+        {/* Additional Neon Accent Lines */}
+        <div className="absolute top-1/3 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-blue-400/30 to-transparent animate-pulse" style={{ animationDelay: '2.5s' }} />
+        <div className="absolute bottom-1/3 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-yellow-400/30 to-transparent animate-pulse" style={{ animationDelay: '3.5s' }} />
+        
+        {/* Floating Geometric Shapes */}
+        <div className="absolute top-1/5 right-1/5 w-4 h-4 bg-cyan-400/40 rotate-45 animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-1/5 left-1/5 w-6 h-6 bg-purple-400/40 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-2/3 right-1/3 w-3 h-3 bg-pink-400/40 rotate-12 animate-pulse" style={{ animationDelay: '3s' }} />
+        
+        {/* Data Stream Effect */}
+        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent animate-pulse" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-purple-400/20 to-transparent animate-pulse" style={{ animationDelay: '2.5s' }} />
+        <div className="absolute top-0 left-3/4 w-px h-full bg-gradient-to-b from-transparent via-pink-400/20 to-transparent animate-pulse" style={{ animationDelay: '3.5s' }} />
         
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
