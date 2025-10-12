@@ -2,6 +2,8 @@
 <<<<<<< HEAD
 import React from 'react'
 import SEOHead from './components/SEOHead'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
 import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
 import { Link } from 'react-router-dom'
 =======
@@ -151,16 +153,12 @@ export default function HomePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-e118
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, cloud migration, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, cybersecurity, cloud migration, digital transformation, IT services, Zion Tech Group" />
-      </Helmet>
 =======
-    <div className="min-h-screen bg-gray-50">
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-51d9
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your business with cutting-edge technology."
@@ -177,6 +175,7 @@ export default function HomePage() {
       
       <Navigation />
       
+<<<<<<< HEAD
       {/* Hero Section */}
 <<<<<<< HEAD
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
@@ -367,41 +366,39 @@ export default function HomePage() {
                   Our Services
                 </Link>
               </div>
+=======
+      <main>
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Transform Your Business with
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Advanced AI</span>
+              <br />
+              and IT Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              We deliver cutting-edge technology solutions that drive growth, enhance security, 
+              and streamline operations for businesses worldwide.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started Today
+              </Link>
+              <Link
+                to="/about"
+                className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                Learn More
+              </Link>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-51d9
             </div>
           </div>
 <<<<<<< HEAD
         </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Transform Your Business with
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Advanced AI</span>
-            <br />
-            and IT Solutions
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            We deliver cutting-edge technology solutions that drive growth, enhance security, 
-            and streamline operations for businesses worldwide.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started Today
-            </Link>
-            <Link
-              to="/about"
-              className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-            >
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -497,6 +494,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </main>
+      
+      <Footer />
     </div>
   )
 }

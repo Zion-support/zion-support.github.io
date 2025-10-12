@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
             <p className="text-gray-400 mb-4">
@@ -32,57 +32,33 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">
-                  AI Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">
-                  IT Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors">
-                  Micro SaaS
-                </Link>
-              </li>
-              <li>
-                <Link to="/cloud-services" className="text-gray-400 hover:text-white transition-colors">
-                  Cloud Services
-                </Link>
-              </li>
-              <li>
-                <Link to="/5g-implementation" className="text-gray-400 hover:text-white transition-colors">
-                  5G Implementation
-                </Link>
-              </li>
+              <li><Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
+              <li><Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
+              <li><Link to="/micro-saas" className="text-gray-400 hover:text-white transition-colors">Micro SaaS</Link></li>
+              <li><Link to="/cloud-services" className="text-gray-400 hover:text-white transition-colors">Cloud Services</Link></li>
+              <li><Link to="/5g-implementation" className="text-gray-400 hover:text-white transition-colors">5G Implementation</Link></li>
+              <li><Link to="/digital-transformation" className="text-gray-400 hover:text-white transition-colors">Digital Transformation</Link></li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Blog
-                </a>
-              </li>
+              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
+              <li><Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              <li><Link to="/case-studies" className="text-gray-400 hover:text-white transition-colors">Case Studies</Link></li>
+              <li><Link to="/whitepapers" className="text-gray-400 hover:text-white transition-colors">Whitepapers</Link></li>
+              <li><Link to="/api-docs" className="text-gray-400 hover:text-white transition-colors">API Documentation</Link></li>
+              <li><Link to="/support" className="text-gray-400 hover:text-white transition-colors">Support Center</Link></li>
+              <li><Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
 
@@ -91,15 +67,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Mail className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">info@ziontechgroup.com</span>
+                <span className="text-gray-400">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+1 302 464 0950</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">San Francisco, CA</span>
+                <span className="text-gray-400">364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
 =======
 import React from 'react';
