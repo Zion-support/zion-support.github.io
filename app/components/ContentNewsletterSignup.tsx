@@ -53,20 +53,20 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
 
   if (isSubscribed) {
     return (
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
-        <div className="max-w-4 xl mx-auto text-center" />
-          <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12 border border-white/20" />
-            <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6" />
-              <CheckCircle className="w-10 h-10 text-white" / />
+    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
+        <div className="max-w-4 xlmx-autotext-center" />
+          <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20" />
+            <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-centermx-automb-6" />
+              <CheckCircle className="w-10h-10text-white" / />
             </div>
-            <h2 className="text-3 xl font-bold text-white mb-4"  />Thank You for Subscribing!
+            <h2 className="text-3 xl font-boldtext-whitemb-4"  />Thank You for Subscribing!
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xltext-gray-300mb-8" />
               You'll receive our latest insights and updates soon.
             </p>
             <button
               onClick="{()" =  />setIsSubscribed(false)}
-              className="text-blue-400 hover:text-blue-300 transition-colors"
+              className="text-blue-400hover:text-blue-300transition-colors"
             >
               Subscribe another email
             </button>
@@ -77,19 +77,19 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
   }
 
   return (
-    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
-      <div className="max-w-4 xl mx-auto" />
-        <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12 border border-white/20" />
-          <div className="text-center mb-12" />
-            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4"  />{title}
+    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
+      <div className="max-w-4xlmx-auto" />
+        <div className="bg-white/5 backdrop-blur-sm rounded-3 xl p-12borderborder-white/20" />
+          <div className="text-centermb-12" />
+            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />{title}
             </h2>
-            <p className="text-xl text-gray-300 max-w-2 xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-2xlmx-auto" />
               {subtitle}
             </p>
           </div>
 
-          <form onSubmit="{handleSubmit}" className="max-w-md mx-auto mb-12" />
-            <div className="flex flex-col sm:flex-row gap-4" />
+          <form onSubmit="{handleSubmit}" className="max-w-mdmx-automb-12" />
+            <div className="flex flex-colsm:flex-rowgap-4" />
               <div className="flex-1" />
                 <input
                   type="email"
@@ -97,37 +97,36 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
                   onChange="{(e)" = /> setEmail(e.target.value)}
                   placeholder="{placeholder}"
                   required
-                  className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
                 />
               </div>
               <button
                 type="submit"
                 disabled="{isSubmitting}"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 min-w-[140, px]"
-               />
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]" />
                 {isSubmitting ? (
                   <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white" /></div>
+                    <div className="animate-spin rounded-full h-5 w-5border-b-2border-white" /></div>
                     <span  >Subscribing...</span>
                   </>
                 ) : (
                   <>
                     <span  >{buttonText}</span>
-                    <ArrowRight className="h-5 w-5" / />
+                    <ArrowRight className="h-5w-5" />
                   </>
                 )}
               </button>
             </div>
           </form>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6" />
+          <div className="grid grid-cols-2md:grid-cols-4gap-6" />
             {features.map((feature, index) => (
 
                 <div key="{index}" className="text-center" />
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3" />
-                  <feature.icon className="h-6 w-6 text-white" / />
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-centermx-automb-3" />
+                  <feature.icon className="h-6w-6text-white" / />
                 </div>
-                <p className="text-gray-300 text-sm">{feature.text}</p>
+                <p className="text-gray-300text-sm">{feature.text}</p>
               </div>
             ))}
           </div>

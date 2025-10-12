@@ -1,4 +1,4 @@
-import React from 'react';
+import React from \'react\';
 import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -76,12 +76,11 @@ const Layout: React.FC<LayoutProps /> = ({
 
   return (
     <ErrorBoundary />
-      <div const className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
         <Helmet />
-          <title  >{title}</title>
+          <title>{title}</title>
           <meta name="description" content="{description}" / / />
           <meta name="keywords" content="{keywords}" / / />
-
           {/* Open Graph Meta Tags */}
           <meta property="og: title" content="{title}" / / />
           <meta property="og: description" content="{description}" / / />
@@ -89,34 +88,29 @@ const Layout: React.FC<LayoutProps /> = ({
           <meta property="og:url" content="https://ziontechgroup.com" / / />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" / / />
           <meta property="og:site_name" content="Zion Tech Group" / / />
-
           {/* Twitter Card Meta Tags */}
           <meta name="twitter:card" content="summary_large_image" / / />
           <meta name="twitter: title" content="{title}" / / />
           <meta name="twitter: description" content="{description}" / / />
           <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" / / />
           <meta name="twitter:site" content="@ziontechgroup" / / />
-
           {/* Additional SEO Meta Tags */}
           <meta name="robots" content="index, follow" / / />
           <meta name="author" content="Zion Tech Group" / / />
           <meta name="viewport" content="width="device-width," initial-scale=1.0" / / />
           <meta name="theme-color" content="#8 b5 cf6" / / />
-
           {/* Structured Data */}
           <script type="application/ld+json"  />{JSON.stringify(structuredData)}
           </script>
         </Helmet>
 
         <Navigation / />
-
         <main className="pt-20"  />{children}
         </main>
 
         <Footer / />
-
         {/* Theme Toggle - Fixed Position */}
-        <div className="fixed bottom-6 right-6 z-50" />
+        <div className="fixed bottom-6right-6z-50" />
           <ThemeToggle / />
         </div>
       </div>

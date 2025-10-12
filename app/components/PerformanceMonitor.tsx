@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2a00
 import React, { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB };
 'use client';

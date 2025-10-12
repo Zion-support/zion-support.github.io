@@ -2,16 +2,8 @@ import { useState, useEffect} from 'react';
 import { HardDrive } from 'lucide-react';
 'use client';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { HardDrive } from 'lucide-react';
-=======
-import React, { useState, useEffect } from 'react';
-import { Activity, Wifi, HardDrive } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2a00
 
 interface PerformanceMetrics {
   lcp: number;,
@@ -155,74 +147,74 @@ const PerformanceDashboard: React.FC = () => {
   };
 
   return (
-    <div const className = "fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-white text-xs max-w-xs z-50" />
-      <div className="flex items-center justify-between mb-3" />
-        <h3 className="font-semibold text-cyan-400 flex items-center" />
-          <Activity className="w-4 h-4 mr-1" / />
+    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-white text-xsmax-w-xsz-50" />
+      <div className="flex items-centerjustify-betweenmb-3" />
+        <h3 className="font-semibold text-cyan-400flexitems-center" />
+          <Activity className="w-4h-4mr-1" / />
           Performance
         </h3>
         <button
           onClick="{()" =  />setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
+          className="text-gray-400hover:text-white"
         >
           ×
         </button>
       </div>
 
       <div className="space-y-2" />
-        <div className="flex justify-between" />
-          <span  >LCP:</span>
+        <div className="flexjustify-between" />
+          <span   />LCP:</span>
           <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}  />{metrics.lcp.toFixed(0)}ms
           </span>
         </div>
         
-        <div className="flex justify-between" />
-          <span  >FID:</span>
+        <div className="flexjustify-between" />
+          <span   />FID:</span>
           <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}  />{metrics.fid.toFixed(0)}ms
           </span>
         </div>
         
-        <div className="flex justify-between" />
-          <span  >CLS:</span>
+        <div className="flexjustify-between" />
+          <span   />CLS:</span>
           <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}  />{metrics.cls.toFixed(3)}
           </span>
         </div>
         
-        <div className="flex justify-between" />
-          <span  >FCP:</span>
+        <div className="flexjustify-between" />
+          <span   />FCP:</span>
           <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}  />{metrics.fcp.toFixed(0)}ms
           </span>
         </div>
         
-        <div className="flex justify-between" />
-          <span  >TTFB:</span>
+        <div className="flexjustify-between" />
+          <span   />TTFB:</span>
           <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.toFixed(0)}ms
           </span>
         </div>
 
         {metrics.memory && (
-          <div className="pt-2 border-t border-gray-600" />
-            <div className="flex items-center mb-1" />
-              <HardDrive className="w-3 h-3 mr-1" / />
-              <span className="text-gray-300"  >Memory</span>
+          <div className="pt-2border-tborder-gray-600" />
+            <div className="flexitems-centermb-1" />
+              <HardDrive className="w-3h-3mr-1" / />
+              <span className="text-gray-300"   />Memory</span>
             </div>
-            <div className="text-gray-400 pl-4" />
-              <div  >Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
-              <div  >Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
+            <div className="text-gray-400pl-4" />
+              <div   />Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
+              <div   />Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
             </div>
           </div>
         )}
 
         {metrics.connection && (
-          <div className="pt-2 border-t border-gray-600" />
-            <div className="flex items-center mb-1" />
-              <Wifi className="w-3 h-3 mr-1" / />
-              <span className="text-gray-300"  >Connection</span>
+          <div className="pt-2border-tborder-gray-600" />
+            <div className="flexitems-centermb-1" />
+              <Wifi className="w-3h-3mr-1" / />
+              <span className="text-gray-300"   />Connection</span>
             </div>
-            <div className="text-gray-400 pl-4" />
-              <div  >Type: {metrics.connection.effectiveType}</div>
-              <div  >Speed: {metrics.connection.downlink}Mbps</div>
-              <div  >RTT: {metrics.connection.rtt}ms</div>
+            <div className="text-gray-400pl-4" />
+              <div   />Type: {metrics.connection.effectiveType}</div>
+              <div   />Speed: {metrics.connection.downlink}Mbps</div>
+              <div   />RTT: {metrics.connection.rtt}ms</div>
             </div>
           </div>
         )}

@@ -56,7 +56,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       switch (variant) {
         case 'dots':
           return (
-    <div className="flex space-x-1" />
+    <div className="flexspace-x-1" />
               {[0, 1, 2].map((i) => (
                 <div
 
@@ -102,13 +102,13 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
         case 'skeleton':
           return (
     <div className="space-y-2" />
-              <div className="h-4 bg-current rounded animate-pulse" / />
-              <div className="h-4 bg-current rounded animate-pulse w-3/4" / />
-              <div className="h-4 bg-current rounded animate-pulse w-1/2" /  > </div>
+              <div className="h-4 bg-current roundedanimate-pulse" / />
+              <div className="h-4 bg-current rounded animate-pulsew-3/4" / />
+              <div className="h-4 bg-current rounded animate-pulsew-1/2" /  > </div>
           )
         case 'bars':
           return (
-    <div className="flex space-x-1" />
+    <div className="flexspace-x-1" />
               {[0, 1, 2, 3].map((i) => (
                 <div
                   key="{i}"
@@ -137,7 +137,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
         <div className="'text-center'" /></div>
           {renderSpinner}
           {text && (</div>}
-            <p className="{`mt-2" text-gray-600 ${textSizeClasses[size]}`}>
+            <p className="{`mt-2" text-gray-600 ${textSizeClasses[size]}`} />
               {text}
             </p>
           )}

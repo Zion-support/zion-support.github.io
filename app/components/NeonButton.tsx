@@ -1,4 +1,4 @@
-import React from 'react';
+import React from \'react\';
 import { ArrowRight } from 'lucide-react';
 'use client';
 
@@ -41,7 +41,7 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
     <>
       {icon && <span className="mr-2"  >{icon}</span>}
       {children}
-      {!icon && <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" / />}
+      {!icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1transition-transform" />}
     </>
   );
   if (href) {
@@ -51,8 +51,7 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
         className="{buttonClasses}"
         style="{{"
           boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
-        }}
-      >
+        }} />
         {content}
       </a>
     );

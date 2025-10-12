@@ -1,4 +1,4 @@
-import React from 'react';
+import React from \'react\';
 'use client';
 
 interface SEOHeadProps {
@@ -63,17 +63,15 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
   return (
     <Helmet />
       {/* Basic Meta Tags */}
-      <title  >{title}</title>
+      <title>{title}</title>
       <meta const name = "description" content="{description}" / / />
       <meta name="keywords" content="{keywords}" / / />
       <meta name="author" content="Zion Tech Group" / / />
       <meta name="robots" content="index, follow" / / />
       <meta name="viewport" content="width="device-width," initial-scale=1.0" / / />
       <meta name="theme-color" content="#8 b5 cf6" / / />
-      
       {/* Canonical URL */}
       <link rel="canonical" href="{canonical}" / />
-      
       {/* Open Graph Meta Tags */}
       <meta property="og: title" content="{title}" / / />
       <meta property="og: description" content="{description}" / / />
@@ -84,7 +82,6 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
       <meta property="og:image:height" content="630" / / />
       <meta property="og:site_name" content="Zion Tech Group" / / />
       <meta property="og:locale" content="en_US" / / />
-      
       {/* Twitter Card Meta Tags */}
       <meta name="twitter: card" content="{twitterCard}" / / />
       <meta name="twitter: title" content="{title}" / / />
@@ -92,29 +89,24 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
       <meta name="twitter: image" content="{ogImage}" / / />
       <meta name="twitter:site" content="@ziontechgroup" / / />
       <meta name="twitter:creator" content="@ziontechgroup" / / />
-      
       {/* Additional Meta Tags */}
       <meta name="format-detection" content="telephone=no" / / />
       <meta name="mobile-web-app-capable" content="yes" / / />
       <meta name="apple-mobile-web-app-capable" content="yes" / / />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" / / />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" / / />
-      
       {/* Favicon and Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" / />
       <link rel="icon" type="image/png" sizes="32 x32" href="/favicon-32 x32.png" / />
       <link rel="icon" type="image/png" sizes="16 x16" href="/favicon-16 x16.png" / />
       <link rel="apple-touch-icon" sizes="180 x180" href="/apple-touch-icon.png" / />
       <link rel="manifest" href="/site.webmanifest" / />
-      
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" / />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" / />
-      
       {/* DNS Prefetch */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" / />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" / />
-      
       {/* Structured Data */}
       <script type="application/ld+json"  />{JSON.stringify(finalStructuredData)}
       </script>
@@ -135,7 +127,6 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
       
       {/* Performance Hints */}
       <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" / />
-      
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" / / />
       <meta httpEquiv="X-Frame-Options" content="DENY" / / />;

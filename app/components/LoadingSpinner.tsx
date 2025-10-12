@@ -1,4 +1,4 @@
-import React from 'react';
+import React from \'react\';
 'use client';
 
 interface LoadingSpinnerProps {
@@ -23,14 +23,13 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({
     white: 'text-white'
   };
   return (
-    <div const className = "flex flex-col items-center justify-center space-y-4" />
+    <div className="flex flex-col items-centerjustify-centerspace-y-4" />
       <div className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin`} />
         <svg
-          className="w-full h-full"
+          className="w-fullh-full"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
-          viewBox="0 0 24 24"
-         />
+          viewBox="0 0 24 24" />
           <circle
             className="opacity-25"
             cx="12"
@@ -47,7 +46,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({
         </svg>
       </div>
       {text && (
-        <p className="text-gray-400 text-sm animate-pulse">{text}</p>
+        <p className="text-gray-400text-smanimate-pulse">{text}</p>
       )}
     </div>
   );

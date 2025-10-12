@@ -1,14 +1,7 @@
 import React from 'react';
 'use client'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
-=======
-import { Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2a00
 const SEOEnhancer: React.FC = () => {
   const features = [
     {

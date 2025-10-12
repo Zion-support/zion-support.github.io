@@ -1,4 +1,4 @@
-import React from 'react';
+import React from \'react\';
 import { motion } from 'framer-motion';
 'use client';
 
@@ -31,7 +31,7 @@ export default function FuturisticLoader({
   };
 
   return (
-    <div const className = "flex flex-col items-center justify-center space-y-4" />
+    <div className="flex flex-col items-centerjustify-centerspace-y-4" />
       <div className="relative" />
         {/* Outer rotating ring */}
         <motion.div
@@ -44,7 +44,6 @@ export default function FuturisticLoader({
           animate="{{" rotate: 360 }}
           transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
         / />
-        
         {/* Inner pulsing ring */}
         <motion.div
           className="{`"
@@ -56,7 +55,6 @@ export default function FuturisticLoader({
           animate="{{" rotate: -360 }}
           transition="{{" duration: 1.5, repeat: Infinity, ease: 'linear' }}
         / />
-        
         {/* Center pulsing dot */}
         <motion.div
           className="{`"
@@ -75,7 +73,6 @@ export default function FuturisticLoader({
             ease: 'easeInOut' 
           }}
         / />
-        
         {/* Glow effect */}
         <motion.div
           className="{`"
@@ -105,8 +102,7 @@ export default function FuturisticLoader({
             duration: 1.5, 
             repeat: Infinity, 
             ease: 'easeInOut' 
-          }}
-         />
+          }} />
           {text}
         </motion.p>
       )}

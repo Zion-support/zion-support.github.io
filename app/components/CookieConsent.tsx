@@ -33,37 +33,37 @@ const CookieConsent: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div const className = "fixed bottom-0 left-0 right-0 z-50 p-4" />
-      <div className="max-w-4 xl mx-auto" />
-        <div className="bg-slate-800 border border-slate-700 rounded-xl shadow-2 xl backdrop-blur-sm" />
+    <div className="fixed bottom-0 left-0 right-0z-50p-4" />
+      <div className="max-w-4xlmx-auto" />
+        <div className="bg-slate-800 border border-slate-700 rounded-xl shadow-2xlbackdrop-blur-sm" />
           {!showDetails ? (
             // Simple view
             <div className="p-6" />
-              <div className="flex items-start space-x-4" />
+              <div className="flexitems-startspace-x-4" />
                 <div className="flex-shrink-0" />
-                  <Cookie className="w-8 h-8 text-cyan-400" / />
+                  <Cookie className="w-8h-8text-cyan-400" / />
                 </div>
                 <div className="flex-1" />
-                  <h3 className="text-lg font-semibold text-white mb-2"  />We use cookies
+                  <h3 className="text-lg font-semiboldtext-whitemb-2"  />We use cookies
                   </h3>
-                  <p className="text-gray-300 mb-4">
+                  <p className="text-gray-300mb-4" />
                     We use cookies to enhance your browsing experience, serve personalized content,
                     and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-3" />
+                  <div className="flex flex-colsm:flex-rowgap-3" />
                     <button
                       onClick="{acceptAll}"
-                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                      className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300"
                       />Accept All
                     </button>
                     <button
                       onClick="{acceptNecessary}"
-                      className="border border-slate-600 text-gray-300 px-6 py-2 rounded-lg font-semibold hover:bg-slate-700 transition-colors"
+                      className="border border-slate-600 text-gray-300 px-6 py-2 rounded-lg font-semiboldhover:bg-slate-700transition-colors"
                       />Necessary Only
                     </button>
                     <button
                       onClick="{()" =  />setShowDetails(true)}
-                      className="text-cyan-400 hover:text-cyan-300 px-6 py-2 font-semibold transition-colors"
+                      className="text-cyan-400 hover:text-cyan-300 px-6 py-2font-semiboldtransition-colors"
                     >
                       Customize
                     </button>
@@ -71,91 +71,90 @@ const CookieConsent: React.FC = () => {
                 </div>
                 <button
                   onClick="{acceptNecessary}"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  aria-label="Close"
-                 />
-                  <X className="w-5 h-5" / />
+                  className="text-gray-400hover:text-whitetransition-colors"
+                  aria-label="Close" />
+                  <X className="w-5h-5" / />
                 </button>
               </div>
             </div>
           ) : (
             // Detailed view
             <div className="p-6" />
-              <div className="flex items-center justify-between mb-6" />
-                <h3 className="text-xl font-semibold text-white"  >Cookie Preferences</h3>
+              <div className="flex items-centerjustify-betweenmb-6" />
+                <h3 className="text-xlfont-semiboldtext-white"  >Cookie Preferences</h3>
                 <button
                   onClick="{()" = /> setShowDetails(false)}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400hover:text-whitetransition-colors"
                   aria-label="Close details"
                 >
-                  <X className="w-5 h-5" / />
+                  <X className="w-5h-5" / />
                 </button>
               </div>
 
               <div className="space-y-6" />
                 {/* Necessary Cookies */}
-                <div className="flex items-start space-x-4" />
-                  <Shield className="w-6 h-6 text-green-400 mt-1" / />
+                <div className="flexitems-startspace-x-4" />
+                  <Shield className="w-6 h-6text-green-400mt-1" / />
                   <div className="flex-1" />
-                    <div className="flex items-center justify-between mb-2" />
-                      <h4 className="font-semibold text-white"  >Necessary Cookies</h4>
-                      <span className="text-sm text-green-400 font-medium"  >Always Active</span>
+                    <div className="flex items-centerjustify-betweenmb-2" />
+                      <h4 className="font-semiboldtext-white"  >Necessary Cookies</h4>
+                      <span className="text-smtext-green-400font-medium"  >Always Active</span>
                     </div>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-gray-300text-sm" />
                       These cookies are essential for the website to function properly. They cannot be disabled.
                     </p>
                   </div>
                 </div>
 
                 {/* Analytics Cookies */}
-                <div className="flex items-start space-x-4" />
-                  <BarChart3 className="w-6 h-6 text-blue-400 mt-1" / />
+                <div className="flexitems-startspace-x-4" />
+                  <BarChart3 className="w-6 h-6text-blue-400mt-1" / />
                   <div className="flex-1" />
-                    <div className="flex items-center justify-between mb-2" />
-                      <h4 className="font-semibold text-white"  >Analytics Cookies</h4>
-                      <label className="relative inline-flex items-center cursor-pointer" />
-                        <input type="checkbox" className="sr-only peer" defaultChecked / />
-                        <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2, px] after:left-[2, px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500" /></div>
+                    <div className="flex items-centerjustify-betweenmb-2" />
+                      <h4 className="font-semiboldtext-white"  >Analytics Cookies</h4>
+                      <label className="relative inline-flexitems-centercursor-pointer" />
+                        <input type="checkbox" className="sr-onlypeer" defaultChecked / />
+                        <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2, px] after:left-[2, px] after:bg-white after:rounded-full after:h-5 after:w-5after:transition-allpeer-checked:bg-cyan-500" /></div>
                       </label>
                     </div>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-gray-300text-sm" />
                       These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.
                     </p>
                   </div>
                 </div>
 
                 {/* Marketing Cookies */}
-                <div className="flex items-start space-x-4" />
-                  <Settings className="w-6 h-6 text-purple-400 mt-1" / />
+                <div className="flexitems-startspace-x-4" />
+                  <Settings className="w-6 h-6text-purple-400mt-1" / />
                   <div className="flex-1" />
-                    <div className="flex items-center justify-between mb-2" />
-                      <h4 className="font-semibold text-white"  >Marketing Cookies</h4>
-                      <label className="relative inline-flex items-center cursor-pointer" />
-                        <input type="checkbox" className="sr-only peer" / />
-                        <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2, px] after:left-[2, px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500" /></div>
+                    <div className="flex items-centerjustify-betweenmb-2" />
+                      <h4 className="font-semiboldtext-white"  >Marketing Cookies</h4>
+                      <label className="relative inline-flexitems-centercursor-pointer" />
+                        <input type="checkbox" className="sr-onlypeer" / />
+                        <div className="w-11 h-6 bg-slate-600 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-cyan-500/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2, px] after:left-[2, px] after:bg-white after:rounded-full after:h-5 after:w-5after:transition-allpeer-checked:bg-cyan-500" /></div>
                       </label>
                     </div>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-gray-300text-sm" />
                       These cookies are used to track visitors across websites to display relevant and engaging advertisements.
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 mt-6 pt-6 border-t border-slate-700" />
+              <div className="flex flex-col sm:flex-row gap-3 mt-6 pt-6border-tborder-slate-700" />
                 <button
                   onClick="{acceptAll}"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300"
                   />Accept All
                 </button>
                 <button
                   onClick="{acceptCustom}"
-                  className="bg-slate-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-slate-600 transition-colors"
+                  className="bg-slate-700 text-white px-6 py-2 rounded-lg font-semiboldhover:bg-slate-600transition-colors"
                   />Save Preferences
                 </button>
                 <button
                   onClick="{acceptNecessary}"
-                  className="border border-slate-600 text-gray-300 px-6 py-2 rounded-lg font-semibold hover:bg-slate-700 transition-colors"
+                  className="border border-slate-600 text-gray-300 px-6 py-2 rounded-lg font-semiboldhover:bg-slate-700transition-colors"
                   />Reject All
                 </button>
               </div>

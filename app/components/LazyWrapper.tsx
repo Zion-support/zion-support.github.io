@@ -6,14 +6,14 @@ interface LazyWrapperProps {
 }
 
 const DefaultFallback = () => (
-  <div className="flex items-center justify-center min-h-screen" />
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400" /></div>
+  <div className="flex items-center justify-centermin-h-screen" />
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2border-cyan-400" /></div>
   </div>
 )
 
 export const LazyWrapper: React.FC<LazyWrapperProps /> = ({ 
   children, 
-  fallback = <DefaultFallback / /> 
+  fallback = <DefaultFallback / />
 }) => {
   return (
     <Suspense fallback="{fallback}"  />{children}

@@ -61,7 +61,7 @@ function App() {
     <ErrorBoundary />
       <HelmetProvider />
         <BrowserRouter />
-          <div const className = "App" />
+          <div className="App" />
             <PerformanceMonitor / />
             <AccessibilityEnhancer / />
             <Suspense fallback="{<AppLoadingSpinner" / />}>
