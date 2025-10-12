@@ -1,7 +1,9 @@
-<<<<<<< HEAD
 'use client';
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
@@ -5,13 +6,21 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, 
 =======
 import { Menu, X, ChevronDown, Zap, Cloud, Globe, Code, Smartphone, Brain, Wifi } from 'lucide-react';
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
+=======
+'use client';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Brain, Cloud, Shield, Code, ChevronDown } from 'lucide-react';
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+<<<<<<< HEAD
   const [servicesOpen, setServicesOpen] = useState(false);
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
 
-  // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -20,6 +29,7 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -134,6 +144,8 @@ const Navigation: React.FC = () => {
     { name: 'Zion AI Fraud Detector', url: '/zion-ai-fraud-detector', icon: Shield }
   ];
 
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -156,6 +168,7 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
+<<<<<<< HEAD
           <Link to="/" className="flex items-center space-x-2 group">
             <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <Zap className="w-6 h-6 text-white" />
@@ -165,6 +178,19 @@ const Navigation: React.FC = () => {
             </span>
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
           </Link>
+=======
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center space-x-3 group">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
+                <Brain className="w-6 h-6 text-white" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-2xl font-bold text-white">Zion Tech Group</span>
+                <span className="text-xs text-cyan-400 font-medium tracking-wider">AI & IT SOLUTIONS</span>
+              </div>
+            </Link>
+          </div>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -172,6 +198,7 @@ const Navigation: React.FC = () => {
             <Link to="/" className="text-gray-300 hover:text-white transition-colors">
               Home
             </Link>
+<<<<<<< HEAD
             <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
 =======
             <Link 
@@ -400,10 +427,26 @@ const Navigation: React.FC = () => {
               Case Studies
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+=======
+            <Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              AI Services
+            </Link>
+            <Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              IT Services
+            </Link>
+            <Link to="/micro-saas" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Micro SAAS
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              About
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
               Contact
             </Link>
           </div>
 
+<<<<<<< HEAD
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -420,6 +463,13 @@ const Navigation: React.FC = () => {
             <button
               onClick={toggleMenu}
               className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
+=======
+          {/* Mobile Menu Button */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -452,6 +502,7 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="lg:hidden mobile-menu">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900 rounded-lg mt-2">
@@ -655,6 +706,28 @@ const Navigation: React.FC = () => {
                 Get Started
               </Link>
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
+=======
+          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
+            <div className="pt-4 space-y-4">
+              <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={() => setIsOpen(false)}>
+                Home
+              </Link>
+              <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={() => setIsOpen(false)}>
+                AI Services
+              </Link>
+              <Link to="/it-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={() => setIsOpen(false)}>
+                IT Services
+              </Link>
+              <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={() => setIsOpen(false)}>
+                Micro SAAS
+              </Link>
+              <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={() => setIsOpen(false)}>
+                About
+              </Link>
+              <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={() => setIsOpen(false)}>
+                Contact
+              </Link>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
             </div>
           </div>
         )}
@@ -665,6 +738,9 @@ const Navigation: React.FC = () => {
 
 <<<<<<< HEAD
 export default Navigation;
+<<<<<<< HEAD
 =======
 export default Navigation;
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
