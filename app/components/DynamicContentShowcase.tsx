@@ -1,11 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Zap, Star, Users, Shield, Cloud, BarChart3, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
 
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,255 +15,196 @@ const DynamicContentShowcase: React.FC = () => {
       color: 'from-yellow-400 to-orange-500'
     },
     {
-      icon: Cloud,
-      title: 'Cloud-Native Architecture',
-      description: 'Built for the cloud with scalability, reliability, and performance at its core.',
-      color: 'from-blue-400 to-cyan-500'
+      icon: Star,
+      title: 'Advanced Analytics',
+      description: 'Gain deep insights into your business performance with our cutting-edge analytics platform.',
+      color: 'from-blue-400 to-purple-500'
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Enhance productivity with seamless collaboration tools designed for modern teams.',
+      color: 'from-green-400 to-teal-500'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Accelerate your business growth with data-driven strategies and optimization tools.',
+      color: 'from-pink-400 to-rose-500'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with advanced encryption, compliance, and threat protection.',
-      color: 'from-green-400 to-emerald-500'
+      description: 'Protect your data with enterprise-grade security measures and compliance standards.',
+      color: 'from-indigo-400 to-blue-500'
     },
     {
-      icon: BarChart3,
-      title: 'Real-Time Analytics',
-      description: 'Make data-driven decisions with comprehensive analytics and business intelligence.',
-      color: 'from-purple-400 to-pink-500'
+      icon: Cloud,
+      title: 'Cloud Infrastructure',
+      description: 'Scale effortlessly with our robust cloud infrastructure and global CDN network.',
+      color: 'from-cyan-400 to-blue-500'
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CEO',
-      company: 'TechCorp Solutions',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. The AI solutions they implemented have increased our efficiency by 300% and reduced costs significantly.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CTO',
-      company: 'InnovateLabs',
-      content: 'Their cloud migration services were exceptional. We achieved 99.9% uptime and our applications now run 5x faster than before.',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Operations Director',
-      company: 'Global Enterprises',
-      content: 'The security enhancements they implemented gave us peace of mind. Our data is now more secure than ever, and we passed all compliance audits.',
-      rating: 5
-    }
+  const stats = [
+    { label: 'Happy Clients', value: '500+', icon: Users },
+    { label: 'Projects Completed', value: '1000+', icon: CheckCircle },
+    { label: 'Years Experience', value: '10+', icon: Star },
+    { label: 'Team Members', value: '50+', icon: BarChart3 }
   ];
-
-  const benefits = [
-    'Reduce operational costs by up to 40%',
-    'Increase productivity and efficiency',
-    'Enhance customer experience',
-    'Improve data security and compliance',
-    'Scale your business faster',
-    'Gain competitive advantage',
-    'Access to expert support',
-    'Future-proof your technology'
-  ];
-
-  const currentTestimonial = testimonials[currentIndex];
 
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(() => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-      }, 5000);
+        setCurrentIndex((prev) => (prev + 1) % features.length);
+      }, 3000);
       return () => clearInterval(interval);
     }
-    
-    return () => {
-      // No cleanup needed when not playing
-    };
-  }, [isPlaying, testimonials.length]);
+  }, [isPlaying, features.length]);
 
-  const nextTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+  const nextFeature = () => {
+    setCurrentIndex((prev) => (prev + 1) % features.length);
   };
 
-  const prevTestimonial = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+  const prevFeature = () => {
+    setCurrentIndex((prev) => (prev - 1 + features.length) % features.length);
   };
 
-  const togglePlayPause = () => {
+  const togglePlay = () => {
     setIsPlaying(!isPlaying);
   };
 
+  const currentFeature = features[currentIndex];
+
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Experience the <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Future</span> of Technology
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Discover how our cutting-edge AI and IT solutions can transform your business and drive unprecedented growth.
+    <div className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Dynamic Content
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Showcase</span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Experience our interactive platform with real-time updates and dynamic content that adapts to your needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-              <Zap className="w-5 h-5 mr-2" />
-              Get Started
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
-              <ArrowRight className="w-5 h-5 mr-2" />
-              Learn More
-            </button>
-          </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Powerful Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive suite of AI and IT solutions provides everything you need to succeed in the digital age.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3 text-center">{feature.title}</h3>
-                <p className="text-gray-300 text-center">{feature.description}</p>
+        {/* Feature Showcase */}
+        <div className="mb-20">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="flex items-center justify-between mb-8">
+              <h3 className="text-2xl font-bold text-white">Featured Capabilities</h3>
+              <div className="flex items-center space-x-4">
+                <button
+                  onClick={prevFeature}
+                  className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors duration-200"
+                >
+                  <ChevronLeft className="w-6 h-6 text-white" />
+                </button>
+                <button
+                  onClick={togglePlay}
+                  className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors duration-200"
+                >
+                  {isPlaying ? (
+                    <Pause className="w-6 h-6 text-white" />
+                  ) : (
+                    <Play className="w-6 h-6 text-white" />
+                  )}
+                </button>
+                <button
+                  onClick={nextFeature}
+                  className="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors duration-200"
+                >
+                  <ChevronRight className="w-6 h-6 text-white" />
+                </button>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* Testimonials Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">What Our Customers Say</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our satisfied customers have to say about their experience.
-            </p>
-          </div>
-
-          <div className="relative">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-              <div className="text-center">
-                <div className="flex justify-center mb-6">
-                  {[...Array(currentTestimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-                  ))}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div className="space-y-6">
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${currentFeature.color} flex items-center justify-center`}>
+                  <currentFeature.icon className="w-8 h-8 text-white" />
                 </div>
-                <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                  "{currentTestimonial.content}"
-                </blockquote>
-                
-                <div className="flex items-center justify-center gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-left">
-                    <div className="text-lg font-semibold text-white">{currentTestimonial.name}</div>
-                    <div className="text-gray-400">{currentTestimonial.role}</div>
-                    <div className="text-purple-400 text-sm">{currentTestimonial.company}</div>
+                <h4 className="text-3xl font-bold text-white">
+                  {currentFeature.title}
+                </h4>
+                <p className="text-lg text-gray-300">
+                  {currentFeature.description}
+                </p>
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center">
+                  Learn More
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </button>
+              </div>
+
+              <div className="relative">
+                <div className="aspect-square bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className={`w-24 h-24 rounded-full bg-gradient-to-r ${currentFeature.color} flex items-center justify-center mx-auto mb-4`}>
+                      <currentFeature.icon className="w-12 h-12 text-white" />
+                    </div>
+                    <h5 className="text-xl font-semibold text-white mb-2">
+                      {currentFeature.title}
+                    </h5>
+                    <p className="text-gray-400">
+                      Interactive Demo
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Navigation Controls */}
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <button
-                onClick={prevTestimonial}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              
-              <button
-                onClick={togglePlayPause}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
-              >
-                {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
-              </button>
-              
-              <button
-                onClick={nextTestimonial}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {testimonials.map((_, index) => (
+            {/* Feature Indicators */}
+            <div className="flex justify-center mt-8 space-x-2">
+              {features.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
+                  className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                    index === currentIndex ? 'bg-blue-500' : 'bg-white/30'
                   }`}
                 />
               ))}
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Benefits Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Comprehensive Benefits</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our solutions provide a complete package of benefits designed to accelerate your business growth.
-            </p>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <stat.icon className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-3xl font-bold text-white mb-2">
+                {stat.value}
+              </div>
+              <div className="text-gray-300">
+                {stat.label}
+              </div>
             </div>
+          ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-16">
+          <h3 className="text-3xl font-bold text-white mb-6">
+            Ready to Experience Dynamic Content?
+          </h3>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Discover how our dynamic content platform can transform your user experience and drive engagement.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+              Start Free Trial
+            </button>
+            <button className="border border-gray-300 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              Schedule Demo
+            </button>
           </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Experience the Future?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses that have already transformed their operations with our cutting-edge solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
-                <Zap className="w-5 h-5" />
-                <span>Start Free Trial</span>
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
-                Schedule Demo
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 };

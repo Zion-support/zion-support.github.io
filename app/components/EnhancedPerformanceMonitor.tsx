@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
 
 const EnhancedPerformanceMonitorPage: React.FC = () => {
   const features = [
@@ -13,7 +13,6 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Real-time Analytics',
-<<<<<<< HEAD
       description: 'Get instant insights into your system performance with comprehensive analytics'
     },
     {
@@ -25,30 +24,17 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
       icon: Globe,
       title: 'Global Coverage',
       description: 'Monitor performance across multiple locations and data centers worldwide'
-=======
-      description: 'Lightning-fast performance monitoring with instant alerts and insights'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards for monitoring data'
-    },
-    {
-      icon: Globe,
-      title: 'Global Monitoring',
-      description: 'Worldwide performance monitoring and support for international businesses'
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
     }
   ]
 
   const benefits = [
-    'Real-time performance monitoring',
-    'AI-powered analytics and insights',
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
-    'Scalable monitoring solutions',
+    'Scalable and flexible solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
-    'Cost-effective monitoring plans',
+    'Cost-effective pricing plans',
     'Proven track record of success'
   ]
 
@@ -56,12 +42,8 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Enhanced Performance Monitor | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Professional Enhanced Performance Monitor services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-=======
-        <meta name="description" content="Professional performance monitoring services by Zion Tech Group. Advanced AI and IT solutions for your business." />
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
-        <meta name="keywords" content="performance monitoring, AI solutions, IT services, Zion Tech Group, system monitoring" />
+        <meta name="description" content="Professional enhanced performance monitor solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="enhanced performance monitor, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
       
       {/* Hero Section */}
@@ -70,32 +52,21 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
-                Enhanced Performance Monitor
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Monitor and optimize your system performance with our advanced AI-powered monitoring solutions. 
-              Get real-time insights and proactive alerts.
-=======
                 Enhanced Performance
               </span>
               <br />
-              <span className="text-white">Monitoring</span>
+              <span className="text-white">Monitor</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced performance monitoring solutions. 
+              Transform your business with our advanced enhanced performance monitor solutions. 
               Powered by cutting-edge AI technology and industry expertise.
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              <button className="border border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
             </div>
@@ -108,24 +79,25 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
-              Why Choose Our Performance Monitor?
-=======
-              Why Choose Our Performance Monitoring?
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
+              Our Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our performance monitoring solutions deliver unmatched insights, security, and scalability.
+              Discover the powerful features that make our enhanced performance monitor solutions stand out.
             </p>
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-bold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -137,61 +109,44 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+              Why Choose Our Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our performance monitoring solutions for your business.
+              Experience the benefits of working with our cutting-edge enhanced performance monitor solutions.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
+              <div key={index} className="flex items-start space-x-4">
+                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="w-5 h-5 text-white" />
+                </div>
+                <p className="text-gray-300 text-lg">
+                  {benefit}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
+            Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Contact us today to learn more about our performance monitoring solutions and how they can transform your business.
+            Get started with our enhanced performance monitor solutions today and experience the future of business technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
+              Start Your Journey
+            </button>
+            <button className="border border-gray-300 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
               Contact Us
-              <ArrowRight className="ml-2 h-5 w-5" />
             </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-              Learn More
-            </button>
-=======
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Contact us today to learn more about our performance monitoring solutions and how they can benefit your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
-                Contact Us
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Schedule Demo
-              </button>
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
           </div>
         </div>
       </section>

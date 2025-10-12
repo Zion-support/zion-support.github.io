@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import SEOHead from '../components/SEOHead'
-import { ArrowRight, Bot, Zap, Settings, Workflow, CheckCircle, Star, Clock, Users, DollarSign, Globe, Shield } from 'lucide-react'
+import { ArrowRight, Bot, Zap, Settings, Workflow, CheckCircle, Clock, Users, DollarSign, Globe } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export default function AutomationPage() {
