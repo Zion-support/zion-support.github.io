@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Smartphone, Cpu, Database } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
+import LazyImage from './components/LazyImage'
+import StructuredData from './components/StructuredData'
+import Testimonials from './components/Testimonials'
 
 export default function HomePage() {
   const features = [
@@ -59,12 +62,36 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 dark:from-gray-900 dark:via-purple-900 dark:to-gray-900">
       <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, IT services, 5G implementation, cloud services, digital transformation, Zion Tech Group" />
+        <title>Zion Tech Group - Advanced AI and IT Solutions | 300% ROI Guaranteed</title>
+        <meta name="description" content="Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Transform your business with cutting-edge technology. 300% ROI guaranteed." />
+        <meta name="keywords" content="AI solutions, IT services, 5G implementation, cloud services, digital transformation, Zion Tech Group, ROI guaranteed" />
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Transform your business with cutting-edge technology." />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta name="twitter:description" content="Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
+      
+      <StructuredData 
+        type="service" 
+        data={{
+          name: "AI and IT Solutions",
+          description: "Comprehensive AI-powered solutions, 5G implementation, and enterprise IT services",
+          serviceType: "Technology Services",
+          areaServed: "Worldwide",
+          offers: {
+            "@type": "Offer",
+            price: "Contact for pricing",
+            priceCurrency: "USD"
+          }
+        }} 
+      />
       
       <Navigation />
       
@@ -150,6 +177,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Testimonials Section */}
+      <Testimonials />
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
