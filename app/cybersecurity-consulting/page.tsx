@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { Shield, ArrowRight, CheckCircle, Brain, Star, Lock, Eye } from 'lucide-react';
+import { Shield, ArrowRight, CheckCircle, Brain, Star, Lock, Eye, Brain, Clock, Target } from 'lucide-react';
 
 import Layout from '../layout'
 
@@ -109,7 +109,7 @@ export default function CybersecurityConsulting() {
 
   return (
 
-        {/* Hero Section */}
+        {/* Hero Section */
     
                 Expert Cybersecurity Consulting
 
@@ -122,22 +122,22 @@ export default function CybersecurityConsulting() {
 
                 <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">View Case Studies
 
-        {/* Features Section */}
+        {/* Features Section */
     
               <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Comprehensive Security Solutions
                 Expert cybersecurity services that protect your business from evolving threats
 
  (
 
-                    {feature.icon}
+                    {feature.icon
     
                     <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
 
                   <p className="text-gray-300">{feature.description}</p>
 
-              ))}
+              ))
 
-        {/* Consulting Features */}
+        {/* Consulting Features */
     
               <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Complete Security Consulting
                 End-to-end cybersecurity services to protect your organization
@@ -147,12 +147,12 @@ export default function CybersecurityConsulting() {
                   <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.category}</h3>
  (
 
-                        {item}
-                    ))}
+                        {item
+                    ))
 
-              ))}
+              ))
 
-        {/* Pricing Section */}
+        {/* Pricing Section */
     
               <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Flexible Consulting Packages
                 Choose the security consulting package that fits your needs
@@ -161,7 +161,7 @@ export default function CybersecurityConsulting() {
                   {plan.popular && (
 
                       Most Popular
-                  )}
+                  )
 
                   <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
                   <p className="text-gray-300mb-6">{plan.description}</p>
@@ -169,21 +169,21 @@ export default function CybersecurityConsulting() {
                     <span className="text-gray-400">{plan.period}</span>
  (
 
-                        {feature}
-                    ))}
+                        {feature
+                    ))
                   
                     to="/contact"
                     className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-red-500 to-purple-600 text-white hover:from-red-600 hover:to-purple-700'
                         : 'border-2 border-red-400 text-red-400 hover: bg-red-400/10'
-                    }`}
+                    }`
 
 Get Started
     
-              ))}
+              ))
 
-        {/* Testimonials */}
+        {/* Testimonials */
     
               <h2 className="text-3 xl font-boldtext-whitemb-4">Trusted by Industry Leaders
                 See how our Cybersecurity Consulting protects organizations worldwide
@@ -191,15 +191,15 @@ Get Started
  (
 
  (
-                    ))}
+                    ))
 
                   <p className="text-gray-300mb-4">"{testimonial.content}"</p>
                     <div className="font-semiboldtext-white">{testimonial.name}</div>
                     <div className="text-smtext-gray-400">{testimonial.company}</div>
 
-              ))}
+              ))
 
-        {/* CTA Section */}
+        {/* CTA Section */
     
               <h2 className="text-3 xl font-boldtext-whitemb-4">Secure Your Business Today
                 Don't wait for a security breach. Get expert cybersecurity consulting to protect your organization
@@ -207,5 +207,3 @@ Get Started
                 <Link to="/contact" className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700transition-allduration-300">Get Your Free Security Audit
                 <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
   )
-};
-

@@ -1,14 +1,14 @@
-
-
 'use client';
+
+
 import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3 } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Brain, Clock, Target } from 'lucide-react';
 
-        {/* Hero Section */}
+        {/* Hero Section */
     
                 AI Project Management Pro
 
@@ -18,7 +18,7 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud,
 
                 Learn More
 
-        {/* Features Section */}
+        {/* Features Section */
     
                 Why Choose Our AI Project Management?
 
@@ -38,14 +38,14 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud,
                   description: "Enterprise-grade security ensures your project data is protected while maintaining 99.9% uptime."
  (
 
-                    {feature.icon}
+                    {feature.icon
 
                   <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
 
-              ))}
+              ))
 
-        {/* Pricing Section */}
+        {/* Pricing Section */
     
                 Choose Your Plan
 
@@ -55,7 +55,7 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud,
     
                     <h3 className="text-2xl font-boldtext-whitemb-2">{plan.name}</h3>
 
-                      {plan.price}
+                      {plan.price
     
                       <span className="text-lgtext-gray-400">{plan.period}</span>
 
@@ -63,12 +63,12 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud,
 
  (
 
-                        {feature}
-                    ))}
+                        {feature
+                    ))
                   
                     Get Started
 
-              ))}
+              ))
     
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Clock, Target, BarChart3 } from 'lucide-react';
 
@@ -167,48 +167,48 @@ export default function AIProjectManagementPro() {
                 Get Started
                 View All Services
 
-        {/* Features Section */}
+        {/* Features Section */
 
-        {/* Hero Section */}
+        {/* Hero Section */
                 AI Project Management Pro
               Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs.
                 Get Started
                 Learn More
 
-        {/* Features Section */}
+        {/* Features Section */
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300">Powerful AI capabilities for superior project management</p>
  (
                   <div className="mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-              ))}
+              ))
 
-        {/* Pricing Section */}
+        {/* Pricing Section */
               <h2 className="text-4xl font-bold text-white mb-4">Pricing Plans</h2>
               <p className="text-xl text-gray-300">Choose the perfect plan for your team</p>
  (
                   {plan.popular && (
                         Most Popular
-                  )}
+                  )
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                       <span className="text-4xl font-bold text-white">{plan.price}</span>
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     <p className="text-gray-300 mt-2">{plan.description}</p>
  (
 
-                        {feature}
-                    ))}
+                        {feature
+                    ))
 
               Powerful Features
  (
-                    {feature.icon}
-                    {feature.title}
-                    {feature.description}
+                    {feature.icon
+                    {feature.title
+                    {feature.description
 
-              ))}
+              ))
 
-        {/* CTA Section */}
+        {/* CTA Section */
 
               Ready to Transform Your Project Management?
               Join thousands of teams already using our AI-powered project management solutions to achieve better results.
@@ -217,31 +217,17 @@ export default function AIProjectManagementPro() {
   );
 
                     Get Started
-              ))}
+              ))
 
-        {/* Testimonials Section */}
+        {/* Testimonials Section */
               <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
               <p className="text-xl text-gray-300">Real results from real teams</p>
  (
  (
-                    ))}
+                    ))
                   <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                     <p className="font-semibold text-white">{testimonial.name}</p>
                     <p className="text-cyan-400">{testimonial.company}</p>
-              ))}
+              ))
 
-        {/* CTA Section */}
-
-                Ready to Get Started?
-
-                Ready to Transform Your Project Management?
-                Contact us to learn more about our AI project management solutions and how we can help your team succeed.
-
-                Contact us to learn more about our solutions and how we can help your business.
-
-                  Contact Us
-    
-                  View Services
-
-  );
-
+        {/* CTA Section */

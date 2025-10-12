@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { Languages, ArrowRight, CheckCircle, Brain, Star, Target, Clock, FileText } from 'lucide-react';
+import { Languages, ArrowRight, CheckCircle, Brain, Star, Target, Clock, FileText, Brain, Clock, Target } from 'lucide-react';
 
 import Layout from '../layout'
 
@@ -111,7 +111,7 @@ export default function AITranslationService() {
 
   return (
 
-        {/* Hero Section */}
+        {/* Hero Section */
     
                 AI-Powered Translation
 
@@ -124,22 +124,22 @@ export default function AITranslationService() {
 
                 <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Try Demo
 
-        {/* Features Section */}
+        {/* Features Section */
     
               <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Intelligent Translation Solutions
                 AI-powered features that break down language barriers and enable global communication
 
  (
 
-                    {feature.icon}
+                    {feature.icon
     
                     <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
 
                   <p className="text-gray-300">{feature.description}</p>
 
-              ))}
+              ))
 
-        {/* Translation Features */}
+        {/* Translation Features */
     
               <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Complete Translation Platform
                 Everything you need to translate content across languages and cultures
@@ -149,12 +149,12 @@ export default function AITranslationService() {
                   <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.category}</h3>
  (
 
-                        {item}
-                    ))}
+                        {item
+                    ))
 
-              ))}
+              ))
 
-        {/* Pricing Section */}
+        {/* Pricing Section */
     
               <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Flexible Pricing Plans
                 Choose the plan that fits your translation needs
@@ -163,7 +163,7 @@ export default function AITranslationService() {
                   {plan.popular && (
 
                       Most Popular
-                  )}
+                  )
 
                   <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
                   <p className="text-gray-300mb-6">{plan.description}</p>
@@ -171,21 +171,21 @@ export default function AITranslationService() {
                     <span className="text-gray-400">{plan.period}</span>
  (
 
-                        {feature}
-                    ))}
+                        {feature
+                    ))
                   
                     to="/contact"
                     className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-amber-500 to-purple-600 text-white hover:from-amber-600 hover:to-purple-700'
                         : 'border-2 border-amber-400 text-amber-400 hover: bg-amber-400/10'
-                    }`}
+                    }`
 
 Get Started
     
-              ))}
+              ))
 
-        {/* Testimonials */}
+        {/* Testimonials */
     
               <h2 className="text-3 xl font-boldtext-whitemb-4">Trusted by Global Businesses
                 See how our AI Translation Service enables global communication
@@ -193,15 +193,15 @@ Get Started
  (
 
  (
-                    ))}
+                    ))
 
                   <p className="text-gray-300mb-4">"{testimonial.content}"</p>
                     <div className="font-semiboldtext-white">{testimonial.name}</div>
                     <div className="text-smtext-gray-400">{testimonial.company}</div>
 
-              ))}
+              ))
 
-        {/* CTA Section */}
+        {/* CTA Section */
     
               <h2 className="text-3 xl font-boldtext-whitemb-4">Break Down Language Barriers Today
                 Join thousands of businesses using AI Translation Service to reach global audiences
@@ -209,5 +209,3 @@ Get Started
                 <Link to="/contact" className="bg-gradient-to-r from-amber-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
                 <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
   )
-};
-

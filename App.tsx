@@ -7,7 +7,7 @@ import './app/styles/futuristic-enhanced.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
-import { PageLoader } from './app/components/LoadingStates';
+import { LoadingPage } from './app/components/LoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import SEOHead from './app/components/EnhancedSEOHead';
 import Breadcrumb from './app/components/Breadcrumb';
@@ -172,7 +172,7 @@ function App() {
             <FuturisticBackground />
             <Navigation />
             <Breadcrumb />
-            <Suspense fallback={<PageLoader />}>
+            <Suspense fallback={<LoadingPage />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />

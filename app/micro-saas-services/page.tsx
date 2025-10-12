@@ -84,46 +84,43 @@ import { BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users 
 
 import { ArrowRight } from 'lucide-react';
 
-export default function MicroSaasServices() {
-  return (
-    
-        <title>Micro SaaS Services - Zion Tech Group</title>
+export default function <title>Micro SaaS Services - Zion Tech Group</title>
 
-        {/* Hero Section */}
+        {/* Hero Section */
                 Micro <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">SaaS Services</span>
                 Powerful, purpose-built software solutions designed to solve specific business challenges. 
                 Get enterprise-grade functionality without the complexity.
                   Start Free Trial
                   View AI Services
 
-        {/* Services Grid */}
+        {/* Services Grid */
                 Our <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SaaS Solutions</span>
                 Specialized software tools that solve specific business problems with precision and efficiency
 
  (
                   
-                    {service.title}
+                    {service.title
                   
-                    {service.description}
+                    {service.description
 
  (
-                        {feature}
-                    ))}
+                        {feature
+                    ))
 
                     <span className="text-2xlfont-bold text-cyan-400">{service.price}</span>
                       Learn More <ArrowRight>
-              ))}
+              ))
 
-        {/* Features Section */}
+        {/* Features Section */
                 Why Choose <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SaaS</span>?
                 Get the power of enterprise software without the complexity and cost
 
  (
                   <h3 className="text-xlfont-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300leading-relaxed">{feature.description}</p>
-              ))}
+              ))
 
-        {/* Pricing Section */}
+        {/* Pricing Section */
                 Simple <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
                 Choose the plan that fits your needs. All plans include 24/7 support and regular updates.
 
@@ -151,7 +148,7 @@ export default function MicroSaasServices() {
                     Custom development
                   Contact Sales
 
-        {/* CTA Section */}
+        {/* CTA Section */
                 Ready to Transform Your Business?
                 Start your free trial today and experience the power of our Micro SaaS solutions.
                   Start Free Trial
@@ -163,13 +160,178 @@ export default function MicroSaasServices() {
 export default MicroSaasServicesPage;
 
         <title>5G Data Analytics - Zion Tech Group</title>
-
-        <title>MicroSaasServices - Zion Tech Group</title>
       
-            <h1 className="text-4xl font-bold text-white mb-6">MicroSaasServices</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional microsaasservices services coming soon.</p>
-            
-              Contact Us
+            () {
+  return (
+    <>
+      <Helmet>
+        <title>Micro SaaS Services - Zion Tech Group</title>
+
+        {/* Hero Section */
+                Micro <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">SaaS Services</span>
+                Powerful, purpose-built software solutions designed to solve specific business challenges. 
+                Get enterprise-grade functionality without the complexity.
+                  Start Free Trial
+                  View AI Services
+
+        {/* Services Grid */
+                Our <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SaaS Solutions</span>
+                Specialized software tools that solve specific business problems with precision and efficiency
+
+ (
+                  
+                    {service.title
+                  
+                    {service.description
+
+ (
+                        {feature
+                    ))
+
+                    <span className="text-2xlfont-bold text-cyan-400">{service.price}</span>
+                      Learn More <ArrowRight>
+              ))
+
+        {/* Features Section */
+                Why Choose <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SaaS</span>?
+                Get the power of enterprise software without the complexity and cost
+
+ (
+                  <h3 className="text-xlfont-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300leading-relaxed">{feature.description}</p>
+              ))
+
+        {/* Pricing Section */
+                Simple <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
+                Choose the plan that fits your needs. All plans include 24/7 support and regular updates.
+
+                <h3 className="text-2xlfont-bold text-white mb-4">Starter</h3>
+                <div className="text-4xl font-bold text-cyan-400 mb-6">$99<span className="text-lgtext-gray-400">/month</span></div>
+                    Up to 3 Micro SaaS tools
+                    Basic support
+                    Standard features
+                  Get Started
+
+                    Most Popular
+                <h3 className="text-2xlfont-bold text-white mb-4">Professional</h3>
+                <div className="text-4xl font-bold text-cyan-400 mb-6"><title>Micro SaaS Services - Zion Tech Group</title>
+
+        {/* Hero Section */
+                Micro <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">SaaS Services</span>
+                Powerful, purpose-built software solutions designed to solve specific business challenges. 
+                Get enterprise-grade functionality without the complexity.
+                  Start Free Trial
+                  View AI Services
+
+        {/* Services Grid */
+                Our <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SaaS Solutions</span>
+                Specialized software tools that solve specific business problems with precision and efficiency
+
+ (
+                  
+                    {service.title
+                  
+                    {service.description
+
+ (
+                        {feature
+                    ))
+
+                    <span className="text-2xlfont-bold text-cyan-400">{service.price}</span>
+                      Learn More <ArrowRight>
+              ))
+
+        {/* Features Section */
+                Why Choose <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SaaS</span>?
+                Get the power of enterprise software without the complexity and cost
+
+ (
+                  <h3 className="text-xlfont-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300leading-relaxed">{feature.description}</p>
+              ))
+
+        {/* Pricing Section */
+                Simple <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
+                Choose the plan that fits your needs. All plans include 24/7 support and regular updates.
+
+                <h3 className="text-2xlfont-bold text-white mb-4">Starter</h3>
+                <div className="text-4xl font-bold text-cyan-400 mb-6">$99<span className="text-lgtext-gray-400">/month</span></div>
+                    Up to 3 Micro SaaS tools
+                    Basic support
+                    Standard features
+                  Get Started
+
+                    Most Popular
+                <h3 className="text-2xlfont-bold text-white mb-4">Professional</h3>
+                <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lgtext-gray-400">/month</span></div>
+                    Up to 10 Micro SaaS tools
+                    Priority support
+                    Advanced features
+                    Custom integrations
+                  Get Started
+
+                <h3 className="text-2xlfont-bold text-white mb-4">Enterprise</h3>
+                <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>
+                    Unlimited Micro SaaS tools
+                    24/7 dedicated support
+                    All features included
+                    Custom development
+                  Contact Sales
+
+        {/* CTA Section */
+                Ready to Transform Your Business?
+                Start your free trial today and experience the power of our Micro SaaS solutions.
+                  Start Free Trial
+                  Learn More About Us
 
   );
+};
 
+export default MicroSaasServicesPage;
+
+        <title>5G Data Analytics - Zion Tech Group</title>
+      
+            99<span className="text-lgtext-gray-400">/month</span></div>
+                    Up to 10 Micro SaaS tools
+                    Priority support
+                    Advanced features
+                    Custom integrations
+                  Get Started
+
+                <h3 className="text-2xlfont-bold text-white mb-4">Enterprise</h3>
+                <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>
+                    Unlimited Micro SaaS tools
+                    24/7 dedicated support
+                    All features included
+                    Custom development
+                  Contact Sales
+
+        {/* CTA Section */
+                Ready to Transform Your Business?
+                Start your free trial today and experience the power of our Micro SaaS solutions.
+                  Start Free Trial
+                  Learn More About Us
+
+  );
+};
+
+export default MicroSaasServicesPage;
+
+        <title>5G Data Analytics - Zion Tech Group</title>
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">MicroSaasServices</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional microsaasservices services coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}

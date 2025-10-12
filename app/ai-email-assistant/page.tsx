@@ -1,3 +1,4 @@
+'use client';
 
 
 import React from 'react';
@@ -8,9 +9,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Star, Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings} from 'lucide-react';
-'use client';
-
-  const features = [
+const features = [
       icon: Mail,
       title: 'Smart Classification',
       description: 'Automatically categorize and prioritize emails based on content and sender.'
@@ -48,34 +47,34 @@ import { Star, Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings} fr
     
         <title />AI Email Assistant - Zion Tech Group</title>
 
-        {/* Hero Section */}
+        {/* Hero Section */
                 AI <span className="w-5 h-5ml-2" />Email Assistant</span>
               <p className="w-5 h-5ml-2">Transform your email management with intelligent automation, smart classification, 
                 and AI-powered responses that save time and improve productivity.
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building
                 <Link to="/ai-services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All AI Services
 
-        {/* Features Section */}
+        {/* Features Section */
                 Powerful <span className="w-5 h-5ml-2" />Features</span>
               <p className="w-5 h-5ml-2">Everything you need to automate and optimize your email management
 
  (
-                    {feature.icon}
+                    {feature.icon
                   <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
                   <p className="w-5 h-5ml-2">{feature.description}</p>
-              ))}
+              ))
 
-        {/* Use Cases Section */}
+        {/* Use Cases Section */
                 Use <span className="w-5 h-5ml-2" />Cases</span>
               <p className="w-5 h-5ml-2">Discover how our AI email assistant can transform your communication workflows
 
  (
-                    {useCase.icon}
-                  <h3 className="w-5 h-5ml-2" />{useCase.title}
-                  <p className="w-5 h-5ml-2">{useCase.description}
-              ))}
+                    {useCase.icon
+                  <h3 className="w-5 h-5ml-2" />{useCase.title
+                  <p className="w-5 h-5ml-2">{useCase.description
+              ))
 
-        {/* CTA Section */}
+        {/* CTA Section */
               <h2 className="w-5 h-5ml-2" />Ready to Transform Your Email Management?
               <p className="w-5 h-5ml-2">Start automating your email workflows and boost productivity with AI-powered assistance.
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building Now
@@ -91,15 +90,25 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function AiEmailAssistant() {
+export default function AiEmailAssistantZionTechGroup() {
   return (
-    
+    <>
+      <Helmet>
         <title>AiEmailAssistant - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AiEmailAssistant</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional aiemailassistant services coming soon.</p>
-            
-              Contact Us
-
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">AiEmailAssistant</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional aiemailassistant services coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+    </>
   );
-
+}

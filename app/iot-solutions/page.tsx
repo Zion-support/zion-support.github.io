@@ -112,12 +112,11 @@ export default function IoTSolutionsPage() {
   return (
 
         <title>5G Data Analytics - Zion Tech Group</title>
-        <title>IoT Solutions - Zion Tech Group | Smart Device Management & Analytics</title>
-        {/* Open Graph Meta Tags */}
+        {/* Open Graph Meta Tags */
     
-        {/* Twitter Card Meta Tags */}
+        {/* Twitter Card Meta Tags */
 
-        {/* Structured Data */}
+        {/* Structured Data */
         <script type="application/ld+json"  />{JSON.stringify({
             "@context": "https: //schema.org",
             "@type": "Service",
@@ -137,9 +136,9 @@ export default function IoTSolutionsPage() {
                 "price": "199",
                 "priceCurrency": "USD",
                 "unitText": "MONTH"
-          })}
+          })
 
-        {/* Hero Section */}
+        {/* Hero Section */
     
               <span>IoT Solutions</span>
 
@@ -154,63 +153,53 @@ export default function IoTSolutionsPage() {
                 <span>Get Started</span>
                 <span>View Demo</span>
 
-        {/* Services Section */}
+        {/* Services Section */
     
                 Complete <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">IoT Solutions</span>
                 From device management to advanced analytics, we provide everything you need to build and scale your IoT infrastructure.
 
  (
     
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{service.icon}
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{service.icon
 
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{service.title}
-                    {service.description}
+                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{service.title
+                    {service.description
 
  (
     
                         <span>{feature}</span>
 
-                    ))}
+                    ))
     
-                  <div className="text-cyan-400font-semiboldtext-lg">{service.price}
+                  <div className="text-cyan-400font-semiboldtext-lg">{service.price
 
-              ))}
+              ))
 
-        {/* Industries Section */}
+        {/* Industries Section */
     
                 Industries We <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Transform</span>
                 Our IoT solutions are designed to work across various industries, providing tailored solutions for specific needs.
 
  (
     
-                    <div className="p-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg group-hover:scale-110transition-transformduration-300">{industry.icon}
-                    <h3 className="text-xl font-bold text-whitegroup-hover:text-cyan-400transition-colors">{industry.name}
-                    {industry.description}
+                    <div className="p-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg group-hover:scale-110transition-transformduration-300">{industry.icon
+                    <h3 className="text-xl font-bold text-whitegroup-hover:text-cyan-400transition-colors">{industry.name
+                    {industry.description
 
-              ))}
+              ))
 
-        {/* Benefits Section */}
+        {/* Benefits Section */
     
                 Why Choose Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">IoT Solutions?</span>
                 Our IoT solutions deliver measurable results and provide a competitive advantage for your business.
 
  (
     
-                  <div className="flex justify-center mb-4 group-hover:scale-110transition-transformduration-300">{benefit.icon}
+                  <div className="flex justify-center mb-4 group-hover:scale-110transition-transformduration-300">{benefit.icon
 
-                  <h3 className="text-xl font-bold text-white mb-3group-hover:text-cyan-400transition-colors">{benefit.title}
-                    {benefit.description}
+                  <h3 className="text-xl font-bold text-white mb-3group-hover:text-cyan-400transition-colors">{benefit.title
+                    {benefit.description
 
-              ))}
+              ))
 
-        {/* CTA Section */}
-    
-                    Ready to Connect Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">World?</span>
-
-                    Transform your business with our comprehensive IoT solutions. Get started today and unlock the power of connected devices.
-
-                      <span>Get Started</span>
-                      <span>View Pricing</span>
-
-  );
-
+        {/* CTA Section */

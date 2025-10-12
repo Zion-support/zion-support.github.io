@@ -192,7 +192,7 @@ export default function AiFinancialAnalyticsProPage() {
     { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-6h-6" / /> },
     { number: '1 M+', label: 'Transactions Analyzed', icon: <Database className="w-6h-6" / /> },
     { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-6h-6" / /> },
-    { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-6h-6" / /> }
+    { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-6h-6" / /> 
   ];
   const integrations = [
     
@@ -203,18 +203,17 @@ export default function AiFinancialAnalyticsProPage() {
     { name: 'Salesforce', icon: <TrendingUp className="w-6h-6" / />, category: 'CRM' },
     { name: 'HubSpot', icon: <Target className="w-6h-6" / />, category: 'CRM' },
     { name: 'Stripe', icon: <CreditCard className="w-6h-6" / />, category: 'Payments' },
-    { name: 'PayPal', icon: <Wallet className="w-6h-6" / />, category: 'Payments' }
+    { name: 'PayPal', icon: <Wallet className="w-6h-6" / />, category: 'Payments' 
   ];
   return (
     
         <title>5G Data Analytics - Zion Tech Group</title>
-        <title>AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform</title>
 
-        {/* Open Graph Meta Tags */}
+        {/* Open Graph Meta Tags */
     
-        {/* Twitter Card Meta Tags */}
+        {/* Twitter Card Meta Tags */
     
-        {/* Structured Data */}
+        {/* Structured Data */
         <script type="application/ld+json"  />{JSON.stringify({
             "@context": "https: //schema.org",
             "@type": "SoftwareApplication",
@@ -237,11 +236,11 @@ export default function AiFinancialAnalyticsProPage() {
               "@type": "Organization",
               "name": "Zion Tech Group",
               "url": "https: //ziontechgroup.com"
-          })}
+          })
 
-        {/* Hero Section */}
+        {/* Hero Section */
     
-            AI Financial Analytics{' '}
+            AI Financial Analytics{' '
     
             <span className="bg-gradient-to-r from-cyan-400 to-purple-500bg-clip-texttext-transparent">Pro
               Transform your financial analysis with AI-powered insights, real-time analytics, 
@@ -253,16 +252,16 @@ export default function AiFinancialAnalyticsProPage() {
 
           <div className="text-smtext-gray-400">✓ 14-day free trial • ✓ No credit card required • ✓ Bank-grade security
 
-        {/* Stats Section */}
+        {/* Stats Section */
 
  (
     
                   <div className="text-3 xl md: text-4 xl font-boldtext-whitemb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
 
-              ))}
+              ))
 
-        {/* Features Section */}
+        {/* Features Section */
     
             <h2 className="text-3 xl font-boldtext-whitemb-4">Advanced AI Features</h2>
               Our AI Financial Analytics Pro leverages cutting-edge machine learning 
@@ -270,49 +269,49 @@ export default function AiFinancialAnalyticsProPage() {
 
  (
     
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4group-hover:scale-110transition-transform">{feature.icon}
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4group-hover:scale-110transition-transform">{feature.icon
                   <h3 className="text-xl font-semibold text-whitemb-3text-center">{feature.title}</h3>
                   <p className="text-gray-300mb-4text-center">{feature.description}</p>
 
  (
 
-                        {benefit}
-                    ))}
+                        {benefit
+                    ))
 
-            ))}
+            ))
 
-        {/* Analytics Types Section */}
+        {/* Analytics Types Section */
     
             <h2 className="text-3 xl font-boldtext-whitemb-4">Comprehensive Analytics</h2>
               Cover every aspect of your financial operations with our comprehensive analytics suite.
 
  (
 
-                  {type.icon}
+                  {type.icon
     
                   <h3 className="text-lg font-semiboldtext-whiteml-3">{type.category}</h3>
  (
 
-                      {item}
-                  ))}
+                      {item
+                  ))
 
-            ))}
+            ))
 
-        {/* Integrations Section */}
+        {/* Integrations Section */
     
             <h2 className="text-3 xl font-boldtext-whitemb-4">Seamless Integrations</h2>
               Connect with your existing financial systems and tools for a unified analytics experience.
 
  (
     
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-3group-hover:scale-110transition-transform">{integration.icon}
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-3group-hover:scale-110transition-transform">{integration.icon
 
                 <h3 className="text-whitefont-semiboldmb-1">{integration.name}</h3>
                 <p className="text-gray-400text-sm">{integration.category}</p>
 
-            ))}
+            ))
 
-        {/* Pricing Section */}
+        {/* Pricing Section */
     
             <h2 className="text-3 xl font-boldtext-whitemb-4">Choose Your Plan</h2>
               Flexible pricing plans designed to meet your financial analytics needs at any scale.
@@ -322,7 +321,7 @@ export default function AiFinancialAnalyticsProPage() {
 
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
 
-                )}
+                )
 
                   <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
                     <span className="text-4 xlfont-boldtext-cyan-400">{plan.price}</span>
@@ -331,45 +330,31 @@ export default function AiFinancialAnalyticsProPage() {
 
  (
 
-                      {feature}
-                  ))}
+                      {feature
+                  ))
 
-                  {plan.cta}
+                  {plan.cta
 
-            ))}
+            ))
 
-        {/* Testimonials */}
+        {/* Testimonials */
     
               <h2 className="text-3 xl font-boldtext-whitemb-4">What Our Customers Say</h2>
                 Join hundreds of finance professionals who trust AI Financial Analytics Pro.
 
  (
     
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar}
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar
                       <h4 className="text-whitefont-semibold">{testimonial.name}</h4>
                       <p className="text-gray-400text-sm">{testimonial.role}</p>
                       <p className="text-cyan-400text-smfont-semibold">{testimonial.company}</p>
 
  (
-                    ))}
+                    ))
 
                   <p className="text-gray-300italicmb-3">"{testimonial.content}"</p>
-                  <div className="text-cyan-400font-semiboldtext-sm">Result: {testimonial.results}
+                  <div className="text-cyan-400font-semiboldtext-sm">Result: {testimonial.results
 
-              ))}
+              ))
 
-        {/* CTA Section */}
-    
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Ready to Transform Your Financial Analysis?
-
-              Start your free trial today and experience the power of AI-driven financial analytics. 
-              Join hundreds of finance professionals making smarter decisions with data.
-    
-                Start Free Trial
-    
-                Learn More
-    
-              <p>✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
-
-  );
-
+        {/* CTA Section */

@@ -111,7 +111,7 @@ export default function CloudInfrastructureManagement() {
 
   return (
 
-        {/* Hero Section */}
+        {/* Hero Section */
     
                 Enterprise Cloud Management
 
@@ -124,22 +124,22 @@ export default function CloudInfrastructureManagement() {
 
                 <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">View Demo
 
-        {/* Features Section */}
+        {/* Features Section */
     
               <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Comprehensive Cloud Management
                 Enterprise-grade features that optimize your cloud infrastructure performance and costs
 
  (
 
-                    {feature.icon}
+                    {feature.icon
     
                     <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
 
                   <p className="text-gray-300">{feature.description}</p>
 
-              ))}
+              ))
 
-        {/* Management Features */}
+        {/* Management Features */
     
               <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Complete Infrastructure Solution
                 Everything you need to manage, secure, and optimize your cloud infrastructure
@@ -149,12 +149,12 @@ export default function CloudInfrastructureManagement() {
                   <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.category}</h3>
  (
 
-                        {item}
-                    ))}
+                        {item
+                    ))
 
-              ))}
+              ))
 
-        {/* Pricing Section */}
+        {/* Pricing Section */
     
               <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Transparent Pricing Plans
                 Choose the plan that fits your infrastructure needs
@@ -163,7 +163,7 @@ export default function CloudInfrastructureManagement() {
                   {plan.popular && (
 
                       Most Popular
-                  )}
+                  )
 
                   <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
                   <p className="text-gray-300mb-6">{plan.description}</p>
@@ -171,21 +171,21 @@ export default function CloudInfrastructureManagement() {
                     <span className="text-gray-400">{plan.period}</span>
  (
 
-                        {feature}
-                    ))}
+                        {feature
+                    ))
                   
                     to="/contact"
                     className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-sky-500 to-purple-600 text-white hover:from-sky-600 hover:to-purple-700'
                         : 'border-2 border-sky-400 text-sky-400 hover: bg-sky-400/10'
-                    }`}
+                    }`
 
 Get Started
     
-              ))}
+              ))
 
-        {/* Testimonials */}
+        {/* Testimonials */
     
               <h2 className="text-3 xl font-boldtext-whitemb-4">Trusted by Industry Leaders
                 See how our Cloud Infrastructure Management transforms businesses
@@ -193,15 +193,15 @@ Get Started
  (
 
  (
-                    ))}
+                    ))
 
                   <p className="text-gray-300mb-4">"{testimonial.content}"</p>
                     <div className="font-semiboldtext-white">{testimonial.name}</div>
                     <div className="text-smtext-gray-400">{testimonial.company}</div>
 
-              ))}
+              ))
 
-        {/* CTA Section */}
+        {/* CTA Section */
     
               <h2 className="text-3 xl font-boldtext-whitemb-4">Optimize Your Cloud Infrastructure Today
                 Join thousands of businesses using our Cloud Infrastructure Management to reduce costs and improve performance
@@ -209,5 +209,3 @@ Get Started
                 <Link to="/contact" className="bg-gradient-to-r from-sky-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700transition-allduration-300">Get Your Free Assessment
                 <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
   )
-};
-

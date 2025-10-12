@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import { Calendar, Users, Zap, CheckCircle, ArrowRight, Brain, Globe, Star, Sparkles } from 'lucide-react';
+import { Calendar, Users, Zap, CheckCircle, ArrowRight, Brain, Globe, Star, Sparkles, Brain, Clock, Target } from 'lucide-react';
 
 import Layout from '../layout'
 
@@ -94,7 +94,7 @@ export default function AISmartScheduler() {
 
   return (
 
-        {/* Hero Section */}
+        {/* Hero Section */
     
                 AI-Powered Scheduling
 
@@ -107,22 +107,22 @@ export default function AISmartScheduler() {
 
                 <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Watch Demo
 
-        {/* Features Section */}
+        {/* Features Section */
     
               <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Intelligent Scheduling Features
                 Powered by advanced AI to make scheduling effortless and efficient
 
  (
 
-                    {feature.icon}
+                    {feature.icon
     
                     <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
 
                   <p className="text-gray-300">{feature.description}</p>
 
-              ))}
+              ))
 
-        {/* Pricing Section */}
+        {/* Pricing Section */
     
               <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Simple, Transparent Pricing
                 Choose the plan that fits your team size and needs
@@ -131,7 +131,7 @@ export default function AISmartScheduler() {
                   {plan.popular && (
 
                       Most Popular
-                  )}
+                  )
 
                   <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
                   <p className="text-gray-300mb-6">{plan.description}</p>
@@ -139,21 +139,21 @@ export default function AISmartScheduler() {
                     <span className="text-gray-400">{plan.period}</span>
  (
 
-                        {feature}
-                    ))}
+                        {feature
+                    ))
                   
                     to="/contact"
                     className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400/10'
-                    }`}
+                    }`
 
 Get Started
     
-              ))}
+              ))
 
-        {/* Testimonials */}
+        {/* Testimonials */
     
               <h2 className="text-3 xl font-boldtext-whitemb-4">Trusted by Teams Worldwide
                 See what our customers say about AI Smart Scheduler
@@ -161,15 +161,15 @@ Get Started
  (
 
  (
-                    ))}
+                    ))
 
                   <p className="text-gray-300mb-4">"{testimonial.content}"</p>
                     <div className="font-semiboldtext-white">{testimonial.name}</div>
                     <div className="text-smtext-gray-400">{testimonial.company}</div>
 
-              ))}
+              ))
 
-        {/* CTA Section */}
+        {/* CTA Section */
     
               <h2 className="text-3 xl font-boldtext-whitemb-4">Ready to Transform Your Scheduling?
                 Join thousands of teams already using AI Smart Scheduler to optimize their productivity
@@ -177,5 +177,3 @@ Get Started
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
                 <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
   )
-};
-

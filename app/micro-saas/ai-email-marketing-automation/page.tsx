@@ -130,15 +130,14 @@ export default function AIEmailMarketingAutomationPage() {
     { name: 'Cart Abandonment', icon: '🛒', description: 'Recover lost sales with intelligent follow-up campaigns' },
     { name: 'Re-engagement', icon: '🔄', description: 'Win back inactive subscribers with targeted content' },
     { name: 'Birthday & Anniversaries', icon: '🎉', description: 'Celebrate special moments with personalized messages' },
-    { name: 'Educational Content', icon: '📚', description: 'Nurture leads with valuable, AI-generated content' }
+    { name: 'Educational Content', icon: '📚', description: 'Nurture leads with valuable, AI-generated content' 
   ]
 
   return (
 
         <title>5G Data Analytics - Zion Tech Group</title>
-        <title>AI Email Marketing Automation - Zion Tech Group | Smart Email Campaigns</title>
 
-      {/* Hero Section */}
+      {/* Hero Section */
     
             <span>AI-Powered Email Marketing</span>
 
@@ -152,7 +151,7 @@ export default function AIEmailMarketingAutomationPage() {
               <span>Start Free Trial</span>
               <span>View Pricing</span>
 
-          {/* Key Stats */}
+          {/* Key Stats */
 
               <div className="text-3 xl font-boldtext-cyan-400mb-2">150%</div>
               <div className="text-gray-300text-sm">Higher Open Rates</div>
@@ -163,7 +162,7 @@ export default function AIEmailMarketingAutomationPage() {
               <div className="text-3 xl font-boldtext-emerald-400mb-2">50 K+</div>
               <div className="text-gray-300text-sm">Active Users</div>
 
-      {/* Benefits Section */}
+      {/* Benefits Section */
     
               Why Choose Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">AI Email Marketing?</span>
 
@@ -171,14 +170,14 @@ export default function AIEmailMarketingAutomationPage() {
 
  (
     
-                <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 mx-auto group-hover:scale-110transition-transformduration-300">{benefit.icon}
+                <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 mx-auto group-hover:scale-110transition-transformduration-300">{benefit.icon
 
-                <h3 className="text-xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{benefit.title}
-                  {benefit.description}
+                <h3 className="text-xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{benefit.title
+                  {benefit.description
     
-            ))}
+            ))
 
-      {/* Email Types Section */}
+      {/* Email Types Section */
     
               AI-Powered <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Email Campaigns</span>
 
@@ -187,12 +186,12 @@ export default function AIEmailMarketingAutomationPage() {
  (
     
                   <div className="text-4xlmb-4">{emailType.icon}</div>
-                  <h3 className="text-xl font-bold text-whitegroup-hover:text-cyan-400transition-colors">{emailType.name}
-                  {emailType.description}
+                  <h3 className="text-xl font-bold text-whitegroup-hover:text-cyan-400transition-colors">{emailType.name
+                  {emailType.description
     
-            ))}
+            ))
 
-      {/* Features Section */}
+      {/* Features Section */
     
               Powerful Features for <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Smart Email Marketing</span>
 
@@ -200,14 +199,14 @@ export default function AIEmailMarketingAutomationPage() {
 
  (
     
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon}
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon
 
-                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title}
-                  {feature.description}
+                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title
+                  {feature.description
     
-            ))}
+            ))
 
-      {/* Pricing Section */}
+      {/* Pricing Section */
     
               Simple, Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
 
@@ -217,7 +216,7 @@ export default function AIEmailMarketingAutomationPage() {
                 {plan.popular && (
 
                     <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
-                )}
+                )
 
                   <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
                   <p className="text-gray-300text-smmb-4">{plan.description}</p>
@@ -228,20 +227,20 @@ export default function AIEmailMarketingAutomationPage() {
 
                       <span className="text-gray-300">{feature}</span>
 
-                  ))}
+                  ))
 
                   to="/contact"
                   className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
                       : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-gray-900'
-                  }`}
+                  }`
 
 Get Started
     
-            ))}
+            ))
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section */
     
               Trusted by <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">50,000+</span> Marketers
 
@@ -249,28 +248,15 @@ Get Started
 
  (
     
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar}
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar
                     <div className="font-semiboldtext-white">{testimonial.name}</div>
                     <div className="text-gray-400text-sm">{testimonial.company}</div>
 
  (
-                  ))}
+                  ))
 
                 <p className="text-gray-300italic">"{testimonial.content}"</p>
 
-            ))}
+            ))
 
-      {/* CTA Section */}
-    
-                  Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">Email Marketing?</span>
-                
-                  Join thousands of marketers already increasing open rates by 150% with our AI-powered email automation. 
-                  Start your free trial today and experience the future of email marketing.
-
-                    <span>Start Free Trial</span>
-                    <span>View All Plans</span>
-
-                  <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-
-  );
-
+      {/* CTA Section */

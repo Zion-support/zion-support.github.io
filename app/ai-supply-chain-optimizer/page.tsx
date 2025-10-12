@@ -1,6 +1,6 @@
-
-
 'use client';
+
+
 import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
@@ -98,15 +98,14 @@ export default function AISupplyChainOptimizerPage() {
     { number: '35%', label: 'Cost Reduction', icon: <TrendingUp className="w-6h-6" / /> },
     { number: '92%', label: 'Forecast Accuracy', icon: <Target className="w-6h-6" / /> },
     { number: '500+', label: 'Companies Using', icon: <Globe className="w-6h-6" / /> },
-    { number: '40%', label: 'Delivery Improvement', icon: <Clock className="w-6h-6" / /> }
+    { number: '40%', label: 'Delivery Improvement', icon: <Clock className="w-6h-6" / /> 
 
   ];
   return (
 
         <title>5G Data Analytics - Zion Tech Group</title>
-        <title>AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
 
-        {/* Hero Section */}
+        {/* Hero Section */
 
               <h1 className="text-3 xl sm:text-4 xl md:text-5 xl lg:text-6 xl font-boldtext-whitemb-6">AI Supply Chain Optimizer
                 Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
@@ -115,33 +114,33 @@ export default function AISupplyChainOptimizerPage() {
 
                   variant="primary"
                   size="lg"
- window.open('/contact', '_blank')}
+ window.open('/contact', '_blank')
                   Start Free Trial
 
                   variant="ghost"
                   size="lg"
-window.open('#demo', '_blank')}
+window.open('#demo', '_blank')
                   Watch Demo
 
-            {/* Stats */}
+            {/* Stats */
 
  (
     
-                  <div className="flex items-centerjustify-centermb-2">{stat.icon}
+                  <div className="flex items-centerjustify-centermb-2">{stat.icon
 
                   <div className="text-3 xl font-boldtext-whitemb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
 
-              ))}
+              ))
 
-        {/* Features Section */}
+        {/* Features Section */
     
               <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4">Advanced AI Features
                 Cutting-edge artificial intelligence meets supply chain expertise to optimize your operations
 
  (
 
-                    {feature.icon}
+                    {feature.icon
     
                     <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
 
@@ -149,12 +148,12 @@ window.open('#demo', '_blank')}
 
  (
 
-                        {benefit}
-                    ))}
+                        {benefit
+                    ))
 
-              ))}
+              ))
 
-        {/* Pricing Section */}
+        {/* Pricing Section */
     
               <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4">Choose Your Plan
                 Scalable pricing options to match your supply chain needs
@@ -164,7 +163,7 @@ window.open('#demo', '_blank')}
 
                       <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
 
-                  )}
+                  )
 
                     <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
                       <span className="text-4 xlfont-boldtext-white">{plan.price}</span>
@@ -173,17 +172,17 @@ window.open('#demo', '_blank')}
 
  (
 
-                        {feature}
-                    ))}
+                        {feature
+                    ))
 
-                    variant="{plan.popular" ? "primary" : "ghost"}
+                    variant="{plan.popular" ? "primary" : "ghost"
                     className="w-full"
-window.open('/contact', '_blank')}
+window.open('/contact', '_blank')
                     Get Started
 
-              ))}
+              ))
 
-        {/* Testimonials Section */}
+        {/* Testimonials Section */
     
               <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4">What Our Clients Say
                 Join hundreds of companies optimizing their supply chains
@@ -191,32 +190,26 @@ window.open('/contact', '_blank')}
  (
 
  (
-                    ))}
+                    ))
 
                   <blockquote className="text-gray-300mb-6italic">"{testimonial.content}"
                     <p className="font-semiboldtext-white">{testimonial.name}</p>
                     <p className="text-gray-400text-sm">{testimonial.role}</p>
                     <p className="text-gray-500text-sm">{testimonial.company}</p>
 
-              ))}
+              ))
 
-        {/* CTA Section */}
+        {/* CTA Section */
     
               <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4">Ready to Optimize Your Supply Chain?
                 Start your free 14-day trial today. No credit card required. Join 500+ companies optimizing their supply chains.
 
                   variant="primary"
                   size="lg"
-window.open('/contact', '_blank')}
+window.open('/contact', '_blank')
 
                   Start Free Trial
                 
                   variant="secondary"
                   size="lg"
-window.open('/contact', '_blank')}
-                  Schedule Demo
-
-                <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
-
-  );
-
+window.open('/contact', '_blank')

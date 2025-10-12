@@ -1,9 +1,9 @@
-
 'use client';
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3 } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Brain, Clock, Target } from 'lucide-react';
 
 'use client';
 import React from 'react';
@@ -11,9 +11,8 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
         <title>5G Data Analytics - Zion Tech Group</title>
-        <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
 
-      {/* Hero Section */}
+      {/* Hero Section */
     
               AI E-commerce <span className="text-blue-600">Optimizer Pro</span>
 
@@ -23,7 +22,6 @@ import { Link } from 'react-router-dom';
                 Get Started
     
         <title>5G Data Analytics - Zion Tech Group</title>
-        <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
 
 import { ArrowRight, CheckCircle, Star, Brain, BarChart3, Target, TrendingUp } from 'lucide-react';
 
@@ -128,7 +126,7 @@ export default function AIEcommerceOptimizerPro() {
     
         <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
 
-        {/* Hero Section */}
+        {/* Hero Section */
     
                 AI E-commerce Optimizer Pro
     
@@ -139,24 +137,24 @@ export default function AIEcommerceOptimizerPro() {
                 Learn More
 View All Services
 
-        {/* Hero Section */}
+        {/* Hero Section */
                 AI E-commerce Optimizer Pro
 
               Powerful Features
  (
-                    {feature.icon}
-                    {feature.title}
-                    {feature.description}
+                    {feature.icon
+                    {feature.title
+                    {feature.description
 
-              ))}
+              ))
 
-        {/* Pricing Section */}
+        {/* Pricing Section */
                 Choose Your Plan
               <p className="w-5 h-5ml-2">Flexible pricing options to fit your business needs
             
  (
                     <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
-                      {plan.price}
+                      {plan.price
                       <span className="w-5 h-5ml-2" />{plan.period}</span>
                     <p className="w-5 h-5ml-2">{plan.description}</p>
                   
@@ -165,14 +163,14 @@ View All Services
                 Get Started
                 Learn More
 
-        {/* Features Section */}
+        {/* Features Section */
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
               <p className="text-xl text-gray-300">Powerful AI capabilities for superior e-commerce optimization</p>
  (
                   <div className="mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-              ))}
+              ))
 
                 Why Choose Our AI E-commerce Optimizer?
 
@@ -192,41 +190,41 @@ View All Services
                   description: "Enterprise-grade security ensures your data is protected while maintaining 99.9% uptime."
  (
 
-                    {feature.icon}
+                    {feature.icon
     
-        {/* Detailed Features Section */}
+        {/* Detailed Features Section */
               <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Features</h2>
               <p className="text-xl text-gray-300">Everything you need for effective e-commerce optimization</p>
  (
                   <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
  (
-                        {item}
-                    ))}
-              ))}
+                        {item
+                    ))
+              ))
 
-        {/* Pricing Section */}
+        {/* Pricing Section */
               <h2 className="text-4xl font-bold text-white mb-4">Pricing Plans</h2>
               <p className="text-xl text-gray-300">Choose the perfect plan for your e-commerce needs</p>
  (
                   {plan.popular && (
                         Most Popular
-                  )}
+                  )
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                       <span className="text-4xl font-bold text-white">{plan.price}</span>
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     <p className="text-gray-300 mt-2">{plan.description}</p>
  (
-                        {feature}
-                    ))}
+                        {feature
+                    ))
                     Get Started
-              ))}
+              ))
 
-        {/* Testimonials Section */}
+        {/* Testimonials Section */
               <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
               <p className="text-xl text-gray-300">Real results from real businesses</p>
  (
  (
-                    ))}
+                    ))
                   <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                     <p className="font-semibold text-white">{testimonial.name}</p>
                     <p className="text-cyan-400">{testimonial.company}</p>
@@ -234,13 +232,13 @@ View All Services
                   <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
 
-              ))}
+              ))
 
                 Choose Your Plan
 
                 Flexible pricing options to fit your business needs
     
-        {/* CTA Section */}
+        {/* CTA Section */
                 Ready to Optimize Your E-commerce?
                 Contact us to learn more about our AI e-commerce optimization solutions and how we can help your business grow.
 
@@ -248,7 +246,7 @@ View All Services
     
                     <h3 className="text-2xl font-boldtext-whitemb-2">{plan.name}</h3>
 
-                      {plan.price}
+                      {plan.price
     
                       <span className="text-lgtext-gray-400">{plan.period}</span>
 
@@ -256,8 +254,8 @@ View All Services
 
  (
 
-                        {feature}
-                    ))}
+                        {feature
+                    ))
                   
                     Get Started
 
@@ -267,17 +265,6 @@ View All Services
 
   );
 
-              ))}
+              ))
 
-        {/* CTA Section */}
-    
-                Ready to Get Started?
-
-                Contact us to learn more about our solutions and how we can help your business.
-
-                  Contact Us
-    
-                  View Services
-
-  );
-
+        {/* CTA Section */
