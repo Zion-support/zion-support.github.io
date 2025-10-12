@@ -1,4 +1,10 @@
 import React from 'react'
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight, CheckCircle, Brain, Mic, Zap, Users, BarChart3, Clock, MessageCircle, Volume2, Headphones } from 'lucide-react'
+>>>>>>> cursor/website-audit-and-update-with-deployment-a621
 
 import Layout from '../layout'
 
@@ -7,6 +13,7 @@ import { ArrowRight, Mic, Brain, MessageSquare } from 'lucide-react';
 const AIVoiceAssistantPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: <Mic className="w-6 h-6 text-cyan-400" />,
       title: "Natural Voice Recognition",
       description: "Advanced speech recognition with 99.2% accuracy in 50+ languages and dialects"
@@ -69,10 +76,52 @@ const AIVoiceAssistantPage: React.FC = () => {
         "On-premise deployment"
       ],
       popular: false
+=======
+      icon: <Mic className="w-8 h-8 text-blue-500" />,
+      title: 'Natural Voice Recognition',
+      description: 'Advanced speech recognition with 99% accuracy in multiple languages and accents.'
+    },
+    {
+      icon: <MessageCircle className="w-8 h-8 text-green-500" />,
+      title: 'Conversational AI',
+      description: 'Intelligent conversational capabilities with context awareness and natural language understanding.'
+    },
+    {
+      icon: <Volume2 className="w-8 h-8 text-purple-500" />,
+      title: 'Text-to-Speech',
+      description: 'High-quality voice synthesis with customizable voices and emotional expression.'
+    },
+    {
+      icon: <Headphones className="w-8 h-8 text-orange-500" />,
+      title: 'Multi-Platform Support',
+      description: 'Deploy across mobile apps, web applications, smart devices, and IoT platforms.'
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-red-500" />,
+      title: 'Analytics & Insights',
+      description: 'Comprehensive analytics on user interactions, performance metrics, and usage patterns.'
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-yellow-500" />,
+      title: 'Real-time Processing',
+      description: 'Low-latency voice processing for seamless real-time conversations and interactions.'
+>>>>>>> cursor/website-audit-and-update-with-deployment-a621
     }
   ]
 
+  const useCases = [
+    'Customer service automation',
+    'Virtual assistants',
+    'Smart home control',
+    'Healthcare applications',
+    'Educational tools',
+    'Accessibility solutions',
+    'Call center automation',
+    'Voice-enabled apps'
+  ]
+
   return (
+<<<<<<< HEAD
     <Layout
       title="AI Voice Assistant - Zion Tech Group"
       description="Advanced AI voice assistant with natural language processing, contextual understanding, and multi-platform integration. Transform how you interact with technology."
@@ -81,13 +130,31 @@ const AIVoiceAssistantPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>AI Voice Assistant - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI voice assistant with natural language processing, speech recognition, and conversational AI capabilities." />
+        <meta name="keywords" content="AI voice assistant, speech recognition, text-to-speech, conversational AI, voice automation" />
+      </Helmet>
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+>>>>>>> cursor/website-audit-and-update-with-deployment-a621
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Voice Assistant
             </h1>
+<<<<<<< HEAD
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Experience the future of human-computer interaction with our advanced AI voice assistant. 
               Natural conversations, contextual understanding, and seamless integration across all your devices.
+=======
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Create intelligent voice assistants with advanced speech recognition, natural language processing, 
+              and conversational AI capabilities for any application.
+>>>>>>> cursor/website-audit-and-update-with-deployment-a621
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -106,6 +173,7 @@ const AIVoiceAssistantPage: React.FC = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
@@ -124,6 +192,18 @@ const AIVoiceAssistantPage: React.FC = () => {
               <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
               <div className="text-gray-300">Availability</div>
             </div>
+=======
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Voice AI Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced voice AI capabilities for creating intelligent conversational experiences.
+            </p>
+>>>>>>> cursor/website-audit-and-update-with-deployment-a621
           </div>
 
           {/* Features */}
@@ -198,6 +278,7 @@ const AIVoiceAssistantPage: React.FC = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Pricing */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Choose Your Voice AI Plan</h2>
@@ -236,10 +317,31 @@ const AIVoiceAssistantPage: React.FC = () => {
                   >
                     Get Started
                   </Link>
+=======
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Application Areas
+              </h2>
+              <p className="text-xl text-gray-300">
+                Our AI voice assistant technology powers various applications across industries
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <span className="text-sm">{useCase}</span>
+>>>>>>> cursor/website-audit-and-update-with-deployment-a621
                 </div>
               ))}
             </div>
           </div>
+<<<<<<< HEAD
 
           {/* Benefits */}
           <div className="bg-white/5 rounded-2xl p-8 mb-16">
@@ -268,14 +370,32 @@ const AIVoiceAssistantPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Experience the Future of Voice AI?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join over 1 million users who have transformed their daily interactions with our advanced AI voice assistant.
+=======
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Build Voice AI?
+            </h2>
+            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              Create intelligent voice assistants with our advanced AI voice technology.
+>>>>>>> cursor/website-audit-and-update-with-deployment-a621
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center"
               >
+<<<<<<< HEAD
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
+=======
+                Start Building
+>>>>>>> cursor/website-audit-and-update-with-deployment-a621
               </Link>
               <Link
                 to="/pricing"

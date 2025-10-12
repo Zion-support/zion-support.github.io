@@ -20,6 +20,7 @@ export default function Footer() {
   ];
 
   const itServices = [
+<<<<<<< HEAD
     { name: 'Web Development', path: '/web-development' },
     { name: 'Mobile Development', path: '/mobile-development' },
     { name: 'DevOps', path: '/devops' },
@@ -53,6 +54,27 @@ export default function Footer() {
     { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
     { name: '5G Data Analytics', path: '/5g-data-analytics' },
     { name: 'AI Smart City Solutions', path: '/ai-smart-city-solutions' }
+=======
+    { name: 'Cloud Migration', path: '/cloud-migration' },
+    { name: 'DevOps Solutions', path: '/devops' },
+    { name: 'Cybersecurity', path: '/cybersecurity' },
+    { name: 'Mobile Development', path: '/mobile-development' },
+    { name: 'Database Services', path: '/database-services' },
+    { name: 'IT Consulting', path: '/it-consulting' },
+    { name: 'Network Infrastructure', path: '/network-infrastructure' },
+    { name: 'Data Center', path: '/data-center' }
+  ];
+
+  const microSaasServices = [
+    { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard' },
+    { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler' },
+    { name: 'Chat Analytics', path: '/micro-saas/chat-analytics' },
+    { name: 'Content Generator', path: '/micro-saas/content-generator' },
+    { name: 'Document Processor', path: '/micro-saas/document-processor' },
+    { name: 'Email Marketing', path: '/micro-saas/email-marketing' },
+    { name: 'Expense Tracker', path: '/micro-saas/expense-tracker' },
+    { name: 'Inventory Management', path: '/micro-saas/inventory-management' }
+>>>>>>> cursor/website-audit-and-update-with-deployment-a621
   ];
 
   const companyLinks = [
