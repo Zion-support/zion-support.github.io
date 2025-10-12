@@ -77,7 +77,8 @@ const Footer: React.FC = () => {
     { name: 'Careers', url: '/careers' },
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Partners', url: '/partners' },
-    { name: 'Press', url: '/press' }
+    { name: 'Press', url: '/press' },
+    { name: 'Status', url: '/status' }
   ];
 
   const resourceLinks = [
@@ -86,7 +87,9 @@ const Footer: React.FC = () => {
     { name: 'Tutorials', url: '/tutorials' },
     { name: 'Blog', url: '/blog' },
     { name: 'FAQ', url: '/faq' },
-    { name: 'Support', url: '/support' }
+    { name: 'Support', url: '/support' },
+    { name: 'Community', url: '/community' },
+    { name: 'Demo', url: '/demo' }
   ];
 
   const legalLinks = [
