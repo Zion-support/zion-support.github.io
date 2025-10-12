@@ -3,96 +3,73 @@ import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphon
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function CybersecurityPage() {
+export default function DevOpsSolutionsPage() {
   const features = [
     {
-      icon: <Shield className="w-8 h-8 text-blue-500" />,
-      title: 'Advanced Threat Protection',
-      description: 'AI-powered threat detection and prevention to keep your systems secure from evolving cyber threats.'
+      icon: <Code className="w-8 h-8 text-blue-500" />,
+      title: 'CI/CD Pipeline Setup',
+      description: 'Automated continuous integration and deployment pipelines for faster, more reliable releases.'
     },
     {
-      icon: <Database className="w-8 h-8 text-green-500" />,
-      title: 'Data Encryption',
-      description: 'End-to-end encryption for all your sensitive data, both in transit and at rest.'
+      icon: <Cloud className="w-8 h-8 text-green-500" />,
+      title: 'Infrastructure as Code',
+      description: 'Manage your infrastructure using code with tools like Terraform and CloudFormation.'
     },
     {
-      icon: <Globe className="w-8 h-8 text-red-500" />,
-      title: 'Network Security',
-      description: 'Comprehensive network security solutions including firewalls, VPNs, and intrusion detection.'
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'Security Integration',
+      description: 'Built-in security scanning and compliance checks in your deployment pipeline.'
     },
     {
-      icon: <Cloud className="w-8 h-8 text-purple-500" />,
-      title: 'Cloud Security',
-      description: 'Secure your cloud infrastructure with advanced security controls and monitoring.'
+      icon: <Database className="w-8 h-8 text-purple-500" />,
+      title: 'Monitoring & Logging',
+      description: 'Comprehensive monitoring, logging, and alerting solutions for your applications.'
     }
   ];
 
   const services = [
     {
-      title: 'Security Assessment',
-      description: 'Comprehensive security audit and vulnerability assessment',
-      features: ['Penetration Testing', 'Vulnerability Scanning', 'Security Audit', 'Compliance Check']
+      title: 'CI/CD Implementation',
+      description: 'Set up automated build, test, and deployment pipelines',
+      features: ['GitHub Actions', 'Jenkins', 'GitLab CI', 'Azure DevOps']
     },
     {
-      title: 'Incident Response',
-      description: 'Rapid response and recovery from security incidents',
-      features: ['24/7 Monitoring', 'Incident Detection', 'Forensic Analysis', 'Recovery Planning']
+      title: 'Container Orchestration',
+      description: 'Deploy and manage containerized applications at scale',
+      features: ['Kubernetes', 'Docker Swarm', 'Amazon ECS', 'Azure Container Instances']
     },
     {
-      title: 'Security Training',
-      description: 'Employee security awareness and training programs',
-      features: ['Phishing Simulation', 'Security Workshops', 'Policy Training', 'Best Practices']
+      title: 'Infrastructure Automation',
+      description: 'Automate infrastructure provisioning and management',
+      features: ['Terraform', 'Ansible', 'Puppet', 'Chef']
     },
     {
-      title: 'Compliance Management',
-      description: 'Ensure compliance with industry standards and regulations',
-      features: ['GDPR Compliance', 'HIPAA Compliance', 'SOC 2', 'ISO 27001']
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Advanced AI Technology',
-      description: 'Leverage cutting-edge AI for proactive threat detection and prevention.'
-    },
-    {
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: '24/7 Monitoring',
-      description: 'Round-the-clock security monitoring and incident response capabilities.'
-    },
-    {
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Compliance Ready',
-      description: 'Meet industry standards and regulatory requirements with ease.'
-    },
-    {
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Scalable Solutions',
-      description: 'Security solutions that grow with your business needs.'
+      title: 'Monitoring & Observability',
+      description: 'Comprehensive monitoring and observability solutions',
+      features: ['Prometheus', 'Grafana', 'ELK Stack', 'Datadog']
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cybersecurity solutions including threat protection, data encryption, and compliance management. Secure your business with our expert security services." />
-        <meta name="keywords" content="cybersecurity, threat protection, data encryption, network security, compliance, security audit" />
+        <title>DevOps Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive DevOps solutions including CI/CD, infrastructure automation, and monitoring. Accelerate your development lifecycle with our expert DevOps services." />
+        <meta name="keywords" content="DevOps, CI/CD, infrastructure automation, monitoring, Kubernetes, Docker, cloud deployment" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Secure Your Business with
+            Accelerate Development with
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              {' '}Advanced Cybersecurity
+              {' '}DevOps Solutions
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Protect your digital assets with our comprehensive cybersecurity solutions. 
-            From threat detection to compliance management, we keep your business secure.
+            Streamline your development lifecycle with our comprehensive DevOps services. 
+            From CI/CD pipelines to infrastructure automation, we help you deploy faster and more reliably.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -117,10 +94,10 @@ export default function CybersecurityPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Why Choose Our Cybersecurity Solutions?
+              Why Choose Our DevOps Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver enterprise-grade security solutions that protect your business from evolving threats
+              We deliver enterprise-grade DevOps solutions that accelerate your development process
             </p>
           </div>
           
@@ -143,10 +120,10 @@ export default function CybersecurityPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Our Cybersecurity Services
+              Our DevOps Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive security solutions tailored to your specific needs
+              Comprehensive DevOps solutions tailored to your specific needs
             </p>
           </div>
           
@@ -169,47 +146,21 @@ export default function CybersecurityPage() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Benefits of Our Cybersecurity Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Protect your business with our comprehensive security approach
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4">
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Secure Your Business?
+            Ready to Transform Your Development Process?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let our cybersecurity experts help you build a robust defense against cyber threats.
+            Let our DevOps experts help you build faster, more reliable deployment pipelines.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
             >
-              Start Security Assessment
+              Start Your DevOps Journey
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link 

@@ -1,98 +1,98 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone, Code, Server } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone, Code, Server, Link as LinkIcon } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function CybersecurityPage() {
+export default function SystemIntegrationPage() {
   const features = [
     {
-      icon: <Shield className="w-8 h-8 text-blue-500" />,
-      title: 'Advanced Threat Protection',
-      description: 'AI-powered threat detection and prevention to keep your systems secure from evolving cyber threats.'
+      icon: <LinkIcon className="w-8 h-8 text-blue-500" />,
+      title: 'API Integration',
+      description: 'Seamlessly connect different systems through robust API integrations and data synchronization.'
     },
     {
       icon: <Database className="w-8 h-8 text-green-500" />,
-      title: 'Data Encryption',
-      description: 'End-to-end encryption for all your sensitive data, both in transit and at rest.'
+      title: 'Data Migration',
+      description: 'Safe and efficient migration of data between systems with zero downtime.'
     },
     {
-      icon: <Globe className="w-8 h-8 text-red-500" />,
-      title: 'Network Security',
-      description: 'Comprehensive network security solutions including firewalls, VPNs, and intrusion detection.'
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'Security Integration',
+      description: 'Implement secure authentication and authorization across all integrated systems.'
     },
     {
       icon: <Cloud className="w-8 h-8 text-purple-500" />,
-      title: 'Cloud Security',
-      description: 'Secure your cloud infrastructure with advanced security controls and monitoring.'
+      title: 'Cloud Integration',
+      description: 'Connect on-premise systems with cloud services for hybrid infrastructure.'
     }
   ];
 
   const services = [
     {
-      title: 'Security Assessment',
-      description: 'Comprehensive security audit and vulnerability assessment',
-      features: ['Penetration Testing', 'Vulnerability Scanning', 'Security Audit', 'Compliance Check']
+      title: 'Enterprise System Integration',
+      description: 'Connect your existing enterprise systems for seamless data flow',
+      features: ['ERP Integration', 'CRM Integration', 'Legacy System Modernization', 'Data Synchronization']
     },
     {
-      title: 'Incident Response',
-      description: 'Rapid response and recovery from security incidents',
-      features: ['24/7 Monitoring', 'Incident Detection', 'Forensic Analysis', 'Recovery Planning']
+      title: 'API Development & Management',
+      description: 'Build and manage APIs for system connectivity',
+      features: ['RESTful APIs', 'GraphQL APIs', 'API Gateway', 'API Documentation']
     },
     {
-      title: 'Security Training',
-      description: 'Employee security awareness and training programs',
-      features: ['Phishing Simulation', 'Security Workshops', 'Policy Training', 'Best Practices']
+      title: 'Cloud Integration Services',
+      description: 'Integrate cloud services with your existing infrastructure',
+      features: ['AWS Integration', 'Azure Integration', 'Google Cloud Integration', 'Multi-cloud Strategy']
     },
     {
-      title: 'Compliance Management',
-      description: 'Ensure compliance with industry standards and regulations',
-      features: ['GDPR Compliance', 'HIPAA Compliance', 'SOC 2', 'ISO 27001']
+      title: 'Real-time Data Integration',
+      description: 'Enable real-time data sharing between systems',
+      features: ['Event Streaming', 'Message Queues', 'Real-time Sync', 'Data Pipeline']
     }
   ];
 
   const benefits = [
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Advanced AI Technology',
-      description: 'Leverage cutting-edge AI for proactive threat detection and prevention.'
+      title: 'Improved Efficiency',
+      description: 'Eliminate manual data entry and reduce duplicate work across systems.'
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: '24/7 Monitoring',
-      description: 'Round-the-clock security monitoring and incident response capabilities.'
+      title: 'Better Data Quality',
+      description: 'Ensure data consistency and accuracy across all integrated systems.'
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Compliance Ready',
-      description: 'Meet industry standards and regulatory requirements with ease.'
+      title: 'Cost Reduction',
+      description: 'Reduce operational costs by automating data flow between systems.'
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Scalable Solutions',
-      description: 'Security solutions that grow with your business needs.'
+      title: 'Scalability',
+      description: 'Build integrations that can scale with your business growth.'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cybersecurity solutions including threat protection, data encryption, and compliance management. Secure your business with our expert security services." />
-        <meta name="keywords" content="cybersecurity, threat protection, data encryption, network security, compliance, security audit" />
+        <title>System Integration Services - Zion Tech Group</title>
+        <meta name="description" content="Expert system integration services to connect your applications, databases, and cloud services. Seamless data flow and improved efficiency." />
+        <meta name="keywords" content="system integration, API integration, data migration, cloud integration, enterprise integration" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Secure Your Business with
+            Connect Your Systems with
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              {' '}Advanced Cybersecurity
+              {' '}Expert Integration
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Protect your digital assets with our comprehensive cybersecurity solutions. 
-            From threat detection to compliance management, we keep your business secure.
+            Seamlessly integrate your applications, databases, and cloud services. 
+            Our system integration experts ensure smooth data flow and improved operational efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -117,10 +117,10 @@ export default function CybersecurityPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Why Choose Our Cybersecurity Solutions?
+              Why Choose Our Integration Services?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver enterprise-grade security solutions that protect your business from evolving threats
+              We deliver robust, scalable integration solutions that connect your entire technology ecosystem
             </p>
           </div>
           
@@ -143,10 +143,10 @@ export default function CybersecurityPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Our Cybersecurity Services
+              Our Integration Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive security solutions tailored to your specific needs
+              Comprehensive system integration solutions for modern businesses
             </p>
           </div>
           
@@ -174,10 +174,10 @@ export default function CybersecurityPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Benefits of Our Cybersecurity Solutions
+              Benefits of System Integration
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Protect your business with our comprehensive security approach
+              Transform your business operations with seamless system connectivity
             </p>
           </div>
           
@@ -199,17 +199,17 @@ export default function CybersecurityPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Secure Your Business?
+            Ready to Connect Your Systems?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let our cybersecurity experts help you build a robust defense against cyber threats.
+            Let our integration experts help you build a connected, efficient technology ecosystem.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
             >
-              Start Security Assessment
+              Start Integration Project
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link 

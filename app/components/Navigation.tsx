@@ -53,6 +53,23 @@ export default function Navigation() {
     }
   ]
 
+  const companyPages = [
+    { name: 'About Us', path: '/about' },
+    { name: 'Our Team', path: '/team' },
+    { name: 'Careers', path: '/careers' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Pricing', path: '/pricing' }
+  ]
+
+  const supportPages = [
+    { name: 'Documentation', path: '/docs' },
+    { name: 'Help Center', path: '/help' },
+    { name: 'Status Page', path: '/status' },
+    { name: 'Community', path: '/community' },
+    { name: 'Contact Support', path: '/contact' }
+  ]
+
   const aiServices = [
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
     { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', icon: <Smartphone className="w-4 h-4" /> },
@@ -79,9 +96,27 @@ export default function Navigation() {
             <Link to="/" className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
               Home
             </Link>
-            <Link to="/about" className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-              About
-            </Link>
+
+            {/* Company Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('company')}
+                className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+              >
+                Company
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              
+              {activeDropdown === 'company' && (
+                <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                  {companyPages.map((page, index) => (
+                    <Link key={index} to={page.path} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
+                      {page.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* AI Services Dropdown */}
             <div className="relative">
@@ -127,6 +162,27 @@ export default function Navigation() {
               )}
             </div>
 
+            {/* Support Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('support')}
+                className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+              >
+                Support
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              
+              {activeDropdown === 'support' && (
+                <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                  {supportPages.map((page, index) => (
+                    <Link key={index} to={page.path} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
+                      {page.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
               Contact
             </Link>
@@ -150,9 +206,16 @@ export default function Navigation() {
               <Link to="/" className="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">
                 Home
               </Link>
-              <Link to="/about" className="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">
-                About
-              </Link>
+              
+              {/* Company Pages Mobile */}
+              <div className="px-3 py-2">
+                <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Company</p>
+                {companyPages.map((page, index) => (
+                  <Link key={index} to={page.path} className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                    {page.name}
+                  </Link>
+                ))}
+              </div>
               
               {/* AI Services Mobile */}
               <div className="px-3 py-2">
@@ -170,6 +233,16 @@ export default function Navigation() {
                 {services.slice(1).map((service, index) => (
                   <Link key={index} to={service.href} className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
                     {service.title}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Support Pages Mobile */}
+              <div className="px-3 py-2">
+                <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Support</p>
+                {supportPages.map((page, index) => (
+                  <Link key={index} to={page.path} className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                    {page.name}
                   </Link>
                 ))}
               </div>
