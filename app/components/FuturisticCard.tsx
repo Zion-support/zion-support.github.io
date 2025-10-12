@@ -1,136 +1,61 @@
 'use client';
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 interface FuturisticCardProps {
   children: React.ReactNode;
+  variant?: 'default' | 'service' | 'testimonial' | 'feature';
   className?: string;
-  hover?: boolean;
-  glow?: boolean;
-  neon?: boolean;
-  variant?: 'default' | 'service' | 'feature' | 'testimonial';
   onClick?: () => void;
 }
 
-export default function FuturisticCard({ 
   children, 
+  variant = 'default', 
   className = '', 
-  hover = true, 
-  glow = true, 
-  neon = true,
-  variant = 'default',
   onClick 
 }: FuturisticCardProps) {
-  const [isHovered, setIsHovered] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
-    
-    const rect = cardRef.current.getBoundingClientRect();
-    setMousePosition({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top
-    });
-  };
-
-  const getVariantClasses = () => {
+  const getVariantStyles = () => {
     switch (variant) {
       case 'service':
-        return 'bg-white/5 backdrop-blur-lg border border-cyan-500/30';
-      case 'feature':
-        return 'bg-gradient-to-br from-purple-500/10 to-cyan-500/10 backdrop-blur-lg border border-purple-500/30';
+        return 'bg-gradient-to-br from-slate-800/60 via-slate-700/40 to-slate-800/60 backdrop-blur-xl border border-cyan-500/30 hover:border-cyan-400/50 shadow-2xl hover:shadow-cyan-500/20';
       case 'testimonial':
-        return 'bg-gradient-to-br from-green-500/10 to-blue-500/10 backdrop-blur-lg border border-green-500/30';
+        return 'bg-gradient-to-br from-slate-800/50 via-purple-900/30 to-slate-800/50 backdrop-blur-xl border border-purple-500/30 hover:border-purple-400/50 shadow-2xl hover:shadow-purple-500/20';
+      case 'feature':
+        return 'bg-gradient-to-br from-slate-800/70 via-indigo-900/40 to-slate-800/70 backdrop-blur-xl border border-indigo-500/30 hover:border-indigo-400/50 shadow-2xl hover:shadow-indigo-500/20';
       default:
-        return 'bg-white/10 backdrop-blur-lg border border-white/20';
+        return 'bg-gradient-to-br from-slate-800/60 via-slate-700/40 to-slate-800/60 backdrop-blur-xl border border-white/20 hover:border-cyan-500/50 shadow-2xl hover:shadow-cyan-500/20';
     }
-  };
-
-  const getGlowEffect = () => {
-    if (!glow) return '';
-    
-    const baseGlow = 'shadow-2xl';
-    if (isHovered) {
-      switch (variant) {
-        case 'service':
-          return `${baseGlow} shadow-cyan-500/25`;
-        case 'feature':
-          return `${baseGlow} shadow-purple-500/25`;
-        case 'testimonial':
-          return `${baseGlow} shadow-green-500/25`;
-        default:
-          return `${baseGlow} shadow-cyan-500/25`;
-      }
-    }
-    return baseGlow;
-  };
-
-  const getNeonEffect = () => {
-    if (!neon) return '';
-    
-    if (isHovered) {
-      switch (variant) {
-        case 'service':
-          return 'shadow-[0_0_20px_rgba(6,182,212,0.3)]';
-        case 'feature':
-          return 'shadow-[0_0_20px_rgba(168,85,247,0.3)]';
-        case 'testimonial':
-          return 'shadow-[0_0_20px_rgba(34,197,94,0.3)]';
-        default:
-          return 'shadow-[0_0_20px_rgba(6,182,212,0.3)]';
-      }
-    }
-    return '';
   };
 
   return (
     <motion.div
-      ref={cardRef}
-      className={`
-        relative rounded-2xl p-6 transition-all duration-300 cursor-pointer
-        ${getVariantClasses()}
-        ${getGlowEffect()}
-        ${getNeonEffect()}
-        ${hover ? 'hover:scale-105 hover:rotate-1' : ''}
-        ${className}
-      `}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      onMouseMove={handleMouseMove}
+      className={`relative rounded-2xl p-8 transition-all duration-500 cursor-pointer group overflow-hidden ${getVariantStyles()} ${className}`}
       onClick={onClick}
-      whileHover={{ y: -5 }}
+      whileHover={{ 
+        scale: 1.02,
+        y: -5
+      }}
       whileTap={{ scale: 0.98 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      {/* Animated border */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+      {/* Animated background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       
-      {/* Mouse follow effect */}
-      {isHovered && (
-        <div
-          className="absolute pointer-events-none rounded-full bg-gradient-to-r from-cyan-400/20 to-purple-400/20 blur-xl"
-          style={{
-            left: mousePosition.x - 50,
-            top: mousePosition.y - 50,
-            width: 100,
-            height: 100,
-            transform: 'translate(-50%, -50%)',
-          }}
-        />
-      )}
-
+      {/* Animated border glow */}
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
+      
       {/* Content */}
       <div className="relative z-10">
         {children}
       </div>
-
-      {/* Corner accents */}
-      <div className="absolute top-2 right-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60" />
-      <div className="absolute bottom-2 left-2 w-2 h-2 bg-purple-400 rounded-full opacity-60" />
+      
+      {/* Corner accent */}
+      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      
+      {/* Bottom accent */}
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     </motion.div>
   );
 }

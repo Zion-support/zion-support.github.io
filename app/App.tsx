@@ -86,7 +86,7 @@ function App() {
                 <Route path="/privacy" element={<PrivacyPage />} />
                 <Route path="/terms" element={<TermsPage />} />
                 <Route path="/cookies" element={<CookiesPage />} />
-                
+
                 {/* AI Services */}
                 <Route path="/ai-services" element={<AiServicesPage />} />
                 <Route path="/ai-marketing" element={<AiMarketingPage />} />
@@ -100,24 +100,83 @@ function App() {
                 <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
                 <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                 <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
-                
+
                 {/* IT Services */}
                 <Route path="/it-services" element={<ItServicesPage />} />
                 <Route path="/it-infrastructure" element={<ItInfrastructurePage />} />
                 <Route path="/it-support" element={<ItSupportPage />} />
                 <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
                 <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                
+
                 {/* Emerging Technologies */}
                 <Route path="/blockchain" element={<BlockchainPage />} />
                 <Route path="/quantum-computing" element={<QuantumComputingPage />} />
                 <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
                 <Route path="/ar-vr-solutions" element={<ARVRSolutionsPage />} />
                 <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-                
+
                 {/* Micro SaaS */}
                 <Route path="/micro-saas" element={<MicroSaasPage />} />
                 <Route path="/micro-saas/ai-content-writer-pro" element={<AIContentWriterProPage />} />
+                <Route path="/micro-saas/analytics-dashboard" element={<MicroSaasPage />} />
+                <Route path="/micro-saas/appointment-scheduler" element={<MicroSaasPage />} />
+                <Route path="/micro-saas/chat-analytics" element={<MicroSaasPage />} />
+                <Route path="/micro-saas/content-generator" element={<MicroSaasPage />} />
+                <Route path="/micro-saas/document-processor" element={<MicroSaasPage />} />
+                <Route path="/micro-saas/email-marketing" element={<MicroSaasPage />} />
+                <Route path="/micro-saas/expense-tracker" element={<MicroSaasPage />} />
+                <Route path="/micro-saas/inventory-management" element={<MicroSaasPage />} />
+                
+                {/* AI Services Dropdown */}
+                <Route path="/ai-content-generator" element={<AiContentGenerationPage />} />
+                <Route path="/ai-chatbot-builder" element={<AiServicesPage />} />
+                <Route path="/ai-analytics-dashboard" element={<AiDataAnalyticsPage />} />
+                <Route path="/ai-email-assistant" element={<AiServicesPage />} />
+                
+                {/* Additional AI Services */}
+                <Route path="/ai-voice-assistant" element={<AiServicesPage />} />
+                <Route path="/ai-crm-assistant" element={<AiServicesPage />} />
+                <Route path="/ai-social-media-manager" element={<AiServicesPage />} />
+                <Route path="/ai-email-marketing-automation" element={<AiServicesPage />} />
+                <Route path="/ai-project-manager" element={<AiServicesPage />} />
+                <Route path="/ai-3d-generation" element={<AiServicesPage />} />
+                <Route path="/ai-drug-discovery-pro" element={<AiServicesPage />} />
+                <Route path="/ai-automated-reporting" element={<AiServicesPage />} />
+                <Route path="/ai-password-manager" element={<AiServicesPage />} />
+                <Route path="/ai-task-manager" element={<AiServicesPage />} />
+                
+                {/* IT Services Dropdown */}
+                <Route path="/web-development" element={<ItServicesPage />} />
+                <Route path="/mobile-development" element={<ItServicesPage />} />
+                <Route path="/devops" element={<ItServicesPage />} />
+                <Route path="/cloud-migration" element={<ItServicesPage />} />
+                
+                {/* Additional IT Services */}
+                <Route path="/api-development" element={<ItServicesPage />} />
+                <Route path="/database-management" element={<ItServicesPage />} />
+                <Route path="/network-infrastructure" element={<ItServicesPage />} />
+                <Route path="/system-integration" element={<ItServicesPage />} />
+                <Route path="/data-analytics" element={<ItServicesPage />} />
+                <Route path="/iot-solutions" element={<ItServicesPage />} />
+                <Route path="/blockchain-development" element={<ItServicesPage />} />
+                
+                {/* 5G Services */}
+                <Route path="/5g-network-infrastructure" element={<ItServicesPage />} />
+                <Route path="/5g-iot-solutions" element={<ItServicesPage />} />
+                <Route path="/5g-edge-computing" element={<ItServicesPage />} />
+                <Route path="/5g-private-networks" element={<ItServicesPage />} />
+                <Route path="/5g-mobile-applications" element={<ItServicesPage />} />
+                <Route path="/5g-data-analytics" element={<ItServicesPage />} />
+                
+                {/* Additional Services */}
+                <Route path="/business-intelligence" element={<ItServicesPage />} />
+                <Route path="/5g-implementation" element={<ItServicesPage />} />
+                
+                {/* Company Pages */}
+                <Route path="/team" element={<TeamPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/case-studies" element={<CaseStudiesPage />} />
+                <Route path="/blog" element={<BlogPage />} />
                 {/* Support Pages */}
                 <Route path="/docs" element={<DocsPage />} />
                 <Route path="/api-docs" element={<ApiDocsPage />} />

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 interface ContentNewsletterSignupProps {
   title?: string
@@ -34,7 +34,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email) return
-    
+
     setIsSubmitting(true)
     try {
       // Simulate API call
@@ -53,7 +53,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
 
   if (isSubscribed) {
     return (
-      <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/20">
             <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -124,7 +124,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              {features.map((feature, index) => (
 
                 <div key={index} className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">

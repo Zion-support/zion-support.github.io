@@ -10,7 +10,6 @@ interface AnimatedCounterProps {
   suffix?: string;
 }
 
-export default function AnimatedCounter({ 
   end, 
   duration = 2000, 
   className = '', 

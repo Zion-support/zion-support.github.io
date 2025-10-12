@@ -22,5 +22,5 @@ export default function TrainingPage() {
         </Link>
       </div>
     </div>
-  )
+  );
 }

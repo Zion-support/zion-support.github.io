@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Home, ArrowLeft, RefreshCw } from 'lucide-react'
+import React, { Link } from 'react'
+
+import { Home, ArrowLeft } from 'lucide-react';
 
 const NotFound: React.FC = () => {
   return (
@@ -44,5 +44,3 @@ const NotFound: React.FC = () => {
     </div>
   )
 }
-
-export default NotFound
