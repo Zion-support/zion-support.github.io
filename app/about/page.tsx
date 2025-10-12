@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Users, Target, Award, Globe, Zap, Shield, Database } from 'lucide-react';
-=======
 import { CheckCircle, Users, Target, Award, Globe, Zap, Shield, Database, ArrowRight, Star, Clock, TrendingUp, Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -16,13 +12,8 @@ export default function AboutPage() {
     },
     {
       icon: <Shield className="w-8 h-8 text-green-500" />,
-<<<<<<< HEAD
-      title: 'Reliability',
-      description: 'Our solutions are built with enterprise-grade security and reliability to ensure your business operations never stop.'
-=======
       title: 'Security',
       description: 'Security is at the core of everything we do. We implement enterprise-grade security measures to protect your data and systems.'
->>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
     },
     {
       icon: <Users className="w-8 h-8 text-purple-500" />,
@@ -30,11 +21,7 @@ export default function AboutPage() {
       description: 'We work closely with our clients as partners, understanding their unique needs and delivering tailored solutions.'
     },
     {
-<<<<<<< HEAD
-      icon: <Database className="w-8 h-8 text-orange-500" />,
-=======
       icon: <Zap className="w-8 h-8 text-orange-500" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
       title: 'Excellence',
       description: 'We strive for excellence in every project, delivering high-quality solutions that exceed expectations.'
     }
@@ -51,41 +38,12 @@ export default function AboutPage() {
     {
       name: 'John Smith',
       role: 'CEO & Founder',
-<<<<<<< HEAD
-      description: '20+ years in technology leadership',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face'
-=======
       image: 'KS',
       bio: 'Technology visionary with 15+ years of experience in AI and enterprise solutions.'
->>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
     },
     {
       name: 'Sarah Johnson',
       role: 'CTO',
-<<<<<<< HEAD
-      description: 'AI and Machine Learning expert',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face'
-    },
-    {
-      name: 'Mike Chen',
-      role: 'Lead Developer',
-      description: 'Full-stack development specialist',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face'
-    },
-    {
-      name: 'Emily Davis',
-      role: 'Head of Design',
-      description: 'UX/UI design and user experience',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face'
-    }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99%', label: 'Success Rate' },
-    { number: '24/7', label: 'Support' }
-=======
       image: 'SJ',
       bio: 'Expert in cloud architecture and AI implementation with a passion for innovation.'
     },

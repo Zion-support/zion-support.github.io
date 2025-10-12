@@ -1,28 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
-<<<<<<< HEAD
-=======
-import { CheckCircle, ArrowRight, Zap, Shield, Cloud, Database } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-edcb
-=======
-import SEOHead from './components/SEOHead';
->>>>>>> cursor/analyze-improve-and-deploy-application-c354
-import { Link } from 'react-router-dom';
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Smartphone, Cpu, Database, BarChart3, Users, Settings, Globe, Lock, Code2, MessageSquare, Target, TrendingUp, Star } from 'lucide-react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-00bf
-=======
 import { ArrowRight, CheckCircle, Zap, Shield, Cloud, Database, Smartphone, Star, Sparkles, Rocket, Cpu, Globe } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
 
 export default function HomePage() {
   const stats = [
