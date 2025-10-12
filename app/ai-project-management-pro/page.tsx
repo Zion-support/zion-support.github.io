@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Clock, Target, BarChart3, Calendar, FileText, TrendingUp } from 'lucide-react';
+import { CheckCircle, Star, Brain, Clock, Target, BarChart3 } from 'lucide-react';
 
 export default function AIProjectManagementPro() {
   const features = [
