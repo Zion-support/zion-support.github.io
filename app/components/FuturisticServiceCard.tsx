@@ -1,6 +1,9 @@
-'use client'
+'use client';
+import React from 'react';
+import { ArrowRight, Brain, Zap, Shield, Globe } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
-import { ArrowRight } from 'lucide-react';
+const FuturisticServiceCard: React.FC = () => {
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -11,6 +14,7 @@ import { ArrowRight } from 'lucide-react';
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
+  
   const features = [
     {
       icon: Brain,
@@ -33,6 +37,7 @@ import { ArrowRight } from 'lucide-react';
       description: 'Worldwide deployment and support for international businesses',
     }
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -47,7 +52,7 @@ import { ArrowRight } from 'lucide-react';
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                FuturisticServiceCard
+                Futuristic Service Card
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -80,5 +85,22 @@ import { ArrowRight } from 'lucide-react';
               Discover the powerful features that make our futuristic service card solutions stand out.
             </p>
           </div>
-        </div></div></section>)};export default FuturisticServiceCardPage
-}
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-xl rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default FuturisticServiceCard;
