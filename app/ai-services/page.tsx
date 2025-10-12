@@ -27,52 +27,114 @@ export default function AIServicesPage() {
   const aiServices = [
     {
       name: 'AI Content Generator Pro',
-      description: 'Advanced AI-powered content creation with natural language processing',
+      description: 'Advanced AI-powered content creation with natural language processing and multi-format support',
       price: '$299/month',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice training', 'Content analytics'],
+      originalPrice: '$399/month',
+      features: ['Multi-language support', 'SEO optimization', 'Brand voice training', 'Content analytics', 'Plagiarism detection', 'Tone adjustment', 'Content scheduling', 'Team collaboration'],
       icon: FileText,
       path: '/ai-content-generator',
-      popular: true
+      popular: true,
+      savings: '25%',
+      category: 'Content Creation'
     },
     {
       name: 'AI Chatbot Enterprise',
-      description: 'Intelligent conversational AI for customer service and support',
+      description: 'Intelligent conversational AI for customer service and support with advanced NLP capabilities',
       price: '$499/month',
-      features: ['24/7 availability', 'Multi-channel integration', 'Sentiment analysis', 'Custom training'],
+      features: ['24/7 availability', 'Multi-channel integration', 'Sentiment analysis', 'Custom training', 'Voice recognition', 'Multi-language support', 'Integration APIs', 'Analytics dashboard'],
       icon: MessageSquare,
-      path: '/ai-chatbot-enterprise'
+      path: '/ai-chatbot-enterprise',
+      category: 'Conversational AI'
     },
     {
       name: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence with predictive analytics',
+      description: 'Real-time business intelligence with predictive analytics and machine learning insights',
       price: '$399/month',
-      features: ['Real-time insights', 'Predictive modeling', 'Custom reports', 'API integration'],
+      features: ['Real-time insights', 'Predictive modeling', 'Custom reports', 'API integration', 'Data visualization', 'Automated alerts', 'Trend analysis', 'ROI tracking'],
       icon: BarChart3,
-      path: '/ai-analytics-dashboard'
+      path: '/ai-analytics-dashboard',
+      category: 'Analytics & Intelligence'
     },
     {
       name: 'AI 3D Generation Studio',
-      description: 'Create stunning 3D models and animations with AI assistance',
+      description: 'Create stunning 3D models and animations with AI assistance for gaming, AR/VR, and design',
       price: '$799/month',
-      features: ['3D model generation', 'Animation creation', 'Texture mapping', 'VR/AR support'],
+      features: ['3D model generation', 'Animation creation', 'Texture mapping', 'VR/AR support', 'Rigging automation', 'Lighting optimization', 'Export formats', 'Cloud rendering'],
       icon: Camera,
-      path: '/ai-3d-generation'
+      path: '/ai-3d-generation',
+      category: 'Creative AI'
     },
     {
       name: 'AI Drug Discovery Pro',
-      description: 'Accelerate pharmaceutical research with AI-powered molecular analysis',
+      description: 'Accelerate pharmaceutical research with AI-powered molecular analysis and drug design',
       price: '$2,999/month',
-      features: ['Molecular modeling', 'Drug interaction analysis', 'Clinical trial optimization', 'Regulatory compliance'],
+      features: ['Molecular modeling', 'Drug interaction analysis', 'Clinical trial optimization', 'Regulatory compliance', 'Toxicity prediction', 'ADMET properties', 'Patent analysis', 'Collaboration tools'],
       icon: Brain,
-      path: '/ai-drug-discovery-pro'
+      path: '/ai-drug-discovery-pro',
+      category: 'Healthcare AI'
     },
     {
       name: 'AI Cybersecurity Suite',
-      description: 'Advanced threat detection and prevention using machine learning',
+      description: 'Advanced threat detection and prevention using machine learning and behavioral analysis',
       price: '$1,299/month',
-      features: ['Real-time monitoring', 'Threat intelligence', 'Automated response', 'Compliance reporting'],
+      features: ['Real-time monitoring', 'Threat intelligence', 'Automated response', 'Compliance reporting', 'Vulnerability scanning', 'Incident response', 'Security training', 'Penetration testing'],
       icon: Shield,
-      path: '/ai-cybersecurity-suite'
+      path: '/ai-cybersecurity-suite',
+      category: 'Security AI'
+    },
+    {
+      name: 'AI Computer Vision Platform',
+      description: 'Advanced computer vision solutions for object detection, recognition, and image analysis',
+      price: '$599/month',
+      features: ['Object detection', 'Image classification', 'Facial recognition', 'OCR capabilities', 'Video analysis', 'Real-time processing', 'Custom models', 'API integration'],
+      icon: Camera,
+      path: '/ai-computer-vision',
+      category: 'Computer Vision'
+    },
+    {
+      name: 'AI Voice Synthesis Pro',
+      description: 'Natural voice generation and speech synthesis with multiple languages and accents',
+      price: '$399/month',
+      features: ['Natural voice generation', 'Multiple languages', 'Emotion control', 'Voice cloning', 'Real-time synthesis', 'Custom voices', 'Audio processing', 'API access'],
+      icon: MessageSquare,
+      path: '/ai-voice-synthesis',
+      category: 'Voice AI'
+    },
+    {
+      name: 'AI Document Intelligence',
+      description: 'Intelligent document processing with OCR, data extraction, and automated workflows',
+      price: '$299/month',
+      features: ['OCR processing', 'Data extraction', 'Document classification', 'Automated workflows', 'Form processing', 'Invoice scanning', 'Contract analysis', 'Compliance checking'],
+      icon: FileText,
+      path: '/ai-document-intelligence',
+      category: 'Document AI'
+    },
+    {
+      name: 'AI Predictive Maintenance',
+      description: 'Machine learning-powered predictive maintenance for industrial equipment and machinery',
+      price: '$899/month',
+      features: ['Equipment monitoring', 'Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'Sensor integration', 'Alert systems', 'Performance analytics', 'ROI tracking'],
+      icon: Cpu,
+      path: '/ai-predictive-maintenance',
+      category: 'Industrial AI'
+    },
+    {
+      name: 'AI Fraud Detection System',
+      description: 'Advanced fraud detection using machine learning for financial transactions and identity verification',
+      price: '$699/month',
+      features: ['Transaction monitoring', 'Identity verification', 'Risk scoring', 'Real-time alerts', 'Pattern recognition', 'Compliance reporting', 'API integration', 'Custom rules'],
+      icon: Shield,
+      path: '/ai-fraud-detection',
+      category: 'Financial AI'
+    },
+    {
+      name: 'AI Recommendation Engine',
+      description: 'Personalized recommendation system for e-commerce, content, and product suggestions',
+      price: '$499/month',
+      features: ['Personalized recommendations', 'A/B testing', 'Real-time updates', 'Multi-channel support', 'Analytics dashboard', 'Custom algorithms', 'API integration', 'Performance metrics'],
+      icon: TrendingUp,
+      path: '/ai-recommendation-engine',
+      category: 'Recommendation AI'
     }
   ];
 

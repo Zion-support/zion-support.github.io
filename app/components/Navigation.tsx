@@ -38,23 +38,33 @@ export default function Navigation() {
   }
 
   const aiServices = [
-    { name: 'AI Content Generator', path: '/ai-content-generator' },
-    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
+    { name: 'AI Content Generator Pro', path: '/ai-content-generator' },
+    { name: 'AI Chatbot Enterprise', path: '/ai-chatbot-enterprise' },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-    { name: 'AI Email Assistant', path: '/ai-email-assistant' },
-    { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Automation', path: '/ai-automation' },
-    { name: 'AI 3D Generation', path: '/ai-3d-generation' },
-    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
+    { name: 'AI Computer Vision', path: '/ai-computer-vision' },
+    { name: 'AI Voice Synthesis Pro', path: '/ai-voice-synthesis' },
+    { name: 'AI Document Intelligence', path: '/ai-document-intelligence' },
+    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
+    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' },
+    { name: 'AI 3D Generation Studio', path: '/ai-3d-generation' },
+    { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance' },
+    { name: 'AI Fraud Detection', path: '/ai-fraud-detection' },
+    { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine' }
   ];
 
   const itServices = [
+    { name: 'Cloud Migration', path: '/cloud-migration', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
     { name: 'Mobile Development', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'DevOps', path: '/devops', icon: <Server className="w-4 h-4" /> },
+    { name: 'DevOps Solutions', path: '/devops-solutions', icon: <Server className="w-4 h-4" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> }
+    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
+    { name: 'API Development', path: '/api-development', icon: <Database className="w-4 h-4" /> },
+    { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
+    { name: 'IT Infrastructure', path: '/it-infrastructure', icon: <Server className="w-4 h-4" /> },
+    { name: 'Blockchain Solutions', path: '/blockchain-solutions', icon: <Shield className="w-4 h-4" /> },
+    { name: 'IoT Development', path: '/iot-development', icon: <Wifi className="w-4 h-4" /> },
+    { name: 'IT Consulting', path: '/it-consulting', icon: <Users className="w-4 h-4" /> }
   ];
 
   const fiveGServices = [
@@ -67,13 +77,18 @@ export default function Navigation() {
   ];
 
   const microSaasServices = [
-    { name: 'AI Task Manager', path: '/ai-task-manager' },
-    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
-    { name: 'AI Password Manager', path: '/ai-password-manager' },
-    { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
-    { name: 'AI Health Tracker', path: '/ai-health-tracker' },
+    { name: 'AI-Powered CRM Pro', path: '/ai-crm' },
+    { name: 'Smart Analytics Platform', path: '/smart-analytics' },
+    { name: 'AI Task Manager Pro', path: '/ai-task-manager' },
+    { name: 'AI Expense Tracker Pro', path: '/ai-expense-tracker' },
+    { name: 'AI Password Manager Pro', path: '/ai-password-manager' },
+    { name: 'AI Invoice Generator Pro', path: '/ai-invoice-generator' },
+    { name: 'AI Health Tracker Pro', path: '/ai-health-tracker' },
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
-    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
+    { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro' },
+    { name: 'AI Customer Support Bot', path: '/ai-customer-support' },
+    { name: 'AI Financial Analytics', path: '/ai-financial-analytics' },
+    { name: 'AI Design Studio', path: '/ai-design-studio' }
   ];
 
   return (
@@ -98,12 +113,12 @@ export default function Navigation() {
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-white hover:text-cyan-400 transition-colors">
+            {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Home
             </Link>
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
               About
             </Link>
             
@@ -211,7 +226,20 @@ export default function Navigation() {
               )}
             </div>
 
-            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
+            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Contact
+            </Link>
+          </div>
+
+          {/* Tablet Navigation */}
+          <div className="hidden md:flex lg:hidden items-center space-x-4">
+            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Home
+            </Link>
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              About
+            </Link>
+            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Contact
             </Link>
           </div>
@@ -233,7 +261,7 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden" id="mobile-menu">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-lg mt-2" role="menu" aria-label="Mobile navigation menu">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-md rounded-lg mt-2 border border-cyan-500/20" role="menu" aria-label="Mobile navigation menu">
               <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
                 Home
               </Link>

@@ -25,52 +25,114 @@ export default function ITServicesPage() {
   const itServices = [
     {
       name: 'Cloud Migration Services',
-      description: 'Seamless migration to AWS, Azure, or Google Cloud Platform',
+      description: 'Seamless migration to AWS, Azure, or Google Cloud Platform with zero downtime',
       price: 'Starting at $5,000',
-      features: ['Zero-downtime migration', 'Data security', 'Performance optimization', '24/7 support'],
+      originalPrice: '$7,500',
+      features: ['Zero-downtime migration', 'Data security', 'Performance optimization', '24/7 support', 'Cost optimization', 'Disaster recovery', 'Monitoring setup', 'Team training'],
       icon: Cloud,
       path: '/cloud-migration',
-      popular: true
+      popular: true,
+      savings: '33%',
+      category: 'Cloud Services'
     },
     {
       name: 'DevOps Solutions',
-      description: 'Complete DevOps implementation with CI/CD pipelines',
+      description: 'Complete DevOps implementation with CI/CD pipelines and infrastructure automation',
       price: 'Starting at $3,500',
-      features: ['Automated deployment', 'Infrastructure as code', 'Monitoring setup', 'Team training'],
+      features: ['Automated deployment', 'Infrastructure as code', 'Monitoring setup', 'Team training', 'Container orchestration', 'Security scanning', 'Performance monitoring', 'Incident response'],
       icon: Code,
-      path: '/devops-solutions'
+      path: '/devops-solutions',
+      category: 'DevOps & Automation'
     },
     {
       name: 'Cybersecurity Services',
-      description: 'Comprehensive security assessment and implementation',
+      description: 'Comprehensive security assessment and implementation with ongoing monitoring',
       price: 'Starting at $2,500',
-      features: ['Security audit', 'Penetration testing', 'Compliance certification', 'Ongoing monitoring'],
+      features: ['Security audit', 'Penetration testing', 'Compliance certification', 'Ongoing monitoring', 'Vulnerability scanning', 'Incident response', 'Security training', 'Compliance reporting'],
       icon: Shield,
-      path: '/cybersecurity'
+      path: '/cybersecurity',
+      category: 'Security Services'
     },
     {
       name: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications',
+      description: 'Native and cross-platform mobile applications with modern UI/UX design',
       price: 'Starting at $8,000',
-      features: ['iOS & Android', 'Cross-platform', 'App store optimization', 'Maintenance support'],
+      features: ['iOS & Android', 'Cross-platform', 'App store optimization', 'Maintenance support', 'Push notifications', 'Offline functionality', 'Analytics integration', 'Performance optimization'],
       icon: Smartphone,
-      path: '/mobile-development'
+      path: '/mobile-development',
+      category: 'Mobile Development'
     },
     {
       name: 'API Development',
-      description: 'RESTful and GraphQL APIs with comprehensive documentation',
+      description: 'RESTful and GraphQL APIs with comprehensive documentation and monitoring',
       price: 'Starting at $4,000',
-      features: ['REST & GraphQL', 'API documentation', 'Rate limiting', 'Analytics dashboard'],
+      features: ['REST & GraphQL', 'API documentation', 'Rate limiting', 'Analytics dashboard', 'Authentication', 'Versioning', 'Testing suite', 'Performance optimization'],
       icon: Database,
-      path: '/api-development'
+      path: '/api-development',
+      category: 'API Development'
     },
     {
       name: 'Database Management',
-      description: 'Database design, optimization, and maintenance services',
+      description: 'Database design, optimization, and maintenance services with 24/7 monitoring',
       price: 'Starting at $1,500',
-      features: ['Performance tuning', 'Backup strategies', 'Security hardening', 'Migration support'],
+      features: ['Performance tuning', 'Backup strategies', 'Security hardening', 'Migration support', 'Query optimization', 'Index management', 'Capacity planning', 'Disaster recovery'],
       icon: Database,
-      path: '/database-management'
+      path: '/database-management',
+      category: 'Database Services'
+    },
+    {
+      name: 'Web Development',
+      description: 'Modern web applications with responsive design and optimal performance',
+      price: 'Starting at $6,000',
+      features: ['Responsive design', 'SEO optimization', 'Performance tuning', 'Security implementation', 'CMS integration', 'E-commerce solutions', 'Progressive Web App', 'Analytics integration'],
+      icon: Globe,
+      path: '/web-development',
+      category: 'Web Development'
+    },
+    {
+      name: 'Data Analytics Solutions',
+      description: 'Business intelligence and data analytics with custom dashboards and reporting',
+      price: 'Starting at $3,000',
+      features: ['Custom dashboards', 'Data visualization', 'ETL processes', 'Real-time analytics', 'Machine learning', 'Predictive analytics', 'Data warehousing', 'Report automation'],
+      icon: BarChart3,
+      path: '/data-analytics',
+      category: 'Data & Analytics'
+    },
+    {
+      name: 'IT Infrastructure Design',
+      description: 'Complete IT infrastructure design and implementation for enterprise environments',
+      price: 'Starting at $10,000',
+      features: ['Network design', 'Server configuration', 'Storage solutions', 'Security implementation', 'Backup systems', 'Monitoring setup', 'Documentation', 'Training'],
+      icon: Server,
+      path: '/it-infrastructure',
+      category: 'Infrastructure'
+    },
+    {
+      name: 'Blockchain Solutions',
+      description: 'Blockchain development and smart contract implementation for various industries',
+      price: 'Starting at $15,000',
+      features: ['Smart contracts', 'DApp development', 'Token creation', 'DeFi solutions', 'NFT platforms', 'Consensus mechanisms', 'Security auditing', 'Integration services'],
+      icon: Shield,
+      path: '/blockchain-solutions',
+      category: 'Blockchain'
+    },
+    {
+      name: 'IoT Development',
+      description: 'Internet of Things solutions with device management and data processing',
+      price: 'Starting at $7,000',
+      features: ['Device connectivity', 'Data processing', 'Real-time monitoring', 'Dashboard development', 'Mobile apps', 'Cloud integration', 'Security implementation', 'Scalability planning'],
+      icon: Wifi,
+      path: '/iot-development',
+      category: 'IoT Solutions'
+    },
+    {
+      name: 'IT Consulting',
+      description: 'Strategic IT consulting and digital transformation services',
+      price: 'Starting at $200/hour',
+      features: ['Technology assessment', 'Digital strategy', 'Process optimization', 'Technology selection', 'Implementation planning', 'Change management', 'ROI analysis', 'Ongoing support'],
+      icon: Users,
+      path: '/it-consulting',
+      category: 'Consulting'
     }
   ];
 

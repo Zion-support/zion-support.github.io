@@ -4,37 +4,48 @@ import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Clou
 
 export default function Footer() {
   const aiServices = [
-    { name: 'AI Content Generator', path: '/ai-content-generator' },
-    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
+    { name: 'AI Content Generator Pro', path: '/ai-content-generator' },
+    { name: 'AI Chatbot Enterprise', path: '/ai-chatbot-enterprise' },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-    { name: 'AI Email Assistant', path: '/ai-email-assistant' },
-    { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Automation Suite', path: '/ai-automation' },
-    { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant' },
-    { name: 'AI Project Manager', path: '/ai-project-manager' },
-    { name: 'AI 3D Generation', path: '/ai-3d-generation' },
-    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
+    { name: 'AI Computer Vision', path: '/ai-computer-vision' },
+    { name: 'AI Voice Synthesis Pro', path: '/ai-voice-synthesis' },
+    { name: 'AI Document Intelligence', path: '/ai-document-intelligence' },
+    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
+    { name: 'AI 3D Generation Studio', path: '/ai-3d-generation' },
+    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' },
+    { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance' },
+    { name: 'AI Fraud Detection', path: '/ai-fraud-detection' },
+    { name: 'AI Recommendation Engine', path: '/ai-recommendation-engine' }
   ];
 
   const itServices = [
+    { name: 'Cloud Migration', path: '/cloud-migration' },
     { name: 'Web Development', path: '/web-development' },
     { name: 'Mobile Development', path: '/mobile-development' },
-    { name: 'DevOps', path: '/devops' },
+    { name: 'DevOps Solutions', path: '/devops-solutions' },
     { name: 'Data Analytics', path: '/data-analytics' },
-    { name: 'Cloud Services', path: '/cloud-services' },
     { name: 'Cybersecurity', path: '/cybersecurity' },
-    { name: 'Blockchain Solutions', path: '/blockchain' },
-    { name: 'Quantum Computing', path: '/quantum-computing-solutions' }
+    { name: 'API Development', path: '/api-development' },
+    { name: 'Database Management', path: '/database-management' },
+    { name: 'IT Infrastructure', path: '/it-infrastructure' },
+    { name: 'Blockchain Solutions', path: '/blockchain-solutions' },
+    { name: 'IoT Development', path: '/iot-development' },
+    { name: 'IT Consulting', path: '/it-consulting' }
   ];
 
   const microSaasServices = [
-    { name: 'AI Task Manager', path: '/ai-task-manager' },
-    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
-    { name: 'AI Password Manager', path: '/ai-password-manager' },
-    { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
-    { name: 'AI Health Tracker', path: '/ai-health-tracker' },
+    { name: 'AI-Powered CRM Pro', path: '/ai-crm' },
+    { name: 'Smart Analytics Platform', path: '/smart-analytics' },
+    { name: 'AI Task Manager Pro', path: '/ai-task-manager' },
+    { name: 'AI Expense Tracker Pro', path: '/ai-expense-tracker' },
+    { name: 'AI Password Manager Pro', path: '/ai-password-manager' },
+    { name: 'AI Invoice Generator Pro', path: '/ai-invoice-generator' },
+    { name: 'AI Health Tracker Pro', path: '/ai-health-tracker' },
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
-    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
+    { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro' },
+    { name: 'AI Customer Support Bot', path: '/ai-customer-support' },
+    { name: 'AI Financial Analytics', path: '/ai-financial-analytics' },
+    { name: 'AI Design Studio', path: '/ai-design-studio' }
   ];
 
   const fiveGServices = [
@@ -78,8 +89,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-sm">
-              Leading provider of AI, cloud services, cybersecurity, and 5G solutions. 
-              Transform your business with cutting-edge technology.
+              Leading provider of AI services, IT solutions, micro SAAS platforms, and 5G implementation. 
+              Transform your business with cutting-edge technology and innovative solutions.
             </p>
             <div className="flex space-x-4">
               <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">

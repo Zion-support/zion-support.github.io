@@ -49,46 +49,46 @@ export default function HomePage() {
 
   const services = [
     {
-      title: 'AI Content Generation',
-      description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
+      title: 'AI Services & Solutions',
+      description: 'Comprehensive AI solutions including content generation, chatbots, computer vision, and predictive analytics.',
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      link: '/ai-content-generation',
-      features: ['Automated content creation', 'SEO optimization', 'Multi-language support']
+      link: '/ai-services',
+      features: ['Content Generation', 'Computer Vision', 'Predictive Analytics', 'Voice Synthesis', 'Document Intelligence', 'Fraud Detection']
     },
     {
       title: 'IT Services & Solutions',
       description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
       icon: <Shield className="w-8 h-8 text-green-500" />,
       link: '/it-services',
-      features: ['Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics']
+      features: ['Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics', 'API Development', 'Blockchain Solutions']
     },
     {
-      title: 'Cloud Services',
-      description: 'Scalable, secure, and reliable cloud infrastructure solutions for your business.',
-      icon: <Cloud className="w-8 h-8 text-blue-400" />,
-      link: '/cloud-services',
-      features: ['Scalable infrastructure', '99.9% uptime', 'Global CDN']
-    },
-    {
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with our comprehensive cybersecurity services and monitoring.',
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      link: '/cybersecurity',
-      features: ['Threat detection', 'Security audits', 'Compliance management']
+      title: 'Micro SAAS Solutions',
+      description: 'Specialized micro SAAS platforms for business productivity, CRM, analytics, and automation.',
+      icon: <Cpu className="w-8 h-8 text-purple-400" />,
+      link: '/micro-saas-services',
+      features: ['AI-Powered CRM', 'Smart Analytics', 'Task Management', 'Expense Tracking', 'Health Monitoring', 'Design Studio']
     },
     {
       title: '5G Implementation',
       description: 'Leverage the power of 5G technology for ultra-fast connectivity and IoT solutions.',
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
       link: '/5g-implementation',
-      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing']
+      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing', 'Private networks', 'Mobile applications']
     },
     {
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics platform.',
+      title: 'Cybersecurity Solutions',
+      description: 'Protect your business with our comprehensive cybersecurity services and AI-powered threat detection.',
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      link: '/cybersecurity',
+      features: ['Threat detection', 'Security audits', 'Compliance management', 'Penetration testing', 'Incident response']
+    },
+    {
+      title: 'Data Analytics & Intelligence',
+      description: 'Transform your data into actionable insights with our advanced analytics and business intelligence platform.',
       icon: <BarChart3 className="w-8 h-8 text-green-400" />,
       link: '/data-analytics',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards']
+      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'Machine learning', 'Data visualization']
     }
   ];
 
