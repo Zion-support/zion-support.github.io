@@ -35,22 +35,22 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Core React libraries
+          // Core React libraries - keep small
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
-          // Router
+          // Router - separate chunk
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - separate by size
           if (id.includes('framer-motion')) {
             return 'animations'
           }
           if (id.includes('lucide-react')) {
             return 'icons'
           }
-          // SEO and meta
+          // SEO and meta - lightweight
           if (id.includes('react-helmet')) {
             return 'seo'
           }
@@ -58,32 +58,29 @@ export default defineConfig({
           if (id.includes('recharts')) {
             return 'charts'
           }
-          // Utility libraries
-          if (id.includes('clsx') || id.includes('tailwind-merge')) {
+          // Utility libraries - keep together
+          if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('web-vitals')) {
             return 'utils'
           }
-          // Performance monitoring
-          if (id.includes('web-vitals')) {
-            return 'performance'
-          }
-          // AI service pages
+          // Split pages by category for better caching
           if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
             return 'ai-pages'
           }
-          // IT service pages
           if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {
             return 'it-pages'
           }
-          // Micro SAAS pages
           if (id.includes('/app/zion-') && id.includes('/page.tsx')) {
             return 'saas-pages'
           }
-          // Other pages
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
           }
+          // Large vendor libraries
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
           // Default chunk for other modules
-          return 'vendor'
+          return 'misc'
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -91,11 +88,18 @@ export default defineConfig({
       },
     },
     // Optimize bundle size
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
     // Enable tree shaking
     treeshake: true,
     // Enable compression
     reportCompressedSize: true,
+    // Add compression
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
   },
   server: {
     port: 3000,

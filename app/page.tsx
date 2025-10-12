@@ -1,8 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import EnhancedSEOHead from './components/EnhancedSEOHead';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart, BarChart } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -152,18 +152,27 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI & IT Solutions | Leading Technology Company</title>
-        <meta name="description" content="Zion Tech Group provides cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development. Transform your business with our innovative technology services." />
-        <meta name="keywords" content="AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics" />
-        <meta property="og:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
-        <meta property="og:description" content="Leading technology company providing AI solutions, cloud infrastructure, and cybersecurity services." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
-        <meta name="twitter:description" content="Transform your business with cutting-edge AI and IT solutions." />
-      </Helmet>
+      <EnhancedSEOHead
+        title="Zion Tech Group - Advanced AI & IT Solutions | Leading Technology Company"
+        description="Zion Tech Group provides cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development. Transform your business with our innovative technology services."
+        keywords="AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics"
+        canonicalUrl="https://ziontechgroup.com"
+        ogImage="https://ziontechgroup.com/og-image.jpg"
+        ogType="website"
+        structuredData={{
+          type: 'WebPage',
+          data: {
+            name: 'Zion Tech Group - Advanced AI & IT Solutions',
+            description: 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.',
+            url: 'https://ziontechgroup.com',
+            mainEntity: {
+              '@type': 'Organization',
+              name: 'Zion Tech Group',
+              url: 'https://ziontechgroup.com'
+            }
+          }
+        }}
+      />
 
       <div className="min-h-screen">
         {/* Hero Section */}
