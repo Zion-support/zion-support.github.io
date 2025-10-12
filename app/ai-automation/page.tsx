@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -51,7 +49,6 @@ const AIAutomationPage: React.FC = () => {
       icon: Globe
     }
   ];
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 
   return (
     <>
