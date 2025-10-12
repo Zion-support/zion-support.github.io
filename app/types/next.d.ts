@@ -1,30 +1,22 @@
-import React from 'react';
-  export default content;
-export {};
-// Type definitions for Next.js;
+// Type definitions for Next.js
+declare global {
+  namespace NodeJS {
+    interface ProcessEnv {
       NODE_ENV: 'development' | 'production' | 'test'
-      NEXT_PUBLIC_API_URL: string;
-      NEXT_PUBLIC_APP_URL: string;
-      DATABASE_URL: string;
-      NEXTAUTH_SECRET: string;
-      NEXTAUTH_URL: string;
-      id: string;
-      email: string;
-      name: string;
-  const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
-  const content: string;
+      NEXT_PUBLIC_API_URL: string
+      NEXT_PUBLIC_APP_URL: string
+      DATABASE_URL: string
+      NEXTAUTH_SECRET: string
+      NEXTAUTH_URL: string
+    }
+  }
+}
 
-  const content: string;
+interface User {
+  id: string
+  email: string
+  name: string
+}
 
-  const content: string;
-
-  const content: string;
-
-  const content: string;
-
-  const content: string;
-
-  const content: string;
-
-  const content: string;
+export type { User }
 
