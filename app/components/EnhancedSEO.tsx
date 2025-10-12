@@ -14,18 +14,21 @@ interface SEOProps {
   structuredData?: object;
   noindex?: boolean;
   nofollow?: boolean;
-const EnhancedSEO: React.FC<SEOProps /> = ({
-  const title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered solutions, IT services, 5 G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
-  keywords = 'AI solutions, artificial intelligence, IT services, 5 G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
+}
+
+const EnhancedSEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
+  keywords = 'AI solutions, artificial intelligence, IT services, 5G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
   canonical,
-  ogImage = 'https: //ziontechgroup.com/og-image.jpg',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
-  noindex = false,;
-  nofollow = false;
-const defaultStructuredData = {
+  noindex = false,
+  nofollow = false
+}) => {
+  const defaultStructuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -61,21 +64,48 @@ const defaultStructuredData = {
       "offerCount": "50+",
       "lowPrice": "99",
       "highPrice": "2999",
-      "priceCurrency": "USD";
+      "priceCurrency": "USD"
+    }
+  };
+
   const finalStructuredData = structuredData || defaultStructuredData;
-  const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
+  const canonicalUrl = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;
+
   return (
-    <div>Content</div>
-  );
-        <title>5G Data Analytics - Zion Tech Group</title>
+    <>
       {/* Basic Meta Tags */}
       <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      
       {/* Canonical URL */}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      
       {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonicalUrl} />
+      
       {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      
       {/* Additional SEO Meta Tags */}
+      {noindex && <meta name="robots" content="noindex" />}
+      {nofollow && <meta name="robots" content="nofollow" />}
+      
       {/* Performance Hints */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      
       {/* Structured Data */}
-      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
-
-
+      <script type="application/ld+json">
+        {JSON.stringify(finalStructuredData)}
+      </script>
+    </>
+  );
+};

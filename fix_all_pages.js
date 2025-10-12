@@ -35,12 +35,8 @@ const pagesToRewrite = [
                 <li>• Benefit 2</li>
                 <li>• Benefit 3</li>
                 <li>• Benefit 4</li>
-<<<<<<< HEAD
   )
 
-=======
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 // Page configurations;
 const pageConfigs = {
   'enterprise-security': {
