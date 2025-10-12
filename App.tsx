@@ -5,6 +5,7 @@ import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
 import ErrorBoundary from './app/components/ErrorBoundary'
@@ -92,6 +93,9 @@ function App() {
     </HelmetProvider>
 <<<<<<< HEAD
 =======
+=======
+import FuturisticBackground from './app/components/FuturisticBackground'
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-00bf
 import HomePage from './app/page'
 import AboutPage from './app/about/page'
 import ContactPage from './app/contact/page'
@@ -119,7 +123,8 @@ import WebDevelopmentPage from './app/web-development/page'
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-futuristic-dark relative overflow-hidden">
+        <FuturisticBackground />
         <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
