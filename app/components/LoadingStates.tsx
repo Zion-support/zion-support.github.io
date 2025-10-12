@@ -59,3 +59,7 @@ export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => 
     </div>
   );
 };
+
+export const PageLoader: React.FC = () => {
+  return <LoadingPage />;
+};
