@@ -31,6 +31,19 @@ import MicroSaasLeadScoringPage from './app/micro-saas/lead-scoring/page'
 import MicroSaasSeoOptimizerPage from './app/micro-saas/seo-optimizer/page'
 import MicroSaasSocialManagerPage from './app/micro-saas/social-manager/page'
 import MicroSaasSupportBotPage from './app/micro-saas/support-bot/page'
+import AIInvoiceGeneratorPage from './app/micro-saas/ai-invoice-generator/page'
+import AISocialMediaManagerPage from './app/micro-saas/ai-social-media-manager/page'
+import AIProjectManagementPage from './app/micro-saas/ai-project-management/page'
+import AIEmailMarketingAutomationPage from './app/micro-saas/ai-email-marketing-automation/page'
+import AICustomerSupportChatbotPage from './app/micro-saas/ai-customer-support-chatbot/page'
+import AIContentManagementPage from './app/micro-saas/ai-content-management/page'
+import AILeadScoringPage from './app/micro-saas/ai-lead-scoring/page'
+import AIWorkflowAutomationPage from './app/micro-saas/ai-workflow-automation/page'
+import AIDataAnalyticsPage from './app/micro-saas/ai-data-analytics/page'
+import AICRMAssistantPage from './app/micro-saas/ai-crm-assistant/page'
+import AIAccountingAssistantPage from './app/micro-saas/ai-accounting-assistant/page'
+import AISEOOptimizerPage from './app/micro-saas/ai-seo-optimizer/page'
+import AIEmailAssistantPage from './app/micro-saas/ai-email-assistant/page'
 import AIAutomatedReportingPage from './app/ai-automated-reporting/page'
 import AIChatbotBuilderPage from './app/ai-chatbot-builder/page'
 import AIExpenseTrackerPage from './app/ai-expense-tracker/page'
@@ -93,6 +106,19 @@ const App: React.FC = () => {
                   <Route path="/micro-saas/seo-optimizer" element={<MicroSaasSeoOptimizerPage />} />
                   <Route path="/micro-saas/social-manager" element={<MicroSaasSocialManagerPage />} />
                   <Route path="/micro-saas/support-bot" element={<MicroSaasSupportBotPage />} />
+                  <Route path="/micro-saas/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
+                  <Route path="/micro-saas/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
+                  <Route path="/micro-saas/ai-project-management" element={<AIProjectManagementPage />} />
+                  <Route path="/micro-saas/ai-email-marketing-automation" element={<AIEmailMarketingAutomationPage />} />
+                  <Route path="/micro-saas/ai-customer-support-chatbot" element={<AICustomerSupportChatbotPage />} />
+                  <Route path="/micro-saas/ai-content-management" element={<AIContentManagementPage />} />
+                  <Route path="/micro-saas/ai-lead-scoring" element={<AILeadScoringPage />} />
+                  <Route path="/micro-saas/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
+                  <Route path="/micro-saas/ai-data-analytics" element={<AIDataAnalyticsPage />} />
+                  <Route path="/micro-saas/ai-crm-assistant" element={<AICRMAssistantPage />} />
+                  <Route path="/micro-saas/ai-accounting-assistant" element={<AIAccountingAssistantPage />} />
+                  <Route path="/micro-saas/ai-seo-optimizer" element={<AISEOOptimizerPage />} />
+                  <Route path="/micro-saas/ai-email-assistant" element={<AIEmailAssistantPage />} />
                   
                   {/* AI Services */}
                   <Route path="/ai-automated-reporting" element={<AIAutomatedReportingPage />} />

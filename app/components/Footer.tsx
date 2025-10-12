@@ -11,7 +11,13 @@ const Footer: React.FC = () => {
     { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' },
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
     { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
-    { name: 'AI Email Marketing', path: '/ai-email-marketing' }
+    { name: 'AI Email Marketing', path: '/ai-email-marketing' },
+    { name: 'AI Automated Reporting', path: '/ai-automated-reporting' },
+    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
+    { name: 'AI Password Manager', path: '/ai-password-manager' },
+    { name: 'AI Task Manager', path: '/ai-task-manager' },
+    { name: 'Business Intelligence', path: '/business-intelligence' }
   ];
 
   const itServices = [
@@ -26,14 +32,31 @@ const Footer: React.FC = () => {
   ];
 
   const microSaasServices = [
-    { name: 'AI-Powered CRM', path: '/ai-crm' },
-    { name: 'Smart Analytics', path: '/smart-analytics' },
-    { name: 'Automated Testing', path: '/ai-automated-testing' },
-    { name: 'Content Management', path: '/ai-content-management' },
-    { name: 'Email Marketing', path: '/ai-email-marketing' },
-    { name: 'Social Media Manager', path: '/ai-social-media-manager' },
-    { name: 'Project Management', path: '/ai-project-management' },
-    { name: 'Customer Support', path: '/ai-customer-support' }
+    { name: 'AI Invoice Generator', path: '/micro-saas/ai-invoice-generator' },
+    { name: 'AI Social Media Manager', path: '/micro-saas/ai-social-media-manager' },
+    { name: 'AI Project Management', path: '/micro-saas/ai-project-management' },
+    { name: 'AI Email Marketing Automation', path: '/micro-saas/ai-email-marketing-automation' },
+    { name: 'AI Customer Support Chatbot', path: '/micro-saas/ai-customer-support-chatbot' },
+    { name: 'AI Content Management', path: '/micro-saas/ai-content-management' },
+    { name: 'AI Lead Scoring', path: '/micro-saas/ai-lead-scoring' },
+    { name: 'AI Workflow Automation', path: '/micro-saas/ai-workflow-automation' },
+    { name: 'AI Data Analytics', path: '/micro-saas/ai-data-analytics' },
+    { name: 'AI CRM Assistant', path: '/micro-saas/ai-crm-assistant' },
+    { name: 'AI Accounting Assistant', path: '/micro-saas/ai-accounting-assistant' },
+    { name: 'AI SEO Optimizer', path: '/micro-saas/ai-seo-optimizer' },
+    { name: 'AI Email Assistant', path: '/micro-saas/ai-email-assistant' },
+    { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard' },
+    { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler' },
+    { name: 'Chat Analytics', path: '/micro-saas/chat-analytics' },
+    { name: 'Content Generator', path: '/micro-saas/content-generator' },
+    { name: 'Document Processor', path: '/micro-saas/document-processor' },
+    { name: 'Email Marketing', path: '/micro-saas/email-marketing' },
+    { name: 'Expense Tracker', path: '/micro-saas/expense-tracker' },
+    { name: 'Inventory Management', path: '/micro-saas/inventory-management' },
+    { name: 'Lead Scoring', path: '/micro-saas/lead-scoring' },
+    { name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer' },
+    { name: 'Social Manager', path: '/micro-saas/social-manager' },
+    { name: 'Support Bot', path: '/micro-saas/support-bot' }
   ];
 
   const companyLinks = [

@@ -1,103 +1,103 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Shield, Zap, Lock, Globe, DollarSign, Star, Clock, TrendingUp, Users, Target, Award, Brain, BarChart3, FileText, Eye, Database } from 'lucide-react';
+import { CheckCircle, ArrowRight, Mail, Zap, Shield, Globe, DollarSign, Star, Clock, TrendingUp, Users, Target, Award, Brain, BarChart3, Send, Edit3, Filter, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 
-const GDPRPage: React.FC = () => {
+const AIEmailMarketingAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: <Shield className="w-8 h-8 text-blue-500" />,
-      title: 'Data Protection Compliance',
-      description: 'Ensure full GDPR compliance with our comprehensive data protection and privacy management solutions.',
-      benefits: ['Data mapping', 'Privacy impact assessments', 'Consent management', 'Data subject rights']
+      icon: <Brain className="w-8 h-8 text-blue-500" />,
+      title: 'AI Content Generation',
+      description: 'Generate compelling email content, subject lines, and CTAs using AI that understands your audience and brand voice.',
+      benefits: ['Personalized content', 'A/B testing', 'Subject line optimization', 'Brand voice consistency']
     },
     {
-      icon: <Lock className="w-8 h-8 text-green-500" />,
-      title: 'Security & Encryption',
-      description: 'Advanced security measures and encryption to protect personal data and ensure compliance.',
-      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Security monitoring']
+      icon: <Users className="w-8 h-8 text-green-500" />,
+      title: 'Smart Segmentation',
+      description: 'AI-powered audience segmentation that automatically groups subscribers based on behavior, preferences, and engagement patterns.',
+      benefits: ['Behavioral segmentation', 'Dynamic lists', 'Engagement scoring', 'Predictive targeting']
     },
     {
-      icon: <FileText className="w-8 h-8 text-purple-500" />,
-      title: 'Documentation & Policies',
-      description: 'Comprehensive documentation and policy management to maintain GDPR compliance.',
-      benefits: ['Privacy policies', 'Data processing agreements', 'Compliance documentation', 'Policy updates']
+      icon: <Calendar className="w-8 h-8 text-purple-500" />,
+      title: 'Automated Workflows',
+      description: 'Create sophisticated email sequences that automatically trigger based on user actions, time delays, and behavioral patterns.',
+      benefits: ['Welcome sequences', 'Drip campaigns', 'Re-engagement flows', 'Lifecycle automation']
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-orange-500" />,
-      title: 'Compliance Monitoring',
-      description: 'Continuous monitoring and reporting to ensure ongoing GDPR compliance and identify risks.',
-      benefits: ['Compliance dashboards', 'Risk assessment', 'Automated reporting', 'Alert systems']
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics and AI insights to optimize your email campaigns and maximize ROI.',
+      benefits: ['Performance tracking', 'ROI analysis', 'Predictive insights', 'Optimization recommendations']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$299',
+      price: '$59',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small businesses and startups',
       features: [
-        'Basic compliance assessment',
-        'Privacy policy templates',
-        'Data mapping tools',
-        'Basic reporting',
-        'Email support',
-        'Standard documentation'
+        'Up to 5,000 subscribers',
+        'Unlimited emails',
+        'Basic AI features',
+        'Email templates',
+        'Basic analytics',
+        'Automation workflows'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$799',
+      price: '$149',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing businesses and agencies',
       features: [
-        'Advanced compliance tools',
-        'Custom privacy policies',
-        'Advanced data mapping',
-        'Compliance monitoring',
+        'Up to 25,000 subscribers',
+        'Advanced AI features',
+        'Advanced segmentation',
+        'A/B testing',
+        'Advanced analytics',
+        'Integrations',
         'Priority support',
-        'API access',
-        'Custom documentation',
-        'Risk assessment'
+        'Custom branding'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,999',
+      price: '$399',
       period: '/month',
-      description: 'For large organizations',
+      description: 'For large organizations and enterprises',
       features: [
-        'Full compliance suite',
-        'White-label solutions',
+        'Unlimited subscribers',
+        'Custom AI training',
+        'White-label solution',
         'Advanced reporting',
+        'API access',
         'Custom integrations',
         'Dedicated support',
-        'Multi-tenant support',
-        'Advanced security',
-        'Compliance consulting'
+        'Advanced security'
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: '500+', label: 'Organizations Compliant', icon: <Shield className="w-6 h-6 text-blue-400" /> },
-    { number: '100%', label: 'GDPR Compliance', icon: <Target className="w-6 h-6 text-green-400" /> },
-    { number: '99.9%', label: 'Data Security', icon: <Lock className="w-6 h-6 text-purple-400" /> },
-    { number: '24/7', label: 'Compliance Monitoring', icon: <Clock className="w-6 h-6 text-orange-400" /> }
+    { number: '2M+', label: 'Emails Sent', icon: <Mail className="w-6 h-6 text-blue-400" /> },
+    { number: '45%', label: 'Open Rate Increase', icon: <TrendingUp className="w-6 h-6 text-green-400" /> },
+    { number: '60%', label: 'Time Saved', icon: <Clock className="w-6 h-6 text-purple-400" /> },
+    { number: '300%', label: 'ROI Improvement', icon: <Target className="w-6 h-6 text-orange-400" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>GDPR Compliance - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive GDPR compliance solutions including data protection, privacy management, and security. Ensure 100% compliance with 24/7 monitoring." />
-        <meta name="keywords" content="GDPR compliance, data protection, privacy management, data security, compliance monitoring" />
+        <title>AI Email Marketing Automation - Zion Tech Group</title>
+        <meta name="description" content="AI-powered email marketing automation platform that generates content, segments audiences, and optimizes campaigns. Increase open rates by 45%." />
+        <meta name="keywords" content="AI email marketing, email automation, email campaigns, marketing automation, email segmentation" />
       </Helmet>
 
       <Navigation />
@@ -108,22 +108,22 @@ const GDPRPage: React.FC = () => {
           <div className="text-center mb-12 sm:mb-16">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-600 rounded-2xl flex items-center justify-center">
-                <Shield className="w-8 h-8 text-white" />
+                <Mail className="w-8 h-8 text-white" />
               </div>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-              GDPR Compliance
+              AI Email Marketing Automation
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
-              Ensure full GDPR compliance with our comprehensive data protection and privacy management solutions. 
-              Achieve 100% compliance with 24/7 monitoring and support.
+              Transform your email marketing with AI-powered automation that generates content, 
+              segments audiences, and optimizes campaigns. Increase open rates by 45%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
                 className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-300 flex items-center"
               >
-                Get Started
+                Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link 
@@ -156,9 +156,9 @@ const GDPRPage: React.FC = () => {
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Our GDPR Solutions</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              Comprehensive tools and services to ensure full GDPR compliance and data protection
+              Everything you need to create, automate, and optimize your email marketing campaigns
             </p>
           </div>
           
@@ -188,7 +188,7 @@ const GDPRPage: React.FC = () => {
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              Choose the plan that fits your compliance needs and organization size. All plans include our core GDPR features.
+              Choose the plan that fits your subscriber count and marketing needs. All plans include our core AI features.
             </p>
           </div>
           
@@ -247,17 +247,17 @@ const GDPRPage: React.FC = () => {
           <div className="text-center">
             <div className="bg-gradient-to-r from-red-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Ensure GDPR Compliance?
+                Ready to Transform Your Email Marketing?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Join 500+ organizations achieving 100% GDPR compliance with our comprehensive solutions and 24/7 monitoring.
+                Join thousands of businesses increasing their email open rates by 45% with our AI-powered automation platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
                   className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Get Started
+                  Start Free Trial
                 </Link>
                 <Link 
                   to="/about" 
@@ -276,4 +276,4 @@ const GDPRPage: React.FC = () => {
   );
 };
 
-export default GDPRPage;
+export default AIEmailMarketingAutomationPage;

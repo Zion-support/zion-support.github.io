@@ -1,103 +1,103 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Shield, Zap, Lock, Globe, DollarSign, Star, Clock, TrendingUp, Users, Target, Award, Brain, BarChart3, FileText, Eye, Database } from 'lucide-react';
+import { CheckCircle, ArrowRight, Workflow, Zap, Shield, Globe, DollarSign, Star, Clock, TrendingUp, Users, Target, Award, Brain, BarChart3, Settings, Play, Pause, RotateCcw } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 
-const GDPRPage: React.FC = () => {
+const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: <Shield className="w-8 h-8 text-blue-500" />,
-      title: 'Data Protection Compliance',
-      description: 'Ensure full GDPR compliance with our comprehensive data protection and privacy management solutions.',
-      benefits: ['Data mapping', 'Privacy impact assessments', 'Consent management', 'Data subject rights']
+      icon: <Brain className="w-8 h-8 text-blue-500" />,
+      title: 'AI-Powered Automation',
+      description: 'Intelligent workflow automation that learns from your processes and automatically optimizes them for maximum efficiency.',
+      benefits: ['Process learning', 'Automatic optimization', 'Smart routing', 'Error prevention']
     },
     {
-      icon: <Lock className="w-8 h-8 text-green-500" />,
-      title: 'Security & Encryption',
-      description: 'Advanced security measures and encryption to protect personal data and ensure compliance.',
-      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Security monitoring']
+      icon: <Settings className="w-8 h-8 text-green-500" />,
+      title: 'Visual Workflow Builder',
+      description: 'Drag-and-drop interface to create complex workflows without coding, with AI suggestions for optimal process design.',
+      benefits: ['No-code automation', 'Visual design', 'AI suggestions', 'Template library']
     },
     {
-      icon: <FileText className="w-8 h-8 text-purple-500" />,
-      title: 'Documentation & Policies',
-      description: 'Comprehensive documentation and policy management to maintain GDPR compliance.',
-      benefits: ['Privacy policies', 'Data processing agreements', 'Compliance documentation', 'Policy updates']
+      icon: <BarChart3 className="w-8 h-8 text-purple-500" />,
+      title: 'Performance Analytics',
+      description: 'Comprehensive analytics and insights to track workflow performance, identify bottlenecks, and optimize processes.',
+      benefits: ['Performance tracking', 'Bottleneck identification', 'Process optimization', 'ROI analysis']
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-orange-500" />,
-      title: 'Compliance Monitoring',
-      description: 'Continuous monitoring and reporting to ensure ongoing GDPR compliance and identify risks.',
-      benefits: ['Compliance dashboards', 'Risk assessment', 'Automated reporting', 'Alert systems']
+      icon: <Zap className="w-8 h-8 text-orange-500" />,
+      title: 'Smart Integrations',
+      description: 'Seamlessly connect with 500+ apps and services to create powerful automated workflows across your entire tech stack.',
+      benefits: ['500+ integrations', 'API connections', 'Data synchronization', 'Cross-platform automation']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$299',
+      price: '$69',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small teams and simple workflows',
       features: [
-        'Basic compliance assessment',
-        'Privacy policy templates',
-        'Data mapping tools',
-        'Basic reporting',
+        'Up to 5 workflows',
+        'Basic automation',
+        '10 integrations',
+        'Basic analytics',
         'Email support',
-        'Standard documentation'
+        'Template library'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$799',
+      price: '$179',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing businesses and complex processes',
       features: [
-        'Advanced compliance tools',
-        'Custom privacy policies',
-        'Advanced data mapping',
-        'Compliance monitoring',
+        'Up to 50 workflows',
+        'Advanced AI features',
+        '100 integrations',
+        'Advanced analytics',
         'Priority support',
+        'Custom workflows',
         'API access',
-        'Custom documentation',
-        'Risk assessment'
+        'Team collaboration'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,999',
+      price: '$449',
       period: '/month',
-      description: 'For large organizations',
+      description: 'For large organizations with complex needs',
       features: [
-        'Full compliance suite',
-        'White-label solutions',
+        'Unlimited workflows',
+        'Custom AI training',
+        'Unlimited integrations',
         'Advanced reporting',
-        'Custom integrations',
         'Dedicated support',
-        'Multi-tenant support',
-        'Advanced security',
-        'Compliance consulting'
+        'White-label solution',
+        'Custom development',
+        'Advanced security'
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: '500+', label: 'Organizations Compliant', icon: <Shield className="w-6 h-6 text-blue-400" /> },
-    { number: '100%', label: 'GDPR Compliance', icon: <Target className="w-6 h-6 text-green-400" /> },
-    { number: '99.9%', label: 'Data Security', icon: <Lock className="w-6 h-6 text-purple-400" /> },
-    { number: '24/7', label: 'Compliance Monitoring', icon: <Clock className="w-6 h-6 text-orange-400" /> }
+    { number: '10K+', label: 'Workflows Created', icon: <Workflow className="w-6 h-6 text-blue-400" /> },
+    { number: '75%', label: 'Time Saved', icon: <Clock className="w-6 h-6 text-green-400" /> },
+    { number: '90%', label: 'Error Reduction', icon: <Target className="w-6 h-6 text-purple-400" /> },
+    { number: '500+', label: 'Integrations', icon: <Settings className="w-6 h-6 text-orange-400" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>GDPR Compliance - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive GDPR compliance solutions including data protection, privacy management, and security. Ensure 100% compliance with 24/7 monitoring." />
-        <meta name="keywords" content="GDPR compliance, data protection, privacy management, data security, compliance monitoring" />
+        <title>AI Workflow Automation - Zion Tech Group</title>
+        <meta name="description" content="AI-powered workflow automation platform that streamlines business processes, reduces errors by 90%, and saves 75% of your time." />
+        <meta name="keywords" content="AI workflow automation, business process automation, workflow management, process optimization, automation platform" />
       </Helmet>
 
       <Navigation />
@@ -107,23 +107,23 @@ const GDPRPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-600 rounded-2xl flex items-center justify-center">
-                <Shield className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                <Workflow className="w-8 h-8 text-white" />
               </div>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-              GDPR Compliance
+              AI Workflow Automation
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
-              Ensure full GDPR compliance with our comprehensive data protection and privacy management solutions. 
-              Achieve 100% compliance with 24/7 monitoring and support.
+              Streamline your business processes with AI-powered workflow automation that learns, 
+              optimizes, and executes tasks automatically. Save 75% of your time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-300 flex items-center"
+                className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-300 flex items-center"
               >
-                Get Started
+                Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link 
@@ -156,9 +156,9 @@ const GDPRPage: React.FC = () => {
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Our GDPR Solutions</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              Comprehensive tools and services to ensure full GDPR compliance and data protection
+              Everything you need to automate and optimize your business processes with AI intelligence
             </p>
           </div>
           
@@ -166,7 +166,7 @@ const GDPRPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
                 <div className="mb-6 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-red-300 transition-colors">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-violet-300 transition-colors">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
@@ -188,7 +188,7 @@ const GDPRPage: React.FC = () => {
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              Choose the plan that fits your compliance needs and organization size. All plans include our core GDPR features.
+              Choose the plan that fits your workflow complexity and team size. All plans include our core AI features.
             </p>
           </div>
           
@@ -196,12 +196,12 @@ const GDPRPage: React.FC = () => {
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 group ${
                 plan.popular 
-                  ? 'border-red-500 bg-gradient-to-b from-red-500/20 to-transparent' 
+                  ? 'border-violet-500 bg-gradient-to-b from-violet-500/20 to-transparent' 
                   : 'border-white/20 hover:bg-white/15'
               }`}>
                 {plan.popular && (
                   <div className="text-center mb-4">
-                    <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -229,7 +229,7 @@ const GDPRPage: React.FC = () => {
                   to="/contact"
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700'
+                      ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700'
                       : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
                   }`}
                 >
@@ -245,19 +245,19 @@ const GDPRPage: React.FC = () => {
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="bg-gradient-to-r from-red-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+            <div className="bg-gradient-to-r from-violet-600 to-purple-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Ensure GDPR Compliance?
+                Ready to Automate Your Workflows?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Join 500+ organizations achieving 100% GDPR compliance with our comprehensive solutions and 24/7 monitoring.
+                Join thousands of businesses saving 75% of their time and reducing errors by 90% with our AI-powered automation platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
-                  className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-violet-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Get Started
+                  Start Free Trial
                 </Link>
                 <Link 
                   to="/about" 
@@ -276,4 +276,4 @@ const GDPRPage: React.FC = () => {
   );
 };
 
-export default GDPRPage;
+export default AIWorkflowAutomationPage;

@@ -1,103 +1,103 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Shield, Zap, Lock, Globe, DollarSign, Star, Clock, TrendingUp, Users, Target, Award, Brain, BarChart3, FileText, Eye, Database } from 'lucide-react';
+import { CheckCircle, ArrowRight, MessageSquare, Zap, Shield, Globe, DollarSign, Star, Clock, TrendingUp, Users, Target, Award, Brain, BarChart3, Bot, Headphones, Languages } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
 
-const GDPRPage: React.FC = () => {
+const AICustomerSupportChatbotPage: React.FC = () => {
   const features = [
     {
-      icon: <Shield className="w-8 h-8 text-blue-500" />,
-      title: 'Data Protection Compliance',
-      description: 'Ensure full GDPR compliance with our comprehensive data protection and privacy management solutions.',
-      benefits: ['Data mapping', 'Privacy impact assessments', 'Consent management', 'Data subject rights']
+      icon: <Brain className="w-8 h-8 text-blue-500" />,
+      title: 'Intelligent Conversations',
+      description: 'AI-powered chatbot that understands context, learns from interactions, and provides accurate, helpful responses to customer queries.',
+      benefits: ['Natural language processing', 'Context awareness', 'Learning capabilities', 'Multi-turn conversations']
     },
     {
-      icon: <Lock className="w-8 h-8 text-green-500" />,
-      title: 'Security & Encryption',
-      description: 'Advanced security measures and encryption to protect personal data and ensure compliance.',
-      benefits: ['Data encryption', 'Access controls', 'Audit trails', 'Security monitoring']
+      icon: <Languages className="w-8 h-8 text-green-500" />,
+      title: 'Multi-Language Support',
+      description: 'Support customers in over 50 languages with automatic translation and culturally appropriate responses.',
+      benefits: ['50+ languages', 'Auto-translation', 'Cultural adaptation', 'Regional preferences']
     },
     {
-      icon: <FileText className="w-8 h-8 text-purple-500" />,
-      title: 'Documentation & Policies',
-      description: 'Comprehensive documentation and policy management to maintain GDPR compliance.',
-      benefits: ['Privacy policies', 'Data processing agreements', 'Compliance documentation', 'Policy updates']
+      icon: <BarChart3 className="w-8 h-8 text-purple-500" />,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics and insights to track performance, identify common issues, and optimize customer satisfaction.',
+      benefits: ['Conversation analytics', 'Satisfaction tracking', 'Issue identification', 'Performance metrics']
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-orange-500" />,
-      title: 'Compliance Monitoring',
-      description: 'Continuous monitoring and reporting to ensure ongoing GDPR compliance and identify risks.',
-      benefits: ['Compliance dashboards', 'Risk assessment', 'Automated reporting', 'Alert systems']
+      icon: <Headphones className="w-8 h-8 text-orange-500" />,
+      title: 'Seamless Handoff',
+      description: 'Intelligent escalation system that smoothly transfers complex queries to human agents when needed.',
+      benefits: ['Smart escalation', 'Context preservation', 'Agent handoff', 'Seamless transition']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$299',
+      price: '$79',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small businesses and startups',
       features: [
-        'Basic compliance assessment',
-        'Privacy policy templates',
-        'Data mapping tools',
-        'Basic reporting',
-        'Email support',
-        'Standard documentation'
+        'Up to 1,000 conversations/month',
+        'Basic AI responses',
+        'Email integration',
+        'Basic analytics',
+        '5 languages',
+        'Email support'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$799',
+      price: '$199',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing businesses and agencies',
       features: [
-        'Advanced compliance tools',
-        'Custom privacy policies',
-        'Advanced data mapping',
-        'Compliance monitoring',
+        'Up to 10,000 conversations/month',
+        'Advanced AI features',
+        'Multi-channel integration',
+        'Advanced analytics',
+        '25 languages',
         'Priority support',
-        'API access',
-        'Custom documentation',
-        'Risk assessment'
+        'Custom training',
+        'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,999',
+      price: '$499',
       period: '/month',
-      description: 'For large organizations',
+      description: 'For large organizations and enterprises',
       features: [
-        'Full compliance suite',
-        'White-label solutions',
+        'Unlimited conversations',
+        'Custom AI training',
+        'White-label solution',
         'Advanced reporting',
-        'Custom integrations',
+        '50+ languages',
         'Dedicated support',
-        'Multi-tenant support',
-        'Advanced security',
-        'Compliance consulting'
+        'Custom integrations',
+        'Advanced security'
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: '500+', label: 'Organizations Compliant', icon: <Shield className="w-6 h-6 text-blue-400" /> },
-    { number: '100%', label: 'GDPR Compliance', icon: <Target className="w-6 h-6 text-green-400" /> },
-    { number: '99.9%', label: 'Data Security', icon: <Lock className="w-6 h-6 text-purple-400" /> },
-    { number: '24/7', label: 'Compliance Monitoring', icon: <Clock className="w-6 h-6 text-orange-400" /> }
+    { number: '100K+', label: 'Conversations Handled', icon: <MessageSquare className="w-6 h-6 text-blue-400" /> },
+    { number: '90%', label: 'Resolution Rate', icon: <Target className="w-6 h-6 text-green-400" /> },
+    { number: '70%', label: 'Cost Reduction', icon: <DollarSign className="w-6 h-6 text-purple-400" /> },
+    { number: '24/7', label: 'Always Available', icon: <Clock className="w-6 h-6 text-orange-400" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>GDPR Compliance - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive GDPR compliance solutions including data protection, privacy management, and security. Ensure 100% compliance with 24/7 monitoring." />
-        <meta name="keywords" content="GDPR compliance, data protection, privacy management, data security, compliance monitoring" />
+        <title>AI Customer Support Chatbot - Zion Tech Group</title>
+        <meta name="description" content="AI-powered customer support chatbot that provides 24/7 assistance, handles multiple languages, and reduces support costs by 70%." />
+        <meta name="keywords" content="AI chatbot, customer support, virtual assistant, automated support, chatbot solution" />
       </Helmet>
 
       <Navigation />
@@ -107,23 +107,23 @@ const GDPRPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-600 rounded-2xl flex items-center justify-center">
-                <Shield className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center">
+                <Bot className="w-8 h-8 text-white" />
               </div>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-              GDPR Compliance
+              AI Customer Support Chatbot
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
-              Ensure full GDPR compliance with our comprehensive data protection and privacy management solutions. 
-              Achieve 100% compliance with 24/7 monitoring and support.
+              Provide 24/7 customer support with an intelligent AI chatbot that understands context, 
+              speaks multiple languages, and reduces support costs by 70%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-300 flex items-center"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center"
               >
-                Get Started
+                Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link 
@@ -156,9 +156,9 @@ const GDPRPage: React.FC = () => {
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Our GDPR Solutions</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              Comprehensive tools and services to ensure full GDPR compliance and data protection
+              Everything you need to provide exceptional customer support with AI-powered automation
             </p>
           </div>
           
@@ -166,7 +166,7 @@ const GDPRPage: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
                 <div className="mb-6 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-red-300 transition-colors">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-300 transition-colors">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
@@ -188,7 +188,7 @@ const GDPRPage: React.FC = () => {
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              Choose the plan that fits your compliance needs and organization size. All plans include our core GDPR features.
+              Choose the plan that fits your support volume and business needs. All plans include our core AI features.
             </p>
           </div>
           
@@ -196,12 +196,12 @@ const GDPRPage: React.FC = () => {
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 group ${
                 plan.popular 
-                  ? 'border-red-500 bg-gradient-to-b from-red-500/20 to-transparent' 
+                  ? 'border-cyan-500 bg-gradient-to-b from-cyan-500/20 to-transparent' 
                   : 'border-white/20 hover:bg-white/15'
               }`}>
                 {plan.popular && (
                   <div className="text-center mb-4">
-                    <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -229,7 +229,7 @@ const GDPRPage: React.FC = () => {
                   to="/contact"
                   className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700'
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                       : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
                   }`}
                 >
@@ -245,19 +245,19 @@ const GDPRPage: React.FC = () => {
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="bg-gradient-to-r from-red-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Ensure GDPR Compliance?
+                Ready to Transform Your Customer Support?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Join 500+ organizations achieving 100% GDPR compliance with our comprehensive solutions and 24/7 monitoring.
+                Join thousands of businesses reducing support costs by 70% with our AI-powered chatbot solution.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
-                  className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Get Started
+                  Start Free Trial
                 </Link>
                 <Link 
                   to="/about" 
@@ -276,4 +276,4 @@ const GDPRPage: React.FC = () => {
   );
 };
 
-export default GDPRPage;
+export default AICustomerSupportChatbotPage;
