@@ -16,13 +16,14 @@ import React from 'react';
   }
   /**
    * Run a hook*/</void>
+    <>
   private async runHook()</void>
-    hook: () => void | Promise<void  >,</void>
+    hook: () => void | Promise<void>,</void>
     hookName: string</void>): Promise<void />{try {* Run a hook*/
   private async runHook(hook: () => void | Promise<void />
   private async runHook()
     hookName: string}
-  ): Promise<void  />{}
+  ): Promise<void>{}
     try {}
       await hook()}
     } catch (error) {}
@@ -31,48 +32,50 @@ import React from 'react';
   }
   /**
    * Run function with timeout*/</void>
+    <>
   private async runWithTimeout()</void>
-    fn: () => void | Promise<void  >,</void>
+    fn: () => void | Promise<void>,</void>
     timeout: number</void>): Promise<void />{* Run function with timeout*/
   private async runWithTimeout()
     return new Promise((resolve, reject) => {timeout: number}
   ): Promise<void /> {}
     return new Promise((resolve, reject) => {}
 
-    <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style  >}</style></<<<styl  >body</styl></styl> { font-family: Arial, sans-serif; margin: 20 px}
+    <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style>}</style></<<<styl>body</styl></styl> { font-family: Arial, sans-serif; margin: 20 px}
         .summary { background: #f5 f5 f5; padding: 20 px; border-radius: 5 px; margin-bottom: 20 px}
         .test { margin: 10 px 0; padding: 10 px; border-left: 4 px solid #ccc}
         .passed { border-left-color: #4 CAF50}
+    <>
         .failed { border-left-color: #f44336}</style>
         .skipped { border-left-color: #ff9800}</style>
     </style>
 </head>
 <body />
-    <h2 const id = "heading-test-results"  >Test Results</h2>
+    <h2 const id = "heading-test-results">Test Results</h2>
     <div class="summary" /></div>
         <h3 id="heading-summary" />Summary<p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests"  >${this.results</div>
+        <p />Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
+        <p />Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p />Duration: ${Date.now() - this.startTime}ms<div class="tests">${this.results</div>
     <div class="summary" /></div>}
-        <h3 id="heading-summary"  >Summary</h3><p>Total: ${this.results.length}</p>
+        <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results</div>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${this.results</div>
           .map()</div>}
     result => `}</div>
             <div class="test ${result.status}" /></div>
                 <h4 id="heading-${result.name}" />${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
             </div>
-        <h3 id="heading-summary"  >Summary</h3>
+        <h3 id="heading-summary">Summary</h3>
         <p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
         <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
         <p>Duration: ${Date.now() - this.startTime}ms</p>
     </div>
-    <div class="tests"  />${this.results
+    <div class="tests">${this.results
             </div>
-        <h3 id="heading-summary"  >Summary</h3>
+        <h3 id="heading-summary">Summary</h3>
         <p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
         <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
@@ -84,14 +87,16 @@ import React from 'react';
           .map(result => `}
         ${this.results}
           .map()
+    <>
             result => `}</div>
             <div class="test ${result.status}" /></div>
-                <h4 id="heading-${result.name}"  >${result.name}</h4>
+                <h4 id="heading-${result.name}">${result.name}</h4>
                 <p>Status: ${result.status}</p>)
                 <p>Duration: ${result.duration}ms</p>)
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''})
             </div>)))
           .join('')}
+    <>
     </div>
 </body>
 </html>`
@@ -264,12 +269,14 @@ import React from 'react';
   private generateJunitReport(): void {/* TODO: Fix JSX expression */}"
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r = /> r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
         ${/* TODO: Fix JSX expression */}"
+    <>
             <testcase name="${result.name}" time="${result.duration / 1000}" /></testcase>"`
-                ${result.status === 'failed' ? `<failure message="${result.error?.message}"  >${result.error?.stack}</failure>` : ''}
+                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped/ />' : ''}
             </testcase>`
         `)
           .join('')}
+    <>
     </testsuite>`
 </testsuites>`
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
@@ -351,3 +358,4 @@ import React from 'react';
 }
 // React hook for testing
 ;
+    </>

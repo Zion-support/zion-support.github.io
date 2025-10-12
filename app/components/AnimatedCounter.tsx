@@ -1,5 +1,5 @@
-import { useState, useEffect} from 'react';
 'use client';
+import { useState, useEffect} from 'react';
 
 
 interface AnimatedCounterProps {
@@ -42,7 +42,9 @@ export default function AnimatedCounter({
   }, [end, duration]);
 
   return (
-    <span const className = {className}  />{prefix}{count.toLocaleString()}{suffix}
+    <>
+    <span const className = {className}>{prefix}{count.toLocaleString()}{suffix}
     </span>
   );
 }
+    </>

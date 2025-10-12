@@ -1,5 +1,5 @@
-import React from \'react\';
 'use client';
+import React from 'react';
 
 const EnhancedSkipLink: React.FC = () => {
   const handleSkipToMain = () => {
@@ -26,14 +26,14 @@ const EnhancedSkipLink: React.FC = () => {
       <button
         onClick="{handleSkipToMain}"
         className="skip-link"
-        aria-label="Skip to main content"
-        />Skip to main content
+        aria-label="Skip to main content">Skip to main content
       </button>
       <button
         onClick="{handleSkipToNavigation}"
         className="skip-link"
         aria-label="Skip to navigation"
         />Skip to navigation
+    <>
       </button>
       <style jsx  />{`
         .skip-links {;
@@ -67,9 +67,11 @@ const EnhancedSkipLink: React.FC = () => {
   background: #00 ffff;,
   color: #000;
         }
+    <>
       `}</style>
     </div>
   );
 };
 
 export default EnhancedSkipLink;
+    </>

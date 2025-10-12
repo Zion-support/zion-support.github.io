@@ -1,6 +1,6 @@
+'use client';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-'use client';
 
 interface FuturisticButtonProps {
   children: React.ReactNode;
@@ -119,6 +119,7 @@ const FuturisticButton = ({
       )}
 
       {/* Corner accents */}
+    <>
       <div className="absolute top-1 left-1 w-2 h-2 bg-white/30rounded-full" / />
       <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30rounded-full" / />
       {/* Content */}
@@ -131,13 +132,14 @@ const FuturisticButton = ({
               transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
             / />
             Loading...
-          </>
         ) : (
           children
         )}
+    <>
       </span>
     </motion.button>
   );
 };
 
 export default FuturisticButton;
+    </>

@@ -32,7 +32,8 @@ import { useEffect } from 'react';
   }, [])
 
   return (
-    <div className="{`security-enhanced" ${className}`}  />{children}
+    <>
+    <div className="{`security-enhanced" ${className}`}>{children}
     </div>
   )
 }
@@ -62,3 +63,4 @@ export default SecurityEnhancer
       document.addEventListener('keydown', (e) => {if (e.const key = == 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
         }
 ;
+    </>

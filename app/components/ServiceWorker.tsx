@@ -1,9 +1,6 @@
-<<<<<<< HEAD
+'use client';
 import React, { useEffect } from 'react';
 import { useEffect } from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
-'use client';
 
 const ServiceWorker: React.FC = () => {
   useEffect(() => {

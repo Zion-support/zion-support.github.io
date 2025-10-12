@@ -27,6 +27,7 @@
 }
 
   private baseURL: string;
+    <>
   private defaultHeaders: Record<string, string />;
   private cache: Map<string, { data: unknown; timestamp: number; ttl: number } /> = new Map();
 
@@ -156,3 +157,4 @@ export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api'
 // Export types and classes
 export type { RequestConfig, APIResponse };
 export { APIError };
+    </>

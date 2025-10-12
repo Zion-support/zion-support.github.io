@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """
-Comprehensive JSX fix script to handle all remaining issues:
+Simple JSX fix script to handle the most critical issues:
 1. Fix unclosed JSX fragments
 2. Fix malformed self-closing tags
-3. Fix missing closing tags
-4. Fix malformed className attributes
+3. Fix basic className issues
 """
 
 import os
@@ -12,8 +11,8 @@ import re
 import glob
 from pathlib import Path
 
-def fix_jsx_fragments_comprehensive(content):
-    """Fix JSX fragment issues comprehensively"""
+def fix_jsx_fragments_simple(content):
+    """Fix JSX fragment issues simply"""
     lines = content.split('\n')
     result = []
     i = 0
@@ -63,47 +62,25 @@ def fix_jsx_fragments_comprehensive(content):
     
     return '\n'.join(result)
 
-def fix_malformed_self_closing_tags(content):
-    """Fix malformed self-closing tags"""
+def fix_malformed_self_closing_tags_simple(content):
+    """Fix malformed self-closing tags simply"""
     # Fix tags like <h1 />text</h1> to <h1>text</h1>
-    content = re.sub(r'<(\w+)([^>]*?)\s*/>([^<]+)</\1>', r'<\1\2>\3</\1>', content)
-    
-    # Fix tags like <p />text</p> to <p>text</p>
-    content = re.sub(r'<(\w+)([^>]*?)\s*/>([^<]+)</\1>', r'<\1\2>\3</\1>', content)
-    
-    # Fix tags like <div />text</div> to <div>text</div>
     content = re.sub(r'<(\w+)([^>]*?)\s*/>([^<]+)</\1>', r'<\1\2>\3</\1>', content)
     
     return content
 
-def fix_classname_attributes_comprehensive(content):
-    """Fix className attributes comprehensively"""
+def fix_classname_attributes_simple(content):
+    """Fix className attributes simply"""
     # Fix className with missing spaces
     content = re.sub(r'className="([^"]*?)(\d+)([^"]*?)"', r'className="\1\2\3"', content)
     
     # Fix className with missing quotes
     content = re.sub(r'className=([^"\s][^>\s]*)', r'className="\1"', content)
     
-    # Fix className with missing spaces before pt-20
-    content = re.sub(r'className="([^"]*?)\s+pt-20"', r'className="\1 pt-20"', content)
-    
-    # Fix className with missing spaces before mb-6
-    content = re.sub(r'className="([^"]*?)\s+mb-6"', r'className="\1 mb-6"', content)
-    
-    # Fix className with missing spaces before mb-8
-    content = re.sub(r'className="([^"]*?)\s+mb-8"', r'className="\1 mb-8"', content)
-    
-    # Fix className with missing spaces before w-fit
-    content = re.sub(r'className="([^"]*?)\s+w-fit"', r'className="\1 w-fit"', content)
-    
     return content
 
-def fix_helmet_components_comprehensive(content):
-    """Fix Helmet components comprehensively"""
-    # Fix duplicate Helmet tags
-    content = re.sub(r'<Helmet>\s*<title>([^<]*)</title>\s*</Helmet>\s*<title>([^<]*)</title>\s*<meta[^>]*>\s*</Helmet>', 
-                    r'<Helmet>\n        <title>\2</title>\n        <meta name="description" content="\3" />\n      </Helmet>', content)
-    
+def fix_helmet_components_simple(content):
+    """Fix Helmet components simply"""
     # Fix malformed title tags
     content = re.sub(r'<title />([^<]*)</title>', r'<title>\1</title>', content)
     
@@ -113,69 +90,25 @@ def fix_helmet_components_comprehensive(content):
     
     return content
 
-def fix_missing_closing_tags_comprehensive(content):
-    """Fix missing closing tags comprehensively"""
-    lines = content.split('\n')
-    result = []
-    tag_stack = []
-    
-    for line in lines:
-        # Track opening tags
-        opening_tags = re.findall(r'<(\w+)(?:\s[^>]*)?(?<!/)>', line)
-        for tag in opening_tags:
-            if tag not in ['Helmet', 'title', 'meta', 'link', 'img', 'br', 'hr']:  # Self-closing tags
-                tag_stack.append(tag)
-        
-        # Track closing tags
-        closing_tags = re.findall(r'</(\w+)>', line)
-        for tag in closing_tags:
-            if tag in tag_stack:
-                tag_stack.remove(tag)
-        
-        result.append(line)
-    
-    # Add missing closing tags at the end
-    while tag_stack:
-        tag = tag_stack.pop()
-        result.append(f'    </{tag}>')
-    
-    return '\n'.join(result)
-
-def fix_jsx_structure_comprehensive(content):
-    """Fix JSX structure comprehensively"""
-    # Fix unclosed JSX fragments
-    content = fix_jsx_fragments_comprehensive(content)
-    
-    # Fix malformed self-closing tags
-    content = fix_malformed_self_closing_tags(content)
-    
-    # Fix className attributes
-    content = fix_classname_attributes_comprehensive(content)
-    
-    # Fix Helmet components
-    content = fix_helmet_components_comprehensive(content)
-    
-    # Fix missing closing tags
-    content = fix_missing_closing_tags_comprehensive(content)
-    
-    return content
-
 def process_file(file_path):
-    """Process a single file to fix JSX issues comprehensively"""
+    """Process a single file to fix JSX issues simply"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Apply comprehensive fixes
-        content = fix_jsx_structure_comprehensive(content)
+        # Apply simple fixes
+        content = fix_jsx_fragments_simple(content)
+        content = fix_malformed_self_closing_tags_simple(content)
+        content = fix_classname_attributes_simple(content)
+        content = fix_helmet_components_simple(content)
         
         # Only write if content changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed JSX comprehensively in: {file_path}")
+            print(f"Fixed JSX simply in: {file_path}")
             return True
         else:
             print(f"No JSX changes needed: {file_path}")
@@ -206,7 +139,7 @@ def main():
                     files_fixed += 1
     
     print(f"\nProcessed {files_processed} files")
-    print(f"Fixed JSX comprehensively in {files_fixed} files")
+    print(f"Fixed JSX simply in {files_fixed} files")
 
 if __name__ == "__main__":
     main()

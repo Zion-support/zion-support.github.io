@@ -1,11 +1,10 @@
-<<<<<<< HEAD
+'use client';
 import React from 'react'
 import { Receipt, ArrowRight, Bot, RotateCcw, RotateCw } from 'lucide-react'
 import { Link } from 'react-router-dom'
   )
 }
-'use client';
-import React from \'react\';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Brain, TrendingUp } from 'lucide-react';
@@ -28,19 +27,16 @@ const Page: React.FC = () => {
       description: "Bank-level security ensures your financial data is protected and private."
     }
   ];
-=======
-'use client';
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 export default function AIExpenseTrackerPage() {
   return (
     <>
-      <Helmet />
-        <title />AI Expense Tracker - Zion Tech Group</title>
+    <>
+      <Helmet>
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+        <title>AI Expense Tracker - Zion Tech Group</title>
         <meta name="description" content="Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta name="keywords" content="AI solutions, expense tracking, IT services, Zion Tech Group" />
         <meta property="og:title" content="AI Expense Tracker - Zion Tech Group" />
@@ -48,82 +44,119 @@ export default function AIExpenseTrackerPage() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-expense-tracker" />
       </Helmet>
+    </>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16">
+        </div>
         {/* Hero Section */}
+    <>
         <section className="py-20" />
-          <div className="container mx-autopx-4text-center" />
+          <div className="container mx-autopx-4text-center">
+        </div>
             <h1 className="text-5xl md:text-6xl font-boldtext-whitemb-6" />
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" />
+    </>
                 AI Expense Tracker
+    <>
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto" />
+    </>
               Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs.
+    <>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4justify-centermb-12" />
+            <div className="flex flex-col sm:flex-row gap-4justify-centermb-12">
+        </div>
               <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" />
+    </>
                 Get Started
+    <>
                 <ArrowRight className="ml-2group-hover:translate-x-1transition-transform" />
               </Link>
               <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
+    </>
                 Learn More
+    <>
               </Link>
             </div>
-          </div>
         </section>
+    </>
 
-<<<<<<< HEAD
         {/* Features Section */}
+    <>
         <section className="py-20" />
-          <div className="containermx-autopx-4" />
-            <div className="text-centermb-16" />
+          <div className="containermx-autopx-4">
+        </div>
+            <div className="text-centermb-16">
+        </div>
               <h2 className="text-4xl font-boldtext-whitemb-6" />
+    </>
                 Why Choose Our AI Expense Tracker?
+    <>
               </h2>
               <p className="text-xl text-gray-300max-w-3xlmx-auto" />
+    </>
                 Our advanced AI technology helps you manage your finances more efficiently
+    <>
               </p>
             </div>
+    </>
             
-            <div className="grid grid-cols-1md:grid-cols-3gap-8" />
+            <div className="grid grid-cols-1md:grid-cols-3gap-8">
+        </div>
               {features.map((feature, index) => (
+    <>
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-allduration-300" />
-                  <div className="flexjustify-centermb-4" />
+                  <div className="flexjustify-centermb-4">
+        </div>
+    </>
                     {feature.icon}
+    <>
                   </div>
-                  <h3 className="text-xl font-semiboldtext-whitemb-4" />{feature.title}</h3>
-                  <p className="text-gray-300" />{feature.description}</p>
+                  <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
+    </>
               ))}
+    <>
             </div>
-          </div>
         </section>
+    </>
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
         {/* CTA Section */}
+    <>
         <section className="py-20" />
-          <div className="containermx-autopx-4" />
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xlp-12text-center" />
+          <div className="containermx-autopx-4">
+        </div>
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xlp-12text-center">
+        </div>
               <h2 className="text-4xl font-boldtext-whitemb-6" />
+    </>
                 Ready to Get Started?
+    <>
               </h2>
               <p className="text-xl text-gray-300 mb-8max-w-2xlmx-auto" />
+    </>
                 Contact us to learn more about our solutions and how we can help your business.
+    <>
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center" />
+              <div className="flex flex-col sm:flex-rowgap-4justify-center">
+        </div>
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
+    </>
                   Contact Us
+    <>
                 </Link>
                 <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
+    </>
                   View All Services
+    <>
                 </Link>
               </div>
-            </div>
           </div>
         </section>
       </div>
     </>
   );
 }
+    </>

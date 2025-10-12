@@ -1,6 +1,6 @@
+'use client';
 import { useState, useEffect} from 'react';
 import { ChevronLeft, ChevronRight} from 'lucide-react';
-'use client';
 
 
 interface Slide {
@@ -41,12 +41,7 @@ const defaultSlides: Slide[] = [
   }
 ];
 
-<<<<<<< HEAD
   const slides = defaultSlides, 
-=======
-export default function ContentCarousel({ 
-  slides = defaultSlides, 
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
   autoPlay = true, 
   interval = 5000 
 }: ContentCarouselProps) {
@@ -79,34 +74,40 @@ export default function ContentCarousel({
   };
 
   return (
-    <div className="relative w-full max-w-4xlmx-auto" />
+    <div className="relative w-full max-w-4xlmx-auto">
+        </div>
       {/* Main Carousel */}
-      <div className="relative overflow-hidden rounded-2 xl bg-white/10 backdrop-blur-lgborderborder-white/20" />
+      <div className="relative overflow-hidden rounded-2 xl bg-white/10 backdrop-blur-lgborderborder-white/20">
+        </div>
         <div 
           className="flex transition-transformduration-500ease-in-out"
           style="{{" transform: `translateX(-${currentSlide * 100}%)` }} />
           {slides.map((slide) => (
+    <>
             <div key="{slide.id}" className="w-fullflex-shrink-0" />
-              <div className="grid grid-cols-1 lg:grid-cols-2gap-8p-8" />
-                <div className="space-y-6" />
-                  <h3 className="text-3 xlfont-boldtext-white"  >{slide.title}</h3>
+              <div className="grid grid-cols-1 lg:grid-cols-2gap-8p-8">
+        </div>
+                <div className="space-y-6">
+        </div>
+                  <h3 className="text-3 xlfont-boldtext-white">{slide.title}</h3>
                   <p className="text-lgtext-gray-300">{slide.description}</p>
                   <ul className="space-y-3" />
                     {slide.features.map((feature, index) => (
+    <>
                       <li key="{index}" className="flexitems-centertext-gray-300" />
                         <CheckCircle className="w-5 h-5 text-green-400mr-3flex-shrink-0" / />
                         {feature}
                       </li>
                     ))}
+    <>
                   </ul>
                 </div>
                 <div className="flexitems-centerjustify-center" />
-                  <div className="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flexitems-centerjustify-center" />
+                  <div className="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flexitems-centerjustify-center">
+        </div>
                     <Cloud className="w-24 h-24text-whiteopacity-50" / />
                   </div>
-                </div>
               </div>
-            </div>
           ))}
         </div>
 
@@ -115,27 +116,32 @@ export default function ContentCarousel({
           onClick="{prevSlide}"
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-fulltransition-colors"
           aria-label="Previous slide" />
+    <>
           <ChevronLeft className="w-6h-6" / />
         </button>
         <button
           onClick="{nextSlide}"
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-fulltransition-colors"
           aria-label="Next slide" />
+    <>
           <ChevronRight className="w-6h-6" / />
         </button>
       </div>
 
       {/* Controls */}
-      <div className="flex items-center justify-centermt-6space-x-4" />
+      <div className="flex items-center justify-centermt-6space-x-4">
+        </div>
         <button
           onClick="{togglePlayPause}"
           className="bg-white/20 hover:bg-white/30 text-white p-2rounded-fulltransition-colors"
           aria-label="{isPlaying" ? 'Pause' : 'Play'} />
+    <>
           {isPlaying ? <Pause className="w-5h-5" / /> : <Play className="w-5h-5" / />}
         </button>
 
         {/* Slide Indicators */}
-        <div className="flexspace-x-2" />
+        <div className="flexspace-x-2">
+        </div>
           {slides.map((_, index) => (
             <button
               key="{index}"
@@ -146,8 +152,9 @@ export default function ContentCarousel({
               aria-label="{`Go" to slide ${index + 1}`}
             />
           ))}
+    <>
         </div>
-      </div>
     </div>
   );
 }
+    </>

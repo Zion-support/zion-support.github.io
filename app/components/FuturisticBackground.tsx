@@ -1,5 +1,5 @@
-import { useEffect, useRef} from 'react';
 'use client';
+import { useEffect, useRef} from 'react';
 
 const FuturisticBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement />(null);
@@ -90,7 +90,8 @@ const FuturisticBackground: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0pointer-events-nonez-0" />
+    <div className="fixed inset-0pointer-events-nonez-0">
+        </div>
       <canvas
         ref="{canvasRef}"
         className="w-fullh-fullopacity-30"
@@ -103,7 +104,7 @@ const FuturisticBackground: React.FC = () => {
       {/* Quantum field effect */}
       <div className="absolute inset-0quantum-fieldopacity-30" / />
       {/* Plasma effect */}
-      <div className="absolute inset-0plasma-effectopacity-20" /  > </div>
+      <div className="absolute inset-0plasma-effectopacity-20" /> </div>
   );
 };
 

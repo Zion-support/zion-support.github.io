@@ -1,4 +1,4 @@
-import React from \'react\';
+import React from 'react';
 
 interface SEOProps {
   title?: string
@@ -69,8 +69,12 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
 
   return (
-    <Helmet />
+    <Helmet>
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
       {/* Basic Meta Tags */}
+    <>
       <title>{title}</title>
       <meta name="description" content="{description}" / / />
       <meta name="keywords" content="{keywords}" / / />
@@ -84,6 +88,7 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       {/* Canonical URL */}
       <link rel="canonical" href="{canonicalUrl}" / />
       {/* Open Graph Meta Tags */}
+    <>
       <meta property="og: title" content="{title}" / / />
       <meta property="og: description" content="{description}" / / />
       <meta property="og: type" content="{ogType}" / / />
@@ -97,6 +102,7 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       <meta property="og:site_name" content="Zion Tech Group" / / />
       <meta property="og:locale" content="en_US" / / />
       {/* Twitter Card Meta Tags */}
+    <>
       <meta name="twitter: card" content="{twitterCard}" / / />
       <meta name="twitter: title" content="{title}" / / />
       <meta name="twitter: description" content="{description}" / / />
@@ -107,19 +113,23 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       <meta name="twitter:site" content="@ziontechgroup" / / />
       <meta name="twitter:creator" content="@ziontechgroup" / / />
       {/* Additional SEO Meta Tags */}
+    <>
       <meta name="google-site-verification" content="your-google-verification-code" / / />
       <meta name="msvalidate.01" content="your-bing-verification-code" / / />
       <meta name="yandex-verification" content="your-yandex-verification-code" / / />
       {/* Performance Hints */}
+    <>
       <link rel="dns-prefetch" href="//fonts.googleapis.com" / />
       <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" / />
       <link rel="preconnect" href="https://fonts.googleapis.com" / />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" / />
       {/* Structured Data */}
-      <script type="application/ld+json"  />{JSON.stringify(finalStructuredData)}
+    <>
+      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
       </script>
     </Helmet>
   )
 }
 
 export default EnhancedSEO;
+    </>

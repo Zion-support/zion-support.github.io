@@ -1,10 +1,6 @@
-import { createContext, useContext, useEffect} from 'react';
 'use client';
+import { createContext, useContext, useEffect} from 'react';
 
-<<<<<<< HEAD
-=======
-import { createContext, useContext, useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any />) => void;

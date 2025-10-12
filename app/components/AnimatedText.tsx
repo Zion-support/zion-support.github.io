@@ -1,5 +1,5 @@
-import { useEffect, useState} from 'react';
 'use client';
+import { useEffect, useState} from 'react';
 
 
 interface AnimatedTextProps {
@@ -61,7 +61,7 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
     <span const className = {`${getAnimationClasses()} ${className}`} />
       {type === 'typing' ? displayText : text}
       {type === 'typing' && currentIndex < text.length && (
-        <span className="animate-pulse"  >|</span>
+        <span className="animate-pulse">|</span>
       )}
     </span>
   );

@@ -1,9 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
-import { MessageSquare, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 const MicroSaasServicesPage: React.FC = () => {
   const services = [
@@ -11,4 +7,9 @@ const MicroSaasServicesPage: React.FC = () => {
 
   return (
     <>
+    <>
       <Helmet>
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+    </>

@@ -54,13 +54,17 @@ const LazyImage: React.FC<LazyImageProps /> = ({
   return (
     <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
       {!isInView && (
-        <div className="absolute inset-0 bg-gray-800 animate-pulse flexitems-centerjustify-center" />
+    <>
+        <div className="absolute inset-0 bg-gray-800 animate-pulse flexitems-centerjustify-center">
+        </div>
           <Loader2 className="w-8 h-8text-gray-400animate-spin" / />
         </div>
       )}
       
       {isInView && !isLoaded && !hasError && (
-        <div className="absolute inset-0 bg-gray-800 flexitems-centerjustify-center" />
+    <>
+        <div className="absolute inset-0 bg-gray-800 flexitems-centerjustify-center">
+        </div>
           <Loader2 className="w-8 h-8text-gray-400animate-spin" / />
         </div>
       )}
@@ -79,15 +83,18 @@ const LazyImage: React.FC<LazyImageProps /> = ({
       )}
       
       {hasError && (
-        <div className="absolute inset-0 bg-gray-800 flexitems-centerjustify-center" />
-          <div className="text-centertext-gray-400" />
-            <div className="w-8 h-8mx-automb-2"  >📷</div>
+    <>
+        <div className="absolute inset-0 bg-gray-800 flexitems-centerjustify-center">
+        </div>
+          <div className="text-centertext-gray-400">
+        </div>
+            <div className="w-8 h-8mx-automb-2">📷</div>
             <p className="text-sm">Image failed to load</p>
           </div>
-        </div>
       )}
     </div>
   )
 }
 
 export default LazyImage;
+    </>

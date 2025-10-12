@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 'use client';
+import { useEffect } from 'react';
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {

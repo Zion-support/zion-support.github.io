@@ -1,4 +1,4 @@
-import React from \'react\';
+import React from 'react';
 
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg'
@@ -28,10 +28,13 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
   }
 
   const spinner = (
-    <div className="flex flex-col items-center justify-centerspace-y-4" />
+    <>
+    <div className="flex flex-col items-center justify-centerspace-y-4">
+        </div>
       <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`} / />
       {text && (
-        <div className="text-sm text-gray-300animate-pulse"  />{text}
+    <>
+        <div className="text-sm text-gray-300animate-pulse">{text}
         </div>
       )}
     </div>
@@ -39,7 +42,8 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
 
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-centerz-50"  />{spinner}
+    <>
+      <div className="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-centerz-50">{spinner}
       </div>
     )
   }
@@ -48,3 +52,4 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
 }
 
 export default EnhancedLoading;
+    </>

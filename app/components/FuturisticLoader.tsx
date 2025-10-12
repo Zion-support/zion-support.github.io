@@ -1,6 +1,6 @@
-import React from \'react\';
-import { motion } from 'framer-motion';
 'use client';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 interface FuturisticLoaderProps {
   size?: 'sm' | 'md' | 'lg';
@@ -31,7 +31,9 @@ export default function FuturisticLoader({
   };
 
   return (
-    <div className="flex flex-col items-centerjustify-centerspace-y-4" />
+    <>
+    <div className="flex flex-col items-centerjustify-centerspace-y-4">
+        </div>
       <div className="relative" />
         {/* Outer rotating ring */}
         <motion.div
@@ -109,3 +111,4 @@ export default function FuturisticLoader({
     </div>
   );
 }
+    </>

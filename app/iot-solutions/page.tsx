@@ -1,12 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import React from \'react\';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Bot, RotateCcw, RotateCw } from 'lucide-react';
-=======
-import { ArrowRight, Bot, RotateCcw, RotateCw } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-7b79
 
 export default function IoTSolutionsPage() {
   const iotServices = [
@@ -112,23 +108,32 @@ export default function IoTSolutionsPage() {
 
   return (
     <>
-      <Helmet />
-        <title   />IoT Solutions - Zion Tech Group | Smart Device Management & Analytics</title>
+    <>
+      <Helmet>
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+        <title>IoT Solutions - Zion Tech Group | Smart Device Management & Analytics</title>
         <meta name="description" content="Comprehensive IoT solutions including device management, data analytics, security, and cloud platforms. Transform your business with smart connected devices." / / />
         <meta name="keywords" content="IoT solutions, internet of things, smart devices, IoT analytics, device management, edge computing, IoT security, connected devices" / / />
         <meta name="robots" content="index, follow, max-image-preview: large, max-snippet: -1, max-video-preview:-1" / / />
         <meta name="author" content="Zion Tech Group" / / />
+    </>
         {/* Open Graph Meta Tags */}
+    <>
         <meta property="og:title" content="IoT Solutions - Zion Tech Group | Smart Device Management & Analytics" / / />
         <meta property="og: description" content="Comprehensive IoT solutions including device management, data analytics, security, and cloud platforms. Transform your business with smart connected devices." / / />
         <meta property="og:type" content="website" / / />
         <meta property="og:url" content="https://ziontechgroup.com/iot-solutions" / / />
         <meta property="og:image" content="https://ziontechgroup.com/iot-solutions-og-image.jpg" / / />
+    </>
         {/* Twitter Card Meta Tags */}
+    <>
         <meta name="twitter:card" content="summary_large_image" / / />
         <meta name="twitter:title" content="IoT Solutions - Zion Tech Group | Smart Device Management & Analytics" / / />
         <meta name="twitter: description" content="Comprehensive IoT solutions including device management, data analytics, security, and cloud platforms. Transform your business with smart connected devices." / / />
         <meta name="twitter:image" content="https://ziontechgroup.com/iot-solutions-twitter-image.jpg" / / />
+    </>
         {/* Structured Data */}
         <script type="application/ld+json"  />{JSON.stringify({
             "@context": "https: //schema.org",
@@ -152,176 +157,236 @@ export default function IoTSolutionsPage() {
               }
             }
           })}
+    <>
         </script>
       </Helmet>
+    </>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20" />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900 pt-20">
+        </div>
         {/* Hero Section */}
+    <>
         <section className="py-20px-4relative" />
           <div className="absolute inset-0bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.4)_0%,transparent_50%)]animate-pulse" / />
           <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }} / />
-          <div className="relative max-w-7 xlmx-autotext-center" />
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30" />
+          <div className="relative max-w-7 xlmx-autotext-center">
+        </div>
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8borderborder-cyan-400/30">
+        </div>
               <Network className="w-4h-4" / />
-              <span   />IoT Solutions</span>
+              <span>IoT Solutions</span>
             </div>
+    </>
             
             <h1 className="text-6 xl md:text-8 xl font-bold text-whitemb-8leading-tight" />
               Connect Everything with
+    <>
               <br / />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-texttext-transparentanimate-pulse"  />Smart IoT Solutions
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-texttext-transparentanimate-pulse">Smart IoT Solutions
               </span>
             </h1>
+    </>
             
             <p className="text-2 xl text-gray-300 mb-12 max-w-4 xlmx-autoleading-relaxed" />
               Transform your business with comprehensive IoT solutions that connect, monitor, and optimize your devices and processes.
+    <>
               <br / />
-              <span className="text-cyan-400font-semibold"   />From device management to advanced analytics.</span>
+              <span className="text-cyan-400font-semibold">From device management to advanced analytics.</span>
             </p>
+    </>
             
-            <div className="flex flex-col sm:flex-rowgap-6justify-center" />
+    <>
+            <div className="flex flex-col sm:flex-rowgap-6justify-center">
+        </div>
               <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" />
-                <span   />Get Started</span>
+                <span>Get Started</span>
                 <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
               </Link>
               <Link to="/demo" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                <span   />View Demo</span>
+                <span>View Demo</span>
                 <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
               </Link>
             </div>
-          </div>
         </section>
+    </>
 
         {/* Services Section */}
+    <>
         <section className="py-20px-4relative" />
           <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" / />
-          <div className="relative max-w-7xlmx-auto" />
-            <div className="text-centermb-16" />
+          <div className="relative max-w-7xlmx-auto">
+        </div>
+            <div className="text-centermb-16">
+        </div>
               <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Complete <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />IoT Solutions</span>
+                Complete <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">IoT Solutions</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
+    </>
                 From device management to advanced analytics, we provide everything you need to build and scale your IoT infrastructure.
+    <>
               </p>
             </div>
+    </>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8" />
+            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
+        </div>
               {iotServices.map((service, index) => (
+    <>
                 <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" />
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300"  />{service.icon}
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{service.icon}
                   </div>
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors"  />{service.title}
+                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{service.title}
                   </h3>
                   <p className="text-gray-300mb-6leading-relaxed" />
+    </>
                     {service.description}
+    <>
                   </p>
-                  <div className="space-y-2mb-6" />
+                  <div className="space-y-2mb-6">
+        </div>
+    </>
                     {service.features.map((feature, featureIndex) => (
+    <>
                       <div key="{featureIndex}" className="flex items-center space-x-2text-gray-400text-sm" />
                         <CheckCircle className="w-4h-4text-green-400" / />
-                        <span   />{feature}</span>
+                        <span>{feature}</span>
                       </div>
+    </>
                     ))}
+    <>
                   </div>
-                  <div className="text-cyan-400font-semiboldtext-lg"  />{service.price}
+                  <div className="text-cyan-400font-semiboldtext-lg">{service.price}
                   </div>
-                </div>
+    </>
               ))}
+    <>
             </div>
-          </div>
         </section>
+    </>
 
         {/* Industries Section */}
+    <>
         <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50to-purple-900/50relative" />
           <div className="absoluteinset-0bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" / />
-          <div className="relative max-w-7xlmx-auto" />
-            <div className="text-centermb-16" />
+          <div className="relative max-w-7xlmx-auto">
+        </div>
+            <div className="text-centermb-16">
+        </div>
               <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Industries We <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Transform</span>
+                Industries We <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Transform</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
+    </>
                 Our IoT solutions are designed to work across various industries, providing tailored solutions for specific needs.
+    <>
               </p>
             </div>
+    </>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8" />
+            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
+        </div>
               {industries.map((industry, index) => (
+    <>
                 <div key="{index}" className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-6 border border-white/20 hover:bg-white/20 transition-allduration-300hover:scale-105" />
-                  <div className="flex items-centerspace-x-4mb-4" />
-                    <div className="p-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg group-hover:scale-110transition-transformduration-300"  />{industry.icon}
+                  <div className="flex items-centerspace-x-4mb-4">
+        </div>
+                    <div className="p-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg group-hover:scale-110transition-transformduration-300">{industry.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-whitegroup-hover:text-cyan-400transition-colors"  />{industry.name}
+                    <h3 className="text-xl font-bold text-whitegroup-hover:text-cyan-400transition-colors">{industry.name}
                     </h3>
                   </div>
                   <p className="text-gray-300text-smleading-relaxed" />
+    </>
                     {industry.description}
+    <>
                   </p>
                 </div>
+    </>
               ))}
+    <>
             </div>
-          </div>
         </section>
+    </>
 
         {/* Benefits Section */}
+    <>
         <section className="py-20px-4relative" />
           <div className="absolute inset-0 bg-gradient-to-rfrom-cyan-500/5to-purple-500/5" / />
-          <div className="relative max-w-7xlmx-auto" />
-            <div className="text-centermb-16" />
+          <div className="relative max-w-7xlmx-auto">
+        </div>
+            <div className="text-centermb-16">
+        </div>
               <h2 className="text-4 xl md:text-5 xl font-boldtext-whitemb-6" />
-                Why Choose Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />IoT Solutions?</span>
+                Why Choose Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">IoT Solutions?</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xlmx-auto" />
+    </>
                 Our IoT solutions deliver measurable results and provide a competitive advantage for your business.
+    <>
               </p>
             </div>
+    </>
             
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
+            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8">
+        </div>
               {benefits.map((benefit, index) => (
+    <>
                 <div key="{index}" className="text-centergroup" />
-                  <div className="flex justify-center mb-4 group-hover:scale-110transition-transformduration-300"  />{benefit.icon}
+                  <div className="flex justify-center mb-4 group-hover:scale-110transition-transformduration-300">{benefit.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3group-hover:text-cyan-400transition-colors"  />{benefit.title}
+                  <h3 className="text-xl font-bold text-white mb-3group-hover:text-cyan-400transition-colors">{benefit.title}
                   </h3>
                   <p className="text-gray-300text-smleading-relaxed" />
+    </>
                     {benefit.description}
+    <>
                   </p>
                 </div>
+    </>
               ))}
+    <>
             </div>
-          </div>
         </section>
+    </>
 
         {/* CTA Section */}
+    <>
         <section className="py-20px-4relative" />
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10via-purple-500/10to-pink-500/10" / />
-          <div className="relative max-w-7xlmx-auto" />
+          <div className="relative max-w-7xlmx-auto">
+        </div>
             <div className="text-center" />
-              <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden" />
-                <div className="relativez-10" />
+              <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3 xl p-8 sm:p-12 lg:p-16relativeoverflow-hidden">
+        </div>
+                <div className="relativez-10">
+        </div>
                   <h2 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-whitemb-6leading-tight" />
-                    Ready to Connect Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent"   />World?</span>
+                    Ready to Connect Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">World?</span>
                   </h2>
+    </>
                   
-                  <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed" />
+                  <p className="text-xl sm:text-2 xl text-white/90 mb-8 sm:mb-12 max-w-4 xlmx-autoleading-relaxed">
                     Transform your business with our comprehensive IoT solutions. Get started today and unlock the power of connected devices.
                   </p>
                   
-                  <div className="flex flex-col sm:flex-rowgap-6justify-center" />
+    <>
+                  <div className="flex flex-col sm:flex-rowgap-6justify-center">
+        </div>
                     <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
-                      <span   />Get Started</span>
+                      <span>Get Started</span>
                       <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
                     </Link>
                     <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
-                      <span   />View Pricing</span>
+                      <span>View Pricing</span>
                       <ArrowRight className="w-5 h-5group-hover:translate-x-1transition-transform" />
                     </Link>
                   </div>
-                </div>
               </div>
-            </div>
           </div>
         </section>
       </div>
     </>
   );
 }
+    </>

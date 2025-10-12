@@ -1,6 +1,6 @@
+'use client';
 import { useState, useEffect} from 'react';
 import { Sun, Moon} from 'lucide-react';
-'use client';
 
 const ThemeToggle: React.FC = () => {
   const [isDark, setIsDark] = useState(true);
