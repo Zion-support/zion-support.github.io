@@ -2,95 +2,95 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Target, TrendingUp, Users, Mail, BarChart, Zap, Star, Award, Globe, Database, Smartphone, Settings, Calendar, CheckSquare, MessageCircle, Heart, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle as CheckCircleIcon, ShoppingCart, Megaphone, Share2, MousePointer, PieChart } from 'lucide-react';
+import { CheckCircle, ArrowRight, Calculator, TrendingUp, Shield, Clock, Users, DollarSign, BarChart, FileText, Zap, Star, Award, Target, Globe, Database, Smartphone, Settings, Calendar, CheckSquare, MessageCircle, Heart, Box, Monitor, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle as CheckCircleIcon, ShoppingCart } from 'lucide-react';
 
-const ZionAIMarketingAutomation: React.FC = () => {
+const ZionAIAccountingPro: React.FC = () => {
   const features = [
     {
-      icon: Target,
-      title: 'AI-Powered Campaigns',
-      description: 'Create and optimize marketing campaigns automatically with AI-driven insights and targeting',
-      price: '$299/month'
-    },
-    {
-      icon: Mail,
-      title: 'Email Marketing Automation',
-      description: 'Send personalized emails at scale with advanced segmentation and behavioral triggers',
+      icon: Calculator,
+      title: 'Automated Bookkeeping',
+      description: 'AI-powered transaction categorization and reconciliation with 99.9% accuracy',
       price: '$199/month'
     },
     {
-      icon: BarChart,
-      title: 'Predictive Analytics',
-      description: 'Forecast customer behavior and optimize marketing spend with machine learning models',
+      icon: TrendingUp,
+      title: 'Financial Forecasting',
+      description: 'Predict cash flow, revenue, and expenses with advanced machine learning models',
+      price: '$299/month'
+    },
+    {
+      icon: Shield,
+      title: 'Tax Compliance',
+      description: 'Automated tax calculations, filing, and compliance monitoring across all jurisdictions',
       price: '$399/month'
     },
     {
-      icon: Users,
-      title: 'Customer Segmentation',
-      description: 'Automatically segment customers based on behavior, preferences, and engagement patterns',
+      icon: BarChart,
+      title: 'Real-time Analytics',
+      description: 'Comprehensive financial dashboards with actionable insights and recommendations',
       price: '$149/month'
     },
     {
-      icon: Share2,
-      title: 'Social Media Management',
-      description: 'Schedule, post, and engage across all social platforms with AI-optimized content',
-      price: '$179/month'
+      icon: FileText,
+      title: 'Invoice Management',
+      description: 'Automated invoice generation, tracking, and payment processing',
+      price: '$99/month'
     },
     {
-      icon: MousePointer,
-      title: 'Ad Optimization',
-      description: 'Automatically optimize ad spend and targeting across Google, Facebook, and LinkedIn',
-      price: '$249/month'
+      icon: Zap,
+      title: 'Expense Tracking',
+      description: 'Smart expense categorization and receipt processing with OCR technology',
+      price: '$79/month'
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$299',
+      price: '$199',
       period: 'per month',
-      description: 'Perfect for small businesses and startups',
+      description: 'Perfect for small businesses and freelancers',
       features: [
-        'AI-powered email campaigns',
-        'Basic social media automation',
-        'Customer segmentation',
-        'Analytics dashboard',
+        'Automated bookkeeping',
+        'Basic financial reports',
+        'Invoice management',
+        'Expense tracking',
         'Email support',
-        'Up to 10,000 contacts'
+        'Up to 1,000 transactions/month'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$599',
+      price: '$399',
       period: 'per month',
       description: 'Ideal for growing businesses',
       features: [
         'Everything in Starter',
-        'Advanced AI campaigns',
-        'Predictive analytics',
-        'Ad optimization',
+        'Financial forecasting',
+        'Tax compliance',
+        'Real-time analytics',
         'Priority support',
-        'Up to 50,000 contacts',
-        'Multi-channel automation',
-        'A/B testing tools'
+        'Up to 10,000 transactions/month',
+        'Multi-currency support',
+        'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,199',
+      price: '$799',
       period: 'per month',
       description: 'For large organizations',
       features: [
         'Everything in Professional',
-        'Custom AI models',
+        'Custom integrations',
         'Dedicated account manager',
         '24/7 phone support',
-        'Unlimited contacts',
-        'Advanced integrations',
-        'White-label options',
-        'Custom reporting'
+        'Unlimited transactions',
+        'Advanced security features',
+        'Custom reporting',
+        'White-label options'
       ],
       popular: false
     }
@@ -98,42 +98,35 @@ const ZionAIMarketingAutomation: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Jennifer Martinez',
-      role: 'Marketing Director, GrowthTech',
-      content: 'Zion AI Marketing Automation increased our conversion rates by 45% while reducing our marketing costs by 30%. The AI insights are game-changing.',
+      name: 'Sarah Johnson',
+      role: 'CFO, TechStart Inc.',
+      content: 'Zion AI Accounting Pro has revolutionized our financial management. We\'ve reduced accounting costs by 60% while improving accuracy.',
       rating: 5
     },
     {
-      name: 'David Kim',
-      role: 'CEO, StartupXYZ',
-      content: 'The automated email campaigns are incredibly effective. We\'ve seen a 200% increase in email engagement since implementing this platform.',
+      name: 'Michael Chen',
+      role: 'Small Business Owner',
+      content: 'The automated bookkeeping feature is incredible. It saves me 10+ hours per week and catches errors I would have missed.',
       rating: 5
     },
     {
-      name: 'Lisa Thompson',
-      role: 'CMO, RetailCorp',
-      content: 'The predictive analytics help us make data-driven decisions. We\'ve optimized our ad spend and increased ROI by 150%.',
+      name: 'Emily Rodriguez',
+      role: 'Finance Director, GrowthCorp',
+      content: 'The financial forecasting capabilities have helped us make better business decisions. The accuracy is impressive.',
       rating: 5
     }
-  ];
-
-  const stats = [
-    { number: '45%', label: 'Average Conversion Increase', icon: TrendingUp },
-    { number: '30%', label: 'Cost Reduction', icon: DollarSign },
-    { number: '200%', label: 'Email Engagement Boost', icon: Mail },
-    { number: '150%', label: 'ROI Improvement', icon: BarChart }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Marketing Automation - Advanced AI-Powered Marketing Platform</title>
-        <meta name="description" content="Revolutionary AI-powered marketing automation platform with predictive analytics, email campaigns, and social media management. Boost conversions by 45%!" />
-        <meta name="keywords" content="AI marketing automation, email marketing, social media automation, predictive analytics, marketing AI" />
-        <meta property="og:title" content="Zion AI Marketing Automation - Advanced AI-Powered Marketing Platform" />
-        <meta property="og:description" content="Revolutionary AI-powered marketing automation platform with predictive analytics, email campaigns, and social media management." />
+        <title>Zion AI Accounting Pro - Advanced AI-Powered Accounting Software</title>
+        <meta name="description" content="Revolutionary AI-powered accounting software with automated bookkeeping, financial forecasting, and tax compliance. Start your free trial today!" />
+        <meta name="keywords" content="AI accounting, automated bookkeeping, financial forecasting, tax compliance, accounting software" />
+        <meta property="og:title" content="Zion AI Accounting Pro - Advanced AI-Powered Accounting Software" />
+        <meta property="og:description" content="Revolutionary AI-powered accounting software with automated bookkeeping, financial forecasting, and tax compliance." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-marketing-automation" />
+        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-accounting-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -143,19 +136,19 @@ const ZionAIMarketingAutomation: React.FC = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Megaphone className="w-5 h-5 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 font-medium">AI Marketing Automation</span>
+                <Calculator className="w-5 h-5 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 font-medium">AI-Powered Accounting</span>
               </div>
               
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Zion AI Marketing Automation
+                  Zion AI Accounting Pro
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Transform your marketing with AI-powered automation that increases conversions by 45% 
-                while reducing costs by 30%. The future of marketing is here.
+                Revolutionary AI-powered accounting software that automates bookkeeping, 
+                provides financial forecasting, and ensures tax compliance with 99.9% accuracy.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -176,15 +169,22 @@ const ZionAIMarketingAutomation: React.FC = () => {
 
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center group">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <stat.icon className="w-8 h-8 text-cyan-400" />
-                    </div>
-                    <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                    <div className="text-gray-400 text-sm">{stat.label}</div>
-                  </div>
-                ))}
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
+                  <div className="text-gray-400 text-sm">Accuracy Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
+                  <div className="text-gray-400 text-sm">Cost Reduction</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-pink-400 mb-2">10+</div>
+                  <div className="text-gray-400 text-sm">Hours Saved/Week</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">5000+</div>
+                  <div className="text-gray-400 text-sm">Happy Customers</div>
+                </div>
               </div>
             </div>
           </div>
@@ -198,7 +198,7 @@ const ZionAIMarketingAutomation: React.FC = () => {
                 Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to automate and optimize your marketing campaigns with AI
+                Everything you need to manage your finances with AI-powered automation and insights
               </p>
             </div>
 
@@ -226,64 +226,15 @@ const ZionAIMarketingAutomation: React.FC = () => {
           </div>
         </section>
 
-        {/* How It Works Section */}
-        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                How It <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Works</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Get started in minutes with our simple 3-step process
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Database className="w-10 h-10 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">1. Connect Your Data</h3>
-                <p className="text-gray-300">
-                  Import your customer data, website analytics, and social media accounts. 
-                  Our AI analyzes your audience and creates detailed customer profiles.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Zap className="w-10 h-10 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">2. AI Creates Campaigns</h3>
-                <p className="text-gray-300">
-                  Our AI automatically generates personalized campaigns, email sequences, 
-                  and social media content optimized for your audience and goals.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <BarChart className="w-10 h-10 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">3. Optimize & Scale</h3>
-                <p className="text-gray-300">
-                  Monitor performance in real-time and let AI continuously optimize 
-                  your campaigns for maximum ROI and engagement.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Pricing Section */}
-        <section id="pricing" className="py-20">
+        <section id="pricing" className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your marketing needs. All plans include a 14-day free trial.
+                Choose the perfect plan for your business needs. All plans include a 14-day free trial.
               </p>
             </div>
 
@@ -340,14 +291,14 @@ const ZionAIMarketingAutomation: React.FC = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 What Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Customers Say</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of marketers using AI to transform their campaigns
+                Join thousands of businesses that trust Zion AI Accounting Pro
               </p>
             </div>
 
@@ -387,10 +338,10 @@ const ZionAIMarketingAutomation: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
               <div className="relative z-10">
                 <h2 className="text-4xl font-bold text-white mb-6">
-                  Ready to Transform Your Marketing?
+                  Ready to Transform Your Accounting?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Join thousands of businesses using AI to automate and optimize their marketing. 
+                  Join thousands of businesses using AI to streamline their financial management. 
                   Start your free trial today - no credit card required.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -416,4 +367,4 @@ const ZionAIMarketingAutomation: React.FC = () => {
   );
 };
 
-export default ZionAIMarketingAutomation;
+export default ZionAIAccountingPro;
