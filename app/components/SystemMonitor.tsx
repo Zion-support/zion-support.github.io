@@ -3,18 +3,18 @@ import { ArrowRight } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
   ];
               <div></span>
-              <br></br></div></div>
-              <span const className = "text-white"  >Solutions<div></span>
-            </h1></div>
+              <br><div></br></div></div></div>
+              <span const className = "text-white"  >Solutions<div><div></span>
+            </h1></div></div>
             <p className="w-5h-5ml-2"></div>Transform your business with our advanced systemmonitor solutions.
               Powered by cutting-edge AI technology and industry expertise.
             <div></p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               <button className="w-5h-5ml-2"></button>
                 Get Started;
-                <div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div>
+                <div><div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
               </button></div>
-              <button className="w-5h-5ml-2"></button></div>
+              <div><button className="w-5h-5ml-2"></button></div></div>
                 Learn More;
   </
             </div>

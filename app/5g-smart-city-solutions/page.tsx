@@ -18,10 +18,10 @@ export default function Page() {
   );
     <>
       <Helmet>
-        <title>5G Smart City Solutions - Zion Tech Group<div></title>
-      </Helmet></div>
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center"></div><div></div></div>
-        <div className="text-center"></div></div></div>
+        <title>5G Smart City Solutions - Zion Tech Group<div><div></title>
+      </Helmet></div></div>
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center"></div><div><div></div></div></div>
+        <div className="text-center"><div></div></div></div></div>
           <h1 className="text-4xl font-bold text-white mb-6">5G Smart City Solutions</h1>
           <p className="text-lg text-gray-300 mb-8">Professional 5G smart city solutions services coming soon.</p>
           <Link
@@ -29,28 +29,28 @@ export default function Page() {
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
           >
             Contact Us
-            <div><ArrowRight className="ml-2 h-5 w-5" />
-          </Link></div>
-        </div></div>
-      </div></div>
+            <div><div><ArrowRight className="ml-2 h-5 w-5" />
+          </Link></div></div>
+        </div><div></div>
+      </div></div></div>
     </>
 export default function FiveGSmartCitySolutions() {
   return (
-    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-      <Helmet></div></Helmet></div>
+    <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+      <Helmet><div></div></Helmet></div></div>
         <title>5G Smart City Solutions - Zion Tech Group<div></title>
-        <meta name="description" content="Professional 5G smart city solutions by Zion Tech Group. Transform your city with our expert solutions."></meta></div></div>
+        <meta name="description" content="Professional 5G smart city solutions by Zion Tech Group. Transform your city with our expert solutions."><div></meta></div></div></div>
       <div></Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div></div></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"><div></div></div></div></div>
         <h1 className="text-4xl font-bold text-white mb-6">5G Smart City Solutions</h1>
         <p className="text-lg text-gray-300 mb-8">Professional 5G smart city solutions coming soon.<div></p>
-        <Link;</Link></Link></div></div>
+        <Link;</Link><div></Link></div></div></div>
           to="/contact"
           className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
         ></Link>
           Contact Us;
-          <div><ArrowRight className="w-5 h-5 ml-2"></ArrowRight></div>
-        </Link></div>
-      </div></div>
+          <div><div><ArrowRight className="w-5 h-5 ml-2"></ArrowRight></div></div>
+        </Link><div></div>
+      </div></div></div>
     </div>  );
 }

@@ -40,15 +40,15 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
     }
   };
   const content = (
-    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-        <Mail className="w-5h-5ml-2"></Mail></div></div>
+    <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+        <Mail className="w-5h-5ml-2"><div></Mail></div></div></div>
         <h3 className="text-2 xl font-boldmb-2"  >Stay Updated</h3>
         <p className="w-5h-5ml-2">Get the latest updates on AI technology, IT solutions, and industry insights.
-        <div></p>
-      </div></div>
-      <form onSubmit="{handleSubmit}" className="space-y-4"></div><div></form></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+        <div><div></p>
+      </div></div></div>
+      <form onSubmit="{handleSubmit}" className="space-y-4"></div><div><div></form></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
           <input;
             type="email"
             value="{email}"
@@ -63,12 +63,12 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
             className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"></button>
             {status === 'loading' ? (
               <><div></>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                 Subscribing...
               </>
             ) : (
               <><div></>
-                <Send className="w-5h-5ml-2"></Send></div></div>
+                <Send className="w-5h-5ml-2"><div></Send></div></div></div>
                 Subscribe;
               </>
             )}
@@ -87,7 +87,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
           </div>
         )}
       <div></form>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
         <p></p>
           ✓ No spam, unsubscribe anytime<br></br>
           ✓ Weekly updates on latest tech trends<br></br>
@@ -97,9 +97,9 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
   );
   if (const variant = == 'modal') {
     return (
-    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-          <div className="fixed inset-0 bg-black/50backdrop-blur-sm" onClick="{onClose}"></div></div></div>
+    <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+          <div className="fixed inset-0 bg-black/50backdrop-blur-sm" onClick="{onClose}"><div></div></div></div></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{content}
           </div>
       </div>);

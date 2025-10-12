@@ -2,7 +2,7 @@
 'use client';
 import React from 'react'
 import { Receipt, ArrowRight, Bot, RotateCcw, RotateCw } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 export default function AIExpenseTracker() {;
 export default Page;
   )
@@ -58,7 +58,7 @@ export default function AIExpenseTracker() {
         <>
       <title>AI Expense Tracker - Zion Tech Group</title>
   );
-import React from 'react'
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, Zap, CheckCircle, ArrowRight, Star, Users, Award, Brain, Cloud } from 'lucide-react';
 import { Link } from 'react-router-dom'
@@ -67,82 +67,82 @@ export default function AIExpenseTracker() {
         <title>AI Expense Tracker - Zion Tech Group</title>
         <h1 className="text-4xl font-bold text-white mb-6">AI Expense Tracker</h1>
         <p className="text-lg text-gray-300 mb-8">Professional AI expense tracking services coming soon.</p>
-          Contact Us
+          Contact Us;
       </>;
   );
 }
     <><div></>
-      <Helmet></Helmet></div></div>
+      <Helmet><div></Helmet></div></div></div>
         <title>AI Expense Tracker - Zion Tech Group<div></title>
-        <meta name="description" content="Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs."></meta></div></div>
-        <div><meta name="keywords" content="AI expense tracker, financial management, automation, Zion Tech Group"></meta></div>
-        <meta property="og:title" content="AI Expense Tracker - Zion Tech Group"></div><div></meta></div>
-        <meta property="og:description" content="Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs."></meta></div></div>
-        <div><meta property="og:type" content="website"></meta></div>
-        <meta property="og:url" content="https://ziontechgroup.com/ai-expense-tracker"></div><div></meta></div>
+        <meta name="description" content="Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs."><div></meta></div></div></div>
+        <div><div><meta name="keywords" content="AI expense tracker, financial management, automation, Zion Tech Group"></meta></div></div>
+        <meta property="og:title" content="AI Expense Tracker - Zion Tech Group"></div><div><div></meta></div></div>
+        <meta property="og:description" content="Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs."><div></meta></div></div></div>
+        <div><div><meta property="og:type" content="website"></meta></div></div>
+        <meta property="og:url" content="https://ziontechgroup.com/ai-expense-tracker"></div><div><div></meta></div></div>
       </Helmet>
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
         {/* Hero Section */}
-        <div><section className="w-5h-5ml-2"></section></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-            <h1 className="w-5h-5ml-2"></h1></div></div>
+        <div><div><section className="w-5h-5ml-2"></section></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+            <h1 className="w-5h-5ml-2"><div></h1></div></div></div>
               <span className="w-5h-5ml-2"></span>
                 AI Expense Tracker;
-              <div></span>
-            </h1></div>
+              <div><div></span>
+            </h1></div></div>
             <p className="w-5h-5ml-2"></div>Professional AI expense tracking services by Zion Tech Group. Expert solutions tailored to your business needs.
             <div></p>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               <Link;</Link></Link>
           to="/contact"
           className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
         ></Link>
           Get Started;
-          <div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div>
+          <div><div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
         </Link></div>
-              <Link to="/contact" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105"></Link></div>
+              <div><Link to="/contact" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105"></Link></div></div>
                 Learn More;
-        <div><section className="py-20"></section></div>
-          <div className="containermx-auto px-4 text-center"></div><div></div></div>
-            <h1 className="text-5xlmd:text-6xl font-bold text-white mb-6"></h1></div></div>
+        <div><div><section className="py-20"></section></div></div>
+          <div className="containermx-auto px-4 text-center"></div><div><div></div></div></div>
+            <h1 className="text-5xlmd:text-6xl font-bold text-white mb-6"><div></h1></div></div></div>
               <span className="bg-gradient-to-rfrom-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"></span>
                 AI Expense Tracker;
-              <div></span>
-            </h1></div>
-            <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto"></div></p></div>
+              <div><div></span>
+            </h1></div></div>
+            <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto"><div></div></p></div></div>
               Revolutionize your expense management with AI-powered tracking.
               Automate categorization, optimize budgets, and gain valuable insights into your spending.
             <div></p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center"></div></div></div>
+            <div className="flexflex-col sm:flex-row gap-4 justify-center"><div></div></div></div></div>
               <Link;</Link></Link>
                 to="/contact"
                 className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               ></Link>
                 Get Started;
-                <div><ArrowRight className="w-5h-5 ml-2"></ArrowRight></div>
+                <div><div><ArrowRight className="w-5h-5 ml-2"></ArrowRight></div></div>
               </Link></div>
-              <Link;</Link></Link></div>
+              <div><Link;</Link></Link></div></div>
                 to="/services"
                 className="borderborder-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
               ></Link>
                 View All Services;
-              <div></Link>
-            </div></div>
+              <div><div></Link>
+            </div></div></div>
         </section></div>
         {/* Features Section */}
-        <div><section className="w-5h-5ml-2"></section></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+        <div><div><section className="w-5h-5ml-2"></section></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               <h2 className="w-5h-5ml-2"></h2>
                 Why Choose Our AI Expense Tracker?
               </h2>
               <p className="w-5h-5ml-2">Our advanced AI technology helps you manage your finances more efficiently;
-              <div></p>
-            </div></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <div><div></p>
+            </div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               {features.map((feature, index) => (
-                <div><div key={index} className="bg-slate-800/50backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-all duration-300"></div></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                <div><div><div key={index} className="bg-slate-800/50backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-all duration-300"></div></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                     {feature.icon}
                   </div>
                   <h3 className="w-5h-5ml-2" />{feature.title}</h3>
@@ -152,63 +152,63 @@ export default function AIExpenseTracker() {
             </div>
         </section>
         {/* Features Section */}
-        <div><section className="py-20"></section></div>
-          <div className="containermx-auto px-4"></div><div></div></div>
-            <h2 className="text-4xlfont-bold text-white text-center mb-16"></h2></div></div>
+        <div><div><section className="py-20"></section></div></div>
+          <div className="containermx-auto px-4"></div><div><div></div></div></div>
+            <h2 className="text-4xlfont-bold text-white text-center mb-16"><div></h2></div></div></div>
               Powerful Features;
             <div></h2>
-            <div className="gridmd:grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>
+            <div className="gridmd:grid-cols-2 lg:grid-cols-4 gap-8"><div></div></div></div></div>
               {features.map((feature, index) => (
-                <div><div key={index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"></div></div>
-                  <div className="mb-4"></div></div></div>
+                <div><div><div key={index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"></div></div></div>
+                  <div className="mb-4"><div></div></div></div></div>
                     {feature.icon}
                   <div></div>
-                  <h3 className="text-xlfont-semibold text-white mb-3"></h3></div></div>
+                  <h3 className="text-xlfont-semibold text-white mb-3"><div></h3></div></div></div>
                     {feature.title}
                   <div></h3>
-                  <p className="text-gray-300"></p></div></div>
+                  <p className="text-gray-300"><div></p></div></div></div>
                     {feature.description}
                   </p>
                 </div>
               ))}
-            <div></div>
-          </div></div>
+            <div><div></div>
+          </div></div></div>
         </section></div>
         {/* CTA Section */}
-        <div><section className="w-5h-5ml-2"></section></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+        <div><div><section className="w-5h-5ml-2"></section></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               <h2 className="w-5h-5ml-2"></h2>
                 Ready to Get Started?
               </h2>
               <p className="w-5h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
               <div></p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                 <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25"></Link>
                   Contact Us;
                 <div></Link>
-                <Link to="/services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105"></Link></div></div>
+                <Link to="/services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105"><div></Link></div></div></div>
                   View All Services;
-                <div></Link>
-              </div></div>
-        <section className="py-20"></div><div></section></div>
-          <div className="containermx-auto px-4 text-center"></div></div></div>
+                <div><div></Link>
+              </div></div></div>
+        <section className="py-20"></div><div><div></section></div></div>
+          <div className="containermx-auto px-4 text-center"><div></div></div></div></div>
             <h2 className="text-4xlfont-bold text-white mb-6"></h2>
               Ready to Transform Your Expense Management?
             <div></h2>
-            <p className="text-xltext-gray-300 mb-8 max-w-2xl mx-auto"></p></div></div>
+            <p className="text-xltext-gray-300 mb-8 max-w-2xl mx-auto"><div></p></div></div></div>
               Join thousands of users already using our AI-powered expense tracking solutions to better manage their finances.
             <div></p>
-            <Link;</Link></Link></div></div>
+            <Link;</Link><div></Link></div></div></div>
               to="/contact"
               className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
             ></Link>
               Contact Us Today;
-              <div><ArrowRight className="w-5h-5 ml-2"></ArrowRight></div>
+              <div><div><ArrowRight className="w-5h-5 ml-2"></ArrowRight></div></div>
             </Link></div>
-          <div></div></div>
+          <div><div></div></div></div>
         </section>
-      </div></div></div>
+      <div></div></div></div></div>
     </>
   );
 };

@@ -68,7 +68,7 @@ export default function FuturisticLoader() {
             ease: 'easeInOut'
           }}></motion>
         {/* Glow effect */}
-        <div><motion.div;
+        <div><div><motion.div;
           className="{`"
             absolute inset-0;
             ${getColorClasses().split(' ')[1]}
@@ -84,7 +84,7 @@ export default function FuturisticLoader() {
             duration: 2,
             repeat: Infinity,
             ease: 'easeInOut'
-          }}></motion></div>
+          }}></motion></div></div>
       </div></div>
       {text && (
         <motion.p;

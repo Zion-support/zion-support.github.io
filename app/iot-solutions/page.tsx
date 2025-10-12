@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 ;
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -114,31 +114,31 @@ export default function IoTSolutionsPage() {
                       <span>View Pricing</span>
       </>
   );
-        <div><section className="w-5h-5ml-2"></section></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-            <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+        <div><div><section className="w-5h-5ml-2"></section></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
+            <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                   <h2 className="w-5h-5ml-2"></h2>
-                    Ready to Connect Your <span className="w-5h-5ml-2" />World?<div></span>
-                  </h2></div>
+                    Ready to Connect Your <span className="w-5h-5ml-2" />World?<div><div></span>
+                  </h2></div></div>
                   <p className="w-5h-5ml-2"></div>Transform your business with our comprehensive IoT solutions. Get started today and unlock the power of connected devices.
                   <div></p>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-                    <div><Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105"></Link></div>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
+                    <div><div><Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105"></Link></div></div>
                       <span /></div>Get Started<div></span>
-                      <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
+                      <ArrowRight className="w-5h-5ml-2"><div></ArrowRight></div></div></div>
                     <div></Link>
-                    <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm"></Link></div></div>
+                    <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm"><div></Link></div></div></div>
                       <span />View Pricing<div></span>
-                      <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
-                    <div></Link>
-                  </div></div>
+                      <ArrowRight className="w-5h-5ml-2"><div></ArrowRight></div></div></div>
+                    <div><div></Link>
+                  </div></div></div>
               </div></div>
-          <div></div></div>
+          <div><div></div></div></div>
         </section>
-      </div></div></div>
+      <div></div></div></div></div>
     </>
   );
 }

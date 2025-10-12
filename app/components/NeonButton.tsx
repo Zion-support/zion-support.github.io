@@ -42,8 +42,8 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
     <></>
       {icon && <span className="mr-2"  >{icon}</span>}
       {children}
-      {!icon && <div><ArrowRight className="w-5h-5ml-2" /&gt;}    </ArrowRight></ArrowRight></div>
-</></div></ArrowRight></div>
+      {!icon && <div><div><ArrowRight className="w-5h-5ml-2" /&gt;}    </ArrowRight></ArrowRight></div></div>
+</><div></div></ArrowRight></div></div>
   );
   if (href) {
     return (

@@ -78,39 +78,39 @@ export default function Layout() {
   return (
         <title>5G Data Analytics - Zion Tech Group</title>
           <title>{title}<div></title>
-          <meta name="description" content="{description}"></meta></div></div>
+          <meta name="description" content="{description}"><div></meta></div></div></div>
           <meta name="keywords" content="{keywords}"></meta>
           {/* Open Graph Meta Tags */}
-          <div><meta property="og: title" content="{title}" /></meta></div>
-          <meta property="og: description" content="{description}" /></div><div></meta></div>
-          <meta property="og:type" content="website" /></meta></div></div>
-          <div><meta property="og:url" content="https://ziontechgroup.com" /></meta></div>
-          <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" /></div><div></meta></div>
-          <meta property="og:site_name" content="Zion Tech Group" /></meta></div></div>
+          <div><div><meta property="og: title" content="{title}" /></meta></div></div>
+          <meta property="og: description" content="{description}" /></div><div><div></meta></div></div>
+          <meta property="og:type" content="website" /><div></meta></div></div></div>
+          <div><div><meta property="og:url" content="https://ziontechgroup.com" /></meta></div></div>
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" /></div><div><div></meta></div></div>
+          <meta property="og:site_name" content="Zion Tech Group" /><div></meta></div></div></div>
           {/* Twitter Card Meta Tags */}
-          <div><meta name="twitter:card" content="summary_large_image"></meta></div>
-          <meta name="twitter: title" content="{title}"></div><div></meta></div>
-          <meta name="twitter: description" content="{description}"></meta></div></div>
-          <div><meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg"></meta></div>
-          <meta name="twitter:site" content="@ziontechgroup"></div></meta></div>
+          <div><div><meta name="twitter:card" content="summary_large_image"></meta></div></div>
+          <meta name="twitter: title" content="{title}"></div><div><div></meta></div></div>
+          <meta name="twitter: description" content="{description}"><div></meta></div></div></div>
+          <div><div><meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg"></meta></div></div>
+          <meta name="twitter:site" content="@ziontechgroup"><div></div></meta></div></div>
           {/* Additional SEO Meta Tags */}
-          <div><meta name="robots" content="index, follow"></meta></div>
-          <meta name="author" content="Zion Tech Group"></div><div></meta></div>
-          <meta name="viewport" content="width="device-width," initial-scale=1.0" /></meta></div></div>
+          <div><div><meta name="robots" content="index, follow"></meta></div></div>
+          <meta name="author" content="Zion Tech Group"></div><div><div></meta></div></div>
+          <meta name="viewport" content="width="device-width," initial-scale=1.0" /><div></meta></div></div></div>
           <meta name="theme-color" content="#8 b5 cf6"></meta>
           {/* Structured Data */}
           <script type="application/ld+json"  />{JSON.stringify(structuredData)}
-          <div></script>
-        </Helmet></div>
-        <Navigation></div></Navigation></div>
+          <div><div></script>
+        </Helmet></div></div>
+        <Navigation><div></div></Navigation></div></div>
         <main className="w-5h-5ml-2" />{children}
         <div></main>
-        <Footer></Footer></div></div>
+        <Footer><div></Footer></div></div></div>
         {/* Theme Toggle - Fixed Position */}
-        <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-          <ThemeToggle></div><div></ThemeToggle></div>
+        <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <ThemeToggle></div><div><div></ThemeToggle></div></div>
         </div>
-    </ErrorBoundary></div></div>
+    <div></ErrorBoundary></div></div></div>
   );
 };
 export default Layout;

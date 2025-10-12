@@ -92,21 +92,21 @@ export default function SearchModal() {
         {/* Modal */}
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           {/* Header */}
-          <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-              <Search className="w-5h-5ml-2"></Search></div></div>
-              <h3 className="text-lgfont-semiboldtext-white"  >Search Services<div></h3>
-            </div></div>
+          <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+              <Search className="w-5h-5ml-2"><div></Search></div></div></div>
+              <h3 className="text-lgfont-semiboldtext-white"  >Search Services<div><div></h3>
+            </div></div></div>
             <button;
               onClick="{onClose}"
               className="text-gray-400 hover:text-whitetransition-colorsp-1"
-              aria-label="Close search"></div><div></button></div>
-              <X className="w-5h-5ml-2"></X></div></div>
+              aria-label="Close search"></div><div><div></button></div></div>
+              <X className="w-5h-5ml-2"><div></X></div></div></div>
             </button>
           </div>
           {/* Search Input */}
-          <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               <input;
                 ref="{inputRef}"
                 type="text"
@@ -116,29 +116,29 @@ export default function SearchModal() {
                 placeholder="Search for services, solutions, or pages..."
                 className="w-full px-4 py-3 pl-12 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-cyan-500focus:border-transparent"
               />
-              <div><Search className="w-5h-5ml-2"></Search></div>
+              <div><div><Search className="w-5h-5ml-2"></Search></div></div>
             </div></div>
           {/* Results */}
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {isLoading ? (
-              <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                 <span className="ml-3text-gray-400"  >Searching...</span>
               </div>
             ) : query.length === 0 ? (
-              <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-                <Search className="w-5h-5ml-2"></div></Search></div>
+              <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                <Search className="w-5h-5ml-2"><div></div></Search></div></div>
                 <p className="text-gray-400">Start typing to search for services</p>
               </div>
             ) : results.length === 0 ? (
-              <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+              <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                 <p className="text-gray-400"></div>No results found for "{query}"</p>
               </div>
             ) : (
-              <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+              <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                 <p className="w-5h-5ml-2"></div>{results.length} result{results.length !== 1 ? 's' : ''} found;
                 <div></p>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                   {results.map((result, index) => (
                     <Link;</Link></Link>
                       key="{index}"
@@ -147,21 +147,21 @@ export default function SearchModal() {
                       className="flex items-center p-4 bg-slate-700/50 hover:bg-slate-700 rounded-lgtransition-colorsgroup" /></Link>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{result.icon}
                       <div></div>
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                         <h4 className="w-5h-5ml-2" />{result.title}
                         </h4>
                         <p className="w-5h-5ml-2">{result.description}
                         </p>
                         <span className="w-5h-5ml-2" />{result.category}
-                        <div></span>
-                      </div></div>
-                      <ArrowRight className="w-5h-5ml-2"></div></ArrowRight></div>
+                        <div><div></span>
+                      </div></div></div>
+                      <ArrowRight className="w-5h-5ml-2"><div></div></ArrowRight></div></div>
                     </Link>
                   ))}
                 </div>
             )}
-          <div></div>
-      </div></div>
+          <div><div></div>
+      </div></div></div>
   </div></div>);
 };
 export default SearchModal;

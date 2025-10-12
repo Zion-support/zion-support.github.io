@@ -117,13 +117,13 @@ interface FuturisticButtonProps {
             <motion.div;
               className="w-4h-4bor d er-2 border-white/30 border-t-white rounded-full mr-2"
               animate="{{" rotate: 360 }}
-              transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}></motion></div></div>
+              transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}><div></motion></div></div></div>
             Loading...
           </>
         ) : (
           children;
         )}
-      <div></span>
-    </motion.button></div>
+      <div><div></span>
+    </motion.button></div></div>
   </div></div>);
 }

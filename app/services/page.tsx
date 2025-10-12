@@ -27,26 +27,26 @@ export default function ServicesPage() {
   return (
     <>
       <Helmet>
-        <title>Services - Zion Tech Group<div></title>
-        <meta name="description" content="Explore our comprehensive AI and IT services designed to transform your business." /></div>
+        <title>Services - Zion Tech Group<div><div></title>
+        <meta name="description" content="Explore our comprehensive AI and IT services designed to transform your business." /></div></div>
       </Helmet></div>
-      <div><div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 py-20"></div></div>
-        <div className="max-w-7xl mx-auto px-4"></div><div></div></div>
-          <div className="text-center mb-16"></div></div></div>
+      <div><div><div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 py-20"></div></div></div>
+        <div className="max-w-7xl mx-auto px-4"></div><div><div></div></div></div>
+          <div className="text-center mb-16"><div></div></div></div></div>
             <h1 className="text-4xl font-bold text-white mb-6">Our Services</h1>
-            <p className="text-lg text-gray-300">Comprehensive technology solutions for modern businesses<div></p>
-          </div></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>
+            <p className="text-lg text-gray-300">Comprehensive technology solutions for modern businesses<div><div></p>
+          </div></div></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><div></div></div></div></div>
             {services.map((service, index) => (
-              <div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div></div>
+              <div><div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div></div></div>
                 <div className="text-cyan-400 mb-4"></div>{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
               </div>
             ))}
-          <div></div>
-        </div></div>
-      </div></div>
-    </></div>
+          <div><div></div>
+        </div></div></div>
+      </div><div></div>
+    </></div></div>
   );
 }

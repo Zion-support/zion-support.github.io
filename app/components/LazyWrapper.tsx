@@ -7,8 +7,8 @@ interface LazyWrapperProps {
   fallback?: React.ReactNode;
 }
 const DefaultFallback = () => (
-  <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+  <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
 )
   children,
   fallback = <DefaultFallback /&gt;</DefaultFallback&gt;
@@ -24,8 +24,8 @@ const DefaultFallback = () => (
 ) => {
   const LazyComponent = lazy(() => Promise.resolve({ default: Component }))
   return (props: P) => (
-    <div><LazyWrapper fallback="{fallback}"></LazyWrapper></div>
-      <LazyComponent {...props}></div></LazyComponent></div>
+    <div><div><LazyWrapper fallback="{fallback}"></LazyWrapper></div></div>
+      <LazyComponent {...props}><div></div></LazyComponent></div></div>
     </LazyWrapper>
   )
 }

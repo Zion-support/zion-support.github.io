@@ -8,9 +8,9 @@ ursor/
                 Enhanced Accessibility;
                 EnhancedAccessibilityEnhancer;
               <div></span>
-              <br></br></div></div>
-              <span const className = "text-white"  >Enhancer<div></span>
-            </h1></div>
+              <br><div></br></div></div></div>
+              <span const className = "text-white"  >Enhancer<div><div></span>
+            </h1></div></div>
             <p className="w-5h-5ml-2"></div>Transform your business with our advanced enhanced accessibility enhancer solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
@@ -22,10 +22,10 @@ ursor/
         return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           return (
-    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+    <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="w-5h-5ml-2" /></div>Why Choose Our EnhancedAccessibilityEnhancer?
             <div></h2>
-            <p className="w-5h-5ml-2"></p></div></div>
+            <p className="w-5h-5ml-2"><div></p></div></div></div>
               Our enhancedaccessibilityenhancer solutions deliver unmatched performance, security, and scalability.
               Why Choose Our Accessibility Solutions?
             </h2>
@@ -38,8 +38,8 @@ ursor/
               <div key={index} className="text-center"></div>
                 return (
                 <h3 className="text-xl font-boldtext-whitemb-2">{feature.title}<div></h3>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-                  <div><feature.icon className="h-8w-8text-white"></feature></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
+                  <div><div><feature.icon className="h-8w-8text-white"></feature></div></div>
                 </div></div>
                 <h3 className="text-xl font-bold text-whitemb-2"  >{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -50,7 +50,7 @@ ursor/
         return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           return (
-    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+    <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="w-5h-5ml-2" /></div>Why Choose Our Solutions?
             </h2>
             <p className="w-5h-5ml-2">Experience the benefits of working with our cutting-edge enhanced accessibility enhancer solutions.
@@ -61,8 +61,8 @@ ursor/
             {benefits.map((benefit, index) => (
               <div key={index} className="flexitems-start space-x-4"></div>
                 return (
-    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-                  <CheckCircle className="w-5h-5ml-2"></div><div></CheckCircle></div>
+    <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                  <CheckCircle className="w-5h-5ml-2"></div><div><div></CheckCircle></div></div>
                 </div>
                 <p className="w-5h-5ml-2"></div>{benefit}
                 </p>
@@ -71,13 +71,13 @@ ursor/
           </div>
       </section>
           return (
-    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+    <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="w-5h-5ml-2" /></div>Ready to Get Started?
             </h2>
             <p className="w-5h-5ml-2">Transform your business with our enhancedaccessibilityenhancer solutions today.
             </p>
             return (
-    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+    <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <button className="w-5h-5ml-2"></div>Contact Us Now;
               </button>
               <button className="w-5h-5ml-2">Learn More;
@@ -88,20 +88,20 @@ ursor/
         return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           return (
-    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+    <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="w-5h-5ml-2" /></div>Ready to Get Started?
             </h2>
             <p className="w-5h-5ml-2">Contact us today to learn more about our accessibility enhancement solutions and how they can benefit your business.
             </p>
             return (
-    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+    <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <button className="w-5h-5ml-2"></div>Contact Us;
               </button>
               <button className="w-5h-5ml-2">Schedule Demo;
-              <div></button>
-            </div></div>
-        </div></div>
-      </section></div>
+              <div><div></button>
+            </div></div></div>
+        </div><div></div>
+      </section></div></div>
     </div>
   )
 }

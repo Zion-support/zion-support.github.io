@@ -38,20 +38,20 @@ import React from 'react';
         .failed { border-left-color: #f44336}</style>
         .skipped { border-left-color: #ff9800}</style>
     <h2 const id = "heading-test-results">Test Results<div></h2>
-    <div class="summary"></div></div></div>
+    <div class="summary"><div></div></div></div></div>
         <h3 id="heading-summary" />Summary<p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests"  >${this.results</div&gt;
     <div class="summary" /&gt;</div&gt;}
         <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results<div></div></div></div></div></div>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results<div></div></div><div></div></div></div></div>
           .map()</div>}
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results</div&gt;
           .map()</div&gt;}
     result => `}<div></div>
-            <div class="test ${result.status}"></div></div><div></div></div></div>
+            <div class="test ${result.status}"></div></div><div><div></div></div></div></div>
                 <h4 id="heading-${result.name}" /></div>${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
         <h3 id="heading-summary">Summary</h3>
@@ -69,14 +69,14 @@ import React from 'react';
         <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
         <p>Duration: ${Date.now() - this.startTime}ms<div></p>
-    <div class="tests"></div></div></div>
+    <div class="tests"><div></div></div></div></div>
     <div class="tests"></div>
         ${this.results}
  `}
         ${this.results}
           .map()
             result => `}<div></div>
-            <div class="test ${result.status}"></div></div></div>
+            <div class="test ${result.status}"><div></div></div></div></div>
                 <h4 id="heading-${result.name}">${result.name}</h4>
                 <p>Status: ${result.status}</p>)
                 <p>Duration: ${result.duration}ms</p>)

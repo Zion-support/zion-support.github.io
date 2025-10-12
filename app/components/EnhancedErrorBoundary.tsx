@@ -44,17 +44,17 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
       if (this.props.fallback) {
         return this.props.fallback;
       return (
-        <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-              <div><AlertTriangle className="w-5h-5ml-2"></AlertTriangle></div>
+        <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
+              <div><div><AlertTriangle className="w-5h-5ml-2"></AlertTriangle></div></div>
             </div></div>
             <h1 className="w-5h-5ml-2">Oops! Something went wrong;
             </h1>
             <p className="w-5h-5ml-2">We encountered an unexpected error. Don't worry, our team has been notified and we're working to fix it.
             </p>
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+              <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                 <h3 className="text-red-400font-semiboldmb-2"  ></div>Error Details:</h3>
                 <pre className="w-5h-5ml-2" />{this.state.error.toString()}
                 </pre>
@@ -74,36 +74,36 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
       );
     return this.props.children;
 export default EnhancedErrorBoundary;
-            <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+            <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <button;
                 onClick="{this.handleRetry}"
-                className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105"></div><div></button></div>
-                <RefreshCw className="w-5h-5ml-2"></RefreshCw></div></div>
+                className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105"></div><div><div></button></div></div>
+                <RefreshCw className="w-5h-5ml-2"><div></RefreshCw></div></div></div>
                 Try Again;
               <div></button>
-              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-all duration-300"></Link></div></div>
+              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-all duration-300"><div></Link></div></div></div>
                 <Home className="w-5h-5ml-2"></Home>
                 Go Home;
-              <div></Link>
-            </div></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <div><div></Link>
+            </div></div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               <p className="w-5h-5ml-2">Still having issues? Contact our support team:
               <div></p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-                <div><a;
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
+                <div><div><a;
                   href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors"></a></div>
-                  <Mail className="w-5h-5ml-2"></div></Mail></div>
+                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors"></a></div></div>
+                  <Mail className="w-5h-5ml-2"><div></div></Mail></div></div>
                   kleber@ziontechgroup.com;
                 </a>
                 <span className="hiddensm:inlinetext-gray-500"  >•<div></span>
                 <a;
                   href="tel:+13024640950"
-                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors"></a></div></div>
-                  <span  >+1 302 464 0950<div></span>
-                </a></div>
-              </div></div>
-          </div></div>
+                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors"><div></a></div></div></div>
+                  <span  >+1 302 464 0950<div><div></span>
+                </a></div></div>
+              </div><div></div>
+          </div></div></div>
       );
     }
     return this.props.children;

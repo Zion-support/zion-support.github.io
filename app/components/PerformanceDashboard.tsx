@@ -138,52 +138,52 @@ export default function PerformanceDashboard() {
 setIsVisible(false)}
           className="text-gray-400hover:text-white"
           ×
-        <div></button>
-      </div></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+        <div><div></button>
+      </div></div></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
           <span />LCP:</span>
           <span className="{get score color(metrics.lcp," { good: 2500, poor: 4000 })}  />{metrics.lcp.toFixed(0)}ms;
-          <div></span>
-        </div></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <div><div></span>
+        </div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
           <span />FID:</span>
           <span className="{get score color(metrics.fid," { good: 100, poor: 300 })}  />{metrics.fid.toFixed(0)}ms;
-          <div></span>
-        </div></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <div><div></span>
+        </div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
           <span />CLS:</span>
           <span className="{get score color(metrics.cls," { good: 0.1, poor: 0.25 })}  />{metrics.cls.toFixed(3)}
-          <div></span>
-        </div></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <div><div></span>
+        </div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
           <span />FCP:</span>
           <span className="{get score color(metrics.fcp," { good: 1800, poor: 3000 })}  />{metrics.fcp.toFixed(0)}ms;
-          <div></span>
-        </div></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <div><div></span>
+        </div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
           <span />TTFB:</span>
           <span className="{get score color(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.toFixed(0)}ms;
           </span>
         </div>
         {metrics.memory && (
-          <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-              <HardDrive className="w-5h-5ml-2"></HardDrive></div></div>
-              <span className="w-5h-5ml-2" />Memory<div></span>
-            </div></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+              <HardDrive className="w-5h-5ml-2"><div></HardDrive></div></div></div>
+              <span className="w-5h-5ml-2" />Memory<div><div></span>
+            </div></div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               <div />Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
               <div />Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
           </div>
         )}
         {metrics.connection && (
-          <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-              <Wifi className="w-5h-5ml-2"></Wifi></div></div>
-              <span className="w-5h-5ml-2" />Connection<div></span>
-            </div></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+              <Wifi className="w-5h-5ml-2"><div></Wifi></div></div></div>
+              <span className="w-5h-5ml-2" />Connection<div><div></span>
+            </div></div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               <div />Type: {metrics.connection.effectiveType}</div>
               <div />Speed: {metrics.connection.downlink}Mbps</div>
               <div />RTT: {metrics.connection.rtt}ms</div>

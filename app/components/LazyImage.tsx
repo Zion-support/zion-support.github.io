@@ -46,13 +46,13 @@ const LazyImage: React.FC<LazyImageProps /> = ({
 export default function LazyImage() {
   return (
       {!isInView && (
-        <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-          <Loader2 className="w-5h-5ml-2"></div></Loader2></div>
+        <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <Loader2 className="w-5h-5ml-2"><div></div></Loader2></div></div>
         </div>
       )}
       {isInView && !isLoaded && !hasError && (
-        <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-          <Loader2 className="w-5h-5ml-2"></div></Loader2></div>
+        <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <Loader2 className="w-5h-5ml-2"><div></div></Loader2></div></div>
         </div>
       )}
       {isInView && (
@@ -67,8 +67,8 @@ export default function LazyImage() {
           loading="lazy"></img>
       )}
       {hasError && (
-        <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+        <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
             <div className="w-8 h-8mx-au tomb-2"  >📷</div>
             <p className="text-sm">Image failed to load</p>
           </div>

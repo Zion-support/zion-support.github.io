@@ -49,44 +49,44 @@ import { ArrowRight } from 'lucide-react';
   ];
   return (
     <><div></>
-      <Helmet></Helmet></div></div>
+      <Helmet><div></Helmet></div></div></div>
         <title>AI Email Assistant - Zion Tech Group<div></title>
-        <meta const name = "description" content="Transform your email management with our AI Email Assistant. Smart classification, auto-responses, sentiment analysis, and automated workflows." /></meta></div></div>
-        <div><meta name="keywords" content="AI email assistant, email automation, smart email management, auto-responses, email classification"></meta></div>
+        <meta const name = "description" content="Transform your email management with our AI Email Assistant. Smart classification, auto-responses, sentiment analysis, and automated workflows." /><div></meta></div></div></div>
+        <div><div><meta name="keywords" content="AI email assistant, email automation, smart email management, auto-responses, email classification"></meta></div></div>
       </Helmet></div>
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+      <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
         {/* Hero Section */}
-        <div><section className="w-5h-5ml-2"></section></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+        <div><div><section className="w-5h-5ml-2"></section></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               <h1 className="w-5h-5ml-2"></h1>
-                AI <span className="w-5h-5ml-2" />Email Assistant<div></span>
-              </h1></div>
+                AI <span className="w-5h-5ml-2" />Email Assistant<div><div></span>
+              </h1></div></div>
               <p className="w-5h-5ml-2"></div>Transform your email management with intelligent automation, smart classification,
                 and AI-powered responses that save time and improve productivity.
               <div></p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                 <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building;
                 </Link>
                 <Link to="/ai-services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All AI Services;
-                <div></Link>
-              </div></div>
-          </div></div>
-        </section></div>
+                <div><div></Link>
+              </div></div></div>
+          </div><div></div>
+        </section></div></div>
         {/* Features Section */}
-        <div><section className="w-5h-5ml-2"></section></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+        <div><div><section className="w-5h-5ml-2"></section></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               <h2 className="w-5h-5ml-2"></h2>
-                Powerful <span className="w-5h-5ml-2" />Features<div></span>
-              </h2></div>
+                Powerful <span className="w-5h-5ml-2" />Features<div><div></span>
+              </h2></div></div>
               <p className="w-5h-5ml-2"></div>Everything you need to automate and optimize your email management;
-              <div></p>
-            </div></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <div><div></p>
+            </div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               {features.map((feature, index) => (
-                <div><div key={index} className="text-centergroup"></div></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                <div><div><div key={index} className="text-centergroup"></div></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                     {feature.icon}
                   </div>
                   <h3 className="w-5h-5ml-2" />{feature.title}</h3>
@@ -96,20 +96,20 @@ import { ArrowRight } from 'lucide-react';
             </div>
         </section>
         {/* Use Cases Section */}
-        <div><section className="w-5h-5ml-2"></section></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+        <div><div><section className="w-5h-5ml-2"></section></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               <h2 className="w-5h-5ml-2"></h2>
-                Use <span className="w-5h-5ml-2" />Cases<div></span>
-              </h2></div>
+                Use <span className="w-5h-5ml-2" />Cases<div><div></span>
+              </h2></div></div>
               <p className="w-5h-5ml-2"></div>Discover how our AI email assistant can transform your communication workflows;
-              <div></p>
-            </div></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <div><div></p>
+            </div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               {useCases.map((useCase, index) => (
-                <div><div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 grouphover: transformhove,
-  r:scale-105"></div></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                <div><div><div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 grouphover: transformhove,
+  r:scale-105"></div></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                     {useCase.icon}
                   </div>
                   <h3 className="w-5h-5ml-2" />{useCase.title}
@@ -121,23 +121,23 @@ import { ArrowRight } from 'lucide-react';
             </div>
         </section>
         {/* CTA Section */}
-        <div><section className="w-5h-5ml-2"></section></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+        <div><div><section className="w-5h-5ml-2"></section></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               <h2 className="w-5h-5ml-2" />Ready to Transform Your Email Management?
               </h2>
               <p className="w-5h-5ml-2">Start automating your email workflows and boost productivity with AI-powered assistance.
               <div></p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                 <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building Now;
                 </Link>
                 <Link to="/about" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us;
-                <div></Link>
-              </div></div>
+                <div><div></Link>
+              </div></div></div>
           </div></div>
-        <div></section></div>
+        <div><div></section></div></div>
       </div>
-    </></div></div>
+    <div></></div></div></div>
   );
 };
 export default AIEmailAssistantPage;

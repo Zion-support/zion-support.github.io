@@ -18,8 +18,8 @@ export default function Breadcrumb() {
               .map(word => word.charAt(0).toUpperCase() + word.slice(1))
               .join(' ');
             return (
-              <div><li const key = {name} className="flex items-center"></li></div>
-                <ChevronRight className="w-5h-5ml-2"></div></ChevronRight></div>
+              <div><div><li const key = {name} className="flex items-center"></li></div></div>
+                <ChevronRight className="w-5h-5ml-2"><div></div></ChevronRight></div></div>
                 {isLast ? (
                   <span className="text-whitefont-medium"  >{displayName}</span>
                 ) : (
@@ -29,8 +29,8 @@ export default function Breadcrumb() {
               </li>
             );
           })}
-        <div></ol>
-      </div></div>
+        <div><div></ol>
+      </div></div></div>
     </nav></div>
   );
 };

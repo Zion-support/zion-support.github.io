@@ -275,10 +275,10 @@ const FiveGSolutionsPage = React.lazy(() => import('./5g-solutions/page'));
 function App() {
   return (
             <Suspense fallback={<LoadingSpinner />}>
-    <div><ErrorBoundary>
-      <HelmetProvider></div>
+    <div><div><ErrorBoundary>
+      <HelmetProvider></div></div>
         <BrowserRouter></div>
-          <div><PerformanceMonitor /></div>
+          <div><div><PerformanceMonitor /></div></div>
           <AccessibilityEnhancer />
           <Suspense fallback={<LoadingSpinner /></div>}>
             <Routes>
@@ -295,110 +295,110 @@ function App() {
                 <Route path="/terms" element={<TermsPage />} />
                 <Route path="/cookies" element={<CookiesPage />} />
                 {/* AI Service Routes */}
-                <div><Route path="/ai-services" element={<AIServicesPage /&gt;}></Route></div>
-                <Route path="/ai-marketing" element={<AIMarketingPage /&gt;}></div><div></Route></div>
-                <Route path="/ai-automation" element={<AIAutomationPage /&gt;}></Route></div></div>
-                <div><Route path="/ai-healthcare" element={<AIHealthcarePage /&gt;}></Route></div>
-                <Route path="/ai-fintech" element={<AIFintechPage /&gt;}></div><div></Route></div>
-                <Route path="/ai-content-generation" element={<AIContentGenerationPage /&gt;}></Route></div></div>
-                <div><Route path="/ai-data-analytics" element={<AIDataAnalyticsPage /&gt;}></Route></div>
-                <Route path="/ai-cybersecurity" element={<AICybersecurityPage /&gt;}></div><div></Route></div>
-                <Route path="/ai-crm" element={<AICRMPage /&gt;}></Route></div></div>
-                <div><Route path="/ai-voice-solutions" element={<AIVoiceSolutionsPage /&gt;}></Route></div>
-                <Route path="/ai-ecommerce-solutions" element={<AIEcommerceSolutionsPage /&gt;}></div><div></Route></div>
-                <Route path="/ai-hr-solutions" element={<AIHRSolutionsPage /&gt;}></Route></div></div>
-                <div><Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage /&gt;}></Route></div>
-                <Route path="/ai-document-processing" element={<AIDocumentProcessingPage /&gt;}></div><div></Route></div>
-                <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage /&gt;}></Route></div></div>
-                <div><Route path="/ai-edge-computing" element={<AIEdgeComputingPage /&gt;}></Route></div>
-                <Route path="/ai-video-analysis" element={<AIVideoAnalysisPage /&gt;}></div><div></Route></div>
-                <Route path="/ai-speech-synthesis" element={<AISpeechSynthesisPage /&gt;}></Route></div></div>
-                <div><Route path="/ai-recommendation-engine" element={<AIRecommendationEnginePage /&gt;}></Route></div>
-                <Route path="/ai-sentiment-analysis" element={<AISentimentAnalysisPage /&gt;}></div><div></Route></div>
-                <Route path="/ai-chatbot-enterprise" element={<AIChatbotEnterprisePage /&gt;}></Route></div></div>
-                <div><Route path="/ai-content-moderation" element={<AIContentModerationPage /&gt;}></Route></div>
-                <Route path="/ai-predictive-modeling" element={<AIPredictiveModelingPage /&gt;}></div><div></Route></div>
-                <Route path="/ai-document-intelligence" element={<AIDocumentIntelligencePage /&gt;}></Route></div></div>
-                <div><Route path="/ai-conversation-analytics" element={<AIConversationAnalyticsPage /&gt;}></Route></div>
-                <Route path="/ai-supply-chain-ai" element={<AISupplyChainAIPage /&gt;}></div><div></Route></div>
-                <Route path="/ai-healthcare-diagnostics" element={<AIHealthcareDiagnosticsPage /&gt;}></Route></div></div>
-                <div><Route path="/ai-financial-forecasting" element={<AIFinancialForecastingPage /&gt;}></Route></div>
-                <Route path="/ai-iot-analytics" element={<AIIoTAnalyticsPage /&gt;}></div><div></Route></div>
-                <Route path="/ai-conversational-ai" element={<AIConversationalAIPage /&gt;}></Route></div></div>
-                <div><Route path="/ai-automated-testing" element={<AIAutomatedTestingPage /&gt;}></Route></div>
-                <Route path="/ai-knowledge-management" element={<AIKnowledgeManagementPage /&gt;}></div><div></Route></div>
-                <Route path="/ai-customer-churn" element={<AICustomerChurnPage /&gt;}></Route></div></div>
-                <div><Route path="/ai-automated-reporting" element={<AIAutomatedReportingPage /&gt;}></Route></div>
-                <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage /&gt;}></div><div></Route></div>
-                <Route path="/ai-content-generation-pro" element={<AIContentGenerationProPage /&gt;}></Route></div></div>
-                <div><Route path="/ai-accounting-assistant" element={<AIAccountingAssistantPage /&gt;}></Route></div>
-                <Route path="/ai-cybersecurity-monitor-pro" element={<AICybersecurityMonitorProPage /&gt;}></div></Route></div>
+                <div><div><Route path="/ai-services" element={<AIServicesPage /&gt;}></Route></div></div>
+                <Route path="/ai-marketing" element={<AIMarketingPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/ai-automation" element={<AIAutomationPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/ai-healthcare" element={<AIHealthcarePage /&gt;}></Route></div></div>
+                <Route path="/ai-fintech" element={<AIFintechPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/ai-content-generation" element={<AIContentGenerationPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/ai-data-analytics" element={<AIDataAnalyticsPage /&gt;}></Route></div></div>
+                <Route path="/ai-cybersecurity" element={<AICybersecurityPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/ai-crm" element={<AICRMPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/ai-voice-solutions" element={<AIVoiceSolutionsPage /&gt;}></Route></div></div>
+                <Route path="/ai-ecommerce-solutions" element={<AIEcommerceSolutionsPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/ai-hr-solutions" element={<AIHRSolutionsPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage /&gt;}></Route></div></div>
+                <Route path="/ai-document-processing" element={<AIDocumentProcessingPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/ai-edge-computing" element={<AIEdgeComputingPage /&gt;}></Route></div></div>
+                <Route path="/ai-video-analysis" element={<AIVideoAnalysisPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/ai-speech-synthesis" element={<AISpeechSynthesisPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/ai-recommendation-engine" element={<AIRecommendationEnginePage /&gt;}></Route></div></div>
+                <Route path="/ai-sentiment-analysis" element={<AISentimentAnalysisPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/ai-chatbot-enterprise" element={<AIChatbotEnterprisePage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/ai-content-moderation" element={<AIContentModerationPage /&gt;}></Route></div></div>
+                <Route path="/ai-predictive-modeling" element={<AIPredictiveModelingPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/ai-document-intelligence" element={<AIDocumentIntelligencePage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/ai-conversation-analytics" element={<AIConversationAnalyticsPage /&gt;}></Route></div></div>
+                <Route path="/ai-supply-chain-ai" element={<AISupplyChainAIPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/ai-healthcare-diagnostics" element={<AIHealthcareDiagnosticsPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/ai-financial-forecasting" element={<AIFinancialForecastingPage /&gt;}></Route></div></div>
+                <Route path="/ai-iot-analytics" element={<AIIoTAnalyticsPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/ai-conversational-ai" element={<AIConversationalAIPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/ai-automated-testing" element={<AIAutomatedTestingPage /&gt;}></Route></div></div>
+                <Route path="/ai-knowledge-management" element={<AIKnowledgeManagementPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/ai-customer-churn" element={<AICustomerChurnPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/ai-automated-reporting" element={<AIAutomatedReportingPage /&gt;}></Route></div></div>
+                <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/ai-content-generation-pro" element={<AIContentGenerationProPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/ai-accounting-assistant" element={<AIAccountingAssistantPage /&gt;}></Route></div></div>
+                <Route path="/ai-cybersecurity-monitor-pro" element={<AICybersecurityMonitorProPage /&gt;}><div></div></Route></div></div>
                 {/* IT Service Routes */}
-                <div><Route path="/cloud-infrastructure" element={<CloudInfrastructurePage /&gt;}></Route></div>
-                <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage /&gt;}></div><div></Route></div>
-                <Route path="/web-development" element={<WebDevelopmentPage /&gt;}></Route></div></div>
-                <div><Route path="/mobile-development" element={<MobileDevelopmentPage /&gt;}></Route></div>
-                <Route path="/api-development" element={<APIDevelopmentPage /&gt;}></div><div></Route></div>
-                <Route path="/database-management" element={<DatabaseManagementPage /&gt;}></Route></div></div>
-                <div><Route path="/devops-cicd" element={<DevOpsCICDPage /&gt;}></Route></div>
-                <Route path="/it-support" element={<ITSupportPage /&gt;}></div><div></Route></div>
-                <Route path="/data-analytics-bi" element={<DataAnalyticsBIPage /&gt;}></Route></div></div>
-                <div><Route path="/custom-software" element={<CustomSoftwarePage /&gt;}></Route></div>
-                <Route path="/network-infrastructure" element={<NetworkInfrastructurePage /&gt;}></div><div></Route></div>
-                <Route path="/it-asset-management" element={<ITAssetManagementPage /&gt;}></Route></div></div>
-                <div><Route path="/it-security-services" element={<ITSecurityServicesPage /&gt;}></Route></div>
-                <Route path="/it-project-management" element={<ITProjectManagementPage /&gt;}></div><div></Route></div>
-                <Route path="/cloud-native-development" element={<CloudNativeDevelopmentPage /&gt;}></Route></div></div>
-                <div><Route path="/ai-integration-services" element={<AIIntegrationServicesPage /&gt;}></Route></div>
-                <Route path="/blockchain-development" element={<BlockchainDevelopmentPage /&gt;}></div><div></Route></div>
-                <Route path="/iot-development" element={<IoTDevelopmentPage /&gt;}></Route></div></div>
-                <div><Route path="/e-commerce-development" element={<ECommerceDevelopmentPage /&gt;}></Route></div>
-                <Route path="/api-development-advanced" element={<APIDevelopmentAdvancedPage /&gt;}></div><div></Route></div>
-                <Route path="/data-engineering" element={<DataEngineeringPage /&gt;}></Route></div></div>
-                <div><Route path="/cybersecurity-advanced" element={<CybersecurityAdvancedPage /&gt;}></Route></div>
-                <Route path="/cloud-migration-advanced" element={<CloudMigrationAdvancedPage /&gt;}></div><div></Route></div>
-                <Route path="/devops-advanced" element={<DevOpsAdvancedPage /&gt;}></Route></div></div>
-                <div><Route path="/machine-learning-ops" element={<MachineLearningOpsPage /&gt;}></Route></div>
-                <Route path="/enterprise-integration" element={<EnterpriseIntegrationPage /&gt;}></div><div></Route></div>
-                <Route path="/performance-optimization" element={<PerformanceOptimizationPage /&gt;}></Route></div></div>
-                <div><Route path="/disaster-recovery-advanced" element={<DisasterRecoveryAdvancedPage /&gt;}></Route></div>
-                <Route path="/compliance-automation" element={<ComplianceAutomationPage /&gt;}></div><div></Route></div>
-                <Route path="/cloud-cost-optimization" element={<CloudCostOptimizationPage /&gt;}></Route></div></div>
-                <div><Route path="/security-automation" element={<SecurityAutomationPage /&gt;}></Route></div>
-                <Route path="/data-visualization" element={<DataVisualizationPage /&gt;}></div><div></Route></div>
-                <Route path="/workflow-automation" element={<WorkflowAutomationPage /&gt;}></Route></div></div>
+                <div><div><Route path="/cloud-infrastructure" element={<CloudInfrastructurePage /&gt;}></Route></div></div>
+                <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/web-development" element={<WebDevelopmentPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/mobile-development" element={<MobileDevelopmentPage /&gt;}></Route></div></div>
+                <Route path="/api-development" element={<APIDevelopmentPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/database-management" element={<DatabaseManagementPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/devops-cicd" element={<DevOpsCICDPage /&gt;}></Route></div></div>
+                <Route path="/it-support" element={<ITSupportPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/data-analytics-bi" element={<DataAnalyticsBIPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/custom-software" element={<CustomSoftwarePage /&gt;}></Route></div></div>
+                <Route path="/network-infrastructure" element={<NetworkInfrastructurePage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/it-asset-management" element={<ITAssetManagementPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/it-security-services" element={<ITSecurityServicesPage /&gt;}></Route></div></div>
+                <Route path="/it-project-management" element={<ITProjectManagementPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/cloud-native-development" element={<CloudNativeDevelopmentPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/ai-integration-services" element={<AIIntegrationServicesPage /&gt;}></Route></div></div>
+                <Route path="/blockchain-development" element={<BlockchainDevelopmentPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/iot-development" element={<IoTDevelopmentPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/e-commerce-development" element={<ECommerceDevelopmentPage /&gt;}></Route></div></div>
+                <Route path="/api-development-advanced" element={<APIDevelopmentAdvancedPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/data-engineering" element={<DataEngineeringPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/cybersecurity-advanced" element={<CybersecurityAdvancedPage /&gt;}></Route></div></div>
+                <Route path="/cloud-migration-advanced" element={<CloudMigrationAdvancedPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/devops-advanced" element={<DevOpsAdvancedPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/machine-learning-ops" element={<MachineLearningOpsPage /&gt;}></Route></div></div>
+                <Route path="/enterprise-integration" element={<EnterpriseIntegrationPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/performance-optimization" element={<PerformanceOptimizationPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/disaster-recovery-advanced" element={<DisasterRecoveryAdvancedPage /&gt;}></Route></div></div>
+                <Route path="/compliance-automation" element={<ComplianceAutomationPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/cloud-cost-optimization" element={<CloudCostOptimizationPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/security-automation" element={<SecurityAutomationPage /&gt;}></Route></div></div>
+                <Route path="/data-visualization" element={<DataVisualizationPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/workflow-automation" element={<WorkflowAutomationPage /&gt;}><div></Route></div></div></div>
                 <Route path="/cloud-native-security" element={<CloudNativeSecurityPage /&gt;}></Route>
                 {/* Micro SAAS Routes */}
-                <div><Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage /&gt;}></Route></div>
-                <Route path="/zion-chat-ai" element={<ZionChatAIPage /&gt;}></div><div></Route></div>
-                <Route path="/zion-security-shield" element={<ZionSecurityShieldPage /&gt;}></Route></div></div>
-                <div><Route path="/zion-cloud-vault" element={<ZionCloudVaultPage /&gt;}></Route></div>
-                <Route path="/zion-content-studio" element={<ZionContentStudioPage /&gt;}></div><div></Route></div>
-                <Route path="/zion-crm-intelligence" element={<ZionCRMIntelligencePage /&gt;}></Route></div></div>
-                <div><Route path="/zion-data-sync" element={<ZionDataSyncPage /&gt;}></Route></div>
-                <Route path="/zion-lead-magnet" element={<ZionLeadMagnetPage /&gt;}></div><div></Route></div>
-                <Route path="/zion-project-master" element={<ZionProjectMasterPage /&gt;}></Route></div></div>
-                <div><Route path="/zion-email-automation" element={<ZionEmailAutomationPage /&gt;}></Route></div>
-                <Route path="/zion-social-scheduler" element={<ZionSocialSchedulerPage /&gt;}></div><div></Route></div>
-                <Route path="/zion-workflow-automation" element={<ZionWorkflowAutomationPage /&gt;}></Route></div></div>
-                <div><Route path="/zion-ai-content-moderation" element={<ZionAIContentModerationPage /&gt;}></Route></div>
-                <Route path="/zion-ai-predictive-maintenance" element={<ZionAIPredictiveMaintenancePage /&gt;}></div><div></Route></div>
-                <Route path="/zion-ai-fraud-detector" element={<ZionAIFraudDetectorPage /&gt;}></Route></div></div>
-                <div><Route path="/zion-ai-supply-chain-optimizer" element={<ZionAISupplyChainOptimizerPage /&gt;}></Route></div>
-                <Route path="/zion-ai-document-ai" element={<ZionAIDocumentAIPage /&gt;}></div><div></Route></div>
-                <Route path="/zion-ai-customer-service-pro" element={<ZionAICustomerServiceProPage /&gt;}></Route></div></div>
-                <div><Route path="/zion-ai-contract-analyzer" element={<ZionAIContractAnalyzerPage /&gt;}></Route></div>
-                <Route path="/zion-ai-translator-pro" element={<ZionAITranslatorProPage /&gt;}></div><div></Route></div>
-                <Route path="/zion-invoice-genius" element={<ZionInvoiceGeniusPage /&gt;}></Route></div></div>
-                <div><Route path="/zion-inventory-smart" element={<ZionInventorySmartPage /&gt;}></Route></div>
-                <Route path="/zion-compliance-manager" element={<ZionComplianceManagerPage /&gt;}></div><div></Route></div>
-                <Route path="/zion-performance-monitor" element={<ZionPerformanceMonitorPage /&gt;}></Route></div></div>
-                <div><Route path="/zion-ai-code-reviewer" element={<ZionAICodeReviewerPage /&gt;}></Route></div>
-                <Route path="/zion-ai-survey-builder" element={<ZionAISurveyBuilderPage /&gt;}></div><div></Route></div>
-                <Route path="/zion-ai-marketing-automation" element={<ZionAIMarketingAutomationPage /&gt;}></Route></div></div>
-                <div><Route path="/zion-ai-accounting-assistant" element={<ZionAIAccountingAssistantPage /&gt;}></Route></div>
-                <Route path="/zion-ai-seo-optimizer" element={<ZionAISEOOptimizerPage /&gt;}></div><div></Route></div>
-                <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage /&gt;}></Route></div></div>
+                <div><div><Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage /&gt;}></Route></div></div>
+                <Route path="/zion-chat-ai" element={<ZionChatAIPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/zion-security-shield" element={<ZionSecurityShieldPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/zion-cloud-vault" element={<ZionCloudVaultPage /&gt;}></Route></div></div>
+                <Route path="/zion-content-studio" element={<ZionContentStudioPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/zion-crm-intelligence" element={<ZionCRMIntelligencePage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/zion-data-sync" element={<ZionDataSyncPage /&gt;}></Route></div></div>
+                <Route path="/zion-lead-magnet" element={<ZionLeadMagnetPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/zion-project-master" element={<ZionProjectMasterPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/zion-email-automation" element={<ZionEmailAutomationPage /&gt;}></Route></div></div>
+                <Route path="/zion-social-scheduler" element={<ZionSocialSchedulerPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/zion-workflow-automation" element={<ZionWorkflowAutomationPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/zion-ai-content-moderation" element={<ZionAIContentModerationPage /&gt;}></Route></div></div>
+                <Route path="/zion-ai-predictive-maintenance" element={<ZionAIPredictiveMaintenancePage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/zion-ai-fraud-detector" element={<ZionAIFraudDetectorPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/zion-ai-supply-chain-optimizer" element={<ZionAISupplyChainOptimizerPage /&gt;}></Route></div></div>
+                <Route path="/zion-ai-document-ai" element={<ZionAIDocumentAIPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/zion-ai-customer-service-pro" element={<ZionAICustomerServiceProPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/zion-ai-contract-analyzer" element={<ZionAIContractAnalyzerPage /&gt;}></Route></div></div>
+                <Route path="/zion-ai-translator-pro" element={<ZionAITranslatorProPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/zion-invoice-genius" element={<ZionInvoiceGeniusPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/zion-inventory-smart" element={<ZionInventorySmartPage /&gt;}></Route></div></div>
+                <Route path="/zion-compliance-manager" element={<ZionComplianceManagerPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/zion-performance-monitor" element={<ZionPerformanceMonitorPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/zion-ai-code-reviewer" element={<ZionAICodeReviewerPage /&gt;}></Route></div></div>
+                <Route path="/zion-ai-survey-builder" element={<ZionAISurveyBuilderPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/zion-ai-marketing-automation" element={<ZionAIMarketingAutomationPage /&gt;}><div></Route></div></div></div>
+                <div><div><Route path="/zion-ai-accounting-assistant" element={<ZionAIAccountingAssistantPage /&gt;}></Route></div></div>
+                <Route path="/zion-ai-seo-optimizer" element={<ZionAISEOOptimizerPage /&gt;}></div><div><div></Route></div></div>
+                <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage /&gt;}><div></Route></div></div></div>
                 <Route path="/zion-customer-insights" element={<ZionAICustomerInsightsPage /&gt;}></Route>
                 {/* 5G Solutions Routes */}
                 <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
@@ -410,10 +410,10 @@ function App() {
                 <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                 <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-            <div></Routes>
-          </Suspense></div>
-        </BrowserRouter></div>
-      </HelmetProvider></div>
+            <div><div></Routes>
+          </Suspense></div></div>
+        </BrowserRouter><div></div>
+      </HelmetProvider></div></div>
     </ErrorBoundary>
   );
 }
@@ -503,12 +503,12 @@ function App() {
                 <Route path="/support" element={<SupportPage />} />
                 <Route path="/status" element={<StatusPage />} />
                 <Route path="/consultation" element={<ConsultationPage />} />
-              <div></Routes>
-            </Suspense></div>
+              <div><div></Routes>
+            </Suspense></div></div>
           </div></div>
-        <div></BrowserRouter></div>
+        <div><div></BrowserRouter></div></div>
       </HelmetProvider>
-    </ErrorBoundary></div></div>
+    <div></ErrorBoundary></div></div></div>
     </>
   );
 };

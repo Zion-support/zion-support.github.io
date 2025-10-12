@@ -144,54 +144,54 @@ import { ArrowRight } from 'lucide-react';
 export default function PerformanceOptimizer() {
   return (
       {/* Hero Section */}
-      <div><section className="relativepy-20 px-4 sm:px-6 lg:px-8"></section></div>
-        <div className="max-w-7xl mx-auto"></div><div></div></div>
-          <div className="text-center"></div></div></div>
-            <div><h1 className="text-4xlmd:text-6xl font-bold text-white mb-6"></h1></div>
-              <span className="bg-gradient-to-rfrom-purple-400 to-blue-400 bg-clip-text text-transparent"></div></span></div>
+      <div><div><section className="relativepy-20 px-4 sm:px-6 lg:px-8"></section></div></div>
+        <div className="max-w-7xl mx-auto"></div><div><div></div></div></div>
+          <div className="text-center"><div></div></div></div></div>
+            <div><div><h1 className="text-4xlmd:text-6xl font-bold text-white mb-6"></h1></div></div>
+              <span className="bg-gradient-to-rfrom-purple-400 to-blue-400 bg-clip-text text-transparent"><div></div></span></div></div>
                 Performance Optimizer;
-              <div></span>
-            </h1></div>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></div></p></div>
+              <div><div></span>
+            </h1></div></div>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"><div></div></p></div></div>
               Optimize your application's performance with our advanced optimization tools and techniques.
             <div></p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center"></div></div></div>
+            <div className="flexflex-col sm:flex-row gap-4 justify-center"><div></div></div></div></div>
               <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"></button>
                 Get Started;
-                <div><ArrowRight className="ml-2h-5w-5"></ArrowRight></div>
+                <div><div><ArrowRight className="ml-2h-5w-5"></ArrowRight></div></div>
               </button></div>
-              <button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button></div>
+              <div><button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"></button></div></div>
                 Learn More;
-              <div></button>
-            </div></div>
-          </div></div>
-        </div></div>
+              <div><div></button>
+            </div></div></div>
+          </div><div></div>
+        </div></div></div>
       </section>
       {/* Features Section */}
-      <div><section className="py-20px-4 sm:px-6 lg:px-8"></section></div>
-        <div className="max-w-7xl mx-auto"></div><div></div></div>
-          <div className="text-centermb-16"></div></div></div>
+      <div><div><section className="py-20px-4 sm:px-6 lg:px-8"></section></div></div>
+        <div className="max-w-7xl mx-auto"></div><div><div></div></div></div>
+          <div className="text-centermb-16"><div></div></div></div></div>
             <h2 className="text-3xlmd:text-4xl font-bold text-white mb-4"></h2>
               Our Features;
             <div></h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p></div></div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"><div></p></div></div></div>
               Discover the powerful features that make our performance optimizer solutions stand out.
-            <div></p>
-          </div></div>
-          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>
+            <div><div></p>
+          </div></div></div>
+          <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"><div></div></div></div></div>
             {features.map((feature, index) => (
-              <div><div key={index} className="bg-gray-800/50backdrop-blur-xl rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"></div></div>
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div><div></div></div>
-                  <Zap className="h-6w-6text-white"></Zap></div></div>
+              <div><div><div key={index} className="bg-gray-800/50backdrop-blur-xl rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"></div></div></div>
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div><div><div></div></div></div>
+                  <Zap className="h-6w-6text-white"><div></Zap></div></div></div>
                 </div>
                 <h3 className="text-xlfont-bold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
-          <div></div>
-        </div></div>
-      </section></div>
-    </div></div>
+          <div><div></div>
+        </div></div></div>
+      </section><div></div>
+    </div></div></div>
   );
 };
       cleanupScroll()

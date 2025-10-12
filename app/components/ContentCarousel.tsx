@@ -64,48 +64,48 @@ const defaultSlides: Slide[] = [
   };
   return (
       {/* Main Carousel */}
-      <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+      <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
         <div;
           className="flex transition-transformduration-500ease-in-out"
-          style="{{" transform: `translateX(-${currentSlide * 100}%)` }}></div></div></div>
+          style="{{" transform: `translateX(-${currentSlide * 100}%)` }}><div></div></div></div></div>
           {slides.map((slide) => (
-            <div><div key="{slide.id}" className="w-fullflex-shrink-0"></div></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><div><div key="{slide.id}" className="w-fullflex-shrink-0"></div></div></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                   <h3 className="text-3 xlfont-bold text-white"  >{slide.title}</h3>
                   <p className="text-lgtext-gray-300">{slide.description}</p>
  (
                   <ul className="w-5h-5ml-2"></ul>
                     {slide.features.map((feature, index) => (
-                      <div><li key="{index}" className="flex items-center text-gray-300"></li></div>
-                        <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
+                      <div><div><li key="{index}" className="flex items-center text-gray-300"></li></div></div>
+                        <CheckCircle className="w-5h-5ml-2"><div></div></CheckCircle></div></div>
                         {feature}
                       </li>
                     ))}
           ))}
         </div>
         {/* Navigation Arrows */}
-        <div><button;
+        <div><div><button;
           onClick="{prevSlide}"
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
-          aria-label="Previous slide"></button></div>
-          <ChevronLeft className="w-5h-5ml-2"></div><div></ChevronLeft></div>
+          aria-label="Previous slide"></button></div></div>
+          <ChevronLeft className="w-5h-5ml-2"></div><div><div></ChevronLeft></div></div>
         </button>
         <button;
           onClick="{nextSlide}"
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
-          aria-label="Next slide"></div><div></button></div>
-          <ChevronRight className="w-5h-5ml-2"></ChevronRight></div></div>
+          aria-label="Next slide"></div><div><div></button></div></div>
+          <ChevronRight className="w-5h-5ml-2"><div></ChevronRight></div></div></div>
         </button>
       </div>
       {/* Controls */}
-      <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+      <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
         <button;
           onClick="{togglePlayPause}"
           className="bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
-          aria-label="{isPlaying" ? 'Pause' : 'Play'}></div></button></div>
-          {isPlaying ? <div><Pause className="w-5h-5ml-2" /&gt; : <Play className="w-5h-5ml-2" /&gt;}</Pause></Pause></div>
-        </button></div></Pause></div>
+          aria-label="{isPlaying" ? 'Pause' : 'Play'}><div></div></button></div></div>
+          {isPlaying ? <div><div><Pause className="w-5h-5ml-2" /&gt; : <Play className="w-5h-5ml-2" /&gt;}</Pause></Pause></div></div>
+        </button><div></div></Pause></div></div>
         {/* Slide Indicators */}
  (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>

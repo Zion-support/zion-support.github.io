@@ -34,25 +34,25 @@ interface ServicePageProps {
  (
                   <span className="text-gray-300">{benefit}</span>
               ))}
-            <div></ul>
-          </div></div>
-          <div></div></div></div>
+            <div><div></ul>
+          </div></div></div>
+          <div><div></div></div></div></div>
             <h2 className="text-3 xl font-bold text-white mb-6"  >Features<div></h2>
-            <ul className="w-5h-5ml-2"></ul></div></div>
+            <ul className="w-5h-5ml-2"><div></ul></div></div></div>
               {features.map((feature, index) => (
-                <div><li key="{index}" className="flexitems-start"></li></div>
-                  <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
+                <div><div><li key="{index}" className="flexitems-start"></li></div></div>
+                  <CheckCircle className="w-5h-5ml-2"><div></div></CheckCircle></div></div>
                   <span className="text-gray-300"  >{feature}</span>
                 </li>
               ))}
-            <div></ul>
-          </div></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><div></ul>
+          </div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
           <h2 className="text-3 xl font-bold text-white mb-4"  >Pricing</h2>
           <p className="text-2 xl font-boldtext-cyan-400 mb-6">{pricing}</p>
           <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-all duration-300">Contact Us for Details;
-          <div></Link>
-        </div></div>
+          <div><div></Link>
+        </div></div></div>
     </div></div>
   )
 };

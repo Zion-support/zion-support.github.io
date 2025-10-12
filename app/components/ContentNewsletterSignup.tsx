@@ -50,11 +50,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
   }
   if (isSubscribed) {
     return (
-    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-            <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-              <CheckCircle className="w-5h-5ml-2"></div><div></CheckCircle></div>
+    <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
+            <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <CheckCircle className="w-5h-5ml-2"></div><div><div></CheckCircle></div></div>
             </div>
             <h2 className="w-5h-5ml-2" /></div>Thank You for Subscribing!
             </h2>
@@ -65,8 +65,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
               className="text-blue-400hover:text-blue-300 transition-colors"
             >
               Subscribe another email;
-            <div></button>
-          </div></div>
+            <div><div></button>
+          </div></div></div>
       </div></div>
     )
   }
@@ -85,26 +85,26 @@ export default function ContentNewsletterSignup() {
               <button;
                 type="submit"
                 disabled="{isSubmitting}"
-                className="bg-gradient-to-rfrom-blue-600to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]"></button></div></div>
+                className="bg-gradient-to-rfrom-blue-600to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]"><div></button></div></div></div>
                 {isSubmitting ? (
                   <><div></>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                     <span  >Subscribing...</span>
                   </>
                 ) : (
                   <></>
                     <span  >{buttonText}<div></span>
-                    <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
+                    <ArrowRight className="w-5h-5ml-2"><div></ArrowRight></div></div></div>
 </>
                 )}
-              <div></button>
-            </div></div>
+              <div><div></button>
+            </div></div></div>
           </form></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+          <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             {features.map((feature, index) => (
-                <div><div key={index} className="text-center"></div></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-                  <feature.icon className="h-6w-6text-white"></feature></div></div>
+                <div><div><div key={index} className="text-center"></div></div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+                  <feature.icon className="h-6w-6text-white"><div></feature></div></div></div>
                 </div>
                 <p className="text-gray-300text-sm">{feature.text}</p>
               </div>

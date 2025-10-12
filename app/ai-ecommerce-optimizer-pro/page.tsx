@@ -84,31 +84,31 @@ const Page: React.FC = () => {
     }
   ];
   return (
-    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-      <Helmet></div></Helmet></div>
+    <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+      <Helmet><div></div></Helmet></div></div>
         <title>Service - Zion Tech Group<div></title>
-        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions."></meta></div></div>
+        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions."><div></meta></div></div></div>
       <div></Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div></div></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"><div></div></div></div></div>
         {/* Hero Section */}
-        <div><section className="w-5h-5ml-2"></section></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-            <h1 className="w-5h-5ml-2"></h1></div></div>
+        <div><div><section className="w-5h-5ml-2"></section></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+            <h1 className="w-5h-5ml-2"><div></h1></div></div></div>
               <span className="w-5h-5ml-2"></span>
                 AI E-commerce Optimizer Pro;
-              <div></span>
-            </h1></div>
+              <div><div></span>
+            </h1></div></div>
             <p className="w-5h-5ml-2"></div>Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs.
             <div></p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
               <Link;</Link></Link>
           to="/contact"
           className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
         ></Link>
           Get Started;
-          <div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div>
+          <div><div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
         </Link></div>
-              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105"></Link></div>
+              <div><Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105"></Link></div></div>
                 Learn More;
                 />View All Services;
 'use client';

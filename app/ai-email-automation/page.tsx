@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
-import { Mail, Send, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Clock, Brain, Shield, DollarSign } from 'lucide-react'
+import { Mail, Send, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Clock, Brain, Shield, DollarSign } from 'lucide-react';
 import { Link } from 'react-router-dom';
 export default AIEmailAutomationPage;
 const AIEmailAutomationPage: React.FC = () => {
@@ -128,48 +128,48 @@ const AIEmailAutomationPage: React.FC = () => {
   );
 }
     <><div></>
-      <Helmet></Helmet></div></div>
+      <Helmet><div></Helmet></div></div></div>
         <title>AI Email Automation - Smart Email Marketing | Zion Tech Group<div></title>
-        <meta name="description" content="Revolutionary AI-powered email automation with content generation, smart segmentation, and performance analytics. Increase revenue by 300% and save 20+ hours per week."></meta></div></div>
-        <div><meta name="keywords" content="AI email automation, email marketing, email generation, lead scoring, email analytics, marketing automation, AI content creation"></meta></div>
-        <meta name="robots" content="index, follow"></div><div></meta></div>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-email-automation"></link></div></div>
+        <meta name="description" content="Revolutionary AI-powered email automation with content generation, smart segmentation, and performance analytics. Increase revenue by 300% and save 20+ hours per week."><div></meta></div></div></div>
+        <div><div><meta name="keywords" content="AI email automation, email marketing, email generation, lead scoring, email analytics, marketing automation, AI content creation"></meta></div></div>
+        <meta name="robots" content="index, follow"></div><div><div></meta></div></div>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-email-automation"><div></link></div></div></div>
       </Helmet>
       {/* Hero Section */}
-      <div><section className="w-5h-5ml-2"></section></div>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-        <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-            <Mail className="w-5h-5ml-2"></Mail></div></div>
-            <span />AI-Powered Email Marketing<div></span>
-          </div></div>
-          <h1 className="w-5h-5ml-2"></div></h1></div>
+      <div><div><section className="w-5h-5ml-2"></section></div></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
+        <div><div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+            <Mail className="w-5h-5ml-2"><div></Mail></div></div></div>
+            <span />AI-Powered Email Marketing<div><div></span>
+          </div></div></div>
+          <h1 className="w-5h-5ml-2"><div></div></h1></div></div>
             AI Email;
-            <div><br></br></div>
+            <div><div><br></br></div></div>
             <span className="w-5h-5ml-2" /></div>Automation Pro;
-            <div></span>
-          </h1></div>
+            <div><div></span>
+          </h1></div></div>
           <p className="w-5h-5ml-2"></div>Transform your email marketing with AI-powered automation,
             content generation, and performance optimization that increases revenue by 300%.
           <div></p>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-            <div><Link to="/contact" className="groupbg-gradient-to-r from-blue-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40transformhover:scale-105"></Link></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
+            <div><div><Link to="/contact" className="groupbg-gradient-to-r from-blue-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40transformhover:scale-105"></Link></div></div>
               <span /></div>Start Free Trial<div></span>
-              <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
+              <ArrowRight className="w-5h-5ml-2"><div></ArrowRight></div></div></div>
             <div></Link>
-            <Link to="#demo" className="groupborder-2 border-blue-400 text-blue-400 px-10 py-4 rounded-xl font-semibold hover:bg-blue-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm"></Link></div></div>
+            <Link to="#demo" className="groupborder-2 border-blue-400 text-blue-400 px-10 py-4 rounded-xl font-semibold hover:bg-blue-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm"><div></Link></div></div></div>
               <span />Watch Demo<div></span>
-              <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
-            <div></Link>
-          </div></div>
+              <ArrowRight className="w-5h-5ml-2"><div></ArrowRight></div></div></div>
+            <div><div></Link>
+          </div></div></div>
       </section></div>
       {/* Stats Section */}
-      <div><section className="w-5h-5ml-2"></section></div>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+      <div><div><section className="w-5h-5ml-2"></section></div></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
             {stats.map((stat, index) => (
-              <div><div key={index} className="text-centerbg-white/5 backdrop-blur-sm rounded-2 xl p-6 borderborder-white/10"></div></div>
+              <div><div><div key={index} className="text-centerbg-white/5 backdrop-blur-sm rounded-2 xl p-6 borderborder-white/10"></div></div></div>
                 <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>{stat.icon}
                 </div>
                 <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}
@@ -180,29 +180,29 @@ const AIEmailAutomationPage: React.FC = () => {
           </div>
       </section>
       {/* Features Section */}
-      <div><section className="w-5h-5ml-2"></section></div>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+      <div><div><section className="w-5h-5ml-2"></section></div></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
             <h2 className="w-5h-5ml-2"></h2>
-              Advanced <span className="w-5h-5ml-2" />Features<div></span>
-            </h2></div>
+              Advanced <span className="w-5h-5ml-2" />Features<div><div></span>
+            </h2></div></div>
             <p className="w-5h-5ml-2"></div>Our AI-powered email automation platform uses machine learning to create,
               send, and optimize email campaigns that drive real business results.
-            <div></p>
-          </div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><div></p>
+          </div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
             {features.map((feature, index) => (
-              <div><div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105"></div></div>
+              <div><div><div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105"></div></div></div>
                 <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>{feature.icon}
                 </div>
                 <h3 className="w-5h-5ml-2" />{feature.title}
                 </h3>
                 <p className="w-5h-5ml-2">{feature.description}
                 <div></p>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <div><div key={benefitIndex} className="flex items-center space-x-2text-gray-400text-sm"></div></div>
-                      <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
+                    <div><div><div key={benefitIndex} className="flex items-center space-x-2text-gray-400text-sm"></div></div></div>
+                      <CheckCircle className="w-5h-5ml-2"><div></div></CheckCircle></div></div>
                       <span />{benefit}</span>
                     </div>
                   ))}
@@ -211,17 +211,17 @@ const AIEmailAutomationPage: React.FC = () => {
           </div>
       </section>
       {/* Pricing Section */}
-      <div><section className="w-5h-5ml-2"></section></div>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+      <div><div><section className="w-5h-5ml-2"></section></div></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
             <h2 className="w-5h-5ml-2"></h2>
-              Transparent <span className="w-5h-5ml-2" />Pricing<div></span>
-            </h2></div>
+              Transparent <span className="w-5h-5ml-2" />Pricing<div><div></span>
+            </h2></div></div>
             <p className="w-5h-5ml-2"></div>Choose the perfect plan for your email marketing needs. All plans include our core AI features;
               with scalable options for businesses of all sizes.
-            <div></p>
-          </div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><div></p>
+          </div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
             {pricingPlans.map((plan, index) => (
               <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
                 plan.popular;
@@ -229,26 +229,26 @@ const AIEmailAutomationPage: React.FC = () => {
                   : 'border-white/20 hover: border-white/40'
               }`}></div>
                 {plan.popular && (
-                  <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                  <div><div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>Most Popular;
                     </div>
                 )}
-                <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                <div><div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                   <h3 className="w-5h-5ml-2" /></div>{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}<div></p>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                     <span className="w-5h-5ml-2" />{plan.price}</span>
-                    <span className="w-5h-5ml-2" />{plan.period}<div></span>
-                  </div></div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                    <span className="w-5h-5ml-2" />{plan.period}<div><div></span>
+                  </div></div></div>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                   {plan.features.map((feature, featureIndex) => (
-                    <div><div key={featureIndex} className="flex items-centerspace-x-3"></div></div>
-                      <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
+                    <div><div><div key={featureIndex} className="flex items-centerspace-x-3"></div></div></div>
+                      <CheckCircle className="w-5h-5ml-2"><div></div></CheckCircle></div></div>
                       <span className="w-5h-5ml-2" />{feature}</span>
                     </div>
                   ))}
                 <div></div>
-                <Link;</Link></Link></div></div>
+                <Link;</Link><div></Link></div></div></div>
                   to="/contact"
                   className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular;
@@ -262,26 +262,26 @@ const AIEmailAutomationPage: React.FC = () => {
           </div>
       </section>
       {/* Testimonials Section */}
-      <div><section className="w-5h-5ml-2"></section></div>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+      <div><div><section className="w-5h-5ml-2"></section></div></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
             <h2 className="w-5h-5ml-2"></h2>
-              Trusted by <span className="w-5h-5ml-2" />Marketers<div></span>
-            </h2></div>
+              Trusted by <span className="w-5h-5ml-2" />Marketers<div><div></span>
+            </h2></div></div>
             <p className="w-5h-5ml-2"></div>See how AI Email Automation is transforming email marketing for businesses worldwide.
-            <div></p>
-          </div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><div></p>
+          </div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
             {testimonials.map((testimonial, index) => (
-              <div><div key={index} className="bg-white/10backdrop-blur-lg rounded-2 xl p-8 borderborder-white/20"></div></div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <div><div><div key={index} className="bg-white/10backdrop-blur-lg rounded-2 xl p-8 borderborder-white/20"></div></div></div>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
                   <div></div>
-                  <div></div></div></div>
+                  <div><div></div></div></div></div>
                     <h4 className="w-5h-5ml-2" />{testimonial.name}</h4>
-                    <p className="w-5h-5ml-2">{testimonial.company}<div></p>
-                  </div></div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                    <p className="w-5h-5ml-2">{testimonial.company}<div><div></p>
+                  </div></div></div>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5h-5tex t-yellow-400fill-current"></Star>
                   ))}
@@ -292,28 +292,28 @@ const AIEmailAutomationPage: React.FC = () => {
           </div>
       </section>
       {/* CTA Section */}
-      <div><section className="w-5h-5ml-2"></section></div>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-          <h2 className="w-5h-5ml-2"></h2></div></div>
+      <div><div><section className="w-5h-5ml-2"></section></div></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+          <h2 className="w-5h-5ml-2"><div></h2></div></div></div>
             Ready to Revolutionize Your;
-            <div><br></br></div>
+            <div><div><br></br></div></div>
             <span className="w-5h-5ml-2" /></div>Email Marketing?
-            <div></span>
-          </h2></div>
+            <div><div></span>
+          </h2></div></div>
           <p className="w-5h-5ml-2"></div>Join thousands of marketers already increasing revenue and saving time with AI Email Automation.
             Start your free trial today - no credit card required.
           <div></p>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-            <div><Link to="/contact" className="groupbg-white text-blue-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105"></Link></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
+            <div><div><Link to="/contact" className="groupbg-white text-blue-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105"></Link></div></div>
               <span /></div>Start Free Trial<div></span>
-              <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
+              <ArrowRight className="w-5h-5ml-2"><div></ArrowRight></div></div></div>
             <div></Link>
-            <Link to="/pricing" className="groupborder-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm"></Link></div></div>
+            <Link to="/pricing" className="groupborder-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm"><div></Link></div></div></div>
               <span />View All Plans<div></span>
-              <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
-            <div></Link>
-          </div></div>
-      </section></div>
-    </></div>
+              <ArrowRight className="w-5h-5ml-2"><div></ArrowRight></div></div></div>
+            <div><div></Link>
+          </div></div></div>
+      </section><div></div>
+    </></div></div>
   )
 }

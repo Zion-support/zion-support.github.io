@@ -4,19 +4,19 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 const NotFound: React.FC = () => {
   return (
-    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-          <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-            <span className="text-4xl"  ></div>404<div></span>
-          </div></div>
+    <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
+          <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <span className="text-4xl"  ></div>404<div><div></span>
+          </div></div></div>
         <h1 className="w-5h-5ml-2"></div>Page Not Found;
         </h1>
         <p className="w-5h-5ml-2">Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
         <div></p>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-          <div><Link to="/" className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors"></Link></div>
-            <Home className="w-5h-5ml-2"></div></Home></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
+          <div><div><Link to="/" className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors"></Link></div></div>
+            <Home className="w-5h-5ml-2"><div></div></Home></div></div>
             Go Home;
           </Link>
           <button;
@@ -32,8 +32,8 @@ const NotFound: React.FC = () => {
           >
             <RefreshCw className="w-5h-5ml-2"></RefreshCw>
             Refresh;
-          <div></button>
-        </div></div>
+          <div><div></button>
+        </div></div></div>
     </div></div>
   )
 };

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
-import { Clock, Timer, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Target, Brain, Shield } from 'lucide-react'
+import { Clock, Timer, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Target, Brain, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 export default AITimeTrackerPage;
 const AITimeTrackerPage: React.FC = () => {
@@ -128,48 +128,48 @@ const AITimeTrackerPage: React.FC = () => {
   );
 }
     <><div></>
-      <Helmet></Helmet></div></div>
+      <Helmet><div></Helmet></div></div></div>
         <title>AI Time Tracker - Smart Productivity Management | Zion Tech Group<div></title>
-        <meta name="description" content="Revolutionary AI-powered time tracking with activity recognition, productivity analytics, and automated reporting. Increase productivity by 40% and deliver projects 20% faster."></meta></div></div>
-        <div><meta name="keywords" content="AI time tracking, productivity management, activity recognition, time analytics, project management, work optimization"></meta></div>
-        <meta name="robots" content="index, follow"></div><div></meta></div>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-time-tracker"></link></div></div>
+        <meta name="description" content="Revolutionary AI-powered time tracking with activity recognition, productivity analytics, and automated reporting. Increase productivity by 40% and deliver projects 20% faster."><div></meta></div></div></div>
+        <div><div><meta name="keywords" content="AI time tracking, productivity management, activity recognition, time analytics, project management, work optimization"></meta></div></div>
+        <meta name="robots" content="index, follow"></div><div><div></meta></div></div>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-time-tracker"><div></link></div></div></div>
       </Helmet>
       {/* Hero Section */}
-      <div><section className="w-5h-5ml-2"></section></div>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-        <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-            <Clock className="w-5h-5ml-2"></Clock></div></div>
-            <span />AI-Powered Time Management<div></span>
-          </div></div>
-          <h1 className="w-5h-5ml-2"></div></h1></div>
+      <div><div><section className="w-5h-5ml-2"></section></div></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
+        <div><div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+            <Clock className="w-5h-5ml-2"><div></Clock></div></div></div>
+            <span />AI-Powered Time Management<div><div></span>
+          </div></div></div>
+          <h1 className="w-5h-5ml-2"><div></div></h1></div></div>
             AI Time;
-            <div><br></br></div>
+            <div><div><br></br></div></div>
             <span className="w-5h-5ml-2" /></div>Tracker Pro;
-            <div></span>
-          </h1></div>
+            <div><div></span>
+          </h1></div></div>
           <p className="w-5h-5ml-2"></div>Transform your productivity with AI-powered time tracking,
             activity recognition, and intelligent insights that increase efficiency by 40%.
           <div></p>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-            <div><Link to="/contact" className="groupbg-gradient-to-r from-indigo-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-indigo-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40transformhover:scale-105"></Link></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
+            <div><div><Link to="/contact" className="groupbg-gradient-to-r from-indigo-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-indigo-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40transformhover:scale-105"></Link></div></div>
               <span /></div>Start Free Trial<div></span>
-              <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
+              <ArrowRight className="w-5h-5ml-2"><div></ArrowRight></div></div></div>
             <div></Link>
-            <Link to="#demo" className="groupborder-2 border-indigo-400 text-indigo-400 px-10 py-4 rounded-xl font-semibold hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm"></Link></div></div>
+            <Link to="#demo" className="groupborder-2 border-indigo-400 text-indigo-400 px-10 py-4 rounded-xl font-semibold hover:bg-indigo-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm"><div></Link></div></div></div>
               <span />Watch Demo<div></span>
-              <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
-            <div></Link>
-          </div></div>
+              <ArrowRight className="w-5h-5ml-2"><div></ArrowRight></div></div></div>
+            <div><div></Link>
+          </div></div></div>
       </section></div>
       {/* Stats Section */}
-      <div><section className="w-5h-5ml-2"></section></div>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+      <div><div><section className="w-5h-5ml-2"></section></div></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
             {stats.map((stat, index) => (
-              <div><div key={index} className="text-centerbg-white/5 backdrop-blur-sm rounded-2 xl p-6 borderborder-white/10"></div></div>
+              <div><div><div key={index} className="text-centerbg-white/5 backdrop-blur-sm rounded-2 xl p-6 borderborder-white/10"></div></div></div>
                 <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>{stat.icon}
                 </div>
                 <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}
@@ -180,29 +180,29 @@ const AITimeTrackerPage: React.FC = () => {
           </div>
       </section>
       {/* Features Section */}
-      <div><section className="w-5h-5ml-2"></section></div>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+      <div><div><section className="w-5h-5ml-2"></section></div></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
             <h2 className="w-5h-5ml-2"></h2>
-              Intelligent <span className="w-5h-5ml-2" />Features<div></span>
-            </h2></div>
+              Intelligent <span className="w-5h-5ml-2" />Features<div><div></span>
+            </h2></div></div>
             <p className="w-5h-5ml-2"></div>Our AI-powered time tracking platform uses machine learning to automatically;
               track activities, analyze productivity patterns, and provide actionable insights.
-            <div></p>
-          </div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><div></p>
+          </div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
             {features.map((feature, index) => (
-              <div><div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105"></div></div>
+              <div><div><div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105"></div></div></div>
                 <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>{feature.icon}
                 </div>
                 <h3 className="w-5h-5ml-2" />{feature.title}
                 </h3>
                 <p className="w-5h-5ml-2">{feature.description}
                 <div></p>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <div><div key={benefitIndex} className="flex items-center space-x-2text-gray-400text-sm"></div></div>
-                      <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
+                    <div><div><div key={benefitIndex} className="flex items-center space-x-2text-gray-400text-sm"></div></div></div>
+                      <CheckCircle className="w-5h-5ml-2"><div></div></CheckCircle></div></div>
                       <span />{benefit}</span>
                     </div>
                   ))}
@@ -211,17 +211,17 @@ const AITimeTrackerPage: React.FC = () => {
           </div>
       </section>
       {/* Pricing Section */}
-      <div><section className="w-5h-5ml-2"></section></div>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+      <div><div><section className="w-5h-5ml-2"></section></div></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
             <h2 className="w-5h-5ml-2"></h2>
-              Simple <span className="w-5h-5ml-2" />Pricing<div></span>
-            </h2></div>
+              Simple <span className="w-5h-5ml-2" />Pricing<div><div></span>
+            </h2></div></div>
             <p className="w-5h-5ml-2"></div>Choose the perfect plan for your time tracking needs. All plans include our core AI features;
               with flexible options for individuals and teams.
-            <div></p>
-          </div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><div></p>
+          </div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
             {pricingPlans.map((plan, index) => (
               <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
                 plan.popular;
@@ -229,26 +229,26 @@ const AITimeTrackerPage: React.FC = () => {
                   : 'border-white/20 hover: border-white/40'
               }`}></div>
                 {plan.popular && (
-                  <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                  <div><div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>Most Popular;
                     </div>
                 )}
-                <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                <div><div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                   <h3 className="w-5h-5ml-2" /></div>{plan.name}</h3>
                   <p className="w-5h-5ml-2">{plan.description}<div></p>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                     <span className="w-5h-5ml-2" />{plan.price}</span>
-                    <span className="w-5h-5ml-2" />{plan.period}<div></span>
-                  </div></div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                    <span className="w-5h-5ml-2" />{plan.period}<div><div></span>
+                  </div></div></div>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                   {plan.features.map((feature, featureIndex) => (
-                    <div><div key={featureIndex} className="flex items-centerspace-x-3"></div></div>
-                      <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
+                    <div><div><div key={featureIndex} className="flex items-centerspace-x-3"></div></div></div>
+                      <CheckCircle className="w-5h-5ml-2"><div></div></CheckCircle></div></div>
                       <span className="w-5h-5ml-2" />{feature}</span>
                     </div>
                   ))}
                 <div></div>
-                <Link;</Link></Link></div></div>
+                <Link;</Link><div></Link></div></div></div>
                   to="/contact"
                   className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular;
@@ -262,26 +262,26 @@ const AITimeTrackerPage: React.FC = () => {
           </div>
       </section>
       {/* Testimonials Section */}
-      <div><section className="w-5h-5ml-2"></section></div>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+      <div><div><section className="w-5h-5ml-2"></section></div></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
             <h2 className="w-5h-5ml-2"></h2>
-              Trusted by <span className="w-5h-5ml-2" />Professionals<div></span>
-            </h2></div>
+              Trusted by <span className="w-5h-5ml-2" />Professionals<div><div></span>
+            </h2></div></div>
             <p className="w-5h-5ml-2"></div>See how AI Time Tracker is transforming productivity for professionals and teams worldwide.
-            <div></p>
-          </div></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><div></p>
+          </div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
             {testimonials.map((testimonial, index) => (
-              <div><div key={index} className="bg-white/10backdrop-blur-lg rounded-2 xl p-8 borderborder-white/20"></div></div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <div><div><div key={index} className="bg-white/10backdrop-blur-lg rounded-2 xl p-8 borderborder-white/20"></div></div></div>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
                   <div></div>
-                  <div></div></div></div>
+                  <div><div></div></div></div></div>
                     <h4 className="w-5h-5ml-2" />{testimonial.name}</h4>
-                    <p className="w-5h-5ml-2">{testimonial.company}<div></p>
-                  </div></div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                    <p className="w-5h-5ml-2">{testimonial.company}<div><div></p>
+                  </div></div></div>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5h-5tex t-yellow-400fill-current"></Star>
                   ))}
@@ -292,28 +292,28 @@ const AITimeTrackerPage: React.FC = () => {
           </div>
       </section>
       {/* CTA Section */}
-      <div><section className="w-5h-5ml-2"></section></div>
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
-          <h2 className="w-5h-5ml-2"></h2></div></div>
+      <div><div><section className="w-5h-5ml-2"></section></div></div>
+        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
+          <h2 className="w-5h-5ml-2"><div></h2></div></div></div>
             Ready to Boost Your;
-            <div><br></br></div>
+            <div><div><br></br></div></div>
             <span className="w-5h-5ml-2" /></div>Productivity?
-            <div></span>
-          </h2></div>
+            <div><div></span>
+          </h2></div></div>
           <p className="w-5h-5ml-2"></div>Join thousands of professionals already increasing productivity and improving work-life balance with AI Time Tracker.
             Start your free trial today - no credit card required.
           <div></p>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-            <div><Link to="/contact" className="groupbg-white text-indigo-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105"></Link></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
+            <div><div><Link to="/contact" className="groupbg-white text-indigo-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105"></Link></div></div>
               <span /></div>Start Free Trial<div></span>
-              <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
+              <ArrowRight className="w-5h-5ml-2"><div></ArrowRight></div></div></div>
             <div></Link>
-            <Link to="/pricing" className="groupborder-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm"></Link></div></div>
+            <Link to="/pricing" className="groupborder-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm"><div></Link></div></div></div>
               <span />View All Plans<div></span>
-              <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
-            <div></Link>
-          </div></div>
-      </section></div>
-    </></div>
+              <ArrowRight className="w-5h-5ml-2"><div></ArrowRight></div></div></div>
+            <div><div></Link>
+          </div></div></div>
+      </section><div></div>
+    </></div></div>
   )
 }
