@@ -53,10 +53,10 @@ const FuturisticBackgroundPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Started
-  </
+              </button>
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 Learn More
-  </
+              </button>
             </div>
           </div>
         </section>
@@ -66,10 +66,10 @@ const FuturisticBackgroundPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Key Features
-  </
+              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Powerful AI technology that drives results
-  </
+              </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
