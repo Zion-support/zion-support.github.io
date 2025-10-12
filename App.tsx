@@ -19,6 +19,10 @@ const CareersPage = React.lazy(() => import('./app/careers/page'))
 const BlogPage = React.lazy(() => import('./app/blog/page'))
 const PrivacyPolicyPage = React.lazy(() => import('./app/privacy-policy/page'))
 const TermsOfServicePage = React.lazy(() => import('./app/terms-of-service/page'))
+const DevOpsSolutionsPage = React.lazy(() => import('./app/devops-solutions/page'))
+const AIContentManagementPage = React.lazy(() => import('./app/ai-content-management/page'))
+const DocumentationPage = React.lazy(() => import('./app/documentation/page'))
+const APIReferencePage = React.lazy(() => import('./app/api-reference/page'))
 
 // Loading component for Suspense
 const PageLoader = () => (
@@ -50,6 +54,10 @@ function App() {
                 <Route path="/blog" element={<BlogPage />} />
                 <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
                 <Route path="/terms-of-service" element={<TermsOfServicePage />} />
+                <Route path="/devops-solutions" element={<DevOpsSolutionsPage />} />
+                <Route path="/ai-content-management" element={<AIContentManagementPage />} />
+                <Route path="/documentation" element={<DocumentationPage />} />
+                <Route path="/api-reference" element={<APIReferencePage />} />
                 {/* 404 Route */}
                 <Route path="*" element={
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
