@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -53,6 +56,7 @@ const ItServicesPage: React.FC = () => {
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       category: 'Security'
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -100,14 +104,19 @@ const ITServicesPage: React.FC = () => {
       price: 'Starting at $1,800/month'
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
 >>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
     },
     {
       icon: Code,
       title: 'Web Development',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
       description: 'Modern, responsive web applications built to scale',
       price: 'Starting at $8,000',
       features: [
@@ -118,7 +127,6 @@ const ITServicesPage: React.FC = () => {
         'Mobile optimization',
         'Cross-browser compatibility'
       ],
-      icon: Code,
       color: 'from-green-500 to-emerald-500',
       category: 'Development'
     },
@@ -434,6 +442,7 @@ const ITServicesPage: React.FC = () => {
   const filteredServices = selectedCategory === 'All' 
     ? itServices 
     : itServices.filter(service => service.category === selectedCategory);
+<<<<<<< HEAD
 =======
       description: 'Modern, responsive web applications built with the latest technologies and best practices.',
       features: ['React/Next.js', 'Node.js Backend', 'Database Design', 'API Development'],
@@ -534,14 +543,19 @@ const ITServicesPage: React.FC = () => {
   ];
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
 >>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
 
   return (
     <>
       <Helmet>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
         <title>IT Services - Zion Tech Group | Comprehensive IT Solutions</title>
         <meta name="description" content="Professional IT services including cloud infrastructure, cybersecurity, web development, mobile apps, and DevOps. Transform your business with our expert IT solutions." />
         <meta name="keywords" content="IT services, cloud computing, cybersecurity, web development, mobile development, DevOps, database management, IT support" />
@@ -703,6 +717,7 @@ const ITServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 =======
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive IT services including cloud migration, cybersecurity, web development, mobile apps, data analytics, and DevOps solutions." />
@@ -984,11 +999,14 @@ const ITServicesPage: React.FC = () => {
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
 >>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
       </div>
     </>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1001,3 +1019,6 @@ export default ITServicesPage;
 export default ITServicesPage;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
 >>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
+=======
+export default ItServicesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460

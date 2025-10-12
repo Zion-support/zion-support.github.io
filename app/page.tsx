@@ -1,10 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
 'use client';
 import React, { useState, useEffect } from 'react';
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart, Workflow, MessageCircle, Link as LinkIcon, Monitor } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
 
 const HomePage: React.FC = () => {
 <<<<<<< HEAD
@@ -298,6 +306,7 @@ const HomePage: React.FC = () => {
                 cybersecurity, and custom software development services to businesses worldwide.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
@@ -311,6 +320,10 @@ const HomePage: React.FC = () => {
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
+=======
+              <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <Link
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
                   to="/contact"
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"

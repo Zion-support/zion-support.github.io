@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "timestamp": "2025-10-12T10:31:19.019Z",
 =======
 <<<<<<< HEAD
@@ -28,6 +29,9 @@
   "timestamp": "2025-10-12T10:29:20.454Z",
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
 >>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
+=======
+  "timestamp": "2025-10-12T10:36:14.200Z",
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
   "optimizations": [
     "Icon imports optimized",
     "Bundle splitting improved",

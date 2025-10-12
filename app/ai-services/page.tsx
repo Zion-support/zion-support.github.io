@@ -1,11 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -126,6 +128,7 @@ const AiServicesPage: React.FC = () => {
     ? aiServices 
     : aiServices.filter(service => service.category === activeTab);
 
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -504,13 +507,18 @@ const AiServicesPage: React.FC = () => {
 
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
 >>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
   return (
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
         <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and automation. Transform your business with cutting-edge AI technology." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI automation, AI consulting" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
@@ -689,6 +697,7 @@ const AIServicesPage: React.FC = () => {
                   </div>
                 </div>
               ))}
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -867,15 +876,20 @@ const AIServicesPage: React.FC = () => {
                 </div>
               ))}
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
             </div>
           </div>
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
         {/* AI Services Tabs */}
         <section className="py-20 px-4 relative">
           <div className="relative max-w-7xl mx-auto">
@@ -956,6 +970,7 @@ const AIServicesPage: React.FC = () => {
                       className="block w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                     >
                       Learn More
+<<<<<<< HEAD
 =======
         {/* Services Grid */}
         <section className="py-20">
@@ -1138,6 +1153,8 @@ const AIServicesPage: React.FC = () => {
                     >
                       Get Quote
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
                     </Link>
                   </div>
                 </div>
@@ -1146,21 +1163,85 @@ const AIServicesPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+        {/* AI Process Section */}
+        <section className="py-20 px-4 relative">
+          <div className="relative max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Process</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                A proven methodology for successful AI implementation
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
+=======
+              {[
+                {
+                  step: '01',
+                  title: 'Discovery & Analysis',
+                  description: 'We analyze your business processes and identify AI opportunities.',
+                  icon: <Target className="w-8 h-8 text-cyan-400" />
+                },
+                {
+                  step: '02',
+                  title: 'AI Strategy & Planning',
+                  description: 'Develop a comprehensive AI roadmap tailored to your goals.',
+                  icon: <Settings className="w-8 h-8 text-purple-400" />
+                },
+                {
+                  step: '03',
+                  title: 'Model Development',
+                  description: 'Build and train custom AI models for your specific use cases.',
+                  icon: <Brain className="w-8 h-8 text-green-400" />
+                },
+                {
+                  step: '04',
+                  title: 'Deployment & Optimization',
+                  description: 'Deploy AI solutions and continuously optimize performance.',
+                  icon: <Zap className="w-8 h-8 text-yellow-400" />
+                }
+              ].map((step, index) => (
+                <div key={index} className="text-center group">
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {step.icon}
+                  </div>
+                  <div className="text-cyan-400 font-bold text-lg mb-2">{step.step}</div>
+                  <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{step.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
               </div>
 =======
                   <div className="text-cyan-400 font-semibold text-sm mb-4">
                     {service.price}
                   </div>
+=======
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
+              <div className="relative z-10">
+                <h2 className="text-4xl font-bold text-white mb-6">
+                  Ready to Harness the Power of AI?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                  Let's discuss how our AI solutions can transform your business and give you a competitive edge.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
                   <Link 
                     to="/contact"
                     className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-block"
@@ -1168,17 +1249,24 @@ const AIServicesPage: React.FC = () => {
                     Learn More →
                   </Link>
                 </div>
+<<<<<<< HEAD
               ))}
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
+=======
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
@@ -1216,6 +1304,7 @@ const AIServicesPage: React.FC = () => {
                   Learn More About Us
                 </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 >>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
               </div>
@@ -1249,6 +1338,9 @@ const AIServicesPage: React.FC = () => {
 =======
               </div>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
+=======
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
             </div>
           </div>
         </section>

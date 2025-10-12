@@ -4,7 +4,11 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
 
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-6024
+=======
+const Page: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
   return (
     <>
       <Helmet>
@@ -75,5 +79,13 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud,
           </div>
         </section>
       </div>
+<<<<<<< HEAD
 }
 >>>>>>> cursor/website-audit-and-update-with-deployment-6024
+=======
+    </>
+  );
+};
+
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
