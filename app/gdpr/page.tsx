@@ -1,9 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-
-
 import { ArrowRight } from 'lucide-react'
-
 export default function GdprPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -25,20 +21,14 @@ export default function GdprPage() {
     </div>
   )
 }
-=======
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import Layout from '../layout'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, Database, FileText } from 'lucide-react'
 import { Link } from 'react-router-dom'
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, Database, Users, FileText, AlertTriangle } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
-
 const GDPRPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: <Lock className="w-8 h-8 text-blue-500" />,
       title: 'Data Protection',
       description: 'Comprehensive data protection measures to ensure GDPR compliance.'
@@ -57,7 +47,6 @@ const GDPRPage: React.FC = () => {
       icon: <FileText className="w-8 h-8 text-orange-500" />,
       title: 'Compliance Reporting',
       description: 'Automated compliance reporting and documentation.'
-=======
       icon: <Shield className="w-8 h-8 text-cyan-400" />,
       title: 'Data Protection by Design',
       description: 'Built-in privacy protection from the ground up with GDPR compliance at every level.'
@@ -76,13 +65,10 @@ const GDPRPage: React.FC = () => {
       icon: <Database className="w-8 h-8 text-orange-400" />,
       title: 'Data Minimization',
       description: 'Collect only necessary data and implement automatic data retention policies.'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
     }
   ]
-
   const benefits = [
     'Full GDPR compliance implementation',
-<<<<<<< HEAD
     'Advanced data protection measures',
     'User consent management system',
     'Automated compliance reporting',
@@ -91,7 +77,6 @@ const GDPRPage: React.FC = () => {
     'Data subject rights management',
     'Regular compliance audits'
   ]
-
   return (
     <Layout
       title="GDPR Compliance - Zion Tech Group"
@@ -114,7 +99,6 @@ const GDPRPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Ensure your business meets GDPR requirements with our comprehensive compliance solutions. 
               Protect your customers' data and build trust with transparent privacy practices.
-=======
     'Automated data protection assessments',
     'Privacy impact analysis tools',
     'Consent management system',
@@ -123,7 +107,6 @@ const GDPRPage: React.FC = () => {
     'Privacy policy generator',
     'Compliance monitoring dashboard'
   ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -131,7 +114,6 @@ const GDPRPage: React.FC = () => {
         <meta name="description" content="Comprehensive GDPR compliance solutions with advanced data protection, privacy controls, and automated compliance monitoring." />
         <link rel="canonical" href="https://ziontechgroup.com/gdpr" />
       </Helmet>
-      
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -156,14 +138,12 @@ const GDPRPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Everything you need for complete GDPR compliance
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -181,9 +161,7 @@ const GDPRPage: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -208,7 +186,6 @@ const GDPRPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -246,7 +223,6 @@ const GDPRPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -280,11 +256,7 @@ const GDPRPage: React.FC = () => {
     </Layout>
   )
 }
-
 export default GDPRPage
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
@@ -296,7 +268,6 @@ export default GDPRPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -305,7 +276,6 @@ export default GDPRPage
               Comprehensive compliance solutions for your business
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -316,7 +286,6 @@ export default GDPRPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -340,6 +309,4 @@ export default GDPRPage
     </div>
   )
 }
-
 export default GDPRPage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a

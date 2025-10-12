@@ -1,14 +1,9 @@
 import React from 'react'
-<<<<<<< HEAD
-
-
 import { ArrowRight } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async'
 import Layout from '../layout'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Users, Award, Target, Star } from 'lucide-react'
 import { Link } from 'react-router-dom'
-
 const TeamPage: React.FC = () => {
   const teamMembers = [
     {
@@ -36,7 +31,6 @@ const TeamPage: React.FC = () => {
       image: '/team/emily-davis.jpg'
     }
   ]
-
   const values = [
     {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
@@ -59,7 +53,6 @@ const TeamPage: React.FC = () => {
       description: 'We focus on delivering measurable value to our clients'
     }
   ]
-
   const benefits = [
     'Diverse team of experts',
     'Collaborative work environment',
@@ -68,10 +61,7 @@ const TeamPage: React.FC = () => {
     'Client-focused approach',
     'Innovation-driven culture'
   ]
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>Team - Zion Tech Group</title>
@@ -91,7 +81,6 @@ const TeamPage: React.FC = () => {
     </div>
   )
 }
-=======
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet the talented team behind Zion Tech Group. Our experts are dedicated to delivering innovative AI and IT solutions that drive business success."
@@ -131,7 +120,6 @@ const TeamPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Team Members Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -157,7 +145,6 @@ const TeamPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -182,7 +169,6 @@ const TeamPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -220,7 +206,6 @@ const TeamPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -254,6 +239,4 @@ const TeamPage: React.FC = () => {
     </Layout>
   )
 }
-
 export default TeamPage
->>>>>>> cursor/website-audit-and-update-with-deployment-713e

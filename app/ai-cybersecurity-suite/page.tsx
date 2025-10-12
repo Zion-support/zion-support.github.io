@@ -1,6 +1,4 @@
 'use client';
-
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -32,15 +30,10 @@ import {
   Network,
   Key
 } from 'lucide-react';
-=======
 import React from 'react';
-
 import { ArrowRight, Brain, Database } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-b5ac
-
 export default function AICybersecuritySuitePage() {
   const [selectedPlan, setSelectedPlan] = useState('pro');
-
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -79,7 +72,6 @@ export default function AICybersecuritySuitePage() {
       benefits: ['Network monitoring', 'Endpoint protection', 'Cloud security']
     }
   ];
-
   const securityServices = [
     {
       service: 'Penetration Testing',
@@ -118,7 +110,6 @@ export default function AICybersecuritySuitePage() {
       benefits: ['Cloud monitoring', 'Access control', 'Data protection']
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Essential',
@@ -168,7 +159,6 @@ export default function AICybersecuritySuitePage() {
       popular: false
     }
   ];
-
   const testimonials = [
     {
       name: 'David Martinez',
@@ -192,14 +182,12 @@ export default function AICybersecuritySuitePage() {
       avatar: 'MC'
     }
   ];
-
   const stats = [
     { number: '99.9%', label: 'Threat Detection Accuracy', icon: <Target className="w-6 h-6" /> },
     { number: '80%', label: 'Faster Incident Response', icon: <Zap className="w-6 h-6" /> },
     { number: '100%', label: 'Compliance Coverage', icon: <CheckCircle className="w-6 h-6" /> },
     { number: '24/7', label: 'Security Monitoring', icon: <Eye className="w-6 h-6" /> }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
@@ -207,7 +195,6 @@ export default function AICybersecuritySuitePage() {
         <meta name="description" content="Protect your business with our AI-powered Cybersecurity Suite. Advanced threat detection, zero trust security, and automated response. 99.9% threat detection accuracy." />
         <meta name="keywords" content="AI cybersecurity, threat detection, zero trust security, security automation, Zion Tech Group" />
       </Helmet>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -237,7 +224,6 @@ export default function AICybersecuritySuitePage() {
             </Link>
           </div>
         </div>
-
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xl mb-16">
           <div className="max-w-7xl mx-auto">
@@ -254,7 +240,6 @@ export default function AICybersecuritySuitePage() {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -264,7 +249,6 @@ export default function AICybersecuritySuitePage() {
               artificial intelligence and machine learning technologies.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
@@ -287,7 +271,6 @@ export default function AICybersecuritySuitePage() {
             ))}
           </div>
         </section>
-
         {/* Security Services Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -296,7 +279,6 @@ export default function AICybersecuritySuitePage() {
               Complete security solutions to protect your business from all angles.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {securityServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
@@ -316,7 +298,6 @@ export default function AICybersecuritySuitePage() {
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -325,7 +306,6 @@ export default function AICybersecuritySuitePage() {
               Flexible pricing plans designed to provide the right level of security for your business.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 relative ${
@@ -338,7 +318,6 @@ export default function AICybersecuritySuitePage() {
                     </span>
                   </div>
                 )}
-                
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -347,7 +326,6 @@ export default function AICybersecuritySuitePage() {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -356,7 +334,6 @@ export default function AICybersecuritySuitePage() {
                     </li>
                   ))}
                 </ul>
-                
                 <Link
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
@@ -372,7 +349,6 @@ export default function AICybersecuritySuitePage() {
             ))}
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xl mb-16">
           <div className="max-w-7xl mx-auto">
@@ -382,7 +358,6 @@ export default function AICybersecuritySuitePage() {
                 Join thousands of satisfied customers who trust us with their security.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -406,7 +381,6 @@ export default function AICybersecuritySuitePage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 border border-cyan-500/30">

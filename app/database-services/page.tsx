@@ -1,9 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-
-
 import { ArrowRight } from 'lucide-react'
-
 export default function DatabaseServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -25,20 +21,14 @@ export default function DatabaseServicesPage() {
     </div>
   )
 }
-=======
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import Layout from '../layout'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Server, Cpu, Network } from 'lucide-react'
 import { Link } from 'react-router-dom'
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Database, Server, Lock, Cpu } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
-
 const DatabaseServicesPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: <Database className="w-8 h-8 text-blue-500" />,
       title: 'Database Design',
       description: 'Expert database design and architecture for optimal performance and scalability.'
@@ -59,7 +49,6 @@ const DatabaseServicesPage: React.FC = () => {
       description: 'Seamless data migration and integration across different database systems.'
     }
   ]
-
   const benefits = [
     'Expert database design and architecture',
     'Comprehensive administration services',
@@ -70,7 +59,6 @@ const DatabaseServicesPage: React.FC = () => {
     'Security and compliance',
     'Scalable database solutions'
   ]
-
   return (
     <Layout
       title="Database Services - Zion Tech Group"
@@ -111,7 +99,6 @@ const DatabaseServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -136,7 +123,6 @@ const DatabaseServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -174,7 +160,6 @@ const DatabaseServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -208,10 +193,7 @@ const DatabaseServicesPage: React.FC = () => {
     </Layout>
   )
 }
-
 export default DatabaseServicesPage
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
       icon: <Database className="w-8 h-8 text-cyan-400" />,
       title: 'Database Design',
       description: 'Custom database design and architecture optimized for your specific business requirements.'
@@ -232,7 +214,6 @@ export default DatabaseServicesPage
       description: 'Database performance tuning and optimization for maximum efficiency and speed.'
     }
   ]
-
   const benefits = [
     'Custom database design',
     '24/7 monitoring and support',
@@ -243,7 +224,6 @@ export default DatabaseServicesPage
     'Compliance management',
     'Migration services'
   ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -251,7 +231,6 @@ export default DatabaseServicesPage
         <meta name="description" content="Professional database services including design, management, security, and optimization for your business." />
         <link rel="canonical" href="https://ziontechgroup.com/database-services" />
       </Helmet>
-      
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -276,7 +255,6 @@ export default DatabaseServicesPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -285,7 +263,6 @@ export default DatabaseServicesPage
               Everything you need for robust database management
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
@@ -297,7 +274,6 @@ export default DatabaseServicesPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -306,7 +282,6 @@ export default DatabaseServicesPage
               Comprehensive database solutions for your business
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -317,7 +292,6 @@ export default DatabaseServicesPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -341,6 +315,4 @@ export default DatabaseServicesPage
     </div>
   )
 }
-
 export default DatabaseServicesPage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a

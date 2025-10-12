@@ -1,9 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-
-
 import { ArrowRight } from 'lucide-react'
-
 export default function EnterpriseSecurityPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -25,20 +21,14 @@ export default function EnterpriseSecurityPage() {
     </div>
   )
 }
-=======
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import Layout from '../layout'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, Database, FileText } from 'lucide-react'
 import { Link } from 'react-router-dom'
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, Database, Users } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
-
 const EnterpriseSecurityPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: <Shield className="w-8 h-8 text-blue-500" />,
       title: 'Advanced Threat Protection',
       description: 'Comprehensive security measures to protect against advanced threats and cyber attacks.'
@@ -59,7 +49,6 @@ const EnterpriseSecurityPage: React.FC = () => {
       description: 'Automated compliance management for industry standards and regulations.'
     }
   ]
-
   const benefits = [
     'Advanced threat protection',
     'End-to-end data encryption',
@@ -70,7 +59,6 @@ const EnterpriseSecurityPage: React.FC = () => {
     'Regular security audits',
     'Multi-layered security approach'
   ]
-
   return (
     <Layout
       title="Enterprise Security - Zion Tech Group"
@@ -111,7 +99,6 @@ const EnterpriseSecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -136,7 +123,6 @@ const EnterpriseSecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -174,7 +160,6 @@ const EnterpriseSecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -208,10 +193,7 @@ const EnterpriseSecurityPage: React.FC = () => {
     </Layout>
   )
 }
-
 export default EnterpriseSecurityPage
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
       icon: <Shield className="w-8 h-8 text-cyan-400" />,
       title: 'Advanced Threat Protection',
       description: 'Multi-layered security architecture with real-time threat detection and prevention.'
@@ -232,7 +214,6 @@ export default EnterpriseSecurityPage
       description: 'Comprehensive identity and access management with role-based permissions.'
     }
   ]
-
   const benefits = [
     'Advanced threat protection',
     'Real-time security monitoring',
@@ -243,7 +224,6 @@ export default EnterpriseSecurityPage
     'Security training',
     'Audit and reporting'
   ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -251,7 +231,6 @@ export default EnterpriseSecurityPage
         <meta name="description" content="Comprehensive enterprise security solutions with advanced threat protection, data encryption, and security monitoring." />
         <link rel="canonical" href="https://ziontechgroup.com/enterprise-security" />
       </Helmet>
-      
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -276,7 +255,6 @@ export default EnterpriseSecurityPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -285,7 +263,6 @@ export default EnterpriseSecurityPage
               Everything you need for enterprise-grade security
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
@@ -297,7 +274,6 @@ export default EnterpriseSecurityPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -306,7 +282,6 @@ export default EnterpriseSecurityPage
               Comprehensive security solutions for your enterprise
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -317,7 +292,6 @@ export default EnterpriseSecurityPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -341,6 +315,4 @@ export default EnterpriseSecurityPage
     </div>
   )
 }
-
 export default EnterpriseSecurityPage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a

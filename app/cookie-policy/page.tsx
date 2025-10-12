@@ -1,8 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-
 import Layout from '../layout'
-
 const CookiePolicyPage: React.FC = () => {
   return (
     <Layout
@@ -20,7 +17,6 @@ const CookiePolicyPage: React.FC = () => {
               Last updated: January 2024
             </p>
           </div>
-
           <div className="prose prose-invert max-w-none">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
               <h2 className="text-2xl font-semibold text-white mb-4">What Are Cookies?</h2>
@@ -29,7 +25,6 @@ const CookiePolicyPage: React.FC = () => {
                 They help us provide you with a better experience by remembering your preferences and enabling certain functionality.
               </p>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
               <h2 className="text-2xl font-semibold text-white mb-4">How We Use Cookies</h2>
               <p className="text-gray-300 mb-4">We use cookies for the following purposes:</p>
@@ -40,7 +35,6 @@ const CookiePolicyPage: React.FC = () => {
                 <li>• <strong>Marketing Cookies:</strong> Used to deliver relevant advertisements</li>
               </ul>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
               <h2 className="text-2xl font-semibold text-white mb-4">Managing Cookies</h2>
               <p className="text-gray-300 mb-4">
@@ -53,7 +47,6 @@ const CookiePolicyPage: React.FC = () => {
                 <li>• Block third-party cookies</li>
               </ul>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h2 className="text-2xl font-semibold text-white mb-4">Contact Us</h2>
               <p className="text-gray-300 mb-4">
@@ -67,12 +60,10 @@ const CookiePolicyPage: React.FC = () => {
             </div>
           </div>
         </div>
-=======
 import { Helmet } from 'react-helmet-async'
 import Layout from '../layout'
 import { Shield, Settings, BarChart3, Target, AlertCircle, CheckCircle, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
-
 const CookiePolicyPage: React.FC = () => {
   const cookieTypes = [
     {
@@ -104,7 +95,6 @@ const CookiePolicyPage: React.FC = () => {
       examples: ['Language settings', 'Theme preferences', 'Location settings']
     }
   ]
-
   const cookieTable = [
     { name: 'session_id', type: 'Essential', purpose: 'Maintains user session', duration: 'Session' },
     { name: '_ga', type: 'Analytics', purpose: 'Google Analytics tracking', duration: '2 years' },
@@ -112,7 +102,6 @@ const CookiePolicyPage: React.FC = () => {
     { name: 'theme_preference', type: 'Preference', purpose: 'User theme selection', duration: '1 year' },
     { name: 'language', type: 'Preference', purpose: 'User language preference', duration: '1 year' }
   ]
-
   return (
     <Layout
       title="Cookie Policy - Zion Tech Group"
@@ -153,7 +142,6 @@ const CookiePolicyPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* What Are Cookies Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -204,7 +192,6 @@ const CookiePolicyPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Types of Cookies Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -244,7 +231,6 @@ const CookiePolicyPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Cookie Table Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -289,7 +275,6 @@ const CookiePolicyPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Managing Cookies Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -331,7 +316,6 @@ const CookiePolicyPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -361,10 +345,8 @@ const CookiePolicyPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
       </div>
     </Layout>
   )
 }
-
 export default CookiePolicyPage

@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-'use client';
-
-import React, { Suspense } from 'react';
-
-
-import { Brain, ArrowRight, MessageSquare } from 'lucide-react';
-import FuturisticBackground from './components/FuturisticBackground';
-import FuturisticCard from './components/FuturisticCard';
-import FuturisticButton from './components/FuturisticButton';
-
-// Note: Lazy loading components will be implemented in future iterations
-
-export default function HomePage() {
-  const stats = [
-    { number: '1,200+', label: 'Projects Completed', icon: <Users className="w-6 h-6" /> },
-    { number: '99.8%', label: 'Client Satisfaction', icon: <Star className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Globe className="w-6 h-6" /> },
-    { number: '150+', label: 'Expert Team Members', icon: <Users className="w-6 h-6" /> },
-    { number: '50+', label: 'Countries Served', icon: <Globe className="w-6 h-6" /> },
-    { number: '300%', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> },
-    { number: '48hr', label: 'Response Time', icon: <MessageSquare className="w-6 h-6" /> }
-  ];
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from './components/Navigation'
@@ -75,58 +50,18 @@ const HomePage: React.FC = () => {
       link: '/micro-saas'
     }
   ]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
+
+  const stats = [
+    { number: '1,200+', label: 'Projects Completed', icon: <Rocket className="w-6 h-6 text-cyan-400" /> },
+    { number: '500+', label: 'Happy Clients', icon: <Users className="w-6 h-6 text-emerald-400" /> },
+    { number: '24/7', label: 'Support Available', icon: <Clock className="w-6 h-6 text-blue-400" /> },
+    { number: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6 text-purple-400" /> },
+    { number: '50+', label: 'Micro SAAS Solutions', icon: <Layers className="w-6 h-6 text-orange-400" /> },
+    { number: '30+', label: 'AI Services', icon: <Brain className="w-6 h-6 text-pink-400" /> }
+  ]
 
   const microSaasServices = [
     {
-<<<<<<< HEAD
-      title: 'AI Content Generation',
-      description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      link: '/ai-content-generator',
-      features: ['Automated content creation', 'SEO optimization', 'Multi-language support'],
-      price: 'Starting at $99/month'
-    },
-    {
-      title: 'AI CRM Assistant',
-      description: 'Boost sales by 45% with AI-powered lead scoring, email automation, and predictive analytics.',
-      icon: <Users className="w-8 h-8 text-purple-400" />,
-      link: '/ai-crm-assistant',
-      features: ['AI lead scoring', 'Email automation', 'Predictive analytics'],
-      price: 'Starting at $49/month'
-    },
-    {
-      title: 'AI Social Media Manager',
-      description: 'Increase engagement by 200% with AI-powered social media automation and content generation.',
-      icon: <MessageSquare className="w-8 h-8 text-pink-400" />,
-      link: '/ai-social-media-manager',
-      features: ['AI content generation', 'Smart scheduling', 'Analytics insights'],
-      price: 'Starting at $29/month'
-    },
-    {
-      title: 'AI Cybersecurity Suite',
-      description: 'Protect your business with 99.9% threat detection accuracy using advanced AI security.',
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      link: '/ai-cybersecurity-suite',
-      features: ['AI threat detection', 'Zero trust security', 'Automated response'],
-      price: 'Starting at $199/month'
-    },
-    {
-      title: 'AI Smart City Solutions',
-      description: 'Transform urban infrastructure with AI-powered smart city technologies and IoT integration.',
-      icon: <Globe className="w-8 h-8 text-green-400" />,
-      link: '/ai-smart-city-solutions',
-      features: ['Traffic optimization', 'Energy management', 'IoT integration'],
-      price: 'Starting at $50,000/project'
-    },
-    {
-      title: '5G Implementation',
-      description: 'Leverage the power of 5G technology for ultra-fast connectivity and IoT solutions.',
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      link: '/5g-implementation',
-      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing'],
-      price: 'Starting at $5,000/project'
-=======
       icon: <BarChart3 className="w-6 h-6 text-cyan-400" />,
       title: 'AI Analytics Dashboard',
       description: 'Real-time business intelligence with AI-powered insights and predictive analytics.',
@@ -211,24 +146,37 @@ const HomePage: React.FC = () => {
     },
     {
       icon: <Lock className="w-6 h-6 text-red-400" />,
-      title: 'AI Password Manager',
-      description: 'Advanced password management with AI-powered security recommendations.',
-      price: '$89/month',
-      features: ['AI security scan', 'Auto-generation', 'Breach monitoring', 'Team sharing'],
-      link: '/ai-password-manager'
+      title: 'AI Smart Contract Auditor',
+      description: 'Advanced AI-powered smart contract auditing with 99.9% accuracy in vulnerability detection.',
+      price: '$299/month',
+      features: ['Automated security analysis', 'Code quality assessment', 'Vulnerability detection', 'Real-time monitoring'],
+      link: '/ai-smart-contract-auditor'
     },
     {
-      icon: <CheckCircle className="w-6 h-6 text-purple-400" />,
-      title: 'AI Task Manager',
-      description: 'Intelligent task management with AI prioritization and automation.',
-      price: '$79/month',
-      features: ['AI prioritization', 'Smart scheduling', 'Progress tracking', 'Team collaboration'],
-      link: '/ai-task-manager'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
+      icon: <Atom className="w-6 h-6 text-purple-400" />,
+      title: 'AI Quantum Financial Oracle',
+      description: 'Revolutionary quantum-powered financial oracle with 99.97% prediction accuracy.',
+      price: '$2,999/month',
+      features: ['Quantum-powered predictions', 'Real-time market analysis', 'Portfolio optimization', 'Risk assessment'],
+      link: '/ai-quantum-financial-oracle'
+    },
+    {
+      icon: <Eye className="w-6 h-6 text-orange-400" />,
+      title: 'AI Holographic Workspace',
+      description: 'Revolutionary AI-powered holographic workspace with 3D interface and spatial computing.',
+      price: '$1,999/month',
+      features: ['3D holographic interface', 'Collaborative holograms', 'AI-powered gestures', 'Mixed reality integration'],
+      link: '/ai-holographic-workspace'
+    },
+    {
+      icon: <Rocket className="w-6 h-6 text-pink-400" />,
+      title: 'AI Space Mission Optimizer',
+      description: 'Revolutionary AI-powered space mission optimization with 99.8% success rate.',
+      price: '$50,000/mission',
+      features: ['Mission trajectory optimization', 'Orbital mechanics analysis', 'Space debris avoidance', 'Autonomous operations'],
+      link: '/ai-space-mission-optimizer'
     }
-  ];
-
-<<<<<<< HEAD
+  ]
 
   const testimonials = [
     {
@@ -249,17 +197,7 @@ const HomePage: React.FC = () => {
       content: 'The cybersecurity services gave us peace of mind. Our data has never been more secure.',
       rating: 5
     }
-  ];
-=======
-  const stats = [
-    { number: '1000+', label: 'Projects Completed', icon: <Rocket className="w-6 h-6 text-cyan-400" /> },
-    { number: '500+', label: 'Happy Clients', icon: <Users className="w-6 h-6 text-emerald-400" /> },
-    { number: '24/7', label: 'Support Available', icon: <Clock className="w-6 h-6 text-blue-400" /> },
-    { number: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6 text-purple-400" /> },
-    { number: '50+', label: 'Micro SAAS Solutions', icon: <Layers className="w-6 h-6 text-orange-400" /> },
-    { number: '30+', label: 'AI Services', icon: <Brain className="w-6 h-6 text-pink-400" /> }
   ]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
 
   return (
     <>
@@ -346,53 +284,14 @@ const HomePage: React.FC = () => {
           })}
         </script>
       </Helmet>
-      
-<<<<<<< HEAD
-      <FuturisticBackground variant="hero">
-        {/* Hero Section */}
-        <section id="main-content" className="pt-20 px-4 py-12 sm:py-16 lg:py-20" role="banner" aria-labelledby="hero-title">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
-              <h1 id="hero-title" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-                Advanced AI & IT Solutions
-              </h1>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
-                Transform your business with cutting-edge artificial intelligence, 5G implementation, and enterprise-grade IT solutions. 
-                Join 1,200+ satisfied clients with 99.8% satisfaction rate.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton
-                  variant="primary"
-                  size="lg"
-                  onClick={() => window.open('/about', '_blank')}
-                >
-                  Learn More
-                  <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
-                </FuturisticButton>
-                <FuturisticButton
-                  variant="ghost"
-                  size="lg"
-                  onClick={() => window.open('/contact', '_blank')}
-                >
-                  Get Started
-                </FuturisticButton>
-=======
+
       <Navigation />
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        {/* Animated Background Elements */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.4)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.3)_0%,transparent_60%)] animate-pulse" style={{ animationDelay: '2s' }} />
-        
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-cyan-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '0.5s' }} />
-        <div className="absolute top-40 right-20 w-16 h-16 bg-purple-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '1.5s' }} />
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-pink-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '2.5s' }} />
-        
-        {/* Grid Pattern Overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse" />
         
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
@@ -606,7 +505,7 @@ const HomePage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10">
                 <div className="flex items-center justify-between mb-4">
@@ -654,7 +553,6 @@ const HomePage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center">
             <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden">
-              {/* Animated Background Elements */}
               <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
               <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
               
@@ -705,186 +603,15 @@ const HomePage: React.FC = () => {
                     <span className="text-sm">Middletown DE 19709</span>
                   </div>
                 </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
               </div>
             </div>
-
-            {/* Stats Section */}
-            <Suspense fallback={
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20">
-                {[...Array(8)].map((_, index) => (
-                  <div key={index} className="text-center px-2">
-                    <div className="animate-pulse">
-                      <div className="h-8 bg-gray-700 rounded mb-2"></div>
-                      <div className="h-4 bg-gray-600 rounded"></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            }>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20" role="region" aria-label="Company statistics">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center px-2" role="img" aria-label={`${stat.number} ${stat.label}`}>
-                    <div className="flex items-center justify-center mb-2">
-                      {stat.icon}
-                    </div>
-                    <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">{stat.number}</div>
-                    <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </Suspense>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4" role="region" aria-labelledby="services-title">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 id="services-title" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Our Core Services</h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-                Comprehensive technology solutions designed to accelerate your digital transformation
-              </p>
-            </div>
-            
-            <Suspense fallback={
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
-                {[...Array(6)].map((_, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 animate-pulse">
-                    <div className="h-8 w-8 bg-gray-600 rounded mb-4"></div>
-                    <div className="h-6 bg-gray-600 rounded mb-4"></div>
-                    <div className="h-4 bg-gray-600 rounded mb-6"></div>
-                    <div className="space-y-2 mb-6">
-                      <div className="h-4 bg-gray-600 rounded"></div>
-                      <div className="h-4 bg-gray-600 rounded"></div>
-                      <div className="h-4 bg-gray-600 rounded"></div>
-                    </div>
-                    <div className="h-4 bg-gray-600 rounded"></div>
-                  </div>
-                ))}
-              </div>
-            }>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
-                {services.map((service, index) => (
-                  <FuturisticCard
-                    key={index}
-                    variant="service"
-                    className="h-full"
-                    onClick={() => window.open(service.link, '_blank')}
-                  >
-                    <div className="mb-4" aria-hidden="true">{service.icon}</div>
-                    <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <div className="text-cyan-400 font-semibold mb-4 text-sm">
-                      {service.price}
-                    </div>
-                    <ul className="space-y-2 mb-6" role="list">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" aria-hidden="true" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="mt-6 flex items-center text-blue-400">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
-                    </div>
-                  </FuturisticCard>
-                ))}
-              </div>
-            </Suspense>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5" role="region" aria-labelledby="testimonials-title">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 id="testimonials-title" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">What Our Clients Say</h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-                Don't just take our word for it - hear from businesses that have transformed with our solutions
-              </p>
-            </div>
-
-            <Suspense fallback={
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                {[...Array(3)].map((_, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 sm:p-8 border border-white/20 animate-pulse">
-                    <div className="flex items-center mb-4">
-                      <div className="h-4 w-4 bg-gray-600 rounded mr-1"></div>
-                      <div className="h-4 w-4 bg-gray-600 rounded mr-1"></div>
-                      <div className="h-4 w-4 bg-gray-600 rounded mr-1"></div>
-                      <div className="h-4 w-4 bg-gray-600 rounded mr-1"></div>
-                      <div className="h-4 w-4 bg-gray-600 rounded"></div>
-                    </div>
-                    <div className="h-4 bg-gray-600 rounded mb-2"></div>
-                    <div className="h-4 bg-gray-600 rounded mb-4"></div>
-                    <div className="h-4 bg-gray-600 rounded mb-2"></div>
-                    <div className="h-4 bg-gray-600 rounded"></div>
-                  </div>
-                ))}
-              </div>
-            }>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                {testimonials.map((testimonial, index) => (
-                  <FuturisticCard
-                    key={index}
-                    variant="testimonial"
-                    className="h-full"
-                  >
-                    <div className="flex items-center mb-4" role="img" aria-label={`${testimonial.rating} star rating`}>
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <span key={i} className="text-yellow-400" aria-hidden="true">★</span>
-                      ))}
-                    </div>
-                    <blockquote className="text-gray-300 mb-4 italic">
-                      <p>"{testimonial.content}"</p>
-                    </blockquote>
-                    <footer>
-                      <p className="font-semibold text-white">{testimonial.name}</p>
-                      <p className="text-gray-400 text-sm">{testimonial.company}</p>
-                    </footer>
-                  </FuturisticCard>
-                ))}
-              </div>
-            </Suspense>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4" role="region" aria-labelledby="cta-title">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <FuturisticCard variant="feature" className="text-center">
-                <h2 id="cta-title" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Transform Your Business?</h2>
-                <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                  Let's discuss how our AI and IT solutions can drive your success. Join 1,200+ satisfied clients today.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <FuturisticButton
-                    variant="primary"
-                    size="lg"
-                    onClick={() => window.open('/contact', '_blank')}
-                  >
-                    Get Started Today
-                  </FuturisticButton>
-                  <FuturisticButton
-                    variant="secondary"
-                    size="lg"
-                    onClick={() => window.open('/about', '_blank')}
-                  >
-                    Learn More
-                  </FuturisticButton>
-                </div>
-                <div className="mt-8 text-white/80 text-sm">
-                  <p>✓ Free consultation • ✓ 24/7 support • ✓ 99.8% satisfaction rate</p>
-                </div>
-              </FuturisticCard>
-            </div>
-          </div>
-        </section>
-      </FuturisticBackground>
+      <Footer />
     </>
-  );
+  )
 }
+
+export default HomePage

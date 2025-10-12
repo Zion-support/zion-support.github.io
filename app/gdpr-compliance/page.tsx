@@ -1,8 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-
 import Layout from '../layout'
-
 const GDPRCompliancePage: React.FC = () => {
   return (
     <Layout
@@ -20,7 +17,6 @@ const GDPRCompliancePage: React.FC = () => {
               Our commitment to data protection and privacy rights
             </p>
           </div>
-
           <div className="prose prose-invert max-w-none">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
               <h2 className="text-2xl font-semibold text-white mb-4">What is GDPR?</h2>
@@ -30,7 +26,6 @@ const GDPRCompliancePage: React.FC = () => {
                 the EU and addresses the export of personal data outside the EU.
               </p>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
               <h2 className="text-2xl font-semibold text-white mb-4">Our Commitment</h2>
               <p className="text-gray-300 mb-4">
@@ -46,7 +41,6 @@ const GDPRCompliancePage: React.FC = () => {
                 <li>• User rights implementation</li>
               </ul>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
               <h2 className="text-2xl font-semibold text-white mb-4">Your Rights</h2>
               <p className="text-gray-300 mb-4">Under GDPR, you have the following rights:</p>
@@ -59,7 +53,6 @@ const GDPRCompliancePage: React.FC = () => {
                 <li>• <strong>Right to Object:</strong> Object to processing of your personal data</li>
               </ul>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h2 className="text-2xl font-semibold text-white mb-4">Contact Us</h2>
               <p className="text-gray-300 mb-4">
@@ -73,12 +66,10 @@ const GDPRCompliancePage: React.FC = () => {
             </div>
           </div>
         </div>
-=======
 import { Helmet } from 'react-helmet-async'
 import Layout from '../layout'
 import { Shield, Lock, Eye, Download, Trash2, Edit, CheckCircle, ArrowRight, AlertCircle, FileText, Users, Database } from 'lucide-react'
 import { Link } from 'react-router-dom'
-
 const GDPRCompliancePage: React.FC = () => {
   const principles = [
     {
@@ -112,7 +103,6 @@ const GDPRCompliancePage: React.FC = () => {
       icon: <Lock className="w-6 h-6 text-indigo-500" />
     }
   ]
-
   const rights = [
     {
       title: 'Right to Access',
@@ -145,7 +135,6 @@ const GDPRCompliancePage: React.FC = () => {
       icon: <AlertCircle className="w-6 h-6 text-yellow-500" />
     }
   ]
-
   const dataTypes = [
     {
       category: 'Contact Information',
@@ -168,7 +157,6 @@ const GDPRCompliancePage: React.FC = () => {
       purpose: 'Personalized marketing and communication'
     }
   ]
-
   return (
     <Layout
       title="GDPR Compliance - Zion Tech Group"
@@ -209,7 +197,6 @@ const GDPRCompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* What is GDPR Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -259,7 +246,6 @@ const GDPRCompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Data Protection Principles Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -284,7 +270,6 @@ const GDPRCompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Your Rights Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -309,7 +294,6 @@ const GDPRCompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Data We Collect Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -345,7 +329,6 @@ const GDPRCompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* How to Exercise Your Rights Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -385,7 +368,6 @@ const GDPRCompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -415,10 +397,8 @@ const GDPRCompliancePage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
       </div>
     </Layout>
   )
 }
-
 export default GDPRCompliancePage

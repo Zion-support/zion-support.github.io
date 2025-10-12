@@ -1,10 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 import { ArrowRight } from 'lucide-react'
-
 export default function TrainingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -26,12 +21,10 @@ export default function TrainingPage() {
     </div>
   )
 }
-=======
 import { Helmet } from 'react-helmet-async'
 import Layout from '../layout'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BookOpen, Users, Award, Target } from 'lucide-react'
 import { Link } from 'react-router-dom'
-
 const TrainingPage: React.FC = () => {
   const features = [
     {
@@ -55,7 +48,6 @@ const TrainingPage: React.FC = () => {
       description: 'Practical, hands-on training with real-world projects and scenarios.'
     }
   ]
-
   const benefits = [
     'Industry-recognized certifications',
     'Hands-on practical training',
@@ -66,7 +58,6 @@ const TrainingPage: React.FC = () => {
     'Career placement assistance',
     'Continuous learning opportunities'
   ]
-
   return (
     <Layout
       title="Training & Certification - Zion Tech Group"
@@ -107,7 +98,6 @@ const TrainingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -132,7 +122,6 @@ const TrainingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -170,7 +159,6 @@ const TrainingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -204,13 +192,9 @@ const TrainingPage: React.FC = () => {
     </Layout>
   )
 }
-
 export default TrainingPage
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BookOpen, Users, Award, Target } from 'lucide-react'
-
 const TrainingPage: React.FC = () => {
   const features = [
     {
@@ -234,7 +218,6 @@ const TrainingPage: React.FC = () => {
       description: 'Practical, hands-on training with real-world projects and scenarios.'
     }
   ]
-
   const benefits = [
     'Industry-recognized certifications',
     'Expert-led training sessions',
@@ -245,7 +228,6 @@ const TrainingPage: React.FC = () => {
     'Personalized learning paths',
     'Ongoing support and mentoring'
   ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -253,7 +235,6 @@ const TrainingPage: React.FC = () => {
         <meta name="description" content="Professional training solutions by Zion Tech Group. Advanced AI and IT training for your business." />
         <link rel="canonical" href="https://ziontechgroup.com/training" />
       </Helmet>
-      
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -278,7 +259,6 @@ const TrainingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -287,7 +267,6 @@ const TrainingPage: React.FC = () => {
               Everything you need for professional training
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
@@ -299,7 +278,6 @@ const TrainingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -308,7 +286,6 @@ const TrainingPage: React.FC = () => {
               Comprehensive training solutions for your team
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -319,7 +296,6 @@ const TrainingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -343,6 +319,4 @@ const TrainingPage: React.FC = () => {
     </div>
   )
 }
-
 export default TrainingPage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a

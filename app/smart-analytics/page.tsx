@@ -1,14 +1,9 @@
 import React from 'react'
-<<<<<<< HEAD
-
-
 import { ArrowRight } from 'lucide-react'
-=======
 import { Helmet } from 'react-helmet-async'
 import Layout from '../layout'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart3, TrendingUp, PieChart, Activity } from 'lucide-react'
 import { Link } from 'react-router-dom'
-
 const SmartAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -32,7 +27,6 @@ const SmartAnalyticsPage: React.FC = () => {
       description: 'Track key metrics and monitor performance across all your systems.'
     }
   ]
-
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -43,10 +37,7 @@ const SmartAnalyticsPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>Smart Analytics - Zion Tech Group</title>
@@ -66,7 +57,6 @@ const SmartAnalyticsPage: React.FC = () => {
     </div>
   )
 }
-=======
     <Layout
       title="Smart Analytics - Zion Tech Group"
       description="Advanced analytics solutions powered by AI to help you make data-driven decisions and gain valuable insights from your business data."
@@ -106,7 +96,6 @@ const SmartAnalyticsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -131,7 +120,6 @@ const SmartAnalyticsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -169,7 +157,6 @@ const SmartAnalyticsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -203,6 +190,4 @@ const SmartAnalyticsPage: React.FC = () => {
     </Layout>
   )
 }
-
 export default SmartAnalyticsPage
->>>>>>> cursor/website-audit-and-update-with-deployment-713e

@@ -1,10 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 import { ArrowRight } from 'lucide-react'
-
 export default function EnterprisePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -26,12 +21,10 @@ export default function EnterprisePage() {
     </div>
   )
 }
-=======
 import { Helmet } from 'react-helmet-async'
 import Layout from '../layout'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Users, BarChart3, Clock, TrendingUp } from 'lucide-react'
 import { Link } from 'react-router-dom'
-
 const EnterprisePage: React.FC = () => {
   const features = [
     {
@@ -55,7 +48,6 @@ const EnterprisePage: React.FC = () => {
       description: 'Advanced security measures and compliance for enterprise environments.'
     }
   ]
-
   const benefits = [
     'Scalable enterprise architecture',
     'Advanced security and compliance',
@@ -66,25 +58,19 @@ const EnterprisePage: React.FC = () => {
     'Performance optimization',
     'Cost-effective enterprise solutions'
   ]
-
-=======
 import { Helmet } from 'react-helmet-async'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
 import { ArrowRight, Shield, Brain, Globe, Zap, Building, Users, Settings, Database, BarChart, Clock, TrendingUp } from 'lucide-react'
-
 const EnterprisePage: React.FC = () => {
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
   const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Clock },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
   ]
-
   return (
-<<<<<<< HEAD
     <Layout
       title="Enterprise Solutions - Zion Tech Group"
       description="Comprehensive enterprise-grade solutions for large-scale business operations. Scalable, secure, and designed for enterprise success."
@@ -124,7 +110,6 @@ const EnterprisePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -141,7 +126,6 @@ const EnterprisePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -166,7 +150,6 @@ const EnterprisePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -204,7 +187,6 @@ const EnterprisePage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -238,10 +220,7 @@ const EnterprisePage: React.FC = () => {
     </Layout>
   )
 }
-
 export default EnterprisePage
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
         title="Enterprise Solutions - Zion Tech Group"
@@ -249,7 +228,6 @@ export default EnterprisePage
         keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
       />
       <Navigation />
-      
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -276,7 +254,6 @@ export default EnterprisePage
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -320,7 +297,6 @@ export default EnterprisePage
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -334,7 +310,6 @@ export default EnterprisePage
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -356,11 +331,8 @@ export default EnterprisePage
           </div>
         </div>
       </section>
-      
       <Footer />
     </div>
   )
 }
-
 export default EnterprisePage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a

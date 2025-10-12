@@ -1,9 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-
-
 import { ArrowRight } from 'lucide-react'
-
 export default function ServicesAdvertisingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -25,20 +21,14 @@ export default function ServicesAdvertisingPage() {
     </div>
   )
 }
-=======
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import Layout from '../layout'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Megaphone, Target, BarChart3, Users } from 'lucide-react'
 import { Link } from 'react-router-dom'
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Target, BarChart3, Users, DollarSign } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
-
 const ServicesAdvertisingPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: <Megaphone className="w-8 h-8 text-blue-500" />,
       title: 'Digital Advertising',
       description: 'Comprehensive digital advertising solutions across all major platforms.'
@@ -57,7 +47,6 @@ const ServicesAdvertisingPage: React.FC = () => {
       icon: <Users className="w-8 h-8 text-orange-500" />,
       title: 'Audience Engagement',
       description: 'Creative strategies to engage and convert your target audience.'
-=======
       icon: <Target className="w-8 h-8 text-cyan-400" />,
       title: 'Targeted Campaigns',
       description: 'Precision-targeted advertising campaigns that reach your ideal customers with AI-powered audience analysis.'
@@ -76,10 +65,8 @@ const ServicesAdvertisingPage: React.FC = () => {
       icon: <DollarSign className="w-8 h-8 text-orange-400" />,
       title: 'Cost Optimization',
       description: 'Intelligent budget allocation and bid optimization to maximize your advertising ROI and minimize costs.'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
     }
   ]
-
   const benefits = [
     'AI-powered audience targeting',
     'Real-time campaign optimization',
@@ -90,9 +77,7 @@ const ServicesAdvertisingPage: React.FC = () => {
     'A/B testing automation',
     'ROI maximization strategies'
   ]
-
   return (
-<<<<<<< HEAD
     <Layout
       title="Services Advertising - Zion Tech Group"
       description="Professional advertising services including digital marketing, targeted campaigns, and analytics to help your business grow and reach the right audience."
@@ -132,7 +117,6 @@ const ServicesAdvertisingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -157,7 +141,6 @@ const ServicesAdvertisingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -177,14 +160,12 @@ const ServicesAdvertisingPage: React.FC = () => {
                     <span className="text-gray-300 text-lg">{benefit}</span>
                   </div>
                 ))}
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Services Advertising Solutions | Zion Tech Group</title>
         <meta name="description" content="Advanced advertising solutions with AI-powered targeting, performance analytics, and cost optimization for maximum ROI." />
         <link rel="canonical" href="https://ziontechgroup.com/services-advertising" />
       </Helmet>
-      
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -209,7 +190,6 @@ const ServicesAdvertisingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -218,14 +198,12 @@ const ServicesAdvertisingPage: React.FC = () => {
               Everything you need for successful advertising campaigns
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-300 transition-colors">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-6">Ready to Get Started?</h3>
@@ -243,9 +221,7 @@ const ServicesAdvertisingPage: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -279,13 +255,9 @@ const ServicesAdvertisingPage: React.FC = () => {
     </Layout>
   )
 }
-
 export default ServicesAdvertisingPage
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
         </div>
       </section>
-
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -294,7 +266,6 @@ export default ServicesAdvertisingPage
               Comprehensive advertising solutions for your business
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -305,7 +276,6 @@ export default ServicesAdvertisingPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -329,6 +299,4 @@ export default ServicesAdvertisingPage
     </div>
   )
 }
-
 export default ServicesAdvertisingPage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a

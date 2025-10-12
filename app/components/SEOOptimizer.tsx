@@ -1,12 +1,7 @@
 'use client';
-
-<<<<<<< HEAD
 import { useEffect } from 'react';
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
-
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
@@ -15,8 +10,6 @@ interface SEOOptimizerProps {
   ogImage?: string;
   structuredData?: object;
 }
-
-<<<<<<< HEAD
 export default function SEOOptimizer({
   title,
   description,
@@ -30,7 +23,6 @@ export default function SEOOptimizer({
     if (title) {
       document.title = title;
     }
-
     // Update meta description
     if (description) {
       const metaDescription = document.querySelector('meta[name="description"]');
@@ -43,7 +35,6 @@ export default function SEOOptimizer({
         document.head.appendChild(meta);
       }
     }
-
     // Update meta keywords
     if (keywords) {
       const metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -56,7 +47,6 @@ export default function SEOOptimizer({
         document.head.appendChild(meta);
       }
     }
-
     // Update canonical URL
     if (canonicalUrl) {
       const canonical = document.querySelector('link[rel="canonical"]');
@@ -69,7 +59,6 @@ export default function SEOOptimizer({
         document.head.appendChild(link);
       }
     }
-
     // Update Open Graph image
     if (ogImage) {
       const ogImageMeta = document.querySelector('meta[property="og:image"]');
@@ -82,7 +71,6 @@ export default function SEOOptimizer({
         document.head.appendChild(meta);
       }
     }
-
     // Add structured data
     if (structuredData) {
       const script = document.createElement('script');
@@ -90,7 +78,6 @@ export default function SEOOptimizer({
       script.textContent = JSON.stringify(structuredData);
       document.head.appendChild(script);
     }
-
     // Add performance hints
     const addPerformanceHints = () => {
       // Preconnect to external domains
@@ -99,7 +86,6 @@ export default function SEOOptimizer({
         'https://fonts.gstatic.com',
         'https://www.google-analytics.com'
       ];
-
       preconnectDomains.forEach(domain => {
         const link = document.createElement('link');
         link.rel = 'preconnect';
@@ -108,13 +94,10 @@ export default function SEOOptimizer({
         document.head.appendChild(link);
       });
     };
-
     addPerformanceHints();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
-
   return null;
 }
-=======
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
@@ -124,7 +107,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   structuredData
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  
   const defaultStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -145,16 +127,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       email: 'kleber@ziontechgroup.com'
     }
   };
-
   const finalStructuredData = structuredData || defaultStructuredData;
-
   return (
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={canonicalUrl} />
-      
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -162,19 +141,16 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#3B82F6" />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
-      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
@@ -182,6 +158,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     </Helmet>
   );
 };
-
 export default SEOOptimizer;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a

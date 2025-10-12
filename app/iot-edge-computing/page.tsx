@@ -1,9 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-
-
 import { ArrowRight } from 'lucide-react'
-
 export default function IotEdgeComputingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -25,29 +21,20 @@ export default function IotEdgeComputingPage() {
     </div>
   )
 }
-=======
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import Layout from '../layout'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cpu, Network, Database, Wifi } from 'lucide-react'
 import { Link } from 'react-router-dom'
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cpu, Network, Settings } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
-
 const IOTEdgeComputingPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: <Cpu className="w-8 h-8 text-blue-500" />,
-=======
       icon: <Cpu className="w-8 h-8 text-cyan-400" />,
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
       title: 'Edge Processing',
       description: 'Real-time data processing at the edge for faster response times and reduced latency.'
     },
     {
-<<<<<<< HEAD
       icon: <Network className="w-8 h-8 text-green-500" />,
       title: 'IoT Connectivity',
       description: 'Comprehensive IoT connectivity solutions for seamless device communication.'
@@ -63,7 +50,6 @@ const IOTEdgeComputingPage: React.FC = () => {
       description: 'Advanced wireless communication protocols for reliable IoT connectivity.'
     }
   ]
-
   const benefits = [
     'Real-time edge processing',
     'Reduced latency and bandwidth usage',
@@ -74,7 +60,6 @@ const IOTEdgeComputingPage: React.FC = () => {
     'Cost-effective solutions',
     'Future-proof technology'
   ]
-
   return (
     <Layout
       title="IoT Edge Computing - Zion Tech Group"
@@ -97,7 +82,6 @@ const IOTEdgeComputingPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced IoT edge computing solutions for real-time processing, device connectivity, 
               and intelligent data management at the edge of your network.
-=======
       icon: <Network className="w-8 h-8 text-emerald-400" />,
       title: 'IoT Connectivity',
       description: 'Seamless connectivity for IoT devices with robust network infrastructure.'
@@ -113,7 +97,6 @@ const IOTEdgeComputingPage: React.FC = () => {
       description: 'Advanced AI integration for intelligent decision-making at the edge.'
     }
   ]
-
   const benefits = [
     'Real-time processing',
     'Reduced latency',
@@ -124,7 +107,6 @@ const IOTEdgeComputingPage: React.FC = () => {
     'Enhanced security',
     'Global connectivity'
   ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -132,7 +114,6 @@ const IOTEdgeComputingPage: React.FC = () => {
         <meta name="description" content="Professional IoT edge computing solutions by Zion Tech Group. Advanced AI and edge computing for your business." />
         <link rel="canonical" href="https://ziontechgroup.com/iot-edge-computing" />
       </Helmet>
-      
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -157,7 +138,6 @@ const IOTEdgeComputingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -166,7 +146,6 @@ const IOTEdgeComputingPage: React.FC = () => {
               Everything you need for IoT edge computing solutions
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
@@ -178,14 +157,12 @@ const IOTEdgeComputingPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">IoT Edge Benefits</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IoT edge computing solutions for your business
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -203,9 +180,7 @@ const IOTEdgeComputingPage: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -230,7 +205,6 @@ const IOTEdgeComputingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -268,7 +242,6 @@ const IOTEdgeComputingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -302,11 +275,7 @@ const IOTEdgeComputingPage: React.FC = () => {
     </Layout>
   )
 }
-
 export default IOTEdgeComputingPage
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -317,7 +286,6 @@ export default IOTEdgeComputingPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -341,6 +309,4 @@ export default IOTEdgeComputingPage
     </div>
   )
 }
-
 export default IOTEdgeComputingPage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a

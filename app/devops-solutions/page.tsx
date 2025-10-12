@@ -1,8 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-
 import Layout from '../layout'
-
 const DevOpsSolutionsPage: React.FC = () => {
   return (
     <Layout
@@ -20,7 +17,6 @@ const DevOpsSolutionsPage: React.FC = () => {
               Streamline your development and deployment processes with our comprehensive DevOps solutions.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <h3 className="text-xl font-semibold text-white mb-4">CI/CD Pipeline</h3>
@@ -34,7 +30,6 @@ const DevOpsSolutionsPage: React.FC = () => {
                 <li>• Rollback capabilities</li>
               </ul>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <h3 className="text-xl font-semibold text-white mb-4">Infrastructure as Code</h3>
               <p className="text-gray-300 mb-4">
@@ -47,7 +42,6 @@ const DevOpsSolutionsPage: React.FC = () => {
                 <li>• Kubernetes manifests</li>
               </ul>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <h3 className="text-xl font-semibold text-white mb-4">Monitoring & Observability</h3>
               <p className="text-gray-300 mb-4">
@@ -62,12 +56,10 @@ const DevOpsSolutionsPage: React.FC = () => {
             </div>
           </div>
         </div>
-=======
 import { Helmet } from 'react-helmet-async'
 import Layout from '../layout'
 import { Code, Cloud, Shield, Database, GitBranch, Monitor, Zap, CheckCircle, ArrowRight, Users, Clock, BarChart3 } from 'lucide-react'
 import { Link } from 'react-router-dom'
-
 const DevOpsSolutionsPage: React.FC = () => {
   const features = [
     {
@@ -91,7 +83,6 @@ const DevOpsSolutionsPage: React.FC = () => {
       description: 'Automated database migrations, backups, and performance optimization.'
     }
   ]
-
   const services = [
     {
       icon: <GitBranch className="w-6 h-6 text-blue-500" />,
@@ -114,7 +105,6 @@ const DevOpsSolutionsPage: React.FC = () => {
       description: 'Detailed analytics and reporting on deployment frequency and success rates.'
     }
   ]
-
   const benefits = [
     'Faster time to market with automated deployments',
     'Reduced manual errors and improved reliability',
@@ -123,7 +113,6 @@ const DevOpsSolutionsPage: React.FC = () => {
     'Scalable infrastructure that grows with your business',
     '24/7 monitoring and proactive issue resolution'
   ]
-
   return (
     <Layout
       title="DevOps Solutions - Zion Tech Group"
@@ -164,7 +153,6 @@ const DevOpsSolutionsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -189,7 +177,6 @@ const DevOpsSolutionsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -214,7 +201,6 @@ const DevOpsSolutionsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -252,7 +238,6 @@ const DevOpsSolutionsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -282,10 +267,8 @@ const DevOpsSolutionsPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
       </div>
     </Layout>
   )
 }
-
 export default DevOpsSolutionsPage

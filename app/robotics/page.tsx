@@ -1,9 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-
-
 import { ArrowRight } from 'lucide-react'
-
 export default function RoboticsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -25,20 +21,14 @@ export default function RoboticsPage() {
     </div>
   )
 }
-=======
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import Layout from '../layout'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Bot, Cpu, Wrench, Target } from 'lucide-react'
 import { Link } from 'react-router-dom'
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cpu, Settings, Target } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
-
 const RoboticsPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: <Bot className="w-8 h-8 text-blue-500" />,
       title: 'Robotic Automation',
       description: 'Advanced robotic automation solutions for manufacturing and industrial processes.'
@@ -59,7 +49,6 @@ const RoboticsPage: React.FC = () => {
       description: 'High-precision robotic control systems for accurate and reliable operations.'
     }
   ]
-
   const benefits = [
     'Advanced robotic automation',
     'AI-powered intelligent systems',
@@ -70,7 +59,6 @@ const RoboticsPage: React.FC = () => {
     'Improved safety and reliability',
     '24/7 operational capability'
   ]
-
   return (
     <Layout
       title="Robotics Solutions - Zion Tech Group"
@@ -93,7 +81,6 @@ const RoboticsPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced robotics solutions including automation, AI-powered systems, and custom 
               robotic solutions for manufacturing and industrial applications.
-=======
       icon: <Cpu className="w-8 h-8 text-cyan-400" />,
       title: 'AI-Powered Robotics',
       description: 'Advanced robotics systems powered by artificial intelligence for intelligent automation.'
@@ -114,7 +101,6 @@ const RoboticsPage: React.FC = () => {
       description: 'Self-learning robotic systems that improve performance over time.'
     }
   ]
-
   const benefits = [
     'AI-powered automation',
     'Precision control systems',
@@ -125,7 +111,6 @@ const RoboticsPage: React.FC = () => {
     'Safety enhancement',
     'Scalable solutions'
   ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -133,7 +118,6 @@ const RoboticsPage: React.FC = () => {
         <meta name="description" content="Professional robotics solutions by Zion Tech Group. Advanced AI and automation for your business." />
         <link rel="canonical" href="https://ziontechgroup.com/robotics" />
       </Helmet>
-      
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -158,7 +142,6 @@ const RoboticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -167,7 +150,6 @@ const RoboticsPage: React.FC = () => {
               Everything you need for advanced robotics solutions
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
@@ -179,14 +161,12 @@ const RoboticsPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Robotics Benefits</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive robotics solutions for your business
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -204,9 +184,7 @@ const RoboticsPage: React.FC = () => {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -231,7 +209,6 @@ const RoboticsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -269,7 +246,6 @@ const RoboticsPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -303,11 +279,7 @@ const RoboticsPage: React.FC = () => {
     </Layout>
   )
 }
-
 export default RoboticsPage
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -318,7 +290,6 @@ export default RoboticsPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -342,6 +313,4 @@ export default RoboticsPage
     </div>
   )
 }
-
 export default RoboticsPage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a

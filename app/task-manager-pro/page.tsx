@@ -1,9 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-
-
 import { ArrowRight } from 'lucide-react'
-
 export default function TaskManagerProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -25,20 +21,14 @@ export default function TaskManagerProPage() {
     </div>
   )
 }
-=======
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import Layout from '../layout'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, CheckSquare, Calendar, Users, BarChart3 } from 'lucide-react'
 import { Link } from 'react-router-dom'
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Calendar, Clock, Users, Target } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
-
 const TaskManagerProPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: <CheckSquare className="w-8 h-8 text-blue-500" />,
       title: 'Task Management',
       description: 'Advanced task management with priority settings, deadlines, and progress tracking.'
@@ -59,7 +49,6 @@ const TaskManagerProPage: React.FC = () => {
       description: 'Detailed analytics and reporting for project performance and team productivity.'
     }
   ]
-
   const benefits = [
     'Advanced task management capabilities',
     'Real-time team collaboration',
@@ -70,7 +59,6 @@ const TaskManagerProPage: React.FC = () => {
     'Customizable workflows',
     '24/7 customer support'
   ]
-
   return (
     <Layout
       title="Task Manager Pro - Zion Tech Group"
@@ -111,7 +99,6 @@ const TaskManagerProPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -136,7 +123,6 @@ const TaskManagerProPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -174,7 +160,6 @@ const TaskManagerProPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -208,10 +193,7 @@ const TaskManagerProPage: React.FC = () => {
     </Layout>
   )
 }
-
 export default TaskManagerProPage
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
       icon: <Calendar className="w-8 h-8 text-cyan-400" />,
       title: 'Advanced Scheduling',
       description: 'Intelligent task scheduling with AI-powered prioritization and deadline management.'
@@ -232,7 +214,6 @@ export default TaskManagerProPage
       description: 'Advanced time tracking and productivity analytics for optimal performance.'
     }
   ]
-
   const benefits = [
     'AI-powered task prioritization',
     'Real-time team collaboration',
@@ -243,7 +224,6 @@ export default TaskManagerProPage
     'Mobile and desktop sync',
     'Integration with popular tools'
   ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -251,7 +231,6 @@ export default TaskManagerProPage
         <meta name="description" content="Advanced task management solution with AI-powered scheduling, team collaboration, and productivity analytics." />
         <link rel="canonical" href="https://ziontechgroup.com/task-manager-pro" />
       </Helmet>
-      
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -276,7 +255,6 @@ export default TaskManagerProPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -285,7 +263,6 @@ export default TaskManagerProPage
               Everything you need for efficient task management
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
@@ -297,7 +274,6 @@ export default TaskManagerProPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -306,7 +282,6 @@ export default TaskManagerProPage
               Comprehensive task management solutions for your business
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -317,7 +292,6 @@ export default TaskManagerProPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -341,6 +315,4 @@ export default TaskManagerProPage
     </div>
   )
 }
-
 export default TaskManagerProPage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a

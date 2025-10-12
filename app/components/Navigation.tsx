@@ -1,28 +1,20 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react'
-=======
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Network, Bot, BarChart3, Settings, Rocket, Lock, Wifi, BarChart, Users, Mail, Phone, MapPin, Sparkles, Layers, Target, Award, Lightbulb, Monitor, Server, CircuitBoard, Atom, Satellite, Wrench, PieChart, LineChart, Activity, Eye, Search, Filter, Download, Upload, Share, MessageCircle, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10, FileText, Package, DollarSign, CheckCircle, Star, Clock, TrendingUp } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
-
 import { Menu, X, ChevronDown, Database, Code, Brain } from 'lucide-react';
 import SearchModal from './SearchModal'
 import ThemeToggle from './ThemeToggle'
-
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
-
-<<<<<<< HEAD
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
-    
     // Throttle scroll events for better performance
     let ticking = false
     const throttledHandleScroll = () => {
@@ -34,11 +26,9 @@ export default function Navigation() {
         ticking = true
       }
     }
-    
     window.addEventListener('scroll', throttledHandleScroll, { passive: true })
     return () => window.removeEventListener('scroll', throttledHandleScroll)
   }, [])
-=======
   const navigationItems = [
     {
       name: 'AI Services',
@@ -78,12 +68,9 @@ export default function Navigation() {
     {
       name: 'Micro SAAS',
       path: '/micro-saas',
-<<<<<<< HEAD
       icon: Code,
-=======
       icon: Layers,
       color: 'from-emerald-500 to-cyan-500',
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
       dropdown: [
         { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', price: '$149/month', icon: BarChart3 },
         { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', price: '$79/month', icon: Calendar },
@@ -139,33 +126,25 @@ export default function Navigation() {
       ]
     }
   ];
-
   const simpleLinks = [
-<<<<<<< HEAD
     { name: 'About', path: '/about' },
     { name: 'Team', path: '/team' },
     { name: 'Blog', path: '/blog' },
     { name: 'Case Studies', path: '/case-studies' },
     { name: 'Pricing', path: '/pricing' },
     { name: 'Contact', path: '/contact' }
-=======
     { name: 'About', path: '/about', icon: Info },
     { name: 'Contact', path: '/contact', icon: Phone },
     { name: 'Pricing', path: '/pricing', icon: DollarSign },
     { name: 'Blog', path: '/blog', icon: FileText },
     { name: 'Support', path: '/support', icon: HelpCircle }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
   ];
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   }
-
   const closeDropdown = () => {
     setActiveDropdown(null)
   }
-
   const aiServices = [
     { name: 'AI Content Generator', path: '/ai-content-generator' },
     { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
@@ -181,7 +160,6 @@ export default function Navigation() {
     { name: 'AI 3D Generation', path: '/ai-3d-generation' },
     { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
   ];
-
   const itServices = [
     { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
     { name: 'Mobile Development', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> },
@@ -191,7 +169,6 @@ export default function Navigation() {
     { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite', icon: <Shield className="w-4 h-4" /> }
   ];
-
   const fiveGServices = [
     { name: '5G Implementation', path: '/5g-implementation', icon: <Wifi className="w-4 h-4" /> },
     { name: '5G Network Infrastructure', path: '/5g-network-infrastructure', icon: <Server className="w-4 h-4" /> },
@@ -201,7 +178,6 @@ export default function Navigation() {
     { name: '5G Mobile Applications', path: '/5g-mobile-applications', icon: <Smartphone className="w-4 h-4" /> },
     { name: 'AI Smart City Solutions', path: '/ai-smart-city-solutions', icon: <Database className="w-4 h-4" /> }
   ];
-
   const microSaasServices = [
     { name: 'AI Task Manager', path: '/ai-task-manager' },
     { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
@@ -216,9 +192,7 @@ export default function Navigation() {
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
     { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
   ];
-
   return (
-<<<<<<< HEAD
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20' : 'bg-transparent'
@@ -236,12 +210,10 @@ export default function Navigation() {
           >
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
               <Zap className="w-5 h-5 text-white" aria-hidden="true" />
-=======
     <nav className="bg-gray-900/95 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50 relative">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" />
       <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(6,182,212,0.1)_50%,transparent_100%)] animate-pulse" />
-      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
@@ -256,7 +228,6 @@ export default function Navigation() {
               </div>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
             <div className="ml-10 flex items-center space-x-1">
@@ -271,7 +242,6 @@ export default function Navigation() {
                     {item.name}
                     <ChevronDown className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform duration-300" />
                   </button>
-                  
                   {activeDropdown === item.name && (
                     <div className="absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-lg rounded-2xl border border-white/20 shadow-2xl z-50 overflow-hidden">
                       <div className="p-6">
@@ -324,7 +294,6 @@ export default function Navigation() {
                   )}
                 </div>
               ))}
-              
               {simpleLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -335,11 +304,9 @@ export default function Navigation() {
                   <span>{link.name}</span>
                 </Link>
               ))}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
-
             {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
@@ -357,7 +324,6 @@ export default function Navigation() {
             <Link to="/it-services" className="text-white hover:text-cyan-400 transition-colors font-medium">
               IT Services
             </Link>
-            
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
@@ -390,7 +356,6 @@ export default function Navigation() {
                 </div>
               )}
             </div>
-
             {/* IT Services Dropdown */}
             <div className="relative">
               <button
@@ -416,7 +381,6 @@ export default function Navigation() {
                 </div>
               )}
             </div>
-
             {/* Micro SAAS Dropdown */}
             <div className="relative">
               <button
@@ -442,7 +406,6 @@ export default function Navigation() {
                 </div>
               )}
             </div>
-
             {/* 5G Services Dropdown */}
             <div className="relative">
               <button
@@ -468,11 +431,9 @@ export default function Navigation() {
                 </div>
               )}
             </div>
-
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Contact
             </Link>
-            
             {/* Search Button */}
             <button
               onClick={() => setIsSearchOpen(true)}
@@ -481,12 +442,9 @@ export default function Navigation() {
             >
               <Search className="w-5 h-5" />
             </button>
-            
             {/* Theme Toggle */}
             <ThemeToggle />
           </div>
-
-<<<<<<< HEAD
           {/* Tablet Navigation */}
           <div className="hidden md:flex lg:hidden items-center space-x-6">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
@@ -497,7 +455,6 @@ export default function Navigation() {
             </Link>
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Contact
-=======
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
@@ -506,10 +463,8 @@ export default function Navigation() {
             >
               <span>Get Started</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
             </Link>
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -523,10 +478,8 @@ export default function Navigation() {
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
-<<<<<<< HEAD
           <div className="md:hidden" id="mobile-menu">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-md rounded-lg mt-2 border border-cyan-500/20" role="menu" aria-label="Mobile navigation menu">
               <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
@@ -544,7 +497,6 @@ export default function Navigation() {
               <Link to="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
                 IT Services
               </Link>
-              
               {/* AI Services Mobile */}
               <div>
                 <button
@@ -554,7 +506,6 @@ export default function Navigation() {
                   <div className="flex items-center">
                     <Brain className="w-4 h-4 mr-2" />
                     <span>AI Services</span>
-=======
           <div className="lg:hidden">
             <div className="px-4 pt-2 pb-6 space-y-1 bg-gray-900/95 backdrop-blur-lg border-t border-white/10">
               {navigationItems.map((item) => (
@@ -564,16 +515,13 @@ export default function Navigation() {
                       <item.icon className="w-4 h-4 text-white" />
                     </div>
                     {item.name}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
                   </div>
                   <ChevronDown className="w-4 h-4" />
                 </button>
-                
                 {activeDropdown === 'ai-mobile' && (
                   <div className="pl-6 space-y-1">
                     {aiServices.map((service) => (
                       <Link
-<<<<<<< HEAD
                         key={service.name}
                         to={service.path}
                         className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm transition-colors"
@@ -588,7 +536,6 @@ export default function Navigation() {
                   </div>
                 )}
               </div>
-
               {/* IT Services Mobile */}
               <div>
                 <button
@@ -601,7 +548,6 @@ export default function Navigation() {
                   </div>
                   <ChevronDown className="w-4 h-4" />
                 </button>
-                
                 {activeDropdown === 'it-mobile' && (
                   <div className="pl-6 space-y-1">
                     {itServices.map((service) => (
@@ -620,7 +566,6 @@ export default function Navigation() {
                   </div>
                 )}
               </div>
-
               {/* Micro SAAS Mobile */}
               <div>
                 <button
@@ -633,7 +578,6 @@ export default function Navigation() {
                   </div>
                   <ChevronDown className="w-4 h-4" />
                 </button>
-                
                 {activeDropdown === 'saas-mobile' && (
                   <div className="pl-6 space-y-1">
                     {microSaasServices.map((service) => (
@@ -652,7 +596,6 @@ export default function Navigation() {
                   </div>
                 )}
               </div>
-
               {/* 5G Services Mobile */}
               <div>
                 <button
@@ -665,7 +608,6 @@ export default function Navigation() {
                   </div>
                   <ChevronDown className="w-4 h-4" />
                 </button>
-                
                 {activeDropdown === '5g-mobile' && (
                   <div className="pl-6 space-y-1">
                     {fiveGServices.map((service) => (
@@ -684,15 +626,12 @@ export default function Navigation() {
                   </div>
                 )}
               </div>
-
               <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
                 Contact
               </Link>
-              
               <Link 
                 to="/contact" 
                 className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 rounded-lg text-base font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center mt-4"
-=======
                         key={index}
                         to={dropdownItem.path}
                         className="group block text-gray-400 hover:text-white px-3 py-2 rounded-lg text-sm transition-all duration-300"
@@ -717,7 +656,6 @@ export default function Navigation() {
                   </div>
                 </div>
               ))}
-              
               {simpleLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -729,11 +667,9 @@ export default function Navigation() {
                   <span>{link.name}</span>
                 </Link>
               ))}
-              
               <Link
                 to="/contact"
                 className="group block bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-xl font-bold text-center hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 mt-4 flex items-center justify-center space-x-2"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
                 onClick={() => setIsOpen(false)}
               >
                 <span>Get Started</span>
@@ -743,7 +679,6 @@ export default function Navigation() {
           </div>
         )}
       </div>
-      
       {/* Search Modal */}
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </nav>

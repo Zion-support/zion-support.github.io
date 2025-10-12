@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 'use client';
-
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -32,17 +30,11 @@ import {
   Filter,
   Settings
 } from 'lucide-react';
-
 export default function AIEmailMarketingAutomationPage() {
   const [selectedPlan, setSelectedPlan] = useState('pro');
-=======
 import React from 'react'
-
 import Layout from '../layout'
-
 import { ArrowRight, Mail } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-b5ac
-
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -81,7 +73,6 @@ import { ArrowRight, Mail } from 'lucide-react';
       benefits: ['GDPR compliance', 'Spam score monitoring', 'List hygiene tools']
     }
   ];
-
   const automationTypes = [
     {
       type: 'Welcome Series',
@@ -120,7 +111,6 @@ import { ArrowRight, Mail } from 'lucide-react';
       benefits: ['Content series', 'Progressive profiling', 'Lead scoring']
     }
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -170,7 +160,6 @@ import { ArrowRight, Mail } from 'lucide-react';
       popular: false
     }
   ];
-
   const testimonials = [
     {
       name: 'Amanda Foster',
@@ -194,14 +183,12 @@ import { ArrowRight, Mail } from 'lucide-react';
       avatar: 'LC'
     }
   ];
-
   const stats = [
     { number: '180%', label: 'Increase in Email Revenue', icon: <DollarSign className="w-6 h-6" /> },
     { number: '40%', label: 'Higher Open Rates', icon: <Eye className="w-6 h-6" /> },
     { number: '35%', label: 'Better Conversion Rates', icon: <TrendingUp className="w-6 h-6" /> },
     { number: '20hrs', label: 'Time Saved Per Week', icon: <Clock className="w-6 h-6" /> }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
@@ -209,7 +196,6 @@ import { ArrowRight, Mail } from 'lucide-react';
         <meta name="description" content="Transform your email marketing with our AI-powered Email Marketing Automation. Increase revenue by 180% with intelligent campaigns, segmentation, and automation workflows." />
         <meta name="keywords" content="AI email marketing, email automation, email campaigns, marketing automation, Zion Tech Group" />
       </Helmet>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -239,7 +225,6 @@ import { ArrowRight, Mail } from 'lucide-react';
             </Link>
           </div>
         </div>
-
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xl mb-16">
           <div className="max-w-7xl mx-auto">
@@ -256,7 +241,6 @@ import { ArrowRight, Mail } from 'lucide-react';
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -266,7 +250,6 @@ import { ArrowRight, Mail } from 'lucide-react';
               your email campaigns for maximum engagement and revenue.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
@@ -289,7 +272,6 @@ import { ArrowRight, Mail } from 'lucide-react';
             ))}
           </div>
         </section>
-
         {/* Automation Types Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -298,7 +280,6 @@ import { ArrowRight, Mail } from 'lucide-react';
               Create powerful automated email sequences that nurture leads and drive conversions.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {automationTypes.map((type, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
@@ -318,7 +299,6 @@ import { ArrowRight, Mail } from 'lucide-react';
             ))}
           </div>
         </section>
-
         {/* Pricing Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -327,7 +307,6 @@ import { ArrowRight, Mail } from 'lucide-react';
               Flexible pricing plans designed to scale with your email marketing needs.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 relative ${
@@ -340,7 +319,6 @@ import { ArrowRight, Mail } from 'lucide-react';
                     </span>
                   </div>
                 )}
-                
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -349,7 +327,6 @@ import { ArrowRight, Mail } from 'lucide-react';
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -358,7 +335,6 @@ import { ArrowRight, Mail } from 'lucide-react';
                     </li>
                   ))}
                 </ul>
-                
                 <Link
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
@@ -374,7 +350,6 @@ import { ArrowRight, Mail } from 'lucide-react';
             ))}
           </div>
         </section>
-
         {/* Testimonials */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xl mb-16">
           <div className="max-w-7xl mx-auto">
@@ -384,7 +359,6 @@ import { ArrowRight, Mail } from 'lucide-react';
                 Join thousands of satisfied customers who have transformed their email marketing.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -408,7 +382,6 @@ import { ArrowRight, Mail } from 'lucide-react';
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 border border-cyan-500/30">

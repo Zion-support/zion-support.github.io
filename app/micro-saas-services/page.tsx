@@ -1,7 +1,5 @@
 'use client';
-
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
@@ -33,18 +31,11 @@ import {
   Twitter,
   Calendar
 } from 'lucide-react';
-=======
-
-
 import { Code, ArrowRight, Mail, MessageSquare } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-b5ac
-
 const MicroSaasServicesPage: React.FC = () => {
   const services = [
     {
-<<<<<<< HEAD
       icon: <Brain className="w-8 h-8 text-cyan-500" />,
-=======
       name: 'AI-Powered CRM',
       description: 'Intelligent customer relationship management with AI insights, lead scoring, and automated follow-ups',
       price: '$99/month',
@@ -153,7 +144,6 @@ const MicroSaasServicesPage: React.FC = () => {
       freeTrial: '30 days'
     }
   ];
-
   const categories = [
     { name: 'All Services', count: microSaasServices.length, active: true },
     { name: 'Customer Management', count: microSaasServices.filter(s => s.category === 'Customer Management').length, active: false },
@@ -166,7 +156,6 @@ const MicroSaasServicesPage: React.FC = () => {
     { name: 'Customer Support', count: microSaasServices.filter(s => s.category === 'Customer Support').length, active: false },
     { name: 'Finance', count: microSaasServices.filter(s => s.category === 'Finance').length, active: false }
   ];
-
   const benefits = [
     {
       icon: Zap,
@@ -189,7 +178,6 @@ const MicroSaasServicesPage: React.FC = () => {
       description: 'Round-the-clock support from our expert team to ensure your success'
     }
   ];
-
   const pricingTiers = [
     {
       name: 'Starter',
@@ -213,7 +201,6 @@ const MicroSaasServicesPage: React.FC = () => {
       popular: false
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -221,13 +208,11 @@ const MicroSaasServicesPage: React.FC = () => {
         <meta name="description" content="Comprehensive micro SAAS solutions including CRM, analytics, testing, content management, email marketing, and project management. Streamline your business processes." />
         <meta name="keywords" content="micro SAAS, business software, CRM, analytics, testing, content management, email marketing, project management, customer support" />
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 via-emerald-600/20 to-teal-600/20 animate-pulse"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.3),transparent_50%)]"></div>
-          
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -254,7 +239,6 @@ const MicroSaasServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto">
@@ -279,7 +263,6 @@ const MicroSaasServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Pricing Tiers */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -330,7 +313,6 @@ const MicroSaasServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Category Filter */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -350,7 +332,6 @@ const MicroSaasServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -369,7 +350,6 @@ const MicroSaasServicesPage: React.FC = () => {
                       <div className="text-sm text-gray-400">{service.reviews} reviews</div>
                     </div>
                   </div>
-                  
                   <div className="mb-4">
                     <span className="inline-block bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm font-medium mb-3">
                       {service.category}
@@ -377,12 +357,10 @@ const MicroSaasServicesPage: React.FC = () => {
                     <h3 className="text-2xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
                   </div>
-                  
                   <div className="flex items-center justify-between mb-6">
                     <div className="text-3xl font-bold text-green-400">{service.price}</div>
                     <div className="text-sm text-gray-400">Free trial: {service.freeTrial}</div>
                   </div>
-                  
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -391,7 +369,6 @@ const MicroSaasServicesPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
                   <Link
                     to={service.path}
                     className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center group"
@@ -404,7 +381,6 @@ const MicroSaasServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -438,14 +414,10 @@ const MicroSaasServicesPage: React.FC = () => {
   );
 }
 import { ArrowRight, Brain } from 'lucide-react';
-
-
-
 const MicroSAASServicesPage: React.FC = () => {
   const microSAAS = [
     {
       icon: <Zap className="w-8 h-8 text-blue-500" />,
->>>>>>> cursor/analyze-improve-and-deploy-application-b5ac
       title: 'AI Content Generator',
       description: 'Create high-quality content with AI-powered writing tools.',
       features: ['Automated content creation', 'SEO optimization', 'Multi-language support', 'Content templates'],
@@ -552,14 +524,12 @@ const MicroSAASServicesPage: React.FC = () => {
       popular: true
     }
   ];
-
   const stats = [
     { number: '10,000+', label: 'Active Users' },
     { number: '99.9%', label: 'Uptime' },
     { number: '50+', label: 'AI Tools' },
     { number: '24/7', label: 'Support' }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
@@ -567,7 +537,6 @@ const MicroSAASServicesPage: React.FC = () => {
         <meta name="description" content="Discover our comprehensive micro SaaS services. AI-powered tools and solutions for modern businesses." />
         <meta name="keywords" content="micro saas, ai tools, business automation, productivity software, Zion Tech Group" />
       </Helmet>
-      
       {/* Hero Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -594,7 +563,6 @@ const MicroSAASServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -606,7 +574,6 @@ const MicroSAASServicesPage: React.FC = () => {
               Focused solutions for specific business needs
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
@@ -644,7 +611,6 @@ const MicroSAASServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -661,7 +627,6 @@ const MicroSAASServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -691,5 +656,4 @@ const MicroSAASServicesPage: React.FC = () => {
     </div>
   );
 };
-
 export default MicroSaasServicesPage;

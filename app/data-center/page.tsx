@@ -1,9 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-
-
 import { ArrowRight } from 'lucide-react'
-
 export default function DataCenterPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -25,20 +21,14 @@ export default function DataCenterPage() {
     </div>
   )
 }
-=======
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import Layout from '../layout'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Server, Database, Cpu, Network } from 'lucide-react'
 import { Link } from 'react-router-dom'
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Server, Database, Network, Cpu } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
-
 const DataCenterPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: <Server className="w-8 h-8 text-blue-500" />,
       title: 'High-Performance Servers',
       description: 'Enterprise-grade servers with cutting-edge hardware for optimal performance.'
@@ -59,7 +49,6 @@ const DataCenterPage: React.FC = () => {
       description: 'Robust network infrastructure with high-speed connectivity and redundancy.'
     }
   ]
-
   const benefits = [
     'Enterprise-grade infrastructure',
     'High availability and uptime',
@@ -70,7 +59,6 @@ const DataCenterPage: React.FC = () => {
     'Green energy initiatives',
     'Compliance and certification'
   ]
-
   return (
     <Layout
       title="Data Center Solutions - Zion Tech Group"
@@ -111,7 +99,6 @@ const DataCenterPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -136,7 +123,6 @@ const DataCenterPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -174,7 +160,6 @@ const DataCenterPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -208,10 +193,7 @@ const DataCenterPage: React.FC = () => {
     </Layout>
   )
 }
-
 export default DataCenterPage
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
       icon: <Server className="w-8 h-8 text-cyan-400" />,
       title: 'High-Performance Servers',
       description: 'State-of-the-art server infrastructure with 99.99% uptime guarantee and enterprise-grade reliability.'
@@ -232,7 +214,6 @@ export default DataCenterPage
       description: 'Distributed computing resources for faster processing and reduced latency.'
     }
   ]
-
   const benefits = [
     '99.99% uptime guarantee',
     '24/7 monitoring and support',
@@ -243,7 +224,6 @@ export default DataCenterPage
     'Disaster recovery solutions',
     'Compliance certifications'
   ]
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -251,7 +231,6 @@ export default DataCenterPage
         <meta name="description" content="Enterprise-grade data center solutions with high-performance servers, advanced storage, and global network infrastructure." />
         <link rel="canonical" href="https://ziontechgroup.com/data-center" />
       </Helmet>
-      
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -276,7 +255,6 @@ export default DataCenterPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -285,7 +263,6 @@ export default DataCenterPage
               Everything you need for enterprise data center operations
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
@@ -297,7 +274,6 @@ export default DataCenterPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -306,7 +282,6 @@ export default DataCenterPage
               Comprehensive data center solutions for your business
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -317,7 +292,6 @@ export default DataCenterPage
           </div>
         </div>
       </section>
-
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -341,6 +315,4 @@ export default DataCenterPage
     </div>
   )
 }
-
 export default DataCenterPage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a

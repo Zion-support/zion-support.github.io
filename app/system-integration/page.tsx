@@ -1,8 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
-
 import Layout from '../layout'
-
 const SystemIntegrationPage: React.FC = () => {
   return (
     <Layout
@@ -20,7 +17,6 @@ const SystemIntegrationPage: React.FC = () => {
               Connect your systems seamlessly with our comprehensive integration solutions.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <h3 className="text-xl font-semibold text-white mb-4">API Integration</h3>
@@ -34,7 +30,6 @@ const SystemIntegrationPage: React.FC = () => {
                 <li>• API gateway management</li>
               </ul>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <h3 className="text-xl font-semibold text-white mb-4">Data Integration</h3>
               <p className="text-gray-300 mb-4">
@@ -47,7 +42,6 @@ const SystemIntegrationPage: React.FC = () => {
                 <li>• Data migration</li>
               </ul>
             </div>
-
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <h3 className="text-xl font-semibold text-white mb-4">Enterprise Integration</h3>
               <p className="text-gray-300 mb-4">
@@ -62,12 +56,10 @@ const SystemIntegrationPage: React.FC = () => {
             </div>
           </div>
         </div>
-=======
 import { Helmet } from 'react-helmet-async'
 import Layout from '../layout'
 import { Network, Database, Code, Shield, Zap, CheckCircle, ArrowRight, Users, Clock, BarChart3, Cloud, Settings } from 'lucide-react'
 import { Link } from 'react-router-dom'
-
 const SystemIntegrationPage: React.FC = () => {
   const features = [
     {
@@ -91,7 +83,6 @@ const SystemIntegrationPage: React.FC = () => {
       description: 'Implement secure authentication and authorization across all integrated systems.'
     }
   ]
-
   const services = [
     {
       icon: <Code className="w-6 h-6 text-blue-500" />,
@@ -114,7 +105,6 @@ const SystemIntegrationPage: React.FC = () => {
       description: 'Comprehensive monitoring and analytics for all integrated systems and data flows.'
     }
   ]
-
   const benefits = [
     'Streamlined business processes through unified systems',
     'Reduced manual data entry and human errors',
@@ -123,7 +113,6 @@ const SystemIntegrationPage: React.FC = () => {
     'Better decision-making with unified data insights',
     'Scalable integration architecture for future growth'
   ]
-
   const integrationTypes = [
     {
       title: 'ERP Integration',
@@ -146,7 +135,6 @@ const SystemIntegrationPage: React.FC = () => {
       icon: <BarChart3 className="w-8 h-8 text-orange-500" />
     }
   ]
-
   return (
     <Layout
       title="System Integration - Zion Tech Group"
@@ -187,7 +175,6 @@ const SystemIntegrationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -212,7 +199,6 @@ const SystemIntegrationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Integration Types Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -237,7 +223,6 @@ const SystemIntegrationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -262,7 +247,6 @@ const SystemIntegrationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -300,7 +284,6 @@ const SystemIntegrationPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -330,10 +313,8 @@ const SystemIntegrationPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
       </div>
     </Layout>
   )
 }
-
 export default SystemIntegrationPage
