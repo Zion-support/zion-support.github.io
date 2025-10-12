@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain } from 'lucide-react'
 
 export default function Footer() {
   const aiServices = [

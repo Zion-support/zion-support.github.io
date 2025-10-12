@@ -1,13 +1,26 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'}
-  ]
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+
+const SystemMonitor: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>System Monitor | Zion Tech Group</title>
+        <meta name="description" content="Professional system monitoring solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="system monitor, AI solutions, IT services, Zion Tech Group, monitoring" />
+      </Helmet>
+
+      <div className="text-center py-20">
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            System Monitor
+          </span>
+          <br />
+          <span className="text-white">Solutions</span>
+        </h1>
+        <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced systemmonitor solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>

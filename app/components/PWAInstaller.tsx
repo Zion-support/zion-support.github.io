@@ -23,8 +23,12 @@ const PWAInstaller: React.FC = () => {
       </Helmet>
         </div>
       </section>
-}}
-  ];const benefits = [
+    </div>
+  )
+}
+
+const PWAInstallerPage: React.FC = () => {
+  const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
