@@ -53,7 +53,7 @@ export function useForm<T extends Record<string, unknown>>({
       setErrors(prev => ({
         ...prev,
         [field]: result.errors
-      }));
+      });
     },
     [values, validationSchema]
   );
@@ -78,7 +78,7 @@ export function useForm<T extends Record<string, unknown>>({
       setValues(prev => ({
         ...prev,
         [fieldName]: fieldValue
-      }));
+      });
       // Validate on change if enabled
       if (validateOnChange && touched[fieldName]) {
         setTimeout(() => validateSingleField(fieldName), 0);
@@ -93,7 +93,7 @@ export function useForm<T extends Record<string, unknown>>({
       setTouched(prev => ({
         ...prev,
         [fieldName]: true
-      }));
+      });
       // Validate on blur if enabled
       if (validateOnBlur) {
         validateSingleField(fieldName);
@@ -132,7 +132,7 @@ export function useForm<T extends Record<string, unknown>>({
     setValues(prev => ({
       ...prev,
       [field]: value
-    }));
+    });
     if (validateOnChange && touched[field]) {
       setTimeout(() => validateSingleField(field), 0);
     }
@@ -142,14 +142,14 @@ export function useForm<T extends Record<string, unknown>>({
     setErrors(prev => ({
       ...prev,
       [field]: fieldErrors
-    }));
+    });
   }, []);
   // Set field touched programmatically
   const setFieldTouched = useCallback((field: keyof T, isTouched: boolean) => {
     setTouched(prev => ({
       ...prev,
       [field]: isTouched
-    }));
+    });
   }, []);
   // Reset form to initial values
   const resetForm = useCallback(() => {
@@ -178,3 +178,24 @@ export function useForm<T extends Record<string, unknown>>({
     validateAllFields
   };
 }
+                                        </keyof>
+                                      </keyof>
+                                    </keyof>
+                                  </HTMLFormElement>
+                                </HTMLInputElement>
+                              </HTMLInputElement>
+                            </keyof>
+                          </keyof>
+                        </keyof>
+                      </T>
+                    </T>
+                  </T>
+                </HTMLFormElement>
+              </HTMLInputElement>
+            </HTMLInputElement>
+          </keyof>
+        </keyof>
+      </T>
+    </void>
+  </keyof>
+</T>

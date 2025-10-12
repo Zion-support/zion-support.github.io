@@ -35,7 +35,7 @@ export const useEnhancedPerformance = () => {
         loadTime,
         renderTime,
         memoryUsage: memoryUsage / 1024 / 1024 // Convert to MB
-      }));
+      });
     });
   }, []);
 
@@ -74,4 +74,4 @@ export const useEnhancedPerformance = () => {
     optimizePerformance,
     measurePerformance
   };
-};
+</PerformanceMetrics>

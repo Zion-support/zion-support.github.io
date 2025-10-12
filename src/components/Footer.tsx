@@ -120,8 +120,6 @@ const Footer: React.FC = () => {
                 <MapPin className="w-4 h-4 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
-            </div>
-          </div>
 
           {/* Micro SAAS Services */}
           <div>
@@ -183,7 +181,6 @@ const Footer: React.FC = () => {
                   ))}
                 </ul>
               </div>
-            </div>
             <a href="/services"
               className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
             >
@@ -244,9 +241,6 @@ const Footer: React.FC = () => {
                   ))}
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
 
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-8 pt-8">
@@ -264,11 +258,17 @@ const Footer: React.FC = () => {
                 </a>
               ))}
             </div>
-          </div>
-        </div>
-      </div>
     </footer>
   );
 };
 
 export default Footer;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

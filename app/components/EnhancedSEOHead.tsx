@@ -1,8 +1,7 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { useLocation } from 'react-router-dom'
-
+import { Helmet  } from 'react-helmet-async';
+import { useLocation  } from 'react-router-dom';
 interface SEOHeadProps {
   title?: string
   description?: string
@@ -45,7 +44,6 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "addressRegion": "CA",
       "addressCountry": "US"
     }
-  }
 
   return (
     <Helmet>
@@ -70,3 +68,5 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
 }
 
 export default EnhancedSEOHead
+
+</SEOHeadProps>

@@ -66,7 +66,6 @@ const AIApiManagementPage: React.FC = () => {
                 View Demo
               </button>
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -100,7 +99,6 @@ const AIApiManagementPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -119,8 +117,6 @@ const AIApiManagementPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-            </div>
-          </div>
         </section>
 
         <Footer />
@@ -130,3 +126,8 @@ const AIApiManagementPage: React.FC = () => {
 };
 
 export default AIApiManagementPage;
+
+      </div>
+    </div>
+  </div>
+</div>

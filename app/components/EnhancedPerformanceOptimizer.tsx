@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-import { Brain, Zap, Shield, BarChart, ArrowRight, CheckCircle } from 'lucide-react'
-
+import { Brain, Zap, Shield, BarChart, ArrowRight, CheckCircle  } from 'lucide-react';
 const EnhancedPerformanceOptimizer: React.FC = () => {
   const features = [
     {
@@ -23,9 +22,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       icon: BarChart,
       title: 'Analytics & Insights',
       description: 'Detailed performance metrics and actionable insights to drive continuous improvement.'
-    }
-  ]
-
+    } ]
   const benefits = [
     'Up to 80% faster page load times',
     'Reduced server costs by 40%',
@@ -56,7 +53,6 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
               Learn More
             </button>
           </div>
-        </div>
       </section>
 
       {/* Features Section */}
@@ -78,7 +74,6 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Benefits Section */}
@@ -115,7 +110,6 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
                     <h4 className="text-lg font-semibold text-white mb-2">Expert Team</h4>
                     <p className="text-gray-300 text-sm">Our experienced developers and performance engineers work tirelessly to optimize your applications.</p>
                   </div>
-                </div>
                 <div className="flex items-start">
                   <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-white font-bold text-sm">2</span>
@@ -124,7 +118,6 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
                     <h4 className="text-lg font-semibold text-white mb-2">Proven Results</h4>
                     <p className="text-gray-300 text-sm">We've helped hundreds of businesses achieve significant performance improvements and cost savings.</p>
                   </div>
-                </div>
                 <div className="flex items-start">
                   <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                     <span className="text-white font-bold text-sm">3</span>
@@ -133,11 +126,6 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
                     <h4 className="text-lg font-semibold text-white mb-2">24/7 Support</h4>
                     <p className="text-gray-300 text-sm">Round-the-clock monitoring and support to ensure your applications run smoothly at all times.</p>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -158,11 +146,21 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
                 View Pricing
               </button>
             </div>
-          </div>
-        </div>
       </section>
     </div>
   )
 }
 
 export default EnhancedPerformanceOptimizer
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Share2, ArrowRight } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async';
+import { Share2, ArrowRight  } from 'lucide-react';
 const SocialMediaManagerPage: React.FC = () => {
   return (
     <React.Fragment>
@@ -33,7 +33,6 @@ const SocialMediaManagerPage: React.FC = () => {
                 View Demo
   </
             </div>
-          </div>
         </section>
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto"></div>
@@ -43,7 +42,6 @@ const SocialMediaManagerPage: React.FC = () => {
                 We're developing powerful social media management solutions. Stay tuned for updates!
               </p>
             </div>
-          </div>
         </section>
       </div>
     </React.Fragment>
@@ -81,7 +79,6 @@ const SocialMediaManagerPage: React.FC = () => {return (<></>
                 View Demo
               </button>
             </div>
-          </div>
         </section>
         <section className="py-16 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -91,7 +88,6 @@ const SocialMediaManagerPage: React.FC = () => {return (<></>
                 We're developing powerful social media management solutions. Stay tuned for updates!
               </p>
             </div>
-          </div>
         </section>
       </div>
     </>)}

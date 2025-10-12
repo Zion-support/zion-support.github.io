@@ -47,7 +47,6 @@ export const usePerformanceOptimization = () => {
         if (!layoutShiftEntry.hadRecentInput) {
           clsValue += layoutShiftEntry.value || 0;
         }
-      }
       metrics.cumulativeLayoutShift = clsValue;
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] });
@@ -81,7 +80,6 @@ export const usePerformanceOptimization = () => {
           imageObserver.unobserve(img);
         }
       });
-    });
     images.forEach(img => imageObserver.observe(img));
   }, []);
   const preloadCriticalResources = useCallback(() => {
@@ -110,8 +108,6 @@ export const usePerformanceOptimization = () => {
           if (import.meta.env.DEV) { 
             console.log('Performance metrics:', metrics);
           } 
-        }
-      }
     }, 1000);
     // Optimize images
     optimizeImages();
@@ -124,4 +120,3 @@ export const usePerformanceOptimization = () => {
     optimizeImages,
     preloadCriticalResources
   };
-};

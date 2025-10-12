@@ -179,8 +179,6 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
             Go Home
   </
         </div>
-      </div>
-    </div>
   )}
 /**
  * Network error fallback component
@@ -208,7 +206,6 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
             Go Home
           </button>
         </div>
-      </div>
     </div>)}
 
 /**
@@ -240,8 +237,6 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
             Retry Connection
   </
         </div>
-      </div>
-    </div>
   )}
 /**
  * Not found error fallback component
@@ -267,8 +262,6 @@ function NotFoundFallback(): JSX.Element {
             Go Back
   </
         </div>
-      </div>
-    </div>
   )}
 /**
  * Get error type from error object
@@ -280,7 +273,6 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
             Retry Connection
           </button>
         </div>
-      </div>
     </div>)}
 
 /**
@@ -304,7 +296,6 @@ function NotFoundFallback(): JSX.Element {return (<div className="min-h-screen f
             Go Back
           </button>
         </div>
-      </div>
     </div>)}
 
 /**
@@ -335,10 +326,7 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
   }}
 export default getErrorBoundaryConfig
   </button>
-  </button>
-  </button>
   </path>
-  </button>
   </button>
   </h2>
   </path>
@@ -355,3 +343,7 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {re
   }}
 
 export default getErrorBoundaryConfig
+      </svg>
+    </path>
+  </p>
+</path>

@@ -61,7 +61,6 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
               value: href
             });
           }
-        }
       });
       // Track form submissions
       document.addEventListener('submit', (e) => {
@@ -84,7 +83,6 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
               value: target.getAttribute('href')
             });
           }
-        }
       });
     };
     // Initialize analytics

@@ -118,8 +118,6 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
             Go Home
           </button>
         </div>
-      </div>
-    </div>
   );
 }
 /**
@@ -156,8 +154,6 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
             Retry Connection
           </button>
         </div>
-      </div>
-    </div>
   );
 }
 /**
@@ -186,8 +182,6 @@ function NotFoundFallback(): JSX.Element {
             Go Back
           </button>
         </div>
-      </div>
-    </div>
   );
 }
 /**
@@ -226,3 +220,12 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
   };
 }
 export default getErrorBoundaryConfig;
+
+              </div>
+            </div>
+          </path>
+        </div>
+      </div>
+    </path>
+  </div>
+</div>

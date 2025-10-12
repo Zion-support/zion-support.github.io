@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Shield, Brain, Globe } from 'lucide-react'
-
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Shield, Brain, Globe  } from 'lucide-react';
 const EnhancedHero: React.FC = () => {
   const benefits = [
     'Advanced AI technology integration',
@@ -30,9 +29,7 @@ const EnhancedHero: React.FC = () => {
       title: 'Visit Us',
       details: 'San Francisco, CA',
       description: 'Schedule a meeting'
-    }
-  ]
-
+    } ]
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
@@ -67,7 +64,6 @@ const EnhancedHero: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -89,11 +85,8 @@ const EnhancedHero: React.FC = () => {
                     <div className="text-sm font-medium text-white">{contact.title}</div>
                     <div className="text-xs text-gray-400">{contact.details}</div>
                   </div>
-                </div>
               ))}
             </div>
-          </div>
-        </div>
 
         {/* Right Content - Visual Elements */}
         <div className="flex-1 px-4 sm:px-6 lg:px-8 py-20">
@@ -105,7 +98,6 @@ const EnhancedHero: React.FC = () => {
                 <h3 className="text-lg font-bold text-white mb-2">AI Solutions</h3>
                 <p className="text-sm text-gray-300">Machine Learning & Analytics</p>
               </div>
-            </div>
 
             <div className="absolute top-20 right-0 w-64 h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl backdrop-blur-sm border border-purple-500/30 animate-float" style={{ animationDelay: '1s' }}>
               <div className="p-6">
@@ -113,7 +105,6 @@ const EnhancedHero: React.FC = () => {
                 <h3 className="text-lg font-bold text-white mb-2">Security</h3>
                 <p className="text-sm text-gray-300">Cybersecurity & Compliance</p>
               </div>
-            </div>
 
             <div className="absolute top-40 left-1/2 transform -translate-x-1/2 w-64 h-40 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-2xl backdrop-blur-sm border border-green-500/30 animate-float" style={{ animationDelay: '2s' }}>
               <div className="p-6">
@@ -121,12 +112,17 @@ const EnhancedHero: React.FC = () => {
                 <h3 className="text-lg font-bold text-white mb-2">Cloud Services</h3>
                 <p className="text-sm text-gray-300">Infrastructure & Migration</p>
               </div>
+  )
+}
+
+export default EnhancedHero
+
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
-
-export default EnhancedHero
+  </div>
+</div>

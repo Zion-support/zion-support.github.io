@@ -6,10 +6,8 @@ import path from 'path';
 // Function to fix common JSX syntax issues
 function fixJSXSyntax(content) {
   // Remove any remaining merge conflict artifacts
-  content = content.replace(/<<<<<<< HEAD\n?/g, '');
-  content = content.replace(/=======\n?/g, '');
-  content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-  
+  content = content.replace(/\n?/g, '');
+  content = content.replace(/  
   // Fix common broken JSX patterns
   content = content.replace(/\}\s*\)\s*\)\s*\)\s*$/gm, '}');
   content = content.replace(/\}\s*\)\s*\)\s*$/gm, '}');
@@ -64,7 +62,6 @@ function fixFile(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
-}
 
 // Main execution
 console.log('Starting final JSX syntax fixes...');
@@ -299,8 +296,6 @@ for (const file of criticalFiles) {
     if (fixFile(file)) {
       fixedCount++;
     }
-  }
-}
 
 console.log(`Fixed syntax in ${fixedCount} files`);
 console.log('Final JSX syntax fixes completed!');

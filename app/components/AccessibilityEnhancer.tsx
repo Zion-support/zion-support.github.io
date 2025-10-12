@@ -26,7 +26,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             skipLink.focus();
             event.preventDefault();
           }
-        }
 
         // Close dropdowns with Escape key
         if (event.key === 'Escape') {
@@ -63,7 +62,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               firstFocusableElement.focus();
               e.preventDefault();
             }
-          }
         };
 
         container.addEventListener('keydown', handleTabKey);
@@ -144,3 +142,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 };
 
 export default AccessibilityEnhancer;
+</AccessibilityEnhancerProps>

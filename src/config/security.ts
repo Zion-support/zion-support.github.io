@@ -110,7 +110,6 @@ export function generateSecureToken(length: number = 32): string {
     for (let i = 0; i < length; i++) {
       array[i] = Math.floor(Math.random() * 256);
     }
-  }
   return Array.from(array, (byte: number) => byte.toString(16).padStart(2, '0')).join('');
 }
 export default {

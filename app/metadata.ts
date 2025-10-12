@@ -45,7 +45,6 @@ interface Metadata {
       'max-image-preview': string;
       'max-snippet': number;
     };
-  };
 }
 
 export const metadata: Metadata = {
@@ -106,5 +105,4 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
 }

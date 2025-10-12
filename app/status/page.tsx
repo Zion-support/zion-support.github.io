@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react'
+import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart  } from 'lucide-react';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
@@ -62,8 +62,7 @@ export default function StatusPage() {
       responseTime: '5ms',
       lastIncident: 'Never',
       description: 'System monitoring and alerts'
-    }
-  ]
+    } ]
   const incidents = [
     {
       id: 1,
@@ -84,8 +83,7 @@ export default function StatusPage() {
       endTime: '2024-01-12T16:30:00Z',
       description: 'Intermittent database connection issues affecting some user operations.',
       affectedServices: ['Database', 'API Services']
-    }
-  ]
+    } ]
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
@@ -296,11 +294,8 @@ export default function StatusPage() {
                     <span className="text-gray-400">Last Incident:</span>
                     <span className="text-white">{service.lastIncident}</span>
                   </div>
-                </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
                   </span>
                 </div>
@@ -318,10 +313,8 @@ export default function StatusPage() {
                     <span className="text-gray-400">Last Incident:</span>
                     <span className="text-white">{service.lastIncident}</span>
                   </div>
-                </div>
               </div>))}
           </div>
-        </div>
       </section>
       {/* Recent Incidents */}
       <section className="py-16 px-4"></section>
@@ -337,7 +330,6 @@ export default function StatusPage() {
                       <span>Started: {new Date(incident.startTime).toLocaleString()}</span>
                       <span>Ended: {new Date(incident.endTime).toLocaleString()}</span>
                     </div>
-                  </div>
                   <div className="flex items-center gap-2"></div>
                     <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>
                       {incident.severity}
@@ -349,16 +341,13 @@ export default function StatusPage() {
                       {incident.status}
                     </span>
                   </div>
-                </div>
                 <p className="text-gray-300 mb-4">{incident.description}</p>
                 <div>
                   <span className="text-gray-400 text-sm">Affected Services: </span>
                   <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
       {/* Performance Metrics */}
       <section className="py-16 px-4">
@@ -393,8 +382,6 @@ export default function StatusPage() {
               <div className="text-3xl font-bold text-white mb-2">1.2M</div>
               <div className="text-gray-400">Requests Today</div>
             </div>
-          </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
@@ -413,17 +400,13 @@ export default function StatusPage() {
               Contact Support
   </
           </div>
-        </div>
       </section>
       <Footer />
     </div>
   )}
   </button>
-  </button>
-  </button>
                     </span>
                   </div>
-                </div>
                 <p className="text-gray-300 mb-4">{incident.description}</p>
                 <div></div>
                   <span className="text-gray-400 text-sm">Affected Services: </span>
@@ -431,7 +414,6 @@ export default function StatusPage() {
                 </div>
               </div>))}
           </div>
-        </div>
       </section>
       {/* Performance Metrics */}
       <section className="py-16 px-4"></section>
@@ -466,8 +448,6 @@ export default function StatusPage() {
               <div className="text-3xl font-bold text-white mb-2">1.2M</div>
               <div className="text-gray-400">Requests Today</div>
             </div>
-          </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700"></section>
@@ -486,7 +466,8 @@ export default function StatusPage() {
               Contact Support
             </button>
           </div>
-        </div>
       </section>
       <Footer />
     </div>)}
+
+</button>

@@ -1,8 +1,7 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
-
+import { Helmet  } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe  } from 'lucide-react';
 const EnhancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
@@ -24,9 +23,7 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
-  ]
-
+    } ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -70,8 +67,6 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </div>
-        </div>
       </section>
 
       {/* Features Section */}
@@ -96,7 +91,6 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Benefits Section */}
@@ -118,7 +112,6 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -139,11 +132,15 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </div>
-        </div>
       </section>
     </div>
   )
 }
 
 export default EnhancedAccessibilityEnhancerPage
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -34,7 +34,6 @@ export const usePerformance = () => {
             ) {
               cumulativeLayoutShift += (entry as unknown as { value: number }).value;
             }
-          }
         });
         observer.observe({ entryTypes: ['layout-shift'] });
       }
@@ -47,7 +46,6 @@ export const usePerformance = () => {
               firstInputDelay =
                 (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
             }
-          }
         });
         observer.observe({ entryTypes: ['first-input'] });
       }
@@ -96,3 +94,5 @@ export const usePerformance = () => {
   }, []);
   return { metrics, isMonitoring };
 };
+
+</PerformanceMetrics>

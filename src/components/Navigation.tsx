@@ -134,7 +134,6 @@ const Navigation: React.FC = () => {
                           </a>
                         ))}
                       </div>
-                    </div>
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <Brain className="w-4 h-4 mr-2" />
@@ -152,7 +151,6 @@ const Navigation: React.FC = () => {
                           </a>
                         ))}
                       </div>
-                    </div>
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <Settings className="w-4 h-4 mr-2" />
@@ -171,8 +169,6 @@ const Navigation: React.FC = () => {
                           </Link>
                         ))}
                       </div>
-                    </div>
-                  </div>
                   <div className="mt-4 pt-4 border-t border-gray-700">
                     <div className="grid grid-cols-2 gap-4">
                       <Link
@@ -192,8 +188,6 @@ const Navigation: React.FC = () => {
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
-                  </div>
-                </div>
               )}
             </div>
 
@@ -227,7 +221,6 @@ const Navigation: React.FC = () => {
                 Get Started
               </a>
             </div>
-          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -266,7 +259,6 @@ const Navigation: React.FC = () => {
                           </a>
                         ))}
                       </div>
-                    </div>
                     <div>
                       <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
                       <div className="space-y-2">
@@ -280,7 +272,6 @@ const Navigation: React.FC = () => {
                           </a>
                         ))}
                       </div>
-                    </div>
                     <a href="/services"
                       className="block text-cyan-400 hover:text-white transition-colors"
                       onClick={closeAllMenus}
@@ -322,8 +313,6 @@ const Navigation: React.FC = () => {
                   Get Started
                 </a>
               </div>
-            </div>
-          </div>
         )}
       </div>
     </nav>
@@ -331,3 +320,14 @@ const Navigation: React.FC = () => {
 };
 
 export default Navigation;
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -28,14 +28,13 @@ class APIError extends Error {
     this.status = status;
     this.code = code;
   }
-}
 
 export class APIClient {
   private baseURL: string;
   private defaultHeaders: Record<string, string>;
   private cache: Map<string, { data: any; timestamp: number; ttl: number }> = new Map();
 
-  constructor(baseURL: string, defaultHeaders: Record<string, string> = {}) {
+  constructor(baseURL: string, defaultHeaders: Record<string, string> = } {
     this.baseURL = baseURL;
     this.defaultHeaders = {
       'Content-Type': 'application/json',
@@ -48,8 +47,7 @@ export class APIClient {
    */
   async request<T = any>(
     endpoint: string,
-    config: RequestConfig = {}
-  ): Promise<APIResponse<T>> {
+    config: RequestConfig = }: Promise<APIResponse<T>> {
     const {
       method = 'GET',
       headers = {},
@@ -59,7 +57,7 @@ export class APIClient {
     } = config;
 
     const url = `${this.baseURL}${endpoint}`;
-    const cacheKey = `${method}:${url}:${JSON.stringify(body || {})}`;
+    const cacheKey = `${method}:${url}:${JSON.stringify(body || }}`;
 
     // Check cache first
     if (cache && method === 'GET') {
@@ -67,7 +65,6 @@ export class APIClient {
       if (cached) {
         return cached;
       }
-    }
 
     try {
       const response = await fetch(url, {
@@ -111,40 +108,39 @@ export class APIClient {
         code: 'NETWORK_ERROR'
       });
     }
-  }
 
   /**
    * GET request
    */
-  async get<T = any>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async get<T = any>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = }: Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'GET' });
   }
 
   /**
    * POST request
    */
-  async post<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async post<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = }: Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'POST', body });
   }
 
   /**
    * PUT request
    */
-  async put<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async put<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = }: Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'PUT', body });
   }
 
   /**
    * DELETE request
    */
-  async delete<T = any>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async delete<T = any>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = }: Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'DELETE' });
   }
 
   /**
    * PATCH request
    */
-  async patch<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async patch<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = }: Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
   }
 
@@ -205,7 +201,6 @@ export class APIClient {
     });
     keysToDelete.forEach(key => this.cache.delete(key));
   }
-}
 
 // Export utility functions
 export const createAPIClient = (baseURL: string, headers?: Record<string, string>) => 
@@ -217,3 +212,17 @@ export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api'
 // Export types and classes
 export type { RequestConfig, APIResponse };
 export { APIError };
+                          </T>
+                        </T>
+                      </T>
+                    </T>
+                  </T>
+                </T>
+              </T>
+            </T>
+          </T>
+        </T>
+      </T>
+    </T>
+  </T>
+</T>

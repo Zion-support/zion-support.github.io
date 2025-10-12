@@ -44,3 +44,19 @@ export default {
     'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
   ]
 }
+                              </rootDir>
+                            </rootDir>
+                          </rootDir>
+                        </rootDir>
+                      </rootDir>
+                    </rootDir>
+                  </rootDir>
+                </rootDir>
+              </rootDir>
+            </rootDir>
+          </rootDir>
+        </rootDir>
+      </rootDir>
+    </rootDir>
+  </rootDir>
+</rootDir>

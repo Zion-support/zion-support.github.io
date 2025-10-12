@@ -136,7 +136,6 @@ const ServicesPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
 
           {/* CTA Section */}
           <div className="text-center">
@@ -159,12 +158,12 @@ const ServicesPage: React.FC = () => {
                   Explore AI Services
                 </Link>
               </div>
-            </div>
-          </div>
-        </div>
       </main>
     </div>
   );
 };
 
 export default ServicesPage;
+    </div>
+  </div>
+</div>

@@ -1,16 +1,12 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
             </div>
-          </div>
-        </div>
       </section>
           </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -23,8 +19,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               Experience the power of our page solutions for your business.
             </p>
             </div>
-          </div>
-        </div>
       </section>
     </div>
   )}
@@ -32,13 +26,10 @@ export default PagePage
   </h2>
 
             </div>
-          </div>
-        </div>
       </section>
           </div>
               </div>))}
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
@@ -51,7 +42,5 @@ export default PagePage
               Experience the power of our page solutions for your business.
             </p>
             </div>
-          </div>
-        </div>
       </section>
     </div>)};export default PagePage

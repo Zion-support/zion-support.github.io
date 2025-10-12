@@ -104,7 +104,6 @@ const PricingPage: React.FC = () => {
                       <span className="text-4xl font-bold text-white">{plan.price}</span>
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
-                  </div>
 
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
@@ -125,7 +124,6 @@ const PricingPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* FAQ Section */}
@@ -162,8 +160,6 @@ const PricingPage: React.FC = () => {
                   We accept all major credit cards, PayPal, and bank transfers for enterprise plans.
                 </p>
               </div>
-            </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -183,7 +179,6 @@ const PricingPage: React.FC = () => {
                 Contact Sales
               </button>
             </div>
-          </div>
         </section>
       </div>
     </>
@@ -191,3 +186,8 @@ const PricingPage: React.FC = () => {
 };
 
 export default PricingPage;
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

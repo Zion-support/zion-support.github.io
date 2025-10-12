@@ -7,7 +7,6 @@ const logger = {
     if (process.env.NODE_ENV === 'development') {
       console.error(message, context);
     }
-  }
 };
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -78,7 +77,6 @@ class AdvancedErrorBoundary extends Component<
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
-  }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
@@ -218,7 +216,6 @@ class AdvancedErrorBoundary extends Component<
                       </pre>
                     </details>
                   </div>
-                </div>
               )}
               <div className='mt-6 space-y-3'>
                 {this.props.enableRetry &&
@@ -256,12 +253,15 @@ class AdvancedErrorBoundary extends Component<
                   </a>
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
       );
     }
     return this.props.children;
   }
-}
 export default AdvancedErrorBoundary;
+
+          </div>
+        </path>
+      </div>
+    </div>
+  </div>
+</ErrorBoundaryState>

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
@@ -23,8 +23,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
-  ]
+    } ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -66,8 +65,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
                 Learn More
   </
             </div>
-          </div>
-        </div>
       </section>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -91,7 +88,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
@@ -101,7 +97,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -123,14 +118,10 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
                 Email Us
   </
             </div>
-          </div>
-        </div>
       </section>
     </div>
   )}
 export default EnhancedSEOOptimizerPage
-  </button>
-  </button>
   </button>
   </span>
 
@@ -190,8 +181,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {const features = [
                 Learn More
               </button>
             </div>
-          </div>
-        </div>
       </section>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
@@ -214,7 +203,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {const features = [
                 <p className="text-gray-300">{feature.description}</p>
               </div>))}
           </div>
-        </div>
       </section>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
             {benefits.map((benefit, index) => (}
@@ -223,7 +211,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {const features = [
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
@@ -245,7 +232,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {const features = [
                 Email Us
               </button>
             </div>
-          </div>
-        </div>
       </section>
     </div>)};export default EnhancedSEOOptimizerPage
+  </button>
+</button>

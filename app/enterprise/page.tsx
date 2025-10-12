@@ -3,72 +3,80 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react'
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles  } from 'lucide-react';
 const EnterprisePage: React.FC = () => {
   const features = [
     {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Comprehensive security solutions designed for large-scale enterprise environments.',
-      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control']
+      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control'] }
+    }
     },
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions that grow with your business needs.',
-      benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization']
+      benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization'] }
+    }
     },
     {
       icon: Brain,
       title: 'AI Integration',
       description: 'Enterprise-grade AI solutions for automation and intelligent decision making.',
-      benefits: ['Machine learning', 'Predictive analytics', 'Process automation', 'Intelligent insights']
+      benefits: ['Machine learning', 'Predictive analytics', 'Process automation', 'Intelligent insights'] }
+    }
     },
     {
       icon: Database,
       title: 'Data Management',
       description: 'Advanced data management and analytics for enterprise-scale operations.',
-      benefits: ['Big data processing', 'Real-time analytics', 'Data governance', 'Business intelligence']
+      benefits: ['Big data processing', 'Real-time analytics', 'Data governance', 'Business intelligence'] }
+    }
     },
     {
       icon: Users,
       title: 'User Management',
       description: 'Comprehensive user and access management for large organizations.',
-      benefits: ['Single sign-on', 'Role-based access', 'User provisioning', 'Audit trails']
+      benefits: ['Single sign-on', 'Role-based access', 'User provisioning', 'Audit trails'] }
+    }
     },
     {
       icon: Settings,
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
+      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'] }
     }
-  ]
+    } ]
   const solutions = [
     {
       title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
       icon: Building,
-      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management']
+      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management'] }
+    }
     },
     {
       title: 'Customer Relationship Management',
       description: 'Advanced CRM systems for managing customer relationships and sales processes.',
       icon: Users,
-      benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation']
+      benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation'] }
+    }
     },
     {
       title: 'Business Intelligence',
       description: 'Powerful BI solutions for data-driven decision making and strategic planning.',
       icon: BarChart,
-      benefits: ['Data visualization', 'Predictive analytics', 'Reporting', 'Performance monitoring']
+      benefits: ['Data visualization', 'Predictive analytics', 'Reporting', 'Performance monitoring'] }
+    }
     },
     {
       title: 'Workflow Automation',
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
+      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management'] }
     }
-  ]
+    } ]
   const benefits = [
     'Reduce operational costs by 30%',
     'Improve productivity by 50%',
@@ -83,8 +91,7 @@ const EnterprisePage: React.FC = () => {
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
-    { number: '24/7', label: 'Support Available', icon: Clock }
-  ]
+    { number: '24/7', label: 'Support Available', icon: Clock } ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer
@@ -117,60 +124,77 @@ const EnterprisePage: React.FC = () => {
               View Case Studies
   </
           </div>
-        </div>
       </section>
 
 const EnterprisePage: React.FC = () => {const features = [
     {icon: Shield,
       title: 'Enterprise Security',
       description: 'Comprehensive security solutions designed for large-scale enterprise environments.',
-      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control']}
+      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control'] }
+    }
+    }
     },
     {icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions that grow with your business needs.',
-      benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization']}
+      benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization'] }
+    }
+    }
     },
     {icon: Brain,
       title: 'AI Integration',
       description: 'Enterprise-grade AI solutions for automation and intelligent decision making.',
-      benefits: ['Machine learning', 'Predictive analytics', 'Process automation', 'Intelligent insights']}
+      benefits: ['Machine learning', 'Predictive analytics', 'Process automation', 'Intelligent insights'] }
+    }
+    }
     },
     {icon: Database,
       title: 'Data Management',
       description: 'Advanced data management and analytics for enterprise-scale operations.',
-      benefits: ['Big data processing', 'Real-time analytics', 'Data governance', 'Business intelligence']}
+      benefits: ['Big data processing', 'Real-time analytics', 'Data governance', 'Business intelligence'] }
+    }
+    }
     },
     {icon: Users,
       title: 'User Management',
       description: 'Comprehensive user and access management for large organizations.',
-      benefits: ['Single sign-on', 'Role-based access', 'User provisioning', 'Audit trails']}
+      benefits: ['Single sign-on', 'Role-based access', 'User provisioning', 'Audit trails'] }
+    }
+    }
     },
     {icon: Settings,
       title: 'System Integration',
       description: 'Seamless integration with existing enterprise systems and workflows.',
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']}
+      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization'] }
+    }
     }
   ];const solutions = [
     {title: 'Enterprise Resource Planning',
       description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
       icon: Building,
-      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management']}
+      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management'] }
+    }
+    }
     },
     {title: 'Customer Relationship Management',
       description: 'Advanced CRM systems for managing customer relationships and sales processes.',
       icon: Users,
-      benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation']}
+      benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation'] }
+    }
+    }
     },
     {title: 'Business Intelligence',
       description: 'Powerful BI solutions for data-driven decision making and strategic planning.',
       icon: BarChart,
-      benefits: ['Data visualization', 'Predictive analytics', 'Reporting', 'Performance monitoring']}
+      benefits: ['Data visualization', 'Predictive analytics', 'Reporting', 'Performance monitoring'] }
+    }
+    }
     },
     {title: 'Workflow Automation',
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
       icon: Zap,
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']}
+      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management'] }
+    }
     }
   ];const benefits = [
     'Reduce operational costs by 30%',
@@ -217,7 +241,6 @@ const EnterprisePage: React.FC = () => {const features = [
               View Case Studies
             </button>
           </div>
-        </div>
       </section>
       {/* Stats Section */}
       <section className="py-20 px-4"></section>
@@ -232,7 +255,6 @@ const EnterprisePage: React.FC = () => {const features = [
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>))}
           </div>
-        </div>
       </section>
       {/* Features Section */}
       <section className="py-20 px-4">
@@ -255,7 +277,6 @@ const EnterprisePage: React.FC = () => {const features = [
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
           </div>
-        </div>
       </section>
       {/* Features Section */}
       <section className="py-20 px-4"></section>
@@ -282,7 +303,6 @@ const EnterprisePage: React.FC = () => {const features = [
                 </ul>
               </div>))}
           </div>
-        </div>
       </section>
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Solutions
@@ -293,7 +313,6 @@ const EnterprisePage: React.FC = () => {const features = [
           </div>
                     </li>
           </div>
-        </div>
       </section>
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Solutions
@@ -306,15 +325,11 @@ const EnterprisePage: React.FC = () => {const features = [
                 </ul>
               </div>))}
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4">
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4">
@@ -334,7 +349,6 @@ const EnterprisePage: React.FC = () => {const features = [
               Learn More
   </
           </div>
-        </div>
       </section>
       <Footer />
     </div>
@@ -342,19 +356,14 @@ const EnterprisePage: React.FC = () => {const features = [
 export default EnterprisePage
   </button>
   </h2>
-  </h2>
   </span>
   </SEOOptimizer>
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4"></section>
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4"></section>
@@ -374,7 +383,8 @@ export default EnterprisePage
               Learn More
             </button>
           </div>
-        </div>
       </section>
       <Footer />
     </div>)};export default EnterprisePage
+  </h2>
+</SEOOptimizer>

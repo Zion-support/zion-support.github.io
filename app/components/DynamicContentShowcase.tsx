@@ -1,11 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Star, Users, Shield, Cloud, BarChart3, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
 
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -121,7 +118,6 @@ const DynamicContentShowcase: React.FC = () => {
               Learn More
             </button>
           </div>
-        </div>
       </section>
 
       {/* Features Section */}
@@ -145,7 +141,6 @@ const DynamicContentShowcase: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Testimonials Section */}
@@ -179,9 +174,6 @@ const DynamicContentShowcase: React.FC = () => {
                     <div className="text-gray-400">{currentTestimonial.role}</div>
                     <div className="text-purple-400 text-sm">{currentTestimonial.company}</div>
                   </div>
-                </div>
-              </div>
-            </div>
 
             {/* Navigation Controls */}
             <div className="flex items-center justify-center gap-4 mt-8">
@@ -219,8 +211,6 @@ const DynamicContentShowcase: React.FC = () => {
                 />
               ))}
             </div>
-          </div>
-        </div>
       </section>
 
       {/* Benefits Section */}
@@ -242,8 +232,6 @@ const DynamicContentShowcase: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -265,11 +253,18 @@ const DynamicContentShowcase: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-          </div>
-        </div>
       </section>
     </div>
   );
 };
 
 export default DynamicContentShowcase;
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

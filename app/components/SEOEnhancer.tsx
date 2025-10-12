@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 const SEOEnhancer: React.FC = () => {
   const features = [
     {
@@ -23,8 +23,7 @@ const SEOEnhancer: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
-  ]
+    } ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -66,8 +65,6 @@ const SEOEnhancer: React.FC = () => {
                 Learn More
   </
             </div>
-          </div>
-        </div>
       </section>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -91,7 +88,6 @@ const SEOEnhancer: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -112,7 +108,6 @@ const SEOEnhancer: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -134,16 +129,20 @@ const SEOEnhancer: React.FC = () => {
                 Email Us
   </
             </div>
-          </div>
-        </div>
       </section>
     </div>
   )}
 export default SEOEnhancerPage
-  </button>
   </button>
   </h2>
   </button>
   </span>
 
 export default SEOEnhancer
+            </div>
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>

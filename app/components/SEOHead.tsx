@@ -1,5 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet  } from 'react-helmet-async';
 interface SEOHeadProps {interface SEOHeadProps {title?: string
   description?: string
   keywords?: string
@@ -146,3 +146,5 @@ export default SEOHead
   </SEOHeadProps>
 
 export default SEOHead
+  </Helmet>
+</SEOHeadProps>

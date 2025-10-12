@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
@@ -26,7 +26,6 @@ const InstantmessagingPage: React.FC = () => {
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
           </div>
-        </div>
       </main>
       
       <Footer />
@@ -35,3 +34,5 @@ const InstantmessagingPage: React.FC = () => {
 };
 
 export default InstantmessagingPage;
+
+</div>

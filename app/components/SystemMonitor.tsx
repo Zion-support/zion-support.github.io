@@ -1,8 +1,7 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'}
-  ]
+import { Helmet  } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -20,8 +19,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                 Learn More
   </
             </div>
-        </div>
-    </div>
   )}
 export default SystemMonitorPage
   </button>
@@ -43,5 +40,4 @@ export default SystemMonitorPage
                 Learn More
               </button>
             </div>
-        </div>
     </div>)};export default SystemMonitorPage

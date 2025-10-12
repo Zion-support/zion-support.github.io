@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
-
+import { CheckCircle, ArrowRight, Star, Users, Globe, Zap  } from 'lucide-react';
 interface ContentNewsletterSignupProps {
   title?: string
   subtitle?: string
@@ -49,7 +48,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     } finally {
       setIsSubmitting(false)
     }
-  }
 
   if (isSubscribed) {
     return (
@@ -72,8 +70,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               Subscribe another email
             </button>
           </div>
-        </div>
-      </div>
     )
   }
 
@@ -132,10 +128,13 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               </div>
             ))}
           </div>
-        </div>
-      </div>
-    </div>
   )
 }
 
 export default ContentNewsletterSignup
+          </input>
+        </div>
+      </div>
+    </div>
+  </div>
+</ContentNewsletterSignupProps>

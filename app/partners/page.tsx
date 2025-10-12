@@ -156,8 +156,6 @@ const PartnersPage: React.FC = () => {
                 <div className="text-3xl font-bold text-white mb-2">100%</div>
                 <div className="text-gray-400">Certified Solutions</div>
               </div>
-            </div>
-          </div>
         </section>
 
         {/* Partnership Tiers */}
@@ -181,7 +179,6 @@ const PartnersPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Partners Grid */}
@@ -222,11 +219,9 @@ const PartnersPage: React.FC = () => {
                         </a>
                       )}
                     </div>
-                  </div>
                 );
               })}
             </div>
-          </div>
         </section>
 
         {/* Partnership Benefits */}
@@ -248,8 +243,6 @@ const PartnersPage: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
         </section>
 
         {/* Become a Partner CTA */}
@@ -270,8 +263,6 @@ const PartnersPage: React.FC = () => {
                   View Partnership Program
                 </button>
               </div>
-            </div>
-          </div>
         </section>
       </div>
     </>
@@ -279,3 +270,8 @@ const PartnersPage: React.FC = () => {
 };
 
 export default PartnersPage;
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

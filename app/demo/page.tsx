@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Play, ArrowRight, CheckCircle } from 'lucide-react'
+import { Play, ArrowRight, CheckCircle  } from 'lucide-react';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
@@ -41,9 +41,7 @@ const DemoPage: React.FC = () => {
         'Remediation suggestions'
       ],
       duration: '6 min'
-    }
-  ]
-
+    } ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -70,7 +68,6 @@ const DemoPage: React.FC = () => {
                   <div className="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Play className="w-8 h-8 text-white ml-1" />
                   </div>
-                </div>
                 
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                   {demo.title}
@@ -99,10 +96,8 @@ const DemoPage: React.FC = () => {
                     Watch Demo
                   </button>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -124,8 +119,6 @@ const DemoPage: React.FC = () => {
                 Contact Sales
               </button>
             </div>
-          </div>
-        </div>
       </section>
 
       <Footer />
@@ -134,3 +127,9 @@ const DemoPage: React.FC = () => {
 }
 
 export default DemoPage
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

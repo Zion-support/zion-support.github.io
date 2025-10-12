@@ -35,7 +35,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   }, []);
 
-  const trackEvent = (eventName: string, parameters: Record<string, unknown> = {}) => {
+  const trackEvent = (eventName: string, parameters: Record<string, unknown> = } => {
     if (typeof window === 'undefined') return;
 
     // Google Analytics
@@ -84,3 +84,5 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     </AnalyticsContext.Provider>
   );
 };
+  </AnalyticsProviderProps>
+</AnalyticsContextType>

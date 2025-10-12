@@ -1,6 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Settings, ArrowRight } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async';
+import { Settings, ArrowRight  } from 'lucide-react';
 const MicroSaaSPage: React.FC = () => {
   const serviceName = 'chat-analytics'
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
@@ -34,7 +34,6 @@ const MicroSaaSPage: React.FC = () => {
                 View Demo
   </
             </div>
-          </div>
         </section>
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto"></div>
@@ -44,7 +43,6 @@ const MicroSaaSPage: React.FC = () => {
                 We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!
               </p>
             </div>
-          </div>
         </section>
       </div>
     </React.Fragment>
@@ -82,7 +80,6 @@ const MicroSaaSPage: React.FC = () => {const serviceName = 'chat-analytics'
                 View Demo
               </button>
             </div>
-          </div>
         </section>
         <section className="py-16 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -92,7 +89,6 @@ const MicroSaaSPage: React.FC = () => {const serviceName = 'chat-analytics'
                 We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!
               </p>
             </div>
-          </div>
         </section>
       </div>
     </>)};export default MicroSaaSPage

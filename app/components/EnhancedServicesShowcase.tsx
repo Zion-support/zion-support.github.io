@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-import { CheckCircle, ArrowRight, Brain, Cloud, Shield, BarChart, Zap, Globe } from 'lucide-react'
-
+import { CheckCircle, ArrowRight, Brain, Cloud, Shield, BarChart, Zap, Globe  } from 'lucide-react';
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
     {
@@ -39,9 +38,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       title: 'Digital Transformation',
       description: 'Complete digital transformation services to modernize your business and stay competitive.',
       features: ['Strategy Development', 'Technology Integration', 'Change Management', 'Training & Support']
-    }
-  ]
-
+    } ]
   return (
     <div className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -87,9 +84,10 @@ const EnhancedServicesShowcase: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>
-    </div>
   )
 }
 
 export default EnhancedServicesShowcase
+
+  </div>
+</div>

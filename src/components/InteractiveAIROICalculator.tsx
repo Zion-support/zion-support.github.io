@@ -46,7 +46,6 @@ const InteractiveAIROICalculator: React.FC = () => {
                 <div className='text-center text-sm text-gray-600'>
                   {efficiencyGain}%
                 </div>
-              </div>
               <div>
                 <label className='block text-sm font-medium text-gray-700 mb-2'>
                   Implementation Timeframe (months)
@@ -62,7 +61,6 @@ const InteractiveAIROICalculator: React.FC = () => {
                   <option value={24}>24 months</option>
                 </select>
               </div>
-            </div>
             <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl'>
               <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
                 Your ROI Projection
@@ -75,11 +73,16 @@ const InteractiveAIROICalculator: React.FC = () => {
                   Expected return on investment over {timeframe} months
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };
 export default InteractiveAIROICalculator;
+
+              </div>
+            </input>
+          </div>
+        </input>
+      </div>
+    </div>
+  </div>
+</div>

@@ -12,7 +12,7 @@ interface PerformanceMetrics {
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+  const [metrics, setMetrics] = useState<PerformanceMetrics>(};
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const PerformanceMonitor: React.FC = () => {
     if (!shouldMonitor) return;
 
     const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
-      setMetrics(prev => ({ ...prev, ...newMetrics }));
+      setMetrics(prev => ({ ...prev, ...newMetrics });
     };
 
     // Monitor Core Web Vitals
@@ -52,7 +52,6 @@ const PerformanceMonitor: React.FC = () => {
       updateMetrics({
         loadTime: Math.round(performance.now())
       });
-    });
 
     // Show/hide with keyboard shortcut (Ctrl+Shift+P)
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -136,8 +135,10 @@ const PerformanceMonitor: React.FC = () => {
       <div className="mt-2 pt-2 border-t border-slate-700 text-gray-400">
         Press Ctrl+Shift+P to toggle
       </div>
-    </div>
   );
 };
 
 export default PerformanceMonitor;
+    </div>
+  </PerformanceMetrics>
+</PerformanceMetrics>

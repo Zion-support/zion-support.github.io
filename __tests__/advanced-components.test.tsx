@@ -1,6 +1,6 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
-import { HelmetProvider } from 'react-helmet-async'
-import { MemoryRouter } from 'react-router-dom'
+import { render, screen, fireEvent, waitFor  } from '@testing-library/react';
+import { HelmetProvider  } from 'react-helmet-async';
+import { MemoryRouter  } from 'react-router-dom';
 // Mock components
 const AdvancedErrorBoundary = ({ children }: { children: React.ReactNode }) => {
   return <div data-testid="error-boundary">{children}</div>}
@@ -23,7 +23,6 @@ describe('AdvancedErrorBoundary', () => {
   it('renders children when there is no error', () => {
     // Test implementation
   })
-})
 
 describe('Advanced Components', () => {
   it('renders test content without error', () => {
@@ -36,7 +35,7 @@ describe('Advanced Components', () => {
   it('renders error UI when there is an error', () => {
     const consoleSpy = jest
       .spyOn(console, 'error')
-      .mockImplementation(() => {})
+      .mockImplementation(() => }
     render(
       <MemoryRouter>
         <AdvancedErrorBoundary enableRetry={true}>
@@ -53,7 +52,7 @@ describe('Advanced Components', () => {
     const onError = jest.fn()
     const consoleSpy = jest
       .spyOn(console, 'error')
-      .mockImplementation(() => {})
+      .mockImplementation(() => }
     render(
       <MemoryRouter>
         <AdvancedErrorBoundary onError={onError}>
@@ -66,7 +65,7 @@ describe('Advanced Components', () => {
   it('retries when retry button is clicked', async () => {
     const consoleSpy = jest
       .spyOn(console, 'error')
-      .mockImplementation(() => {})
+      .mockImplementation(() => }
     let shouldThrow = true
     const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />
     render(
@@ -244,7 +243,7 @@ describe('AdvancedPerformanceMonitor', () => {
   it('handles error when shouldThrow is true', () => {
     const consoleSpy = jest
       .spyOn(console, 'error')
-      .mockImplementation(() => {})
+      .mockImplementation(() => }
     // In React testing, errors are caught by error boundaries
     // We just verify the component doesn't crash the test
     expect(() => {
@@ -256,4 +255,6 @@ describe('AdvancedPerformanceMonitor', () => {
     }).not.toThrow();
     consoleSpy.mockRestore();
   });
-});
+
+  </AdvancedPerformanceMonitor>
+</AdvancedSEOOptimizer>

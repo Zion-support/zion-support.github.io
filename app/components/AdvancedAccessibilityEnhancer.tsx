@@ -54,7 +54,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
   const toggleFeature = (feature: keyof typeof settings) => {
     const newValue = typeof settings[feature] === 'boolean' ? !settings[feature] : settings[feature];
-    setSettings(prev => ({ ...prev, [feature]: newValue }));
+    setSettings(prev => ({ ...prev, [feature]: newValue });
     
     // Apply the setting to the document
     if (feature === 'textScaling') {
@@ -136,7 +136,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
                 <div className="text-sm font-medium text-gray-900">{feature.name}</div>
                 <div className="text-xs text-gray-500">{feature.description}</div>
               </div>
-            </div>
             <button
               onClick={() => toggleFeature(feature.id as keyof typeof settings)}
               disabled={!feature.enabled}
@@ -176,9 +175,10 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
           Accessibility features are active
         </div>
-      </div>
-    </div>
   );
 };
 
 export default AdvancedAccessibilityEnhancer;
+    </div>
+  </input>
+</AdvancedAccessibilityEnhancerProps>

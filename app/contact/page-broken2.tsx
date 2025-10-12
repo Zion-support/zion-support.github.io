@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 'use client';import React, { useState, useCallback } from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet  } from 'react-helmet-async';
 import {Phone,
   Mail,
   MapPin,
@@ -35,7 +35,7 @@ phone: '',
     const { name, value } = e.target
     setFormData(prev => ({...prev,
       [name]: value}
-    }))}, [])
+    })}, [])
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -59,7 +59,6 @@ phone: '',
       })} catch (error) {setSubmitStatus('error')}
     } finally {setIsSubmitting(false)}
     }
-  }
   const services = [
     'AI Solutions',
     'Cloud Computing',
@@ -95,8 +94,7 @@ phone: '',
       title: 'Business Hours',
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
       description: 'Eastern Time'
-    }
-  ]
+    } ]
   return (
     <React.Fragment>
       <Helmet>
@@ -153,7 +151,6 @@ phone: '',
                         placeholder="Your full name"
                       />
                     </div>
-                  </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
@@ -170,8 +167,6 @@ phone: '',
                         placeholder="your@email.com"
                       />
                     </div>
-                  </div>
-                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -188,7 +183,6 @@ phone: '',
                         placeholder="Your company"
                       />
                     </div>
-                  </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
@@ -204,8 +198,6 @@ phone: '',
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
-                  </div>
-                </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Service Interest
@@ -307,7 +299,6 @@ phone: '',
                         placeholder="Your full name"
                       />
                     </div>
-                  </div>
                   <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
@@ -324,8 +315,6 @@ phone: '',
                         placeholder="your@email.com"
                       />
                     </div>
-                  </div>
-                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
                   <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -342,7 +331,6 @@ phone: '',
                         placeholder="Your company"
                       />
                     </div>
-                  </div>
                   <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
@@ -358,8 +346,6 @@ phone: '',
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
-                  </div>
-                </div>
                 <div></div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Service Interest
@@ -378,7 +364,6 @@ phone: '',
                         </option>))}
                     </select>
                   </div>
-                </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
@@ -389,7 +374,6 @@ phone: '',
                       name="message"
                     </select>
                   </div>
-                </div>
                 <div></div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
@@ -406,7 +390,6 @@ phone: '',
                       placeholder="Tell us about your project, goals, or any questions you have..."
                     />
                   </div>
-                </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -453,7 +436,6 @@ phone: '',
                       placeholder="Tell us about your project, goals, or any questions you have..."
                     />
                   </div>
-                </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
@@ -502,7 +484,6 @@ phone: '',
                         {info.description}
                       </p>
                     </div>
-                  </div>
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
                       <Mail className="w-6 h-6 text-white" />
@@ -511,7 +492,6 @@ phone: '',
                       <h3 className="text-lg font-semibold text-white">Email</h3>
                       <p className="text-gray-300">info@ziontechgroup.com</p>
                     </div>
-                  </div>
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4">
                       <MapPin className="w-6 h-6 text-white" />
@@ -520,7 +500,6 @@ phone: '',
                       <h3 className="text-lg font-semibold text-white">Address</h3>
                       <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
                     </div>
-                  </div>
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
                       <Clock className="w-6 h-6 text-white" />
@@ -529,25 +508,16 @@ phone: '',
                       <h3 className="text-lg font-semibold text-white">Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
       </div>
-</div>
   )}
 export default ContactPage
   </textarea>
-  </label>
-  </label>
   </label>
   </span>
   </HTMLInputElement>
                       </p>
                     </div>
-                  </div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <Mail className="w-6 h-6 text-white" />
@@ -556,7 +526,6 @@ export default ContactPage
                       <h3 className="text-lg font-semibold text-white">Email</h3>
                       <p className="text-gray-300">info@ziontechgroup.com</p>
                     </div>
-                  </div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <MapPin className="w-6 h-6 text-white" />
@@ -565,7 +534,6 @@ export default ContactPage
                       <h3 className="text-lg font-semibold text-white">Address</h3>
                       <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
                     </div>
-                  </div>
                   <div className="flex items-center"></div>
                     <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <Clock className="w-6 h-6 text-white" />
@@ -574,11 +542,18 @@ export default ContactPage
                       <h3 className="text-lg font-semibold text-white">Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
       </div>
 </div>)};export default ContactPage
+                      </textarea>
+                    </input>
+                  </input>
+                </input>
+              </input>
+            </input>
+          </label>
+        </input>
+      </label>
+    </input>
+  </input>
+</HTMLInputElement>

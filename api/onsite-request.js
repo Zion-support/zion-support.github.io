@@ -58,7 +58,7 @@ export default function handler(req, res) {
       success: true, 
       message: 'Onsite request submitted successfully',
       id: newRequest.id
-    }));
+    });
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
@@ -68,6 +68,6 @@ export default function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save request' }));
   }
-}
-module.exports = handler;
+};
 
+module.exports = handler;

@@ -78,7 +78,6 @@ function fixParsingErrors(filePath) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
-}
 
 // Find all TypeScript files in the app directory
 const files = glob.sync('app/**/*.tsx', { cwd: __dirname });

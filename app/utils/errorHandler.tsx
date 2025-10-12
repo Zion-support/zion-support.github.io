@@ -93,7 +93,7 @@ export class ErrorHandler {}
   private config: ErrorHandlerConfig;</string>
   private errors: AppError[] = [];</string>
   private retryQueue: Array<{ error: AppError; retryCount: number }> = []
-  constructor(config: Partial<ErrorHandlerConfig>= {}) {}
+  constructor(config: Partial<ErrorHandlerConfig>= } {}
     this.config = { ...defaultErrorHandlerConfig, ...config };</ErrorHandlerConfig>}</ErrorHandlerConfig>
   static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {if (!ErrorHandler.instance) {ErrorHandler.instance = new ErrorHandler(config)
 // Error types}
@@ -116,14 +116,14 @@ export const,
 export class ErrorHandler {/* TODO: Fix JSX expression */}
   t: number }> = []
   constructor(confi)
-  g: Partial<ErrorHandlerConfig> = {}) {/* TODO: Fix JSX expression */}
+  g: Partial<ErrorHandlerConfig> = } {/* TODO: Fix JSX expression */}
     this.config = { ...defaultErrorHandlerConfig, ...config }}
   static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {/* TODO: Fix JSX expression */}
     }
     return ErrorHandler.instance}</ErrorHandlerConfig>
   // Handle error</<<<ErrorHandlerConfig>handleError</ErrorHandlerConfig></ErrorHandlerConfig>(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {</string></<<<strin>const</strin></<<strin>appError</strin>: AppError = {,
     id: this.generateErrorId(),}
-  constructor(config: Partial<ErrorHandlerConfig> = {}) {}
+  constructor(config: Partial<ErrorHandlerConfig> = } {}
     this.config = { ...defaultErrorHandlerConfig, ...config }}
   static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {}
     if (!ErrorHandler.instance) {}
@@ -370,7 +370,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       const logMessage = `[${error.severity}] ${error.type}: ${error.message}`
       switch (error.severity) {/* TODO: Fix JSX expression */}
               }
-          }
           break}
     }
     if (this.config.enableNetworkLogging) {}
@@ -410,7 +409,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     try {}
       await fetch(this.config.reportEndpoint, {} catch (err) {}
       }
-  }
   // Report error
   private async reportError(error: AppError) {}
     if (!this.config.reportEndpoint) return
@@ -436,7 +434,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           ...error,
           timestamp: error.timestamp.toISOString()})} catch (err) {}
       }
-  }
   // Notify user
   private notifyUser(error: AppError) {// Notify user}
   private notifyUser(error: AppError) {}
@@ -484,7 +481,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           notification.remove()
     if (this.config.enableNetworkLogging) {/* TODO: Fix JSX expression */}
     }
-  }
   // Log to network
   private async logToNetwork(erro)
   r: AppError) {/* TODO: Fix JSX expression */}
@@ -492,7 +488,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         bod,
   y: JSON.stringify(error)})} catch (err) {/* TODO: Fix JSX expression */}
       }
-  }
   // Report error
   private async reportError(erro)
   r: AppError) {/* TODO: Fix JSX expression */}
@@ -500,7 +495,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})})})} catch (err) {/* TODO: Fix JSX expression */}
       }
-  }
   // Notify user
   private notifyUser(erro)
   r: AppError) {/* TODO: Fix JSX expression */}
@@ -594,7 +588,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   private getNotificationColor(severit)}
   y: ErrorSeverity): string {/* TODO: Fix JSX expression */}
     }
-  }
   // Check if error should be retried
   private shouldRetry(erro)
   r: AppError): boolean {/* TODO: Fix JSX expression */}
@@ -620,14 +613,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         if (process.env['NODE_ENV'] === 'development') {}
           if (import.meta.env.DEV) {}
             }
-        }
         // Add your retry logic here}
     } catch {}
       if (retryItem.retryCount < this.config.maxRetries) {}
         this.scheduleRetry(retryItem.error)} else {}
         }
-    }
-  }
   // Get all errors
   getErrors(): AppError[] {return [...this.errors]}
   }
@@ -695,8 +685,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     } catch {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
         }
-    }
-  }
   // Get all errors
   getErrors(): AppError[] {/* TODO: Fix JSX expression */}
   }
@@ -755,7 +743,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       window.addEventListener('unhandledrejection', event => {)
     this.handleError(new Error(event.reason))}
     }
-  }
 }</ErrorSeverity>
 // React error boundary component</ErrorSeverity>
       // Set up global error handler
@@ -776,7 +763,6 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       // Set up unhandled promise rejection handler
       window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})})}
   }
-}
 // React error boundary component
 export class ErrorBoundary extends React.Component<{ children: React.ReactNode; fallback?: React.ReactNode },
   { hasError: boolean; error?: Error }
@@ -816,7 +802,6 @@ export class ErrorBoundary extends React.Component<{ children: React.ReactNode; 
             <p>We're sorry, but something unexpected happened.</p>)
             <button)
               onClick={() => this.setState({ hasError: false, error: undefined })}
-              style={{}
               style={{}
                 padding: '10px 20px',
                 backgroundColor: '#007bff',
@@ -905,10 +890,8 @@ export default ErrorHandler
   </h2>
   </ErrorSeverit>
   </strong>
-  </strong>
-  </ErrorHandlerConfig>
-  </ErrorHandlerConfig>
-  </ErrorHandlerConfig>
   </ErrorHandlerConfig>
   </strin>
 "`
+  </ErrorHandlerConfig>
+</ErrorHandlerConfig>

@@ -14,8 +14,7 @@ self.addEventListener('install', (event) => {
       .then((cache) => cache.addAll(urlsToCache))
       .then((cache) => {
         console.log('Opened cache')
-        return cache.addAll(urlsToCache)})
-  )})
+        return cache.addAll(urlsToCache)})})
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
@@ -25,8 +24,7 @@ self.addEventListener('fetch', (event) => {
         return fetch(event.request)}
     )
         // Return cached version or fetch from network
-        return response || fetch(event.request)})
-  )})
+        return response || fetch(event.request)})})
 // Activate event
 self.addEventListener('activate', (event) => {
   event.waitUntil(
@@ -36,6 +34,4 @@ self.addEventListener('activate', (event) => {
           if (cacheName !== CACHE_NAME) {
             console.log('Deleting old cache:', cacheName)
             return caches.delete(cacheName)}
-        })
-      )})
-  )})
+        })})

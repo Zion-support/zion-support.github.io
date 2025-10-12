@@ -148,7 +148,6 @@ const MicroSaasPage: React.FC = () => {
                 View Pricing
               </Link>
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}
@@ -168,7 +167,6 @@ const MicroSaasPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Products Grid */}
@@ -200,7 +198,6 @@ const MicroSaasPage: React.FC = () => {
                       <h3 className="text-xl font-semibold text-white">{product.title}</h3>
                       <span className="text-sm text-purple-300">{product.category}</span>
                     </div>
-                  </div>
                   
                   <p className="text-gray-300 mb-4">{product.description}</p>
                   
@@ -218,7 +215,6 @@ const MicroSaasPage: React.FC = () => {
                       <div className="text-2xl font-bold text-white">{product.price}</div>
                       <div className="text-sm text-gray-400">{product.users}</div>
                     </div>
-                  </div>
                   
                   <Link
                     to={`/micro-saas/${product.id}`}
@@ -230,7 +226,6 @@ const MicroSaasPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -258,7 +253,6 @@ const MicroSaasPage: React.FC = () => {
                 View All Pricing
               </Link>
             </div>
-          </div>
         </section>
       </div>
     </>
@@ -266,3 +260,8 @@ const MicroSaasPage: React.FC = () => {
 };
 
 export default MicroSaasPage;
+        </div>
+      </div>
+    </div>
+  </div>
+</any>

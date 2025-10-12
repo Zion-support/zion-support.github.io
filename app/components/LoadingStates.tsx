@@ -16,14 +16,11 @@ export const PageLoader: React.FC = () => {
           <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-lg flex items-center justify-center animate-pulse" style={{ animationDelay: '0.4s' }}>
             <Shield className="w-6 h-6 text-white" />
           </div>
-        </div>
         <h2 className="text-2xl font-bold text-white mb-4">Loading AI Solutions</h2>
         <p className="text-gray-400 mb-6">Preparing advanced features for your experience</p>
         <div className="w-64 h-2 bg-gray-700 rounded-full overflow-hidden">
           <div className="h-full bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full animate-pulse"></div>
         </div>
-      </div>
-    </div>
   );
 };
 
@@ -43,7 +40,6 @@ export const ContentSkeleton: React.FC = () => {
   return (
     <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 animate-pulse">
       <div className="h-8 bg-slate-700 rounded mb-4 w-1/2"></div>
-      <div className="h-4 bg-slate-700 rounded mb-2"></div>
       <div className="h-4 bg-slate-700 rounded mb-2"></div>
       <div className="h-4 bg-slate-700 rounded w-3/4"></div>
     </div>
@@ -74,14 +70,11 @@ export const FeatureLoader: React.FC = () => {
           <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-lg flex items-center justify-center animate-pulse" style={{ animationDelay: '0.4s' }}>
             <Shield className="w-6 h-6 text-white" />
           </div>
-        </div>
         <h2 className="text-2xl font-bold text-white mb-4">Initializing AI Solutions</h2>
         <p className="text-gray-400 mb-6">Preparing advanced features for your experience</p>
         <div className="w-64 h-2 bg-gray-700 rounded-full overflow-hidden">
           <div className="h-full bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full animate-pulse"></div>
         </div>
-      </div>
-    </div>
   );
 };
 
@@ -99,3 +92,4 @@ export const InlineLoader: React.FC<{ text?: string }> = ({ text = 'Loading...' 
     </div>
   );
 };
+</div>

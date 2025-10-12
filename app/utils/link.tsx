@@ -69,7 +69,6 @@ export const,
     // Handle internal navigation
     if (href.startsWith('/') && !href.startsWith('//')) {/* TODO: Fix JSX expression */}
     }
-  }
   return (<a></a>
       href={href}
       className={className}
@@ -89,5 +88,8 @@ export default Link>
     </a>))}
 export default Link
   </LinkProps>
+
+      </LinkProps>
+    </LinkProps>
   </LinkProps>
-  </LinkProps>
+</LinkProps>

@@ -125,7 +125,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
                   />
                 </svg>
               </div>
-            </div>
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
               {Object.entries(currentContent.metrics).map(([key, value]) => (
@@ -134,7 +133,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
                   <div className="text-sm text-gray-300 capitalize">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
                   </div>
-                </div>
               ))}
             </div>
             {/* Tags */}
@@ -165,7 +163,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 <span>Call +1 302 464 0950</span>
               </a>
             </div>
-          </div>
           {/* Slide Indicators */}
           <div className="flex justify-center mt-8 space-x-2">
             {content.map((_, index) => (
@@ -179,7 +176,6 @@ const UltimateBusinessIntelligence2025Banner = () => {
               />
             ))}
           </div>
-        </div>
         {/* Stats Section */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
@@ -198,3 +194,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
   );
 };
 export default UltimateBusinessIntelligence2025Banner;
+
+      </button>
+    </path>
+  </path>
+</div>

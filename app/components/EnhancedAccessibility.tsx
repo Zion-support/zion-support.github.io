@@ -6,7 +6,6 @@ interface AccessibilitySettings {
   fontSize: 'normal' | 'large' | 'extra-large'
   focusVisible: boolean}
 
-
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -99,7 +98,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       ...prev,
       reducedMotion: prefersReducedMotion,
       highContrast: prefersHighContrast
-    }))
+    })
     // Apply initial settings
     applyAccessibilitySettings({
       ...settings,
@@ -110,10 +109,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
     const contrastQuery = window.matchMedia('(prefers-contrast: high)')
     const handleMotionChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, reducedMotion: e.matches }))
+      setSettings(prev => ({ ...prev, reducedMotion: e.matches })
       applyAccessibilitySettings({ ...settings, reducedMotion: e.matches })}
     const handleContrastChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, highContrast: e.matches }))
+      setSettings(prev => ({ ...prev, highContrast: e.matches })
       applyAccessibilitySettings({ ...settings, highContrast: e.matches })}
     motionQuery.addEventListener('change', handleMotionChange)
     contrastQuery.addEventListener('change', handleContrastChange)
@@ -178,8 +177,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
               firstElement?.focus()
               e.preventDefault()}
           }
-        }
-      }
       modal.addEventListener('keydown', handleKeyDown)})}
   const setupFocusManagement = useCallback(() => {
     // Add focus indicators
@@ -234,3 +231,5 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 };
 
 export default EnhancedAccessibility;
+  </AccessibilitySettings>
+</AccessibilitySettings>

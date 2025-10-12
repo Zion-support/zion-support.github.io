@@ -81,7 +81,6 @@ const ContentPromotionBanner: React.FC = () => {
               Learn More
             </button>
           </div>
-        </div>
 
         {/* Stats Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -127,7 +126,6 @@ const ContentPromotionBanner: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
 
         {/* CTA Section */}
         <div className="text-center">
@@ -147,11 +145,10 @@ const ContentPromotionBanner: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 
 export default ContentPromotionBanner;
+    </div>
+  </div>
+</div>

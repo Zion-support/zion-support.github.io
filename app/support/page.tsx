@@ -100,9 +100,6 @@ const SupportPage: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* Support Options */}
@@ -134,7 +131,6 @@ const SupportPage: React.FC = () => {
                 </a>
               ))}
             </div>
-          </div>
         </section>
 
         {/* FAQ Section */}
@@ -162,7 +158,6 @@ const SupportPage: React.FC = () => {
                 </div>
               )}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -190,7 +185,6 @@ const SupportPage: React.FC = () => {
                 Call Us
               </a>
             </div>
-          </div>
         </section>
       </div>
     </>
@@ -198,3 +192,10 @@ const SupportPage: React.FC = () => {
 };
 
 export default SupportPage;
+            </div>
+          </div>
+        </input>
+      </div>
+    </div>
+  </div>
+</div>

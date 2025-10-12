@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import React, { memo, useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation  } from 'react-router-dom';
 import {X,
   Menu,
   Home,
@@ -130,8 +130,7 @@ const Sidebar: React.FC = () => {
         { name: 'Support', path: '/support', icon: Users },
         { name: 'Status', path: '/status', icon: Settings },
       ]
-    }
-  ]
+    } ]
   const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
@@ -345,7 +344,6 @@ const Sidebar: React.FC = () => {
                 <Clock className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span className="text-xs">{contactInfo.hours}</span>
               </div>
-          </div>
       </aside>
     </React.Fragment>
   )}
@@ -375,6 +373,6 @@ export default Sidebar
                 <Clock className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                 <span className="text-xs">{contactInfo.hours}</span>
               </div>
-          </div>
       </aside>
     </>)};Sidebar.displayName = 'Sidebar';export default Sidebar
+</string>

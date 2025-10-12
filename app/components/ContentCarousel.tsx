@@ -114,7 +114,6 @@ const ContentCarousel: React.FC = () => {
                       {currentSlideData.description}
                     </p>
                   </div>
-                </div>
 
                 <div className="space-y-3">
                   {currentSlideData.features.map((feature, index) => (
@@ -133,7 +132,6 @@ const ContentCarousel: React.FC = () => {
                     Get Started
                   </button>
                 </div>
-              </div>
 
               {/* Visual Element */}
               <div className="relative">
@@ -148,11 +146,6 @@ const ContentCarousel: React.FC = () => {
                     <div className="text-gray-300">
                       Slide {currentSlide + 1} of {slides.length}
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
           {/* Navigation Controls */}
           <div className="flex items-center justify-center gap-4 mt-8">
@@ -190,10 +183,18 @@ const ContentCarousel: React.FC = () => {
               />
             ))}
           </div>
-        </div>
-      </div>
-    </div>
   );
 };
 
 export default ContentCarousel;
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

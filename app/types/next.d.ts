@@ -9,8 +9,6 @@ declare global {
       NEXTAUTH_SECRET: string
       NEXTAUTH_URL: string
     }
-  }
-}
 declare module 'next' {
   interface NextRequest {
     user?: {
@@ -18,8 +16,6 @@ declare module 'next' {
       email: string
       name: string
     }
-  }
-}
 
 declare module '*.svg' {
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
@@ -66,3 +62,5 @@ declare module '*.tiff' {
 }
 
 export {};
+
+</SVGElement>

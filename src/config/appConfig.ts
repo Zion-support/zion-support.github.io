@@ -74,7 +74,6 @@ export function getConfig<T = unknown>(keyPath: string): T {
     } else {
       throw new Error(`Configuration key "${keyPath}" not found`);
     }
-  }
   return value as T;
 }
 /**
@@ -102,3 +101,5 @@ export function isDevelopment(): boolean {
   return config.app.environment === 'development';
 }
 export default config;
+
+</T>

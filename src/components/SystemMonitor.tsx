@@ -112,7 +112,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
             type: error.type,
             severity: error.severity,
             timestamp: error.context.timestamp
-          }))
+          })
         },
         memory: memoryInfo,
         network: networkInfo
@@ -172,7 +172,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       rtt: 0,
       saveData: false
     };
-  };
   // Export data
   const handleExport = () => {
     if (!metrics) return;
@@ -217,7 +216,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
           <span className="ml-2 text-gray-600">Loading system metrics...</span>
         </div>
-      </div>
     );
   }
   return (
@@ -240,7 +238,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
             </button>
           )}
         </div>
-      </div>
       {lastUpdate && (
         <p className="text-sm text-gray-500 mb-4">
           Last updated: {lastUpdate.toLocaleTimeString()}
@@ -257,7 +254,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 {metrics.performance.score}
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Load Time</span>
@@ -265,7 +261,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 {metrics.performance.loadTime.toFixed(0)}ms
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">FCP</span>
@@ -273,7 +268,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 {metrics.performance.firstContentfulPaint.toFixed(0)}ms
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">LCP</span>
@@ -281,7 +275,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 {metrics.performance.largestContentfulPaint.toFixed(0)}ms
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">FID</span>
@@ -289,7 +282,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 {metrics.performance.firstInputDelay.toFixed(0)}ms
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">CLS</span>
@@ -297,9 +289,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 {metrics.performance.cumulativeLayoutShift.toFixed(3)}
               </span>
             </div>
-          </div>
-        </div>
-      </div>
       {/* Error Metrics */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>
@@ -311,7 +300,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 {metrics.errors.total}
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Critical</span>
@@ -319,7 +307,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 {metrics.errors.bySeverity.critical || 0}
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">High</span>
@@ -327,7 +314,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 {metrics.errors.bySeverity.high || 0}
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Medium</span>
@@ -335,9 +321,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 {metrics.errors.bySeverity.medium || 0}
               </span>
             </div>
-          </div>
-        </div>
-      </div>
       {/* Memory and Network */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">System Resources</h3>
@@ -366,8 +349,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                   style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
                 ></div>
               </div>
-            </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <h4 className="text-sm font-medium text-gray-600 mb-2">Network</h4>
             <div className="space-y-2">
@@ -387,10 +368,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                 <span>Save Data</span>
                 <span>{metrics.network.saveData ? 'Yes' : 'No'}</span>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
       {/* Recent Errors */}
       {showDetails && metrics.errors.recent.length > 0 && (
         <div className="mb-8">
@@ -408,10 +385,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                   <span>{error.type}</span>
                   <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       )}
       {/* Error Distribution */}
       {showDetails && (
@@ -428,7 +403,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                   </div>
                 ))}
               </div>
-            </div>
             <div className="bg-gray-50 p-4 rounded-lg">
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Category</h4>
               <div className="space-y-1">
@@ -439,11 +413,37 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                   </div>
                 ))}
               </div>
-            </div>
-          </div>
-        </div>
       )}
     </div>
   );
 };
 export default SystemMonitor;
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Date>
+  </SystemMetrics>
+</SystemMonitorProps>

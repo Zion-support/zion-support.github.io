@@ -1,7 +1,6 @@
-import {Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter} from 'lucide-react'
+import { Facebook, Github, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
 import React from 'react'
-import {Link} from 'react-router-dom'
-
+import { Link } from 'react-router-dom';
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear()
 
@@ -67,7 +66,6 @@ const EnhancedFooter: React.FC = () => {
                 <Facebook className="w-5 h-5" />
               </a>
             </div>
-          </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
@@ -113,7 +111,6 @@ const EnhancedFooter: React.FC = () => {
               ))}
             </ul>
           </div>
-        </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -123,23 +120,18 @@ const EnhancedFooter: React.FC = () => {
                 <p className="text-sm text-gray-400">Email</p>
                 <p className="text-white">info@ziontechgroup.com</p>
               </div>
-            </div>
             <div className="flex items-center space-x-3">
               <Phone className="w-5 h-5 text-blue-400" />
               <div>
                 <p className="text-sm text-gray-400">Phone</p>
                 <p className="text-white">+1 (555) 123-4567</p>
               </div>
-            </div>
             <div className="flex items-center space-x-3">
               <MapPin className="w-5 h-5 text-blue-400" />
               <div>
                 <p className="text-sm text-gray-400">Address</p>
                 <p className="text-white">123 Tech Street, Silicon Valley, CA 94000</p>
               </div>
-            </div>
-          </div>
-        </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -163,11 +155,17 @@ const EnhancedFooter: React.FC = () => {
                 </span>
               </Link>
             </div>
-          </div>
-        </div>
-      </div>
     </footer>
   );
 };
 
 export default EnhancedFooter;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

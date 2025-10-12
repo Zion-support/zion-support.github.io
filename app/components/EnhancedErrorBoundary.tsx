@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-import { CheckCircle, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react'
-
+import { CheckCircle, Phone, Mail, Zap, Shield, Brain, Globe  } from 'lucide-react';
 const EnhancedErrorBoundary: React.FC = () => {
   const features = [
     {
@@ -23,9 +22,7 @@ const EnhancedErrorBoundary: React.FC = () => {
       icon: Globe,
       title: 'Global Error Tracking',
       description: 'Track errors across all environments and user locations for complete visibility.'
-    }
-  ]
-
+    } ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -58,7 +55,6 @@ const EnhancedErrorBoundary: React.FC = () => {
               Learn More
             </button>
           </div>
-        </div>
       </section>
 
       {/* Features Section */}
@@ -83,7 +79,6 @@ const EnhancedErrorBoundary: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Benefits Section */}
@@ -105,7 +100,6 @@ const EnhancedErrorBoundary: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -128,11 +122,15 @@ const EnhancedErrorBoundary: React.FC = () => {
                 Email Us
               </button>
             </div>
-          </div>
-        </div>
       </section>
     </div>
   )
 }
 
 export default EnhancedErrorBoundary
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

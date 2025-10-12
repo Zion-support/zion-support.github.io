@@ -1,9 +1,9 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 const PagePage: React.FC = () => {
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database  } from 'lucide-react';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const SmartCityInfrastructurePage: React.FC = () => {
@@ -30,8 +30,7 @@ const SmartCityInfrastructurePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
-  ]
+    } ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -67,8 +66,6 @@ const SmartCityInfrastructurePage: React.FC = () => {
                 Learn More
   </
             </div>
-          </div>
-        </div>
       </section>
 
 const PagePage: React.FC = () => {const features = [
@@ -88,8 +85,7 @@ const PagePage: React.FC = () => {const features = [
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'}
       description: 'Worldwide deployment and support for international smart city projects'
-    }
-  ]
+    } ]
   const smartCityServices = [
     {
       icon: Building,
@@ -139,8 +135,6 @@ const PagePage: React.FC = () => {const features = [
                 Learn More
               </button>
             </div>
-          </div>
-        </div>
       </section>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
@@ -153,12 +147,10 @@ const PagePage: React.FC = () => {const features = [
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-                </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>))}
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -171,10 +163,8 @@ const PagePage: React.FC = () => {const features = [
               Experience the power of our page solutions for your business.
             </p>
           </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -196,19 +186,15 @@ const PagePage: React.FC = () => {const features = [
                 Email Us
   </
             </div>
-          </div>
-        </div>
       </section>
     </div>
   )}
 export default PagePage
   </button>
-  </button>
   </h2>
   </button>
   </span>
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
@@ -223,7 +209,6 @@ export default PagePage
           </div>
               </div>))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
@@ -245,8 +230,6 @@ export default PagePage
                 Email Us
               </button>
             </div>
-          </div>
-        </div>
       </section>
     </div>)};export default PagePage
   const benefits = [
@@ -292,8 +275,6 @@ export default PagePage
                   Learn More
                 </button>
               </div>
-            </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -318,7 +299,6 @@ export default PagePage
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Services Section */}
@@ -343,7 +323,6 @@ export default PagePage
                       <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
                       <p className="text-gray-300">{service.description}</p>
                     </div>
-                  </div>
                   <div className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center text-gray-300">
@@ -352,10 +331,8 @@ export default PagePage
                       </div>
                     ))}
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}
@@ -377,7 +354,6 @@ export default PagePage
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -400,11 +376,19 @@ export default PagePage
                   Email Us
                 </button>
               </div>
-            </div>
-          </div>
         </section>
       </div>
       <Footer />
     </>
   )}
 export default SmartCityInfrastructurePage
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</button>

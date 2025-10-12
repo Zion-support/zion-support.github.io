@@ -1,8 +1,7 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'}
-  ]
+import { Helmet  } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -37,8 +36,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                 Learn More
   </
             </div>
-          </div>
-        </div>
       </section>
         </div>
       </section>
@@ -61,7 +58,6 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -83,13 +79,10 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                 Email Us
   </
             </div>
-          </div>
-        </div>
       </section>
     </div>
   )}
 export default LazyImagePage
-  </button>
   </button>
   </h2>
   </button>
@@ -128,8 +121,6 @@ export default LazyImagePage
                 Learn More
               </button>
             </div>
-          </div>
-        </div>
       </section>
         </div>
       </section>
@@ -151,7 +142,6 @@ export default LazyImagePage
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
@@ -173,7 +163,6 @@ export default LazyImagePage
                 Email Us
               </button>
             </div>
-          </div>
-        </div>
       </section>
     </div>)};export default LazyImagePage
+</button>

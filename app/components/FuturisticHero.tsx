@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 const FuturisticHeroPage: React.FC = () => {
   const features = [
     {
@@ -23,8 +23,7 @@ const FuturisticHeroPage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
-  ]
+    } ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -44,7 +43,6 @@ const FuturisticHeroPage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -69,8 +67,6 @@ const FuturisticHeroPage: React.FC = () => {
   )}
 export default FuturisticHeroPage
   </button>
-  </button>
-  </div>
   </div>
   </section>
 
@@ -107,7 +103,6 @@ const FuturisticHeroPage: React.FC = () => {const features = [
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
@@ -129,3 +124,4 @@ const FuturisticHeroPage: React.FC = () => {const features = [
                 Email Us
               </button>
             </div>)};export default FuturisticHeroPage
+</button>

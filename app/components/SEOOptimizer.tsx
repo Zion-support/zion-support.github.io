@@ -34,8 +34,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           "position": 1,
           "name": "Home",
           "item": "https://ziontechgroup.com"
-        }
-      ]
+        } ]
     };
 
     const script = document.createElement('script');
@@ -130,3 +129,5 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 };
 
 export default SEOOptimizer;
+  </script>
+</SEOOptimizerProps>

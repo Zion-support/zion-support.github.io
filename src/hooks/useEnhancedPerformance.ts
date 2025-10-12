@@ -12,7 +12,7 @@ export interface UseEnhancedPerformanceOptions {
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
 }
-export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
+export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = } {
   const {
     component = 'Unknown',
     trackErrors = true,
@@ -41,7 +41,6 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
             Math.round(duration)
           );
         }
-      }
       // Track component unmount
       if (trackAnalytics) {
         analytics.trackCustomEvent('Component', 'Unmounted', component);
@@ -106,3 +105,5 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
   };
 }
 export default useEnhancedPerformance;
+  </number>
+</number>

@@ -97,8 +97,6 @@ const CommunityPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-            </div>
-          </div>
         </section>
 
         {/* Stats Section */}
@@ -113,10 +111,8 @@ const CommunityPage: React.FC = () => {
                   <div className="text-gray-300 font-medium">
                     {stat.label}
                   </div>
-                </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -141,7 +137,6 @@ const CommunityPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Events Section */}
@@ -179,14 +174,12 @@ const CommunityPage: React.FC = () => {
                       <Globe className="h-4 w-4 mr-2" />
                       <span>{event.location}</span>
                     </div>
-                  </div>
                   <button className="w-full mt-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
                     Register Now
                   </button>
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -208,7 +201,6 @@ const CommunityPage: React.FC = () => {
                 Contact Us
               </button>
             </div>
-          </div>
         </section>
       </div>
     </>
@@ -216,3 +208,11 @@ const CommunityPage: React.FC = () => {
 };
 
 export default CommunityPage;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

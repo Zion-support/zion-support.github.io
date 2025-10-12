@@ -75,15 +75,12 @@ export class RateLimiter {
       if (now > record.resetTime) {
         this.requests.delete(key);
       }
-    }
-  }
   /**
    * Get current stats
    */
   getStats(): { totalTracked: number } {
     return { totalTracked: this.requests.size };
   }
-}
 /**
  * Pre-configured rate limiters for common use cases
  */
@@ -159,7 +156,6 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
             'X-RateLimit-Remaining': String(remaining),
             'X-RateLimit-Reset': String(resetTime)
           }
-        }
       );
     }
     // Request allowed - headers can be added to response later
@@ -167,3 +163,5 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
   };
 }
 export default RateLimiter;
+
+</Response>

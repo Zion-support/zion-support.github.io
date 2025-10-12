@@ -1,6 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async';
+import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield  } from 'lucide-react';
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
     {
@@ -32,8 +32,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       icon: Target,
       title: 'Goal Tracking',
       description: 'Monitor KPIs and business objectives with automated alerts.'
-    }
-  ]
+    } ]
   const benefits = [
     'Real-time data visualization and reporting',
     'AI-powered predictive analytics',
@@ -46,8 +45,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
-    { label: 'User Satisfaction', value: '4.9/5', icon: Star }
-  ]
+    { label: 'User Satisfaction', value: '4.9/5', icon: Star } ]
   return (
     <React.Fragment>
       <Helmet>
@@ -82,8 +80,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   View Demo
   </
               </div>
-            </div>
-          </div>
         </section>
         {/* Features Section */}
         <section className="py-16 px-4">
@@ -105,7 +101,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
         {/* Metrics Section */}
         <section className="py-16 px-4 bg-slate-800/30">
@@ -127,7 +122,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
         {/* Benefits Section */}
         <section className="py-16 px-4">
@@ -162,10 +156,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                     <Star className="w-5 h-5 text-yellow-400" />
                     <span className="text-gray-300">"Improved decision making speed by 3x"</span>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
         {/* CTA Section */}
         <section className="py-16 px-4">
@@ -187,16 +177,12 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   Schedule Demo
   </
               </div>
-            </div>
-          </div>
         </section>
       </div>
     </React.Fragment>
   )}
 export default AIAnalyticsDashboardPage
   </button>
-  </p>
-  </p>
   </p>
   </button>
 
@@ -270,8 +256,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
                   View Demo
                 </button>
               </div>
-            </div>
-          </div>
         </section>
         {/* Features Section */}
         <section className="py-16 px-4"></section>
@@ -292,7 +276,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
                   <p className="text-gray-300">{feature.description}</p>
                 </div>))}
             </div>
-          </div>
         </section>
         {/* Metrics Section */}
         <section className="py-16 px-4 bg-slate-800/30"></section>
@@ -313,7 +296,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
                   <div className="text-gray-300">{metric.label}</div>
                 </div>))}
             </div>
-          </div>
         </section>
         {/* Benefits Section */}
         <section className="py-16 px-4"></section>
@@ -347,10 +329,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
                     <Star className="w-5 h-5 text-yellow-400" />
                     <span className="text-gray-300">"Improved decision making speed by 3x"</span>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
         {/* CTA Section */}
         <section className="py-16 px-4"></section>
@@ -372,8 +350,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
                   Schedule Demo
                 </button>
               </div>
-            </div>
-          </div>
         </section>
       </div>
     </>)};export default AIAnalyticsDashboardPage

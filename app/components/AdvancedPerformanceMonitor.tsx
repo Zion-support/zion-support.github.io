@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState, useCallback } from 'react';
 
-
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -46,14 +45,13 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         const lcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
-          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime });
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
         console.warn('LCP observer error:', error);
       }
-    }
 
     // Measure First Input Delay (FID)
     if ('PerformanceObserver' in window) {
@@ -70,16 +68,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               setMetrics(prev => ({
                 ...prev,
                 fid: fidEntry.processingStart - fidEntry.startTime,
-              }));
+              });
             }
           });
-        });
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
         console.warn('FID observer error:', error);
       }
-    }
 
     // Measure Cumulative Layout Shift (CLS)
     if ('PerformanceObserver' in window) {
@@ -96,17 +92,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               const clsEntry = entry as LayoutShift;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
-                setMetrics(prev => ({ ...prev, cls: clsValue }));
+                setMetrics(prev => ({ ...prev, cls: clsValue });
               }
-            }
           });
-        });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
         console.warn('CLS observer error:', error);
       }
-    }
 
     // Measure Time to First Byte (TTFB)
     try {
@@ -126,7 +119,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fcp,
         ttfb,
         memory,
-      }));
+      });
     } catch (error) {
       console.warn('Performance measurement error:', error);
     }
@@ -152,15 +145,14 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-       
-       
+
       console.log(
         'Slow resources detected:',
         slowResources.map((r: PerformanceResourceTiming) => ({
           name: r.name,
           duration: r.duration,
           size: r.transferSize,
-        }))
+        })
       );
     }
   }, []);
@@ -176,22 +168,22 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
           if (onCLS) {
             onCLS((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, cls: metric.value }))
+              setMetrics(prev => ({ ...prev, cls: metric.value })
             );
           }
           if (onFCP) {
             onFCP((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, fcp: metric.value }))
+              setMetrics(prev => ({ ...prev, fcp: metric.value })
             );
           }
           if (onLCP) {
             onLCP((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, lcp: metric.value }))
+              setMetrics(prev => ({ ...prev, lcp: metric.value })
             );
           }
           if (onTTFB) {
             onTTFB((metric: { value: number }) =>
-              setMetrics(prev => ({ ...prev, ttfb: metric.value }))
+              setMetrics(prev => ({ ...prev, ttfb: metric.value })
             );
           }
         })
@@ -293,7 +285,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}
           </div>
-        </div>
         {_recommendations.length > 0 && (
           <div className='mt-2'>
             <h4 className='font-semibold text-xs text-red-600'>
@@ -314,3 +305,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 };
 
 export default AdvancedPerformanceMonitor;
+
+  </PerformanceMetrics>
+</PerformanceMonitorProps>

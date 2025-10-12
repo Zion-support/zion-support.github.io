@@ -68,9 +68,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               img.removeAttribute('data-src');
               observer.unobserve(img);
             }
-          }
         });
-      });
 
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => imageObserver.observe(img));
@@ -88,17 +86,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
           }
         });
-      });
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
       } catch (e) {
         // Fallback for browsers that don't support these entry types
       }
-    }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
   return null;
 };
 
 export default PerformanceOptimizer;
+</PerformanceOptimizerProps>

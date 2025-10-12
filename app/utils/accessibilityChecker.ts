@@ -81,7 +81,6 @@ export class AccessibilityChecker {
           element
         };
       }
-    }
     
     return {
       passed: false,
@@ -254,7 +253,6 @@ ${report.results
   .join('\n')}
     `.trim();
   }
-}
 
 // Export a default instance
 export const accessibilityChecker = new AccessibilityChecker();

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link  } from 'react-router-dom';
 import {Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,
   Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock,
   TrendingUp, Star, Settings, Calendar, CheckSquare, FileText,
@@ -397,8 +397,7 @@ const ITConsultingPage: React.FC = () => {
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
       caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
-    }
-  ]
+    } ]
   const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
@@ -410,8 +409,7 @@ const ITConsultingPage: React.FC = () => {
     { id: 'development', name: 'Development', icon: Code },
     { id: 'consulting', name: 'Consulting', icon: Briefcase },
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
-    { id: 'compliance', name: 'Compliance', icon: CheckSquare }
-  ]
+    { id: 'compliance', name: 'Compliance', icon: CheckSquare } ]
   const filteredServices = itServices.filter(service => {const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('');const itServices = [
     // IT Infrastructure Services
@@ -769,7 +767,6 @@ const ITConsultingPage: React.FC = () => {
               Get IT Consultation
   </
           </div>
-        </div>
       </section>
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -798,7 +795,6 @@ const ITConsultingPage: React.FC = () => {
               Get IT Consultation
             </a>
           </div>
-        </div>
       </section>
       {/* Search and Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
@@ -816,11 +812,9 @@ const ITConsultingPage: React.FC = () => {
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               </div>
-            </div>
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               </div>
-            </div>
             {/* Category Filter */}
             <div className="lg:w-64"></div>
               <select
@@ -836,10 +830,8 @@ const ITConsultingPage: React.FC = () => {
                   </option>))}
               </select>
             </div>
-          </div>
               </select>
             </div>
-          </div>
           {/* Category Pills */}
           <div className="flex flex-wrap gap-2 mb-8"></div>
             {categories.map((category) => (</div>
@@ -854,7 +846,6 @@ const ITConsultingPage: React.FC = () => {
                 {category.name}
               </button>))}
           </div>
-        </div>
       </section>
       {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
@@ -870,7 +861,6 @@ const ITConsultingPage: React.FC = () => {
                     <div className="text-2xl font-bold text-white">{service.price}</div>
                     <div className="text-sm text-gray-400">starting price</div>
                   </div>
-                </div>
                 <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}</h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                 <div className="space-y-3 mb-6"></div>
@@ -896,7 +886,6 @@ const ITConsultingPage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                </div>
                 <div className="space-y-2 mb-6 text-sm"></div>
                   <div className="flex justify-between"></div>
                     <span className="text-gray-400">Setup Time:</span>
@@ -910,7 +899,6 @@ const ITConsultingPage: React.FC = () => {
                     <span className="text-gray-400">Target:</span>
                     <span className="text-white">{service.targetAudience}</span>
                   </div>
-                </div>
                 {service.caseStudy && (
                   <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div>
                     <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
@@ -931,10 +919,8 @@ const ITConsultingPage: React.FC = () => {
                     Call for Quote
   </
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
@@ -960,19 +946,12 @@ const ITConsultingPage: React.FC = () => {
               Get Custom IT Strategy
   </
           </div>
-        </div>
       </section>
     </div>
   )}
 export default ITConsultingPage
   </a>
-  </a>
-  </a>
-  </a>
-  </a>
-  </a>
           </div>
-        </div>
       </section>
       {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
@@ -988,7 +967,6 @@ export default ITConsultingPage
                     <div className="text-2xl font-bold text-white">{service.price}</div>
                     <div className="text-sm text-gray-400">starting price</div>
                   </div>
-                </div>
                 <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}</h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                 <div className="space-y-3 mb-6"></div>
@@ -1012,7 +990,6 @@ export default ITConsultingPage
                         </li>))}
                     </ul>
                   </div>
-                </div>
                 <div className="space-y-2 mb-6 text-sm"></div>
                   <div className="flex justify-between"></div>
                     <span className="text-gray-400">Setup Time:</span>
@@ -1026,7 +1003,6 @@ export default ITConsultingPage
                     <span className="text-gray-400">Target:</span>
                     <span className="text-white">{service.targetAudience}</span>
                   </div>
-                </div>
                 {service.caseStudy && (<div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div>}
                     <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
                   </div>)}
@@ -1048,7 +1024,6 @@ export default ITConsultingPage
                 </div>
               </div>))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect"></section>
@@ -1074,6 +1049,12 @@ export default ITConsultingPage
               Get Custom IT Strategy
             </a>
           </div>
-        </div>
       </section>
     </div>)};export default ITConsultingPage
+            </a>
+          </a>
+        </a>
+      </option>
+    </input>
+  </a>
+</a>

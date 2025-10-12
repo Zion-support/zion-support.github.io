@@ -49,7 +49,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
     }
-  }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Enhanced error reporting logic
     const errorReport = {
@@ -187,10 +186,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               </details>
             )}
           </div>
-        </div>
       );
     }
     return this.props.children;
   }
-}
 export default EnhancedErrorBoundary;

@@ -1,11 +1,8 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
 import { CheckCircle, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
 
 const BusinessIntelligencePage: React.FC = () => {
   const features = [
@@ -86,7 +83,6 @@ const BusinessIntelligencePage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -105,10 +101,11 @@ const BusinessIntelligencePage: React.FC = () => {
               Email Us
             </button>
           </div>
-        </div>
-      </div>
-    </div>
   );
 };
 
 export default BusinessIntelligencePage;
+      </div>
+    </div>
+  </div>
+</div>

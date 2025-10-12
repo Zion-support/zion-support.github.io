@@ -266,7 +266,6 @@ export class AdvancedAnalytics {
     if (this.config.debug) {
       console.log('Sending to analytics:', event);
     }
-  }
 
   /**
    * Get analytics report
@@ -307,7 +306,6 @@ export class AdvancedAnalytics {
     };
     this.performanceMetrics = null;
   }
-}
 
 // Export utility functions
 export const createAnalytics = (config: AnalyticsConfig) => new AdvancedAnalytics(config);

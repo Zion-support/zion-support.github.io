@@ -1,35 +1,36 @@
 'use client'
 import React from 'react'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, BarChart, Globe } from 'lucide-react'
-
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, BarChart, Globe  } from 'lucide-react';
 const ServiceWorker: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Analysis',
       description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'] }
+    }
     },
     {
       icon: BarChart,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results.',
-      benefits: ['Real-time processing', 'High-speed analytics', 'Optimized performance', 'Scalable solutions']
+      benefits: ['Real-time processing', 'High-speed analytics', 'Optimized performance', 'Scalable solutions'] }
+    }
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards.',
-      benefits: ['End-to-end encryption', 'Compliance ready', 'Secure data handling', 'Regular audits']
+      benefits: ['End-to-end encryption', 'Compliance ready', 'Secure data handling', 'Regular audits'] }
+    }
     },
     {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses.',
-      benefits: ['Global deployment', 'Multi-language support', '24/7 support', 'Local expertise']
+      benefits: ['Global deployment', 'Multi-language support', '24/7 support', 'Local expertise'] }
     }
-  ]
-
+    } ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -60,7 +61,6 @@ const ServiceWorker: React.FC = () => {
               Learn More
             </button>
           </div>
-        </div>
       </section>
 
       {/* Features Section */}
@@ -93,7 +93,6 @@ const ServiceWorker: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Benefits Section */}
@@ -134,10 +133,6 @@ const ServiceWorker: React.FC = () => {
                   <MapPin className="w-5 h-5 text-purple-400 mr-3" />
                   <span>San Francisco, CA</span>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -158,11 +153,18 @@ const ServiceWorker: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </div>
-        </div>
       </section>
     </div>
   )
 }
 
 export default ServiceWorker
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

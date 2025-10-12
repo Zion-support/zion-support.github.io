@@ -9,17 +9,20 @@ const LayoutPage: React.FC = () => {
     {
       title: 'Layout',
       description: 'Professional layout services for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
+      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support'] }
+    }
     },
     {
       title: 'Advanced Technology',
       description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready'] }
+    }
     },
     {
       title: 'Proven Results',
       description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
+      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement'] }
+    }
     }
   ];
 
@@ -75,9 +78,6 @@ const LayoutPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-            </div>
-          </div>
-        </div>
       </main>
       
       <Footer />
@@ -86,3 +86,6 @@ const LayoutPage: React.FC = () => {
 };
 
 export default LayoutPage;
+    </div>
+  </div>
+</div>

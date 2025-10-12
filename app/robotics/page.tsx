@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -23,8 +23,7 @@ const PagePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
-  ]
+    } ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -45,7 +44,6 @@ const PagePage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           </div>
-        </div>
       </section>
       {/* Features Section */}
             </p>
@@ -54,7 +52,6 @@ const PagePage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
 const PagePage: React.FC = () => {const features = [
@@ -92,7 +89,6 @@ const PagePage: React.FC = () => {const features = [
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
           </div>
-        </div>
       </section>
       {/* Features Section */}
             </p>
@@ -100,20 +96,16 @@ const PagePage: React.FC = () => {const features = [
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               </div>))}
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
               </div>))}
           </div>
-        </div>
       </section>
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
           </div>
-        </div>
       </section>
     </div>)};export default PagePage

@@ -133,7 +133,6 @@ function fixFile(filePath) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
-}
 
 // Main function
 function main() {
@@ -150,7 +149,6 @@ function main() {
     } else {
       console.log(`File not found: ${file}`);
     }
-  }
   
   console.log(`\nFixed ${fixedCount} critical files.`);
   
@@ -162,6 +160,5 @@ function main() {
   } catch (error) {
     console.log('Type check still has errors, but critical files have been processed.');
   }
-}
 
 main();

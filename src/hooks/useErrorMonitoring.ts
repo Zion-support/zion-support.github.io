@@ -7,7 +7,6 @@ declare global {
   interface Window {
     __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
   }
-}
 export const useErrorMonitoring = () => {
   // const { trackError } = useAnalytics();
   const reportError = useCallback(
@@ -59,5 +58,4 @@ export const useErrorMonitoring = () => {
   return {
     reportError
   };
-};
 export default useErrorMonitoring;

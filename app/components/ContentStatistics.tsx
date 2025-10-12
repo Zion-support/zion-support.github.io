@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Users, TrendingUp, Award, CheckCircle, Zap, Shield, Cloud, BarChart3 } from 'lucide-react';
 
 const ContentStatistics: React.FC = () => {
-  const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
+  const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>(};
 
   const statistics = useMemo(() => [
     {
@@ -173,10 +173,8 @@ const ContentStatistics: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </div>
             ))}
           </div>
-        </div>
 
         {/* Achievements Section */}
         <div className="mb-16">
@@ -198,7 +196,6 @@ const ContentStatistics: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
 
         {/* CTA Section */}
         <div className="text-center">
@@ -218,11 +215,10 @@ const ContentStatistics: React.FC = () => {
                 View Case Studies
               </button>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 
 export default ContentStatistics;
+    </div>
+  </div>
+</div>

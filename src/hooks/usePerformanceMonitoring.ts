@@ -49,7 +49,6 @@ export const usePerformanceMonitoring = () => {
             if (!entry.hadRecentInput && entry.value) {
               clsValue += entry.value;
             }
-          }
         );
         reportMetric('CLS', clsValue);
       });
@@ -62,7 +61,6 @@ export const usePerformanceMonitoring = () => {
             reportMetric('FCP', entry.startTime);
           }
         });
-      });
       fcpObserver.observe({ entryTypes: ['paint'] });
       // TTFB - Time to First Byte
       const navigationObserver = new PerformanceObserver(list => {
@@ -74,7 +72,6 @@ export const usePerformanceMonitoring = () => {
             reportMetric('TTFB', ttfb);
           }
         });
-      });
       navigationObserver.observe({ entryTypes: ['navigation'] });
       // Resource timing
       const resourceObserver = new PerformanceObserver(list => {
@@ -87,9 +84,7 @@ export const usePerformanceMonitoring = () => {
               // Only track slow resources
               reportMetric('SLOW_RESOURCE', loadTime);
             }
-          }
         });
-      });
       resourceObserver.observe({ entryTypes: ['resource'] });
       // Cleanup
       return () => {
@@ -132,5 +127,4 @@ export const usePerformanceMonitoring = () => {
   return {
     reportMetric
   };
-};
 export default usePerformanceMonitoring;

@@ -345,7 +345,6 @@ const ITServicesPage: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (
@@ -364,7 +363,6 @@ const ITServicesPage: React.FC = () => {
                     Learn More <ArrowRight className="w-4 h-4 ml-1" />
                   </a>
                 </div>
-              </div>
             ))}
           </div>
         </section>
@@ -470,7 +468,6 @@ const ITServicesPage: React.FC = () => {
                 Contact Sales
               </a>
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -494,7 +491,6 @@ const ITServicesPage: React.FC = () => {
                 (302) 464-0950
               </a>
             </div>
-          </div>
           </section>
         </main>
         <Footer />

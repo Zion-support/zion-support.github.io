@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -42,7 +42,6 @@ const PagePage: React.FC = () => {const features = [
                 <p className="text-gray-300">{feature.description}</p>
               </div>))}
           </div>
-        </div>
       </section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
@@ -53,10 +52,8 @@ const PagePage: React.FC = () => {const features = [
               </div>
             ))}
           </div>
-        </div>
       </section>
           </div>
-        </div>
       </section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
@@ -66,11 +63,9 @@ const PagePage: React.FC = () => {const features = [
             </p>
               </div>))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
           </div>
-        </div>
       </section>
     </div>)}
 export default PagePage

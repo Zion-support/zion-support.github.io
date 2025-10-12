@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath  } from 'url';
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 // Function to fix critical parsing errors
@@ -82,8 +82,6 @@ function findFilesToFix(dir) {
 function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {/* TODO: Fix JSX expression */}
       }
-    }
-  }
   
   walkDir(dir)
   return files}
@@ -96,6 +94,6 @@ console.log(`Processing ${filesToFix.length} files`)
 let fixedCount = 0
 for (const file of filesToFix) {/* TODO: Fix JSX expression */}
   }
-}
 `
 console.log(`Fixed ${fixedCount} files`);"`
+</div>

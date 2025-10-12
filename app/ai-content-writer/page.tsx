@@ -66,7 +66,6 @@ const AIContentWriterPage: React.FC = () => {
                 View Demo
               </button>
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -100,7 +99,6 @@ const AIContentWriterPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -119,8 +117,6 @@ const AIContentWriterPage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-            </div>
-          </div>
         </section>
 
         <Footer />
@@ -130,3 +126,8 @@ const AIContentWriterPage: React.FC = () => {
 };
 
 export default AIContentWriterPage;
+
+      </div>
+    </div>
+  </div>
+</div>

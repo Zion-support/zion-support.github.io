@@ -106,8 +106,6 @@ const CompliancePage: React.FC = () => {
                   Learn More
                 </button>
               </div>
-            </div>
-          </div>
         </section>
 
         {/* Compliance Standards */}
@@ -136,12 +134,10 @@ const CompliancePage: React.FC = () => {
                         {standard.status}
                       </span>
                     </div>
-                  </div>
                   <p className="text-gray-300">{standard.description}</p>
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -163,7 +159,6 @@ const CompliancePage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}
@@ -185,7 +180,6 @@ const CompliancePage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -207,7 +201,6 @@ const CompliancePage: React.FC = () => {
                 Download Report
               </button>
             </div>
-          </div>
         </section>
       </div>
     </>
@@ -215,3 +208,10 @@ const CompliancePage: React.FC = () => {
 };
 
 export default CompliancePage;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

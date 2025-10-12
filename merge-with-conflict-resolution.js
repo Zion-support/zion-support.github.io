@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { execSync } from 'child_process'
-import { readFileSync, writeFileSync } from 'fs'
+import { execSync  } from 'child_process';
+import { readFileSync, writeFileSync  } from 'fs';
 console.log('🔄 Merging branches with automatic conflict resolution...')
 function resolveConflicts(filePath) {
   try {
@@ -58,7 +58,6 @@ function mergeBranch(branchName) {
           if (resolveConflicts(file.trim())) {
             resolvedCount++}
         }
-      }
 
       console.log(`✅ Resolved conflicts in ${resolvedCount} files`)
       // Add all resolved files
@@ -70,7 +69,6 @@ function mergeBranch(branchName) {
       console.log(`❌ Could not resolve conflicts for ${branchName}`)
       return false}
   }
-}
 
 try {
   // List of branches to merge (most recent first)

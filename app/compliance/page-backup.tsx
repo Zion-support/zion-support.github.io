@@ -1,38 +1,39 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet  } from 'react-helmet-async';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Shield, BarChart, Target, TrendingUp } from 'lucide-react'
-
+import { CheckCircle, ArrowRight, Shield, BarChart, Target, TrendingUp  } from 'lucide-react';
 const PageBackupPage: React.FC = () => {
   const features = [
     {
       icon: Shield,
       title: 'Compliance Management',
       description: 'Comprehensive compliance management with automated monitoring and reporting.',
-      benefits: ['Automated monitoring', 'Compliance reporting', 'Risk assessment', 'Audit trails']
+      benefits: ['Automated monitoring', 'Compliance reporting', 'Risk assessment', 'Audit trails'] }
+    }
     },
     {
       icon: BarChart,
       title: 'Risk Analytics',
       description: 'Advanced risk analytics and assessment tools for compliance management.',
-      benefits: ['Risk assessment', 'Analytics dashboard', 'Predictive modeling', 'Compliance metrics']
+      benefits: ['Risk assessment', 'Analytics dashboard', 'Predictive modeling', 'Compliance metrics'] }
+    }
     },
     {
       icon: Target,
       title: 'Policy Management',
       description: 'Centralized policy management and enforcement across your organization.',
-      benefits: ['Policy enforcement', 'Centralized management', 'Automated updates', 'Compliance tracking']
+      benefits: ['Policy enforcement', 'Centralized management', 'Automated updates', 'Compliance tracking'] }
+    }
     },
     {
       icon: TrendingUp,
       title: 'Performance Monitoring',
       description: 'Real-time performance monitoring and compliance status tracking.',
-      benefits: ['Real-time monitoring', 'Status tracking', 'Performance metrics', 'Alert system']
+      benefits: ['Real-time monitoring', 'Status tracking', 'Performance metrics', 'Alert system'] }
     }
-  ]
-
+    } ]
   return (
     <React.Fragment>
       <Helmet>
@@ -60,7 +61,6 @@ const PageBackupPage: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -92,7 +92,6 @@ const PageBackupPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -115,3 +114,5 @@ const PageBackupPage: React.FC = () => {
 }
 
 export default PageBackupPage
+  </div>
+</div>

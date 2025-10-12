@@ -1,5 +1,4 @@
-    }
-  ]
+    } ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -39,7 +38,6 @@
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -60,7 +58,6 @@
               </div>
             ))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -82,13 +79,10 @@
                 Email Us
   </
             </div>
-          </div>
-        </div>
       </section>
     </div>
   )}
 export default GlobalErrorBoundaryPage
-  </button>
   </button>
   </h2>
 
@@ -128,7 +122,6 @@ export default GlobalErrorBoundaryPage
                 <p className="text-gray-300">{feature.description}</p>
               </div>))}
           </div>
-        </div>
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
@@ -148,7 +141,6 @@ export default GlobalErrorBoundaryPage
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>))}
           </div>
-        </div>
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
@@ -170,7 +162,6 @@ export default GlobalErrorBoundaryPage
                 Email Us
               </button>
             </div>
-          </div>
-        </div>
       </section>
     </div>)};export default GlobalErrorBoundaryPage
+</button>

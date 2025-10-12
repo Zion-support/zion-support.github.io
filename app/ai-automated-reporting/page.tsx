@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight, CheckCircle, Shield, Brain, BarChart, Target, TrendingUp, FileText} from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Shield, Brain, BarChart, Target, TrendingUp, FileText } from 'lucide-react';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-=======
 import React from 'react';
 import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -17,90 +15,77 @@ const AIAutomatedReportingPage: React.FC = () => {
       icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
       title: 'Real-time Analytics',
       description: 'Get instant insights from your data with automated reporting and real-time dashboards.',
-      benefits: ['Live data updates', 'Interactive charts', 'Custom metrics', 'Performance tracking']
+      benefits: ['Live data updates', 'Interactive charts', 'Custom metrics', 'Performance tracking'] }
+    }
     },
     {
       icon: <FileText className="w-8 h-8 text-green-500" />,
       title: 'Automated Reports',
       description: 'Generate comprehensive reports automatically without manual intervention.',
-      benefits: ['Scheduled reports', 'Multiple formats', 'Custom templates', 'Email delivery']
+      benefits: ['Scheduled reports', 'Multiple formats', 'Custom templates', 'Email delivery'] }
+    }
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-purple-500" />,
       title: 'Predictive Insights',
       description: 'Leverage AI to predict trends and provide actionable business intelligence.',
-      benefits: ['Trend analysis', 'Forecasting', 'Risk assessment', 'Opportunity identification']
+      benefits: ['Trend analysis', 'Forecasting', 'Risk assessment', 'Opportunity identification'] }
+    }
     },
     {
       icon: <Clock className="w-8 h-8 text-orange-500" />,
       title: 'Time Savings',
       description: 'Reduce manual reporting time by up to 90% with intelligent automation.',
-      benefits: ['Automated data collection', 'Smart formatting', 'Instant delivery', 'Zero manual work']
+      benefits: ['Automated data collection', 'Smart formatting', 'Instant delivery', 'Zero manual work'] }
+    }
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
 
   const benefits = [
     {
-<<<<<<< HEAD
       icon: FileText,
       title: 'Automated Report Generation',
       description: 'Generate comprehensive reports automatically with AI-powered data analysis.',
-      benefits: ['Auto-generation', 'Data analysis', 'Report templates', 'Custom formatting']
+      benefits: ['Auto-generation', 'Data analysis', 'Report templates', 'Custom formatting'] }
+    }
     },
     {
       icon: BarChart,
       title: 'Data Visualization',
       description: 'Create stunning visualizations and charts from your data automatically.',
-      benefits: ['Interactive charts', 'Real-time data', 'Custom dashboards', 'Export options']
+      benefits: ['Interactive charts', 'Real-time data', 'Custom dashboards', 'Export options'] }
+    }
     },
     {
       icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Get intelligent insights and recommendations from your data patterns.',
-      benefits: ['Pattern recognition', 'Predictive analytics', 'Smart recommendations', 'Trend analysis']
+      benefits: ['Pattern recognition', 'Predictive analytics', 'Smart recommendations', 'Trend analysis'] }
+    }
     },
     {
       icon: Target,
       title: 'Customizable Templates',
       description: 'Use pre-built templates or create custom report formats for your needs.',
-      benefits: ['Pre-built templates', 'Custom layouts', 'Brand consistency', 'Easy customization']
+      benefits: ['Pre-built templates', 'Custom layouts', 'Brand consistency', 'Easy customization'] }
+    }
     },
     {
       icon: TrendingUp,
       title: 'Performance Metrics',
       description: 'Track and analyze key performance indicators with automated reporting.',
-      benefits: ['KPI tracking', 'Performance monitoring', 'Trend analysis', 'Goal tracking']
+      benefits: ['KPI tracking', 'Performance monitoring', 'Trend analysis', 'Goal tracking'] }
+    }
     },
     {
       icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security ensures your data remains protected and compliant.',
-      benefits: ['Data encryption', 'Access controls', 'Compliance', 'Audit trails']
-=======
-      icon: <Shield className="w-6 h-6 text-green-500" />,
-      title: 'Data Security',
-      description: 'Enterprise-grade security with encrypted data transmission and storage.'
-    },
-    {
-      icon: <Zap className="w-6 h-6 text-blue-500" />,
-      title: 'Lightning Fast',
-      description: 'Generate complex reports in seconds, not hours or days.'
-    },
-    {
-      icon: <CheckCircle className="w-6 h-6 text-purple-500" />,
-      title: '100% Accurate',
-      description: 'Eliminate human errors with automated data processing and validation.'
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-orange-500" />,
-      title: 'Customizable',
-      description: 'Tailor reports to your specific business needs and requirements.'
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+      benefits: ['Data encryption', 'Access controls', 'Compliance', 'Audit trails'] }
     }
-  ]
+    },
+    {{{]
 
-<<<<<<< HEAD
   const benefits = [
     'Automated report generation saves 80% of manual effort',
     'Real-time data processing and visualization',
@@ -132,9 +117,7 @@ const AIAutomatedReportingPage: React.FC = () => {
       title: 'Compliance Reports',
       description: 'Automated compliance reporting for regulatory requirements.',
       icon: Shield
-    }
-  ]
-
+    } ]
   return (
     <>
       <Helmet>
@@ -169,8 +152,6 @@ const AIAutomatedReportingPage: React.FC = () => {
                   View Demo
                 </button>
               </div>
-            </div>
-          </div>
         </section>
 
         {/* Features Section */}
@@ -205,7 +186,6 @@ const AIAutomatedReportingPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Benefits Section */}
@@ -228,7 +208,6 @@ const AIAutomatedReportingPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* Use Cases Section */}
@@ -254,7 +233,6 @@ const AIAutomatedReportingPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
         </section>
 
         {/* CTA Section */}
@@ -275,7 +253,6 @@ const AIAutomatedReportingPage: React.FC = () => {
                 Contact Sales
               </button>
             </div>
-          </div>
         </section>
       </main>
       
@@ -285,7 +262,6 @@ const AIAutomatedReportingPage: React.FC = () => {
 }
 
 export default AiAutomatedReportingPage
-=======
   const pricing = [
     {
       name: 'Starter',
@@ -363,8 +339,6 @@ export default AiAutomatedReportingPage
                 View All AI Services
               </Link>
             </div>
-          </div>
-        </div>
       </section>
 
       {/* Features Section */}
@@ -394,7 +368,6 @@ export default AiAutomatedReportingPage
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Benefits Section */}
@@ -416,7 +389,6 @@ export default AiAutomatedReportingPage
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Pricing Section */}
@@ -437,7 +409,6 @@ export default AiAutomatedReportingPage
                     <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </div>
-                  </div>
                 )}
                 <div className="text-center mb-6">
                   <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
@@ -446,7 +417,6 @@ export default AiAutomatedReportingPage
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
-                </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -468,7 +438,6 @@ export default AiAutomatedReportingPage
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -494,13 +463,24 @@ export default AiAutomatedReportingPage
                   Explore All AI Services
                 </Link>
               </div>
-            </div>
-          </div>
-        </div>
       </section>
     </div>
   );
 };
 
 export default AIAutomatedReportingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

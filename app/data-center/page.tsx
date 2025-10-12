@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Helmet  } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -23,8 +23,7 @@ const PagePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
-  ]
+    } ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -66,24 +65,18 @@ const PagePage: React.FC = () => {
                 Learn More
   </
             </div>
-          </div>
-        </div>
       </section>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-          </div>
-        </div>
       </section>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
           </div>
-          </div>
-        </div>
       </section>
               Ready to Get Started?
             </h2>
@@ -100,14 +93,10 @@ const PagePage: React.FC = () => {
                 Email Us
   </
             </div>
-          </div>
-        </div>
       </section>
     </div>
   )}
 export default PagePage
-  </button>
-  </button>
   </button>
   </span>
 
@@ -167,24 +156,18 @@ const PagePage: React.FC = () => {const features = [
                 Learn More
               </button>
             </div>
-          </div>
-        </div>
       </section>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-          </div>
-        </div>
       </section>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
             </p>
           </div>
-          </div>
-        </div>
       </section>
               Ready to Get Started?
             </h2>
@@ -201,7 +184,7 @@ const PagePage: React.FC = () => {const features = [
                 Email Us
               </button>
             </div>
-          </div>
-        </div>
       </section>
     </div>)};export default PagePage
+  </button>
+</button>
