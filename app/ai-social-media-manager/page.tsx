@@ -1,271 +1,299 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Layout from '../layout'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Share2, TrendingUp, Users, BarChart3, CheckCircle, Star, Zap, Globe, MessageSquare } from 'lucide-react'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Share2, 
+  TrendingUp, 
+  Calendar, 
+  BarChart3, 
+  Users, 
+  Hash, 
+  Image, 
+  Video, 
+  MessageSquare, 
+  Heart, 
+  ThumbsUp, 
+  Eye, 
+  Target, 
+  Zap, 
+  CheckCircle, 
+  Star, 
+  ArrowRight,
+  Clock,
+  DollarSign,
+  Globe,
+  Smartphone,
+  Monitor,
+  Bot,
+  Sparkles
+} from 'lucide-react';
+import FuturisticBackground from '../components/FuturisticBackground';
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
 
-const AISocialMediaManagerPage: React.FC = () => {
+export default function AISocialMediaManagerPage() {
   const features = [
-    {
-      icon: <Share2 className="w-6 h-6 text-cyan-400" />,
-      title: "Auto Posting",
-      description: "AI-powered content scheduling and automatic posting across all social platforms"
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6 text-green-400" />,
-      title: "Growth Analytics",
-      description: "Advanced analytics and insights to track engagement and optimize your social presence"
-    },
-    {
-      icon: <Users className="w-6 h-6 text-purple-400" />,
-      title: "Audience Insights",
-      description: "AI-driven audience analysis and targeting for maximum engagement and reach"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-yellow-400" />,
-      title: "Performance Tracking",
-      description: "Comprehensive performance metrics and ROI tracking across all social channels"
-    }
-  ]
+    'AI-powered content creation for all platforms',
+    'Automated posting and scheduling across 15+ platforms',
+    'Real-time engagement monitoring and response',
+    'Advanced analytics and performance insights',
+    'Hashtag research and optimization',
+    'Competitor analysis and benchmarking',
+    'Influencer identification and outreach',
+    'Crisis management and brand protection',
+    'Multi-language content generation',
+    'Visual content creation with AI',
+    'Social listening and sentiment analysis',
+    'ROI tracking and campaign optimization'
+  ];
+
+  const platforms = [
+    { name: 'Facebook', icon: '📘', users: '2.9B' },
+    { name: 'Instagram', icon: '📷', users: '2B' },
+    { name: 'Twitter', icon: '🐦', users: '450M' },
+    { name: 'LinkedIn', icon: '💼', users: '900M' },
+    { name: 'TikTok', icon: '🎵', users: '1B' },
+    { name: 'YouTube', icon: '📺', users: '2.7B' },
+    { name: 'Pinterest', icon: '📌', users: '450M' },
+    { name: 'Snapchat', icon: '👻', users: '600M' },
+    { name: 'Reddit', icon: '🤖', users: '430M' },
+    { name: 'Discord', icon: '💬', users: '150M' }
+  ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$29",
-      period: "/month",
+      name: 'Starter',
+      price: '$49',
+      period: '/month',
+      description: 'Perfect for small businesses and startups',
       features: [
-        "Up to 3 social accounts",
-        "Basic scheduling",
-        "Simple analytics",
-        "Content calendar",
-        "Email support"
+        '3 social media accounts',
+        '50 posts per month',
+        'Basic analytics',
+        'AI content suggestions',
+        'Email support',
+        'Mobile app access'
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$79",
-      period: "/month",
+      name: 'Professional',
+      price: '$149',
+      period: '/month',
+      description: 'Ideal for growing businesses and agencies',
       features: [
-        "Up to 10 social accounts",
-        "Advanced AI features",
-        "Detailed analytics",
-        "Team collaboration",
-        "Priority support",
-        "API access"
+        '10 social media accounts',
+        'Unlimited posts',
+        'Advanced analytics & insights',
+        'AI content creation',
+        'Automated scheduling',
+        'Hashtag research',
+        'Competitor analysis',
+        'Priority support',
+        'Team collaboration (5 users)'
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$199",
-      period: "/month",
+      name: 'Enterprise',
+      price: '$399',
+      period: '/month',
+      description: 'For large organizations and agencies',
       features: [
-        "Unlimited accounts",
-        "Custom AI training",
-        "Advanced reporting",
-        "White-label solution",
-        "Dedicated support",
-        "Custom integrations"
+        'Unlimited social media accounts',
+        'Unlimited posts',
+        'White-label analytics',
+        'Custom AI training',
+        'API access',
+        'Advanced automation',
+        'Dedicated account manager',
+        'Custom integrations',
+        'Unlimited team members',
+        '24/7 phone support'
       ],
       popular: false
     }
-  ]
+  ];
+
+  const stats = [
+    { number: '50,000+', label: 'Active Users', icon: <Users className="w-6 h-6" /> },
+    { number: '2.5M+', label: 'Posts Published', icon: <Share2 className="w-6 h-6" /> },
+    { number: '95%', label: 'Time Saved', icon: <Clock className="w-6 h-6" /> },
+    { number: '300%', label: 'Engagement Increase', icon: <TrendingUp className="w-6 h-6" /> }
+  ];
 
   return (
-    <Layout
-      title="AI Social Media Manager - Zion Tech Group"
-      description="Automate and optimize your social media presence with AI-powered content creation, scheduling, and analytics. Grow your audience and engagement."
-      keywords="AI social media manager, social media automation, content scheduling, social media analytics, social media marketing, AI content creation"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Social Media Manager
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your social media presence with AI-powered content creation, automated scheduling, 
-              and intelligent analytics. Grow your audience and engagement like never before.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-pink-500 to-rose-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-rose-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                Watch Demo
-              </Link>
-            </div>
-          </div>
+    <>
+      <Helmet>
+        <title>AI Social Media Manager - Zion Tech Group | Automated Social Media Management</title>
+        <meta name="description" content="Revolutionize your social media with AI-powered content creation, automated posting, and advanced analytics. Manage all platforms from one dashboard. Starting at $49/month." />
+        <meta name="keywords" content="ai social media manager, social media automation, content creation, social media analytics, automated posting, social media scheduling" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-social-media-manager" />
+      </Helmet>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-pink-400 mb-2">300%</div>
-              <div className="text-gray-300">Engagement Boost</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">50K+</div>
-              <div className="text-gray-300">Posts Scheduled</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">10M+</div>
-              <div className="text-gray-300">Impressions Generated</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
-              <div className="text-gray-300">Time Saved</div>
-            </div>
-          </div>
-
-          {/* Features */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Social Media Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <div className="mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+      <FuturisticBackground variant="service">
+        <div className="pt-20 px-4 py-12">
+          <div className="max-w-7xl mx-auto">
+            {/* Hero Section */}
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl flex items-center justify-center mr-4">
+                  <Share2 className="w-8 h-8 text-white" />
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Platform Support */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Supported Platforms</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="bg-white/5 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">f</span>
-                </div>
-                <h3 className="text-lg font-semibold text-white">Facebook</h3>
-                <p className="text-gray-300 text-sm">Posts, Stories, Reels</p>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+                  AI Social Media Manager
+                </h1>
               </div>
-              <div className="bg-white/5 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">ig</span>
-                </div>
-                <h3 className="text-lg font-semibold text-white">Instagram</h3>
-                <p className="text-gray-300 text-sm">Posts, Stories, Reels, IGTV</p>
-              </div>
-              <div className="bg-white/5 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-blue-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">t</span>
-                </div>
-                <h3 className="text-lg font-semibold text-white">Twitter</h3>
-                <p className="text-gray-300 text-sm">Tweets, Threads, Spaces</p>
-              </div>
-              <div className="bg-white/5 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-xl">in</span>
-                </div>
-                <h3 className="text-lg font-semibold text-white">LinkedIn</h3>
-                <p className="text-gray-300 text-sm">Posts, Articles, Videos</p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Transform your social media presence with AI-powered content creation, automated posting, and intelligent analytics. 
+                Manage all platforms from one powerful dashboard.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <FuturisticButton
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </FuturisticButton>
+                <FuturisticButton
+                  variant="ghost"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
+                >
+                  Watch Demo
+                </FuturisticButton>
               </div>
             </div>
-          </div>
 
-          {/* Pricing */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-pink-500' : 'border-white/20'} relative`}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-pink-500 to-rose-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-pink-400">{plan.price}</span>
-                      <span className="text-gray-300 ml-1">{plan.period}</span>
-                    </div>
+            {/* Stats Section */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+              {stats.map((stat, index) => (
+                <FuturisticCard key={index} variant="stat" className="text-center">
+                  <div className="flex items-center justify-center mb-4">
+                    {stat.icon}
                   </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-pink-500 to-rose-600 text-white hover:from-pink-600 hover:to-rose-700'
-                        : 'border-2 border-white text-white hover:bg-white/10'
-                    }`}
-                  >
-                    Get Started
-                  </Link>
-                </div>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-300">{stat.label}</div>
+                </FuturisticCard>
               ))}
             </div>
-          </div>
 
-          {/* Benefits */}
-          <div className="bg-white/5 rounded-2xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our AI Social Media Manager?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <Zap className="w-12 h-12 text-pink-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Save Time</h3>
-                <p className="text-gray-300">Reduce social media management time by 95% with AI-powered automation and scheduling.</p>
-              </div>
-              <div className="text-center">
-                <TrendingUp className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Grow Engagement</h3>
-                <p className="text-gray-300">Increase engagement by 300% with AI-optimized content and perfect timing.</p>
-              </div>
-              <div className="text-center">
-                <Globe className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Multi-Platform</h3>
-                <p className="text-gray-300">Manage all your social media accounts from one powerful AI-driven dashboard.</p>
+            {/* Features Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-white text-center mb-12">
+                Powerful AI Features
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {features.map((feature, index) => (
+                  <FuturisticCard key={index} variant="feature">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                      <span className="text-gray-300">{feature}</span>
+                    </div>
+                  </FuturisticCard>
+                ))}
               </div>
             </div>
-          </div>
 
-          {/* CTA */}
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Social Media?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of brands and influencers who have revolutionized their social media presence with our AI platform.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-pink-500 to-rose-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-rose-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/pricing"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                View All Plans
-              </Link>
+            {/* Supported Platforms */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-white text-center mb-12">
+                Supported Platforms
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+                {platforms.map((platform, index) => (
+                  <FuturisticCard key={index} variant="platform" className="text-center">
+                    <div className="text-4xl mb-3">{platform.icon}</div>
+                    <h3 className="text-lg font-semibold text-white mb-2">{platform.name}</h3>
+                    <p className="text-sm text-gray-400">{platform.users} users</p>
+                  </FuturisticCard>
+                ))}
+              </div>
             </div>
+
+            {/* Pricing Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-white text-center mb-12">
+                Simple, Transparent Pricing
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {pricingPlans.map((plan, index) => (
+                  <FuturisticCard 
+                    key={index} 
+                    variant={plan.popular ? "pricing-popular" : "pricing"} 
+                    className="relative"
+                  >
+                    {plan.popular && (
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                          Most Popular
+                        </span>
+                      </div>
+                    )}
+                    <div className="text-center mb-8">
+                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                      <p className="text-gray-300 mb-4">{plan.description}</p>
+                      <div className="flex items-baseline justify-center">
+                        <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
+                        <span className="text-gray-400 ml-2">{plan.period}</span>
+                      </div>
+                    </div>
+                    <ul className="space-y-4 mb-8">
+                      {plan.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300">
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <FuturisticButton
+                      variant={plan.popular ? "primary" : "secondary"}
+                      size="lg"
+                      className="w-full"
+                      onClick={() => window.open('/contact', '_blank')}
+                    >
+                      Get Started
+                    </FuturisticButton>
+                  </FuturisticCard>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA Section */}
+            <FuturisticCard variant="feature" className="text-center">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Ready to Transform Your Social Media?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join 50,000+ businesses using AI to create, schedule, and optimize their social media content. 
+                Start your free trial today - no credit card required.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <FuturisticButton
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </FuturisticButton>
+                <FuturisticButton
+                  variant="secondary"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
+                >
+                  Schedule Demo
+                </FuturisticButton>
+              </div>
+              <div className="mt-8 text-white/80 text-sm">
+                <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
+              </div>
+            </FuturisticCard>
           </div>
         </div>
-      </div>
-    </Layout>
-  )
+      </FuturisticBackground>
+    </>
+  );
 }
-
-export default AISocialMediaManagerPage

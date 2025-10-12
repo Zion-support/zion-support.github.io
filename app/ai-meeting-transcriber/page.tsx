@@ -1,236 +1,350 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Layout from '../layout'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Mic, FileText, Clock, Users, CheckCircle, Star, Zap, Shield, Globe } from 'lucide-react'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Mic, 
+  FileText, 
+  Clock, 
+  Users, 
+  Search, 
+  Download, 
+  Share2, 
+  Zap, 
+  CheckCircle, 
+  Star, 
+  ArrowRight,
+  Play,
+  Pause,
+  Volume2,
+  Languages,
+  Brain,
+  Target,
+  BarChart3,
+  Calendar,
+  Mail,
+  MessageSquare,
+  Video,
+  Headphones,
+  Settings,
+  Globe
+} from 'lucide-react';
+import FuturisticBackground from '../components/FuturisticBackground';
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
 
-const AIMeetingTranscriberPage: React.FC = () => {
+export default function AIMeetingTranscriberPage() {
   const features = [
-    {
-      icon: <Mic className="w-6 h-6 text-cyan-400" />,
-      title: "Real-time Transcription",
-      description: "Convert speech to text instantly with 99.5% accuracy in 50+ languages"
-    },
-    {
-      icon: <FileText className="w-6 h-6 text-green-400" />,
-      title: "Smart Summarization",
-      description: "AI-powered meeting summaries with key points, action items, and decisions"
-    },
-    {
-      icon: <Clock className="w-6 h-6 text-purple-400" />,
-      title: "Time Stamps",
-      description: "Precise timestamps for every spoken word and important moments"
-    },
-    {
-      icon: <Users className="w-6 h-6 text-yellow-400" />,
-      title: "Speaker Identification",
-      description: "Automatically identify and label different speakers in meetings"
-    }
-  ]
+    'Real-time transcription with 99.5% accuracy',
+    'Multi-language support (50+ languages)',
+    'Speaker identification and diarization',
+    'Automatic meeting summaries and action items',
+    'Searchable transcript database',
+    'Integration with Zoom, Teams, Google Meet',
+    'AI-powered insights and sentiment analysis',
+    'Custom vocabulary and industry terms',
+    'Export to multiple formats (PDF, Word, SRT)',
+    'Cloud storage and synchronization',
+    'Team collaboration and sharing',
+    'Compliance and security features'
+  ];
+
+  const integrations = [
+    { name: 'Zoom', icon: '🔵', description: 'Native integration' },
+    { name: 'Microsoft Teams', icon: '🔷', description: 'Seamless sync' },
+    { name: 'Google Meet', icon: '🟢', description: 'One-click setup' },
+    { name: 'Webex', icon: '🔴', description: 'Enterprise ready' },
+    { name: 'Slack', icon: '💬', description: 'Team notifications' },
+    { name: 'Notion', icon: '📝', description: 'Document sync' },
+    { name: 'Confluence', icon: '📚', description: 'Wiki integration' },
+    { name: 'Salesforce', icon: '☁️', description: 'CRM integration' }
+  ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$29",
-      period: "/month",
+      name: 'Individual',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for freelancers and small teams',
       features: [
-        "Up to 10 hours transcription/month",
-        "Basic speaker identification",
-        "Meeting summaries",
-        "Export to PDF/Word",
-        "Email support"
+        '5 hours of transcription per month',
+        'Real-time transcription',
+        'Basic speaker identification',
+        'Export to PDF, Word, SRT',
+        'Cloud storage (10GB)',
+        'Email support',
+        'Mobile app access'
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$79",
-      period: "/month",
+      name: 'Professional',
+      price: '$79',
+      period: '/month',
+      description: 'Ideal for growing businesses',
       features: [
-        "Up to 50 hours transcription/month",
-        "Advanced speaker identification",
-        "AI-powered insights",
-        "Custom vocabulary",
-        "Priority support",
-        "API access"
+        '20 hours of transcription per month',
+        'Advanced speaker identification',
+        'AI meeting summaries',
+        'Action item extraction',
+        'Custom vocabulary',
+        'Team collaboration (5 users)',
+        'Priority support',
+        'API access',
+        'Cloud storage (100GB)'
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$199",
-      period: "/month",
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+      description: 'For large organizations',
       features: [
-        "Unlimited transcription",
-        "Custom AI training",
-        "Advanced analytics",
-        "White-label solution",
-        "Dedicated support",
-        "SSO integration"
+        'Unlimited transcription hours',
+        'Advanced AI insights',
+        'Custom integrations',
+        'White-label solution',
+        'Dedicated account manager',
+        'Unlimited team members',
+        'Advanced security features',
+        'Compliance reporting',
+        '24/7 phone support',
+        'Cloud storage (1TB)'
       ],
       popular: false
     }
-  ]
+  ];
+
+  const stats = [
+    { number: '25,000+', label: 'Meetings Transcribed', icon: <Mic className="w-6 h-6" /> },
+    { number: '99.5%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6" /> },
+    { number: '50+', label: 'Languages Supported', icon: <Globe className="w-6 h-6" /> },
+    { number: '2M+', label: 'Hours Processed', icon: <Clock className="w-6 h-6" /> }
+  ];
+
+  const useCases = [
+    {
+      title: 'Business Meetings',
+      description: 'Capture every detail from board meetings, client calls, and team standups',
+      icon: <Users className="w-8 h-8 text-blue-400" />
+    },
+    {
+      title: 'Interviews',
+      description: 'Transcribe job interviews, customer interviews, and research sessions',
+      icon: <MessageSquare className="w-8 h-8 text-green-400" />
+    },
+    {
+      title: 'Webinars & Events',
+      description: 'Convert live events into searchable, shareable content',
+      icon: <Video className="w-8 h-8 text-purple-400" />
+    },
+    {
+      title: 'Legal Proceedings',
+      description: 'Accurate transcription for depositions, hearings, and consultations',
+      icon: <FileText className="w-8 h-8 text-red-400" />
+    },
+    {
+      title: 'Medical Consultations',
+      description: 'HIPAA-compliant transcription for patient consultations',
+      icon: <Headphones className="w-8 h-8 text-cyan-400" />
+    },
+    {
+      title: 'Educational Content',
+      description: 'Transcribe lectures, training sessions, and educational materials',
+      icon: <Brain className="w-8 h-8 text-orange-400" />
+    }
+  ];
 
   return (
-    <Layout
-      title="AI Meeting Transcriber - Zion Tech Group"
-      description="Transform your meetings with AI-powered transcription, summarization, and insights. 99.5% accuracy, real-time processing, and smart analytics."
-      keywords="AI meeting transcriber, meeting transcription, voice to text, meeting notes, AI summarization, business productivity"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Meeting Transcriber
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your meetings with AI-powered transcription, real-time summarization, and intelligent insights. 
-              Never miss important details again.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                Watch Demo
-              </Link>
-            </div>
-          </div>
+    <>
+      <Helmet>
+        <title>AI Meeting Transcriber - Zion Tech Group | Real-time Meeting Transcription</title>
+        <meta name="description" content="Transform your meetings with AI-powered real-time transcription. 99.5% accuracy, multi-language support, and automatic summaries. Starting at $29/month." />
+        <meta name="keywords" content="ai meeting transcriber, real-time transcription, meeting notes, voice to text, meeting recorder, speech recognition" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-meeting-transcriber" />
+      </Helmet>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">99.5%</div>
-              <div className="text-gray-300">Accuracy Rate</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
-              <div className="text-gray-300">Languages</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">10K+</div>
-              <div className="text-gray-300">Meetings Transcribed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
-              <div className="text-gray-300">Processing</div>
-            </div>
-          </div>
-
-          {/* Features */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <div className="mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+      <FuturisticBackground variant="service">
+        <div className="pt-20 px-4 py-12">
+          <div className="max-w-7xl mx-auto">
+            {/* Hero Section */}
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mr-4">
+                  <Mic className="w-8 h-8 text-white" />
                 </div>
-              ))}
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white">
+                  AI Meeting Transcriber
+                </h1>
+              </div>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Never miss important details again. Our AI-powered transcription service converts your meetings into 
+                searchable, shareable text with 99.5% accuracy in real-time.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <FuturisticButton
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </FuturisticButton>
+                <FuturisticButton
+                  variant="ghost"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
+                >
+                  Watch Demo
+                </FuturisticButton>
+              </div>
             </div>
-          </div>
 
-          {/* Pricing */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-cyan-500' : 'border-white/20'} relative`}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-300 ml-1">{plan.period}</span>
-                    </div>
+            {/* Stats Section */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+              {stats.map((stat, index) => (
+                <FuturisticCard key={index} variant="stat" className="text-center">
+                  <div className="flex items-center justify-center mb-4">
+                    {stat.icon}
                   </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                        : 'border-2 border-white text-white hover:bg-white/10'
-                    }`}
-                  >
-                    Get Started
-                  </Link>
-                </div>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-300">{stat.label}</div>
+                </FuturisticCard>
               ))}
             </div>
-          </div>
 
-          {/* Benefits */}
-          <div className="bg-white/5 rounded-2xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our AI Meeting Transcriber?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <Zap className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Lightning Fast</h3>
-                <p className="text-gray-300">Real-time transcription with minimal latency for seamless meeting experiences.</p>
-              </div>
-              <div className="text-center">
-                <Shield className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Enterprise Security</h3>
-                <p className="text-gray-300">Bank-level encryption and compliance with GDPR, HIPAA, and SOC 2 standards.</p>
-              </div>
-              <div className="text-center">
-                <Globe className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Global Support</h3>
-                <p className="text-gray-300">Works across 50+ languages with regional accents and dialects support.</p>
+            {/* Features Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-white text-center mb-12">
+                Powerful AI Features
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {features.map((feature, index) => (
+                  <FuturisticCard key={index} variant="feature">
+                    <div className="flex items-start space-x-3">
+                      <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                      <span className="text-gray-300">{feature}</span>
+                    </div>
+                  </FuturisticCard>
+                ))}
               </div>
             </div>
-          </div>
 
-          {/* CTA */}
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Meetings?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of teams already using our AI Meeting Transcriber to boost productivity and never miss important details.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/pricing"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                View All Plans
-              </Link>
+            {/* Use Cases */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-white text-center mb-12">
+                Perfect For Every Industry
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {useCases.map((useCase, index) => (
+                  <FuturisticCard key={index} variant="use-case" className="text-center">
+                    <div className="flex items-center justify-center mb-4">
+                      {useCase.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                    <p className="text-gray-300">{useCase.description}</p>
+                  </FuturisticCard>
+                ))}
+              </div>
             </div>
+
+            {/* Integrations */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-white text-center mb-12">
+                Seamless Integrations
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {integrations.map((integration, index) => (
+                  <FuturisticCard key={index} variant="integration" className="text-center">
+                    <div className="text-4xl mb-3">{integration.icon}</div>
+                    <h3 className="text-lg font-semibold text-white mb-2">{integration.name}</h3>
+                    <p className="text-sm text-gray-400">{integration.description}</p>
+                  </FuturisticCard>
+                ))}
+              </div>
+            </div>
+
+            {/* Pricing Section */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-white text-center mb-12">
+                Simple, Transparent Pricing
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {pricingPlans.map((plan, index) => (
+                  <FuturisticCard 
+                    key={index} 
+                    variant={plan.popular ? "pricing-popular" : "pricing"} 
+                    className="relative"
+                  >
+                    {plan.popular && (
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                        <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                          Most Popular
+                        </span>
+                      </div>
+                    )}
+                    <div className="text-center mb-8">
+                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                      <p className="text-gray-300 mb-4">{plan.description}</p>
+                      <div className="flex items-baseline justify-center">
+                        <span className="text-5xl font-bold text-cyan-400">{plan.price}</span>
+                        <span className="text-gray-400 ml-2">{plan.period}</span>
+                      </div>
+                    </div>
+                    <ul className="space-y-4 mb-8">
+                      {plan.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300">
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <FuturisticButton
+                      variant={plan.popular ? "primary" : "secondary"}
+                      size="lg"
+                      className="w-full"
+                      onClick={() => window.open('/contact', '_blank')}
+                    >
+                      Get Started
+                    </FuturisticButton>
+                  </FuturisticCard>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA Section */}
+            <FuturisticCard variant="feature" className="text-center">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Ready to Never Miss Important Details?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join 25,000+ professionals who trust our AI to capture every word. 
+                Start your free trial today and experience the future of meeting documentation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <FuturisticButton
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </FuturisticButton>
+                <FuturisticButton
+                  variant="secondary"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
+                >
+                  Schedule Demo
+                </FuturisticButton>
+              </div>
+              <div className="mt-8 text-white/80 text-sm">
+                <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
+              </div>
+            </FuturisticCard>
           </div>
         </div>
-      </div>
-    </Layout>
-  )
+      </FuturisticBackground>
+    </>
+  );
 }
-
-export default AIMeetingTranscriberPage
