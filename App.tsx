@@ -10,7 +10,6 @@ import SEOHead from './app/components/SEOHead'
 const HomePage = React.lazy(() => import('./app/page'))
 const AboutPage = React.lazy(() => import('./app/about/page'))
 const ContactPage = React.lazy(() => import('./app/contact/page'))
-const AIServicesPage = React.lazy(() => import('./app/ai-services/page'))
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'))
 const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
 const MicroSAASServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
@@ -41,7 +40,6 @@ function App() {
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
-                <Route path="/ai-services" element={<AIServicesPage />} />
                 <Route path="/it-services" element={<ITServicesPage />} />
                 <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
                 <Route path="/cloud-services" element={<CloudServicesPage />} />
