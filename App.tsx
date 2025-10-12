@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -42,35 +41,13 @@ const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
 const TermsPage = React.lazy(() => import('./app/terms/page'));
 const CookiesPage = React.lazy(() => import('./app/cookies/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
-=======
-import React, { Suspense } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import Navigation from './app/components/Navigation'
-import Footer from './app/components/Footer'
-import ErrorBoundary from './app/components/ErrorBoundary'
-import PerformanceMonitor from './app/components/PerformanceMonitor'
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
-
-// Lazy load pages for better performance
-const HomePage = React.lazy(() => import('./app/page'))
-const AboutPage = React.lazy(() => import('./app/about/page'))
-const ContactPage = React.lazy(() => import('./app/contact/page'))
-const PricingPage = React.lazy(() => import('./app/pricing/page'))
-const AIServicesPage = React.lazy(() => import('./app/ai-services/page'))
-const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
-const MicroSaasServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
-const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'))
-const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'))
-const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
-const AIContentGenerationPage = React.lazy(() => import('./app/ai-content-generation/page'))
-const AIChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
 const AiAutomationPage = React.lazy(() => import('./app/ai-automation/page'));
 const AiChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'));
+const AiQuantumComputingPage = React.lazy(() => import('./app/ai-quantum-computing/page'));
+const AiAutonomousSystemsPage = React.lazy(() => import('./app/ai-autonomous-systems/page'));
 const AiCybersecurityPage = React.lazy(() => import('./app/ai-cybersecurity/page'));
 const AiCrmPage = React.lazy(() => import('./app/ai-crm/page'));
 const AiDataAnalyticsPage = React.lazy(() => import('./app/ai-data-analytics/page'));
@@ -146,6 +123,7 @@ const CloudNativeSecurityPage = React.lazy(() => import('./app/cloud-native-secu
 const ZionAnalyticsProPage = React.lazy(() => import('./app/zion-analytics-pro/page'));
 const ZionChatAiPage = React.lazy(() => import('./app/zion-chat-ai/page'));
 const ZionSecurityShieldPage = React.lazy(() => import('./app/zion-security-shield/page'));
+const ZionBusinessIntelligenceProPage = React.lazy(() => import('./app/zion-business-intelligence-pro/page'));
 const ZionCloudVaultPage = React.lazy(() => import('./app/zion-cloud-vault/page'));
 const ZionContentStudioPage = React.lazy(() => import('./app/zion-content-studio/page'));
 const ZionCrmIntelligencePage = React.lazy(() => import('./app/zion-crm-intelligence/page'));
@@ -184,7 +162,6 @@ const ZionAiDocumentAiPage = React.lazy(() => import('./app/zion-ai-document-ai/
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
 const Ai3DGenerationPage = React.lazy(() => import('./app/ai-3d-generation/page'));
 const AiHolographicWorkspacePage = React.lazy(() => import('./app/ai-holographic-workspace/page'));
-const AiAutonomousSystemsPage = React.lazy(() => import('./app/ai-autonomous-systems/page'));
 const AiBlockchainSolutionsPage = React.lazy(() => import('./app/ai-blockchain-solutions/page'));
 const QuantumComputingPage = React.lazy(() => import('./app/quantum-computing/page'));
 const ArVrSolutionsPage = React.lazy(() => import('./app/ar-vr-solutions/page'));
@@ -212,7 +189,6 @@ const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({
 // Main App Component
 const App: React.FC = () => {
   return (
-<<<<<<< HEAD
     <EnhancedErrorBoundary>
       <HelmetProvider>
         <SEOHead />
@@ -256,6 +232,8 @@ const App: React.FC = () => {
                             <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
                             <Route path="/ai-automation" element={<AiAutomationPage />} />
                             <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
+                            <Route path="/ai-quantum-computing" element={<AiQuantumComputingPage />} />
+                            <Route path="/ai-autonomous-systems" element={<AiAutonomousSystemsPage />} />
                             <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
                             <Route path="/ai-crm" element={<AiCrmPage />} />
                             <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
@@ -331,6 +309,7 @@ const App: React.FC = () => {
                             <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
                             <Route path="/zion-chat-ai" element={<ZionChatAiPage />} />
                             <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+                            <Route path="/zion-business-intelligence-pro" element={<ZionBusinessIntelligenceProPage />} />
                             <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
                             <Route path="/zion-content-studio" element={<ZionContentStudioPage />} />
                             <Route path="/zion-crm-intelligence" element={<ZionCrmIntelligencePage />} />
@@ -402,59 +381,6 @@ const App: React.FC = () => {
     </EnhancedErrorBoundary>
   );
 };
-=======
-    <HelmetProvider>
-      <ErrorBoundary>
-        <PerformanceMonitor>
-          <AccessibilityEnhancer>
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <Navigation />
-                <Suspense fallback={<PageLoader />}>
-                  <Routes>
-                    {/* Main Pages */}
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/pricing" element={<PricingPage />} />
-                    
-                    {/* Service Pages */}
-                    <Route path="/ai-services" element={<AIServicesPage />} />
-                    <Route path="/it-services" element={<ITServicesPage />} />
-                    <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-                    <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                    <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                    <Route path="/cloud-services" element={<CloudServicesPage />} />
-                    <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-                    <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
-                    
-                    {/* 404 Route */}
-                    <Route path="*" element={
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-                        <div className="text-center">
-                          <h1 className="text-6xl font-bold text-white mb-4">404</h1>
-                          <p className="text-xl text-gray-300 mb-8">Page not found</p>
-                          <a 
-                            href="/" 
-                            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-                          >
-                            Go Home
-                          </a>
-                        </div>
-                      </div>
-                    } />
-                  </Routes>
-                </Suspense>
-                <Footer />
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
-        </PerformanceMonitor>
-      </ErrorBoundary>
-    </HelmetProvider>
-  )
-}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
 App.displayName = 'App';
 export default App;

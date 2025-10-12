@@ -1,124 +1,127 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Cpu, Zap, Shield, BarChart, Users, ArrowRight, CheckCircle, Star, Phone, Mail, MapPin, Clock, Rocket, Target, Globe, Code, Database, Smartphone, Lock, Wifi, MessageCircle, ShoppingCart, Box, Monitor, Link as LinkIcon, Server, Calendar, CheckSquare, Workflow, Mic, Eye, Heart, DollarSign, Package, Settings, Video, FileText } from 'lucide-react';
+import { Brain, Cpu, Zap, Shield, BarChart, Users, ArrowRight, CheckCircle, Star, Phone, Mail, MapPin, Clock, Rocket, Target, Globe, Code, Database, Smartphone, Lock, Wifi, MessageCircle, ShoppingCart, Box, Monitor, Link as LinkIcon, Server, Calendar, CheckSquare, Workflow, Mic, Eye, Heart, DollarSign, Package, Settings, Video, FileText, TrendingUp, PieChart, Activity, BarChart3 } from 'lucide-react';
 
-const AIQuantumComputingPage: React.FC = () => {
+const ZionBusinessIntelligenceProPage: React.FC = () => {
   const features = [
     {
-      icon: Cpu,
-      title: 'Quantum Algorithm Development',
-      description: 'Custom quantum algorithms for optimization, cryptography, and machine learning applications.',
-      benefits: ['Quantum Optimization', 'Cryptographic Security', 'ML Acceleration', 'Problem Solving']
+      icon: BarChart3,
+      title: 'AI-Powered Analytics',
+      description: 'Advanced machine learning algorithms that automatically identify trends, patterns, and insights from your data.',
+      benefits: ['Predictive Analytics', 'Trend Analysis', 'Anomaly Detection', 'Smart Insights']
     },
     {
       icon: Brain,
-      title: 'Quantum Machine Learning',
-      description: 'Leverage quantum computing power for advanced machine learning and AI model training.',
-      benefits: ['Quantum Neural Networks', 'Faster Training', 'Complex Pattern Recognition', 'Quantum Advantage']
+      title: 'Natural Language Queries',
+      description: 'Ask questions in plain English and get instant answers from your data with AI-powered natural language processing.',
+      benefits: ['Voice Commands', 'Text Queries', 'Instant Answers', 'Context Understanding']
     },
     {
-      icon: Shield,
-      title: 'Quantum Cryptography',
-      description: 'Unbreakable security solutions using quantum key distribution and quantum-resistant algorithms.',
-      benefits: ['Quantum Key Distribution', 'Post-Quantum Security', 'Unbreakable Encryption', 'Future-Proof Security']
+      icon: TrendingUp,
+      title: 'Real-time Dashboards',
+      description: 'Live, interactive dashboards that update in real-time with customizable widgets and automated alerts.',
+      benefits: ['Live Updates', 'Custom Widgets', 'Smart Alerts', 'Mobile Access']
     },
     {
-      icon: BarChart,
-      title: 'Quantum Analytics',
-      description: 'Process massive datasets with quantum computing for real-time insights and predictions.',
-      benefits: ['Big Data Processing', 'Real-time Analytics', 'Quantum Simulation', 'Predictive Modeling']
+      icon: PieChart,
+      title: 'Advanced Visualizations',
+      description: 'Create stunning, interactive charts and graphs that make complex data easy to understand and share.',
+      benefits: ['Interactive Charts', '3D Visualizations', 'Custom Themes', 'Export Options']
     }
   ];
 
-  const useCases = [
+  const capabilities = [
     {
-      title: 'Financial Services',
-      description: 'Portfolio optimization, risk analysis, and fraud detection using quantum algorithms.',
-      icon: DollarSign,
-      benefits: ['Portfolio Optimization', 'Risk Analysis', 'Fraud Detection', 'Algorithmic Trading']
+      title: 'Data Integration',
+      description: 'Connect to 100+ data sources including databases, APIs, cloud services, and spreadsheets.',
+      icon: Database,
+      benefits: ['100+ Connectors', 'Real-time Sync', 'Data Transformation', 'Error Handling']
     },
     {
-      title: 'Healthcare & Life Sciences',
-      description: 'Drug discovery, protein folding, and genetic analysis with quantum computing power.',
-      icon: Heart,
-      benefits: ['Drug Discovery', 'Protein Folding', 'Genetic Analysis', 'Medical Imaging']
+      title: 'Automated Reporting',
+      description: 'Generate and schedule reports automatically with AI-powered insights and recommendations.',
+      icon: FileText,
+      benefits: ['Scheduled Reports', 'AI Insights', 'Email Delivery', 'Custom Formats']
     },
     {
-      title: 'Supply Chain Optimization',
-      description: 'Complex logistics optimization and route planning using quantum algorithms.',
-      icon: Package,
-      benefits: ['Route Optimization', 'Inventory Management', 'Demand Forecasting', 'Cost Reduction']
+      title: 'Collaborative Analytics',
+      description: 'Share insights and collaborate with your team through comments, annotations, and shared workspaces.',
+      icon: Users,
+      benefits: ['Team Collaboration', 'Shared Workspaces', 'Comments & Annotations', 'Version Control']
     },
     {
-      title: 'Climate & Energy',
-      description: 'Climate modeling, energy optimization, and carbon footprint reduction.',
-      icon: Globe,
-      benefits: ['Climate Modeling', 'Energy Optimization', 'Carbon Reduction', 'Sustainability']
+      title: 'Mobile Analytics',
+      description: 'Access your data and insights anywhere with our mobile-optimized interface and offline capabilities.',
+      icon: Smartphone,
+      benefits: ['Mobile App', 'Offline Access', 'Push Notifications', 'Touch Optimized']
     }
   ];
 
   const pricing = [
     {
-      name: 'Quantum Consulting',
-      price: '$5,000',
+      name: 'Starter',
+      price: '$99',
       period: '/month',
-      description: 'Strategic quantum computing consultation and planning',
+      description: 'Perfect for small businesses getting started with analytics',
       features: [
-        'Quantum Readiness Assessment',
-        'Technology Roadmap',
-        'Use Case Identification',
-        'Vendor Evaluation',
-        'Implementation Planning',
-        'Monthly Strategy Sessions'
+        'Up to 5 data sources',
+        '10 dashboards',
+        'Basic AI insights',
+        'Email support',
+        '5GB data storage',
+        'Standard reports'
       ],
       popular: false
     },
     {
-      name: 'Quantum Development',
-      price: '$15,000',
+      name: 'Professional',
+      price: '$299',
       period: '/month',
-      description: 'Custom quantum algorithm development and optimization',
+      description: 'Advanced features for growing businesses',
       features: [
-        'Custom Quantum Algorithms',
-        'Quantum Circuit Design',
-        'Performance Optimization',
-        'Testing & Validation',
-        'Documentation',
-        '24/7 Support'
+        'Up to 25 data sources',
+        'Unlimited dashboards',
+        'Advanced AI analytics',
+        'Priority support',
+        '50GB data storage',
+        'Custom reports',
+        'API access'
       ],
       popular: true
     },
     {
-      name: 'Quantum Enterprise',
-      price: '$50,000',
+      name: 'Enterprise',
+      price: '$999',
       period: '/month',
-      description: 'Full quantum computing implementation and management',
+      description: 'Complete solution for large organizations',
       features: [
-        'Complete Quantum Infrastructure',
-        'Dedicated Quantum Team',
-        'Custom Hardware Integration',
-        'Advanced Security',
-        'Priority Support',
-        'Training & Certification'
+        'Unlimited data sources',
+        'Unlimited dashboards',
+        'AI-powered insights',
+        '24/7 dedicated support',
+        'Unlimited storage',
+        'Custom integrations',
+        'White-label options',
+        'Advanced security'
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: '1000x', label: 'Faster Processing' },
-    { number: '99.9%', label: 'Accuracy Rate' },
-    { number: '50+', label: 'Quantum Algorithms' },
-    { number: '24/7', label: 'Expert Support' }
+    { number: '500+', label: 'Companies Using' },
+    { number: '99.9%', label: 'Uptime' },
+    { number: '50%', label: 'Faster Decisions' },
+    { number: '24/7', label: 'Support' }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Quantum Computing Solutions - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI quantum computing solutions for optimization, cryptography, machine learning, and advanced analytics. Transform your business with quantum advantage." />
-        <meta name="keywords" content="quantum computing, AI quantum, quantum algorithms, quantum cryptography, quantum machine learning, quantum optimization" />
+        <title>Zion Business Intelligence Pro - AI-Powered Analytics Platform</title>
+        <meta name="description" content="Transform your data into actionable insights with Zion Business Intelligence Pro. AI-powered analytics, real-time dashboards, and natural language queries for smarter business decisions." />
+        <meta name="keywords" content="business intelligence, data analytics, AI insights, dashboards, reporting, data visualization, business intelligence platform" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
@@ -128,16 +131,16 @@ const AIQuantumComputingPage: React.FC = () => {
             <div className="max-w-5xl mx-auto">
               <div className="mb-6">
                 <span className="inline-block px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-4">
-                  🚀 Next-Generation Quantum AI
+                  📊 AI-Powered Business Intelligence
                 </span>
               </div>
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent leading-tight">
-                AI Quantum Computing
-                <span className="block text-6xl md:text-8xl mt-2">Solutions</span>
+                Zion Business Intelligence
+                <span className="block text-6xl md:text-8xl mt-2">Pro</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Harness the power of quantum computing combined with artificial intelligence to solve 
-                complex problems that are impossible for classical computers. Get quantum advantage today.
+                Transform your data into actionable insights with AI-powered analytics, real-time dashboards, 
+                and natural language queries. Make smarter business decisions faster than ever before.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -145,7 +148,7 @@ const AIQuantumComputingPage: React.FC = () => {
                   href="/contact" 
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transform hover:scale-105"
                 >
-                  Get Quantum Consultation
+                  Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a 
@@ -175,10 +178,10 @@ const AIQuantumComputingPage: React.FC = () => {
           <section className="mb-20">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Quantum AI <span className="text-purple-400">Capabilities</span>
+                Powerful AI <span className="text-purple-400">Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Revolutionary quantum computing solutions powered by artificial intelligence for unprecedented performance.
+                Advanced analytics capabilities powered by artificial intelligence for deeper insights and smarter decisions.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -209,31 +212,31 @@ const AIQuantumComputingPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Use Cases Section */}
+          {/* Capabilities Section */}
           <section className="mb-20">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Quantum AI <span className="text-cyan-400">Use Cases</span>
+                Complete <span className="text-cyan-400">Analytics Platform</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Real-world applications where quantum AI delivers breakthrough results.
+                Everything you need to turn your data into actionable business insights.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
+              {capabilities.map((capability, index) => (
                 <div
                   key={index}
                   className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
-                      <useCase.icon className="w-6 h-6 text-white" />
+                      <capability.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-white">{useCase.title}</h3>
+                    <h3 className="text-xl font-bold text-white">{capability.title}</h3>
                   </div>
-                  <p className="text-gray-300 mb-4">{useCase.description}</p>
+                  <p className="text-gray-300 mb-4">{capability.description}</p>
                   <ul className="space-y-2">
-                    {useCase.benefits.map((benefit, benefitIndex) => (
+                    {capability.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {benefit}
@@ -249,10 +252,10 @@ const AIQuantumComputingPage: React.FC = () => {
           <section className="mb-20">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Quantum AI <span className="text-purple-400">Pricing</span>
+                Choose Your <span className="text-purple-400">Plan</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the quantum computing solution that fits your business needs.
+                Flexible pricing plans designed to scale with your business needs.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -307,18 +310,18 @@ const AIQuantumComputingPage: React.FC = () => {
           <section className="text-center bg-gradient-to-r from-slate-800/50 to-purple-900/50 rounded-3xl p-12 border border-purple-500/20">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready for Quantum Advantage?
+                Ready to Transform Your Data?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join the quantum revolution and transform your business with AI-powered quantum computing solutions. 
-                Get started with a free quantum readiness assessment.
+                Join hundreds of companies using Zion Business Intelligence Pro to make smarter, 
+                data-driven decisions. Start your free trial today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a 
                   href="/contact" 
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transform hover:scale-105"
                 >
-                  Get Quantum Assessment
+                  Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a 
@@ -330,7 +333,7 @@ const AIQuantumComputingPage: React.FC = () => {
                 </a>
               </div>
               <div className="text-sm text-gray-400">
-                <p>✓ Free quantum assessment • ✓ No obligation • ✓ 30-day quantum advantage guarantee</p>
+                <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
               </div>
             </div>
           </section>
@@ -340,4 +343,4 @@ const AIQuantumComputingPage: React.FC = () => {
   );
 };
 
-export default AIQuantumComputingPage;
+export default ZionBusinessIntelligenceProPage;

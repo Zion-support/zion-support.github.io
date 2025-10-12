@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { Suspense, useEffect, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -103,71 +102,33 @@ const HomePage: React.FC = () => {
       description: 'Complete digital transformation strategies',
       icon: Zap,
       features: ['Process Automation', 'Data Analytics', 'API Development', 'Integration Services']
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Smartphone, Cpu, Database, BarChart3, Users, Settings, Globe, Lock, Code2, MessageSquare, Target, TrendingUp, Star, Sparkles, Rocket, Mail, Video, FileText } from 'lucide-react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-
-export default function HomePage() {
-  const stats = [
-    { number: '1,200+', label: 'Projects Completed', icon: <Rocket className="w-6 h-6" /> },
-    { number: '99.8%', label: 'Client Satisfaction', icon: <Star className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Globe className="w-6 h-6" /> },
-    { number: '150+', label: 'Expert Team Members', icon: <Users className="w-6 h-6" /> },
-    { number: '50+', label: 'Countries Served', icon: <Globe className="w-6 h-6" /> },
-    { number: '300%', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> },
-    { number: '48hr', label: 'Response Time', icon: <MessageSquare className="w-6 h-6" /> }
-  ]
-
-  const services = [
-    {
-      title: 'AI Social Media Manager',
-      description: 'Transform your social media presence with AI-powered content creation and smart scheduling.',
-      icon: <Globe className="w-8 h-8 text-pink-400" />,
-      link: '/ai-social-media-manager',
-      features: ['AI content creation', 'Smart scheduling', 'Multi-platform support']
-    },
-    {
-      title: 'AI Email Marketing Automation',
-      description: 'Boost engagement with AI-powered email campaigns, smart segmentation, and automation.',
-      icon: <Mail className="w-8 h-8 text-blue-400" />,
-      link: '/ai-email-marketing-automation',
-      features: ['AI content generation', 'Smart segmentation', 'Automated workflows']
-    },
-    {
-      title: 'AI Project Management Pro',
-      description: 'Streamline project delivery with AI-powered task optimization and team management.',
-      icon: <Settings className="w-8 h-8 text-indigo-400" />,
-      link: '/ai-project-management-pro',
-      features: ['AI task optimization', 'Smart team management', 'Predictive analytics']
-    },
-    {
-      title: 'AI Customer Support Chatbot',
-      description: 'Provide 24/7 intelligent support with AI-powered chatbots and natural language processing.',
-      icon: <MessageSquare className="w-8 h-8 text-green-400" />,
-      link: '/ai-customer-support-chatbot',
-      features: ['24/7 availability', 'Natural language processing', 'Intelligent routing']
-    },
-    {
-      title: 'AI Video Editor',
-      description: 'Create professional videos with AI-powered editing, smart cuts, and auto-generated content.',
-      icon: <Video className="w-8 h-8 text-violet-400" />,
-      link: '/ai-video-editor',
-      features: ['AI-powered editing', 'Smart cut detection', 'Auto-generated content']
-    },
-    {
-      title: 'AI Invoice Generator',
-      description: 'Streamline invoicing with AI-powered generation, automated billing, and payment integration.',
-      icon: <FileText className="w-8 h-8 text-emerald-400" />,
-      link: '/ai-invoice-generator',
-      features: ['AI-powered generation', 'Automated billing', 'Payment integration']
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
     }
-  ]
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Happy Clients' },
+    { number: '1000+', label: 'Projects Completed' },
+    { number: '99%', label: 'Client Satisfaction' },
+    { number: '10+', label: 'Years Experience' }
+  ];
+
+  const aiServices = [
+    { name: 'Machine Learning', description: 'Custom ML models for your business needs', icon: Brain },
+    { name: 'Natural Language Processing', description: 'AI-powered text analysis and generation', icon: Code },
+    { name: 'Computer Vision', description: 'Image recognition and analysis solutions', icon: Globe },
+    { name: 'Predictive Analytics', description: 'Data-driven insights and forecasting', icon: BarChart },
+    { name: 'AI Automation', description: 'Intelligent process automation', icon: Zap },
+    { name: 'AI Consulting', description: 'Strategic AI implementation guidance', icon: Target }
+  ];
+
+  const itServices = [
+    { name: 'Cloud Migration', description: 'Seamless cloud infrastructure migration', icon: Cloud },
+    { name: 'DevOps', description: 'Continuous integration and deployment', icon: Code },
+    { name: 'Cybersecurity', description: 'Comprehensive security solutions', icon: Shield },
+    { name: 'Database Management', description: 'Optimized database solutions', icon: BarChart },
+    { name: 'API Development', description: 'RESTful and GraphQL APIs', icon: Code },
+    { name: 'System Integration', description: 'Connect and optimize your systems', icon: Globe }
+  ];
 
 <<<<<<< HEAD
   const stats = [
