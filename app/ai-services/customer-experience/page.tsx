@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 
-import { ArrowRight } from 'lucide-react';
-
-export default function CustomerExperiencePage() {
+export default function CustomerexperiencePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
@@ -22,5 +22,5 @@ export default function CustomerExperiencePage() {
         </Link>
       </div>
     </div>
-  )
+  );
 }

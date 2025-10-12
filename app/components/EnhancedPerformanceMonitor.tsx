@@ -1,163 +1,236 @@
-'use client';
+import React, { useEffect, useState } from 'react'
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'
 
-import React, { useState, useEffect } from 'react';
-
-interface PerformanceMetric {
-  name: string;
-  value: number;
-  unit: string;
-  status: 'good' | 'warning' | 'critical';
-  trend: 'up' | 'down' | 'stable';
+interface PerformanceMetrics {
+  lcp: number | null
+  inp: number | null
+  cls: number | null
+  fcp: number | null
+  ttfb: number | null
+  memoryUsage: number | null
+  loadTime: number | null
 }
 
-interface EnhancedPerformanceMonitorProps {
-  className?: string;
+interface PerformanceReport {
+  metrics: PerformanceMetrics
+  timestamp: string
+  userAgent: string
+  connectionType: string
+  deviceMemory: number | null
 }
 
-const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
-  className = ''
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetric[]>([
-    {
-      name: 'LCP',
-      value: 1.2,
-      unit: 's',
-      status: 'good',
-      trend: 'down'
-    },
-    {
-      name: 'FID',
-      value: 45,
-      unit: 'ms',
-      status: 'good',
-      trend: 'down'
-    },
-    {
-      name: 'CLS',
-      value: 0.05,
-      unit: '',
-      status: 'good',
-      trend: 'stable'
-    },
-    {
-      name: 'TTFB',
-      value: 200,
-      unit: 'ms',
-      status: 'warning',
-      trend: 'up'
-    }
-  ]);
+const EnhancedPerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    lcp: null,
+    inp: null,
+    cls: null,
+    fcp: null,
+    ttfb: null,
+    memoryUsage: null,
+    loadTime: null
+  })
 
-  const [isMonitoring, setIsMonitoring] = useState(true);
+  const [isMonitoring, setIsMonitoring] = useState(false)
 
   useEffect(() => {
-    if (!isMonitoring) return;
+    const startTime = performance.now()
 
-    const interval = setInterval(() => {
-      setMetrics(prev => prev.map(metric => ({
-        ...metric,
-        value: metric.value + (Math.random() - 0.5) * metric.value * 0.1,
-        trend: Math.random() > 0.5 ? 'up' : 'down'
-      })));
-    }, 2000);
+    // Monitor Core Web Vitals
+    const measureWebVitals = () => {
+      onCLS((metric) => {
+        setMetrics(prev => ({ ...prev, cls: metric.value }))
+      })
 
-    return () => clearInterval(interval);
-  }, [isMonitoring]);
+      onINP((metric) => {
+        setMetrics(prev => ({ ...prev, inp: metric.value }))
+      })
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'good':
-        return 'text-green-400';
-      case 'warning':
-        return 'text-yellow-400';
-      case 'critical':
-        return 'text-red-400';
-      default:
-        return 'text-gray-400';
+      onFCP((metric) => {
+        setMetrics(prev => ({ ...prev, fcp: metric.value }))
+      })
+
+      onLCP((metric) => {
+        setMetrics(prev => ({ ...prev, lcp: metric.value }))
+      })
+
+      onTTFB((metric) => {
+        setMetrics(prev => ({ ...prev, ttfb: metric.value }))
+      })
     }
-  };
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'good':
-        return <CheckCircle className="w-4 h-4" />;
-      case 'warning':
-        return <AlertTriangle className="w-4 h-4" />;
-      case 'critical':
-        return <AlertTriangle className="w-4 h-4" />;
-      default:
-        return <BarChart3 className="w-4 h-4" />;
+    // Monitor memory usage
+    const measureMemoryUsage = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory
+        setMetrics(prev => ({ 
+          ...prev, 
+          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+        }))
+      }
     }
-  };
+
+    // Monitor load time
+    const measureLoadTime = () => {
+      window.addEventListener('load', () => {
+        const loadTime = performance.now() - startTime
+        setMetrics(prev => ({ ...prev, loadTime }))
+      })
+    }
+
+    // Monitor resource loading
+    const monitorResourceLoading = () => {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        entries.forEach((entry) => {
+          if (entry.entryType === 'resource') {
+            const resource = entry as PerformanceResourceTiming
+            if (resource.duration > 1000) { // Log slow resources
+              console.warn('Slow resource detected:', {
+                name: resource.name,
+                duration: resource.duration,
+                size: resource.transferSize
+              })
+            }
+          }
+        })
+      })
+      observer.observe({ entryTypes: ['resource'] })
+    }
+
+    // Monitor layout shifts
+    const monitorLayoutShifts = () => {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries()
+        entries.forEach((entry) => {
+          if (entry.entryType === 'layout-shift') {
+            const layoutShift = entry as PerformanceEntry & { value: number }
+            if (layoutShift.value > 0.1) { // Log significant layout shifts
+              console.warn('Significant layout shift detected:', {
+                value: layoutShift.value,
+                startTime: layoutShift.startTime
+              })
+            }
+          }
+        })
+      })
+      observer.observe({ entryTypes: ['layout-shift'] })
+    }
+
+    // Generate performance report
+    const generatePerformanceReport = (): PerformanceReport => {
+      const report: PerformanceReport = {
+        metrics,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        connectionType: (navigator as any).connection?.effectiveType || 'unknown',
+        deviceMemory: (navigator as any).deviceMemory || null
+      }
+
+      // Send to analytics (in a real app, you'd send this to your analytics service)
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'performance_metrics', {
+          event_category: 'Performance',
+          event_label: 'Core Web Vitals',
+          value: Math.round(metrics.lcp || 0),
+          custom_map: {
+            lcp: metrics.lcp,
+            inp: metrics.inp,
+            cls: metrics.cls,
+            fcp: metrics.fcp,
+            ttfb: metrics.ttfb,
+            memory_usage: metrics.memoryUsage,
+            load_time: metrics.loadTime
+          }
+        })
+      }
+
+      return report
+    }
+
+    // Initialize monitoring
+    setIsMonitoring(true)
+    measureWebVitals()
+    measureMemoryUsage()
+    measureLoadTime()
+    monitorResourceLoading()
+    monitorLayoutShifts()
+
+    // Generate report after 5 seconds
+    const reportTimer = setTimeout(() => {
+      const report = generatePerformanceReport()
+      console.log('Performance Report:', report)
+    }, 5000)
+
+    // Cleanup
+    return () => {
+      clearTimeout(reportTimer)
+      setIsMonitoring(false)
+    }
+  }, [])
+
+  // Performance optimization suggestions
+  const getPerformanceSuggestions = (): string[] => {
+    const suggestions: string[] = []
+
+    if (metrics.lcp && metrics.lcp > 2500) {
+      suggestions.push('LCP is above 2.5s - consider optimizing images and reducing render-blocking resources')
+    }
+
+    if (metrics.inp && metrics.inp > 200) {
+      suggestions.push('INP is above 200ms - consider reducing JavaScript execution time')
+    }
+
+    if (metrics.cls && metrics.cls > 0.1) {
+      suggestions.push('CLS is above 0.1 - consider fixing layout shifts and adding size attributes to images')
+    }
+
+    if (metrics.fcp && metrics.fcp > 1800) {
+      suggestions.push('FCP is above 1.8s - consider optimizing critical rendering path')
+    }
+
+    if (metrics.ttfb && metrics.ttfb > 600) {
+      suggestions.push('TTFB is above 600ms - consider optimizing server response time')
+    }
+
+    if (metrics.memoryUsage && metrics.memoryUsage > 50) {
+      suggestions.push('High memory usage detected - consider optimizing memory leaks and reducing bundle size')
+    }
+
+    return suggestions
+  }
+
+  const suggestions = getPerformanceSuggestions()
+
+  // Don't render anything in production
+  if (process.env.NODE_ENV === 'production') {
+    return null
+  }
 
   return (
-    <div className={`bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/20 ${className}`}>
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-            <Zap className="w-5 h-5 text-white" />
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold text-white">Performance Monitor</h3>
-            <p className="text-gray-400 text-sm">Real-time metrics tracking</p>
-          </div>
+    <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg max-w-sm z-50">
+      <h3 className="text-sm font-bold mb-2">Performance Monitor</h3>
+      <div className="text-xs space-y-1">
+        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div>INP: {metrics.inp ? `${metrics.inp.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>
+        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'Measuring...'}</div>
+        <div>Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}MB` : 'N/A'}</div>
+        <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'Measuring...'}</div>
+      </div>
+      
+      {suggestions.length > 0 && (
+        <div className="mt-2 pt-2 border-t border-gray-600">
+          <div className="text-xs font-semibold mb-1">Suggestions:</div>
+          <ul className="text-xs space-y-1">
+            {suggestions.map((suggestion, index) => (
+              <li key={index} className="text-yellow-300">• {suggestion}</li>
+            ))}
+          </ul>
         </div>
-
-        <button
-          onClick={() => setIsMonitoring(!isMonitoring)}
-          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-            isMonitoring
-              ? 'bg-green-600 text-white hover:bg-green-700'
-              : 'bg-gray-600 text-white hover:bg-gray-700'
-          }`}
-        >
-          {isMonitoring ? 'Pause' : 'Resume'}
-        </button>
-      </div>
-
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        {metrics.map((metric, index) => (
-          <div
-            key={index}
-            className="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-white/20 transition-colors"
-          >
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-gray-400">{metric.name}</span>
-              <div className={`${getStatusColor(metric.status)}`}>
-                {getStatusIcon(metric.status)}
-              </div>
-            </div>
-
-            <div className="text-2xl font-bold text-white mb-1">
-              {metric.value.toFixed(metric.unit === '' ? 2 : 0)}{metric.unit}
-            </div>
-
-            <div className="flex items-center gap-1">
-              <span className={`text-xs ${
-                metric.trend === 'up' ? 'text-red-400' :
-                metric.trend === 'down' ? 'text-green-400' :
-                'text-gray-400'
-              }`}>
-                {metric.trend === 'up' ? '↗' : metric.trend === 'down' ? '↘' : '→'}
-              </span>
-              <span className="text-xs text-gray-400">
-                {metric.trend === 'up' ? 'Increasing' :
-                 metric.trend === 'down' ? 'Decreasing' :
-                 'Stable'}
-              </span>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-6 pt-4 border-t border-white/10">
-        <div className="flex items-center justify-between text-sm">
-          <span className="text-gray-400">Last updated: {new Date().toLocaleTimeString()}</span>
-          <span className="text-cyan-400">Live monitoring active</span>
-        </div>
-      </div>
+      )}
     </div>
-  );
-};
+  )
+}
 
-export default EnhancedPerformanceMonitor;
+export default EnhancedPerformanceMonitor

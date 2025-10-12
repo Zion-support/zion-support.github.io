@@ -307,4 +307,3 @@ export default ContactPage
           </div>
         </section>
       </div>
-</div>)};export default ContactPage

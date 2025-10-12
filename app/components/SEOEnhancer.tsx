@@ -7,24 +7,24 @@ const SEOEnhancer: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
+      description: 'Bank-level security with encryption and compliance standards'
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
+      description: 'Worldwide deployment and support for international businesses'
     }
-  ]
+  ];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -34,7 +34,7 @@ const SEOEnhancer: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  ];
   return (
     <div className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 ${className}`}>
       <div className="flex items-center justify-between mb-6">
@@ -121,7 +121,5 @@ const SEOEnhancer: React.FC = () => {
         </div>
       )}
     </div>
-  </div>)
+  )
 }
-
-export default SEOEnhancer

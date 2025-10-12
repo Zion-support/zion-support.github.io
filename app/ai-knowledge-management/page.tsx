@@ -1,26 +1,21 @@
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+'use client';
+import React from 'react';
+import GenericServicePage from '../components/GenericServicePage';
+import { FileText } from 'lucide-react';
 
-import { ArrowRight } from 'lucide-react';
-
-export default function AiKnowledgeManagementPage() {
+const AiKnowledgeManagementPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>Ai Knowledge Management - Zion Tech Group</title>
-        <meta name="description" content="Professional ai knowledge management services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">Ai Knowledge Management</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional ai knowledge management services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </div>
-  )
-}
+    <GenericServicePage
+      title="AI Knowledge Management"
+      description="Intelligent knowledge management system that organizes and retrieves information efficiently."
+      icon={FileText}
+      features={["Document Organization","Smart Search","Knowledge Graphs","Content Recommendations","Collaboration Tools","Version Control"]}
+      benefits={["Better Organization","Faster Access","Improved Collaboration","Knowledge Retention"]}
+      pricing="$399/month"
+      category="AI"
+      color="from-blue-500 to-indigo-600"
+    />
+  );
+};
+
+export default AiKnowledgeManagementPage;

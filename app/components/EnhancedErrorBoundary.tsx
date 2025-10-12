@@ -1,197 +1,183 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Bug, Mail, ArrowLeft } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react'
 
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
+  children: ReactNode
+  fallback?: ReactNode
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
-  retryCount: number;
+  hasError: boolean
+  error: Error | null
+  errorInfo: ErrorInfo | null
+  errorId: string
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  private maxRetries = 3;
-
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = {
       hasError: false,
-      retryCount: 0
-    };
+      error: null,
+      errorInfo: null,
+      errorId: ''
+    }
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+      errorInfo: null,
+      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+    }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Enhanced error logging
-    const errorDetails = {
+    this.setState({
+      error,
+      errorInfo,
+    })
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error Boundary caught an error:', error, errorInfo)
+    }
+
+    // In production, you would send this to an error reporting service
+    if (process.env.NODE_ENV === 'production') {
+      this.logErrorToService(error, errorInfo)
+    }
+  }
+
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    // This would integrate with services like Sentry, LogRocket, etc.
+    const errorReport = {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
       errorId: this.state.errorId,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href
-    };
+      url: window.location.href,
+      userId: 'anonymous', // You would get this from your auth context
+    }
 
-    // Send to monitoring service
+    // Example: Send to analytics or error reporting service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: error.message,
-        fatal: true,
+        fatal: false,
         custom_map: {
           error_id: this.state.errorId,
-          retry_count: this.state.retryCount
+          component_stack: errorInfo.componentStack
         }
-      });
+      })
     }
 
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    this.setState({ errorInfo });
+    console.error('Error Report:', errorReport)
   }
 
   handleRetry = () => {
-    if (this.state.retryCount < this.maxRetries) {
-      this.setState(prevState => ({
-        hasError: false,
-        error: undefined,
-        errorInfo: undefined,
-        retryCount: prevState.retryCount + 1
-      }));
-    } else {
-      // Reset retry count and show error
-      this.setState({ retryCount: 0 });
-    }
-  };
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
+    })
+  }
 
-  handleGoBack = () => {
-    window.history.back();
-  };
+  handleReload = () => {
+    window.location.reload()
+  }
+
+  handleGoHome = () => {
+    window.location.href = '/'
+  }
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
 
       return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-          <div className="max-w-lg w-full bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-red-500/30 text-center">
-            <div className="flex items-center justify-center w-16 h-16 bg-red-500/20 rounded-full mb-6 mx-auto">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
+        <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
+          <div className="max-w-md w-full bg-gray-800 rounded-lg p-8 text-center">
+            <div className="flex justify-center mb-6">
+              <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center">
+                <AlertTriangle className="w-8 h-8 text-red-400" />
+              </div>
             </div>
-
+            
             <h1 className="text-2xl font-bold text-white mb-4">
-              {this.state.retryCount > 0 ? 'Retry Failed' : 'Something went wrong'}
+              Oops! Something went wrong
             </h1>
-
+            
             <p className="text-gray-300 mb-6">
-              {this.state.retryCount > 0
-                ? `We've tried ${this.state.retryCount} times but couldn't recover. Please try refreshing the page.`
-                : "We're sorry, but something unexpected happened. Please try refreshing the page."
-              }
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
             </p>
 
-            {this.state.errorId && (
-              <div className="mb-6 p-3 bg-slate-700/50 rounded-lg">
-                <p className="text-sm text-gray-400">Error ID: {this.state.errorId}</p>
-                {this.state.retryCount > 0 && (
-                  <p className="text-sm text-gray-400 mt-1">Retry attempts: {this.state.retryCount}</p>
-                )}
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+              <div className="mb-6 p-4 bg-gray-700 rounded-lg text-left">
+                <h3 className="text-sm font-semibold text-red-400 mb-2 flex items-center">
+                  <Bug className="w-4 h-4 mr-2" />
+                  Error Details (Development Only)
+                </h3>
+                <div className="text-xs text-gray-300 space-y-2">
+                  <div>
+                    <strong>Error:</strong> {this.state.error.message}
+                  </div>
+                  <div>
+                    <strong>Error ID:</strong> {this.state.errorId}
+                  </div>
+                  {this.state.error.stack && (
+                    <div>
+                      <strong>Stack Trace:</strong>
+                      <pre className="mt-1 text-xs overflow-auto max-h-32">
+                        {this.state.error.stack}
+                      </pre>
+                    </div>
+                  )}
+                </div>
               </div>
             )}
 
             <div className="space-y-3">
-              {this.state.retryCount < this.maxRetries && (
-                <button
-                  onClick={this.handleRetry}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
-                  aria-label="Try to recover from the error"
-                >
-                  <RefreshCw className="w-5 h-5 mr-2" />
-                  Try Again ({this.maxRetries - this.state.retryCount} attempts left)
-                </button>
-              )}
-
               <button
-                onClick={() => window.location.reload()}
-                className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-blue-500/50"
-                aria-label="Refresh the page to try again"
+                onClick={this.handleRetry}
+                className="w-full bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
               >
-                <RefreshCw className="w-5 h-5 mr-2" />
-                Refresh Page
+                <RefreshCw className="w-4 h-4 mr-2" />
+                Try Again
               </button>
-
+              
               <button
-                onClick={this.handleGoBack}
-                className="w-full border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-white/50"
-                aria-label="Go back to the previous page"
+                onClick={this.handleGoHome}
+                className="w-full bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center justify-center"
               >
-                <ArrowLeft className="w-5 h-5 mr-2" />
-                Go Back
-              </button>
-
-              <button
-                onClick={() => window.location.href = '/'}
-                className="w-full border-2 border-gray-500 text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-700/50 transition-colors flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-gray-500/50"
-                aria-label="Go back to the homepage"
-              >
-                <Home className="w-5 h-5 mr-2" />
+                <Home className="w-4 h-4 mr-2" />
                 Go Home
               </button>
-
-              <a
-                href={`mailto:kleber@ziontechgroup.com?subject=Error Report&body=Error ID: ${this.state.errorId}%0A%0APlease describe what you were doing when this error occurred:`}
-                className="w-full border-2 border-cyan-500 text-cyan-300 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700/50 transition-colors flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
-                aria-label="Report this error via email"
+              
+              <button
+                onClick={this.handleReload}
+                className="w-full border border-gray-600 hover:bg-gray-700 text-gray-300 px-6 py-3 rounded-lg font-semibold transition-colors"
               >
-                <Mail className="w-5 h-5 mr-2" />
-                Report Error
-              </a>
+                Reload Page
+              </button>
             </div>
 
-            {this.props.showDetails && this.state.error && (
-              <details className="mt-6 text-left">
-                <summary className="text-red-400 cursor-pointer font-medium flex items-center">
-                  <Bug className="w-4 h-4 mr-2" />
-                  Error Details
-                </summary>
-                <div className="mt-2 space-y-2">
-                  <pre className="text-xs text-gray-400 bg-slate-900/50 p-3 rounded overflow-auto">
-                    {this.state.error.toString()}
-                  </pre>
-                  {this.state.errorInfo && (
-                    <pre className="text-xs text-gray-400 bg-slate-900/50 p-3 rounded overflow-auto">
-                      {this.state.errorInfo.componentStack}
-                    </pre>
-                  )}
-                </div>
-              </details>
-            )}
+            <div className="mt-6 text-xs text-gray-500">
+              Error ID: {this.state.errorId}
+            </div>
           </div>
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary

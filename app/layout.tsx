@@ -72,7 +72,7 @@ const Layout: React.FC<LayoutProps> = ({
           "unitText": "PROJECT"
         }
       }
-    ]
+    ];
   };
 
   return (

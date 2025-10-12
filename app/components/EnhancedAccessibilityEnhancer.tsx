@@ -7,10 +7,11 @@ ursor/
               <span className="text-white">Enhancer</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced enhanced accessibility enhancer solutions.
+              Transform your business with our advanced enhanced accessibility enhancer solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            return (
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -25,8 +26,10 @@ ursor/
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        return (
+    <div className="max-w-7xl mx-auto">
+          return (
+    <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our EnhancedAccessibilityEnhancer?
             </h2>
@@ -38,11 +41,13 @@ ursor/
               Our accessibility enhancement solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                return (
+    <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
@@ -55,8 +60,10 @@ ursor/
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+        return (
+    <div className="max-w-7xl mx-auto">
+          return (
+    <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Solutions?
             </h2>
@@ -64,11 +71,13 @@ ursor/
               Experience the benefits of working with our cutting-edge enhanced accessibility enhancer solutions.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-4">
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                return (
+    <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                   <CheckCircle className="w-5 h-5 text-white" />
                 </div>
                 <p className="text-gray-300 text-lg">
@@ -80,14 +89,16 @@ ursor/
         </div>
       </section>
 
-          <div className="bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl p-12">
+          return (
+    <div className="bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">
               Transform your business with our enhancedaccessibilityenhancer solutions today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            return (
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
                 Contact Us Now
               </button>
@@ -97,15 +108,18 @@ ursor/
             </div>
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
+        return (
+    <div className="max-w-7xl mx-auto">
+          return (
+    <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Contact us today to learn more about our accessibility enhancement solutions and how they can benefit your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            return (
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
                 Contact Us
               </button>

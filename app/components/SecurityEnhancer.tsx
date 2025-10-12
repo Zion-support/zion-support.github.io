@@ -62,4 +62,3 @@ export default SecurityEnhancer
       });// Disable F12 and other dev tools shortcuts
       document.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
         }
-      })};enhanceSecurity()}, []);return <>{children}</>};export default SecurityEnhancer

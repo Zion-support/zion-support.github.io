@@ -24,8 +24,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       title: 'Analytics & Insights',
       description: 'Detailed performance metrics and actionable insights to drive continuous improvement.',
     }
-  ]
-
+  ];
   const benefits = [
     'Up to 80% faster page load times',
     'Reduced server costs by 40%',
@@ -33,8 +32,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     'Enhanced user experience',
     'Real-time performance monitoring',
     'Automatic optimization updates'
-  ]
-
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -164,5 +162,3 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     </div>
   )
 }
-
-export default EnhancedPerformanceOptimizer

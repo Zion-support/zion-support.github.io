@@ -13,7 +13,6 @@ interface FuturisticButtonProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
-export default function FuturisticButton({
   children,
   onClick,
   variant = 'primary',

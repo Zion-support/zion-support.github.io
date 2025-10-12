@@ -12,45 +12,48 @@ def fix_merge_conflicts(file_path):
         # Check if file has merge conflicts
         if '<<<<<<< HEAD' not in content:
             return False
-        
+            
         # Split by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
+        lines = content.split('\n')
+        new_lines = []
+        skip_until_end = False
         
-        if len(parts) < 2:
-            return False
+        for line in lines:
+            if line.strip() == '<<<<<<< HEAD':
+                skip_until_end = False
+                continue
+            elif line.strip() == '=======':
+                skip_until_end = True
+                continue
+            elif line.strip() == '>>>>>>> cursor/':
+                skip_until_end = False
+                continue
+            elif line.strip().startswith('>>>>>>> cursor/'):
+                skip_until_end = False
+                continue
+            elif not skip_until_end:
+                new_lines.append(line)
         
-        # Keep the HEAD version (odd indices after the first part)
-        result = parts[0]
-        for i in range(1, len(parts), 2):
-            if i + 1 < len(parts):
-                result += parts[i]  # HEAD version
-                if i + 2 < len(parts):
-                    result += parts[i + 2]  # Content after the conflict
-        
-        # Write the fixed content back
+        # Write the cleaned content
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(result)
+            f.write('\n'.join(new_lines))
         
         print(f"Fixed merge conflicts in: {file_path}")
         return True
+        
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/JavaScript files with merge conflicts
-    patterns = [
-        'app/**/*.tsx',
-        'app/**/*.ts',
-        'app/**/*.js',
-        'app/**/*.jsx'
-    ]
+    # Find all TypeScript/TSX files with merge conflicts
+    pattern = "/workspace/**/*.tsx"
+    files = glob.glob(pattern, recursive=True)
     
     fixed_count = 0
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if fix_merge_conflicts(file_path):
-                fixed_count += 1
+    for file_path in files:
+        if fix_merge_conflicts(file_path):
+            fixed_count += 1
     
     print(f"Fixed merge conflicts in {fixed_count} files")
 

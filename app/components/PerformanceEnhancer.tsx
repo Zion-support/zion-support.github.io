@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, Mail, Brain } from 'lucide-react';
 
-export default function PerformanceEnhancer() {
   const features = [
     {
       title: "Feature 1",
@@ -24,8 +23,7 @@ export default function PerformanceEnhancer() {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-
+  ];
   return (
     <div className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 ${className}`}>
       <div className="flex items-center justify-between mb-6">
@@ -196,5 +194,4 @@ export default function PerformanceEnhancer() {
               </div>))}
           </div>
         </div>
-      </section>};export default PerformanceEnhancerPage
 }
