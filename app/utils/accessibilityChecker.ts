@@ -1,28 +1,129 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+// Accessibility checker utility functions
+export interface AccessibilityIssue {
+  type: 'error' | 'warning' | 'info';
+  message: string;
+  element?: HTMLElement;
+  rule?: string;
+}
 
-export default function Accessibilitychecker() {
-  return (
-    <>
-      <Helmet>
-        <title>Accessibilitychecker - Zion Tech Group</title>
-        <meta name="description" content="Professional accessibilitychecker solutions and services." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Accessibilitychecker</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional accessibilitychecker solutions coming soon.</p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
+export interface AccessibilityCheckerOptions {
+  includeWarnings?: boolean;
+  includeInfo?: boolean;
+  customRules?: AccessibilityRule[];
+}
+
+export interface AccessibilityRule {
+  name: string;
+  check: (element: HTMLElement) => AccessibilityIssue[];
+}
+
+export class AccessibilityChecker {
+  private options: AccessibilityCheckerOptions;
+
+  constructor(options: AccessibilityCheckerOptions = {}) {
+    this.options = {
+      includeWarnings: true,
+      includeInfo: false,
+      customRules: [],
+      ...options
+    };
+  }
+
+  checkElement(element: HTMLElement): AccessibilityIssue[] {
+    const issues: AccessibilityIssue[] = [];
+    
+    // Check for missing alt text on images
+    const images = element.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.alt && !img.getAttribute('aria-label')) {
+        issues.push({
+          type: 'error',
+          message: 'Image missing alt text or aria-label',
+          element: img,
+          rule: 'image-alt-text'
+        });
+      }
+    });
+
+    // Check for proper heading hierarchy
+    const headings = element.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let lastLevel = 0;
+    headings.forEach(heading => {
+      const level = parseInt(heading.tagName.charAt(1));
+      if (level > lastLevel + 1) {
+        issues.push({
+          type: 'warning',
+          message: `Heading level ${level} skips level ${lastLevel + 1}`,
+          element: heading as HTMLElement,
+          rule: 'heading-hierarchy'
+        });
+      }
+      lastLevel = level;
+    });
+
+    // Check for proper form labels
+    const inputs = element.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+      const id = input.getAttribute('id');
+      const ariaLabel = input.getAttribute('aria-label');
+      const ariaLabelledBy = input.getAttribute('aria-labelledby');
+      
+      if (!id && !ariaLabel && !ariaLabelledBy) {
+        const label = element.querySelector(`label[for="${id}"]`);
+        if (!label) {
+          issues.push({
+            type: 'error',
+            message: 'Form input missing label or aria-label',
+            element: input as HTMLElement,
+            rule: 'form-labels'
+          });
+        }
+      }
+    });
+
+    // Run custom rules
+    if (this.options.customRules) {
+      this.options.customRules.forEach(rule => {
+        issues.push(...rule.check(element));
+      });
+    }
+
+    return issues;
+  }
+
+  checkDocument(): AccessibilityIssue[] {
+    if (typeof document === 'undefined') {
+      return [];
+    }
+    
+    return this.checkElement(document.body);
+  }
+
+  generateReport(issues: AccessibilityIssue[]): string {
+    const errorCount = issues.filter(i => i.type === 'error').length;
+    const warningCount = issues.filter(i => i.type === 'warning').length;
+    const infoCount = issues.filter(i => i.type === 'info').length;
+
+    let report = `Accessibility Report\n`;
+    report += `==================\n`;
+    report += `Errors: ${errorCount}\n`;
+    report += `Warnings: ${warningCount}\n`;
+    report += `Info: ${infoCount}\n\n`;
+
+    issues.forEach(issue => {
+      report += `${issue.type.toUpperCase()}: ${issue.message}\n`;
+      if (issue.element) {
+        report += `Element: ${issue.element.tagName.toLowerCase()}`;
+        if (issue.element.id) report += `#${issue.element.id}`;
+        if (issue.element.className) report += `.${issue.element.className.split(' ').join('.')}`;
+        report += `\n`;
+      }
+      if (issue.rule) {
+        report += `Rule: ${issue.rule}\n`;
+      }
+      report += `\n`;
+    });
+
+    return report;
+  }
 }
