@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, MessageSquare, Brain, Zap, Users, Clock, Star, Target, Award } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, MessageSquare, Brain, Zap, Users, Clock, Star, Target, Award } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 const AIChatbotBuilderPage: React.FC = () => {
   const features = [
@@ -27,7 +27,7 @@ const AIChatbotBuilderPage: React.FC = () => {
       title: 'Easy Integration',
       description: 'Seamlessly integrate with your existing CRM, helpdesk, and business tools.'
     }
-  ];
+  ]
 
   const useCases = [
     {
@@ -46,7 +46,7 @@ const AIChatbotBuilderPage: React.FC = () => {
       title: 'Technical Support',
       description: 'Provide instant answers to common technical questions.'
     }
-  ];
+  ]
 
   const pricingPlans = [
     {
@@ -93,17 +93,17 @@ const AIChatbotBuilderPage: React.FC = () => {
       ],
       popular: false
     }
-  ];
+  ]
 
   const stats = [
     { number: '95%', label: 'Customer Satisfaction', icon: <Star className="w-6 h-6 text-yellow-400" /> },
     { number: '40%', label: 'Response Time Reduction', icon: <Clock className="w-6 h-6 text-blue-400" /> },
     { number: '300+', label: 'Chatbots Deployed', icon: <MessageSquare className="w-6 h-6 text-green-400" /> },
     { number: '24/7', label: 'Availability', icon: <Target className="w-6 h-6 text-purple-400" /> }
-  ];
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>AI Chatbot Builder - Zion Tech Group</title>
         <meta name="description" content="Build intelligent chatbots with our AI-powered chatbot builder. Create conversational experiences that engage customers and drive business growth." />
@@ -290,7 +290,7 @@ const AIChatbotBuilderPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default AIChatbotBuilderPage;
+export default AIChatbotBuilderPage

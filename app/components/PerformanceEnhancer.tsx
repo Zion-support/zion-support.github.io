@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
@@ -26,105 +25,6 @@ export default function PerformanceEnhancer() {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-=======
-import React, { useState, useEffect, useCallback } from 'react'
-import { Zap, CheckCircle, BarChart3, Clock, Shield, Brain } from 'lucide-react'
-
-interface PerformanceMetrics {
-  loadTime: number
-  renderTime: number
-  memoryUsage: number
-  cpuUsage: number
-}
-
-interface PerformanceEnhancerProps {
-  onOptimize?: (metrics: PerformanceMetrics) => void
-  className?: string
-}
-
-const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
-  onOptimize,
-  className = ''
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    cpuUsage: 0
-  })
-  const [isOptimizing, setIsOptimizing] = useState(false)
-  const [optimizations, setOptimizations] = useState<string[]>([])
-
-  const measurePerformance = useCallback(() => {
-    const startTime = performance.now()
-    
-    // Measure load time
-    const loadTime = performance.timing?.loadEventEnd - performance.timing?.navigationStart || 0
-    
-    // Measure render time
-    const renderTime = performance.now() - startTime
-    
-    // Measure memory usage (if available)
-    const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0
-    
-    // Simulate CPU usage measurement
-    const cpuUsage = Math.random() * 100
-
-    const newMetrics = {
-      loadTime,
-      renderTime,
-      memoryUsage,
-      cpuUsage
-    }
-
-    setMetrics(newMetrics)
-    return newMetrics
-  }, [])
-
-  const optimizePerformance = useCallback(async () => {
-    setIsOptimizing(true)
-    
-    // Simulate optimization process
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    const newOptimizations = [
-      'Enabled code splitting',
-      'Optimized images',
-      'Minified CSS and JS',
-      'Enabled gzip compression',
-      'Implemented lazy loading',
-      'Optimized database queries',
-      'Enabled caching',
-      'Reduced bundle size'
-    ]
-    
-    setOptimizations(newOptimizations)
-    
-    // Re-measure performance after optimization
-    const optimizedMetrics = measurePerformance()
-    onOptimize?.(optimizedMetrics)
-    
-    setIsOptimizing(false)
-  }, [measurePerformance, onOptimize])
-
-  useEffect(() => {
-    // Initial performance measurement
-    measurePerformance()
-    
-    // Set up performance monitoring
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (entry.entryType === 'navigation') {
-          measurePerformance()
-        }
-      }
-    })
-    
-    observer.observe({ entryTypes: ['navigation'] })
-    
-    return () => observer.disconnect()
-  }, [measurePerformance])
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
 
   return (
     <div className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 ${className}`}>
@@ -163,7 +63,6 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
           <div className="text-2xl font-bold text-white mb-1">
             {metrics.loadTime.toFixed(0)}ms
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               {features.map((feature, index) => (
@@ -174,47 +73,10 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-=======
-          <div className="text-gray-400 text-sm">Load Time</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-white mb-1">
-            {metrics.renderTime.toFixed(0)}ms
-          </div>
-          <div className="text-gray-400 text-sm">Render Time</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-white mb-1">
-            {(metrics.memoryUsage / 1024 / 1024).toFixed(1)}MB
-          </div>
-          <div className="text-gray-400 text-sm">Memory Usage</div>
-        </div>
-        <div className="text-center">
-          <div className="text-2xl font-bold text-white mb-1">
-            {metrics.cpuUsage.toFixed(1)}%
-          </div>
-          <div className="text-gray-400 text-sm">CPU Usage</div>
-        </div>
-      </div>
-
-      {/* Optimizations Applied */}
-      {optimizations.length > 0 && (
-        <div className="mt-6">
-          <h4 className="text-white font-semibold mb-3 flex items-center">
-            <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-            Optimizations Applied
-          </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-            {optimizations.map((optimization, index) => (
-              <div key={index} className="flex items-center text-gray-300 text-sm">
-                <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                {optimization}
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -337,11 +199,3 @@ export default PerformanceEnhancerPage
         </div>
       </section>};export default PerformanceEnhancerPage
 }
-=======
-      )}
-    </div>
-  )
-}
-
-export default PerformanceEnhancer
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07

@@ -4,8 +4,8 @@ import { Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Zap, Brain, Cpu,
 
 const Footer: React.FC = () => {
   const aiServices = [
-    { name: 'AI Content Generator', path: '/ai-content-generator' },
-    { name: 'AI Chatbot Enterprise', path: '/ai-chatbot-enterprise' },
+    { name: 'AI Content Generator', path: '/ai-content-generation' },
+    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI 3D Generation', path: '/ai-3d-generation' },
     { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' },
@@ -182,7 +182,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Contact Info */}
+        {/* Contact Information */}
         <div className="border-t border-white/10 mt-12 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center">
@@ -208,7 +208,11 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               {legalPages.map((page, index) => (
-                <Link key={index} to={page.path} className="text-gray-400 hover:text-white text-sm transition-colors">
+                <Link 
+                  key={index}
+                  to={page.path} 
+                  className="text-gray-400 hover:text-white text-sm transition-colors"
+                >
                   {page.name}
                 </Link>
               ))}

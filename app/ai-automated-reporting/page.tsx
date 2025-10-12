@@ -1,13 +1,18 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, FileText, Brain, Target, BarChart3, Clock, Zap, Users, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+=======
+ursor/website-audit-and-update-with-deployment-a178
+>>>>>>> main
 
 const AIAutomatedReportingPage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: <Brain className="w-8 h-8 text-blue-500" />,
       title: 'AI-Powered Insights',
       description: 'Automatically generate insights and recommendations from your data using advanced AI algorithms.'
@@ -83,9 +88,18 @@ const AIAutomatedReportingPage: React.FC = () => {
     { number: '24/7', label: 'Automation', icon: <Zap className="w-6 h-6 text-orange-400" /> }
   ];
 
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
+
+export default function AiAutomatedReportingPage() {
+>>>>>>> main
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
+<<<<<<< HEAD
         <title>AI Automated Reporting - Zion Tech Group</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered automated reporting solutions. Real-time analytics, custom dashboards, and intelligent reporting." />
         <meta name="keywords" content="AI reporting, automated reporting, data analytics, business intelligence, Zion Tech Group" />
@@ -249,8 +263,22 @@ const AIAutomatedReportingPage: React.FC = () => {
       </section>
 
       <Footer />
+=======
+        <title>Ai Automated Reporting - Zion Tech Group</title>
+        <meta name="description" content="Professional ai automated reporting services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6">Ai Automated Reporting</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional ai automated reporting services coming soon.</p>
+        <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+        >
+          Contact Us
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </Link>
+      </div>
+>>>>>>> main
     </div>
-  );
-};
-
-export default AIAutomatedReportingPage;
+  )
+}

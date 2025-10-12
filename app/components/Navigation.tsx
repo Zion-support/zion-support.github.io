@@ -1,10 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Network, Bot, BarChart3, Settings, Rocket, Lock, Wifi, BarChart, Users, Mail, Phone, MapPin } from 'lucide-react'
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const navigationItems = [
     {
@@ -12,8 +21,8 @@ const Navigation: React.FC = () => {
       path: '/ai-services',
       icon: Brain,
       dropdown: [
-        { name: 'AI Content Generator', path: '/ai-content-generator' },
-        { name: 'AI Chatbot Enterprise', path: '/ai-chatbot-enterprise' },
+        { name: 'AI Content Generator', path: '/ai-content-generation' },
+        { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
         { name: 'AI 3D Generation', path: '/ai-3d-generation' },
         { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' },
@@ -82,77 +91,85 @@ const Navigation: React.FC = () => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   }
 
+  const closeDropdown = () => {
+    setActiveDropdown(null)
+  }
+
   return (
-    <nav className="bg-gray-900/95 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled ? 'bg-gray-900/95 backdrop-blur-lg border-b border-white/10 shadow-lg' : 'bg-transparent'
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-20">
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 group">
-              <span className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent group-hover:from-purple-300 group-hover:to-blue-300 transition-all duration-300">
-                Zion Tech Group
-              </span>
-            </Link>
-          </div>
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2 group">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+              <Zap className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              Zion Tech Group
+            </span>
+          </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:block">
-            <div className="ml-10 flex items-center space-x-1">
-              {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
-                  <button
-                    className="flex items-center text-gray-300 hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/10"
-                    onMouseEnter={() => setActiveDropdown(item.name)}
-                    onMouseLeave={() => setActiveDropdown(null)}
-                  >
-                    <item.icon className="w-4 h-4 mr-2" />
-                    {item.name}
-                    <ChevronDown className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform duration-300" />
-                  </button>
-                  
-                  {activeDropdown === item.name && (
-                    <div className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl z-50">
-                      <div className="p-6">
-                        <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
-                          <item.icon className="w-5 h-5 mr-2" />
-                          {item.name}
-                        </h3>
-                        <div className="grid grid-cols-1 gap-2">
-                          {item.dropdown.map((dropdownItem, index) => (
-                            <Link
-                              key={index}
-                              to={dropdownItem.path}
-                              className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 group"
-                            >
-                              <span className="group-hover:translate-x-2 transition-transform duration-300">
-                                {dropdownItem.name}
-                              </span>
-                            </Link>
-                          ))}
-                        </div>
-                        <div className="mt-4 pt-4 border-t border-white/10">
+          <div className="hidden lg:flex items-center space-x-1">
+            {navigationItems.map((item) => (
+              <div key={item.name} className="relative group">
+                <button
+                  className="flex items-center text-gray-300 hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/10"
+                  onMouseEnter={() => setActiveDropdown(item.name)}
+                  onMouseLeave={() => setActiveDropdown(null)}
+                >
+                  <item.icon className="w-4 h-4 mr-2" />
+                  {item.name}
+                  <ChevronDown className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform duration-300" />
+                </button>
+                
+                {activeDropdown === item.name && (
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl z-50">
+                    <div className="p-6">
+                      <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+                        <item.icon className="w-5 h-5 mr-2" />
+                        {item.name}
+                      </h3>
+                      <div className="grid grid-cols-1 gap-2">
+                        {item.dropdown.map((dropdownItem, index) => (
                           <Link
-                            to={item.path}
-                            className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
+                            key={index}
+                            to={dropdownItem.path}
+                            className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 group"
+                            onClick={closeDropdown}
                           >
-                            View All {item.name}
+                            <span className="group-hover:translate-x-2 transition-transform duration-300">
+                              {dropdownItem.name}
+                            </span>
                           </Link>
-                        </div>
+                        ))}
+                      </div>
+                      <div className="mt-4 pt-4 border-t border-white/10">
+                        <Link
+                          to={item.path}
+                          className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
+                          onClick={closeDropdown}
+                        >
+                          View All {item.name}
+                        </Link>
                       </div>
                     </div>
-                  )}
-                </div>
-              ))}
-              
-              {simpleLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  className="text-gray-300 hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/10"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
+                  </div>
+                )}
+              </div>
+            ))}
+            
+            {simpleLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className="text-gray-300 hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/10"
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
 
           {/* CTA Button */}
@@ -169,9 +186,9 @@ const Navigation: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2 rounded-lg hover:bg-white/10 transition-all duration-300"
+              className="text-gray-300 hover:text-white p-2"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -179,32 +196,45 @@ const Navigation: React.FC = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden">
-            <div className="px-4 pt-2 pb-6 space-y-1 bg-gray-900/95 backdrop-blur-lg border-t border-white/10">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-lg rounded-lg mt-2 border border-white/10">
               {navigationItems.map((item) => (
-                <div key={item.name} className="space-y-1">
-                  <div className="flex items-center text-gray-300 px-3 py-2 text-base font-medium">
-                    <item.icon className="w-5 h-5 mr-3" />
+                <div key={item.name}>
+                  <button
+                    className="flex items-center w-full text-left text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                    onClick={() => toggleDropdown(item.name)}
+                  >
+                    <item.icon className="w-4 h-4 mr-2" />
                     {item.name}
-                  </div>
-                  <div className="ml-8 space-y-1">
-                    {item.dropdown.map((dropdownItem, index) => (
+                    <ChevronDown className="w-4 h-4 ml-auto" />
+                  </button>
+                  
+                  {activeDropdown === item.name && (
+                    <div className="pl-6 space-y-1">
+                      {item.dropdown.map((dropdownItem, index) => (
+                        <Link
+                          key={index}
+                          to={dropdownItem.path}
+                          className="block px-3 py-2 text-gray-400 hover:text-white rounded-md text-sm"
+                          onClick={() => {
+                            setIsOpen(false)
+                            setActiveDropdown(null)
+                          }}
+                        >
+                          {dropdownItem.name}
+                        </Link>
+                      ))}
                       <Link
-                        key={index}
-                        to={dropdownItem.path}
-                        className="block text-gray-400 hover:text-white px-3 py-2 rounded-lg text-sm transition-all duration-300"
-                        onClick={() => setIsOpen(false)}
+                        to={item.path}
+                        className="block px-3 py-2 text-purple-400 hover:text-purple-300 rounded-md text-sm font-medium"
+                        onClick={() => {
+                          setIsOpen(false)
+                          setActiveDropdown(null)
+                        }}
                       >
-                        {dropdownItem.name}
+                        View All {item.name}
                       </Link>
-                    ))}
-                    <Link
-                      to={item.path}
-                      className="block text-purple-400 hover:text-purple-300 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      View All {item.name} →
-                    </Link>
-                  </div>
+                    </div>
+                  )}
                 </div>
               ))}
               
@@ -212,7 +242,7 @@ const Navigation: React.FC = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className="block text-gray-300 hover:text-white px-3 py-2 rounded-lg text-base font-medium transition-all duration-300"
+                  className="block px-3 py-2 text-gray-300 hover:text-white rounded-md text-base font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -221,7 +251,7 @@ const Navigation: React.FC = () => {
               
               <Link
                 to="/contact"
-                className="block bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-purple-600 hover:to-blue-700 transition-all duration-300 mt-4"
+                className="block w-full text-center bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300 mt-4"
                 onClick={() => setIsOpen(false)}
               >
                 Get Started

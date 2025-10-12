@@ -1,12 +1,14 @@
 import React from 'react'
-import SEOHead from '../components/SEOHead'
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Globe, Database, Cpu, Network } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
+import { ArrowRight, CheckCircle, Shield, Lock, Eye, AlertTriangle, Star, Zap, Globe, Database, Cpu, Network } from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-export default function CybersecurityPage() {
+const CybersecurityPage: React.FC = () => {
   const services = [
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Shield className="w-8 h-8 text-red-500" />,
       title: 'Advanced Threat Detection',
       description: 'AI-powered threat detection and response with real-time monitoring and automated incident response.',
       features: ['Real-time Monitoring', 'AI Threat Analysis', 'Automated Response', '24/7 SOC Support'],
@@ -16,7 +18,7 @@ export default function CybersecurityPage() {
       borderColor: 'border-red-500/30'
     },
     {
-      icon: <Lock className="w-8 h-8" />,
+      icon: <Lock className="w-8 h-8 text-blue-500" />,
       title: 'Data Encryption & Protection',
       description: 'Comprehensive data protection with end-to-end encryption and secure key management.',
       features: ['End-to-End Encryption', 'Key Management', 'Data Loss Prevention', 'Compliance Reporting'],
@@ -26,7 +28,7 @@ export default function CybersecurityPage() {
       borderColor: 'border-blue-500/30'
     },
     {
-      icon: <Eye className="w-8 h-8" />,
+      icon: <Eye className="w-8 h-8 text-green-500" />,
       title: 'Security Monitoring & Analytics',
       description: 'Continuous security monitoring with advanced analytics and threat intelligence.',
       features: ['SIEM Platform', 'Threat Intelligence', 'Behavioral Analytics', 'Custom Dashboards'],
@@ -36,7 +38,7 @@ export default function CybersecurityPage() {
       borderColor: 'border-green-500/30'
     },
     {
-      icon: <AlertTriangle className="w-8 h-8" />,
+      icon: <AlertTriangle className="w-8 h-8 text-orange-500" />,
       title: 'Incident Response & Recovery',
       description: 'Rapid incident response and business continuity planning with 24/7 support.',
       features: ['Incident Response Plan', 'Forensic Analysis', 'Business Continuity', 'Recovery Services'],
@@ -65,15 +67,13 @@ export default function CybersecurityPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <SEOHead 
-        title="Cybersecurity Services - Zion Tech Group"
-        description="Advanced cybersecurity solutions including threat detection, data protection, security monitoring, and incident response. Protect your business with enterprise-grade security."
-        keywords="cybersecurity, threat detection, data protection, security monitoring, incident response, compliance, SOC 2, ISO 27001, GDPR"
-      />
+      <Helmet>
+        <title>Cybersecurity Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced cybersecurity solutions including threat detection, data protection, security monitoring, and incident response. Protect your business with enterprise-grade security." />
+        <meta name="keywords" content="cybersecurity, threat detection, data protection, security monitoring, incident response, compliance, SOC 2, ISO 27001, GDPR" />
+      </Helmet>
       
-      {/* Animated background elements */}
-      <div className="absolute inset-0 bg-cyber-grid opacity-10"></div>
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400"></div>
+      <Navigation />
       
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
@@ -192,7 +192,6 @@ export default function CybersecurityPage() {
         <section className="py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto text-center">
             <div className="bg-gradient-to-r from-red-500 via-orange-600 to-yellow-600 rounded-3xl p-16 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-full bg-cyber-grid opacity-10"></div>
               <div className="absolute top-10 right-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
               <div className="absolute bottom-10 left-10 w-24 h-24 bg-white/10 rounded-full blur-2xl"></div>
               
@@ -226,6 +225,10 @@ export default function CybersecurityPage() {
           </div>
         </section>
       </main>
+
+      <Footer />
     </div>
   )
 }
+
+export default CybersecurityPage

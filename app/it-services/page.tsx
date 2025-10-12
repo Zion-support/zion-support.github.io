@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Cloud, Shield, Server, Database, Smartphone, Globe, MessageSquare, Code, Network, Users, Clock, Star, Target, Award } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Cloud, Shield, Server, Database, Smartphone, Globe, MessageSquare, Code, Network, Users, Clock, Star, Target, Award } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 const ITServicesPage: React.FC = () => {
   const services = [
@@ -55,14 +55,14 @@ const ITServicesPage: React.FC = () => {
       pricing: 'Starting at $3,500/project',
       category: 'Development'
     }
-  ];
+  ]
 
   const stats = [
     { number: '200+', label: 'Projects Completed', icon: <Award className="w-6 h-6 text-blue-400" /> },
     { number: '98%', label: 'Client Satisfaction', icon: <Star className="w-6 h-6 text-green-400" /> },
     { number: '15+', label: 'Years Experience', icon: <Clock className="w-6 h-6 text-purple-400" /> },
     { number: '24/7', label: 'Support Available', icon: <Shield className="w-6 h-6 text-orange-400" /> }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -137,13 +137,17 @@ const ITServicesPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-                <div className="mb-6 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 bg-white/10 text-white text-sm rounded-full mb-3">
-                    {service.category}
-                  </span>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="flex items-start justify-between mb-6">
+                  <div className="flex items-center">
+                    <div className="mr-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">{service.title}</h3>
+                      <p className="text-gray-300 text-sm">{service.description}</p>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-white">{service.pricing}</div>
+                  </div>
                 </div>
                 
                 <ul className="space-y-2 mb-6">
@@ -155,15 +159,12 @@ const ITServicesPage: React.FC = () => {
                   ))}
                 </ul>
                 
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-semibold text-white">{service.pricing}</span>
-                  <Link
-                    to="/contact"
-                    className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
-                  >
-                    Learn More
-                  </Link>
-                </div>
+                <Link
+                  to="/contact"
+                  className="w-full block text-center py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+                >
+                  Get Started
+                </Link>
               </div>
             ))}
           </div>
@@ -176,7 +177,7 @@ const ITServicesPage: React.FC = () => {
           <div className="text-center">
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Transform Your IT Infrastructure?
+                Ready to Modernize Your IT Infrastructure?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
                 Let's discuss how our IT services can help you achieve your technology goals and drive business growth.
@@ -202,7 +203,7 @@ const ITServicesPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default ITServicesPage;
+export default ITServicesPage

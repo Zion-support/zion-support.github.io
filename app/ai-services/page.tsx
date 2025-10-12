@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, MessageSquare, BarChart3, Clock, TrendingUp, Users, Target, Award } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, MessageSquare, BarChart3, Clock, TrendingUp, Users, Target, Award } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
@@ -35,14 +35,14 @@ const AIServicesPage: React.FC = () => {
       price: '$149/month',
       features: ['Workflow automation', 'Process optimization', 'Error reduction', 'Cost savings']
     }
-  ];
+  ]
 
   const stats = [
     { number: '500+', label: 'AI Models Deployed', icon: <Brain className="w-6 h-6 text-blue-400" /> },
     { number: '95%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6 text-green-400" /> },
     { number: '40%', label: 'Cost Reduction', icon: <DollarSign className="w-6 h-6 text-purple-400" /> },
     { number: '24/7', label: 'AI Support', icon: <Clock className="w-6 h-6 text-orange-400" /> }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -183,7 +183,7 @@ const AIServicesPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default AIServicesPage;
+export default AIServicesPage

@@ -1,6 +1,6 @@
 ursor/analyze-improve-and-deploy-application-edcb
+ursor/analyze-improve-and-deploy-application-edcb
 'use client'
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -114,9 +114,6 @@ export default OptimizedImagePage
   </h2>
   </button>
   </span>
-=======
-import React, { useState, useRef, useEffect } from 'react'
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
 
 interface OptimizedImageProps {
   src: string
@@ -199,7 +196,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             <div className="w-8 h-8 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
           )}
         </div>
-<<<<<<< HEAD
       </section>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
@@ -270,25 +266,3 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     </div>)};export default OptimizedImagePage
 }
 'use client'
-=======
-      )}
-      
-      {isInView && (
-        <img
-          src={src}
-          alt={alt}
-          style={imageStyle}
-          onLoad={handleLoad}
-          onError={handleError}
-          className={`transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          loading={priority ? 'eager' : 'lazy'}
-        />
-      )}
-    </div>
-  )
-}
-
-export default OptimizedImage
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -13,51 +13,64 @@ const ContactPage: React.FC = () => {
     phone: '',
     service: '',
     message: ''
-  });
+  })
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+    }))
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the data to your backend
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-  };
+    e.preventDefault()
+    // Here you would typically send the form data to your backend
+    console.log('Form submitted:', formData)
+    setIsSubmitted(true)
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false)
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
+      })
+    }, 3000)
+  }
 
   const contactInfo = [
     {
-      icon: <Mail className="w-6 h-6 text-blue-400" />,
+      icon: <Mail className="w-6 h-6 text-blue-500" />,
       title: 'Email',
       details: 'kleber@ziontechgroup.com',
       description: 'Send us an email anytime'
     },
     {
-      icon: <Phone className="w-6 h-6 text-green-400" />,
+      icon: <Phone className="w-6 h-6 text-green-500" />,
       title: 'Phone',
       details: '+1 302 464 0950',
-      description: 'Mon-Fri from 9am to 6pm EST'
+      description: 'Call us for immediate assistance'
     },
     {
-      icon: <MapPin className="w-6 h-6 text-purple-400" />,
+      icon: <MapPin className="w-6 h-6 text-purple-500" />,
       title: 'Address',
       details: '364 E Main St STE 1008',
-      description: 'Middletown, DE 19709'
+      subtitle: 'Middletown, DE 19709',
+      description: 'Visit our office'
     },
     {
-      icon: <Clock className="w-6 h-6 text-orange-400" />,
+      icon: <Clock className="w-6 h-6 text-orange-500" />,
       title: 'Business Hours',
       details: 'Monday - Friday',
       description: '9:00 AM - 6:00 PM EST'
     }
-  ];
+  ]
 
   const services = [
     'AI Services',
@@ -69,14 +82,14 @@ const ContactPage: React.FC = () => {
     'Mobile Development',
     'Web Development',
     'Other'
-  ];
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. Contact us today for a free consultation." />
-        <meta name="keywords" content="contact, AI solutions, IT services, consultation, Zion Tech Group" />
+        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. Call +1 302 464 0950 or email kleber@ziontechgroup.com" />
+        <meta name="keywords" content="contact Zion Tech Group, AI solutions contact, IT services contact, digital transformation" />
       </Helmet>
 
       <Navigation />
@@ -104,6 +117,7 @@ const ContactPage: React.FC = () => {
                 <div className="flex justify-center mb-4">{info.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
                 <p className="text-gray-300 font-medium mb-1">{info.details}</p>
+                {info.subtitle && <p className="text-gray-300 font-medium mb-1">{info.subtitle}</p>}
                 <p className="text-gray-400 text-sm">{info.description}</p>
               </div>
             ))}
@@ -277,7 +291,7 @@ const ContactPage: React.FC = () => {
                   to="/about" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Learn More About Us
+                  Learn More
                 </Link>
               </div>
             </div>
@@ -287,7 +301,7 @@ const ContactPage: React.FC = () => {
 
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default ContactPage;
+export default ContactPage
