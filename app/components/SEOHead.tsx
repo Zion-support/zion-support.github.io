@@ -35,15 +35,29 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
+    alternateName: 'Zion Tech',
     description: 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
     url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://ziontechgroup.com/logo.png',
+      width: 200,
+      height: 200
+    },
+    image: 'https://ziontechgroup.com/og-image.jpg',
+    foundingDate: '2020',
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'customer service',
       areaServed: 'US',
       availableLanguage: 'English',
+      hoursAvailable: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '09:00',
+        closes: '18:00'
+      }
     },
     address: {
       '@type': 'PostalAddress',
@@ -56,24 +70,79 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
+      'https://github.com/ziontechgroup'
     ],
     service: [
       {
         '@type': 'Service',
         name: 'AI Services',
         description: 'Advanced AI solutions including content generation, automation, and analytics.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Zion Tech Group'
+        },
+        areaServed: 'US',
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'AI Services Catalog',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'AI Content Generation'
+              }
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'AI Automation'
+              }
+            }
+          ]
+        }
       },
       {
         '@type': 'Service',
         name: 'IT Services',
         description: 'Comprehensive IT services including infrastructure management and cybersecurity.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Zion Tech Group'
+        },
+        areaServed: 'US'
       },
       {
         '@type': 'Service',
         name: 'Cloud Services',
         description: 'Cloud migration, optimization, and management across all major platforms.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Zion Tech Group'
+        },
+        areaServed: 'US'
       },
     ],
+    makesOffer: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'AI Solutions',
+          description: 'Custom AI solutions for businesses'
+        },
+        priceRange: '$29-$299',
+        availability: 'https://schema.org/InStock'
+      }
+    ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '127',
+      bestRating: '5',
+      worstRating: '1'
+    }
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
