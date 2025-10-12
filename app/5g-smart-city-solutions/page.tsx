@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Wifi, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Shield, BarChart3, Star, Sparkles, Building, Users, Target, Cpu } from 'lucide-react'
+import { Wifi, ArrowRight, CheckCircle, Building, Users } from 'lucide-react'
 import Layout from '../layout'
 
 export default function FiveGSmartCitySolutions() {

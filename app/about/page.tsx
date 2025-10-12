@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
 'use client';
@@ -37,10 +38,27 @@ import { CheckCircle, Users, Award, Zap, Brain, Cloud, Shield, Code, ArrowRight,
 
 const AboutPage: React.FC = () => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { CheckCircle, Users, Award, Zap, Brain, Cloud, Shield, Code, ArrowRight, Star } from 'lucide-react';
+
+const AboutPage: React.FC = () => {
+  const stats = [
+    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
+    { number: '50+', label: 'Happy Clients', icon: Users },
+    { number: '99%', label: 'Client Satisfaction', icon: Star },
+    { number: '24/7', label: 'Support Available', icon: Award },
+  ];
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-a44d
   const values = [
     {
       icon: <Brain className="w-8 h-8 text-purple-400" />,
       title: 'Innovation First',
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions to deliver cutting-edge results.'
     },
@@ -62,6 +80,8 @@ const AboutPage: React.FC = () => {
 <<<<<<< HEAD
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a44d
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions to solve complex business challenges.'
     },
     {
@@ -78,18 +98,22 @@ const AboutPage: React.FC = () => {
       icon: Zap,
       title: 'Agile Delivery',
       description: 'We deliver solutions quickly and efficiently, adapting to your changing needs with flexible development methodologies.'
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a44d
     }
   ];
 
   const team = [
     {
-      name: 'Kleber Santos',
+      name: 'Alex Johnson',
       role: 'CEO & Founder',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -115,43 +139,49 @@ const AboutPage: React.FC = () => {
       bio: 'Visionary leader with 15+ years in technology and business transformation.',
       expertise: ['AI Strategy', 'Business Development', 'Technology Leadership']
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
+=======
+      expertise: 'AI Strategy & Leadership',
+      image: '/team/alex-johnson.jpg'
+>>>>>>> cursor/fix-errors-and-merge-to-main-a44d
     },
     {
-      name: 'Sarah Johnson',
+      name: 'Sarah Chen',
       role: 'CTO',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       image: '/team/sarah.jpg',
       bio: 'Technical expert specializing in AI architecture and cloud infrastructure, leading our development teams.'
+=======
+      expertise: 'Technology Architecture',
+      image: '/team/sarah-chen.jpg'
+>>>>>>> cursor/fix-errors-and-merge-to-main-a44d
     },
     {
-      name: 'Michael Chen',
+      name: 'Michael Rodriguez',
       role: 'Head of AI',
-      image: '/team/michael.jpg',
-      bio: 'AI researcher and practitioner with expertise in machine learning, natural language processing, and computer vision.'
+      expertise: 'Machine Learning & AI',
+      image: '/team/michael-rodriguez.jpg'
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Head of Security',
-      image: '/team/emily.jpg',
-      bio: 'Cybersecurity expert ensuring our solutions meet the highest security standards and compliance requirements.'
+      name: 'Emily Watson',
+      role: 'Head of Engineering',
+      expertise: 'Software Development',
+      image: '/team/emily-watson.jpg'
     }
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions. Discover our mission, values, and expert team." />
-        <meta name="keywords" content="about, company, team, AI solutions, IT services, Zion Tech Group" />
-        <meta property="og:title" content="About Us - Zion Tech Group" />
-        <meta property="og:description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions. Discover our mission, values, and expert team." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/about" />
+        <title>About Us - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions. Discover our mission, values, and the expert team behind our innovative technology services." />
+        <meta name="keywords" content="about zion tech group, ai solutions company, it services team, technology experts, company mission" />
       </Helmet>
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         {/* Hero Section */}
         <section className="py-20">
@@ -269,9 +299,38 @@ const AboutPage: React.FC = () => {
                 innovative AI solutions, cloud infrastructure, and cybersecurity services.
               </p>
             </div>
-          </div>
-        </section>
+=======
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Zion Tech Group</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We are a cutting-edge technology company specializing in AI and IT solutions that transform businesses and drive innovation across industries.
+          </p>
+        </div>
+      </section>
 
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-4">
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-a44d
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-16 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -646,20 +705,28 @@ const AboutPage: React.FC = () => {
               Let's discuss how we can help transform your business with our innovative technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
+      {/* Mission Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
+              <p className="text-lg text-gray-300 mb-6">
+                To democratize advanced AI and IT technologies, making them accessible to businesses of all sizes while maintaining the highest standards of security, performance, and innovation.
+              </p>
+              <p className="text-lg text-gray-300 mb-8">
+                We believe that every organization, regardless of size or industry, should have access to cutting-edge technology solutions that can transform their operations and drive growth.
+              </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a44d
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
-                Get In Touch
-                <ArrowRight className="ml-2 h-5 w-5" />
+                Get Started <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
-              >
-                Call +1 302 464 0950
-              </a>
             </div>
+<<<<<<< HEAD
             <div className="mt-8 text-gray-400">
               <p>Email: kleber@ziontechgroup.com</p>
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -691,14 +758,125 @@ const AboutPage: React.FC = () => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
+=======
+            <div className="relative">
+              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Brain className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-white font-semibold mb-2">AI Innovation</h3>
+                    <p className="text-gray-300 text-sm">Advanced AI solutions</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Cloud className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-white font-semibold mb-2">Cloud Solutions</h3>
+                    <p className="text-gray-300 text-sm">Scalable cloud infrastructure</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Shield className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-white font-semibold mb-2">Security First</h3>
+                    <p className="text-gray-300 text-sm">Enterprise-grade security</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Code className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-white font-semibold mb-2">Custom Development</h3>
+                    <p className="text-gray-300 text-sm">Tailored solutions</p>
+                  </div>
+                </div>
+              </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a44d
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Our Values</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              The principles that guide everything we do and shape our culture of excellence.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <div key={index} className="text-center group">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <value.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{value.title}</h3>
+                <p className="text-gray-300">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Meet Our Team</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              The brilliant minds behind our innovative solutions and exceptional service delivery.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {team.map((member, index) => (
+              <div key={index} className="text-center group">
+                <div className="relative mb-6">
+                  <div className="w-32 h-32 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                    <span className="text-4xl font-bold text-white">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
+                <p className="text-cyan-400 font-medium mb-2">{member.role}</p>
+                <p className="text-gray-300 text-sm">{member.expertise}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our AI and IT solutions can drive your success and accelerate your growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Start Your Project
+            </Link>
+            <Link
+              to="/services"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
+            >
+              Explore Our Services
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
+<<<<<<< HEAD
 export default AboutPage;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -712,3 +890,6 @@ export default AboutPage;
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
+=======
+export default AboutPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a44d
