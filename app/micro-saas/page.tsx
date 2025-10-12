@@ -8,13 +8,13 @@ export default function MicroSaas() {
     <>
       <Helmet>
         <title>Micro SAAS - Zion Tech Group</title>
-        <meta name="description" content="Micro SAAS solutions for businesses" />
+        <meta name="description" content="Ready-to-use software solutions for immediate deployment by Zion Tech Group." />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Micro SAAS</h1>
-          <p className="text-lg text-gray-300 mb-8">Micro SAAS solutions coming soon.</p>
+          <h1 className="text-4xl font-bold text-white mb-6">Micro SAAS Solutions</h1>
+          <p className="text-lg text-gray-300 mb-8">Ready-to-use software solutions for immediate deployment.</p>
           
           <Link 
             to="/contact" 

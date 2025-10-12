@@ -2,49 +2,48 @@ import { Link } from 'react-router-dom';
 
 import React from 'react';
 
-import { Link } from 'react-router-dom';
 
 import { Brain, TrendingUp, Zap, CheckCircle, ArrowRight, Star, BarChart3, DollarSign, Shield, Target, PieChart, Activity, Globe, Monitor, Sparkles, Calculator, FileText, Database, Lock, Building2, CreditCard, Wallet } from 'lucide-react';
 
 export default function AiFinancialAnalyticsProPage() {
 
   const features = [
-
+    {
       icon: <Brain className="w-8h-8text-cyan-400" />,
 
       title: 'AI-Powered Insights',
       description: 'Advanced machine learning algorithms analyze your financial data to provide actionable insights',
       benefits: ['Predictive analytics', 'Risk assessment', 'Trend identification', 'Anomaly detection']
     },
-
+    {
       icon: <BarChart3 className="w-8h-8text-green-400" />,
 
       title: 'Real-Time Analytics',
       description: 'Monitor your financial performance with live dashboards and instant reporting',
       benefits: ['Live data feeds', 'Instant alerts', 'Real-time KPIs', 'Dynamic reporting']
     },
-
+    {
       icon: <Shield className="w-8h-8text-purple-400" />,
 
       title: 'Enterprise Security',
       description: 'Bank-grade security with end-to-end encryption and compliance standards',
       benefits: ['256-bit encryption', 'SOC 2 compliance', 'GDPR ready', 'Audit trails']
     },
-
+    {
       icon: <Target className="w-8h-8text-orange-400" />,
 
       title: 'Custom Dashboards',
       description: 'Create personalized financial dashboards tailored to your business needs',
       benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views', 'Mobile optimization']
     },
-
+    {
       icon: <Zap className="w-8h-8text-red-400" />,
 
       title: 'Automated Reporting',
       description: 'Generate comprehensive financial reports automatically with AI-driven insights',
       benefits: ['Scheduled reports', 'Custom templates', 'Multi-format export', 'Email delivery']
     },
-
+    {
       icon: <Globe className="w-8h-8text-blue-400" />,
 
       title: 'Multi-Currency Support',
@@ -52,6 +51,7 @@ export default function AiFinancialAnalyticsProPage() {
       benefits: ['Real-time exchange rates', 'Currency conversion', 'Global compliance', 'Tax calculations']
   ];
   const analyticsTypes = [
+    {
       category: 'Revenue Analytics',
       icon: <DollarSign className="w-5 h-5ml-2" />,
       items: [
@@ -62,6 +62,7 @@ export default function AiFinancialAnalyticsProPage() {
         'Market share analysis'
       ]
     },
+    {
       category: 'Expense Management',
       icon: <Calculator className="w-5 h-5ml-2" />,
       items: [
@@ -72,6 +73,7 @@ export default function AiFinancialAnalyticsProPage() {
         'Vendor performance'
       ]
     },
+    {
       category: 'Cash Flow Analysis',
       icon: <Activity className="w-5 h-5ml-2" />,
       items: [
@@ -82,6 +84,7 @@ export default function AiFinancialAnalyticsProPage() {
         'Credit risk assessment'
       ]
     },
+    {
       category: 'Investment Analytics',
       icon: <TrendingUp className="w-5 h-5ml-2" />,
       items: [
@@ -92,6 +95,7 @@ export default function AiFinancialAnalyticsProPage() {
         'ROI calculations'
       ]
     },
+    {
       category: 'Compliance & Audit',
       icon: <Lock className="w-5 h-5ml-2" />,
       items: [
@@ -102,6 +106,7 @@ export default function AiFinancialAnalyticsProPage() {
         'Documentation'
       ]
     },
+    {
       category: 'Predictive Modeling',
       icon: <Brain className="w-5 h-5ml-2" />,
       items: [
@@ -113,6 +118,7 @@ export default function AiFinancialAnalyticsProPage() {
       ]
   ];
   const pricingPlans = [
+    {
       name: 'Starter',
       price: '$199',
       period: '/month',
@@ -128,6 +134,7 @@ export default function AiFinancialAnalyticsProPage() {
       popular: false,
       cta: 'Start Free Trial'
     },
+    {
       name: 'Professional',
       price: '$499',
       period: '/month',
@@ -145,6 +152,7 @@ export default function AiFinancialAnalyticsProPage() {
       popular: true,
       cta: 'Get Started'
     },
+    {
       name: 'Enterprise',
       price: '$1,299',
       period: '/month',
@@ -163,6 +171,7 @@ export default function AiFinancialAnalyticsProPage() {
       cta: 'Contact Sales'
   ];
   const testimonials = [
+    {
       name: 'Jennifer Walsh',
       company: 'FinTech Solutions',
       role: 'CFO',
@@ -171,6 +180,7 @@ export default function AiFinancialAnalyticsProPage() {
       avatar: 'JW',
       results: '35% faster financial reporting'
     },
+    {
       name: 'Robert Kim',
       company: 'Global Investments',
       role: 'Financial Director',
@@ -179,6 +189,7 @@ export default function AiFinancialAnalyticsProPage() {
       avatar: 'RK',
       results: '95% forecast accuracy'
     },
+    {
       name: 'Lisa Thompson',
       company: 'Enterprise Corp',
       role: 'VP Finance',
@@ -247,31 +258,31 @@ export default function AiFinancialAnalyticsProPage() {
             and predictive modeling. Make smarter financial decisions with advanced intelligence.
     
               Start Free Trial
-    
+    </span>
             <Link to="/ai-services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flexitems-centerjustify-center">View All AI Services
 
-          <div className="text-smtext-gray-400">✓ 14-day free trial • ✓ No credit card required • ✓ Bank-grade security
+          <div className="text-smtext-gray-400">✓ 14-day free trial • ✓ No credit card required • ✓ Bank-grade security</div>
 
         {/* Stats Section */
 
  (
-    
-                  <div className="text-3 xl md: text-4 xl font-boldtext-whitemb-2">{stat.number}</div>
+    </div>
+                  <div className="text-3xl md: text-4xl font-boldtext-whitemb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
 
               ))
 
         {/* Features Section */
     
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Advanced AI Features</h2>
+            <h2 className="text-3xl font-boldtext-whitemb-4">Advanced AI Features</h2>
               Our AI Financial Analytics Pro leverages cutting-edge machine learning 
               to provide unprecedented insights into your financial data.
 
  (
     
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4group-hover:scale-110transition-transform">{feature.icon
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4group-hover:scale-110transition-transform">{feature.icon</div>
                   <h3 className="text-xl font-semibold text-whitemb-3text-center">{feature.title}</h3>
-                  <p className="text-gray-300mb-4text-center">{feature.description}</p>
+                  <p className="text-lg text-gray-300 mb-8">{feature.description}</p>
 
  (
 
@@ -282,7 +293,7 @@ export default function AiFinancialAnalyticsProPage() {
 
         {/* Analytics Types Section */
     
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Comprehensive Analytics</h2>
+            <h2 className="text-3xl font-boldtext-whitemb-4">Comprehensive Analytics</h2>
               Cover every aspect of your financial operations with our comprehensive analytics suite.
 
  (
@@ -299,21 +310,21 @@ export default function AiFinancialAnalyticsProPage() {
 
         {/* Integrations Section */
     
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Seamless Integrations</h2>
+            <h2 className="text-3xl font-boldtext-whitemb-4">Seamless Integrations</h2>
               Connect with your existing financial systems and tools for a unified analytics experience.
 
  (
     
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-3group-hover:scale-110transition-transform">{integration.icon
-
+</div>
                 <h3 className="text-whitefont-semiboldmb-1">{integration.name}</h3>
-                <p className="text-gray-400text-sm">{integration.category}</p>
+                <p className="text-lg text-gray-300 mb-8">{integration.category}</p>
 
             ))
 
         {/* Pricing Section */
     
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Choose Your Plan</h2>
+            <h2 className="text-3xl font-boldtext-whitemb-4">Choose Your Plan</h2>
               Flexible pricing plans designed to meet your financial analytics needs at any scale.
 
  (
@@ -322,11 +333,11 @@ export default function AiFinancialAnalyticsProPage() {
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold">Most Popular
 
                 )
-
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                    <span className="text-4 xlfont-boldtext-cyan-400">{plan.price}</span>
+</span>
+                  <h3 className="text-2xl font-boldtext-whitemb-2">{plan.name}</h3>
+                    <span className="text-4xlfont-boldtext-cyan-400">{plan.price}</span>
                     <span className="text-gray-400ml-1">{plan.period}</span>
-                  <p className="text-gray-300">{plan.description}</p>
+                  <p className="text-lg text-gray-300 mb-8">{plan.description}</p>
 
  (
 
@@ -339,22 +350,22 @@ export default function AiFinancialAnalyticsProPage() {
 
         {/* Testimonials */
     
-              <h2 className="text-3 xl font-boldtext-whitemb-4">What Our Customers Say</h2>
+              <h2 className="text-3xl font-boldtext-whitemb-4">What Our Customers Say</h2>
                 Join hundreds of finance professionals who trust AI Financial Analytics Pro.
 
  (
     
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar</div>
                       <h4 className="text-whitefont-semibold">{testimonial.name}</h4>
-                      <p className="text-gray-400text-sm">{testimonial.role}</p>
-                      <p className="text-cyan-400text-smfont-semibold">{testimonial.company}</p>
+                      <p className="text-lg text-gray-300 mb-8">{testimonial.role}</p>
+                      <p className="text-lg text-gray-300 mb-8">{testimonial.company}</p>
 
  (
                     ))
 
-                  <p className="text-gray-300italicmb-3">"{testimonial.content}"</p>
-                  <div className="text-cyan-400font-semiboldtext-sm">Result: {testimonial.results
+                  <p className="text-lg text-gray-300 mb-8">"{testimonial.content}"</p>
+                  <div className="text-cyan-400font-semiboldtext-sm">Result: {testimonial.results</div>
 
               ))
 
-        {/* CTA Section */
+        {/* CTA Section */</div>

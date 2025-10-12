@@ -17,9 +17,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-4">
-              Advanced AI & IT Solutions
-            </p>
+            <p className="text-lg text-gray-300 mb-8">Advanced AI & IT Solutions</p>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
@@ -57,9 +55,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © {currentYear} Zion Tech Group. All rights reserved.
-          </p>
+          <p className="text-lg text-gray-300 mb-8">© {currentYear} Zion Tech Group. All rights reserved.</p>
         </div>
       </div>
     </footer>

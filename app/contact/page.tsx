@@ -7,13 +7,13 @@ export default function Contact() {
     <>
       <Helmet>
         <title>Contact - Zion Tech Group</title>
-        <meta name="description" content="Contact us for professional services" />
+        <meta name="description" content="Professional contact services for businesses" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Contact</h1>
-          <p className="text-lg text-gray-300 mb-8">Get in touch with us for professional services.</p>
+          <p className="text-lg text-gray-300 mb-8">Professional contact services coming soon.</p>
           
           <Link 
             to="/contact" 

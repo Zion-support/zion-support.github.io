@@ -6,14 +6,14 @@ export default function AiAnalytics() {
   return (
     <>
       <Helmet>
-        <title>AI Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional AI analytics services from Zion Tech Group" />
+        <title>Ai Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional ai analytics services for businesses" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">AI Analytics</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional AI analytics services coming soon.</p>
+          <h1 className="text-4xl font-bold text-white mb-6">Ai Analytics</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ai analytics services coming soon.</p>
           
           <Link 
             to="/contact" 

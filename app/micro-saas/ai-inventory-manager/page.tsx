@@ -10,26 +10,32 @@ import { ArrowRight, Package, BarChart3, Zap, CheckCircle, Target, Smartphone, S
 
 export default function AIInventoryManagerPage() {
   const features = [
+    {
       icon: <Bot className="w-6h-6text-cyan-400" />,
       title: 'AI Demand Forecasting',
       description: 'Predict inventory needs with 95% accuracy using machine learning algorithms'
     },
+    {
       icon: <Package className="w-6h-6text-emerald-400" />,
       title: 'Smart Reorder Points',
       description: 'Automatically trigger reorders based on sales velocity and lead times'
     },
+    {
       icon: <BarChart3 className="w-6h-6text-purple-400" />,
       title: 'Real-time Analytics',
       description: 'Comprehensive inventory insights with predictive analytics and trend analysis'
     },
+    {
       icon: <Zap className="w-6h-6text-orange-400" />,
       title: 'Automated Workflows',
       description: 'Streamline inventory processes with intelligent automation and alerts'
     },
+    {
       icon: <Target className="w-6h-6text-pink-400" />,
       title: 'Multi-location Sync',
       description: 'Seamlessly manage inventory across multiple warehouses and stores'
     },
+    {
       icon: <Shield className="w-6h-6text-red-400" />,
 
       title: 'Loss Prevention',
@@ -37,6 +43,7 @@ export default function AIInventoryManagerPage() {
   ]
 
   const pricingPlans = [
+    {
       name: 'Starter',
       price: '$39',
       period: '/month',
@@ -51,6 +58,7 @@ export default function AIInventoryManagerPage() {
       ],
       popular: false
     },
+    {
       name: 'Professional',
       price: '$99',
       period: '/month',
@@ -67,6 +75,7 @@ export default function AIInventoryManagerPage() {
       ],
       popular: true
     },
+    {
       name: 'Enterprise',
       price: '$299',
       period: '/month',
@@ -85,18 +94,21 @@ export default function AIInventoryManagerPage() {
   ]
 
   const testimonials = [
+    {
       name: 'Jennifer Walsh',
       company: 'Retail Chain Owner',
       content: 'Reduced our inventory costs by 25% and eliminated stockouts completely. The AI forecasting is incredibly accurate.',
       rating: 5,
       avatar: 'JW'
     },
+    {
       name: 'Michael Torres',
       company: 'E-commerce Store',
       content: 'The automated reorder system saves us hours every week. Never run out of stock again.',
       rating: 5,
       avatar: 'MT'
     },
+    {
       name: 'Sarah Kim',
       company: 'Manufacturing Company',
       content: 'Multi-location sync is a game-changer. We can see inventory across all our facilities in real-time.',
@@ -105,19 +117,22 @@ export default function AIInventoryManagerPage() {
   ]
 
   const benefits = [
-
+    {
       icon: <DollarSign className="w-8h-8text-cyan-400" />,
       title: '25% Cost Reduction',
       description: 'Optimize inventory levels and reduce carrying costs'
     },
+    {
       icon: <Target className="w-8h-8text-emerald-400" />,
       title: '95% Accuracy',
       description: 'AI forecasting with industry-leading accuracy rates'
     },
+    {
       icon: <Activity className="w-8h-8text-purple-400" />,
       title: 'Zero Stockouts',
       description: 'Smart reorder points prevent stockouts completely'
     },
+    {
       icon: <Zap className="w-8h-8text-orange-400" />,
 
       title: 'Real-time Sync',
@@ -151,19 +166,19 @@ export default function AIInventoryManagerPage() {
           
             Transform your inventory management with AI-powered demand forecasting, automated reordering, 
             and real-time analytics. Reduce costs by 25% and eliminate stockouts completely.
-
+</span>
               <span>Start Free Trial</span>
               <span>View Pricing</span>
 
           {/* Key Stats */
 
-              <div className="text-3 xl font-boldtext-cyan-400mb-2">25%</div>
+              <div className="text-3xl font-boldtext-cyan-400mb-2">25%</div>
               <div className="text-gray-300text-sm">Cost Reduction</div>
-              <div className="text-3 xl font-boldtext-purple-400mb-2">95%</div>
+              <div className="text-3xl font-boldtext-purple-400mb-2">95%</div>
               <div className="text-gray-300text-sm">Forecast Accuracy</div>
-              <div className="text-3 xl font-boldtext-pink-400mb-2">0</div>
+              <div className="text-3xl font-boldtext-pink-400mb-2">0</div>
               <div className="text-gray-300text-sm">Stockouts</div>
-              <div className="text-3 xl font-boldtext-emerald-400mb-2">15 K+</div>
+              <div className="text-3xl font-boldtext-emerald-400mb-2">15 K+</div>
               <div className="text-gray-300text-sm">Active Users</div>
 
       {/* Benefits Section */
@@ -175,14 +190,14 @@ export default function AIInventoryManagerPage() {
  (
     
                 <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 mx-auto group-hover:scale-110transition-transformduration-300">{benefit.icon
-
-                <h3 className="text-xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{benefit.title
+</div>
+                <h3 className="text-xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{benefit.title</h3>
                   {benefit.description
     
             ))
 
       {/* Features Section */
-    
+    </h3>
               Powerful Features for <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Smart Inventory</span>
 
               Everything you need to manage inventory efficiently with AI-powered intelligence and automation.
@@ -190,14 +205,14 @@ export default function AIInventoryManagerPage() {
  (
     
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon
-
-                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title
+</div>
+                <h3 className="text-2xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title</h3>
                   {feature.description
     
             ))
 
       {/* Integrations Section */
-    
+    </h3>
               Seamless <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Integrations</span>
 
               Connect with your favorite e-commerce platforms, accounting software, and business tools.
@@ -205,11 +220,11 @@ export default function AIInventoryManagerPage() {
  (
     
                   <span className="text-3xl">{integration.icon}</span>
-                <div className="text-gray-300group-hover:text-whitetransition-colors">{integration.name
+                <div className="text-gray-300group-hover:text-whitetransition-colors">{integration.name</div>
             ))
 
       {/* Pricing Section */
-    
+    </div>
               Simple, Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
 
               Choose the plan that fits your business size and inventory needs. All plans include our core AI features.
@@ -217,12 +232,12 @@ export default function AIInventoryManagerPage() {
  (
                 {plan.popular && (
 
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
+                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular</div>
                 )
-
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300text-smmb-4">{plan.description}</p>
-                    <span className="text-5 xlfont-boldtext-cyan-400">{plan.price}</span>
+</div>
+                  <h3 className="text-2xl font-boldtext-whitemb-2">{plan.name}</h3>
+                  <p className="text-lg text-gray-300 mb-8">{plan.description}</p>
+                    <span className="text-5xlfont-boldtext-cyan-400">{plan.price}</span>
                     <span className="text-gray-300ml-2">{plan.period}</span>
 
  (
@@ -250,14 +265,14 @@ Get Started
 
  (
     
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar</div>
                     <div className="font-semiboldtext-white">{testimonial.name}</div>
                     <div className="text-gray-400text-sm">{testimonial.company}</div>
 
  (
                   ))
 
-                <p className="text-gray-300italic">"{testimonial.content}"</p>
+                <p className="text-lg text-gray-300 mb-8">"{testimonial.content}"</p>
 
             ))
 

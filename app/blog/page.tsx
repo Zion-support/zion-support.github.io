@@ -7,13 +7,13 @@ export default function Blog() {
     <>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Latest news and insights from Zion Tech Group" />
+        <meta name="description" content="Professional blog services for businesses" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Blog</h1>
-          <p className="text-lg text-gray-300 mb-8">Latest news and insights coming soon.</p>
+          <p className="text-lg text-gray-300 mb-8">Professional blog services coming soon.</p>
           
           <Link 
             to="/contact" 

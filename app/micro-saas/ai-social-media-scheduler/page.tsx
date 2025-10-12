@@ -10,26 +10,32 @@ import { ArrowRight, Calendar, BarChart3, Users, Zap, CheckCircle, Target, Share
 
 export default function AISocialMediaSchedulerPage() {
   const features = [
+    {
       icon: <Calendar className="w-6h-6text-cyan-400" />,
       title: 'Smart Scheduling',
       description: 'AI-powered optimal posting times based on audience engagement patterns'
     },
+    {
       icon: <BarChart3 className="w-6h-6text-emerald-400" />,
       title: 'Analytics Dashboard',
       description: 'Comprehensive performance metrics and ROI tracking across all platforms'
     },
+    {
       icon: <Users className="w-6h-6text-purple-400" />,
       title: 'Audience Insights',
       description: 'AI-driven audience analysis and content personalization recommendations'
     },
+    {
       icon: <Zap className="w-6h-6text-orange-400" />,
       title: 'Auto-Posting',
       description: 'Seamless cross-platform content distribution with smart formatting'
     },
+    {
       icon: <Target className="w-6h-6text-pink-400" />,
       title: 'Content Optimization',
       description: 'AI suggestions for hashtags, captions, and optimal posting times'
     },
+    {
       icon: <Shield className="w-6h-6text-red-400" />,
 
       title: 'Brand Safety',
@@ -37,6 +43,7 @@ export default function AISocialMediaSchedulerPage() {
   ]
 
   const pricingPlans = [
+    {
       name: 'Starter',
       price: '$29',
       period: '/month',
@@ -51,6 +58,7 @@ export default function AISocialMediaSchedulerPage() {
       ],
       popular: false
     },
+    {
       name: 'Professional',
       price: '$79',
       period: '/month',
@@ -67,6 +75,7 @@ export default function AISocialMediaSchedulerPage() {
       ],
       popular: true
     },
+    {
       name: 'Enterprise',
       price: '$199',
       period: '/month',
@@ -85,18 +94,21 @@ export default function AISocialMediaSchedulerPage() {
   ]
 
   const testimonials = [
+    {
       name: 'Sarah Johnson',
       company: 'Digital Marketing Agency',
       content: 'Increased our social media engagement by 300% in just 2 months. The AI scheduling is incredibly accurate.',
       rating: 5,
       avatar: 'SJ'
     },
+    {
       name: 'Mike Chen',
       company: 'E-commerce Store',
       content: 'The analytics dashboard gives us insights we never had before. ROI tracking is spot-on.',
       rating: 5,
       avatar: 'MC'
     },
+    {
       name: 'Emily Rodriguez',
       company: 'Content Creator',
       content: 'Saves me 10+ hours per week. The AI content suggestions are always on-brand and engaging.',
@@ -118,19 +130,19 @@ export default function AISocialMediaSchedulerPage() {
           
             Transform your social media presence with AI-powered scheduling, content optimization, 
             and analytics. Increase engagement by up to 300% with intelligent automation.
-
+</span>
               <span>Start Free Trial</span>
               <span>View Pricing</span>
 
           {/* Key Stats */
 
-              <div className="text-3 xl font-boldtext-cyan-400mb-2">300%</div>
+              <div className="text-3xl font-boldtext-cyan-400mb-2">300%</div>
               <div className="text-gray-300text-sm">Avg. Engagement Increase</div>
-              <div className="text-3 xl font-boldtext-purple-400mb-2">10+</div>
+              <div className="text-3xl font-boldtext-purple-400mb-2">10+</div>
               <div className="text-gray-300text-sm">Platforms Supported</div>
-              <div className="text-3 xl font-boldtext-pink-400mb-2">50 K+</div>
+              <div className="text-3xl font-boldtext-pink-400mb-2">50 K+</div>
               <div className="text-gray-300text-sm">Active Users</div>
-              <div className="text-3 xl font-boldtext-emerald-400mb-2">99.9%</div>
+              <div className="text-3xl font-boldtext-emerald-400mb-2">99.9%</div>
               <div className="text-gray-300text-sm">Uptime Guarantee</div>
 
       {/* Features Section */
@@ -142,14 +154,14 @@ export default function AISocialMediaSchedulerPage() {
  (
     
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon
-
-                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title
+</div>
+                <h3 className="text-2xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title</h3>
                   {feature.description
     
             ))
 
       {/* Pricing Section */
-    
+    </h3>
               Simple, Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
 
               Choose the plan that fits your needs. All plans include our core AI features and 24/7 support.
@@ -157,12 +169,12 @@ export default function AISocialMediaSchedulerPage() {
  (
                 {plan.popular && (
 
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
+                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular</div>
                 )
-
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300text-smmb-4">{plan.description}</p>
-                    <span className="text-5 xlfont-boldtext-cyan-400">{plan.price}</span>
+</div>
+                  <h3 className="text-2xl font-boldtext-whitemb-2">{plan.name}</h3>
+                  <p className="text-lg text-gray-300 mb-8">{plan.description}</p>
+                    <span className="text-5xlfont-boldtext-cyan-400">{plan.price}</span>
                     <span className="text-gray-300ml-2">{plan.period}</span>
 
  (
@@ -190,14 +202,14 @@ Get Started
 
  (
     
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar</div>
                     <div className="font-semiboldtext-white">{testimonial.name}</div>
                     <div className="text-gray-400text-sm">{testimonial.company}</div>
 
  (
                   ))
 
-                <p className="text-gray-300italic">"{testimonial.content}"</p>
+                <p className="text-lg text-gray-300 mb-8">"{testimonial.content}"</p>
 
             ))
 

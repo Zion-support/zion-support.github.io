@@ -7,13 +7,13 @@ export default function Support() {
     <>
       <Helmet>
         <title>Support - Zion Tech Group</title>
-        <meta name="description" content="Get support from Zion Tech Group" />
+        <meta name="description" content="Professional support services for businesses" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Support</h1>
-          <p className="text-lg text-gray-300 mb-8">Get support for our services.</p>
+          <p className="text-lg text-gray-300 mb-8">Professional support services coming soon.</p>
           
           <Link 
             to="/contact" 

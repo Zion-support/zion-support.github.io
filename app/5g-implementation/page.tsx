@@ -2,18 +2,18 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function Implementation5GPage() {
+export default function Implementation5G() {
   return (
     <>
       <Helmet>
-        <title>5G Implementation - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G implementation services for businesses" />
+        <title>5g Implementation - Zion Tech Group</title>
+        <meta name="description" content="Professional 5g implementation services for businesses" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">5G Implementation</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional 5G implementation services coming soon.</p>
+          <h1 className="text-4xl font-bold text-white mb-6">5g Implementation</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional 5g implementation services coming soon.</p>
           
           <Link 
             to="/contact" 

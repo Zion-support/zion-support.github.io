@@ -29,11 +29,13 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud,
                   title: "AI-Powered Planning",
                   description: "Advanced machine learning algorithms help optimize project timelines and resource allocation."
                 },
-                  icon: <Zap className="w-12h-12text-purple-400" />,
+    {
+      icon: <Zap className="w-12h-12text-purple-400" />,
                   title: "Real-time Tracking",
                   description: "Get instant insights into project progress and team performance with our comprehensive dashboard."
                 },
-                  icon: <Shield className="w-12h-12text-green-400" />,
+    {
+      icon: <Shield className="w-12h-12text-green-400" />,
                   title: "Secure & Reliable",
                   description: "Enterprise-grade security ensures your project data is protected while maintaining 99.9% uptime."
  (
@@ -41,7 +43,7 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud,
                     {feature.icon
 
                   <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <p className="text-lg text-gray-300 mb-8">{feature.description}</p>
 
               ))
 
@@ -59,7 +61,7 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud,
     
                       <span className="text-lgtext-gray-400">{plan.period}</span>
 
-                    <p className="text-gray-300">{plan.description}</p>
+                    <p className="text-lg text-gray-300 mb-8">{plan.description}</p>
 
  (
 
@@ -74,20 +76,23 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Clock,
 
 export default function AIProjectManagementPro() {
   const features = [
+    {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: 'AI-Powered Project Planning',
       description: 'Intelligent project planning with automated resource allocation and timeline optimization'
     },
-
+    {
       icon: <Clock className="w-6 h-6 text-purple-400" />,
       title: 'Real-time Tracking',
       description: 'Monitor project progress, deadlines, and team performance in real-time'
     },
+    {
       icon: <Target className="w-6 h-6 text-yellow-400" />,
       title: 'Smart Scheduling',
       description: 'Automatically optimize schedules and identify potential bottlenecks'
 
     },
+    {
       icon: <BarChart3 className="w-6 h-6 text-green-400" />,
       title: 'Advanced Analytics',
 
@@ -95,6 +100,7 @@ export default function AIProjectManagementPro() {
   ]
 
   const pricingPlans = [
+    {
       name: 'Starter',
       price: '$49',
       period: '/month',
@@ -109,6 +115,7 @@ export default function AIProjectManagementPro() {
       ],
       popular: false
     },
+    {
       name: 'Professional',
       price: '$149',
       period: '/month',
@@ -124,6 +131,7 @@ export default function AIProjectManagementPro() {
       ],
       popular: true
     },
+    {
       name: 'Enterprise',
       price: '$399',
       period: '/month',
@@ -141,16 +149,19 @@ export default function AIProjectManagementPro() {
   ]
 
   const testimonials = [
+    {
       name: 'Sarah Johnson',
       company: 'Tech Startup',
       content: 'AI Project Management Pro helped us increase productivity by 40% and reduce project delays by 60%.',
       rating: 5
     },
+    {
       name: 'Michael Chen',
       company: 'Consulting Firm',
       content: 'The AI-powered insights and automated scheduling have transformed how we manage our projects.',
       rating: 5
     },
+    {
       name: 'Emily Rodriguez',
       company: 'Software Company',
       content: 'Our team collaboration and project visibility have improved dramatically since using this platform.',
@@ -177,16 +188,16 @@ export default function AIProjectManagementPro() {
 
         {/* Features Section */
               <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300">Powerful AI capabilities for superior project management</p>
+              <p className="text-lg text-gray-300 mb-8">Powerful AI capabilities for superior project management</p>
  (
                   <div className="mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <p className="text-lg text-gray-300 mb-8">{feature.description}</p>
               ))
 
         {/* Pricing Section */
               <h2 className="text-4xl font-bold text-white mb-4">Pricing Plans</h2>
-              <p className="text-xl text-gray-300">Choose the perfect plan for your team</p>
+              <p className="text-lg text-gray-300 mb-8">Choose the perfect plan for your team</p>
  (
                   {plan.popular && (
                         Most Popular
@@ -194,7 +205,7 @@ export default function AIProjectManagementPro() {
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                       <span className="text-4xl font-bold text-white">{plan.price}</span>
                       <span className="text-gray-400 ml-1">{plan.period}</span>
-                    <p className="text-gray-300 mt-2">{plan.description}</p>
+                    <p className="text-lg text-gray-300 mb-8">{plan.description}</p>
  (
 
                         {feature
@@ -221,13 +232,13 @@ export default function AIProjectManagementPro() {
 
         {/* Testimonials Section */
               <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
-              <p className="text-xl text-gray-300">Real results from real teams</p>
+              <p className="text-lg text-gray-300 mb-8">Real results from real teams</p>
  (
  (
                     ))
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-cyan-400">{testimonial.company}</p>
+                  <p className="text-lg text-gray-300 mb-8">"{testimonial.content}"</p>
+                    <p className="text-lg text-gray-300 mb-8">{testimonial.name}</p>
+                    <p className="text-lg text-gray-300 mb-8">{testimonial.company}</p>
               ))
 
         {/* CTA Section */

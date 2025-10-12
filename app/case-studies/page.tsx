@@ -7,13 +7,13 @@ export default function CaseStudies() {
     <>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Case studies and success stories from Zion Tech Group" />
+        <meta name="description" content="Professional case studies services for businesses" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Case Studies</h1>
-          <p className="text-lg text-gray-300 mb-8">Success stories and case studies coming soon.</p>
+          <p className="text-lg text-gray-300 mb-8">Professional case studies services coming soon.</p>
           
           <Link 
             to="/contact" 

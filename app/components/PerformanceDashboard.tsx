@@ -145,108 +145,21 @@ export default function ComponentsPage() {
 <<<<<<< HEAD
 
 =======
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
-          <Link
-=======
-export default function PerformanceDashboard() {
-  return (
-    <div>Content</div>
-  );
-    <div>Component content</div>
-  );
-}
-  return (
-    <div>Content</div>
-  );
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <h3 className="w-5h-5ml-2" /></h3>
-          <Activity className="w-5h-5ml-2" /></Activity>;
-          Performance;
-        </h3>
-        <button;          onClick = "{()" =  />setIsVisible(false)}
-          className="text-gray-400hover: text-white"
-        >
-          ×
-        </button>
       </div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <span />LCP:</span>;
-          <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}  />{metrics.lcp.toFixed(0)}ms;
-          </span>
-        </div>
-        <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <span />FID:</span>;
-          <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}  />{metrics.fid.toFixed(0)}ms;
-          </span>
-        </div>
-        <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <span />CLS:</span>
-          <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}  />{metrics.cls.toFixed(3)}
-          </span>
-        </div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <span />FCP:</span>;
-          <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}  />{metrics.fcp.toFixed(0)}ms;
-          </span>
-        </div>
-        <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <span />TTFB:</span>;
-          <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.toFixed(0)}ms;
-          </span>
-        </div>
-        {metrics.memory && (
-          <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <HardDrive className="w-5h-5ml-2" /></HardDrive>
-              <span className="w-5h-5ml-2" />Memory</span>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div />Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
-              <div />Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
-          </div>
-        )}
-        {metrics.connection && (
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <Wifi className="w-5h-5ml-2" /></Wifi>
-              <span className="w-5h-5ml-2" />Connection</span>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div />Type: {metrics.connection.effectiveType}</div>
-              <div />Speed: {metrics.connection.downlink}Mbps</div>
-              <div />RTT: {metrics.connection.rtt}ms</div>
-          </div>
-        )}
-      </div>;
-  );
-};
-    <>
-      <Helmet >
-        <title>Performance Dashboard - Zion Tech Group</title>
-        <meta name = "description" content="Professional performance dashboard by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Performance Dashboard</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional performance dashboard coming soon.</p>
-          <Link >
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>
     </>;
   );

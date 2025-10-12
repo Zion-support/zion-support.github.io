@@ -57,14 +57,13 @@ const benefits = [
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h1 className="w-5h-5ml-2" /></h1>;
-              <span className="w-5h-5ml-2" />Futuristic Hero;
+              <span className="w-5h-5ml-2" />Futuristic Hero;</span>
               </span>
               <br /></br>
               <span className = "text-white"  >Solutions</span>
             </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced futuristic hero solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
+            <p className="w-5h-5ml-2">Transform your business with our advanced futuristic hero solutions.</p>
+              Powered by cutting-edge AI technology and industry expertise.</p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <button className="w-5h-5ml-2" /></button>;
                 Get Started;
@@ -73,16 +72,13 @@ const benefits = [
               <button className="w-5h-5ml-2">Learn More;
               </button>
             </div>
-        </div>
       </section>
       {/* Features Section */}
       <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Why Choose Our Futuristic Hero Solutions?
-            </h2>
-            <p className="w-5h-5ml-2">Our futuristic hero solutions deliver unmatched performance, security, and scalability.
-            </p>
+            <h2 className="w-5h-5ml-2" />Why Choose Our Futuristic Hero Solutions?</h2>
+            <p className="text-lg text-gray-300 mb-8">Our futuristic hero solutions deliver unmatched performance, security, and scalability.</p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {features.map((feature, index) => (
@@ -91,7 +87,7 @@ const benefits = [
                   <feature.icon className="h-6w-6text-white"  /></feature>
                 </div>
                 <h3 className="text-xl font-semiboldtext-whitemb-3"  >{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-lg text-gray-300 mb-8">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -100,16 +96,14 @@ const benefits = [
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
-            <h2 className="w-5h-5ml-2" />Key Benefits;
-            </h2>
-            <p className = "w-5h-5ml-2">Experience the power of our futuristic hero solutions for your business.
-            </p>
+            <h2 className="w-5h-5ml-2" />Key Benefits;</h2>
+            <p className="text-lg text-gray-300 mb-8">Experience the power of our futuristic hero solutions for your business.</p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {benefits.map((benefit, index) => (
               <div key={index} className="flexitems-startspace-x-3" /></div>
                 <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                <p className="text-gray-300text-lg">{benefit}</p>
+                <p className="text-lg text-gray-300 mb-8">{benefit}</p>
               </div>
             ))}
           </div>
@@ -118,23 +112,17 @@ const benefits = [
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Ready to Get Started?
-            </h2>
-            <p className="w-5h-5ml-2">Contact us today to learn more about our futuristic hero solutions and how they can benefit your business.
-            </p>
+            <h2 className="w-5h-5ml-2" />Ready to Get Started?</h2>
+            <p className="text-lg text-gray-300 mb-8">Contact us today to learn more about our futuristic hero solutions and how they can benefit your business.</p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <button className="w-5h-5ml-2">Contact Us;
               </button>
               <button className="w-5h-5ml-2">Schedule Demo;
               </button>
             </div>
-        </div>
       </section>
     </div>
   )
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 export default function FuturisticHeroPage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-a79b
   return (
@@ -146,34 +134,8 @@ export default function FuturisticHeroPage() {
   return (
     <div>Content</div>
   );
-    <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
-          <Link
-=======
-      <Helmet >
-        <title>Futuristic Hero - Zion Tech Group</title>
-        <meta name = "description" content="Professional futuristic hero by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Futuristic Hero</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional futuristic hero coming soon.</p>
-          <Link >
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
+      </div>
+      </div>
       </div>
     </>;
   );

@@ -7,13 +7,13 @@ export default function Careers() {
     <>
       <Helmet>
         <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team at Zion Tech Group" />
+        <meta name="description" content="Professional careers services for businesses" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Careers</h1>
-          <p className="text-lg text-gray-300 mb-8">Join our team and build the future with us.</p>
+          <p className="text-lg text-gray-300 mb-8">Professional careers services coming soon.</p>
           
           <Link 
             to="/contact" 

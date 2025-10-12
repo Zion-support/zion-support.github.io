@@ -1,270 +1,132 @@
 'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Brain, Clock, Target } from 'lucide-react';
-
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
-        <title>5G Data Analytics - Zion Tech Group</title>
-
-      {/* Hero Section */
-    
-              AI E-commerce <span className="text-blue-600">Optimizer Pro</span>
-
-              Transform your e-commerce business with advanced AI optimization solutions that boost sales, 
-              improve conversion rates, and maximize your online store performance.
-    
-                Get Started
-    
-        <title>5G Data Analytics - Zion Tech Group</title>
-
-import { ArrowRight, CheckCircle, Star, Brain, BarChart3, Target, TrendingUp } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Target, TrendingUp } from 'lucide-react';
 
 export default function AIEcommerceOptimizerPro() {
   const features = [
+    {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: 'AI-Powered Optimization',
-      description: 'Advanced machine learning algorithms analyze customer behavior and optimize your e-commerce platform in real-time'
+      description: 'Advanced machine learning algorithms that continuously optimize your e-commerce performance'
     },
-
+    {
       icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
-      title: 'Real-time Insights',
-      description: 'Get instant insights into customer behavior, conversion rates, and sales performance'
+      title: 'Real-time Analytics',
+      description: 'Comprehensive analytics dashboard with real-time insights and performance metrics'
     },
+    {
       icon: <Target className="w-6 h-6 text-yellow-400" />,
       title: 'Conversion Optimization',
-      description: 'Automatically optimize product pages, checkout flows, and marketing campaigns for maximum conversions'
+      description: 'AI-driven strategies to maximize conversion rates and revenue growth'
     },
+    {
       icon: <TrendingUp className="w-6 h-6 text-green-400" />,
       title: 'Revenue Growth',
-      description: 'Increase your e-commerce revenue by up to 40% with our proven optimization strategies'
-  ]
+      description: 'Proven strategies that increase sales and improve customer lifetime value'
+    }
+  ];
 
-  const optimizationFeatures = [
-      category: 'Product Optimization',
-      items: ['AI Product Recommendations', 'Dynamic Pricing', 'Inventory Management', 'Product Image Optimization', 'SEO Enhancement', 'Review Management']
+  const optimizationAreas = [
+    {
+      title: 'Product Recommendations',
+      description: 'Advanced recommendation engine that increases average order value and customer satisfaction',
+      features: ['Machine Learning Models', 'Real-time Personalization', 'Cross-selling Optimization', 'A/B Testing']
     },
-      category: 'Customer Experience',
-      items: ['Personalized Shopping', 'Smart Search', 'Chatbot Integration', 'Mobile Optimization', 'Fast Loading', 'User Journey Analysis']
+    {
+      title: 'Pricing Strategy',
+      description: 'Dynamic pricing optimization based on market conditions, demand, and competitor analysis',
+      features: ['Dynamic Pricing', 'Competitor Analysis', 'Demand Forecasting', 'Profit Optimization']
     },
-      category: 'Marketing Automation',
-      items: ['Email Campaigns', 'Social Media Integration', 'Retargeting Ads', 'A/B Testing', 'Customer Segmentation', 'Analytics Dashboard']
+    {
+      title: 'Inventory Management',
+      description: 'Intelligent inventory optimization to reduce costs and prevent stockouts',
+      features: ['Demand Prediction', 'Automated Reordering', 'Stock Optimization', 'Cost Reduction']
     },
-      category: 'Performance Monitoring',
-      items: ['Real-time Analytics', 'Conversion Tracking', 'Revenue Reports', 'Customer Insights', 'Performance Alerts', 'ROI Analysis']
-  ]
+    {
+      title: 'Customer Experience',
+      description: 'AI-powered personalization that creates unique shopping experiences for each customer',
+      features: ['Personalized Content', 'Behavioral Analysis', 'Customer Segmentation', 'Engagement Optimization']
+    }
+  ];
 
   const pricingPlans = [
+    {
       name: 'Starter',
       price: '$99',
       period: '/month',
       description: 'Perfect for small e-commerce stores',
       features: [
-        'Up to 1,000 products',
         'Basic AI optimization',
+        'Up to 5,000 products',
         'Standard analytics',
         'Email support',
-        'Basic integrations',
-        'Monthly reports'
+        'Monthly reports',
+        'Basic recommendations'
       ],
       popular: false
     },
+    {
       name: 'Professional',
       price: '$299',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 products',
         'Advanced AI features',
+        'Up to 25,000 products',
         'Real-time analytics',
         'Priority support',
-        'Custom integrations',
-        'Weekly reports',
-        'A/B testing tools'
+        'Custom optimization',
+        'A/B testing tools',
+        'API access',
+        'Advanced reporting'
       ],
       popular: true
     },
+    {
       name: 'Enterprise',
       price: '$799',
       period: '/month',
       description: 'For large e-commerce platforms',
       features: [
+        'Custom AI solutions',
         'Unlimited products',
-        'Custom AI training',
+        'Custom analytics dashboard',
+        '24/7 dedicated support',
         'White-label solution',
-        'Dedicated support',
-        'Advanced integrations',
-        'Real-time reports',
-        'Custom development'
+        'Custom integrations',
+        'Advanced AI training',
+        'SLA guarantee'
       ],
       popular: false
-  ]
+    }
+  ];
 
   const testimonials = [
+    {
       name: 'Michael Rodriguez',
-      company: 'Fashion Store',
-      content: 'AI E-commerce Optimizer Pro increased our conversion rate by 35% and boosted revenue by 50% in just 3 months.',
+      company: 'Tech Store',
+      content: 'AI E-commerce Optimizer Pro increased our conversion rate by 45% and boosted revenue by 60% in just 3 months.',
       rating: 5
     },
-      name: 'Emily Chen',
-      company: 'Electronics Retailer',
-      content: 'The AI recommendations and automated optimization features have transformed our online store performance.',
+    {
+      name: 'Sarah Kim',
+      company: 'Fashion Retailer',
+      content: 'The AI recommendations are incredibly accurate. Our average order value increased by 35% since implementation.',
       rating: 5
     },
-      name: 'David Thompson',
-      company: 'Home & Garden',
-      content: 'Our sales have grown consistently since implementing the AI optimization tools. Highly recommended!',
+    {
+      name: 'David Chen',
+      company: 'Electronics Store',
+      content: 'The optimization tools helped us reduce inventory costs by 30% while improving customer satisfaction.',
       rating: 5
-  ]
+    }
+  ];
 
   return (
-    
-        <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
-
-        {/* Hero Section */
-    
-                AI E-commerce Optimizer Pro
-    
-              Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs.
-    
-                Get Started
-    
-                Learn More
-View All Services
-
-        {/* Hero Section */
-                AI E-commerce Optimizer Pro
-
-              Powerful Features
- (
-                    {feature.icon
-                    {feature.title
-                    {feature.description
-
-              ))
-
-        {/* Pricing Section */
-                Choose Your Plan
-              <p className="w-5 h-5ml-2">Flexible pricing options to fit your business needs
-            
- (
-                    <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
-                      {plan.price
-                      <span className="w-5 h-5ml-2" />{plan.period}</span>
-                    <p className="w-5 h-5ml-2">{plan.description}</p>
-                  
- (
-              Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs.
-                Get Started
-                Learn More
-
-        {/* Features Section */
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300">Powerful AI capabilities for superior e-commerce optimization</p>
- (
-                  <div className="mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-              ))
-
-                Why Choose Our AI E-commerce Optimizer?
-
-                Our advanced AI technology helps you maximize your e-commerce potential
-
-              {[
-                  icon: <Brain className="w-12h-12text-cyan-400" />,
-                  title: "AI-Powered Optimization",
-                  description: "Advanced machine learning algorithms optimize your product listings, pricing, and recommendations."
-                },
-                  icon: <Zap className="w-12h-12text-purple-400" />,
-                  title: "Real-time Analytics",
-                  description: "Get instant insights into customer behavior and sales performance with our comprehensive dashboard."
-                },
-                  icon: <Shield className="w-12h-12text-green-400" />,
-                  title: "Secure & Reliable",
-                  description: "Enterprise-grade security ensures your data is protected while maintaining 99.9% uptime."
- (
-
-                    {feature.icon
-    
-        {/* Detailed Features Section */
-              <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Features</h2>
-              <p className="text-xl text-gray-300">Everything you need for effective e-commerce optimization</p>
- (
-                  <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
- (
-                        {item
-                    ))
-              ))
-
-        {/* Pricing Section */
-              <h2 className="text-4xl font-bold text-white mb-4">Pricing Plans</h2>
-              <p className="text-xl text-gray-300">Choose the perfect plan for your e-commerce needs</p>
- (
-                  {plan.popular && (
-                        Most Popular
-                  )
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    <p className="text-gray-300 mt-2">{plan.description}</p>
- (
-                        {feature
-                    ))
-                    Get Started
-              ))
-
-        {/* Testimonials Section */
-              <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
-              <p className="text-xl text-gray-300">Real results from real businesses</p>
- (
- (
-                    ))
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-cyan-400">{testimonial.company}</p>
-
-                  <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-
-              ))
-
-                Choose Your Plan
-
-                Flexible pricing options to fit your business needs
-    
-        {/* CTA Section */
-                Ready to Optimize Your E-commerce?
-                Contact us to learn more about our AI e-commerce optimization solutions and how we can help your business grow.
-
- (
-    
-                    <h3 className="text-2xl font-boldtext-whitemb-2">{plan.name}</h3>
-
-                      {plan.price
-    
-                      <span className="text-lgtext-gray-400">{plan.period}</span>
-
-                    <p className="text-gray-300">{plan.description}</p>
-
- (
-
-                        {feature
-                    ))
-                  
-                    Get Started
-
-              Ready to Transform Your E-commerce?
-              Join thousands of businesses already using our AI-powered solutions to boost their online sales.
-              Contact Us Today
-
+      </div>
+      </div>
+    </>
   );
-
-              ))
-
-        {/* CTA Section */
+}

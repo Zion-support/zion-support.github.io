@@ -7,13 +7,13 @@ export default function Pricing() {
     <>
       <Helmet>
         <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Pricing information for our services" />
+        <meta name="description" content="Professional pricing services for businesses" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Pricing</h1>
-          <p className="text-lg text-gray-300 mb-8">Pricing information coming soon.</p>
+          <p className="text-lg text-gray-300 mb-8">Professional pricing services coming soon.</p>
           
           <Link 
             to="/contact" 

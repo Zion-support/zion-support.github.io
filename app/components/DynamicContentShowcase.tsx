@@ -127,8 +127,8 @@ const IconComponent = currentItem.icon;
                   <Star key={i} className="w-4h-4tex t-yellow-400fill-current"  /></Star>
                 ))}
               </div>
-            <h3 className="text-2 xl font-bold text-whitemb-3"  >{currentItem.title}</h3>
-            <p className="text-gray-300 mb-4">{currentItem.description}</p>
+            <h3 className="text-2xl font-bold text-whitemb-3"  >{currentItem.title}</h3>
+            <p className="text-lg text-gray-300 mb-8">{currentItem.description}</p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {currentItem.features.map((feature, index) => (
                 <div key={index} className="flex items-centertext-sm text-gray-300" /></div>
@@ -139,15 +139,13 @@ const IconComponent = currentItem.icon;
             </div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {currentItem.price && (
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{currentItem.price}
-                </div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{currentItem.price}</div>
               )}
               <button className="w-5h-5ml-2" /></button>;
                 Learn More;
                 <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
               </button>
             </div>
-        </div>
     </div>;
   );
 };
@@ -171,34 +169,8 @@ export default function DynamicContentShowcase() {
   return (
     <div>Content</div>
   );
-    <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
-          <Link
-=======
-      <Helmet >
-        <title>Dynamic Content Showcase - Zion Tech Group</title>
-        <meta name = "description" content="Professional dynamic content showcase by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Dynamic Content Showcase</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional dynamic content showcase coming soon.</p>
-          <Link >
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
+      </div>
+      </div>
       </div>
     </>;
   );

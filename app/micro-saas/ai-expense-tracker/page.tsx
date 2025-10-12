@@ -10,26 +10,32 @@ import { ArrowRight, DollarSign, BarChart3, Receipt, CheckCircle, Clock, Target,
 
 export default function AIExpenseTrackerPage() {
   const features = [
+    {
       icon: <Receipt className="w-6h-6text-cyan-400" />,
       title: 'Smart Receipt Scanning',
       description: 'AI-powered OCR technology automatically extracts data from receipts and invoices'
     },
+    {
       icon: <BarChart3 className="w-6h-6text-emerald-400" />,
       title: 'Real-time Analytics',
       description: 'Comprehensive spending insights with predictive analytics and budget forecasting'
     },
+    {
       icon: <Bot className="w-6h-6text-purple-400" />,
       title: 'AI Categorization',
       description: 'Automatically categorizes expenses using machine learning and learns from your patterns'
     },
+    {
       icon: <Shield className="w-6h-6text-orange-400" />,
       title: 'Bank-level Security',
       description: '256-bit encryption and secure cloud storage for all your financial data'
     },
+    {
       icon: <Target className="w-6h-6text-pink-400" />,
       title: 'Smart Budgeting',
       description: 'AI-powered budget recommendations based on your spending patterns and goals'
     },
+    {
       icon: <Zap className="w-6h-6text-red-400" />,
 
       title: 'Automated Workflows',
@@ -37,6 +43,7 @@ export default function AIExpenseTrackerPage() {
   ]
 
   const pricingPlans = [
+    {
       name: 'Personal',
       price: '$9',
       period: '/month',
@@ -51,6 +58,7 @@ export default function AIExpenseTrackerPage() {
       ],
       popular: false
     },
+    {
       name: 'Business',
       price: '$29',
       period: '/month',
@@ -67,6 +75,7 @@ export default function AIExpenseTrackerPage() {
       ],
       popular: true
     },
+    {
       name: 'Enterprise',
       price: '$99',
       period: '/month',
@@ -85,18 +94,21 @@ export default function AIExpenseTrackerPage() {
   ]
 
   const testimonials = [
+    {
       name: 'David Kim',
       company: 'Freelance Designer',
       content: 'Saves me hours every week. The AI categorization is incredibly accurate and the receipt scanning is flawless.',
       rating: 5,
       avatar: 'DK'
     },
+    {
       name: 'Lisa Martinez',
       company: 'Small Business Owner',
       content: 'Finally found an expense tracker that actually understands my business needs. The analytics are game-changing.',
       rating: 5,
       avatar: 'LM'
     },
+    {
       name: 'James Wilson',
       company: 'Finance Manager',
       content: 'Our team productivity increased by 40% since implementing this. The automated workflows are brilliant.',
@@ -105,19 +117,22 @@ export default function AIExpenseTrackerPage() {
   ]
 
   const benefits = [
-
+    {
       icon: <Clock className="w-8h-8text-cyan-400" />,
       title: 'Save 5+ Hours Weekly',
       description: 'Automated data entry and categorization eliminates manual work'
     },
+    {
       icon: <TrendingUp className="w-8h-8text-emerald-400" />,
       title: 'Reduce Costs by 15%',
       description: 'AI insights help identify spending patterns and optimization opportunities'
     },
+    {
       icon: <Shield className="w-8h-8text-purple-400" />,
       title: '100% Accurate',
       description: 'AI-powered validation ensures data accuracy and compliance'
     },
+    {
       icon: <Zap className="w-8h-8text-orange-400" />,
 
       title: 'Real-time Sync',
@@ -138,19 +153,19 @@ export default function AIExpenseTrackerPage() {
           
             Transform your financial management with AI-powered expense tracking, smart receipt scanning, 
             and automated categorization. Save time and gain insights like never before.
-
+</span>
               <span>Start Free Trial</span>
               <span>View Pricing</span>
 
           {/* Key Stats */
 
-              <div className="text-3 xl font-boldtext-cyan-400mb-2">5+</div>
+              <div className="text-3xl font-boldtext-cyan-400mb-2">5+</div>
               <div className="text-gray-300text-sm">Hours Saved Weekly</div>
-              <div className="text-3 xl font-boldtext-purple-400mb-2">15%</div>
+              <div className="text-3xl font-boldtext-purple-400mb-2">15%</div>
               <div className="text-gray-300text-sm">Average Cost Reduction</div>
-              <div className="text-3 xl font-boldtext-pink-400mb-2">99.9%</div>
+              <div className="text-3xl font-boldtext-pink-400mb-2">99.9%</div>
               <div className="text-gray-300text-sm">Accuracy Rate</div>
-              <div className="text-3 xl font-boldtext-emerald-400mb-2">25 K+</div>
+              <div className="text-3xl font-boldtext-emerald-400mb-2">25 K+</div>
               <div className="text-gray-300text-sm">Active Users</div>
 
       {/* Benefits Section */
@@ -162,14 +177,14 @@ export default function AIExpenseTrackerPage() {
  (
     
                 <div className="flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 mx-auto group-hover:scale-110transition-transformduration-300">{benefit.icon
-
-                <h3 className="text-xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{benefit.title
+</div>
+                <h3 className="text-xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{benefit.title</h3>
                   {benefit.description
     
             ))
 
       {/* Features Section */
-    
+    </h3>
               Powerful Features for <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Smart Finance</span>
 
               Everything you need to manage your finances efficiently with AI-powered intelligence and automation.
@@ -177,14 +192,14 @@ export default function AIExpenseTrackerPage() {
  (
     
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2 xl mb-6 group-hover:scale-110transition-transformduration-300">{feature.icon
-
-                <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title
+</div>
+                <h3 className="text-2xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors">{feature.title</h3>
                   {feature.description
     
             ))
 
       {/* Pricing Section */
-    
+    </h3>
               Simple, Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">Pricing</span>
 
               Choose the plan that fits your needs. All plans include our core AI features and secure cloud storage.
@@ -192,12 +207,12 @@ export default function AIExpenseTrackerPage() {
  (
                 {plan.popular && (
 
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular
+                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-fulltext-smfont-semibold">Most Popular</div>
                 )
-
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300text-smmb-4">{plan.description}</p>
-                    <span className="text-5 xlfont-boldtext-cyan-400">{plan.price}</span>
+</div>
+                  <h3 className="text-2xl font-boldtext-whitemb-2">{plan.name}</h3>
+                  <p className="text-lg text-gray-300 mb-8">{plan.description}</p>
+                    <span className="text-5xlfont-boldtext-cyan-400">{plan.price}</span>
                     <span className="text-gray-300ml-2">{plan.period}</span>
 
  (
@@ -225,14 +240,14 @@ Get Started
 
  (
     
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4">{testimonial.avatar</div>
                     <div className="font-semiboldtext-white">{testimonial.name}</div>
                     <div className="text-gray-400text-sm">{testimonial.company}</div>
 
  (
                   ))
 
-                <p className="text-gray-300italic">"{testimonial.content}"</p>
+                <p className="text-lg text-gray-300 mb-8">"{testimonial.content}"</p>
 
             ))
 

@@ -6,14 +6,14 @@ export default function Privacy() {
   return (
     <>
       <Helmet>
-        <title>Privacy Policy - Zion Tech Group</title>
-        <meta name="description" content="Privacy policy for Zion Tech Group" />
+        <title>Privacy - Zion Tech Group</title>
+        <meta name="description" content="Professional privacy services for businesses" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Privacy Policy</h1>
-          <p className="text-lg text-gray-300 mb-8">Our privacy policy and data protection information.</p>
+          <h1 className="text-4xl font-bold text-white mb-6">Privacy</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional privacy services coming soon.</p>
           
           <Link 
             to="/contact" 

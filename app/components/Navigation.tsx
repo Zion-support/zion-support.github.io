@@ -9,8 +9,7 @@ export default function Navigation() {
     <nav className="bg-gray-900 text-white shadow-lg">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-2xl font-bold">
-            Zion Tech Group
+          <Link to="/" className="text-2xl font-bold">Zion Tech Group
           </Link>
           
           <div className="hidden md:flex space-x-8">

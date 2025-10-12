@@ -78,31 +78,14 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ComponentsPage() {
   return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
       </div>
     </>
 >>>>>>> cursor/fix-errors-and-merge-to-main-d941
 =======
     <div>Content</div>
   );
-        <h3 className = "text-2 xl font-boldtext-whitemb-2">Message Sent!</h3>
-        <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
+        <h3 className = "text-2xl font-boldtext-whitemb-2">Message Sent!</h3>
+        <p className="text-lg text-gray-300 mb-8">Thank you for your message. We'll get back to you soon.</p>
       </div>;
     );
   }
@@ -111,8 +94,8 @@ export default function ComponentsPage() {
   );
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <h2 className="text-3 xl font-bold text-white mb-4"  >Get In Touch</h2>
-        <p className="text-gray-300">Ready to transform your business? Let's discuss your project.</p>
+        <h2 className="text-3xl font-bold text-white mb-4"  >Get In Touch</h2>
+        <p className="text-lg text-gray-300 mb-8">Ready to transform your business? Let's discuss your project.</p>
       </div>
       <form onSubmit="{handleSubmit}" className="space-y-6" /></form>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -209,19 +192,15 @@ export default function ComponentsPage() {
             <></>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               Sending...
-            </>
-          ) : (
+                  </div>
+    </>
+  ) : (
             <></>
               <Send className="w-5h-5ml-2" /></Send>;
               Send Message;
-            </>
-          )}
-    <>
-      <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        </div></div><CheckCircle className="w-5 h-5 ml-2" />
-        <h3 className="text-2 xl font-boldtext-whitemb-2"  >Message Sent!</h3>
-        <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
-      </div>
+                  </div>
+    </>
+  )}
     </>;
   );
   }
@@ -229,14 +208,14 @@ export default function ComponentsPage() {
     <div>Content</div>
   );
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        </div></div><h2 className="text-3 xl font-boldtext-white mb-4"  >Get In Touch</h2>
-        <p className="text-gray-300">Ready to transform your business? Let's discuss your project.</p>
+      </div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        </div><h2 className="text-3xl font-boldtext-white mb-4"  >Get In Touch</h2>
+        <p className="text-lg text-gray-300 mb-8">Ready to transform your business? Let's discuss your project.</p>
       </div>
       <form onSubmit="{handleSubmit}" className="space-y-6" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          </div></div><div />
-            </div></div><label htmlFor="name" className="block text-sm font-mediumtext-gray-300mb-2"  />Full Name *
+          </div><div>
+            </div><label htmlFor="name" className="block text-sm font-mediumtext-gray-300mb-2"  />Full Name *
             </label>
             <input type="text"
               id="name"
@@ -248,8 +227,8 @@ export default function ComponentsPage() {
               placeholder="Your full name"
              />
           </div>
-          <div />
-            </div></div><label htmlFor="email" className="block text-sm font-mediumtext-gray-300mb-2"  />Email Address *
+          <div>
+            </div><label htmlFor="email" className="block text-sm font-mediumtext-gray-300mb-2"  />Email Address *
             </label>
             <input type="email"
               id="email"
@@ -262,8 +241,8 @@ export default function ComponentsPage() {
              />
           </div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          </div></div><div />
-            </div></div><label htmlFor="phone" className="block text-sm font-mediumtext-gray-300mb-2"  />Phone Number
+          </div><div>
+            </div><label htmlFor="phone" className="block text-sm font-mediumtext-gray-300mb-2"  />Phone Number
             </label>
             <input type="tel"
               id="phone"
@@ -274,8 +253,8 @@ export default function ComponentsPage() {
               placeholder="+1 (555) 123-4567"
              />
           </div>
-          <div />
-            </div></div><label htmlFor="company" className="block text-sm font-mediumtext-gray-300mb-2"  />Company
+          <div>
+            </div><label htmlFor="company" className="block text-sm font-mediumtext-gray-300mb-2"  />Company
             </label>
             <input type="text"
               id="company"
@@ -286,8 +265,8 @@ export default function ComponentsPage() {
               placeholder="Your company name"
              />
           </div>
-        <div />
-          </div></div><label htmlFor="service" className="block text-sm font-mediumtext-gray-300mb-2"  />Service Interest
+        <div>
+          </div><label htmlFor="service" className="block text-sm font-mediumtext-gray-300mb-2"  />Service Interest
           </label>
           <select id="service"
             name="service"
@@ -302,8 +281,8 @@ export default function ComponentsPage() {
             <option value="consulting"  >Consulting</option>
           </select>
         </div>
-        <div />
-          </div></div><label htmlFor="message" className="block text-sm font-mediumtext-gray-300mb-2"  />Message *
+        <div>
+          </div><label htmlFor="message" className="block text-sm font-mediumtext-gray-300mb-2"  />Message *
           </label>
           <textarea id="message"
             name="message"
@@ -319,33 +298,29 @@ export default function ComponentsPage() {
           type="submit"
           disabled="{isSubmitting}"
           {isSubmitting ? (
-            <>
-              </><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-              Sending...
-            </>
-          ) : (
-            <>
+    </>
+  ) : (
               </><Send className="w-5 h-5 ml-2" />
               Send Message
-            </>
-          )}
+                  </div>
+    </>
+  )}
         </button>
       </form>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            </div></div><Mail className="w-5 h-5 ml-2" />
+        </div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          </div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            </div><Mail className="w-5 h-5 ml-2" />
             <span className="text-gray-300"  >kleber@ziontechgroup.com</span>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            </div></div><Phone className="w-5 h-5 ml-2" />
+            </div><Phone className="w-5 h-5 ml-2" />
             <span className="text-gray-300"  >+1 (302) 464-0950</span>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            </div></div><MessageSquare className="w-5 h-5 ml-2" />
+            </div><MessageSquare className="w-5 h-5 ml-2" />
             <span className="text-gray-300"  >24/7 Support</span>
           </div>
-      </div>
         </button>
       </form>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -361,8 +336,7 @@ export default function ComponentsPage() {
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <MessageSquare className="w-5h-5ml-2" /></MessageSquare>
             <span className="text-gray-300"  >24/7 Support</span>
-          </div>
-      </div>;
+          </div>;
 >>>>>>> cursor/fix-errors-and-merge-to-main-a79b
   );
 }

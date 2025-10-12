@@ -7,7 +7,7 @@ export default function Consultation() {
     <>
       <Helmet>
         <title>Consultation - Zion Tech Group</title>
-        <meta name="description" content="Professional consultation services from Zion Tech Group" />
+        <meta name="description" content="Professional consultation services for businesses" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">

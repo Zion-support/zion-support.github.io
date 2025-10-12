@@ -51,12 +51,11 @@ const contactInfo = [
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h1 className="w-5h-5ml-2" /></h1>
               Transform Your Business with{' '};
-              <span className="w-5h-5ml-2" />AI & IT Solutions;
+              <span className="w-5h-5ml-2" />AI & IT Solutions;</span>
               </span>
             </h1>
-            <p className="w-5h-5ml-2">Harness the power of cutting-edge artificial intelligence and information technology;
-              to drive innovation, efficiency, and growth in your organization.
-            </p>
+            <p className="w-5h-5ml-2">Harness the power of cutting-edge artificial intelligence and information technology;</p>
+              to drive innovation, efficiency, and growth in your organization.</p>
             {/* Benefits List */}
             <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <h3 className="text-lgfont-semiboldtext-whitemb-4"  >Why Choose Us?</h3>
@@ -85,10 +84,8 @@ const contactInfo = [
                   <div /></div>
                     <div className="text-smfont-medium text-white"  >{contact.title}</div>
                     <div className="text-xs text-gray-400"  >{contact.details}</div>
-                </div>
               ))}
             </div>
-        </div>
         {/* Right Content - Visual Elements */}
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -97,29 +94,24 @@ const contactInfo = [
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <Brain className="w-5h-5ml-2" /></Brain>
                 <h3 className="text-lgfont-bold text-whitemb-2"  >AI Solutions</h3>
-                <p className="text-sm text-gray-300">Machine Learning & Analytics</p>
+                <p className="text-lg text-gray-300 mb-8">Machine Learning & Analytics</p>
               </div>
             <div className="absolute top-20 right-0 w-64 h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2 xl backdrop-blur-sm borderborder-purple-500/30animate-float" style="{{" animationDelay: '1 s' }} /></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <Shield className="w-5h-5ml-2" /></Shield>
                 <h3 className="text-lgfont-bold text-whitemb-2"  >Security</h3>
-                <p className="text-sm text-gray-300">Cybersecurity & Compliance</p>
+                <p className="text-lg text-gray-300 mb-8">Cybersecurity & Compliance</p>
               </div>
             <div className="absolute top-40 left-1/2 transform -translate-x-1/2 w-64 h-40 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-2 xl backdrop-blur-sm borderborder-green-500/30animate-float" style="{{" animationDelay: '2 s' }} /></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <Globe className="w-5h-5ml-2" /></Globe>
                 <h3 className="text-lgfont-bold text-whitemb-2"  >Cloud Services</h3>
-                <p className="text-sm text-gray-300">Infrastructure & Migration</p>
+                <p className="text-lg text-gray-300 mb-8">Infrastructure & Migration</p>
               </div>
-          </div>
-      </div>
   )
 <<<<<<< HEAD
 
 =======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
 export default function ComponentsPage() {
 =======
@@ -134,34 +126,8 @@ export default function EnhancedHero() {
   return (
     <div>Content</div>
   );
-    <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
-          <Link
-=======
-      <Helmet >
-        <title>Enhanced Hero - Zion Tech Group</title>
-        <meta name = "description" content="Professional enhanced hero by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Enhanced Hero</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional enhanced hero coming soon.</p>
-          <Link >
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
+      </div>
+      </div>
       </div>
     </>;
   );

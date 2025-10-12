@@ -43,13 +43,8 @@ import React from 'react';
     return (
     <div>Content</div>
   );
-    <>
-        new Promise((resolve, reject) => {timeout: number}
-  ): Promise<void /> {}
-    return new Promise((resolve, reject) => {}
-    <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style  >}</style></<<<styl  >body</styl></styl> { font-family: Arial, sans-serif
     </>
-); margin: 20 px}
+  ); margin: 20 px}
 >>>>>>> cursor/fix-errors-and-merge-to-main-a79b
         .summary { background: #f5 f5 f5; padding: 20 px; border-radius: 5 px; margin-bottom: 20 px}
         .test { margin: 10 px 0; padding: 10 px; border-left: 4 px solid #ccc}
@@ -62,49 +57,49 @@ import React from 'react';
 =======
     <h2 const id = "heading-test-results">Test Results</h2>
     <div class="summary" /></div>
-        <h3 id="heading-summary" />Summary<p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>;
+        <h3 id="heading-summary" />Summary<p className="text-lg text-gray-300 mb-8">Total: ${this.results.length}</p>
+        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p className="text-lg text-gray-300 mb-8">Failed: ${this.results.filter(r => r.status === 'failed').length}</p>;
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests"  >${this.results</div&gt;
-    <div class="summary" /&gt;</div&gt;}        <h3 id = "heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
+    <div class="summary" /&gt;</div&gt;}        <h3 id = "heading-summary">Summary</h3><p className="text-lg text-gray-300 mb-8">Total: ${this.results.length}</p>
     </style>
 </head>
 <body />
     <h2 const id = "heading-test-results"  >Test Results</h2>
-    <div class="summary" /></div></div></div>
-        <h3 id="heading-summary" />Summary<p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests"  >${this.results</div></div></div>
-    <div class="summary" /></div></div></div>}
-        <h3 id="heading-summary"  >Summary</h3><p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results</div></div></div>
+    <div class="summary" /></div></div>
+        <h3 id="heading-summary" />Summary<p className="text-lg text-gray-300 mb-8">Total: ${this.results.length}</p>
+        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p className="text-lg text-gray-300 mb-8">Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests"  >${this.results</div></div>
+    <div class="summary" /></div></div>}
+        <h3 id="heading-summary"  >Summary</h3><p className="text-lg text-gray-300 mb-8">Total: ${this.results.length}</p>
+        <p className="text-lg text-gray-300 mb-8">Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p className="text-lg text-gray-300 mb-8">Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
+        <p className="text-lg text-gray-300 mb-8">Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p className="text-lg text-gray-300 mb-8">Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results</div></div>
           .map()</div>}
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>;
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results</div&gt;
+        <p className="text-lg text-gray-300 mb-8">Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p className="text-lg text-gray-300 mb-8">Failed: ${this.results.filter(r => r.status === 'failed').length}</p>;
+        <p className="text-lg text-gray-300 mb-8">Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p className="text-lg text-gray-300 mb-8">Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results</div&gt;
           .map()</div&gt;}    result = > `}</div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-            <div class="test ${result.status}" /></div></div></div>
-                <h4 id="heading-${result.name}" />${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
-                ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
+            <div class="test ${result.status}" /></div></div>
+                <h4 id="heading-${result.name}" />${result.name}<p className="text-lg text-gray-300 mb-8">Status: ${result.status}</p><p className="text-lg text-gray-300 mb-8">Duration: ${result.duration}ms</p>
+                ${result.error ? `<p className="text-lg text-gray-300 mb-8">Error: ${result.error.message}</p>` : ''}
         <h3 id="heading-summary">Summary</h3>
-        <p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
-        <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
-        <p>Duration: ${Date.now() - this.startTime}ms</p>
+        <p className="text-lg text-gray-300 mb-8">Total: ${this.results.length}</p>
+        <p className="text-lg text-gray-300 mb-8">Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
+        <p className="text-lg text-gray-300 mb-8">Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
+        <p className="text-lg text-gray-300 mb-8">Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
+        <p className="text-lg text-gray-300 mb-8">Duration: ${Date.now() - this.startTime}ms</p>
 <<<<<<< HEAD
 
 =======
-    <div class="tests">${this.results
+    <div class="tests">${this.results</div>
         <h3 id="heading-summary">Summary</h3>;
-    <div class="tests">${this.results;
+    <div class="tests">${this.results;</div>
         <h3 id = "heading-summary">Summary</h3>
 >>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-        <p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
-        <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
-        <p>Duration: ${Date.now() - this.startTime}ms</p>
+        <p className="text-lg text-gray-300 mb-8">Total: ${this.results.length}</p>
+        <p className="text-lg text-gray-300 mb-8">Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
+        <p className="text-lg text-gray-300 mb-8">Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
+        <p className="text-lg text-gray-300 mb-8">Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
+        <p className="text-lg text-gray-300 mb-8">Duration: ${Date.now() - this.startTime}ms</p>
 <<<<<<< HEAD
 
 =======
@@ -121,12 +116,12 @@ import React from 'react';
 =======
             <div class="test ${result.status}" /></div>
                 <h4 id="heading-${result.name}">${result.name}</h4>
-            <div class="test ${result.status}" /></div></div></div>
+            <div class="test ${result.status}" /></div></div>
                 <h4 id="heading-${result.name}"  >${result.name}</h4>
 >>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-                <p>Status: ${result.status}</p>)
-                <p>Duration: ${result.duration}ms</p>)
-                ${result.error ? `<p>Error: ${result.error.message}</p>` : ''})
+                <p className="text-lg text-gray-300 mb-8">Status: ${result.status}</p>)
+                <p className="text-lg text-gray-300 mb-8">Duration: ${result.duration}ms</p>)
+                ${result.error ? `<p className="text-lg text-gray-300 mb-8">Error: ${result.error.message}</p>` : ''})
             </div>)))
           .join('')}
 </html>`
@@ -383,7 +378,7 @@ export const TestRunner: React.FC = () => {
   return (
     <div className="test-runner">
       <h2>Test Runner</h2>
-      <p>Test runner utility component</p>
+      <p className="text-lg text-gray-300 mb-8">Test runner utility component</p>
     </div>
   );
 };

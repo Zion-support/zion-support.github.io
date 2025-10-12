@@ -13,8 +13,8 @@ import { ArrowRight } from 'lucide-react';
           Contact Us
           
         <title>5G Data Analytics - Zion Tech Group</title>
-        <h1 className="text-4 xl font-boldtext-whitemb-6">Productivity</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional productivity services coming soon.</p>
+        <h1 className="text-4xl font-boldtext-whitemb-6">Productivity</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional productivity services coming soon.</p>
           Contact Us
     
   );

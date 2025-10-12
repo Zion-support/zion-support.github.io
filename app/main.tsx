@@ -55,14 +55,13 @@ const benefits = [
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h1 className="w-5h-5ml-2" /></h1>;
-              <span className="w-5h-5ml-2" />Main;
+              <span className="w-5h-5ml-2" />Main;</span>
               </span>
               <br /></br>
               <span className = "text-white"  >Solutions</span>
             </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced main solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
+            <p className="w-5h-5ml-2">Transform your business with our advanced main solutions.</p>
+              Powered by cutting-edge AI technology and industry expertise.</p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <button className="w-5h-5ml-2" /></button>;
                 Get Started;
@@ -71,16 +70,13 @@ const benefits = [
               <button className="w-5h-5ml-2">Learn More;
               </button>
             </div>
-        </div>
       </section>
       {/* Features Section */}
       <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Why Choose Our Main?
-            </h2>
-            <p className="w-5h-5ml-2">Our main solutions deliver unmatched performance, security, and scalability.
-            </p>
+            <h2 className="w-5h-5ml-2" />Why Choose Our Main?</h2>
+            <p className="text-lg text-gray-300 mb-8">Our main solutions deliver unmatched performance, security, and scalability.</p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {features.map((feature, index) => (
@@ -89,7 +85,7 @@ const benefits = [
                   <feature.icon className="h-6w-6text-white"  /></feature>
                 </div>
                 <h3 className="text-xl font-semiboldtext-whitemb-3"  >{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-lg text-gray-300 mb-8">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -98,16 +94,14 @@ const benefits = [
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
-            <h2 className="w-5h-5ml-2" />Key Benefits;
-            </h2>
-            <p className = "w-5h-5ml-2">Experience the power of our main solutions for your business.
-            </p>
+            <h2 className="w-5h-5ml-2" />Key Benefits;</h2>
+            <p className="text-lg text-gray-300 mb-8">Experience the power of our main solutions for your business.</p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {benefits.map((benefit, index) => (
               <div key={index} className="flexitems-startspace-x-3" /></div>
                 <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                <p className="text-gray-300text-lg">{benefit}</p>
+                <p className="text-lg text-gray-300 mb-8">{benefit}</p>
               </div>
             ))}
           </div>
@@ -116,10 +110,8 @@ const benefits = [
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Ready to Get Started?
-            </h2>
-            <p className="w-5h-5ml-2">Contact our experts to discuss your main needs and get a customized solution.
-            </p>
+            <h2 className="w-5h-5ml-2" />Ready to Get Started?</h2>
+            <p className="text-lg text-gray-300 mb-8">Contact our experts to discuss your main needs and get a customized solution.</p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <button className="w-5h-5ml-2" /></button>
                 <Phone className="w-5h-5ml-2" /></Phone>;
@@ -130,16 +122,12 @@ const benefits = [
                 Email Us;
               </button>
             </div>
-        </div>
       </section>
     </div>
   )
 <<<<<<< HEAD
 
 =======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
 export default function AppPage() {
 =======
@@ -154,34 +142,8 @@ export default function MainPage() {
   return (
     <div>Content</div>
   );
-    <>
-<<<<<<< HEAD
-      <Helmet>
-        <title>App - Zion Tech Group</title>
-        <meta name="description" content="Professional app services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">App</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional app services coming soon.</p>
-          <Link
-=======
-      <Helmet >
-        <title>Main - Zion Tech Group</title>
-        <meta name = "description" content="Professional main by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Main</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional main coming soon.</p>
-          <Link >
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
+      </div>
+      </div>
       </div>
     </>;
   );

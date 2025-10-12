@@ -1,49 +1,51 @@
 #!/usr/bin/env python3
-"""
-Script to fix function names that start with numbers.
-"""
-
 import os
-import glob
 import re
+import glob
 
-def fix_function_names(file_path):
-    """Fix function names that start with numbers."""
+def fix_function_name(file_path):
+    """Fix function names that start with numbers"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Fix function names that start with numbers
-        content = re.sub(r'export default function 5G(\w+)Page\(\)', r'export default function FiveG\1Page()', content)
-        content = re.sub(r'export default function 5g(\w+)Page\(\)', r'export default function FiveG\1Page()', content)
+        # Check if there's a function name starting with a number
+        if re.search(r'export default function \d+', content):
+            # Extract the directory name to create proper content
+            dir_name = os.path.basename(os.path.dirname(file_path))
+            function_name = ''.join(word.capitalize() for word in dir_name.replace('-', ' ').split())
+            page_title = ' '.join(word.capitalize() for word in dir_name.replace('-', ' ').split())
+            
+            # Replace the function name
+            content = re.sub(r'export default function \d+\w+', f'export default function {function_name}', content)
+            
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"Fixed function name in: {file_path}")
+            return True
         
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        
-        print(f"Fixed {file_path}")
-        
+        print(f"No changes needed: {file_path}")
+        return False
+            
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
+        return False
 
 def main():
-    """Fix all files with problematic function names."""
-    # Find all TypeScript/JavaScript files
-    files = glob.glob('**/*.tsx', recursive=True) + glob.glob('**/*.ts', recursive=True) + glob.glob('**/*.js', recursive=True) + glob.glob('**/*.jsx', recursive=True)
+    """Fix all function names that start with numbers"""
+    app_dir = "/workspace/app"
+    tsx_files = glob.glob(f"{app_dir}/**/*.tsx", recursive=True)
     
-    # Filter out node_modules
-    files = [f for f in files if 'node_modules' not in f]
+    fixed_count = 0
+    total_count = len(tsx_files)
     
-    for file_path in files:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-            
-            # Check if file has function names starting with numbers
-            if re.search(r'export default function 5[Gg]', content):
-                fix_function_names(file_path)
-                
-        except Exception as e:
-            print(f"Error processing {file_path}: {e}")
+    print(f"Found {total_count} TSX files to check for invalid function names...")
+    
+    for file_path in tsx_files:
+        if fix_function_name(file_path):
+            fixed_count += 1
+    
+    print(f"\nFixed {fixed_count} out of {total_count} files")
 
 if __name__ == "__main__":
     main()

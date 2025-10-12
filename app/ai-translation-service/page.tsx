@@ -13,19 +13,22 @@ import Layout from '../layout';
 
 export default function AITranslationService() {
   const features = [
-
+    {
       icon: <Brain className="w-6h-6text-cyan-400" />,
       title: 'Neural Machine Translation',
       description: 'Advanced AI models provide contextually accurate translations in 100+ languages'
     },
+    {
       icon: <FileText className="w-6h-6text-purple-400" />,
       title: 'Document Translation',
       description: 'Translate entire documents while preserving formatting, layout, and structure'
     },
+    {
       icon: <Clock className="w-6h-6text-yellow-400" />,
       title: 'Real-time Translation',
       description: 'Instant translation for live conversations, meetings, and customer support'
     },
+    {
       icon: <Target className="w-6h-6text-green-400" />,
 
       title: 'Industry-Specific Translation',
@@ -33,20 +36,25 @@ export default function AITranslationService() {
   ]
 
   const translationFeatures = [
+    {
       category: 'Translation Types',
       items: ['Text Translation', 'Document Translation', 'Website Translation', 'Audio Translation', 'Video Subtitles', 'Live Translation']
     },
+    {
       category: 'Languages',
       items: ['100+ Languages', 'Regional Dialects', 'Rare Languages', 'Sign Language', 'Technical Jargon', 'Cultural Adaptation']
     },
+    {
       category: 'Quality Assurance',
       items: ['Human Review', 'Quality Scoring', 'Consistency Checks', 'Terminology Management', 'Style Guides', 'Proofreading']
     },
+    {
       category: 'Integration',
       items: ['API Access', 'CMS Integration', 'Website Widgets', 'Mobile Apps', 'Desktop Software', 'Cloud Storage']
   ]
 
   const pricingPlans = [
+    {
       name: 'Starter',
       price: '$29',
       period: '/month',
@@ -61,6 +69,7 @@ export default function AITranslationService() {
       ],
       popular: false
     },
+    {
       name: 'Professional',
       price: '$99',
       period: '/month',
@@ -76,6 +85,7 @@ export default function AITranslationService() {
       ],
       popular: true
     },
+    {
       name: 'Enterprise',
       price: '$299',
       period: '/month',
@@ -93,16 +103,19 @@ export default function AITranslationService() {
   ]
 
   const testimonials = [
+    {
       name: 'Maria Santos',
       company: 'Global Marketing Agency',
       content: 'AI Translation Service helped us expand to 15 new markets. The quality is exceptional and cost-effective.',
       rating: 5
     },
+    {
       name: 'James Wilson',
       company: 'E-learning Platform',
       content: 'Translating our courses into 8 languages was seamless. The educational content translation is spot-on.',
       rating: 5
     },
+    {
       name: 'Lisa Chen',
       company: 'Legal Firm',
       content: 'The legal translation accuracy is impressive. Our international clients are very satisfied with the service.',
@@ -115,37 +128,37 @@ export default function AITranslationService() {
     
                 AI-Powered Translation
 
-              <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6">AI Translation Service
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-boldtext-whitemb-6">AI Translation Service</h1>
 
               Transform your global communication with AI-powered translation in 100+ languages. 
                 Professional quality, real-time translation, and industry-specific solutions.
     
                   Start Free Trial
-
+</h1>
                 <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Try Demo
 
         {/* Features Section */
     
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Intelligent Translation Solutions
+              <h2 className="text-3xl sm:text-4xl font-boldtext-whitemb-4">Intelligent Translation Solutions</h2>
                 AI-powered features that break down language barriers and enable global communication
 
  (
 
                     {feature.icon
-    
+    </h2>
                     <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
 
-                  <p className="text-gray-300">{feature.description}</p>
+                  <p className="text-lg text-gray-300 mb-8">{feature.description}</p>
 
               ))
 
         {/* Translation Features */
     
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Complete Translation Platform
+              <h2 className="text-3xl sm:text-4xl font-boldtext-whitemb-4">Complete Translation Platform</h2>
                 Everything you need to translate content across languages and cultures
 
  (
-    
+    </h2>
                   <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.category}</h3>
  (
 
@@ -156,7 +169,7 @@ export default function AITranslationService() {
 
         {/* Pricing Section */
     
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Flexible Pricing Plans
+              <h2 className="text-3xl sm:text-4xl font-boldtext-whitemb-4">Flexible Pricing Plans</h2>
                 Choose the plan that fits your translation needs
 
  (
@@ -164,10 +177,10 @@ export default function AITranslationService() {
 
                       Most Popular
                   )
-
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300mb-6">{plan.description}</p>
-                    <span className="text-4 xlfont-boldtext-white">{plan.price}</span>
+</h2>
+                  <h3 className="text-2xl font-boldtext-whitemb-2">{plan.name}</h3>
+                  <p className="text-lg text-gray-300 mb-8">{plan.description}</p>
+                    <span className="text-4xlfont-boldtext-white">{plan.price}</span>
                     <span className="text-gray-400">{plan.period}</span>
  (
 
@@ -187,15 +200,15 @@ Get Started
 
         {/* Testimonials */
     
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Trusted by Global Businesses
+              <h2 className="text-3xl font-boldtext-whitemb-4">Trusted by Global Businesses</h2>
                 See how our AI Translation Service enables global communication
 
  (
 
  (
                     ))
-
-                  <p className="text-gray-300mb-4">"{testimonial.content}"</p>
+</h2>
+                  <p className="text-lg text-gray-300 mb-8">"{testimonial.content}"</p>
                     <div className="font-semiboldtext-white">{testimonial.name}</div>
                     <div className="text-smtext-gray-400">{testimonial.company}</div>
 
@@ -203,9 +216,9 @@ Get Started
 
         {/* CTA Section */
     
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Break Down Language Barriers Today
+              <h2 className="text-3xl font-boldtext-whitemb-4">Break Down Language Barriers Today</h2>
                 Join thousands of businesses using AI Translation Service to reach global audiences
-
+</h2>
                 <Link to="/contact" className="bg-gradient-to-r from-amber-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
                 <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
   )

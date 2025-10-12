@@ -6,14 +6,14 @@ export default function AiChatbotBuilder() {
   return (
     <>
       <Helmet>
-        <title>AI Chatbot Builder - Zion Tech Group</title>
-        <meta name="description" content="Professional AI chatbot builder services from Zion Tech Group" />
+        <title>Ai Chatbot Builder - Zion Tech Group</title>
+        <meta name="description" content="Professional ai chatbot builder services for businesses" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">AI Chatbot Builder</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional AI chatbot builder services coming soon.</p>
+          <h1 className="text-4xl font-bold text-white mb-6">Ai Chatbot Builder</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ai chatbot builder services coming soon.</p>
           
           <Link 
             to="/contact" 
