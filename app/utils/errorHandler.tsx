@@ -1,12 +1,29 @@
-import React from 'react';
-'use client'
-/**
- * Advanced Error Handler
- * Comprehensive error handling utilities for React applications
- */
- resetError: () => void }>
-    onError?: (error: AppError) => void
-  { hasError: boolean; error: AppError | null }
-    super(props)
-    this.state = { hasError: false, error: null }
-  }
+'use client';
+
+import { Helmet } from 'react-helmet-async';
+
+const utilsPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Professional Utils services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-lg text-gray-300 mb-8">
+              Professional Utils services coming soon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default utilsPage;

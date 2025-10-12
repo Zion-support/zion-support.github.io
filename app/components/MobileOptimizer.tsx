@@ -1,9 +1,10 @@
-import { useEffect } from 'react'
-
+'use client';
+import { useEffect } from 'react';
+;
 const MobileOptimizer: React.FC = () => {
   useEffect(() => {
     // Prevent zoom on input focus for iOS
-    const preventZoom = () => {
+    const preventZoom = (): void => {
       const viewport = document.querySelector('meta[name="viewport"]')
       if (viewport) {
         viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
@@ -11,7 +12,7 @@ const MobileOptimizer: React.FC = () => {
     }
 
     // Add touch-friendly classes
-    const addTouchClasses = () => {
+    const addTouchClasses = (): void => {
       const buttons = document.querySelectorAll('button, a, [role="button"]')
       buttons.forEach(button => {
         if (!button.classList.contains('touch-manipulation')) {
@@ -21,7 +22,7 @@ const MobileOptimizer: React.FC = () => {
     }
 
     // Optimize images for mobile
-    const optimizeImagesForMobile = () => {
+    const optimizeImagesForMobile = (): void => {
       const images = document.querySelectorAll('img')
       images.forEach(img => {
         const imageElement = img as HTMLImageElement
@@ -35,7 +36,7 @@ const MobileOptimizer: React.FC = () => {
     }
 
     // Add mobile-specific event listeners
-    const addMobileEventListeners = () => {
+    const addMobileEventListeners = (): void => {
       // Prevent double-tap zoom
       let lastTouchEnd = 0
       document.addEventListener('touchend', (event) => {
@@ -60,14 +61,14 @@ const MobileOptimizer: React.FC = () => {
     }
 
     // Optimize scroll performance
-    const optimizeScrollPerformance = () => {
+    const optimizeScrollPerformance = (): void => {
       let ticking = false
-      const updateScrollPosition = () => {
+      const updateScrollPosition = (): void => {
         // Add scroll-based optimizations here
         ticking = false
       }
 
-      const requestTick = () => {
+      const requestTick = (): void => {
         if (!ticking) {
           requestAnimationFrame(updateScrollPosition)
           ticking = true

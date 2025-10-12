@@ -1,64 +1,29 @@
-import { useEffect } from 'react';
-'use client'
-  children: React.ReactNode}
-    // Security enhancement logic
+'use client';
 
-        'Referrer-Policy': 'strict-origin-when-cross-origin'
-      }
+import { Helmet } from 'react-helmet-async';
 
-      // Add CSP meta tag
-      const cspMeta = document.createElement('meta')
-      cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');
-      cspMeta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;")
-      document.head.appendChild(cspMeta)
-
-      // Add security event listeners
-      const handleSecurityEvent = (event: Event) => {
-        console.log('Security event detected: ', event.type)
-      }
-
-      window.addEventListener('beforeunload', handleSecurityEvent)
-      window.addEventListener('unload', handleSecurityEvent)
-
-      return () => {
-        window.removeEventListener('beforeunload', handleSecurityEvent)
-        window.removeEventListener('unload', handleSecurityEvent)
-        document.head.removeChild(cspMeta)
-      }
-    }
-
-    const cleanup = enhanceSecurity()
-    return cleanup
-  }, [])
-
+const componentsPage: React.FC = () => {
   return (
-    <div className="{`security-enhanced" ${className}`}  />{children}
-    </div>
-  )
-}
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-lg text-gray-300 mb-8">
+              Professional Components services coming soon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps /> = ({ children }) => {useEffect(() => {// Security enhancement logic
-
-    $3
-  )}
-        'Referrer-Policy': 'strict-origin-when-cross-origin'};
-      };// Add CSP meta tag
-
-      cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
-      document.head.appendChild(cspMeta)
-      // Disable right-click context menu
-        e.preventDefault()})
-      // Disable F12 and other dev tools shortcuts
-          e.preventDefault()}
-      })}
-    enhanceSecurity()}, [])
-  return <React.Fragment />{children}</React.Fragment>}
-export default SecurityEnhancer
-  </SecurityEnhancerProps>
-
-      // Disable right-click context menu
-      document.addEventListener('contextmenu', (e) => {e.preventDefault()}
-      });// Disable F12 and other dev tools shortcuts
-      document.addEventListener('keydown', (e) => {if (e.const key = == 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
-        }
-;
+export default componentsPage;

@@ -1,130 +1,29 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-'use client'
+'use client';
 
+import { Helmet } from 'react-helmet-async';
 
-const EnhancedLoadingSkeletonPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
-    }
-  ];
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+const componentsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+    <>
       <Helmet>
-        <title>EnhancedLoadingSkeleton | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedLoadingSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="EnhancedLoadingSkeleton, AI solutions, IT services, Zion Tech Group, enhancedloadingskeleton" />
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
-
-      {/* Hero Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />EnhancedLoadingSkeleton
-              </span>
-              <br />
-              <span className="text-white"  >Solutions</span>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
             </h1>
-            <p className="w-5 h-5ml-2">Transform your business with our advanced enhancedloadingskeleton solutions.
-              Powered by cutting-edge AI technology and industry expertise.
+            <p className="text-lg text-gray-300 mb-8">
+              Professional Components services coming soon.
             </p>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button className="w-5 h-5ml-2">Get Started
-              </button>
-              <button className="w-5 h-5ml-2">Learn More
-              </button>
-            </div>
+          </div>
         </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />Why Choose Our EnhancedLoadingSkeleton Solutions?
-            </h2>
-            <p className="w-5 h-5ml-2">Our comprehensive approach ensures maximum efficiency and results for your business.
-            </p>
-          </div>
-
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {features.map((feature, index) => (
-              <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <feature.icon className="h-8w-8te xt-purple-400mr-3"  />
-                  <h3 className="text-xlfont-semibold text-white"  >{feature.title}</h3>
-                </div>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5 h-5ml-2" />Key Benefits
-            </h2>
-            <p className="w-5 h-5ml-2">Discover the advantages of our enhancedloadingskeleton solutions.
-            </p>
-          </div>
-
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            {benefits.map((benefit, index) => (
-              <div key="{index}" className="flexitems-startspace-x-3" />
-                <CheckCircle className="w-5 h-5ml-2" />
-                <p className="text-gray-300">{benefit}</p>
-              </div>
-            ))}
-          </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="w-5 h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <h2 className="w-5 h-5ml-2" />Ready to Get Started?
-          </h2>
-          <p className="w-5 h-5ml-2">Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.
-          </p>
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <button className="w-5 h-5ml-2" />
-              Get Started Now
-              <ArrowRight className="w-5 h-5ml-2" />
-            </button>
-            <button className="w-5 h-5ml-2">Contact Sales
-            </button>
-          </div>
-      </section>
-    </div>
-  )
+      </div>
+    </>
+  );
 };
+
+export default componentsPage;

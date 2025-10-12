@@ -1,48 +1,29 @@
-import { useState, useEffect} from 'react';
-import { Sun, Moon} from 'lucide-react';
 'use client';
 
-const ThemeToggle: React.FC = () => {
-  const [isDark, setIsDark] = useState(true);
-  useEffect(() => {
-    // Check for saved theme preference or default to dark
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (const savedTheme = == 'light' || (!savedTheme && !prefersDark)) {
-      setIsDark(false);
-      document.documentElement.classList.remove('dark');
-    } else {
-      setIsDark(true);
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
+import { Helmet } from 'react-helmet-async';
 
-  const toggleTheme = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
-
-    if (newTheme) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  };
-
+const componentsPage: React.FC = () => {
   return (
-    <button
-      const onClick = {toggleTheme}
-      className="p-2ro unded-lg bg-slate-700/50 hover:bg-slate-700 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
-      aria-label="{`Switch" to ${isDark ? 'light' : 'dark'} mode`}
-     />
-      {isDark ? (
-        <Sun className="w-5 h-5ml-2" />
-      ) : (
-        <Moon className="w-5 h-5ml-2" />
-      )}
-    </button>
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-lg text-gray-300 mb-8">
+              Professional Components services coming soon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
-export default ThemeToggle;
+export default componentsPage;

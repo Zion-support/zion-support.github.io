@@ -1,37 +1,29 @@
-import React from 'react';
 'use client';
 
-const ZionAiEnergyManagerPage: React.FC = () => {
+import { Helmet } from 'react-helmet-async';
+
+const zionaienergymanagerPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Zion Ai Energy Manager - Zion Tech Group</title>
-        <meta name="description" content="Zion Ai Energy Manager services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="zion-ai-energy-manager, AI solutions, IT services" />
+        <meta name="description" content="Professional Zion Ai Energy Manager services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />Zion Ai Energy Manager
-              </span>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Zion Ai Energy Manager
             </h1>
-            <p className="w-5 h-5ml-2">Professional zion ai energy manager services by Zion Tech Group.
+            <p className="text-lg text-gray-300 mb-8">
+              Professional Zion Ai Energy Manager services coming soon.
             </p>
           </div>
-
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="text-2 xl font-boldtext-white mb-4"  >Coming Soon</h2>
-            <p className="w-5 h-5ml-2">We're working on bringing you comprehensive zion ai energy manager solutions. 
-              Contact us to learn more about our services.
-            </p>
-            <button className="w-5 h-5ml-2">Contact Us
-            </button>
-          </div>
+        </div>
       </div>
     </>
   );
 };
 
-export default ZionAiEnergyManagerPage;
+export default zionaienergymanagerPage;

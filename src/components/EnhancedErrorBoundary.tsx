@@ -1,92 +1,29 @@
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  enableErrorReporting?: boolean;
-  maxRetries?: number;
-}
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-  errorId?: string;
-  retryCount: number;
-}
-  private maxRetries: number;
-    super(props);
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-    this.maxRetries = props.maxRetries || 3;
-  }
-      retryCount: 0
-    };
-  }
-      errorInfo
-    });
-    // Log error to console in development
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-    // Call custom error handler if provided
-      this.props.onError(error, errorInfo);
-    }
-    // Enhanced error reporting
-      this.reportError(error, errorInfo);
-    }
-  }
-    // Enhanced error reporting logic
-    
-    };
-    // Log to console in development
-      console.group('🚨 Error Boundary Caught Error');
-      console.error('Error Report:', errorReport);
-      console.groupEnd();
-    }
-    // Send to error reporting service (implement as needed)
-      // In a real app, you would send this to your error reporting service
-      // For now, we'll just log it
-      console.log('Error report prepared:', errorReport);
-       
-      // Example: Send to error reporting service
-      //   body: JSON.stringify(errorReport)
-      // });
-      console.error('Failed to report error:', reportingError);
-    }
-  };
-    // Get user ID from localStorage, cookies, or context
-    return localStorage.getItem('userId') || null;
-  };
-    let sessionId = sessionStorage.getItem('sessionId');
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('sessionId', sessionId);
-    }
-    return sessionId;
-  };
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-    window.location.reload();
-  };
-    window.location.href = '/';
-  };
-    
-    };
-    navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
-        // Show success message
-        const button = document.getElementById('copy-error-details');
-          const originalText = button.textContent;
-          button.textContent = 'Copied!';
-            button.textContent = originalText;
-          }, 2000);
-        }
-      })
-        console.error('Failed to copy error details:', error);
-      });
-  };
-      // Custom fallback UI
-        return this.props.fallback;
-      }
-      const { retryCount, error } = this.state;
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const componentsPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
       
-      );
-    }
-    return this.props.children;
-  }
-}
-export default EnhancedErrorBoundary;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-lg text-gray-300 mb-8">
+              Professional Components services coming soon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default componentsPage;

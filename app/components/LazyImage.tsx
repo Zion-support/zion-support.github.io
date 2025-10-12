@@ -1,92 +1,29 @@
-import { useState, useRef, useEffect} from 'react';
-import { Loader2 } from 'lucide-react';
+'use client';
 
-interface LazyImageProps {
-  src: string,
-  alt: string
-  className?: string
-  placeholder?: string
-  onLoad?: () => void
-  onError?: () => void
-}
+import { Helmet } from 'react-helmet-async';
 
-const LazyImage: React.FC<LazyImageProps /> = ({
-  src,
-  alt,
-  const className = '',
-  placeholder,
-  onLoad,
-  onError
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isInView, setIsInView] = useState(false)
-  const [hasError, setHasError] = useState(false)
-  const imgRef = useRef<HTMLImageElement />(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [])
-
-  const handleLoad = () => {
-    setIsLoaded(true)
-    onLoad?.()
-  }
-
-  const handleError = () => {
-    setHasError(true)
-    onError?.()
-  }
-
+const componentsPage: React.FC = () => {
   return (
-    <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
-      {!isInView && (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <Loader2 className="w-5 h-5ml-2" />
-        </div>
-      )}
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
       
-      {isInView && !isLoaded && !hasError && (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <Loader2 className="w-5 h-5ml-2" />
-        </div>
-      )}
-      
-      {isInView && (
-        <img
-          src="{src}"
-          alt="{alt}"
-          onLoad="{handleLoad}"
-          onError="{handleError}"
-          className="{`w-full" h-full object-cover transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          loading="lazy"
-         />
-      )}
-      
-      {hasError && (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="w-8h-8mx-a utomb-2"  >📷</div>
-            <p className="text-sm">Image failed to load</p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-lg text-gray-300 mb-8">
+              Professional Components services coming soon.
+            </p>
           </div>
-      )}
-    </div>
-  )
-}
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default LazyImage;
+export default componentsPage;

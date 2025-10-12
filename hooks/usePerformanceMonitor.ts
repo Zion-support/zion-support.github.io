@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
-
-export const usePerformanceMonitor = () => {
+;
+export const usePerformanceMonitor = (): void => {
   useEffect(() => {
     // Monitor page load performance
-    const monitorPageLoad = () => {
+    const monitorPageLoad = (): void => {
       if ('performance' in window) {
         window.addEventListener('load', () => {
           setTimeout(() => {
@@ -23,7 +23,7 @@ export const usePerformanceMonitor = () => {
     };
 
     // Monitor resource loading
-    const monitorResourceLoading = () => {
+    const monitorResourceLoading = (): void => {
       if ('performance' in window) {
         const observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {

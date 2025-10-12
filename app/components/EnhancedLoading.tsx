@@ -1,50 +1,29 @@
-import React from 'react';
+'use client';
 
-interface LoadingProps {
-  size?: 'sm' | 'md' | 'lg'
-  text?: string
-  fullScreen?: boolean
-  color?: string
-}
+import { Helmet } from 'react-helmet-async';
 
-const EnhancedLoading: React.FC<LoadingProps /> = ({
-  const size = 'md',
-  text = 'Loading...',
-  fullScreen = false,
-  color = 'cyan'
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  }
-
-  const colorClasses = {
-    cyan: 'border-cyan-400',
-    purple: 'border-purple-400',
-    pink: 'border-pink-400',
-    blue: 'border-blue-400',
-    green: 'border-green-400'
-  }
-
-  const spinner = (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`}  />
-      {text && (
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{text}
+const componentsPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-lg text-gray-300 mb-8">
+              Professional Components services coming soon.
+            </p>
+          </div>
         </div>
-      )}
-    </div>
-  )
-
-  if (fullScreen) {
-    return (
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{spinner}
       </div>
-    )
-  }
+    </>
+  );
+};
 
-  return spinner
-}
-
-export default EnhancedLoading;
+export default componentsPage;

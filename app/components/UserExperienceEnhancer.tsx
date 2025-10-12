@@ -1,132 +1,29 @@
 'use client';
-import React, { useState, useEffect } from 'react';
 
-interface UserExperienceEnhancerProps {
-  children: React.ReactNode;
-}
+import { Helmet } from 'react-helmet-async';
 
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
-  const [feedback, setFeedback] = useState<{
-    rating: number;
-    comment: string;
-    submitted: boolean;
-  }>({
-    rating: 0,
-    comment: '',
-    submitted: false,
-  });
-
-  useEffect(() => {
-    // UX enhancement logic
-    const enhanceUX = () => {
-      // Add smooth scrolling
-      document.documentElement.style.scrollBehavior = 'smooth';
-
-      // Add loading states for interactive elements
-      const buttons = document.querySelectorAll('button');
-      buttons.forEach((button) => {
-        button.addEventListener('click', () => {
-          button.classList.add('opacity-75', 'cursor-not-allowed');
-          setTimeout(() => {
-            button.classList.remove('opacity-75', 'cursor-not-allowed');
-          }, 1000);
-        });
-      });
-
-      // Add focus indicators
-      const focusableElements = document.querySelectorAll('button, input, textarea, select, a[href]');
-      focusableElements.forEach((element) => {
-        element.addEventListener('focus', () => {
-          element.classList.add('ring-2', 'ring-blue-500', 'ring-opacity-50');
-        });
-        element.addEventListener('blur', () => {
-          element.classList.remove('ring-2', 'ring-blue-500', 'ring-opacity-50');
-        });
-      });
-
-      // Add keyboard navigation
-      document.addEventListener('keydown', (e) => {
-        if (e.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation');
-        }
-      });
-
-      document.addEventListener('mousedown', () => {
-        document.body.classList.remove('keyboard-navigation');
-      });
-    };
-
-    enhanceUX();
-  }, []);
-
-  const handleFeedbackSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setFeedback((prev) => ({ ...prev, submitted: true }));
-    // Here you would typically send the feedback to your backend
-    console.log('Feedback submitted:', feedback);
-  };
-
+const componentsPage: React.FC = () => {
   return (
     <>
-      {children}
-      {/* Feedback Modal */}
-      {!feedback.submitted && (
-        <div className="fixedbottom-4 right-4 z-50">
-          <div className="bg-whiterounded-lg shadow-lg p-4 max-w-sm">
-            <h3 className="text-lgfont-semibold mb-2">How was your experience?</h3>
-            <form onSubmit={handleFeedbackSubmit}>
-              <div className="mb-3">
-                <label className="blocktext-sm font-medium text-gray-700 mb-1">
-                  Rating
-                </label>
-                <div className="flexspace-x-1">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <button
-                      key={star}
-                      type="button"
-                      onClick={() => setFeedback((prev) => ({ ...prev, rating: star }))}
-                      className={`text-2xl ${
-                        star <= feedback.rating ? 'text-yellow-400' : 'text-gray-300'
-                      }`}
-                    >
-                      ★
-                    </button>
-                  ))}
-                </div>
-              </div>
-              <div className="mb-3">
-                <label className="blocktext-sm font-medium text-gray-700 mb-1">
-                  Comment (optional)
-                </label>
-                <textarea
-                  value={feedback.comment}
-                  onChange={(e) => setFeedback((prev) => ({ ...prev, comment: e.target.value }))}
-                  className="w-fullp-2 border border-gray-300 rounded-md text-sm"
-                  rows={3}
-                  placeholder="Tell us about your experience..."
-                />
-              </div>
-              <div className="flexspace-x-2">
-                <button
-                  type="submit"
-                  className="bg-blue-500text-white px-4 py-2 rounded-md text-sm hover:bg-blue-600"
-                >
-                  Submit
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setFeedback((prev) => ({ ...prev, submitted: true }))}
-                  className="bg-gray-300text-gray-700 px-4 py-2 rounded-md text-sm hover:bg-gray-400"
-                >
-                  Dismiss
-                </button>
-              </div>
-            </form>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-lg text-gray-300 mb-8">
+              Professional Components services coming soon.
+            </p>
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 };
 
-export default UserExperienceEnhancer;
+export default componentsPage;

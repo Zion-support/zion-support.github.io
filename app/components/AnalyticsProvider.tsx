@@ -1,56 +1,29 @@
-<<<<<<< HEAD
-import { createContext, useContext, useEffect} from 'react';
-=======
 'use client';
-import { createContext, useContext, useEffect} from 'react';
 
+import { Helmet } from 'react-helmet-async';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any />) => void;
-  trackPageView: (pageName: string) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
-export function useAnalytics() {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-}
-
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
-
-  useEffect(() => {
-    // Initialize analytics
-    // Analytics initialization logic here
-  }, []);
-
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown />) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
-    }
-  };
-
-  const trackPageView = (pageName: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: pageName,
-        page_location: window.location.href,
-      });
-    }
-  };
-
-  const value: const AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-  };
+const componentsPage: React.FC = () => {
   return (
-    <AnalyticsContext.Provider const value = {value} />
-      {children}
-    </AnalyticsContext.Provider>
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-lg text-gray-300 mb-8">
+              Professional Components services coming soon.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
   );
-}
+};
+
+export default componentsPage;

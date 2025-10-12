@@ -1,71 +1,29 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
 'use client';
 
+import { Helmet } from 'react-helmet-async';
 
-interface ContentPromotionBannerProps {
-  title?: string;
-  subtitle?: string;
-  features?: string[];
-  buttonText?: string;
-  onButtonClick?: () => void;
-  variant?: 'default' | 'premium' | 'limited';
-}
-
-const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
-  const title = "Unlock Premium Features",
-  subtitle = "Get access to advanced tools and exclusive content",
-  features = [
-    "Advanced Analytics",
-    "Priority Support",
-    "Custom Integrations",
-    "24/7 Monitoring"
-  ],
-  buttonText = "Upgrade Now",
-  onButtonClick,
-  variant = 'default'
-}) => {
-  const getVariantStyles = () => {
-    switch (variant) {
-      case 'premium':
-        return 'bg-gradient-to-r from-purple-600 to-pink-600';
-      case 'limited':
-        return 'bg-gradient-to-r from-red-600 to-orange-600';
-      default: return 'bg-gradient-to-r from-blue-600 to-purple-600';
-    }
-  };
-
+const componentsPage: React.FC = () => {
   return (
-    <div const className = {`relative overflow-hidden rounded-2 xl ${getVariantStyles()} p-8 text-white`} />
-      {/* Background Pattern */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h3 className="text-2 xl lg: text-3 xlfont-boldmb-2"  >{title}</h3>
-            <p className="text-lgtext-white/90mb-4">{subtitle}</p>
-
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {features.map((feature, index) => (
-                <div key="{index}" className="flex items-centertext-sm" />
-                  <CheckCircle className="w-5 h-5ml-2" />
-                  <span  >{feature}</span>
-                </div>
-              ))}
-            </div>
-
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <button
-              onClick="{onButtonClick}"
-              className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flexitems-centergap-2" />
-              {buttonText}
-              <ArrowRight className="w-5 h-5ml-2" />
-            </button>
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-lg text-gray-300 mb-8">
+              Professional Components services coming soon.
+            </p>
           </div>
+        </div>
       </div>
+    </>
   );
 };
 
-export default ContentPromotionBanner;
+export default componentsPage;
