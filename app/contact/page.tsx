@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-edcb
 import { Helmet } from 'react-helmet-async';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 const ContactPage: React.FC = () => {

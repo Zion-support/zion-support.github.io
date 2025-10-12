@@ -12,10 +12,15 @@ import Footer from './app/components/Footer'
 import ErrorBoundary from './app/components/ErrorBoundary'
 import LoadingSpinner from './app/components/LoadingSpinner'
 import SEOHead from './app/components/SEOHead'
+<<<<<<< HEAD
 =======
 import ErrorBoundary from './app/components/ErrorBoundary'
 import LoadingSpinner from './app/components/LoadingSpinner'
 >>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
+=======
+import PerformanceMonitor from './app/components/PerformanceMonitor'
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
+>>>>>>> cursor/analyze-improve-and-deploy-application-edcb
 
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./app/page'))
@@ -64,6 +69,8 @@ function App() {
         <Router>
           <div className="min-h-screen bg-gray-50">
             <SEOHead />
+            <PerformanceMonitor />
+            <AccessibilityEnhancer />
             <Navigation />
             <Suspense fallback={<PageLoader />}>
               <Routes>

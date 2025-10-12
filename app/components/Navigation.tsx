@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi } from 'lucide-react'
 =======
 import { Menu, X, ChevronDown, Cloud, Code, Smartphone, Brain, Cpu, Wifi, Zap, Database, Shield, Users, BarChart3, Settings } from 'lucide-react'
@@ -9,6 +10,9 @@ import { Menu, X, ChevronDown, Cloud, Code, Smartphone, Brain, Cpu, Wifi, Zap, D
 =======
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Smartphone, Brain, Cpu, Wifi } from 'lucide-react'
 >>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
+=======
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Server, Wifi } from 'lucide-react'
+>>>>>>> cursor/analyze-improve-and-deploy-application-edcb
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)

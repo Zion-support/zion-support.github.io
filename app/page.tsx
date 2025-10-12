@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
+=======
+import { CheckCircle, ArrowRight, Zap, Shield, Cloud, Database } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/analyze-improve-and-deploy-application-edcb
 import { Link } from 'react-router-dom';
 =======
 import React from 'react'
