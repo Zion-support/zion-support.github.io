@@ -117,7 +117,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
       // Cleanup
       return () => {
         document.removeEventListener('click', trackClick)
-        window.removeEventListener('scroll', trackScroll)
+        window.removeEventListener('scroll', trackScrollDepth)
       }
     }
   }

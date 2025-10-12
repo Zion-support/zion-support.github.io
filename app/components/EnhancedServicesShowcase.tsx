@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { CheckCircle, ArrowRight, Brain, Cloud, Shield, BarChart, Zap, Globe } from 'lucide-react'
+import { CheckCircle, ArrowRight, Brain, Cloud, Shield, BarChart, Zap, Globe } from 'lucide-react';
 
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [

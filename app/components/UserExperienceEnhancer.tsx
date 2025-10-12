@@ -45,3 +45,4 @@ export default UserExperienceEnhancer
   </UserExperienceEnhancerProps>
 
     enhanceUX()}, []);return <>{children}</>};export default UserExperienceEnhancer
+}

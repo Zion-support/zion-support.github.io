@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 interface SEOHeadProps {
   title?: string;
@@ -22,41 +22,32 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = "summary_large_image",
   structuredData
 }) => {
-  const siteUrl = "https://ziontechgroup.com";
-  const fullCanonical = canonical ? `${siteUrl}${canonical}` : siteUrl;
-  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
 
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": siteUrl,
-    "logo": `${siteUrl}/logo.png`,
     "description": description,
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
+    "url": canonicalUrl,
+    "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
+      "telephone": "+1-555-123-4567",
       "contactType": "customer service",
       "email": "contact@ziontechgroup.com"
     },
     "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
+      "https://www.linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup"
     ]
-  };
+  }
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={fullCanonical} />
@@ -84,10 +75,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
+        {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-  );
-};
+  )
+}
 
 export default SEOHead;

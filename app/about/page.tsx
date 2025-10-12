@@ -1,14 +1,14 @@
 import React from 'react';
-import { CheckCircle, Users, Target, Award, Globe, Zap, Shield, Database } from 'lucide-react';
+import { Users, Target, Award, Globe, Zap, Shield, Database } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 export default function AboutPage() {
   const values = [
     {
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
+      icon: <Brain className="w-8 h-8 text-blue-500" />,
       title: 'Innovation',
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.'
+      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that give our clients a competitive advantage.'
     },
     {
       icon: <Shield className="w-8 h-8 text-green-500" />,
@@ -18,13 +18,20 @@ export default function AboutPage() {
     {
       icon: <Users className="w-8 h-8 text-purple-500" />,
       title: 'Collaboration',
-      description: 'We work closely with our clients as partners, understanding their unique challenges and delivering tailored solutions.'
+      description: 'We work closely with our clients as partners, understanding their unique needs and delivering tailored solutions.'
     },
     {
       icon: <Database className="w-8 h-8 text-orange-500" />,
       title: 'Excellence',
-      description: 'We maintain the highest standards of quality in everything we do, from initial consultation to ongoing support.'
+      description: 'We strive for excellence in every project, delivering high-quality solutions that exceed expectations.'
     }
+  ];
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed', icon: <Target className="w-6 h-6" /> },
+    { number: '50+', label: 'Enterprise Clients', icon: <Users className="w-6 h-6" /> },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> },
+    { number: '24/7', label: 'Support Available', icon: <Clock className="w-6 h-6" /> }
   ];
 
   const team = [
@@ -79,8 +86,6 @@ export default function AboutPage() {
               We are a leading technology company specializing in AI-powered solutions, IT services, and digital transformation for modern businesses.
             </p>
           </div>
-        </div>
-      </section>
 
       {/* Stats Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
@@ -165,7 +170,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">

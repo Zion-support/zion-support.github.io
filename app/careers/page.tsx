@@ -45,7 +45,8 @@ const CareersPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _benefits = [
     {
       icon: <Users className="w-6 h-6 text-blue-500" />,
       title: 'Collaborative Culture',

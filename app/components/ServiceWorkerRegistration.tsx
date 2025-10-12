@@ -271,3 +271,4 @@ const ServiceWorkerRegistrationPage: React.FC = () => {const features = [
         </div>
       </section>
     </div>)};export default ServiceWorkerRegistrationPage
+}

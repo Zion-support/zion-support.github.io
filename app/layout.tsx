@@ -1,88 +1,129 @@
 import React from 'react';
-import { CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import ThemeToggle from './components/ThemeToggle';
 
-const LayoutPage: React.FC = () => {
-  const features = [
-    {
-      title: 'Layout',
-      description: 'Professional layout services for modern businesses.',
-      benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
+
+const Layout: React.FC<LayoutProps> = ({ 
+  children, 
+  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  description = "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
+  keywords = "AI solutions, IT services, cloud computing, digital transformation, 5G implementation"
+}) => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
     },
-    {
-      title: 'Advanced Technology',
-      description: 'Cutting-edge tools and technologies to deliver superior results.',
-      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
     },
-    {
-      title: 'Proven Results',
-      description: 'Track record of successful projects and satisfied clients.',
-      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
-    }
-  ];
+    "sameAs": [
+      "https://github.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup"
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "AI Services",
+        "description": "Comprehensive AI solutions including content generation, chatbots, and automation",
+        "price": "500",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "500",
+          "priceCurrency": "USD",
+          "unitText": "MONTH"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "IT Services",
+        "description": "Complete IT infrastructure services including cloud migration, cybersecurity, and mobile development",
+        "price": "2500",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "2500",
+          "priceCurrency": "USD",
+          "unitText": "PROJECT"
+        }
+      }
+    ]
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Layout - Zion Tech Group</title>
-        <meta name="description" content="Professional layout services and solutions." />
-        <meta name="keywords" content="layout, services, solutions, technology" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Layout
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional layout services to help your business succeed and grow.
-            </p>
-          </div>
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Helmet>
+          <title>{title}</title>
+          <meta name="description" content={description} />
+          <meta name="keywords" content={keywords} />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          {/* Open Graph Meta Tags */}
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://ziontechgroup.com" />
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+          <meta property="og:site_name" content="Zion Tech Group" />
           
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us today to learn more about our layout services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Contact Us
-                </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
+          {/* Twitter Card Meta Tags */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={description} />
+          <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
+          <meta name="twitter:site" content="@ziontechgroup" />
+          
+          {/* Additional SEO Meta Tags */}
+          <meta name="robots" content="index, follow" />
+          <meta name="author" content="Zion Tech Group" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="theme-color" content="#8b5cf6" />
+          
+          {/* Structured Data */}
+          <script type="application/ld+json">
+            {JSON.stringify(structuredData)}
+          </script>
+        </Helmet>
+        
+        <Navigation />
+        
+        <main className="pt-20">
+          {children}
+        </main>
+        
+        <Footer />
+        
+        {/* Theme Toggle - Fixed Position */}
+        <div className="fixed bottom-6 right-6 z-50">
+          <ThemeToggle />
         </div>
-      </main>
-      
-      <Footer />
-    </div>
+      </div>
+    </ErrorBoundary>
   );
 };
 
-export default LayoutPage;
+export default Layout;
