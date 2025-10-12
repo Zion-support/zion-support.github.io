@@ -120,12 +120,14 @@ export default function AICustomerSupportChatbot() {
 export default function AiCustomerSupportChatbot() {
   return (
     
-        <title>AiCustomerSupportChatbot - Zion Tech Group</title>
+        <>
+      <title>AiCustomerSupportChatbot - Zion Tech Group</title>
       
             <h1 className="text-4xl font-bold text-white mb-6">AiCustomerSupportChatbot</h1>
             <p className="text-lg text-gray-300 mb-8">Professional aicustomersupportchatbot services coming soon.</p>
             
               Contact Us
 
+      </>
   );
-
+}

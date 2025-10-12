@@ -8,11 +8,13 @@ import { ArrowRight } from 'lucide-react';
 export default function CloudmigrationservicesPage() {
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
         <title>Cloud Migration Services - Zion Tech Group</title>
         <h1 className="text-4 xl font-boldtext-whitemb-6">Cloud Migration Services</h1>
         <p className="text-lgtext-gray-300mb-8">Professional cloud migration services services coming soon.</p>
           Contact Us
     
+      </>
   );
-
+}

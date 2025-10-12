@@ -7,12 +7,14 @@ import { ArrowRight } from 'lucide-react';
 export default function MachineLearning() {
   return (
     
-        <title>MachineLearning - Zion Tech Group</title>
+        <>
+      <title>MachineLearning - Zion Tech Group</title>
       
             <h1 className="text-4xl font-bold text-white mb-6">MachineLearning</h1>
             <p className="text-lg text-gray-300 mb-8">Professional machinelearning services coming soon.</p>
             
               Contact Us
 
+      </>
   );
-
+}

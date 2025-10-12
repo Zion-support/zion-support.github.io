@@ -7,12 +7,14 @@ import { ArrowRight } from 'lucide-react';
 export default function CybersecurityAdvanced() {
   return (
     
-        <title>CybersecurityAdvanced - Zion Tech Group</title>
+        <>
+      <title>CybersecurityAdvanced - Zion Tech Group</title>
       
             <h1 className="text-4xl font-bold text-white mb-6">CybersecurityAdvanced</h1>
             <p className="text-lg text-gray-300 mb-8">Professional cybersecurityadvanced services coming soon.</p>
             
               Contact Us
 
+      </>
   );
-
+}

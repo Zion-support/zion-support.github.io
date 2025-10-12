@@ -8,11 +8,13 @@ import { ArrowRight } from 'lucide-react';
 export default function ContentgeneratorPage() {
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
         <title>Content Generator - Zion Tech Group</title>
         <h1 className="text-4 xl font-boldtext-whitemb-6">Content Generator</h1>
         <p className="text-lgtext-gray-300mb-8">Professional content generator services coming soon.</p>
           Contact Us
     
+      </>
   );
-
+}

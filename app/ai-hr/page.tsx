@@ -8,11 +8,13 @@ import { ArrowRight } from 'lucide-react';
 export default function AihrPage() {
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
         <title>Ai Hr - Zion Tech Group</title>
         <h1 className="text-4 xl font-boldtext-whitemb-6">Ai Hr</h1>
         <p className="text-lgtext-gray-300mb-8">Professional ai hr services coming soon.</p>
           Contact Us
     
+      </>
   );
-
+}

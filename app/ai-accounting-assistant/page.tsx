@@ -8,11 +8,14 @@ import { ArrowRight } from 'lucide-react';
 export default function AIAccountingAssistant() {
   return (
     
-        <title>AI Accounting Assistant - Zion Tech Group</title>
+        <>
+      <title>AI Accounting Assistant - Zion Tech Group</title>
       
             <h1 className="text-4xl font-bold text-white mb-6">AI Accounting Assistant</h1>
             <p className="text-lg text-gray-300 mb-8">Professional AI accounting assistant services coming soon.</p>
             
               Contact Us
 
+      </>
   );
+}

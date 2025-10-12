@@ -7,12 +7,14 @@ import { ArrowRight } from 'lucide-react';
 export default function ZionSocialScheduler() {
   return (
     
-        <title>ZionSocialScheduler - Zion Tech Group</title>
+        <>
+      <title>ZionSocialScheduler - Zion Tech Group</title>
       
             <h1 className="text-4xl font-bold text-white mb-6">ZionSocialScheduler</h1>
             <p className="text-lg text-gray-300 mb-8">Professional zionsocialscheduler services coming soon.</p>
             
               Contact Us
 
+      </>
   );
-
+}

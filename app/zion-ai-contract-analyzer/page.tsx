@@ -7,12 +7,14 @@ import { ArrowRight } from 'lucide-react';
 export default function ZionAiContractAnalyzer() {
   return (
     
-        <title>ZionAiContractAnalyzer - Zion Tech Group</title>
+        <>
+      <title>ZionAiContractAnalyzer - Zion Tech Group</title>
       
             <h1 className="text-4xl font-bold text-white mb-6">ZionAiContractAnalyzer</h1>
             <p className="text-lg text-gray-300 mb-8">Professional zionaicontractanalyzer services coming soon.</p>
             
               Contact Us
 
+      </>
   );
-
+}

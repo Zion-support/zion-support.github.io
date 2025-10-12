@@ -25,7 +25,8 @@ import { ArrowRight, Zap, Shield, Cloud } from 'lucide-react';
 
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
         <title>System Integration - Zion Tech Group</title>
 
         {/* Hero Section */}
@@ -79,5 +80,6 @@ export default function SystemIntegrationPage() {
         <h1 className="text-4xl font-bold text-white mb-6">System Integration</h1>
         <p className="text-lg text-gray-300 mb-8">Professional system integration services coming soon.</p>
           Contact Us
+      </>
   );
-
+}

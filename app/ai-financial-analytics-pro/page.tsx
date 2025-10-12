@@ -207,7 +207,8 @@ export default function AiFinancialAnalyticsProPage() {
   ];
   return (
     
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform</title>
 
         {/* Open Graph Meta Tags */}
@@ -371,5 +372,5 @@ export default function AiFinancialAnalyticsProPage() {
     
               <p>✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
 
+      </>
   );
-

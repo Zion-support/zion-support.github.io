@@ -126,7 +126,8 @@ export default function AIExpenseTrackerPage() {
 
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Expense Tracker - Zion Tech Group | Smart Financial Management</title>
 
       {/* Hero Section */}
@@ -249,5 +250,5 @@ Get Started
 
                   <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
 
+      </>
   );
-

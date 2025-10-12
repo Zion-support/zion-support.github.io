@@ -7,12 +7,14 @@ import { ArrowRight } from 'lucide-react';
 export default function ZionCustomerInsights() {
   return (
     
-        <title>ZionCustomerInsights - Zion Tech Group</title>
+        <>
+      <title>ZionCustomerInsights - Zion Tech Group</title>
       
             <h1 className="text-4xl font-bold text-white mb-6">ZionCustomerInsights</h1>
             <p className="text-lg text-gray-300 mb-8">Professional zioncustomerinsights services coming soon.</p>
             
               Contact Us
 
+      </>
   );
-
+}

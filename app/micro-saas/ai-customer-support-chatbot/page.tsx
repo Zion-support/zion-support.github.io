@@ -171,7 +171,8 @@ export default function AICustomerSupportChatbotPage() {
 
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Customer Support Chatbot - Zion Tech Group | Intelligent Customer Service</title>
 
       {/* Hero Section */}
@@ -321,5 +322,5 @@ Get Started
 
                   <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
 
+      </>
   );
-

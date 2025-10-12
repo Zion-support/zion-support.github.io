@@ -159,7 +159,8 @@ export default function AIProjectManagementPro() {
 
   return (
     
-        <title>AI Project Management Pro - Zion Tech Group</title>
+        <>
+      <title>AI Project Management Pro - Zion Tech Group</title>
 
                 AI Project Management Pro
               Revolutionize your project management with AI-powered tools. 
@@ -243,5 +244,5 @@ export default function AIProjectManagementPro() {
     
                   View Services
 
+      </>
   );
-

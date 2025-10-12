@@ -7,12 +7,14 @@ import { ArrowRight } from 'lucide-react';
 export default function AiWorkflowAutomation() {
   return (
     
-        <title>AiWorkflowAutomation - Zion Tech Group</title>
+        <>
+      <title>AiWorkflowAutomation - Zion Tech Group</title>
       
             <h1 className="text-4xl font-bold text-white mb-6">AiWorkflowAutomation</h1>
             <p className="text-lg text-gray-300 mb-8">Professional aiworkflowautomation services coming soon.</p>
             
               Contact Us
 
+      </>
   );
-
+}

@@ -7,12 +7,14 @@ import { ArrowRight } from 'lucide-react';
 export default function ComplianceAutomation() {
   return (
     
-        <title>ComplianceAutomation - Zion Tech Group</title>
+        <>
+      <title>ComplianceAutomation - Zion Tech Group</title>
       
             <h1 className="text-4xl font-bold text-white mb-6">ComplianceAutomation</h1>
             <p className="text-lg text-gray-300 mb-8">Professional complianceautomation services coming soon.</p>
             
               Contact Us
 
+      </>
   );
-
+}

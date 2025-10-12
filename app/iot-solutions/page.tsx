@@ -111,7 +111,8 @@ export default function IoTSolutionsPage() {
 
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
         <title>IoT Solutions - Zion Tech Group | Smart Device Management & Analytics</title>
         {/* Open Graph Meta Tags */}
     
@@ -212,5 +213,5 @@ export default function IoTSolutionsPage() {
                       <span>Get Started</span>
                       <span>View Pricing</span>
 
+      </>
   );
-

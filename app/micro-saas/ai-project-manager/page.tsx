@@ -139,7 +139,8 @@ export default function AIProjectManagerPage() {
 
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Project Manager - Zion Tech Group | Intelligent Project Management</title>
 
       {/* Hero Section */}
@@ -274,5 +275,5 @@ Get Started
 
                   <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
 
+      </>
   );
-

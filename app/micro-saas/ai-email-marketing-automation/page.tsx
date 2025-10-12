@@ -135,7 +135,8 @@ export default function AIEmailMarketingAutomationPage() {
 
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Email Marketing Automation - Zion Tech Group | Smart Email Campaigns</title>
 
       {/* Hero Section */}
@@ -272,5 +273,5 @@ Get Started
 
                   <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
 
+      </>
   );
-

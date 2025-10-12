@@ -8,11 +8,13 @@ import { ArrowRight } from 'lucide-react';
 export default function AismartcontractauditorPage() {
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
         <title>Ai Smart Contract Auditor - Zion Tech Group</title>
         <h1 className="text-4 xl font-boldtext-whitemb-6">Ai Smart Contract Auditor</h1>
         <p className="text-lgtext-gray-300mb-8">Professional ai smart contract auditor services coming soon.</p>
           Contact Us
     
+      </>
   );
-
+}

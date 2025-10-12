@@ -8,11 +8,13 @@ import { ArrowRight } from 'lucide-react';
 export default function SmartcitiesPage() {
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
         <title>Smart Cities - Zion Tech Group</title>
         <h1 className="text-4 xl font-boldtext-whitemb-6">Smart Cities</h1>
         <p className="text-lgtext-gray-300mb-8">Professional smart cities services coming soon.</p>
           Contact Us
     
+      </>
   );
-
+}

@@ -7,12 +7,14 @@ import { ArrowRight } from 'lucide-react';
 export default function DatabaseManagement() {
   return (
     
-        <title>DatabaseManagement - Zion Tech Group</title>
+        <>
+      <title>DatabaseManagement - Zion Tech Group</title>
       
             <h1 className="text-4xl font-bold text-white mb-6">DatabaseManagement</h1>
             <p className="text-lg text-gray-300 mb-8">Professional databasemanagement services coming soon.</p>
             
               Contact Us
 
+      </>
   );
-
+}

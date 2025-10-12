@@ -7,12 +7,14 @@ import { ArrowRight } from 'lucide-react';
 export default function AiEcommerceSolutions() {
   return (
     
-        <title>AiEcommerceSolutions - Zion Tech Group</title>
+        <>
+      <title>AiEcommerceSolutions - Zion Tech Group</title>
       
             <h1 className="text-4xl font-bold text-white mb-6">AiEcommerceSolutions</h1>
             <p className="text-lg text-gray-300 mb-8">Professional aiecommercesolutions services coming soon.</p>
             
               Contact Us
 
+      </>
   );
-
+}

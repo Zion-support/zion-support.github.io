@@ -87,7 +87,8 @@ import { ArrowRight } from 'lucide-react';
 export default function MicroSaasServices() {
   return (
     
-        <title>Micro SaaS Services - Zion Tech Group</title>
+        <>
+      <title>Micro SaaS Services - Zion Tech Group</title>
 
         {/* Hero Section */}
                 Micro <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">SaaS Services</span>
@@ -171,5 +172,5 @@ export default MicroSaasServicesPage;
             
               Contact Us
 
+      </>
   );
-

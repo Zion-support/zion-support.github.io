@@ -103,7 +103,8 @@ export default function AISupplyChainOptimizerPage() {
   ];
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
 
         {/* Hero Section */}
@@ -218,5 +219,5 @@ window.open('/contact', '_blank')}
 
                 <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
 
+      </>
   );
-

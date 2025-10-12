@@ -7,7 +7,8 @@ import { ArrowRight } from 'lucide-react';
 
   return (
 
-        <title>Page - Zion Tech Group</title>
+        <>
+      <title>Page - Zion Tech Group</title>
         <h1 className="text-4xl font-bold text-white mb-6">Page</h1>
         <p className="text-lg text-gray-300 mb-8">Professional page services coming soon.</p>
           Contact Us
@@ -18,5 +19,5 @@ import { ArrowRight } from 'lucide-react';
         <p className="text-lgtext-gray-300mb-8">Professional nlp services coming soon.</p>
           Contact Us
     
+      </>
   );
-
