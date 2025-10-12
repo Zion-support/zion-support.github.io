@@ -2,11 +2,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
-=======
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, Users, BarChart3, Settings, Mail, MessageSquare, FileText, Receipt, Video, Mic } from 'lucide-react'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +73,6 @@ const Navigation: React.FC = () => {
 
   // Service data
   const aiServices = [
-<<<<<<< HEAD
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
@@ -115,7 +109,38 @@ const Navigation: React.FC = () => {
     { name: 'AI Customer Churn Prediction', href: '/ai-customer-churn', icon: Users, description: 'Churn prevention' },
     { name: 'AI Automated Reporting', href: '/ai-automated-reporting', icon: BarChart, description: 'Smart reporting' },
     { name: 'AI Voice Assistant Platform', href: '/ai-voice-assistant', icon: Mic, description: 'Enterprise voice AI' },
-    { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', icon: FileText, description: 'Advanced content creation' }
+    { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro', icon: FileText, description: 'Advanced content creation' },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Globe, description: 'Automated social media management' },
+    { name: 'AI Email Marketing Pro', href: '/ai-email-marketing-pro', icon: Mail, description: 'Intelligent email campaigns' },
+    { name: 'AI Project Management', href: '/ai-project-management', icon: Calendar, description: 'Smart project coordination' },
+    { name: 'AI Customer Support Pro', href: '/ai-customer-support-pro', icon: MessageSquare, description: 'Advanced customer service' },
+    { name: 'AI Video Editor Pro', href: '/ai-video-editor-pro', icon: Eye, description: 'Professional video editing' },
+    { name: 'AI Translation Service', href: '/ai-translation-service', icon: Globe, description: 'Real-time language translation' },
+    { name: 'AI Voice Assistant Pro', href: '/ai-voice-assistant-pro', icon: Mic, description: 'Enterprise voice solutions' },
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Advanced business analytics' },
+    { name: 'AI Smart Scheduler', href: '/ai-smart-scheduler', icon: Calendar, description: 'Intelligent scheduling system' },
+    { name: 'AI Content Moderation Pro', href: '/ai-content-moderation-pro', icon: Shield, description: 'Advanced content filtering' },
+    { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: FileText, description: 'Automated invoice creation' },
+    { name: 'AI Expense Tracker', href: '/ai-expense-tracker', icon: DollarSign, description: 'Smart expense management' },
+    { name: 'AI Contract Analyzer Pro', href: '/ai-contract-analyzer-pro', icon: FileText, description: 'Legal document analysis' },
+    { name: 'AI Survey Builder Pro', href: '/ai-survey-builder-pro', icon: CheckSquare, description: 'Intelligent survey creation' },
+    { name: 'AI Accounting Pro', href: '/ai-accounting-pro', icon: DollarSign, description: 'Advanced accounting automation' },
+    { name: 'AI Recruitment Pro', href: '/ai-recruitment-pro', icon: Users, description: 'Smart talent acquisition' },
+    { name: 'AI Predictive Maintenance Pro', href: '/ai-predictive-maintenance-pro', icon: Settings, description: 'Advanced equipment monitoring' },
+    { name: 'AI Energy Manager Pro', href: '/ai-energy-manager-pro', icon: Zap, description: 'Smart energy optimization' },
+    { name: 'AI Supply Chain Pro', href: '/ai-supply-chain-pro', icon: Box, description: 'Advanced supply chain AI' },
+    { name: 'AI Fraud Detection Pro', href: '/ai-fraud-detection-pro', icon: Shield, description: 'Advanced fraud prevention' },
+    { name: 'AI Marketing Automation Pro', href: '/ai-marketing-automation-pro', icon: Target, description: 'Complete marketing automation' },
+    { name: 'AI Document AI Pro', href: '/ai-document-ai-pro', icon: FileText, description: 'Advanced document processing' },
+    { name: 'AI 3D Generation Pro', href: '/ai-3d-generation-pro', icon: Box, description: 'Professional 3D content creation' },
+    { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' },
+    { name: 'AI Autonomous Systems Pro', href: '/ai-autonomous-systems-pro', icon: Cpu, description: 'Self-operating AI systems' },
+    { name: 'AI Blockchain Solutions Pro', href: '/ai-blockchain-solutions-pro', icon: LinkIcon, description: 'Decentralized AI applications' },
+    { name: 'AI Edge Computing Pro', href: '/ai-edge-computing-pro', icon: Server, description: 'Advanced distributed processing' },
+    { name: 'AI Quantum Computing', href: '/ai-quantum-computing', icon: Cpu, description: 'Quantum AI processing' },
+    { name: 'AI AR/VR Solutions Pro', href: '/ai-ar-vr-solutions-pro', icon: Monitor, description: 'Advanced immersive experiences' },
+    { name: 'AI IoT Analytics Pro', href: '/ai-iot-analytics-pro', icon: Wifi, description: 'Advanced IoT intelligence' },
+    { name: 'AI Machine Learning Pro', href: '/ai-machine-learning-pro', icon: Brain, description: 'Advanced ML algorithms' }
   ];
 
   const itServices = [
@@ -152,7 +177,31 @@ const Navigation: React.FC = () => {
     { name: 'Security Automation', href: '/security-automation', icon: Shield, description: 'Automated security' },
     { name: 'Data Visualization & BI', href: '/data-visualization', icon: BarChart, description: 'Advanced dashboards' },
     { name: 'Workflow Automation', href: '/workflow-automation', icon: Settings, description: 'Process automation' },
-    { name: 'Cloud-Native Security', href: '/cloud-native-security', icon: Shield, description: 'Container security' }
+    { name: 'Cloud-Native Security', href: '/cloud-native-security', icon: Shield, description: 'Container security' },
+    { name: 'IT Consulting', href: '/it-consulting', icon: Users, description: 'Strategic IT guidance' },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: Zap, description: 'Complete digital overhaul' },
+    { name: 'IT Infrastructure Management', href: '/it-infrastructure-management', icon: Server, description: 'Comprehensive infrastructure oversight' },
+    { name: 'Cloud Migration Services', href: '/cloud-migration-services', icon: Cloud, description: 'Seamless cloud transitions' },
+    { name: 'IT Security Auditing', href: '/it-security-auditing', icon: Shield, description: 'Comprehensive security assessments' },
+    { name: 'IT Training & Support', href: '/it-training-support', icon: Users, description: 'Staff training and support' },
+    { name: 'IT Strategy Planning', href: '/it-strategy-planning', icon: Target, description: 'Strategic IT roadmaps' },
+    { name: 'IT Cost Optimization', href: '/it-cost-optimization', icon: DollarSign, description: 'Cost reduction strategies' },
+    { name: 'IT Compliance Management', href: '/it-compliance-management', icon: CheckSquare, description: 'Regulatory compliance' },
+    { name: 'IT Disaster Recovery', href: '/it-disaster-recovery', icon: Shield, description: 'Business continuity planning' },
+    { name: 'IT Vendor Management', href: '/it-vendor-management', icon: Users, description: 'Vendor relationship management' },
+    { name: 'IT Change Management', href: '/it-change-management', icon: Settings, description: 'Organizational change support' },
+    { name: 'IT Risk Assessment', href: '/it-risk-assessment', icon: Shield, description: 'Comprehensive risk analysis' },
+    { name: 'IT Governance', href: '/it-governance', icon: Users, description: 'IT governance frameworks' },
+    { name: 'IT Service Management', href: '/it-service-management', icon: Settings, description: 'ITSM implementation' },
+    { name: 'IT Capacity Planning', href: '/it-capacity-planning', icon: BarChart, description: 'Resource capacity planning' },
+    { name: 'IT Performance Monitoring', href: '/it-performance-monitoring', icon: Monitor, description: 'System performance tracking' },
+    { name: 'IT Backup Solutions', href: '/it-backup-solutions', icon: Database, description: 'Data backup strategies' },
+    { name: 'IT Monitoring & Alerting', href: '/it-monitoring-alerting', icon: Monitor, description: 'Proactive system monitoring' },
+    { name: 'IT Patch Management', href: '/it-patch-management', icon: Settings, description: 'System update management' },
+    { name: 'IT License Management', href: '/it-license-management', icon: FileText, description: 'Software license optimization' },
+    { name: 'IT Documentation', href: '/it-documentation', icon: FileText, description: 'Technical documentation services' },
+    { name: 'IT Quality Assurance', href: '/it-quality-assurance', icon: CheckCircle, description: 'Quality testing services' },
+    { name: 'IT Innovation Consulting', href: '/it-innovation-consulting', icon: Brain, description: 'Technology innovation guidance' }
   ];
 
   const microSaasServices = [
@@ -191,7 +240,38 @@ const Navigation: React.FC = () => {
     { name: 'Zion AI Fraud Detector', href: '/zion-ai-fraud-detector', icon: Shield, description: 'Fraud detection' },
     { name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro', icon: MessageSquare, description: 'Advanced customer service' },
     { name: 'Zion AI Marketing Automation', href: '/zion-ai-marketing-automation', icon: Target, description: 'Marketing AI' },
-    { name: 'Zion AI Document AI', href: '/zion-ai-document-ai', icon: FileText, description: 'Document processing' }
+    { name: 'Zion AI Document AI', href: '/zion-ai-document-ai', icon: FileText, description: 'Document processing' },
+    { name: 'Zion AI Social Media Pro', href: '/zion-ai-social-media-pro', icon: Globe, description: 'Advanced social media automation' },
+    { name: 'Zion AI Email Marketing Pro', href: '/zion-ai-email-marketing-pro', icon: Mail, description: 'Intelligent email campaigns' },
+    { name: 'Zion AI Project Manager Pro', href: '/zion-ai-project-manager-pro', icon: Calendar, description: 'Advanced project coordination' },
+    { name: 'Zion AI Customer Service Pro', href: '/zion-ai-customer-service-pro', icon: MessageSquare, description: 'Enterprise customer service' },
+    { name: 'Zion AI Video Editor Pro', href: '/zion-ai-video-editor-pro', icon: Eye, description: 'Professional video editing' },
+    { name: 'Zion AI Translation Pro', href: '/zion-ai-translation-pro', icon: Globe, description: 'Advanced language translation' },
+    { name: 'Zion AI Voice Assistant Pro', href: '/zion-ai-voice-assistant-pro', icon: Mic, description: 'Enterprise voice solutions' },
+    { name: 'Zion AI Analytics Dashboard Pro', href: '/zion-ai-analytics-dashboard-pro', icon: BarChart, description: 'Advanced business analytics' },
+    { name: 'Zion AI Smart Scheduler Pro', href: '/zion-ai-smart-scheduler-pro', icon: Calendar, description: 'Intelligent scheduling system' },
+    { name: 'Zion AI Content Moderation Pro', href: '/zion-ai-content-moderation-pro', icon: Shield, description: 'Advanced content filtering' },
+    { name: 'Zion AI Invoice Generator Pro', href: '/zion-ai-invoice-generator-pro', icon: FileText, description: 'Automated invoice creation' },
+    { name: 'Zion AI Expense Tracker Pro', href: '/zion-ai-expense-tracker-pro', icon: DollarSign, description: 'Smart expense management' },
+    { name: 'Zion AI Contract Analyzer Pro', href: '/zion-ai-contract-analyzer-pro', icon: FileText, description: 'Legal document analysis' },
+    { name: 'Zion AI Survey Builder Pro', href: '/zion-ai-survey-builder-pro', icon: CheckSquare, description: 'Intelligent survey creation' },
+    { name: 'Zion AI Accounting Pro', href: '/zion-ai-accounting-pro', icon: DollarSign, description: 'Advanced accounting automation' },
+    { name: 'Zion AI Recruitment Pro', href: '/zion-ai-recruitment-pro', icon: Users, description: 'Smart talent acquisition' },
+    { name: 'Zion AI Predictive Maintenance Pro', href: '/zion-ai-predictive-maintenance-pro', icon: Settings, description: 'Advanced equipment monitoring' },
+    { name: 'Zion AI Energy Manager Pro', href: '/zion-ai-energy-manager-pro', icon: Zap, description: 'Smart energy optimization' },
+    { name: 'Zion AI Supply Chain Pro', href: '/zion-ai-supply-chain-pro', icon: Box, description: 'Advanced supply chain AI' },
+    { name: 'Zion AI Fraud Detection Pro', href: '/zion-ai-fraud-detection-pro', icon: Shield, description: 'Advanced fraud prevention' },
+    { name: 'Zion AI Marketing Automation Pro', href: '/zion-ai-marketing-automation-pro', icon: Target, description: 'Complete marketing automation' },
+    { name: 'Zion AI Document AI Pro', href: '/zion-ai-document-ai-pro', icon: FileText, description: 'Advanced document processing' },
+    { name: 'Zion AI 3D Generation Pro', href: '/zion-ai-3d-generation-pro', icon: Box, description: 'Professional 3D content creation' },
+    { name: 'Zion AI Holographic Workspace', href: '/zion-ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' },
+    { name: 'Zion AI Autonomous Systems Pro', href: '/zion-ai-autonomous-systems-pro', icon: Cpu, description: 'Self-operating AI systems' },
+    { name: 'Zion AI Blockchain Solutions Pro', href: '/zion-ai-blockchain-solutions-pro', icon: LinkIcon, description: 'Decentralized AI applications' },
+    { name: 'Zion AI Edge Computing Pro', href: '/zion-ai-edge-computing-pro', icon: Server, description: 'Advanced distributed processing' },
+    { name: 'Zion AI Quantum Computing', href: '/zion-ai-quantum-computing', icon: Cpu, description: 'Quantum AI processing' },
+    { name: 'Zion AI AR/VR Solutions Pro', href: '/zion-ai-ar-vr-solutions-pro', icon: Monitor, description: 'Advanced immersive experiences' },
+    { name: 'Zion AI IoT Analytics Pro', href: '/zion-ai-iot-analytics-pro', icon: Wifi, description: 'Advanced IoT intelligence' },
+    { name: 'Zion AI Machine Learning Pro', href: '/zion-ai-machine-learning-pro', icon: Brain, description: 'Advanced ML algorithms' }
   ];
 
   const emergingTech = [
@@ -204,57 +284,27 @@ const Navigation: React.FC = () => {
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum processing power' },
     { name: 'AR/VR Solutions', href: '/ar-vr-solutions', icon: Monitor, description: 'Immersive experiences' },
     { name: 'IoT Integration', href: '/iot-integration', icon: Wifi, description: 'Internet of Things' },
-    { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' }
+    { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' },
+    { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions', icon: Globe, description: 'Smart city infrastructure' },
+    { name: '5G Network Infrastructure', href: '/5g-network-infrastructure', icon: Server, description: '5G network deployment' },
+    { name: '5G IoT Solutions', href: '/5g-iot-solutions', icon: Wifi, description: '5G-enabled IoT devices' },
+    { name: '5G Edge Computing', href: '/5g-edge-computing', icon: Cpu, description: '5G edge processing' },
+    { name: '5G Private Networks', href: '/5g-private-networks', icon: Shield, description: 'Private 5G networks' },
+    { name: '5G Data Analytics', href: '/5g-data-analytics', icon: BarChart, description: '5G data insights' },
+    { name: '5G Mobile Applications', href: '/5g-mobile-applications', icon: Smartphone, description: '5G mobile apps' },
+    { name: 'Quantum Computing Solutions', href: '/quantum-computing-solutions', icon: Cpu, description: 'Quantum processing solutions' },
+    { name: 'AR/VR Development', href: '/ar-vr-development', icon: Monitor, description: 'Immersive app development' },
+    { name: 'IoT Integration Services', href: '/iot-integration-services', icon: Wifi, description: 'IoT device integration' },
+    { name: 'Machine Learning Operations', href: '/machine-learning-operations', icon: Brain, description: 'MLOps implementation' },
+    { name: 'Edge Computing Solutions', href: '/edge-computing-solutions', icon: Server, description: 'Edge processing solutions' },
+    { name: 'Blockchain Development', href: '/blockchain-development', icon: LinkIcon, description: 'Blockchain applications' },
+    { name: 'Smart Contract Development', href: '/smart-contract-development', icon: FileText, description: 'Smart contract creation' },
+    { name: 'Decentralized Applications', href: '/decentralized-applications', icon: Globe, description: 'DApp development' },
+    { name: 'Cryptocurrency Solutions', href: '/cryptocurrency-solutions', icon: DollarSign, description: 'Crypto integration' },
+    { name: 'NFT Development', href: '/nft-development', icon: Box, description: 'NFT marketplace development' },
+    { name: 'Metaverse Development', href: '/metaverse-development', icon: Monitor, description: 'Metaverse platforms' },
+    { name: 'Web3 Development', href: '/web3-development', icon: Globe, description: 'Web3 applications' }
   ];
-=======
-    { name: 'AI Social Media Manager', path: '/ai-social-media-manager', icon: <Globe className="w-4 h-4" /> },
-    { name: 'AI Email Marketing Automation', path: '/ai-email-marketing-automation', icon: <Mail className="w-4 h-4" /> },
-    { name: 'AI Project Management Pro', path: '/ai-project-management-pro', icon: <Settings className="w-4 h-4" /> },
-    { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot', icon: <MessageSquare className="w-4 h-4" /> },
-    { name: 'AI Video Editor', path: '/ai-video-editor', icon: <Video className="w-4 h-4" /> },
-    { name: 'AI Translation Service', path: '/ai-translation-service', icon: <Globe className="w-4 h-4" /> },
-    { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Mic className="w-4 h-4" /> },
-    { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Brain className="w-4 h-4" /> },
-    { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'AI Smart Scheduler', path: '/ai-smart-scheduler', icon: <Settings className="w-4 h-4" /> }
-  ]
-
-  const itServices = [
-    { name: 'Cloud Infrastructure Management', path: '/cloud-infrastructure-management', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity Consulting', path: '/cybersecurity-consulting', icon: <Shield className="w-4 h-4" /> },
-    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Mobile Development', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'Cloud Migration Pro', path: '/cloud-migration-pro', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'DevOps', path: '/devops', icon: <Server className="w-4 h-4" /> },
-    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> }
-  ]
-
-  const fiveGServices = [
-    { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions', icon: <Wifi className="w-4 h-4" /> },
-    { name: '5G Implementation', path: '/5g-implementation', icon: <Wifi className="w-4 h-4" /> },
-    { name: '5G Network Infrastructure', path: '/5g-network-infrastructure', icon: <Server className="w-4 h-4" /> },
-    { name: '5G IoT Solutions', path: '/5g-iot-solutions', icon: <Smartphone className="w-4 h-4" /> },
-    { name: '5G Edge Computing', path: '/5g-edge-computing', icon: <Cpu className="w-4 h-4" /> },
-    { name: '5G Private Networks', path: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> }
-  ]
-
-  const microSaasServices = [
-    { name: 'AI E-commerce Optimizer Pro', path: '/ai-ecommerce-optimizer-pro', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'AI Social Media Manager', path: '/ai-social-media-manager', icon: <Globe className="w-4 h-4" /> },
-    { name: 'AI Email Marketing Automation', path: '/ai-email-marketing-automation', icon: <Mail className="w-4 h-4" /> },
-    { name: 'AI Project Management Pro', path: '/ai-project-management-pro', icon: <Settings className="w-4 h-4" /> },
-    { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot', icon: <MessageSquare className="w-4 h-4" /> },
-    { name: 'AI Invoice Generator', path: '/ai-invoice-generator', icon: <FileText className="w-4 h-4" /> },
-    { name: 'AI Expense Tracker', path: '/ai-expense-tracker', icon: <Receipt className="w-4 h-4" /> },
-    { name: 'AI Video Editor', path: '/ai-video-editor', icon: <Video className="w-4 h-4" /> },
-    { name: 'Advanced Security Suite', path: '/advanced-security-suite', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Smart Scheduler', path: '/ai-smart-scheduler', icon: <Settings className="w-4 h-4" /> },
-    { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'Cloud Migration Pro', path: '/cloud-migration-pro', icon: <Cloud className="w-4 h-4" /> }
-  ]
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -290,8 +340,6 @@ const Navigation: React.FC = () => {
                 <span>AI Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-<<<<<<< HEAD
-              
               {aiServicesOpen && (
                 <div className="absolute top-full left-0 mt-3 w-[500px] bg-slate-900/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-cyan-500/30 p-6 cyber-card-enhanced holographic-card-enhanced">
                   <div className="mb-4">
@@ -318,23 +366,13 @@ const Navigation: React.FC = () => {
                     ))}
                   </div>
                   <div className="mt-4 pt-4 border-t border-cyan-500/20">
-=======
-              {activeDropdown === 'ai' && (
-                <div className="absolute top-full left-0 mt-2 w-64 sm:w-72 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2 z-50">
-                  {aiServices.map((service, index) => (
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                     <Link
                       to="/ai-services"
                       className="flex items-center justify-center w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
                       onClick={closeAllMenus}
                     >
-<<<<<<< HEAD
                       View All AI Services
                       <ArrowRight className="w-4 h-4 ml-2" />
-=======
-                      {service.icon}
-                      <span className="ml-3">{service.name}</span>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                     </Link>
                   </div>
                 </div>
@@ -350,8 +388,6 @@ const Navigation: React.FC = () => {
                 <span>IT Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-<<<<<<< HEAD
-              
               {itServicesOpen && (
                 <div className="absolute top-full left-0 mt-3 w-[450px] bg-slate-900/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-purple-500/30 p-6 cyber-card-enhanced holographic-card-enhanced">
                   <div className="mb-4">
@@ -378,11 +414,6 @@ const Navigation: React.FC = () => {
                     ))}
                   </div>
                   <div className="mt-4 pt-4 border-t border-purple-500/20">
-=======
-              {activeDropdown === 'it' && (
-                <div className="absolute top-full left-0 mt-2 w-64 sm:w-72 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2 z-50">
-                  {itServices.map((service, index) => (
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                     <Link
                       to="/it-services"
                       className="flex items-center justify-center w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
@@ -396,7 +427,6 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-<<<<<<< HEAD
             {/* Micro SAAS Dropdown */}
             <div className="relative group">
               <button
@@ -447,10 +477,6 @@ const Navigation: React.FC = () => {
 
             {/* Emerging Technologies Dropdown */}
             <div className="relative group">
-=======
-            {/* 5G Services Dropdown */}
-            <div className="relative">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
               <button
                 onClick={toggleServices}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
@@ -458,7 +484,6 @@ const Navigation: React.FC = () => {
                 <span>Emerging Tech</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
-<<<<<<< HEAD
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-3 w-[400px] bg-slate-900/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-orange-500/30 p-6 cyber-card-enhanced holographic-card-enhanced">
                   <div className="mb-4">
@@ -484,26 +509,10 @@ const Navigation: React.FC = () => {
                       </Link>
                     ))}
                   </div>
-=======
-              {activeDropdown === '5g' && (
-                <div className="absolute top-full left-0 mt-2 w-64 sm:w-72 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2 z-50">
-                  {fiveGServices.map((service, index) => (
-                    <Link
-                      key={index}
-                      to={service.path}
-                      onClick={closeDropdown}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
-                    >
-                      {service.icon}
-                      <span className="ml-3">{service.name}</span>
-                    </Link>
-                  ))}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                 </div>
               )}
             </div>
 
-<<<<<<< HEAD
             <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
@@ -514,35 +523,6 @@ const Navigation: React.FC = () => {
               Blog
             </Link>
             <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
-=======
-            {/* Micro SAAS Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('saas')}
-                className="flex items-center text-white hover:text-cyan-400 transition-colors"
-              >
-                Micro SAAS
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              {activeDropdown === 'saas' && (
-                <div className="absolute top-full left-0 mt-2 w-64 sm:w-72 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2 z-50">
-                  {microSaasServices.map((service, index) => (
-                    <Link
-                      key={index}
-                      to={service.path}
-                      onClick={closeDropdown}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
-                    >
-                      {service.icon}
-                      <span className="ml-3">{service.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
               Contact
             </Link>
           </div>
@@ -566,13 +546,8 @@ const Navigation: React.FC = () => {
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
-<<<<<<< HEAD
               onClick={toggleMenu}
               className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
-=======
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-cyan-400 transition-colors"
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -581,7 +556,6 @@ const Navigation: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-<<<<<<< HEAD
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
@@ -778,48 +752,6 @@ const Navigation: React.FC = () => {
                 </div>
               </div>
 
-              {/* Mobile 5G Services */}
-              <div className="px-3 py-2">
-                <div className="text-cyan-400 font-medium mb-2">5G Solutions</div>
-                <div className="pl-4 space-y-1">
-                  {fiveGServices.map((service, index) => (
-                    <Link
-                      key={index}
-                      to={service.path}
-                      onClick={() => setIsOpen(false)}
-                      className="block text-gray-300 hover:text-cyan-400 transition-colors"
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Mobile Micro SAAS Services */}
-              <div className="px-3 py-2">
-                <div className="text-cyan-400 font-medium mb-2">Micro SAAS</div>
-                <div className="pl-4 space-y-1">
-                  {microSaasServices.map((service, index) => (
-                    <Link
-                      key={index}
-                      to={service.path}
-                      onClick={() => setIsOpen(false)}
-                      className="block text-gray-300 hover:text-cyan-400 transition-colors"
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              <Link
-                to="/contact"
-                className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
             </div>
           </div>
         )}

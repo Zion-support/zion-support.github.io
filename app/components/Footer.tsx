@@ -1,19 +1,12 @@
-<<<<<<< HEAD
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, Cpu, ArrowRight } from 'lucide-react';
-=======
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-<<<<<<< HEAD
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Business intelligence' },
@@ -25,7 +18,38 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Document analysis' },
     { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Business forecasting' },
     { name: 'AI HR Solutions', url: '/ai-hr-solutions', description: 'Human resources AI' },
-    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed AI processing' }
+    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed AI processing' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media management' },
+    { name: 'AI Email Marketing Pro', url: '/ai-email-marketing-pro', description: 'Intelligent email campaigns' },
+    { name: 'AI Project Management', url: '/ai-project-management', description: 'Smart project coordination' },
+    { name: 'AI Customer Support Pro', url: '/ai-customer-support-pro', description: 'Advanced customer service' },
+    { name: 'AI Video Editor Pro', url: '/ai-video-editor-pro', description: 'Professional video editing' },
+    { name: 'AI Translation Service', url: '/ai-translation-service', description: 'Real-time language translation' },
+    { name: 'AI Voice Assistant Pro', url: '/ai-voice-assistant-pro', description: 'Enterprise voice solutions' },
+    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Advanced business analytics' },
+    { name: 'AI Smart Scheduler', url: '/ai-smart-scheduler', description: 'Intelligent scheduling system' },
+    { name: 'AI Content Moderation Pro', url: '/ai-content-moderation-pro', description: 'Advanced content filtering' },
+    { name: 'AI Invoice Generator', url: '/ai-invoice-generator', description: 'Automated invoice creation' },
+    { name: 'AI Expense Tracker', url: '/ai-expense-tracker', description: 'Smart expense management' },
+    { name: 'AI Contract Analyzer Pro', url: '/ai-contract-analyzer-pro', description: 'Legal document analysis' },
+    { name: 'AI Survey Builder Pro', url: '/ai-survey-builder-pro', description: 'Intelligent survey creation' },
+    { name: 'AI Accounting Pro', url: '/ai-accounting-pro', description: 'Advanced accounting automation' },
+    { name: 'AI Recruitment Pro', url: '/ai-recruitment-pro', description: 'Smart talent acquisition' },
+    { name: 'AI Predictive Maintenance Pro', url: '/ai-predictive-maintenance-pro', description: 'Advanced equipment monitoring' },
+    { name: 'AI Energy Manager Pro', url: '/ai-energy-manager-pro', description: 'Smart energy optimization' },
+    { name: 'AI Supply Chain Pro', url: '/ai-supply-chain-pro', description: 'Advanced supply chain AI' },
+    { name: 'AI Fraud Detection Pro', url: '/ai-fraud-detection-pro', description: 'Advanced fraud prevention' },
+    { name: 'AI Marketing Automation Pro', url: '/ai-marketing-automation-pro', description: 'Complete marketing automation' },
+    { name: 'AI Document AI Pro', url: '/ai-document-ai-pro', description: 'Advanced document processing' },
+    { name: 'AI 3D Generation Pro', url: '/ai-3d-generation-pro', description: 'Professional 3D content creation' },
+    { name: 'AI Holographic Workspace', url: '/ai-holographic-workspace', description: 'Immersive work environments' },
+    { name: 'AI Autonomous Systems Pro', url: '/ai-autonomous-systems-pro', description: 'Self-operating AI systems' },
+    { name: 'AI Blockchain Solutions Pro', url: '/ai-blockchain-solutions-pro', description: 'Decentralized AI applications' },
+    { name: 'AI Edge Computing Pro', url: '/ai-edge-computing-pro', description: 'Advanced distributed processing' },
+    { name: 'AI Quantum Computing', url: '/ai-quantum-computing', description: 'Quantum AI processing' },
+    { name: 'AI AR/VR Solutions Pro', url: '/ai-ar-vr-solutions-pro', description: 'Advanced immersive experiences' },
+    { name: 'AI IoT Analytics Pro', url: '/ai-iot-analytics-pro', description: 'Advanced IoT intelligence' },
+    { name: 'AI Machine Learning Pro', url: '/ai-machine-learning-pro', description: 'Advanced ML algorithms' }
   ];
 
   const itServices = [
@@ -40,7 +64,31 @@ const Footer: React.FC = memo(() => {
     { name: 'Custom Software', url: '/custom-software', description: 'Tailored solutions' },
     { name: 'Database Management', url: '/database-management', description: 'Database optimization' },
     { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Network setup' },
-    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle' }
+    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle' },
+    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic IT guidance' },
+    { name: 'Digital Transformation', url: '/digital-transformation', description: 'Complete digital overhaul' },
+    { name: 'IT Infrastructure Management', url: '/it-infrastructure-management', description: 'Comprehensive infrastructure oversight' },
+    { name: 'Cloud Migration Services', url: '/cloud-migration-services', description: 'Seamless cloud transitions' },
+    { name: 'IT Security Auditing', url: '/it-security-auditing', description: 'Comprehensive security assessments' },
+    { name: 'IT Training & Support', url: '/it-training-support', description: 'Staff training and support' },
+    { name: 'IT Strategy Planning', url: '/it-strategy-planning', description: 'Strategic IT roadmaps' },
+    { name: 'IT Cost Optimization', url: '/it-cost-optimization', description: 'Cost reduction strategies' },
+    { name: 'IT Compliance Management', url: '/it-compliance-management', description: 'Regulatory compliance' },
+    { name: 'IT Disaster Recovery', url: '/it-disaster-recovery', description: 'Business continuity planning' },
+    { name: 'IT Vendor Management', url: '/it-vendor-management', description: 'Vendor relationship management' },
+    { name: 'IT Change Management', url: '/it-change-management', description: 'Organizational change support' },
+    { name: 'IT Risk Assessment', url: '/it-risk-assessment', description: 'Comprehensive risk analysis' },
+    { name: 'IT Governance', url: '/it-governance', description: 'IT governance frameworks' },
+    { name: 'IT Service Management', url: '/it-service-management', description: 'ITSM implementation' },
+    { name: 'IT Capacity Planning', url: '/it-capacity-planning', description: 'Resource capacity planning' },
+    { name: 'IT Performance Monitoring', url: '/it-performance-monitoring', description: 'System performance tracking' },
+    { name: 'IT Backup Solutions', url: '/it-backup-solutions', description: 'Data backup strategies' },
+    { name: 'IT Monitoring & Alerting', url: '/it-monitoring-alerting', description: 'Proactive system monitoring' },
+    { name: 'IT Patch Management', url: '/it-patch-management', description: 'System update management' },
+    { name: 'IT License Management', url: '/it-license-management', description: 'Software license optimization' },
+    { name: 'IT Documentation', url: '/it-documentation', description: 'Technical documentation services' },
+    { name: 'IT Quality Assurance', url: '/it-quality-assurance', description: 'Quality testing services' },
+    { name: 'IT Innovation Consulting', url: '/it-innovation-consulting', description: 'Technology innovation guidance' }
   ];
 
   const microSaasServices = [
@@ -49,7 +97,38 @@ const Footer: React.FC = memo(() => {
     { name: 'Zion Security Shield', url: '/zion-security-shield', description: 'Cybersecurity monitoring' },
     { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', description: 'Cloud backup & recovery' },
     { name: 'Zion Content Studio', url: '/zion-content-studio', description: 'AI content creation' },
-    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', description: 'AI-enhanced CRM' }
+    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', description: 'AI-enhanced CRM' },
+    { name: 'Zion AI Social Media Pro', url: '/zion-ai-social-media-pro', description: 'Advanced social media automation' },
+    { name: 'Zion AI Email Marketing Pro', url: '/zion-ai-email-marketing-pro', description: 'Intelligent email campaigns' },
+    { name: 'Zion AI Project Manager Pro', url: '/zion-ai-project-manager-pro', description: 'Advanced project coordination' },
+    { name: 'Zion AI Customer Service Pro', url: '/zion-ai-customer-service-pro', description: 'Enterprise customer service' },
+    { name: 'Zion AI Video Editor Pro', url: '/zion-ai-video-editor-pro', description: 'Professional video editing' },
+    { name: 'Zion AI Translation Pro', url: '/zion-ai-translation-pro', description: 'Advanced language translation' },
+    { name: 'Zion AI Voice Assistant Pro', url: '/zion-ai-voice-assistant-pro', description: 'Enterprise voice solutions' },
+    { name: 'Zion AI Analytics Dashboard Pro', url: '/zion-ai-analytics-dashboard-pro', description: 'Advanced business analytics' },
+    { name: 'Zion AI Smart Scheduler Pro', url: '/zion-ai-smart-scheduler-pro', description: 'Intelligent scheduling system' },
+    { name: 'Zion AI Content Moderation Pro', url: '/zion-ai-content-moderation-pro', description: 'Advanced content filtering' },
+    { name: 'Zion AI Invoice Generator Pro', url: '/zion-ai-invoice-generator-pro', description: 'Automated invoice creation' },
+    { name: 'Zion AI Expense Tracker Pro', url: '/zion-ai-expense-tracker-pro', description: 'Smart expense management' },
+    { name: 'Zion AI Contract Analyzer Pro', url: '/zion-ai-contract-analyzer-pro', description: 'Legal document analysis' },
+    { name: 'Zion AI Survey Builder Pro', url: '/zion-ai-survey-builder-pro', description: 'Intelligent survey creation' },
+    { name: 'Zion AI Accounting Pro', url: '/zion-ai-accounting-pro', description: 'Advanced accounting automation' },
+    { name: 'Zion AI Recruitment Pro', url: '/zion-ai-recruitment-pro', description: 'Smart talent acquisition' },
+    { name: 'Zion AI Predictive Maintenance Pro', url: '/zion-ai-predictive-maintenance-pro', description: 'Advanced equipment monitoring' },
+    { name: 'Zion AI Energy Manager Pro', url: '/zion-ai-energy-manager-pro', description: 'Smart energy optimization' },
+    { name: 'Zion AI Supply Chain Pro', url: '/zion-ai-supply-chain-pro', description: 'Advanced supply chain AI' },
+    { name: 'Zion AI Fraud Detection Pro', url: '/zion-ai-fraud-detection-pro', description: 'Advanced fraud prevention' },
+    { name: 'Zion AI Marketing Automation Pro', url: '/zion-ai-marketing-automation-pro', description: 'Complete marketing automation' },
+    { name: 'Zion AI Document AI Pro', url: '/zion-ai-document-ai-pro', description: 'Advanced document processing' },
+    { name: 'Zion AI 3D Generation Pro', url: '/zion-ai-3d-generation-pro', description: 'Professional 3D content creation' },
+    { name: 'Zion AI Holographic Workspace', url: '/zion-ai-holographic-workspace', description: 'Immersive work environments' },
+    { name: 'Zion AI Autonomous Systems Pro', url: '/zion-ai-autonomous-systems-pro', description: 'Self-operating AI systems' },
+    { name: 'Zion AI Blockchain Solutions Pro', url: '/zion-ai-blockchain-solutions-pro', description: 'Decentralized AI applications' },
+    { name: 'Zion AI Edge Computing Pro', url: '/zion-ai-edge-computing-pro', description: 'Advanced distributed processing' },
+    { name: 'Zion AI Quantum Computing', url: '/zion-ai-quantum-computing', description: 'Quantum AI processing' },
+    { name: 'Zion AI AR/VR Solutions Pro', url: '/zion-ai-ar-vr-solutions-pro', description: 'Advanced immersive experiences' },
+    { name: 'Zion AI IoT Analytics Pro', url: '/zion-ai-iot-analytics-pro', description: 'Advanced IoT intelligence' },
+    { name: 'Zion AI Machine Learning Pro', url: '/zion-ai-machine-learning-pro', description: 'Advanced ML algorithms' }
   ];
 
   const companyLinks = [
@@ -90,75 +169,6 @@ const Footer: React.FC = memo(() => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-=======
-    { name: 'AI Content Generator', path: '/ai-content-generation' },
-    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
-    { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro' },
-    { name: 'AI Smart Scheduler', path: '/ai-smart-scheduler' },
-    { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro' },
-    { name: 'AI Computer Vision', path: '/ai-computer-vision' },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics' },
-    { name: 'AI Automation', path: '/ai-automation' }
-  ]
-
-  const itServices = [
-    { name: 'Web Development', path: '/web-development' },
-    { name: 'Mobile Development', path: '/mobile-development' },
-    { name: 'Cloud Migration Pro', path: '/cloud-migration-pro' },
-    { name: 'DevOps', path: '/devops' },
-    { name: 'Data Analytics', path: '/data-analytics' },
-    { name: 'Cloud Services', path: '/cloud-services' },
-    { name: 'Cybersecurity', path: '/cybersecurity' }
-  ]
-
-  const microSaasServices = [
-    { name: 'AI E-commerce Optimizer Pro', path: '/ai-ecommerce-optimizer-pro' },
-    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
-    { name: 'AI Email Marketing Automation', path: '/ai-email-marketing-automation' },
-    { name: 'AI Project Management Pro', path: '/ai-project-management-pro' },
-    { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot' },
-    { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
-    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
-    { name: 'AI Video Editor', path: '/ai-video-editor' },
-    { name: 'Advanced Security Suite', path: '/advanced-security-suite' },
-    { name: 'AI Smart Scheduler', path: '/ai-smart-scheduler' },
-    { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro' },
-    { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro' },
-    { name: 'Cloud Migration Pro', path: '/cloud-migration-pro' }
-  ]
-
-  const fiveGServices = [
-    { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
-    { name: '5G Implementation', path: '/5g-implementation' },
-    { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
-    { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
-    { name: '5G Edge Computing', path: '/5g-edge-computing' },
-    { name: '5G Private Networks', path: '/5g-private-networks' }
-  ]
-
-  const companyLinks = [
-    { name: 'About Us', path: '/about' },
-    { name: 'Our Team', path: '/team' },
-    { name: 'Careers', path: '/careers' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Case Studies', path: '/case-studies' },
-    { name: 'Partners', path: '/partners' }
-  ]
-
-  const supportLinks = [
-    { name: 'Contact Us', path: '/contact' },
-    { name: 'Help Center', path: '/help' },
-    { name: 'Documentation', path: '/docs' },
-    { name: 'Support', path: '/support' },
-    { name: 'Status', path: '/status' },
-    { name: 'SLA', path: '/sla' }
-  ]
-
-  return (
-    <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3 group">
@@ -203,33 +213,15 @@ const Footer: React.FC = memo(() => {
                 </div>
                 <span className="font-medium">Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support</span>
               </div>
-=======
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Github className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
             </div>
           </div>
 
           {/* AI Services */}
-<<<<<<< HEAD
           <div className="cyber-card-enhanced p-6 rounded-2xl">
             <h3 className="text-lg font-bold mb-6 text-cyan-400 flex items-center neon-text-enhanced">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">
                 <Brain className="w-5 h-5 text-white" />
               </div>
-=======
-          <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Brain className="w-5 h-5 mr-2 text-cyan-400" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
               AI Services
             </h3>
             <ul className="space-y-3">
@@ -306,13 +298,6 @@ const Footer: React.FC = memo(() => {
                     to={service.url}
                     className="text-gray-300 hover:text-green-400 transition-all duration-300 text-sm group flex items-center">
                     <div className="w-2 h-2 bg-green-400 rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
-=======
-                  <Link
-                    to={service.path}
-                    className="text-gray-300 hover:text-purple-400 transition-colors flex items-center"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                     {service.name}
                   </Link>
                 </li>
@@ -336,16 +321,6 @@ const Footer: React.FC = memo(() => {
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Company</h3>
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
-=======
-          {/* Micro SAAS Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Sparkles className="w-5 h-5 mr-2 text-yellow-400" />
-              Micro SAAS
-            </h3>
-            <ul className="space-y-3">
-              {microSaasServices.map((service, index) => (
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                 <li key={index}>
                   <Link 
                     to={link.url} 
@@ -369,30 +344,12 @@ const Footer: React.FC = memo(() => {
                     className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
                   >
                     {link.name}
-=======
-          {/* 5G Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Zap className="w-5 h-5 mr-2 text-blue-400" />
-              5G Solutions
-            </h3>
-            <ul className="space-y-3">
-              {fiveGServices.map((service, index) => (
-                <li key={index}>
-                  <Link
-                    to={service.path}
-                    className="text-gray-300 hover:text-blue-400 transition-colors flex items-center"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2" />
-                    {service.name}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-<<<<<<< HEAD
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Enterprise</h3>
             <ul className="space-y-2">
@@ -402,39 +359,6 @@ const Footer: React.FC = memo(() => {
                     to={link.url} 
                     className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
                   >
-=======
-          {/* Company & Support */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-green-400" />
-              Company
-            </h3>
-            <ul className="space-y-3">
-              {companyLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    to={link.path}
-                    className="text-gray-300 hover:text-green-400 transition-colors flex items-center"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2" />
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <h3 className="text-lg font-semibold mb-6 mt-8 flex items-center">
-              <Shield className="w-5 h-5 mr-2 text-red-400" />
-              Support
-            </h3>
-            <ul className="space-y-3">
-              {supportLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    to={link.path}
-                    className="text-gray-300 hover:text-red-400 transition-colors flex items-center"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                     {link.name}
                   </Link>
                 </li>
@@ -442,7 +366,6 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
 
-<<<<<<< HEAD
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400">Quick Links</h3>
             <ul className="space-y-2">
@@ -497,23 +420,6 @@ const Footer: React.FC = memo(() => {
                 <a href="https://youtube.com/ziontechgroup" className="text-gray-300 hover:text-cyan-400 transition-colors">
                   YouTube
                 </a>
-=======
-        {/* Contact Info */}
-          <div className="border-t border-gray-700 mt-12 pt-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
-            <div className="flex items-center">
-              <Mail className="w-5 h-5 text-cyan-400 mr-3" />
-              <div>
-                <p className="text-sm text-gray-400">Email</p>
-                <p className="text-white">kleber@ziontechgroup.com</p>
-              </div>
-            </div>
-            <div className="flex items-center">
-              <Phone className="w-5 h-5 text-purple-400 mr-3" />
-              <div>
-                <p className="text-sm text-gray-400">Phone</p>
-                <p className="text-white">+1 302 464 0950</p>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
               </div>
               <div className="text-sm text-gray-400">
                 <p>📧 kleber@ziontechgroup.com</p>
@@ -547,14 +453,9 @@ const Footer: React.FC = memo(() => {
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
   );
 });
 
 Footer.displayName = 'Footer';
 
 export default Footer;
-=======
-  )
-}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
