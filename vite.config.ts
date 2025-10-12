@@ -31,6 +31,7 @@ export default defineConfig({
     minify: 'esbuild',
     target: 'es2020',
     cssCodeSplit: true,
+    
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -61,6 +62,10 @@ export default defineConfig({
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
             return 'utils'
           }
+          // Performance monitoring
+          if (id.includes('web-vitals')) {
+            return 'performance'
+          }
           // Large page components (lazy load)
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
@@ -68,6 +73,11 @@ export default defineConfig({
           // Default chunk for other modules
           return 'vendor'
         },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+      },
+    },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]',
