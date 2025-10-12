@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Cloud, Code, Smartphone, Brain, Cpu, Wifi } from 'lucide-react'
+import { Menu, X, ChevronDown, Cloud, Code, Smartphone, Brain, Cpu, Wifi, Shield, Link as LinkIcon, Mail, BarChart3 } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -48,6 +48,60 @@ export default function Navigation() {
     }
   ]
 
+  const aiServices = [
+    {
+      title: 'AI CRM Assistant',
+      href: '/ai-crm-assistant',
+      icon: <Brain className="w-4 h-4" />,
+      description: 'AI-powered sales automation'
+    },
+    {
+      title: 'AI Cybersecurity Monitor',
+      href: '/ai-cybersecurity-monitor',
+      icon: <Shield className="w-4 h-4" />,
+      description: 'Real-time threat detection'
+    },
+    {
+      title: 'AI Blockchain Solutions',
+      href: '/ai-blockchain-solutions',
+      icon: <LinkIcon className="w-4 h-4" />,
+      description: 'Smart contracts & DeFi'
+    },
+    {
+      title: 'AI Email Marketing',
+      href: '/ai-email-marketing-automation',
+      icon: <Mail className="w-4 h-4" />,
+      description: 'Automated email campaigns'
+    }
+  ]
+
+  const itServices = [
+    {
+      title: 'Cloud Migration',
+      href: '/cloud-migration',
+      icon: <Cloud className="w-4 h-4" />,
+      description: 'Zero-downtime migration'
+    },
+    {
+      title: 'Cybersecurity Solutions',
+      href: '/cybersecurity-solutions',
+      icon: <Shield className="w-4 h-4" />,
+      description: 'Comprehensive security'
+    },
+    {
+      title: 'DevOps & CI/CD',
+      href: '/devops-cicd',
+      icon: <Code className="w-4 h-4" />,
+      description: 'Automated deployment'
+    },
+    {
+      title: 'Data Analytics',
+      href: '/data-analytics',
+      icon: <BarChart3 className="w-4 h-4" />,
+      description: 'Business intelligence'
+    }
+  ]
+
   return (
     <nav className="bg-white/10 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,8 +140,9 @@ export default function Navigation() {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white/10 backdrop-blur-lg rounded-lg border border-white/20 shadow-lg z-50">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white/10 backdrop-blur-lg rounded-lg border border-white/20 shadow-lg z-50">
                   <div className="py-2">
+                    {/* Main Services */}
                     {services.map((service, index) => (
                       <Link
                         key={index}
@@ -102,6 +157,46 @@ export default function Navigation() {
                         </div>
                       </Link>
                     ))}
+                    
+                    {/* AI Services */}
+                    <div className="border-t border-white/20 my-2"></div>
+                    <div className="px-4 py-2">
+                      <div className="text-sm font-semibold text-purple-300 mb-2">AI Services</div>
+                      {aiServices.map((service, index) => (
+                        <Link
+                          key={`ai-${index}`}
+                          to={service.href}
+                          className="flex items-center px-2 py-2 text-gray-300 hover:text-white hover:bg-white/5 transition-colors rounded"
+                          onClick={() => setIsServicesOpen(false)}
+                        >
+                          <div className="mr-2">{service.icon}</div>
+                          <div className="text-sm">
+                            <div className="font-medium">{service.title}</div>
+                            <div className="text-xs text-gray-400">{service.description}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                    
+                    {/* IT Services */}
+                    <div className="border-t border-white/20 my-2"></div>
+                    <div className="px-4 py-2">
+                      <div className="text-sm font-semibold text-blue-300 mb-2">IT Services</div>
+                      {itServices.map((service, index) => (
+                        <Link
+                          key={`it-${index}`}
+                          to={service.href}
+                          className="flex items-center px-2 py-2 text-gray-300 hover:text-white hover:bg-white/5 transition-colors rounded"
+                          onClick={() => setIsServicesOpen(false)}
+                        >
+                          <div className="mr-2">{service.icon}</div>
+                          <div className="text-sm">
+                            <div className="font-medium">{service.title}</div>
+                            <div className="text-xs text-gray-400">{service.description}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
@@ -153,11 +248,41 @@ export default function Navigation() {
               
               {/* Mobile Services */}
               <div className="px-3 py-2">
-                <div className="text-white font-medium mb-2">Services</div>
+                <div className="text-white font-medium mb-2">Main Services</div>
                 <div className="space-y-1 ml-4">
                   {services.map((service, index) => (
                     <Link
                       key={index}
+                      to={service.href}
+                      className="flex items-center text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <div className="mr-2">{service.icon}</div>
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+                
+                <div className="text-purple-300 font-medium mb-2 mt-4">AI Services</div>
+                <div className="space-y-1 ml-4">
+                  {aiServices.map((service, index) => (
+                    <Link
+                      key={`ai-mobile-${index}`}
+                      to={service.href}
+                      className="flex items-center text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <div className="mr-2">{service.icon}</div>
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+                
+                <div className="text-blue-300 font-medium mb-2 mt-4">IT Services</div>
+                <div className="space-y-1 ml-4">
+                  {itServices.map((service, index) => (
+                    <Link
+                      key={`it-mobile-${index}`}
                       to={service.href}
                       className="flex items-center text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm"
                       onClick={() => setIsOpen(false)}

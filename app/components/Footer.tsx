@@ -4,12 +4,12 @@ import { Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Footer() {
   const aiServices = [
+    { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
+    { name: 'AI Cybersecurity Monitor', path: '/ai-cybersecurity-monitor' },
+    { name: 'AI Blockchain Solutions', path: '/ai-blockchain-solutions' },
+    { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
     { name: 'AI Content Generator', path: '/ai-content-generator' },
-    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
-    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-    { name: 'AI Email Assistant', path: '/ai-email-assistant' },
-    { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Automation Suite', path: '/ai-automation' }
+    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' }
   ]
 
   const itServices = [
@@ -46,16 +46,19 @@ export default function Footer() {
             <p className="text-gray-300 mb-4">
               Advanced AI and IT solutions for modern businesses. We help you transform your digital infrastructure with cutting-edge technology.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Mail className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Phone className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <MapPin className="w-5 h-5" />
-              </a>
+            <div className="space-y-2 text-gray-300">
+              <div className="flex items-center">
+                <Phone className="w-4 h-4 mr-2" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center">
+                <Mail className="w-4 h-4 mr-2" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-4 h-4 mr-2" />
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
             </div>
           </div>
 
