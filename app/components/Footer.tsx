@@ -17,44 +17,48 @@ import {
 
 const Footer = () => {
   const aiServices = [
-    { name: 'AI Content Generator', path: '/ai-content-generator' },
     { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-    { name: 'AI Email Assistant', path: '/ai-email-assistant' },
+    { name: 'AI Code Assistant', path: '/ai-code-assistant' },
+    { name: 'AI Customer Support', path: '/ai-customer-support' },
+    { name: 'AI Email Marketing', path: '/ai-email-marketing' },
+    { name: 'AI Content Generator', path: '/ai-content-generator' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
-    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
-    { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
-    { name: 'AI Automation Suite', path: '/ai-automation' },
-    { name: 'AI Project Manager', path: '/ai-project-manager' },
-    { name: 'AI 3D Generation', path: '/ai-3d-generation' },
-    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
+    { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+    { name: 'AI Data Processing', path: '/ai-document-processing' },
+    { name: 'AI Business Intelligence', path: '/ai-business-intelligence' },
+    { name: 'AI Project Management', path: '/ai-project-management' },
+    { name: 'AI HR Assistant', path: '/ai-hr-assistant' }
   ];
 
   const itServices = [
     { name: 'Web Development', path: '/web-development' },
     { name: 'Mobile Development', path: '/mobile-development' },
-    { name: 'DevOps', path: '/devops' },
     { name: 'Cloud Migration', path: '/cloud-migration' },
-    { name: 'API Development', path: '/api-development' },
+    { name: 'Cybersecurity', path: '/cybersecurity' },
     { name: 'Database Management', path: '/database-management' },
     { name: 'Network Infrastructure', path: '/network-infrastructure' },
-    { name: 'Cybersecurity', path: '/cybersecurity' },
-    { name: 'System Integration', path: '/system-integration' },
+    { name: 'DevOps Solutions', path: '/devops' },
     { name: 'Data Analytics', path: '/data-analytics' },
-    { name: 'IoT Solutions', path: '/iot-solutions' },
-    { name: 'Blockchain Development', path: '/blockchain-development' }
+    { name: 'Server Management', path: '/server-management' },
+    { name: 'API Development', path: '/api-development' },
+    { name: 'IT Security Audit', path: '/it-security-audit' },
+    { name: 'IT Support & Maintenance', path: '/it-support' }
   ];
 
   const microSaasServices = [
-    { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard' },
-    { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler' },
-    { name: 'Chat Analytics', path: '/micro-saas/chat-analytics' },
-    { name: 'Content Generator', path: '/micro-saas/content-generator' },
+    { name: 'AI Customer Insights', path: '/ai-customer-insights' },
+    { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
+    { name: 'Smart Appointment Scheduler', path: '/micro-saas/appointment-scheduler' },
+    { name: 'AI Chat Analytics', path: '/micro-saas/chat-analytics' },
+    { name: 'AI Content Generator', path: '/micro-saas/content-generator' },
     { name: 'Document Processor', path: '/micro-saas/document-processor' },
-    { name: 'Email Marketing', path: '/micro-saas/email-marketing' },
-    { name: 'Expense Tracker', path: '/micro-saas/expense-tracker' },
-    { name: 'Inventory Management', path: '/micro-saas/inventory-management' }
+    { name: 'AI Email Marketing', path: '/micro-saas/email-marketing' },
+    { name: 'Expense Tracker Pro', path: '/micro-saas/expense-tracker' },
+    { name: 'Inventory Manager', path: '/micro-saas/inventory-management' },
+    { name: 'Lead Generation Suite', path: '/micro-saas/lead-generation' },
+    { name: 'Social Media Scheduler', path: '/micro-saas/social-scheduler' },
+    { name: 'Password Manager Pro', path: '/micro-saas/password-manager' }
   ];
 
   const fiveGServices = [

@@ -21,14 +21,21 @@ export default function Navigation() {
       name: 'AI Services',
       path: '/ai-services',
       dropdown: [
-        { name: 'AI Customer Insights', path: '/ai-customer-insights' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-        { name: 'AI Blockchain Analytics', path: '/ai-blockchain-analytics' },
-        { name: 'AI Content Generator', path: '/ai-content-generator' },
         { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-        { name: 'AI Email Assistant', path: '/ai-email-assistant' }
+        { name: 'AI Code Assistant', path: '/ai-code-assistant' },
+        { name: 'AI Customer Support', path: '/ai-customer-support' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing' },
+        { name: 'AI Content Generator', path: '/ai-content-generator' },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+        { name: 'AI Data Processing', path: '/ai-document-processing' },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence' },
+        { name: 'AI Project Management', path: '/ai-project-management' },
+        { name: 'AI HR Assistant', path: '/ai-hr-assistant' },
+        { name: 'AI Financial Advisor', path: '/ai-financial-advisor' },
+        { name: 'AI Computer Vision', path: '/ai-computer-vision' },
+        { name: 'AI Translation Services', path: '/ai-translation-services' }
       ]
     },
     {
@@ -37,12 +44,16 @@ export default function Navigation() {
       dropdown: [
         { name: 'Web Development', path: '/web-development' },
         { name: 'Mobile Development', path: '/mobile-development' },
-        { name: 'DevOps', path: '/devops' },
         { name: 'Cloud Migration', path: '/cloud-migration' },
-        { name: 'API Development', path: '/api-development' },
+        { name: 'Cybersecurity', path: '/cybersecurity' },
         { name: 'Database Management', path: '/database-management' },
         { name: 'Network Infrastructure', path: '/network-infrastructure' },
-        { name: 'Cybersecurity', path: '/cybersecurity' }
+        { name: 'DevOps Solutions', path: '/devops' },
+        { name: 'Data Analytics', path: '/data-analytics' },
+        { name: 'Server Management', path: '/server-management' },
+        { name: 'API Development', path: '/api-development' },
+        { name: 'IT Security Audit', path: '/it-security-audit' },
+        { name: 'IT Support & Maintenance', path: '/it-support' }
       ]
     },
     {
@@ -51,16 +62,42 @@ export default function Navigation() {
       dropdown: [
         { name: 'AI Customer Insights', path: '/ai-customer-insights' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-        { name: 'AI Blockchain Analytics', path: '/ai-blockchain-analytics' },
         { name: 'Smart Appointment Scheduler', path: '/micro-saas/appointment-scheduler' },
         { name: 'AI Chat Analytics', path: '/micro-saas/chat-analytics' },
         { name: 'AI Content Generator', path: '/micro-saas/content-generator' },
-        { name: 'Document Processor', path: '/micro-saas/document-processor' }
+        { name: 'Document Processor', path: '/micro-saas/document-processor' },
+        { name: 'AI Email Marketing', path: '/micro-saas/email-marketing' },
+        { name: 'Expense Tracker Pro', path: '/micro-saas/expense-tracker' },
+        { name: 'Inventory Manager', path: '/micro-saas/inventory-management' },
+        { name: 'Lead Generation Suite', path: '/micro-saas/lead-generation' },
+        { name: 'Social Media Scheduler', path: '/micro-saas/social-scheduler' },
+        { name: 'Password Manager Pro', path: '/micro-saas/password-manager' },
+        { name: 'Task Manager AI', path: '/micro-saas/task-manager' },
+        { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard' },
+        { name: 'Website Monitor', path: '/micro-saas/website-monitor' },
+        { name: 'Email Signature Manager', path: '/micro-saas/email-signature' },
+        { name: 'Meeting Room Booker', path: '/micro-saas/meeting-room-booker' },
+        { name: 'Contract Manager', path: '/micro-saas/contract-manager' },
+        { name: 'Employee Directory', path: '/micro-saas/employee-directory' },
+        { name: 'Invoice Generator', path: '/micro-saas/invoice-generator' },
+        { name: 'Time Tracking Pro', path: '/micro-saas/time-tracking' }
+      ]
+    },
+    {
+      name: '5G Solutions',
+      path: '/5g-solutions',
+      dropdown: [
+        { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
+        { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
+        { name: '5G Edge Computing', path: '/5g-edge-computing' },
+        { name: '5G Private Networks', path: '/5g-private-networks' },
+        { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
+        { name: '5G Data Analytics', path: '/5g-data-analytics' }
       ]
     },
     { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Contact', path: '/contact' },
+    { name: 'Pricing', path: '/pricing' }
   ]
 
   return (
