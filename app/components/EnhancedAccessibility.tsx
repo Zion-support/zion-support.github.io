@@ -211,16 +211,17 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         category: 'accessibility',
         label: (e.target as HTMLElement).tagName
       })});
-  }, []);
+  }, [trackEvent]);
 
-  const updateSettings = (newSettings: Partial<AccessibilitySettings>) => {
+  const updateSettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
     const updatedSettings = { ...settings, ...newSettings }
     setSettings(updatedSettings)
     applyAccessibilitySettings(updatedSettings)
     trackEvent('accessibility_setting_changed', {
       category: 'accessibility',
       label: Object.keys(newSettings)[0]
-    })}
+    })
+  }, [settings, trackEvent])
   // Provide accessibility context
   useEffect(() => {
     const context = {

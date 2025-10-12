@@ -1,42 +1,80 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'}
-  ]
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
+import React, { useState, useEffect } from 'react'
+import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react'
+
+interface PWAInstallerProps {
+  onInstall?: () => void
+  onDismiss?: () => void
+}
+
+const PWAInstaller: React.FC<PWAInstallerProps> = ({ onInstall, onDismiss }) => {
+  const [deferredPrompt, setDeferredPrompt] = useState<any>(null)
+  const [showInstallPrompt, setShowInstallPrompt] = useState(false)
+
+  useEffect(() => {
+    const handleBeforeInstallPrompt = (e: Event) => {
+      e.preventDefault()
+      setDeferredPrompt(e)
+      setShowInstallPrompt(true)
+    }
+
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
+    }
+  }, [])
+
+  const handleInstall = async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt()
+      const { outcome } = await deferredPrompt.userChoice
+      if (outcome === 'accepted') {
+        onInstall?.()
+      }
+      setDeferredPrompt(null)
+      setShowInstallPrompt(false)
+    }
+  }
+
+  const handleDismiss = () => {
+    setShowInstallPrompt(false)
+    onDismiss?.()
+  }
+
+  if (!showInstallPrompt) return null
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>PWAInstaller | Zion Tech Group</title>
-        <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
-      </Helmet>
+    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">
+      <div className="flex items-start space-x-3">
+        <div className="flex-shrink-0">
+          <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+            <Zap className="w-4 h-4 text-white" />
+          </div>
         </div>
-      </section>
-}}
-  ];const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        <title>PWAInstaller | Zion Tech Group</title>
-        <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
-      </Helmet>
+        <div className="flex-1">
+          <h3 className="text-sm font-medium text-gray-900">Install App</h3>
+          <p className="text-sm text-gray-500 mt-1">
+            Install this app on your device for a better experience.
+          </p>
+          <div className="flex space-x-2 mt-3">
+            <button
+              onClick={handleInstall}
+              className="bg-blue-600 text-white px-3 py-1 rounded text-sm font-medium hover:bg-blue-700"
+            >
+              Install
+            </button>
+            <button
+              onClick={handleDismiss}
+              className="text-gray-500 px-3 py-1 rounded text-sm font-medium hover:bg-gray-100"
+            >
+              Dismiss
+            </button>
+          </div>
         </div>
-      </section>};export default PWAInstallerPage
+      </div>
+    </div>
+  )
+}
+
+export default PWAInstaller
