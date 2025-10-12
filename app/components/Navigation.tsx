@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, DollarSign, CheckSquare, BarChart3, Mail } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -55,11 +55,20 @@ export default function Navigation() {
 
   const aiServices = [
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
-    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'AI Task Manager', path: '/ai-task-manager', icon: <Database className="w-4 h-4" /> },
-    { name: 'AI Expense Tracker', path: '/ai-expense-tracker', icon: <Code className="w-4 h-4" /> },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Smartphone className="w-4 h-4" /> },
+    { name: 'AI API Management', path: '/ai-api-management', icon: <Code className="w-4 h-4" /> },
+    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', icon: <Globe className="w-4 h-4" /> }
+  ]
+
+  const microSAAS = [
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker', icon: <DollarSign className="w-4 h-4" /> },
     { name: 'AI Password Manager', path: '/ai-password-manager', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Automated Reporting', path: '/ai-automated-reporting', icon: <Globe className="w-4 h-4" /> }
+    { name: 'AI Task Manager', path: '/ai-task-manager', icon: <CheckSquare className="w-4 h-4" /> },
+    { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
+    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Email Assistant', path: '/ai-email-assistant', icon: <Mail className="w-4 h-4" /> }
   ]
 
   return (
@@ -96,6 +105,28 @@ export default function Navigation() {
               {activeDropdown === 'ai' && (
                 <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
                   {aiServices.map((service, index) => (
+                    <Link key={index} to={service.path} className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
+                      {service.icon}
+                      <span className="ml-3">{service.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Micro SaaS Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('micro')}
+                className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+              >
+                Micro SaaS
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              
+              {activeDropdown === 'micro' && (
+                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                  {microSAAS.map((service, index) => (
                     <Link key={index} to={service.path} className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
                       {service.icon}
                       <span className="ml-3">{service.name}</span>
@@ -158,6 +189,16 @@ export default function Navigation() {
               <div className="px-3 py-2">
                 <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">AI Services</p>
                 {aiServices.map((service, index) => (
+                  <Link key={index} to={service.path} className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Micro SaaS Mobile */}
+              <div className="px-3 py-2">
+                <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Micro SaaS</p>
+                {microSAAS.map((service, index) => (
                   <Link key={index} to={service.path} className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
                     {service.name}
                   </Link>

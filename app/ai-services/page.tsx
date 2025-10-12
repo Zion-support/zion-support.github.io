@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, MessageSquare, BarChart3, Clock, TrendingUp } from 'lucide-react';
+import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, MessageSquare, BarChart3, Clock, TrendingUp, Code } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -9,55 +9,61 @@ export default function AIServicesPage() {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
       title: 'AI Content Generator',
       description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI models.',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates'],
+      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates', 'Plagiarism detection', 'Content scheduling'],
       pricing: 'Starting at $29/month',
       link: '/ai-content-generator',
-      popular: true
+      popular: true,
+      marketPrice: '$49-99/month'
     },
     {
       icon: <Zap className="w-8 h-8 text-purple-500" />,
-      title: 'AI Automation',
-      description: 'Automate repetitive tasks and workflows with intelligent AI-powered automation solutions.',
-      features: ['Workflow automation', 'Process optimization', 'Custom integrations', 'Real-time monitoring'],
+      title: 'AI Voice Assistant',
+      description: 'Advanced AI-powered voice assistant with natural language processing and multi-language support.',
+      features: ['Natural language processing', 'Multi-language support', 'Custom voice training', 'Integration with 100+ apps', '24/7 availability', 'Advanced analytics'],
+      pricing: 'Starting at $29/month',
+      link: '/ai-voice-assistant',
+      popular: true,
+      marketPrice: '$79-199/month'
+    },
+    {
+      icon: <Code className="w-8 h-8 text-indigo-500" />,
+      title: 'AI API Management',
+      description: 'Revolutionize your API infrastructure with AI-powered management, analytics, and optimization.',
+      features: ['AI-powered analytics', 'Intelligent rate limiting', 'Automated documentation', 'Real-time monitoring', 'Advanced security', 'Cost optimization'],
       pricing: 'Starting at $49/month',
-      link: '/ai-automation',
-      popular: true
+      link: '/ai-api-management',
+      popular: true,
+      marketPrice: '$199-599/month'
     },
     {
       icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'AI Cybersecurity',
-      description: 'Advanced AI-powered security solutions to protect your digital assets and detect threats.',
-      features: ['Threat detection', 'Anomaly monitoring', 'Automated response', 'Compliance reporting'],
-      pricing: 'Starting at $99/month',
-      link: '/ai-cybersecurity',
-      popular: false
+      title: 'AI Cybersecurity Suite',
+      description: 'Comprehensive AI-powered cybersecurity suite with threat detection and incident response.',
+      features: ['AI threat detection', 'Real-time monitoring', 'Automated response', 'Compliance management', 'Zero-trust architecture', 'Security orchestration'],
+      pricing: 'Starting at $199/month',
+      link: '/ai-cybersecurity-suite',
+      popular: false,
+      marketPrice: '$499-999/month'
     },
     {
       icon: <Globe className="w-8 h-8 text-green-500" />,
-      title: 'AI Analytics',
-      description: 'Transform your data into actionable insights with powerful AI-driven analytics tools.',
-      features: ['Predictive analytics', 'Data visualization', 'Custom dashboards', 'Real-time insights'],
+      title: 'AI Analytics Dashboard',
+      description: 'Transform your data into actionable insights with powerful AI-driven analytics and visualization.',
+      features: ['Predictive analytics', 'Data visualization', 'Custom dashboards', 'Real-time insights', 'Machine learning models', 'Automated reporting'],
       pricing: 'Starting at $39/month',
-      link: '/ai-analytics',
-      popular: false
+      link: '/ai-analytics-dashboard',
+      popular: false,
+      marketPrice: '$99-299/month'
     },
     {
-      icon: <MessageSquare className="w-8 h-8 text-indigo-500" />,
-      title: 'AI Chatbot',
-      description: 'Intelligent conversational AI that provides 24/7 customer support and engagement.',
-      features: ['Natural language processing', 'Multi-channel support', 'Custom training', 'Analytics dashboard'],
+      icon: <MessageSquare className="w-8 h-8 text-orange-500" />,
+      title: 'AI Chatbot Builder',
+      description: 'Create intelligent conversational AI that provides 24/7 customer support and engagement.',
+      features: ['Natural language processing', 'Multi-channel support', 'Custom training', 'Analytics dashboard', 'Voice integration', 'Sentiment analysis'],
       pricing: 'Starting at $79/month',
-      link: '/ai-chatbot',
-      popular: true
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-orange-500" />,
-      title: 'Predictive Analytics',
-      description: 'Forecast future trends and behaviors using advanced machine learning algorithms.',
-      features: ['Trend forecasting', 'Risk assessment', 'Performance prediction', 'Custom models'],
-      pricing: 'Starting at $59/month',
-      link: '/predictive-analytics',
-      popular: false
+      link: '/ai-chatbot-builder',
+      popular: true,
+      marketPrice: '$149-399/month'
     }
   ];
 
@@ -196,15 +202,23 @@ export default function AIServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-semibold text-white">{service.pricing}</span>
-                  <Link 
-                    to={service.link}
-                    className="text-purple-400 hover:text-purple-300 transition-colors flex items-center"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-lg font-semibold text-white">{service.pricing}</div>
+                      <div className="text-sm text-gray-400">Market: {service.marketPrice}</div>
+                    </div>
+                    <Link 
+                      to={service.link}
+                      className="text-purple-400 hover:text-purple-300 transition-colors flex items-center"
+                    >
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </Link>
+                  </div>
+                  <div className="text-xs text-green-400 font-medium">
+                    Save up to 70% vs market rates
+                  </div>
                 </div>
               </div>
             ))}

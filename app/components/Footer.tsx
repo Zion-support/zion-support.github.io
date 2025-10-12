@@ -5,11 +5,20 @@ import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight } from 'luci
 export default function Footer() {
   const aiServices = [
     { name: 'AI Content Generator', path: '/ai-content-generator' },
-    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
-    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-    { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Automation Suite', path: '/ai-automation' }
+    { name: 'AI API Management', path: '/ai-api-management' },
+    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
+    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
+    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' }
+  ]
+
+  const microSAAS = [
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
+    { name: 'AI Password Manager', path: '/ai-password-manager' },
+    { name: 'AI Task Manager', path: '/ai-task-manager' },
+    { name: 'AI Content Generator', path: '/ai-content-generator' },
+    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
+    { name: 'AI Email Assistant', path: '/ai-email-assistant' }
   ]
 
   const itServices = [
@@ -50,15 +59,15 @@ export default function Footer() {
               Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">Twitter</span>
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">LinkedIn</span>
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">GitHub</span>
                 <Github className="w-5 h-5" />
               </a>
@@ -70,6 +79,24 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
               {aiServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.path} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Micro SaaS */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
+            <ul className="space-y-2">
+              {microSAAS.map((service, index) => (
                 <li key={index}>
                   <Link 
                     to={service.path} 
@@ -138,15 +165,15 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center">
               <Mail className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">contact@ziontech.com</span>
+              <span className="text-gray-400">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
               <Phone className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">+1 (555) 123-4567</span>
+              <span className="text-gray-400">+1 302 464 0950</span>
             </div>
             <div className="flex items-center">
               <MapPin className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">San Francisco, CA</span>
+              <span className="text-gray-400">364 E Main St STE 1008 Middletown DE 19709</span>
             </div>
           </div>
         </div>

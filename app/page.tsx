@@ -15,26 +15,30 @@ export default function HomePage() {
     {
       icon: <Zap className="w-8 h-8 text-blue-500" />,
       title: 'AI Services',
-      description: 'Cutting-edge artificial intelligence solutions for your business',
-      link: '/ai-services'
+      description: 'Cutting-edge artificial intelligence solutions including voice assistants, API management, and cybersecurity',
+      link: '/ai-services',
+      features: ['AI Voice Assistant', 'API Management', 'Cybersecurity Suite', 'Content Generation']
     },
     {
       icon: <Cloud className="w-8 h-8 text-green-500" />,
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services',
-      link: '/cloud-services'
+      title: 'Micro SaaS',
+      description: 'Powerful micro applications for productivity, expense tracking, and task management',
+      link: '/micro-saas-services',
+      features: ['Expense Tracker', 'Password Manager', 'Task Manager', 'Email Assistant']
     },
     {
       icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions to protect your digital assets',
-      link: '/cybersecurity'
+      title: 'IT Services',
+      description: 'Comprehensive IT solutions including cloud migration, cybersecurity, and custom development',
+      link: '/it-services',
+      features: ['Cloud Migration', 'Cybersecurity', 'Custom Development', 'Data Analytics']
     },
     {
-      icon: <Database className="w-8 h-8 text-purple-500" />,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable business insights',
-      link: '/data-analytics'
+      icon: <Globe className="w-8 h-8 text-purple-500" />,
+      title: '5G Implementation',
+      description: 'Next-generation 5G network solutions for enhanced connectivity and performance',
+      link: '/5g-implementation',
+      features: ['Network Infrastructure', 'Edge Computing', 'IoT Solutions', 'Mobile Applications']
     }
   ];
 
@@ -159,6 +163,16 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="mb-4">
+                  <ul className="space-y-1">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="text-sm text-gray-300 flex items-center">
+                        <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <Link 
                   to={service.link}
                   className="text-purple-400 hover:text-purple-300 transition-colors flex items-center"
@@ -225,6 +239,105 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Overview Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Competitive Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Get enterprise-grade solutions at startup-friendly prices
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
+              <h3 className="text-2xl font-bold text-white mb-2">Micro SaaS</h3>
+              <div className="text-4xl font-bold text-white mb-4">$4-39<span className="text-lg text-gray-300">/month</span></div>
+              <p className="text-gray-300 mb-6">Perfect for individuals and small teams</p>
+              <ul className="space-y-2 mb-8 text-left">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                  AI-powered productivity tools
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                  Mobile apps included
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                  24/7 support
+                </li>
+              </ul>
+              <Link 
+                to="/micro-saas-services"
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 inline-block"
+              >
+                View Micro SaaS
+              </Link>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-purple-500 text-center relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm px-4 py-1 rounded-full">
+                  Most Popular
+                </span>
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-2">AI Services</h3>
+              <div className="text-4xl font-bold text-white mb-4">$29-199<span className="text-lg text-gray-300">/month</span></div>
+              <p className="text-gray-300 mb-6">Advanced AI solutions for growing businesses</p>
+              <ul className="space-y-2 mb-8 text-left">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                  Voice assistants & chatbots
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                  API management & analytics
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                  Cybersecurity suite
+                </li>
+              </ul>
+              <Link 
+                to="/ai-services"
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 inline-block"
+              >
+                View AI Services
+              </Link>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
+              <h3 className="text-2xl font-bold text-white mb-2">IT Services</h3>
+              <div className="text-4xl font-bold text-white mb-4">$1,500-8,000<span className="text-lg text-gray-300">/project</span></div>
+              <p className="text-gray-300 mb-6">Enterprise solutions for large organizations</p>
+              <ul className="space-y-2 mb-8 text-left">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                  Cloud migration & management
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                  Custom development
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                  Dedicated support team
+                </li>
+              </ul>
+              <Link 
+                to="/it-services"
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 inline-block"
+              >
+                View IT Services
+              </Link>
+            </div>
           </div>
         </div>
       </section>

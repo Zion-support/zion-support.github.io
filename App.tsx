@@ -18,6 +18,16 @@ const MicroSAASServicesPage = React.lazy(() => import('./app/micro-saas-services
 const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
 const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'))
 
+// AI Services
+const AIVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/page'))
+const AIAPIManagementPage = React.lazy(() => import('./app/ai-api-management/page'))
+const AICybersecuritySuitePage = React.lazy(() => import('./app/ai-cybersecurity-suite/page'))
+
+// Micro SaaS Services
+const AIExpenseTrackerPage = React.lazy(() => import('./app/ai-expense-tracker/page'))
+const AIPasswordManagerPage = React.lazy(() => import('./app/ai-password-manager/page'))
+const AITaskManagerPage = React.lazy(() => import('./app/ai-task-manager/page'))
+
 // Loading component for Suspense
 const PageLoader = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -44,6 +54,16 @@ function App() {
                 <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                 <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                
+                {/* AI Services Routes */}
+                <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                <Route path="/ai-api-management" element={<AIAPIManagementPage />} />
+                <Route path="/ai-cybersecurity-suite" element={<AICybersecuritySuitePage />} />
+                
+                {/* Micro SaaS Routes */}
+                <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
+                <Route path="/ai-password-manager" element={<AIPasswordManagerPage />} />
+                <Route path="/ai-task-manager" element={<AITaskManagerPage />} />
                 {/* 404 Route */}
                 <Route path="*" element={
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">

@@ -1,63 +1,69 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings, CheckSquare, BarChart3, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const MicroSAASServicesPage: React.FC = () => {
   const microSAAS = [
     {
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
-      title: 'AI Content Generator',
-      description: 'Generate high-quality content automatically using advanced AI technology.',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization'],
-      pricing: 'Starting at $29/month',
-      link: '/ai-content-generator',
-      popular: true
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-green-500" />,
-      title: 'Task Management Pro',
-      description: 'Streamline your workflow with intelligent task management and automation.',
-      features: ['Smart scheduling', 'Team collaboration', 'Progress tracking'],
-      pricing: 'Starting at $19/month',
-      link: '/task-management',
-      popular: false
-    },
-    {
-      icon: <DollarSign className="w-8 h-8 text-purple-500" />,
-      title: 'Expense Tracker AI',
-      description: 'Automatically track and categorize expenses with AI-powered insights.',
-      features: ['Receipt scanning', 'Smart categorization', 'Budget alerts'],
-      pricing: 'Starting at $15/month',
-      link: '/expense-tracker',
-      popular: true
+      icon: <DollarSign className="w-8 h-8 text-green-500" />,
+      title: 'AI Expense Tracker',
+      description: 'Smart AI-powered expense tracking with receipt scanning and automatic categorization.',
+      features: ['AI receipt scanning', 'Smart categorization', 'Budget management', 'Tax preparation', 'Multi-currency support', 'Mobile app'],
+      pricing: 'Starting at $9/month',
+      link: '/ai-expense-tracker',
+      popular: true,
+      marketPrice: '$19-49/month'
     },
     {
       icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'Password Manager',
-      description: 'Secure password management with advanced encryption and AI features.',
-      features: ['Zero-knowledge encryption', 'Password generator', 'Breach monitoring'],
-      pricing: 'Starting at $9/month',
-      link: '/password-manager',
-      popular: false
+      title: 'AI Password Manager',
+      description: 'Advanced AI-powered password manager with zero-knowledge encryption and breach monitoring.',
+      features: ['AI password generation', 'Zero-knowledge encryption', 'Breach monitoring', 'Multi-device sync', 'Biometric auth', 'Secure sharing'],
+      pricing: 'Starting at $4/month',
+      link: '/ai-password-manager',
+      popular: true,
+      marketPrice: '$8-20/month'
     },
     {
-      icon: <Brain className="w-8 h-8 text-orange-500" />,
+      icon: <CheckSquare className="w-8 h-8 text-blue-500" />,
+      title: 'AI Task Manager',
+      description: 'Intelligent task management with AI prioritization and smart scheduling.',
+      features: ['AI prioritization', 'Smart scheduling', 'Team collaboration', 'Progress tracking', 'Time tracking', 'Mobile app'],
+      pricing: 'Starting at $12/month',
+      link: '/ai-task-manager',
+      popular: true,
+      marketPrice: '$25-60/month'
+    },
+    {
+      icon: <Brain className="w-8 h-8 text-purple-500" />,
+      title: 'AI Content Generator',
+      description: 'Generate high-quality content automatically using advanced AI technology.',
+      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates', 'Plagiarism detection', 'Content scheduling'],
+      pricing: 'Starting at $29/month',
+      link: '/ai-content-generator',
+      popular: false,
+      marketPrice: '$49-99/month'
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-orange-500" />,
       title: 'AI Analytics Dashboard',
-      description: 'Transform your data into actionable insights with AI-powered analytics.',
-      features: ['Real-time analytics', 'Custom dashboards', 'Predictive insights'],
+      description: 'Transform your data into actionable insights with AI-powered analytics and visualization.',
+      features: ['Real-time analytics', 'Custom dashboards', 'Predictive insights', 'Machine learning', 'Automated reports', 'Data visualization'],
       pricing: 'Starting at $39/month',
-      link: '/analytics-dashboard',
-      popular: true
+      link: '/ai-analytics-dashboard',
+      popular: false,
+      marketPrice: '$99-299/month'
     },
     {
-      icon: <Users className="w-8 h-8 text-indigo-500" />,
-      title: 'Team Collaboration Hub',
-      description: 'Enhance team productivity with integrated communication and project management.',
-      features: ['Real-time chat', 'File sharing', 'Project tracking'],
-      pricing: 'Starting at $25/month',
-      link: '/team-collaboration',
-      popular: false
+      icon: <Mail className="w-8 h-8 text-indigo-500" />,
+      title: 'AI Email Assistant',
+      description: 'Intelligent email management with AI-powered composition, scheduling, and organization.',
+      features: ['Smart composition', 'Email scheduling', 'Priority sorting', 'Auto-responses', 'Spam filtering', 'Calendar integration'],
+      pricing: 'Starting at $19/month',
+      link: '/ai-email-assistant',
+      popular: false,
+      marketPrice: '$39-99/month'
     }
   ];
 
@@ -174,15 +180,23 @@ const MicroSAASServicesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-semibold text-white">{service.pricing}</span>
-                  <Link 
-                    to={service.link}
-                    className="text-purple-400 hover:text-purple-300 transition-colors flex items-center"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-lg font-semibold text-white">{service.pricing}</div>
+                      <div className="text-sm text-gray-400">Market: {service.marketPrice}</div>
+                    </div>
+                    <Link 
+                      to={service.link}
+                      className="text-purple-400 hover:text-purple-300 transition-colors flex items-center"
+                    >
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </Link>
+                  </div>
+                  <div className="text-xs text-green-400 font-medium">
+                    Save up to 75% vs market rates
+                  </div>
                 </div>
               </div>
             ))}

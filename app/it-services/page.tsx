@@ -7,57 +7,63 @@ const ITServicesPage: React.FC = () => {
   const services = [
     {
       icon: <Cloud className="w-8 h-8 text-blue-500" />,
-      title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud with our expert guidance.',
-      features: ['AWS/Azure/GCP expertise', 'Zero-downtime migration', 'Cost optimization'],
+      title: 'Cloud Migration & Management',
+      description: 'Seamlessly migrate your infrastructure to the cloud with our expert guidance and ongoing management.',
+      features: ['AWS/Azure/GCP expertise', 'Zero-downtime migration', 'Cost optimization', '24/7 monitoring', 'Auto-scaling', 'Disaster recovery'],
       pricing: 'Starting at $5,000',
       link: '/cloud-migration',
-      popular: true
+      popular: true,
+      marketPrice: '$10,000-25,000'
     },
     {
       icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'Cybersecurity',
-      description: 'Protect your digital assets with comprehensive security solutions.',
-      features: ['Threat detection', 'Vulnerability assessment', 'Security training'],
+      title: 'Cybersecurity Solutions',
+      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
+      features: ['Threat detection', 'Vulnerability assessment', 'Security training', 'Penetration testing', 'Compliance management', 'Incident response'],
       pricing: 'Starting at $2,500',
       link: '/cybersecurity',
-      popular: true
+      popular: true,
+      marketPrice: '$5,000-15,000'
     },
     {
       icon: <Server className="w-8 h-8 text-green-500" />,
       title: 'Infrastructure Management',
-      description: 'Optimize and maintain your IT infrastructure for peak performance.',
-      features: ['24/7 monitoring', 'Proactive maintenance', 'Performance optimization'],
+      description: 'Optimize and maintain your IT infrastructure for peak performance and reliability.',
+      features: ['24/7 monitoring', 'Proactive maintenance', 'Performance optimization', 'Capacity planning', 'Backup solutions', 'Patch management'],
       pricing: 'Starting at $1,500',
       link: '/infrastructure',
-      popular: false
+      popular: false,
+      marketPrice: '$3,000-8,000'
     },
     {
       icon: <Database className="w-8 h-8 text-purple-500" />,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable business insights.',
-      features: ['Data visualization', 'Predictive analytics', 'Custom dashboards'],
+      title: 'Data Analytics & BI',
+      description: 'Transform your data into actionable business insights with advanced analytics and visualization.',
+      features: ['Data visualization', 'Predictive analytics', 'Custom dashboards', 'Data warehousing', 'ETL processes', 'Machine learning'],
       pricing: 'Starting at $3,000',
       link: '/data-analytics',
-      popular: false
+      popular: false,
+      marketPrice: '$6,000-20,000'
     },
     {
       icon: <Code className="w-8 h-8 text-orange-500" />,
       title: 'Custom Development',
-      description: 'Build tailored software solutions for your specific business needs.',
-      features: ['Full-stack development', 'API integration', 'Mobile apps'],
+      description: 'Build tailored software solutions for your specific business needs with modern technologies.',
+      features: ['Full-stack development', 'API integration', 'Mobile apps', 'Web applications', 'Database design', 'Third-party integrations'],
       pricing: 'Starting at $8,000',
       link: '/custom-development',
-      popular: true
+      popular: true,
+      marketPrice: '$15,000-50,000'
     },
     {
       icon: <Network className="w-8 h-8 text-indigo-500" />,
       title: 'Network Solutions',
-      description: 'Design and implement robust network infrastructure.',
-      features: ['Network design', 'Security implementation', 'Performance monitoring'],
+      description: 'Design and implement robust network infrastructure with advanced security and monitoring.',
+      features: ['Network design', 'Security implementation', 'Performance monitoring', 'VPN setup', 'Firewall configuration', 'Load balancing'],
       pricing: 'Starting at $4,000',
       link: '/network-solutions',
-      popular: false
+      popular: false,
+      marketPrice: '$8,000-25,000'
     }
   ];
 
@@ -197,15 +203,23 @@ const ITServicesPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-semibold text-white">{service.pricing}</span>
-                  <Link 
-                    to={service.link}
-                    className="text-purple-400 hover:text-purple-300 transition-colors flex items-center"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-lg font-semibold text-white">{service.pricing}</div>
+                      <div className="text-sm text-gray-400">Market: {service.marketPrice}</div>
+                    </div>
+                    <Link 
+                      to={service.link}
+                      className="text-purple-400 hover:text-purple-300 transition-colors flex items-center"
+                    >
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </Link>
+                  </div>
+                  <div className="text-xs text-green-400 font-medium">
+                    Save up to 50% vs market rates
+                  </div>
                 </div>
               </div>
             ))}
