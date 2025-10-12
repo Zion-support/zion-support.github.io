@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight } from 'lucide-react'
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
 
 export default function Footer() {
   const aiServices = [
@@ -15,49 +9,16 @@ export default function Footer() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-<<<<<<< HEAD
-    { name: 'AI Automation Suite', path: '/ai-automation' }
-  ]
-=======
     { name: 'AI Automation Suite', path: '/ai-automation' },
     { name: 'AI 3D Generation', path: '/ai-3d-generation' },
     { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
   ];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
 
   const itServices = [
     { name: 'Cloud Migration', path: '/cloud-migration' },
     { name: 'DevOps Solutions', path: '/devops-solutions' },
     { name: 'Cybersecurity', path: '/cybersecurity' },
     { name: 'Data Analytics', path: '/data-analytics' },
-<<<<<<< HEAD
-    { name: 'API Development', path: '/api-development' },
-    { name: 'System Integration', path: '/system-integration' }
-  ]
-
-<<<<<<< HEAD
-  const companyLinks = [
-    { name: 'About Us', path: '/about' },
-    { name: 'Our Team', path: '/team' },
-    { name: 'Careers', path: '/careers' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Case Studies', path: '/case-studies' },
-    { name: 'Press Kit', path: '/press' }
-  ]
-
-  const supportLinks = [
-    { name: 'Help Center', path: '/help' },
-    { name: 'Documentation', path: '/docs' },
-    { name: 'API Reference', path: '/api-docs' },
-    { name: 'Status Page', path: '/status' },
-    { name: 'Contact Support', path: '/contact' },
-    { name: 'Community', path: '/community' }
-=======
-  const legalPages = [
-    { name: 'Privacy Policy', path: '/privacy' },
-    { name: 'Terms of Service', path: '/terms' }
-  ]
-=======
     { name: 'Mobile Development', path: '/mobile-development' },
     { name: 'Blockchain Solutions', path: '/blockchain' },
     { name: 'Quantum Computing', path: '/quantum-computing-solutions' }
@@ -72,7 +33,21 @@ export default function Footer() {
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
     { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
   ];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
+
+  const quickLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'AI Services', path: '/ai-services' },
+    { name: 'IT Services', path: '/it-services' },
+    { name: 'Micro SAAS', path: '/micro-saas-services' },
+    { name: '5G Solutions', path: '/5g-implementation' },
+    { name: 'Contact', path: '/contact' }
+  ];
+
+  const legalPages = [
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' }
+  ];
 
   const quickLinks = [
     { name: 'Home', path: '/' },
