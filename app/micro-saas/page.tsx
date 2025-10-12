@@ -3,7 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare, Mail, Share2, DollarSign, Calendar, Headphones, Package, FileText, Target, Clock } from 'lucide-react';
 
 interface MicroSaasProduct {
   id: string;
@@ -20,74 +20,140 @@ interface MicroSaasProduct {
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts: MicroSaasProduct[] = [
     {
-      id: '1',
+      id: 'ai-content-writer-pro',
+      icon: MessageSquare,
+      title: 'AI Content Writer Pro',
+      description: 'Advanced AI-powered content creation with SEO optimization, brand voice training, and multi-language support',
+      features: ['SEO-optimized content generation', 'Brand voice customization', '50+ content templates', 'Plagiarism detection', 'Multi-language support', 'Content scheduling', 'Team collaboration'],
+      price: '$29/month',
+      users: 'Up to 10 users',
+      popular: true,
+      category: 'Content Creation'
+    },
+    {
+      id: 'ai-analytics-dashboard',
       icon: BarChart3,
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence and predictive analytics for small to medium businesses',
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Mobile app', 'API integration'],
-      price: '$99/month',
-      users: 'Up to 50 users',
+      title: 'AI Business Intelligence',
+      description: 'Real-time analytics dashboard with predictive insights, custom reports, and automated alerts',
+      features: ['Real-time dashboards', 'Predictive analytics', 'Custom KPI tracking', 'Automated reports', 'Data visualization', 'Mobile app', 'API integrations'],
+      price: '$49/month',
+      users: 'Up to 25 users',
       popular: true,
       category: 'Analytics'
     },
     {
-      id: '2',
-      icon: Users,
-      title: 'AI-Powered CRM',
-      description: 'Intelligent customer relationship management with automated lead scoring and personalized interactions',
-      features: ['Lead management', 'Email automation', 'Sales forecasting', 'Integration APIs', 'Custom fields'],
-      price: '$149/month',
-      users: 'Up to 100 users',
+      id: 'ai-email-marketing',
+      icon: Mail,
+      title: 'AI Email Marketing Suite',
+      description: 'Intelligent email marketing with automated campaigns, A/B testing, and advanced segmentation',
+      features: ['AI-powered subject lines', 'Automated drip campaigns', 'Advanced segmentation', 'A/B testing', 'Deliverability optimization', 'Template library', 'Analytics & reporting'],
+      price: '$39/month',
+      users: 'Up to 50,000 subscribers',
       popular: false,
+      category: 'Marketing'
+    },
+    {
+      id: 'ai-crm-assistant',
+      icon: Users,
+      title: 'AI CRM Assistant',
+      description: 'Smart customer relationship management with automated lead scoring, follow-ups, and sales forecasting',
+      features: ['Lead scoring & qualification', 'Automated follow-ups', 'Sales forecasting', 'Pipeline management', 'Email integration', 'Custom fields', 'Mobile app'],
+      price: '$79/month',
+      users: 'Up to 100 users',
+      popular: true,
       category: 'CRM'
     },
     {
-      id: '3',
-      icon: Shield,
-      title: 'Security Monitor',
-      description: 'Comprehensive security monitoring and threat detection for small businesses',
-      features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', 'Real-time alerts', 'Incident response'],
-      price: '$79/month',
-      users: 'Up to 25 users',
+      id: 'ai-social-scheduler',
+      icon: Share2,
+      title: 'AI Social Media Manager',
+      description: 'Automated social media posting with optimal timing, hashtag research, and engagement analytics',
+      features: ['Auto-posting across platforms', 'Optimal timing suggestions', 'Hashtag research', 'Engagement analytics', 'Content calendar', 'Team collaboration', 'Brand monitoring'],
+      price: '$25/month',
+      users: 'Up to 5 social accounts',
       popular: false,
-      category: 'Security'
+      category: 'Social Media'
     },
     {
-      id: '4',
-      icon: Cloud,
-      title: 'Cloud Backup Pro',
-      description: 'Automated cloud backup and disaster recovery solution with AI-powered optimization',
-      features: ['Automated backups', 'Disaster recovery', 'Version control', 'Cross-platform sync', 'Encryption'],
+      id: 'ai-expense-tracker',
+      icon: DollarSign,
+      title: 'AI Expense Tracker',
+      description: 'Smart expense management with receipt scanning, automatic categorization, and budget alerts',
+      features: ['Receipt scanning (OCR)', 'Auto-categorization', 'Budget tracking & alerts', 'Tax preparation', 'Expense reports', 'Multi-currency support', 'Team expense management'],
+      price: '$19/month',
+      users: 'Up to 20 users',
+      popular: true,
+      category: 'Finance'
+    },
+    {
+      id: 'ai-project-manager',
+      icon: Calendar,
+      title: 'AI Project Manager',
+      description: 'Intelligent project management with automated task assignment, deadline tracking, and resource optimization',
+      features: ['AI task assignment', 'Deadline tracking', 'Resource optimization', 'Team collaboration', 'Progress analytics', 'Gantt charts', 'Time tracking'],
       price: '$59/month',
-      users: 'Unlimited',
-      popular: true,
-      category: 'Backup'
-    },
-    {
-      id: '5',
-      icon: MessageSquare,
-      title: 'AI Chat Support',
-      description: 'Intelligent customer support chatbot with natural language processing and human handoff',
-      features: ['AI chatbot', 'Multi-language support', 'Human handoff', 'Analytics dashboard', 'Custom training'],
-      price: '$89/month',
-      users: 'Up to 200 conversations',
+      users: 'Up to 50 users',
       popular: false,
-      category: 'Support'
+      category: 'Project Management'
     },
     {
-      id: '6',
-      icon: TrendingUp,
-      title: 'Marketing Automation',
-      description: 'AI-driven marketing automation platform for email campaigns and social media management',
-      features: ['Email campaigns', 'Social media scheduling', 'Lead nurturing', 'A/B testing', 'ROI tracking'],
-      price: '$129/month',
-      users: 'Up to 75 users',
+      id: 'ai-customer-support',
+      icon: Headphones,
+      title: 'AI Customer Support Bot',
+      description: '24/7 intelligent customer support with natural language processing and seamless human handoff',
+      features: ['24/7 AI chatbot', 'Multi-language support', 'Human handoff', 'Knowledge base integration', 'Sentiment analysis', 'Custom training', 'Analytics dashboard'],
+      price: '$89/month',
+      users: 'Up to 500 conversations/month',
       popular: true,
-      category: 'Marketing'
+      category: 'Customer Support'
+    },
+    {
+      id: 'ai-inventory-manager',
+      icon: Package,
+      title: 'AI Inventory Manager',
+      description: 'Smart inventory management with demand forecasting, automated reordering, and supply chain optimization',
+      features: ['Demand forecasting', 'Automated reordering', 'Supply chain optimization', 'Barcode scanning', 'Multi-location support', 'Vendor management', 'Analytics & reporting'],
+      price: '$69/month',
+      users: 'Up to 10,000 SKUs',
+      popular: false,
+      category: 'Inventory'
+    },
+    {
+      id: 'ai-document-processor',
+      icon: FileText,
+      title: 'AI Document Processor',
+      description: 'Automated document processing with OCR, data extraction, and intelligent categorization',
+      features: ['OCR text extraction', 'Data extraction', 'Document categorization', 'Form processing', 'Batch processing', 'API integration', 'Cloud storage sync'],
+      price: '$45/month',
+      users: 'Up to 1,000 documents/month',
+      popular: true,
+      category: 'Document Management'
+    },
+    {
+      id: 'ai-lead-generator',
+      icon: Target,
+      title: 'AI Lead Generator',
+      description: 'Automated lead discovery and qualification with advanced targeting and contact enrichment',
+      features: ['Lead discovery', 'Contact enrichment', 'Lead scoring', 'Email verification', 'CRM integration', 'Campaign tracking', 'ROI analytics'],
+      price: '$99/month',
+      users: 'Up to 1,000 leads/month',
+      popular: false,
+      category: 'Lead Generation'
+    },
+    {
+      id: 'ai-appointment-scheduler',
+      icon: Clock,
+      title: 'AI Appointment Scheduler',
+      description: 'Smart scheduling system with automated booking, reminders, and calendar optimization',
+      features: ['Automated booking', 'Smart scheduling', 'Calendar integration', 'Reminder automation', 'Time zone handling', 'Custom booking forms', 'Analytics dashboard'],
+      price: '$35/month',
+      users: 'Up to 5 team members',
+      popular: true,
+      category: 'Scheduling'
     }
   ];
 
-  const categories = ['All', 'Analytics', 'CRM', 'Security', 'Backup', 'Support', 'Marketing'];
+  const categories = ['All', 'Content Creation', 'Analytics', 'Marketing', 'CRM', 'Social Media', 'Finance', 'Project Management', 'Customer Support', 'Inventory', 'Document Management', 'Lead Generation', 'Scheduling'];
 
   const benefits = [
     {
