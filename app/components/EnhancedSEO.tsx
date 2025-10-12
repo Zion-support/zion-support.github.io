@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
 
 interface SEOProps {
   title?: string;
@@ -29,32 +27,23 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   nofollow = false
 }) => {
   const defaultStructuredData = {
+<<<<<<< HEAD
     "@context": "https: //schema.org",
+=======
+    "@context": "https://schema.org",
+>>>>>>> cursor/fix-errors-and-merge-to-main-c493
     "@type": "Organization",
     "name": "Zion Tech Group",
-    "url": "https: //ziontechgroup.com",
-    "logo": "https: //ziontechgroup.com/logo.png",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
     "description": description,
-    "foundingDate": "2020",
-    "founder": {
-      "@type": "Person",
-      "name": "Dr. Kleber Santos"
-    },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+      "addressCountry": "US",
+      "addressRegion": "Delaware"
     },
     "sameAs": [
+<<<<<<< HEAD
       "https: //linkedin.com/company/ziontechgroup",
       "https: //twitter.com/ziontechgroup",
       "https://github.com/ziontechgroup"
@@ -82,18 +71,42 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Open Graph Meta Tags */}
+=======
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup"
+    ]
+  };
+
+  const finalStructuredData = structuredData || defaultStructuredData;
+
+  return (
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      {canonical && <link rel="canonical" href={canonical} />}
+      
+      {/* Open Graph */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-c493
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:type" content={ogType} />
+<<<<<<< HEAD
       <meta property="og:url" content={canonicalUrl} />
       
       {/* Twitter Card Meta Tags */}
+=======
+      <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
+      
+      {/* Twitter Card */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-c493
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
       
+<<<<<<< HEAD
       {/* Additional SEO Meta Tags */}
       {noindex && <meta name="robots" content="noindex" />}
       {nofollow && <meta name="robots" content="nofollow" />}
@@ -102,10 +115,24 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       
+=======
+      {/* SEO */}
+      {noindex && <meta name="robots" content="noindex" />}
+      {nofollow && <meta name="robots" content="nofollow" />}
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-c493
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
+<<<<<<< HEAD
     </>
   );
 };
+=======
+    </Helmet>
+  );
+};
+
+export default EnhancedSEO;
+>>>>>>> cursor/fix-errors-and-merge-to-main-c493
