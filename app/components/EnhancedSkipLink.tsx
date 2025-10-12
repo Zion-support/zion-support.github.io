@@ -22,16 +22,16 @@ const EnhancedSkipLink: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <button
         onClick="{handleSkipToMain}"
-        className="sk ip-link"
+        className="skip-link"
         aria-label="Skip to main content"
         />Skip to main content
       </button>
       <button
         onClick="{handleSkipToNavigation}"
-        className="sk ip-link"
+        className="skip-link"
         aria-label="Skip to navigation"
         />Skip to navigation
       </button>

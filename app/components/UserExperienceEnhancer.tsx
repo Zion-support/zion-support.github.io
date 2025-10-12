@@ -71,15 +71,15 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
       {children}
       {/* Feedback Modal */}
       {!feedback.submitted && (
-        <div className="fixed bottom-4 right-4 z-50">
-          <div className="bg-white rounded-lg shadow-lg p-4 max-w-sm">
-            <h3 className="text-lg font-semibold mb-2">How was your experience?</h3>
+        <div className="fixedbottom-4 right-4 z-50">
+          <div className="bg-whiterounded-lg shadow-lg p-4 max-w-sm">
+            <h3 className="text-lgfont-semibold mb-2">How was your experience?</h3>
             <form onSubmit={handleFeedbackSubmit}>
               <div className="mb-3">
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="blocktext-sm font-medium text-gray-700 mb-1">
                   Rating
                 </label>
-                <div className="flex space-x-1">
+                <div className="flexspace-x-1">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <button
                       key={star}
@@ -95,28 +95,28 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
                 </div>
               </div>
               <div className="mb-3">
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="blocktext-sm font-medium text-gray-700 mb-1">
                   Comment (optional)
                 </label>
                 <textarea
                   value={feedback.comment}
                   onChange={(e) => setFeedback((prev) => ({ ...prev, comment: e.target.value }))}
-                  className="w-full p-2 border border-gray-300 rounded-md text-sm"
+                  className="w-fullp-2 border border-gray-300 rounded-md text-sm"
                   rows={3}
                   placeholder="Tell us about your experience..."
                 />
               </div>
-              <div className="flex space-x-2">
+              <div className="flexspace-x-2">
                 <button
                   type="submit"
-                  className="bg-blue-500 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-600"
+                  className="bg-blue-500text-white px-4 py-2 rounded-md text-sm hover:bg-blue-600"
                 >
                   Submit
                 </button>
                 <button
                   type="button"
                   onClick={() => setFeedback((prev) => ({ ...prev, submitted: true }))}
-                  className="bg-gray-300 text-gray-700 px-4 py-2 rounded-md text-sm hover:bg-gray-400"
+                  className="bg-gray-300text-gray-700 px-4 py-2 rounded-md text-sm hover:bg-gray-400"
                 >
                   Dismiss
                 </button>

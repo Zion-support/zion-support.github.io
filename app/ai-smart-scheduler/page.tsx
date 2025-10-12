@@ -9,22 +9,22 @@ import Layout from '../layout';
 export default function AISmartScheduler() {
   const features = [
     {
-      icon: <Brain className="w-5h-5 ml-2" />,
+      icon: <Brain className="w-5 h-5ml-2" />,
       title: 'AI-Powered Scheduling',
       description: 'Intelligent scheduling that learns from your patterns and preferences'
     },
     {
-      icon: <Users className="w-5h-5 ml-2" />,
+      icon: <Users className="w-5 h-5ml-2" />,
       title: 'Team Coordination',
       description: 'Seamlessly coordinate meetings across multiple time zones and schedules'
     },
     {
-      icon: <Zap className="w-5h-5 ml-2" />,
+      icon: <Zap className="w-5 h-5ml-2" />,
       title: 'Auto-Optimization',
       description: 'Automatically finds the best meeting times for maximum productivity'
     },
     {
-      icon: <Globe className="w-5h-5 ml-2" />,
+      icon: <Globe className="w-5 h-5ml-2" />,
       title: 'Global Integration',
       description: 'Works with all major calendar platforms and time zones'
     }
@@ -103,101 +103,98 @@ export default function AISmartScheduler() {
       title="AI Smart Scheduler - Intelligent Meeting Optimization | Zion Tech Group"
       description="Revolutionary AI-powered scheduling tool that optimizes meetings, coordinates teams, and maximizes productivity. Start your free trial today."
       keywords="AI scheduler, meeting optimization, team coordination, calendar management, productivity tools" />
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Sparkles className="w-5h-5 ml-2" />
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Sparkles className="w-5 h-5ml-2" />
                 AI-Powered Scheduling
               </div>
-              <h1 className="w-5h-5 ml-2" />AI Smart Scheduler
+              <h1 className="w-5 h-5ml-2">AI Smart Scheduler
               </h1>
-              <p className="w-5h-5 ml-2" />
-                Transform your scheduling chaos into organized efficiency with our intelligent AI-powered scheduler. 
+              <p className="w-5 h-5ml-2">Transform your scheduling chaos into organized efficiency with our intelligent AI-powered scheduler. 
                 Optimize meetings, coordinate teams, and maximize productivity automatically.
               </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                 <Link
           to="/contact"
-          className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-center justify-center"
+          className="bg-gradient-to-r from-cyan-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-center justify-center"
         >
           Start Free Trial
                   
-          <ArrowRight className="w-5h-5 ml-2" />
+          <ArrowRight className="w-5 h-5ml-2" />
         </Link>
-                <Link to="#demo" className="bo rder-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Watch Demo
+                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Watch Demo
                 </Link>
               </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5 ml-2" />Intelligent Scheduling Features
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Intelligent Scheduling Features
               </h2>
-              <p className="w-5h-5 ml-2" />
-                Powered by advanced AI to make scheduling effortless and efficient
+              <p className="w-5 h-5ml-2">Powered by advanced AI to make scheduling effortless and efficient
               </p>
             </div>
             
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {features.map((feature, index) => (
-                <div key="{index}" className="bg-g radient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40transition-allduration-300" />
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40transition-allduration-300" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                     {feature.icon}
-                    <h3 className="w-5h-5 ml-2" />{feature.title}</h3>
+                    <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
                   </div>
-                  <p className="w-5h-5 ml-2" />{feature.description}</p>
+                  <p className="w-5 h-5ml-2">{feature.description}</p>
                 </div>
               ))}
             </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5 ml-2" />Simple, Transparent Pricing
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Simple, Transparent Pricing
               </h2>
-              <p className="w-5h-5 ml-2" />
-                Choose the plan that fits your team size and needs
+              <p className="w-5 h-5ml-2">Choose the plan that fits your team size and needs
               </p>
             </div>
             
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {pricingPlans.map((plan, index) => (
-                <div key="{index}" className="{`bg-g radient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
+                <div key="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
                     ? 'border-cyan-400/40 scale-105 shadow-2 xl shadow-cyan-500/20' 
                     : 'border-cyan-500/20 hover: border-cyan-400/40'
                 }`} />
                   {plan.popular && (
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <Star className="w-5h-5 ml-2" />
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <Star className="w-5 h-5ml-2" />
                       Most Popular
                     </div>
                   )}
-                  <h3 className="w-5h-5 ml-2" />{plan.name}</h3>
-                  <p className="w-5h-5 ml-2" />{plan.description}</p>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5h-5 ml-2" />{plan.price}</span>
-                    <span className="w-5h-5 ml-2" />{plan.period}</span>
+                  <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
+                  <p className="w-5 h-5ml-2">{plan.description}</p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <span className="w-5 h-5ml-2" />{plan.price}</span>
+                    <span className="w-5 h-5ml-2" />{plan.period}</span>
                   </div>
-                  <ul className="w-5h-5 ml-2" />
+                  <ul className="w-5 h-5ml-2" />
                     {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="fl exitems-center text-gray-300" />
-                        <CheckCircle className="w-5h-5 ml-2" />
+                      <li key="{featureIndex}" className="flex items-center text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className="{`w-fu ll" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400/10'
@@ -210,45 +207,43 @@ export default function AISmartScheduler() {
         </section>
 
         {/* Testimonials */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5 ml-2" />Trusted by Teams Worldwide
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Trusted by Teams Worldwide
               </h2>
-              <p className="w-5h-5 ml-2" />
-                See what our customers say about AI Smart Scheduler
+              <p className="w-5 h-5ml-2">See what our customers say about AI Smart Scheduler
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {testimonials.map((testimonial, index) => (
-                <div key="{index}" className="bg-s late-800/50 rounded-xl p-6borderborder-slate-700" />
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-5h-5t e xt-yellow-400fill-current"  />
+                      <Star key="{i}" className="w-5 h-5te xt-yellow-400fill-current"  />
                     ))}
                   </div>
-                  <p className="w-5h-5 ml-2" />"{testimonial.content}"</p>
+                  <p className="w-5 h-5ml-2">"{testimonial.content}"</p>
                   <div />
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
                 </div>
               ))}
             </div>
         </section>
 
         {/* CTA Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5 ml-2" />Ready to Transform Your Scheduling?
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Ready to Transform Your Scheduling?
               </h2>
-              <p className="w-5h-5 ml-2" />
-                Join thousands of teams already using AI Smart Scheduler to optimize their productivity
+              <p className="w-5 h-5ml-2">Join thousands of teams already using AI Smart Scheduler to optimize their productivity
               </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
                 </Link>
-                <Link to="/about" className="bo rder-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More
+                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More
                 </Link>
               </div>
           </div>

@@ -128,17 +128,17 @@ const MicroSaasServicesPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-32 pb-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Micro <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">SaaS Services</span>
+        <section className="pt-32pb-20">
+          <div className="containermx-auto px-4">
+            <div className="text-centermax-w-4xl mx-auto">
+              <h1 className="text-5xlmd:text-6xl font-bold text-white mb-6">
+                Micro <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">SaaS Services</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Powerful, purpose-built software solutions designed to solve specific business challenges. 
                 Get enterprise-grade functionality without the complexity.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flexflex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
@@ -147,7 +147,7 @@ const MicroSaasServicesPage: React.FC = () => {
                 </Link>
                 <Link 
                   to="/ai-services"
-                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+                  className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                 >
                   View AI Services
                 </Link>
@@ -158,50 +158,50 @@ const MicroSaasServicesPage: React.FC = () => {
 
         {/* Services Grid */}
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+          <div className="containermx-auto px-4">
+            <div className="text-centermb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SaaS Solutions</span>
+                Our <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SaaS Solutions</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Specialized software tools that solve specific business problems with precision and efficiency
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <div 
                   key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
+                  className="bg-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className="w-8 h-8 text-white" />
+                    <service.icon className="w-8h-8 text-white" />
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-2xlfont-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                     {service.title}
                   </h3>
                   
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-300mb-6 leading-relaxed">
                     {service.description}
                   </p>
 
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-2mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
 
                   <div className="flex items-center justify-between mb-6">
-                    <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                    <span className="text-2xlfont-bold text-cyan-400">{service.price}</span>
                     <Link 
                       to={service.link}
-                      className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-flex items-center"
+                      className="text-cyan-400hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-flex items-center"
                     >
-                      Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                      Learn More <ArrowRight className="w-4h-4 ml-1" />
                     </Link>
                   </div>
                 </div>
@@ -211,25 +211,25 @@ const MicroSaasServicesPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+        <section className="py-20bg-gradient-to-r from-slate-800/30 to-slate-900/30">
+          <div className="containermx-auto px-4">
+            <div className="text-centermb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SaaS</span>?
+                Why Choose <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">Micro SaaS</span>?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Get the power of enterprise software without the complexity and cost
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="gridgrid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="text-center group">
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <feature.icon className="w-10 h-10 text-cyan-400" />
+                <div key={index} className="text-centergroup">
+                  <div className="w-20h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-10h-10 text-cyan-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                  <h3 className="text-xlfont-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300leading-relaxed">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -238,21 +238,21 @@ const MicroSaasServicesPage: React.FC = () => {
 
         {/* Pricing Section */}
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+          <div className="containermx-auto px-4">
+            <div className="text-centermb-16">
               <h2 className="text-4xl font-bold text-white mb-6">
-                Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
+                Simple <span className="bg-gradient-to-rfrom-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that fits your needs. All plans include 24/7 support and regular updates.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$99<span className="text-lg text-gray-400">/month</span></div>
-                <ul className="space-y-3 mb-8">
+            <div className="gridgrid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <div className="bg-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8">
+                <h3 className="text-2xlfont-bold text-white mb-4">Starter</h3>
+                <div className="text-4xl font-bold text-cyan-400 mb-6">$99<span className="text-lgtext-gray-400">/month</span></div>
+                <ul className="space-y-3mb-8">
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                     Up to 3 Micro SaaS tools
@@ -268,21 +268,21 @@ const MicroSaasServicesPage: React.FC = () => {
                 </ul>
                 <Link 
                   to="/contact"
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 block"
+                  className="w-fullbg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 block"
                 >
                   Get Started
                 </Link>
               </div>
 
-              <div className="bg-gradient-to-br from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/50 rounded-xl p-8 relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <div className="bg-gradient-to-brfrom-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/50 rounded-xl p-8 relative">
+                <div className="absolute-top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                     Most Popular
                   </span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-                <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg text-gray-400">/month</span></div>
-                <ul className="space-y-3 mb-8">
+                <h3 className="text-2xlfont-bold text-white mb-4">Professional</h3>
+                <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lgtext-gray-400">/month</span></div>
+                <ul className="space-y-3mb-8">
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                     Up to 10 Micro SaaS tools
@@ -302,16 +302,16 @@ const MicroSaasServicesPage: React.FC = () => {
                 </ul>
                 <Link 
                   to="/contact"
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 block"
+                  className="w-fullbg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 block"
                 >
                   Get Started
                 </Link>
               </div>
 
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
+              <div className="bg-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8">
+                <h3 className="text-2xlfont-bold text-white mb-4">Enterprise</h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-6">Custom</div>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3mb-8">
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                     Unlimited Micro SaaS tools
@@ -331,7 +331,7 @@ const MicroSaasServicesPage: React.FC = () => {
                 </ul>
                 <Link 
                   to="/contact"
-                  className="w-full border border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-semibold text-center hover:bg-cyan-500/10 transition-all duration-300 block"
+                  className="w-fullborder border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-semibold text-center hover:bg-cyan-500/10 transition-all duration-300 block"
                 >
                   Contact Sales
                 </Link>
@@ -342,15 +342,15 @@ const MicroSaasServicesPage: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
+          <div className="containermx-auto px-4">
+            <div className="bg-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Start your free trial today and experience the power of our Micro SaaS solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flexflex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
@@ -359,7 +359,7 @@ const MicroSaasServicesPage: React.FC = () => {
                 </Link>
                 <Link 
                   to="/about"
-                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+                  className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                 >
                   Learn More About Us
                 </Link>

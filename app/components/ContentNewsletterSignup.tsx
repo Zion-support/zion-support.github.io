@@ -53,20 +53,19 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
 
   if (isSubscribed) {
     return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <CheckCircle className="w-5h-5 ml-2" />
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <CheckCircle className="w-5 h-5ml-2" />
             </div>
-            <h2 className="w-5h-5 ml-2" />Thank You for Subscribing!
+            <h2 className="w-5 h-5ml-2" />Thank You for Subscribing!
             </h2>
-            <p className="w-5h-5 ml-2" />
-              You'll receive our latest insights and updates soon.
+            <p className="w-5 h-5ml-2">You'll receive our latest insights and updates soon.
             </p>
             <button
               onClick="{()" =  />setIsSubscribed(false)}
-              className="te xt-blue-400hover:text-blue-300 transition-colors"
+              className="text-blue-400hover:text-blue-300 transition-colors"
             >
               Subscribe another email
             </button>
@@ -76,56 +75,55 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
   }
 
   return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5 ml-2" />{title}
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />{title}
             </h2>
-            <p className="w-5h-5 ml-2" />
-              {subtitle}
+            <p className="w-5 h-5ml-2">{subtitle}
             </p>
           </div>
 
-          <form onSubmit="{handleSubmit}" className="ma x-w-mdmx-automb-12" />
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <form onSubmit="{handleSubmit}" className="max-w-mdmx-automb-12" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                 <input
                   type="email"
                   value="{email}"
                   onChange="{(e)" = /> setEmail(e.target.value)}
                   placeholder="{placeholder}"
                   required
-                  className="w-fu ll px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
+                  className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
                 />
               </div>
               <button
                 type="submit"
                 disabled="{isSubmitting}"
-                className="bg-gradient-to-rfrom-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]" />
+                className="bg-gradient-to-rfrom-blue-600to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]" />
                 {isSubmitting ? (
                   <>
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <span  >Subscribing...</span>
                   </>
                 ) : (
                   <>
                     <span  >{buttonText}</span>
-                    <ArrowRight className="w-5h-5 ml-2" />
+                    <ArrowRight className="w-5 h-5ml-2" />
                   </>
                 )}
               </button>
             </div>
           </form>
 
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             {features.map((feature, index) => (
 
-                <div key="{index}" className="te xt-center" />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <feature.icon className="h-6w-6te xt-white"  />
+                <div key="{index}" className="text-center" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <feature.icon className="h-6w-6text-white"  />
                 </div>
-                <p className="te xt-gray-300text-sm">{feature.text}</p>
+                <p className="text-gray-300text-sm">{feature.text}</p>
               </div>
             ))}
           </div>

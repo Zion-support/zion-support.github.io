@@ -71,14 +71,14 @@ interface FuturisticButtonProps {
     >
       {/* Animated background sweep */}
       <motion.div
-        className="ab solute inset-0 bg-gradient-to-r from-white/20to-transparent"
+        className="absolute inset-0 bg-gradient-to-r from-white/20to-transparent"
         initial="{{" x: '-100%' }}
         animate="{{" x: isHovered ? '100%' : '-100%' }}
         transition="{{" duration: 0.6 }}
        />
       {/* Pulsing glow effect */}
       <motion.div
-        className="ab solute inset-0rounded-lg"
+        className="absolute inset-0rounded-lg"
         style="{{"
           boxShadow: variant === 'primary'
             ? '0 0 20 px rgba(6, 182, 212, 0.4)'
@@ -101,7 +101,7 @@ interface FuturisticButtonProps {
       {/* Scanning line effect */}
       {isHovered && (
         <motion.div
-          className="ab solute inset-0rounded-lg"
+          className="absolute inset-0rounded-lg"
           style="{{"
             background: 'linear-gradient(90 deg, transparent, rgba(255,255,255,0.3), transparent)',
             backgroundSize: '200% 100%',
@@ -118,14 +118,14 @@ interface FuturisticButtonProps {
       )}
 
       {/* Corner accents */}
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       {/* Content */}
-      <span className="w-5h-5 ml-2" />
+      <span className="w-5 h-5ml-2" />
         {loading ? (
           <>
             <motion.div
-              className="w-4h-4 b o rder-2 border-white/30 border-t-white rounded-full mr-2"
+              className="w-4h-4b o rder-2 border-white/30 border-t-white rounded-full mr-2"
               animate="{{" rotate: 360 }}
               transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
              />

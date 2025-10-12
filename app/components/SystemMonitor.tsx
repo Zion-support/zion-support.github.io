@@ -7,16 +7,15 @@ import { ArrowRight } from 'lucide-react';
               <br />
               <span const className = "text-white"  >Solutions</span>
             </h1>
-            <p className="w-5h-5 ml-2" />
-              Transform your business with our advanced systemmonitor solutions.
+            <p className="w-5 h-5ml-2">Transform your business with our advanced systemmonitor solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button className="w-5h-5 ml-2" />
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <button className="w-5 h-5ml-2" />
                 Get Started
-                <ArrowRight className="w-5h-5 ml-2" />
+                <ArrowRight className="w-5 h-5ml-2" />
               </button>
-              <button className="w-5h-5 ml-2" />
+              <button className="w-5 h-5ml-2" />
                 Learn More
   </
             </div>

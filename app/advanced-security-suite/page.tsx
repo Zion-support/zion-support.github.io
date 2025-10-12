@@ -9,22 +9,22 @@ import Layout from '../layout';
 export default function AdvancedSecuritySuite() {
   const features = [
     {
-      icon: <Shield className="w-5h-5 ml-2" />,
+      icon: <Shield className="w-5 h-5ml-2" />,
       title: '360° Protection',
       description: 'Comprehensive security coverage across all endpoints, networks, and cloud infrastructure'
     },
     {
-      icon: <Brain className="w-5h-5 ml-2" />,
+      icon: <Brain className="w-5 h-5ml-2" />,
       title: 'AI Threat Detection',
       description: 'Advanced machine learning algorithms detect and prevent sophisticated cyber attacks'
     },
     {
-      icon: <Eye className="w-5h-5 ml-2" />,
+      icon: <Eye className="w-5 h-5ml-2" />,
       title: 'Real-time Monitoring',
       description: '24/7 security monitoring with instant threat response and automated remediation'
     },
     {
-      icon: <Lock className="w-5h-5 ml-2" />,
+      icon: <Lock className="w-5 h-5ml-2" />,
       title: 'Compliance Ready',
       description: 'Meet GDPR, HIPAA, SOX, and other regulatory requirements with built-in compliance tools'
     }
@@ -122,79 +122,76 @@ export default function AdvancedSecuritySuite() {
       title="Advanced Security Suite - Enterprise Cybersecurity | Zion Tech Group"
       description="Comprehensive cybersecurity solution with AI threat detection, 24/7 monitoring, and compliance tools. Protect your business from advanced cyber threats. Get your free security assessment today."
       keywords="cybersecurity, threat detection, security monitoring, compliance, enterprise security, AI security" />
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Shield className="w-5h-5 ml-2" />
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Shield className="w-5 h-5ml-2" />
                 Enterprise Cybersecurity
               </div>
-              <h1 className="w-5h-5 ml-2" />Advanced Security Suite
+              <h1 className="w-5 h-5ml-2">Advanced Security Suite
               </h1>
-              <p className="w-5h-5 ml-2" />
-                Protect your business with our comprehensive cybersecurity solution. AI-powered threat detection, 
+              <p className="w-5 h-5ml-2">Protect your business with our comprehensive cybersecurity solution. AI-powered threat detection, 
                 24/7 monitoring, and compliance tools to keep your data and systems secure.
               </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                 <Link
           to="/contact"
-          className="bg-gradient-to-rfrom-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flexitems-center justify-center"
+          className="bg-gradient-to-rfrom-red-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flexitems-center justify-center"
         >
           Get Free Assessment
                   
-          <ArrowRight className="w-5h-5 ml-2" />
+          <ArrowRight className="w-5 h-5ml-2" />
         </Link>
-                <Link to="#demo" className="bo rder-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">View Demo
+                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">View Demo
                 </Link>
               </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5 ml-2" />Comprehensive Security Features
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Comprehensive Security Features
               </h2>
-              <p className="w-5h-5 ml-2" />
-                Advanced protection against the latest cyber threats
+              <p className="w-5 h-5ml-2">Advanced protection against the latest cyber threats
               </p>
             </div>
             
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {features.map((feature, index) => (
-                <div key="{index}" className="bg-g radient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-red-500/20 hover:border-red-400/40transition-allduration-300" />
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-red-500/20 hover:border-red-400/40transition-allduration-300" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                     {feature.icon}
-                    <h3 className="w-5h-5 ml-2" />{feature.title}</h3>
+                    <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
                   </div>
-                  <p className="w-5h-5 ml-2" />{feature.description}</p>
+                  <p className="w-5 h-5ml-2">{feature.description}</p>
                 </div>
               ))}
             </div>
         </section>
 
         {/* Security Modules */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5 ml-2" />Complete Security Coverage
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Complete Security Coverage
               </h2>
-              <p className="w-5h-5 ml-2" />
-                Protect every aspect of your digital infrastructure
+              <p className="w-5 h-5ml-2">Protect every aspect of your digital infrastructure
               </p>
             </div>
             
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {securityModules.map((module, index) => (
-                <div key="{index}" className="bg-s late-800/50 rounded-xl p-6borderborder-slate-700" />
-                  <h3 className="w-5h-5 ml-2" />{module.category}</h3>
-                  <ul className="w-5h-5 ml-2" />
+                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
+                  <h3 className="w-5 h-5ml-2" />{module.category}</h3>
+                  <ul className="w-5 h-5ml-2" />
                     {module.items.map((item, itemIndex) => (
-                      <li key="{itemIndex}" className="fl exitems-center text-gray-300" />
-                        <CheckCircle className="w-5h-5 ml-2" />
+                      <li key="{itemIndex}" className="flex items-center text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
                         {item}
                       </li>
                     ))}
@@ -205,46 +202,45 @@ export default function AdvancedSecuritySuite() {
         </section>
 
         {/* Pricing Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5 ml-2" />Flexible Security Plans
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Flexible Security Plans
               </h2>
-              <p className="w-5h-5 ml-2" />
-                Choose the security level that fits your organization
+              <p className="w-5 h-5ml-2">Choose the security level that fits your organization
               </p>
             </div>
             
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {pricingPlans.map((plan, index) => (
-                <div key="{index}" className="{`bg-g radient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
+                <div key="{index}" className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
                     ? 'border-red-400/40 scale-105 shadow-2 xl shadow-red-500/20' 
                     : 'border-red-500/20 hover: border-red-400/40'
                 }`} />
                   {plan.popular && (
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <Star className="w-5h-5 ml-2" />
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <Star className="w-5 h-5ml-2" />
                       Most Popular
                     </div>
                   )}
-                  <h3 className="w-5h-5 ml-2" />{plan.name}</h3>
-                  <p className="w-5h-5 ml-2" />{plan.description}</p>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5h-5 ml-2" />{plan.price}</span>
-                    <span className="w-5h-5 ml-2" />{plan.period}</span>
+                  <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
+                  <p className="w-5 h-5ml-2">{plan.description}</p>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <span className="w-5 h-5ml-2" />{plan.price}</span>
+                    <span className="w-5 h-5ml-2" />{plan.period}</span>
                   </div>
-                  <ul className="w-5h-5 ml-2" />
+                  <ul className="w-5 h-5ml-2" />
                     {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="fl exitems-center text-gray-300" />
-                        <CheckCircle className="w-5h-5 ml-2" />
+                      <li key="{featureIndex}" className="flex items-center text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className="{`w-fu ll" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-red-500 to-purple-600 text-white hover:from-red-600 hover:to-purple-700'
                         : 'border-2 border-red-400 text-red-400 hover: bg-red-400/10'
@@ -257,45 +253,43 @@ export default function AdvancedSecuritySuite() {
         </section>
 
         {/* Testimonials */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5 ml-2" />Trusted by Industry Leaders
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Trusted by Industry Leaders
               </h2>
-              <p className="w-5h-5 ml-2" />
-                See how our security suite protects organizations worldwide
+              <p className="w-5 h-5ml-2">See how our security suite protects organizations worldwide
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {testimonials.map((testimonial, index) => (
-                <div key="{index}" className="bg-s late-800/50 rounded-xl p-6borderborder-slate-700" />
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-5h-5t e xt-yellow-400fill-current"  />
+                      <Star key="{i}" className="w-5 h-5te xt-yellow-400fill-current"  />
                     ))}
                   </div>
-                  <p className="w-5h-5 ml-2" />"{testimonial.content}"</p>
+                  <p className="w-5 h-5ml-2">"{testimonial.content}"</p>
                   <div />
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
                 </div>
               ))}
             </div>
         </section>
 
         {/* CTA Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5 ml-2" />Secure Your Business Today
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Secure Your Business Today
               </h2>
-              <p className="w-5h-5 ml-2" />
-                Don't wait for a cyber attack. Get comprehensive protection with Advanced Security Suite
+              <p className="w-5 h-5ml-2">Don't wait for a cyber attack. Get comprehensive protection with Advanced Security Suite
               </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="bg-gradient-to-rfrom-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700transition-allduration-300">Get Free Security Assessment
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link to="/contact" className="bg-gradient-to-rfrom-red-500to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700transition-allduration-300">Get Free Security Assessment
                 </Link>
-                <Link to="/about" className="bo rder-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More
+                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More
                 </Link>
               </div>
           </div>

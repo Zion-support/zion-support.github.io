@@ -65,11 +65,11 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta const name = "description" content="{description}" /  />
-      <meta name="keywords" content="{keywords}" /  />
-      <meta name="author" content="Zion Tech Group" /  />
-      <meta name="robots" content="index, follow" /  />
+      <meta name="keywords" content="{keywords}" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width="device-width," initial-scale=1.0" /  />
-      <meta name="theme-color" content="#8 b5 cf6" /  />
+      <meta name="theme-color" content="#8 b5 cf6" />
       {/* Canonical URL */}
       <link rel="canonical" href="{canonical}"  />
       {/* Open Graph Meta Tags */}
@@ -83,18 +83,18 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
       <meta property="og:site_name" content="Zion Tech Group" /  />
       <meta property="og:locale" content="en_US" /  />
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter: card" content="{twitterCard}" /  />
-      <meta name="twitter: title" content="{title}" /  />
-      <meta name="twitter: description" content="{description}" /  />
-      <meta name="twitter: image" content="{ogImage}" /  />
-      <meta name="twitter:site" content="@ziontechgroup" /  />
-      <meta name="twitter:creator" content="@ziontechgroup" /  />
+      <meta name="twitter: card" content="{twitterCard}" />
+      <meta name="twitter: title" content="{title}" />
+      <meta name="twitter: description" content="{description}" />
+      <meta name="twitter: image" content="{ogImage}" />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
       {/* Additional Meta Tags */}
-      <meta name="format-detection" content="telephone=no" /  />
-      <meta name="mobile-web-app-capable" content="yes" /  />
-      <meta name="apple-mobile-web-app-capable" content="yes" /  />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /  />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /  />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       {/* Favicon and Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico"  />
       <link rel="icon" type="image/png" sizes="32 x32" href="/favicon-32 x32.png"  />

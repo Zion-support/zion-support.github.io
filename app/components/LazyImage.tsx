@@ -52,16 +52,16 @@ const LazyImage: React.FC<LazyImageProps /> = ({
   }
 
   return (
-    <div ref="{imgRef}" className="{`re lative" overflow-hidden ${className}`} />
+    <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
       {!isInView && (
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <Loader2 className="w-5h-5 ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <Loader2 className="w-5 h-5ml-2" />
         </div>
       )}
       
       {isInView && !isLoaded && !hasError && (
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <Loader2 className="w-5h-5 ml-2" />
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <Loader2 className="w-5 h-5ml-2" />
         </div>
       )}
       
@@ -71,7 +71,7 @@ const LazyImage: React.FC<LazyImageProps /> = ({
           alt="{alt}"
           onLoad="{handleLoad}"
           onError="{handleError}"
-          className="{`w-fu ll" h-full object-cover transition-opacity duration-300 ${
+          className="{`w-full" h-full object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           loading="lazy"
@@ -79,10 +79,10 @@ const LazyImage: React.FC<LazyImageProps /> = ({
       )}
       
       {hasError && (
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="w-8h-8m x-a utomb-2"  >📷</div>
-            <p className="te xt-sm">Image failed to load</p>
+        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="w-8h-8mx-a utomb-2"  >📷</div>
+            <p className="text-sm">Image failed to load</p>
           </div>
       )}
     </div>

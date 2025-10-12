@@ -23,7 +23,7 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps /> = ({
         <div
 <<<<<<< HEAD
           key={index}
-          className="h-4 bg-gray-300 rounded mb-2"
+          className="h-4bg-gray-300 rounded mb-2"
         />
       ))}
     </div>

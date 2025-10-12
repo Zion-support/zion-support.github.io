@@ -13,25 +13,25 @@ export default function AISupplyChainOptimizerPage() {
     {
       title: 'Predictive Demand Forecasting',
       description: 'AI algorithms analyze historical data, market trends, and external factors to predict demand with 92% accuracy.',
-      icon: <TrendingUp className="w-5h-5 ml-2" />,
+      icon: <TrendingUp className="w-5 h-5ml-2" />,
       benefits: ['Demand prediction', 'Seasonal analysis', 'Market trend insights', 'Inventory optimization']
     },
     {
       title: 'Smart Route Optimization',
       description: 'Advanced logistics algorithms optimize delivery routes, reduce fuel costs, and improve delivery times.',
-      icon: <Truck className="w-5h-5 ml-2" />,
+      icon: <Truck className="w-5 h-5ml-2" />,
       benefits: ['Route optimization', 'Fuel cost reduction', 'Delivery time improvement', 'Real-time tracking']
     },
     {
       title: 'Automated Inventory Management',
       description: 'Intelligent inventory control with automated reordering, stock level monitoring, and waste reduction.',
-      icon: <Package className="w-5h-5 ml-2" />,
+      icon: <Package className="w-5 h-5ml-2" />,
       benefits: ['Auto reordering', 'Stock monitoring', 'Waste reduction', 'Cost optimization']
     },
     {
       title: 'Risk Management & Compliance',
       description: 'Comprehensive risk assessment and compliance monitoring to ensure supply chain resilience.',
-      icon: <Shield className="w-5h-5 ml-2" />,
+      icon: <Shield className="w-5 h-5ml-2" />,
       benefits: ['Risk assessment', 'Compliance monitoring', 'Disruption alerts', 'Mitigation strategies']
     }
   ];
@@ -105,39 +105,38 @@ export default function AISupplyChainOptimizerPage() {
     }
   ];
   const stats = [
-    { number: '35%', label: 'Cost Reduction', icon: <TrendingUp className="w-5h-5 ml-2" /> },
-    { number: '92%', label: 'Forecast Accuracy', icon: <Target className="w-5h-5 ml-2" /> },
-    { number: '500+', label: 'Companies Using', icon: <Globe className="w-5h-5 ml-2" /> },
-    { number: '40%', label: 'Delivery Improvement', icon: <Clock className="w-5h-5 ml-2" /> }
+    { number: '35%', label: 'Cost Reduction', icon: <TrendingUp className="w-5 h-5ml-2" /> },
+    { number: '92%', label: 'Forecast Accuracy', icon: <Target className="w-5 h-5ml-2" /> },
+    { number: '500+', label: 'Companies Using', icon: <Globe className="w-5 h-5ml-2" /> },
+    { number: '40%', label: 'Delivery Improvement', icon: <Clock className="w-5 h-5ml-2" /> }
   ];
   return (
     <>
       <Helmet>
         <title />AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
         <meta const name = "description" content="Optimize your supply chain with AI-powered demand forecasting, route optimization, and inventory management. Reduce costs by 35% and improve delivery times by 40%." /  />
-        <meta name="keywords" content="AI supply chain, logistics optimization, inventory management, demand forecasting, supply chain AI, logistics technology" /  />
+        <meta name="keywords" content="AI supply chain, logistics optimization, inventory management, demand forecasting, supply chain AI, logistics technology" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer"  />
       </Helmet>
 
       <FuturisticBackground variant="services" />
         {/* Hero Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h1 className="w-5h-5 ml-2" />AI Supply Chain Optimizer
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h1 className="w-5 h-5ml-2">AI Supply Chain Optimizer
               </h1>
-              <p className="w-5h-5 ml-2" />
-                Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
+              <p className="w-5 h-5ml-2">Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
                 and intelligent inventory management. Reduce costs by 35% and improve efficiency by 40%.
               </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                 <FuturisticButton
                   variant="primary"
                   size="lg"
                   onClick="{()" = /> window.open('/contact', '_blank')}
                 >
                   Start Free Trial
-                  <ArrowRight className="w-5h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5ml-2" />
                 </FuturisticButton>
                 <FuturisticButton
                   variant="ghost"
@@ -149,40 +148,39 @@ export default function AISupplyChainOptimizerPage() {
               </div>
 
             {/* Stats */}
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {stats.map((stat, index) => (
-                <div key="{index}" className="te xt-center" />
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.icon}
+                <div key="{index}" className="text-center" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.icon}
                   </div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}</div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}</div>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}</div>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}</div>
               ))}
             </div>
         </section>
 
         {/* Features Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5 ml-2" />Advanced AI Features
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Advanced AI Features
               </h2>
-              <p className="w-5h-5 ml-2" />
-                Cutting-edge artificial intelligence meets supply chain expertise to optimize your operations
+              <p className="w-5 h-5ml-2">Cutting-edge artificial intelligence meets supply chain expertise to optimize your operations
               </p>
             </div>
             
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {features.map((feature, index) => (
-                <FuturisticCard key="{index}" variant="service" className="h-fu ll" />
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <FuturisticCard key="{index}" variant="service" className="h-full" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                     {feature.icon}
-                    <h3 className="w-5h-5 ml-2" />{feature.title}</h3>
+                    <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
                   </div>
-                  <p className="w-5h-5 ml-2" />{feature.description}</p>
-                  <ul className="w-5h-5 ml-2" />
+                  <p className="w-5 h-5ml-2">{feature.description}</p>
+                  <ul className="w-5 h-5ml-2" />
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key="{benefitIndex}" className="fl ex items-centertext-sm text-gray-300" />
-                        <CheckCircle className="w-5h-5 ml-2" />
+                      <li key="{benefitIndex}" className="flex items-centertext-sm text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
                         {benefit}
                       </li>
                     ))}
@@ -193,42 +191,41 @@ export default function AISupplyChainOptimizerPage() {
         </section>
 
         {/* Pricing Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5 ml-2" />Choose Your Plan
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Choose Your Plan
               </h2>
-              <p className="w-5h-5 ml-2" />
-                Scalable pricing options to match your supply chain needs
+              <p className="w-5 h-5ml-2">Scalable pricing options to match your supply chain needs
               </p>
             </div>
 
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {pricingPlans.map((plan, index) => (
                 <FuturisticCard 
                   key="{index}" 
                   variant="{plan.popular" ? "feature" : "service"} 
-                  className="{`h-fu ll" ${plan.popular ? 'ring-2 ring-purple-500' : ''}`} />
+                  className="{`h-full" ${plan.popular ? 'ring-2 ring-purple-500' : ''}`} />
                   {plan.popular && (
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <span className="w-5h-5 ml-2" />Most Popular
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <span className="w-5 h-5ml-2" />Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <h3 className="w-5h-5 ml-2" />{plan.name}</h3>
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <span className="w-5h-5 ml-2" />{plan.price}</span>
-                      <span className="w-5h-5 ml-2" />{plan.period}</span>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <span className="w-5 h-5ml-2" />{plan.price}</span>
+                      <span className="w-5 h-5ml-2" />{plan.period}</span>
                     </div>
-                    <p className="w-5h-5 ml-2" />{plan.description}</p>
+                    <p className="w-5 h-5ml-2">{plan.description}</p>
                   </div>
 
-                  <ul className="w-5h-5 ml-2" />
+                  <ul className="w-5 h-5ml-2" />
                     {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="fl ex items-centertext-sm text-gray-300" />
-                        <CheckCircle className="w-5h-5 ml-2" />
+                      <li key="{featureIndex}" className="flex items-centertext-sm text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
                         {feature}
                       </li>
                     ))}
@@ -236,7 +233,7 @@ export default function AISupplyChainOptimizerPage() {
 
                   <FuturisticButton
                     variant="{plan.popular" ? "primary" : "ghost"}
-                    className="w-fu ll"
+                    className="w-full"
                     onClick="{()" =  />window.open('/contact', '_blank')}
                   >
                     Get Started
@@ -247,30 +244,29 @@ export default function AISupplyChainOptimizerPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5 ml-2" />What Our Clients Say
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />What Our Clients Say
               </h2>
-              <p className="w-5h-5 ml-2" />
-                Join hundreds of companies optimizing their supply chains
+              <p className="w-5 h-5ml-2">Join hundreds of companies optimizing their supply chains
               </p>
             </div>
 
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {testimonials.map((testimonial, index) => (
-                <FuturisticCard key="{index}" variant="testimonial" className="h-fu ll" />
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <FuturisticCard key="{index}" variant="testimonial" className="h-full" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-4h-4t e xt-yellow-400fill-current"  />
+                      <Star key="{i}" className="w-4h-4te xt-yellow-400fill-current"  />
                     ))}
                   </div>
-                  <blockquote className="w-5h-5 ml-2" />"{testimonial.content}"
+                  <blockquote className="w-5 h-5ml-2" />"{testimonial.content}"
                   </blockquote>
                   <footer />
-                    <p className="w-5h-5 ml-2" />{testimonial.name}</p>
-                    <p className="w-5h-5 ml-2" />{testimonial.role}</p>
-                    <p className="w-5h-5 ml-2" />{testimonial.company}</p>
+                    <p className="w-5 h-5ml-2">{testimonial.name}</p>
+                    <p className="w-5 h-5ml-2">{testimonial.role}</p>
+                    <p className="w-5 h-5ml-2">{testimonial.company}</p>
                   </footer>
                 </FuturisticCard>
               ))}
@@ -278,15 +274,14 @@ export default function AISupplyChainOptimizerPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <FuturisticCard variant="feature" className="te xt-center" />
-              <h2 className="w-5h-5 ml-2" />Ready to Optimize Your Supply Chain?
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <FuturisticCard variant="feature" className="text-center" />
+              <h2 className="w-5 h-5ml-2" />Ready to Optimize Your Supply Chain?
               </h2>
-              <p className="w-5h-5 ml-2" />
-                Start your free 14-day trial today. No credit card required. Join 500+ companies optimizing their supply chains.
+              <p className="w-5 h-5ml-2">Start your free 14-day trial today. No credit card required. Join 500+ companies optimizing their supply chains.
               </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                 <FuturisticButton
                   variant="primary"
                   size="lg"
@@ -302,7 +297,7 @@ export default function AISupplyChainOptimizerPage() {
                   Schedule Demo
                 </FuturisticButton>
               </div>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                 <p />✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
               </div>
             </FuturisticCard>

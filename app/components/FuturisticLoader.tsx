@@ -31,8 +31,8 @@ export default function FuturisticLoader({
   };
 
   return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Outer rotating ring */}
         <motion.div
           className="{`"
@@ -96,7 +96,7 @@ export default function FuturisticLoader({
       
       {text && (
         <motion.p
-          className="{`te xt-sm" ${getColorClasses().split(' ')[1]} font-medium`}
+          className="{`text-sm" ${getColorClasses().split(' ')[1]} font-medium`}
           animate="{{" opacity: [0.5, 1, 0.5] }}
           transition="{{" 
             duration: 1.5, 

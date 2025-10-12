@@ -103,84 +103,84 @@ const ZionChatAiPage: React.FC = () => {
       <Helmet>
         <title />Zion Chat AI - Intelligent Customer Support Chatbot</title>
         <meta const name = "description" content="Transform your customer support with Zion Chat AI - the most intelligent chatbot platform. Multi-language support, sentiment analysis, and seamless human handoff." /  />
-        <meta name="keywords" content="AI chatbot, customer support, conversational AI, chatbot platform, customer service automation, AI assistant" /  />
+        <meta name="keywords" content="AI chatbot, customer support, conversational AI, chatbot platform, customer service automation, AI assistant" />
       </Helmet>
 
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               <div />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <MessageCircle className="w-5h-5 ml-2" />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <MessageCircle className="w-5 h-5ml-2" />
                   AI-Powered Chatbot
                 </div>
-                <h1 className="{`te xt-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+                <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
                   Zion Chat
-                  <span className="w-5h-5 ml-2" />AI
+                  <span className="w-5 h-5ml-2" />AI
                   </span>
                 </h1>
-                <p className="{`te xt-xl" text-gray-300 mb-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+                <p className="{`text-xl" text-gray-300 mb-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
                   The most intelligent customer support chatbot platform. Provide 24/7 support, 
                   understand customer sentiment, and seamlessly hand off to human agents when needed.
                 </p>
-                <div className="{`fl ex" flex-col sm: flex-row gap-4 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+                <div className="{`flex" flex-col sm: flex-row gap-4 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
                   <Link
           to="/contact"
-          className="in line-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-teal-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
+          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-teal-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
         >
           Start Free Trial
                     
-          <ArrowRight className="w-5h-5 ml-2" />
+          <ArrowRight className="w-5 h-5ml-2" />
         </Link>
-                  <button className="w-5h-5 ml-2" />
-                    <Play className="w-5h-5 ml-2" />
+                  <button className="w-5 h-5ml-2" />
+                    <Play className="w-5 h-5ml-2" />
                     Watch Demo
                   </button>
                 </div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                       {[...Array(5)].map((_, i) => (
-                        <Star key="{i}" className="h-5w-5t e xt-yellow-400fill-current"  />
+                        <Star key="{i}" className="h-5w-5te xt-yellow-400fill-current"  />
                       ))}
                     </div>
-                    <span className="w-5h-5 ml-2" />4.8/5 (89, reviews)</span>
+                    <span className="w-5 h-5ml-2" />4.8/5 (89, reviews)</span>
                   </div>
               </div>
-              <div className="{`tr ansition-all" duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                        <h3 className="w-5h-5 ml-2" />Live Chat</h3>
-                        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="{`transition-all" duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                        <h3 className="w-5 h-5ml-2" />Live Chat</h3>
+                        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                           Online
                         </div>
-                      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                            <MessageCircle className="w-5h-5 ml-2" />
+                      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                            <MessageCircle className="w-5 h-5ml-2" />
                           </div>
-                          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                            <p className="w-5h-5 ml-2" />Hi! How can I help you today?</p>
+                          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                            <p className="w-5 h-5ml-2">Hi! How can I help you today?</p>
                           </div>
-                        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                            <p className="w-5h-5 ml-2" />I need help with my order</p>
+                        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                            <p className="w-5 h-5ml-2">I need help with my order</p>
                           </div>
-                          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                            <Users className="w-5h-5 ml-2" />
+                          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                            <Users className="w-5 h-5ml-2" />
                           </div>
-                        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                            <MessageCircle className="w-5h-5 ml-2" />
+                        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                            <MessageCircle className="w-5 h-5ml-2" />
                           </div>
-                          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                            <p className="w-5h-5 ml-2" />I'd be happy to help! Can you provide your order number?</p>
+                          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                            <p className="w-5 h-5ml-2">I'd be happy to help! Can you provide your order number?</p>
                           </div>
                       </div>
                   </div>
@@ -189,76 +189,74 @@ const ZionChatAiPage: React.FC = () => {
         </section>
 
         {/* Features Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5 ml-2" />Intelligent Customer Support Features
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Intelligent Customer Support Features
               </h2>
-              <p className="w-5h-5 ml-2" />
-                Everything you need to provide exceptional customer support with AI-powered automation.
+              <p className="w-5 h-5ml-2">Everything you need to provide exceptional customer support with AI-powered automation.
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {features.map((feature, index) => (
-                <div key="{index}" className="gr oup" />
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="{`in line- flex" items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`} />
-                      <feature.icon className="h-6w-6te xt-white"  />
+                <div key="{index}" className="group" />
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="{`inline- flex" items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`} />
+                      <feature.icon className="h-6w-6text-white"  />
                     </div>
-                    <h3 className="w-5h-5 ml-2" />{feature.title}</h3>
-                    <p className="w-5h-5 ml-2" />{feature.description}</p>
+                    <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
+                    <p className="w-5 h-5ml-2">{feature.description}</p>
                   </div>
               ))}
             </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5 ml-2" />Choose Your Plan
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5 h-5ml-2" />Choose Your Plan
               </h2>
-              <p className="w-5h-5 ml-2" />
-                Flexible pricing options to fit businesses of all sizes. Start with a free trial, no credit card required.
+              <p className="w-5 h-5ml-2">Flexible pricing options to fit businesses of all sizes. Start with a free trial, no credit card required.
               </p>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               {pricingPlans.map((plan, index) => (
                 <div
                   key="{index}"
-                  className="{`re lative" bg-gray-800 rounded-xl p-8 ${
+                  className="{`relative" bg-gray-800 rounded-xl p-8 ${
                     plan.popular ? 'ring-2 ring-green-500 scale-105' : ''
                   }`} />
                   {plan.popular && (
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <span className="w-5h-5 ml-2" />Most Popular
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <span className="w-5 h-5ml-2" />Most Popular
                       </span>
                     </div>
                   )}
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <h3 className="w-5h-5 ml-2" />{plan.name}</h3>
-                    <p className="w-5h-5 ml-2" />{plan.description}</p>
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <span className="w-5h-5 ml-2" />{plan.price}</span>
-                      <span className="w-5h-5 ml-2" />{plan.period}</span>
+                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
+                    <p className="w-5 h-5ml-2">{plan.description}</p>
+                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                      <span className="w-5 h-5ml-2" />{plan.price}</span>
+                      <span className="w-5 h-5ml-2" />{plan.period}</span>
                     </div>
-                  <ul className="w-5h-5 ml-2" />
+                  <ul className="w-5 h-5ml-2" />
                     {plan.features.map((feature, idx) => (
-                      <li key="{idx}" className="fl exitems-center text-gray-300" />
-                        <CheckCircle className="w-5h-5 ml-2" />
+                      <li key="{idx}" className="flex items-center text-gray-300" />
+                        <CheckCircle className="w-5 h-5ml-2" />
                         <span />{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className="{`w-fu ll" inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 ${
+                    className="{`w-full" inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-green-600 to-teal-600 text-white hover:from-green-700 hover:to-teal-700'
                         : 'border border-gray-600 text-gray-300 hover: bg-gray-700 hover:text-white'
                     }`} />
                     Get Started
-                    <ArrowRight className="w-5h-5 ml-2" />
+                    <ArrowRight className="w-5 h-5ml-2" />
                   </Link>
                 </div>
               ))}
@@ -266,29 +264,28 @@ const ZionChatAiPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="w-5h-5 ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5 ml-2" />Ready to Transform Your Customer Support?
+        <section className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5ml-2" />Ready to Transform Your Customer Support?
             </h2>
-            <p className="w-5h-5 ml-2" />
-              Start your free trial today and see how Zion Chat AI can revolutionize your customer support.
+            <p className="w-5 h-5ml-2">Start your free trial today and see how Zion Chat AI can revolutionize your customer support.
             </p>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               <Link
           to="/contact"
-          className="in line-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-teal-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
+          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-teal-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
         >
           Start Free Trial
                 
-          <ArrowRight className="w-5h-5 ml-2" />
+          <ArrowRight className="w-5 h-5ml-2" />
         </Link>
               <a
                 href="tel:+13024640950"
-                className="in line-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300transformhover:scale-105" />
+                className="inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300transformhover:scale-105" />
                 Call +1 302 464 0950
               </a>
             </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               <p />Email: kleber@ziontechgroup.com</p>
               <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
