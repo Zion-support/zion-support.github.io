@@ -18,10 +18,6 @@ export default function Navigation() {
     {
       title: 'AI Services',
       href: '/ai-services',
-<<<<<<< HEAD
-      icon: <Zap className="w-4 h-4" />,
-      description: 'AI-powered solutions for your business'
-=======
       icon: Zap,
       description: 'Artificial Intelligence Solutions',
       subServices: [

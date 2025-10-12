@@ -31,7 +31,6 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-<<<<<<< HEAD
               <li>
                 <Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">
                   AI Services
@@ -57,24 +56,30 @@ export default function Footer() {
                   5G Implementation
                 </Link>
               </li>
-=======
-              <li><Link to="/ai-services" className="text-gray-400 hover:text-white transition-colors">AI Services</Link></li>
-              <li><Link to="/it-services" className="text-gray-400 hover:text-white transition-colors">IT Services</Link></li>
-              <li><Link to="/cloud-services" className="text-gray-400 hover:text-white transition-colors">Cloud Services</Link></li>
-              <li><Link to="/micro-saas-services" className="text-gray-400 hover:text-white transition-colors">Micro SAAS</Link></li>
-              <li><Link to="/digital-transformation" className="text-gray-400 hover:text-white transition-colors">Digital Transformation</Link></li>
-              <li><Link to="/5g-implementation" className="text-gray-400 hover:text-white transition-colors">5G Implementation</Link></li>
->>>>>>> cursor/website-audit-and-update-with-deployment-bee6
+              <li>
+                <Link to="/digital-transformation" className="text-gray-400 hover:text-white transition-colors">
+                  Digital Transformation
+                </Link>
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-<<<<<<< HEAD
               <li>
                 <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
                   About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/careers" className="text-gray-400 hover:text-white transition-colors">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-gray-400 hover:text-white transition-colors">
+                  Blog
                 </Link>
               </li>
               <li>
@@ -82,34 +87,27 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Blog
-                </a>
-              </li>
-=======
-              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
-              <li><Link to="/services" className="text-gray-400 hover:text-white transition-colors">All Services</Link></li>
-              <li><Link to="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
-              <li><Link to="/blog" className="text-gray-400 hover:text-white transition-colors">Blog</Link></li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
-              <li><Link to="/case-studies" className="text-gray-400 hover:text-white transition-colors">Case Studies</Link></li>
-              <li><Link to="/whitepapers" className="text-gray-400 hover:text-white transition-colors">Whitepapers</Link></li>
-              <li><Link to="/api-docs" className="text-gray-400 hover:text-white transition-colors">API Documentation</Link></li>
-              <li><Link to="/support" className="text-gray-400 hover:text-white transition-colors">Support Center</Link></li>
-              <li><Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link></li>
->>>>>>> cursor/website-audit-and-update-with-deployment-bee6
+              <li>
+                <Link to="/support" className="text-gray-400 hover:text-white transition-colors">
+                  Help Center
+                </Link>
+              </li>
+              <li>
+                <Link to="/status" className="text-gray-400 hover:text-white transition-colors">
+                  System Status
+                </Link>
+              </li>
+              <li>
+                <Link to="/pricing" className="text-gray-400 hover:text-white transition-colors">
+                  Pricing
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -117,33 +115,33 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-3">
               <div className="flex items-center">
-                <Mail className="w-4 h-4 text-gray-400 mr-3" />
+                <Mail className="w-5 h-5 text-gray-400 mr-3" />
                 <span className="text-gray-400">info@ziontechgroup.com</span>
               </div>
               <div className="flex items-center">
-                <Phone className="w-4 h-4 text-gray-400 mr-3" />
+                <Phone className="w-5 h-5 text-gray-400 mr-3" />
                 <span className="text-gray-400">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center">
-                <MapPin className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">San Francisco, CA</span>
+                <MapPin className="w-5 h-5 text-gray-400 mr-3" />
+                <span className="text-gray-400">New York, NY</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8">
+        <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © 2024 Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              </Link>
+              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>

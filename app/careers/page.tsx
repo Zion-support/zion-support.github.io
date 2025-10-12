@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Users, Briefcase, MapPin, Clock, Star } from 'lucide-react';
+import { ArrowRight, Users, Briefcase, Clock, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -94,6 +94,81 @@ const CareersPage: React.FC = () => {
                 Learn About Us
               </Link>
             </div>
+          </div>
+
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Open Positions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+              We're always looking for talented individuals to join our team. Check out our current openings.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">
+            {openPositions.map((position, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-start justify-between mb-4">
+                  <h3 className="text-xl font-bold text-white">{position.title}</h3>
+                  <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    {position.type}
+                  </span>
+                </div>
+                <div className="flex items-center text-gray-300 mb-4">
+                  <Briefcase className="w-4 h-4 mr-2" />
+                  <span className="mr-4">{position.department}</span>
+                  <Clock className="w-4 h-4 mr-2" />
+                  <span>{position.experience}</span>
+                </div>
+                <p className="text-gray-300 mb-6">{position.description}</p>
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-2">Requirements:</h4>
+                  <ul className="space-y-1">
+                    {position.requirements.map((req, reqIndex) => (
+                      <li key={reqIndex} className="text-gray-300 text-sm">• {req}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-2">Benefits:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {position.benefits.map((benefit, benefitIndex) => (
+                      <span key={benefitIndex} className="bg-white/20 text-white px-2 py-1 rounded text-xs">
+                        {benefit}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <Link
+                  to="/contact"
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Apply Now
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Work With Us?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+              We offer a comprehensive benefits package and a great work environment
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
           </div>
 
           <div className="text-center">
