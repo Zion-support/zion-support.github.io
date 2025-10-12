@@ -3,61 +3,63 @@ import React from 'react'
 import SEOHead from '../components/SEOHead'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { ArrowRight, CheckCircle, BarChart3, FileText, TrendingUp, Clock, Shield, Zap, Users, Star, Target } from 'lucide-react'
+import { ArrowRight, CheckCircle, GitBranch, Zap, Shield, BarChart3, Clock, Users, Database, Server, Globe, Star, TrendingUp, Lock, Smartphone, Code, Settings } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-const AIAutomatedReportingPage: React.FC = () => {
+const DevOpsCICDProPage: React.FC = () => {
   const features = [
     {
-      icon: <BarChart3 className="w-6 h-6 text-blue-500" />,
-      title: 'AI-Powered Analytics',
-      description: 'Automatically analyze data patterns and generate insights using advanced machine learning algorithms.'
+      icon: <GitBranch className="w-6 h-6 text-blue-500" />,
+      title: 'Automated CI/CD Pipelines',
+      description: 'Set up robust continuous integration and deployment pipelines that automatically build, test, and deploy your applications.'
     },
     {
-      icon: <FileText className="w-6 h-6 text-green-500" />,
-      title: 'Automated Report Generation',
-      description: 'Generate comprehensive reports automatically on schedule without manual intervention.'
+      icon: <Zap className="w-6 h-6 text-green-500" />,
+      title: 'Infrastructure as Code',
+      description: 'Manage your entire infrastructure using code with Terraform, Ansible, and other IaC tools for consistency and reliability.'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-purple-500" />,
-      title: 'Predictive Insights',
-      description: 'Get predictive analytics and trend forecasting to make proactive business decisions.'
+      icon: <Shield className="w-6 h-6 text-purple-500" />,
+      title: 'Security Integration',
+      description: 'Integrate security scanning, vulnerability assessment, and compliance checks into your development workflow.'
     },
     {
-      icon: <Zap className="w-6 h-6 text-orange-500" />,
-      title: 'Real-time Monitoring',
-      description: 'Monitor key metrics in real-time with automated alerts and notifications.'
+      icon: <BarChart3 className="w-6 h-6 text-orange-500" />,
+      title: 'Monitoring & Observability',
+      description: 'Comprehensive monitoring, logging, and alerting systems to ensure your applications run smoothly in production.'
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$49',
+      name: 'Startup',
+      price: '$1,999',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for startups and small development teams',
       features: [
-        'Up to 5 data sources',
-        'Basic report templates',
-        'Monthly reports',
+        'Up to 5 applications',
+        'Basic CI/CD pipelines',
+        'Git integration',
+        'Basic monitoring',
         'Email support',
-        'Standard analytics'
+        'Standard security scanning'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$149',
+      price: '$4,999',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing teams and medium businesses',
       features: [
-        'Up to 20 data sources',
-        'Custom report templates',
-        'Real-time reports',
+        'Up to 20 applications',
+        'Advanced CI/CD pipelines',
+        'Multi-environment support',
+        'Advanced monitoring',
         'Priority support',
-        'Advanced analytics',
-        'API access',
-        'Custom dashboards'
+        'Advanced security scanning',
+        'Infrastructure as Code',
+        'Team collaboration tools'
       ],
       popular: true
     },
@@ -65,15 +67,16 @@ const AIAutomatedReportingPage: React.FC = () => {
       name: 'Enterprise',
       price: 'Custom',
       period: 'quote',
-      description: 'For large organizations',
+      description: 'For large organizations with complex requirements',
       features: [
-        'Unlimited data sources',
-        'White-label reports',
-        'Custom AI training',
-        'Dedicated account manager',
-        'Advanced security',
-        'SLA guarantee',
-        'Custom integrations'
+        'Unlimited applications',
+        'Custom CI/CD workflows',
+        'Multi-cloud support',
+        'Enterprise monitoring',
+        '24/7 support',
+        'Custom security policies',
+        'Dedicated DevOps team',
+        'SLA guarantee'
       ],
       popular: false
     }
@@ -81,51 +84,66 @@ const AIAutomatedReportingPage: React.FC = () => {
 
   const benefits = [
     {
-      icon: <Clock className="w-8 h-8 text-green-500" />,
-      title: 'Save 20 Hours Weekly',
-      description: 'Automated reporting eliminates manual work and frees up time for strategic tasks.'
+      icon: <TrendingUp className="w-8 h-8 text-green-500" />,
+      title: '10x Faster Deployments',
+      description: 'Automated pipelines reduce deployment time from hours to minutes.'
     },
     {
-      icon: <Target className="w-8 h-8 text-blue-500" />,
-      title: '99% Accuracy',
-      description: 'AI-powered analysis ensures consistent and accurate reporting every time.'
+      icon: <Shield className="w-8 h-8 text-blue-500" />,
+      title: '99.9% Uptime',
+      description: 'Robust monitoring and automated recovery ensure maximum availability.'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-500" />,
-      title: 'Faster Decision Making',
-      description: 'Real-time insights enable quicker, more informed business decisions.'
+      icon: <Clock className="w-8 h-8 text-purple-500" />,
+      title: '50% Less Manual Work',
+      description: 'Automation eliminates repetitive tasks and reduces human error.'
     }
   ]
 
-  const reportTypes = [
+  const tools = [
+    { name: 'Docker', icon: '🐳', color: 'from-blue-500 to-blue-700' },
+    { name: 'Kubernetes', icon: '☸️', color: 'from-blue-400 to-blue-600' },
+    { name: 'Jenkins', icon: '🔧', color: 'from-red-500 to-red-700' },
+    { name: 'GitLab CI', icon: '🦊', color: 'from-orange-500 to-orange-700' },
+    { name: 'GitHub Actions', icon: '🐙', color: 'from-gray-600 to-gray-800' },
+    { name: 'Terraform', icon: '🏗️', color: 'from-purple-500 to-purple-700' },
+    { name: 'Ansible', icon: '🔴', color: 'from-red-600 to-red-800' },
+    { name: 'Prometheus', icon: '📊', color: 'from-orange-400 to-orange-600' }
+  ]
+
+  const processSteps = [
     {
-      title: 'Financial Reports',
-      description: 'Automated P&L, cash flow, and budget variance reports.',
-      icon: '💰'
+      step: '01',
+      title: 'Assessment & Planning',
+      description: 'Analyze your current development workflow and identify optimization opportunities.',
+      icon: '🔍'
     },
     {
-      title: 'Sales Analytics',
-      description: 'Performance metrics, pipeline analysis, and forecasting.',
-      icon: '📈'
-    },
-    {
-      title: 'Marketing Insights',
-      description: 'Campaign performance, ROI analysis, and customer acquisition.',
-      icon: '📊'
-    },
-    {
-      title: 'Operational Metrics',
-      description: 'KPI tracking, efficiency analysis, and process optimization.',
+      step: '02',
+      title: 'Pipeline Setup',
+      description: 'Configure automated CI/CD pipelines tailored to your technology stack.',
       icon: '⚙️'
+    },
+    {
+      step: '03',
+      title: 'Infrastructure Setup',
+      description: 'Deploy monitoring, logging, and security tools for production readiness.',
+      icon: '🏗️'
+    },
+    {
+      step: '04',
+      title: 'Training & Handover',
+      description: 'Train your team and provide ongoing support for continuous improvement.',
+      icon: '🎓'
     }
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOHead 
-        title="AI Automated Reporting - Intelligent Business Reports | Zion Tech Group"
-        description="Transform your data into actionable insights with AI-powered automated reporting. Generate comprehensive reports, analytics, and predictions automatically."
-        keywords="AI automated reporting, business intelligence, automated analytics, report generation, data insights, business reports"
+        title="DevOps & CI/CD Pro - Enterprise DevOps Services | Zion Tech Group"
+        description="Professional DevOps and CI/CD services with automated pipelines, infrastructure as code, and comprehensive monitoring. Accelerate your development workflow."
+        keywords="DevOps services, CI/CD pipelines, infrastructure as code, automated deployment, monitoring, Kubernetes, Docker, cloud automation"
       />
       
       <Navigation />
@@ -135,29 +153,29 @@ const AIAutomatedReportingPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Automated
+            DevOps & CI/CD
             <br />
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Reporting
+              Pro
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform your data into actionable insights with AI-powered automated reporting. 
-            Generate comprehensive reports, analytics, and predictions without manual effort.
+            Accelerate your development workflow with automated CI/CD pipelines, infrastructure as code, 
+            and comprehensive monitoring. Deploy faster, more reliably, and with confidence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
             >
-              Get Started
+              Get Free Assessment
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link 
               to="/demo" 
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
-              Watch Demo
+              Schedule Demo
             </Link>
           </div>
         </div>
@@ -168,10 +186,10 @@ const AIAutomatedReportingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Intelligent Reporting Features
+              Complete DevOps Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform automatically analyzes your data and generates comprehensive reports.
+              Our certified DevOps engineers provide end-to-end solutions for modern software development.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -188,23 +206,46 @@ const AIAutomatedReportingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Report Types Section */}
+      {/* Process Section */}
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Report Types
+              Our DevOps Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Generate all types of business reports automatically with AI-powered insights.
+              A proven methodology that transforms your development workflow for maximum efficiency.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {reportTypes.map((report, index) => (
+            {processSteps.map((step, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
-                <div className="text-4xl mb-4">{report.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{report.title}</h3>
-                <p className="text-gray-300">{report.description}</p>
+                <div className="text-4xl mb-4">{step.icon}</div>
+                <div className="text-2xl font-bold text-purple-400 mb-2">{step.step}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+                <p className="text-gray-300">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tools Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry-Leading Tools
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We work with the best DevOps tools and technologies to build robust solutions.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+            {tools.map((tool, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                <div className="text-3xl mb-2">{tool.icon}</div>
+                <div className="text-white font-medium">{tool.name}</div>
               </div>
             ))}
           </div>
@@ -212,14 +253,14 @@ const AIAutomatedReportingPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join hundreds of businesses already benefiting from automated reporting.
+              Join hundreds of teams that have transformed their development workflow with our DevOps solutions.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -237,14 +278,14 @@ const AIAutomatedReportingPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 bg-white/5">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple Pricing
+              Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the reporting plan that fits your data needs and business size.
+              Choose the DevOps package that fits your team size and development needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -295,18 +336,17 @@ const AIAutomatedReportingPage: React.FC = () => {
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Automate Your Reporting?
+                Ready to Transform Your Development Workflow?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Start your free 14-day trial today. No credit card required. 
-                Experience the power of AI-powered reporting.
+                Get a free DevOps assessment and discover how much faster you can deploy. No obligation required.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Free Trial
+                  Get Free Assessment
                 </Link>
                 <Link 
                   to="/demo" 
@@ -325,4 +365,4 @@ const AIAutomatedReportingPage: React.FC = () => {
   )
 }
 
-export default AIAutomatedReportingPage
+export default DevOpsCICDProPage

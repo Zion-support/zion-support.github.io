@@ -3,72 +3,73 @@ import React from 'react'
 import SEOHead from '../components/SEOHead'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { ArrowRight, CheckCircle, BarChart3, FileText, TrendingUp, Clock, Shield, Zap, Users, Star, Target } from 'lucide-react'
+import { ArrowRight, CheckCircle, Users, Clock, Target, BarChart3, Zap, Shield, Brain, Calendar, MessageSquare, FileText, TrendingUp, Star, Globe } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-const AIAutomatedReportingPage: React.FC = () => {
+const AIProjectManagerProPage: React.FC = () => {
   const features = [
     {
-      icon: <BarChart3 className="w-6 h-6 text-blue-500" />,
-      title: 'AI-Powered Analytics',
-      description: 'Automatically analyze data patterns and generate insights using advanced machine learning algorithms.'
+      icon: <Brain className="w-6 h-6 text-blue-500" />,
+      title: 'AI-Powered Task Assignment',
+      description: 'Intelligent task distribution based on team member skills, workload, and project requirements.'
     },
     {
-      icon: <FileText className="w-6 h-6 text-green-500" />,
-      title: 'Automated Report Generation',
-      description: 'Generate comprehensive reports automatically on schedule without manual intervention.'
+      icon: <Target className="w-6 h-6 text-green-500" />,
+      title: 'Smart Deadline Prediction',
+      description: 'AI analyzes project complexity and team performance to predict realistic deadlines and identify bottlenecks.'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-purple-500" />,
-      title: 'Predictive Insights',
-      description: 'Get predictive analytics and trend forecasting to make proactive business decisions.'
+      icon: <BarChart3 className="w-6 h-6 text-purple-500" />,
+      title: 'Real-time Analytics',
+      description: 'Comprehensive project insights with predictive analytics to optimize team performance and project outcomes.'
     },
     {
       icon: <Zap className="w-6 h-6 text-orange-500" />,
-      title: 'Real-time Monitoring',
-      description: 'Monitor key metrics in real-time with automated alerts and notifications.'
+      title: 'Automated Workflows',
+      description: 'Streamline project processes with AI-driven automation for status updates, notifications, and reporting.'
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Starter',
+      name: 'Team',
       price: '$49',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small teams up to 10 members',
       features: [
-        'Up to 5 data sources',
-        'Basic report templates',
-        'Monthly reports',
+        'Up to 10 team members',
+        'AI task assignment',
+        'Basic analytics',
+        'Mobile app access',
         'Email support',
-        'Standard analytics'
+        '5 active projects'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$149',
+      price: '$99',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing teams and departments',
       features: [
-        'Up to 20 data sources',
-        'Custom report templates',
-        'Real-time reports',
+        'Up to 50 team members',
+        'Advanced AI features',
+        'Custom workflows',
         'Priority support',
-        'Advanced analytics',
-        'API access',
-        'Custom dashboards'
+        'API integrations',
+        'Unlimited projects',
+        'Advanced reporting'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: 'Custom',
-      period: 'quote',
-      description: 'For large organizations',
+      price: '$299',
+      period: '/month',
+      description: 'For large organizations and enterprises',
       features: [
-        'Unlimited data sources',
-        'White-label reports',
+        'Unlimited team members',
+        'White-label solution',
         'Custom AI training',
         'Dedicated account manager',
         'Advanced security',
@@ -81,51 +82,39 @@ const AIAutomatedReportingPage: React.FC = () => {
 
   const benefits = [
     {
-      icon: <Clock className="w-8 h-8 text-green-500" />,
-      title: 'Save 20 Hours Weekly',
-      description: 'Automated reporting eliminates manual work and frees up time for strategic tasks.'
+      icon: <TrendingUp className="w-8 h-8 text-green-500" />,
+      title: '40% Faster Project Delivery',
+      description: 'AI optimization reduces project timelines and improves team efficiency significantly.'
     },
     {
-      icon: <Target className="w-8 h-8 text-blue-500" />,
-      title: '99% Accuracy',
-      description: 'AI-powered analysis ensures consistent and accurate reporting every time.'
+      icon: <Users className="w-8 h-8 text-blue-500" />,
+      title: '95% Team Satisfaction',
+      description: 'Intelligent task matching ensures team members work on projects they excel at.'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-500" />,
-      title: 'Faster Decision Making',
-      description: 'Real-time insights enable quicker, more informed business decisions.'
+      icon: <Target className="w-8 h-8 text-purple-500" />,
+      title: '85% On-Time Delivery',
+      description: 'AI prediction models help maintain realistic deadlines and project schedules.'
     }
   ]
 
-  const reportTypes = [
-    {
-      title: 'Financial Reports',
-      description: 'Automated P&L, cash flow, and budget variance reports.',
-      icon: '💰'
-    },
-    {
-      title: 'Sales Analytics',
-      description: 'Performance metrics, pipeline analysis, and forecasting.',
-      icon: '📈'
-    },
-    {
-      title: 'Marketing Insights',
-      description: 'Campaign performance, ROI analysis, and customer acquisition.',
-      icon: '📊'
-    },
-    {
-      title: 'Operational Metrics',
-      description: 'KPI tracking, efficiency analysis, and process optimization.',
-      icon: '⚙️'
-    }
+  const integrations = [
+    { name: 'Slack', icon: '💬' },
+    { name: 'Microsoft Teams', icon: '👥' },
+    { name: 'Jira', icon: '🎯' },
+    { name: 'Trello', icon: '📋' },
+    { name: 'Asana', icon: '✅' },
+    { name: 'GitHub', icon: '💻' },
+    { name: 'Google Workspace', icon: '📊' },
+    { name: 'Zoom', icon: '📹' }
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOHead 
-        title="AI Automated Reporting - Intelligent Business Reports | Zion Tech Group"
-        description="Transform your data into actionable insights with AI-powered automated reporting. Generate comprehensive reports, analytics, and predictions automatically."
-        keywords="AI automated reporting, business intelligence, automated analytics, report generation, data insights, business reports"
+        title="AI Project Manager Pro - Intelligent Project Management | Zion Tech Group"
+        description="Revolutionary AI-powered project management platform with intelligent task assignment, deadline prediction, and team optimization. Start free trial!"
+        keywords="AI project management, smart project manager, team collaboration, project analytics, task automation, deadline prediction"
       />
       
       <Navigation />
@@ -135,22 +124,22 @@ const AIAutomatedReportingPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Automated
+            AI Project Manager
             <br />
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Reporting
+              Pro
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform your data into actionable insights with AI-powered automated reporting. 
-            Generate comprehensive reports, analytics, and predictions without manual effort.
+            Transform your project management with AI-powered intelligence. Optimize team performance, 
+            predict deadlines, and deliver projects faster than ever before.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
             >
-              Get Started
+              Start Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link 
@@ -168,10 +157,10 @@ const AIAutomatedReportingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Intelligent Reporting Features
+              Intelligent Project Management
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform automatically analyzes your data and generates comprehensive reports.
+              Our AI learns from your team's patterns to provide intelligent project insights and optimizations.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -188,38 +177,15 @@ const AIAutomatedReportingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Report Types Section */}
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Report Types
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Generate all types of business reports automatically with AI-powered insights.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {reportTypes.map((report, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
-                <div className="text-4xl mb-4">{report.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{report.title}</h3>
-                <p className="text-gray-300">{report.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Benefits Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join hundreds of businesses already benefiting from automated reporting.
+              Join thousands of teams already benefiting from AI-powered project management.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -236,15 +202,37 @@ const AIAutomatedReportingPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Integrations Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Seamless Integrations
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Connect with your favorite tools and platforms for a unified project management experience.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+            {integrations.map((integration, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                <div className="text-3xl mb-2">{integration.icon}</div>
+                <div className="text-white font-medium">{integration.name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple Pricing
+              Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the reporting plan that fits your data needs and business size.
+              Choose the plan that scales with your team. All plans include our core AI features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -295,11 +283,10 @@ const AIAutomatedReportingPage: React.FC = () => {
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Automate Your Reporting?
+                Ready to Transform Your Project Management?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Start your free 14-day trial today. No credit card required. 
-                Experience the power of AI-powered reporting.
+                Start your free 30-day trial today. No credit card required. Experience the future of project management.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
@@ -325,4 +312,4 @@ const AIAutomatedReportingPage: React.FC = () => {
   )
 }
 
-export default AIAutomatedReportingPage
+export default AIProjectManagerProPage

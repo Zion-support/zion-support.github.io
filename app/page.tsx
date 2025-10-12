@@ -3,92 +3,11 @@ import React from 'react'
 import SEOHead from './components/SEOHead'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock } from 'lucide-react'
+import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, Wifi, MessageSquare, FileText, Camera, Mail, Phone, MapPin, Github, Linkedin, Twitter, TrendingUp } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const HomePage: React.FC = () => {
   const features = [
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Database, 
-  Code, 
-  Smartphone, 
-  ArrowRight, 
-  CheckCircle, 
-  Star,
-  Users,
-  TrendingUp,
-  Lock,
-  Cpu,
-  Wifi,
-  BarChart3,
-  MessageSquare,
-  FileText,
-  Camera,
-  Mail,
-  Phone,
-  MapPin,
-  Github,
-  Linkedin,
-  Twitter
-} from 'lucide-react';
-
-export default function HomePage() {
-  const aiServices = [
-    {
-      icon: <Brain className="w-8 h-8 text-blue-500" />,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced artificial intelligence to transform your business operations and drive innovation.'
-    },
-    {
-      icon: <Cloud className="w-8 h-8 text-green-500" />,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions designed for modern business needs.'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and data.'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-purple-500" />,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics platform.'
-    }
-  ]
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Home</h1>
-          <p className="text-xl text-gray-300 mb-8">Welcome to Zion Tech Group - Advanced AI and IT Solutions</p>
-          <a
-            href="/"
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-          >
-            Go Home
-          </a>
-        </div>
-import { Link } from 'react-router-dom';
-import SEOHead from './components/SEOHead';
-import FuturisticBackground from './components/FuturisticBackground';
-import FuturisticCard from './components/FuturisticCard';
-import NeonButton from './components/NeonButton';
-import AnimatedText from './components/AnimatedText';
-
-export default function HomePage() {
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99%', label: 'Success Rate' },
-    { number: '24/7', label: 'Support' }
-  ];
-
-  const services = [
     {
       icon: <Code className="w-6 h-6 text-blue-500" />,
       title: 'Software Development',
@@ -111,11 +30,57 @@ export default function HomePage() {
     }
   ]
 
+  const aiServices = [
+    {
+      icon: <Brain className="w-8 h-8 text-blue-500" />,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence to transform your business operations and drive innovation.'
+    },
+    {
+      icon: <Cloud className="w-8 h-8 text-green-500" />,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions designed for modern business needs.'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets and data.'
+    },
+    {
+      icon: <Database className="w-8 h-8 text-purple-500" />,
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable insights with our advanced analytics platform.'
+    }
+  ]
+
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '100+', label: 'Happy Clients' },
     { number: '24/7', label: 'Support Available' },
     { number: '99.9%', label: 'Uptime Guarantee' }
+  ]
+
+  const services = [
+    {
+      icon: <Code className="w-6 h-6 text-blue-500" />,
+      title: 'Software Development',
+      description: 'Custom software solutions tailored to your business requirements.'
+    },
+    {
+      icon: <Network className="w-6 h-6 text-green-500" />,
+      title: 'IT Infrastructure',
+      description: 'Robust and scalable IT infrastructure solutions for your organization.'
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6 text-purple-500" />,
+      title: 'Business Intelligence',
+      description: 'Data-driven insights to help you make informed business decisions.'
+    },
+    {
+      icon: <Bot className="w-6 h-6 text-orange-500" />,
+      title: 'AI Automation',
+      description: 'Intelligent automation solutions to streamline your business processes.'
+    }
   ]
 
   return (
@@ -250,13 +215,11 @@ export default function HomePage() {
                 >
                   Explore AI Services
                 </Link>
-                </NeonButton>
               </div>
             </div>
           </div>
         </div>
       </section>
-        </section>
 
       <Footer />
     </div>
@@ -264,7 +227,3 @@ export default function HomePage() {
 }
 
 export default HomePage
-      </div>
-    </>
-  );
-}

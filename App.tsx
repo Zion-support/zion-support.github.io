@@ -36,6 +36,12 @@ import AIChatbotBuilderPage from './app/ai-chatbot-builder/page'
 import AIExpenseTrackerPage from './app/ai-expense-tracker/page'
 import AIPasswordManagerPage from './app/ai-password-manager/page'
 import AITaskManagerPage from './app/ai-task-manager/page'
+import AISmartInvoicingPage from './app/ai-smart-invoicing/page'
+import AIProjectManagerProPage from './app/ai-project-manager-pro/page'
+import AICustomerSupportProPage from './app/ai-customer-support-pro/page'
+import AISocialMediaProPage from './app/ai-social-media-pro/page'
+import CloudMigrationProPage from './app/cloud-migration-pro/page'
+import DevOpsCICDProPage from './app/devops-cicd-pro/page'
 import BusinessIntelligencePage from './app/business-intelligence/page'
 import ITConsultingPage from './app/it-consulting/page'
 import ITServicesPage from './app/it-services/page'
@@ -100,9 +106,15 @@ const App: React.FC = () => {
                   <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
                   <Route path="/ai-password-manager" element={<AIPasswordManagerPage />} />
                   <Route path="/ai-task-manager" element={<AITaskManagerPage />} />
+                  <Route path="/ai-smart-invoicing" element={<AISmartInvoicingPage />} />
+                  <Route path="/ai-project-manager-pro" element={<AIProjectManagerProPage />} />
+                  <Route path="/ai-customer-support-pro" element={<AICustomerSupportProPage />} />
+                  <Route path="/ai-social-media-pro" element={<AISocialMediaProPage />} />
                   <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
                   
                   {/* IT Services */}
+                  <Route path="/cloud-migration-pro" element={<CloudMigrationProPage />} />
+                  <Route path="/devops-cicd-pro" element={<DevOpsCICDProPage />} />
                   <Route path="/it-consulting" element={<ITConsultingPage />} />
                   <Route path="/it-services" element={<ITServicesPage />} />
                   <Route path="/cybersecurity" element={<CybersecurityPage />} />

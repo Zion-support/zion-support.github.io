@@ -3,61 +3,62 @@ import React from 'react'
 import SEOHead from '../components/SEOHead'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { ArrowRight, CheckCircle, BarChart3, FileText, TrendingUp, Clock, Shield, Zap, Users, Star, Target } from 'lucide-react'
+import { ArrowRight, CheckCircle, Cloud, Shield, Zap, BarChart3, Clock, Users, Database, Server, Globe, Star, TrendingUp, Lock, Smartphone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-const AIAutomatedReportingPage: React.FC = () => {
+const CloudMigrationProPage: React.FC = () => {
   const features = [
     {
-      icon: <BarChart3 className="w-6 h-6 text-blue-500" />,
-      title: 'AI-Powered Analytics',
-      description: 'Automatically analyze data patterns and generate insights using advanced machine learning algorithms.'
+      icon: <Cloud className="w-6 h-6 text-blue-500" />,
+      title: 'Zero-Downtime Migration',
+      description: 'Seamless migration to cloud infrastructure with zero business disruption using advanced migration strategies.'
     },
     {
-      icon: <FileText className="w-6 h-6 text-green-500" />,
-      title: 'Automated Report Generation',
-      description: 'Generate comprehensive reports automatically on schedule without manual intervention.'
+      icon: <Shield className="w-6 h-6 text-green-500" />,
+      title: 'Enterprise Security',
+      description: 'Bank-level security protocols and compliance standards ensure your data remains protected throughout the migration.'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-purple-500" />,
-      title: 'Predictive Insights',
-      description: 'Get predictive analytics and trend forecasting to make proactive business decisions.'
+      icon: <Zap className="w-6 h-6 text-purple-500" />,
+      title: 'Performance Optimization',
+      description: 'AI-powered optimization ensures your applications perform better in the cloud than on-premises infrastructure.'
     },
     {
-      icon: <Zap className="w-6 h-6 text-orange-500" />,
-      title: 'Real-time Monitoring',
-      description: 'Monitor key metrics in real-time with automated alerts and notifications.'
+      icon: <BarChart3 className="w-6 h-6 text-orange-500" />,
+      title: 'Cost Optimization',
+      description: 'Intelligent resource allocation and auto-scaling reduce cloud costs by up to 40% while maintaining performance.'
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$49',
-      period: '/month',
-      description: 'Perfect for small businesses',
+      name: 'Small Business',
+      price: '$2,999',
+      period: 'one-time',
+      description: 'Perfect for small businesses with basic cloud needs',
       features: [
-        'Up to 5 data sources',
-        'Basic report templates',
-        'Monthly reports',
-        'Email support',
-        'Standard analytics'
+        'Up to 10 servers',
+        'Basic migration planning',
+        'Standard security protocols',
+        '30 days post-migration support',
+        'Performance monitoring',
+        'Cost optimization analysis'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$149',
-      period: '/month',
-      description: 'Ideal for growing businesses',
+      price: '$9,999',
+      period: 'one-time',
+      description: 'Ideal for growing businesses and departments',
       features: [
-        'Up to 20 data sources',
-        'Custom report templates',
-        'Real-time reports',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
-        'Custom dashboards'
+        'Up to 50 servers',
+        'Advanced migration strategy',
+        'Enhanced security protocols',
+        '90 days post-migration support',
+        'Real-time monitoring',
+        'Advanced cost optimization',
+        'Disaster recovery setup'
       ],
       popular: true
     },
@@ -65,15 +66,16 @@ const AIAutomatedReportingPage: React.FC = () => {
       name: 'Enterprise',
       price: 'Custom',
       period: 'quote',
-      description: 'For large organizations',
+      description: 'For large organizations with complex infrastructure',
       features: [
-        'Unlimited data sources',
-        'White-label reports',
-        'Custom AI training',
-        'Dedicated account manager',
-        'Advanced security',
-        'SLA guarantee',
-        'Custom integrations'
+        'Unlimited servers',
+        'Custom migration strategy',
+        'Enterprise-grade security',
+        '1 year post-migration support',
+        '24/7 monitoring',
+        'Custom cost optimization',
+        'Full disaster recovery',
+        'Dedicated migration team'
       ],
       popular: false
     }
@@ -81,51 +83,64 @@ const AIAutomatedReportingPage: React.FC = () => {
 
   const benefits = [
     {
-      icon: <Clock className="w-8 h-8 text-green-500" />,
-      title: 'Save 20 Hours Weekly',
-      description: 'Automated reporting eliminates manual work and frees up time for strategic tasks.'
+      icon: <TrendingUp className="w-8 h-8 text-green-500" />,
+      title: '40% Cost Reduction',
+      description: 'Optimized cloud infrastructure reduces operational costs significantly.'
     },
     {
-      icon: <Target className="w-8 h-8 text-blue-500" />,
-      title: '99% Accuracy',
-      description: 'AI-powered analysis ensures consistent and accurate reporting every time.'
+      icon: <Zap className="w-8 h-8 text-blue-500" />,
+      title: '99.9% Uptime',
+      description: 'Cloud infrastructure provides superior reliability and availability.'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-500" />,
-      title: 'Faster Decision Making',
-      description: 'Real-time insights enable quicker, more informed business decisions.'
+      icon: <Shield className="w-8 h-8 text-purple-500" />,
+      title: 'Enhanced Security',
+      description: 'Advanced cloud security features protect your data and applications.'
     }
   ]
 
-  const reportTypes = [
+  const migrationSteps = [
     {
-      title: 'Financial Reports',
-      description: 'Automated P&L, cash flow, and budget variance reports.',
-      icon: '💰'
+      step: '01',
+      title: 'Assessment & Planning',
+      description: 'Comprehensive analysis of your current infrastructure and migration requirements.',
+      icon: '🔍'
     },
     {
-      title: 'Sales Analytics',
-      description: 'Performance metrics, pipeline analysis, and forecasting.',
-      icon: '📈'
+      step: '02',
+      title: 'Strategy Development',
+      description: 'Custom migration strategy tailored to your business needs and objectives.',
+      icon: '📋'
     },
     {
-      title: 'Marketing Insights',
-      description: 'Campaign performance, ROI analysis, and customer acquisition.',
-      icon: '📊'
+      step: '03',
+      title: 'Migration Execution',
+      description: 'Seamless migration with zero downtime and minimal business disruption.',
+      icon: '🚀'
     },
     {
-      title: 'Operational Metrics',
-      description: 'KPI tracking, efficiency analysis, and process optimization.',
-      icon: '⚙️'
+      step: '04',
+      title: 'Optimization & Support',
+      description: 'Post-migration optimization and ongoing support to ensure peak performance.',
+      icon: '⚡'
     }
+  ]
+
+  const cloudProviders = [
+    { name: 'AWS', icon: '☁️', color: 'from-orange-400 to-orange-600' },
+    { name: 'Microsoft Azure', icon: '🔵', color: 'from-blue-500 to-blue-700' },
+    { name: 'Google Cloud', icon: '🔷', color: 'from-blue-400 to-blue-600' },
+    { name: 'IBM Cloud', icon: '🔵', color: 'from-blue-600 to-blue-800' },
+    { name: 'Oracle Cloud', icon: '🔴', color: 'from-red-500 to-red-700' },
+    { name: 'Alibaba Cloud', icon: '🟠', color: 'from-orange-500 to-orange-700' }
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOHead 
-        title="AI Automated Reporting - Intelligent Business Reports | Zion Tech Group"
-        description="Transform your data into actionable insights with AI-powered automated reporting. Generate comprehensive reports, analytics, and predictions automatically."
-        keywords="AI automated reporting, business intelligence, automated analytics, report generation, data insights, business reports"
+        title="Cloud Migration Pro - Enterprise Cloud Migration Services | Zion Tech Group"
+        description="Professional cloud migration services with zero downtime, enhanced security, and cost optimization. Migrate to AWS, Azure, Google Cloud with confidence."
+        keywords="cloud migration, AWS migration, Azure migration, Google Cloud migration, cloud consulting, infrastructure migration, cloud optimization"
       />
       
       <Navigation />
@@ -135,29 +150,29 @@ const AIAutomatedReportingPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Automated
+            Cloud Migration
             <br />
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Reporting
+              Pro
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform your data into actionable insights with AI-powered automated reporting. 
-            Generate comprehensive reports, analytics, and predictions without manual effort.
+            Seamlessly migrate your infrastructure to the cloud with zero downtime, enhanced security, 
+            and significant cost savings. Trusted by enterprises worldwide.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
             >
-              Get Started
+              Get Free Assessment
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link 
               to="/demo" 
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
-              Watch Demo
+              Schedule Consultation
             </Link>
           </div>
         </div>
@@ -168,10 +183,10 @@ const AIAutomatedReportingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Intelligent Reporting Features
+              Professional Migration Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform automatically analyzes your data and generates comprehensive reports.
+              Our certified cloud architects ensure a smooth, secure, and cost-effective migration process.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -188,23 +203,46 @@ const AIAutomatedReportingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Report Types Section */}
+      {/* Migration Process Section */}
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Report Types
+              Our Migration Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Generate all types of business reports automatically with AI-powered insights.
+              A proven 4-step process that ensures successful cloud migration with minimal risk.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {reportTypes.map((report, index) => (
+            {migrationSteps.map((step, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
-                <div className="text-4xl mb-4">{report.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{report.title}</h3>
-                <p className="text-gray-300">{report.description}</p>
+                <div className="text-4xl mb-4">{step.icon}</div>
+                <div className="text-2xl font-bold text-purple-400 mb-2">{step.step}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+                <p className="text-gray-300">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cloud Providers Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              All Major Cloud Providers
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We work with all leading cloud platforms to find the best fit for your business.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {cloudProviders.map((provider, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                <div className="text-3xl mb-2">{provider.icon}</div>
+                <div className="text-white font-medium">{provider.name}</div>
               </div>
             ))}
           </div>
@@ -212,14 +250,14 @@ const AIAutomatedReportingPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join hundreds of businesses already benefiting from automated reporting.
+              Join hundreds of enterprises that have successfully migrated to the cloud with us.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -237,14 +275,14 @@ const AIAutomatedReportingPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 bg-white/5">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple Pricing
+              Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the reporting plan that fits your data needs and business size.
+              Choose the migration package that fits your infrastructure size and requirements.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -295,24 +333,23 @@ const AIAutomatedReportingPage: React.FC = () => {
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Automate Your Reporting?
+                Ready to Migrate to the Cloud?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Start your free 14-day trial today. No credit card required. 
-                Experience the power of AI-powered reporting.
+                Get a free cloud migration assessment and discover how much you can save. No obligation required.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Free Trial
+                  Get Free Assessment
                 </Link>
                 <Link 
                   to="/demo" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Schedule Demo
+                  Schedule Consultation
                 </Link>
               </div>
             </div>
@@ -325,4 +362,4 @@ const AIAutomatedReportingPage: React.FC = () => {
   )
 }
 
-export default AIAutomatedReportingPage
+export default CloudMigrationProPage

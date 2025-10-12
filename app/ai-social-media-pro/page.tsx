@@ -3,72 +3,73 @@ import React from 'react'
 import SEOHead from '../components/SEOHead'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { ArrowRight, CheckCircle, BarChart3, FileText, TrendingUp, Clock, Shield, Zap, Users, Star, Target } from 'lucide-react'
+import { ArrowRight, CheckCircle, Share2, Clock, Users, Zap, BarChart3, Camera, MessageSquare, TrendingUp, Star, Globe, Smartphone, Heart, ThumbsUp } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-const AIAutomatedReportingPage: React.FC = () => {
+const AISocialMediaProPage: React.FC = () => {
   const features = [
     {
-      icon: <BarChart3 className="w-6 h-6 text-blue-500" />,
-      title: 'AI-Powered Analytics',
-      description: 'Automatically analyze data patterns and generate insights using advanced machine learning algorithms.'
+      icon: <Zap className="w-6 h-6 text-blue-500" />,
+      title: 'AI Content Generation',
+      description: 'Generate engaging posts, captions, and hashtags using AI that understands your brand voice and audience preferences.'
     },
     {
-      icon: <FileText className="w-6 h-6 text-green-500" />,
-      title: 'Automated Report Generation',
-      description: 'Generate comprehensive reports automatically on schedule without manual intervention.'
+      icon: <Clock className="w-6 h-6 text-green-500" />,
+      title: 'Smart Scheduling',
+      description: 'AI-powered optimal posting times based on your audience activity patterns and engagement data.'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-purple-500" />,
-      title: 'Predictive Insights',
-      description: 'Get predictive analytics and trend forecasting to make proactive business decisions.'
+      icon: <BarChart3 className="w-6 h-6 text-purple-500" />,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive social media analytics with AI insights to optimize your content strategy and ROI.'
     },
     {
-      icon: <Zap className="w-6 h-6 text-orange-500" />,
-      title: 'Real-time Monitoring',
-      description: 'Monitor key metrics in real-time with automated alerts and notifications.'
+      icon: <Users className="w-6 h-6 text-orange-500" />,
+      title: 'Audience Intelligence',
+      description: 'AI analyzes your audience demographics, interests, and behavior to create targeted content strategies.'
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$49',
+      name: 'Creator',
+      price: '$29',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for individual creators and influencers',
       features: [
-        'Up to 5 data sources',
-        'Basic report templates',
-        'Monthly reports',
-        'Email support',
-        'Standard analytics'
+        'Up to 5 social accounts',
+        'AI content generation',
+        'Basic scheduling',
+        'Analytics dashboard',
+        'Mobile app access',
+        'Email support'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$149',
+      name: 'Business',
+      price: '$79',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for small to medium businesses',
       features: [
-        'Up to 20 data sources',
-        'Custom report templates',
-        'Real-time reports',
+        'Up to 20 social accounts',
+        'Advanced AI features',
+        'Team collaboration',
+        'Custom branding',
         'Priority support',
-        'Advanced analytics',
-        'API access',
-        'Custom dashboards'
+        'API integrations',
+        'Advanced analytics'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: 'Custom',
-      period: 'quote',
-      description: 'For large organizations',
+      price: '$199',
+      period: '/month',
+      description: 'For large organizations and agencies',
       features: [
-        'Unlimited data sources',
-        'White-label reports',
+        'Unlimited social accounts',
+        'White-label solution',
         'Custom AI training',
         'Dedicated account manager',
         'Advanced security',
@@ -81,51 +82,62 @@ const AIAutomatedReportingPage: React.FC = () => {
 
   const benefits = [
     {
-      icon: <Clock className="w-8 h-8 text-green-500" />,
+      icon: <TrendingUp className="w-8 h-8 text-green-500" />,
+      title: '300% Increase in Engagement',
+      description: 'AI-optimized content and timing leads to significantly higher engagement rates.'
+    },
+    {
+      icon: <Clock className="w-8 h-8 text-blue-500" />,
       title: 'Save 20 Hours Weekly',
-      description: 'Automated reporting eliminates manual work and frees up time for strategic tasks.'
+      description: 'Automated content creation and scheduling frees up time for strategy and creativity.'
     },
     {
-      icon: <Target className="w-8 h-8 text-blue-500" />,
-      title: '99% Accuracy',
-      description: 'AI-powered analysis ensures consistent and accurate reporting every time.'
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8 text-purple-500" />,
-      title: 'Faster Decision Making',
-      description: 'Real-time insights enable quicker, more informed business decisions.'
+      icon: <Users className="w-8 h-8 text-purple-500" />,
+      title: '50% Faster Growth',
+      description: 'AI-driven audience targeting and content optimization accelerates follower growth.'
     }
   ]
 
-  const reportTypes = [
+  const platforms = [
+    { name: 'Instagram', icon: '📸', color: 'from-pink-500 to-purple-600' },
+    { name: 'Facebook', icon: '👥', color: 'from-blue-500 to-blue-700' },
+    { name: 'Twitter', icon: '🐦', color: 'from-sky-400 to-blue-500' },
+    { name: 'LinkedIn', icon: '💼', color: 'from-blue-600 to-blue-800' },
+    { name: 'TikTok', icon: '🎵', color: 'from-black to-gray-800' },
+    { name: 'YouTube', icon: '📺', color: 'from-red-500 to-red-700' },
+    { name: 'Pinterest', icon: '📌', color: 'from-red-500 to-pink-600' },
+    { name: 'Snapchat', icon: '👻', color: 'from-yellow-400 to-yellow-600' }
+  ]
+
+  const contentTypes = [
     {
-      title: 'Financial Reports',
-      description: 'Automated P&L, cash flow, and budget variance reports.',
-      icon: '💰'
+      title: 'AI-Generated Posts',
+      description: 'Create engaging posts tailored to each platform with AI-powered content generation.',
+      icon: '✍️'
     },
     {
-      title: 'Sales Analytics',
-      description: 'Performance metrics, pipeline analysis, and forecasting.',
-      icon: '📈'
+      title: 'Visual Content',
+      description: 'Generate eye-catching images and graphics using AI design tools.',
+      icon: '🎨'
     },
     {
-      title: 'Marketing Insights',
-      description: 'Campaign performance, ROI analysis, and customer acquisition.',
-      icon: '📊'
+      title: 'Video Content',
+      description: 'Create short-form videos optimized for each social platform.',
+      icon: '🎬'
     },
     {
-      title: 'Operational Metrics',
-      description: 'KPI tracking, efficiency analysis, and process optimization.',
-      icon: '⚙️'
+      title: 'Stories & Reels',
+      description: 'Generate engaging stories and reels content that drives engagement.',
+      icon: '📱'
     }
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOHead 
-        title="AI Automated Reporting - Intelligent Business Reports | Zion Tech Group"
-        description="Transform your data into actionable insights with AI-powered automated reporting. Generate comprehensive reports, analytics, and predictions automatically."
-        keywords="AI automated reporting, business intelligence, automated analytics, report generation, data insights, business reports"
+        title="AI Social Media Pro - Intelligent Social Media Management | Zion Tech Group"
+        description="Revolutionary AI-powered social media management platform with content generation, smart scheduling, and advanced analytics. Boost your social presence today!"
+        keywords="AI social media, social media management, content generation, social media automation, social media analytics, social media scheduling"
       />
       
       <Navigation />
@@ -135,22 +147,22 @@ const AIAutomatedReportingPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Automated
+            AI Social Media
             <br />
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Reporting
+              Pro
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform your data into actionable insights with AI-powered automated reporting. 
-            Generate comprehensive reports, analytics, and predictions without manual effort.
+            Transform your social media presence with AI-powered content creation, smart scheduling, 
+            and intelligent analytics. Grow your audience and engagement like never before.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
             >
-              Get Started
+              Start Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link 
@@ -168,10 +180,10 @@ const AIAutomatedReportingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Intelligent Reporting Features
+              Intelligent Social Media Management
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform automatically analyzes your data and generates comprehensive reports.
+              Our AI learns from your audience and content performance to optimize your social media strategy.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -188,23 +200,45 @@ const AIAutomatedReportingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Report Types Section */}
+      {/* Platforms Section */}
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Report Types
+              All Major Platforms Supported
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Generate all types of business reports automatically with AI-powered insights.
+              Manage all your social media accounts from one unified dashboard with AI optimization.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+            {platforms.map((platform, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                <div className="text-3xl mb-2">{platform.icon}</div>
+                <div className="text-white font-medium">{platform.name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Content Types Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              AI-Powered Content Creation
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Create engaging content across all formats with AI assistance and optimization.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {reportTypes.map((report, index) => (
+            {contentTypes.map((content, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
-                <div className="text-4xl mb-4">{report.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{report.title}</h3>
-                <p className="text-gray-300">{report.description}</p>
+                <div className="text-4xl mb-4">{content.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{content.title}</h3>
+                <p className="text-gray-300">{content.description}</p>
               </div>
             ))}
           </div>
@@ -212,14 +246,14 @@ const AIAutomatedReportingPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join hundreds of businesses already benefiting from automated reporting.
+              Join thousands of brands already benefiting from AI-powered social media management.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -237,14 +271,14 @@ const AIAutomatedReportingPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 bg-white/5">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple Pricing
+              Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the reporting plan that fits your data needs and business size.
+              Choose the plan that fits your social media needs. All plans include our core AI features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -295,11 +329,10 @@ const AIAutomatedReportingPage: React.FC = () => {
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Automate Your Reporting?
+                Ready to Transform Your Social Media?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Start your free 14-day trial today. No credit card required. 
-                Experience the power of AI-powered reporting.
+                Start your free 14-day trial today. No credit card required. Experience the future of social media management.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
@@ -325,4 +358,4 @@ const AIAutomatedReportingPage: React.FC = () => {
   )
 }
 
-export default AIAutomatedReportingPage
+export default AISocialMediaProPage

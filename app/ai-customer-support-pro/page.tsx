@@ -3,73 +3,74 @@ import React from 'react'
 import SEOHead from '../components/SEOHead'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-import { ArrowRight, CheckCircle, BarChart3, FileText, TrendingUp, Clock, Shield, Zap, Users, Star, Target } from 'lucide-react'
+import { ArrowRight, CheckCircle, MessageSquare, Clock, Users, Zap, Shield, BarChart3, Bot, Headphones, Globe, Star, TrendingUp, Smartphone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-const AIAutomatedReportingPage: React.FC = () => {
+const AICustomerSupportProPage: React.FC = () => {
   const features = [
     {
-      icon: <BarChart3 className="w-6 h-6 text-blue-500" />,
-      title: 'AI-Powered Analytics',
-      description: 'Automatically analyze data patterns and generate insights using advanced machine learning algorithms.'
+      icon: <Bot className="w-6 h-6 text-blue-500" />,
+      title: 'Advanced AI Chatbot',
+      description: 'Intelligent chatbot that understands context, learns from interactions, and provides human-like responses 24/7.'
     },
     {
-      icon: <FileText className="w-6 h-6 text-green-500" />,
-      title: 'Automated Report Generation',
-      description: 'Generate comprehensive reports automatically on schedule without manual intervention.'
+      icon: <MessageSquare className="w-6 h-6 text-green-500" />,
+      title: 'Multi-Channel Support',
+      description: 'Seamlessly handle customer inquiries across website, social media, email, and live chat platforms.'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-purple-500" />,
-      title: 'Predictive Insights',
-      description: 'Get predictive analytics and trend forecasting to make proactive business decisions.'
+      icon: <BarChart3 className="w-6 h-6 text-purple-500" />,
+      title: 'Real-time Analytics',
+      description: 'Track customer satisfaction, response times, and resolution rates with comprehensive analytics dashboard.'
     },
     {
       icon: <Zap className="w-6 h-6 text-orange-500" />,
-      title: 'Real-time Monitoring',
-      description: 'Monitor key metrics in real-time with automated alerts and notifications.'
+      title: 'Smart Escalation',
+      description: 'AI automatically escalates complex issues to human agents while providing context and suggested solutions.'
     }
   ]
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$49',
+      price: '$39',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 5 data sources',
-        'Basic report templates',
-        'Monthly reports',
-        'Email support',
-        'Standard analytics'
+        'Up to 1,000 conversations/month',
+        'Basic AI chatbot',
+        'Email & live chat support',
+        'Basic analytics',
+        'Mobile app access',
+        'Email support'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$149',
+      price: '$99',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 20 data sources',
-        'Custom report templates',
-        'Real-time reports',
+        'Up to 10,000 conversations/month',
+        'Advanced AI features',
+        'Multi-channel support',
+        'Custom branding',
         'Priority support',
-        'Advanced analytics',
-        'API access',
-        'Custom dashboards'
+        'API integrations',
+        'Advanced analytics'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: 'Custom',
-      period: 'quote',
+      price: '$299',
+      period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited data sources',
-        'White-label reports',
+        'Unlimited conversations',
         'Custom AI training',
+        'White-label solution',
         'Dedicated account manager',
         'Advanced security',
         'SLA guarantee',
@@ -81,51 +82,62 @@ const AIAutomatedReportingPage: React.FC = () => {
 
   const benefits = [
     {
-      icon: <Clock className="w-8 h-8 text-green-500" />,
-      title: 'Save 20 Hours Weekly',
-      description: 'Automated reporting eliminates manual work and frees up time for strategic tasks.'
+      icon: <TrendingUp className="w-8 h-8 text-green-500" />,
+      title: '85% Faster Response Time',
+      description: 'AI-powered responses reduce average response time from hours to seconds.'
     },
     {
-      icon: <Target className="w-8 h-8 text-blue-500" />,
-      title: '99% Accuracy',
-      description: 'AI-powered analysis ensures consistent and accurate reporting every time.'
+      icon: <Users className="w-8 h-8 text-blue-500" />,
+      title: '95% Customer Satisfaction',
+      description: 'Intelligent responses and quick resolution lead to higher customer satisfaction rates.'
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-500" />,
-      title: 'Faster Decision Making',
-      description: 'Real-time insights enable quicker, more informed business decisions.'
+      icon: <Clock className="w-8 h-8 text-purple-500" />,
+      title: '24/7 Availability',
+      description: 'Never miss a customer inquiry with round-the-clock AI-powered support.'
     }
   ]
 
-  const reportTypes = [
+  const integrations = [
+    { name: 'Slack', icon: '💬' },
+    { name: 'Microsoft Teams', icon: '👥' },
+    { name: 'Zendesk', icon: '🎫' },
+    { name: 'Freshdesk', icon: '🆕' },
+    { name: 'Intercom', icon: '💬' },
+    { name: 'Salesforce', icon: '☁️' },
+    { name: 'HubSpot', icon: '🎯' },
+    { name: 'Shopify', icon: '🛍️' }
+  ]
+
+  const useCases = [
     {
-      title: 'Financial Reports',
-      description: 'Automated P&L, cash flow, and budget variance reports.',
+      title: 'E-commerce Support',
+      description: 'Handle product inquiries, order tracking, and returns with intelligent automation.',
+      icon: '🛒'
+    },
+    {
+      title: 'SaaS Customer Success',
+      description: 'Provide technical support and onboarding assistance for software products.',
+      icon: '💻'
+    },
+    {
+      title: 'Healthcare Assistance',
+      description: 'Answer patient questions and provide appointment scheduling support.',
+      icon: '🏥'
+    },
+    {
+      title: 'Financial Services',
+      description: 'Handle account inquiries and provide basic financial guidance securely.',
       icon: '💰'
-    },
-    {
-      title: 'Sales Analytics',
-      description: 'Performance metrics, pipeline analysis, and forecasting.',
-      icon: '📈'
-    },
-    {
-      title: 'Marketing Insights',
-      description: 'Campaign performance, ROI analysis, and customer acquisition.',
-      icon: '📊'
-    },
-    {
-      title: 'Operational Metrics',
-      description: 'KPI tracking, efficiency analysis, and process optimization.',
-      icon: '⚙️'
     }
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOHead 
-        title="AI Automated Reporting - Intelligent Business Reports | Zion Tech Group"
-        description="Transform your data into actionable insights with AI-powered automated reporting. Generate comprehensive reports, analytics, and predictions automatically."
-        keywords="AI automated reporting, business intelligence, automated analytics, report generation, data insights, business reports"
+        title="AI Customer Support Pro - Intelligent Customer Service | Zion Tech Group"
+        description="Revolutionary AI-powered customer support platform with advanced chatbot, multi-channel support, and real-time analytics. Boost customer satisfaction today!"
+        keywords="AI customer support, chatbot, customer service automation, multi-channel support, customer satisfaction, support analytics"
       />
       
       <Navigation />
@@ -135,22 +147,22 @@ const AIAutomatedReportingPage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Automated
+            AI Customer Support
             <br />
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-              Reporting
+              Pro
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform your data into actionable insights with AI-powered automated reporting. 
-            Generate comprehensive reports, analytics, and predictions without manual effort.
+            Transform your customer support with AI-powered automation. Provide instant, intelligent responses 
+            across all channels while maintaining the human touch your customers love.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
             >
-              Get Started
+              Start Free Trial
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link 
@@ -168,10 +180,10 @@ const AIAutomatedReportingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Intelligent Reporting Features
+              Intelligent Support Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform automatically analyzes your data and generates comprehensive reports.
+              Our AI learns from every interaction to provide increasingly better customer support.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -188,23 +200,23 @@ const AIAutomatedReportingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Report Types Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Report Types
+              Perfect for Every Industry
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Generate all types of business reports automatically with AI-powered insights.
+              Our AI adapts to your industry and business needs for optimal customer support.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {reportTypes.map((report, index) => (
+            {useCases.map((useCase, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
-                <div className="text-4xl mb-4">{report.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{report.title}</h3>
-                <p className="text-gray-300">{report.description}</p>
+                <div className="text-4xl mb-4">{useCase.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
               </div>
             ))}
           </div>
@@ -219,7 +231,7 @@ const AIAutomatedReportingPage: React.FC = () => {
               Proven Results
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join hundreds of businesses already benefiting from automated reporting.
+              Join thousands of businesses already benefiting from AI-powered customer support.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -236,15 +248,37 @@ const AIAutomatedReportingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Integrations Section */}
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple Pricing
+              Seamless Integrations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the reporting plan that fits your data needs and business size.
+              Connect with your existing tools and platforms for a unified customer support experience.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+            {integrations.map((integration, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                <div className="text-3xl mb-2">{integration.icon}</div>
+                <div className="text-white font-medium">{integration.name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Flexible Pricing Plans
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your customer support needs. All plans include our core AI features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -295,11 +329,10 @@ const AIAutomatedReportingPage: React.FC = () => {
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Automate Your Reporting?
+                Ready to Transform Your Customer Support?
               </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Start your free 14-day trial today. No credit card required. 
-                Experience the power of AI-powered reporting.
+                Start your free 14-day trial today. No credit card required. Experience the future of customer support.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
@@ -325,4 +358,4 @@ const AIAutomatedReportingPage: React.FC = () => {
   )
 }
 
-export default AIAutomatedReportingPage
+export default AICustomerSupportProPage
