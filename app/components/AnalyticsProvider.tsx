@@ -53,10 +53,3 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
     </AnalyticsContext.Provider>
   );
 }
-
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag: (...args: unknown[]) => void;
-  }
-}

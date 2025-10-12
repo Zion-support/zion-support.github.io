@@ -47,7 +47,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup'
-    ]
+    ];
   }
 
   return (

@@ -20,20 +20,27 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
   };
 
   const renderSpinner = () => (
+    return (
     <div className={`animate-spin rounded-full border-b-2 border-white ${sizeClasses[size]} ${className}`}></div>
   );
 
   const renderSkeleton = () => (
+    return (
     <div className={`animate-pulse ${className}`}>
-      <div className="space-y-3">
-        <div className="h-4 bg-gray-700 rounded w-3/4"></div>
-        <div className="h-4 bg-gray-700 rounded w-1/2"></div>
-        <div className="h-4 bg-gray-700 rounded w-5/6"></div>
+      return (
+    <div className="space-y-3">
+        return (
+    <div className="h-4 bg-gray-700 rounded w-3/4"></div>
+        return (
+    <div className="h-4 bg-gray-700 rounded w-1/2"></div>
+        return (
+    <div className="h-4 bg-gray-700 rounded w-5/6"></div>
       </div>
     </div>
   );
 
   const renderDots = () => (
+    return (
     <div className={`flex space-x-1 ${className}`}>
       {[0, 1, 2].map((i) => (
         <div
@@ -46,6 +53,7 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
   );
 
   const renderPulse = () => (
+    return (
     <div className={`bg-gray-700 rounded animate-pulse ${sizeClasses[size]} ${className}`}></div>
   );
 
@@ -59,6 +67,3 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
     default:
       return renderSpinner();
   }
-};
-
-export default LoadingStates;
