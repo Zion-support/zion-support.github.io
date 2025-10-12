@@ -9,7 +9,11 @@ export default function Footer() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Automation Suite', path: '/ai-automation' }
+    { name: 'AI Automation Suite', path: '/ai-automation' },
+    { name: 'AI Code Assistant', path: '/ai-code-assistant' },
+    { name: 'AI Document Processor', path: '/ai-document-processor' },
+    { name: 'AI Customer Support', path: '/ai-customer-support' },
+    { name: 'AI Business Intelligence', path: '/ai-business-intelligence' }
   ]
 
   const itServices = [
@@ -18,10 +22,26 @@ export default function Footer() {
     { name: 'Cybersecurity', path: '/cybersecurity' },
     { name: 'Data Analytics', path: '/data-analytics' },
     { name: 'API Development', path: '/api-development' },
-    { name: 'System Integration', path: '/system-integration' }
+    { name: 'System Integration', path: '/system-integration' },
+    { name: 'Mobile Development', path: '/mobile-development' },
+    { name: 'Web Development', path: '/web-development' },
+    { name: 'Database Management', path: '/database-management' },
+    { name: 'Network Security', path: '/network-security' }
   ]
 
-<<<<<<< HEAD
+  const microSaasServices = [
+    { name: 'AI Task Manager', path: '/ai-task-manager' },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
+    { name: 'AI Password Manager', path: '/ai-password-manager' },
+    { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
+    { name: 'AI Email Marketing', path: '/ai-email-marketing' },
+    { name: 'AI Document Scanner', path: '/ai-document-scanner' },
+    { name: 'AI Analytics Suite', path: '/ai-analytics-suite' },
+    { name: 'AI Content Studio', path: '/ai-content-studio' },
+    { name: 'AI Design Studio', path: '/ai-design-studio' },
+    { name: 'AI E-commerce Assistant', path: '/ai-ecommerce-assistant' }
+  ]
+
   const companyLinks = [
     { name: 'About Us', path: '/about' },
     { name: 'Our Team', path: '/team' },
@@ -38,7 +58,8 @@ export default function Footer() {
     { name: 'Status Page', path: '/status' },
     { name: 'Contact Support', path: '/contact' },
     { name: 'Community', path: '/community' }
-=======
+  ]
+
   const legalPages = [
     { name: 'Privacy Policy', path: '/privacy' },
     { name: 'Terms of Service', path: '/terms' }
@@ -52,29 +73,29 @@ export default function Footer() {
     { name: 'Micro SAAS', path: '/micro-saas-services' },
     { name: '5G Solutions', path: '/5g-implementation' },
     { name: 'Contact', path: '/contact' }
->>>>>>> cursor/website-audit-and-update-with-deployment-c78e
   ]
 
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
             <p className="text-gray-400 mb-4">
-              Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.
+              Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. 
+              Transform your business with cutting-edge technology solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">Twitter</span>
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">LinkedIn</span>
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">GitHub</span>
                 <Github className="w-5 h-5" />
               </a>
@@ -85,17 +106,25 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
-              {aiServices.map((service, index) => (
+              {aiServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
                     to={service.path} 
-                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                    className="text-gray-400 hover:text-white transition-colors flex items-center text-sm"
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link 
+                  to="/ai-services" 
+                  className="text-purple-400 hover:text-purple-300 transition-colors text-sm font-medium"
+                >
+                  View All AI Services →
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -103,29 +132,63 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">IT Services</h3>
             <ul className="space-y-2">
-              {itServices.map((service, index) => (
+              {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
                     to={service.path} 
-                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                    className="text-gray-400 hover:text-white transition-colors flex items-center text-sm"
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link 
+                  to="/it-services" 
+                  className="text-purple-400 hover:text-purple-300 transition-colors text-sm font-medium"
+                >
+                  View All IT Services →
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Company & Support */}
+          {/* Micro SaaS Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <h3 className="text-lg font-semibold mb-4">Micro SaaS</h3>
+            <ul className="space-y-2">
+              {microSaasServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.path} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center text-sm"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link 
+                  to="/micro-saas-services" 
+                  className="text-purple-400 hover:text-purple-300 transition-colors text-sm font-medium"
+                >
+                  View All Micro SaaS →
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 mb-6">
-              {companyLinks.map((link, index) => (
+              {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
                     to={link.path} 
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {link.name}
                   </Link>
@@ -135,30 +198,13 @@ export default function Footer() {
             
             <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-2">
-              {supportLinks.map((link, index) => (
+              {supportLinks.slice(0, 4).map((link, index) => (
                 <li key={index}>
                   <Link 
                     to={link.path} 
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal Pages */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Legal</h3>
-            <ul className="space-y-2">
-              {legalPages.map((page) => (
-                <li key={page.name}>
-                  <Link
-                    to={page.path}
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    {page.name}
                   </Link>
                 </li>
               ))}
@@ -171,15 +217,19 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center">
               <Mail className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">contact@ziontech.com</span>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-gray-400 hover:text-white transition-colors">
+                kleber@ziontechgroup.com
+              </a>
             </div>
             <div className="flex items-center">
               <Phone className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">+1 (555) 123-4567</span>
+              <a href="tel:+13024640950" className="text-gray-400 hover:text-white transition-colors">
+                +1 302 464 0950
+              </a>
             </div>
             <div className="flex items-center">
               <MapPin className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">San Francisco, CA</span>
+              <span className="text-gray-400">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
         </div>
@@ -187,7 +237,9 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Zion Tech Group. All rights reserved.
+            © 2024 Zion Tech Group. All rights reserved. | 
+            <Link to="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> | 
+            <Link to="/terms" className="hover:text-white transition-colors ml-2">Terms of Service</Link>
           </p>
         </div>
       </div>

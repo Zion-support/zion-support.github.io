@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, BarChart3, Lock, Smartphone as Phone, Layers, Bot, FileText, Users, Settings, TrendingUp, Target, Lightbulb, Rocket, Briefcase, Headphones, Mail, Calendar, CreditCard, Key, Search, Monitor, Wrench, Globe2, ShieldCheck, Zap as Lightning, Database as DataIcon, Cpu as Chip, Smartphone as Mobile, Wifi as Network, BarChart3 as Analytics, Lock as Security, Users as Team, Settings as Config, TrendingUp as Growth, Target as Goal, Lightbulb as Innovation, Rocket as Launch, Briefcase as Business, Headphones as Support, Mail as Email, Calendar as Schedule, CreditCard as Payment, Key as Access, Search as Find, Monitor as Screen, Wrench as Tools } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,10 +18,6 @@ export default function Navigation() {
     {
       title: 'AI Services',
       href: '/ai-services',
-<<<<<<< HEAD
-      icon: Brain,
-      description: 'Artificial Intelligence Solutions'
-=======
       icon: <Brain className="w-4 h-4" />,
       description: 'Advanced AI solutions',
       submenu: [
@@ -30,17 +26,16 @@ export default function Navigation() {
         { title: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
         { title: 'AI Email Assistant', href: '/ai-email-assistant' },
         { title: 'AI Voice Assistant', href: '/ai-voice-assistant' },
-        { title: 'AI Automation', href: '/ai-automation' }
+        { title: 'AI Automation', href: '/ai-automation' },
+        { title: 'AI Code Assistant', href: '/ai-code-assistant' },
+        { title: 'AI Document Processor', href: '/ai-document-processor' },
+        { title: 'AI Customer Support', href: '/ai-customer-support' },
+        { title: 'AI Business Intelligence', href: '/ai-business-intelligence' }
       ]
->>>>>>> cursor/website-audit-and-update-with-deployment-c78e
     },
     {
       title: 'IT Services',
       href: '/it-services',
-<<<<<<< HEAD
-      icon: Server,
-      description: 'Information Technology Solutions'
-=======
       icon: <Code className="w-4 h-4" />,
       description: 'Comprehensive IT solutions',
       submenu: [
@@ -49,56 +44,72 @@ export default function Navigation() {
         { title: 'DevOps & CI/CD', href: '/devops-cicd' },
         { title: 'Data Analytics', href: '/data-analytics' },
         { title: 'Mobile Development', href: '/mobile-development' },
-        { title: 'Web Development', href: '/web-development' }
+        { title: 'Web Development', href: '/web-development' },
+        { title: 'API Development', href: '/api-development' },
+        { title: 'System Integration', href: '/system-integration' },
+        { title: 'Database Management', href: '/database-management' },
+        { title: 'Network Security', href: '/network-security' }
       ]
     },
     {
       title: 'Micro SaaS',
       href: '/micro-saas-services',
       icon: <Smartphone className="w-4 h-4" />,
-      description: 'Specialized software solutions'
+      description: 'Specialized software solutions',
+      submenu: [
+        { title: 'AI Task Manager', href: '/ai-task-manager' },
+        { title: 'AI Expense Tracker', href: '/ai-expense-tracker' },
+        { title: 'AI Password Manager', href: '/ai-password-manager' },
+        { title: 'AI CRM Assistant', href: '/ai-crm-assistant' },
+        { title: 'AI Email Marketing', href: '/ai-email-marketing' },
+        { title: 'AI Document Scanner', href: '/ai-document-scanner' },
+        { title: 'AI Analytics Suite', href: '/ai-analytics-suite' },
+        { title: 'AI Content Studio', href: '/ai-content-studio' },
+        { title: 'AI Design Studio', href: '/ai-design-studio' },
+        { title: 'AI E-commerce Assistant', href: '/ai-ecommerce-assistant' }
+      ]
     },
     {
-      title: '5G Implementation',
+      title: '5G Solutions',
       href: '/5g-implementation',
       icon: <Wifi className="w-4 h-4" />,
-      description: 'Next-generation connectivity'
->>>>>>> cursor/website-audit-and-update-with-deployment-c78e
+      description: 'Next-generation connectivity',
+      submenu: [
+        { title: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
+        { title: '5G Edge Computing', href: '/5g-edge-computing' },
+        { title: '5G IoT Solutions', href: '/5g-iot-solutions' },
+        { title: '5G Mobile Applications', href: '/5g-mobile-applications' },
+        { title: '5G Private Networks', href: '/5g-private-networks' },
+        { title: '5G Data Analytics', href: '/5g-data-analytics' }
+      ]
     },
     {
       title: 'Cloud Services',
       href: '/cloud-services',
-      icon: Cloud,
-      description: 'Cloud Computing Solutions'
-    },
-    {
-      title: 'Micro SaaS',
-      href: '/micro-saas-services',
-      icon: Code,
-      description: 'Micro Software as a Service'
-    },
-    {
-      title: '5G Implementation',
-      href: '/5g-implementation',
-      icon: Wifi,
-      description: '5G Network Implementation'
+      icon: <Cloud className="w-4 h-4" />,
+      description: 'Cloud Computing Solutions',
+      submenu: [
+        { title: 'Cloud Migration', href: '/cloud-migration' },
+        { title: 'Cloud Security', href: '/cloud-security' },
+        { title: 'Cloud Monitoring', href: '/cloud-monitoring' },
+        { title: 'Cloud Backup', href: '/cloud-backup' },
+        { title: 'Cloud Optimization', href: '/cloud-optimization' }
+      ]
     },
     {
       title: 'Digital Transformation',
       href: '/digital-transformation',
-      icon: Globe,
-      description: 'Transform your digital presence'
+      icon: <Globe className="w-4 h-4" />,
+      description: 'Transform your digital presence',
+      submenu: [
+        { title: 'Digital Strategy', href: '/digital-strategy' },
+        { title: 'Process Automation', href: '/process-automation' },
+        { title: 'Data Migration', href: '/data-migration' },
+        { title: 'Legacy Modernization', href: '/legacy-modernization' }
+      ]
     }
   ]
 
-  const aiServices = [
-    { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
-    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'AI Task Manager', path: '/ai-task-manager', icon: <Database className="w-4 h-4" /> },
-    { name: 'AI Expense Tracker', path: '/ai-expense-tracker', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Password Manager', path: '/ai-password-manager', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Automated Reporting', path: '/ai-automated-reporting', icon: <Globe className="w-4 h-4" /> }
-  ]
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -121,82 +132,58 @@ export default function Navigation() {
               About
             </Link>
 
-            {/* AI Services Dropdown */}
+            {/* Services Dropdown */}
             <div className="relative">
               <button
-                onClick={() => toggleDropdown('ai')}
+                onClick={() => toggleDropdown('services')}
                 className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
               >
-                AI Services
+                Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               
-<<<<<<< HEAD
-              {activeDropdown === 'ai' && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                  {aiServices.map((service, index) => (
-                    <Link key={index} to={service.path} className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
-                      {service.icon}
-                      <span className="ml-3">{service.name}</span>
-                    </Link>
-                  ))}
-=======
-              {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-white/10 backdrop-blur-lg rounded-lg border border-white/20 shadow-lg z-50">
-                  <div className="py-2">
+              {activeDropdown === 'services' && (
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-lg border border-gray-200 py-4 z-50">
+                  <div className="grid grid-cols-2 gap-4">
                     {services.map((service, index) => (
-                      <div key={index}>
+                      <div key={index} className="px-4">
                         <Link
                           to={service.href}
-                          className="flex items-center px-4 py-3 text-white hover:bg-white/10 transition-colors"
-                          onClick={() => setIsServicesOpen(false)}
+                          className="flex items-center text-gray-900 hover:text-purple-600 transition-colors mb-2"
+                          onClick={() => setActiveDropdown(null)}
                         >
                           <div className="mr-3">{service.icon}</div>
-                          <div className="flex-1">
-                            <div className="font-medium">{service.title}</div>
-                            <div className="text-sm text-gray-300">{service.description}</div>
+                          <div>
+                            <div className="font-medium text-sm">{service.title}</div>
+                            <div className="text-xs text-gray-500">{service.description}</div>
                           </div>
                         </Link>
                         {service.submenu && (
-                          <div className="ml-8 pl-4 border-l border-white/20">
-                            {service.submenu.map((subItem, subIndex) => (
+                          <div className="ml-6 space-y-1">
+                            {service.submenu.slice(0, 5).map((subItem, subIndex) => (
                               <Link
                                 key={subIndex}
                                 to={subItem.href}
-                                className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-white/5 transition-colors"
-                                onClick={() => setIsServicesOpen(false)}
+                                className="block text-xs text-gray-600 hover:text-purple-600 transition-colors"
+                                onClick={() => setActiveDropdown(null)}
                               >
                                 {subItem.title}
                               </Link>
                             ))}
+                            {service.submenu.length > 5 && (
+                              <Link
+                                to={service.href}
+                                className="block text-xs text-purple-600 hover:text-purple-700 transition-colors font-medium"
+                                onClick={() => setActiveDropdown(null)}
+                              >
+                                View all {service.title} →
+                              </Link>
+                            )}
                           </div>
                         )}
                       </div>
                     ))}
                   </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-c78e
-                </div>
-              )}
-            </div>
-
-            {/* IT Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => toggleDropdown('it')}
-                className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-              >
-                IT Services
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              
-              {activeDropdown === 'it' && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                  {services.slice(1).map((service, index) => (
-                    <Link key={index} to={service.href} className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors">
-                      <service.icon className="w-4 h-4" />
-                      <span className="ml-3">{service.title}</span>
-                    </Link>
-                  ))}
                 </div>
               )}
             </div>
@@ -228,23 +215,15 @@ export default function Navigation() {
                 About
               </Link>
               
-              {/* AI Services Mobile */}
+              {/* Services Mobile */}
               <div className="px-3 py-2">
-<<<<<<< HEAD
-                <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">AI Services</p>
-                {aiServices.map((service, index) => (
-                  <Link key={index} to={service.path} className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
-                    {service.name}
-                  </Link>
-                ))}
-=======
-                <div className="text-white font-medium mb-2">Services</div>
+                <div className="text-gray-900 font-medium mb-2">Services</div>
                 <div className="space-y-1 ml-4">
                   {services.map((service, index) => (
                     <div key={index}>
                       <Link
                         to={service.href}
-                        className="flex items-center text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm"
+                        className="flex items-center text-gray-600 hover:text-purple-600 block px-3 py-2 rounded-md text-sm"
                         onClick={() => setIsOpen(false)}
                       >
                         <div className="mr-2">{service.icon}</div>
@@ -252,32 +231,30 @@ export default function Navigation() {
                       </Link>
                       {service.submenu && (
                         <div className="ml-6 space-y-1">
-                          {service.submenu.map((subItem, subIndex) => (
+                          {service.submenu.slice(0, 3).map((subItem, subIndex) => (
                             <Link
                               key={subIndex}
                               to={subItem.href}
-                              className="block text-gray-400 hover:text-white px-3 py-1 rounded-md text-xs"
+                              className="block text-gray-500 hover:text-purple-600 px-3 py-1 rounded-md text-xs"
                               onClick={() => setIsOpen(false)}
                             >
                               {subItem.title}
                             </Link>
                           ))}
+                          {service.submenu.length > 3 && (
+                            <Link
+                              to={service.href}
+                              className="block text-purple-600 hover:text-purple-700 px-3 py-1 rounded-md text-xs font-medium"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              View all →
+                            </Link>
+                          )}
                         </div>
                       )}
                     </div>
                   ))}
                 </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-c78e
-              </div>
-
-              {/* IT Services Mobile */}
-              <div className="px-3 py-2">
-                <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">IT Services</p>
-                {services.slice(1).map((service, index) => (
-                  <Link key={index} to={service.href} className="text-gray-600 hover:text-purple-600 block py-1 text-sm" onClick={() => setIsOpen(false)}>
-                    {service.title}
-                  </Link>
-                ))}
               </div>
 
               <Link
