@@ -113,7 +113,8 @@ const FuturisticBackgroundPage: React.FC = () => {
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Contact Section */}
         <section className="py-20 px-4">
@@ -133,7 +134,7 @@ const FuturisticBackgroundPage: React.FC = () => {
                   Schedule Demo
                 </button>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -182,6 +183,7 @@ const FuturisticBackgroundPage: React.FC = () => {
       </section>
 
       <Footer />
+      </div>
     </div>
   )
 }

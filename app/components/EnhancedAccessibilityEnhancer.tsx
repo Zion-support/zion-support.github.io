@@ -121,6 +121,9 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -136,6 +139,10 @@ const EnhancedAccessibilityEnhancerPage: React.FC = () => {
                 Learn More
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
