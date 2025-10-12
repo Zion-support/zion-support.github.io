@@ -27,16 +27,13 @@
                   </div>
                 </div>
               ))}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
             </div>
           </div>
         </section>
       </div>
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-6024

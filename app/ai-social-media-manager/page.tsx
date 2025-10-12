@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
 
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
   return (
     <>
       <Helmet>
@@ -76,4 +75,3 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud,
         </section>
       </div>
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-6024

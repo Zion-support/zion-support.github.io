@@ -4,6 +4,5 @@ import { DollarSign, TrendingUp, PieChart, BarChart3, Receipt, CreditCard, Smart
 import { Link } from 'react-router-dom'
   )
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
 
 export default Page;
