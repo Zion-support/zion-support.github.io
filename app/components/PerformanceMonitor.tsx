@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 
     // Monitor Core Web Vitals
 
-      }
-
     };
 
     // Monitor performance metrics

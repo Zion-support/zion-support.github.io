@@ -87,11 +87,11 @@ interface FormData {
         </div></div>
 
               Sending...
-            </>
+
           ) : (
 
               Send Message
-            </>
+
           )}
 
             <span className="text-gray-300">kleber@ziontechgroup.com</span>

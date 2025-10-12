@@ -95,7 +95,6 @@ return (
     feature.benefits && (;
                     <ul>{feature.benefits.map((benefit, idx) => (
                         </ul><li> </li><CheckCircle>
-
                           {benefit}
                       ))}
                   )}

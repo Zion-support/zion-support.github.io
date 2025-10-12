@@ -10,7 +10,6 @@ function fixRemainingComprehensive(content) {
   content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/>/g, '<meta name="$1" content="$2" />');
   
   // Fix malformed className attributes with spaces
-  content = content.replace(/className="([^"]*?)\s+([^"]*?)"/g, (match, part1, part2) => {
     return `className="${part1}${part2}"`;
   });
   
@@ -57,7 +56,6 @@ function fixRemainingComprehensive(content) {
   content = content.replace(/<button className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/button>/g, '<button className="$1">$2</button>');
   
   return content;
-}
 
 // Function to process a single file
 function processFile(filePath) {
@@ -69,13 +67,10 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed comprehensive issues: ${filePath}`);
       return true;
-    }
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
 
 // Function to recursively find and process TSX files
 function processDirectory(dirPath) {
@@ -93,14 +88,9 @@ function processDirectory(dirPath) {
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
         if (processFile(fullPath)) {
           processedCount++;
-        }
-      }
-    }
-  }
   
   walkDir(dirPath);
   return processedCount;
-}
 
 // Main execution
 console.log('Starting comprehensive remaining fixes...');

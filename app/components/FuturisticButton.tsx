@@ -75,7 +75,7 @@ interface FuturisticButtonProps {
         {loading ? (
 
             Loading...
-          </>
+
         ) : (
           children
         )}

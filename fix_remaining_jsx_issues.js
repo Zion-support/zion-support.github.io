@@ -19,12 +19,11 @@ function fixRemainingJSXIssues(content) {
   
   // Fix any remaining issues with extra whitespace in Link elements
   content = content.replace(
-    /(\s*Contact Us\s*\n\s*<ArrowRight)/g,
-    '\n          Contact Us\n          <ArrowRight'
+    /(\s*Contact Us\s*\n\s*
+    '\n          Contact Us\n          
   );
   
   return content;
-}
 
 // Function to process a single file
 function processFile(filePath) {
@@ -36,13 +35,10 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed remaining JSX issues: ${filePath}`);
       return true;
-    }
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
 
 // Function to recursively find and process TSX files
 function processDirectory(dirPath) {
@@ -60,14 +56,9 @@ function processDirectory(dirPath) {
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
         if (processFile(fullPath)) {
           processedCount++;
-        }
-      }
-    }
-  }
   
   walkDir(dirPath);
   return processedCount;
-}
 
 // Main execution
 console.log('Starting remaining JSX fixes...');

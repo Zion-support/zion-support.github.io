@@ -30,7 +30,6 @@ function fixComprehensiveJSX(content) {
   );
   
   return content;
-}
 
 // Function to process a single file
 function processFile(filePath) {
@@ -42,13 +41,10 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed comprehensive JSX: ${filePath}`);
       return true;
-    }
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
 
 // Function to recursively find and process TSX files
 function processDirectory(dirPath) {
@@ -66,14 +62,9 @@ function processDirectory(dirPath) {
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
         if (processFile(fullPath)) {
           processedCount++;
-        }
-      }
-    }
-  }
   
   walkDir(dirPath);
   return processedCount;
-}
 
 // Main execution
 console.log('Starting comprehensive JSX fixes...');

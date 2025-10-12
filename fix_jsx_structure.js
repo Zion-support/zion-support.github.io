@@ -27,27 +27,26 @@ function fixJSXStructure(content) {
   content = content.replace(/<\/div>/g, '</div>');
   
   // Fix the specific structure issue where we have:
-  // <div className="...">
+  // <div>
   //   <Helmet>
   //     ...
   //   </Helmet>
-  //   <div className="...">
+  //   <div>
   //     ...
   //   </div>
   // </div>
   
   // This should be:
-  // <div className="...">
+  // <div>
   //   <Helmet>
   //     ...
   //   </Helmet>
-  //   <div className="...">
+  //   <div>
   //     ...
   //   </div>
   // </div>
   
   return content;
-}
 
 // Function to process a single file
 function processFile(filePath) {
@@ -59,13 +58,10 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed JSX structure: ${filePath}`);
       return true;
-    }
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
 
 // Function to recursively find and process TSX files
 function processDirectory(dirPath) {
@@ -83,14 +79,9 @@ function processDirectory(dirPath) {
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
         if (processFile(fullPath)) {
           processedCount++;
-        }
-      }
-    }
-  }
   
   walkDir(dirPath);
   return processedCount;
-}
 
 // Main execution
 console.log('Starting JSX structure fixes...');

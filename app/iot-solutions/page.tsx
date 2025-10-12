@@ -63,31 +63,26 @@ export default function IoTSolutionsPage() {
       description: 'Smart factories with predictive maintenance and quality control',
 
       icon: <Wrench>
-
     },
       name: 'Healthcare',
       description: 'Medical device monitoring and patient care optimization',
 
       icon: <Heart>
-
     },
       name: 'Agriculture',
       description: 'Precision farming with soil and crop monitoring',
 
       icon: <Globe>
-
     },
       name: 'Smart Cities',
       description: 'Traffic management, waste optimization, and public safety',
 
       icon: <Building>
-
     },
       name: 'Retail',
       description: 'Inventory management and customer experience enhancement',
 
       icon: <ShoppingCart>
-
     },
       name: 'Energy',
       description: 'Smart grid management and renewable energy optimization',

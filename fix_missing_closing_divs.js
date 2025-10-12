@@ -20,17 +20,14 @@ function fixMissingClosingDivs(content) {
   // More specific fix for the pattern
   content = content.replace(
     /(\s*<\/Link>\s*<\/div>\s*\);\s*})/g,
-    (match) => {
       // Check if there's a missing closing div
       const beforeMatch = content.substring(0, content.indexOf(match));
-      const openDivs = (beforeMatch.match(/<div/g) || []).length;
+      const openDivs = (beforeMatch.match(/
       const closeDivs = (beforeMatch.match(/<\/div>/g) || []).length;
       
-      if (openDivs > closeDivs) {
+ closeDivs) {
         return match.replace(');', '</div>\n  );');
-      }
       return match;
-    }
   );
   
   // Alternative approach - fix the specific pattern we see
@@ -40,7 +37,6 @@ function fixMissingClosingDivs(content) {
   );
   
   return content;
-}
 
 // Function to process a single file
 function processFile(filePath) {
@@ -52,13 +48,10 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed missing closing divs: ${filePath}`);
       return true;
-    }
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
 
 // Function to recursively find and process TSX files
 function processDirectory(dirPath) {
@@ -76,14 +69,9 @@ function processDirectory(dirPath) {
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
         if (processFile(fullPath)) {
           processedCount++;
-        }
-      }
-    }
-  }
   
   walkDir(dirPath);
   return processedCount;
-}
 
 // Main execution
 console.log('Starting missing closing div fixes...');

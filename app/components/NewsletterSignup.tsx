@@ -57,11 +57,11 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
         </div></div>
 
                 Subscribing...
-              </>
+
             ) : (
 
                 Subscribe
-              </>
+
             )}
 
         {message && (

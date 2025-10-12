@@ -9,13 +9,12 @@ function fixSyntaxErrors(content) {
   content = content.replace(/\\'/g, "'");
   
   // Fix malformed JSX elements with missing spaces in className
-  content = content.replace(/(className="[^"]*?)([a-zA-Z])([a-zA-Z])/g, (match, prefix, char1, char2) => {
     // Add space between concatenated class names
     return prefix + char1 + ' ' + char2;
   });
   
   // Fix malformed JSX closing tags
-  content = content.replace(/\/\s*\/>/g, ' />');
+');
   
   // Fix malformed JSX opening tags
   content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s*\/\s*>/g, '<$1 />');
@@ -24,7 +23,6 @@ function fixSyntaxErrors(content) {
   content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s+className="[^"]*"\s*\/\s*>/g, '<$1 className="$2" />');
   
   // Fix specific patterns found in the files
-  content = content.replace(/className="([^"]*?)([a-zA-Z])([a-zA-Z])/g, (match, prefix, char1, char2) => {
     return `className="${prefix}${char1} ${char2}`;
   });
   
@@ -57,7 +55,6 @@ function fixSyntaxErrors(content) {
   content = content.replace(/className="([^"]*?)hover:text-cyan-400"/g, 'className="$1 hover:text-cyan-400"');
   
   return content;
-}
 
 // Function to process a single file
 function processFile(filePath) {
@@ -69,13 +66,10 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
-    }
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
 
 // Function to recursively find and process TSX files
 function processDirectory(dirPath) {
@@ -93,14 +87,9 @@ function processDirectory(dirPath) {
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
         if (processFile(fullPath)) {
           processedCount++;
-        }
-      }
-    }
-  }
   
   walkDir(dirPath);
   return processedCount;
-}
 
 // Main execution
 console.log('Starting syntax error fixes...');
@@ -110,4 +99,3 @@ console.log(`Processed ${processedCount} files.`);
 // Also process the root EnhancedFooter.tsx
 if (processFile('./EnhancedFooter.tsx')) {
   console.log('Fixed: EnhancedFooter.tsx');
-}

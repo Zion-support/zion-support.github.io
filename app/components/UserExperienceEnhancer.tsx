@@ -26,10 +26,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
 
       // Add loading states for interactive elements
       const buttons = document.querySelectorAll('button');
-      buttons.forEach((button) => {
-        button.addEventListener('click', () => {
           button.classList.add('opacity-75', 'cursor-not-allowed');
-          setTimeout(() => {
             button.classList.remove('opacity-75', 'cursor-not-allowed');
           }, 1000);
         });

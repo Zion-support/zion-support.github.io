@@ -142,57 +142,25 @@ View All Services
         {/* Hero Section */}
                 AI E-commerce Optimizer Pro
 
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
               Powerful Features
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                  <div className="mb-4">
+ (
                     {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
-                  </h3>
-                  <p className="text-gray-300">
                     {feature.description}
-                  </p>
 
-                </div>
               ))}
-            </div>
-        </section>
 
         {/* Pricing Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />
                 Choose Your Plan
-              </h2>
               <p className="w-5 h-5ml-2">Flexible pricing options to fit your business needs
-              </p>
-            </div>
             
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50transition-allduration-300" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+ (
                     <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                       {plan.price}
                       <span className="w-5 h-5ml-2" />{plan.period}</span>
-                    </div>
                     <p className="w-5 h-5ml-2">{plan.description}</p>
-                  </div>
                   
-                  <ul className="w-5 h-5ml-2" />
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5ml-2" />
-
+ (
               Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs.
                 Get Started
                 Learn More
@@ -293,29 +261,11 @@ View All Services
                   
                     Get Started
 
-        <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your E-commerce?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses already using our AI-powered solutions to boost their online sales.
-            </p>
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
-            >
               Contact Us Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
 
-          </div>
-        </section>
-      </div>
-    </>
   );
-
-}
 
               ))}
 
