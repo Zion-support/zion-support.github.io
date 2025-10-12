@@ -1,14 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Languages, Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
-=======
 import { Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9c1a
-=======
-import { Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0823
 import Layout from '../layout';
 
 export default function AITranslationService() {
@@ -77,31 +69,15 @@ export default function AITranslationService() {
       features: [
         'Up to 100,000 words/month',
         '100+ languages',
-<<<<<<< HEAD
-<<<<<<< HEAD
         'Advanced document processing',
         'Priority support',
         'Custom terminology',
         'Quality assurance',
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9c1a
-        'Advanced document translation',
-        'Priority support',
-        'API access',
-        'Team collaboration',
-        'Custom terminology'
-=======
-        'Advanced quality checks',
-        'Priority support',
-        'Custom integrations',
-        'Team collaboration'
->>>>>>> cursor/fix-errors-and-merge-to-main-0823
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-<<<<<<< HEAD
       price: 'Custom',
       period: '',
       description: 'Tailored for large organizations',
@@ -115,32 +91,14 @@ export default function AITranslationService() {
         'Custom integrations'
       ],
       popular: false
-<<<<<<< HEAD
     },
     {
       name: 'Enterprise Plus',
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0823
-      price: 'Custom',
-      period: '',
-      description: 'Tailored for large organizations',
-      features: [
-        'Unlimited words',
-        'All languages',
-        'Human review included',
-        '24/7 dedicated support',
-        'White-label solution',
-        'On-premise deployment'
-      ],
-      popular: false
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9c1a
     }
   ];
 
   const testimonials = [
     {
-<<<<<<< HEAD
       name: 'Maria Rodriguez',
       company: 'Global Marketing Agency',
       role: 'Content Manager',
@@ -152,23 +110,9 @@ export default function AITranslationService() {
       company: 'Tech Startup',
       role: 'CEO',
       content: 'Incredible accuracy and speed. We can now communicate with international clients seamlessly.',
-=======
-      name: 'Sarah Johnson',
-      role: 'Marketing Director',
-      company: 'Global Tech Corp',
-      content: 'The AI translation service has revolutionized our international campaigns. The quality is incredible and saves us weeks of work.',
       rating: 5
     },
     {
-      name: 'James Wilson',
-      role: 'E-learning Manager',
-      company: 'EduTech Solutions',
-      content: 'Translating our courses into 8 languages was seamless. The educational content translation is spot-on.',
->>>>>>> cursor/fix-errors-and-merge-to-main-0823
-      rating: 5
-    },
-    {
-<<<<<<< HEAD
       name: 'Lisa Chen',
       role: 'Legal Counsel',
       company: 'International Law Firm',
@@ -177,7 +121,6 @@ export default function AITranslationService() {
     }
   ];
 
-<<<<<<< HEAD
   const testimonials = [
     {
       name: 'Dr. Michael Chen',
@@ -187,9 +130,6 @@ export default function AITranslationService() {
     },
     {
       name: 'Elena Rodriguez',
-=======
-      name: 'Sarah Johnson',
->>>>>>> cursor/fix-errors-and-merge-to-main-9c1a
       company: 'E-commerce Platform',
       role: 'International Expansion Lead',
       content: 'The specialized translation models for our industry have been a game-changer for our global expansion.',
@@ -197,11 +137,8 @@ export default function AITranslationService() {
     }
   ];
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0823
   return (
     <Layout>
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         <div className="container mx-auto px-4 text-center">
@@ -391,13 +328,9 @@ export default function AITranslationService() {
           </div>
         </div>
       </section>
-    </Layout>
-  );
-<<<<<<< HEAD
-      </div>
 
       {/* CTA Section */}
-      <div className="py-20 bg-gray-900">
+      <section className="py-20 bg-gray-900">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Break Language Barriers?
@@ -414,203 +347,7 @@ export default function AITranslationService() {
             </Link>
           </div>
         </div>
-      </div>
+      </section>
     </Layout>
   );
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI-Powered
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                {' '}Translation Service
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Break down language barriers with our advanced AI translation technology. 
-              Translate documents, websites, and conversations in real-time with human-level accuracy.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
-                Start Translating
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Try Demo
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Advanced Translation Features
-              </h2>
-              <p className="text-gray-300 text-lg">
-                Powered by cutting-edge AI to deliver accurate, contextually-aware translations
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    {feature.icon}
-                    <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Translation Features Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Comprehensive Translation Solutions
-              </h2>
-              <p className="text-gray-300 text-lg">
-                Everything you need for professional translation services
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {translationFeatures.map((category, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                  <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
-                  <ul className="space-y-2">
-                    {category.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
-              </h2>
-              <p className="text-gray-300 text-lg">
-                Choose the plan that fits your translation needs
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 relative ${plan.popular ? 'border-cyan-400' : ''}`}>
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">
-                    {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300 mb-6">{plan.description}</p>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
-                  >
-                    Get Started
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Trusted by Global Companies
-              </h2>
-              <p className="text-gray-300 text-lg">
-                See how businesses are using our translation services
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <div className="flex mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-yellow-400">★</span>
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}</div>
-                  <div className="text-sm text-gray-500">{testimonial.company}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Break Language Barriers?
-            </h2>
-            <p className="text-gray-300 text-lg mb-8">
-              Start translating with our AI-powered service and connect with global audiences
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
-                Start Free Trial
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Schedule Demo
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-9c1a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0823
 }
