@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -41,18 +40,10 @@ const AiVoiceAssistantPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default AiVoiceAssistantPage;
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Mic, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Clock, Volume2 } from 'lucide-react'
-import Layout from '../layout'
-=======
-import { ArrowRight, Mic, Brain, Zap, Users, BarChart3, Shield } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Mic, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Clock, Volume2, Shield } from 'lucide-react';
 
 export default function AIVoiceAssistant() {
   const features = [
@@ -381,7 +372,4 @@ export default function AIVoiceAssistant() {
     </Layout>
   )
 }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
-=======
-export default AiVoiceAssistantPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
+  // export default AiVoiceAssistantPage;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
     }
   ];
@@ -177,7 +176,6 @@ export default GlobalErrorBoundaryPage
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -240,7 +238,6 @@ class GlobalErrorBoundary extends Component<Props, State> {
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Refresh Page
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
               </button>
               
               <Link
@@ -253,10 +250,8 @@ class GlobalErrorBoundary extends Component<Props, State> {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 }
-=======
       )
     }
 
@@ -265,4 +260,3 @@ class GlobalErrorBoundary extends Component<Props, State> {
 }
 
 export default GlobalErrorBoundary
->>>>>>> cursor/fix-errors-and-merge-to-main-33db

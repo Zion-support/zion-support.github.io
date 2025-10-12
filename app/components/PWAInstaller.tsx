@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import React from 'react'
 
 import { ArrowRight, Mail, Brain } from 'lucide-react';
@@ -63,7 +62,6 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
       </Helmet>
         </div>
 }
-=======
 import React, { useState, useEffect } from 'react'
 import { Download, X, Smartphone, Monitor } from 'lucide-react'
 
@@ -160,4 +158,3 @@ const PWAInstaller: React.FC = () => {
 }
 
 export default PWAInstaller
->>>>>>> cursor/fix-errors-and-merge-to-main-33db

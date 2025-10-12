@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Smartphone, Zap, Users, BarChart3, Shield, Code } from 'lucide-react'
+import { Link } from 'react-router-dom';
+import { ArrowRight, Smartphone, Zap, Users, BarChart3, Shield, Code } from 'lucide-react';
 
-export default function MobileDevelopmentPage() {
+// export default function MobileDevelopmentPage() {
   const features = [
     {
       icon: <Smartphone className="w-8 h-8 text-blue-500" />,
@@ -41,7 +37,6 @@ export default function MobileDevelopmentPage() {
       description: 'Future-proof architecture that scales with your business growth and user base.'
     }
   ]
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
 const MobileDevelopmentPage: React.FC = () => {
   return (
