@@ -1,32 +1,32 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, FlaskConical, Brain, Shield, Target, Zap, Star, Users, Clock, DollarSign, Activity } from 'lucide-react';
+import { CheckCircle, ArrowRight, Atom, Zap, Shield, Cpu, Star, Users, Clock, DollarSign, Brain, Target, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function AIDrugDiscoveryProPage() {
-  const features = [
+export default function QuantumComputingSolutionsPage() {
+  const services = [
     {
-      icon: <FlaskConical className="w-8 h-8 text-blue-500" />,
-      title: 'AI Molecular Design',
-      description: 'Design novel drug molecules using AI-powered molecular generation and optimization algorithms.',
-      features: ['De novo drug design', 'Molecular optimization', 'ADMET prediction', 'Drug-likeness scoring', 'Chemical space exploration', 'Lead compound identification'],
-      price: 'Starting at $2,999/month',
+      icon: <Atom className="w-8 h-8 text-blue-500" />,
+      title: 'Quantum Algorithm Development',
+      description: 'Develop custom quantum algorithms for optimization, machine learning, and cryptography applications.',
+      features: ['Custom algorithm design', 'Quantum machine learning', 'Optimization algorithms', 'Cryptographic protocols', 'Quantum simulation', 'Performance optimization'],
+      price: 'Starting at $15,000/month',
       popular: true
     },
     {
-      icon: <Target className="w-8 h-8 text-red-500" />,
-      title: 'Target Identification',
-      description: 'Identify and validate drug targets using AI-driven analysis of biological pathways and disease mechanisms.',
-      features: ['Disease pathway analysis', 'Target validation', 'Biomarker discovery', 'Drug-target interaction prediction', 'Side effect prediction', 'Efficacy assessment'],
-      price: 'Starting at $1,999/month',
+      icon: <Zap className="w-8 h-8 text-purple-500" />,
+      title: 'Quantum Cloud Access',
+      description: 'Access to leading quantum computing platforms including IBM, Google, and Rigetti quantum computers.',
+      features: ['Multi-cloud quantum access', 'Real-time quantum execution', 'Quantum circuit optimization', 'Error mitigation', 'Quantum state preparation', 'Measurement and analysis'],
+      price: 'Starting at $5,000/month',
       popular: false
     },
     {
-      icon: <Activity className="w-8 h-8 text-green-500" />,
-      title: 'Clinical Trial Optimization',
-      description: 'Optimize clinical trial design and patient selection using AI-powered predictive analytics.',
-      features: ['Patient stratification', 'Trial design optimization', 'Outcome prediction', 'Risk assessment', 'Dosing optimization', 'Success probability modeling'],
-      price: 'Starting at $3,499/month',
+      icon: <Shield className="w-8 h-8 text-green-500" />,
+      title: 'Quantum Security Solutions',
+      description: 'Implement quantum-resistant cryptography and quantum key distribution for enhanced security.',
+      features: ['Post-quantum cryptography', 'Quantum key distribution', 'Security assessment', 'Migration planning', 'Quantum random number generation', 'Secure communication protocols'],
+      price: 'Starting at $12,000/month',
       popular: true
     }
   ];
@@ -34,79 +34,79 @@ export default function AIDrugDiscoveryProPage() {
   const benefits = [
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Faster Discovery',
-      description: 'Accelerate drug discovery timelines by up to 70% with AI-powered molecular design.'
+      title: 'Exponential Speedup',
+      description: 'Achieve quantum advantage for specific problems with exponential computational speedup.'
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Cost Reduction',
-      description: 'Reduce R&D costs by millions through intelligent compound screening and optimization.'
+      title: 'Future-Proof Security',
+      description: 'Prepare for the quantum era with quantum-resistant security solutions.'
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Higher Success Rate',
-      description: 'Improve clinical trial success rates with AI-driven target identification and validation.'
+      title: 'Competitive Advantage',
+      description: 'Stay ahead of competitors with cutting-edge quantum computing capabilities.'
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Regulatory Compliance',
-      description: 'Ensure compliance with FDA and international regulatory requirements.'
+      title: 'Expert Guidance',
+      description: 'Work with quantum computing experts and researchers from leading institutions.'
     }
   ];
 
   const applications = [
     {
-      title: 'Oncology Drug Discovery',
-      description: 'Develop targeted cancer therapies with AI-powered molecular design',
-      icon: <Target className="w-6 h-6 text-red-500" />
+      title: 'Financial Services',
+      description: 'Portfolio optimization, risk analysis, and fraud detection using quantum algorithms',
+      icon: <DollarSign className="w-6 h-6 text-green-500" />
     },
     {
-      title: 'Neurological Disorders',
-      description: 'Discover treatments for Alzheimer\'s, Parkinson\'s, and other neurological conditions',
-      icon: <Brain className="w-6 h-6 text-purple-500" />
+      title: 'Pharmaceuticals',
+      description: 'Drug discovery, molecular simulation, and protein folding with quantum computing',
+      icon: <Atom className="w-6 h-6 text-blue-500" />
     },
     {
-      title: 'Infectious Diseases',
-      description: 'Develop antivirals and antibiotics for emerging infectious diseases',
-      icon: <Shield className="w-6 h-6 text-blue-500" />
+      title: 'Logistics & Supply Chain',
+      description: 'Route optimization, inventory management, and supply chain optimization',
+      icon: <Globe className="w-6 h-6 text-purple-500" />
     },
     {
-      title: 'Rare Diseases',
-      description: 'Accelerate drug development for rare and orphan diseases',
-      icon: <Activity className="w-6 h-6 text-green-500" />
+      title: 'Cybersecurity',
+      description: 'Quantum-resistant cryptography and quantum key distribution systems',
+      icon: <Shield className="w-6 h-6 text-red-500" />
     }
   ];
 
   const stats = [
-    { number: '500+', label: 'Drug Candidates' },
-    { number: '70%', label: 'Time Reduction' },
-    { number: '85%', label: 'Success Rate' },
-    { number: '24/7', label: 'AI Processing' }
+    { number: '100+', label: 'Quantum Algorithms' },
+    { number: '10^18', label: 'Speedup Potential' },
+    { number: '99.9%', label: 'Reliability' },
+    { number: '24/7', label: 'Expert Support' }
   ];
 
   const pricing = [
     {
-      plan: 'Research',
-      price: '$2,999',
+      plan: 'Explorer',
+      price: '$5,000',
       period: '/month',
-      description: 'For academic research and small biotech companies',
-      features: ['Basic molecular design', 'Target identification', 'Email support', 'Standard processing'],
+      description: 'For organizations exploring quantum computing',
+      features: ['Basic quantum access', 'Standard algorithms', 'Email support', 'Monthly reports'],
       popular: false
     },
     {
       plan: 'Professional',
-      price: '$7,999',
+      price: '$15,000',
       period: '/month',
-      description: 'For mid-size pharmaceutical companies',
-      features: ['Advanced AI models', 'Clinical trial optimization', 'Priority support', 'Custom integrations'],
+      description: 'For companies implementing quantum solutions',
+      features: ['Full quantum suite', 'Custom algorithms', 'Priority support', 'Dedicated expert'],
       popular: true
     },
     {
       plan: 'Enterprise',
-      price: '$19,999',
+      price: '$50,000',
       period: '/month',
-      description: 'For large pharmaceutical corporations',
-      features: ['Full AI suite', 'Dedicated support', 'Custom development', 'On-premise deployment'],
+      description: 'For large-scale quantum implementations',
+      features: ['Complete quantum platform', 'On-premise deployment', '24/7 support', 'Custom development'],
       popular: false
     }
   ];
@@ -114,9 +114,9 @@ export default function AIDrugDiscoveryProPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>AI Drug Discovery Pro - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered drug discovery platform for pharmaceutical companies. Accelerate drug development with molecular design, target identification, and clinical trial optimization." />
-        <meta name="keywords" content="AI drug discovery, pharmaceutical AI, molecular design, drug development, clinical trials, biotechnology" />
+        <title>Quantum Computing Solutions - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary quantum computing solutions for enterprises. Access quantum algorithms, cloud platforms, and security solutions to solve complex problems." />
+        <meta name="keywords" content="quantum computing, quantum algorithms, quantum security, quantum cloud, quantum machine learning" />
       </Helmet>
       
       {/* Hero Section */}
@@ -124,25 +124,25 @@ export default function AIDrugDiscoveryProPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-              AI Drug Discovery Pro
+              Quantum Computing Solutions
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize pharmaceutical research with our advanced AI-powered drug discovery platform. 
-              Accelerate drug development, reduce costs, and improve success rates.
+              Harness the power of quantum computing to solve complex problems that are impossible for classical computers. 
+              Access cutting-edge quantum algorithms, cloud platforms, and security solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
-                Schedule Demo
+                Explore Quantum
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                to="/ai-services"
+                to="/it-services"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                View All AI Services
+                View All IT Services
               </Link>
             </div>
           </div>
@@ -159,22 +159,22 @@ export default function AIDrugDiscoveryProPage() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Services Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Advanced AI Drug Discovery Platform
+              Quantum Computing Services
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Comprehensive AI tools for every stage of the drug discovery process.
+              Comprehensive quantum computing solutions for enterprise applications.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {features.map((feature, index) => (
+            {services.map((service, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 group relative">
-                {feature.popular && (
+                {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
                       <Star className="w-4 h-4 mr-1" />
@@ -182,18 +182,18 @@ export default function AIDrugDiscoveryProPage() {
                     </span>
                   </div>
                 )}
-                <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{feature.title}</h3>
-                <p className="text-gray-600 mb-4">{feature.description}</p>
+                <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{service.title}</h3>
+                <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-4">
-                  {feature.features.map((item, itemIndex) => (
+                  {service.features.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-center text-sm text-gray-600">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
-                <div className="text-blue-600 font-semibold mb-4">{feature.price}</div>
+                <div className="text-blue-600 font-semibold mb-4">{service.price}</div>
                 <Link
                   to="/contact"
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
@@ -212,10 +212,10 @@ export default function AIDrugDiscoveryProPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Therapeutic Areas
+              Quantum Applications
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our AI platform is designed for drug discovery across multiple therapeutic areas.
+              Transform your industry with quantum computing solutions.
             </p>
           </div>
           
@@ -236,10 +236,10 @@ export default function AIDrugDiscoveryProPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose AI Drug Discovery Pro?
+              Why Choose Quantum Computing?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Transform your drug discovery process with cutting-edge AI technology.
+              Unlock unprecedented computational power for your most challenging problems.
             </p>
           </div>
           
@@ -260,10 +260,10 @@ export default function AIDrugDiscoveryProPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Enterprise Pricing
+              Quantum Computing Pricing
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choose the plan that fits your organization's drug discovery needs.
+              Choose the quantum computing solution that fits your needs.
             </p>
           </div>
           
@@ -311,24 +311,24 @@ export default function AIDrugDiscoveryProPage() {
       <section className="py-12 sm:py-16 lg:py-20 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Revolutionize Drug Discovery?
+            Ready to Enter the Quantum Era?
           </h2>
           <p className="text-lg sm:text-xl text-white/90 mb-8">
-            Join leading pharmaceutical companies using AI to accelerate drug development and improve patient outcomes.
+            Join the quantum revolution and solve problems that were previously impossible.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
             >
-              <FlaskConical className="w-5 h-5 mr-2" />
-              Schedule Demo
+              <Atom className="w-5 h-5 mr-2" />
+              Schedule Consultation
             </Link>
             <Link
-              to="/ai-services"
+              to="/it-services"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
-              Explore All AI Services
+              Explore All IT Services
             </Link>
           </div>
         </div>

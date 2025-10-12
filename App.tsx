@@ -4,6 +4,9 @@ import { HelmetProvider } from 'react-helmet-async'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
 import ErrorBoundary from './app/components/ErrorBoundary'
 import LoadingSpinner from './app/components/LoadingSpinner'
 import SEOHead from './app/components/SEOHead'
@@ -18,6 +21,16 @@ const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
 const MicroSAASServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
 const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
 const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'))
+
+// New AI Services
+const AI3DGenerationPage = React.lazy(() => import('./app/ai-3d-generation/page'))
+const AIDrugDiscoveryProPage = React.lazy(() => import('./app/ai-drug-discovery-pro/page'))
+
+// New IT Services
+const QuantumComputingSolutionsPage = React.lazy(() => import('./app/quantum-computing-solutions/page'))
+
+// New Micro SAAS Services
+const AIClimateSolutionsProPage = React.lazy(() => import('./app/ai-climate-solutions-pro/page'))
 
 // Loading component for Suspense
 const PageLoader = () => (
@@ -45,6 +58,16 @@ function App() {
                 <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                 <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                
+                {/* New AI Services */}
+                <Route path="/ai-3d-generation" element={<AI3DGenerationPage />} />
+                <Route path="/ai-drug-discovery-pro" element={<AIDrugDiscoveryProPage />} />
+                
+                {/* New IT Services */}
+                <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
+                
+                {/* New Micro SAAS Services */}
+                <Route path="/ai-climate-solutions-pro" element={<AIClimateSolutionsProPage />} />
                 {/* 404 Route */}
                 <Route path="*" element={
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -67,6 +90,7 @@ function App() {
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
+<<<<<<< HEAD
 =======
 import HomePage from './app/page'
 import AboutPage from './app/about/page'
@@ -132,6 +156,8 @@ function App() {
       </div>
     </Router>
 >>>>>>> cursor/website-audit-and-update-with-deployment-c78e
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
   )
 }
 
