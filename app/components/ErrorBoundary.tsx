@@ -1,3 +1,4 @@
+'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -30,10 +31,10 @@ class ErrorBoundary extends Component<Props, State> {
             <h1 className="text-6xl font-bold text-white mb-4">Oops!</h1>
             <p className="text-xl text-gray-300 mb-8">Something went wrong.</p>
             <button
-              onClick={() => this.setState({ hasError: false, error: undefined })}
-              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+              onClick={() => window.location.reload()}
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
             >
-              Try Again
+              Reload Page
             </button>
           </div>
         </div>
