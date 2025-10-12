@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart, Video } from 'lucide-react';
 
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -47,34 +47,34 @@ const HomePage: React.FC = () => {
 
   const aiServices = [
     {
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence with predictive insights',
-      price: '$299/month',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],
+      title: 'AI Analytics & Business Intelligence',
+      description: 'Transform raw data into actionable insights with advanced AI analytics',
+      price: 'Starting at $2,500/month',
+      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration', 'Multi-source data', 'ROI optimization'],
       icon: BarChart,
       color: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'AI Content Generator',
-      description: 'Automated content creation for blogs, social media, and marketing',
-      price: '$199/month',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice training', 'Content scheduling'],
+      title: 'AI Content Generation & Marketing',
+      description: 'Create high-quality, engaging content at scale with AI-powered generation',
+      price: 'Starting at $800/month',
+      features: ['Multi-language support', 'SEO optimization', 'Brand voice training', 'Content scheduling', 'Image generation', 'Video creation'],
       icon: FileText,
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'AI Customer Support',
-      description: '24/7 intelligent customer service with natural language processing',
-      price: '$399/month',
-      features: ['Multi-channel support', 'Sentiment analysis', 'Escalation management', 'Performance analytics'],
+      title: 'AI-Powered Chatbots & Virtual Assistants',
+      description: 'Intelligent customer support with natural language processing and context awareness',
+      price: 'Starting at $1,200/month',
+      features: ['Multi-channel support', 'Sentiment analysis', 'Escalation management', 'Performance analytics', 'Voice integration', 'Knowledge base'],
       icon: MessageCircle,
       color: 'from-green-500 to-emerald-500'
     },
     {
       title: 'AI Workflow Automation',
-      description: 'Streamline business processes with intelligent automation',
-      price: '$249/month',
-      features: ['Process mapping', 'Automated workflows', 'Integration APIs', 'Performance monitoring'],
+      description: 'Automate complex business processes with intelligent workflow management',
+      price: 'Starting at $2,000/month',
+      features: ['Process mapping', 'Automated workflows', 'Integration APIs', 'Performance monitoring', 'Exception handling', 'Compliance tracking'],
       icon: Workflow,
       color: 'from-orange-500 to-red-500'
     }
@@ -82,34 +82,34 @@ const HomePage: React.FC = () => {
 
   const itServices = [
     {
-      title: 'Cloud Migration',
-      description: 'Seamless migration to AWS, Azure, or Google Cloud',
+      title: 'Cloud Infrastructure & Migration',
+      description: 'Complete cloud transformation with AWS, Azure, and Google Cloud expertise',
       price: 'Starting at $5,000',
-      features: ['Zero-downtime migration', 'Security compliance', 'Cost optimization', '24/7 support'],
+      features: ['Zero-downtime migration', 'Security compliance', 'Cost optimization', '24/7 support', 'Multi-cloud strategies', 'Disaster recovery'],
       icon: Cloud,
       color: 'from-cyan-500 to-blue-500'
     },
     {
-      title: 'Cybersecurity Audit',
-      description: 'Comprehensive security assessment and implementation',
+      title: 'Advanced Cybersecurity Solutions',
+      description: 'Comprehensive security solutions to protect your digital assets and data',
       price: 'Starting at $3,000',
-      features: ['Vulnerability assessment', 'Penetration testing', 'Security policies', 'Staff training'],
+      features: ['Vulnerability assessment', 'Penetration testing', 'Security policies', 'Staff training', 'Zero-trust architecture', 'Threat intelligence'],
       icon: Shield,
       color: 'from-red-500 to-orange-500'
     },
     {
-      title: 'Custom Web Development',
-      description: 'Modern, responsive web applications built to scale',
+      title: 'Full-Stack Web Development',
+      description: 'Modern, responsive web applications built with cutting-edge technologies',
       price: 'Starting at $8,000',
-      features: ['Responsive design', 'SEO optimization', 'Performance tuning', 'Maintenance support'],
+      features: ['Responsive design', 'SEO optimization', 'Performance tuning', 'Maintenance support', 'Progressive Web Apps', 'Accessibility compliance'],
       icon: Code,
       color: 'from-green-500 to-emerald-500'
     },
     {
       title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications',
+      description: 'Native and cross-platform mobile applications for iOS and Android',
       price: 'Starting at $12,000',
-      features: ['iOS & Android', 'Cross-platform', 'App store optimization', 'Push notifications'],
+      features: ['iOS & Android native', 'Cross-platform development', 'App store optimization', 'Push notifications', 'Offline functionality', 'Performance optimization'],
       icon: Smartphone,
       color: 'from-purple-500 to-pink-500'
     }
@@ -118,35 +118,35 @@ const HomePage: React.FC = () => {
   const microSaasProducts = [
     {
       title: 'Zion Analytics Pro',
-      description: 'Advanced business intelligence platform with AI insights',
+      description: 'Advanced business intelligence platform with AI-powered insights and real-time dashboards',
       price: '$99/month',
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Team collaboration'],
+      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Team collaboration', 'API integrations', 'Mobile app access'],
       icon: BarChart,
       color: 'from-blue-500 to-purple-500'
     },
     {
-      title: 'Zion Security Shield',
-      description: 'Comprehensive cybersecurity monitoring and threat detection',
+      title: 'Zion AI Video Editor',
+      description: 'AI-powered video editing platform with automatic editing, effects, and optimization',
+      price: '$129/month',
+      features: ['AI auto-editing', 'Smart transitions', 'Voice enhancement', 'Background removal', 'Text-to-speech', 'Cloud rendering'],
+      icon: Video,
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      title: 'Zion AI Code Reviewer',
+      description: 'Intelligent code review and quality assurance platform with automated suggestions',
       price: '$149/month',
-      features: ['Threat detection', 'Vulnerability scanning', 'Incident response', 'Compliance reporting'],
+      features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Multi-language support', 'Git integration'],
+      icon: Code,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Zion AI Fraud Detector',
+      description: 'Advanced fraud detection platform with machine learning and real-time monitoring',
+      price: '$179/month',
+      features: ['Real-time fraud detection', 'Machine learning models', 'Transaction monitoring', 'Risk scoring', 'Alert system', 'Compliance reporting'],
       icon: Shield,
       color: 'from-red-500 to-orange-500'
-    },
-    {
-      title: 'Zion Content Studio',
-      description: 'AI-powered content creation and management platform',
-      price: '$79/month',
-      features: ['AI content generation', 'Multi-platform publishing', 'Brand consistency', 'Performance tracking'],
-      icon: FileText,
-      color: 'from-green-500 to-teal-500'
-    },
-    {
-      title: 'Zion CRM Intelligence',
-      description: 'Smart customer relationship management with AI insights',
-      price: '$129/month',
-      features: ['Lead scoring', 'Sales forecasting', 'Customer insights', 'Automation workflows'],
-      icon: Users,
-      color: 'from-purple-500 to-pink-500'
     }
   ];
 

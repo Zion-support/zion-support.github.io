@@ -7,7 +7,7 @@ import {
   BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
   Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
   TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
-  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock
+  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock, Video
 } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
@@ -293,10 +293,470 @@ const MicroSaasPage: React.FC = () => {
       rating: 4.8,
       reviews: 156,
       popular: true
+    },
+    {
+      id: 'zion-ai-video-editor',
+      title: 'Zion AI Video Editor',
+      description: 'AI-powered video editing platform with automatic editing, effects, and optimization',
+      price: '$129/month',
+      originalPrice: '$179/month',
+      features: [
+        'AI auto-editing',
+        'Smart transitions',
+        'Voice enhancement',
+        'Background removal',
+        'Text-to-speech',
+        'Multi-format export',
+        'Cloud rendering',
+        'Collaboration tools'
+      ],
+      icon: Video,
+      color: 'from-purple-500 to-pink-500',
+      category: 'Video Production',
+      rating: 4.7,
+      reviews: 89,
+      popular: false
+    },
+    {
+      id: 'zion-ai-translator-pro',
+      title: 'Zion AI Translator Pro',
+      description: 'Advanced AI translation service with context awareness and industry-specific terminology',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: [
+        '100+ language support',
+        'Context-aware translation',
+        'Industry terminology',
+        'Document translation',
+        'Real-time translation',
+        'Voice translation',
+        'API integration',
+        'Quality assurance'
+      ],
+      icon: Globe,
+      color: 'from-blue-500 to-cyan-500',
+      category: 'Translation',
+      rating: 4.8,
+      reviews: 156,
+      popular: false
+    },
+    {
+      id: 'zion-ai-code-reviewer',
+      title: 'Zion AI Code Reviewer',
+      description: 'Intelligent code review and quality assurance platform with automated suggestions',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: [
+        'Automated code review',
+        'Security vulnerability detection',
+        'Performance optimization',
+        'Code quality metrics',
+        'Best practice suggestions',
+        'Multi-language support',
+        'Team collaboration',
+        'Integration with Git'
+      ],
+      icon: Code,
+      color: 'from-green-500 to-emerald-500',
+      category: 'Development',
+      rating: 4.9,
+      reviews: 203,
+      popular: true
+    },
+    {
+      id: 'zion-customer-insights',
+      title: 'Zion Customer Insights',
+      description: 'AI-powered customer analytics platform for understanding behavior and preferences',
+      price: '$119/month',
+      originalPrice: '$159/month',
+      features: [
+        'Customer segmentation',
+        'Behavioral analytics',
+        'Churn prediction',
+        'Sentiment analysis',
+        'Personalization engine',
+        'Real-time insights',
+        'Custom dashboards',
+        'API integrations'
+      ],
+      icon: Users,
+      color: 'from-indigo-500 to-purple-500',
+      category: 'Customer Analytics',
+      rating: 4.7,
+      reviews: 127,
+      popular: false
+    },
+    {
+      id: 'zion-ai-email-assistant',
+      title: 'Zion AI Email Assistant',
+      description: 'Intelligent email management with smart replies, scheduling, and organization',
+      price: '$69/month',
+      originalPrice: '$99/month',
+      features: [
+        'Smart email replies',
+        'Email scheduling',
+        'Priority classification',
+        'Spam filtering',
+        'Template suggestions',
+        'Follow-up reminders',
+        'Calendar integration',
+        'Multi-account support'
+      ],
+      icon: Mail,
+      color: 'from-orange-500 to-red-500',
+      category: 'Email Management',
+      rating: 4.6,
+      reviews: 94,
+      popular: false
+    },
+    {
+      id: 'zion-ai-meeting-assistant',
+      title: 'Zion AI Meeting Assistant',
+      description: 'AI-powered meeting transcription, summarization, and action item tracking',
+      price: '$89/month',
+      originalPrice: '$129/month',
+      features: [
+        'Real-time transcription',
+        'Meeting summaries',
+        'Action item extraction',
+        'Speaker identification',
+        'Meeting insights',
+        'Calendar integration',
+        'Team collaboration',
+        'Mobile app'
+      ],
+      icon: Calendar,
+      color: 'from-teal-500 to-cyan-500',
+      category: 'Meeting Management',
+      rating: 4.8,
+      reviews: 145,
+      popular: false
+    },
+    {
+      id: 'zion-ai-seo-optimizer',
+      title: 'Zion AI SEO Optimizer',
+      description: 'Comprehensive SEO optimization platform with AI-powered content and technical analysis',
+      price: '$99/month',
+      originalPrice: '$149/month',
+      features: [
+        'Keyword research',
+        'Content optimization',
+        'Technical SEO analysis',
+        'Competitor analysis',
+        'Rank tracking',
+        'Content suggestions',
+        'Link building tools',
+        'Performance reporting'
+      ],
+      icon: TrendingUp,
+      color: 'from-yellow-500 to-orange-500',
+      category: 'SEO',
+      rating: 4.7,
+      reviews: 178,
+      popular: false
+    },
+    {
+      id: 'zion-ai-data-cleaner',
+      title: 'Zion AI Data Cleaner',
+      description: 'Intelligent data cleaning and preparation platform with automated quality checks',
+      price: '$79/month',
+      originalPrice: '$119/month',
+      features: [
+        'Automated data cleaning',
+        'Duplicate detection',
+        'Data validation',
+        'Format standardization',
+        'Missing data handling',
+        'Data profiling',
+        'Quality scoring',
+        'Export options'
+      ],
+      icon: Database,
+      color: 'from-emerald-500 to-green-500',
+      category: 'Data Management',
+      rating: 4.6,
+      reviews: 112,
+      popular: false
+    },
+    {
+      id: 'zion-ai-contract-analyzer',
+      title: 'Zion AI Contract Analyzer',
+      description: 'AI-powered contract analysis and risk assessment platform for legal teams',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: [
+        'Contract analysis',
+        'Risk assessment',
+        'Clause identification',
+        'Compliance checking',
+        'Version comparison',
+        'Automated summaries',
+        'Legal insights',
+        'Team collaboration'
+      ],
+      icon: FileText,
+      color: 'from-slate-500 to-gray-500',
+      category: 'Legal Tech',
+      rating: 4.9,
+      reviews: 89,
+      popular: false
+    },
+    {
+      id: 'zion-ai-survey-builder',
+      title: 'Zion AI Survey Builder',
+      description: 'Intelligent survey creation platform with AI-powered question suggestions and analytics',
+      price: '$59/month',
+      originalPrice: '$89/month',
+      features: [
+        'AI question suggestions',
+        'Survey templates',
+        'Response analytics',
+        'A/B testing',
+        'Multi-channel distribution',
+        'Real-time results',
+        'Custom branding',
+        'Integration APIs'
+      ],
+      icon: CheckSquare,
+      color: 'from-violet-500 to-purple-500',
+      category: 'Survey Tools',
+      rating: 4.5,
+      reviews: 134,
+      popular: false
+    },
+    {
+      id: 'zion-ai-accounting-assistant',
+      title: 'Zion AI Accounting Assistant',
+      description: 'AI-powered accounting platform with automated bookkeeping and financial insights',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: [
+        'Automated bookkeeping',
+        'Expense categorization',
+        'Invoice processing',
+        'Financial reporting',
+        'Tax preparation',
+        'Bank reconciliation',
+        'Compliance monitoring',
+        'Multi-currency support'
+      ],
+      icon: DollarSign,
+      color: 'from-green-500 to-emerald-500',
+      category: 'Accounting',
+      rating: 4.8,
+      reviews: 167,
+      popular: true
+    },
+    {
+      id: 'zion-ai-recruitment-pro',
+      title: 'Zion AI Recruitment Pro',
+      description: 'Intelligent recruitment platform with AI-powered candidate screening and matching',
+      price: '$179/month',
+      originalPrice: '$249/month',
+      features: [
+        'Resume screening',
+        'Candidate matching',
+        'Interview scheduling',
+        'Skill assessment',
+        'Background checks',
+        'Onboarding automation',
+        'Analytics dashboard',
+        'Integration with ATS'
+      ],
+      icon: Users,
+      color: 'from-blue-500 to-indigo-500',
+      category: 'HR & Recruitment',
+      rating: 4.7,
+      reviews: 145,
+      popular: false
+    },
+    {
+      id: 'zion-ai-content-moderation',
+      title: 'Zion AI Content Moderation',
+      description: 'Automated content moderation platform with AI-powered detection and filtering',
+      price: '$129/month',
+      originalPrice: '$179/month',
+      features: [
+        'Content filtering',
+        'Spam detection',
+        'Inappropriate content detection',
+        'Multi-language support',
+        'Custom rules',
+        'Real-time moderation',
+        'Analytics dashboard',
+        'API integration'
+      ],
+      icon: Shield,
+      color: 'from-red-500 to-pink-500',
+      category: 'Content Moderation',
+      rating: 4.6,
+      reviews: 98,
+      popular: false
+    },
+    {
+      id: 'zion-ai-predictive-maintenance',
+      title: 'Zion AI Predictive Maintenance',
+      description: 'AI-powered predictive maintenance platform for equipment and machinery monitoring',
+      price: '$299/month',
+      originalPrice: '$399/month',
+      features: [
+        'Equipment monitoring',
+        'Failure prediction',
+        'Maintenance scheduling',
+        'Performance analytics',
+        'Alert system',
+        'Cost optimization',
+        'Integration with IoT',
+        'Custom dashboards'
+      ],
+      icon: Settings,
+      color: 'from-orange-500 to-yellow-500',
+      category: 'Industrial IoT',
+      rating: 4.8,
+      reviews: 76,
+      popular: false
+    },
+    {
+      id: 'zion-ai-energy-manager',
+      title: 'Zion AI Energy Manager',
+      description: 'Smart energy management platform with AI-powered optimization and monitoring',
+      price: '$199/month',
+      originalPrice: '$279/month',
+      features: [
+        'Energy consumption monitoring',
+        'Cost optimization',
+        'Demand forecasting',
+        'Renewable energy integration',
+        'Carbon footprint tracking',
+        'Smart grid integration',
+        'Real-time alerts',
+        'Custom reporting'
+      ],
+      icon: Zap,
+      color: 'from-yellow-500 to-orange-500',
+      category: 'Energy Management',
+      rating: 4.7,
+      reviews: 89,
+      popular: false
+    },
+    {
+      id: 'zion-ai-supply-chain-optimizer',
+      title: 'Zion AI Supply Chain Optimizer',
+      description: 'AI-powered supply chain optimization with demand forecasting and logistics management',
+      price: '$249/month',
+      originalPrice: '$349/month',
+      features: [
+        'Demand forecasting',
+        'Inventory optimization',
+        'Route optimization',
+        'Supplier management',
+        'Risk assessment',
+        'Cost analysis',
+        'Real-time tracking',
+        'Integration APIs'
+      ],
+      icon: Package,
+      color: 'from-cyan-500 to-blue-500',
+      category: 'Supply Chain',
+      rating: 4.8,
+      reviews: 112,
+      popular: false
+    },
+    {
+      id: 'zion-ai-fraud-detector',
+      title: 'Zion AI Fraud Detector',
+      description: 'Advanced fraud detection platform with machine learning and real-time monitoring',
+      price: '$179/month',
+      originalPrice: '$249/month',
+      features: [
+        'Real-time fraud detection',
+        'Machine learning models',
+        'Transaction monitoring',
+        'Risk scoring',
+        'Alert system',
+        'Custom rules',
+        'Compliance reporting',
+        'API integration'
+      ],
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      category: 'Fraud Prevention',
+      rating: 4.9,
+      reviews: 156,
+      popular: true
+    },
+    {
+      id: 'zion-ai-customer-service-pro',
+      title: 'Zion AI Customer Service Pro',
+      description: 'Comprehensive customer service platform with AI-powered automation and analytics',
+      price: '$159/month',
+      originalPrice: '$219/month',
+      features: [
+        'Multi-channel support',
+        'AI-powered responses',
+        'Ticket management',
+        'Customer analytics',
+        'Knowledge base',
+        'Escalation management',
+        'Performance metrics',
+        'Integration APIs'
+      ],
+      icon: MessageCircle,
+      color: 'from-green-500 to-teal-500',
+      category: 'Customer Service',
+      rating: 4.7,
+      reviews: 189,
+      popular: false
+    },
+    {
+      id: 'zion-ai-marketing-automation',
+      title: 'Zion AI Marketing Automation',
+      description: 'Intelligent marketing automation platform with AI-powered campaigns and personalization',
+      price: '$139/month',
+      originalPrice: '$199/month',
+      features: [
+        'Campaign automation',
+        'Personalization engine',
+        'Lead scoring',
+        'Email marketing',
+        'Social media automation',
+        'A/B testing',
+        'Analytics dashboard',
+        'Integration APIs'
+      ],
+      icon: Target,
+      color: 'from-purple-500 to-pink-500',
+      category: 'Marketing Automation',
+      rating: 4.6,
+      reviews: 167,
+      popular: false
+    },
+    {
+      id: 'zion-ai-document-ai',
+      title: 'Zion AI Document AI',
+      description: 'Advanced document processing platform with AI-powered extraction and analysis',
+      price: '$119/month',
+      originalPrice: '$169/month',
+      features: [
+        'Document processing',
+        'Data extraction',
+        'OCR capabilities',
+        'Document classification',
+        'Version control',
+        'Search and retrieval',
+        'Workflow automation',
+        'API integration'
+      ],
+      icon: FileText,
+      color: 'from-indigo-500 to-purple-500',
+      category: 'Document Processing',
+      rating: 4.8,
+      reviews: 134,
+      popular: false
     }
   ];
 
-  const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance'];
+  const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance', 'Video Production', 'Translation', 'Development', 'Customer Analytics', 'Email Management', 'Meeting Management', 'SEO', 'Legal Tech', 'Survey Tools', 'Accounting', 'HR & Recruitment', 'Content Moderation', 'Industrial IoT', 'Energy Management', 'Supply Chain', 'Fraud Prevention', 'Customer Service', 'Marketing Automation', 'Document Processing'];
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredProducts = selectedCategory === 'All' 

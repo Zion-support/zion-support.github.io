@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart, Video } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,18 +64,18 @@ const Navigation: React.FC = () => {
   }, [microSaasOpen]);
 
   const aiServices = [
-    { name: 'AI Analytics', url: '/ai-analytics', icon: BarChart },
-    { name: 'AI Automation', url: '/ai-automation', icon: Workflow },
-    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', icon: MessageCircle },
+    { name: 'AI Analytics & BI', url: '/ai-analytics', icon: BarChart },
+    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', icon: MessageCircle },
     { name: 'AI Content Generation', url: '/ai-content-generation', icon: FileText },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield },
-    { name: 'AI CRM', url: '/ai-crm', icon: Users },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', icon: Database },
-    { name: 'AI Healthcare', url: '/ai-healthcare', icon: Heart },
     { name: 'AI Computer Vision', url: '/ai-computer-vision', icon: Eye },
     { name: 'AI Voice Solutions', url: '/ai-voice-solutions', icon: Mic },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', icon: Settings },
-    { name: 'AI Document Processing', url: '/ai-document-processing', icon: FileText }
+    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', icon: Workflow },
+    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', icon: Heart },
+    { name: 'AI Financial Services', url: '/ai-financial-services', icon: DollarSign },
+    { name: 'AI Document Processing', url: '/ai-document-processing', icon: FileText },
+    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', icon: TrendingUp },
+    { name: 'AI HR Solutions', url: '/ai-hr-solutions', icon: Users },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield }
   ];
 
   const itServices = [
@@ -100,12 +100,12 @@ const Navigation: React.FC = () => {
     { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', icon: Cloud },
     { name: 'Zion Content Studio', url: '/zion-content-studio', icon: FileText },
     { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', icon: Users },
-    { name: 'Zion Data Sync', url: '/zion-data-sync', icon: Database },
-    { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', icon: Target },
-    { name: 'Zion Project Master', url: '/zion-project-master', icon: CheckSquare },
-    { name: 'Zion Email Automation', url: '/zion-email-automation', icon: Mail },
-    { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', icon: Box },
-    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', icon: DollarSign }
+    { name: 'Zion AI Video Editor', url: '/zion-ai-video-editor', icon: Video },
+    { name: 'Zion AI Code Reviewer', url: '/zion-ai-code-reviewer', icon: Code },
+    { name: 'Zion AI Translator Pro', url: '/zion-ai-translator-pro', icon: Globe },
+    { name: 'Zion AI Fraud Detector', url: '/zion-ai-fraud-detector', icon: Shield },
+    { name: 'Zion AI Accounting Assistant', url: '/zion-ai-accounting-assistant', icon: DollarSign },
+    { name: 'Zion AI Marketing Automation', url: '/zion-ai-marketing-automation', icon: Target }
   ];
 
   return (
