@@ -38,13 +38,15 @@ export default function Navigation() {
   }
 
   const aiServices = [
-    { name: 'AI Content Generator', path: '/ai-content-generator' },
-    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
-    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-    { name: 'AI Email Assistant', path: '/ai-email-assistant' },
-    { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Automation', path: '/ai-automation' },
+    { name: 'AI Content Generation Pro', path: '/ai-content-generation-pro' },
+    { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
+    { name: 'AI Password Manager', path: '/ai-password-manager' },
+    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
+    { name: 'AI Data Analytics', path: '/ai-data-analytics' },
+    { name: 'AI Voice Assistant Pro', path: '/ai-voice-assistant-pro' },
     { name: 'AI 3D Generation', path: '/ai-3d-generation' },
+    { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro' },
     { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
   ];
 
@@ -59,21 +61,28 @@ export default function Navigation() {
 
   const fiveGServices = [
     { name: '5G Implementation', path: '/5g-implementation', icon: <Wifi className="w-4 h-4" /> },
+    { name: '5G Edge Computing', path: '/5g-edge-computing', icon: <Cpu className="w-4 h-4" /> },
     { name: '5G Network Infrastructure', path: '/5g-network-infrastructure', icon: <Server className="w-4 h-4" /> },
     { name: '5G IoT Solutions', path: '/5g-iot-solutions', icon: <Smartphone className="w-4 h-4" /> },
-    { name: '5G Edge Computing', path: '/5g-edge-computing', icon: <Cpu className="w-4 h-4" /> },
     { name: '5G Private Networks', path: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> },
     { name: '5G Mobile Applications', path: '/5g-mobile-applications', icon: <Smartphone className="w-4 h-4" /> }
   ];
 
+  const advancedITServices = [
+    { name: 'Quantum Computing', path: '/quantum-computing-solutions', icon: <Cpu className="w-4 h-4" /> },
+    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro', icon: <Globe className="w-4 h-4" /> },
+    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', icon: <Database className="w-4 h-4" /> }
+  ];
+
   const microSaasServices = [
-    { name: 'AI Task Manager', path: '/ai-task-manager' },
+    { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
     { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
     { name: 'AI Password Manager', path: '/ai-password-manager' },
-    { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
-    { name: 'AI Health Tracker', path: '/ai-health-tracker' },
-    { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
-    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
+    { name: 'AI Content Generation Pro', path: '/ai-content-generation-pro' },
+    { name: 'AI Data Analytics', path: '/ai-data-analytics' },
+    { name: 'AI Voice Assistant Pro', path: '/ai-voice-assistant-pro' },
+    { name: 'AI 3D Generation', path: '/ai-3d-generation' }
   ];
 
   return (
@@ -197,6 +206,32 @@ export default function Navigation() {
               {activeDropdown === '5g' && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
                   {fiveGServices.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={service.path}
+                      onClick={closeDropdown}
+                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                    >
+                      {service.icon}
+                      <span className="ml-3">{service.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Advanced IT Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('advanced')}
+                className="flex items-center text-white hover:text-cyan-400 transition-colors"
+              >
+                Advanced IT
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {activeDropdown === 'advanced' && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                  {advancedITServices.map((service, index) => (
                     <Link
                       key={index}
                       to={service.path}
@@ -353,6 +388,38 @@ export default function Navigation() {
                 {activeDropdown === '5g-mobile' && (
                   <div className="pl-6 space-y-1">
                     {fiveGServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm transition-colors"
+                        onClick={() => {
+                          setActiveDropdown(null)
+                          setIsOpen(false)
+                        }}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Advanced IT Services Mobile */}
+              <div>
+                <button
+                  onClick={() => toggleDropdown('advanced-mobile')}
+                  className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
+                >
+                  <div className="flex items-center">
+                    <Cpu className="w-4 h-4 mr-2" />
+                    <span>Advanced IT</span>
+                  </div>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                
+                {activeDropdown === 'advanced-mobile' && (
+                  <div className="pl-6 space-y-1">
+                    {advancedITServices.map((service) => (
                       <Link
                         key={service.name}
                         to={service.path}

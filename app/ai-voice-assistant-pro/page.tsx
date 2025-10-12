@@ -4,9 +4,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Cpu, 
-  Atom, 
-  Zap, 
+  MessageSquare, 
+  Mic, 
+  Headphones, 
   Globe, 
   CheckCircle, 
   ArrowRight, 
@@ -17,8 +17,8 @@ import {
   Phone,
   MapPin,
   Brain,
+  Cpu,
   BarChart3,
-  MessageSquare,
   FileText,
   Camera,
   CreditCard,
@@ -26,84 +26,89 @@ import {
   Target,
   Lock,
   Users,
-  TrendingUp
+  TrendingUp,
+  Zap
 } from 'lucide-react';
 
-export default function QuantumComputingSolutionsPage() {
+export default function AIVoiceAssistantProPage() {
   const features = [
     {
-      title: 'Quantum Algorithm Development',
-      description: 'Custom quantum algorithms for optimization, cryptography, and machine learning applications.',
-      icon: <Atom className="w-8 h-8 text-cyan-400" />,
-      benefits: ['Optimization problems', 'Cryptographic solutions', 'Quantum ML', 'Custom algorithms']
+      title: 'Natural Language Processing',
+      description: 'Advanced NLP engine that understands context, intent, and complex conversational patterns.',
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      benefits: ['Context awareness', 'Intent recognition', 'Multi-turn conversations', 'Emotion detection']
     },
     {
-      title: 'Quantum Simulation',
-      description: 'Advanced quantum simulation for molecular modeling, material science, and drug discovery.',
-      icon: <Cpu className="w-8 h-8 text-purple-400" />,
-      benefits: ['Molecular dynamics', 'Material properties', 'Drug interactions', 'Chemical reactions']
+      title: 'Multi-Platform Integration',
+      description: 'Seamlessly integrate with web, mobile, desktop, and IoT devices across all major platforms.',
+      icon: <Globe className="w-8 h-8 text-purple-400" />,
+      benefits: ['Web integration', 'Mobile SDKs', 'Desktop apps', 'IoT devices', 'API access']
     },
     {
-      title: 'Quantum Cryptography',
-      description: 'Unbreakable encryption using quantum key distribution and quantum random number generation.',
-      icon: <Shield className="w-8 h-8 text-green-400" />,
-      benefits: ['Quantum key distribution', 'Quantum random numbers', 'Secure communication', 'Post-quantum crypto']
+      title: 'Custom Voice Training',
+      description: 'Train the assistant with your specific domain knowledge and brand voice for personalized interactions.',
+      icon: <Mic className="w-8 h-8 text-green-400" />,
+      benefits: ['Custom training data', 'Brand voice adaptation', 'Domain expertise', 'Personality customization']
     },
     {
-      title: 'Research Collaboration',
-      description: 'Partnership with leading quantum research institutions and access to cutting-edge quantum hardware.',
-      icon: <Users className="w-8 h-8 text-yellow-400" />,
-      benefits: ['Research partnerships', 'Hardware access', 'Expert consultation', 'Academic collaboration']
+      title: 'Real-Time Analytics',
+      description: 'Comprehensive analytics dashboard with conversation insights, user behavior, and performance metrics.',
+      icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
+      benefits: ['Conversation analytics', 'User insights', 'Performance metrics', 'Custom reports']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Research',
-      price: '$999',
+      name: 'Starter',
+      price: '$79',
       period: '/month',
-      description: 'Perfect for research institutions and universities',
+      description: 'Perfect for small businesses and startups',
       features: [
-        '10 quantum simulations/month',
-        'Basic algorithm development',
-        'Research collaboration',
+        '1,000 conversations/month',
+        'Basic NLP engine',
+        'Web integration',
         'Email support',
-        'Basic documentation',
-        '1 research project'
+        'Basic analytics',
+        '1 custom voice profile',
+        'Standard response time'
       ],
       popular: false
     },
     {
-      name: 'Enterprise',
-      price: '$2,999',
+      name: 'Professional',
+      price: '$199',
       period: '/month',
-      description: 'Ideal for large corporations and government agencies',
+      description: 'Ideal for growing businesses and agencies',
       features: [
-        '50 quantum simulations/month',
-        'Advanced algorithm development',
-        'Priority hardware access',
-        'Dedicated support',
-        'Custom integrations',
-        '5 research projects',
+        '10,000 conversations/month',
+        'Advanced NLP engine',
+        'Multi-platform integration',
+        'Priority support',
+        'Advanced analytics',
+        '5 custom voice profiles',
         'API access',
-        'SLA guarantee'
+        'Custom integrations',
+        'Fast response time'
       ],
       popular: true
     },
     {
-      name: 'Custom',
-      price: 'Contact',
-      period: 'us',
-      description: 'For specialized quantum computing needs',
+      name: 'Enterprise',
+      price: '$499',
+      period: '/month',
+      description: 'For large organizations and enterprises',
       features: [
-        'Unlimited simulations',
-        'Custom quantum hardware',
-        'White-label solutions',
-        '24/7 support',
-        'Custom development',
-        'Unlimited projects',
-        'On-premise deployment',
-        'Custom training'
+        'Unlimited conversations',
+        'Premium NLP models',
+        'Full platform support',
+        'Dedicated support',
+        'Custom analytics',
+        'Unlimited voice profiles',
+        'White-label options',
+        'Custom training',
+        'SLA guarantee',
+        'On-premise deployment'
       ],
       popular: false
     }
@@ -111,51 +116,64 @@ export default function QuantumComputingSolutionsPage() {
 
   const testimonials = [
     {
-      name: 'Dr. Sarah Kim',
-      company: 'Quantum Research Institute',
-      content: 'Zion Tech Group\'s quantum computing solutions have accelerated our research by 10x. The custom algorithms are incredibly powerful.',
+      name: 'Alex Thompson',
+      company: 'Customer Service Director',
+      content: 'AI Voice Assistant Pro has transformed our customer service. The natural language understanding is incredible and our customers love the personalized experience.',
       rating: 5,
-      avatar: 'SK'
+      avatar: 'AT'
     },
     {
-      name: 'Prof. Michael Chen',
-      company: 'MIT Quantum Lab',
-      content: 'The quantum simulation capabilities are state-of-the-art. We\'ve made breakthrough discoveries in molecular modeling.',
+      name: 'Sarah Chen',
+      company: 'E-commerce Platform',
+      content: 'The multi-platform integration was seamless. We now have voice assistants across our web, mobile, and smart speaker platforms with consistent quality.',
       rating: 5,
-      avatar: 'MC'
+      avatar: 'SC'
     },
     {
-      name: 'Dr. Emily Rodriguez',
-      company: 'Pharmaceutical Research',
-      content: 'Quantum computing has revolutionized our drug discovery process. The molecular simulations are incredibly accurate and fast.',
+      name: 'Michael Rodriguez',
+      company: 'Healthcare Provider',
+      content: 'The custom voice training feature allowed us to create a specialized medical assistant that understands our terminology and provides accurate responses.',
       rating: 5,
-      avatar: 'ER'
+      avatar: 'MR'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Quantum Computing Solutions - Advanced Quantum Algorithms & Research | Zion Tech Group</title>
-        <meta name="description" content="Cutting-edge quantum computing solutions with custom algorithms, quantum simulation, and research collaboration. Contact us for quantum innovation." />
-        <meta name="keywords" content="quantum computing, quantum algorithms, quantum simulation, quantum cryptography, quantum research" />
+        <title>AI Voice Assistant Pro - Enterprise Voice AI & NLP Platform | Zion Tech Group</title>
+        <meta name="description" content="Advanced AI voice assistant with natural language processing, multi-platform integration, and custom voice training. Start your free trial today!" />
+        <meta name="keywords" content="AI voice assistant, natural language processing, voice AI, conversational AI, voice recognition, NLP" />
         <meta name="robots" content="index, follow" />
         
         {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Quantum Computing Solutions - Advanced Quantum Algorithms & Research" />
-        <meta property="og:description" content="Cutting-edge quantum computing solutions with custom algorithms and quantum simulation." />
+        <meta property="og:title" content="AI Voice Assistant Pro - Enterprise Voice AI & NLP Platform" />
+        <meta property="og:description" content="Advanced AI voice assistant with natural language processing and multi-platform integration." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/quantum-computing-solutions" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-quantum-computing.jpg" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-voice-assistant-pro" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-ai-voice-assistant-pro.jpg" />
         
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "name": "Quantum Computing Solutions",
-            "description": "Cutting-edge quantum computing solutions with custom algorithms and quantum simulation",
-            "url": "https://ziontechgroup.com/quantum-computing-solutions",
+            "@type": "SoftwareApplication",
+            "name": "AI Voice Assistant Pro",
+            "description": "AI voice assistant with natural language processing and multi-platform integration",
+            "url": "https://ziontechgroup.com/ai-voice-assistant-pro",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web, iOS, Android, Windows, macOS",
+            "offers": {
+              "@type": "Offer",
+              "price": "79",
+              "priceCurrency": "USD",
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "price": "79",
+                "priceCurrency": "USD",
+                "unitText": "MONTH"
+              }
+            },
             "provider": {
               "@type": "Organization",
               "name": "Zion Tech Group",
@@ -170,49 +188,49 @@ export default function QuantumComputingSolutionsPage() {
         <section className="pt-20 px-4 py-16 sm:py-20 lg:py-24">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-2xl mb-8">
-                <Cpu className="w-10 h-10 text-white" />
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl mb-8">
+                <MessageSquare className="w-10 h-10 text-white" />
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-                Quantum Computing Solutions
+                AI Voice Assistant Pro
               </h1>
               <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-                Cutting-edge quantum computing services with custom algorithms, 
-                quantum simulation, and research collaboration for breakthrough innovation.
+                Enterprise-grade AI voice assistant with advanced natural language processing, 
+                multi-platform integration, and custom voice training capabilities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link 
                   to="/contact" 
-                  className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-teal-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
+                  className="bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
-                  Contact Us
+                  Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link 
                   to="#demo" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Learn More
+                  Watch Demo
                 </Link>
               </div>
               
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-teal-400 mb-2">50+</div>
-                  <div className="text-gray-300">Quantum Algorithms</div>
+                  <div className="text-3xl font-bold text-pink-400 mb-2">50K+</div>
+                  <div className="text-gray-300">Conversations/Day</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">1000x</div>
-                  <div className="text-gray-300">Faster Processing</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">98%</div>
                   <div className="text-gray-300">Accuracy Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2">4.9/5</div>
-                  <div className="text-gray-300">Research Rating</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">15+</div>
+                  <div className="text-gray-300">Languages</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-yellow-400 mb-2">4.8/5</div>
+                  <div className="text-gray-300">User Rating</div>
                 </div>
               </div>
             </div>
@@ -223,9 +241,9 @@ export default function QuantumComputingSolutionsPage() {
         <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Quantum Capabilities</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Advanced Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced quantum computing solutions for research, industry, and innovation
+                Everything you need to build intelligent voice experiences across all platforms
               </p>
             </div>
             
@@ -253,20 +271,20 @@ export default function QuantumComputingSolutionsPage() {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Research & Enterprise Plans</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">Flexible Pricing Plans</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the quantum computing solution that fits your research and business needs
+                Choose the plan that fits your voice AI needs. All plans include a 14-day free trial.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                  plan.popular ? 'border-teal-500/50 ring-2 ring-teal-500/20' : 'border-white/20'
+                  plan.popular ? 'border-pink-500/50 ring-2 ring-pink-500/20' : 'border-white/20'
                 } hover:bg-white/15 transition-all duration-300 relative`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -294,11 +312,11 @@ export default function QuantumComputingSolutionsPage() {
                     to="/contact" 
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
                       plan.popular 
-                        ? 'bg-gradient-to-r from-teal-600 to-cyan-600 text-white hover:from-teal-700 hover:to-cyan-700' 
+                        ? 'bg-gradient-to-r from-pink-600 to-purple-600 text-white hover:from-pink-700 hover:to-purple-700' 
                         : 'border-2 border-white text-white hover:bg-white/10'
                     }`}
                   >
-                    Contact Us
+                    Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
@@ -311,9 +329,9 @@ export default function QuantumComputingSolutionsPage() {
         <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">What Researchers Say</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">What Our Users Say</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Leading researchers and institutions trust our quantum computing solutions
+                Join thousands of businesses using AI Voice Assistant Pro
               </p>
             </div>
             
@@ -321,7 +339,7 @@ export default function QuantumComputingSolutionsPage() {
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
                       {testimonial.avatar}
                     </div>
                     <div>
@@ -349,31 +367,31 @@ export default function QuantumComputingSolutionsPage() {
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <div className="bg-gradient-to-r from-teal-600 to-cyan-600 rounded-3xl p-8 sm:p-12">
+              <div className="bg-gradient-to-r from-pink-600 to-purple-600 rounded-3xl p-8 sm:p-12">
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-                  Ready to Explore Quantum Computing?
+                  Ready to Build Intelligent Voice Experiences?
                 </h2>
                 <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-                  Join leading researchers and organizations using our quantum computing solutions. 
-                  Contact us to discuss your quantum computing needs.
+                  Join 5,000+ businesses using AI Voice Assistant Pro to create engaging voice experiences. 
+                  Start your free trial today - no credit card required.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     to="/contact" 
-                    className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+                    className="bg-white text-pink-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
                   >
-                    Contact Us
+                    Start Free Trial
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                   <Link 
                     to="#demo" 
                     className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                   >
-                    Learn More
+                    Watch Demo
                   </Link>
                 </div>
                 <div className="mt-8 text-white/80 text-sm">
-                  <p>✓ Free consultation • ✓ Research collaboration • ✓ Custom solutions</p>
+                  <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
                 </div>
               </div>
             </div>

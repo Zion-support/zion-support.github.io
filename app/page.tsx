@@ -3,6 +3,8 @@
 import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import FuturisticBackground from './components/FuturisticBackground';
+import { NeonCard, NeonText, NeonButton } from './components/NeonEffects';
 import { 
   Brain, 
   Cloud, 
@@ -30,7 +32,8 @@ import {
   Github,
   Linkedin,
   Twitter,
-  Loader2
+  Loader2,
+  DollarSign
 } from 'lucide-react';
 
 // Note: Lazy loading components will be implemented in future iterations
@@ -49,46 +52,112 @@ export default function HomePage() {
 
   const services = [
     {
-      title: 'AI Content Generation',
-      description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
+      title: 'AI Smart Calendar',
+      description: 'Revolutionary AI-powered calendar management with natural language processing and intelligent scheduling.',
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      link: '/ai-content-generation',
-      features: ['Automated content creation', 'SEO optimization', 'Multi-language support']
+      link: '/ai-smart-calendar',
+      features: ['AI-powered scheduling', 'Natural language processing', 'Team collaboration', 'Analytics & insights'],
+      price: 'From $29/month',
+      category: 'Micro SAAS'
     },
     {
-      title: 'IT Services & Solutions',
-      description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      link: '/it-services',
-      features: ['Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics']
+      title: 'AI Expense Tracker',
+      description: 'Smart financial management with AI-powered receipt scanning, budget optimization, and analytics.',
+      icon: <DollarSign className="w-8 h-8 text-green-400" />,
+      link: '/ai-expense-tracker',
+      features: ['AI receipt scanning', 'Budget management', 'Real-time analytics', 'Multi-currency support'],
+      price: 'From $9.99/month',
+      category: 'Micro SAAS'
     },
     {
-      title: 'Cloud Services',
-      description: 'Scalable, secure, and reliable cloud infrastructure solutions for your business.',
-      icon: <Cloud className="w-8 h-8 text-blue-400" />,
-      link: '/cloud-services',
-      features: ['Scalable infrastructure', '99.9% uptime', 'Global CDN']
+      title: 'AI Password Manager',
+      description: 'Advanced password security with zero-knowledge architecture, biometric authentication, and AI monitoring.',
+      icon: <Lock className="w-8 h-8 text-red-400" />,
+      link: '/ai-password-manager',
+      features: ['AI password generation', 'Zero-knowledge architecture', 'Biometric authentication', 'Security monitoring'],
+      price: 'From $4.99/month',
+      category: 'Micro SAAS'
     },
     {
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with our comprehensive cybersecurity services and monitoring.',
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      link: '/cybersecurity',
-      features: ['Threat detection', 'Security audits', 'Compliance management']
+      title: 'AI Content Generation Pro',
+      description: 'Transform your content strategy with advanced AI-powered content generation and optimization tools.',
+      icon: <FileText className="w-8 h-8 text-purple-400" />,
+      link: '/ai-content-generation-pro',
+      features: ['Automated content creation', 'SEO optimization', 'Multi-language support', 'Brand voice training'],
+      price: 'From $49/month',
+      category: 'AI Services'
     },
     {
-      title: '5G Implementation',
-      description: 'Leverage the power of 5G technology for ultra-fast connectivity and IoT solutions.',
+      title: 'AI Cybersecurity Suite',
+      description: 'Comprehensive AI-powered cybersecurity solutions with threat detection and automated response.',
+      icon: <Shield className="w-8 h-8 text-orange-400" />,
+      link: '/ai-cybersecurity-suite',
+      features: ['Threat detection', 'Automated response', 'Security audits', 'Compliance management'],
+      price: 'From $199/month',
+      category: 'AI Services'
+    },
+    {
+      title: '5G Edge Computing',
+      description: 'Ultra-fast 5G edge computing solutions for IoT, real-time applications, and autonomous systems.',
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      link: '/5g-implementation',
-      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing']
+      link: '/5g-edge-computing',
+      features: ['Ultra-low latency', 'IoT connectivity', 'Real-time processing', 'Autonomous systems'],
+      price: 'From $299/month',
+      category: '5G Solutions'
     },
     {
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics platform.',
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      link: '/data-analytics',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards']
+      title: 'AI Data Analytics Platform',
+      description: 'Advanced AI-powered analytics platform with predictive modeling and real-time insights.',
+      icon: <BarChart3 className="w-8 h-8 text-blue-400" />,
+      link: '/ai-data-analytics',
+      features: ['Predictive modeling', 'Real-time analytics', 'Custom dashboards', 'Machine learning insights'],
+      price: 'From $99/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'AI Voice Assistant Pro',
+      description: 'Enterprise-grade AI voice assistant with natural language processing and multi-platform integration.',
+      icon: <MessageSquare className="w-8 h-8 text-pink-400" />,
+      link: '/ai-voice-assistant-pro',
+      features: ['Natural language processing', 'Multi-platform support', 'Custom voice training', 'API integration'],
+      price: 'From $79/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'AI 3D Generation Studio',
+      description: 'Revolutionary AI-powered 3D content creation with automated modeling and rendering.',
+      icon: <Camera className="w-8 h-8 text-indigo-400" />,
+      link: '/ai-3d-generation',
+      features: ['Automated 3D modeling', 'AI rendering', 'Texture generation', 'Animation creation'],
+      price: 'From $149/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'Quantum Computing Solutions',
+      description: 'Cutting-edge quantum computing services for complex problem solving and optimization.',
+      icon: <Cpu className="w-8 h-8 text-teal-400" />,
+      link: '/quantum-computing-solutions',
+      features: ['Quantum algorithms', 'Optimization problems', 'Cryptography', 'Research collaboration'],
+      price: 'From $999/month',
+      category: 'Advanced IT'
+    },
+    {
+      title: 'AI Climate Solutions Pro',
+      description: 'AI-powered climate monitoring and prediction platform for environmental sustainability.',
+      icon: <Globe className="w-8 h-8 text-emerald-400" />,
+      link: '/ai-climate-solutions-pro',
+      features: ['Climate prediction', 'Carbon tracking', 'Sustainability analytics', 'Environmental monitoring'],
+      price: 'From $199/month',
+      category: 'AI Services'
+    },
+    {
+      title: 'AI Drug Discovery Pro',
+      description: 'Advanced AI platform for pharmaceutical research and drug discovery acceleration.',
+      icon: <Database className="w-8 h-8 text-violet-400" />,
+      link: '/ai-drug-discovery-pro',
+      features: ['Molecular modeling', 'Drug interaction analysis', 'Clinical trial optimization', 'Research automation'],
+      price: 'From $2,999/month',
+      category: 'AI Services'
     }
   ];
 
@@ -204,34 +273,38 @@ export default function HomePage() {
         </script>
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <FuturisticBackground />
+        
         {/* Hero Section */}
-        <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20" role="banner" aria-labelledby="hero-title">
+        <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20 relative z-10" role="banner" aria-labelledby="hero-title">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h1 id="hero-title" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+              <NeonText size="6xl" glowColor="cyan" className="mb-4 sm:mb-6">
                 Advanced AI & IT Solutions
-              </h1>
+              </NeonText>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
                 Transform your business with cutting-edge artificial intelligence, 5G implementation, and enterprise-grade IT solutions. 
                 Join 1,200+ satisfied clients with 99.8% satisfaction rate.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/about" 
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-blue-500/50"
-                  aria-label="Learn more about our services and company"
+                <NeonButton 
+                  variant="primary" 
+                  size="lg"
+                  onClick={() => window.location.href = '/about'}
+                  className="flex items-center justify-center"
                 >
                   Learn More
                   <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
-                </Link>
-                <Link 
-                  to="/contact" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors focus:outline-none focus:ring-4 focus:ring-white/50"
-                  aria-label="Get started with our services"
+                </NeonButton>
+                <NeonButton 
+                  variant="secondary" 
+                  size="lg"
+                  onClick={() => window.location.href = '/contact'}
+                  className="flex items-center justify-center"
                 >
                   Get Started
-                </Link>
+                </NeonButton>
               </div>
             </div>
 
@@ -264,18 +337,20 @@ export default function HomePage() {
         </section>
 
         {/* Features Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4" role="region" aria-labelledby="services-title">
+        <section className="py-12 sm:py-16 lg:py-20 px-4 relative z-10" role="region" aria-labelledby="services-title">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 id="services-title" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Our Core Services</h2>
+              <NeonText size="4xl" glowColor="purple" className="mb-4 px-4">
+                Our Core Services
+              </NeonText>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
                 Comprehensive technology solutions designed to accelerate your digital transformation
               </p>
             </div>
             
             <Suspense fallback={
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
-                {[...Array(6)].map((_, index) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
+                {[...Array(12)].map((_, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 animate-pulse">
                     <div className="h-8 w-8 bg-gray-600 rounded mb-4"></div>
                     <div className="h-6 bg-gray-600 rounded mb-4"></div>
@@ -290,30 +365,52 @@ export default function HomePage() {
                 ))}
               </div>
             }>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
                 {services.map((service, index) => (
-                  <Link 
+                  <NeonCard 
                     key={index} 
-                    to={service.link} 
-                    className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
-                    aria-label={`Learn more about ${service.title}`}
+                    glowColor={service.category === 'Micro SAAS' ? 'cyan' : service.category === 'AI Services' ? 'purple' : service.category === '5G Solutions' ? 'yellow' : 'green'}
+                    hover={true}
+                    className="group cursor-pointer"
+                    onClick={() => window.location.href = service.link}
                   >
-                    <div className="mb-4 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">{service.icon}</div>
-                    <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{service.title}</h3>
-                    <p className="text-gray-300 mb-6">{service.description}</p>
-                    <ul className="space-y-2 mb-6" role="list">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" aria-hidden="true" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="mt-6 flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
+                          {service.icon}
+                        </div>
+                        <span className="text-xs px-2 py-1 bg-white/10 rounded-full text-gray-300">
+                          {service.category}
+                        </span>
+                      </div>
+                      
+                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                        {service.title}
+                      </h3>
+                      
+                      <p className="text-gray-300 mb-4 text-sm">
+                        {service.description}
+                      </p>
+                      
+                      <div className="mb-4">
+                        <span className="text-lg font-bold text-cyan-400">{service.price}</span>
+                      </div>
+                      
+                      <ul className="space-y-2 mb-6" role="list">
+                        {service.features.slice(0, 3).map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" aria-hidden="true" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                      
+                      <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+                      </div>
                     </div>
-                  </Link>
+                  </NeonCard>
                 ))}
               </div>
             </Suspense>
@@ -321,10 +418,12 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5" role="region" aria-labelledby="testimonials-title">
+        <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5 relative z-10" role="region" aria-labelledby="testimonials-title">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 id="testimonials-title" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">What Our Clients Say</h2>
+              <NeonText size="4xl" glowColor="pink" className="mb-4 px-4">
+                What Our Clients Say
+              </NeonText>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
                 Don't just take our word for it - hear from businesses that have transformed with our solutions
               </p>
@@ -372,34 +471,38 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4" role="region" aria-labelledby="cta-title">
+        <section className="py-12 sm:py-16 lg:py-20 px-4 relative z-10" role="region" aria-labelledby="cta-title">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
-                <h2 id="cta-title" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Transform Your Business?</h2>
+              <NeonCard glowColor="purple" className="bg-gradient-to-r from-purple-600 to-pink-600 p-6 sm:p-8 lg:p-12">
+                <NeonText size="4xl" glowColor="white" className="mb-4 px-4">
+                  Ready to Transform Your Business?
+                </NeonText>
                 <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
                   Let's discuss how our AI and IT solutions can drive your success. Join 1,200+ satisfied clients today.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
-                    to="/contact" 
-                    className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors focus:outline-none focus:ring-4 focus:ring-white/50"
-                    aria-label="Get started with our services today"
+                  <NeonButton 
+                    variant="accent" 
+                    size="lg"
+                    onClick={() => window.location.href = '/contact'}
+                    className="bg-white text-purple-600 hover:bg-gray-100"
                   >
                     Get Started Today
-                  </Link>
-                  <Link 
-                    to="/about" 
-                    className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors focus:outline-none focus:ring-4 focus:ring-white/50"
-                    aria-label="Learn more about our company and services"
+                  </NeonButton>
+                  <NeonButton 
+                    variant="secondary" 
+                    size="lg"
+                    onClick={() => window.location.href = '/about'}
+                    className="border-2 border-white text-white hover:bg-white/10"
                   >
                     Learn More
-                  </Link>
+                  </NeonButton>
                 </div>
                 <div className="mt-8 text-white/80 text-sm">
                   <p>✓ Free consultation • ✓ 24/7 support • ✓ 99.8% satisfaction rate</p>
                 </div>
-              </div>
+              </NeonCard>
             </div>
           </div>
         </section>
