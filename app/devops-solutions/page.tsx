@@ -1,102 +1,98 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Shield, Lock, Eye, AlertTriangle, Zap, Brain, Globe } from 'lucide-react';
+import { CheckCircle, ArrowRight, Code, Cloud, Shield, Database, Zap, Settings } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function CybersecurityPage() {
+export default function DevOpsSolutionsPage() {
   const services = [
     {
-      icon: <Shield className="w-8 h-8 text-blue-500" />,
-      title: 'Security Assessment',
-      description: 'Comprehensive security audits and vulnerability assessments to identify and address potential threats.',
-      features: ['Penetration testing', 'Vulnerability scanning', 'Security audits', 'Risk assessment']
+      icon: <Code className="w-8 h-8 text-blue-500" />,
+      title: 'CI/CD Pipeline Setup',
+      description: 'Automated continuous integration and deployment pipelines for faster, more reliable releases.',
+      features: ['Automated testing', 'Code quality checks', 'Deployment automation', 'Rollback capabilities']
     },
     {
-      icon: <Lock className="w-8 h-8 text-green-500" />,
-      title: 'Data Protection',
-      description: 'Advanced encryption and data protection solutions to safeguard your sensitive information.',
-      features: ['Data encryption', 'Access controls', 'Backup solutions', 'Compliance management']
+      icon: <Cloud className="w-8 h-8 text-green-500" />,
+      title: 'Infrastructure as Code',
+      description: 'Manage your infrastructure through code with tools like Terraform and CloudFormation.',
+      features: ['Terraform automation', 'CloudFormation templates', 'Version control', 'Environment consistency']
     },
     {
-      icon: <Eye className="w-8 h-8 text-red-500" />,
-      title: 'Threat Monitoring',
-      description: '24/7 threat detection and monitoring to protect your systems from cyber attacks.',
-      features: ['Real-time monitoring', 'Threat detection', 'Incident response', 'Security alerts']
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'Security Integration',
+      description: 'Integrate security practices into your development and deployment processes.',
+      features: ['Security scanning', 'Compliance checks', 'Vulnerability management', 'Access controls']
     },
     {
-      icon: <AlertTriangle className="w-8 h-8 text-yellow-500" />,
-      title: 'Incident Response',
-      description: 'Rapid response and recovery services to minimize damage from security incidents.',
-      features: ['Emergency response', 'Forensic analysis', 'Recovery planning', 'Post-incident review']
+      icon: <Database className="w-8 h-8 text-purple-500" />,
+      title: 'Database Management',
+      description: 'Automated database migrations, backups, and monitoring solutions.',
+      features: ['Automated migrations', 'Backup strategies', 'Performance monitoring', 'Data integrity']
     },
     {
-      icon: <Zap className="w-8 h-8 text-purple-500" />,
-      title: 'Security Automation',
-      description: 'Automated security processes and AI-powered threat detection for enhanced protection.',
-      features: ['Automated monitoring', 'AI threat detection', 'Security orchestration', 'Workflow automation']
+      icon: <Zap className="w-8 h-8 text-yellow-500" />,
+      title: 'Performance Optimization',
+      description: 'Optimize application performance through monitoring and automated scaling.',
+      features: ['Performance monitoring', 'Auto-scaling', 'Load balancing', 'Caching strategies']
     },
     {
-      icon: <Brain className="w-8 h-8 text-indigo-500" />,
-      title: 'AI Security',
-      description: 'Advanced AI-powered security solutions for next-generation threat protection.',
-      features: ['Machine learning detection', 'Behavioral analysis', 'Predictive security', 'AI threat hunting']
+      icon: <Settings className="w-8 h-8 text-indigo-500" />,
+      title: 'Configuration Management',
+      description: 'Centralized configuration management for consistent deployments across environments.',
+      features: ['Environment management', 'Secret management', 'Configuration validation', 'Change tracking']
     }
   ];
 
   const benefits = [
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Comprehensive Protection',
-      description: 'Multi-layered security approach covering all aspects of your digital infrastructure.'
+      title: 'Faster Deployments',
+      description: 'Reduce deployment time from hours to minutes with automated pipelines.'
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: '24/7 Monitoring',
-      description: 'Round-the-clock security monitoring and threat detection to keep your systems safe.'
+      title: 'Improved Reliability',
+      description: 'Consistent, repeatable deployments reduce human error and system downtime.'
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Rapid Response',
-      description: 'Quick incident response and recovery to minimize downtime and data loss.'
+      title: 'Enhanced Security',
+      description: 'Built-in security practices protect your applications and data throughout the lifecycle.'
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Compliance Ready',
-      description: 'Ensure compliance with industry standards and regulatory requirements.'
+      title: 'Cost Optimization',
+      description: 'Automated scaling and resource management help optimize cloud costs.'
     }
-  ];
-
-  const complianceStandards = [
-    'SOC 2', 'ISO 27001', 'GDPR', 'HIPAA', 'PCI DSS', 'NIST', 'CIS Controls', 'COBIT'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Cybersecurity Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cybersecurity services including threat monitoring, data protection, and incident response solutions." />
-        <meta name="keywords" content="cybersecurity, data protection, threat monitoring, security audit, incident response" />
+        <title>DevOps Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive DevOps solutions including CI/CD pipelines, infrastructure as code, and automated deployment strategies." />
+        <meta name="keywords" content="DevOps, CI/CD, infrastructure as code, automation, deployment, cloud" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Advanced
+            DevOps Solutions for
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              {' '}Cybersecurity Solutions
+              {' '}Modern Applications
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Protect your business with our comprehensive cybersecurity services. From threat detection 
-            to incident response, we provide enterprise-grade security solutions tailored to your needs.
+            Streamline your development and deployment processes with our comprehensive DevOps solutions. 
+            From CI/CD pipelines to infrastructure automation, we help you deliver software faster and more reliably.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
             >
-              Get Security Assessment
+              Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
@@ -114,10 +110,10 @@ export default function CybersecurityPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Our Cybersecurity Services
+              Our DevOps Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive security solutions to protect your digital assets
+              Comprehensive DevOps solutions tailored to your development needs
             </p>
           </div>
           
@@ -143,37 +139,15 @@ export default function CybersecurityPage() {
         </div>
       </section>
 
-      {/* Compliance Section */}
+      {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Compliance & Standards
+              Why Choose Our DevOps Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We help you meet industry standards and regulatory requirements
-            </p>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-4">
-            {complianceStandards.map((standard, index) => (
-              <span key={index} className="bg-white/10 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/20 transition-colors">
-                {standard}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Why Choose Our Cybersecurity Services?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Protect your business with industry-leading security expertise
+              Transform your development process with proven DevOps practices
             </p>
           </div>
           
@@ -192,20 +166,20 @@ export default function CybersecurityPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Secure Your Business?
+            Ready to Transform Your Development Process?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Don't wait for a security breach. Let our experts help you build a robust cybersecurity strategy.
+            Let our DevOps experts help you build faster, more reliable software delivery pipelines.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
             >
-              Get Security Assessment
+              Start Your DevOps Journey
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link 

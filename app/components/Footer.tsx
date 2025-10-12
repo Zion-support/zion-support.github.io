@@ -50,15 +50,15 @@ export default function Footer() {
               Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">Twitter</span>
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">LinkedIn</span>
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">GitHub</span>
                 <Github className="w-5 h-5" />
               </a>
@@ -138,15 +138,15 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center">
               <Mail className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">contact@ziontech.com</span>
+              <span className="text-gray-400">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
               <Phone className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">+1 (555) 123-4567</span>
+              <span className="text-gray-400">+1 (302) 464-0950</span>
             </div>
             <div className="flex items-center">
               <MapPin className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">San Francisco, CA</span>
+              <span className="text-gray-400">364 E Main St STE 1008, Middletown, DE 19709</span>
             </div>
           </div>
         </div>
