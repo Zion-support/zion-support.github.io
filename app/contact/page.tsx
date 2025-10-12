@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 <<<<<<< HEAD
@@ -86,6 +87,12 @@ export default function ContactPage() {
     { value: 'high', label: 'High - Within 1 month', color: 'text-orange-400' },
     { value: 'urgent', label: 'Urgent - ASAP', color: 'text-red-400' }
   ]
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import ContactForm from '../components/ContactForm';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
   const contactInfo = [
     {

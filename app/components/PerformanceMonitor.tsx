@@ -133,12 +133,57 @@ const PerformanceMonitor: React.FC = () => {
         }
       })
 
+<<<<<<< HEAD
       try {
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] })
       } catch (e) {
         // Fallback for browsers that don't support all entry types
         observer.observe({ entryTypes: ['navigation'] })
       }
+=======
+      // Monitor First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          console.log('FID:', entry.processingStart - entry.startTime);
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'web_vitals', {
+              name: 'FID',
+              value: Math.round(entry.processingStart - entry.startTime),
+              event_category: 'Web Vitals'
+            });
+          }
+        }
+      });
+      
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Monitor Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
+            clsValue += (entry as PerformanceEntry & { value: number }).value;
+          }
+        }
+        console.log('CLS:', clsValue);
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'web_vitals', {
+            name: 'CLS',
+            value: Math.round(clsValue * 1000),
+            event_category: 'Web Vitals'
+          });
+        }
+      });
+      
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      // Cleanup observers
+      return () => {
+        observer.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
+>>>>>>> cursor/fix-errors-and-merge-to-main-33db
     }
 
     // Start measuring after a short delay to ensure page is loaded

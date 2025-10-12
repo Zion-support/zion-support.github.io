@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
@@ -38,6 +39,12 @@ import {
   Zap
 } from 'lucide-react';
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
+=======
+import React from 'react';
+import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Settings } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
 export default function MicroSAASServicesPage() {
   const microSaasServices = [

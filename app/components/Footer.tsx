@@ -149,10 +149,33 @@ const Footer: React.FC = memo(() => {
     { name: 'Contact Us', path: '/contact' },
     { name: 'Help Center', path: '/help' },
     { name: 'Documentation', path: '/docs' },
+<<<<<<< HEAD
     { name: 'Support', path: '/support' },
     { name: 'Status', path: '/status' },
     { name: 'SLA', path: '/sla' }
   ]
+=======
+    { name: 'API Reference', path: '/api-docs' },
+    { name: 'Status Page', path: '/status' },
+    { name: 'Contact Support', path: '/contact' },
+    { name: 'Community', path: '/community' }
+  ]
+
+  const legalPages = [
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' }
+  ]
+
+  // const quickLinks = [
+  //   { name: 'Home', path: '/' },
+  //   { name: 'About', path: '/about' },
+  //   { name: 'AI Services', path: '/ai-services' },
+  //   { name: 'IT Services', path: '/it-services' },
+  //   { name: 'Micro SAAS', path: '/micro-saas-services' },
+  //   { name: '5G Solutions', path: '/5g-implementation' },
+  //   { name: 'Contact', path: '/contact' }
+  // ]
+>>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
   return (
     <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">

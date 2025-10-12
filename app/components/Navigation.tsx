@@ -5,8 +5,12 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, 
 =======
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, Users, BarChart3, Settings, Mail, MessageSquare, FileText, Receipt, Video, Mic } from 'lucide-react'
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
+=======
+import { Menu, X, ChevronDown, Zap, Cloud, Globe, Code, Smartphone, Brain, Wifi } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +29,7 @@ const Navigation: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+<<<<<<< HEAD
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -256,6 +261,63 @@ const Navigation: React.FC = () => {
   ]
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
+=======
+  const services = [
+    {
+      title: 'AI Services',
+      href: '/ai-services',
+      icon: Brain,
+      description: 'Advanced AI solutions',
+      submenu: [
+        { title: 'AI Content Generator', href: '/ai-content-generator' },
+        { title: 'AI Chatbot Builder', href: '/ai-chatbot-builder' },
+        { title: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
+        { title: 'AI Email Assistant', href: '/ai-email-assistant' },
+        { title: 'AI Voice Assistant', href: '/ai-voice-assistant' },
+        { title: 'AI Automation', href: '/ai-automation' }
+      ]
+    },
+    {
+      title: 'IT Services',
+      href: '/it-services',
+      icon: Code,
+      description: 'Comprehensive IT solutions',
+      submenu: [
+        { title: 'Cloud Migration', href: '/cloud-migration' },
+        { title: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
+        { title: 'DevOps & CI/CD', href: '/devops-cicd' },
+        { title: 'Data Analytics', href: '/data-analytics' },
+        { title: 'Mobile Development', href: '/mobile-development' },
+        { title: 'Web Development', href: '/web-development' }
+      ]
+    },
+    {
+      title: 'Micro SaaS',
+      href: '/micro-saas-services',
+      icon: Smartphone,
+      description: 'Specialized software solutions'
+    },
+    {
+      title: '5G Implementation',
+      href: '/5g-implementation',
+      icon: Wifi,
+      description: 'Next-generation connectivity'
+    },
+    {
+      title: 'Cloud Services',
+      href: '/cloud-services',
+      icon: Cloud,
+      description: 'Cloud Computing Solutions'
+    },
+    {
+      title: 'Digital Transformation',
+      href: '/digital-transformation',
+      icon: Globe,
+      description: 'Transform your digital presence'
+    }
+  ]
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-33db
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-lg border-b border-cyan-500/20' : 'bg-transparent'
@@ -280,6 +342,7 @@ const Navigation: React.FC = () => {
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
             </Link>
+<<<<<<< HEAD
             
             {/* AI Services Dropdown */}
             <div className="relative group">
@@ -537,6 +600,55 @@ const Navigation: React.FC = () => {
                       <span className="ml-3">{service.name}</span>
                     </Link>
                   ))}
+=======
+            <Link to="/about" className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              About
+            </Link>
+
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('services')}
+                className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+              >
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              
+              {activeDropdown === 'services' && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                  <div className="py-2">
+                    {services.map((service, index) => (
+                      <div key={index}>
+                        <Link
+                          to={service.href}
+                          className="flex items-center px-4 py-3 text-gray-700 hover:bg-gray-100 transition-colors"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          <service.icon className="w-4 h-4 mr-3" />
+                          <div className="flex-1">
+                            <div className="font-medium">{service.title}</div>
+                            <div className="text-sm text-gray-500">{service.description}</div>
+                          </div>
+                        </Link>
+                        {service.submenu && (
+                          <div className="ml-8 pl-4 border-l border-gray-200">
+                            {service.submenu.map((subItem, subIndex) => (
+                              <Link
+                                key={subIndex}
+                                to={subItem.href}
+                                className="block px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+                                onClick={() => setActiveDropdown(null)}
+                              >
+                                {subItem.title}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-33db
                 </div>
               )}
             </div>
@@ -744,6 +856,7 @@ const Navigation: React.FC = () => {
                 About
               </Link>
               
+<<<<<<< HEAD
               {/* Mobile AI Services */}
               <div className="px-3 py-2">
                 <div className="text-cyan-400 font-medium mb-2">AI Services</div>
@@ -757,10 +870,45 @@ const Navigation: React.FC = () => {
                     >
                       {service.name}
                     </Link>
+=======
+              {/* Services Mobile */}
+              <div className="px-3 py-2">
+                <div className="text-gray-500 font-medium mb-2">Services</div>
+                <div className="space-y-1 ml-4">
+                  {services.map((service, index) => (
+                    <div key={index}>
+                      <Link
+                        to={service.href}
+                        className="flex items-center text-gray-600 hover:text-purple-600 block px-3 py-2 rounded-md text-sm"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <service.icon className="w-4 h-4 mr-3" />
+                        <div>
+                          <div className="font-medium">{service.title}</div>
+                          <div className="text-xs text-gray-500">{service.description}</div>
+                        </div>
+                      </Link>
+                      {service.submenu && (
+                        <div className="ml-6 space-y-1">
+                          {service.submenu.map((subItem, subIndex) => (
+                            <Link
+                              key={subIndex}
+                              to={subItem.href}
+                              className="block text-gray-500 hover:text-purple-600 px-3 py-1 text-sm"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {subItem.title}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-33db
                   ))}
                 </div>
               </div>
 
+<<<<<<< HEAD
               {/* Mobile IT Services */}
               <div className="px-3 py-2">
                 <div className="text-cyan-400 font-medium mb-2">IT Services</div>
@@ -817,6 +965,9 @@ const Navigation: React.FC = () => {
                 className="block px-3 py-2 text-white hover:text-cyan-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
+=======
+              <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 block text-center mt-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-33db
                 Contact
               </Link>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
@@ -825,7 +976,12 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
+<<<<<<< HEAD
   );
 };
 
 export default Navigation;
+=======
+  )
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-33db
