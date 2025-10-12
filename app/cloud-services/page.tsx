@@ -1,14 +1,14 @@
 import React from 'react';
 
-export default function CloudservicesPage() {
+export default function CloudServicesPage() {
   return (
-
-        <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-        <title>Cloud Services - Zion Tech Group</title>
-        <h1 className="text-4 xl font-boldtext-whitemb-6">Cloud Services</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional cloud services services coming soon.</p>
-          Contact Us
-    
-
-
+    <>
+      <title>Cloud Services - Zion Tech Group</title>
+      <h1 className="text-4xl font-bold text-white mb-6">Cloud Services</h1>
+      <p className="text-lg text-gray-300 mb-8">Professional cloud services coming soon.</p>
+      <a href="/contact" className="text-blue-400 hover:text-blue-300">
+        Contact Us
+      </a>
+    </>
+  );
+}
