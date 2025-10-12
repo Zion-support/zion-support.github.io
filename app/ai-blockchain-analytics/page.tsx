@@ -173,13 +173,13 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        
+
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
             <Shield className="w-4 h-4" />
             <span>AI-Powered Blockchain Intelligence</span>
           </div>
-          
+
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
             AI Blockchain
             <br />
@@ -187,24 +187,24 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
               Analytics
             </span>
           </h1>
-          
+
           <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Advanced AI-powered analytics for DeFi, smart contracts, and crypto trading. 
+            Advanced AI-powered analytics for DeFi, smart contracts, and crypto trading.
             Get real-time insights, security analysis, and trading intelligence with 95% accuracy.
             <br />
             <span className="text-cyan-400 font-semibold">Navigate the blockchain with confidence and intelligence.</span>
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transform hover:scale-105"
             >
               <span>Start Free Trial</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link 
-              to="/demo" 
+            <Link
+              to="/demo"
               className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
             >
               <span>View Demo</span>
@@ -223,11 +223,11 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
               Advanced <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Blockchain Intelligence</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Comprehensive AI-powered analytics that provide deep insights into blockchain networks, 
+              Comprehensive AI-powered analytics that provide deep insights into blockchain networks,
               DeFi protocols, and crypto markets for informed decision-making.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
@@ -252,7 +252,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                   <span className="text-cyan-400 font-semibold text-lg">
                     {feature.price}
                   </span>
-                  <Link 
+                  <Link
                     to="/contact"
                     className="group/link flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
@@ -279,11 +279,11 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
               Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Analytics Suite</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              From DeFi protocols to NFT markets, our AI-powered analytics cover every aspect 
+              From DeFi protocols to NFT markets, our AI-powered analytics cover every aspect
               of the blockchain ecosystem with unmatched accuracy and depth.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {analyticsTypes.map((type, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -298,7 +298,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {type.description}
                 </p>
-                
+
                 <div className="space-y-3 mb-6">
                   <h4 className="text-lg font-semibold text-cyan-400">Key Metrics:</h4>
                   {type.metrics.map((metric, metricIndex) => (
@@ -308,7 +308,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="space-y-2">
                   <h4 className="text-lg font-semibold text-purple-400">Core Features:</h4>
                   <div className="flex flex-wrap gap-2">
@@ -334,16 +334,16 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
               Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Choose the perfect plan for your blockchain analytics needs. All plans include our core features 
+              Choose the perfect plan for your blockchain analytics needs. All plans include our core features
               with no hidden fees or setup costs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <div key={index} className={`relative group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
-                plan.popular 
-                  ? 'border-cyan-400/50 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
+                plan.popular
+                  ? 'border-cyan-400/50 bg-gradient-to-br from-cyan-500/10 to-purple-500/10'
                   : 'border-white/20 hover:bg-white/20'
               }`}>
                 {plan.popular && (
@@ -353,7 +353,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                     </div>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
@@ -362,7 +362,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-3">
@@ -371,8 +371,8 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                     </div>
                   ))}
                 </div>
-                
-                <Link 
+
+                <Link
                   to="/contact"
                   className={`block w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
@@ -400,7 +400,7 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
               Join leading crypto companies and institutions that trust AI Blockchain Analytics for critical insights and decision-making.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -414,13 +414,13 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                     <p className="text-gray-500 text-sm">{testimonial.company}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                
+
                 <p className="text-gray-300 leading-relaxed italic">
                   "{testimonial.content}"
                 </p>
@@ -440,29 +440,29 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
                 <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                   Ready to Master the <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">Blockchain?</span>
                 </h2>
-                
+
                 <p className="text-xl sm:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
-                  Start your free trial today and gain the intelligence you need to navigate 
+                  Start your free trial today and gain the intelligence you need to navigate
                   the complex world of blockchain and DeFi with confidence.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-                  <Link 
-                    to="/contact" 
+                  <Link
+                    to="/contact"
                     className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     <span>Start Free Trial</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                  <Link 
-                    to="/demo" 
+                  <Link
+                    to="/demo"
                     className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
                   >
                     <span>View Demo</span>
                     <BarChart3 className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-white/80">
                   <div className="flex items-center justify-center space-x-3">
                     <Phone className="w-5 h-5 text-cyan-300" />

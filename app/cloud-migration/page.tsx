@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { 
-  ArrowRight, Zap, Cloud, CheckCircle, Star, Clock, BarChart3, 
-  Sparkles, Target, Award, Lightbulb, Globe, Shield, MessageCircle, 
-  Mail, Phone, MapPin, Play, Pause, Download, Upload, Edit, Copy, 
-  Share, Bookmark, Heart, ThumbsUp, RefreshCw, Settings, Database, 
-  Lock, TrendingUp, PieChart, LineChart, Activity, Eye, Search, 
-  Filter, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, 
+import {
+  ArrowRight, Zap, Cloud, CheckCircle, Star, Clock, BarChart3,
+  Sparkles, Target, Award, Lightbulb, Globe, Shield, MessageCircle,
+  Mail, Phone, MapPin, Play, Pause, Download, Upload, Edit, Copy,
+  Share, Bookmark, Heart, ThumbsUp, RefreshCw, Settings, Database,
+  Lock, TrendingUp, PieChart, LineChart, Activity, Eye, Search,
+  Filter, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera,
   Mic, Headphones, Speaker, Volume2, VolumeX, FileText, Package,
   Server, Network, Cpu, HardDrive, Layers, Monitor, Smartphone,
   Laptop, Tablet, Router, Wifi, Database as DatabaseIcon
@@ -229,18 +229,18 @@ export default function CloudMigrationPage() {
           {/* Animated Background */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          
+
           {/* Floating Elements */}
           <div className="absolute top-20 left-10 w-16 h-16 bg-cyan-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '0.5s' }} />
           <div className="absolute top-40 right-20 w-12 h-12 bg-purple-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '1.5s' }} />
           <div className="absolute bottom-20 left-1/4 w-8 h-8 bg-pink-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '2.5s' }} />
-          
+
           <div className="relative max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
               <Sparkles className="w-4 h-4" />
               <span>Expert Cloud Transformation</span>
             </div>
-            
+
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Cloud
               <br />
@@ -248,13 +248,13 @@ export default function CloudMigrationPage() {
                 Migration
               </span>
             </h1>
-            
+
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with expert cloud migration services. 
+              Transform your business with expert cloud migration services.
               <br />
               <span className="text-cyan-400 font-semibold">Zero downtime • 40% cost reduction • 99.9% uptime • Enterprise security</span>
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
               <button className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transform hover:scale-105">
                 <span>Get Free Assessment</span>
@@ -265,7 +265,7 @@ export default function CloudMigrationPage() {
                 <span>Watch Case Study</span>
               </button>
             </div>
-            
+
             {/* Trust Indicators */}
             <div className="flex flex-wrap justify-center items-center gap-8 text-gray-400 text-sm">
               <div className="flex items-center space-x-2">
@@ -300,7 +300,7 @@ export default function CloudMigrationPage() {
                 From assessment to optimization, we handle every aspect of your cloud migration journey.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
@@ -339,7 +339,7 @@ export default function CloudMigrationPage() {
                 A systematic approach that ensures successful cloud migration with minimal risk and maximum value.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {migrationSteps.map((step, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -376,7 +376,7 @@ export default function CloudMigrationPage() {
                 Certified experts in all major cloud platforms with deep experience in complex migrations.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {cloudProviders.map((provider, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -414,12 +414,12 @@ export default function CloudMigrationPage() {
                 Choose the migration package that fits your needs. All packages include our core migration services.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
-                  plan.popular 
-                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20' 
+                  plan.popular
+                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20'
                     : 'border-white/20 hover:border-cyan-400/30'
                 }`}>
                   {plan.popular && (
@@ -429,7 +429,7 @@ export default function CloudMigrationPage() {
                       </div>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-6">{plan.description}</p>
@@ -438,7 +438,7 @@ export default function CloudMigrationPage() {
                       <span className="text-gray-400 ml-2">{plan.period}</span>
                     </div>
                   </div>
-                  
+
                   <div className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-3">
@@ -447,7 +447,7 @@ export default function CloudMigrationPage() {
                       </div>
                     ))}
                   </div>
-                  
+
                   <button className={`w-full py-4 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
@@ -473,7 +473,7 @@ export default function CloudMigrationPage() {
                 See what our clients say about their cloud migration experience with Zion Tech Group.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -505,31 +505,31 @@ export default function CloudMigrationPage() {
             <div className="text-center">
               <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
-                
+
                 <div className="relative z-10">
                   <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                     Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">Infrastructure?</span>
                   </h2>
-                  
+
                   <p className="text-xl sm:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
-                    Join hundreds of companies who have successfully migrated to the cloud with our expert guidance. 
+                    Join hundreds of companies who have successfully migrated to the cloud with our expert guidance.
                     Get your free cloud readiness assessment today.
                   </p>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
                     <button className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105">
                       <span>Get Free Assessment</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <Link 
-                      to="/contact" 
+                    <Link
+                      to="/contact"
                       className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
                     >
                       <span>Contact Expert</span>
                       <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
                     </Link>
                   </div>
-                  
+
                   {/* Contact Information */}
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-white/80">
                     <div className="flex items-center justify-center space-x-3">

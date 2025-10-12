@@ -137,7 +137,7 @@ export default function CloudInfrastructureManagement() {
                 Cloud Infrastructure Management
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Optimize your cloud infrastructure with comprehensive management, security, and cost optimization. 
+                Optimize your cloud infrastructure with comprehensive management, security, and cost optimization.
                 Multi-cloud support, 24/7 monitoring, and enterprise-grade security.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -170,7 +170,7 @@ export default function CloudInfrastructureManagement() {
                 Enterprise-grade features that optimize your cloud infrastructure performance and costs
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-sky-500/20 hover:border-sky-400/40 transition-all duration-300">
@@ -196,7 +196,7 @@ export default function CloudInfrastructureManagement() {
                 Everything you need to manage, secure, and optimize your cloud infrastructure
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {managementFeatures.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -226,12 +226,12 @@ export default function CloudInfrastructureManagement() {
                 Choose the plan that fits your infrastructure needs
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-sky-400/40 scale-105 shadow-2xl shadow-sky-500/20' 
+                  plan.popular
+                    ? 'border-sky-400/40 scale-105 shadow-2xl shadow-sky-500/20'
                     : 'border-sky-500/20 hover:border-sky-400/40'
                 }`}>
                   {plan.popular && (

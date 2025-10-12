@@ -2,11 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
-  BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
-  Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
-  TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
+import {
+  ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code,
+  BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box,
+  Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package,
+  TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database,
   Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock, Play, Download
 } from 'lucide-react';
 
@@ -161,7 +161,7 @@ const ZionAnalyticsProPage: React.FC = () => {
                   </span>
                 </h1>
                 <p className={`text-xl text-gray-300 mb-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                  The most advanced AI-powered business intelligence platform. Get real-time insights, 
+                  The most advanced AI-powered business intelligence platform. Get real-time insights,
                   predictive analytics, and custom reports that drive your business forward.
                 </p>
                 <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>

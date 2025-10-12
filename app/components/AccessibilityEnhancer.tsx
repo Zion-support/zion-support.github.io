@@ -38,7 +38,7 @@ const AccessibilityEnhancer: React.FC = () => {
           outline: 2px solid #8b5cf6 !important;
           outline-offset: 2px !important;
         }
-        
+
         .focus-visible {
           outline: 2px solid #8b5cf6 !important;
           outline-offset: 2px !important;

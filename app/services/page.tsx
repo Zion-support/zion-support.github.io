@@ -100,7 +100,7 @@ const ServicesPage: React.FC = () => {
         <meta name="description" content="Explore our comprehensive range of AI and IT services. From AI solutions to cloud computing, cybersecurity, and custom development - we have you covered." />
         <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, custom development, data analytics, mobile development" />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         {/* Hero Section */}
         <section className="py-20">
@@ -110,7 +110,7 @@ const ServicesPage: React.FC = () => {
                 Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Services</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Comprehensive AI and IT solutions designed to transform your business and drive growth. 
+                Comprehensive AI and IT solutions designed to transform your business and drive growth.
                 We offer end-to-end services from strategy to implementation and support.
               </p>
             </div>
@@ -129,22 +129,22 @@ const ServicesPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {mainServices.map((service, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {service.description}
                   </p>
-                  
+
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -153,8 +153,8 @@ const ServicesPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
-                  <Link 
+
+                  <Link
                     to={service.href}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold group-hover:translate-x-1"
                   >
@@ -211,7 +211,7 @@ const ServicesPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index) => (
-                <div 
+                <div
                   key={index}
                   className="text-center group"
                 >
@@ -246,13 +246,13 @@ const ServicesPage: React.FC = () => {
                 Let's discuss your project and how our services can help you achieve your business goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get a Free Consultation
                 </Link>
-                <Link 
+                <Link
                   to="/about"
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                 >

@@ -23,21 +23,18 @@
         {/* Pricing Section */}
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   </div>
                 </div>
               ))}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
             </div>
           </div>
         </section>
       </div>
 }
->>>>>>> cursor/website-audit-and-update-with-deployment-6024

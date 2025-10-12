@@ -79,7 +79,7 @@ const PerformanceOptimizer: React.FC = () => {
       }
 
       window.addEventListener('scroll', updateScrollPosition, { passive: true })
-      
+
       return () => window.removeEventListener('scroll', updateScrollPosition)
     }
 

@@ -134,7 +134,7 @@ export default function AIContentModerationPro() {
                 AI Content Moderation Pro
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Protect your platform with industry-leading AI content moderation. Real-time detection, 
+                Protect your platform with industry-leading AI content moderation. Real-time detection,
                 multi-format support, and 99.7% accuracy to keep your community safe and compliant.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -167,7 +167,7 @@ export default function AIContentModerationPro() {
                 Comprehensive AI-powered protection for all your content needs
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-red-500/20 hover:border-red-400/40 transition-all duration-300">
@@ -193,7 +193,7 @@ export default function AIContentModerationPro() {
                 Handle any content type, language, or platform with our advanced AI
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {capabilities.map((capability, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -223,12 +223,12 @@ export default function AIContentModerationPro() {
                 Choose the plan that scales with your platform
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-red-400/40 scale-105 shadow-2xl shadow-red-500/20' 
+                  plan.popular
+                    ? 'border-red-400/40 scale-105 shadow-2xl shadow-red-500/20'
                     : 'border-red-500/20 hover:border-red-400/40'
                 }`}>
                   {plan.popular && (

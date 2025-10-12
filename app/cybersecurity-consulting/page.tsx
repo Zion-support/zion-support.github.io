@@ -135,7 +135,7 @@ export default function CybersecurityConsulting() {
                 Cybersecurity Consulting
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Protect your business with expert cybersecurity consulting. Security assessments, compliance management, 
+                Protect your business with expert cybersecurity consulting. Security assessments, compliance management,
                 threat intelligence, and 24/7 monitoring to keep your data secure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -168,7 +168,7 @@ export default function CybersecurityConsulting() {
                 Expert cybersecurity services that protect your business from evolving threats
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-red-500/20 hover:border-red-400/40 transition-all duration-300">
@@ -194,7 +194,7 @@ export default function CybersecurityConsulting() {
                 End-to-end cybersecurity services to protect your organization
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {consultingFeatures.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -224,12 +224,12 @@ export default function CybersecurityConsulting() {
                 Choose the security consulting package that fits your needs
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-red-400/40 scale-105 shadow-2xl shadow-red-500/20' 
+                  plan.popular
+                    ? 'border-red-400/40 scale-105 shadow-2xl shadow-red-500/20'
                     : 'border-red-500/20 hover:border-red-400/40'
                 }`}>
                   {plan.popular && (

@@ -11,9 +11,9 @@ const DefaultFallback = () => (
   </div>
 )
 
-export const LazyWrapper: React.FC<LazyWrapperProps> = ({ 
-  children, 
-  fallback = <DefaultFallback /> 
+export const LazyWrapper: React.FC<LazyWrapperProps> = ({
+  children,
+  fallback = <DefaultFallback />
 }) => {
   return (
     <Suspense fallback={fallback}>
@@ -28,7 +28,7 @@ export const withLazyLoading = <P extends object>(
   fallback?: React.ReactNode
 ) => {
   const LazyComponent = lazy(() => Promise.resolve({ default: Component }))
-  
+
   return (props: P) => (
     <LazyWrapper fallback={fallback}>
       <LazyComponent {...props} />

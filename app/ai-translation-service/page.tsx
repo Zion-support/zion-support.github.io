@@ -137,7 +137,7 @@ export default function AITranslationService() {
                 AI Translation Service
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your global communication with AI-powered translation in 100+ languages. 
+                Transform your global communication with AI-powered translation in 100+ languages.
                 Professional quality, real-time translation, and industry-specific solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -170,7 +170,7 @@ export default function AITranslationService() {
                 AI-powered features that break down language barriers and enable global communication
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-amber-500/20 hover:border-amber-400/40 transition-all duration-300">
@@ -196,7 +196,7 @@ export default function AITranslationService() {
                 Everything you need to translate content across languages and cultures
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {translationFeatures.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -226,12 +226,12 @@ export default function AITranslationService() {
                 Choose the plan that fits your translation needs
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-amber-400/40 scale-105 shadow-2xl shadow-amber-500/20' 
+                  plan.popular
+                    ? 'border-amber-400/40 scale-105 shadow-2xl shadow-amber-500/20'
                     : 'border-amber-500/20 hover:border-amber-400/40'
                 }`}>
                   {plan.popular && (

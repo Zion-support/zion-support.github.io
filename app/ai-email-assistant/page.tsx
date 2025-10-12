@@ -16,17 +16,17 @@
                 AI <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Email Assistant</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Transform your email management with intelligent automation, smart classification, 
+                Transform your email management with intelligent automation, smart classification,
                 and AI-powered responses that save time and improve productivity.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Building
                 </Link>
-                <Link 
+                <Link
                   to="/ai-services"
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                 >
@@ -127,7 +127,7 @@
                     Standard integrations
                   </li>
                 </ul>
-                <Link 
+                <Link
                   to="/contact"
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 block"
                 >
@@ -165,7 +165,7 @@
                     Analytics dashboard
                   </li>
                 </ul>
-                <Link 
+                <Link
                   to="/contact"
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 block"
                 >
@@ -198,7 +198,7 @@
                     Custom development
                   </li>
                 </ul>
-                <Link 
+                <Link
                   to="/contact"
                   className="w-full border border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-semibold text-center hover:bg-cyan-500/10 transition-all duration-300 block"
                 >
@@ -220,13 +220,13 @@
                 Start automating your email workflows and boost productivity with AI-powered assistance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Building Now
                 </Link>
-                <Link 
+                <Link
                   to="/about"
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                 >

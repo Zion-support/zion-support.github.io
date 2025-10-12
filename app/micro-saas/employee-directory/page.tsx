@@ -99,26 +99,26 @@ const EmployeeDirectoryPage: React.FC = () => {
               <Users className="w-4 h-4" />
               <span>Employee Directory</span>
             </div>
-            
+
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Smart <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Employee Directory</span>
             </h1>
-            
+
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Connect your team with an intelligent employee directory that makes finding 
+              Connect your team with an intelligent employee directory that makes finding
               and connecting with colleagues effortless and secure.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transform hover:scale-105"
               >
                 <span>Start Free Trial</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link 
-                to="/demo" 
+              <Link
+                to="/demo"
                 className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
               >
                 <span>View Demo</span>
@@ -140,7 +140,7 @@ const EmployeeDirectoryPage: React.FC = () => {
                 Powerful features that make your employee directory more than just a contact list.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
@@ -170,12 +170,12 @@ const EmployeeDirectoryPage: React.FC = () => {
                 Choose the plan that fits your organization size. All plans include a 14-day free trial.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
-                  plan.popular 
-                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20' 
+                  plan.popular
+                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20'
                     : 'border-white/20 hover:border-cyan-400/30'
                 }`}>
                   {plan.popular && (
@@ -185,7 +185,7 @@ const EmployeeDirectoryPage: React.FC = () => {
                       </div>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -194,7 +194,7 @@ const EmployeeDirectoryPage: React.FC = () => {
                       <span className="text-gray-400 ml-2">{plan.period}</span>
                     </div>
                   </div>
-                  
+
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
@@ -203,9 +203,9 @@ const EmployeeDirectoryPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
-                  <Link 
-                    to="/contact" 
+
+                  <Link
+                    to="/contact"
                     className={`block w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
@@ -228,22 +228,22 @@ const EmployeeDirectoryPage: React.FC = () => {
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                 Ready to Connect Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">Team?</span>
               </h2>
-              
+
               <p className="text-xl sm:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
-                Join thousands of organizations using our employee directory platform. 
+                Join thousands of organizations using our employee directory platform.
                 Start your free trial today and see how easy team connection can be.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Link 
-                  to="/contact" 
+                <Link
+                  to="/contact"
                   className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   <span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link 
-                  to="/pricing" 
+                <Link
+                  to="/pricing"
                   className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
                 >
                   <span>View All Plans</span>

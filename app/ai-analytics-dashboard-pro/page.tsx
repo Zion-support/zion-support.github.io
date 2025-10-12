@@ -134,7 +134,7 @@ export default function AIAnalyticsDashboardPro() {
                 AI Analytics Dashboard Pro
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your data into powerful insights with our AI-powered analytics platform. 
+                Transform your data into powerful insights with our AI-powered analytics platform.
                 Real-time visualization, predictive analytics, and intelligent recommendations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -167,7 +167,7 @@ export default function AIAnalyticsDashboardPro() {
                 Everything you need to make data-driven decisions
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-green-500/20 hover:border-green-400/40 transition-all duration-300">
@@ -193,7 +193,7 @@ export default function AIAnalyticsDashboardPro() {
                 Connect, analyze, and visualize all your data in one place
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {dashboardFeatures.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -223,12 +223,12 @@ export default function AIAnalyticsDashboardPro() {
                 Choose the plan that fits your analytics needs
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-green-400/40 scale-105 shadow-2xl shadow-green-500/20' 
+                  plan.popular
+                    ? 'border-green-400/40 scale-105 shadow-2xl shadow-green-500/20'
                     : 'border-green-500/20 hover:border-green-400/40'
                 }`}>
                   {plan.popular && (

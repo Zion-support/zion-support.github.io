@@ -82,10 +82,10 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="color-scheme" content="dark light" />
       <meta name="format-detection" content="telephone=no,address=no,email=no" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      
+
       {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
-      
+
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -99,7 +99,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta property="og:image:secure_url" content={ogImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
+
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
@@ -110,18 +110,18 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="twitter:image:height" content="630" />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-      
+
       {/* Additional SEO Meta Tags */}
       <meta name="google-site-verification" content="your-google-verification-code" />
       <meta name="msvalidate.01" content="your-bing-verification-code" />
       <meta name="yandex-verification" content="your-yandex-verification-code" />
-      
+
       {/* Performance Hints */}
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
+
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}

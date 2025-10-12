@@ -115,7 +115,7 @@ export default function AISmartScheduler() {
                 AI Smart Scheduler
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your scheduling chaos into organized efficiency with our intelligent AI-powered scheduler. 
+                Transform your scheduling chaos into organized efficiency with our intelligent AI-powered scheduler.
                 Optimize meetings, coordinate teams, and maximize productivity automatically.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -148,7 +148,7 @@ export default function AISmartScheduler() {
                 Powered by advanced AI to make scheduling effortless and efficient
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
@@ -174,12 +174,12 @@ export default function AISmartScheduler() {
                 Choose the plan that fits your team size and needs
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-cyan-400/40 scale-105 shadow-2xl shadow-cyan-500/20' 
+                  plan.popular
+                    ? 'border-cyan-400/40 scale-105 shadow-2xl shadow-cyan-500/20'
                     : 'border-cyan-500/20 hover:border-cyan-400/40'
                 }`}>
                   {plan.popular && (

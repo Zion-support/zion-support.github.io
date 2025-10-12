@@ -1,19 +1,19 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { 
-  ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, 
-  BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, TrendingUp, 
-  Sparkles, Layers, Target, Award, Lightbulb, Monitor, Server, CircuitBoard, Atom, 
-  Satellite, Wrench, BarChart, PieChart, LineChart, Activity, Eye, Search, Filter, 
-  Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, 
-  Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, 
-  VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, 
-  ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, 
-  Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, 
-  Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, 
-  Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, 
-  FileText, Package 
+import {
+  ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network,
+  BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, TrendingUp,
+  Sparkles, Layers, Target, Award, Lightbulb, Monitor, Server, CircuitBoard, Atom,
+  Satellite, Wrench, BarChart, PieChart, LineChart, Activity, Eye, Search, Filter,
+  Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer,
+  Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2,
+  VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp,
+  ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit,
+  Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move,
+  Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2,
+  Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue,
+  FileText, Package
 } from 'lucide-react'
 
 export default function IoTSolutionsPage() {
@@ -126,20 +126,20 @@ export default function IoTSolutionsPage() {
         <meta name="keywords" content="IoT solutions, internet of things, smart devices, IoT analytics, device management, edge computing, IoT security, connected devices" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="author" content="Zion Tech Group" />
-        
+
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="IoT Solutions - Zion Tech Group | Smart Device Management & Analytics" />
         <meta property="og:description" content="Comprehensive IoT solutions including device management, data analytics, security, and cloud platforms. Transform your business with smart connected devices." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/iot-solutions" />
         <meta property="og:image" content="https://ziontechgroup.com/iot-solutions-og-image.jpg" />
-        
+
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="IoT Solutions - Zion Tech Group | Smart Device Management & Analytics" />
         <meta name="twitter:description" content="Comprehensive IoT solutions including device management, data analytics, security, and cloud platforms. Transform your business with smart connected devices." />
         <meta name="twitter:image" content="https://ziontechgroup.com/iot-solutions-twitter-image.jpg" />
-        
+
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -172,13 +172,13 @@ export default function IoTSolutionsPage() {
         <section className="py-20 px-4 relative">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.4)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          
+
           <div className="relative max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
               <Network className="w-4 h-4" />
               <span>IoT Solutions</span>
             </div>
-            
+
             <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
               Connect Everything with
               <br />
@@ -186,23 +186,23 @@ export default function IoTSolutionsPage() {
                 Smart IoT Solutions
               </span>
             </h1>
-            
+
             <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
               Transform your business with comprehensive IoT solutions that connect, monitor, and optimize your devices and processes.
               <br />
               <span className="text-cyan-400 font-semibold">From device management to advanced analytics.</span>
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transform hover:scale-105"
               >
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link 
-                to="/demo" 
+              <Link
+                to="/demo"
                 className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
               >
                 <span>View Demo</span>
@@ -224,7 +224,7 @@ export default function IoTSolutionsPage() {
                 From device management to advanced analytics, we provide everything you need to build and scale your IoT infrastructure.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {iotServices.map((service, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
@@ -266,7 +266,7 @@ export default function IoTSolutionsPage() {
                 Our IoT solutions are designed to work across various industries, providing tailored solutions for specific needs.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -299,7 +299,7 @@ export default function IoTSolutionsPage() {
                 Our IoT solutions deliver measurable results and provide a competitive advantage for your business.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center group">
@@ -328,21 +328,21 @@ export default function IoTSolutionsPage() {
                   <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                     Ready to Connect Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">World?</span>
                   </h2>
-                  
+
                   <p className="text-xl sm:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
                     Transform your business with our comprehensive IoT solutions. Get started today and unlock the power of connected devices.
                   </p>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                    <Link 
-                      to="/contact" 
+                    <Link
+                      to="/contact"
                       className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
                     >
                       <span>Get Started</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
-                    <Link 
-                      to="/pricing" 
+                    <Link
+                      to="/pricing"
                       className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
                     >
                       <span>View Pricing</span>

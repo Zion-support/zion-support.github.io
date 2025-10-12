@@ -1,9 +1,5 @@
 'use client';
-<<<<<<< HEAD
-import React, { createContext, useContext, useEffect } from 'react';
-=======
 import React, { createContext, useContext, useState, useEffect } from 'react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
 
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
@@ -52,7 +48,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       if (window.gtag) {
         window.gtag('event', event, properties);
       }
-      
+
       // Custom analytics
       console.log('Analytics Event:', event, properties);
     }
@@ -67,7 +63,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
           custom_map: traits
         });
       }
-      
+
       // Custom analytics
       console.log('Analytics Identify:', userId, traits);
     }
@@ -83,7 +79,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
           ...properties
         });
       }
-      
+
       // Custom analytics
       console.log('Analytics Page:', name, properties);
     }

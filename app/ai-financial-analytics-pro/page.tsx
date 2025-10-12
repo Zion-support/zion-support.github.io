@@ -3,16 +3,16 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  TrendingUp, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  BarChart3, 
-  DollarSign, 
-  Shield, 
+import {
+  Brain,
+  TrendingUp,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  BarChart3,
+  DollarSign,
+  Shield,
   Target,
   PieChart,
   Activity,
@@ -258,7 +258,7 @@ export default function AiFinancialAnalyticsProPage() {
         <meta name="author" content="Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#8b5cf6" />
-        
+
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="AI Financial Analytics Pro - Advanced Financial Intelligence Platform" />
         <meta property="og:description" content="Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling. Make smarter financial decisions with advanced intelligence." />
@@ -266,14 +266,14 @@ export default function AiFinancialAnalyticsProPage() {
         <meta property="og:url" content="https://ziontechgroup.com/ai-financial-analytics-pro" />
         <meta property="og:image" content="https://ziontechgroup.com/og-ai-financial-analytics.jpg" />
         <meta property="og:site_name" content="Zion Tech Group" />
-        
+
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AI Financial Analytics Pro - Advanced Financial Intelligence Platform" />
         <meta name="twitter:description" content="Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling." />
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-ai-financial-analytics.jpg" />
         <meta name="twitter:site" content="@ziontechgroup" />
-        
+
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -314,19 +314,19 @@ export default function AiFinancialAnalyticsProPage() {
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Transform your financial analysis with AI-powered insights, real-time analytics, 
+            Transform your financial analysis with AI-powered insights, real-time analytics,
             and predictive modeling. Make smarter financial decisions with advanced intelligence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
-              to="/ai-services" 
+            <Link
+              to="/ai-services"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center"
             >
               View All AI Services
@@ -359,11 +359,11 @@ export default function AiFinancialAnalyticsProPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Advanced AI Features</h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Our AI Financial Analytics Pro leverages cutting-edge machine learning 
+              Our AI Financial Analytics Pro leverages cutting-edge machine learning
               to provide unprecedented insights into your financial data.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
@@ -395,7 +395,7 @@ export default function AiFinancialAnalyticsProPage() {
               Cover every aspect of your financial operations with our comprehensive analytics suite.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {analyticsTypes.map((type, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300">
@@ -424,7 +424,7 @@ export default function AiFinancialAnalyticsProPage() {
               Connect with your existing financial systems and tools for a unified analytics experience.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {integrations.map((integration, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 text-center group">
@@ -446,7 +446,7 @@ export default function AiFinancialAnalyticsProPage() {
               Flexible pricing plans designed to meet your financial analytics needs at any scale.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 relative ${
@@ -459,7 +459,7 @@ export default function AiFinancialAnalyticsProPage() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -468,7 +468,7 @@ export default function AiFinancialAnalyticsProPage() {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -477,7 +477,7 @@ export default function AiFinancialAnalyticsProPage() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
@@ -503,7 +503,7 @@ export default function AiFinancialAnalyticsProPage() {
                 Join hundreds of finance professionals who trust AI Financial Analytics Pro.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -539,7 +539,7 @@ export default function AiFinancialAnalyticsProPage() {
               Ready to Transform Your Financial Analysis?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
-              Start your free trial today and experience the power of AI-driven financial analytics. 
+              Start your free trial today and experience the power of AI-driven financial analytics.
               Join hundreds of finance professionals making smarter decisions with data.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

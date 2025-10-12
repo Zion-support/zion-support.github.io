@@ -8,11 +8,11 @@ interface FuturisticGlowProps {
   className?: string;
 }
 
-export default function FuturisticGlow({ 
-  children, 
-  intensity = 'medium', 
+export default function FuturisticGlow({
+  children,
+  intensity = 'medium',
   color = 'cyan',
-  className = '' 
+  className = ''
 }: FuturisticGlowProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 

@@ -10,7 +10,7 @@ export default function InfrastructureManagementPage() {
         <title>Infrastructure Management Services - Zion Tech Group</title>
         <meta name="description" content="Complete IT infrastructure setup, management, and optimization services." />
       </Helmet>
-      
+
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">

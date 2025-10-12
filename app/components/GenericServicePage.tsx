@@ -55,23 +55,23 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
                 {description}
               </p>
-              
+
               {pricing && (
                 <div className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full text-cyan-400 font-semibold mb-8">
                   Starting at {pricing}
                 </div>
               )}
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact" 
+                <a
+                  href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105"
                 >
                   Get Started Today
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
-                <a 
-                  href="tel:+13024640950" 
+                <a
+                  href="tel:+13024640950"
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
                 >
                   <Phone className="w-5 h-5 mr-2" />
@@ -161,19 +161,19 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join hundreds of companies that trust Zion Tech Group for their {title.toLowerCase()} needs. 
+                Join hundreds of companies that trust Zion Tech Group for their {title.toLowerCase()} needs.
                 Get a free consultation today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact" 
+                <a
+                  href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105"
                 >
                   Get Free Consultation
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </a>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
                   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
                 >
                   <Mail className="w-5 h-5 mr-2" />

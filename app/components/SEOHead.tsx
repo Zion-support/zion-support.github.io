@@ -9,7 +9,7 @@ const SEOHead: React.FC = () => {
       <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5G implementation" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#8b5cf6" />
-      
+
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
       <meta property="og:description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
@@ -28,7 +28,7 @@ const SEOHead: React.FC = () => {
       {/* Additional SEO Meta Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
-      
+
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({

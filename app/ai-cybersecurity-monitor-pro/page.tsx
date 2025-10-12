@@ -3,16 +3,16 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  AlertTriangle, 
-  Eye, 
-  Lock, 
+import {
+  Brain,
+  Shield,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  AlertTriangle,
+  Eye,
+  Lock,
   Target,
   Activity,
   Globe,
@@ -258,7 +258,7 @@ export default function AiCybersecurityMonitorProPage() {
         <meta name="author" content="Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#8b5cf6" />
-        
+
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="AI Cybersecurity Monitor Pro - Advanced Security Intelligence Platform" />
         <meta property="og:description" content="Protect your business with AI-powered threat detection, 24/7 monitoring, and automated response for enterprise-grade security." />
@@ -266,14 +266,14 @@ export default function AiCybersecurityMonitorProPage() {
         <meta property="og:url" content="https://ziontechgroup.com/ai-cybersecurity-monitor-pro" />
         <meta property="og:image" content="https://ziontechgroup.com/og-ai-cybersecurity.jpg" />
         <meta property="og:site_name" content="Zion Tech Group" />
-        
+
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AI Cybersecurity Monitor Pro - Advanced Security Intelligence Platform" />
         <meta name="twitter:description" content="Protect your business with AI-powered threat detection, 24/7 monitoring, and automated response." />
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-ai-cybersecurity.jpg" />
         <meta name="twitter:site" content="@ziontechgroup" />
-        
+
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -314,19 +314,19 @@ export default function AiCybersecurityMonitorProPage() {
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Protect your business with AI-powered threat detection, 24/7 monitoring, 
+            Protect your business with AI-powered threat detection, 24/7 monitoring,
             and automated response. Enterprise-grade security powered by artificial intelligence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
-              to="/ai-services" 
+            <Link
+              to="/ai-services"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center"
             >
               View All AI Services
@@ -359,11 +359,11 @@ export default function AiCybersecurityMonitorProPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Advanced Security Features</h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Our AI Cybersecurity Monitor Pro leverages cutting-edge artificial intelligence 
+              Our AI Cybersecurity Monitor Pro leverages cutting-edge artificial intelligence
               to provide comprehensive protection against evolving cyber threats.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
@@ -395,7 +395,7 @@ export default function AiCybersecurityMonitorProPage() {
               Protect every aspect of your digital infrastructure with our comprehensive security capabilities.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {securityCapabilities.map((capability, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300">
@@ -424,7 +424,7 @@ export default function AiCybersecurityMonitorProPage() {
               Advanced AI detection and prevention for all types of cyber threats and attacks.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {threatTypes.map((threat, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 text-center group">
@@ -446,7 +446,7 @@ export default function AiCybersecurityMonitorProPage() {
               Flexible pricing plans designed to protect businesses of all sizes.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 relative ${
@@ -459,7 +459,7 @@ export default function AiCybersecurityMonitorProPage() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -468,7 +468,7 @@ export default function AiCybersecurityMonitorProPage() {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -477,7 +477,7 @@ export default function AiCybersecurityMonitorProPage() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
@@ -503,7 +503,7 @@ export default function AiCybersecurityMonitorProPage() {
                 Join hundreds of security professionals who trust AI Cybersecurity Monitor Pro.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -539,7 +539,7 @@ export default function AiCybersecurityMonitorProPage() {
               Ready to Secure Your Business?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
-              Start your free trial today and experience enterprise-grade security powered by AI. 
+              Start your free trial today and experience enterprise-grade security powered by AI.
               Join hundreds of organizations already protected by our advanced threat detection.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

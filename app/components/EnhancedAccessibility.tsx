@@ -6,7 +6,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     // Add high contrast mode support
     const addHighContrastSupport = () => {
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-      
+
       const handleContrastChange = (e: MediaQueryListEvent) => {
         if (e.matches) {
           document.documentElement.classList.add('high-contrast');
@@ -24,7 +24,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     // Add reduced motion support
     const addReducedMotionSupport = () => {
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      
+
       const handleMotionChange = (e: MediaQueryListEvent) => {
         if (e.matches) {
           document.documentElement.classList.add('reduce-motion');

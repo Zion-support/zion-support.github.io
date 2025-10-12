@@ -134,7 +134,7 @@ export default function FiveGSmartCitySolutions() {
                 5G Smart City Solutions
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your city into a smart, sustainable, and connected urban environment with our 
+                Transform your city into a smart, sustainable, and connected urban environment with our
                 5G-powered infrastructure solutions and AI-driven analytics.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -167,7 +167,7 @@ export default function FiveGSmartCitySolutions() {
                 Comprehensive solutions for modern urban challenges
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300">
@@ -193,7 +193,7 @@ export default function FiveGSmartCitySolutions() {
                 Modular solutions that scale with your city's needs
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {smartCityModules.map((module, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -223,12 +223,12 @@ export default function FiveGSmartCitySolutions() {
                 Transform your city with our comprehensive 5G smart city solutions
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-blue-400/40 scale-105 shadow-2xl shadow-blue-500/20' 
+                  plan.popular
+                    ? 'border-blue-400/40 scale-105 shadow-2xl shadow-blue-500/20'
                     : 'border-blue-500/20 hover:border-blue-400/40'
                 }`}>
                   {plan.popular && (

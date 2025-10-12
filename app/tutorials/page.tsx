@@ -10,7 +10,7 @@ const TutorialsPage: React.FC = () => {
         <meta name="description" content="Learn AI and IT solutions with our comprehensive tutorials and guides." />
         <meta name="keywords" content="tutorials, AI tutorials, IT tutorials, learning, guides, education" />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">

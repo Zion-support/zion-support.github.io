@@ -58,13 +58,13 @@ const LazyImage: React.FC<LazyImageProps> = ({
           <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />
         </div>
       )}
-      
+
       {isInView && !isLoaded && !hasError && (
         <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
           <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />
         </div>
       )}
-      
+
       {isInView && (
         <img
           src={src}
@@ -77,7 +77,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
           loading="lazy"
         />
       )}
-      
+
       {hasError && (
         <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
           <div className="text-center text-gray-400">

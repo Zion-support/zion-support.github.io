@@ -62,8 +62,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     const measureMemoryUsage = () => {
       if ('memory' in performance) {
         const memory = (performance as any).memory
-        setMetrics(prev => ({ 
-          ...prev, 
+        setMetrics(prev => ({
+          ...prev,
           memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
         }))
       }
@@ -218,7 +218,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         <div>Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}MB` : 'N/A'}</div>
         <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'Measuring...'}</div>
       </div>
-      
+
       {suggestions.length > 0 && (
         <div className="mt-2 pt-2 border-t border-gray-600">
           <div className="text-xs font-semibold mb-1">Suggestions:</div>

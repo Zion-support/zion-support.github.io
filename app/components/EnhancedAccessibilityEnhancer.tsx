@@ -7,7 +7,7 @@ ursor/
               <span className="text-white">Enhancer</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced enhanced accessibility enhancer solutions. 
+              Transform your business with our advanced enhanced accessibility enhancer solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             return (
@@ -41,7 +41,7 @@ ursor/
               Our accessibility enhancement solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-          
+
           return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -71,7 +71,7 @@ ursor/
               Experience the benefits of working with our cutting-edge enhanced accessibility enhancer solutions.
             </p>
           </div>
-          
+
           return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (

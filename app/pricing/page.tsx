@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  CheckCircle, ArrowRight, Star, Zap, Shield, Cloud, 
+import {
+  CheckCircle, ArrowRight, Star, Zap, Shield, Cloud,
   Brain, Users, Clock, Award, TrendingUp, DollarSign,
   MessageCircle, Settings, BarChart, FileText, Globe
 } from 'lucide-react';
@@ -241,20 +241,20 @@ const PricingPage: React.FC = () => {
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.4)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          
+
           <div className="relative max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
               <DollarSign className="w-4 h-4" />
               <span>Transparent Pricing</span>
             </div>
-            
+
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Simple, Transparent{' '}
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Pricing
               </span>
             </h1>
-            
+
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
               Choose the plan that fits your business needs. All plans include 14-day free trials and no setup fees.
             </p>
@@ -308,7 +308,7 @@ const PricingPage: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <Brain className="w-8 h-8 text-white" />
@@ -335,7 +335,7 @@ const PricingPage: React.FC = () => {
                     ))}
                   </ul>
 
-                  <Link 
+                  <Link
                     to="/contact"
                     className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
@@ -373,7 +373,7 @@ const PricingPage: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <Settings className="w-8 h-8 text-white" />
@@ -400,7 +400,7 @@ const PricingPage: React.FC = () => {
                     ))}
                   </ul>
 
-                  <Link 
+                  <Link
                     to="/contact"
                     className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
@@ -438,7 +438,7 @@ const PricingPage: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                       <Zap className="w-8 h-8 text-white" />
@@ -465,7 +465,7 @@ const PricingPage: React.FC = () => {
                     ))}
                   </ul>
 
-                  <Link 
+                  <Link
                     to="/contact"
                     className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
@@ -510,7 +510,7 @@ const PricingPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link 
+                  <Link
                     to="/contact"
                     className="block w-full text-center py-2 rounded-lg font-semibold border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300"
                   >
@@ -558,13 +558,13 @@ const PricingPage: React.FC = () => {
                   Start your free trial today and experience the power of our AI and IT solutions.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
+                  <Link
                     to="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
                   >
                     Start Free Trial
                   </Link>
-                  <Link 
+                  <Link
                     to="/contact"
                     className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                   >

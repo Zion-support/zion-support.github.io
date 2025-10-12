@@ -134,7 +134,7 @@ export default function AdvancedSecuritySuite() {
                 Advanced Security Suite
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Protect your business with our comprehensive cybersecurity solution. AI-powered threat detection, 
+                Protect your business with our comprehensive cybersecurity solution. AI-powered threat detection,
                 24/7 monitoring, and compliance tools to keep your data and systems secure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -167,7 +167,7 @@ export default function AdvancedSecuritySuite() {
                 Advanced protection against the latest cyber threats
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-red-500/20 hover:border-red-400/40 transition-all duration-300">
@@ -193,7 +193,7 @@ export default function AdvancedSecuritySuite() {
                 Protect every aspect of your digital infrastructure
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {securityModules.map((module, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -223,12 +223,12 @@ export default function AdvancedSecuritySuite() {
                 Choose the security level that fits your organization
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-red-400/40 scale-105 shadow-2xl shadow-red-500/20' 
+                  plan.popular
+                    ? 'border-red-400/40 scale-105 shadow-2xl shadow-red-500/20'
                     : 'border-red-500/20 hover:border-red-400/40'
                 }`}>
                   {plan.popular && (

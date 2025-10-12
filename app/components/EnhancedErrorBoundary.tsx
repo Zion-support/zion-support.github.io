@@ -50,11 +50,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="h-8 w-8 text-white" />
             </div>
-            
+
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
-            
+
             <p className="text-gray-300 mb-6">
               We encountered an unexpected error. Don't worry, our team has been notified and we're working to fix it.
             </p>
@@ -81,7 +81,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="h-4 w-4 mr-2" />
                 Try Again
               </button>
-              
+
               <Link
                 to="/"
                 className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-white transition-all duration-300"

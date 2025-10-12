@@ -80,17 +80,17 @@ const MobileDevelopmentPage: React.FC = () => {
                 Mobile <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Development</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Create powerful, user-friendly mobile applications for iOS and Android platforms. 
+                Create powerful, user-friendly mobile applications for iOS and Android platforms.
                 From native apps to cross-platform solutions, we deliver exceptional mobile experiences.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Project
                 </Link>
-                <Link 
+                <Link
                   to="/it-services"
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                 >
@@ -115,18 +115,18 @@ const MobileDevelopmentPage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {service.description}
                   </p>
@@ -142,7 +142,7 @@ const MobileDevelopmentPage: React.FC = () => {
 
                   <div className="flex items-center justify-between mb-6">
                     <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                    <Link 
+                    <Link
                       to="/contact"
                       className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-flex items-center"
                     >
@@ -238,13 +238,13 @@ const MobileDevelopmentPage: React.FC = () => {
                 Let's discuss your mobile app idea and create a solution that engages your users and drives business growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Project
                 </Link>
-                <Link 
+                <Link
                   to="/about"
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                 >

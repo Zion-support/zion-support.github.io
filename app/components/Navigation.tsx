@@ -140,13 +140,10 @@ const Navigation: React.FC = () => {
               <Brain className="h-5 w-5 text-white" />
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
-<<<<<<< HEAD
-=======
-=======
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-gray-700/50' 
+      isScrolled
+        ? 'bg-slate-900/95 backdrop-blur-md border-b border-gray-700/50'
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
@@ -159,7 +156,6 @@ const Navigation: React.FC = () => {
             <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
               Zion Tech Group
             </span>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
           </Link>
 
           {/* Desktop Navigation */}
@@ -170,7 +166,7 @@ const Navigation: React.FC = () => {
             <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
               About
             </Link>
-            
+
             {/* Services Dropdown */}
             <div className="relative group">
               <button

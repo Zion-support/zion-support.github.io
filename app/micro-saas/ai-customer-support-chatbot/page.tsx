@@ -1,9 +1,9 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { 
-  ArrowRight, MessageSquare, BarChart3, Users, Zap, CheckCircle, 
-  Clock, Target, TrendingUp, PieChart, Smartphone, Shield, 
+import {
+  ArrowRight, MessageSquare, BarChart3, Users, Zap, CheckCircle,
+  Clock, Target, TrendingUp, PieChart, Smartphone, Shield,
   Lock, RefreshCw, Settings, Bot, FileText, AlertTriangle,
   CheckSquare, Star, Globe, Monitor, Smartphone as Mobile,
   Send, Eye, MousePointer, Calendar, Hash, AtSign, Headphones,
@@ -157,38 +157,38 @@ export default function AICustomerSupportChatbotPage() {
   ]
 
   const useCases = [
-    { 
-      title: 'FAQ Automation', 
+    {
+      title: 'FAQ Automation',
       description: 'Answer common questions instantly with intelligent responses',
       icon: '❓',
       benefit: 'Reduce repetitive queries by 80%'
     },
-    { 
-      title: 'Order Support', 
+    {
+      title: 'Order Support',
       description: 'Help customers track orders, process returns, and handle billing',
       icon: '📦',
       benefit: 'Handle 90% of order-related queries'
     },
-    { 
-      title: 'Technical Support', 
+    {
+      title: 'Technical Support',
       description: 'Provide step-by-step troubleshooting and technical guidance',
       icon: '🔧',
       benefit: 'Resolve 75% of technical issues automatically'
     },
-    { 
-      title: 'Lead Qualification', 
+    {
+      title: 'Lead Qualification',
       description: 'Qualify leads and schedule demos with sales team',
       icon: '🎯',
       benefit: 'Increase qualified leads by 50%'
     },
-    { 
-      title: 'Appointment Booking', 
+    {
+      title: 'Appointment Booking',
       description: 'Schedule appointments and manage calendar availability',
       icon: '📅',
       benefit: 'Reduce no-shows by 30%'
     },
-    { 
-      title: 'Complaint Handling', 
+    {
+      title: 'Complaint Handling',
       description: 'De-escalate issues and route to appropriate departments',
       icon: '😤',
       benefit: 'Improve complaint resolution by 60%'
@@ -209,13 +209,13 @@ export default function AICustomerSupportChatbotPage() {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1)_0%,transparent_50%)]" />
-        
+
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
             <MessageSquare className="w-4 h-4" />
             <span>AI-Powered Customer Support</span>
           </div>
-          
+
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
             AI Customer Support
             <br />
@@ -223,22 +223,22 @@ export default function AICustomerSupportChatbotPage() {
               Chatbot
             </span>
           </h1>
-          
+
           <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Transform your customer support with AI-powered chatbots that provide instant, intelligent responses. 
+            Transform your customer support with AI-powered chatbots that provide instant, intelligent responses.
             Reduce support costs by 60% while improving customer satisfaction by 40%.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transform hover:scale-105"
             >
               <span>Start Free Trial</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link 
-              to="#pricing" 
+            <Link
+              to="#pricing"
               className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
             >
               <span>View Pricing</span>
@@ -280,7 +280,7 @@ export default function AICustomerSupportChatbotPage() {
               Experience the future of customer support with cutting-edge AI technology that works for your business.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center group">
@@ -310,7 +310,7 @@ export default function AICustomerSupportChatbotPage() {
               Deploy AI chatbots across various customer support scenarios for maximum impact and efficiency.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
@@ -343,7 +343,7 @@ export default function AICustomerSupportChatbotPage() {
               Everything you need to provide exceptional customer support with AI-powered intelligence.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
@@ -373,7 +373,7 @@ export default function AICustomerSupportChatbotPage() {
               Connect with your existing tools and platforms for a unified customer support experience.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             {integrations.map((integration, index) => (
               <div key={index} className="group text-center">
@@ -400,12 +400,12 @@ export default function AICustomerSupportChatbotPage() {
               Choose the plan that fits your conversation volume and support needs. All plans include our core AI features.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                plan.popular 
-                  ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
+                plan.popular
+                  ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10'
                   : 'border-white/20 hover:border-cyan-400/30'
               }`}>
                 {plan.popular && (
@@ -415,7 +415,7 @@ export default function AICustomerSupportChatbotPage() {
                     </div>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
@@ -424,7 +424,7 @@ export default function AICustomerSupportChatbotPage() {
                     <span className="text-gray-300 ml-2">{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
@@ -433,8 +433,8 @@ export default function AICustomerSupportChatbotPage() {
                     </li>
                   ))}
                 </ul>
-                
-                <Link 
+
+                <Link
                   to="/contact"
                   className={`block w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
@@ -461,7 +461,7 @@ export default function AICustomerSupportChatbotPage() {
               See what our customers are saying about their success with our AI customer support chatbot.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -496,29 +496,29 @@ export default function AICustomerSupportChatbotPage() {
                 <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                   Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">Customer Support?</span>
                 </h2>
-                
+
                 <p className="text-xl sm:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
-                  Join thousands of businesses already reducing support costs by 60% with our AI-powered chatbot. 
+                  Join thousands of businesses already reducing support costs by 60% with our AI-powered chatbot.
                   Start your free trial today and experience the future of customer support.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-                  <Link 
-                    to="/contact" 
+                  <Link
+                    to="/contact"
                     className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     <span>Start Free Trial</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                  <Link 
-                    to="#pricing" 
+                  <Link
+                    to="#pricing"
                     className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
                   >
                     <span>View All Plans</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
-                
+
                 <div className="text-white/80 text-sm">
                   <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
                 </div>

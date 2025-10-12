@@ -1,9 +1,9 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { 
-  ArrowRight, DollarSign, BarChart3, Receipt, CreditCard, 
-  CheckCircle, Clock, Target, TrendingUp, PieChart, 
+import {
+  ArrowRight, DollarSign, BarChart3, Receipt, CreditCard,
+  CheckCircle, Clock, Target, TrendingUp, PieChart,
   Smartphone, Shield, Lock, RefreshCw, Settings, Zap,
   Calendar, FileText, Image, Bot, AlertTriangle, CheckSquare
 } from 'lucide-react'
@@ -155,13 +155,13 @@ export default function AIExpenseTrackerPage() {
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1)_0%,transparent_50%)]" />
-        
+
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
             <DollarSign className="w-4 h-4" />
             <span>AI-Powered Financial Management</span>
           </div>
-          
+
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
             AI Expense
             <br />
@@ -169,22 +169,22 @@ export default function AIExpenseTrackerPage() {
               Tracker
             </span>
           </h1>
-          
+
           <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Transform your financial management with AI-powered expense tracking, smart receipt scanning, 
+            Transform your financial management with AI-powered expense tracking, smart receipt scanning,
             and automated categorization. Save time and gain insights like never before.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transform hover:scale-105"
             >
               <span>Start Free Trial</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link 
-              to="#pricing" 
+            <Link
+              to="#pricing"
               className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
             >
               <span>View Pricing</span>
@@ -226,7 +226,7 @@ export default function AIExpenseTrackerPage() {
               Experience the future of financial management with cutting-edge AI technology that works for you.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center group">
@@ -256,7 +256,7 @@ export default function AIExpenseTrackerPage() {
               Everything you need to manage your finances efficiently with AI-powered intelligence and automation.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
@@ -286,12 +286,12 @@ export default function AIExpenseTrackerPage() {
               Choose the plan that fits your needs. All plans include our core AI features and secure cloud storage.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                plan.popular 
-                  ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
+                plan.popular
+                  ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10'
                   : 'border-white/20 hover:border-cyan-400/30'
               }`}>
                 {plan.popular && (
@@ -301,7 +301,7 @@ export default function AIExpenseTrackerPage() {
                     </div>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
@@ -310,7 +310,7 @@ export default function AIExpenseTrackerPage() {
                     <span className="text-gray-300 ml-2">{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
@@ -319,8 +319,8 @@ export default function AIExpenseTrackerPage() {
                     </li>
                   ))}
                 </ul>
-                
-                <Link 
+
+                <Link
                   to="/contact"
                   className={`block w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
@@ -347,7 +347,7 @@ export default function AIExpenseTrackerPage() {
               See what our customers are saying about their success with our AI expense tracker.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -382,29 +382,29 @@ export default function AIExpenseTrackerPage() {
                 <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                   Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">Financial Management?</span>
                 </h2>
-                
+
                 <p className="text-xl sm:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
-                  Join thousands of users already saving time and money with our AI-powered expense tracker. 
+                  Join thousands of users already saving time and money with our AI-powered expense tracker.
                   Start your free trial today and experience the future of financial management.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-                  <Link 
-                    to="/contact" 
+                  <Link
+                    to="/contact"
                     className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     <span>Start Free Trial</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                  <Link 
-                    to="#pricing" 
+                  <Link
+                    to="#pricing"
                     className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
                   >
                     <span>View All Plans</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
-                
+
                 <div className="text-white/80 text-sm">
                   <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
                 </div>

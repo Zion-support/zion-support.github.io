@@ -33,9 +33,9 @@ const PerformanceDashboard: React.FC = () => {
 
   useEffect(() => {
     // Only show in development or if user has enabled debug mode
-    const shouldShow = process.env.NODE_ENV === 'development' || 
+    const shouldShow = process.env.NODE_ENV === 'development' ||
                       localStorage.getItem('debug-performance') === 'true';
-    
+
     if (!shouldShow) return;
 
     setIsVisible(true);
@@ -54,9 +54,9 @@ const PerformanceDashboard: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
-          setMetrics(prev => ({ 
-            ...prev, 
-            fid: entry.processingStart - entry.startTime 
+          setMetrics(prev => ({
+            ...prev,
+            fid: entry.processingStart - entry.startTime
           }));
         });
       });
@@ -88,9 +88,9 @@ const PerformanceDashboard: React.FC = () => {
       const navigationObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry: any) => {
-          setMetrics(prev => ({ 
-            ...prev, 
-            ttfb: entry.responseStart - entry.requestStart 
+          setMetrics(prev => ({
+            ...prev,
+            ttfb: entry.responseStart - entry.requestStart
           }));
         });
       });
@@ -99,9 +99,9 @@ const PerformanceDashboard: React.FC = () => {
       // Memory usage
       const updateMemory = () => {
         if ('memory' in performance) {
-          setMetrics(prev => ({ 
-            ...prev, 
-            memory: (performance as any).memory 
+          setMetrics(prev => ({
+            ...prev,
+            memory: (performance as any).memory
           }));
         }
       };
@@ -111,8 +111,8 @@ const PerformanceDashboard: React.FC = () => {
       // Connection info
       if ('connection' in navigator) {
         const connection = (navigator as any).connection;
-        setMetrics(prev => ({ 
-          ...prev, 
+        setMetrics(prev => ({
+          ...prev,
           connection: {
             effectiveType: connection.effectiveType,
             downlink: connection.downlink,
@@ -170,28 +170,28 @@ const PerformanceDashboard: React.FC = () => {
             {metrics.lcp.toFixed(0)}ms
           </span>
         </div>
-        
+
         <div className="flex justify-between">
           <span>FID:</span>
           <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
             {metrics.fid.toFixed(0)}ms
           </span>
         </div>
-        
+
         <div className="flex justify-between">
           <span>CLS:</span>
           <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
             {metrics.cls.toFixed(3)}
           </span>
         </div>
-        
+
         <div className="flex justify-between">
           <span>FCP:</span>
           <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
             {metrics.fcp.toFixed(0)}ms
           </span>
         </div>
-        
+
         <div className="flex justify-between">
           <span>TTFB:</span>
           <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>

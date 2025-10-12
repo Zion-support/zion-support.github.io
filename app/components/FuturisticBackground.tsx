@@ -101,16 +101,16 @@ const FuturisticBackground: React.FC = () => {
         className="w-full h-full opacity-30"
         style={{ background: 'transparent' }}
       />
-      
+
       {/* Additional background effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 opacity-90" />
-      
+
       {/* Animated grid overlay */}
       <div className="absolute inset-0 holographic-grid opacity-20" />
-      
+
       {/* Quantum field effect */}
       <div className="absolute inset-0 quantum-field opacity-30" />
-      
+
       {/* Plasma effect */}
       <div className="absolute inset-0 plasma-effect opacity-20" />
     </div>

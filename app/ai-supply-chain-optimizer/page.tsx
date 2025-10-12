@@ -2,12 +2,12 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Truck, 
-  Package, 
-  TrendingUp, 
-  Shield, 
-  Clock, 
+import {
+  Truck,
+  Package,
+  TrendingUp,
+  Shield,
+  Clock,
   CheckCircle,
   ArrowRight,
   Star,
@@ -144,7 +144,7 @@ export default function AISupplyChainOptimizerPage() {
                 AI Supply Chain Optimizer
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
+                Revolutionize your supply chain with AI-powered demand forecasting, route optimization,
                 and intelligent inventory management. Reduce costs by 35% and improve efficiency by 40%.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -192,7 +192,7 @@ export default function AISupplyChainOptimizerPage() {
                 Cutting-edge artificial intelligence meets supply chain expertise to optimize your operations
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               {features.map((feature, index) => (
                 <FuturisticCard key={index} variant="service" className="h-full">
@@ -229,9 +229,9 @@ export default function AISupplyChainOptimizerPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
-                <FuturisticCard 
-                  key={index} 
-                  variant={plan.popular ? "feature" : "service"} 
+                <FuturisticCard
+                  key={index}
+                  variant={plan.popular ? "feature" : "service"}
                   className={`h-full ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}
                 >
                   {plan.popular && (
@@ -241,7 +241,7 @@ export default function AISupplyChainOptimizerPage() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-2">

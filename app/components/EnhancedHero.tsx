@@ -36,7 +36,7 @@ const EnhancedHero: React.FC = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-      
+
       {/* Main Content */}
       <div className="relative z-10 flex flex-col lg:flex-row items-center min-h-screen">
         {/* Left Content */}
@@ -48,9 +48,9 @@ const EnhancedHero: React.FC = () => {
                 AI & IT Solutions
               </span>
             </h1>
-            
+
             <p className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
-              Harness the power of cutting-edge artificial intelligence and information technology 
+              Harness the power of cutting-edge artificial intelligence and information technology
               to drive innovation, efficiency, and growth in your organization.
             </p>
 

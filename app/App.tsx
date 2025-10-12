@@ -126,13 +126,13 @@ function App() {
                 <Route path="/micro-saas/email-marketing" element={<MicroSaasPage />} />
                 <Route path="/micro-saas/expense-tracker" element={<MicroSaasPage />} />
                 <Route path="/micro-saas/inventory-management" element={<MicroSaasPage />} />
-                
+
                 {/* AI Services Dropdown */}
                 <Route path="/ai-content-generator" element={<AiContentGenerationPage />} />
                 <Route path="/ai-chatbot-builder" element={<AiServicesPage />} />
                 <Route path="/ai-analytics-dashboard" element={<AiDataAnalyticsPage />} />
                 <Route path="/ai-email-assistant" element={<AiServicesPage />} />
-                
+
                 {/* Additional AI Services */}
                 <Route path="/ai-voice-assistant" element={<AiServicesPage />} />
                 <Route path="/ai-crm-assistant" element={<AiServicesPage />} />
@@ -144,13 +144,13 @@ function App() {
                 <Route path="/ai-automated-reporting" element={<AiServicesPage />} />
                 <Route path="/ai-password-manager" element={<AiServicesPage />} />
                 <Route path="/ai-task-manager" element={<AiServicesPage />} />
-                
+
                 {/* IT Services Dropdown */}
                 <Route path="/web-development" element={<ItServicesPage />} />
                 <Route path="/mobile-development" element={<ItServicesPage />} />
                 <Route path="/devops" element={<ItServicesPage />} />
                 <Route path="/cloud-migration" element={<ItServicesPage />} />
-                
+
                 {/* Additional IT Services */}
                 <Route path="/api-development" element={<ItServicesPage />} />
                 <Route path="/database-management" element={<ItServicesPage />} />
@@ -159,7 +159,7 @@ function App() {
                 <Route path="/data-analytics" element={<ItServicesPage />} />
                 <Route path="/iot-solutions" element={<ItServicesPage />} />
                 <Route path="/blockchain-development" element={<ItServicesPage />} />
-                
+
                 {/* 5G Services */}
                 <Route path="/5g-network-infrastructure" element={<ItServicesPage />} />
                 <Route path="/5g-iot-solutions" element={<ItServicesPage />} />
@@ -167,11 +167,11 @@ function App() {
                 <Route path="/5g-private-networks" element={<ItServicesPage />} />
                 <Route path="/5g-mobile-applications" element={<ItServicesPage />} />
                 <Route path="/5g-data-analytics" element={<ItServicesPage />} />
-                
+
                 {/* Additional Services */}
                 <Route path="/business-intelligence" element={<ItServicesPage />} />
                 <Route path="/5g-implementation" element={<ItServicesPage />} />
-                
+
                 {/* Company Pages */}
                 <Route path="/team" element={<TeamPage />} />
                 <Route path="/careers" element={<CareersPage />} />

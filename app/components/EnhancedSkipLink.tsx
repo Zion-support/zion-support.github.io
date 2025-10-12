@@ -44,7 +44,7 @@ const EnhancedSkipLink: React.FC = () => {
           left: 0;
           z-index: 1000;
         }
-        
+
         .skip-link {
           position: absolute;
           top: -100px;
@@ -59,12 +59,12 @@ const EnhancedSkipLink: React.FC = () => {
           transition: top 0.3s;
           z-index: 1001;
         }
-        
+
         .skip-link:focus {
           top: 10px;
           left: 10px;
         }
-        
+
         .skip-link:hover {
           background: #00ffff;
           color: #000;
