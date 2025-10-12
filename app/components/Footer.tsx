@@ -30,16 +30,16 @@ export default function Footer() {
   ];
 
   const microSaasServices = [
-    { name: 'AI Task Manager', path: '/ai-task-manager' },
-    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
-    { name: 'AI Password Manager', path: '/ai-password-manager' },
-    { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
-    { name: 'AI Health Tracker', path: '/ai-health-tracker' },
-    { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
-    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
-    { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
-    { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
-    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
+    { name: 'AI Task Manager Pro', path: '/ai-task-manager', price: '$29/mo' },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker', price: '$19/mo' },
+    { name: 'AI Password Manager', path: '/ai-password-manager', price: '$9/mo' },
+    { name: 'AI Invoice Generator', path: '/ai-invoice-generator', price: '$39/mo' },
+    { name: 'AI Health Tracker', path: '/ai-health-tracker', price: '$24/mo' },
+    { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber', price: '$49/mo' },
+    { name: 'AI Social Media Manager', path: '/ai-social-media-manager', price: '$79/mo' },
+    { name: 'AI Email Marketing', path: '/ai-email-marketing-automation', price: '$59/mo' },
+    { name: 'AI Smart Calendar', path: '/ai-smart-calendar', price: '$34/mo' },
+    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro', price: '$99/mo' }
   ];
 
   const fiveGServices = [
@@ -152,10 +152,15 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     to={service.path}
-                    className="text-gray-300 hover:text-purple-400 transition-colors flex items-center"
+                    className="text-gray-300 hover:text-purple-400 transition-colors flex items-center justify-between group"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2" />
-                    {service.name}
+                    <div className="flex items-center">
+                      <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-200" />
+                      <span className="font-medium">{service.name}</span>
+                    </div>
+                    <span className="text-xs text-purple-400 font-semibold bg-purple-500/10 px-2 py-1 rounded-full">
+                      {service.price}
+                    </span>
                   </Link>
                 </li>
               ))}

@@ -70,38 +70,47 @@ export default function Navigation() {
   ];
 
   const microSaasServices = [
-    { name: 'AI Task Manager', path: '/ai-task-manager' },
-    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
-    { name: 'AI Password Manager', path: '/ai-password-manager' },
-    { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
-    { name: 'AI Health Tracker', path: '/ai-health-tracker' },
-    { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
-    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
-    { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
-    { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
-    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
+    { name: 'AI Task Manager Pro', path: '/ai-task-manager', price: '$29/mo' },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker', price: '$19/mo' },
+    { name: 'AI Password Manager', path: '/ai-password-manager', price: '$9/mo' },
+    { name: 'AI Invoice Generator', path: '/ai-invoice-generator', price: '$39/mo' },
+    { name: 'AI Health Tracker', path: '/ai-health-tracker', price: '$24/mo' },
+    { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber', price: '$49/mo' },
+    { name: 'AI Social Media Manager', path: '/ai-social-media-manager', price: '$79/mo' },
+    { name: 'AI Email Marketing', path: '/ai-email-marketing-automation', price: '$59/mo' },
+    { name: 'AI Smart Calendar', path: '/ai-smart-calendar', price: '$34/mo' },
+    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro', price: '$99/mo' },
+    { name: 'AI Project Manager', path: '/ai-project-manager', price: '$89/mo' },
+    { name: 'AI CRM Assistant', path: '/ai-crm-assistant', price: '$69/mo' }
   ];
 
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20' : 'bg-transparent'
+        scrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' : 'bg-transparent'
       }`}
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Animated background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Logo with enhanced effects */}
           <Link 
             to="/" 
-            className="flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 rounded-lg"
+            className="flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 rounded-lg group relative"
             aria-label="Zion Tech Group - Go to homepage"
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" aria-hidden="true" />
+            <div className="relative">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-5 h-5 text-white" aria-hidden="true" />
+              </div>
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
             </div>
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">Zion Tech Group</span>
           </Link>
 
             {/* Desktop Navigation */}
@@ -175,16 +184,24 @@ export default function Navigation() {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {activeDropdown === 'saas' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-xl shadow-2xl border border-cyan-500/20 py-4">
+                  <div className="px-4 py-2 border-b border-gray-700/50 mb-2">
+                    <h3 className="text-sm font-semibold text-cyan-300 uppercase tracking-wide">Micro SAAS Services</h3>
+                  </div>
                   {microSaasServices.map((service, index) => (
                     <Link
                       key={index}
                       to={service.path}
                       onClick={closeDropdown}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                      className="flex items-center justify-between px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-all duration-200 group"
                     >
-                      <Cpu className="w-4 h-4 mr-3" />
-                      <span>{service.name}</span>
+                      <div className="flex items-center">
+                        <Cpu className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform duration-200" />
+                        <span className="font-medium">{service.name}</span>
+                      </div>
+                      <span className="text-xs text-cyan-400 font-semibold bg-cyan-500/10 px-2 py-1 rounded-full">
+                        {service.price}
+                      </span>
                     </Link>
                   ))}
                 </div>
