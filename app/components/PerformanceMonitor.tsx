@@ -1,5 +1,3 @@
-'use client';
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 const PerformanceMonitor: React.FC = () => {
@@ -61,7 +59,6 @@ const PerformanceMonitor: React.FC = () => {
     };
   }, []);
 
-=======
 import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
@@ -107,7 +104,6 @@ const PerformanceMonitor: React.FC = () => {
 
   // This component doesn't render anything visible
   // It just monitors performance metrics
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
   return null;
 };
 

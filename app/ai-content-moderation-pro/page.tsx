@@ -1,7 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Shield, Eye, Zap, CheckCircle, ArrowRight, Brain, Smartphone, Globe, AlertTriangle, BarChart3, Star, Sparkles, Lock } from 'lucide-react'
 import Layout from '../layout'
 
 export default function AIContentModerationPro() {

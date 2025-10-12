@@ -1,6 +1,5 @@
 import React from 'react';
 'use client'
-import { Helmet } from 'react-helmet-async';
 
 const FuturisticHeroPage: React.FC = () => {
   const features = [

@@ -1,7 +1,6 @@
 import React from 'react';
 'use client';
 import { Link } from 'react-router-dom';
-import { X, ArrowRight, Brain } from 'lucide-react';
 
 interface SearchResult {
   title: string;

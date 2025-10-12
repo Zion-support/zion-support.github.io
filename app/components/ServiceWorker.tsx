@@ -1,31 +1,4 @@
-<<<<<<< HEAD
-'use client';
-import React, { useEffect } from 'react';
-=======
-'use client'
-import React from 'react'
-import { ArrowRight, Mail, Brain, BarChart, Shield, Globe, CheckCircle, Phone, MapPin } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
-
-const ServiceWorker: React.FC = () => {
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: ', registration);
-        })
-        .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError);
-        });
-    }
-  }, []);
-
-  return null;
-};
-
-<<<<<<< HEAD
 export default ServiceWorker;
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -96,4 +69,3 @@ export default ServiceWorker;
 }
 
 export default ServiceWorker;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c

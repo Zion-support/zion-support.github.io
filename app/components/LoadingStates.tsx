@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import { Loader2, Brain, Zap, Cpu } from 'lucide-react';
 
 export const PageLoader: React.FC = () => {
   return (

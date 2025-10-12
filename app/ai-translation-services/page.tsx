@@ -1,6 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Globe, Zap, Shield, Users, CheckCircle, Star, ArrowRight, BarChart3, Clock, Brain, FileText, Mic } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const AITranslationServicesPage: React.FC = () => {

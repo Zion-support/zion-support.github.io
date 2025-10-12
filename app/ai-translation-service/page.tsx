@@ -1,7 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Languages, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Clock, FileText } from 'lucide-react'
 import Layout from '../layout'
 
 export default function AITranslationService() {

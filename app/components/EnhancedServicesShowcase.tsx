@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import { ArrowRight, Brain, BarChart } from 'lucide-react';
 
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [

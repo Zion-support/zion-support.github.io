@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Activity, Zap, Clock, Wifi, Cpu, HardDrive } from 'lucide-react';
 
 interface PerformanceMetrics {
   lcp: number;

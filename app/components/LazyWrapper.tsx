@@ -1,4 +1,3 @@
-import React, { Suspense, lazy, ComponentType } from 'react'
 
 interface LazyWrapperProps {
   children: React.ReactNode

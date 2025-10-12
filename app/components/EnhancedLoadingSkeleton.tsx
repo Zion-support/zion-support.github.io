@@ -1,8 +1,6 @@
 import React from 'react';
 'use client'
-import { Helmet } from 'react-helmet-async';
 
-import { ArrowRight, Brain } from 'lucide-react';
 
 const EnhancedLoadingSkeletonPage: React.FC = () => {
   const features = [
