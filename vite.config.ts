@@ -38,6 +38,7 @@ export default defineConfig({
           router: ['react-router-dom'],
           ui: ['framer-motion', 'lucide-react'],
           helmet: ['react-helmet-async'],
+          charts: ['recharts'],
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -46,6 +47,12 @@ export default defineConfig({
     },
     // Optimize bundle size
     chunkSizeWarningLimit: 1000,
+    // Enable compression
+    reportCompressedSize: true,
+    // Optimize dependencies
+    commonjsOptions: {
+      include: [/node_modules/],
+    },
   },
   server: {
     port: 3000,

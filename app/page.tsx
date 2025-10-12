@@ -21,7 +21,10 @@ import FuturisticBackground from './components/FuturisticBackground';
 import FuturisticCard from './components/FuturisticCard';
 import FuturisticButton from './components/FuturisticButton';
 
-// Note: Lazy loading components will be implemented in future iterations
+// Lazy loading components for better performance
+const LazyFuturisticBackground = React.lazy(() => import('./components/FuturisticBackground'));
+const LazyFuturisticCard = React.lazy(() => import('./components/FuturisticCard'));
+const LazyFuturisticButton = React.lazy(() => import('./components/FuturisticButton'));
 
 export default function HomePage() {
   const stats = [

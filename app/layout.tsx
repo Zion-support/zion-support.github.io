@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import ErrorBoundary from './components/ErrorBoundary';
+import ErrorBoundary from './components/EnhancedErrorBoundary';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';

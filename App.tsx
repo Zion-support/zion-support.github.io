@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import Header from './app/components/Header'
 import Footer from './app/components/Footer'
-import ErrorBoundary from './app/components/ErrorBoundary'
+import ErrorBoundary from './app/components/EnhancedErrorBoundary'
 import Breadcrumb from './app/components/Breadcrumb'
 import CookieConsent from './app/components/CookieConsent'
 
