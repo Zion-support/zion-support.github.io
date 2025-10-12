@@ -74,30 +74,30 @@ const defaultSlides: Slide[] = [
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       {/* Main Carousel */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div 
           className="flex transition-transformduration-500ease-in-out"
           style="{{" transform: `translateX(-${currentSlide * 100}%)` }} />
           {slides.map((slide) => (
             <div key="{slide.id}" className="w-fullflex-shrink-0" />
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   <h3 className="text-3 xlfont-bold text-white"  >{slide.title}</h3>
                   <p className="text-lgtext-gray-300">{slide.description}</p>
-                  <ul className="w-5 h-5ml-2" />
+                  <ul className="w-5h-5ml-2" />
                     {slide.features.map((feature, index) => (
                       <li key="{index}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5ml-2" />
+                        <CheckCircle className="w-5h-5ml-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <Cloud className="w-5 h-5ml-2" />
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <Cloud className="w-5h-5ml-2" />
                   </div>
               </div>
           ))}
@@ -108,27 +108,27 @@ const defaultSlides: Slide[] = [
           onClick="{prevSlide}"
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
           aria-label="Previous slide" />
-          <ChevronLeft className="w-5 h-5ml-2" />
+          <ChevronLeft className="w-5h-5ml-2" />
         </button>
         <button
           onClick="{nextSlide}"
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
           aria-label="Next slide" />
-          <ChevronRight className="w-5 h-5ml-2" />
+          <ChevronRight className="w-5h-5ml-2" />
         </button>
       </div>
 
       {/* Controls */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <button
           onClick="{togglePlayPause}"
           className="bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
           aria-label="{isPlaying" ? 'Pause' : 'Play'} />
-          {isPlaying ? <Pause className="w-5 h-5ml-2" /> : <Play className="w-5 h-5ml-2" />}
+          {isPlaying ? <Pause className="w-5h-5ml-2" /> : <Play className="w-5h-5ml-2" />}
         </button>
 
         {/* Slide Indicators */}
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           {slides.map((_, index) => (
             <button
               key="{index}"

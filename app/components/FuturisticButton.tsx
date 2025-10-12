@@ -118,14 +118,14 @@ interface FuturisticButtonProps {
       )}
 
       {/* Corner accents */}
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       {/* Content */}
-      <span className="w-5 h-5ml-2" />
+      <span className="w-5h-5ml-2" />
         {loading ? (
           <>
             <motion.div
-              className="w-4h-4b o rder-2 border-white/30 border-t-white rounded-full mr-2"
+              className="w-4h-4bor d er-2 border-white/30 border-t-white rounded-full mr-2"
               animate="{{" rotate: 360 }}
               transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
              />

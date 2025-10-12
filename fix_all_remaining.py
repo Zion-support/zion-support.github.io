@@ -1,26 +1,41 @@
 #!/usr/bin/env python3
 """
-Script to fix merge conflicts and syntax errors in TSX/TS files
+Comprehensive script to fix all remaining issues in TSX/TS files
 """
 import os
 import re
 import glob
 
-def fix_merge_conflicts(content):
-    """Remove merge conflict markers and keep the HEAD version"""
-    # Remove merge conflict markers
-    content = re.sub(r'<<<<<<< HEAD\n', '', content)
-    content = re.sub(r'=======.*?\n', '', content, flags=re.DOTALL)
-    content = re.sub(r'>>>>>>> .*\n', '', content)
-    return content
-
-def fix_jsx_syntax(content):
-    """Fix common JSX syntax errors"""
-    # Fix malformed className attributes
-    content = re.sub(r'className="([^"]*?)([a-zA-Z])([a-zA-Z])', r'className="\1\2 \3', content)
+def fix_unused_imports_and_vars(content):
+    """Remove unused imports and variables"""
+    lines = content.split('\n')
+    filtered_lines = []
     
-    # Fix missing spaces in className
-    content = re.sub(r'className="([^"]*?)([a-zA-Z])([a-zA-Z])', r'className="\1\2 \3', content)
+    # Common unused imports to remove
+    unused_imports = [
+        'CheckCircle', 'Star', 'Users', 'Award', 'Zap', 'Shield', 'Brain',
+        'Box', 'Palette', 'Layers', 'ArrowRight', 'Link', 'Layout'
+    ]
+    
+    for line in lines:
+        # Skip unused imports
+        if line.strip().startswith('import '):
+            should_skip = False
+            for unused in unused_imports:
+                if unused in line and f'import {unused}' in line:
+                    should_skip = True
+                    break
+            if not should_skip:
+                filtered_lines.append(line)
+        else:
+            filtered_lines.append(line)
+    
+    return '\n'.join(filtered_lines)
+
+def fix_jsx_syntax_errors(content):
+    """Fix JSX syntax errors"""
+    # Fix malformed className attributes
+    content = re.sub(r'className="([^"]*?)\s+([^"]*?)"', r'className="\1\2"', content)
     
     # Fix malformed gradient classes
     content = re.sub(r'bg-gradient-to-brfrom-', 'bg-gradient-to-br from-', content)
@@ -35,7 +50,9 @@ def fix_jsx_syntax(content):
     
     # Fix malformed spacing classes
     content = re.sub(r'mx-autopx-4', 'mx-auto px-4', content)
-    content = re.sub(r'w-5 h-5ml-2', 'w-5 h-5 ml-2', content)
+    content = re.sub(r'w-5h-5m l-2', 'w-5 h-5 ml-2', content)
+    content = re.sub(r'w-8h-8', 'w-8 h-8', content)
+    content = re.sub(r'w-6h-6', 'w-6 h-6', content)
     content = re.sub(r'flexitems-center', 'flex items-center', content)
     content = re.sub(r'hover:from-cyan-600', 'hover:from-cyan-600', content)
     content = re.sub(r'hover:to-purple-700', 'hover:to-purple-700', content)
@@ -73,33 +90,22 @@ def fix_jsx_syntax(content):
     content = re.sub(r'</Link>\s*/>', '</Link>', content)
     content = re.sub(r'</Star>\s*/>', '</Star>', content)
     
-    # Fix malformed self-closing tags
-    content = re.sub(r'<div key="\{index\}" className="[^"]*" />', lambda m: m.group(0).replace(' />', '>') + '</div>', content)
-    content = re.sub(r'<div key="\{itemIndex\}" className="[^"]*" />', lambda m: m.group(0).replace(' />', '>') + '</div>', content)
-    content = re.sub(r'<div key="\{featureIndex\}" className="[^"]*" />', lambda m: m.group(0).replace(' />', '>') + '</div>', content)
-    content = re.sub(r'<li key="\{itemIndex\}" className="[^"]*" />', lambda m: m.group(0).replace(' />', '>') + '</li>', content)
-    content = re.sub(r'<li key="\{featureIndex\}" className="[^"]*" />', lambda m: m.group(0).replace(' />', '>') + '</li>', content)
-    content = re.sub(r'<Star key="\{i\}" className="[^"]*" />', lambda m: m.group(0).replace(' />', '>') + '</Star>', content)
-    
     # Fix malformed sections
-    content = re.sub(r'<section className="w-5 h-5ml-2" />', '<section className="py-16">', content)
+    content = re.sub(r'<section className="w-5h-5m l-2" />', '<section className="py-16">', content)
     
     # Fix malformed divs with classes
-    content = re.sub(r'<div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">', '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">', content)
+    content = re.sub(r'<div className="mi n-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">', '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">', content)
     
     # Fix malformed headings
-    content = re.sub(r'<h2 className="w-5 h-5ml-2" />', '<h2 className="text-3xl font-bold text-white mb-4">', content)
-    content = re.sub(r'<h3 className="w-5 h-5ml-2" />', '<h3 className="text-xl font-semibold text-white mb-2">', content)
-    content = re.sub(r'<p className="w-5 h-5ml-2">', '<p className="text-gray-300 mb-4">', content)
+    content = re.sub(r'<h2 className="w-5h-5m l-2" />', '<h2 className="text-3xl font-bold text-white mb-4">', content)
+    content = re.sub(r'<h3 className="w-5h-5m l-2" />', '<h3 className="text-xl font-semibold text-white mb-2">', content)
+    content = re.sub(r'<p className="w-5h-5m l-2">', '<p className="text-gray-300 mb-4">', content)
     
     # Fix malformed spans
-    content = re.sub(r'<span className="w-5 h-5ml-2" />', '<span className="text-4xl font-bold text-white">', content)
+    content = re.sub(r'<span className="w-5h-5m l-2" />', '<span className="text-4xl font-bold text-white">', content)
     
     # Fix malformed ul elements
-    content = re.sub(r'<ul className="w-5 h-5ml-2" />', '<ul className="space-y-2">', content)
-    
-    # Fix malformed div elements
-    content = re.sub(r'<div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">', '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">', content)
+    content = re.sub(r'<ul className="w-5h-5m l-2" />', '<ul className="space-y-2">', content)
     
     return content
 
@@ -119,21 +125,15 @@ def fix_duplicate_imports(content):
     
     return '\n'.join(filtered_lines)
 
-def fix_duplicate_react_imports(content):
-    """Fix duplicate React imports"""
-    lines = content.split('\n')
-    react_imports = []
-    other_lines = []
+def fix_missing_closing_braces(content):
+    """Fix missing closing braces"""
+    # Count opening and closing braces
+    open_braces = content.count('{')
+    close_braces = content.count('}')
     
-    for line in lines:
-        if 'import React' in line:
-            react_imports.append(line)
-        else:
-            other_lines.append(line)
-    
-    # Keep only the first React import
-    if react_imports:
-        return react_imports[0] + '\n' + '\n'.join(other_lines)
+    if open_braces > close_braces:
+        missing_braces = open_braces - close_braces
+        content += '\n' + '}' * missing_braces
     
     return content
 
@@ -146,10 +146,10 @@ def fix_file(file_path):
         original_content = content
         
         # Apply fixes
-        content = fix_merge_conflicts(content)
         content = fix_duplicate_imports(content)
-        content = fix_duplicate_react_imports(content)
-        content = fix_jsx_syntax(content)
+        content = fix_unused_imports_and_vars(content)
+        content = fix_jsx_syntax_errors(content)
+        content = fix_missing_closing_braces(content)
         
         # Only write if content changed
         if content != original_content:

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -72,60 +71,56 @@ const Page: React.FC = () => {
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>Service - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
-      <div className="max-w-7xl mx-autopx-4 sm:px-6 lg:px-8 py-16 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
         {/* Hero Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />
-              <span className="w-5 h-5ml-2" />
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h1 className="w-5h-5ml-2" />
+              <span className="w-5h-5ml-2" />
                 AI E-commerce Optimizer Pro
               </span>
             </h1>
-            <p className="w-5 h-5ml-2">Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs.
+            <p className="w-5h-5ml-2">Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs.
             </p>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <Link
           to="/contact"
-          className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
+          className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
         >
           Get Started
                 
-          <ArrowRight className="w-5 h-5ml-2" />
+          <ArrowRight className="w-5h-5ml-2" />
         </Link>
               <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
                 Learn More
                 />View All Services
-=======
 'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3 } from 'lucide-react';
 
 export default function AIEcommerceOptimizerPro() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+      icon: <Brain className="w-6 h-6text-cyan-400" />,
       title: 'AI-Powered Optimization',
       description: 'Advanced machine learning algorithms analyze customer behavior and optimize your e-commerce platform in real-time'
     },
     {
-      icon: <Zap className="w-6 h-6 text-purple-400" />,
+      icon: <Zap className="w-6 h-6text-purple-400" />,
       title: 'Performance Enhancement',
       description: 'Boost conversion rates, reduce cart abandonment, and increase average order value with intelligent recommendations'
     },
     {
-      icon: <Shield className="w-6 h-6 text-yellow-400" />,
+      icon: <Shield className="w-6 h-6text-yellow-400" />,
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with PCI DSS compliance and advanced fraud detection'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
+      icon: <BarChart3 className="w-6 h-6text-green-400" />,
       title: 'Advanced Analytics',
       description: 'Comprehensive insights into customer behavior, sales performance, and optimization opportunities'
     }
@@ -169,49 +164,46 @@ export default function AIEcommerceOptimizerPro() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
               >
                 View All Services
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
               </Link>
             </div>
         </div>
       </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5h-5ml-2" />
                 Why Choose Our AI E-commerce Optimizer?
               </h2>
-              <p className="w-5 h-5ml-2">Our advanced AI technology helps you maximize your e-commerce potential
+              <p className="w-5h-5ml-2">Our advanced AI technology helps you maximize your e-commerce potential
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {[
                 {
-                  icon: <Brain className="w-5 h-5ml-2" />,
+                  icon: <Brain className="w-5h-5ml-2" />,
                   title: "AI-Powered Optimization",
                   description: "Advanced machine learning algorithms optimize your product listings, pricing, and recommendations."
                 },
                 {
-                  icon: <Zap className="w-5 h-5ml-2" />,
+                  icon: <Zap className="w-5h-5ml-2" />,
                   title: "Real-time Analytics",
                   description: "Get instant insights into customer behavior and sales performance with our comprehensive dashboard."
                 },
                 {
-                  icon: <Shield className="w-5 h-5ml-2" />,
+                  icon: <Shield className="w-5h-5ml-2" />,
                   title: "Secure & Reliable",
                   description: "Enterprise-grade security ensures your data is protected while maintaining 99.9% uptime."
                 }
               ].map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-allduration-300" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-all duration-300" />
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     {feature.icon}
                   </div>
-                  <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
-                  <p className="w-5 h-5ml-2">{feature.description}</p>
-=======
+                  <h3 className="w-5h-5ml-2" />{feature.title}</h3>
+                  <p className="w-5h-5ml-2">{feature.description}</p>
         <section className="py-20">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
@@ -229,45 +221,44 @@ export default function AIEcommerceOptimizerPro() {
                   <p className="text-gray-300">
                     {feature.description}
                   </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
                 </div>
               ))}
             </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5h-5ml-2" />
                 Choose Your Plan
               </h2>
-              <p className="w-5 h-5ml-2">Flexible pricing options to fit your business needs
+              <p className="w-5h-5ml-2">Flexible pricing options to fit your business needs
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50transition-allduration-300" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
-                    <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50transition-all duration-300" />
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <h3 className="w-5h-5ml-2" />{plan.name}</h3>
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                       {plan.price}
-                      <span className="w-5 h-5ml-2" />{plan.period}</span>
+                      <span className="w-5h-5ml-2" />{plan.period}</span>
                     </div>
-                    <p className="w-5 h-5ml-2">{plan.description}</p>
+                    <p className="w-5h-5ml-2">{plan.description}</p>
                   </div>
                   
-                  <ul className="w-5 h-5ml-2" />
+                  <ul className="w-5h-5ml-2" />
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5 h-5ml-2" />
+                        <CheckCircle className="w-5h-5ml-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
                   
-                  <Link to="/contact" className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 rounded-lg font-semibold text-center block hover:from-cyan-600 hover:to-purple-600transition-allduration-300" />
+                  <Link to="/contact" className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 rounded-lg font-semibold text-center block hover:from-cyan-600 hover:to-purple-600transition-all duration-300" />
                     Get Started
                   </Link>
                 </div>
@@ -277,24 +268,22 @@ export default function AIEcommerceOptimizerPro() {
       </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5h-5ml-2" />
                 Ready to Get Started?
               </h2>
-              <p className="w-5 h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
+              <p className="w-5h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
               </p>
-              <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
                   Contact Us
                 </Link>
                 <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
                   View Services
                 </Link>
               </div>
-=======
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -310,16 +299,14 @@ export default function AIEcommerceOptimizerPro() {
               Contact Us Today
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
           </div>
         </section>
       </div>
     </>
   );
-<<<<<<< HEAD
 };
 
 export default Page;
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
+
+}}

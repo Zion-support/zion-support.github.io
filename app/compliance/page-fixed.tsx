@@ -35,15 +35,15 @@ return (
         <meta />
       </Helmet>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         {/* Hero Section */}
-        <section className="py-20px-4"  > </section><div className="</di v><divclassName="text-center mb-16"  > </div><h2 className="text-4 xl font-boldtext-white mb-4"  >Section Title</h2>
+        <section className="py-20px-4"  > </section><div className="</div><d ivclassName="text-center mb-16"  > </div><h2 className="text-4 xl font-bold text-white mb-4"  >Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
         </section>
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  /></div>
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h1 />Page Fixed
             </h1>
             <p></p>
@@ -58,18 +58,18 @@ return (
               </button>
             </div>
         </section>
-        <section className="w-5 h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+        <section className="w-5h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  />
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5 h-5ml-2" />Page Fixed
-            <p className="w-5 h-5ml-2" />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h1 className="w-5h-5ml-2" />Page Fixed
+            <p className="w-5h-5ml-2" />
               Advanced page fixed solutions powered by AI technology.
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button className="w-5 h-5ml-2" />Get Started
-              <button className="w-5 h-5ml-2" />Learn More
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <button className="w-5h-5ml-2" />Get Started
+              <button className="w-5h-5ml-2" />Learn More
         {/* Features Section */}
-        <section className="py-20px-4"  > </section><div className="</di v><divclassName="text-center mb-16"  > </div><h2 className="text-4 xl font-boldtext-white mb-4"  >Section Title</h2>
+        <section className="py-20px-4"  > </section><div className="</div><d ivclassName="text-center mb-16"  > </div><h2 className="text-4 xl font-bold text-white mb-4"  >Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
         </section>
@@ -82,12 +82,12 @@ return (
                 Powerful AI technology that drives results
               </p>
             </div>
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {features.map((feature, index) => (
-                <div key="{index}" className="bg-white/5 backdrop-blur-sm rounded-2 xl p-8 hover:bg-white/10 transition-allduration-300group" /></div>
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2 xl p-8 hover:bg-white/10 transition-all duration-300group" /></div>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                     <feature />
-                  <h3 className="text-xl font-boldtext-white mb-4"  >{feature.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-4"  >{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {
     feature.benefits && (;
@@ -104,28 +104,28 @@ return (
 
             </div>
         </section>
-          <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5 h-5ml-2" />Key Features
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <h2 className="w-5h-5ml-2" />Key Features
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Powerful AI technology that drives results
-            <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {features.map((feature, index) => (
-                <div key="{index}" className="bg-white/5 backdrop-blur-sm rounded-2 xl p-8 hover:bg-white/10 transition-allduration-300group" />
-                  <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <feature.icon className="w-8h-8text-white"  />
-                  <h3 className="w-5 h-5ml-2" />{feature.title}
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2 xl p-8 hover:bg-white/10 transition-all duration-300group" />
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <feature.icon className="w-8 h-8text-white"  />
+                  <h3 className="w-5h-5ml-2" />{feature.title}
                   <p className="text-gray-300 mb-4">{feature.description}
                   {feature.benefits && (
-                    <ul className="w-5 h-5ml-2" />
+                    <ul className="w-5h-5ml-2" />
                       {feature.benefits.map((benefit, idx) => (
                         <li key="{idx}" className="flex items-centertext-sm text-gray-400" />
-                          <CheckCircle className="w-5 h-5ml-2" />
+                          <CheckCircle className="w-5h-5ml-2" />
                           {benefit}
                       ))}
                   )}
               ))}
         {/* CTA Section */}
-        <section className="py-20px-4"  > </section><div className="</di v><divclassName="text-center mb-16"  > </div><h2 className="text-4 xl font-boldtext-white mb-4"  >Section Title</h2>
+        <section className="py-20px-4"  > </section><div className="</div><d ivclassName="text-center mb-16"  > </div><h2 className="text-4 xl font-bold text-white mb-4"  >Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
         </section>

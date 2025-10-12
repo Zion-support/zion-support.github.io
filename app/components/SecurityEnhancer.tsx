@@ -32,8 +32,8 @@ import { useEffect } from 'react';
   }, [])
 
   return (
-    <div className="{`s e curity-enhanced" ${className}`}  >{children}
-    </div className="{`s e curity-enhanced" ${className}`}  ></div>
+    <div className="{`sec u rity-enhanced" ${className}`}  >{children}
+    </div className="{`sec u rity-enhanced" ${className}`}  ></div>
   )
 }
 

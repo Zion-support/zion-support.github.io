@@ -22,16 +22,16 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       isOpen ? 'translate-x-0' : '-translate-x-full'
     }`} />
       <div className="fixed inset-0 bg-blackbg-opacity-50" onClick="{onClose}"  />
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <span className="text-xl font-bold text-white"  >Menu</span>
           <button
             onClick="{onClose}"
             className="text-gray-300 hover:text-white transition-colors" />
-            <X className="w-5 h-5ml-2" />
+            <X className="w-5h-5ml-2" />
           </button>
         </div>
-        <nav className="w-5 h-5ml-2" />
+        <nav className="w-5h-5ml-2" />
           {navigationItems.map((item, index) => (
             <Link
               key="{index}"

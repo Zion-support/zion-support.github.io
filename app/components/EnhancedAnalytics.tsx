@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 import { createContext, useContext, useEffect} from 'react';
 import { createContext, useContext, useEffect } from 'react';
 

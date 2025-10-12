@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
-=======
 'use client';
-import React, { useEffect, useState } from 'react';
 import { ArrowRight, Zap } from 'lucide-react';
->>>>>>> origin/main
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -20,11 +16,8 @@ const PerformanceOptimizer: React.FC = () => {
     fid: null,
     cls: null,
     fcp: null,
-<<<<<<< HEAD
     ttfb: null,
-=======
     ttfb: null
->>>>>>> origin/main
   });
 
   useEffect(() => {
@@ -33,17 +26,14 @@ const PerformanceOptimizer: React.FC = () => {
       const criticalResources = [
         '/fonts/inter.woff2',
         '/images/hero-bg.jpg',
-<<<<<<< HEAD
         '/images/logo.png',
       ];
 
       criticalResources.forEach((resource) => {
-=======
         '/images/logo.png'
       ];
 
       criticalResources.forEach(resource => {
->>>>>>> origin/main
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
@@ -57,7 +47,6 @@ const PerformanceOptimizer: React.FC = () => {
 
     // Optimize images
     const optimizeImages = () => {
-<<<<<<< HEAD
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -119,7 +108,6 @@ const PerformanceOptimizer: React.FC = () => {
       window.addEventListener('scroll', updateScrollPosition, { passive: true });
 
       return () => window.removeEventListener('scroll', updateScrollPosition);
-=======
       const images = document.querySelectorAll('img');
       images.forEach(img => {
         if (!img.loading) {
@@ -129,13 +117,11 @@ const PerformanceOptimizer: React.FC = () => {
           img.decoding = 'async';
         }
       });
->>>>>>> origin/main
     };
 
     // Initialize optimizations
     preloadCriticalResources();
     optimizeImages();
-<<<<<<< HEAD
     lazyLoadComponents();
     monitorWebVitals();
     const cleanupScroll = optimizeScroll();
@@ -145,7 +131,6 @@ const PerformanceOptimizer: React.FC = () => {
       cleanupScroll();
     };
   }, []);
-=======
   }, []);
 
   const features = [
@@ -184,7 +169,7 @@ const PerformanceOptimizer: React.FC = () => {
             <div className="flexflex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
-                <ArrowRight className="ml-2h-5 w-5" />
+                <ArrowRight className="ml-2h-5w-5" />
               </button>
               <button className="borderborder-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
@@ -210,7 +195,7 @@ const PerformanceOptimizer: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-gray-800/50backdrop-blur-xl rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <Zap className="h-6w-6 text-white" />
+                  <Zap className="h-6w-6text-white" />
                 </div>
                 <h3 className="text-xlfont-bold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -227,7 +212,6 @@ export default PerformanceOptimizer;
       cleanupScroll()
     }
   }, [])
->>>>>>> origin/main
 
   // Log performance metrics in development
   useEffect(() => {

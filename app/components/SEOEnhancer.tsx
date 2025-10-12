@@ -1,16 +1,10 @@
-'use client';
 import React from 'react';
+'use client';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, Zap, Shield, Globe, CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
-=======
 import { Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
->>>>>>> origin/main
 const SEOEnhancer: React.FC = () => {
   const features = [
     {
@@ -72,7 +66,7 @@ const SEOEnhancer: React.FC = () => {
             <div className="flexflex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-rfrom-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
-                <ArrowRight className="ml-2h-5 w-5" />
+                <ArrowRight className="ml-2h-5w-5" />
               </button>
               <button className="borderborder-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
@@ -98,7 +92,7 @@ const SEOEnhancer: React.FC = () => {
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
                 <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6h-6 text-white" />
+                  <feature.icon className="w-6 h-6text-white" />
                 </div>
                 <h3 className="text-xlfont-bold text-white mb-2">
                   {feature.title}
@@ -128,7 +122,7 @@ const SEOEnhancer: React.FC = () => {
             {benefits.map((benefit, index) => (
               <div key={index} className="flexitems-start space-x-4">
                 <div className="bg-gradient-to-rfrom-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <CheckCircle className="w-5 h-5 text-white" />
+                  <CheckCircle className="w-5h-5text-white" />
                 </div>
                 <p className="text-gray-300text-lg">
                   {benefit}
