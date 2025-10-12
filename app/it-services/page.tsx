@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Cloud, Shield, Code, Database, Smartphone, DollarSign, Clock, Users, Server, Network, Settings } from 'lucide-react';
-=======
-import { CheckCircle, ArrowRight, Server, Shield, Cloud, Database, Network, Settings, Users, Clock, DollarSign } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
