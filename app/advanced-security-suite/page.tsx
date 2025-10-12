@@ -1,4 +1,4 @@
-import { Shield, ArrowRight, CheckCircle, Brain, Lock, Star, Eye } from 'lucide-react'
+import { ArrowRight, CheckCircle, Brain, Lock, Star, Eye } from 'lucide-react'
 
 import Layout from '../layout'
 import React from 'react';

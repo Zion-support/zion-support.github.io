@@ -1,65 +1,54 @@
 'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Brain, Clock, Target } from 'lucide-react';
-
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
-        <title>5G Data Analytics - Zion Tech Group</title>
-
-      {/* Hero Section */
-    
-              AI E-commerce <span className="text-blue-600">Optimizer Pro</span>
-
-              Transform your e-commerce business with advanced AI optimization solutions that boost sales, 
-              improve conversion rates, and maximize your online store performance.
-    
-                Get Started
-    
-        <title>5G Data Analytics - Zion Tech Group</title>
-
-import { ArrowRight, CheckCircle, Star, Brain, BarChart3, Target, TrendingUp } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Clock, Target, TrendingUp } from 'lucide-react';
 
 export default function AIEcommerceOptimizerPro() {
   const features = [
+    {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: 'AI-Powered Optimization',
-      description: 'Advanced machine learning algorithms analyze customer behavior and optimize your e-commerce platform in real-time'
+      description: 'Advanced machine learning algorithms analyze customer behavior and optimize your store automatically'
     },
-
-      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
-      title: 'Real-time Insights',
-      description: 'Get instant insights into customer behavior, conversion rates, and sales performance'
-    },
-      icon: <Target className="w-6 h-6 text-yellow-400" />,
-      title: 'Conversion Optimization',
-      description: 'Automatically optimize product pages, checkout flows, and marketing campaigns for maximum conversions'
-    },
+    {
       icon: <TrendingUp className="w-6 h-6 text-green-400" />,
-      title: 'Revenue Growth',
-      description: 'Increase your e-commerce revenue by up to 40% with our proven optimization strategies'
-  ]
+      title: 'Conversion Rate Optimization',
+      description: 'Increase your conversion rates by up to 40% with intelligent product recommendations and layout optimization'
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
+      title: 'Real-time Analytics',
+      description: 'Get detailed insights into customer behavior, sales patterns, and performance metrics'
+    },
+    {
+      icon: <Zap className="w-6 h-6 text-yellow-400" />,
+      title: 'Automated A/B Testing',
+      description: 'Continuously test and optimize your store elements for maximum performance'
+    }
+  ];
 
   const optimizationFeatures = [
+    {
       category: 'Product Optimization',
-      items: ['AI Product Recommendations', 'Dynamic Pricing', 'Inventory Management', 'Product Image Optimization', 'SEO Enhancement', 'Review Management']
+      items: ['Smart Product Recommendations', 'Dynamic Pricing', 'Inventory Management', 'Product Search Optimization', 'Cross-selling & Upselling', 'Product Image Enhancement']
     },
+    {
       category: 'Customer Experience',
-      items: ['Personalized Shopping', 'Smart Search', 'Chatbot Integration', 'Mobile Optimization', 'Fast Loading', 'User Journey Analysis']
+      items: ['Personalized Shopping Experience', 'Chatbot Integration', 'Customer Journey Mapping', 'Mobile Optimization', 'Page Speed Optimization', 'User Interface Enhancement']
     },
+    {
       category: 'Marketing Automation',
-      items: ['Email Campaigns', 'Social Media Integration', 'Retargeting Ads', 'A/B Testing', 'Customer Segmentation', 'Analytics Dashboard']
+      items: ['Email Campaign Optimization', 'Social Media Integration', 'Retargeting Campaigns', 'SEO Enhancement', 'Content Personalization', 'Customer Segmentation']
     },
-      category: 'Performance Monitoring',
-      items: ['Real-time Analytics', 'Conversion Tracking', 'Revenue Reports', 'Customer Insights', 'Performance Alerts', 'ROI Analysis']
-  ]
+    {
+      category: 'Analytics & Reporting',
+      items: ['Sales Performance Tracking', 'Customer Behavior Analysis', 'Revenue Optimization', 'ROI Measurement', 'Predictive Analytics', 'Custom Dashboards']
+    }
+  ];
 
   const pricingPlans = [
+    {
       name: 'Starter',
       price: '$99',
       period: '/month',
@@ -69,11 +58,12 @@ export default function AIEcommerceOptimizerPro() {
         'Basic AI optimization',
         'Standard analytics',
         'Email support',
-        'Basic integrations',
-        'Monthly reports'
+        'Mobile optimization',
+        'Basic A/B testing'
       ],
       popular: false
     },
+    {
       name: 'Professional',
       price: '$299',
       period: '/month',
@@ -83,188 +73,201 @@ export default function AIEcommerceOptimizerPro() {
         'Advanced AI features',
         'Real-time analytics',
         'Priority support',
-        'Custom integrations',
-        'Weekly reports',
-        'A/B testing tools'
+        'Advanced A/B testing',
+        'API access',
+        'Custom integrations'
       ],
       popular: true
     },
+    {
       name: 'Enterprise',
       price: '$799',
       period: '/month',
-      description: 'For large e-commerce platforms',
+      description: 'For large e-commerce operations',
       features: [
         'Unlimited products',
         'Custom AI training',
         'White-label solution',
         'Dedicated support',
-        'Advanced integrations',
-        'Real-time reports',
-        'Custom development'
+        'Advanced analytics',
+        'Custom development',
+        'SLA guarantee'
       ],
       popular: false
-  ]
+    }
+  ];
 
   const testimonials = [
-      name: 'Michael Rodriguez',
+    {
+      name: 'Maria Rodriguez',
       company: 'Fashion Store',
       content: 'AI E-commerce Optimizer Pro increased our conversion rate by 35% and boosted revenue by 50% in just 3 months.',
       rating: 5
     },
-      name: 'Emily Chen',
+    {
+      name: 'David Kim',
       company: 'Electronics Retailer',
-      content: 'The AI recommendations and automated optimization features have transformed our online store performance.',
+      content: 'The automated optimization features saved us hours of manual work while significantly improving our store performance.',
       rating: 5
     },
-      name: 'David Thompson',
-      company: 'Home & Garden',
-      content: 'Our sales have grown consistently since implementing the AI optimization tools. Highly recommended!',
+    {
+      name: 'Sarah Johnson',
+      company: 'Home & Garden Store',
+      content: 'Our customers love the personalized shopping experience. Sales have increased dramatically since implementation.',
       rating: 5
-  ]
+    }
+  ];
 
   return (
-    
+    <>
+      <Helmet>
         <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
-
-        {/* Hero Section */
-    
-                AI E-commerce Optimizer Pro
-    
-              Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs.
-    
+        <meta name="description" content="Transform your e-commerce business with advanced AI optimization solutions that boost sales, improve conversion rates, and maximize your online store performance." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        {/* Hero Section */}
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              AI E-commerce <span className="text-blue-600">Optimizer Pro</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your e-commerce business with advanced AI optimization solutions that boost sales, 
+              improve conversion rates, and maximize your online store performance.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+              >
                 Get Started
-    
+              </Link>
+              <Link 
+                to="/contact" 
+                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+              >
                 Learn More
-View All Services
+              </Link>
+            </div>
+          </div>
 
-        {/* Hero Section */
-                AI E-commerce Optimizer Pro
+          {/* Features Section */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                <div className="flex justify-center mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
 
-              Powerful Features
- (
-                    {feature.icon
-                    {feature.title
-                    {feature.description
-
-              ))
-
-        {/* Pricing Section */
-                Choose Your Plan
-              <p className="w-5 h-5ml-2">Flexible pricing options to fit your business needs
-            
- (
-                    <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
-                      {plan.price
-                      <span className="w-5 h-5ml-2" />{plan.period}</span>
-                    <p className="w-5 h-5ml-2">{plan.description}</p>
-                  
- (
-              Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs.
-                Get Started
-                Learn More
-
-        {/* Features Section */
-              <h2 className="text-4xl font-bold text-white mb-4">Key Features</h2>
-              <p className="text-xl text-gray-300">Powerful AI capabilities for superior e-commerce optimization</p>
- (
-                  <div className="mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-              ))
-
-                Why Choose Our AI E-commerce Optimizer?
-
-                Our advanced AI technology helps you maximize your e-commerce potential
-
-              {[
-                  icon: <Brain className="w-12h-12text-cyan-400" />,
-                  title: "AI-Powered Optimization",
-                  description: "Advanced machine learning algorithms optimize your product listings, pricing, and recommendations."
-                },
-                  icon: <Zap className="w-12h-12text-purple-400" />,
-                  title: "Real-time Analytics",
-                  description: "Get instant insights into customer behavior and sales performance with our comprehensive dashboard."
-                },
-                  icon: <Shield className="w-12h-12text-green-400" />,
-                  title: "Secure & Reliable",
-                  description: "Enterprise-grade security ensures your data is protected while maintaining 99.9% uptime."
- (
-
-                    {feature.icon
-    
-        {/* Detailed Features Section */
-              <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Features</h2>
-              <p className="text-xl text-gray-300">Everything you need for effective e-commerce optimization</p>
- (
+          {/* Optimization Features Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">Optimization Features</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {optimizationFeatures.map((category, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
                   <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
- (
-                        {item
-                    ))
-              ))
+                  <ul className="space-y-2">
+                    {category.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="text-gray-300 flex items-center">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
 
-        {/* Pricing Section */
-              <h2 className="text-4xl font-bold text-white mb-4">Pricing Plans</h2>
-              <p className="text-xl text-gray-300">Choose the perfect plan for your e-commerce needs</p>
- (
+          {/* Pricing Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">Pricing Plans</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
                   {plan.popular && (
-                        Most Popular
-                  )
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+                    </div>
+                  )}
+                  <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
-                    <p className="text-gray-300 mt-2">{plan.description}</p>
- (
-                        {feature
-                    ))
-                    Get Started
-              ))
-
-        {/* Testimonials Section */
-              <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
-              <p className="text-xl text-gray-300">Real results from real businesses</p>
- (
- (
-                    ))
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-cyan-400">{testimonial.company}</p>
-
-                  <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-
-              ))
-
-                Choose Your Plan
-
-                Flexible pricing options to fit your business needs
-    
-        {/* CTA Section */
-                Ready to Optimize Your E-commerce?
-                Contact us to learn more about our AI e-commerce optimization solutions and how we can help your business grow.
-
- (
-    
-                    <h3 className="text-2xl font-boldtext-whitemb-2">{plan.name}</h3>
-
-                      {plan.price
-    
-                      <span className="text-lgtext-gray-400">{plan.period}</span>
-
+                    <div className="text-4xl font-bold text-cyan-400 mb-2">
+                      {plan.price}<span className="text-lg text-gray-300">{plan.period}</span>
+                    </div>
                     <p className="text-gray-300">{plan.description}</p>
-
- (
-
-                        {feature
-                    ))
-                  
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="text-gray-300 flex items-center">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link 
+                    to="/contact" 
+                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      plan.popular 
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600' 
+                        : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10'
+                    }`}
+                  >
                     Get Started
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
 
-              Ready to Transform Your E-commerce?
-              Join thousands of businesses already using our AI-powered solutions to boost their online sales.
-              Contact Us Today
+          {/* Testimonials Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">What Our Clients Say</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <div>
+                    <p className="text-white font-semibold">{testimonial.name}</p>
+                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
+          {/* CTA Section */}
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your E-commerce Store?</h2>
+            <p className="text-lg text-gray-300 mb-8">Contact us to learn more about our AI optimization solutions and how we can help your business grow.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+              >
+                Contact Us
+              </Link>
+              <Link 
+                to="/services" 
+                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-
-              ))
-
-        {/* CTA Section */
+}

@@ -1,112 +1,271 @@
 'use client';
-
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Star, Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings} from 'lucide-react';
-const features = [
-      icon: Mail,
+import { ArrowRight, Mail, MessageSquare, Brain, Settings, Zap, Shield, BarChart3, Users, Star } from 'lucide-react';
+
+export default function AIEmailAssistant() {
+  const features = [
+    {
+      icon: <Mail className="w-6 h-6 text-cyan-400" />,
       title: 'Smart Classification',
       description: 'Automatically categorize and prioritize emails based on content and sender.'
     },
-      icon: MessageSquare,
+    {
+      icon: <MessageSquare className="w-6 h-6 text-purple-400" />,
       title: 'Auto-Responses',
       description: 'Generate intelligent responses using AI to handle common inquiries.'
     },
-      icon: Brain,
+    {
+      icon: <Brain className="w-6 h-6 text-yellow-400" />,
       title: 'Sentiment Analysis',
       description: 'Analyze email tone and sentiment to provide better customer service.'
     },
-      icon: Settings,
+    {
+      icon: <Settings className="w-6 h-6 text-green-400" />,
       title: 'Workflow Automation',
       description: 'Create automated workflows to streamline your email management.'
+    }
   ];
+
   const useCases = [
+    {
       title: 'Customer Support',
-      description: 'Automate responses to common customer inquiries and support tickets.',
-      icon: Users
+      description: 'Handle customer inquiries efficiently with AI-powered responses and routing.',
+      icon: <Users className="w-8 h-8 text-blue-400" />
     },
-      title: 'Sales Follow-up',
-      description: 'Automatically follow up with leads and prospects based on their behavior.',
-      icon: BarChart3
+    {
+      title: 'Sales Outreach',
+      description: 'Generate personalized sales emails and follow-up sequences automatically.',
+      icon: <Zap className="w-8 h-8 text-yellow-400" />
     },
+    {
       title: 'Email Marketing',
-      description: 'Personalize and optimize email campaigns for better engagement.',
-      icon: Zap
+      description: 'Create compelling marketing campaigns with AI-generated content and optimization.',
+      icon: <BarChart3 className="w-8 h-8 text-green-400" />
     },
-      title: 'Internal Communication',
-      description: 'Streamline internal email workflows and team communication.',
-      icon: Shield
+    {
+      title: 'Internal Communications',
+      description: 'Streamline internal email processes and improve team collaboration.',
+      icon: <Shield className="w-8 h-8 text-purple-400" />
+    }
   ];
-  return (
-    
-        <title />AI Email Assistant - Zion Tech Group</title>
 
-        {/* Hero Section */
-                AI <span className="w-5 h-5ml-2" />Email Assistant</span>
-              <p className="w-5 h-5ml-2">Transform your email management with intelligent automation, smart classification, 
-                and AI-powered responses that save time and improve productivity.
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building
-                <Link to="/ai-services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All AI Services
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for small teams',
+      features: [
+        'Up to 1,000 emails/month',
+        'Basic AI features',
+        'Email classification',
+        'Auto-responses',
+        'Email support',
+        'Basic analytics'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$79',
+      period: '/month',
+      description: 'Ideal for growing businesses',
+      features: [
+        'Up to 10,000 emails/month',
+        'Advanced AI features',
+        'Sentiment analysis',
+        'Workflow automation',
+        'Priority support',
+        'Advanced analytics',
+        'API access'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited emails',
+        'Custom AI training',
+        'White-label solution',
+        'Dedicated support',
+        'Custom integrations',
+        'Advanced security',
+        'SLA guarantee'
+      ],
+      popular: false
+    }
+  ];
 
-        {/* Features Section */
-                Powerful <span className="w-5 h-5ml-2" />Features</span>
-              <p className="w-5 h-5ml-2">Everything you need to automate and optimize your email management
+  const testimonials = [
+    {
+      name: 'Jennifer Smith',
+      company: 'Customer Service Manager',
+      content: 'AI Email Assistant reduced our response time by 60% and improved customer satisfaction significantly.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      company: 'Sales Director',
+      content: 'The automated email generation has increased our outreach efficiency by 3x while maintaining personalization.',
+      rating: 5
+    },
+    {
+      name: 'Sarah Wilson',
+      company: 'Marketing Manager',
+      content: 'Our email campaigns are now more effective thanks to AI-powered content optimization and targeting.',
+      rating: 5
+    }
+  ];
 
- (
-                    {feature.icon
-                  <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
-                  <p className="w-5 h-5ml-2">{feature.description}</p>
-              ))
-
-        {/* Use Cases Section */
-                Use <span className="w-5 h-5ml-2" />Cases</span>
-              <p className="w-5 h-5ml-2">Discover how our AI email assistant can transform your communication workflows
-
- (
-                    {useCase.icon
-                  <h3 className="w-5 h-5ml-2" />{useCase.title
-                  <p className="w-5 h-5ml-2">{useCase.description
-              ))
-
-        {/* CTA Section */
-              <h2 className="w-5 h-5ml-2" />Ready to Transform Your Email Management?
-              <p className="w-5 h-5ml-2">Start automating your email workflows and boost productivity with AI-powered assistance.
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building Now
-                <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
-
-  );
-};
-
-export default AIEmailAssistantPage;
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function AiEmailAssistantZionTechGroup() {
   return (
     <>
       <Helmet>
-        <title>AiEmailAssistant - Zion Tech Group</title>
+        <title>AI Email Assistant - Zion Tech Group</title>
+        <meta name="description" content="Transform your email management with AI-powered automation, smart classification, and intelligent responses." />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">AiEmailAssistant</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional aiemailassistant services coming soon.</p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        {/* Hero Section */}
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              AI Email <span className="text-blue-600">Assistant</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your email management with AI-powered automation, smart classification, 
+              and intelligent responses that boost productivity and improve communication.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+              </Link>
+              <Link 
+                to="/contact" 
+                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+              >
+                Learn More
+              </Link>
+            </div>
+          </div>
+
+          {/* Features Section */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                <div className="flex justify-center mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Use Cases Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">Use Cases</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((useCase, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
+                  <div className="flex justify-center mb-4">
+                    {useCase.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
+                  <p className="text-gray-300">{useCase.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Pricing Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">Pricing Plans</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+                    </div>
+                  )}
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="text-4xl font-bold text-cyan-400 mb-2">
+                      {plan.price}<span className="text-lg text-gray-300">{plan.period}</span>
+                    </div>
+                    <p className="text-gray-300">{plan.description}</p>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="text-gray-300 flex items-center">
+                        <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link 
+                    to="/contact" 
+                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      plan.popular 
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600' 
+                        : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10'
+                    }`}
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Testimonials Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">What Our Clients Say</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <div>
+                    <p className="text-white font-semibold">{testimonial.name}</p>
+                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Email Management?</h2>
+            <p className="text-lg text-gray-300 mb-8">Contact us to learn more about our AI email solutions and how we can help your business communicate more effectively.</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+              >
+                Contact Us
+              </Link>
+              <Link 
+                to="/services" 
+                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </>

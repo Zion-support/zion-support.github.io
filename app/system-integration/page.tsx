@@ -25,29 +25,7 @@ import { ArrowRight, Zap, Shield, Cloud } from 'lucide-react';
 
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
-
-        {/* Hero Section */
-    
-                System Integration
-
-              Professional system integration services by Zion Tech Group. Expert solutions tailored to your business needs.
-    
-                Get Started
-
-                Learn More
-
-        {/* Features Section */
-    
-                Why Choose Our System Integration Services?
-
-                Our expert team helps you connect and optimize all your business systems
-
- (
-
-                    {feature.icon
-
-                  <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.title}</h3>
+        <title>5G Data Analytics - Zion Tech Group</title></h3>
                   <p className="text-gray-300">{feature.description}</p>
 
               ))
@@ -72,7 +50,7 @@ import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
-export default function 5GDataAnalyticsZionTechGroup() {
+export default function GDataAnalyticsZionTechGroupPage() {
   return (
     <>
       <Helmet>

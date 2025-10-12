@@ -9,28 +9,7 @@ import { ArrowRight } from 'lucide-react';
 
   return (
 
-        <title>5G Data Analytics - Zion Tech Group</title>
-
-        {/* Hero Section */
-    
-              Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
-    
-                Get Started
-
-                Learn More
-
-        {/* CTA Section */
-    
-                Ready to Get Started?
-
-                Contact us to learn more about our solutions and how we can help your business.
-
-                  Contact Us
-    
-                  View All Services
-
-  );
-};
+        <title>5G Data Analytics - Zion Tech Group</title>;
 
 export default Page;
 
@@ -39,7 +18,7 @@ import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
-export default function 5GDataAnalyticsZionTechGroup() {
+export default function GDataAnalyticsZionTechGroupPage() {
   return (
     <>
       <Helmet>
