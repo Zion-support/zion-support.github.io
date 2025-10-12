@@ -5,7 +5,6 @@ import React from 'react';
 
 import { ArrowRight, Database } from 'lucide-react';
 
-export default function FiveGImplementationPage() {
   const fiveGServices = [
     {
       name: '5G Network Infrastructure',

@@ -5,7 +5,6 @@ import React from 'react';
 
 import { ArrowRight, Mail } from 'lucide-react';
 
-export default function AISmartInvoicePage() {
   const features = [
     {
       icon: <Zap className="w-6 h-6 text-blue-500" />,

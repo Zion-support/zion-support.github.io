@@ -5,7 +5,6 @@ import React from 'react';
 
 import { ArrowRight, Database } from 'lucide-react';
 
-export default function BusinessIntelligencePage() {
   const features = [
     {
       title: 'Advanced Analytics',

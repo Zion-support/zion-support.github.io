@@ -3,7 +3,6 @@ import React from 'react';
 
 import { ArrowRight, Brain } from 'lucide-react';
 
-export default function AIChatbotBuilderPage() {
   const features = [
     {
       icon: <MessageCircle className="w-8 h-8 text-blue-500" />,

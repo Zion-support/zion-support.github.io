@@ -5,7 +5,6 @@ import React from 'react';
 
 import { Database, Mail } from 'lucide-react';
 
-export default function PrivacyPage() {
   const lastUpdated = 'October 8, 2024';
 
   const dataTypes = [

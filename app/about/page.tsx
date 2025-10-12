@@ -1,9 +1,7 @@
 'use client';
 
 import React from 'react';
-
-
-import { Brain, ArrowRight } from 'lucide-react';
+import { Brain, ArrowRight, Target, Users, Shield, Phone } from 'lucide-react';
 
 export default function AboutPage() {
   const stats = [

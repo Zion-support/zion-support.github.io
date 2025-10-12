@@ -37,7 +37,6 @@ import {
   Wind
 } from 'lucide-react';
 
-export default function AISmartCitySolutionsPage() {
   const [selectedPlan, setSelectedPlan] = useState('pro');
 
   const features = [

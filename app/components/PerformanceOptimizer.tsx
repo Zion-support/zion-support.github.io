@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react';
 
-export default function PerformanceOptimizer() {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {

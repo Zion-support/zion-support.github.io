@@ -4,7 +4,6 @@ import React from 'react';
 
 import { ArrowRight, Brain, Database } from 'lucide-react';
 
-export default function AIBusinessIntelligenceProPage() {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-blue-500" />,

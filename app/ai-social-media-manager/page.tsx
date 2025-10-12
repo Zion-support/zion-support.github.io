@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import React, { useState } from 'react';
@@ -35,15 +34,7 @@ import {
   ThumbsUp
 } from 'lucide-react';
 
-export default function AISocialMediaManagerPage() {
   const [selectedPlan, setSelectedPlan] = useState('pro');
-=======
-import React from 'react'
-
-import Layout from '../layout'
-
-import { ArrowRight, MessageSquare } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-b5ac
 
   const features = [
     {

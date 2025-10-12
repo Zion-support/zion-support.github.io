@@ -1,33 +1,8 @@
-<<<<<<< HEAD
-'use client';
-
-import React, { Suspense } from 'react';
-
-
-import { Brain, ArrowRight, MessageSquare } from 'lucide-react';
-import FuturisticBackground from './components/FuturisticBackground';
-import FuturisticCard from './components/FuturisticCard';
-import FuturisticButton from './components/FuturisticButton';
-
-// Note: Lazy loading components will be implemented in future iterations
-
-export default function HomePage() {
-  const stats = [
-    { number: '1,200+', label: 'Projects Completed', icon: <Users className="w-6 h-6" /> },
-    { number: '99.8%', label: 'Client Satisfaction', icon: <Star className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Globe className="w-6 h-6" /> },
-    { number: '150+', label: 'Expert Team Members', icon: <Users className="w-6 h-6" /> },
-    { number: '50+', label: 'Countries Served', icon: <Globe className="w-6 h-6" /> },
-    { number: '300%', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> },
-    { number: '48hr', label: 'Response Time', icon: <MessageSquare className="w-6 h-6" /> }
-  ];
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, TrendingUp, Sparkles, Layers, Target, Award, Lightbulb, Wifi, Smartphone, Monitor, Server, Cpu2, CircuitBoard, Atom, Satellite, Wrench, Settings, BarChart, PieChart, LineChart, Activity, Eye, Search, Filter, Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, X, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10, FileText, Package } from 'lucide-react'
+import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock, TrendingUp, Sparkles, Layers, Target, Award, Lightbulb, Wifi, Smartphone, Monitor, Server, CircuitBoard, Atom, Satellite, Wrench, Settings, BarChart, PieChart, LineChart, Activity, Eye, Search, Filter, Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, X, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10, FileText, Package } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const HomePage: React.FC = () => {
@@ -75,58 +50,20 @@ const HomePage: React.FC = () => {
       link: '/micro-saas'
     }
   ]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
+
+  const stats = [
+    { number: '1,200+', label: 'Projects Completed', icon: <Users className="w-6 h-6 text-cyan-400" /> },
+    { number: '99.8%', label: 'Client Satisfaction', icon: <Star className="w-6 h-6 text-emerald-400" /> },
+    { number: '24/7', label: 'Support Available', icon: <Clock className="w-6 h-6 text-blue-400" /> },
+    { number: '150+', label: 'Expert Team Members', icon: <Users className="w-6 h-6 text-purple-400" /> },
+    { number: '50+', label: 'Countries Served', icon: <Globe className="w-6 h-6 text-orange-400" /> },
+    { number: '300%', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6 text-pink-400" /> },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6 text-green-400" /> },
+    { number: '48hr', label: 'Response Time', icon: <MessageCircle className="w-6 h-6 text-indigo-400" /> }
+  ]
 
   const microSaasServices = [
     {
-<<<<<<< HEAD
-      title: 'AI Content Generation',
-      description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      link: '/ai-content-generator',
-      features: ['Automated content creation', 'SEO optimization', 'Multi-language support'],
-      price: 'Starting at $99/month'
-    },
-    {
-      title: 'AI CRM Assistant',
-      description: 'Boost sales by 45% with AI-powered lead scoring, email automation, and predictive analytics.',
-      icon: <Users className="w-8 h-8 text-purple-400" />,
-      link: '/ai-crm-assistant',
-      features: ['AI lead scoring', 'Email automation', 'Predictive analytics'],
-      price: 'Starting at $49/month'
-    },
-    {
-      title: 'AI Social Media Manager',
-      description: 'Increase engagement by 200% with AI-powered social media automation and content generation.',
-      icon: <MessageSquare className="w-8 h-8 text-pink-400" />,
-      link: '/ai-social-media-manager',
-      features: ['AI content generation', 'Smart scheduling', 'Analytics insights'],
-      price: 'Starting at $29/month'
-    },
-    {
-      title: 'AI Cybersecurity Suite',
-      description: 'Protect your business with 99.9% threat detection accuracy using advanced AI security.',
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      link: '/ai-cybersecurity-suite',
-      features: ['AI threat detection', 'Zero trust security', 'Automated response'],
-      price: 'Starting at $199/month'
-    },
-    {
-      title: 'AI Smart City Solutions',
-      description: 'Transform urban infrastructure with AI-powered smart city technologies and IoT integration.',
-      icon: <Globe className="w-8 h-8 text-green-400" />,
-      link: '/ai-smart-city-solutions',
-      features: ['Traffic optimization', 'Energy management', 'IoT integration'],
-      price: 'Starting at $50,000/project'
-    },
-    {
-      title: '5G Implementation',
-      description: 'Leverage the power of 5G technology for ultra-fast connectivity and IoT solutions.',
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      link: '/5g-implementation',
-      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing'],
-      price: 'Starting at $5,000/project'
-=======
       icon: <BarChart3 className="w-6 h-6 text-cyan-400" />,
       title: 'AI Analytics Dashboard',
       description: 'Real-time business intelligence with AI-powered insights and predictive analytics.',
@@ -224,42 +161,78 @@ const HomePage: React.FC = () => {
       price: '$79/month',
       features: ['AI prioritization', 'Smart scheduling', 'Progress tracking', 'Team collaboration'],
       link: '/ai-task-manager'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
     }
-  ];
-
-<<<<<<< HEAD
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      content: 'Zion Tech Group transformed our business with their AI solutions. The results exceeded our expectations.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'InnovateLabs',
-      content: 'Their cloud infrastructure is rock-solid. We\'ve had zero downtime since implementation.',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'DataFlow Systems',
-      content: 'The cybersecurity services gave us peace of mind. Our data has never been more secure.',
-      rating: 5
-    }
-  ];
-=======
-  const stats = [
-    { number: '1000+', label: 'Projects Completed', icon: <Rocket className="w-6 h-6 text-cyan-400" /> },
-    { number: '500+', label: 'Happy Clients', icon: <Users className="w-6 h-6 text-emerald-400" /> },
-    { number: '24/7', label: 'Support Available', icon: <Clock className="w-6 h-6 text-blue-400" /> },
-    { number: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6 text-purple-400" /> },
-    { number: '50+', label: 'Micro SAAS Solutions', icon: <Layers className="w-6 h-6 text-orange-400" /> },
-    { number: '30+', label: 'AI Services', icon: <Brain className="w-6 h-6 text-pink-400" /> }
   ]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
+
+  const itServices = [
+    {
+      icon: <Cloud className="w-6 h-6 text-cyan-400" />,
+      title: 'Cloud Migration',
+      description: 'Seamless migration to cloud infrastructure with zero downtime.',
+      price: '$299/month',
+      features: ['Zero downtime', 'Data security', 'Cost optimization', '24/7 support'],
+      link: '/cloud-migration'
+    },
+    {
+      icon: <Settings className="w-6 h-6 text-emerald-400" />,
+      title: 'DevOps Solutions',
+      description: 'Complete DevOps implementation with CI/CD pipelines and automation.',
+      price: '$399/month',
+      features: ['CI/CD pipelines', 'Infrastructure as code', 'Monitoring', 'Automation'],
+      link: '/devops'
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-red-400" />,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets.',
+      price: '$399/month',
+      features: ['Threat detection', 'Vulnerability assessment', 'Security audits', 'Incident response'],
+      link: '/cybersecurity'
+    },
+    {
+      icon: <Database className="w-6 h-6 text-purple-400" />,
+      title: 'Database Services',
+      description: 'Expert database management and optimization services.',
+      price: '$249/month',
+      features: ['Performance tuning', 'Backup solutions', 'Security hardening', 'Monitoring'],
+      link: '/database-services'
+    }
+  ]
+
+  const fiveGServices = [
+    {
+      icon: <Network className="w-6 h-6 text-orange-400" />,
+      title: '5G Network Infrastructure',
+      description: 'Complete 5G network deployment and optimization services.',
+      price: '$599/month',
+      features: ['Network design', 'Equipment installation', 'Performance optimization', 'Maintenance'],
+      link: '/5g-network-infrastructure'
+    },
+    {
+      icon: <Cpu className="w-6 h-6 text-blue-400" />,
+      title: '5G Edge Computing',
+      description: 'Edge computing solutions for ultra-low latency applications.',
+      price: '$699/month',
+      features: ['Edge deployment', 'Latency optimization', 'IoT integration', 'Real-time processing'],
+      link: '/5g-edge-computing'
+    },
+    {
+      icon: <CircuitBoard className="w-6 h-6 text-green-400" />,
+      title: '5G IoT Solutions',
+      description: 'IoT device management and connectivity solutions.',
+      price: '$499/month',
+      features: ['Device management', 'Connectivity solutions', 'Data analytics', 'Remote monitoring'],
+      link: '/5g-iot-solutions'
+    },
+    {
+      icon: <Smartphone className="w-6 h-6 text-purple-400" />,
+      title: '5G Mobile Applications',
+      description: 'High-performance mobile apps optimized for 5G networks.',
+      price: '$399/month',
+      features: ['5G optimization', 'Real-time features', 'Cross-platform', 'Performance monitoring'],
+      link: '/5g-mobile-applications'
+    }
+  ]
 
   return (
     <>
@@ -347,36 +320,6 @@ const HomePage: React.FC = () => {
         </script>
       </Helmet>
       
-<<<<<<< HEAD
-      <FuturisticBackground variant="hero">
-        {/* Hero Section */}
-        <section id="main-content" className="pt-20 px-4 py-12 sm:py-16 lg:py-20" role="banner" aria-labelledby="hero-title">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
-              <h1 id="hero-title" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-                Advanced AI & IT Solutions
-              </h1>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
-                Transform your business with cutting-edge artificial intelligence, 5G implementation, and enterprise-grade IT solutions. 
-                Join 1,200+ satisfied clients with 99.8% satisfaction rate.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton
-                  variant="primary"
-                  size="lg"
-                  onClick={() => window.open('/about', '_blank')}
-                >
-                  Learn More
-                  <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
-                </FuturisticButton>
-                <FuturisticButton
-                  variant="ghost"
-                  size="lg"
-                  onClick={() => window.open('/contact', '_blank')}
-                >
-                  Get Started
-                </FuturisticButton>
-=======
       <Navigation />
       
       {/* Hero Section */}
@@ -647,6 +590,124 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
+      {/* IT Services Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-blue-900/50 to-cyan-900/50 relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1)_0%,transparent_70%)]" />
+        <div className="relative max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400 px-6 py-3 rounded-full text-sm font-medium mb-6 border border-blue-400/30">
+              <Cloud className="w-4 h-4" />
+              <span>IT Infrastructure Solutions</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Enterprise <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">IT Services</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Comprehensive IT solutions designed to modernize your infrastructure, enhance security, 
+              and optimize performance for maximum business efficiency.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {itServices.map((service, index) => (
+              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="p-2 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
+                      {service.title}
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                  {service.description}
+                </p>
+                <div className="space-y-3">
+                  <div className="text-2xl font-bold text-blue-400 mb-2">
+                    {service.price}
+                  </div>
+                  <div className="space-y-1">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-2 text-gray-400 text-xs">
+                        <CheckCircle className="w-3 h-3 text-green-400" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link 
+                    to={service.link}
+                    className="block w-full mt-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white text-center py-2 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-500/25"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5G Solutions Section */}
+      <section className="py-20 px-4 bg-gradient-to-br from-orange-900/50 to-red-900/50 relative">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(251,146,60,0.1)_0%,transparent_50%)]" />
+        <div className="relative max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 text-orange-400 px-6 py-3 rounded-full text-sm font-medium mb-6 border border-orange-400/30">
+              <Wifi className="w-4 h-4" />
+              <span>5G Technology Solutions</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Next-Generation <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">5G Solutions</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Unleash the power of 5G technology with our comprehensive network solutions, 
+              edge computing, and IoT integration services for the future of connectivity.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {fiveGServices.map((service, index) => (
+              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/10">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="p-2 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">
+                      {service.title}
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                  {service.description}
+                </p>
+                <div className="space-y-3">
+                  <div className="text-2xl font-bold text-orange-400 mb-2">
+                    {service.price}
+                  </div>
+                  <div className="space-y-1">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center space-x-2 text-gray-400 text-xs">
+                        <CheckCircle className="w-3 h-3 text-green-400" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link 
+                    to={service.link}
+                    className="block w-full mt-4 bg-gradient-to-r from-orange-500 to-red-600 text-white text-center py-2 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/25"
+                  >
+                    Explore 5G
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 relative">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
@@ -705,186 +766,15 @@ const HomePage: React.FC = () => {
                     <span className="text-sm">Middletown DE 19709</span>
                   </div>
                 </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
               </div>
             </div>
-
-            {/* Stats Section */}
-            <Suspense fallback={
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20">
-                {[...Array(8)].map((_, index) => (
-                  <div key={index} className="text-center px-2">
-                    <div className="animate-pulse">
-                      <div className="h-8 bg-gray-700 rounded mb-2"></div>
-                      <div className="h-4 bg-gray-600 rounded"></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            }>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20" role="region" aria-label="Company statistics">
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center px-2" role="img" aria-label={`${stat.number} ${stat.label}`}>
-                    <div className="flex items-center justify-center mb-2">
-                      {stat.icon}
-                    </div>
-                    <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">{stat.number}</div>
-                    <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </Suspense>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4" role="region" aria-labelledby="services-title">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 id="services-title" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Our Core Services</h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-                Comprehensive technology solutions designed to accelerate your digital transformation
-              </p>
-            </div>
-            
-            <Suspense fallback={
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
-                {[...Array(6)].map((_, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 animate-pulse">
-                    <div className="h-8 w-8 bg-gray-600 rounded mb-4"></div>
-                    <div className="h-6 bg-gray-600 rounded mb-4"></div>
-                    <div className="h-4 bg-gray-600 rounded mb-6"></div>
-                    <div className="space-y-2 mb-6">
-                      <div className="h-4 bg-gray-600 rounded"></div>
-                      <div className="h-4 bg-gray-600 rounded"></div>
-                      <div className="h-4 bg-gray-600 rounded"></div>
-                    </div>
-                    <div className="h-4 bg-gray-600 rounded"></div>
-                  </div>
-                ))}
-              </div>
-            }>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
-                {services.map((service, index) => (
-                  <FuturisticCard
-                    key={index}
-                    variant="service"
-                    className="h-full"
-                    onClick={() => window.open(service.link, '_blank')}
-                  >
-                    <div className="mb-4" aria-hidden="true">{service.icon}</div>
-                    <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <div className="text-cyan-400 font-semibold mb-4 text-sm">
-                      {service.price}
-                    </div>
-                    <ul className="space-y-2 mb-6" role="list">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" aria-hidden="true" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="mt-6 flex items-center text-blue-400">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2" aria-hidden="true" />
-                    </div>
-                  </FuturisticCard>
-                ))}
-              </div>
-            </Suspense>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5" role="region" aria-labelledby="testimonials-title">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 id="testimonials-title" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">What Our Clients Say</h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-                Don't just take our word for it - hear from businesses that have transformed with our solutions
-              </p>
-            </div>
-
-            <Suspense fallback={
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                {[...Array(3)].map((_, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 sm:p-8 border border-white/20 animate-pulse">
-                    <div className="flex items-center mb-4">
-                      <div className="h-4 w-4 bg-gray-600 rounded mr-1"></div>
-                      <div className="h-4 w-4 bg-gray-600 rounded mr-1"></div>
-                      <div className="h-4 w-4 bg-gray-600 rounded mr-1"></div>
-                      <div className="h-4 w-4 bg-gray-600 rounded mr-1"></div>
-                      <div className="h-4 w-4 bg-gray-600 rounded"></div>
-                    </div>
-                    <div className="h-4 bg-gray-600 rounded mb-2"></div>
-                    <div className="h-4 bg-gray-600 rounded mb-4"></div>
-                    <div className="h-4 bg-gray-600 rounded mb-2"></div>
-                    <div className="h-4 bg-gray-600 rounded"></div>
-                  </div>
-                ))}
-              </div>
-            }>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                {testimonials.map((testimonial, index) => (
-                  <FuturisticCard
-                    key={index}
-                    variant="testimonial"
-                    className="h-full"
-                  >
-                    <div className="flex items-center mb-4" role="img" aria-label={`${testimonial.rating} star rating`}>
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <span key={i} className="text-yellow-400" aria-hidden="true">★</span>
-                      ))}
-                    </div>
-                    <blockquote className="text-gray-300 mb-4 italic">
-                      <p>"{testimonial.content}"</p>
-                    </blockquote>
-                    <footer>
-                      <p className="font-semibold text-white">{testimonial.name}</p>
-                      <p className="text-gray-400 text-sm">{testimonial.company}</p>
-                    </footer>
-                  </FuturisticCard>
-                ))}
-              </div>
-            </Suspense>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4" role="region" aria-labelledby="cta-title">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <FuturisticCard variant="feature" className="text-center">
-                <h2 id="cta-title" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Transform Your Business?</h2>
-                <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                  Let's discuss how our AI and IT solutions can drive your success. Join 1,200+ satisfied clients today.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <FuturisticButton
-                    variant="primary"
-                    size="lg"
-                    onClick={() => window.open('/contact', '_blank')}
-                  >
-                    Get Started Today
-                  </FuturisticButton>
-                  <FuturisticButton
-                    variant="secondary"
-                    size="lg"
-                    onClick={() => window.open('/about', '_blank')}
-                  >
-                    Learn More
-                  </FuturisticButton>
-                </div>
-                <div className="mt-8 text-white/80 text-sm">
-                  <p>✓ Free consultation • ✓ 24/7 support • ✓ 99.8% satisfaction rate</p>
-                </div>
-              </FuturisticCard>
-            </div>
-          </div>
-        </section>
-      </FuturisticBackground>
+      <Footer />
     </>
-  );
+  )
 }
+
+export default HomePage

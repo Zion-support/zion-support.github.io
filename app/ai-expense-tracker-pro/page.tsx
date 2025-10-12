@@ -4,7 +4,6 @@ import React from 'react';
 
 import { Receipt, ArrowRight, Camera } from 'lucide-react';
 
-export default function AIExpenseTrackerProPage() {
   const features = [
     {
       icon: <Camera className="w-6 h-6 text-blue-500" />,

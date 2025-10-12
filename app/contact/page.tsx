@@ -6,7 +6,6 @@ import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',

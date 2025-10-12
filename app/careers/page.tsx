@@ -3,7 +3,6 @@ import React from 'react'
 
 import { ArrowRight } from 'lucide-react'
 
-export default function CareersPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
@@ -22,16 +21,6 @@ export default function CareersPage() {
         </Link>
       </div>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );
-};
-
-<<<<<<< HEAD
 export default CareersPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
-export default CareersPage;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a

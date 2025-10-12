@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import React, { useState } from 'react';
@@ -33,15 +32,7 @@ import {
   Settings
 } from 'lucide-react';
 
-export default function AIEmailMarketingAutomationPage() {
   const [selectedPlan, setSelectedPlan] = useState('pro');
-=======
-import React from 'react'
-
-import Layout from '../layout'
-
-import { ArrowRight, Mail } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-b5ac
 
   const features = [
     {

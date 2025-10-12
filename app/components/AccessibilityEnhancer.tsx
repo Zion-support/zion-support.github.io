@@ -2,7 +2,6 @@
 
 import { useEffect } from 'react';
 
-export default function AccessibilityEnhancer() {
   useEffect(() => {
     // Add skip to main content link
     const addSkipLink = () => {

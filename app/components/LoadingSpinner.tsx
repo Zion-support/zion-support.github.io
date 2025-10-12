@@ -7,7 +7,6 @@ interface LoadingSpinnerProps {
   className?: string;
 }
 
-export default function LoadingSpinner({ 
   size = 'md', 
   text = 'Loading...', 
   className = '' 

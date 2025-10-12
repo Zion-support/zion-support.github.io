@@ -5,7 +5,6 @@ import React from 'react';
 
 import { ArrowRight } from 'lucide-react';
 
-export default function AIAutomatedReportingPage() {
   const features = [
     {
       title: 'Automated Report Generation',

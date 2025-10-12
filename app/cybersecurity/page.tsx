@@ -4,7 +4,6 @@ import React from 'react'
 import { ArrowRight, Database } from 'lucide-react';
 import ServicePageTemplate from '../service-template'
 
-export default function CybersecurityPage() {
   return (
     <ServicePageTemplate
       title="Cybersecurity Solutions"

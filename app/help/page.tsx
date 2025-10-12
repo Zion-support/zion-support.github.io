@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 
 import { HelpCircle, MessageSquare, Mail, BookOpen, ArrowRight, ChevronDown, ChevronUp, Brain, Code } from 'lucide-react';
 
-export default function HelpPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 

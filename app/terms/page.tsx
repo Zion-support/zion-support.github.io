@@ -5,7 +5,6 @@ import React from 'react';
 
 import { Mail } from 'lucide-react';
 
-export default function TermsPage() {
   const lastUpdated = 'October 8, 2024';
 
   const sections = [
