@@ -36,8 +36,6 @@ function fixSyntaxErrors(filePath) {
         // This is a complex fix, let's use a simpler approach
         // Just ensure proper closing for common patterns
         content = content.replace(new RegExp(`<${tag}([^>]*)>\\s*$`, 'gm'), `<${tag}$1></${tag}>`);
-        modified = true;
-      }
     }
 
     // Fix missing closing tags for self-closing elements
@@ -45,7 +43,6 @@ function fixSyntaxErrors(filePath) {
     for (const element of selfClosingElements) {
       content = content.replace(new RegExp(`<${element}([^>]*?)(?<!/)>`, 'g'), `<${element}$1 />`);
       modified = true;
-    }
 
     // Fix JSX expressions that need wrapping
     content = content.replace(/\{([^}]*?)\s*\}\s*\{([^}]*?)\s*\}/g, '{$1}{$2}');
@@ -76,11 +73,9 @@ function fixSyntaxErrors(filePath) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
-    }
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
   }
 }
 
@@ -104,14 +99,9 @@ function findSourceFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
         const ext = path.extname(item);
         if (extensions.includes(ext)) {
           files.push(fullPath);
-        }
-      }
-    }
-  }
   
   traverse(dir);
   return files;
-}
 
 // Main function
 function main() {
@@ -123,10 +113,7 @@ function main() {
   for (const file of sourceFiles) {
     if (fixSyntaxErrors(file)) {
       fixedCount++;
-    }
-  }
   
   console.log(`\nFixed syntax errors in ${fixedCount} files.`);
-}
 
 main();

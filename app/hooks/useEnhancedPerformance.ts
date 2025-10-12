@@ -58,7 +58,6 @@ export const useEnhancedPerformance = () => {
         document.head.appendChild(link);
       });
     }
-  }, []);
 
   useEffect(() => {
     measurePerformance();

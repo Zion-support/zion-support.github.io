@@ -10,31 +10,22 @@ const EnhancedServicesShowcase: React.FC = () => {
       description: 'Harness the power of artificial intelligence to automate processes, gain insights, and drive innovation.',
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
-    {
       icon: Cloud,
       title: 'Cloud Services',
       description: 'Scalable and secure cloud infrastructure solutions to support your business growth and digital transformation.',
       features: ['Cloud Migration', 'Infrastructure Setup', 'Auto-scaling', 'Cost Optimization']
-    },
-    {
       icon: Shield,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your business from evolving threats and ensure compliance.',
       features: ['Threat Detection', 'Security Auditing', 'Incident Response', 'Compliance Management']
-    },
-    {
       icon: BarChart,
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with advanced analytics and visualization tools.',
       features: ['Real-time Analytics', 'Custom Dashboards', 'Data Visualization', 'Business Intelligence']
-    },
-    {
       icon: Zap,
       title: 'Process Automation',
       description: 'Streamline your operations with intelligent automation solutions that reduce manual work and errors.',
       features: ['Workflow Automation', 'RPA Implementation', 'API Integration', 'Process Optimization']
-    },
-    {
       icon: Globe,
       title: 'Digital Transformation',
       description: 'Complete digital transformation services to modernize your business and stay competitive.',
@@ -78,7 +69,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
 
               <button className="cyber-button w-full py-3 text-center inline-flex items-center justify-center group-hover:scale-105 transition-transform">
                 Learn More
@@ -86,7 +76,6 @@ const EnhancedServicesShowcase: React.FC = () => {
               </button>
             </div>
           ))}
-        </div>
       </div>
     </div>
   )

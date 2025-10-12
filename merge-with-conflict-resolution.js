@@ -20,12 +20,9 @@ function resolveConflicts(filePath) {
         skipUntilNextMarker = true
         continue}
       
-      if (line.includes('')) {
         skipUntilNextMarker = false
-        continue}
       
       if (line.includes('>>>>>>>')) {
-        continue}
       
       if (!skipUntilNextMarker) {
         resolvedLines.push(line)}
@@ -40,12 +37,10 @@ function resolveConflicts(filePath) {
 }
 
 function mergeBranch(branchName) {
-  try {
     console.log(`\n🔄 Attempting to merge ${branchName}...`)
     // Try to merge the branch
     execSync(`git merge ${branchName} --no-ff -m "feat: Merge enhancements from ${branchName}"`, { stdio: 'pipe' })
     console.log(`✅ Successfully merged ${branchName}`)
-    return true} catch (error) {
     console.log(`⚠️  Merge conflicts detected in ${branchName}, resolving...`)
     // Check for conflicts
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
@@ -70,7 +65,6 @@ function mergeBranch(branchName) {
       console.log(`❌ Could not resolve conflicts for ${branchName}`)
       return false}
   }
-}
 
 try {
   // List of branches to merge (most recent first)
@@ -89,7 +83,6 @@ try {
       const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 'utf8' })
       if (!uniqueCommits.trim()) {
         console.log(`⏭️  Branch ${branch} has no unique commits, skipping...`)
-        continue}
 
       console.log(`📝 Unique commits in ${branch}:`)
       console.log(uniqueCommits.split('\n').slice(0, 2).join('\n'))
@@ -100,7 +93,6 @@ try {
     } catch (error) {
       console.log(`❌ Error processing ${branch}: ${error.message}`)
       failedCount++}
-  }
 
   console.log(`\n📊 Merge Summary: `)
   console.log(`✅ Successfully merged: ${mergedCount} branches`)

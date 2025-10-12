@@ -45,11 +45,9 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
       // Track component unmount
       if (trackAnalytics) {
         analytics.trackCustomEvent('Component', 'Unmounted', component);
-      }
     };
   }, [component, trackAnalytics, trackPerformance]);
   // Track render performance
-  useEffect(() => {
     renderCountRef.current++;
     if (trackPerformance && renderCountRef.current > 10) {
       // Many re-renders detected
@@ -59,7 +57,6 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
         component,
         renderCountRef.current
       );
-    }
   });
   const trackError = useCallback(
     (error: Error, context?: Record<string, unknown>) => {
@@ -68,18 +65,13 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
           component,
           ...context
         });
-      }
     },
     [component, trackErrors]
   );
   const trackUserAction = useCallback(
     (action: string, metadata?: Record<string, unknown>) => {
-      if (trackAnalytics) {
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
-      }
-    },
     [component, trackAnalytics]
-  );
   const measureOperation = useCallback(
     (operationName: string) => {
       const startTime = performance.now();
@@ -94,15 +86,11 @@ export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions =
             );
           }
           return duration;
-        }
       };
-    },
     [component, trackPerformance]
-  );
   return {
     trackError,
     trackUserAction,
     measureOperation
   };
-}
 export default useEnhancedPerformance;

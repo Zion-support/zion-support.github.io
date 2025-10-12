@@ -20,9 +20,7 @@ const generateImportStatement = (route) => {
 
 // Generate route statements;
 const generateRouteStatement = (route) => {
-  const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
   return `            <Route path="${route}" element={<${componentName} />} />`;
-};
 
 // Generate all import statements;
 const importStatements = missingPages.map(generateImportStatement).join('\n');

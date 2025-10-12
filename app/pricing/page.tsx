@@ -20,12 +20,9 @@ const PricingPage: React.FC = () => {
       ],
       popular: false
     },
-    {
       name: 'Professional',
       price: '$299',
-      period: '/month',
       description: 'Advanced features for growing businesses',
-      features: [
         'Up to 50 AI models',
         'Advanced analytics',
         'Priority support',
@@ -33,15 +30,11 @@ const PricingPage: React.FC = () => {
         '50GB storage',
         'API access',
         'Custom integrations'
-      ],
       popular: true
-    },
-    {
       name: 'Enterprise',
       price: 'Custom',
       period: '',
       description: 'Tailored solutions for large organizations',
-      features: [
         'Unlimited AI models',
         'Custom analytics',
         '24/7 dedicated support',
@@ -50,8 +43,6 @@ const PricingPage: React.FC = () => {
         'Full API access',
         'Custom integrations',
         'SLA guarantee'
-      ],
-      popular: false
     }
   ];
 
@@ -103,7 +94,6 @@ const PricingPage: React.FC = () => {
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-white">{plan.price}</span>
                       <span className="text-gray-400 ml-1">{plan.period}</span>
-                    </div>
                   </div>
 
                   <ul className="space-y-4 mb-8">
@@ -125,11 +115,8 @@ const PricingPage: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
 
         {/* FAQ Section */}
-        <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-12">
               Frequently Asked Questions
@@ -145,46 +132,24 @@ const PricingPage: React.FC = () => {
                 </p>
               </div>
               
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
-                <h3 className="text-xl font-semibold text-white mb-3">
                   Is there a free trial available?
-                </h3>
-                <p className="text-gray-300">
                   Yes, we offer a 14-day free trial for all plans. No credit card required.
-                </p>
-              </div>
               
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
-                <h3 className="text-xl font-semibold text-white mb-3">
                   What payment methods do you accept?
-                </h3>
-                <p className="text-gray-300">
                   We accept all major credit cards, PayPal, and bank transfers for enterprise plans.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Get Started?
-            </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of companies already using our platform
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300">
                 Start Free Trial
               </button>
               <button className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300">
                 Contact Sales
-              </button>
-            </div>
-          </div>
-        </section>
       </div>
     </>
   );

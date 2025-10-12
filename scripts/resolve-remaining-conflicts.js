@@ -20,10 +20,6 @@ function resolveMergeConflicts(filePath) {
         })
         // Handle other conflict patterns
         .replace(/          if (parts.length > 1) {
-            const incoming = parts[1].replace(/            return incoming)
-          })
-          return match)
-        })
         // Clean up any remaining conflict markers
         .replace(/        .replace(//g, '')
         .replace(/      )
@@ -64,11 +60,9 @@ async function main() {
     
     // Commit the resolution
     console.log('\n📝 Committing merge resolution...')
-    try {
       execSync('git commit -m "Resolve remaining merge conflicts and integrate all changes"', { encoding: 'utf8', cwd: process.cwd() })
       console.log('✅ Merge resolution committed successfully')} catch (error) {
       console.log('❌ Error committing:', error.message)}
-  }
   
   // Final status
   console.log('\n📊 Final Status: ')

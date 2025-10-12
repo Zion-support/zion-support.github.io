@@ -37,19 +37,14 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     }
     if (enableScreenReader) {
       document.documentElement.setAttribute('data-screen-reader', 'false');
-    }
     if (enableKeyboardNavigation) {
       document.documentElement.setAttribute('data-keyboard-nav', 'false');
-    }
     if (enableVoiceControl) {
       document.documentElement.setAttribute('data-voice-control', 'false');
-    }
     if (enableFocusManagement) {
       document.documentElement.setAttribute('data-focus-management', 'false');
-    }
     if (enableTextScaling) {
       document.documentElement.setAttribute('data-text-scaling', '100');
-    }
   }, [enableHighContrast, enableScreenReader, enableKeyboardNavigation, enableVoiceControl, enableFocusManagement, enableTextScaling]);
 
   const toggleFeature = (feature: keyof typeof settings) => {
@@ -61,7 +56,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       document.documentElement.setAttribute('data-text-scaling', newValue.toString());
     } else {
       document.documentElement.setAttribute(`data-${feature.replace(/([A-Z])/g, '-$1').toLowerCase()}`, newValue.toString());
-    }
   };
 
   const features = [
@@ -72,34 +66,26 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       icon: Eye,
       enabled: enableHighContrast
     },
-    {
       id: 'screenReader',
       name: 'Screen Reader',
       description: 'Optimize content for screen readers',
       icon: Volume2,
       enabled: enableScreenReader
-    },
-    {
       id: 'keyboardNav',
       name: 'Keyboard Navigation',
       description: 'Enhanced keyboard navigation support',
       icon: Keyboard,
       enabled: enableKeyboardNavigation
-    },
-    {
       id: 'voiceControl',
       name: 'Voice Control',
       description: 'Enable voice commands for navigation',
       icon: MousePointer,
       enabled: enableVoiceControl
-    },
-    {
       id: 'focusManagement',
       name: 'Focus Management',
       description: 'Improved focus indicators and management',
       icon: Settings,
       enabled: enableFocusManagement
-    }
   ];
 
   if (!isActive) {
@@ -158,7 +144,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-900">Text Scaling</span>
               <span className="text-sm text-gray-500">{settings.textScaling}%</span>
-            </div>
             <input
               type="range"
               min="75"
@@ -167,16 +152,13 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
               onChange={() => toggleFeature('textScaling')}
               className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
             />
-          </div>
         )}
-      </div>
 
       <div className="mt-4 pt-4 border-t border-gray-200">
         <div className="flex items-center text-sm text-gray-600">
           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
           Accessibility features are active
         </div>
-      </div>
     </div>
   );
 };

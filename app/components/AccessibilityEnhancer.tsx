@@ -34,7 +34,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           openDropdowns.forEach(dropdown => {
             (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
           });
-        }
       };
 
       document.addEventListener('keydown', handleKeyDown);
@@ -61,21 +60,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           } else {
             if (document.activeElement === lastFocusableElement) {
               firstFocusableElement.focus();
-              e.preventDefault();
-            }
-          }
         };
 
         container.addEventListener('keydown', handleTabKey);
         firstFocusableElement?.focus();
 
         return () => container.removeEventListener('keydown', handleTabKey);
-      };
 
       // Apply focus trap to modals and dropdowns
       const modals = document.querySelectorAll('[role="dialog"], [aria-modal="true"]');
       modals.forEach(modal => trapFocus(modal as HTMLElement));
-    }
 
     // Screen reader support
     if (enableScreenReaderSupport && typeof window !== 'undefined') {
@@ -92,8 +86,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         const liveRegion = document.getElementById('live-region');
         if (liveRegion) {
           liveRegion.textContent = message;
-        }
-      };
 
       // Listen for route changes (if using React Router)
       const originalPushState = history.pushState;
@@ -102,19 +94,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       history.pushState = function(...args) {
         originalPushState.apply(history, args);
         announcePageChange('Page changed');
-      };
 
       history.replaceState = function(...args) {
         originalReplaceState.apply(history, args);
         announcePageChange('Page updated');
-      };
 
       return () => {
         document.body.removeChild(liveRegion);
         history.pushState = originalPushState;
         history.replaceState = originalReplaceState;
-      };
-    }
 
     // High contrast mode support
     if (enableHighContrast && typeof window !== 'undefined') {
@@ -125,15 +113,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           document.documentElement.classList.add('high-contrast');
         } else {
           document.documentElement.classList.remove('high-contrast');
-        }
-      };
 
       const handleChange = (e: MediaQueryListEvent) => updateHighContrast(e);
       prefersHighContrast.addEventListener('change', handleChange);
       updateHighContrast(prefersHighContrast);
 
       return () => prefersHighContrast.removeEventListener('change', handleChange);
-    }
     
     return () => {
       // No cleanup needed

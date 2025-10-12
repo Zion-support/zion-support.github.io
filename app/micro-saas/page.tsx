@@ -30,7 +30,6 @@ const MicroSaasPage: React.FC = () => {
       popular: true,
       category: 'Analytics'
     },
-    {
       id: '2',
       icon: Users,
       title: 'AI-Powered CRM',
@@ -40,8 +39,6 @@ const MicroSaasPage: React.FC = () => {
       users: 'Up to 100 users',
       popular: false,
       category: 'CRM'
-    },
-    {
       id: '3',
       icon: Shield,
       title: 'Security Monitor',
@@ -49,10 +46,7 @@ const MicroSaasPage: React.FC = () => {
       features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', 'Real-time alerts', 'Incident response'],
       price: '$79/month',
       users: 'Up to 25 users',
-      popular: false,
       category: 'Security'
-    },
-    {
       id: '4',
       icon: Cloud,
       title: 'Cloud Backup Pro',
@@ -60,10 +54,7 @@ const MicroSaasPage: React.FC = () => {
       features: ['Automated backups', 'Disaster recovery', 'Version control', 'Cross-platform sync', 'Encryption'],
       price: '$59/month',
       users: 'Unlimited',
-      popular: true,
       category: 'Backup'
-    },
-    {
       id: '5',
       icon: MessageSquare,
       title: 'AI Chat Support',
@@ -71,10 +62,7 @@ const MicroSaasPage: React.FC = () => {
       features: ['AI chatbot', 'Multi-language support', 'Human handoff', 'Analytics dashboard', 'Custom training'],
       price: '$89/month',
       users: 'Up to 200 conversations',
-      popular: false,
       category: 'Support'
-    },
-    {
       id: '6',
       icon: TrendingUp,
       title: 'Marketing Automation',
@@ -82,7 +70,6 @@ const MicroSaasPage: React.FC = () => {
       features: ['Email campaigns', 'Social media scheduling', 'Lead nurturing', 'A/B testing', 'ROI tracking'],
       price: '$129/month',
       users: 'Up to 75 users',
-      popular: true,
       category: 'Marketing'
     }
   ];
@@ -90,27 +77,15 @@ const MicroSaasPage: React.FC = () => {
   const categories = ['All', 'Analytics', 'CRM', 'Security', 'Backup', 'Support', 'Marketing'];
 
   const benefits = [
-    {
       icon: Zap,
       title: 'Quick Setup',
       description: 'Get up and running in minutes with our intuitive setup process'
-    },
-    {
-      icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Cloud,
       title: 'Cloud-Native',
       description: 'Built for the cloud with automatic scaling and high availability'
-    },
-    {
-      icon: Users,
       title: 'User-Friendly',
       description: 'Designed for non-technical users with intuitive interfaces'
-    }
-  ];
 
   return (
     <>
@@ -141,12 +116,9 @@ const MicroSaasPage: React.FC = () => {
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link
                 to="/pricing"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
                 View Pricing
-              </Link>
             </div>
           </div>
         </section>
@@ -167,16 +139,10 @@ const MicroSaasPage: React.FC = () => {
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
 
         {/* Products Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
               Our Micro SaaS Products
-            </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasProducts.map((product) => (
                 <div
@@ -199,8 +165,6 @@ const MicroSaasPage: React.FC = () => {
                     <div>
                       <h3 className="text-xl font-semibold text-white">{product.title}</h3>
                       <span className="text-sm text-purple-300">{product.category}</span>
-                    </div>
-                  </div>
                   
                   <p className="text-gray-300 mb-4">{product.description}</p>
                   
@@ -214,11 +178,8 @@ const MicroSaasPage: React.FC = () => {
                   </ul>
                   
                   <div className="flex items-center justify-between mb-4">
-                    <div>
                       <div className="text-2xl font-bold text-white">{product.price}</div>
                       <div className="text-sm text-gray-400">{product.users}</div>
-                    </div>
-                  </div>
                   
                   <Link
                     to={`/micro-saas/${product.id}`}
@@ -227,39 +188,17 @@ const MicroSaasPage: React.FC = () => {
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
-            </h2>
             <p className="text-xl text-purple-100 mb-8">
               Start with any of our micro SaaS solutions and scale as your business grows. 
               All solutions include free trials and expert support.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-              >
                 <Zap className="mr-2 h-5 w-5" />
                 Start Free Trial
-              </Link>
-              <Link
-                to="/pricing"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
                 View All Pricing
-              </Link>
-            </div>
-          </div>
-        </section>
       </div>
     </>
   );

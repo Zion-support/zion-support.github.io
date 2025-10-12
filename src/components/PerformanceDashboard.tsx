@@ -6,13 +6,7 @@ interface PerformanceMetrics {
   memoryUsage: number;
   fps: number;
 }
-interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
   [key: string]: number;
-}
 const PerformanceDashboard: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -53,7 +47,6 @@ const PerformanceDashboard: React.FC = () => {
           requestAnimationFrame(measureFPS);
         };
         requestAnimationFrame(measureFPS);
-      }
       setMetrics({
         loadTime,
         renderTime,
@@ -94,28 +87,16 @@ const PerformanceDashboard: React.FC = () => {
             {metrics.loadTime.toFixed(2)}ms
           </span>
         </div>
-        <div className="flex justify-between">
           <span className="text-sm text-gray-600">Render Time:</span>
-          <span className="text-sm font-mono">
             {metrics.renderTime.toFixed(2)}ms
-          </span>
-        </div>
-        <div className="flex justify-between">
           <span className="text-sm text-gray-600">Memory Usage:</span>
-          <span className="text-sm font-mono">
             {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
-          </span>
-        </div>
-        <div className="flex justify-between">
           <span className="text-sm text-gray-600">FPS:</span>
           <span className="text-sm font-mono">{metrics.fps}</span>
-        </div>
         <div className="pt-2 border-t border-gray-200">
           <div className="text-xs text-gray-500">
             Last updated: {new Date().toLocaleTimeString()}
           </div>
-        </div>
-      </div>
     </div>
   );
 };

@@ -12,7 +12,6 @@ interface State {
   errorInfo?: ErrorInfo;
   errorId?: string;
   retryCount: number;
-}
 class EnhancedErrorBoundary extends Component<Props, State> {
   private maxRetries: number;
   constructor(props: Props) {
@@ -30,11 +29,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       retryCount: 0
-    };
-  }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
       errorInfo
     });
     // Log error to console in development
@@ -44,12 +40,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
-    }
     // Enhanced error reporting
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
-    }
-  }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Enhanced error reporting logic
     const errorReport = {
@@ -59,13 +52,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href
-    };
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
       console.group('🚨 Error Boundary Caught Error');
       console.error('Error Report:', errorReport);
       console.groupEnd();
-    }
     // Send to error reporting service (implement as needed)
     try {
       // In a real app, you would send this to your error reporting service
@@ -80,38 +70,28 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // });
     } catch (reportingError) {
       console.error('Failed to report error:', reportingError);
-    }
   };
   private getUserId = (): string | null => {
     // Get user ID from localStorage, cookies, or context
     return localStorage.getItem('userId') || null;
-  };
   private getSessionId = (): string => {
     let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
-    }
     return sessionId;
-  };
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
   private handleReload = () => {
     window.location.reload();
-  };
   private handleGoHome = () => {
     window.location.href = '/';
-  };
   private copyErrorDetails = () => {
     const errorDetails = {
       errorId: this.state.errorId,
       message: this.state.error?.message,
       stack: this.state.error?.stack,
       componentStack: this.state.errorInfo?.componentStack,
-      timestamp: new Date().toISOString(),
-      url: window.location.href
-    };
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
       .then(() => {
         // Show success message
@@ -127,7 +107,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       .catch((error) => {
         console.error('Failed to copy error details:', error);
       });
-  };
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -161,12 +140,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               >
                 Try Again
               </button>
-              <button
                 onClick={this.handleGoHome}
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
-              >
                 Go Home
-              </button>
             </div>
             {process.env.NODE_ENV === 'development' && error && (
               <details className="mt-6 text-left">
@@ -177,20 +153,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   {error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
-                <button
                   id="copy-error-details"
                   onClick={this.copyErrorDetails}
                   className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded hover:bg-gray-300"
-                >
                   Copy Error Details
-                </button>
               </details>
             )}
           </div>
         </div>
       );
-    }
     return this.props.children;
-  }
-}
 export default EnhancedErrorBoundary;

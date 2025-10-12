@@ -38,12 +38,12 @@ global.ResizeObserver = class ResizeObserver {
 
 // Mock window.gtag
 Object.defineProperty(window, 'gtag', {
-  writable: true,
   value: jest.fn(),
+  writable: true
 });
 
 // Mock window.dataLayer
 Object.defineProperty(window, 'dataLayer', {
-  writable: true,
   value: [],
+  writable: true
 });

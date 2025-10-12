@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-'use client'
 import React, { useEffect, useState } from 'react'
 interface UserExperienceEnhancerProps {
   children: React.ReactNode}
@@ -31,7 +30,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
             setLoadingStates(prev => ({ ...prev, [index]: false }))}, 1000)})})
       // Add focus indicators
 
-      // Add focus indicators
       const style = document.createElement('style')
       style.textContent = `
         *:focus {outline: 2px solid #06b6d4

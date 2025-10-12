@@ -11,37 +11,26 @@ const ServicesPage: React.FC = () => {
       description: 'Transform your business with cutting-edge AI solutions and machine learning algorithms.',
       features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Automated Decision Making']
     },
-    {
       icon: <Cloud className="w-8 h-8 text-green-500" />,
       title: 'Cloud Solutions',
       description: 'Scalable and secure cloud infrastructure to power your digital transformation.',
       features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery']
-    },
-    {
       icon: <Shield className="w-8 h-8 text-red-500" />,
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and data.',
       features: ['Threat Detection', 'Security Audits', 'Compliance Management', 'Incident Response']
-    },
-    {
       icon: <Globe className="w-8 h-8 text-purple-500" />,
       title: '5G Implementation',
       description: 'Next-generation connectivity solutions for ultra-fast and reliable networks.',
       features: ['Network Design', 'IoT Integration', 'Edge Computing', 'Performance Optimization']
-    },
-    {
       icon: <Database className="w-8 h-8 text-yellow-500" />,
       title: 'Data Analytics',
       description: 'Turn your data into actionable insights with advanced analytics and visualization.',
       features: ['Data Warehousing', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization']
-    },
-    {
       icon: <Code className="w-8 h-8 text-indigo-500" />,
       title: 'Custom Development',
       description: 'Tailored software solutions designed to meet your specific business requirements.',
       features: ['Web Applications', 'API Development', 'Microservices', 'Legacy Modernization']
-    },
-    {
       icon: <Smartphone className="w-8 h-8 text-pink-500" />,
       title: 'Mobile Solutions',
       description: 'Native and cross-platform mobile applications for iOS and Android.',
@@ -50,32 +39,21 @@ const ServicesPage: React.FC = () => {
   ];
 
   const processSteps = [
-    {
       step: '01',
       title: 'Discovery & Analysis',
       description: 'We analyze your business needs and technical requirements to create a tailored solution.'
-    },
-    {
       step: '02',
       title: 'Strategy & Planning',
       description: 'Our team develops a comprehensive strategy and project roadmap for implementation.'
-    },
-    {
       step: '03',
       title: 'Development & Implementation',
       description: 'We build and deploy your solution using industry best practices and cutting-edge technology.'
-    },
-    {
       step: '04',
       title: 'Testing & Optimization',
       description: 'Rigorous testing ensures quality and performance optimization for maximum efficiency.'
-    },
-    {
       step: '05',
       title: 'Launch & Support',
       description: 'We launch your solution and provide ongoing support and maintenance services.'
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -114,7 +92,6 @@ const ServicesPage: React.FC = () => {
                 </ul>
               </div>
             ))}
-          </div>
 
           {/* Process Section */}
           <div className="mb-20">
@@ -135,8 +112,6 @@ const ServicesPage: React.FC = () => {
                   <p className="text-gray-300 text-sm">{step.description}</p>
                 </div>
               ))}
-            </div>
-          </div>
 
           {/* CTA Section */}
           <div className="text-center">
@@ -144,7 +119,6 @@ const ServicesPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Let's discuss how our services can help you achieve your goals and drive innovation.
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/contact" 
@@ -152,15 +126,9 @@ const ServicesPage: React.FC = () => {
                 >
                   Get Started Today
                 </Link>
-                <Link 
                   to="/ai-services" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                >
                   Explore AI Services
-                </Link>
-              </div>
-            </div>
-          </div>
         </div>
       </main>
     </div>

@@ -55,7 +55,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       if (scriptToRemove) {
         scriptToRemove.remove();
       }
-    };
   }, []);
 
   return (

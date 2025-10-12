@@ -24,8 +24,6 @@ function resolveMergeConflicts(content) {
     
       inConflict = false;
       conflictType = null;
-      continue;
-    }
     
     if (inConflict) {
       if (conflictType === 'head') {
@@ -34,7 +32,6 @@ function resolveMergeConflicts(content) {
       // Skip lines from other branch (conflictType === 'separator' or 'other')
     } else {
       resolvedLines.push(line);
-    }
   }
   
   return resolvedLines.join('\n');
@@ -50,14 +47,10 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, resolvedContent, 'utf8');
       console.log(`✓ Resolved merge conflicts in: ${filePath}`);
       return true;
-    }
     
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
 
 // Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {
@@ -85,14 +78,9 @@ function findFilesWithConflicts(dir) {
           } catch (error) {
             // Skip files that can't be read
           }
-        }
-      }
-    }
-  }
   
   scanDirectory(dir);
   return files;
-}
 
 // Main execution
 const workspaceDir = process.argv[2] || '/workspace';
@@ -105,8 +93,6 @@ let resolvedCount = 0;
 for (const filePath of filesWithConflicts) {
   if (processFile(filePath)) {
     resolvedCount++;
-  }
-}
 
 console.log(`\nResolved merge conflicts in ${resolvedCount} files`);
 console.log('Merge conflict resolution complete!');

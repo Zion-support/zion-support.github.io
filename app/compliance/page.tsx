@@ -12,56 +12,34 @@ const CompliancePage: React.FC = () => {
       status: 'Certified',
       icon: Shield
     },
-    {
       name: 'ISO 27001',
       description: 'Information security management system certification',
-      status: 'Certified',
       icon: Lock
-    },
-    {
       name: 'GDPR',
       description: 'General Data Protection Regulation compliance for EU data',
       status: 'Compliant',
       icon: FileText
-    },
-    {
       name: 'HIPAA',
       description: 'Health Insurance Portability and Accountability Act compliance',
-      status: 'Compliant',
       icon: Users
-    },
-    {
       name: 'PCI DSS',
       description: 'Payment Card Industry Data Security Standard',
-      status: 'Compliant',
       icon: Award
-    },
-    {
       name: 'CCPA',
       description: 'California Consumer Privacy Act compliance',
-      status: 'Compliant',
       icon: Globe
     }
   ];
 
   const features = [
-    {
       title: 'Comprehensive Auditing',
       description: 'Regular internal and external audits to ensure ongoing compliance with all standards.'
-    },
-    {
       title: 'Data Protection',
       description: 'Advanced encryption and security measures to protect sensitive data and privacy.'
-    },
-    {
       title: 'Documentation',
       description: 'Complete documentation of policies, procedures, and compliance measures.'
-    },
-    {
       title: 'Training Programs',
       description: 'Regular training for all staff on compliance requirements and best practices.'
-    }
-  ];
 
   const benefits = [
     'Reduced risk of data breaches and security incidents',
@@ -72,7 +50,6 @@ const CompliancePage: React.FC = () => {
     'Better data governance and management',
     'Streamlined audit processes',
     'Continuous compliance monitoring'
-  ];
 
   return (
     <>
@@ -104,7 +81,6 @@ const CompliancePage: React.FC = () => {
                 </button>
                 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                   Learn More
-                </button>
               </div>
             </div>
           </div>
@@ -112,15 +88,12 @@ const CompliancePage: React.FC = () => {
 
         {/* Compliance Standards */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Compliance Certifications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We maintain compliance with the most stringent security and regulatory standards.
-              </p>
-            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {complianceStandards.map((standard, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
@@ -140,56 +113,27 @@ const CompliancePage: React.FC = () => {
                   <p className="text-gray-300">{standard.description}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Compliance Program
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive approach to maintaining the highest standards of security and compliance.
-              </p>
-            </div>
             <div className="grid md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20">
                   <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Benefits of Our Compliance Program
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the advantages of working with a fully compliant technology partner.
-              </p>
-            </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
                   <CheckCircle className="h-8 w-8 text-green-400 mx-auto mb-4" />
                   <p className="text-gray-300">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Questions About Our Compliance?
@@ -205,10 +149,6 @@ const CompliancePage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
                 <FileText className="mr-2 h-5 w-5" />
                 Download Report
-              </button>
-            </div>
-          </div>
-        </section>
       </div>
     </>
   );

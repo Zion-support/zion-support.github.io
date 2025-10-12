@@ -11,12 +11,9 @@ const PagePage: React.FC = () => {
       description: 'Professional page services for modern businesses.',
       benefits: ['Expert Solutions', 'Advanced Technology', 'Proven Results', '24/7 Support']
     },
-    {
       title: 'Advanced Technology',
       description: 'Cutting-edge tools and technologies to deliver superior results.',
       benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
-    },
-    {
       title: 'Proven Results',
       description: 'Track record of successful projects and satisfied clients.',
       benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
@@ -59,7 +56,6 @@ const PagePage: React.FC = () => {
                 </ul>
               </div>
             ))}
-          </div>
           
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
@@ -73,10 +69,7 @@ const PagePage: React.FC = () => {
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
                   Learn More
-                </button>
-              </div>
             </div>
-          </div>
         </div>
       </main>
       

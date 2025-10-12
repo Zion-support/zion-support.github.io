@@ -19,7 +19,6 @@ function execGitCommand(command, description) {
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
-  try {
     const content = fs.readFileSync(filePath, 'utf8')
     // Check if file has merge conflicts
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
@@ -35,10 +34,6 @@ function resolveMergeConflicts(filePath) {
         })
         // Handle other conflict patterns
         .replace(/          if (parts.length > 1) {
-            const incoming = parts[1].replace(/            return incoming)
-          })
-          return match)
-        })
         // Clean up any remaining conflict markers
         .replace(/        .replace(//g, '')
         .replace(/      )
@@ -48,18 +43,15 @@ function resolveMergeConflicts(filePath) {
     return false} catch (error) {
     console.log(`❌ Error resolving conflicts in ${filePath}: ${error.message}`)
     return false}
-}
 
 // Function to find and resolve all merge conflicts
 function resolveAllMergeConflicts() {
   console.log('🔍 Searching for files with merge conflicts...')
-  try {
     // Find all files with merge conflicts
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
     const conflictedFiles = result.trim().split('\n').filter(file => file.length > 0)
     if (conflictedFiles.length === 0) {
       console.log('✅ No merge conflicts found')
-      return true}
     
     console.log(`📋 Found ${conflictedFiles.length} files with merge conflicts: `)
     conflictedFiles.forEach(file => console.log(`  - ${file}`))
@@ -73,12 +65,9 @@ function resolveAllMergeConflicts() {
     console.log(`✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`)
     return resolvedCount === conflictedFiles.length} catch (error) {
     console.log('❌ Error finding merge conflicts:', error.message)
-    return false}
-}
 
 // Function to get all remote branches
 function getAllRemoteBranches() {
-  try {
     const result = execSync('git branch -r', { encoding: 'utf8' })
     const branches = result
       .split('\n')
@@ -89,12 +78,10 @@ function getAllRemoteBranches() {
     return branches} catch (error) {
     console.log('❌ Error getting remote branches:', error.message)
     return []}
-}
 
 // Function to merge a branch safely
 function mergeBranch(branchName) {
   console.log(`\n🔄 Attempting to merge ${branchName}...`)
-  try {
     // Check if branch exists
     const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, `Checking if ${branchName} exists`)
     if (branchExists !== null) {
@@ -116,8 +103,6 @@ function mergeBranch(branchName) {
       return false}
   } catch (error) {
     console.log(`❌ Error merging ${branchName}: ${error.message}`)
-    return false}
-}
 
 // Main execution
 async function main() {
@@ -171,7 +156,6 @@ async function main() {
   for (const branch of priorityBranches) {
     if (allBranches.includes(branch)) {
       mergeBranch(branch)}
-  }
   
   // Merge other branches in batches
   const otherBranches = allBranches.filter(branch => !priorityBranches.includes(branch))
@@ -181,7 +165,6 @@ async function main() {
     const batch = otherBranches.slice(i, i + batchSize)
     console.log(`\n📦 Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(otherBranches.length / batchSize)}`)
     for (const branch of batch) {
-      mergeBranch(branch)}
     
     // Small delay between batches
     await new Promise(resolve => setTimeout(resolve, 1000))}

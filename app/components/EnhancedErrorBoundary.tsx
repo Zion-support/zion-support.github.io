@@ -9,17 +9,12 @@ const EnhancedErrorBoundary: React.FC = () => {
       title: 'AI-Powered Error Detection',
       description: 'Advanced AI algorithms that automatically detect and prevent errors before they impact users.'
     },
-    {
       icon: Zap,
       title: 'Real-time Monitoring',
       description: 'Continuous monitoring and instant error reporting for immediate response and resolution.'
-    },
-    {
       icon: Shield,
       title: 'Robust Error Handling',
       description: 'Comprehensive error handling that ensures your application remains stable and reliable.'
-    },
-    {
       icon: Globe,
       title: 'Global Error Tracking',
       description: 'Track errors across all environments and user locations for complete visibility.'
@@ -33,7 +28,6 @@ const EnhancedErrorBoundary: React.FC = () => {
     'Scalable and flexible solutions',
     '24/7 technical support',
     'Custom implementation and training'
-  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -56,7 +50,6 @@ const EnhancedErrorBoundary: React.FC = () => {
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
-            </button>
           </div>
         </div>
       </section>
@@ -71,7 +64,6 @@ const EnhancedErrorBoundary: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Powerful AI technology that drives results
             </p>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
@@ -82,42 +74,23 @@ const EnhancedErrorBoundary: React.FC = () => {
                 <p className="text-gray-300 mb-6 leading-relaxed">{feature.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our enhanced error boundary solutions for your business.
-            </p>
-          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Get Started?
-            </h2>
             <p className="text-xl text-gray-300 mb-8">
               Contact our experts to discuss your enhanced error boundary needs and get a customized solution.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
@@ -126,11 +99,7 @@ const EnhancedErrorBoundary: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
-              </button>
             </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

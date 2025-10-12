@@ -67,6 +67,5 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       </script>
     </Helmet>
   )
-}
 
 export default EnhancedSEOHead

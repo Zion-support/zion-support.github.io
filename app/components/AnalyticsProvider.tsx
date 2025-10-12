@@ -19,7 +19,6 @@ export const useAnalytics = () => {
 
 interface AnalyticsProviderProps {
   children: ReactNode;
-}
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
@@ -46,41 +45,26 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         event_label: parameters.label,
         value: parameters.value,
         ...parameters,
-      });
-    }
 
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
       console.log('Analytics Event:', eventName, parameters);
-    }
   };
 
   const trackPageView = (pageName: string, pagePath: string) => {
-    if (typeof window === 'undefined') return;
 
-    // Google Analytics
-    if ('gtag' in window) {
       const gtag = (window as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag;
-      gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: pageName,
         page_location: window.location.origin + pagePath,
-      });
-    }
 
-    // Console logging for development
-    if (process.env.NODE_ENV === 'development') {
       console.log('Page View:', pageName, pagePath);
-    }
-  };
 
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-  };
 
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
-};

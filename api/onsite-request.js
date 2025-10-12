@@ -19,7 +19,6 @@ export default function handler(req, res) {
 
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
-  }
 
   let existing = [];
   try {
@@ -32,9 +31,7 @@ export default function handler(req, res) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error reading existing requests:', error);
-    }
     existing = [];
-  }
 
   const newRequest = {
     id: Date.now().toString(),
@@ -50,24 +47,16 @@ export default function handler(req, res) {
 
   existing.push(newRequest);
 
-  try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Onsite request submitted successfully',
       id: newRequest.id
     }));
-  } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
       console.error('Error saving onsite request:', error);
-    }
     res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save request' }));
-  }
 }
 module.exports = handler;
 

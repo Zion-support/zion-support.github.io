@@ -14,7 +14,6 @@ interface Metadata {
   metadataBase: URL;
   alternates: {
     canonical: string;
-  };
   openGraph: {
     title: string;
     description: string;
@@ -28,13 +27,9 @@ interface Metadata {
     }>;
     locale: string;
     type: string;
-  };
   twitter: {
     card: string;
-    title: string;
-    description: string;
     images: string[];
-  };
   robots: {
     index: boolean;
     follow: boolean;
@@ -45,7 +40,6 @@ interface Metadata {
       'max-image-preview': string;
       'max-snippet': number;
     };
-  };
 }
 
 export const metadata: Metadata = {
@@ -65,16 +59,12 @@ export const metadata: Metadata = {
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
-  formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
     canonical: '/',
-  },
-  openGraph: {
     title: 'Zion Tech Group - Advanced AI and IT Solutions',
     description: 'Leading provider of AI-powered solutions, cloud architecture, and cutting-edge technology services for businesses worldwide.',
     url: 'https://ziontechgroup.com',
@@ -89,22 +79,13 @@ export const metadata: Metadata = {
     ],
     locale: 'en_US',
     type: 'website',
-  },
-  twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - Advanced AI and IT Solutions',
-    description: 'Leading provider of AI-powered solutions, cloud architecture, and cutting-edge technology services for businesses worldwide.',
     images: ['/og-image.jpg'],
-  },
-  robots: {
     index: true,
     follow: true,
-    googleBot: {
       index: true,
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-}

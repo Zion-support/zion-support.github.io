@@ -26,10 +26,8 @@ self.addEventListener('fetch', (event) => {
     )
         // Return cached version or fetch from network
         return response || fetch(event.request)})
-  )})
 // Activate event
 self.addEventListener('activate', (event) => {
-  event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
@@ -38,4 +36,3 @@ self.addEventListener('activate', (event) => {
             return caches.delete(cacheName)}
         })
       )})
-  )})

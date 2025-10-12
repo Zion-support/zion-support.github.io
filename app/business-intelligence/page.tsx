@@ -1,11 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { CheckCircle, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
-import { CheckCircle, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
 
 const BusinessIntelligencePage: React.FC = () => {
   const features = [
@@ -14,17 +10,12 @@ const BusinessIntelligencePage: React.FC = () => {
       title: 'AI-Powered Analytics',
       description: 'Advanced AI technology to transform your business intelligence and data analysis'
     },
-    {
       icon: Zap,
       title: 'Real-Time Insights',
       description: 'Lightning-fast data processing and real-time business intelligence'
-    },
-    {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards for your data'
-    },
-    {
       icon: Globe,
       title: 'Global Analytics',
       description: 'Worldwide business intelligence deployment and support'
@@ -40,7 +31,6 @@ const BusinessIntelligencePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -61,7 +51,6 @@ const BusinessIntelligencePage: React.FC = () => {
           </p>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Our business intelligence solutions deliver unmatched performance, security, and scalability.
-          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -72,7 +61,6 @@ const BusinessIntelligencePage: React.FC = () => {
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
-        </div>
 
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
@@ -86,15 +74,12 @@ const BusinessIntelligencePage: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
 
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Get Started?
-          </h2>
           <p className="text-xl text-purple-100 mb-8">
             Contact our experts to discuss your business intelligence needs and get a customized solution.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
               <Phone className="mr-2 h-5 w-5" />
@@ -103,9 +88,6 @@ const BusinessIntelligencePage: React.FC = () => {
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
               Email Us
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );

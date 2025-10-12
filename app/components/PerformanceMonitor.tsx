@@ -44,14 +44,10 @@ const PerformanceMonitor: React.FC = () => {
       const memory = (performance as any).memory;
       updateMetrics({
         memory: Math.round(memory.usedJSHeapSize / 1024 / 1024)
-      });
-    }
 
     // Monitor load time
     window.addEventListener('load', () => {
-      updateMetrics({
         loadTime: Math.round(performance.now())
-      });
     });
 
     // Show/hide with keyboard shortcut (Ctrl+Shift+P)
@@ -60,7 +56,6 @@ const PerformanceMonitor: React.FC = () => {
         e.preventDefault();
         setIsVisible(prev => !prev);
       }
-    };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
@@ -89,53 +84,29 @@ const PerformanceMonitor: React.FC = () => {
           </div>
         )}
         {metrics.fid && (
-          <div className="flex justify-between">
             <span>FID:</span>
             <span className={metrics.fid > 100 ? 'text-red-400' : 'text-green-400'}>
               {metrics.fid.toFixed(0)}ms
-            </span>
-          </div>
-        )}
         {metrics.cls && (
-          <div className="flex justify-between">
             <span>CLS:</span>
             <span className={metrics.cls > 0.1 ? 'text-red-400' : 'text-green-400'}>
               {metrics.cls.toFixed(3)}
-            </span>
-          </div>
-        )}
         {metrics.fcp && (
-          <div className="flex justify-between">
             <span>FCP:</span>
             <span className={metrics.fcp > 1800 ? 'text-red-400' : 'text-green-400'}>
               {metrics.fcp.toFixed(0)}ms
-            </span>
-          </div>
-        )}
         {metrics.ttfb && (
-          <div className="flex justify-between">
             <span>TTFB:</span>
             <span className={metrics.ttfb > 600 ? 'text-red-400' : 'text-green-400'}>
               {metrics.ttfb.toFixed(0)}ms
-            </span>
-          </div>
-        )}
         {metrics.memory && (
-          <div className="flex justify-between">
             <span>Memory:</span>
             <span className="text-blue-400">{metrics.memory}MB</span>
-          </div>
-        )}
         {metrics.loadTime && (
-          <div className="flex justify-between">
             <span>Load Time:</span>
             <span className="text-purple-400">{metrics.loadTime}ms</span>
-          </div>
-        )}
-      </div>
       <div className="mt-2 pt-2 border-t border-slate-700 text-gray-400">
         Press Ctrl+Shift+P to toggle
-      </div>
     </div>
   );
 };

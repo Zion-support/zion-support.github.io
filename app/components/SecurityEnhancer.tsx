@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-'use client'
 import React, { useEffect } from 'react'
 interface SecurityEnhancerProps {
   children: React.ReactNode}
@@ -23,7 +22,6 @@ interface SecurityEnhancerProps {children: React.ReactNode}
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {useEffect(() => {// Security enhancement logic
     const enhanceSecurity = (// Add security headers
       const securityHeaders = {'X-Content-Type-Options': 'nosniff',
-        'X-Frame-Options': 'DENY',
         'X-XSS-Protection': '1; mode=block',) => {
   return (
     $3
@@ -47,7 +45,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {use
 export default SecurityEnhancer
   </SecurityEnhancerProps>
 
-      // Disable right-click context menu
       document.addEventListener('contextmenu', (e) => {e.preventDefault()}
       });// Disable F12 and other dev tools shortcuts
       document.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}

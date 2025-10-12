@@ -16,7 +16,6 @@ interface APIResponse<T = any> {
   status: number;
   statusText: string;
   headers: Record<string, string>;
-}
 
 class APIError extends Error {
   status?: number;
@@ -28,7 +27,6 @@ class APIError extends Error {
     this.status = status;
     this.code = code;
   }
-}
 
 export class APIClient {
   private baseURL: string;
@@ -41,7 +39,6 @@ export class APIClient {
       'Content-Type': 'application/json',
       ...defaultHeaders
     };
-  }
 
   /**
    * Make an API request
@@ -91,7 +88,6 @@ export class APIClient {
       // Cache successful GET requests
       if (cache && method === 'GET' && response.ok) {
         this.setCache(cacheKey, apiResponse, cacheTTL);
-      }
 
       if (!response.ok) {
         throw new APIError({
@@ -99,58 +95,36 @@ export class APIClient {
           status: response.status,
           code: data.code
         });
-      }
 
       return apiResponse;
     } catch (error) {
       if (error instanceof APIError) {
         throw error;
-      }
       throw new APIError({
         message: error instanceof Error ? error.message : 'Network error',
         code: 'NETWORK_ERROR'
-      });
-    }
-  }
 
-  /**
    * GET request
-   */
   async get<T = any>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'GET' });
-  }
 
-  /**
    * POST request
-   */
   async post<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'POST', body });
-  }
 
-  /**
    * PUT request
-   */
   async put<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'PUT', body });
-  }
 
-  /**
    * DELETE request
-   */
   async delete<T = any>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'DELETE' });
-  }
 
-  /**
    * PATCH request
-   */
   async patch<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
-  }
 
-  /**
    * Get data from cache
-   */
   private getFromCache(key: string): APIResponse | null {
     const cached = this.cache.get(key);
     if (!cached) return null;
@@ -159,53 +133,35 @@ export class APIClient {
     if (now - cached.timestamp > cached.ttl) {
       this.cache.delete(key);
       return null;
-    }
 
     return cached.data;
-  }
 
-  /**
    * Set data in cache
-   */
   private setCache(key: string, data: APIResponse, ttl: number): void {
     this.cache.set(key, {
       data,
       timestamp: Date.now(),
       ttl
     });
-  }
 
-  /**
    * Parse response headers
-   */
   private parseHeaders(headers: Headers): Record<string, string> {
     const result: Record<string, string> = {};
     headers.forEach((value, key) => {
       result[key] = value;
-    });
     return result;
-  }
 
-  /**
    * Clear cache
-   */
   clearCache(): void {
     this.cache.clear();
-  }
 
-  /**
    * Clear cache for specific endpoint
-   */
   clearCacheForEndpoint(endpoint: string): void {
     const keysToDelete: string[] = [];
     this.cache.forEach((_, key) => {
       if (key.includes(endpoint)) {
         keysToDelete.push(key);
-      }
-    });
     keysToDelete.forEach(key => this.cache.delete(key));
-  }
-}
 
 // Export utility functions
 export const createAPIClient = (baseURL: string, headers?: Record<string, string>) => 

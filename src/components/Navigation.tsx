@@ -27,11 +27,9 @@ const Navigation: React.FC = () => {
     if (isMenuOpen) {
       closeAllMenus();
     }
-  };
 
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen);
-  };
 
   const microSAASServices = [
     { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart },
@@ -70,7 +68,6 @@ const Navigation: React.FC = () => {
     { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
     { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar }
-  ];
 
   const itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud },
@@ -85,7 +82,6 @@ const Navigation: React.FC = () => {
     { name: 'Developer Tools', href: '/developer-tools', icon: Code },
     { name: 'Marketing Tools', href: '/marketing-tools', icon: Target },
     { name: 'Productivity Solutions', href: '/productivity', icon: BarChart }
-  ];
 
   // Removed specializedServices as it was unused
 
@@ -135,43 +131,16 @@ const Navigation: React.FC = () => {
                         ))}
                       </div>
                     </div>
-                    <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <Brain className="w-4 h-4 mr-2" />
                         AI Services
-                      </h3>
-                      <div className="space-y-2">
                         {aiServices.slice(0, 6).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <Settings className="w-4 h-4 mr-2" />
                         IT Services
-                      </h3>
-                      <div className="space-y-2">
                         {itServices.slice(0, 6).map((service) => (
                           <Link
                             key={service.name}
                             to={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
                           </Link>
-                        ))}
-                      </div>
-                    </div>
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-700">
                     <div className="grid grid-cols-2 gap-4">
@@ -183,50 +152,34 @@ const Navigation: React.FC = () => {
                         <span>View All Services</span>
                         <ArrowRight className="w-4 h-4" />
                       </Link>
-                      <Link
                         to="/specialized-services"
                         className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
-                        onClick={closeAllMenus}
-                      >
                         <span>Specialized Solutions</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
                 </div>
               )}
-            </div>
 
             <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
               About
             </a>
             <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
               Blog
-            </a>
             <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
               Case Studies
-            </a>
             <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
               Pricing
-            </a>
             <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
-            </a>
             
             <div className="flex items-center space-x-4">
               <a
                 href="tel:+13024640950"
                 className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors"
-              >
                 <Phone className="w-4 h-4" />
                 <span className="hidden sm:inline">+1 302 464 0950</span>
               </a>
               <a href="/contact"
                 className="cyber-button px-4 py-2 text-sm"
-              >
                 Get Started
-              </a>
-            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -253,77 +206,43 @@ const Navigation: React.FC = () => {
                 
                 {isServicesOpen && (
                   <div className="mt-4 pl-4 space-y-3">
-                    <div>
                       <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
-                      <div className="space-y-2">
                         {microSAASServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
                             className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
                             {service.name}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
                       <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
-                      <div className="space-y-2">
                         {aiServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
-                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            {service.name}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
                     <a href="/services"
                       className="block text-cyan-400 hover:text-white transition-colors"
                       onClick={closeAllMenus}
                     >
                       View All Services →
                     </a>
-                  </div>
                 )}
               </div>
 
               <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 About
-              </a>
               <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Blog
-              </a>
               <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Case Studies
-              </a>
               <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Pricing
-              </a>
               <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact
-              </a>
               
               <div className="pt-4 border-t border-gray-700">
                 <a
                   href="tel:+13024640950"
                   className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4"
-                >
                   <Phone className="w-4 h-4" />
                   <span>+1 302 464 0950</span>
                 </a>
                 <a href="/contact"
                   className="block cyber-button px-4 py-2 text-center"
                   onClick={closeAllMenus}
-                >
                   Get Started
-                </a>
-              </div>
-            </div>
-          </div>
         )}
       </div>
     </nav>

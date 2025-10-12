@@ -40,17 +40,10 @@ export const usePerformance = () => {
       }
       // Measure FID (First Input Delay)
       let firstInputDelay = 0;
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver(list => {
-          for (const entry of list.getEntries()) {
             if (entry.entryType === 'first-input') {
               firstInputDelay =
                 (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
-            }
-          }
-        });
         observer.observe({ entryTypes: ['first-input'] });
-      }
       const performanceData: PerformanceMetrics = {
         loadTime: navigation.loadEventEnd - navigation.fetchStart,
         domContentLoaded:
@@ -70,16 +63,10 @@ export const usePerformance = () => {
         'first_contentful_paint',
         performanceData.firstContentfulPaint
       );
-      analytics.trackTiming(
-        'performance',
         'largest_contentful_paint',
         performanceData.largestContentfulPaint
-      );
-      analytics.trackTiming(
-        'performance',
         'cumulative_layout_shift',
         performanceData.cumulativeLayoutShift
-      );
       analytics.trackTiming('performance', 'first_input_delay', performanceData.firstInputDelay);
     };
     // Start monitoring
@@ -92,7 +79,6 @@ export const usePerformance = () => {
     }
     return () => {
       window.removeEventListener('load', measurePerformance);
-    };
   }, []);
   return { metrics, isMonitoring };
 };

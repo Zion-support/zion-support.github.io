@@ -18,7 +18,6 @@ export interface UserBehavior {
   conversionRate: number;
   topPages: Array<{ page: string; views: number }>;
   userJourney: string[];
-}
 
 export interface PerformanceMetrics {
   pageLoadTime: number;
@@ -27,7 +26,6 @@ export interface PerformanceMetrics {
   firstInputDelay: number;
   cumulativeLayoutShift: number;
   timeToInteractive: number;
-}
 
 export interface AnalyticsConfig {
   trackingId: string;
@@ -35,7 +33,6 @@ export interface AnalyticsConfig {
   debug: boolean;
   sampleRate: number;
   customDimensions?: Record<string, string>;
-}
 
 export class AdvancedAnalytics {
   private config: AnalyticsConfig;
@@ -75,11 +72,8 @@ export class AdvancedAnalytics {
 
     // Track form submissions
     this.trackFormSubmissions();
-  }
 
-  /**
    * Track a custom event
-   */
   trackEvent(eventName: string, properties?: Record<string, any>): void {
     if (!this.config.enabled) return;
 
@@ -104,11 +98,8 @@ export class AdvancedAnalytics {
 
     // Send to analytics service
     this.sendToAnalytics(event);
-  }
 
-  /**
    * Track page view
-   */
   trackPageView(page?: string): void {
     const currentPage = page || window.location.pathname;
     
@@ -121,18 +112,14 @@ export class AdvancedAnalytics {
       existingPage.views++;
     } else {
       this.userBehavior.topPages.push({ page: currentPage, views: 1 });
-    }
 
     this.trackEvent('page_view', {
       page: currentPage,
       referrer: document.referrer,
       userAgent: navigator.userAgent
     });
-  }
 
-  /**
    * Track user click events
-   */
   trackClick(element: HTMLElement, properties?: Record<string, any>): void {
     this.trackEvent('click', {
       element: element.tagName.toLowerCase(),
@@ -140,24 +127,15 @@ export class AdvancedAnalytics {
       className: element.className,
       text: element.textContent?.slice(0, 100),
       ...properties
-    });
-  }
 
-  /**
    * Track form submissions
-   */
   trackFormSubmission(form: HTMLFormElement, properties?: Record<string, any>): void {
     this.trackEvent('form_submit', {
       formId: form.id,
       formAction: form.action,
       formMethod: form.method,
-      ...properties
-    });
-  }
 
-  /**
    * Track performance metrics
-   */
   private trackPerformanceMetrics(): void {
     if (typeof window === 'undefined') return;
 
@@ -177,22 +155,15 @@ export class AdvancedAnalytics {
 
         this.trackEvent('performance_metrics', this.performanceMetrics);
       }, 0);
-    });
-  }
 
-  /**
    * Track user interactions
-   */
   private trackUserInteractions(): void {
-    if (typeof window === 'undefined') return;
 
     // Track clicks
     document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement;
       this.trackClick(target);
-    });
 
-    // Track scroll depth
     let maxScrollDepth = 0;
     window.addEventListener('scroll', () => {
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
@@ -200,77 +171,43 @@ export class AdvancedAnalytics {
         maxScrollDepth = scrollDepth;
         this.trackEvent('scroll_depth', { depth: scrollDepth });
       }
-    });
-  }
 
-  /**
    * Track scroll depth
-   */
   private trackScrollDepth(): void {
-    if (typeof window === 'undefined') return;
 
-    let maxScrollDepth = 0;
     const trackScrollDepth = () => {
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      if (scrollDepth > maxScrollDepth) {
-        maxScrollDepth = scrollDepth;
-        this.trackEvent('scroll_depth', { depth: scrollDepth });
-      }
-    };
 
     window.addEventListener('scroll', trackScrollDepth, { passive: true });
-  }
 
-  /**
-   * Track form submissions
-   */
   private trackFormSubmissions(): void {
-    if (typeof window === 'undefined') return;
 
     document.addEventListener('submit', (event) => {
       const form = event.target as HTMLFormElement;
       this.trackFormSubmission(form);
-    });
-  }
 
-  /**
    * Get user ID from storage or generate new one
-   */
   private getUserId(): string {
     let userId = localStorage.getItem('analytics_user_id');
     if (!userId) {
       userId = 'user_' + Math.random().toString(36).substr(2, 9);
       localStorage.setItem('analytics_user_id', userId);
-    }
     return userId;
-  }
 
-  /**
    * Get session ID from storage or generate new one
-   */
   private getSessionId(): string {
     let sessionId = sessionStorage.getItem('analytics_session_id');
     if (!sessionId) {
       sessionId = 'session_' + Math.random().toString(36).substr(2, 9);
       sessionStorage.setItem('analytics_session_id', sessionId);
-    }
     return sessionId;
-  }
 
-  /**
    * Send event to analytics service
-   */
   private sendToAnalytics(event: AnalyticsEvent): void {
     // In a real implementation, this would send to your analytics service
     // For now, we'll just log it
-    if (this.config.debug) {
       console.log('Sending to analytics:', event);
-    }
-  }
 
-  /**
    * Get analytics report
-   */
   getReport(): {
     events: AnalyticsEvent[];
     userBehavior: UserBehavior;
@@ -282,19 +219,12 @@ export class AdvancedAnalytics {
       userBehavior: this.userBehavior,
       performanceMetrics: this.performanceMetrics,
       totalEvents: this.events.length
-    };
-  }
 
-  /**
    * Export analytics data
-   */
   exportData(): string {
     return JSON.stringify(this.getReport(), null, 2);
-  }
 
-  /**
    * Clear analytics data
-   */
   clearData(): void {
     this.events = [];
     this.userBehavior = {
@@ -304,10 +234,7 @@ export class AdvancedAnalytics {
       conversionRate: 0,
       topPages: [],
       userJourney: []
-    };
     this.performanceMetrics = null;
-  }
-}
 
 // Export utility functions
 export const createAnalytics = (config: AnalyticsConfig) => new AdvancedAnalytics(config);
@@ -318,6 +245,4 @@ export const trackEvent = (eventName: string, properties?: Record<string, any>) 
 };
 
 export const trackPageView = (page?: string) => {
-  // This would be implemented with a global analytics instance
   console.log('Track page view:', page);
-};

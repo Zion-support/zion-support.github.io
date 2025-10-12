@@ -21,9 +21,7 @@ interface ErrorBoundaryProps {
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableErrorReporting?: boolean;
   enableRetry?: boolean;
-}
 interface ErrorReport {
-  errorId: string | null;
   error: Error;
   errorInfo: ErrorInfo;
   message: string;
@@ -34,7 +32,6 @@ interface ErrorReport {
   url: string;
   userId: string | null;
   sessionId: string;
-}
 class AdvancedErrorBoundary extends Component<
   ErrorBoundaryProps,
   ErrorBoundaryState
@@ -49,40 +46,30 @@ class AdvancedErrorBoundary extends Component<
       errorInfo: null,
       errorId: null
     };
-  }
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
-  }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
       errorInfo
     });
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
       logger.error('Error Boundary caught an error', { 
         context: 'ErrorBoundary', 
         error: error.message,
         errorInfo 
       });
-    }
     // Call custom error handler
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
-    }
     // Report error to external service
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
-    }
-  }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     const errorReport: ErrorReport = {
       errorId: this.state.errorId || this.generateErrorId(),
-      error,
       errorInfo,
       message: error.message,
       stack: error.stack,
@@ -92,7 +79,6 @@ class AdvancedErrorBoundary extends Component<
       url: window.location.href,
       userId: this.getUserId(),
       sessionId: this.getSessionId()
-    };
     // Send to error reporting service
     this.sendErrorReport(errorReport);
   };
@@ -102,26 +88,18 @@ class AdvancedErrorBoundary extends Component<
       return localStorage.getItem('userId') || null;
     } catch {
       return null;
-    }
-  };
   private getSessionId = (): string => {
     // Generate or retrieve session ID
-    try {
       let sessionId = sessionStorage.getItem('sessionId');
       if (!sessionId) {
         sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
         sessionStorage.setItem('sessionId', sessionId);
       }
       return sessionId;
-    } catch {
       return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    }
-  };
   private generateErrorId = (): string => {
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  };
   private sendErrorReport = async (errorReport: ErrorReport) => {
-    try {
       // Send to your error reporting service
       await fetch('/api/errors', {
         method: 'POST',
@@ -129,14 +107,10 @@ class AdvancedErrorBoundary extends Component<
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(errorReport)
-      });
     } catch (reportError) {
       logger.error('Failed to send error report', { 
         context: 'ErrorReporting',
         error: reportError 
-      });
-    }
-  };
   private handleRetry = () => {
     if (this.retryCount < this.maxRetries) {
       this.retryCount++;
@@ -145,21 +119,15 @@ class AdvancedErrorBoundary extends Component<
         error: null,
         errorInfo: null,
         errorId: null
-      });
-    }
-  };
   private handleReload = () => {
     window.location.reload();
-  };
   private handleGoHome = () => {
     window.location.href = '/';
-  };
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
-      }
       // Default error UI
       return (
         <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
@@ -198,9 +166,7 @@ class AdvancedErrorBoundary extends Component<
                     <p>
                       <strong>Error ID:</strong> {this.state.errorId}
                     </p>
-                    <p>
                       <strong>Message:</strong> {this.state.error?.message}
-                    </p>
                     <details className='mt-2'>
                       <summary className='cursor-pointer font-medium'>
                         Stack Trace
@@ -209,16 +175,9 @@ class AdvancedErrorBoundary extends Component<
                         {this.state.error?.stack}
                       </pre>
                     </details>
-                    <details className='mt-2'>
-                      <summary className='cursor-pointer font-medium'>
                         Component Stack
-                      </summary>
-                      <pre className='mt-2 text-xs overflow-auto'>
                         {this.state.errorInfo?.componentStack}
-                      </pre>
-                    </details>
                   </div>
-                </div>
               )}
               <div className='mt-6 space-y-3'>
                 {this.props.enableRetry &&
@@ -237,13 +196,8 @@ class AdvancedErrorBoundary extends Component<
                 >
                   Reload Page
                 </button>
-                <button
                   onClick={this.handleGoHome}
-                  className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                >
                   Go to Homepage
-                </button>
-              </div>
               <div className='mt-6 text-center'>
                 <p className='text-xs text-gray-500'>
                   If this problem persists, please contact our support team
@@ -251,17 +205,11 @@ class AdvancedErrorBoundary extends Component<
                   <a
                     href='mailto:kleber@ziontechgroup.com'
                     className='text-indigo-600 hover:text-indigo-500'
-                  >
                     kleber@ziontechgroup.com
                   </a>
-                </p>
-              </div>
             </div>
           </div>
         </div>
       );
-    }
     return this.props.children;
-  }
-}
 export default AdvancedErrorBoundary;

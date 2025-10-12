@@ -15,35 +15,26 @@ const ContentCarousel: React.FC = () => {
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       color: 'from-yellow-400 to-orange-500'
     },
-    {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable, secure, and reliable cloud solutions that grow with your business needs.',
       features: ['Auto-scaling', 'High Availability', 'Disaster Recovery', 'Global CDN'],
       color: 'from-blue-400 to-cyan-500'
-    },
-    {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with advanced encryption, compliance, and threat protection.',
       features: ['End-to-End Encryption', 'Multi-Factor Authentication', 'Compliance Standards', 'Threat Detection'],
       color: 'from-green-400 to-emerald-500'
-    },
-    {
       icon: BarChart3,
       title: 'Analytics & Insights',
       description: 'Make data-driven decisions with comprehensive analytics and business intelligence.',
       features: ['Real-time Dashboards', 'Custom Reports', 'Data Visualization', 'Predictive Modeling'],
       color: 'from-purple-400 to-pink-500'
-    },
-    {
       icon: Users,
       title: 'Team Collaboration',
       description: 'Enhance productivity with tools that connect your team and streamline workflows.',
       features: ['Project Management', 'Communication Tools', 'File Sharing', 'Task Automation'],
       color: 'from-indigo-400 to-blue-500'
-    },
-    {
       icon: Target,
       title: 'Custom Development',
       description: 'Tailored solutions designed specifically for your unique business requirements.',
@@ -58,7 +49,6 @@ const ContentCarousel: React.FC = () => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
       }, 5000);
       return () => clearInterval(timer);
-    }
     
     return () => {
       // No cleanup needed when not playing
@@ -71,15 +61,12 @@ const ContentCarousel: React.FC = () => {
 
   const prevSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
-  };
 
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
-  };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-  };
 
   const currentSlideData = slides[currentSlide];
 
@@ -113,7 +100,6 @@ const ContentCarousel: React.FC = () => {
                     <p className="text-gray-300">
                       {currentSlideData.description}
                     </p>
-                  </div>
                 </div>
 
                 <div className="space-y-3">
@@ -123,7 +109,6 @@ const ContentCarousel: React.FC = () => {
                       <span className="text-gray-300">{feature}</span>
                     </div>
                   ))}
-                </div>
 
                 <div className="flex gap-4">
                   <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
@@ -131,8 +116,6 @@ const ContentCarousel: React.FC = () => {
                   </button>
                   <button className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                     Get Started
-                  </button>
-                </div>
               </div>
 
               {/* Visual Element */}
@@ -141,16 +124,9 @@ const ContentCarousel: React.FC = () => {
                   <div className="text-center">
                     <div className={`w-32 h-32 bg-gradient-to-r ${currentSlideData.color} rounded-full mx-auto mb-6 flex items-center justify-center`}>
                       <currentSlideData.icon className="w-16 h-16 text-white" />
-                    </div>
                     <div className="text-4xl font-bold text-white mb-2">
-                      {currentSlideData.title}
-                    </div>
                     <div className="text-gray-300">
                       Slide {currentSlide + 1} of {slides.length}
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -163,20 +139,11 @@ const ContentCarousel: React.FC = () => {
               <ChevronLeft className="w-6 h-6" />
             </button>
             
-            <button
               onClick={togglePlayPause}
-              className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
-            >
               {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
-            </button>
             
-            <button
               onClick={nextSlide}
-              className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
-            >
               <ChevronRight className="w-6 h-6" />
-            </button>
-          </div>
 
           {/* Dots Indicator */}
           <div className="flex justify-center mt-6 space-x-2">
@@ -189,8 +156,6 @@ const ContentCarousel: React.FC = () => {
                 }`}
               />
             ))}
-          </div>
-        </div>
       </div>
     </div>
   );

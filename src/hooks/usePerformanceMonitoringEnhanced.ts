@@ -24,7 +24,6 @@ export const usePerformanceMonitoring = () => {
       });
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
       return () => observer.disconnect();
-    }
   }, [reportWebVitals]);
   return { reportWebVitals };
 };

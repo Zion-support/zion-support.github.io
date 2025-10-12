@@ -91,7 +91,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     const header = document.querySelector('header');
     if (header && !header.getAttribute('role')) {
       header.setAttribute('role', 'banner');
-    }
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
@@ -103,8 +102,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     // Apply initial settings
     applyAccessibilitySettings({
       ...settings,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast
     })
     // Listen for preference changes
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
@@ -124,7 +121,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     return () => {
       motionQuery.removeEventListener('change', handleMotionChange)
       contrastQuery.removeEventListener('change', handleContrastChange)
-    }
   }, [settings, setupFocusManagement])
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
@@ -176,10 +172,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
           } else {
             if (document.activeElement === lastElement) {
               firstElement?.focus()
-              e.preventDefault()}
           }
-        }
-      }
       modal.addEventListener('keydown', handleKeyDown)})}
   const setupFocusManagement = useCallback(() => {
     // Add focus indicators
@@ -222,7 +215,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       label: Object.keys(newSettings)[0]
     })}
   // Provide accessibility context
-  useEffect(() => {
     const context = {
       settings,
       updateSettings

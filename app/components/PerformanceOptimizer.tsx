@@ -53,9 +53,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         // Add decoding="async" for better performance
         if (!img.hasAttribute('decoding')) {
           img.decoding = 'async';
-        }
-      });
-    }
 
     // Intersection Observer for lazy loading
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
@@ -70,11 +67,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             }
           }
         });
-      });
 
       const lazyImages = document.querySelectorAll('img[data-src]');
       lazyImages.forEach(img => imageObserver.observe(img));
-    }
 
     // Performance monitoring
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -82,20 +77,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         list.getEntries().forEach((entry) => {
           if (entry.entryType === 'largest-contentful-paint') {
             console.log('LCP:', entry.startTime);
-          }
           if (entry.entryType === 'first-input') {
             const fidEntry = entry as PerformanceEventTiming;
             console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
-          }
-        });
-      });
 
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
       } catch (e) {
         // Fallback for browsers that don't support these entry types
       }
-    }
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
   return null;

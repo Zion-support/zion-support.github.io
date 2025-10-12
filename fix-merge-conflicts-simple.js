@@ -10,7 +10,6 @@ function fixMergeConflicts(filePath) {
     
     // Remove merge conflict markers and keep the content
     content = content.replace(/\n?/g, '');
-    content = content.replace(/\n?/g, '');
     content = content.replace(/    
     // Clean up any double newlines that might have been created
     content = content.replace(/\n\n\n+/g, '\n\n');
@@ -49,11 +48,9 @@ function findFilesWithMergeConflicts(dir) {
         }
       }
     }
-  }
   
   walkDir(dir);
   return files;
-}
 
 // Main execution
 console.log('Starting merge conflict resolution...');
@@ -65,8 +62,6 @@ let fixedCount = 0;
 for (const file of filesWithConflicts) {
   if (fixMergeConflicts(file)) {
     fixedCount++;
-  }
-}
 
 console.log(`Fixed merge conflicts in ${fixedCount} files`);
 console.log('Merge conflict resolution completed!');

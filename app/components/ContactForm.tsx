@@ -12,8 +12,6 @@ interface FormData {
 
 interface FormStatus {
   type: 'idle' | 'loading' | 'success' | 'error'
-  message: string
-}
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -27,18 +25,9 @@ const ContactForm: React.FC = () => {
 
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
-    message: ''
-  })
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9603
 
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
@@ -46,16 +35,8 @@ const ContactForm: React.FC = () => {
       [name]: value
     }))
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9603
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus({ type: 'loading', message: 'Sending message...' })
@@ -77,14 +58,10 @@ const ContactForm: React.FC = () => {
         phone: '',
         service: '',
         message: ''
-      })
     } catch (error) {
-      setStatus({
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again later.'
-      })
     }
-  }
 
   const services = [
     'AI Services',
@@ -133,53 +110,27 @@ const ContactForm: React.FC = () => {
               placeholder="Your full name"
             />
           </div>
-          <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
               Email Address *
-            </label>
-            <input
               type="email"
               id="email"
               name="email"
               value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               placeholder="your@email.com"
-            />
-          </div>
-        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div>
             <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
               Company
-            </label>
-            <input
-              type="text"
               id="company"
               name="company"
               value={formData.company}
-              onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               placeholder="Your company name"
-            />
-          </div>
-          <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
               Phone Number
-            </label>
-            <input
               type="tel"
               id="phone"
               name="phone"
               value={formData.phone}
-              onChange={handleChange}
-              className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               placeholder="+1 (555) 123-4567"
-            />
-          </div>
-        </div>
 
         <div>
           <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
@@ -199,23 +150,18 @@ const ContactForm: React.FC = () => {
               </option>
             ))}
           </select>
-        </div>
 
-        <div>
           <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
             Message *
-          </label>
           <textarea
             id="message"
             name="message"
             value={formData.message}
-            onChange={handleChange}
             required
             rows={6}
             className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
             placeholder="Tell us about your project or requirements..."
           />
-        </div>
 
         <button
           type="submit"
@@ -232,19 +178,12 @@ const ContactForm: React.FC = () => {
           <div className="flex items-center justify-center text-gray-300">
             <Mail className="w-4 h-4 mr-2" />
             <span className="text-sm">contact@ziontechgroup.com</span>
-          </div>
-          <div className="flex items-center justify-center text-gray-300">
             <Phone className="w-4 h-4 mr-2" />
             <span className="text-sm">+1 (555) 123-4567</span>
-          </div>
-          <div className="flex items-center justify-center text-gray-300">
             <MapPin className="w-4 h-4 mr-2" />
             <span className="text-sm">Innovation City, IC</span>
-          </div>
-        </div>
       </div>
     </div>
   )
-}
 
 export default ContactForm

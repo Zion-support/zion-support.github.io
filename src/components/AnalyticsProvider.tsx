@@ -33,19 +33,9 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
           page_location: window.location.href,
           send_page_view: true
         });
-      }
-    };
 
     // Handle route changes
     const handleRouteChange = () => {
-      if (typeof window !== 'undefined' && (window as { gtag: unknown }).gtag) {
-        (window as { gtag: (...args: unknown[]) => void }).gtag('config', GA_TRACKING_ID, {
-          page_title: document.title,
-          page_location: window.location.href,
-          send_page_view: true
-        });
-      }
-    };
     // Track user interactions
     const trackInteractions = () => {
       // Track button clicks
@@ -62,7 +52,6 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
             });
           }
         }
-      });
       // Track form submissions
       document.addEventListener('submit', (e) => {
         const form = e.target as HTMLFormElement;
@@ -71,22 +60,11 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
             event_category: 'engagement',
             event_label: form.id || 'contact_form'
           });
-        }
-      });
       // Track phone number clicks
-      document.addEventListener('click', (e) => {
-        const target = e.target as HTMLElement;
         if (target.getAttribute('href') && target.getAttribute('href')?.startsWith('tel:')) {
-          if ((window as { gtag: unknown }).gtag) {
             (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'phone_click', {
-              event_category: 'engagement',
               event_label: 'phone_number',
               value: target.getAttribute('href')
-            });
-          }
-        }
-      });
-    };
     // Initialize analytics
     initAnalytics();
     trackPageView();
@@ -94,7 +72,6 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     window.addEventListener('popstate', handleRouteChange);
     return () => {
       window.removeEventListener('popstate', handleRouteChange);
-    };
   }, [GA_TRACKING_ID]);
   return <>{children}</>;
 };

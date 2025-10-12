@@ -24,7 +24,6 @@ export enum ErrorSeverity {
   MEDIUM = 'MEDIUM',
   HIGH = 'HIGH',
   CRITICAL = 'CRITICAL'
-}
 
 // Error interface
 export interface AppError {
@@ -39,16 +38,10 @@ export interface AppError {
   sessionId?: string
   url?: string
   userAgent?: string
-}
 
 // Error context interface
 export interface ErrorContext {
-  userId?: string
-  sessionId?: string
-  url?: string
-  userAgent?: string
   additionalData?: Record<string, any>
-}
 
 // Error handler class
 export class ErrorHandler {
@@ -74,16 +67,10 @@ export class ErrorHandler {
     this.logError(appError)
     this.reportError(appError)
     return appError
-  }
 
   private createAppError(
-    error: Error | AppError,
-    context?: ErrorContext,
-    errorInfo?: ErrorInfo
-  ): AppError {
     if ('type' in error) {
       return error as AppError
-    }
 
     const appError: AppError = {
       type: this.determineErrorType(error),
@@ -97,56 +84,40 @@ export class ErrorHandler {
       timestamp: new Date(),
       stack: error.stack,
       ...context
-    }
 
-    return appError
-  }
 
   private determineErrorType(error: Error): ErrorType {
     const message = error.message.toLowerCase()
     
     if (message.includes('network') || message.includes('fetch')) {
       return ErrorType.NETWORK
-    }
     if (message.includes('validation') || message.includes('invalid')) {
       return ErrorType.VALIDATION
-    }
     if (message.includes('auth') || message.includes('login')) {
       return ErrorType.AUTHENTICATION
-    }
     if (message.includes('permission') || message.includes('unauthorized')) {
       return ErrorType.AUTHORIZATION
-    }
     if (message.includes('not found') || message.includes('404')) {
       return ErrorType.NOT_FOUND
-    }
     if (message.includes('server') || message.includes('500')) {
       return ErrorType.SERVER
-    }
     
     return ErrorType.RUNTIME
-  }
 
   private determineErrorSeverity(error: Error): ErrorSeverity {
-    const message = error.message.toLowerCase()
     
     if (message.includes('critical') || message.includes('fatal')) {
       return ErrorSeverity.CRITICAL
-    }
     if (message.includes('error') || message.includes('failed')) {
       return ErrorSeverity.HIGH
-    }
     if (message.includes('warning') || message.includes('caution')) {
       return ErrorSeverity.MEDIUM
-    }
     
     return ErrorSeverity.LOW
-  }
 
   private extractErrorCode(error: Error): string | undefined {
     const match = error.message.match(/\[(\w+)\]/)
     return match ? match[1] : undefined
-  }
 
   private logError(error: AppError): void {
     this.errorLog.push(error)
@@ -154,13 +125,10 @@ export class ErrorHandler {
     // Keep only the most recent errors
     if (this.errorLog.length > this.maxLogSize) {
       this.errorLog = this.errorLog.slice(-this.maxLogSize)
-    }
     
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error logged:', error)
-    }
-  }
 
   private reportError(error: AppError): void {
     // In a real application, you would send this to an error reporting service
@@ -168,16 +136,12 @@ export class ErrorHandler {
     if (process.env.NODE_ENV === 'production') {
       // Example: send to error reporting service
       // errorReportingService.captureException(error)
-    }
-  }
 
   public getErrorLog(): AppError[] {
     return [...this.errorLog]
-  }
 
   public clearErrorLog(): void {
     this.errorLog = []
-  }
 
   public getErrorStats(): {
     total: number
@@ -188,7 +152,6 @@ export class ErrorHandler {
       total: this.errorLog.length,
       byType: {} as Record<ErrorType, number>,
       bySeverity: {} as Record<ErrorSeverity, number>
-    }
 
     // Initialize counters
     Object.values(ErrorType).forEach(type => {
@@ -196,17 +159,13 @@ export class ErrorHandler {
     })
     Object.values(ErrorSeverity).forEach(severity => {
       stats.bySeverity[severity] = 0
-    })
 
     // Count errors
     this.errorLog.forEach(error => {
       stats.byType[error.type]++
       stats.bySeverity[error.severity]++
-    })
 
     return stats
-  }
-}
 
 // React Error Boundary Component
 export class ErrorBoundary extends React.Component<
@@ -220,22 +179,17 @@ export class ErrorBoundary extends React.Component<
   constructor(props: any) {
     super(props)
     this.state = { hasError: false, error: null }
-  }
 
   static getDerivedStateFromError(error: Error): { hasError: boolean; error: AppError | null } {
     const errorHandler = ErrorHandler.getInstance()
     const appError = errorHandler.handleError(error)
     return { hasError: true, error: appError }
-  }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-    const errorHandler = ErrorHandler.getInstance()
     const appError = errorHandler.handleError(error, undefined, errorInfo)
     
     if (this.props.onError) {
       this.props.onError(appError)
-    }
-  }
 
   render(): React.ReactNode {
     if (this.state.hasError && this.state.error) {
@@ -246,11 +200,8 @@ export class ErrorBoundary extends React.Component<
           resetError={() => this.setState({ hasError: false, error: null })}
         />
       )
-    }
 
     return this.props.children
-  }
-}
 
 // Default Error Fallback Component
 const DefaultErrorFallback: React.FC<{
@@ -271,12 +222,10 @@ const DefaultErrorFallback: React.FC<{
           <div className="ml-3">
             <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
             <p className="text-sm text-gray-500">Error Type: {error.type}</p>
-          </div>
         </div>
         
         <div className="mb-4">
           <p className="text-sm text-gray-600">{error.message}</p>
-        </div>
         
         <div className="flex space-x-3">
           <button
@@ -285,17 +234,12 @@ const DefaultErrorFallback: React.FC<{
           >
             Try again
           </button>
-          <button
             onClick={() => window.location.reload()}
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500"
-          >
             Reload page
-          </button>
-        </div>
       </div>
     </div>
   )
-}
 
 // Hook for using error handler
 export const useErrorHandler = () => {
@@ -310,7 +254,5 @@ export const useErrorHandler = () => {
     getErrorLog: errorHandler.getErrorLog.bind(errorHandler),
     clearErrorLog: errorHandler.clearErrorLog.bind(errorHandler),
     getErrorStats: errorHandler.getErrorStats.bind(errorHandler)
-  }
-}
 
 export default ErrorHandler

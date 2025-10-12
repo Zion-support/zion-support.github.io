@@ -22,61 +22,42 @@ const PartnersPage: React.FC = () => {
       website: 'https://microsoft.com',
       tier: 'strategic'
     },
-    {
       name: 'Amazon Web Services',
       logo: '/images/partners/aws.png',
       description: 'Leading cloud infrastructure and machine learning platform provider',
       category: 'Cloud Computing',
       website: 'https://aws.amazon.com',
-      tier: 'strategic'
-    },
-    {
       name: 'Google Cloud',
       logo: '/images/partners/google-cloud.png',
       description: 'Advanced AI and machine learning platform with global reach',
-      category: 'Cloud & AI',
       website: 'https://cloud.google.com',
-      tier: 'strategic'
-    },
-    {
       name: 'IBM',
       logo: '/images/partners/ibm.png',
       description: 'Enterprise AI solutions and hybrid cloud platform',
       category: 'Enterprise AI',
       website: 'https://ibm.com',
       tier: 'preferred'
-    },
-    {
       name: 'Salesforce',
       logo: '/images/partners/salesforce.png',
       description: 'Customer relationship management and business automation',
       category: 'CRM & Automation',
       website: 'https://salesforce.com',
-      tier: 'preferred'
-    },
-    {
       name: 'Oracle',
       logo: '/images/partners/oracle.png',
       description: 'Database solutions and enterprise applications',
       category: 'Database & Enterprise',
       website: 'https://oracle.com',
-      tier: 'preferred'
-    },
-    {
       name: 'ServiceNow',
       logo: '/images/partners/servicenow.png',
       description: 'IT service management and workflow automation',
       category: 'IT Management',
       website: 'https://servicenow.com',
       tier: 'certified'
-    },
-    {
       name: 'Splunk',
       logo: '/images/partners/splunk.png',
       description: 'Data analytics and security monitoring platform',
       category: 'Analytics & Security',
       website: 'https://splunk.com',
-      tier: 'certified'
     }
   ];
 
@@ -91,34 +72,26 @@ const PartnersPage: React.FC = () => {
     'Compliance and security standards',
     'Scalable solutions for any size business',
     'Dedicated partner success managers'
-  ];
 
   const partnershipTiers = [
-    {
       name: 'Strategic Partners',
       description: 'Deep integration and joint development',
       icon: Award,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-400/10',
       borderColor: 'border-yellow-400/30'
-    },
-    {
       name: 'Preferred Partners',
       description: 'Certified solutions and priority support',
       icon: Handshake,
       color: 'text-blue-400',
       bgColor: 'bg-blue-400/10',
       borderColor: 'border-blue-400/30'
-    },
-    {
       name: 'Certified Partners',
       description: 'Authorized implementation and support',
       icon: CheckCircle,
       color: 'text-green-400',
       bgColor: 'bg-green-400/10',
       borderColor: 'border-green-400/30'
-    }
-  ];
 
   const getTierInfo = (tier: string) => {
     return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2];
@@ -148,14 +121,10 @@ const PartnersPage: React.FC = () => {
                 <div className="text-3xl font-bold text-white mb-2">50+</div>
                 <div className="text-gray-400">Technology Partners</div>
               </div>
-              <div className="text-center">
                 <div className="text-3xl font-bold text-white mb-2">15+</div>
                 <div className="text-gray-400">Years of Partnership</div>
-              </div>
-              <div className="text-center">
                 <div className="text-3xl font-bold text-white mb-2">100%</div>
                 <div className="text-gray-400">Certified Solutions</div>
-              </div>
             </div>
           </div>
         </section>
@@ -168,7 +137,6 @@ const PartnersPage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our partnerships are structured to provide maximum value and support for our clients.
               </p>
-            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {partnershipTiers.map((tier, index) => (
@@ -180,19 +148,10 @@ const PartnersPage: React.FC = () => {
                   <p className="text-gray-300">{tier.description}</p>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
 
         {/* Partners Grid */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Technology Partners</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We work with the world's leading technology companies to deliver comprehensive solutions.
-              </p>
-            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partners.map((partner, index) => {
@@ -209,7 +168,6 @@ const PartnersPage: React.FC = () => {
                       <p className="text-sm text-gray-300 mb-3">{partner.description}</p>
                       <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${tierInfo.color} ${tierInfo.bgColor}`}>
                         {partner.category}
-                      </div>
                       {partner.website && (
                         <a
                           href={partner.website}
@@ -222,22 +180,12 @@ const PartnersPage: React.FC = () => {
                         </a>
                       )}
                     </div>
-                  </div>
                 );
               })}
-            </div>
-          </div>
-        </section>
 
         {/* Partnership Benefits */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Partnership Benefits</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our strategic partnerships provide significant advantages for your business.
-              </p>
-            </div>
 
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -245,21 +193,14 @@ const PartnersPage: React.FC = () => {
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300">{benefit}</span>
-                  </div>
                 ))}
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Become a Partner CTA */}
-        <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <h2 className="text-3xl font-bold text-white mb-6">Become a Partner</h2>
               <p className="text-xl text-gray-300 mb-8">
                 Interested in partnering with us? We're always looking for innovative companies to join our ecosystem.
-              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                   <Handshake className="w-5 h-5" />
@@ -268,11 +209,6 @@ const PartnersPage: React.FC = () => {
                 <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <TrendingUp className="w-5 h-5" />
                   View Partnership Program
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </>
   );

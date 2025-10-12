@@ -35,12 +35,9 @@ function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
         skipUntilNextMarker = true
         continue}
       
-      if (line.includes('')) {
         skipUntilNextMarker = false
-        continue}
       
       if (line.includes('>>>>>>>')) {
-        continue}
       
       if (!skipUntilNextMarker) {
         resolvedLines.push(line)}
@@ -69,8 +66,6 @@ try {
     if (file.trim()) {,
       if (resolveConflicts(file.trim())) {,
         resolvedCount++}
-    }
-    // Check if file has conflict markers
     if (!content.includes(' 0) {/* TODO: Fix JSX expression */}
   o: 'inherit' })
     console.log('📝 Added resolved files to git staging')} catch (error) {/* TODO: Fix JSX expression */}

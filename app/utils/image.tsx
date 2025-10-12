@@ -23,7 +23,6 @@ interface OptimizedImageProps extends ImageProps {
   fallback?: string
   showSkeleton?: boolean
   errorFallback?: React.ReactNode
-}
 
 // Optimized Image Component
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -56,7 +55,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }, [onLoad])
 
   const handleError = useCallback(() => {
-    setIsLoading(false)
     setHasError(true)
     if (fallback) {
       setCurrentSrc(fallback)
@@ -112,17 +110,14 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
       />
     </div>
   )
-}
 
 // Lazy Image Component
 export const LazyImage: React.FC<ImageProps> = (props) => {
   return <OptimizedImage {...props} loading="lazy" showSkeleton={true} />
-}
 
 // Priority Image Component
 export const PriorityImage: React.FC<ImageProps> = (props) => {
   return <OptimizedImage {...props} priority={true} loading="eager" showSkeleton={false} />
-}
 
 // Responsive Image Component
 export const ResponsiveImage: React.FC<ImageProps & { 
@@ -142,7 +137,6 @@ export const ResponsiveImage: React.FC<ImageProps & {
 
   const srcSet = generateSrcSet(defaultSrc)
 
-  return (
     <OptimizedImage
       {...props}
       src={defaultSrc}
@@ -152,21 +146,13 @@ export const ResponsiveImage: React.FC<ImageProps & {
         srcSet
       }}
     />
-  )
-}
 
 // Image with Blur Placeholder
 export const BlurImage: React.FC<ImageProps & { 
   blurDataURL: string
 }> = ({ blurDataURL, ...props }) => {
-  return (
-    <OptimizedImage
-      {...props}
       placeholder="blur"
       blurDataURL={blurDataURL}
-    />
-  )
-}
 
 // Avatar Image Component
 export const AvatarImage: React.FC<ImageProps & {
@@ -177,22 +163,14 @@ export const AvatarImage: React.FC<ImageProps & {
   rounded = true, 
   className = '', 
   ...props 
-}) => {
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-12 h-12',
     lg: 'w-16 h-16',
     xl: 'w-24 h-24'
-  }
 
-  return (
-    <OptimizedImage
-      {...props}
       className={`${sizeClasses[size]} ${rounded ? 'rounded-full' : 'rounded'} object-cover ${className}`}
       width={size === 'sm' ? 32 : size === 'md' ? 48 : size === 'lg' ? 64 : 96}
       height={size === 'sm' ? 32 : size === 'md' ? 48 : size === 'lg' ? 64 : 96}
-    />
-  )
-}
 
 export default OptimizedImage

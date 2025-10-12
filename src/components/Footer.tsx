@@ -31,7 +31,6 @@ const Footer: React.FC = () => {
     { name: 'AI CRM Solutions', url: '/ai-crm', description: 'Intelligent customer management' },
     { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' },
     { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
-  ];
 
   const itServices = [
     { name: 'Cloud Services', url: '/cloud-services', description: 'AWS/Azure/GCP setup' },
@@ -46,18 +45,12 @@ const Footer: React.FC = () => {
     { name: 'Developer Tools', url: '/developer-tools', description: 'Advanced dev tools' },
     { name: 'Marketing Tools', url: '/marketing-tools', description: 'Marketing automation' },
     { name: 'Productivity Solutions', url: '/productivity', description: 'Enterprise productivity' }
-  ];
 
   // Removed specializedServices as it was unused
 
   const additionalServices = [
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
-    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
     { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
     { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Financial insights' }
-  ];
 
   const companyLinks = [
     { name: 'About Us', url: '/about' },
@@ -68,7 +61,6 @@ const Footer: React.FC = () => {
     { name: 'News', url: '/news' },
     { name: 'Pricing', url: '/pricing' },
     { name: 'Demo', url: '/demo' }
-  ];
 
   const supportLinks = [
     { name: 'Contact Us', url: '/contact' },
@@ -77,7 +69,6 @@ const Footer: React.FC = () => {
     { name: 'API Reference', url: '/api-docs' },
     { name: 'Status Page', url: '/status' },
     { name: 'System Health', url: '/system-status' }
-  ];
 
   const legalLinks = [
     { name: 'Privacy Policy', url: '/privacy' },
@@ -86,7 +77,6 @@ const Footer: React.FC = () => {
     { name: 'GDPR Compliance', url: '/gdpr' },
     { name: 'Security', url: '/security' },
     { name: 'Compliance', url: '/compliance' }
-  ];
 
   return (
     <footer className="bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
@@ -109,18 +99,11 @@ const Footer: React.FC = () => {
                 <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
                   +1 302 464 0950
                 </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-300">
                 <Mail className="w-4 h-4 text-cyan-400" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
                   kleber@ziontechgroup.com
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-300">
                 <MapPin className="w-4 h-4 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
-              </div>
-            </div>
           </div>
 
           {/* Micro SAAS Services */}
@@ -146,14 +129,10 @@ const Footer: React.FC = () => {
             >
               View All Micro SAAS →
             </a>
-          </div>
 
           {/* AI & IT Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
               <Brain className="w-4 h-4 mr-2" />
               AI & IT Services
-            </h3>
             <div className="space-y-4">
               <div>
                 <h4 className="text-white font-medium mb-2">AI Services</h4>
@@ -168,84 +147,27 @@ const Footer: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
-              <div>
                 <h4 className="text-white font-medium mb-2">IT Services</h4>
-                <ul className="space-y-1">
                   {itServices.slice(0, 3).map((service) => (
-                    <li key={service.name}>
-                      <a href={service.url}
-                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                      >
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <a href="/services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
-            >
               View All Services →
-            </a>
-          </div>
 
           {/* Additional AI Services */}
-          <div>
-            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
-              <Zap className="w-4 h-4 mr-2" />
               AI Tools
-            </h3>
-            <ul className="space-y-2">
               {additionalServices.map((service) => (
-                <li key={service.name}>
                   <Link
                     to={service.url}
-                    className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    <span>{service.name}</span>
-                    <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* Company & Support */}
-          <div>
             <h3 className="text-cyan-400 font-semibold mb-4">Company</h3>
             <div className="grid grid-cols-2 gap-4">
-              <div>
                 <h4 className="text-white font-medium mb-2">Company</h4>
-                <ul className="space-y-1">
                   {companyLinks.slice(0, 4).map((link) => (
                     <li key={link.name}>
                       <a href={link.url}
-                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                      >
                         {link.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
                 <h4 className="text-white font-medium mb-2">Support</h4>
-                <ul className="space-y-1">
                   {supportLinks.slice(0, 4).map((link) => (
-                    <li key={link.name}>
-                      <a href={link.url}
-                        className="text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                      >
-                        {link.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Bottom Section */}
@@ -253,7 +175,6 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © 2024 Zion Tech Group. All rights reserved.
-            </div>
             <div className="flex space-x-6">
               {legalLinks.map((link) => (
                 <a key={link.name}
@@ -261,11 +182,6 @@ const Footer: React.FC = () => {
                   className="text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                 >
                   {link.name}
-                </a>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
     </footer>
   );

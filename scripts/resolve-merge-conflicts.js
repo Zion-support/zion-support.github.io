@@ -19,7 +19,6 @@ function execGitCommand(command, description) {
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
-  try {
     const content = fs.readFileSync(filePath, 'utf8')
     // Check if file has merge conflicts
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
@@ -34,29 +33,21 @@ function resolveMergeConflicts(filePath) {
           return match)
         })
         .replace(/          const parts = match.split('')
-          if (parts.length > 1) {
-            const incoming = parts[1].replace(/            return incoming)
-          })
-          return match)
-        })
       fs.writeFileSync(filePath, resolvedContent)
       console.log(`✅ Resolved merge conflicts in ${filePath}`)
       return true}
     return false} catch (error) {
     console.log(`❌ Error resolving conflicts in ${filePath}: ${error.message}`)
     return false}
-}
 
 // Function to find and resolve all merge conflicts
 function resolveAllMergeConflicts() {
   console.log('🔍 Searching for files with merge conflicts...')
-  try {
     // Find all files with merge conflicts
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
     const conflictedFiles = result.trim().split('\n').filter(file => file.length > 0)
     if (conflictedFiles.length === 0) {
       console.log('✅ No merge conflicts found')
-      return true}
     
     console.log(`📋 Found ${conflictedFiles.length} files with merge conflicts: `)
     conflictedFiles.forEach(file => console.log(`  - ${file}`))
@@ -70,8 +61,6 @@ function resolveAllMergeConflicts() {
     console.log(`✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`)
     return resolvedCount === conflictedFiles.length} catch (error) {
     console.log('❌ Error finding merge conflicts:', error.message)
-    return false}
-}
 
 // Main execution
 async function main() {
@@ -130,7 +119,6 @@ async function main() {
         console.log(`⚠️  Branch ${branch} does not exist, skipping...`)}
     } catch (error) {
       console.log(`❌ Error merging ${branch}: ${error.message}`)}
-  }
   
   // Step 8: Final status check
   console.log('\n📊 Final Status: ')

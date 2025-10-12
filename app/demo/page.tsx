@@ -18,28 +18,21 @@ const DemoPage: React.FC = () => {
       ],
       duration: '5 min'
     },
-    {
       id: '2',
       title: 'Cloud Migration Tool',
       description: 'Experience our seamless cloud migration process with live demonstrations.',
-      features: [
         'Automated migration',
         'Zero downtime',
         'Data integrity checks',
         'Rollback capabilities'
-      ],
       duration: '8 min'
-    },
-    {
       id: '3',
       title: 'Cybersecurity Scanner',
       description: 'Watch our AI-powered security scanner identify and resolve vulnerabilities.',
-      features: [
         'Automated scanning',
         'Threat detection',
         'Vulnerability assessment',
         'Remediation suggestions'
-      ],
       duration: '6 min'
     }
   ]
@@ -90,7 +83,6 @@ const DemoPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
 
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-400">{demo.duration}</span>
@@ -98,15 +90,11 @@ const DemoPage: React.FC = () => {
                     <Play className="w-4 h-4 mr-2" />
                     Watch Demo
                   </button>
-                </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="cyber-card hologram-card p-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -122,11 +110,7 @@ const DemoPage: React.FC = () => {
               </button>
               <button className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
                 Contact Sales
-              </button>
             </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

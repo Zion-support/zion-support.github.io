@@ -15,7 +15,6 @@ interface PerformanceMetrics {
 interface PerformanceMonitorProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
   enableRealTimeMonitoring?: boolean;
-}
 
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
@@ -56,10 +55,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
 
     // Measure First Input Delay (FID)
-    if ('PerformanceObserver' in window) {
-      try {
         const fidObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
           entries.forEach(entry => {
             if (
               entry.entryType === 'first-input' &&
@@ -73,40 +69,24 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               }));
             }
           });
-        });
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
-      } catch (error) {
         console.warn('FID observer error:', error);
-      }
-    }
 
     // Measure Cumulative Layout Shift (CLS)
-    if ('PerformanceObserver' in window) {
-      try {
         let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {
-          const entries = list.getEntries();
-          entries.forEach(entry => {
-            if (
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
               'value' in entry
-            ) {
               const clsEntry = entry as LayoutShift;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
                 setMetrics(prev => ({ ...prev, cls: clsValue }));
               }
-            }
-          });
-        });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
-      } catch (error) {
         console.warn('CLS observer error:', error);
-      }
-    }
 
     // Measure Time to First Byte (TTFB)
     try {
@@ -129,7 +109,6 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       }));
     } catch (error) {
       console.warn('Performance measurement error:', error);
-    }
 
     // Cleanup observers
     return () => {
@@ -162,14 +141,11 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           size: r.transferSize,
         }))
       );
-    }
-  }, []);
 
   const measureCoreWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return () => {};
 
     // Use web-vitals library if available
-    try {
       import('web-vitals')
         .then(webVitals => {
           const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
@@ -182,30 +158,19 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           if (onFCP) {
             onFCP((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, fcp: metric.value }))
-            );
-          }
           if (onLCP) {
             onLCP((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, lcp: metric.value }))
-            );
-          }
           if (onTTFB) {
             onTTFB((metric: { value: number }) =>
               setMetrics(prev => ({ ...prev, ttfb: metric.value }))
-            );
-          }
         })
         .catch(() => {
           // web-vitals not available, continue without it
-        });
     } catch {
       // web-vitals not available, continue without it
-    }
     
-    return () => {
       // Cleanup function for web-vitals
-    };
-  }, []);
 
   useEffect(() => {
     if (!enableRealTimeMonitoring) return () => {};
@@ -219,10 +184,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       measureResourceTiming();
     }, 5000);
 
-    return () => {
       if (cleanup) cleanup();
       clearInterval(interval);
-    };
   }, [
     enableRealTimeMonitoring,
     measureWebVitals,
@@ -230,10 +193,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     measureCoreWebVitals,
   ]);
 
-  useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate(metrics);
-    }
   }, [metrics, onMetricsUpdate]);
 
   // Performance recommendations
@@ -243,32 +204,18 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (metrics.fcp && metrics.fcp > 1800) {
       recommendations.push(
         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
-      );
-    }
 
     if (metrics.lcp && metrics.lcp > 2500) {
-      recommendations.push(
         'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
-      );
-    }
 
     if (metrics.fid && metrics.fid > 100) {
-      recommendations.push(
         'First Input Delay is high. Reduce JavaScript execution time.'
-      );
-    }
 
     if (metrics.cls && metrics.cls > 0.1) {
-      recommendations.push(
         'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
-      );
-    }
 
     if (metrics.ttfb && metrics.ttfb > 600) {
-      recommendations.push(
         'Time to First Byte is slow. Optimize server response time.'
-      );
-    }
 
     return recommendations;
   }, [metrics]);
@@ -287,12 +234,10 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           <div>
             TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
           </div>
-          <div>
             Memory:{' '}
             {metrics.memory
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}
-          </div>
         </div>
         {_recommendations.length > 0 && (
           <div className='mt-2'>
@@ -304,10 +249,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                 <li key={index}>• {rec}</li>
               ))}
             </ul>
-          </div>
         )}
       </div>
-    );
   }
 
   return null;

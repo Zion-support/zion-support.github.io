@@ -15,26 +15,20 @@ const ContentStatistics: React.FC = () => {
       description: 'Satisfied customers worldwide',
       color: 'text-blue-400'
     },
-    {
       icon: TrendingUp,
       value: 99.9,
       suffix: '%',
       label: 'Uptime',
       description: 'Reliable service delivery',
       color: 'text-green-400'
-    },
-    {
       icon: Award,
       value: 4.9,
       suffix: '/5',
       label: 'Rating',
       description: 'Highly rated by clients',
       color: 'text-yellow-400'
-    },
-    {
       icon: Zap,
       value: 300,
-      suffix: '%',
       label: 'Efficiency Gain',
       description: 'Average improvement',
       color: 'text-purple-400'
@@ -42,54 +36,36 @@ const ContentStatistics: React.FC = () => {
   ], []);
 
   const features = [
-    {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with advanced encryption and compliance standards.',
       stats: ['SOC 2 Certified', 'GDPR Compliant', 'End-to-End Encryption', '24/7 Monitoring']
-    },
-    {
       icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Scalable, secure, and reliable cloud solutions that grow with your business.',
       stats: ['Auto-scaling', 'High Availability', 'Global CDN', 'Disaster Recovery']
-    },
-    {
       icon: BarChart3,
       title: 'Analytics & Insights',
       description: 'Make data-driven decisions with comprehensive analytics and business intelligence.',
       stats: ['Real-time Dashboards', 'Custom Reports', 'Predictive Analytics', 'ROI Tracking']
-    },
-    {
-      icon: Zap,
       title: 'AI-Powered Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence and automation.',
       stats: ['Machine Learning', 'Process Automation', 'Predictive Modeling', 'Smart Analytics']
-    }
   ];
 
   const achievements = [
-    {
       title: 'Years of Experience',
       value: '10+',
       description: 'Delivering innovative solutions'
-    },
-    {
       title: 'Projects Completed',
       value: '1000+',
       description: 'Successful implementations'
-    },
-    {
       title: 'Countries Served',
       value: '50+',
       description: 'Global presence'
-    },
-    {
       title: 'Team Members',
       value: '100+',
       description: 'Expert professionals'
-    }
-  ];
 
   useEffect(() => {
     const timers: NodeJS.Timeout[] = [];
@@ -139,12 +115,10 @@ const ContentStatistics: React.FC = () => {
               </div>
               <div className={`text-4xl font-bold ${stat.color} mb-2`}>
                 {Math.round(animatedValues[stat.label] || 0)}{stat.suffix}
-              </div>
               <div className="text-white font-semibold mb-2">{stat.label}</div>
               <div className="text-gray-400 text-sm">{stat.description}</div>
             </div>
           ))}
-        </div>
 
         {/* Features Section */}
         <div className="mb-16">
@@ -172,33 +146,18 @@ const ContentStatistics: React.FC = () => {
                       {stat}
                     </div>
                   ))}
-                </div>
-              </div>
             ))}
-          </div>
-        </div>
 
         {/* Achievements Section */}
-        <div className="mb-16">
-          <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-white mb-4">Our Achievements</h3>
-            <p className="text-gray-300 max-w-3xl mx-auto">
               A track record of excellence and innovation that speaks for itself.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">
                   {achievement.value}
-                </div>
                 <div className="text-white font-semibold mb-2">{achievement.title}</div>
                 <div className="text-gray-400 text-sm">{achievement.description}</div>
-              </div>
-            ))}
-          </div>
-        </div>
 
         {/* CTA Section */}
         <div className="text-center">
@@ -208,7 +167,6 @@ const ContentStatistics: React.FC = () => {
             </h3>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Let us help you achieve similar results with our proven AI and IT solutions.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
                 <Zap className="w-5 h-5 mr-2" />
@@ -216,10 +174,6 @@ const ContentStatistics: React.FC = () => {
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
                 View Case Studies
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

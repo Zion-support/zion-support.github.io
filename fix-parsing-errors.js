@@ -28,13 +28,10 @@ function fixParsingErrors(filePath) {
       if (!match.includes('{')) {
         return `  ${propName}: [${arrayContent}],`;
       }
-      return match;
-    });
 
     // Fix 4: Fix malformed array declarations
     content = content.replace(/(\s+)(\w+):\s*\[\s*$/gm, (match, indent, propName) => {
       return `${indent}${propName}: [`;
-    });
 
     // Fix 5: Fix missing closing braces and brackets
     const openBraces = (content.match(/\{/g) || []).length;
@@ -45,14 +42,10 @@ function fixParsingErrors(filePath) {
     if (openBraces > closeBraces) {
       const missingBraces = openBraces - closeBraces;
       content += '\n' + '}'.repeat(missingBraces);
-      modified = true;
-    }
 
     if (openBrackets > closeBrackets) {
       const missingBrackets = openBrackets - closeBrackets;
       content += '\n' + ']'.repeat(missingBrackets);
-      modified = true;
-    }
 
     // Fix 6: Fix malformed function calls and object destructuring
     content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*$/gm, 'const $1 = () => {');
@@ -65,18 +58,15 @@ function fixParsingErrors(filePath) {
     // Fix 8: Fix malformed JSX return statements
     if (content.includes('return (') && !content.includes('return (')) {
       content = content.replace(/return\s*\(/g, 'return (');
-    }
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
-    }
 
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
   }
 }
 
@@ -90,7 +80,6 @@ files.forEach(file => {
   const fullPath = path.join(__dirname, file);
   if (fixParsingErrors(fullPath)) {
     fixedCount++;
-  }
 });
 
 console.log(`Fixed ${fixedCount} files.`);

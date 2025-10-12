@@ -25,7 +25,6 @@ export const usePerformanceMonitoring = () => {
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       // FID - First Input Delay
       const fidObserver = new PerformanceObserver(list => {
-        const entries = list.getEntries();
         entries.forEach(
           (entry: PerformanceEntry & { processingStart?: number }) => {
             const fid =
@@ -33,13 +32,10 @@ export const usePerformanceMonitoring = () => {
             reportMetric('FID', fid);
           }
         );
-      });
       fidObserver.observe({ entryTypes: ['first-input'] });
       // CLS - Cumulative Layout Shift
       let clsValue = 0;
       const clsObserver = new PerformanceObserver(list => {
-        const entries = list.getEntries();
-        entries.forEach(
           (
             entry: PerformanceEntry & {
               hadRecentInput?: boolean;
@@ -48,48 +44,31 @@ export const usePerformanceMonitoring = () => {
           ) => {
             if (!entry.hadRecentInput && entry.value) {
               clsValue += entry.value;
-            }
-          }
-        );
         reportMetric('CLS', clsValue);
-      });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
       // FCP - First Contentful Paint
       const fcpObserver = new PerformanceObserver(list => {
-        const entries = list.getEntries();
         entries.forEach(entry => {
           if (entry.name === 'first-contentful-paint') {
             reportMetric('FCP', entry.startTime);
-          }
         });
-      });
       fcpObserver.observe({ entryTypes: ['paint'] });
       // TTFB - Time to First Byte
       const navigationObserver = new PerformanceObserver(list => {
-        const entries = list.getEntries();
         entries.forEach((entry) => {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
             const ttfb = navEntry.responseStart - navEntry.requestStart;
             reportMetric('TTFB', ttfb);
-          }
-        });
-      });
       navigationObserver.observe({ entryTypes: ['navigation'] });
       // Resource timing
       const resourceObserver = new PerformanceObserver(list => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
           if (entry.entryType === 'resource') {
             const resourceEntry = entry as PerformanceResourceTiming;
             const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
             if (loadTime > 1000) {
               // Only track slow resources
               reportMetric('SLOW_RESOURCE', loadTime);
-            }
-          }
-        });
-      });
       resourceObserver.observe({ entryTypes: ['resource'] });
       // Cleanup
       return () => {
@@ -102,11 +81,8 @@ export const usePerformanceMonitoring = () => {
       };
     } catch (error) {
       console.error('Performance monitoring setup failed:', error);
-      return () => {};
-    }
   }, [reportMetric]);
   // Monitor page load performance
-  useEffect(() => {
     const handleLoad = () => {
       if (typeof window === 'undefined') return;
       const navigation = performance.getEntriesByType(
@@ -123,12 +99,10 @@ export const usePerformanceMonitoring = () => {
         };
         Object.entries(metrics).forEach(([key, value]) => {
           reportMetric(key.toUpperCase(), value);
-        });
       }
     };
     window.addEventListener('load', handleLoad);
     return () => window.removeEventListener('load', handleLoad);
-  }, [reportMetric]);
   return {
     reportMetric
   };

@@ -66,9 +66,6 @@ function fixFile(filePath) {
         if (!attributes.includes('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
           openTags.push({ tag: tagName, line: i });
         }
-        fixedLines.push(line);
-        continue;
-      }
       
       // Check for closing tags
       const closeTagMatch = trimmedLine.match(/<\/(\w+)>/);
@@ -82,10 +79,6 @@ function fixFile(filePath) {
           // This might be an extra closing tag, skip it
           console.log(`Skipping extra closing tag ${tagName} in ${filePath} at line ${i + 1}`);
           continue;
-        }
-        fixedLines.push(line);
-        continue;
-      }
       
       // Check for JSX expressions
       if (trimmedLine.includes('{') && trimmedLine.includes('}')) {
@@ -98,21 +91,15 @@ function fixFile(filePath) {
         // Fix missing semicolons in JSX
         if (fixedLine.includes(';') && !fixedLine.trim().endsWith(';')) {
           fixedLine = fixedLine.replace(/;\s*$/, '');
-        }
         
         fixedLines.push(fixedLine);
-        continue;
-      }
       
       fixedLines.push(line);
-    }
     
     // Add missing closing tags
     while (openTags.length > 0) {
       const { tag } = openTags.pop();
       fixedLines.push(`</${tag}>`);
-      modified = true;
-    }
     
     const newContent = fixedLines.join('\n');
     
@@ -126,12 +113,10 @@ function fixFile(filePath) {
       fs.writeFileSync(filePath, cleanedContent);
       console.log(`Fixed: ${filePath}`);
       return true;
-    }
     
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
-    return false;
   }
 }
 
@@ -146,22 +131,15 @@ function main() {
     if (fs.existsSync(fullPath)) {
       if (fixFile(fullPath)) {
         fixedCount++;
-      }
     } else {
       console.log(`File not found: ${file}`);
-    }
-  }
   
   console.log(`\nFixed ${fixedCount} critical files.`);
   
   // Run type check
-  try {
     console.log('\nRunning type check...');
     execSync('pnpm run type-check', { stdio: 'inherit' });
     console.log('Type check passed!');
-  } catch (error) {
     console.log('Type check still has errors, but critical files have been processed.');
-  }
-}
 
 main();

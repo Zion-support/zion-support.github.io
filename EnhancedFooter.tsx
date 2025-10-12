@@ -19,7 +19,6 @@ const EnhancedFooter: React.FC = () => {
     {name: 'Cloud Suite', href: '/products/cloud-suite'},
     {name: 'Analytics Dashboard', href: '/products/analytics'},
     {name: 'Mobile SDK', href: '/products/mobile-sdk'},
-  ]
 
   const quickLinks = [
     {name: 'About Us', href: '/about'},
@@ -28,7 +27,6 @@ const EnhancedFooter: React.FC = () => {
     {name: 'Careers', href: '/careers'},
     {name: 'Privacy Policy', href: '/legal/privacy'},
     {name: 'Terms of Service', href: '/legal/terms'},
-  ]
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -51,22 +49,12 @@ const EnhancedFooter: React.FC = () => {
                 className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a
                 href="https://twitter.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="w-5 h-5" />
-              </a>
-              <a
                 href="https://github.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors">
                 <Github className="w-5 h-5" />
-              </a>
-              <a
                 href="https://facebook.com/ziontechgroup"
-                className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           <div>
@@ -82,37 +70,18 @@ const EnhancedFooter: React.FC = () => {
                 </li>
               ))}
             </ul>
-          </div>
 
-          <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
-            <ul className="space-y-2">
               {products.slice(0, 6).map(product => (
                 <li key={product.name}>
                   <Link to={product.href}>
-                    <span className="text-gray-300 hover:text-white transition-colors">
                       {product.name}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
 
-          <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
               {quickLinks.map(item => (
                 <li key={item.name}>
                   <Link to={item.href}>
-                    <span className="text-gray-300 hover:text-white transition-colors">
                       {item.name}
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8">
@@ -122,30 +91,16 @@ const EnhancedFooter: React.FC = () => {
               <div>
                 <p className="text-sm text-gray-400">Email</p>
                 <p className="text-white">info@ziontechgroup.com</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3">
               <Phone className="w-5 h-5 text-blue-400" />
-              <div>
                 <p className="text-sm text-gray-400">Phone</p>
                 <p className="text-white">+1 (555) 123-4567</p>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3">
               <MapPin className="w-5 h-5 text-blue-400" />
-              <div>
                 <p className="text-sm text-gray-400">Address</p>
                 <p className="text-white">123 Tech Street, Silicon Valley, CA 94000</p>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
               &copy; {currentYear} Zion Tech Group. All rights reserved.
-            </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/legal/privacy">
                 <span className="text-gray-400 hover:text-white text-sm transition-colors">
@@ -153,18 +108,9 @@ const EnhancedFooter: React.FC = () => {
                 </span>
               </Link>
               <Link to="/legal/terms">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
                   Terms of Service
-                </span>
-              </Link>
               <Link to="/legal/cookies">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
                   Cookie Policy
-                </span>
-              </Link>
-            </div>
-          </div>
-        </div>
       </div>
     </footer>
   );

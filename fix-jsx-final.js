@@ -8,8 +8,7 @@ function fixJSXSyntax(content) {
   // Remove any remaining merge conflict artifacts
   content = content.replace(/<<<<<<< HEAD\n?/g, '');
   content = content.replace(/=======\n?/g, '');
-  content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-  
+  content = content.replace(/  
   // Fix common broken JSX patterns
   content = content.replace(/\}\s*\)\s*\)\s*\)\s*$/gm, '}');
   content = content.replace(/\}\s*\)\s*\)\s*$/gm, '}');
@@ -21,7 +20,6 @@ function fixJSXSyntax(content) {
   // Fix broken closing tags and JSX structure
   content = content.replace(/\}\s*\)\s*\}\s*\)\s*\}\s*\)\s*$/gm, '}');
   content = content.replace(/\}\s*\)\s*\}\s*\)\s*$/gm, '}');
-  content = content.replace(/\}\s*\)\s*$/gm, '}');
   
   // Fix broken JSX fragments
   content = content.replace(/\<\>\s*$/gm, '');
@@ -34,8 +32,6 @@ function fixJSXSyntax(content) {
   
   // Fix specific broken patterns
   content = content.replace(/\}\s*\)\s*\}\s*\)\s*\}\s*\)\s*\}\s*\)\s*$/gm, '}');
-  content = content.replace(/\}\s*\)\s*\}\s*\)\s*\}\s*\)\s*$/gm, '}');
-  content = content.replace(/\}\s*\)\s*\}\s*\)\s*$/gm, '}');
   
   // Clean up extra whitespace and newlines
   content = content.replace(/\n\s*\n\s*\n+/g, '\n\n');
@@ -62,9 +58,7 @@ function fixFile(filePath) {
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
   }
-}
 
 // Main execution
 console.log('Starting final JSX syntax fixes...');
@@ -298,9 +292,6 @@ for (const file of criticalFiles) {
   if (fs.existsSync(file)) {
     if (fixFile(file)) {
       fixedCount++;
-    }
-  }
-}
 
 console.log(`Fixed syntax in ${fixedCount} files`);
 console.log('Final JSX syntax fixes completed!');
