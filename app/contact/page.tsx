@@ -1,78 +1,20 @@
 'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-=======
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, AlertCircle, User, Building, RotateCcw, RotateCw } from 'lucide-react';
-
-const ContactPage: React.FC = () => {
-'use client';
-import { useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
-=======
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, Mail, Phone, MapPin, Clock, MessageCircle, Send, CheckCircle, 
-  AlertCircle, User, Building, FileText, Calendar, Zap, Shield, Globe, Award, 
-  Star, TrendingUp, Users, Brain, Cpu, Rocket, Target, Lightbulb, Monitor, 
-  Server, CircuitBoard, Atom, Satellite, Wrench, BarChart, PieChart, LineChart, 
-  Activity, Eye, Search, Filter, Download, Upload, Share, Timer, Battery, Wifi2, 
-  Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, 
-  Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, 
-  Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, 
-  Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, 
-  Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, 
-  Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, 
-  Kiss, Tongue, Package, DollarSign
-} from 'lucide-react';
-
-const ContactPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-bce0
+import { Mail, Phone, MapPin, Send, CheckCircle, Clock, MessageCircle } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
-<<<<<<< HEAD
     phone: '',
     service: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitStatus('success');
-<<<<<<< HEAD
-      setIsSubmitting(false);
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bce0
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -80,18 +22,19 @@ const ContactPage: React.FC = () => {
     });
   };
 
-<<<<<<< HEAD
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
     setIsSubmitted(true);
+    
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bce0
       setFormData({
         name: '',
         email: '',
@@ -100,76 +43,106 @@ const ContactPage: React.FC = () => {
         service: '',
         message: ''
       });
-    }, 2000);
+    }, 3000);
   };
 
+  const contactInfo = [
+    {
+      icon: <Mail className="w-6 h-6 text-cyan-400" />,
+      title: 'Email Us',
+      details: ['info@ziontechgroup.com', 'support@ziontechgroup.com'],
+      description: 'Send us an email and we\'ll respond within 24 hours'
+    },
+    {
+      icon: <Phone className="w-6 h-6 text-green-400" />,
+      title: 'Call Us',
+      details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
+      description: 'Speak directly with our team during business hours'
+    },
+    {
+      icon: <MapPin className="w-6 h-6 text-purple-400" />,
+      title: 'Visit Us',
+      details: ['123 Tech Street', 'San Francisco, CA 94105'],
+      description: 'Come visit our headquarters in the heart of Silicon Valley'
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-orange-400" />,
+      title: 'Business Hours',
+      details: ['Monday - Friday: 9:00 AM - 6:00 PM', 'Saturday: 10:00 AM - 4:00 PM'],
+      description: 'We\'re here to help during these hours'
+    }
+  ];
+
   const services = [
-    'AI Analytics & Business Intelligence',
-    'AI Workflow Automation',
-    'AI Chatbot & Conversational AI',
-    'AI-Powered Cybersecurity',
-    'Cloud Infrastructure & Migration',
-    'Cybersecurity Solutions',
-    'Custom Web Development',
-    'Blockchain & IoT Development',
-    'Zion Analytics Pro',
-    'Zion AI Video Editor',
-    'Zion AI Code Reviewer',
-    'Zion AI Fraud Detector',
-    'Other'
+    'AI Solutions',
+    'Web Development',
+    'Mobile Development',
+    'Cloud Migration',
+    'Cybersecurity',
+    'Data Analytics',
+    'DevOps',
+    'Consulting'
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <Helmet>
-        <title>Contact Us - Zion Tech Group | Get In Touch</title>
-<<<<<<< HEAD
-        <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get in touch with our experts to discuss your project requirements and discover how we can help transform your business." />
-        <meta name="keywords" content="contact zion tech group, ai solutions contact, it services contact, business consultation, project inquiry" />
-=======
-        <meta name="description" content="Contact Zion Tech Group for AI solutions, cloud infrastructure, cybersecurity, and custom software development. Call +1 302 464 0950 or email kleber@ziontechgroup.com" />
-        <meta name="keywords" content="contact us, get in touch, AI solutions, cloud computing, cybersecurity, software development, IT services" />
-  return (
-    <>
-      <Helmet>
-        <title>Contact Us - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for a free consultation and project discussion." />
-        <meta name="keywords" content="contact zion tech group, AI consultation, IT services contact, business inquiry" />
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bce0
+        <title>Contact Us - Zion Tech Group | Get in Touch</title>
+        <meta name="description" content="Get in touch with Zion Tech Group. Contact our team for AI solutions, web development, and IT services. We're here to help transform your business." />
+        <meta name="keywords" content="contact us, get in touch, AI solutions, web development, IT services, consultation" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Touch</span>
+              Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Touch</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Ready to transform your business with cutting-edge AI and IT solutions? 
-              Let's discuss your project and discover how we can help you succeed.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Ready to transform your business with cutting-edge AI and IT solutions? Let's start the conversation.
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Contact Form & Info */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
-                <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
-                
-                {submitStatus === 'success' && (
-                  <div className="mb-6 p-4 bg-green-900/50 border border-green-500 rounded-lg flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-green-400">Thank you! Your message has been sent successfully.</span>
-                  </div>
-                )}
+      {/* Contact Info Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {contactInfo.map((info, index) => (
+              <div key={index} className="text-center group">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {info.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{info.title}</h3>
+                <div className="space-y-2 mb-4">
+                  {info.details.map((detail, idx) => (
+                    <div key={idx} className="text-gray-300">{detail}</div>
+                  ))}
+                </div>
+                <p className="text-sm text-gray-400">{info.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      {/* Contact Form Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Form */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+              
+              {isSubmitted ? (
+                <div className="text-center py-8">
+                  <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
+                  <p className="text-gray-300">Thank you for reaching out. We'll get back to you soon.</p>
+                </div>
+              ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
@@ -181,9 +154,9 @@ const ContactPage: React.FC = () => {
                         id="name"
                         name="name"
                         value={formData.name}
-                        onChange={handleInputChange}
+                        onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your full name"
                       />
                     </div>
@@ -196,9 +169,9 @@ const ContactPage: React.FC = () => {
                         id="email"
                         name="email"
                         value={formData.email}
-                        onChange={handleInputChange}
+                        onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -214,8 +187,8 @@ const ContactPage: React.FC = () => {
                         id="company"
                         name="company"
                         value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your company name"
                       />
                     </div>
@@ -228,8 +201,8 @@ const ContactPage: React.FC = () => {
                         id="phone"
                         name="phone"
                         value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
@@ -243,12 +216,12 @@ const ContactPage: React.FC = () => {
                       id="service"
                       name="service"
                       value={formData.service}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     >
                       <option value="">Select a service</option>
                       {services.map((service, index) => (
-                        <option key={index} value={service}>
+                        <option key={index} value={service} className="bg-gray-800">
                           {service}
                         </option>
                       ))}
@@ -263,18 +236,18 @@ const ContactPage: React.FC = () => {
                       id="message"
                       name="message"
                       value={formData.message}
-                      onChange={handleInputChange}
+                      onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-                      placeholder="Tell us about your project requirements, goals, and how we can help..."
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
+                      placeholder="Tell us about your project or how we can help..."
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                    className="w-full flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <>
@@ -288,261 +261,50 @@ const ContactPage: React.FC = () => {
                       </>
                     )}
                   </button>
-<<<<<<< HEAD
                 </form>
+              )}
+            </div>
+
+            {/* Additional Info */}
+            <div className="space-y-8">
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <h3 className="text-xl font-semibold text-white mb-4">Why Choose Us?</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">Expert team with 10+ years of experience</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">Custom solutions tailored to your needs</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">24/7 support and maintenance</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300">Proven track record of success</span>
+                  </li>
+                </ul>
               </div>
 
-              {/* Contact Information */}
-              <div className="space-y-8">
-                <div>
-                  <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
-                  <p className="text-gray-300 mb-8">
-                    Ready to start your project? Get in touch with our team of experts. 
-                    We're here to help you transform your business with innovative AI and IT solutions.
-=======
-
-                  {submitStatus === 'success' && (
-                    <div className="flex items-center justify-center p-4 bg-green-900/20 border border-green-500 rounded-lg">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-2" />
-                      <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
-                    </div>
-                  )}
-
-                  {submitStatus === 'error' && (
-                    <div className="flex items-center justify-center p-4 bg-red-900/20 border border-red-500 rounded-lg">
-                      <AlertCircle className="h-5 w-5 text-red-400 mr-2" />
-                      <span className="text-red-400">Failed to send message. Please try again.</span>
-                    </div>
-                  )}
-                </form>
-              </div>
-
-              {/* Additional Info */}
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                  Why Choose Us?
-                </h2>
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                        <CheckCircle className="h-6 w-6 text-white" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
-                      <p className="text-gray-300">
-                        Our team of experienced professionals brings deep expertise in AI, cloud computing, and cybersecurity.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
-                        <Clock className="h-6 w-6 text-white" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">24/7 Support</h3>
-                      <p className="text-gray-300">
-                        Round-the-clock support to ensure your systems run smoothly and your business stays operational.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
-                        <Shield className="h-6 w-6 text-white" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">Security First</h3>
-                      <p className="text-gray-300">
-                        Enterprise-grade security measures to protect your data and ensure compliance with industry standards.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
-                        <Rocket className="h-6 w-6 text-white" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">Fast Delivery</h3>
-                      <p className="text-gray-300">
-                        Agile development processes that deliver results quickly without compromising on quality.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8 p-6 bg-gray-800 rounded-xl border border-gray-700">
-                  <h3 className="text-xl font-semibold text-white mb-4">Quick Contact</h3>
-                  <div className="space-y-3">
-                    <a
-                      href="tel:+13024640950"
-                      className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
-                    >
-                      <Phone className="h-5 w-5 mr-3" />
-                      +1 302 464 0950
-                    </a>
-                    <a
-                      href="mailto:kleber@ziontechgroup.com"
-                      className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
-                    >
-                      <Mail className="h-5 w-5 mr-3" />
-                      kleber@ziontechgroup.com
-                    </a>
-                    <div className="flex items-start text-gray-300">
-                      <MapPin className="h-5 w-5 mr-3 mt-0.5" />
-                      <div>
-                        <div>364 E Main St STE 1008</div>
-                        <div>Middletown DE 19709, USA</div>
-                      </div>
-                    </div>
-                  </div>
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bce0
-                  </p>
-                </div>
-
-                <div className="space-y-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0">
-=======
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
-                      <Phone className="w-6 h-6 text-cyan-400" />
-                    </div>
-                    <div className="ml-4">
-                      <h3 className="text-lg font-semibold text-white">Phone</h3>
-                      <p className="text-gray-300">+1 302 464 0950</p>
-                      <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
-                    </div>
-                  </div>
-
-<<<<<<< HEAD
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0">
-                      <Mail className="w-6 h-6 text-cyan-400" />
-=======
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-purple-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
-                    </div>
-                    <div className="ml-4">
-                      <h3 className="text-lg font-semibold text-white">Email</h3>
-                      <p className="text-gray-300">kleber@ziontechgroup.com</p>
-                      <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
-                    </div>
-                  </div>
-
-<<<<<<< HEAD
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-cyan-400" />
-                    </div>
-                    <div className="ml-4">
-                      <h3 className="text-lg font-semibold text-white">Address</h3>
-                      <p className="text-gray-300">
-                        364 E Main St STE 1008<br />
-                        Middletown DE 19709
-                      </p>
-=======
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-green-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-1">Office</h3>
-                      <p className="text-gray-300">364 E Main St STE 1008</p>
-                      <p className="text-gray-300">Middletown, DE 19709</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
-                      <p className="text-sm text-gray-400">United States</p>
-=======
-                  <div className="flex items-start space-x-4">
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-bce0
-                    </div>
-                  </div>
-                </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-6 border border-cyan-500/20">
-                  <h3 className="text-lg font-semibold text-white mb-3">Why Choose Us?</h3>
-=======
-                <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">Why Choose Us?</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bce0
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      Expert AI and IT professionals
-                    </li>
-                    <li className="flex items-center">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      Proven track record of success
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      Custom solutions for your business
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      Custom solutions tailored to your needs
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      Expert team with proven track record
-=======
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/fix-errors-and-merge-to-main-bce0
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
-                      24/7 support and maintenance
-                    </li>
-                  </ul>
+              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <h3 className="text-xl font-semibold text-white mb-4">Quick Response</h3>
+                <p className="text-gray-300 mb-4">
+                  We typically respond to all inquiries within 24 hours. For urgent matters, please call us directly.
+                </p>
+                <div className="flex items-center text-cyan-400">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  <span className="font-medium">Average response time: 2 hours</span>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+    </div>
   );
 };
 
-<<<<<<< HEAD
 export default ContactPage;
-<<<<<<< HEAD
-=======
-export default ContactPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bce0
