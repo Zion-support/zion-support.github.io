@@ -1,35 +1,25 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Database, Shield, Brain, MessageSquare, Mail, Camera, Palette, Mic, Code, HardDrive, EyeOff, Cloud, Users, Star, TrendingUp, Clock, Target, Zap, CheckCircle, Globe, Smartphone, Wifi, Cpu, Lock, Eye, MousePointer, Filter, Settings, Calendar, FileText, PieChart, Activity, DollarSign, Heart, ThumbsUp, Share2, Hash, Image, Video, Search, Menu, X, ChevronDown, Home, BarChart, ChevronRight, Play, Award, Lightbulb, Rocket, MapPin, Github, Linkedin, Twitter, Phone } from 'lucide-react';
-import ServicePageTemplate from '../service-template'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 
-export default function CybersecurityPage() {
   return (
-    <ServicePageTemplate
-      title="Cybersecurity Solutions"
-      description="Protect your business with our comprehensive cybersecurity services. Advanced threat detection, data protection, and 24/7 monitoring to keep your systems secure."
-      icon={<Shield className="w-10 h-10 text-red-400" />}
-      benefits={[
-        'Advanced threat detection and response',
-        'Enterprise-grade data encryption',
-        '24/7 security monitoring and support',
-        'Compliance with industry standards',
-        'Automated incident response',
-        'Custom security solutions'
-      ]}
-      features={[
-        'AI-powered threat detection',
-        'Real-time security monitoring',
-        'End-to-end data encryption',
-        'Vulnerability assessments',
-        'Security awareness training',
-        'Incident response planning'
-      ]}
-      pricing="Starting at $299/month"
-      seoTitle="Cybersecurity Solutions - Zion Tech Group"
-      seoDescription="Comprehensive cybersecurity services including threat detection, data protection, and 24/7 monitoring. Protect your business with enterprise-grade security solutions."
-      seoKeywords="cybersecurity, threat detection, data protection, security monitoring, compliance, incident response"
-    />
-  )
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet>
+        <title>Cybersecurity - Zion Tech Group</title>
+        <meta name="description" content="Professional cybersecurity services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6">Cybersecurity</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional cybersecurity services coming soon.</p>
+        <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+        >
+          Contact Us
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </Link>
+      </div>
+    </div>
+  );
 }

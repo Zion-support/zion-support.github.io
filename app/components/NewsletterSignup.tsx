@@ -14,7 +14,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!email) {
       setStatus('error');
       setMessage('Please enter your email address');
@@ -28,16 +28,16 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
     }
 
     setStatus('loading');
-    
+
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000));
-      
+
       // In a real app, you would make an API call here
       setStatus('success');
       setMessage('Thank you for subscribing! Check your email for confirmation.');
       setEmail('');
-      
+
       // Close modal after success if it's a modal variant
       if (variant === 'modal' && onClose) {
         setTimeout(() => {
@@ -115,7 +115,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
 
   if (variant === 'modal') {
     return (
-      <div className="fixed inset-0 z-50 overflow-y-auto">
+    <div className="fixed inset-0 z-50 overflow-y-auto">
         <div className="flex min-h-screen items-center justify-center px-4 py-6">
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
           <div className="relative w-full max-w-md">
@@ -123,7 +123,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           </div>
         </div>
       </div>
-    );
+    </div>);
   }
 
   return content;

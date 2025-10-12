@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, MessageSquare, Mail, Camera, Palette, Mic, Database, Code, HardDrive, EyeOff, Cloud, Shield, Users, Star, TrendingUp, Clock, Target, Zap, CheckCircle, Globe, Smartphone, Wifi, Cpu, Lock, Eye, MousePointer, Filter, Settings, Calendar, FileText, PieChart, Activity, DollarSign, Heart, ThumbsUp, Share2, Hash, Image, Video, Search, Menu, X, ChevronDown, Home, BarChart, ChevronRight, Play, Award, Lightbulb, Rocket, MapPin, Github, Linkedin, Twitter, Phone } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 
-export default function MobileDevelopmentPage() {
+export default function MobiledevelopmentPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
@@ -22,5 +22,5 @@ export default function MobileDevelopmentPage() {
         </Link>
       </div>
     </div>
-  )
+  );
 }
