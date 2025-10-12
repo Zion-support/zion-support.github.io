@@ -2,16 +2,18 @@ import { useState, useEffect} from 'react';
 import { ChevronLeft, ChevronRight} from 'lucide-react';
 
 interface Slide {
-  id: number;,
-  title: string;,
-  description: string;,
-  image: string;,
+  id: number;
+  title: string;
+  description: string;
+  image: string;
   features: string[];
+}
 
 interface ContentCarouselProps {
   slides?: Slide[];
   autoPlay?: boolean;
   interval?: number;
+}
 
 const defaultSlides: Slide[] = [
   {
