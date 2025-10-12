@@ -2,147 +2,150 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Smartphone, Zap, Users, BarChart3, Shield, Code, CheckCircle, Star, Phone, MapPin, Clock, Award, Target, Lightbulb, Monitor, Server, Database, Wrench, Settings, TrendingUp, DollarSign, Globe } from 'lucide-react';
+import { BarChart3, Zap, Brain, TrendingUp, CheckCircle, ArrowRight, Star, Database, Target, Shield } from 'lucide-react';
 
-const MobileDevelopmentPage: React.FC = () => {
+const ZionAiDataAnalyticsProPage: React.FC = () => {
   const features = [
     {
-      icon: Smartphone,
-      title: 'Native & Cross-Platform',
-      description: 'Build native iOS and Android apps or cross-platform solutions for maximum reach and efficiency.',
+      icon: Brain,
+      title: 'AI-Powered Insights',
+      description: 'Advanced machine learning algorithms automatically discover patterns and generate actionable insights',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: BarChart3,
+      title: 'Interactive Dashboards',
+      description: 'Create stunning, interactive dashboards with drag-and-drop simplicity and real-time updates',
       color: 'from-cyan-500 to-blue-500'
     },
     {
       icon: Zap,
-      title: 'High Performance',
-      description: 'Optimized mobile applications with smooth animations and lightning-fast performance.',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Shield,
-      title: 'Secure & Scalable',
-      description: 'Enterprise-grade security with scalable architecture for growing businesses.',
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      icon: Code,
-      title: 'Modern Technologies',
-      description: 'Built with React Native, Flutter, Swift, and Kotlin using the latest best practices.',
+      title: 'Real-time Analytics',
+      description: 'Process and analyze data in real-time with sub-second response times and live streaming',
       color: 'from-green-500 to-emerald-500'
-    }
-  ];
-
-  const services = [
-    {
-      title: 'iOS Development',
-      description: 'Native iOS applications using Swift and SwiftUI',
-      icon: Smartphone,
-      features: ['Swift & SwiftUI', 'App Store Optimization', 'Core Data Integration', 'Push Notifications']
     },
     {
-      title: 'Android Development',
-      description: 'Native Android applications using Kotlin and Jetpack Compose',
-      icon: Smartphone,
-      features: ['Kotlin & Jetpack', 'Google Play Optimization', 'Room Database', 'Material Design']
-    },
-    {
-      title: 'Cross-Platform Development',
-      description: 'React Native and Flutter applications for both platforms',
-      icon: Globe,
-      features: ['React Native', 'Flutter', 'Code Reusability', 'Faster Development']
-    },
-    {
-      title: 'Mobile App Maintenance',
-      description: 'Ongoing support, updates, and optimization services',
-      icon: Wrench,
-      features: ['Bug Fixes', 'Performance Optimization', 'Feature Updates', 'Security Patches']
+      icon: Database,
+      title: 'Multi-Source Integration',
+      description: 'Connect to 100+ data sources including databases, APIs, cloud platforms, and files',
+      color: 'from-orange-500 to-red-500'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Basic App',
-      price: '$5,000',
-      description: 'Simple mobile application',
+      name: 'Starter',
+      price: '$49',
+      period: '/month',
+      description: 'Perfect for small teams',
       features: [
-        'Up to 5 screens',
-        'Basic functionality',
-        'Standard UI/UX',
-        'Basic testing',
-        '1 platform (iOS or Android)',
-        '3 months support'
+        'Up to 5 data sources',
+        '10,000 rows of data',
+        'Basic AI insights',
+        'Standard dashboards',
+        'Email support',
+        'Mobile app access'
       ],
       popular: false
     },
     {
-      name: 'Business App',
-      price: '$15,000',
-      description: 'Feature-rich mobile application',
+      name: 'Professional',
+      price: '$149',
+      period: '/month',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 15 screens',
-        'Advanced features',
-        'Custom UI/UX design',
-        'Comprehensive testing',
-        'Both platforms (iOS & Android)',
-        '6 months support',
-        'App store submission',
-        'Analytics integration'
+        'Up to 25 data sources',
+        '100,000 rows of data',
+        'Advanced AI analytics',
+        'Custom dashboards',
+        'Priority support',
+        'API access',
+        'Real-time processing',
+        'Team collaboration'
       ],
       popular: true
     },
     {
-      name: 'Enterprise App',
-      price: '$50,000+',
-      description: 'Complex enterprise mobile solution',
+      name: 'Enterprise',
+      price: '$399',
+      period: '/month',
+      description: 'For large organizations',
       features: [
-        'Unlimited screens',
-        'Custom functionality',
-        'Premium UI/UX design',
-        'Full testing suite',
-        'Both platforms',
-        '12 months support',
-        'Custom backend integration',
-        'Advanced security features',
-        'Scalable architecture'
+        'Unlimited data sources',
+        'Unlimited data volume',
+        'Custom AI model training',
+        '24/7 dedicated support',
+        'Advanced integrations',
+        'On-premise deployment',
+        'White-label solution',
+        'SLA guarantee'
       ],
       popular: false
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: TrendingUp,
+      title: '300% Faster Insights',
+      description: 'AI-powered analysis delivers insights 300% faster than traditional methods',
+      stat: '300%'
+    },
+    {
+      icon: Target,
+      title: '95% Accuracy',
+      description: 'Advanced algorithms ensure highly accurate predictions and recommendations',
+      stat: '95%'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance certifications',
+      stat: '100%'
     }
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'Product Manager',
-      company: 'RetailTech Solutions',
-      content: 'Zion Tech Group delivered an exceptional mobile app that increased our user engagement by 200%. The user experience is outstanding.',
+      name: 'James Wilson',
+      role: 'Chief Data Officer',
+      company: 'DataDriven Corp',
+      content: 'Zion AI Data Analytics Pro has transformed how we analyze our data. We discovered insights that were completely hidden before, leading to a 25% increase in revenue.',
       rating: 5
     },
     {
-      name: 'Michael Chen',
-      role: 'CEO',
-      company: 'InnovateLabs',
-      content: 'Our mobile app is fast, secure, and beautifully designed. The team understood our vision and brought it to life perfectly.',
+      name: 'Sarah Kim',
+      role: 'Analytics Director',
+      company: 'RetailMax',
+      content: 'The AI-powered insights are incredible. It automatically identifies trends and anomalies that would take our team weeks to find manually.',
       rating: 5
     },
     {
-      name: 'Emily Rodriguez',
+      name: 'Michael Brown',
       role: 'VP of Operations',
-      company: 'ServiceFirst Inc.',
-      content: 'The cross-platform solution they built works flawlessly on both iOS and Android. Highly recommend their services.',
+      company: 'Manufacturing Plus',
+      content: 'Real-time analytics has revolutionized our operations. We can now respond to issues immediately and optimize our processes on the fly.',
       rating: 5
     }
+  ];
+
+  const dataSources = [
+    'MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch', 'Snowflake',
+    'BigQuery', 'Redshift', 'S3', 'Azure Blob', 'Google Drive', 'Salesforce',
+    'HubSpot', 'Stripe', 'PayPal', 'Shopify', 'WooCommerce', 'Facebook Ads',
+    'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhook'
   ];
 
   return (
     <>
       <Helmet>
-        <title>Mobile Development Services - iOS & Android Apps | Zion Tech Group</title>
-        <meta name="description" content="Professional mobile app development services including iOS, Android, and cross-platform solutions. Build high-performance mobile applications." />
-        <meta name="keywords" content="mobile app development, iOS development, Android development, React Native, Flutter, mobile applications" />
-        <meta property="og:title" content="Mobile Development Services - iOS & Android Apps" />
-        <meta property="og:description" content="Professional mobile app development services including iOS, Android, and cross-platform solutions." />
+        <title>Zion AI Data Analytics Pro - Advanced Business Intelligence | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered data analytics platform with real-time insights, interactive dashboards, and 95% accuracy. Transform your data into actionable intelligence." />
+        <meta name="keywords" content="AI data analytics, business intelligence, data visualization, real-time analytics, AI insights" />
+        <meta property="og:title" content="Zion AI Data Analytics Pro - Advanced Business Intelligence" />
+        <meta property="og:description" content="Revolutionary AI-powered data analytics platform with real-time insights and interactive dashboards." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/mobile-development" />
+        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-data-analytics-pro" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -153,25 +156,25 @@ const MobileDevelopmentPage: React.FC = () => {
             <div className="max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Mobile Development
+                  Zion AI Data Analytics Pro
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Build high-performance mobile applications for iOS and Android with cutting-edge technologies and expert development practices.
+                Transform your data into actionable intelligence with AI-powered analytics. Get insights 300% faster, with 95% accuracy, and make data-driven decisions with confidence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link 
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
                 >
-                  Start Your Project
+                  Start Free Trial
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
-                  to="/portfolio"
+                  to="/demo"
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                 >
-                  View Portfolio
+                  Watch Demo
                 </Link>
               </div>
               
@@ -179,31 +182,31 @@ const MobileDevelopmentPage: React.FC = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center group">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Smartphone className="w-8 h-8 text-cyan-400" />
+                    <TrendingUp className="w-8 h-8 text-cyan-400" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">100+</div>
-                  <div className="text-gray-400 text-sm">Apps Built</div>
+                  <div className="text-3xl font-bold text-white mb-2">300%</div>
+                  <div className="text-gray-400 text-sm">Faster Insights</div>
                 </div>
                 <div className="text-center group">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Zap className="w-8 h-8 text-purple-400" />
+                    <Target className="w-8 h-8 text-purple-400" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">4.8★</div>
-                  <div className="text-gray-400 text-sm">App Store Rating</div>
+                  <div className="text-3xl font-bold text-white mb-2">95%</div>
+                  <div className="text-gray-400 text-sm">Accuracy Rate</div>
                 </div>
                 <div className="text-center group">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Users className="w-8 h-8 text-green-400" />
+                    <Database className="w-8 h-8 text-green-400" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">1M+</div>
-                  <div className="text-gray-400 text-sm">Downloads</div>
+                  <div className="text-3xl font-bold text-white mb-2">100+</div>
+                  <div className="text-gray-400 text-sm">Data Sources</div>
                 </div>
                 <div className="text-center group">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Award className="w-8 h-8 text-orange-400" />
+                    <Zap className="w-8 h-8 text-orange-400" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">50+</div>
-                  <div className="text-gray-400 text-sm">Happy Clients</div>
+                  <div className="text-3xl font-bold text-white mb-2">Real-time</div>
+                  <div className="text-gray-400 text-sm">Processing</div>
                 </div>
               </div>
             </div>
@@ -215,10 +218,10 @@ const MobileDevelopmentPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Our Services</span>
+                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We deliver exceptional mobile applications with modern technologies and best practices
+                Everything you need to unlock the power of your data
               </p>
             </div>
 
@@ -243,44 +246,55 @@ const MobileDevelopmentPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Benefits Section */}
         <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Services</span>
+                Proven <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Results</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive mobile development solutions for every platform
+                Real metrics from companies using Zion AI Data Analytics Pro
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {services.map((service, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center group">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <benefit.icon className="w-10 h-10 text-cyan-400" />
+                  </div>
+                  <div className="text-5xl font-bold text-white mb-4">{benefit.stat}</div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{benefit.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Data Sources Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Connect <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Everything</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Integrate with 100+ data sources and platforms
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+              {dataSources.map((source, index) => (
                 <div 
                   key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-lg p-4 text-center hover:border-cyan-400/40 transition-all duration-300 group"
                 >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                        {service.title}
-                      </h3>
-                      <p className="text-gray-300 mb-4">
-                        {service.description}
-                      </p>
-                      <ul className="space-y-2">
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  <div className="text-gray-300 font-semibold group-hover:text-cyan-400 transition-colors">
+                    {source}
                   </div>
                 </div>
               ))}
@@ -289,14 +303,14 @@ const MobileDevelopmentPage: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20">
+        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
+                Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your mobile app development needs
+                Choose the perfect plan for your data analytics needs
               </p>
             </div>
 
@@ -323,6 +337,7 @@ const MobileDevelopmentPage: React.FC = () => {
                     <p className="text-gray-400 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
                       <span className="text-5xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400 ml-2">{plan.period}</span>
                     </div>
                   </div>
 
@@ -352,14 +367,14 @@ const MobileDevelopmentPage: React.FC = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                What Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Clients Say</span>
+                What <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Customers Say</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't just take our word for it - hear from our satisfied clients
+                Join thousands of companies who have transformed their data analytics
               </p>
             </div>
 
@@ -396,23 +411,23 @@ const MobileDevelopmentPage: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
               <div className="relative z-10">
                 <h2 className="text-4xl font-bold text-white mb-6">
-                  Ready to Build Your Mobile App?
+                  Ready to Transform Your Data Analytics?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Let's discuss your project and create something amazing together.
+                  Join thousands of companies who are already getting insights 300% faster with AI-powered analytics.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     to="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
                   >
-                    Start Your Project
+                    Start Free Trial
                   </Link>
                   <Link 
-                    to="/about"
+                    to="/demo"
                     className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                   >
-                    Learn More About Us
+                    Schedule Demo
                   </Link>
                 </div>
               </div>
@@ -424,4 +439,4 @@ const MobileDevelopmentPage: React.FC = () => {
   );
 };
 
-export default MobileDevelopmentPage;
+export default ZionAiDataAnalyticsProPage;

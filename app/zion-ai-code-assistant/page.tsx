@@ -2,108 +2,81 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Smartphone, Zap, Users, BarChart3, Shield, Code, CheckCircle, Star, Phone, MapPin, Clock, Award, Target, Lightbulb, Monitor, Server, Database, Wrench, Settings, TrendingUp, DollarSign, Globe } from 'lucide-react';
+import { Code, Zap, Shield, Brain, CheckCircle, ArrowRight, Star, Users, Award } from 'lucide-react';
 
-const MobileDevelopmentPage: React.FC = () => {
+const ZionAiCodeAssistantPage: React.FC = () => {
   const features = [
     {
-      icon: Smartphone,
-      title: 'Native & Cross-Platform',
-      description: 'Build native iOS and Android apps or cross-platform solutions for maximum reach and efficiency.',
-      color: 'from-cyan-500 to-blue-500'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Optimized mobile applications with smooth animations and lightning-fast performance.',
+      icon: Brain,
+      title: 'AI-Powered Code Generation',
+      description: 'Generate high-quality code in multiple programming languages using advanced AI models',
       color: 'from-purple-500 to-pink-500'
     },
     {
+      icon: Zap,
+      title: 'Real-time Code Analysis',
+      description: 'Instant code review, bug detection, and performance optimization suggestions',
+      color: 'from-cyan-500 to-blue-500'
+    },
+    {
       icon: Shield,
-      title: 'Secure & Scalable',
-      description: 'Enterprise-grade security with scalable architecture for growing businesses.',
+      title: 'Security Vulnerability Detection',
+      description: 'Automatically identify and fix security vulnerabilities in your codebase',
       color: 'from-red-500 to-orange-500'
     },
     {
       icon: Code,
-      title: 'Modern Technologies',
-      description: 'Built with React Native, Flutter, Swift, and Kotlin using the latest best practices.',
+      title: 'Multi-Language Support',
+      description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, and more',
       color: 'from-green-500 to-emerald-500'
-    }
-  ];
-
-  const services = [
-    {
-      title: 'iOS Development',
-      description: 'Native iOS applications using Swift and SwiftUI',
-      icon: Smartphone,
-      features: ['Swift & SwiftUI', 'App Store Optimization', 'Core Data Integration', 'Push Notifications']
-    },
-    {
-      title: 'Android Development',
-      description: 'Native Android applications using Kotlin and Jetpack Compose',
-      icon: Smartphone,
-      features: ['Kotlin & Jetpack', 'Google Play Optimization', 'Room Database', 'Material Design']
-    },
-    {
-      title: 'Cross-Platform Development',
-      description: 'React Native and Flutter applications for both platforms',
-      icon: Globe,
-      features: ['React Native', 'Flutter', 'Code Reusability', 'Faster Development']
-    },
-    {
-      title: 'Mobile App Maintenance',
-      description: 'Ongoing support, updates, and optimization services',
-      icon: Wrench,
-      features: ['Bug Fixes', 'Performance Optimization', 'Feature Updates', 'Security Patches']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Basic App',
-      price: '$5,000',
-      description: 'Simple mobile application',
+      name: 'Starter',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for individual developers',
       features: [
-        'Up to 5 screens',
-        'Basic functionality',
-        'Standard UI/UX',
-        'Basic testing',
-        '1 platform (iOS or Android)',
-        '3 months support'
+        'Up to 1,000 code generations per month',
+        '5 programming languages',
+        'Basic security scanning',
+        'Email support',
+        'Code completion suggestions'
       ],
       popular: false
     },
     {
-      name: 'Business App',
-      price: '$15,000',
-      description: 'Feature-rich mobile application',
+      name: 'Professional',
+      price: '$79',
+      period: '/month',
+      description: 'Ideal for small teams',
       features: [
-        'Up to 15 screens',
-        'Advanced features',
-        'Custom UI/UX design',
-        'Comprehensive testing',
-        'Both platforms (iOS & Android)',
-        '6 months support',
-        'App store submission',
-        'Analytics integration'
+        'Up to 10,000 code generations per month',
+        'All programming languages',
+        'Advanced security scanning',
+        'Priority support',
+        'Code refactoring suggestions',
+        'API access',
+        'Team collaboration tools'
       ],
       popular: true
     },
     {
-      name: 'Enterprise App',
-      price: '$50,000+',
-      description: 'Complex enterprise mobile solution',
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+      description: 'For large development teams',
       features: [
-        'Unlimited screens',
-        'Custom functionality',
-        'Premium UI/UX design',
-        'Full testing suite',
-        'Both platforms',
-        '12 months support',
-        'Custom backend integration',
-        'Advanced security features',
-        'Scalable architecture'
+        'Unlimited code generations',
+        'All programming languages',
+        'Enterprise security scanning',
+        '24/7 dedicated support',
+        'Custom AI model training',
+        'Advanced API access',
+        'On-premise deployment',
+        'Custom integrations'
       ],
       popular: false
     }
@@ -111,24 +84,24 @@ const MobileDevelopmentPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'Product Manager',
-      company: 'RetailTech Solutions',
-      content: 'Zion Tech Group delivered an exceptional mobile app that increased our user engagement by 200%. The user experience is outstanding.',
+      name: 'Sarah Chen',
+      role: 'Senior Developer',
+      company: 'TechFlow Inc.',
+      content: 'Zion AI Code Assistant has revolutionized our development process. We\'ve reduced coding time by 60% and caught 90% more bugs before deployment.',
       rating: 5
     },
     {
-      name: 'Michael Chen',
-      role: 'CEO',
-      company: 'InnovateLabs',
-      content: 'Our mobile app is fast, secure, and beautifully designed. The team understood our vision and brought it to life perfectly.',
+      name: 'Michael Rodriguez',
+      role: 'CTO',
+      company: 'StartupXYZ',
+      content: 'The AI-powered code generation is incredibly accurate. It understands our codebase context and generates code that actually works.',
       rating: 5
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'VP of Operations',
-      company: 'ServiceFirst Inc.',
-      content: 'The cross-platform solution they built works flawlessly on both iOS and Android. Highly recommend their services.',
+      name: 'Emily Watson',
+      role: 'Lead Engineer',
+      company: 'CloudScale',
+      content: 'Security vulnerability detection has saved us countless hours. The AI catches issues we would have missed in manual reviews.',
       rating: 5
     }
   ];
@@ -136,13 +109,13 @@ const MobileDevelopmentPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Mobile Development Services - iOS & Android Apps | Zion Tech Group</title>
-        <meta name="description" content="Professional mobile app development services including iOS, Android, and cross-platform solutions. Build high-performance mobile applications." />
-        <meta name="keywords" content="mobile app development, iOS development, Android development, React Native, Flutter, mobile applications" />
-        <meta property="og:title" content="Mobile Development Services - iOS & Android Apps" />
-        <meta property="og:description" content="Professional mobile app development services including iOS, Android, and cross-platform solutions." />
+        <title>Zion AI Code Assistant - AI-Powered Development Tool | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered code assistant that generates, analyzes, and optimizes code in 50+ programming languages. Boost productivity by 60% with intelligent code generation." />
+        <meta name="keywords" content="AI code assistant, code generation, programming AI, code analysis, developer tools, AI coding" />
+        <meta property="og:title" content="Zion AI Code Assistant - AI-Powered Development Tool" />
+        <meta property="og:description" content="Revolutionary AI-powered code assistant that generates, analyzes, and optimizes code in 50+ programming languages." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/mobile-development" />
+        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-code-assistant" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -153,25 +126,25 @@ const MobileDevelopmentPage: React.FC = () => {
             <div className="max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Mobile Development
+                  Zion AI Code Assistant
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-                Build high-performance mobile applications for iOS and Android with cutting-edge technologies and expert development practices.
+                The world's most advanced AI-powered code assistant. Generate, analyze, and optimize code in 50+ programming languages with unprecedented accuracy and speed.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link 
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
                 >
-                  Start Your Project
+                  Start Free Trial
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
-                  to="/portfolio"
+                  to="/demo"
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                 >
-                  View Portfolio
+                  Watch Demo
                 </Link>
               </div>
               
@@ -179,31 +152,31 @@ const MobileDevelopmentPage: React.FC = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center group">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Smartphone className="w-8 h-8 text-cyan-400" />
+                    <Code className="w-8 h-8 text-cyan-400" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">100+</div>
-                  <div className="text-gray-400 text-sm">Apps Built</div>
+                  <div className="text-3xl font-bold text-white mb-2">50+</div>
+                  <div className="text-gray-400 text-sm">Programming Languages</div>
                 </div>
                 <div className="text-center group">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
                     <Zap className="w-8 h-8 text-purple-400" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">4.8★</div>
-                  <div className="text-gray-400 text-sm">App Store Rating</div>
+                  <div className="text-3xl font-bold text-white mb-2">60%</div>
+                  <div className="text-gray-400 text-sm">Faster Development</div>
                 </div>
                 <div className="text-center group">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Users className="w-8 h-8 text-green-400" />
+                    <Shield className="w-8 h-8 text-green-400" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">1M+</div>
-                  <div className="text-gray-400 text-sm">Downloads</div>
+                  <div className="text-3xl font-bold text-white mb-2">90%</div>
+                  <div className="text-gray-400 text-sm">Bug Detection Rate</div>
                 </div>
                 <div className="text-center group">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Award className="w-8 h-8 text-orange-400" />
+                    <Users className="w-8 h-8 text-orange-400" />
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">50+</div>
-                  <div className="text-gray-400 text-sm">Happy Clients</div>
+                  <div className="text-3xl font-bold text-white mb-2">10K+</div>
+                  <div className="text-gray-400 text-sm">Happy Developers</div>
                 </div>
               </div>
             </div>
@@ -215,10 +188,10 @@ const MobileDevelopmentPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Our Services</span>
+                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We deliver exceptional mobile applications with modern technologies and best practices
+                Everything you need to supercharge your development workflow
               </p>
             </div>
 
@@ -243,60 +216,15 @@ const MobileDevelopmentPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Services Section */}
+        {/* Pricing Section */}
         <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Services</span>
+                Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive mobile development solutions for every platform
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {services.map((service, index) => (
-                <div 
-                  key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
-                >
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                        {service.title}
-                      </h3>
-                      <p className="text-gray-300 mb-4">
-                        {service.description}
-                      </p>
-                      <ul className="space-y-2">
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your mobile app development needs
+                Choose the perfect plan for your development needs
               </p>
             </div>
 
@@ -323,6 +251,7 @@ const MobileDevelopmentPage: React.FC = () => {
                     <p className="text-gray-400 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
                       <span className="text-5xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400 ml-2">{plan.period}</span>
                     </div>
                   </div>
 
@@ -352,14 +281,14 @@ const MobileDevelopmentPage: React.FC = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
+        <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                What Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Clients Say</span>
+                What <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Developers Say</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't just take our word for it - hear from our satisfied clients
+                Join thousands of developers who have transformed their workflow
               </p>
             </div>
 
@@ -396,23 +325,23 @@ const MobileDevelopmentPage: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
               <div className="relative z-10">
                 <h2 className="text-4xl font-bold text-white mb-6">
-                  Ready to Build Your Mobile App?
+                  Ready to Transform Your Development Workflow?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Let's discuss your project and create something amazing together.
+                  Join thousands of developers who are already coding faster and smarter with Zion AI Code Assistant.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     to="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
                   >
-                    Start Your Project
+                    Start Free Trial
                   </Link>
                   <Link 
-                    to="/about"
+                    to="/demo"
                     className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                   >
-                    Learn More About Us
+                    Schedule Demo
                   </Link>
                 </div>
               </div>
@@ -424,4 +353,4 @@ const MobileDevelopmentPage: React.FC = () => {
   );
 };
 
-export default MobileDevelopmentPage;
+export default ZionAiCodeAssistantPage;

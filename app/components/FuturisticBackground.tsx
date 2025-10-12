@@ -1,14 +1,8 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
 
-interface FuturisticBackgroundProps {
-  children: React.ReactNode;
-  variant?: 'default' | 'hero' | 'services' | 'contact';
-}
-
-export default function FuturisticBackground({ children, variant = 'default' }: FuturisticBackgroundProps) {
+const FuturisticBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number>();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -17,18 +11,13 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    let isVisible = true;
+    let animationId: number;
+    let particles: Particle[] = [];
+    let mouseX = 0;
+    let mouseY = 0;
 
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Particle system
-    const particles: Array<{
+    // Particle class
+    class Particle {
       x: number;
       y: number;
       vx: number;
@@ -36,101 +25,149 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
       size: number;
       opacity: number;
       color: string;
-    }> = [];
+      life: number;
+      maxLife: number;
 
-    const colors = [
-      '#00ffff', '#ff00ff', '#00ff00', '#ffff00', '#ff0080', '#8000ff'
-    ];
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 2;
+        this.vy = (Math.random() - 0.5) * 2;
+        this.size = Math.random() * 3 + 1;
+        this.opacity = Math.random() * 0.5 + 0.2;
+        this.color = this.getRandomColor();
+        this.life = 0;
+        this.maxLife = Math.random() * 200 + 100;
+      }
 
-    // Create particles - reduced count for better performance
-    for (let i = 0; i < 25; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        size: Math.random() * 1.5 + 0.5,
-        opacity: Math.random() * 0.3 + 0.1,
-        color: colors[Math.floor(Math.random() * colors.length)]
-      });
+      getRandomColor() {
+        const colors = ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff8000'];
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        this.life++;
+
+        // Mouse interaction
+        const dx = mouseX - this.x;
+        const dy = mouseY - this.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        if (distance < 100) {
+          const force = (100 - distance) / 100;
+          this.vx += (dx / distance) * force * 0.1;
+          this.vy += (dy / distance) * force * 0.1;
+        }
+
+        // Fade out over time
+        this.opacity = Math.max(0, this.opacity - 0.002);
+
+        // Reset if dead
+        if (this.life > this.maxLife || this.opacity <= 0) {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.vx = (Math.random() - 0.5) * 2;
+          this.vy = (Math.random() - 0.5) * 2;
+          this.opacity = Math.random() * 0.5 + 0.2;
+          this.life = 0;
+          this.color = this.getRandomColor();
+        }
+
+        // Keep particles in bounds
+        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+      }
+
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = this.opacity;
+        ctx.fillStyle = this.color;
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
     }
 
-    const animate = () => {
-      if (!isVisible) return;
+    // Initialize particles
+    const initParticles = () => {
+      particles = [];
+      for (let i = 0; i < 50; i++) {
+        particles.push(new Particle());
+      }
+    };
 
+    // Animation loop
+    const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
-      particles.forEach((particle, index) => {
-        // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-
-        // Wrap around screen
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
-
-        // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
-        ctx.fill();
-
-        // Draw connections
-        particles.slice(index + 1).forEach(otherParticle => {
-          const distance = Math.sqrt(
-            Math.pow(particle.x - otherParticle.x, 2) + 
-            Math.pow(particle.y - otherParticle.y, 2)
-          );
-
-          if (distance < 150) {
-            ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = particle.color + Math.floor((1 - distance / 150) * 80).toString(16).padStart(2, '0');
-            ctx.lineWidth = 1;
-            ctx.stroke();
-          }
-        });
+      particles.forEach(particle => {
+        particle.update();
+        particle.draw();
       });
 
-      animationRef.current = requestAnimationFrame(animate);
+      // Draw connections between nearby particles
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 100) {
+            ctx.save();
+            ctx.globalAlpha = (100 - distance) / 100 * 0.2;
+            ctx.strokeStyle = '#00ffff';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+            ctx.restore();
+          }
+        }
+      }
+
+      animationId = requestAnimationFrame(animate);
     };
 
-    // Start animation
+    // Handle resize
+    const handleResize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      initParticles();
+    };
+
+    // Handle mouse move
+    const handleMouseMove = (e: MouseEvent) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    };
+
+    // Initialize
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('mousemove', handleMouseMove);
     animate();
 
-    // Handle visibility change
-    const handleVisibilityChange = () => {
-      isVisible = !document.hidden;
-      if (isVisible) {
-        animate();
-      }
-    };
-
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
     return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-      window.removeEventListener('resize', resizeCanvas);
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      cancelAnimationFrame(animationId);
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
   return (
-    <div className="relative min-h-screen">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full opacity-30"
-        style={{ zIndex: 1 }}
-      />
-      <div className="relative z-10">
-        {children}
-      </div>
-    </div>
+    <canvas
+      ref={canvasRef}
+      className="fixed inset-0 w-full h-full pointer-events-none z-0"
+      style={{ background: 'transparent' }}
+    />
   );
-}
+};
+
+export default FuturisticBackground;
