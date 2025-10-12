@@ -188,4 +188,3 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
   );
 };
 
-export default GenericServicePage;

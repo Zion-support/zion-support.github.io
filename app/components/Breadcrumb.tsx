@@ -50,4 +50,3 @@ const Breadcrumb: React.FC = () => {
   );
 };
 
-export default Breadcrumb;

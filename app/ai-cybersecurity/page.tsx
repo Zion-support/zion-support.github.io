@@ -40,4 +40,3 @@ const AiCybersecurityPage: React.FC = () => {
   );
 };
 
-export default AiCybersecurityPage;

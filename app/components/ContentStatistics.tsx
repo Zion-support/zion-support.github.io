@@ -119,4 +119,3 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
   );
 };
 
-export default ContentStatistics;

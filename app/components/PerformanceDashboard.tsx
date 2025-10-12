@@ -230,4 +230,3 @@ const PerformanceDashboard: React.FC = () => {
   );
 };
 
-export default PerformanceDashboard;

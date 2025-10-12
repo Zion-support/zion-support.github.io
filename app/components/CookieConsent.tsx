@@ -175,4 +175,3 @@ const CookieConsent: React.FC = () => {
   );
 };
 
-export default CookieConsent;

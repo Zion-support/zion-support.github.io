@@ -195,4 +195,3 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   );
 };
 
-export default EnhancedAccessibility;

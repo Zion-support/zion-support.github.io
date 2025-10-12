@@ -193,4 +193,3 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
   </div>);
 };
 
-export default SearchModal;

@@ -1,85 +1,76 @@
 #!/usr/bin/env python3
-"""
-Script to fix all duplicate function definitions in TypeScript/TSX files
-"""
 import os
 import re
 import glob
 
-def fix_duplicate_functions(file_path):
-    """Fix duplicate function definitions in a single file"""
+def fix_duplicate_exports(file_path):
+    """Fix duplicate export statements and function declarations"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file has duplicate function definitions
-        if 'export default function PagePage()' not in content:
-            return False
+        original_content = content
         
-        print(f"Fixing duplicate functions in: {file_path}")
+        # Remove duplicate export default function declarations
+        content = re.sub(r'export default function\s+([A-Za-z][A-Za-z0-9]*)\s*\(\s*\)\s*\{\s*return null;\s*\}', '', content)
         
-        # Extract the component name from the file path
-        component_name = os.path.basename(file_path).replace('.tsx', '').replace('.ts', '')
-        # Convert kebab-case to PascalCase
-        component_name = ''.join(word.capitalize() for word in component_name.split('-'))
+        # Fix duplicate export statements
+        export_matches = list(re.finditer(r'export default\s+([^;]+);', content))
         
-        # Remove the first function definition and keep only the second one
-        lines = content.split('\n')
-        new_lines = []
-        skip_until_brace = False
-        brace_count = 0
-        
-        for i, line in enumerate(lines):
-            if 'export default function PagePage()' in line:
-                skip_until_brace = True
-                brace_count = 0
-                continue
+        if len(export_matches) > 1:
+            # Keep only the first export statement
+            first_export = export_matches[0]
+            last_export = export_matches[-1]
             
-            if skip_until_brace:
-                # Count braces to know when to stop skipping
-                brace_count += line.count('{') - line.count('}')
-                if brace_count <= 0 and 'const ' + component_name in line:
-                    skip_until_brace = False
-                    new_lines.append(line)
-                continue
+            # Remove all export statements except the first one
+            before_first = content[:first_export.end()]
+            after_last = content[last_export.end():]
             
-            new_lines.append(line)
+            # Clean up the content between first and last export
+            middle_content = content[first_export.end():last_export.start()]
+            middle_content = re.sub(r'export default\s+[^;]+;', '', middle_content)
+            
+            content = before_first + middle_content + after_last
         
-        # Join lines back
-        fixed_content = '\n'.join(new_lines)
+        # Clean up extra whitespace
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
         
-        # Add export if missing
-        if 'export default' not in fixed_content:
-            fixed_content = re.sub(r'(\s*);\s*$', r'\1;\n\nexport default ' + component_name + 'Page;', fixed_content)
-        
-        # Write the fixed content back
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(fixed_content)
-        
-        return True
-        
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return True
+            
+        return False
+            
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all duplicate functions"""
-    # Find all TypeScript/TSX files
+    # Find all TypeScript/JavaScript files
     patterns = [
         'app/**/*.tsx',
-        'app/**/*.ts'
+        'app/**/*.ts', 
+        'app/**/*.js',
+        'app/**/*.jsx'
     ]
     
+    files_processed = 0
     files_fixed = 0
-    total_files = 0
     
     for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
-            total_files += 1
-            if fix_duplicate_functions(file_path):
+            # Skip node_modules and other directories
+            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', 'build', '.next']):
+                continue
+                
+            files_processed += 1
+            if fix_duplicate_exports(file_path):
                 files_fixed += 1
+                print(f"Fixed: {file_path}")
     
-    print(f"Fixed duplicate functions in {files_fixed} out of {total_files} files")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed issues in {files_fixed} files")
 
 if __name__ == "__main__":
     main()

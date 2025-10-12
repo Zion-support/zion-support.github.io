@@ -78,4 +78,3 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   );
 };
 
-export default NeonButton;
