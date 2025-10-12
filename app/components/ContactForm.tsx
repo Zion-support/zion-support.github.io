@@ -30,11 +30,8 @@ const ContactForm: React.FC = () => {
     message: ''
   })
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
@@ -43,10 +40,7 @@ const ContactForm: React.FC = () => {
     }))
   }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus({ type: 'loading', message: 'Sending message...' })
@@ -69,12 +63,8 @@ const ContactForm: React.FC = () => {
         service: '',
         message: ''
       })
-<<<<<<< HEAD
     } catch (error) {
       console.error('Error sending message:', error);
-=======
-    } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
       setStatus({
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again later.'

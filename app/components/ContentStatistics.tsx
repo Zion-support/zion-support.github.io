@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
-import { Users, TrendingUp, Award, CheckCircle, Zap, Shield, Cloud, BarChart3 } from 'lucide-react';
+import {CheckCircle, Zap} from 'lucide-react';
 
 const ContentStatistics: React.FC = () => {
   const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});

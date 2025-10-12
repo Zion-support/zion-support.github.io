@@ -1,9 +1,9 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import {CheckCircle, ArrowRight, Phone, Mail} from 'lucide-react'
 const PagePage: React.FC = () => {
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database } from 'lucide-react'
+import {CheckCircle, ArrowRight, Phone, Mail} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 const SmartCityInfrastructurePage: React.FC = () => {

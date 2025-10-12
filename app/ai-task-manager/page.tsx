@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Brain, Clock, Users, BarChart, Zap, Shield, Smartphone, Globe } from 'lucide-react'
+import {CheckCircle, ArrowRight, Brain, Clock, Users, BarChart, Zap, Shield} from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
