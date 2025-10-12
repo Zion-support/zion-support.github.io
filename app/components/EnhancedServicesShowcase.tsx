@@ -1,6 +1,6 @@
-'use client'
-import React from 'react'
-import { ArrowRight } from 'lucide-react';
+'use client';
+import React from 'react';
+import { ArrowRight, Brain, Shield, Zap, Globe, Database, Cloud, CheckCircle } from 'lucide-react';
 
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
@@ -89,5 +89,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default EnhancedServicesShowcase;

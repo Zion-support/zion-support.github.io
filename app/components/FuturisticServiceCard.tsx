@@ -80,5 +80,10 @@ import { ArrowRight } from 'lucide-react';
               Discover the powerful features that make our futuristic service card solutions stand out.
             </p>
           </div>
-        </div></div></section>)};export default FuturisticServiceCardPage
-}
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default FuturisticServiceCardPage;

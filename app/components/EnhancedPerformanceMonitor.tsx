@@ -30,7 +30,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     loadTime: null
   })
 
-  const [isMonitoring, setIsMonitoring] = useState(false)
 
   useEffect(() => {
     const startTime = performance.now()
