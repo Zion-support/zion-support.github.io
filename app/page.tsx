@@ -50,48 +50,48 @@ export default function HomePage() {
       description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       link: '/ai-content-generation',
-      features: ['Automated content creation', 'SEO optimization', 'Multi-language support']
+      features: ['Automated content creation', 'SEO optimization', 'Multi-language support'],
+      pricing: 'Starting at $29/month'
     },
     {
-<<<<<<< HEAD
       title: 'IT Services & Solutions',
       description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
       icon: <Shield className="w-8 h-8 text-green-500" />,
-=======
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      title: 'IT Services & Solutions',
-      description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
       link: '/it-services',
-      features: ['Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics']
+      features: ['Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'],
+      pricing: 'Starting at $2,500/project'
     },
     {
       title: 'Cloud Services',
       description: 'Scalable, secure, and reliable cloud infrastructure solutions for your business.',
       icon: <Cloud className="w-8 h-8 text-blue-400" />,
       link: '/cloud-services',
-      features: ['Scalable infrastructure', '99.9% uptime', 'Global CDN']
+      features: ['Scalable infrastructure', '99.9% uptime', 'Global CDN'],
+      pricing: 'Starting at $99/month'
     },
     {
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with our comprehensive cybersecurity services and monitoring.',
       icon: <Shield className="w-8 h-8 text-red-400" />,
       link: '/cybersecurity',
-      features: ['Threat detection', 'Security audits', 'Compliance management']
+      features: ['Threat detection', 'Security audits', 'Compliance management'],
+      pricing: 'Starting at $199/month'
     },
     {
       title: '5G Implementation',
       description: 'Leverage the power of 5G technology for ultra-fast connectivity and IoT solutions.',
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
       link: '/5g-implementation',
-      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing']
+      features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing'],
+      pricing: 'Starting at $5,000/project'
     },
     {
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with our advanced analytics platform.',
       icon: <BarChart3 className="w-8 h-8 text-green-400" />,
       link: '/data-analytics',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards']
+      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards'],
+      pricing: 'Starting at $149/month'
     }
   ];
 
@@ -209,17 +209,16 @@ export default function HomePage() {
                   <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{service.title}</h3>
                   <p className="text-gray-300 mb-6">{service.description}</p>
                   <ul className="space-y-2 mb-6">
-<<<<<<< HEAD
                     {service.features.map((feature, featureIndex) => (
-=======
-                    {service.features?.map((feature, featureIndex) => (
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
+                  <div className="mb-4">
+                    <div className="text-lg font-bold text-white">{service.pricing}</div>
+                  </div>
                   <div className="mt-6 flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -273,21 +272,13 @@ export default function HomePage() {
                     to="/contact" 
                     className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                   >
-<<<<<<< HEAD
                     Get Started Today
-=======
-                    Start Your Project
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
                   </Link>
                   <Link 
                     to="/about" 
                     className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                   >
-<<<<<<< HEAD
                     Learn More
-=======
-                    Learn About Us
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
                   </Link>
                 </div>
               </div>
