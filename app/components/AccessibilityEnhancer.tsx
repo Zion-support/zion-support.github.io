@@ -1,110 +1,200 @@
-ursor/analyze-improve-and-deploy-application-c354
-'use client'
 import React, { useEffect, useState } from 'react'
 
-const AccessibilityEnhancer: React.FC = () => {
+interface Props {
+  children: React.ReactNode
+}
+
+const AccessibilityEnhancer: React.FC<Props> = ({ children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false)
+  const [isReducedMotion, setIsReducedMotion] = useState(false)
   const [fontSize, setFontSize] = useState(16)
 
   useEffect(() => {
-    // Check for user's preferred color scheme
     // Check for user preferences
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
-    if (prefersHighContrast) {
-      setIsHighContrast(true)
-      document.documentElement.classList.add('high-contrast')
-    }
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-    // Apply reduced motion if preferred
-    if (prefersReducedMotion) {
-      document.documentElement.classList.add('reduced-motion')
-    }
+    setIsHighContrast(prefersHighContrast)
+    setIsReducedMotion(prefersReducedMotion)
 
-    // Add keyboard navigation support
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content with Tab key
-      if (event.key === 'Tab' && !event.shiftKey) {
-        const skipLink = document.querySelector('.skip-to-main')
-        if (skipLink && document.activeElement === document.body) {
-          (skipLink as HTMLElement).focus()
-        }
-      }
-    }
+    // Listen for changes in preferences
+    const contrastQuery = window.matchMedia('(prefers-contrast: high)')
+    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
 
-    document.addEventListener('keydown', handleKeyDown)
+    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches)
+    const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches)
+
+    contrastQuery.addEventListener('change', handleContrastChange)
+    motionQuery.addEventListener('change', handleMotionChange)
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)
+      contrastQuery.removeEventListener('change', handleContrastChange)
+      motionQuery.removeEventListener('change', handleMotionChange)
     }
   }, [])
 
-  const toggleHighContrast = () => {
-    setIsHighContrast(!isHighContrast)
+  useEffect(() => {
+    // Apply accessibility classes to document
+    const root = document.documentElement
+
     if (isHighContrast) {
-      document.documentElement.classList.remove('high-contrast')
+      root.classList.add('high-contrast')
     } else {
-      document.documentElement.classList.add('high-contrast')
+      root.classList.remove('high-contrast')
     }
-  }
 
-  const increaseFontSize = () => {
-    const newSize = Math.min(fontSize + 2, 24)
-    setFontSize(newSize)
-    document.documentElement.style.fontSize = `${newSize}px`
-  }
+    if (isReducedMotion) {
+      root.classList.add('reduced-motion')
+    } else {
+      root.classList.remove('reduced-motion')
+    }
 
-  const decreaseFontSize = () => {
-    const newSize = Math.max(fontSize - 2, 12)
-    setFontSize(newSize)
-    document.documentElement.style.fontSize = `${newSize}px`
-  }
+    // Apply font size
+    root.style.fontSize = `${fontSize}px`
+  }, [isHighContrast, isReducedMotion, fontSize])
 
-  const resetFontSize = () => {
-    setFontSize(16)
-    document.documentElement.style.fontSize = '16px'
-  }
+  useEffect(() => {
+    // Add skip links
+    const skipLink = document.createElement('a')
+    skipLink.href = '#main-content'
+    skipLink.textContent = 'Skip to main content'
+    skipLink.className = 'skip-link'
+    skipLink.style.cssText = `
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      text-decoration: none;
+      z-index: 1000;
+      border-radius: 4px;
+    `
+    
+    skipLink.addEventListener('focus', () => {
+      skipLink.style.top = '6px'
+    })
+    
+    skipLink.addEventListener('blur', () => {
+      skipLink.style.top = '-40px'
+    })
 
-  return (
-    <div className="accessibility-controls fixed bottom-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 border">
-      <h3 className="text-sm font-semibold mb-2 text-gray-700">Accessibility</h3>
-      
+    document.body.insertBefore(skipLink, document.body.firstChild)
+
+    // Add main content landmark
+    const main = document.querySelector('main')
+    if (main && !main.id) {
+      main.id = 'main-content'
+    }
+
+    // Add ARIA landmarks
+    const nav = document.querySelector('nav')
+    if (nav && !nav.getAttribute('role')) {
+      nav.setAttribute('role', 'navigation')
+      nav.setAttribute('aria-label', 'Main navigation')
+    }
+
+    const footer = document.querySelector('footer')
+    if (footer && !footer.getAttribute('role')) {
+      footer.setAttribute('role', 'contentinfo')
+    }
+
+    // Add focus management
+    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    const focusableContent = document.querySelectorAll(focusableElements)
+    
+    focusableContent.forEach(element => {
+      const el = element as HTMLElement
+      if (!el.classList.contains('focus-visible')) {
+        el.classList.add('focus-visible')
+      }
+    })
+
+    return () => {
+      // Cleanup
+      const existingSkipLink = document.querySelector('.skip-link')
+      if (existingSkipLink) {
+        existingSkipLink.remove()
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    // Keyboard navigation enhancements
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Escape key to close modals/dropdowns
+      if (e.key === 'Escape') {
+        const activeElement = document.activeElement as HTMLElement
+        if (activeElement && activeElement.blur) {
+          activeElement.blur()
+        }
+      }
+
+      // Tab navigation improvements
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation')
+      }
+    }
+
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation')
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('mousedown', handleMouseDown)
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.removeEventListener('mousedown', handleMouseDown)
+    }
+  }, [])
+
+  // Accessibility controls component
+  const AccessibilityControls = () => (
+    <div className="fixed top-4 right-4 bg-slate-800/90 backdrop-blur-md rounded-lg p-4 border border-cyan-500/20 z-50">
+      <h3 className="text-sm font-semibold text-white mb-3">Accessibility</h3>
       <div className="space-y-2">
-        <button
-          onClick={toggleHighContrast}
-          className="block w-full text-left px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded"
-          aria-label="Toggle high contrast mode"
-        >
-          {isHighContrast ? 'Disable' : 'Enable'} High Contrast
-        </button>
-        
-        <div className="flex items-center space-x-2">
-          <button
-            onClick={decreaseFontSize}
-            className="px-2 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded"
-            aria-label="Decrease font size"
-          >
-            A-
-          </button>
-          <span className="text-xs text-gray-500">{fontSize}px</span>
-          <button
-            onClick={increaseFontSize}
-            className="px-2 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded"
-            aria-label="Increase font size"
-          >
-            A+
-          </button>
-          <button
-            onClick={resetFontSize}
-            className="px-2 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded"
-            aria-label="Reset font size"
-          >
-            Reset
-          </button>
+        <label className="flex items-center text-xs text-gray-300">
+          <input
+            type="checkbox"
+            checked={isHighContrast}
+            onChange={(e) => setIsHighContrast(e.target.checked)}
+            className="mr-2"
+          />
+          High Contrast
+        </label>
+        <label className="flex items-center text-xs text-gray-300">
+          <input
+            type="checkbox"
+            checked={isReducedMotion}
+            onChange={(e) => setIsReducedMotion(e.target.checked)}
+            className="mr-2"
+          />
+          Reduced Motion
+        </label>
+        <div className="flex items-center text-xs text-gray-300">
+          <label htmlFor="font-size" className="mr-2">Font Size:</label>
+          <input
+            id="font-size"
+            type="range"
+            min="12"
+            max="24"
+            value={fontSize}
+            onChange={(e) => setFontSize(Number(e.target.value))}
+            className="w-16"
+          />
+          <span className="ml-2">{fontSize}px</span>
         </div>
       </div>
     </div>
+  )
+
+  return (
+    <>
+      {children}
+      {/* Show accessibility controls in development */}
+      {process.env.NODE_ENV === 'development' && <AccessibilityControls />}
+    </>
   )
 }
 

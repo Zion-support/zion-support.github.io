@@ -158,21 +158,21 @@ export default function Footer() {
               <Mail className="w-5 h-5 text-cyan-400 mr-3" />
               <div>
                 <p className="text-sm text-gray-400">Email</p>
-                <p className="text-white">contact@ziontechgroup.com</p>
+                <p className="text-white">kleber@ziontechgroup.com</p>
               </div>
             </div>
             <div className="flex items-center">
               <Phone className="w-5 h-5 text-purple-400 mr-3" />
               <div>
                 <p className="text-sm text-gray-400">Phone</p>
-                <p className="text-white">+1 (555) 123-4567</p>
+                <p className="text-white">+1 (302) 464-0950</p>
               </div>
             </div>
             <div className="flex items-center">
               <MapPin className="w-5 h-5 text-green-400 mr-3" />
               <div>
                 <p className="text-sm text-gray-400">Location</p>
-                <p className="text-white">San Francisco, CA</p>
+                <p className="text-white">Middletown, DE 19709</p>
               </div>
             </div>
           </div>
