@@ -3,7 +3,11 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function FiveGNetworkInfrastructurePage() {
+=======
+export default function NetworkInfrastructure5GPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-0a63
   return (
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>

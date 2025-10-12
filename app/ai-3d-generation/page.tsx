@@ -1,7 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
+=======
+import { Box, Palette, Zap, CheckCircle, ArrowRight, Star, Brain, Layers } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-0a63
 
 const Ai3DGenerationPage: React.FC = () => {
   return (

@@ -1,6 +1,89 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
+=======
+import { Calculator, FileText, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Users, Target } from 'lucide-react';
+
+const AiAccountingAssistantPage: React.FC = () => {
+  const features = [
+    {
+      icon: <Calculator className="w-8 h-8 text-cyan-400" />,
+      title: 'Automated Bookkeeping',
+      description: 'AI-powered transaction categorization and reconciliation',
+      benefits: ['95% accuracy in categorization', 'Saves 20+ hours per week', 'Real-time reconciliation']
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-purple-400" />,
+      title: 'Smart Invoice Processing',
+      description: 'Automated invoice creation, sending, and payment tracking',
+      benefits: ['50% faster invoice processing', 'Reduced payment delays', 'Automated follow-ups']
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8 text-green-400" />,
+      title: 'Financial Forecasting',
+      description: 'AI-driven cash flow predictions and budget planning',
+      benefits: ['90% accurate predictions', 'Proactive financial planning', 'Risk mitigation']
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: 'Compliance Management',
+      description: 'Automated tax calculations and regulatory compliance',
+      benefits: ['100% compliance rate', 'Reduced audit risk', 'Automated reporting']
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$99/month',
+      description: 'Perfect for small businesses',
+      features: [
+        'Up to 1,000 transactions/month',
+        'Basic AI categorization',
+        'Invoice generation',
+        'Basic reporting',
+        'Email support'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$199/month',
+      description: 'Ideal for growing businesses',
+      features: [
+        'Up to 10,000 transactions/month',
+        'Advanced AI categorization',
+        'Automated invoice processing',
+        'Financial forecasting',
+        'Multi-currency support',
+        'Priority support'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$399/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited transactions',
+        'Custom AI training',
+        'Advanced analytics',
+        'API integrations',
+        'Dedicated account manager',
+        '24/7 phone support'
+      ],
+      popular: false
+    }
+  ];
+
+  const stats = [
+    { number: '10,000+', label: 'Businesses Served', icon: <Users className="w-6 h-6 text-cyan-400" /> },
+    { number: '95%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6 text-green-400" /> },
+    { number: '20+', label: 'Hours Saved Weekly', icon: <Clock className="w-6 h-6 text-purple-400" /> },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6 text-red-400" /> }
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-0a63
 
 export default function AiaccountingassistantPage() {
   return (

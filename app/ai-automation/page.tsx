@@ -1,7 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight, Zap, Brain, Settings, Globe, Users, Star, Award, CheckCircle } from 'lucide-react';
+=======
+import { Zap, Workflow, CheckCircle, ArrowRight, Brain, Settings, Clock, TrendingUp, Shield } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-0a63
 
 const AIAutomationPage: React.FC = () => {
   const features = [
