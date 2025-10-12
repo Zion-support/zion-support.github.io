@@ -22,5 +22,12 @@ export default function CareersPage() {
         </Link>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
+=======
+  );
+};
+
+export default CareersPage;
+>>>>>>> cursor/website-audit-and-update-with-deployment-713e

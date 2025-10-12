@@ -11,6 +11,7 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
+<<<<<<< HEAD
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
@@ -31,6 +32,95 @@ export default function Navigation() {
     window.addEventListener('scroll', throttledHandleScroll, { passive: true })
     return () => window.removeEventListener('scroll', throttledHandleScroll)
   }, [])
+=======
+  const navigationItems = [
+    {
+      name: 'AI Services',
+      path: '/ai-services',
+      icon: Brain,
+      dropdown: [
+        { name: 'AI Content Generator', path: '/ai-content-generator' },
+        { name: 'AI Chatbot Enterprise', path: '/ai-chatbot-enterprise' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
+        { name: 'AI 3D Generation', path: '/ai-3d-generation' },
+        { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' },
+        { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
+        { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
+        { name: 'AI Email Marketing', path: '/ai-email-marketing' },
+        { name: 'AI Document Processing', path: '/ai-document-processing' },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' }
+      ]
+    },
+    {
+      name: 'IT Services',
+      path: '/it-services',
+      icon: Cloud,
+      dropdown: [
+        { name: 'Cloud Migration', path: '/cloud-migration' },
+        { name: 'DevOps Solutions', path: '/devops-solutions' },
+        { name: 'Cybersecurity', path: '/cybersecurity' },
+        { name: 'Mobile Development', path: '/mobile-development' },
+        { name: 'API Development', path: '/api-development' },
+        { name: 'Database Management', path: '/database-management' },
+        { name: 'System Integration', path: '/system-integration' },
+        { name: 'IT Consulting', path: '/it-consulting' },
+        { name: 'Network Infrastructure', path: '/network-infrastructure' }
+      ]
+    },
+    {
+      name: 'Micro SAAS',
+      path: '/micro-saas',
+      icon: Code,
+      dropdown: [
+        { name: 'AI-Powered CRM', path: '/ai-crm' },
+        { name: 'Smart Analytics', path: '/smart-analytics' },
+        { name: 'Automated Testing', path: '/ai-automated-testing' },
+        { name: 'Content Management', path: '/ai-content-management' },
+        { name: 'Email Marketing', path: '/ai-email-marketing' },
+        { name: 'Social Media Manager', path: '/ai-social-media-manager' },
+        { name: 'Project Management', path: '/ai-project-management' },
+        { name: 'Customer Support', path: '/ai-customer-support' },
+        { name: 'Invoice Generator', path: '/ai-invoice-generator' },
+        { name: 'Task Manager', path: '/ai-task-manager' }
+      ]
+    },
+    {
+      name: '5G Solutions',
+      path: '/5g-implementation',
+      icon: Wifi,
+      dropdown: [
+        { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
+        { name: '5G Edge Computing', path: '/5g-edge-computing' },
+        { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
+        { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
+        { name: '5G Private Networks', path: '/5g-private-networks' },
+        { name: '5G Data Analytics', path: '/5g-data-analytics' }
+      ]
+    },
+    {
+      name: 'Resources',
+      path: '/resources',
+      icon: Globe,
+      dropdown: [
+        { name: 'Documentation', path: '/docs' },
+        { name: 'API Reference', path: '/api-docs' },
+        { name: 'Help Center', path: '/help' },
+        { name: 'Community', path: '/community' },
+        { name: 'Status Page', path: '/status' },
+        { name: 'Press Kit', path: '/press' }
+      ]
+    }
+  ];
+
+  const simpleLinks = [
+    { name: 'About', path: '/about' },
+    { name: 'Team', path: '/team' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Pricing', path: '/pricing' },
+    { name: 'Contact', path: '/contact' }
+  ];
+>>>>>>> cursor/website-audit-and-update-with-deployment-713e
 
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)

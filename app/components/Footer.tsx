@@ -66,6 +66,15 @@ export default function Footer() {
     { name: 'Terms of Service', path: '/terms' }
   ];
 
+  const resourceLinks = [
+    { name: 'Documentation', path: '/docs' },
+    { name: 'API Reference', path: '/api-docs' },
+    { name: 'Help Center', path: '/help' },
+    { name: 'Community', path: '/community' },
+    { name: 'Status Page', path: '/status' },
+    { name: 'Resources', path: '/resources' }
+  ];
+
   const supportLinks = [
     { name: 'Help Center', path: '/help' },
     { name: 'Documentation', path: '/docs' },
@@ -77,7 +86,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
@@ -168,6 +177,7 @@ export default function Footer() {
             </ul>
           </div>
 
+<<<<<<< HEAD
           {/* 5G Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4 flex items-center">
@@ -183,16 +193,33 @@ export default function Footer() {
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
+=======
+          {/* Resources */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Resources</h3>
+            <ul className="space-y-2">
+              {resourceLinks.map((link, index) => (
+                <li key={index}>
+                  <Link 
+                    to={link.path} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2" />
+                    {link.name}
+>>>>>>> cursor/website-audit-and-update-with-deployment-713e
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
         </div>
 
         {/* Newsletter Signup */}
         <div className="border-t border-white/10 mt-12 pt-8">
           <NewsletterSignup variant="inline" />
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-713e
         </div>
 
         {/* Company & Support Links */}
