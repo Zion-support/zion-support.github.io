@@ -12,7 +12,6 @@ interface FuturisticCardProps {
   onClick?: () => void;
 }
 
-export default function FuturisticCard({ 
   children, 
   className = '', 
   hover = true, 
