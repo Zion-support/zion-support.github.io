@@ -2,7 +2,11 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart, BarChart } from 'lucide-react';
+import InteractiveDemo from './components/InteractiveDemo';
+import RealTimeStats from './components/RealTimeStats';
+import CustomerTestimonials from './components/CustomerTestimonials';
+import ContactForm from './components/ContactForm';
 
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -375,36 +379,55 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
+        {/* Interactive Demo Section */}
+        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Experience Our AI Solutions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                See our AI and IT solutions in action with this interactive demonstration.
+              </p>
+            </div>
+            <InteractiveDemo />
+          </div>
+        </section>
+
+        {/* Real-time Statistics Section */}
+        <section className="py-20 bg-gradient-to-br from-purple-900 to-slate-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Live System Performance
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Monitor our systems in real-time and see the impact of our solutions.
+              </p>
+            </div>
+            <RealTimeStats />
+          </div>
+        </section>
+
+        {/* Customer Testimonials Section */}
+        <section className="py-20 bg-gradient-to-br from-gray-900 to-purple-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <CustomerTestimonials />
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
+            <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Contact us today to discuss your project and discover how our AI and IT solutions can drive your success.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  Contact Us Now
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
-                >
-                  Call +1 302 464 0950
-                </a>
-              </div>
-              <div className="mt-8 text-gray-400">
-                <p>Email: kleber@ziontechgroup.com</p>
-                <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-              </div>
             </div>
+            <ContactForm />
           </div>
         </section>
       </div>

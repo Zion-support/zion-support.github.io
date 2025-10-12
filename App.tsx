@@ -13,6 +13,7 @@ import SEOHead from './app/components/EnhancedSEOHead';
 import SkipLink from './app/components/EnhancedSkipLink';
 import Breadcrumb from './app/components/Breadcrumb';
 import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
+import PerformanceOptimizerNew from './app/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './hooks/usePerformanceMonitor';
@@ -196,6 +197,7 @@ const App: React.FC = () => {
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
               <PerformanceOptimizer>
+                <PerformanceOptimizerNew />
                 <EnhancedAccessibility>
                   <AccessibilityEnhancer>
                     <PerformanceMonitor />

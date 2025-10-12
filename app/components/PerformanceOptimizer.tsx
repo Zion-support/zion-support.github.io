@@ -1,109 +1,86 @@
-import React, { useEffect, useState } from 'react'
-
-}
+'use client';
+import React, { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    lcp: null,
-    fid: null,
-    cls: null,
-    fcp: null,
-    ttfb: null
-  })
-
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
-      const criticalResources = [
-        '/fonts/inter.woff2',
+      const criticalImages = [
         '/images/hero-bg.jpg',
         '/images/logo.png'
-      ]
+      ];
 
-      criticalResources.forEach(resource => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = resource
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image'
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous'
-        }
-        document.head.appendChild(link)
-      })
-    }
+      criticalImages.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
+      });
+    };
 
     // Optimize images
     const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]')
+      const images = document.querySelectorAll('img');
       images.forEach(img => {
-        const imageElement = img as HTMLImageElement
-        if (imageElement.dataset.src) {
-          imageElement.src = imageElement.dataset.src
-          imageElement.removeAttribute('data-src')
+        // Add loading="lazy" for non-critical images
+        if (!img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
         }
-      })
-    }
+        
+        // Add decoding="async" for better performance
+        if (!img.hasAttribute('decoding')) {
+          img.setAttribute('decoding', 'async');
+        }
+      });
+    };
 
-    // Lazy load non-critical components
-    const lazyLoadComponents = () => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const element = entry.target as HTMLElement
-              element.classList.add('loaded')
-              observer.unobserve(element)
-            }
-          })
-        },
-        { threshold: 0.1 }
-      )
+    // Defer non-critical JavaScript
+    const deferNonCriticalJS = () => {
+      const scripts = document.querySelectorAll('script[src]');
+      scripts.forEach(script => {
+        if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
+          script.setAttribute('defer', '');
+        }
+      });
+    };
 
-      const lazyElements = document.querySelectorAll('[data-lazy]')
-      lazyElements.forEach(el => observer.observe(el))
+    // Initialize performance optimizations
+    preloadCriticalResources();
+    
+    // Run optimizations after DOM is loaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        optimizeImages();
+        deferNonCriticalJS();
+      });
+    } else {
+      optimizeImages();
+      deferNonCriticalJS();
     }
 
     // Monitor Core Web Vitals
     const monitorWebVitals = () => {
-      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
-        onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
-        onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
-        onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
-        onLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
-        onTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
-      }).catch(() => {
-        // Silently fail if web-vitals is not available
-      })
-    }
-
+      if ('web-vitals' in window) {
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS(console.log);
+          getFID(console.log);
+          getFCP(console.log);
+          getLCP(console.log);
+          getTTFB(console.log);
+        });
       }
+    };
 
-      window.addEventListener('scroll', updateScrollPosition, { passive: true })
-      
-      return () => window.removeEventListener('scroll', updateScrollPosition)
-    }
+    monitorWebVitals();
 
-    // Initialize optimizations
-    preloadCriticalResources()
-    optimizeImages()
-    lazyLoadComponents()
-    monitorWebVitals()
-    const cleanupScroll = optimizeScroll()
-
-    // Cleanup
+    // Cleanup function
     return () => {
-      cleanupScroll()
-    }
-  }, [])
+      // Cleanup any event listeners or intervals if needed
+    };
+  }, []);
 
-  // Log performance metrics in development
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(val => val !== null)) {
-      console.log('Performance Metrics:', metrics)
-    }
-  }, [metrics])
+  return null; // This component doesn't render anything
+};
 
-  return null
-}
-
-export default PerformanceOptimizer
+export default PerformanceOptimizer;

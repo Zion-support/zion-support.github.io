@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -44,43 +43,11 @@ const Page: React.FC = () => {
               >
                 Learn More
               </Link>
-=======
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      period: '/month',
-      description: 'Ideal for growing e-commerce businesses',
-      features: [
-        'Up to 10,000 products',
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  </div>
-                </div>
-              ))}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
@@ -104,18 +71,12 @@ const Page: React.FC = () => {
                   View All Services
                 </Link>
               </div>
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </>
   );
 };
 
 export default Page;
-=======
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
