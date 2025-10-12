@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -10,62 +9,8 @@ interface SEOHeadProps {
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
-<<<<<<< HEAD
-}
-
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading provider of AI and IT solutions. Transform your business with our cutting-edge technology and expert services.",
-  keywords = "AI solutions, IT services, cloud computing, software development, artificial intelligence, machine learning, Zion Tech Group",
-  canonical,
-  ogImage = "https://ziontechgroup.com/og-image.jpg",
-  ogType = "website",
-  twitterCard = "summary_large_image",
-  structuredData
-}) => {
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": description,
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "sameAs": [
-      "https://github.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup"
-    ]
-<<<<<<< HEAD
-  }
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-=======
   noIndex?: boolean;
-  noFollow?: boolean;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
-}
-
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-<<<<<<< HEAD
-  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, artificial intelligence, and innovative digital solutions.',
+  noFollow?: boolean;  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, artificial intelligence, and innovative digital solutions.',
   keywords = 'AI, artificial intelligence, IT solutions, technology, digital transformation, machine learning, automation',
   canonical,
   ogImage = '/og-image.jpg'
@@ -132,7 +77,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           "unitText": "PROJECT"
         }
       }
-    ]
+    ];
   };
     "url": canonicalUrl,
     "logo": "https://ziontechgroup.com/logo.png",
@@ -145,56 +90,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     "sameAs": [
       "https://www.linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup"
-    ]
-  }
-=======
-  };
+    ];
+  }  };
 
-  const finalStructuredData = structuredData || defaultStructuredData;
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
-  description = 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your business with cutting-edge technology.',
-  keywords = 'AI solutions, IT services, digital transformation, cloud computing, 5G implementation, micro SAAS, artificial intelligence, business automation',
-  canonical = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData,
-  noIndex = false,
-  noFollow = false
-}) => {
-  const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    description: description,
-    url: canonical,
-    logo: 'https://ziontechgroup.com/logo.png',
-    sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
-      'https://github.com/ziontechgroup'
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      availableLanguage: 'English',
-      email: 'kleber@ziontechgroup.com'
-    }
-  };
-
-  const finalStructuredData = structuredData || defaultStructuredData;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
-
-  return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <link rel="canonical" href={canonical || window.location.href} />
+  const finalStructuredData = structuredData || defaultStructuredData;      <link rel="canonical" href={canonical || window.location.href} />
       
       {/* Open Graph */}
       <meta property="og:title" content={title} />
@@ -203,27 +102,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonical || window.location.href} />
       
-      {/* Twitter */}
-=======
-      
+      {/* Twitter */}      
       {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
-      <link rel="canonical" href={canonical} />
-      
-      {/* Robots Meta */}
-      {noIndex && <meta name="robots" content="noindex" />}
-      {noFollow && <meta name="robots" content="nofollow" />}
-      {!noIndex && !noFollow && <meta name="robots" content="index, follow" />}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <meta property="og:type" content={type} />
+      {canonical && <link rel="canonical" href={canonical} />}      <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image} />
       <meta property="og:site_name" content="Zion Tech Group" />
@@ -232,25 +113,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-=======
-      <meta property="og:type" content={ogType} />
+      <meta name="twitter:image" content={image} />      <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />
-=======
       <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonical} />
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta property="og:url" content={canonical} />      <meta name="twitter:site" content="@ziontechgroup" />
       
       {/* Additional SEO Meta Tags */}
       <meta name="robots" content="index, follow" />
@@ -258,7 +124,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#8b5cf6" />
       
-<<<<<<< HEAD
       {/* Favicon */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -292,45 +157,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
-=======
-      {/* Structured Data */}
+        {JSON.stringify(structuredData || defaultStructuredData)}      {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
-      
-      {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#3B82F6" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="generator" content="React" />
-      
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
-      </script>
-    </Helmet>
-  );
-};
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default SEOHead;
-export default SEOHead
-export default SEOHead;
-export default SEOHead
-export default SEOHead;
-=======
-export default SEOHead;
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
-=======
-export default SEOHead;
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a81a
+        {JSON.stringify(finalStructuredData)}export default SEOHead;

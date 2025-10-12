@@ -1,26 +1,21 @@
-import React from 'react'
+'use client';
+import React from 'react';
+import GenericServicePage from '../components/GenericServicePage';
+import { MessageCircle } from 'lucide-react';
 
-
-import { ArrowRight } from 'lucide-react'
-
-export default function AiConversationAnalyticsPage() {
+const AiConversationAnalyticsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>Ai Conversation Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional ai conversation analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">Ai Conversation Analytics</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional ai conversation analytics services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </div>
-  )
-}
+    <GenericServicePage
+      title="AI Conversation Analytics"
+      description="Advanced analytics for customer conversations to improve service quality and business insights."
+      icon={MessageCircle}
+      features={["Conversation Analysis","Sentiment Tracking","Topic Extraction","Performance Metrics","Quality Scoring","Trend Analysis"]}
+      benefits={["Better Customer Service","Performance Insights","Quality Improvement","Data-Driven Decisions"]}
+      pricing="$349/month"
+      category="AI"
+      color="from-green-500 to-emerald-600"
+    />
+  );
+};
+
+export default AiConversationAnalyticsPage;

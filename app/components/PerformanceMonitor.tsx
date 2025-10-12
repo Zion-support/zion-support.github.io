@@ -1,120 +1,119 @@
-'use client';
-
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'
 
 interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
+  cls: number | null
+  inp: number | null
+  fcp: number | null
+  lcp: number | null
+  ttfb: number | null
 }
 
-export default function PerformanceMonitor() {
+const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    lcp: null,
-    fid: null,
     cls: null,
+    inp: null,
     fcp: null,
+    lcp: null,
     ttfb: null
-  });
+  })
 
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
+    // Measure Core Web Vitals
+    onCLS((metric) => {
+      setMetrics(prev => ({ ...prev, cls: metric.value }))
+      console.log('CLS:', metric)
+    })
 
-    const measurePerformance = async () => {
-      try {
-        // Dynamic import to reduce bundle size
-        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
+    onINP((metric) => {
+      setMetrics(prev => ({ ...prev, inp: metric.value }))
+      console.log('INP:', metric)
+    })
 
-        getCLS((metric) => {
-          setMetrics(prev => ({ ...prev, cls: metric.value }));
-          // Send to analytics
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              metric_name: 'CLS',
-              metric_value: Math.round(metric.value * 1000) / 1000,
-              metric_delta: Math.round(metric.delta * 1000) / 1000
-            });
+    onFCP((metric) => {
+      setMetrics(prev => ({ ...prev, fcp: metric.value }))
+      console.log('FCP:', metric)
+    })
+
+    onLCP((metric) => {
+      setMetrics(prev => ({ ...prev, lcp: metric.value }))
+      console.log('LCP:', metric)
+    })
+
+    onTTFB((metric) => {
+      setMetrics(prev => ({ ...prev, ttfb: metric.value }))
+      console.log('TTFB:', metric)
+    })
+
+    // Monitor resource loading
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'navigation') {
+          console.log('Navigation timing:', entry)
+        } else if (entry.entryType === 'resource') {
+          const resource = entry as PerformanceResourceTiming
+          if (resource.duration > 1000) {
+            console.warn('Slow resource:', resource.name, resource.duration)
           }
-        });
-
-        getFID((metric) => {
-          setMetrics(prev => ({ ...prev, fid: metric.value }));
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              metric_name: 'FID',
-              metric_value: Math.round(metric.value * 1000) / 1000,
-              metric_delta: Math.round(metric.delta * 1000) / 1000
-            });
-          }
-        });
-
-        getFCP((metric) => {
-          setMetrics(prev => ({ ...prev, fcp: metric.value }));
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              metric_name: 'FCP',
-              metric_value: Math.round(metric.value * 1000) / 1000,
-              metric_delta: Math.round(metric.delta * 1000) / 1000
-            });
-          }
-        });
-
-        getLCP((metric) => {
-          setMetrics(prev => ({ ...prev, lcp: metric.value }));
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              metric_name: 'LCP',
-              metric_value: Math.round(metric.value * 1000) / 1000,
-              metric_delta: Math.round(metric.delta * 1000) / 1000
-            });
-          }
-        });
-
-        getTTFB((metric) => {
-          setMetrics(prev => ({ ...prev, ttfb: metric.value }));
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'web_vitals', {
-              metric_name: 'TTFB',
-              metric_value: Math.round(metric.value * 1000) / 1000,
-              metric_delta: Math.round(metric.delta * 1000) / 1000
-            });
-          }
-        });
-      } catch (error) {
-        // Silently handle errors
-        console.warn('Performance monitoring failed:', error);
+        }
       }
-    };
+    })
 
-    measurePerformance();
-  }, []);
+    observer.observe({ entryTypes: ['navigation', 'resource'] })
 
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-    return null;
-  }
+    // Monitor memory usage (if available)
+    if ('memory' in performance) {
+      const memory = (performance as any).memory
+      console.log('Memory usage:', {
+        used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
+        total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
+        limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
+      })
+    }
 
-  // Development mode - show metrics
-  return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-3 text-xs text-white z-50">
-      <div className="font-semibold mb-2 text-cyan-400">Performance Metrics</div>
-      <div className="space-y-1">
-        <div>LCP: {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Loading...'}</div>
-        <div>FCP: {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Loading...'}</div>
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
+
+  // Send metrics to analytics in production
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      const allMetricsCollected = Object.values(metrics).every(value => value !== null)
+      
+      if (allMetricsCollected) {
+        // Send to analytics service
+        console.log('Sending performance metrics to analytics:', metrics)
+        
+        // Example: Google Analytics
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'web_vitals', {
+            event_category: 'Performance',
+            event_label: 'Core Web Vitals',
+            value: Math.round((metrics.lcp || 0) + (metrics.inp || 0) + (metrics.cls || 0))
+          })
+        }
+      }
+    }
+  }, [metrics])
+
+  // Development-only performance display
+  if (process.env.NODE_ENV === 'development') {
+    return (
+      <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg text-xs font-mono z-50 max-w-xs">
+        <div className="font-bold mb-2 text-cyan-400">Performance Metrics</div>
+        <div className="space-y-1">
+          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
+          <div>INP: {metrics.inp ? `${metrics.inp.toFixed(2)}ms` : 'Loading...'}</div>
+          <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'Loading...'}</div>
+          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
+          <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
+        </div>
       </div>
-    </div>
-  );
+    )
+  }
+
+  return null
 }
 
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}
+export default PerformanceMonitor
