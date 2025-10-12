@@ -1,98 +1,62 @@
-'use client';
-import { useEffect } from 'react';
-;
-const MobileOptimizer: React.FC = () => {
-  useEffect(() => {
-    // Prevent zoom on input focus for iOS
-    const preventZoom = (): void => {
+import { useEffect } from 'react'
+export default MobileOptimizer;
+
+    // Prevent zoom on input focus for iOS;
       const viewport = document.querySelector('meta[name="viewport"]')
       if (viewport) {
         viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
-      }
-    }
 
-    // Add touch-friendly classes
-    const addTouchClasses = (): void => {
+    // Add touch-friendly classes;
       const buttons = document.querySelectorAll('button, a, [role="button"]')
-      buttons.forEach(button => {
         if (!button.classList.contains('touch-manipulation')) {
           button.classList.add('touch-manipulation')
-        }
       })
-    }
 
-    // Optimize images for mobile
-    const optimizeImagesForMobile = (): void => {
+    // Optimize images for mobile;
       const images = document.querySelectorAll('img')
-      images.forEach(img => {
-        const imageElement = img as HTMLImageElement
+        const imageElement = img as HTMLImageElement;
         if (!imageElement.loading) {
           imageElement.loading = 'lazy'
-        }
         if (!imageElement.decoding) {
           imageElement.decoding = 'async'
-        }
       })
-    }
 
-    // Add mobile-specific event listeners
-    const addMobileEventListeners = (): void => {
-      // Prevent double-tap zoom
-      let lastTouchEnd = 0
-      document.addEventListener('touchend', (event) => {
+    // Add mobile-specific event listeners;
+      // Prevent double-tap zoom;
+      let lastTouchEnd = 0;
         const now = new Date().getTime()
-        if (now - lastTouchEnd <= 300) {
+        if (now - lastTouchEnd;
           event.preventDefault()
-        }
-        lastTouchEnd = now
+        lastTouchEnd = now;
       }, false)
 
-      // Add haptic feedback for supported devices
-      const addHapticFeedback = (element: Element) => {
-        element.addEventListener('touchstart', () => {
+      // Add haptic feedback for supported devices;
           if ('vibrate' in navigator) {
-            navigator.vibrate(10) // Short vibration
-          }
+            navigator.vibrate(10) // Short vibration;
         })
-      }
 
       const interactiveElements = document.querySelectorAll('button, a, [role="button"]')
       interactiveElements.forEach(addHapticFeedback)
-    }
 
-    // Optimize scroll performance
-    const optimizeScrollPerformance = (): void => {
-      let ticking = false
-      const updateScrollPosition = (): void => {
-        // Add scroll-based optimizations here
-        ticking = false
-      }
-
-      const requestTick = (): void => {
+    // Optimize scroll performance;
+      let ticking = false;
+        // Add scroll-based optimizations here;
+        ticking = false;
         if (!ticking) {
           requestAnimationFrame(updateScrollPosition)
-          ticking = true
-        }
-      }
-
+          ticking = true;
       window.addEventListener('scroll', requestTick, { passive: true })
-    }
 
-    // Initialize mobile optimizations
+    // Initialize mobile optimizations;
     preventZoom()
     addTouchClasses()
     optimizeImagesForMobile()
     addMobileEventListeners()
     optimizeScrollPerformance()
 
-    // Cleanup
-    return () => {
-      window.removeEventListener('touchend', () => {})
-      window.removeEventListener('scroll', () => {})
-    }
+    // Cleanup;
+ {})
+ {})
   }, [])
 
-  return null
-}
-
-export default MobileOptimizer
+  return null;

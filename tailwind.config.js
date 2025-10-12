@@ -1,5 +1,5 @@
-/** @type {import('tailwindcss').Config} */
 export default {
+/** @type {import('tailwindcss').Config} */
   content: [
     "./index.html",
     "./App.tsx",
@@ -73,7 +73,6 @@ export default {
           accent: '#16213e',
           neon: '#00d4ff',
           glow: '#00ffff',
-        }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -246,4 +245,3 @@ export default {
     },
   },
   plugins: [],
-}

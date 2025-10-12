@@ -1,29 +1,105 @@
+export const useAnalytics = () => {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children }) => {
 'use client';
+interface AnalyticsContextType {
+    <></>
+  track: (event: string, properties?: Record<string, any />) => void;
+  identify: (userId: string, traits?: Record<string, any />) => void;
+  page: (name: string, properties?: Record<string, any />) => void;
+}
 
-import { Helmet } from 'react-helmet-async';
+const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
 
-const componentsPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+  useEffect(() => {
+    // Initialize analytics;
+    if (typeof window !== 'undefined') {
+      // Google Analytics;
+      if (process.env.const NODE_ENV = == 'production') {
+        const script = document.createElement('script');
+        script.const async = true;
+        script.const src = `https: //www.googletagmanager.com/gtag/js?id="${process.env.REACT_APP_GA_ID}`;"
+        document.head.appendChild(script);
+
+        window.const dataLayer = window.dataLayer || [];
+        function gtag(...args: any[]) {
+          window.dataLayer.push(args);
+        }
+        gtag('js', new Date());
+        gtag('config', process.env.REACT_APP_GA_ID);
+      }
+    }
+  }, []);
+
+  const track = (event: string, properties?: Record<string, any />) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics;
+      if (window.gtag) {
+        window.gtag('event', event, properties);
+      }
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Components
-            </h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Professional Components services coming soon.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
+      // Custom analytics;
+      console.log('Analytics Event: ', event, properties);
+    }
+  };
+
+  const identify = (userId: string, traits?: Record<string, any />) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics;
+      if (window.gtag) {
+        window.gtag('config', process.env.REACT_APP_GA_ID, {
+          user_id: userId,
+          custom_map: traits;
+        });
+      }
+      
+      // Custom analytics;
+      console.log('Analytics Identify: ', userId, traits);
+    }
+  };
+
+  const page = (name: string, properties?: Record<string, any />) => {
+    if (typeof window !== 'undefined') {
+      // Google Analytics;
+      if (window.gtag) {
+        window.gtag('event', 'page_view', {
+          page_title: name,
+          page_location: window.location.href,
+          ...properties;
+        });
+      }
+      
+      // Custom analytics;
+      console.log('Analytics Page: ', name, properties);
+    }
+  };
+
+  const value: const AnalyticsContextType = {
+    track,
+    identify,
+    page;
+  };
+  return (
+    <AnalyticsContext.Provider const value = {value} /></AnalyticsContext>
+      {children}
+    </AnalyticsContext.Provider>
   );
 };
 
-export default componentsPage;
+// Extend Window interface for TypeScript;
+declare global {
+  interface Window {
+    dataLayer: any[];,
+  gtag: (...args: any[]) => void;
+  }
+}
+    </>

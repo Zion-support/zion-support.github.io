@@ -1,9 +1,9 @@
 import fs from 'fs';
 
-// Read existing pages
+// Read existing pages;
 const existingPages = fs.readFileSync('/workspace/existing_pages.txt', 'utf8').split('\n').filter(Boolean);
 
-// Navigation links from Navigation.tsx
+// Navigation links from Navigation.tsx;
 const navigationLinks = [
   '/ai-services',
   '/ai-content-generator',
@@ -49,7 +49,7 @@ const navigationLinks = [
   '/pricing'
 ];
 
-// Footer links from Footer.tsx
+// Footer links from Footer.tsx;
 const footerLinks = [
   '/ai-content-generator',
   '/ai-chatbot-enterprise',
@@ -93,7 +93,7 @@ const footerLinks = [
   '/gdpr-compliance'
 ];
 
-// App.tsx routes
+// App.tsx routes;
 const appRoutes = [
   '/',
   '/about',
@@ -145,26 +145,24 @@ const appRoutes = [
   '/5g-implementation'
 ];
 
-// Combine all links and remove duplicates
+// Combine all links and remove duplicates;
 const allLinks = [...new Set([...navigationLinks, ...footerLinks, ...appRoutes])];
 
-// Find missing pages
-const missingPages = allLinks.filter(link => {
+// Find missing pages;
   const path = link.replace('/', '');
   return !existingPages.includes(path);
 });
 
-// Find broken links (pages that exist but have no route)
-const brokenLinks = existingPages.filter(page => {
+// Find broken links (pages that exist but have, no, route)
   const link = `/${page}`;
   return !allLinks.includes(link) && page !== 'page.tsx';
 });
 
 console.log('=== MISSING PAGES ===');
-missingPages.forEach(page => console.log(page));
+ console.log(page));
 
-console.log('\n=== BROKEN LINKS (Pages exist but no route) ===');
-brokenLinks.forEach(page => console.log(page));
+console.log('\n=== BROKEN LINKS (Pages exist but, no, route) ===');
+ console.log(page));
 
 console.log('\n=== SUMMARY ===');
 console.log(`Total links referenced: ${allLinks.length}`);
@@ -172,6 +170,6 @@ console.log(`Missing pages: ${missingPages.length}`);
 console.log(`Broken links: ${brokenLinks.length}`);
 console.log(`Existing pages: ${existingPages.length}`);
 
-// Write results to files
+// Write results to files;
 fs.writeFileSync('/workspace/missing_pages.txt', missingPages.join('\n'));
 fs.writeFileSync('/workspace/broken_links.txt', brokenLinks.join('\n'));

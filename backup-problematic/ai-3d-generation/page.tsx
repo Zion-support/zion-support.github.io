@@ -1,29 +1,62 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const ai3dgenerationPage: React.FC = () => {
+export default function Ai3dGenerationPage() {
   return (
-    <>
-      <Helmet>
-        <title>Ai 3d Generation - Zion Tech Group</title>
-        <meta name="description" content="Professional Ai 3d Generation services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ai 3d Generation
-            </h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Professional Ai 3d Generation services coming soon.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+        <title>AI 3D Generation - Zion Tech Group</title>
+      {/* Hero Section */}
+              AI 3D Generation;
+              Transform your ideas into stunning 3D models with our advanced AI-powered generation technology.
+              Create detailed 3D assets from text descriptions or 2D images in seconds.
+                Get Started;
+                Try Demo;
+      {/* Features Section */}
+              Powerful 3D Generation Features;
+              Everything you need to create professional 3D models with AI assistance.
 
-export default ai3dgenerationPage;
+ (
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+            ))}
+
+      {/* Use Cases Section */}
+                Perfect For;
+                Our AI 3D generation technology excels in various industries and applications;
+ (
+                  <span className="text-sm">{useCase}</span>
+              ))}
+
+      {/* CTA Section */}
+              Ready to Create Amazing 3D Models?
+              Start generating professional 3D models with our AI-powered technology today.
+                Get Started Today;
+                View All AI Services;
+      </section>    <div></div>
+        <title>AI 3D Generation - Zion Tech Group</title>
+      {/* Hero Section */}
+              AI 3D Generation;
+              Transform your ideas into stunning 3D models with our advanced AI-powered generation technology.
+              Create detailed 3D assets from text descriptions or 2D images in seconds.
+                Get Started;
+                Try Demo;
+      {/* Features Section */}
+              Powerful 3D Generation Features;
+              Everything you need to create professional 3D models with AI assistance.
+
+ (
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+            ))}
+
+      {/* Use Cases Section */}
+                Perfect For;
+                Our AI 3D generation technology excels in various industries and applications;
+ (
+                  <span className="text-sm">{useCase}</span>
+              ))}
+
+      {/* CTA Section */}
+              Ready to Create Amazing 3D Models?
+              Start generating professional 3D models with our AI-powered technology today.
+                Get Started Today;
+                View All AI Services;
+  );

@@ -1,29 +1,82 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState, useEffect } from 'react';
+export default Navigation;
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  // Removed unused state variables;
+  const [isScrolled, setIsScrolled] = useState(false);
 
-const componentsPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Components
-            </h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Professional Components services coming soon.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
+ 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+ window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+    setIsMenuOpen(false);
+    setIsServicesOpen(false);
+  };
+
+    setIsMenuOpen(!isMenuOpen);
+      closeAllMenus();
+  };
+
+    setIsServicesOpen(!isServicesOpen);
+  };
+
+  ];
+
+  ];
+
+  ];
+
+  // Removed specializedServices as it was unused;
+          {/* Logo */}
+            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+          {/* Desktop Navigation */}
+                <span>Services</span>
+                        Micro SAAS;
+                            <span>{service.name}</span>
+                        ))}
+                        AI Services;
+                            <span>{service.name}</span>
+                        ))}
+                        IT Services;
+                            <span>{service.name}</span>
+                        ))}
+                        <span>View All Services</span>
+                        <span>Specialized Solutions</span>
+              )}
+
+              About;
+              Blog;
+              Case Studies;
+              Pricing;
+              Contact;
+                <span className="hidden sm:inline">+1 302 464 0950</span>
+                Get Started;
+          {/* Mobile Menu Button */}
+          
+            {isMenuOpen ? <X className="w-6 h-6" /&gt; : <Menu className="w-6 h-6" /&gt;}</X></X>
+        {/* Mobile Menu */}
+                  <span>Services</span>
+                      <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
+                            {service.name}
+                        ))}
+                      <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
+                            {service.name}
+                        ))}
+                    
+                      View All Services →
+                )}
+
+                About;
+                Blog;
+                Case Studies;
+                Pricing;
+                Contact;
+                  <span>+1 302 464 0950</span>
+                  Get Started;
+        )}
   );
 };
 
-export default componentsPage;

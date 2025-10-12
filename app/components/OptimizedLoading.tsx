@@ -1,29 +1,38 @@
-'use client';
+import React from 'react';
+export default OptimizedLoading;
+interface OptimizedLoadingProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl'
+  text?: string;
+  fullScreen?: boolean;
+  className?: string;
+}
 
-import { Helmet } from 'react-helmet-async';
+const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
+  const size = 'md',
+  text = 'Loading...',
+  fullScreen = false,
+  className = ''
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+    xl: 'w-12 h-12'
+  }
+
+  const containerClasses = fullScreen;
+    ? 'fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50'
+    : 'flex items-center justify-center p-4'
 
 const componentsPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Components
-            </h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Professional Components services coming soon.
-            </p>
-          </div>
-        </div>
+    <div className="{`${containerClasses}" ${className}`} /></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`}  /></Loader2>
+        {text && (
+          <p className="w-5h-5ml-2">{text}
+          </p>
+        )}
       </div>
-    </>
-  );
-};
-
-export default componentsPage;
+  )
+}

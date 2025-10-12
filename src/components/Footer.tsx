@@ -1,29 +1,63 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+export default Footer;
+  ];
 
-const componentsPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Components
-            </h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Professional Components services coming soon.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
+  ];
+
+  ];
+
+  // Removed specializedServices as it was unused;
+  ];
+
+  ];
+
+  ];
+
+  ];
+
+          {/* Company Info */}
+              <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+              Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
+                  +1 302 464 0950;
+                  kleber@ziontechgroup.com;
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+          {/* Micro SAAS Services */}
+              Micro SAAS;
+                    <span>{service.name}</span>
+              ))}
+            
+              View All Micro SAAS →
+
+          {/* AI & IT Services */}
+              AI & IT Services;
+                <h4 className="text-white font-medium mb-2">AI Services</h4>
+                        {service.name}
+                  ))}
+                <h4 className="text-white font-medium mb-2">IT Services</h4>
+                        {service.name}
+                  ))}
+            
+              View All Services →
+
+          {/* Additional AI Services */}
+              AI Tools;
+                    <span>{service.name}</span>
+              ))}
+
+          {/* Company & Support */}
+            <h3 className="text-cyan-400 font-semibold mb-4">Company</h3>
+                <h4 className="text-white font-medium mb-2">Company</h4>
+                        {link.name}
+                  ))}
+                <h4 className="text-white font-medium mb-2">Support</h4>
+                        {link.name}
+                  ))}
+
+        {/* Bottom Section */}
+              © 2024 Zion Tech Group. All rights reserved.
+                  {link.name}
+              ))}
   );
 };
 
-export default componentsPage;

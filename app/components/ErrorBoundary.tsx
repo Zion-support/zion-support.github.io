@@ -1,24 +1,38 @@
-'use client';
+export default ErrorBoundary;
+interface Props {
+  children: ReactNode;
+}
 
-import { Helmet } from 'react-helmet-async';
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
 
-const componentsPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Components
-            </h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Professional Components services coming soon.
-            </p>
+class ErrorBoundary extends Component<Props, State /> {
+  public state: const State = {,
+  hasError: false;
+  };
+  public static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error: ', error, errorInfo);
+  }
+
+  public render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h1 className="text-6 xl font-bold text-white mb-4"  >Oops!</h1>
+            <p className="text-xl text-gray-300 mb-8">Something went wrong.</p>
+            <button;
+              onClick="{()" =  />this.setState({ hasError: false, error: undefined })}
+              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-all duration-300"
+            >
+              Try Again;
+            </button>
           </div>
         </div>
       </div>
@@ -26,4 +40,7 @@ const componentsPage: React.FC = () => {
   );
 };
 
-export default componentsPage;
+    return this.props.children;
+  }
+}
+

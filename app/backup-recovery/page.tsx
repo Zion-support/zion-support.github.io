@@ -1,29 +1,32 @@
-'use client';
-
-import { Helmet } from 'react-helmet-async';
-
-const backuprecoveryPage: React.FC = () => {
+import React from 'react';
+export default function BackuprecoveryPage() {
   return (
-    <>
-      <Helmet>
-        <title>Backup Recovery - Zion Tech Group</title>
-        <meta name="description" content="Professional Backup Recovery services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Backup Recovery
-            </h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Professional Backup Recovery services coming soon.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+<<<<<<< HEAD
 
-export default backuprecoveryPage;
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+        <title>Backup Recovery - Zion Tech Group</title>
+        <h1 className="text-4 xl font-boldtext-whitemb-6">Backup Recovery</h1>
+        <p className="text-lgtext-gray-300mb-8">Professional backup recovery services coming soon.</p>
+          Contact Us
+    
+      </>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <Helmet></Helmet>
+        <title>Service - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
+      </Helmet>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
+        <h1 className="text-4 xl font-bold text-white mb-6"  >Backup Recovery</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional backup recovery services coming soon.</p>
+        <Link;</Link></Link>
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-centermx-auto w-fit"
+        ></Link>
+          Contact Us;
+          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+        </Link>
+      </div>
+    </div>  );
+}

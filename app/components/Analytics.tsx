@@ -1,29 +1,30 @@
 'use client';
 
-import { Helmet } from 'react-helmet-async';
+interface AnalyticsProps {
+  children: React.ReactNode;
+}
 
-const componentsPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Components
-            </h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Professional Components services coming soon.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+  useEffect(() => {
+    // Initialize analytics tracking;
+    const initAnalytics = () => {
+      // Google Analytics initialization;
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('config', 'GA_MEASUREMENT_ID', {
+          page_title: document.title,
+          page_location: window.location.href,
+        });
+      }
+    };
 
-export default componentsPage;
+    initAnalytics();
+  }, []);
+
+  return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
+}
+
+// Extend Window interface for gtag;
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
+}

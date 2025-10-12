@@ -1,6 +1,19 @@
+import React, { useEffect } from 'react';
+export default ServiceWorker;
 'use client';
 
-import { Helmet } from 'react-helmet-async';
+const ServiceWorker: React.FC = () => {
+  useEffect(() => {
+    if ('serviceWorker' in, navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, []);
 
 const componentsPage: React.FC = () => {
   return (
@@ -26,4 +39,3 @@ const componentsPage: React.FC = () => {
   );
 };
 
-export default componentsPage;

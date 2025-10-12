@@ -1,25 +1,84 @@
-'use client';
+import React from 'react';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-import { Helmet } from 'react-helmet-async';
+=======
+interface ServicePageProps {
+  title: string,
+  description: string,
+  icon: React.ReactNode,
+  benefits: string[],
+  features: string[],
+  pricing: string,
+  seoTitle: string,
+  seoDescription: string,
+  seoKeywords: string;
+}
 
-const appPage: React.FC = () => {
+  title,
+  description,
+  icon,
+  benefits,
+  features,
+  pricing,
+  seoTitle,
+  seoDescription,
+  seoKeywords;
+}: ServicePageProps) {
   return (
-    <>
-      <Helmet>
-        <title>App - Zion Tech Group</title>
-        <meta name="description" content="Professional App services by Zion Tech Group. Transform your business with our expert solutions." />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <Helmet></Helmet>
+        <title>Service - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              App
-            </h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Professional App services coming soon.
-            </p>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{icon}
           </div>
+          <h1 className="w-5h-5ml-2">{title}
+          </h1>
+          <p className="w-5h-5ml-2">{description}
+          </p>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <Link;</Link></Link>
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+        ></Link>
+          Get Started;
+          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+        </Link>
+            <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More;
+            </Link>
+          </div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div /></div>
+            <h2 className="text-3 xl font-bold text-white mb-6"  >Key Benefits</h2>
+            <ul className="w-5h-5ml-2" /></ul>
+              {benefits.map((benefit, index) => (
+                <li key="{index}" className="flexitems-start" /></li>
+                  <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                  <span className="text-gray-300"  >{benefit}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div /></div>
+            <h2 className="text-3 xl font-bold text-white mb-6"  >Features</h2>
+            <ul className="w-5h-5ml-2" /></ul>
+              {features.map((feature, index) => (
+                <li key="{index}" className="flexitems-start" /></li>
+                  <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                  <span className="text-gray-300"  >{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <h2 className="text-3 xl font-bold text-white mb-4"  >Pricing</h2>
+          <p className="text-2 xl font-boldtext-cyan-400 mb-6">{pricing}</p>
+          <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-all duration-300">Contact Us for Details;
+          </Link>
         </div>
       </div>
     </>

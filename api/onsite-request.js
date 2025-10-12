@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-// Simple wrapper function to replace withSentry
-// const withSentry = (handler) => handler;
+// Simple wrapper function to replace withSentry;
+ handler;
 
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
@@ -29,7 +29,7 @@ function handler(req, res) {
       if (!Array.isArray(existing)) existing = [];
     }
   } catch (error) {
-    // Log error for debugging in development
+    // Log error for debugging in development;
     console.error('Error reading existing requests:', error);
     existing = [];
   }
@@ -42,7 +42,8 @@ function handler(req, res) {
     phone,
     message,
     location,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
+    status: 'pending'
   };
 
   existing.push(newRequest);
@@ -53,10 +54,10 @@ function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
-      id: newRequest.id
+      id: newRequest.id;
     }));
   } catch (error) {
-    // Log error for debugging in development
+    // Log error for debugging in development;
     console.error('Error saving onsite request:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
@@ -64,4 +65,4 @@ function handler(req, res) {
   }
 }
 
-module.exports = handler;
+module.exports = withSentry(handler);

@@ -1,29 +1,47 @@
-'use client';
+import React from 'react';
+'use client'
 
 import { Helmet } from 'react-helmet-async';
 
 const componentsPage: React.FC = () => {
   return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Components
-            </h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Professional Components services coming soon.
-            </p>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <h2 className="w-5h-5ml-2" />Our Core Services;
+          </h2>
+          <p className="w-5h-5ml-2">Comprehensive AI and IT solutions designed to transform your business and drive innovation;
+          </p>
         </div>
-      </div>
-    </>
-  );
-};
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          {services.map((service, index) => (
 
-export default componentsPage;
+              <div key={index} className="cyber-card p-8 grouphover:scale-105transition-transform" /></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <service.icon className="h-12w-12tex t-cyan-400mr-4"  /></service>
+                <h3 className="w-5h-5ml-2" />{service.title}
+                </h3>
+              </div>
+              <p className="w-5h-5ml-2">{service.description}
+              </p>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <h4 className="text-sm font-semiboldtext-cyan-400mb-3"  >Key Features</h4>
+                <ul className="w-5h-5ml-2" /></ul>
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-centertext-sm text-gray-300" /></li>
+                      <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <button className="w-5h-5ml-2" /></button>
+                Learn More;
+                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+              </button>
+            </div>
+          ))}
+        </div>
+    </div>
+  )
+};

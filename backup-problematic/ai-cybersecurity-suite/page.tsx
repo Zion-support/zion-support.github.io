@@ -1,29 +1,36 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const aicybersecuritysuitePage: React.FC = () => {
+export default function AICybersecuritySuitePage() {
   return (
-    <>
-      <Helmet>
-        <title>Ai Cybersecurity Suite - Zion Tech Group</title>
-        <meta name="description" content="Professional Ai Cybersecurity Suite services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Ai Cybersecurity Suite
-            </h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Professional Ai Cybersecurity Suite services coming soon.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
+        <title>AI Cybersecurity Suite - Zion Tech Group</title>
+      {/* Hero Section */}
+              AI Cybersecurity Suite;
+              Comprehensive AI-powered cybersecurity solutions with advanced threat detection, 
+              zero trust security, and automated incident response capabilities.
+                Get Started;
+                View Pricing;
+      {/* Features Section */}
+              Advanced Security Features;
+              Protect your organization with cutting-edge AI-powered cybersecurity solutions.
 
-export default aicybersecuritysuitePage;
+                AI Threat Detection;
+                Advanced machine learning algorithms detect and prevent cyber threats in real-time.
+                  Real-time monitoring;
+                  Behavioral analysis;
+                  Anomaly detection;
+                Zero Trust Security;
+                Implement zero trust architecture with continuous verification and access control.
+                  Continuous verification;
+                  Access control;
+                  Identity management;
+                Automated Response;
+                Automated incident response and threat mitigation with AI-powered decision making.
+                  Instant response;
+                  Threat mitigation;
+                  Recovery automation;
+      {/* CTA Section */}
+            Ready to Secure Your Organization?
+            Protect your business with our comprehensive AI-powered cybersecurity suite.
+              Get Started;
+              View Pricing;
+  );

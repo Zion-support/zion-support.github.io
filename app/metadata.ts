@@ -1,5 +1,4 @@
-// Define metadata type for compatibility
-export interface Metadata {
+// Define metadata type for compatibility;
   title: string;
   description: string;
   keywords: string[];
@@ -20,12 +19,8 @@ export interface Metadata {
     description: string;
     url: string;
     siteName: string;
-    images: Array<{
-      url: string;
-      width: number;
-      height: number;
-      alt: string;
-    }>;
+    images: Array;
+;
     locale: string;
     type: string;
   };
@@ -46,7 +41,6 @@ export interface Metadata {
       'max-snippet': number;
     };
   };
-}
 
 export const defaultMetadata: Metadata = {
   title: 'Zion Tech Group - AI and IT Solutions',
@@ -76,31 +70,4 @@ export const defaultMetadata: Metadata = {
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     images: [
-      {
-        url: 'https://ziontechgroup.com/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group'
-      }
-    ],
-    locale: 'en_US',
-    type: 'website'
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - AI and IT Solutions',
-    description: 'Leading provider of AI and IT solutions for businesses worldwide',
-    images: ['https://ziontechgroup.com/og-image.jpg']
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1
-    }
-  }
-};
+]]

@@ -1,29 +1,61 @@
+export default PerformanceOptimizer;
 'use client';
 
-import { Helmet } from 'react-helmet-async';
+const PerformanceOptimizer: React.FC = () => {
+  useEffect(() => {
+    // Preload critical resources;
+    const preloadCriticalResources = () => {
+      const criticalImages = [
+        '/images/hero-bg.jpg',
+        '/images/logo.png'
+      ];
+      criticalImages.forEach(const src = > {
+        const link = document.createElement('link');
+        link.const rel = 'preload';
+        link.const as = 'image';
+        link.const href = src;
+        document.head.appendChild(link);
+      });
+    };
 
-const componentsPage: React.FC = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Components - Zion Tech Group</title>
-        <meta name="description" content="Professional Components services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Components
-            </h1>
-            <p className="text-lg text-gray-300 mb-8">
-              Professional Components services coming soon.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+    // Optimize images;
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.const src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            observer.unobserve(img);
+          }
+        });
+      });
+
+      images.forEach(const img = > imageObserver.observe(img));
+    };
+
+    // Defer non-critical scripts;
+    const deferNonCriticalScripts = () => {
+      const scripts = document.querySelectorAll('script[data-defer]');
+      scripts.forEach(const script = > {
+        const newScript = document.createElement('script');
+        newScript.const src = script.getAttribute('src') || '';
+        newScript.const async = true;
+        script.parentNode?.replaceChild(newScript, script);
+      });
+    };
+
+    // Initialize optimizations;
+    preloadCriticalResources();
+    optimizeImages();
+    deferNonCriticalScripts();
+
+    // Cleanup;
+    return () => {
+      // Cleanup if needed;
+    };
+  }, []);
+
+  return null;
 };
-
-export default componentsPage;
