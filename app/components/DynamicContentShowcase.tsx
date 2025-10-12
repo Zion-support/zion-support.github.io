@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-ursor/website-audit-and-update-with-deployment-a178
-=======
-'use client';
-
-import React, { useState, useEffect } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-072b
 
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
