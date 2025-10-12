@@ -3,58 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
-<<<<<<< HEAD
-import HomePage from './app/page'
-import AboutPage from './app/about/page'
-import ContactPage from './app/contact/page'
-import AIServicesPage from './app/ai-services/page'
-import ITServicesPage from './app/it-services/page'
-import MicroSAASServicesPage from './app/micro-saas-services/page'
-import FiveGImplementationPage from './app/5g-implementation/page'
-import CloudServicesPage from './app/cloud-services/page'
-import DigitalTransformationPage from './app/digital-transformation/page'
-import CareersPage from './app/careers/page'
-import BlogPage from './app/blog/page'
-
-function App() {
-  return (
-    <Router>
-      <div className="min-h-screen bg-gray-900">
-        <Navigation />
-<<<<<<< HEAD
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/ai-services" element={<AIServicesPage />} />
-            <Route path="/it-services" element={<ITServicesPage />} />
-            <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
-            <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-            <Route path="/cloud-services" element={<CloudServicesPage />} />
-            <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-          </Routes>
-        </main>
-=======
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/ai-services" element={<AIServicesPage />} />
-          <Route path="/it-services" element={<ITServicesPage />} />
-          <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
-          <Route path="/cloud-services" element={<CloudServicesPage />} />
-          <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-          <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-          <Route path="/careers" element={<CareersPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
->>>>>>> cursor/website-audit-and-update-with-deployment-bee6
-        <Footer />
-      </div>
-    </Router>
-=======
 import ErrorBoundary from './app/components/ErrorBoundary'
 import LoadingSpinner from './app/components/LoadingSpinner'
 import SEOHead from './app/components/SEOHead'
@@ -69,6 +17,8 @@ const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
 const MicroSAASServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
 const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
 const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'))
+const CareersPage = React.lazy(() => import('./app/careers/page'))
+const BlogPage = React.lazy(() => import('./app/blog/page'))
 
 // Loading component for Suspense
 const PageLoader = () => (
@@ -95,6 +45,8 @@ function App() {
                 <Route path="/cloud-services" element={<CloudServicesPage />} />
                 <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                 <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                <Route path="/careers" element={<CareersPage />} />
+                <Route path="/blog" element={<BlogPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 {/* 404 Route */}
                 <Route path="*" element={
@@ -118,7 +70,6 @@ function App() {
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
   )
 }
 

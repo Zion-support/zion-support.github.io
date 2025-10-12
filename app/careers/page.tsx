@@ -1,10 +1,10 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Users, Briefcase, MapPin, Clock, Star } from 'lucide-react';
+import { ArrowRight, Users, Briefcase, Clock, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const CareersPage: React.FC = () => {
-  const openPositions = [
+  const positions = [
     {
       title: 'Senior AI Engineer',
       department: 'AI Research',
@@ -39,7 +39,7 @@ const CareersPage: React.FC = () => {
     }
   ];
 
-  const benefits = [
+  const companyBenefits = [
     {
       icon: <Star className="w-8 h-8 text-yellow-500" />,
       title: 'Competitive Compensation',
@@ -93,6 +93,73 @@ const CareersPage: React.FC = () => {
               >
                 Learn About Us
               </Link>
+            </div>
+          </div>
+
+          {/* Open Positions */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {positions.map((position, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
+                  <h3 className="text-xl font-bold text-white mb-2">{position.title}</h3>
+                  <div className="flex items-center space-x-4 text-sm text-gray-300 mb-4">
+                    <span className="flex items-center">
+                      <Briefcase className="w-4 h-4 mr-1" />
+                      {position.department}
+                    </span>
+                    <span className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {position.type}
+                    </span>
+                  </div>
+                  <p className="text-gray-300 mb-4">{position.description}</p>
+                  <div className="mb-4">
+                    <h4 className="text-white font-semibold mb-2">Requirements:</h4>
+                    <ul className="text-sm text-gray-300 space-y-1">
+                      {position.requirements.map((req, reqIndex) => (
+                        <li key={reqIndex} className="flex items-start">
+                          <span className="text-blue-400 mr-2">•</span>
+                          {req}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="mb-6">
+                    <h4 className="text-white font-semibold mb-2">Benefits:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {position.benefits.map((benefit, benefitIndex) => (
+                        <span key={benefitIndex} className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <Link
+                    to="/contact"
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
+                  >
+                    Apply Now
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Company Benefits */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Work With Us?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {companyBenefits.map((benefit, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center">
+                  <div className="mb-4">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </div>
+              ))}
             </div>
           </div>
 
