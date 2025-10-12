@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
@@ -22,7 +21,6 @@ export default function SystemintegrationPage() {
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
       </div>
-=======
 import React from 'react';
 import { ArrowRight, Settings } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -76,7 +74,6 @@ export default function SystemIntegrationPage() {
           </Link>
         </div>
       </section>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
     </div>
   );
 }

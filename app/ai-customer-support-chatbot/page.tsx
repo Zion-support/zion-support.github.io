@@ -118,10 +118,7 @@ export default function AICustomerSupportChatbot() {
     }
   ]
 
-<<<<<<< HEAD
 export default function AicustomersupportchatbotPage() {
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   return (
     <Layout
       title="AI Customer Support Chatbot - 24/7 Automated Support | Zion Tech Group"
@@ -332,11 +329,8 @@ export default function AicustomersupportchatbotPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </div>
   );
-=======
     </Layout>
   )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }

@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { 
-<<<<<<< HEAD
   Layers, BarChart3, Calendar, MessageCircle, FileText, 
   Mail, DollarSign, Package, Clock, Users, Shield, 
   CheckCircle, ArrowRight, Sparkles, Target, Award, 
@@ -12,7 +10,6 @@ import {
   Search, Filter, Download, Upload, Share, Phone, 
   MapPin, Globe, TrendingUp, Star, Zap, Brain
 } from 'lucide-react'
-=======
   ArrowRight, 
   CheckCircle, 
   Star,
@@ -38,18 +35,14 @@ import {
   CreditCard,
   Zap
 } from 'lucide-react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
-=======
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Settings } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
 export default function MicroSAASServicesPage() {
   const microSaasServices = [
     {
-<<<<<<< HEAD
       icon: <BarChart3 className="w-8 h-8 text-cyan-400" />,
       title: 'AI Customer Insights',
       description: 'Transform customer data into actionable insights with AI-powered analytics and churn prediction.',
@@ -166,7 +159,6 @@ export default function MicroSAASServicesPage() {
     { number: '24/7', label: 'Support Available', icon: <Monitor className="w-6 h-6 text-blue-400" /> },
     { number: '10,000+', label: 'Active Users', icon: <Users className="w-6 h-6 text-purple-400" /> }
   ]
-=======
       icon: <Brain className="w-8 h-8 text-cyan-500" />,
       title: 'AI Task Manager',
       description: 'Intelligent task management with AI-powered prioritization and automation.',
@@ -267,12 +259,10 @@ export default function MicroSAASServicesPage() {
       rating: 5
     }
   ];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Micro SaaS Services - Zion Tech Group | Ready-to-Deploy Software Solutions</title>
         <meta name="description" content="Powerful micro SaaS solutions that integrate seamlessly with your workflow. From AI automation to business tools, deploy instantly and scale effortlessly." />
         <meta name="keywords" content="micro SaaS, software as a service, business tools, automation, AI solutions, ready-to-deploy, Zion Tech Group" />
@@ -470,7 +460,6 @@ export default function MicroSAASServicesPage() {
       </section>
     </>
   )
-=======
         <title>Micro SAAS Services - Zion Tech Group | AI-Powered Solutions</title>
         <meta name="description" content="Discover our collection of AI-powered micro SAAS solutions including task management, expense tracking, password management, and more. Streamline your business operations." />
         <meta name="keywords" content="micro SAAS, AI solutions, task management, expense tracking, password manager, invoice generator, Zion Tech Group" />
@@ -641,5 +630,4 @@ export default function MicroSAASServicesPage() {
       </div>
     </>
   );
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 import { 
   ArrowRight, Cloud, BarChart3, Zap, CheckCircle, 
   Clock, Target, TrendingUp, PieChart, Smartphone, Shield, 
@@ -25,7 +24,6 @@ export default function CloudMigrationProPage() {
       icon: <Zap className="w-6 h-6 text-emerald-400" />,
       title: 'Zero-Downtime Migration',
       description: 'Seamless migration with zero business disruption using advanced automation and orchestration'
-=======
 import { Cloud, ArrowRight, CheckCircle, Zap, Shield, Database, Smartphone, Globe, BarChart3, Star, Sparkles, Server, Lock, Users } from 'lucide-react'
 import Layout from '../layout'
 
@@ -35,12 +33,10 @@ export default function CloudMigrationPro() {
       icon: <Cloud className="w-6 h-6 text-cyan-400" />,
       title: 'Zero-Downtime Migration',
       description: 'Seamless migration with guaranteed zero downtime and data integrity'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
     },
     {
       icon: <Shield className="w-6 h-6 text-purple-400" />,
       title: 'Security-First Approach',
-<<<<<<< HEAD
       description: 'Enterprise-grade security implementation with compliance monitoring and threat protection'
     },
     {
@@ -57,7 +53,6 @@ export default function CloudMigrationPro() {
       icon: <Bot className="w-6 h-6 text-red-400" />,
       title: 'AI-Powered Automation',
       description: 'Intelligent automation for migration planning, execution, and ongoing optimization'
-=======
       description: 'Enterprise-grade security throughout the entire migration process'
     },
     {
@@ -108,14 +103,12 @@ export default function CloudMigrationPro() {
       title: 'Go-Live & Support',
       description: 'Smooth transition with 24/7 support and ongoing optimization',
       icon: <Zap className="w-8 h-8 text-red-400" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
     }
   ]
 
   const pricingPlans = [
     {
       name: 'Small Business',
-<<<<<<< HEAD
       price: '$2,999',
       period: '/project',
       description: 'Perfect for small businesses',
@@ -126,7 +119,6 @@ export default function CloudMigrationPro() {
         'Basic monitoring',
         '30-day warranty',
         'Documentation'
-=======
       price: '$2,500',
       period: 'one-time',
       description: 'Perfect for small businesses with basic cloud needs',
@@ -136,13 +128,11 @@ export default function CloudMigrationPro() {
         'Standard security measures',
         'Email support',
         '30-day post-migration support'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
       ],
       popular: false
     },
     {
       name: 'Enterprise',
-<<<<<<< HEAD
       price: '$9,999',
       period: '/project',
       description: 'Ideal for growing businesses',
@@ -155,7 +145,6 @@ export default function CloudMigrationPro() {
         'Custom integrations',
         'Performance optimization',
         'Security hardening'
-=======
       price: '$15,000',
       period: 'one-time',
       description: 'Comprehensive migration for growing enterprises',
@@ -166,12 +155,10 @@ export default function CloudMigrationPro() {
         'Priority support',
         'Custom optimization',
         '90-day post-migration support'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
       ],
       popular: true
     },
     {
-<<<<<<< HEAD
       name: 'Enterprise Plus',
       price: '$24,999',
       period: '/project',
@@ -185,7 +172,6 @@ export default function CloudMigrationPro() {
         'Custom solutions',
         'Advanced security',
         'SLA guarantee'
-=======
       name: 'Custom Solution',
       price: 'Custom',
       period: 'pricing',
@@ -197,7 +183,6 @@ export default function CloudMigrationPro() {
         'Dedicated team',
         'White-glove service',
         '1-year support included'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
       ],
       popular: false
     }
@@ -205,7 +190,6 @@ export default function CloudMigrationPro() {
 
   const testimonials = [
     {
-<<<<<<< HEAD
       name: 'Jennifer Walsh',
       company: 'Financial Services CTO',
       content: 'Reduced our infrastructure costs by 45% and improved performance by 200%. The migration was flawless with zero downtime.',
@@ -635,7 +619,6 @@ export default function CloudMigrationPro() {
       </section>
     </div>
   );
-=======
       name: 'Jennifer Adams',
       company: 'TechCorp Solutions',
       content: 'The migration was flawless. Zero downtime and our performance improved by 40%.',
@@ -866,5 +849,4 @@ export default function CloudMigrationPro() {
       </div>
     </Layout>
   )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }

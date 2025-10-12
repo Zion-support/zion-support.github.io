@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import React, { useState } from 'react';
@@ -149,7 +148,6 @@ export default function AiEcommerceOptimizerProPage() {
       ]
     }
   ];
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
@@ -198,12 +196,10 @@ export default function AIEcommerceOptimizerPro() {
       items: ['Real-time Dashboard', 'Sales Analytics', 'Customer Insights', 'ROI Tracking', 'Performance Metrics', 'Custom Reports']
     }
   ]
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
   const pricingPlans = [
     {
       name: 'Starter',
-<<<<<<< HEAD
       price: '$199',
       period: '/month',
       description: 'Perfect for small online stores and startups',
@@ -221,7 +217,6 @@ export default function AIEcommerceOptimizerPro() {
     {
       name: 'Professional',
       price: '$599',
-=======
       price: '$79',
       period: '/month',
       description: 'Perfect for small online stores',
@@ -237,12 +232,10 @@ export default function AIEcommerceOptimizerPro() {
     {
       name: 'Professional',
       price: '$199',
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
       period: '/month',
       description: 'Ideal for growing e-commerce businesses',
       features: [
         'Up to 10,000 products',
-<<<<<<< HEAD
         'Advanced AI personalization',
         'Comprehensive analytics',
         'Priority support',
@@ -422,7 +415,6 @@ export default function AIEcommerceOptimizerPro() {
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
-=======
         'Advanced AI features',
         'Custom recommendations',
         'Priority support',
@@ -530,14 +522,12 @@ export default function AIEcommerceOptimizerPro() {
                     <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
                   </div>
                   <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -562,7 +552,6 @@ export default function AIEcommerceOptimizerPro() {
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {benefit}
-=======
         {/* Optimization Features */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-purple-900/30">
           <div className="max-w-7xl mx-auto">
@@ -584,12 +573,10 @@ export default function AIEcommerceOptimizerPro() {
                       <li key={itemIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-orange-400 mr-2" />
                         {item}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                       </li>
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
               </div>
             ))}
           </div>
@@ -643,15 +630,12 @@ export default function AIEcommerceOptimizerPro() {
                 <p className="text-gray-400 text-sm">{integration.category}</p>
               </div>
             ))}
-=======
               ))}
             </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
           </div>
         </section>
 
         {/* Pricing Section */}
-<<<<<<< HEAD
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Choose Your Plan</h2>
@@ -714,7 +698,6 @@ export default function AIEcommerceOptimizerPro() {
               <h2 className="text-3xl font-bold text-white mb-4">What Our Customers Say</h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                 Join hundreds of e-commerce businesses already growing with AI optimization.
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -723,12 +706,10 @@ export default function AIEcommerceOptimizerPro() {
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                 Choose the plan that scales with your e-commerce business
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
                   <div className="flex items-center mb-4">
@@ -749,7 +730,6 @@ export default function AIEcommerceOptimizerPro() {
                   <p className="text-gray-300 italic mb-3">"{testimonial.content}"</p>
                   <div className="text-cyan-400 font-semibold text-sm">
                     Result: {testimonial.results}
-=======
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
@@ -815,7 +795,6 @@ export default function AIEcommerceOptimizerPro() {
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.company}</div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                   </div>
                 </div>
               ))}
@@ -824,7 +803,6 @@ export default function AIEcommerceOptimizerPro() {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 border border-cyan-500/30">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -852,7 +830,6 @@ export default function AIEcommerceOptimizerPro() {
             </div>
             <div className="mt-8 text-white/80 text-sm">
               <p>✓ 14-day free trial • ✓ No setup fees • ✓ 35% average sales increase • ✓ Cancel anytime</p>
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-orange-500/20 to-purple-500/20 rounded-2xl p-8 border border-orange-500/30">
@@ -876,16 +853,12 @@ export default function AIEcommerceOptimizerPro() {
                   Learn More
                 </Link>
               </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </div>
   );
-=======
     </Layout>
   )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }

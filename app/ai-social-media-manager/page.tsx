@@ -126,10 +126,7 @@ export default function AISocialMediaManager() {
     }
   ]
 
-<<<<<<< HEAD
 export default function AisocialmediamanagerPage() {
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   return (
     <Layout
       title="AI Social Media Manager - Automated Social Media Management | Zion Tech Group"
@@ -340,11 +337,8 @@ export default function AisocialmediamanagerPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </div>
   );
-=======
     </Layout>
   )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }

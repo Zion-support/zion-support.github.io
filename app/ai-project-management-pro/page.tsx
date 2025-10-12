@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import React, { useState } from 'react';
@@ -140,7 +139,6 @@ export default function AiProjectManagementProPage() {
       ]
     }
   ];
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
@@ -189,12 +187,10 @@ export default function AIProjectManagementPro() {
       items: ['Project Dashboards', 'Performance Metrics', 'Time Tracking', 'Budget Analysis', 'ROI Reports', 'Custom Reports']
     }
   ]
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
   const pricingPlans = [
     {
       name: 'Starter',
-<<<<<<< HEAD
       price: '$29',
       period: '/month',
       description: 'Perfect for small teams and individual projects',
@@ -226,7 +222,6 @@ export default function AIProjectManagementPro() {
       ],
       popular: true,
       cta: 'Get Started'
-=======
       price: '$59',
       period: '/month',
       description: 'Perfect for small teams and freelancers',
@@ -255,13 +250,11 @@ export default function AIProjectManagementPro() {
         'Integrations'
       ],
       popular: true
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
     },
     {
       name: 'Enterprise',
       price: '$299',
       period: '/month',
-<<<<<<< HEAD
       description: 'For large organizations with advanced needs',
       features: [
         'Everything in Professional',
@@ -427,7 +420,6 @@ export default function AIProjectManagementPro() {
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
-=======
       description: 'For large organizations',
       features: [
         'Unlimited team members',
@@ -524,14 +516,12 @@ export default function AIProjectManagementPro() {
                     <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
                   </div>
                   <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
@@ -556,7 +546,6 @@ export default function AIProjectManagementPro() {
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {benefit}
-=======
         {/* Management Features */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-purple-900/30">
           <div className="max-w-7xl mx-auto">
@@ -578,12 +567,10 @@ export default function AIProjectManagementPro() {
                       <li key={itemIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-indigo-400 mr-2" />
                         {item}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                       </li>
                     ))}
                   </ul>
                 </div>
-<<<<<<< HEAD
               </div>
             ))}
           </div>
@@ -638,15 +625,12 @@ export default function AIProjectManagementPro() {
                 <p className="text-gray-400 text-sm">{integration.category}</p>
               </div>
             ))}
-=======
               ))}
             </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
           </div>
         </section>
 
         {/* Pricing Section */}
-<<<<<<< HEAD
         <section className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Choose Your Plan</h2>
@@ -709,7 +693,6 @@ export default function AIProjectManagementPro() {
               <h2 className="text-3xl font-bold text-white mb-4">What Our Customers Say</h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                 Join thousands of teams who have transformed their project management with AI.
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -718,12 +701,10 @@ export default function AIProjectManagementPro() {
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                 Choose the plan that fits your team size and project needs
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-<<<<<<< HEAD
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
                   <div className="flex items-center mb-4">
@@ -744,7 +725,6 @@ export default function AIProjectManagementPro() {
                   <p className="text-gray-300 italic mb-3">"{testimonial.content}"</p>
                   <div className="text-cyan-400 font-semibold text-sm">
                     Result: {testimonial.results}
-=======
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
@@ -810,7 +790,6 @@ export default function AIProjectManagementPro() {
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-400">{testimonial.company}</div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                   </div>
                 </div>
               ))}
@@ -819,7 +798,6 @@ export default function AIProjectManagementPro() {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 border border-cyan-500/30">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -847,7 +825,6 @@ export default function AIProjectManagementPro() {
             </div>
             <div className="mt-8 text-white/80 text-sm">
               <p>✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 support • ✓ Cancel anytime</p>
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 border border-indigo-500/30">
@@ -871,16 +848,12 @@ export default function AIProjectManagementPro() {
                   Learn More
                 </Link>
               </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </div>
   );
-=======
     </Layout>
   )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }
