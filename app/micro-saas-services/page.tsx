@@ -1,20 +1,22 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Zap, BarChart, MessageSquare, Shield, Cloud, CheckCircle, ArrowRight, Users, Award, Star } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2460
 
-const MicroSaasServicesPage: React.FC = () => {
-  const services = [
-    {
-
+const Page: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-2460
+        <title>Micro Saas Services - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group - Advanced AI and IT Solutions" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Micro Saas Services</h1>
+          <p className="text-gray-300">This page is under development.</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Page;

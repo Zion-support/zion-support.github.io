@@ -7,7 +7,7 @@ import HomePage from './app/page';
 // Component imports
 import ErrorBoundary from './app/components/ErrorBoundary';
 import SEOHead from './app/components/SEOHead';
-import AnalyticsProvider from './app/components/AnalyticsProvider';
+import { AnalyticsProvider } from './app/components/AnalyticsProvider';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
