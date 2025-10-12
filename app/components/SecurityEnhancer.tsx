@@ -32,12 +32,12 @@ import { useEffect } from 'react';
   }, [])
 
   return (
-    <div className="{`security-enhanced" ${className}`}  />{children}
-    </div>
+    <div className="{`s e curity-enhanced" ${className}`}  >{children}
+    </div className="{`s e curity-enhanced" ${className}`}  ></div>
   )
 }
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps /> = ({ children }) => {useEffect(() => {// Security enhancement logic
+const SecurityEnhancer: React.FC<SecurityEnhancerProps >= ({ children }) => {useEffect(() => {// Security enhancement logic
 
     $3
   )}
@@ -52,7 +52,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps /> = ({ children }) => {u
           e.preventDefault()}
       })}
     enhanceSecurity()}, [])
-  return <React.Fragment />{children}</React.Fragment>}
+  return </SecurityEnhancerProps ><React.Fragment >{children}</React.Fragment ></React.Fragment>}
 export default SecurityEnhancer
   </SecurityEnhancerProps>
 

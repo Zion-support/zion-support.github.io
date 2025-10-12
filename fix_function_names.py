@@ -1,26 +1,14 @@
 #!/usr/bin/env python3
 """
-Final comprehensive fix for all remaining issues
+Script to fix function names with hyphens
 """
 import os
 import re
 import glob
 
-def final_fix(content):
-    """Final comprehensive fix"""
-    # Fix malformed JSX elements with closing tags
-    content = re.sub(r'</[A-Za-z]+ className="[^"]*" ><([A-Za-z]+) className="([^"]*?)" />', r'<\1 className="\2" />', content)
-    
-    # Fix malformed closing tags
-    content = re.sub(r'</[A-Za-z]+ className="[^"]*" >', '', content)
-    
-    # Fix spaces in class names
-    content = re.sub(r'w-8 h-8t ext-', 'w-8 h-8 text-', content)
-    content = re.sub(r'w-6 h-6t ext-', 'w-6 h-6 text-', content)
-    content = re.sub(r'w-4 h-4t ext-', 'w-4 h-4 text-', content)
-    content = re.sub(r'w-5 h-5t ext-', 'w-5 h-5 text-', content)
-    
-    # Fix malformed function names
+def fix_function_names(content):
+    """Fix function names with hyphens"""
+    # Fix function names like "5G-Data-AnalyticsPage" -> "FiveGDataAnalyticsPage"
     content = re.sub(r'export default function (\d+[Gg])-([A-Za-z-]+)Page\(\)', 
                      lambda m: f'export default function {m.group(1).replace("5G", "FiveG").replace("5g", "FiveG")}{"".join(word.capitalize() for word in m.group(2).split("-"))}Page()', 
                      content)
@@ -29,17 +17,6 @@ def final_fix(content):
     content = re.sub(r'export default function ([A-Za-z0-9]+)-([A-Za-z-]+)Page\(\)', 
                      lambda m: f'export default function {m.group(1)}{"".join(word.capitalize() for word in m.group(2).split("-"))}Page()', 
                      content)
-    
-    # Fix malformed JSX attributes
-    content = re.sub(r'className="([^"]*?)([a-zA-Z])([a-zA-Z])', r'className="\1\2 \3', content)
-    
-    # Fix specific patterns
-    content = re.sub(r'text-cyan-400" >', 'text-cyan-400" />', content)
-    content = re.sub(r'text-emerald-400" >', 'text-emerald-400" />', content)
-    content = re.sub(r'text-purple-400" >', 'text-purple-400" />', content)
-    content = re.sub(r'text-red-400" >', 'text-red-400" />', content)
-    content = re.sub(r'text-orange-400" >', 'text-orange-400" />', content)
-    content = re.sub(r'text-pink-400" >', 'text-pink-400" />', content)
     
     return content
 
@@ -50,13 +27,13 @@ def process_file(file_path):
             content = f.read()
         
         original_content = content
-        content = final_fix(content)
+        content = fix_function_names(content)
         
         # Only write if content changed
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Final fix applied: {file_path}")
+            print(f"Fixed function names: {file_path}")
             return True
         else:
             return False
@@ -86,7 +63,7 @@ def main():
         if process_file(file_path):
             fixed_count += 1
     
-    print(f"Applied final fixes to {fixed_count} files")
+    print(f"Fixed {fixed_count} files")
 
 if __name__ == "__main__":
     main()
