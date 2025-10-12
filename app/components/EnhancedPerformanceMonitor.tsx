@@ -13,7 +13,6 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Real-time Analytics',
-<<<<<<< HEAD
       description: 'Get instant insights into your system performance with comprehensive analytics'
     },
     {
@@ -25,135 +24,242 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
       icon: Globe,
       title: 'Global Coverage',
       description: 'Monitor performance across multiple locations and data centers worldwide'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
     }
   ]
 
   const benefits = [
     'Real-time performance monitoring',
-    'AI-powered analytics and insights',
-    'Enterprise-grade security and compliance',
-    'Scalable monitoring solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective monitoring plans',
-    'Proven track record of success'
+    'AI-powered anomaly detection',
+    'Automated alerting system',
+    'Comprehensive reporting',
+    'Multi-platform support',
+    'Customizable dashboards',
+    'Historical data analysis',
+    '24/7 monitoring coverage'
+  ]
+
+  const pricing = [
+    {
+      name: 'Basic',
+      price: '$99',
+      period: '/month',
+      description: 'Perfect for small businesses starting with performance monitoring',
+      features: [
+        'Up to 5 servers',
+        'Basic monitoring',
+        'Email alerts',
+        'Standard support',
+        '7-day data retention'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$299',
+      period: '/month',
+      description: 'Ideal for growing businesses with advanced monitoring needs',
+      features: [
+        'Up to 25 servers',
+        'Advanced analytics',
+        'SMS and email alerts',
+        'Priority support',
+        '30-day data retention',
+        'API access'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored solutions for large organizations',
+      features: [
+        'Unlimited servers',
+        'Custom monitoring',
+        'Dedicated support',
+        'Unlimited data retention',
+        'White-label options',
+        '24/7 phone support'
+      ],
+      popular: false
+    }
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Enhanced Performance Monitor | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Professional Enhanced Performance Monitor services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
-        <meta name="keywords" content="performance monitoring, AI solutions, IT services, Zion Tech Group, system monitoring" />
+        <title>Enhanced Performance Monitor - Zion Tech Group</title>
+        <meta name="description" content="Monitor and optimize your system performance with our AI-powered performance monitoring solution. Real-time analytics, automated alerting, and comprehensive reporting." />
+        <meta name="keywords" content="performance monitoring, system monitoring, AI monitoring, real-time analytics, server monitoring" />
       </Helmet>
-      
+
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
-                Enhanced Performance Monitor
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+              Enhanced Performance Monitor
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Monitor and optimize your system performance with our advanced AI-powered monitoring solutions. 
-              Get real-time insights and proactive alerts.
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Monitor and optimize your system performance with our AI-powered monitoring solution. 
+              Get real-time insights, automated alerting, and comprehensive reporting.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+              <a
+                href="#contact"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+              >
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+              </a>
+              <a
+                href="#features"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              >
                 Learn More
-              </button>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="features" className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
-              Why Choose Our Performance Monitor?
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Powerful Monitoring Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our performance monitoring solutions deliver unmatched insights, security, and scalability.
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Everything you need to monitor and optimize your system performance.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow text-center">
+                  <div className="flex justify-center mb-4">
+                    <IconComponent className="w-8 h-8 text-purple-500" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Performance Monitor?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our performance monitoring solutions for your business.
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Discover the advantages of implementing AI-powered performance monitoring in your organization.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="space-y-4">
+              {benefits.slice(0, 4).map((benefit, index) => (
+                <div key={index} className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">{benefit}</span>
+                </div>
+              ))}
+            </div>
+            <div className="space-y-4">
+              {benefits.slice(4).map((benefit, index) => (
+                <div key={index} className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Choose the plan that best fits your monitoring needs and budget.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {pricing.map((plan, index) => (
+              <div key={index} className={`bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow ${plan.popular ? 'ring-2 ring-purple-500 relative' : ''}`}>
+                {plan.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                <div className="text-center mb-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-3xl font-bold text-gray-900">{plan.price}</span>
+                    <span className="text-gray-600 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-600 mt-2">{plan.description}</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="#contact"
+                  className={`w-full block text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
+                    plan.popular
+                      ? 'bg-purple-600 text-white hover:bg-purple-700'
+                      : 'bg-gray-900 text-white hover:bg-gray-800'
+                  }`}
+                >
+                  Get Started
+                </a>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Contact us today to learn more about our performance monitoring solutions and how they can benefit your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
-                Contact Us
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Schedule Demo
-              </button>
-            </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
+      {/* CTA Section */}
+      <section id="contact" className="py-12 sm:py-16 lg:py-20 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Monitor Your Performance?
+          </h2>
+          <p className="text-lg sm:text-xl text-white/90 mb-8">
+            Start monitoring your system performance today with our AI-powered solution.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#contact"
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+            >
+              Start Free Trial
+            </a>
+            <a
+              href="#contact"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            >
+              Schedule Demo
+            </a>
           </div>
         </div>
       </section>

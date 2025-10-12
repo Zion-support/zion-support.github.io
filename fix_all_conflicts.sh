@@ -1,23 +1,29 @@
 #!/bin/bash
 
-echo "Fixing all remaining merge conflicts..."
-
 # Find all files with merge conflicts
-files=$(find app -name "*.tsx" -o -name "*.ts" | xargs grep -l "\|
+files_with_conflicts=$(find app/ -name "*.tsx" -o -name "*.ts" | xargs grep -l "^<<<<<<< HEAD" 2>/dev/null)
 
-for file in $files; do
-    echo "Fixing: $file"
+echo "Found files with merge conflicts:"
+echo "$files_with_conflicts"
+echo ""
+
+# Process each file
+for file in $files_with_conflicts; do
+    echo "Processing: $file"
     
-    # Create backup
-    cp "$file" "${file}.backup"
+    # Create a backup
+    cp "$file" "$file.backup"
     
-    # Use git checkout to resolve conflicts by choosing HEAD version
-    git checkout --ours "$file" 2>/dev/null || true
+    # Use sed to remove merge conflict markers and keep the content after =======
+    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+    sed -i '/^>>>>>>> /d' "$file"
     
-    # If that doesn't work, use sed to remove conflict markers
-    if grep -q "
-        sed -i '/
-    fi
+    echo "Fixed: $file"
 done
 
-echo "All merge conflicts fixed!"
+echo ""
+echo "Merge conflicts fixed. Checking remaining conflicts..."
+
+# Check if any conflicts remain
+remaining=$(grep -r "^<<<<<<< HEAD\|^=======\|^>>>>>>> " app/ --include="*.tsx" --include="*.ts" 2>/dev/null | wc -l)
+echo "Remaining conflicts: $remaining"
