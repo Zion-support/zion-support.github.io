@@ -1,67 +1,14 @@
 import React from 'react';
-import { CheckCircle, Users, Target, Award, Globe, Zap, Shield, Database } from 'lucide-react';
+import { Users, Target, Award, Globe, Database } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function AboutPage() {
-  const values = [
-    {
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
-      title: 'Innovation',
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      title: 'Reliability',
-      description: 'Our solutions are built with enterprise-grade security and reliability to ensure your business operations never stop.'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-purple-500" />,
-      title: 'Collaboration',
-      description: 'We work closely with our clients as partners, understanding their unique challenges and delivering tailored solutions.'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-orange-500" />,
-      title: 'Excellence',
-      description: 'We maintain the highest standards of quality in everything we do, from initial consultation to ongoing support.'
-    }
   ];
 
-  const team = [
-    {
-      name: 'John Smith',
-      role: 'CEO & Founder',
-      description: '20+ years in technology leadership',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face'
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      description: 'AI and Machine Learning expert',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face'
-    },
-    {
-      name: 'Mike Chen',
-      role: 'Lead Developer',
-      description: 'Full-stack development specialist',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face'
-    },
-    {
-      name: 'Emily Davis',
-      role: 'Head of Design',
-      description: 'UX/UI design and user experience',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face'
-    }
   ];
 
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99%', label: 'Success Rate' },
-    { number: '24/7', label: 'Support' }
   ];
 
-  return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>About Us - Zion Tech Group</title>
@@ -86,7 +33,6 @@ export default function AboutPage() {
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
-            {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2">{stat.number}</div>
                 <div className="text-gray-600 text-sm sm:text-base">{stat.label}</div>
@@ -114,15 +60,11 @@ export default function AboutPage() {
                 that not only meet today's challenges but also prepare our clients for tomorrow's opportunities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center"
+                
                 >
                   Get In Touch
                 </Link>
-                <Link
-                  to="/ai-services"
-                  className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors text-center"
+                
                 >
                   Our Services
                 </Link>
@@ -177,7 +119,6 @@ export default function AboutPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {values.map((value, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow text-center">
                 <div className="flex justify-center mb-4">{value.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{value.title}</h3>
@@ -201,13 +142,9 @@ export default function AboutPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {team.map((member, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
                 <div className="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4 overflow-hidden">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover"
+                  
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{member.name}</h3>
@@ -229,15 +166,11 @@ export default function AboutPage() {
             Let's discuss how our team can help transform your business with cutting-edge technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
+            
             >
               Start Your Project
             </Link>
-            <Link
-              to="/ai-services"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            
             >
               Explore Services
             </Link>

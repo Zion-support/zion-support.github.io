@@ -1,8 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Share2, ArrowRight } from 'lucide-react'
-const SocialMediaManagerPage: React.FC = () => {
-  return (
     <React.Fragment>
       <Helmet>
         <title>Social Media Manager | Zion Tech Group - AI Social Media Automation</title>
@@ -21,7 +19,6 @@ const SocialMediaManagerPage: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Automation</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              AI-powered social media management and automation. Schedule posts, analyze engagement, 
               and grow your social presence with intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -31,7 +28,7 @@ const SocialMediaManagerPage: React.FC = () => {
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
                 View Demo
-  </
+  
             </div>
           </div>
         </section>
@@ -69,7 +66,6 @@ const SocialMediaManagerPage: React.FC = () => {return (<></>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Automation</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              AI-powered social media management and automation. Schedule posts, analyze engagement,
               and grow your social presence with intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>

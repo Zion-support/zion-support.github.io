@@ -1,34 +1,11 @@
 import React from 'react';
-import { Shield, Eye, Lock, Database } from 'lucide-react';
+import {  Eye, Lock, Database } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const PrivacyPolicyPage: React.FC = () => {
-  const sections = [
-    {
-      icon: <Database className="w-6 h-6 text-blue-500" />,
-      title: 'Information We Collect',
-      content: 'We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support. This may include your name, email address, phone number, and other contact information.'
-    },
-    {
-      icon: <Eye className="w-6 h-6 text-green-500" />,
-      title: 'How We Use Your Information',
-      content: 'We use the information we collect to provide, maintain, and improve our services, process transactions, send you technical notices and support messages, and communicate with you about products, services, and promotional offers.'
-    },
-    {
-      icon: <Lock className="w-6 h-6 text-purple-500" />,
-      title: 'Information Sharing',
-      content: 'We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy. We may share your information with trusted third parties who assist us in operating our website and conducting our business.'
-    },
-    {
-      icon: <Shield className="w-6 h-6 text-orange-500" />,
-      title: 'Data Security',
-      content: 'We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.'
-    }
   ];
 
-  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
@@ -58,7 +35,6 @@ const PrivacyPolicyPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-12">
-              {sections.map((section, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
@@ -105,15 +81,11 @@ const PrivacyPolicyPage: React.FC = () => {
                 If you have any questions about this Privacy Policy or our data practices, please contact us.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:privacy@ziontechgroup.com"
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                
                 >
                   Contact Us
                 </a>
-                <a
-                  href="/contact"
-                  className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+                
                 >
                   General Contact
                 </a>

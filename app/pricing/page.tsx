@@ -1,61 +1,11 @@
 'use client';
 
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Settings, BarChart } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
-const PricingPage: React.FC = () => {
-  const plans = [
-    {
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with AI',
-      features: [
-        'Up to 10 AI models',
-        'Basic analytics',
-        'Email support',
-        'Standard security',
-        '5GB storage'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Advanced features for growing businesses',
-      features: [
-        'Up to 50 AI models',
-        'Advanced analytics',
-        'Priority support',
-        'Enhanced security',
-        '50GB storage',
-        'API access',
-        'Custom integrations'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Tailored solutions for large organizations',
-      features: [
-        'Unlimited AI models',
-        'Custom analytics',
-        '24/7 dedicated support',
-        'Enterprise security',
-        'Unlimited storage',
-        'Full API access',
-        'Custom integrations',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
   ];
 
-  return (
     <>
       <Helmet>
         <title>Pricing | Zion Tech Group</title>
@@ -85,11 +35,8 @@ const PricingPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
-              {plans.map((plan, index) => (
-                <div key={index} className={`bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-gray-700'
+                
                 } hover:border-blue-500 transition-all duration-300 relative`}>
-                  {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
@@ -107,7 +54,6 @@ const PricingPage: React.FC = () => {
                   </div>
 
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
@@ -115,10 +61,6 @@ const PricingPage: React.FC = () => {
                     ))}
                   </ul>
 
-                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                      : 'border border-gray-600 text-white hover:bg-gray-700'
                   }`}>
                     {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                   </button>

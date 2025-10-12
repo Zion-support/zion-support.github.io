@@ -4,35 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIContentWriterPage: React.FC = () => {
-  const features = [
-    {
-      title: 'AI Writing Assistant',
-      description: 'Advanced AI-powered content generation and writing assistance.',
-      benefits: ['Content Generation', 'Grammar Check', 'Style Optimization', 'Tone Adjustment'],
-      icon: <PenTool className="w-8 h-8 text-blue-400" />
-    },
-    {
-      title: 'Content Templates',
-      description: 'Pre-built templates for various content types and formats.',
-      benefits: ['Blog Posts', 'Social Media', 'Email Campaigns', 'Product Descriptions'],
-      icon: <FileText className="w-8 h-8 text-purple-400" />
-    },
-    {
-      title: 'SEO Optimization',
-      description: 'Built-in SEO tools to optimize content for search engines.',
-      benefits: ['Keyword Research', 'Meta Tags', 'Content Analysis', 'Ranking Insights'],
-      icon: <Target className="w-8 h-8 text-green-400" />
-    },
-    {
-      title: 'Creative Enhancement',
-      description: 'AI-powered creative tools to enhance your content quality.',
-      benefits: ['Ideas Generation', 'Headline Creation', 'Content Expansion', 'Creative Writing'],
-      icon: <Sparkles className="w-8 h-8 text-orange-400" />
-    }
   ];
 
-  return (
     <>
       <Helmet>
         <title>AI Content Writer | Zion Tech Group</title>
@@ -82,7 +55,6 @@ const AIContentWriterPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-              {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="mb-4">
                     {feature.icon}
@@ -90,7 +62,6 @@ const AIContentWriterPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}

@@ -1,8 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Mail, ArrowRight } from 'lucide-react'
-const EmailMarketingSuitePage: React.FC = () => {
-  return (
     <React.Fragment>
       <Helmet>
         <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
@@ -31,7 +29,7 @@ const EmailMarketingSuitePage: React.FC = () => {
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
                 View Demo
-  </
+  
             </div>
           </div>
         </section>

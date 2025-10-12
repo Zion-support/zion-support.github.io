@@ -1,38 +1,11 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Shield, Zap, Globe, BarChart3 } from 'lucide-react';
+import { CheckCircle, ArrowRight3 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIApiManagementPage: React.FC = () => {
-  const features = [
-    {
-      title: 'API Gateway Management',
-      description: 'Centralized API gateway for seamless integration and management.',
-      benefits: ['Traffic Control', 'Rate Limiting', 'Authentication', 'Monitoring'],
-      icon: <Shield className="w-8 h-8 text-blue-400" />
-    },
-    {
-      title: 'AI Model Integration',
-      description: 'Easy integration with various AI models and services.',
-      benefits: ['Model Versioning', 'A/B Testing', 'Performance Monitoring', 'Auto-scaling'],
-      icon: <Zap className="w-8 h-8 text-purple-400" />
-    },
-    {
-      title: 'Global Distribution',
-      description: 'Worldwide API distribution with edge computing capabilities.',
-      benefits: ['Low Latency', 'High Availability', 'Global CDN', 'Edge Computing'],
-      icon: <Globe className="w-8 h-8 text-green-400" />
-    },
-    {
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics and performance insights.',
-      benefits: ['Real-time Metrics', 'Usage Analytics', 'Performance Reports', 'Cost Optimization'],
-      icon: <BarChart3 className="w-8 h-8 text-orange-400" />
-    }
   ];
 
-  return (
     <>
       <Helmet>
         <title>AI API Management | Zion Tech Group</title>
@@ -82,7 +55,6 @@ const AIApiManagementPage: React.FC = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-              {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="mb-4">
                     {feature.icon}
@@ -90,7 +62,6 @@ const AIApiManagementPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {benefit}

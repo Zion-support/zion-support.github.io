@@ -4,68 +4,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, MessageCircle, Calendar, Award, Globe, Zap } from 'lucide-react';
 
-const CommunityPage: React.FC = () => {
-  const events = [
-    {
-      id: '1',
-      title: 'AI Innovation Summit 2024',
-      date: 'March 15, 2024',
-      time: '9:00 AM - 5:00 PM',
-      location: 'San Francisco, CA',
-      description: 'Join industry leaders for a day of AI innovation, networking, and collaboration.',
-      type: 'Conference'
-    },
-    {
-      id: '2',
-      title: 'Cloud Computing Workshop',
-      date: 'March 22, 2024',
-      time: '2:00 PM - 4:00 PM',
-      location: 'Online',
-      description: 'Learn the latest cloud computing strategies and best practices.',
-      type: 'Workshop'
-    },
-    {
-      id: '3',
-      title: 'Cybersecurity Roundtable',
-      date: 'March 29, 2024',
-      time: '6:00 PM - 8:00 PM',
-      location: 'New York, NY',
-      description: 'Discuss emerging cybersecurity threats and defense strategies.',
-      type: 'Roundtable'
-    }
   ];
 
-  const communityStats = [
-    { number: '10,000+', label: 'Active Members' },
-    { number: '50+', label: 'Countries' },
-    { number: '200+', label: 'Events Hosted' },
-    { number: '95%', label: 'Satisfaction Rate' }
   ];
 
-  const features = [
-    {
-      icon: Users,
-      title: 'Global Network',
-      description: 'Connect with professionals from around the world in our diverse community.'
-    },
-    {
-      icon: MessageCircle,
-      title: 'Knowledge Sharing',
-      description: 'Share insights, ask questions, and learn from industry experts.'
-    },
-    {
-      icon: Calendar,
-      title: 'Regular Events',
-      description: 'Attend workshops, conferences, and networking events throughout the year.'
-    },
-    {
-      icon: Award,
-      title: 'Recognition',
-      description: 'Get recognized for your contributions and achievements in the community.'
-    }
   ];
 
-  return (
     <>
       <Helmet>
         <title>Community - Join Our Tech Community | Zion Tech Group</title>
@@ -105,7 +49,6 @@ const CommunityPage: React.FC = () => {
         <section className="py-16 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {communityStats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                     {stat.number}
@@ -131,7 +74,6 @@ const CommunityPage: React.FC = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
                   <div className="flex justify-center mb-4">
                     <feature.icon className="h-12 w-12 text-purple-400" />
@@ -156,7 +98,6 @@ const CommunityPage: React.FC = () => {
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {events.map((event) => (
                 <div key={event.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                   <div className="flex items-center justify-between mb-4">
                     <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">

@@ -1,106 +1,32 @@
-'use client';
-
-import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { CheckCircle, ArrowRight, Zap, Star, Users, Shield, Cloud, BarChart3, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
-=======
-import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
-
-const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  const features = [
-    {
-      icon: Zap,
-      title: 'AI-Powered Automation',
-      description: 'Streamline your workflows with intelligent automation that learns and adapts to your business needs.',
-      color: 'from-yellow-400 to-orange-500'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud-Native Architecture',
-      description: 'Built for the cloud with scalability, reliability, and performance at its core.',
-      color: 'from-blue-400 to-cyan-500'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with advanced encryption, compliance, and threat protection.',
-      color: 'from-green-400 to-emerald-500'
-    },
-    {
-      icon: BarChart3,
-      title: 'Real-Time Analytics',
-      description: 'Make data-driven decisions with comprehensive analytics and business intelligence.',
-      color: 'from-purple-400 to-pink-500'
-    }
   ];
 
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CEO',
-      company: 'TechCorp Solutions',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. The AI solutions they implemented have increased our efficiency by 300% and reduced costs significantly.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CTO',
-      company: 'InnovateLabs',
-      content: 'Their cloud migration services were exceptional. We achieved 99.9% uptime and our applications now run 5x faster than before.',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Operations Director',
-      company: 'Global Enterprises',
-      content: 'The security enhancements they implemented gave us peace of mind. Our data is now more secure than ever, and we passed all compliance audits.',
-      rating: 5
-    }
   ];
 
-  const benefits = [
-    'Reduce operational costs by up to 40%',
-    'Increase productivity and efficiency',
-    'Enhance customer experience',
-    'Improve data security and compliance',
-    'Scale your business faster',
-    'Gain competitive advantage',
-    'Access to expert support',
-    'Future-proof your technology'
   ];
 
   const currentTestimonial = testimonials[currentIndex];
 
-  useEffect(() => {
-    if (isPlaying) {
-      const interval = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
       }, 5000);
       return () => clearInterval(interval);
     }
     
-    return () => {
       // No cleanup needed when not playing
     };
   }, [isPlaying, testimonials.length]);
 
-  const nextTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
   };
 
-  const prevTestimonial = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
   };
 
-  const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
 
-  return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="py-20 px-4">
@@ -135,7 +61,6 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
@@ -162,7 +87,6 @@ const DynamicContentShowcase: React.FC = () => {
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <div className="text-center">
                 <div className="flex justify-center mb-6">
-                  {[...Array(currentTestimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -185,23 +109,15 @@ const DynamicContentShowcase: React.FC = () => {
 
             {/* Navigation Controls */}
             <div className="flex items-center justify-center gap-4 mt-8">
-              <button
-                onClick={prevTestimonial}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
+              
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
-              
-              <button
-                onClick={togglePlayPause}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
+
               >
                 {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
               </button>
-              
-              <button
-                onClick={nextTestimonial}
-                className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
+
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
@@ -209,11 +125,8 @@ const DynamicContentShowcase: React.FC = () => {
 
             {/* Dots Indicator */}
             <div className="flex justify-center mt-6 space-x-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
+                
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
                     index === currentIndex ? 'bg-purple-400' : 'bg-white/30'
                   }`}
                 />
@@ -235,7 +148,6 @@ const DynamicContentShowcase: React.FC = () => {
 
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                   <span className="text-gray-300">{benefit}</span>

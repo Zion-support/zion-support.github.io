@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ExternalLink, Award, Handshake, TrendingUp } from 'lucide-react';
 
-interface Partner {
   name: string;
   logo: string;
   description: string;
@@ -12,119 +11,25 @@ interface Partner {
   tier: 'strategic' | 'preferred' | 'certified';
 }
 
-const PartnersPage: React.FC = () => {
   const partners: Partner[] = [
-    {
-      name: 'Microsoft',
-      logo: '/images/partners/microsoft.png',
-      description: 'Strategic partnership for Azure cloud solutions and AI services',
-      category: 'Cloud & AI',
-      website: 'https://microsoft.com',
       tier: 'strategic'
-    },
-    {
-      name: 'Amazon Web Services',
-      logo: '/images/partners/aws.png',
-      description: 'Leading cloud infrastructure and machine learning platform provider',
-      category: 'Cloud Computing',
-      website: 'https://aws.amazon.com',
       tier: 'strategic'
-    },
-    {
-      name: 'Google Cloud',
-      logo: '/images/partners/google-cloud.png',
-      description: 'Advanced AI and machine learning platform with global reach',
-      category: 'Cloud & AI',
-      website: 'https://cloud.google.com',
       tier: 'strategic'
-    },
-    {
-      name: 'IBM',
-      logo: '/images/partners/ibm.png',
-      description: 'Enterprise AI solutions and hybrid cloud platform',
-      category: 'Enterprise AI',
-      website: 'https://ibm.com',
       tier: 'preferred'
-    },
-    {
-      name: 'Salesforce',
-      logo: '/images/partners/salesforce.png',
-      description: 'Customer relationship management and business automation',
-      category: 'CRM & Automation',
-      website: 'https://salesforce.com',
       tier: 'preferred'
-    },
-    {
-      name: 'Oracle',
-      logo: '/images/partners/oracle.png',
-      description: 'Database solutions and enterprise applications',
-      category: 'Database & Enterprise',
-      website: 'https://oracle.com',
       tier: 'preferred'
-    },
-    {
-      name: 'ServiceNow',
-      logo: '/images/partners/servicenow.png',
-      description: 'IT service management and workflow automation',
-      category: 'IT Management',
-      website: 'https://servicenow.com',
       tier: 'certified'
-    },
-    {
-      name: 'Splunk',
-      logo: '/images/partners/splunk.png',
-      description: 'Data analytics and security monitoring platform',
-      category: 'Analytics & Security',
-      website: 'https://splunk.com',
       tier: 'certified'
     }
   ];
 
-  const benefits = [
-    'Access to cutting-edge technology platforms',
-    'Joint go-to-market strategies',
-    'Co-marketing opportunities',
-    'Technical training and certification',
-    'Priority support and resources',
-    'Innovation labs and R&D collaboration',
-    'Global reach and local expertise',
-    'Compliance and security standards',
-    'Scalable solutions for any size business',
-    'Dedicated partner success managers'
   ];
 
-  const partnershipTiers = [
-    {
-      name: 'Strategic Partners',
-      description: 'Deep integration and joint development',
-      icon: Award,
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-400/10',
-      borderColor: 'border-yellow-400/30'
-    },
-    {
-      name: 'Preferred Partners',
-      description: 'Certified solutions and priority support',
-      icon: Handshake,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-400/10',
-      borderColor: 'border-blue-400/30'
-    },
-    {
-      name: 'Certified Partners',
-      description: 'Authorized implementation and support',
-      icon: CheckCircle,
-      color: 'text-green-400',
-      bgColor: 'bg-green-400/10',
-      borderColor: 'border-green-400/30'
-    }
   ];
 
-  const getTierInfo = (tier: string) => {
     return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2];
   };
 
-  return (
     <>
       <Helmet>
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
@@ -171,7 +76,6 @@ const PartnersPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {partnershipTiers.map((tier, index) => (
                 <div key={index} className={`${tier.bgColor} backdrop-blur-lg rounded-2xl p-8 border ${tier.borderColor} text-center`}>
                   <div className={`w-16 h-16 ${tier.bgColor} rounded-full mx-auto mb-6 flex items-center justify-center`}>
                     <tier.icon className={`w-8 h-8 ${tier.color}`} />
@@ -195,9 +99,7 @@ const PartnersPage: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {partners.map((partner, index) => {
                 const tierInfo = getTierInfo(partner.tier);
-                return (
                   <div key={index} className={`${tierInfo.bgColor} backdrop-blur-lg rounded-2xl p-6 border ${tierInfo.borderColor} hover:border-purple-400 transition-all duration-300 group`}>
                     <div className="text-center">
                       <div className="w-20 h-20 bg-white/10 rounded-lg mx-auto mb-4 flex items-center justify-center">
@@ -210,12 +112,7 @@ const PartnersPage: React.FC = () => {
                       <div className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${tierInfo.color} ${tierInfo.bgColor}`}>
                         {partner.category}
                       </div>
-                      {partner.website && (
-                        <a
-                          href={partner.website}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-purple-400 hover:text-purple-300 transition-colors mt-3 text-sm"
+                        
                         >
                           Visit Website
                           <ExternalLink className="w-3 h-3" />
@@ -241,7 +138,6 @@ const PartnersPage: React.FC = () => {
 
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300">{benefit}</span>

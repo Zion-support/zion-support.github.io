@@ -1,83 +1,14 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Wifi, Smartphone, Globe, Database, MessageCircle } from 'lucide-react';
+import { CheckCircle, ArrowRight, Wifi, Smartphone, Database, MessageCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function FiveGImplementationPage() {
-  const services = [
-    {
-      icon: <Wifi className="w-8 h-8 text-blue-500" />,
-      title: '5G Network Design',
-      description: 'Design and implement high-performance 5G networks for your organization.',
-      features: ['Ultra-fast speeds (10+ Gbps)', 'Low latency (1ms)', 'High capacity', 'Network optimization'],
-      price: 'Starting at $50,000'
-    },
-    {
-      icon: <Smartphone className="w-8 h-8 text-green-500" />,
-      title: 'IoT Integration',
-      description: 'Connect and manage millions of IoT devices with 5G technology.',
-      features: ['Device management', 'Data collection', 'Real-time monitoring', 'Edge computing'],
-      price: 'Starting at $25,000'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-purple-500" />,
-      title: 'Edge Computing',
-      description: 'Deploy edge computing solutions for ultra-low latency applications.',
-      features: ['Edge servers', 'Data processing', 'Real-time analytics', 'Local storage'],
-      price: 'Starting at $30,000'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-orange-500" />,
-      title: '5G Security',
-      description: 'Comprehensive security solutions for 5G networks and applications.',
-      features: ['Network security', 'Data encryption', 'Threat detection', 'Compliance'],
-      price: 'Starting at $15,000'
-    }
   ];
 
-  const benefits = [
-    {
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Ultra-Fast Speeds',
-      description: 'Experience speeds up to 10+ Gbps for lightning-fast data transfer.'
-    },
-    {
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Low Latency',
-      description: 'Ultra-low latency of 1ms enables real-time applications and IoT.'
-    },
-    {
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'High Capacity',
-      description: 'Support for millions of connected devices per square kilometer.'
-    },
-    {
-      icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Edge Computing',
-      description: 'Process data locally for faster response times and reduced bandwidth.'
-    }
   ];
 
-  const useCases = [
-    {
-      title: 'Smart Cities',
-      description: 'Traffic management, public safety, and environmental monitoring'
-    },
-    {
-      title: 'Industrial IoT',
-      description: 'Manufacturing automation, predictive maintenance, and quality control'
-    },
-    {
-      title: 'Healthcare',
-      description: 'Remote surgery, telemedicine, and patient monitoring'
-    },
-    {
-      title: 'Autonomous Vehicles',
-      description: 'Vehicle-to-vehicle communication and real-time navigation'
-    }
   ];
 
-  return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
         <title>5G Implementation - Zion Tech Group</title>
@@ -95,16 +26,12 @@ export default function FiveGImplementationPage() {
               Next-generation connectivity solutions to power your digital transformation with ultra-fast speeds and low latency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              
               >
                 Get Started
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
-                to="/about"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              
               >
                 Learn More
               </Link>
@@ -126,13 +53,11 @@ export default function FiveGImplementationPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {services.map((service, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="space-y-2 mb-4">
-                  {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                       {feature}
@@ -159,7 +84,6 @@ export default function FiveGImplementationPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">{benefit.icon}</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{benefit.title}</h3>
@@ -183,7 +107,6 @@ export default function FiveGImplementationPage() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {useCases.map((useCase, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{useCase.title}</h3>
                 <p className="text-gray-600">{useCase.description}</p>
@@ -203,16 +126,12 @@ export default function FiveGImplementationPage() {
             Let's discuss how 5G implementation can transform your business and unlock new opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
+            
             >
               <MessageCircle className="w-5 h-5 mr-2" />
               Get Free Consultation
             </Link>
-            <Link
-              to="/digital-transformation"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            
             >
               Digital Transformation
             </Link>

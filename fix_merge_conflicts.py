@@ -1,76 +1,81 @@
 #!/usr/bin/env python3
+"""
+Script to automatically resolve merge conflicts in the codebase
+"""
 import os
 import re
 import glob
 
 def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a file by keeping the most recent version"""
+    """Fix merge conflicts in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Remove all merge conflict markers and keep the content after the last =======
-        # This keeps the most recent version (usually after the last =======)
-        lines = content.split('\n')
-        new_lines = []
-        skip_until_next_section = False
+        # Check if file has merge conflicts
+        if '<<<<<<< HEAD' not in content:
+            return False
         
-        for line in lines:
-            if line.startswith('<<<<<<< HEAD'):
-                skip_until_next_section = True
-                continue
-            elif line.startswith('======='):
-                skip_until_next_section = False
-                continue
-            elif line.startswith('>>>>>>>'):
-                skip_until_next_section = False
-                continue
-            elif not skip_until_next_section:
-                new_lines.append(line)
+        print(f"Fixing merge conflicts in: {file_path}")
         
-        # Write the cleaned content back
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write('\n'.join(new_lines))
+        # Remove all merge conflict markers and keep the last version (usually the most complete)
+        # This is a simple approach - in practice, you might want more sophisticated conflict resolution
         
-        print(f"Fixed merge conflicts in: {file_path}")
-        return True
+        # Split by merge conflict markers
+        parts = re.split(r'<<<<<<< HEAD.*?=======.*?>>>>>>> [a-f0-9]+', content, flags=re.DOTALL)
+        
+        # If we have multiple parts, take the last one (usually the most recent/complete)
+        if len(parts) > 1:
+            # Take the last part, but also check if there are any remaining conflict markers
+            clean_content = parts[-1]
+            
+            # Remove any remaining conflict markers
+            clean_content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>> [a-f0-9]+', '', clean_content, flags=re.DOTALL)
+            clean_content = re.sub(r'=======.*?>>>>>>> [a-f0-9]+', '', clean_content, flags=re.DOTALL)
+            clean_content = re.sub(r'<<<<<<< HEAD.*?=======', '', clean_content, flags=re.DOTALL)
+            
+            # Clean up extra whitespace
+            clean_content = re.sub(r'\n\s*\n\s*\n', '\n\n', clean_content)
+            clean_content = clean_content.strip() + '\n'
+            
+            # Write the cleaned content back
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(clean_content)
+            
+            return True
+        else:
+            # No conflicts found or already resolved
+            return False
+            
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/TSX files with merge conflicts
+    """Main function to process all files"""
+    # Get all TypeScript and JavaScript files
     patterns = [
-        '/workspace/app/**/*.tsx',
-        '/workspace/app/**/*.ts',
-        '/workspace/components/**/*.tsx',
-        '/workspace/components/**/*.ts'
+        '**/*.tsx',
+        '**/*.ts', 
+        '**/*.jsx',
+        '**/*.js'
     ]
     
-    files_to_fix = []
+    files_processed = 0
+    files_fixed = 0
+    
     for pattern in patterns:
-        files_to_fix.extend(glob.glob(pattern, recursive=True))
+        for file_path in glob.glob(pattern, recursive=True):
+            # Skip node_modules and other irrelevant directories
+            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', 'build']):
+                continue
+                
+            files_processed += 1
+            if fix_merge_conflicts(file_path):
+                files_fixed += 1
     
-    # Filter files that actually have merge conflicts
-    files_with_conflicts = []
-    for file_path in files_to_fix:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
-                    files_with_conflicts.append(file_path)
-        except:
-            continue
-    
-    print(f"Found {len(files_with_conflicts)} files with merge conflicts")
-    
-    # Fix each file
-    fixed_count = 0
-    for file_path in files_with_conflicts:
-        if fix_merge_conflicts(file_path):
-            fixed_count += 1
-    
-    print(f"Fixed merge conflicts in {fixed_count} files")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed merge conflicts in {files_fixed} files")
 
 if __name__ == "__main__":
     main()
