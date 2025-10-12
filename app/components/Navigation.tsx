@@ -18,10 +18,6 @@ export default function Navigation() {
     {
       title: 'AI Services',
       href: '/ai-services',
-<<<<<<< HEAD
-      icon: <Zap className="w-4 h-4" />,
-      description: 'AI-powered solutions for your business'
-=======
       icon: Zap,
       description: 'Artificial Intelligence Solutions',
       subServices: [
@@ -30,21 +26,10 @@ export default function Navigation() {
         { title: 'AI Automation', href: '/ai-automation' },
         { title: 'AI Cybersecurity', href: '/ai-cybersecurity' }
       ]
->>>>>>> cursor/website-audit-and-update-with-deployment-bee6
     },
     {
       title: 'IT Services',
       href: '/it-services',
-<<<<<<< HEAD
-      icon: <Database className="w-4 h-4" />,
-      description: 'Comprehensive IT infrastructure services'
-    },
-    {
-      title: 'Micro SaaS',
-      href: '/micro-saas-services',
-      icon: <Smartphone className="w-4 h-4" />,
-      description: 'Powerful micro SaaS tools'
-=======
       icon: Code,
       description: 'Information Technology Solutions',
       subServices: [
@@ -53,15 +38,10 @@ export default function Navigation() {
         { title: 'Database Management', href: '/it-services' },
         { title: 'Network Solutions', href: '/it-services' }
       ]
->>>>>>> cursor/website-audit-and-update-with-deployment-bee6
     },
     {
       title: 'Cloud Services',
       href: '/cloud-services',
-<<<<<<< HEAD
-      icon: <Cloud className="w-4 h-4" />,
-      description: 'Cloud migration and management'
-=======
       icon: Cloud,
       description: 'Cloud Computing Solutions',
       subServices: [
@@ -94,21 +74,10 @@ export default function Navigation() {
         { title: 'Customer Experience', href: '/digital-transformation' },
         { title: 'Data Strategy', href: '/digital-transformation' }
       ]
->>>>>>> cursor/website-audit-and-update-with-deployment-bee6
     },
     {
       title: '5G Implementation',
       href: '/5g-implementation',
-<<<<<<< HEAD
-      icon: <Globe className="w-4 h-4" />,
-      description: 'Next-generation 5G solutions'
-    },
-    {
-      title: 'Digital Transformation',
-      href: '/digital-transformation',
-      icon: <Code className="w-4 h-4" />,
-      description: 'Transform your digital presence'
-=======
       icon: Database,
       description: '5G Network Implementation',
       subServices: [
@@ -117,7 +86,6 @@ export default function Navigation() {
         { title: 'Edge Computing', href: '/5g-implementation' },
         { title: '5G Security', href: '/5g-implementation' }
       ]
->>>>>>> cursor/website-audit-and-update-with-deployment-bee6
     }
   ]
 
@@ -153,77 +121,44 @@ export default function Navigation() {
                 className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
               >
                 Services
-                <ChevronDown className="w-4 h-4 ml-1" />
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
-<<<<<<< HEAD
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg z-50">
-                  <div className="p-4">
-                    <div className="grid grid-cols-1 gap-2">
-                      {services.map((service, index) => (
-                        <Link
-                          key={index}
-                          to={service.href}
-                          className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
-                          onClick={() => setIsServicesOpen(false)}
-                        >
-                          <div className="flex-shrink-0 text-blue-600">
-                            {service.icon}
-                          </div>
-                          <div className="ml-3">
-                            <p className="text-sm font-medium text-gray-900">{service.title}</p>
-                            <p className="text-xs text-gray-500">{service.description}</p>
-                          </div>
-                        </Link>
-                      ))}
-=======
-              <div className="relative">
-                <button
-                  onClick={toggleServices}
-                  className="text-gray-900 hover:text-purple-600 px-3 py-2 text-sm font-medium transition-colors flex items-center"
-                >
-                  Services
-                  <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="absolute left-0 mt-2 w-96 bg-white rounded-lg shadow-lg border border-gray-200 py-4 z-50">
-                    <div className="grid grid-cols-1 gap-2 p-4">
-                      {services.map((service) => {
-                        const IconComponent = service.icon
-                        return (
-                          <div key={service.href} className="group">
-                            <Link
-                              to={service.href}
-                              className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                              onClick={() => setIsServicesOpen(false)}
-                            >
-                              <IconComponent className="w-5 h-5 text-purple-600 mr-3" />
-                              <div className="flex-1">
-                                <div className="font-medium text-gray-900">{service.title}</div>
-                                <div className="text-sm text-gray-500">{service.description}</div>
-                              </div>
-                            </Link>
-                            {service.subServices && (
-                              <div className="ml-8 mt-2 space-y-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                {service.subServices.slice(0, 3).map((subService, index) => (
-                                  <Link
-                                    key={index}
-                                    to={subService.href}
-                                    className="block text-sm text-gray-600 hover:text-purple-600 px-2 py-1 rounded hover:bg-gray-50"
-                                    onClick={() => setIsServicesOpen(false)}
-                                  >
-                                    {subService.title}
-                                  </Link>
-                                ))}
-                              </div>
-                            )}
-                          </div>
-                        )
-                      })}
->>>>>>> cursor/website-audit-and-update-with-deployment-bee6
-                    </div>
+                <div className="absolute left-0 mt-2 w-96 bg-white rounded-lg shadow-lg border border-gray-200 py-4 z-50">
+                  <div className="grid grid-cols-1 gap-2 p-4">
+                    {services.map((service) => {
+                      const IconComponent = service.icon
+                      return (
+                        <div key={service.href} className="group">
+                          <Link
+                            to={service.href}
+                            className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                            onClick={() => setIsServicesOpen(false)}
+                          >
+                            <IconComponent className="w-5 h-5 text-purple-600 mr-3" />
+                            <div className="flex-1">
+                              <div className="font-medium text-gray-900">{service.title}</div>
+                              <div className="text-sm text-gray-500">{service.description}</div>
+                            </div>
+                          </Link>
+                          {service.subServices && (
+                            <div className="ml-8 mt-2 space-y-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                              {service.subServices.slice(0, 3).map((subService, index) => (
+                                <Link
+                                  key={index}
+                                  to={subService.href}
+                                  className="block text-sm text-gray-600 hover:text-purple-600 px-2 py-1 rounded hover:bg-gray-50"
+                                  onClick={() => setIsServicesOpen(false)}
+                                >
+                                  {subService.title}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      )
+                    })}
                   </div>
                 </div>
               )}
@@ -266,34 +201,10 @@ export default function Navigation() {
               >
                 About
               </Link>
-              
-<<<<<<< HEAD
-              {/* Mobile Services */}
-              <div className="px-3 py-2">
-                <p className="text-gray-400 text-sm font-medium mb-2">Services</p>
-                <div className="space-y-1">
-                  {services.map((service, index) => (
-                    <Link
-                      key={index}
-                      to={service.href}
-                      className="flex items-center text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm"
-                      onClick={toggleMenu}
-                    >
-                      <div className="flex-shrink-0 text-blue-400 mr-3">
-                        {service.icon}
-                      </div>
-                      <div>
-                        <p className="font-medium">{service.title}</p>
-                        <p className="text-xs text-gray-400">{service.description}</p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-=======
               <div>
                 <button
                   onClick={toggleServices}
-                  className="text-gray-900 hover:text-purple-600 block px-3 py-2 text-base font-medium w-full text-left flex items-center justify-between"
+                  className="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium w-full text-left flex items-center justify-between"
                 >
                   Services
                   <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
@@ -307,13 +218,13 @@ export default function Navigation() {
                         <div key={service.href}>
                           <Link
                             to={service.href}
-                            className="text-gray-600 hover:text-purple-600 block px-3 py-2 text-sm font-medium flex items-center"
+                            className="text-gray-300 hover:text-white block px-3 py-2 text-sm font-medium flex items-center"
                             onClick={() => {
                               setIsOpen(false)
                               setIsServicesOpen(false)
                             }}
                           >
-                            <IconComponent className="w-4 h-4 text-purple-600 mr-2" />
+                            <IconComponent className="w-4 h-4 text-purple-400 mr-2" />
                             {service.title}
                           </Link>
                           {service.subServices && (
@@ -322,7 +233,7 @@ export default function Navigation() {
                                 <Link
                                   key={index}
                                   to={subService.href}
-                                  className="text-gray-500 hover:text-purple-600 block px-3 py-1 text-xs"
+                                  className="text-gray-400 hover:text-white block px-3 py-1 text-xs"
                                   onClick={() => {
                                     setIsOpen(false)
                                     setIsServicesOpen(false)
@@ -338,7 +249,6 @@ export default function Navigation() {
                     })}
                   </div>
                 )}
->>>>>>> cursor/website-audit-and-update-with-deployment-bee6
               </div>
 
               <Link
