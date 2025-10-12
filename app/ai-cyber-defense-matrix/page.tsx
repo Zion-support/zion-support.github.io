@@ -1,18 +1,30 @@
 import React from 'react';
-
 import { Helmet } from 'react-helmet-async';
-
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function AICyberDefenseMatrix() {
+export default function AiCyberDefenseMatrixPage() {
   return (
-
-        <title>AI Cyber Defense Matrix - Zion Tech Group</title>
+    <>
+      <Helmet>
+        <title>AiCyberDefenseMatrix - Zion Tech Group</title>
+        <meta name="description" content="Professional aicyberdefensematrix services by Zion Tech Group." />
+      </Helmet>
       
-            <h1 className="text-4xl font-bold text-white mb-6">AI Cyber Defense Matrix</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional AI cyber defense matrix services coming soon.</p>
-            
-              Contact Us
-
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white mb-6">AiCyberDefenseMatrix</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional aicyberdefensematrix services by Zion Tech Group.</p>
+          
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </div>
+    </>
   );
+}

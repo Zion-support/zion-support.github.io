@@ -1,18 +1,30 @@
-
-
 import React from 'react';
-
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function BlockchainintegrationservicesPage() {
+export default function BlockchainIntegrationServicesPage() {
   return (
-
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <title>Blockchain Integration Services - Zion Tech Group</title>
-        <h1 className="text-4 xl font-boldtext-whitemb-6">Blockchain Integration Services</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional blockchain integration services services coming soon.</p>
-          Contact Us
-    
+    <>
+      <Helmet>
+        <title>BlockchainIntegrationServices - Zion Tech Group</title>
+        <meta name="description" content="Professional blockchainintegrationservices services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white mb-6">BlockchainIntegrationServices</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional blockchainintegrationservices services by Zion Tech Group.</p>
+          
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </div>
+    </>
   );
-
+}

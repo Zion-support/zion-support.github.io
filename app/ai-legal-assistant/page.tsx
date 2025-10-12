@@ -1,18 +1,30 @@
-
-
 import React from 'react';
-
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function AilegalassistantPage() {
+export default function AiLegalAssistantPage() {
   return (
-
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <title>Ai Legal Assistant - Zion Tech Group</title>
-        <h1 className="text-4 xl font-boldtext-whitemb-6">Ai Legal Assistant</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional ai legal assistant services coming soon.</p>
-          Contact Us
-    
+    <>
+      <Helmet>
+        <title>AiLegalAssistant - Zion Tech Group</title>
+        <meta name="description" content="Professional ailegalassistant services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white mb-6">AiLegalAssistant</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ailegalassistant services by Zion Tech Group.</p>
+          
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </div>
+    </>
   );
-
+}

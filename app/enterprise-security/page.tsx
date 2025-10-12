@@ -1,18 +1,30 @@
-
-
 import React from 'react';
-
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function EnterprisesecurityPage() {
+export default function EnterpriseSecurityPage() {
   return (
-
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <title>Enterprise Security - Zion Tech Group</title>
-        <h1 className="text-4 xl font-boldtext-whitemb-6">Enterprise Security</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional enterprise security services coming soon.</p>
-          Contact Us
-    
+    <>
+      <Helmet>
+        <title>EnterpriseSecurity - Zion Tech Group</title>
+        <meta name="description" content="Professional enterprisesecurity services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-white mb-6">EnterpriseSecurity</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional enterprisesecurity services by Zion Tech Group.</p>
+          
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </div>
+      </div>
+    </>
   );
-
+}
