@@ -207,7 +207,9 @@ export default function AIContentGenerationPage() {
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                    {benefits.map((benefit, benefitIndex) => (
+
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>

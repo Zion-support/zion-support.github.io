@@ -200,7 +200,6 @@ export default AIAnalyticsDashboardPage
   </p>
   </button>
 
-const AIAnalyticsDashboardPage: React.FC = () => {const features = [
     {icon: BarChart,
       title: 'Real-time Analytics',
       description: 'Live data visualization with instant updates and interactive charts.'}

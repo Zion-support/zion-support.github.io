@@ -3,7 +3,8 @@ import { CheckCircle, Cloud, Database, Code, Smartphone } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-  ];
+export default function ServicesPage() {
+  return (
 
   ];
 
@@ -90,3 +91,6 @@ import { Link } from 'react-router-dom';
 };
 
 export default ServicesPage;
+
+  );
+}

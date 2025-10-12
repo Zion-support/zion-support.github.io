@@ -8,7 +8,6 @@ export default function StatusPage() {
   const [lastUpdated, setLastUpdated] = useState(new Date())
   const [isRefreshing, setIsRefreshing] = useState(false)
   const refreshStatus = async () => {export default function StatusPage() {const [lastUpdated, setLastUpdated] = useState(new Date())
-  const [isRefreshing, setIsRefreshing] = useState(false);const refreshStatus = async () => {setIsRefreshing(true)
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000))
     setLastUpdated(new Date())
@@ -90,7 +89,6 @@ export default function StatusPage() {
     switch (status) {
       case 'operational':
 
-  const services = [
     {name: 'API Services',
       status: 'operational',
       uptime: '99.9%',
@@ -188,6 +186,7 @@ export default function StatusPage() {
     : services.some(service => service.status === 'outage') 
       ? 'outage' 
       : 'degraded'
+
   return (
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -197,6 +196,7 @@ export default function StatusPage() {
           <div className="flex items-center justify-center gap-4 mb-8">
             <div className="flex items-center gap-2">
       default:) => {
+
   return (
     $3
   )}
@@ -209,6 +209,7 @@ export default function StatusPage() {
       case 'outage':
         return 'text-red-400'
       default:) => {
+
   return (
     $3
   )}
@@ -221,6 +222,7 @@ export default function StatusPage() {
       case 'minor':
         return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50'
       default:) => {
+
   return (
     $3
   )}
@@ -230,6 +232,7 @@ export default function StatusPage() {
     ? 'operational'
     : services.some(service => service.status === 'outage')
       ? 'outage'
+
       : 'degraded';return (</h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Real-time status of all our services. We're committed to providing reliable,

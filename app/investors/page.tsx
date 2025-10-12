@@ -19,7 +19,6 @@ const PagePage: React.FC = () => {
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
 
-const PagePage: React.FC = () => {const features = [
     {icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'}

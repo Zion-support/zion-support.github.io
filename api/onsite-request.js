@@ -7,6 +7,19 @@ const path = require('path');
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
 
+const handler = async (req, res) => {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    res.statusCode = 200;
+    res.end();
+    return;
+  }
+
+  if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
@@ -15,35 +28,52 @@ const file = path.join(dir, 'onsite-requests.json');
 
   const { name, email, company, phone, message, location } = req.body || {};
 
+  // Ensure directory exists
+  if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
 
   let existing = [];
+  try {
+    if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
+  } catch (error) {
     // Log error for debugging in development
-      console.error('Error reading existing requests:', error);
-    }
+    console.error('Error reading existing requests:', error);
     existing = [];
   }
 
+  const newRequest = {
+    id: Date.now().toString(),
+    name,
+    email,
+    company,
+    phone,
+    message,
+    location,
+    timestamp: new Date().toISOString()
   };
 
   existing.push(newRequest);
 
+  try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      success: true,
       id: newRequest.id
     }));
+  } catch (error) {
     // Log error for debugging in development
-      console.error('Error saving onsite request:', error);
-    }
+    console.error('Error saving onsite request:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save request' }));
   }
-}
+};
+
 module.exports = handler;

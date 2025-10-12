@@ -4,6 +4,17 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 export default function QuantumComputingSolutionsPage() {
+  const features = [
+    {
+      title: "Feature 1",
+      description: "Description of feature 1"
+    },
+    {
+      title: "Feature 2",
+      description: "Description of feature 2"
+    }
+  ];
+
   const services = [
     {
       icon: <Atom className="w-8 h-8 text-blue-500" />,
@@ -150,7 +161,9 @@ export default function QuantumComputingSolutionsPage() {
           {/* Stats Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20 mt-12">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center px-2">
+              {features.map((feature, index) => (
+
+                <div key={index} className="text-center px-2">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
               </div>
@@ -173,7 +186,9 @@ export default function QuantumComputingSolutionsPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 group relative">
+              {features.map((feature, index) => (
+
+                <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 group relative">
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold flex items-center">
@@ -221,7 +236,9 @@ export default function QuantumComputingSolutionsPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {applications.map((application, index) => (
-              <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+              {features.map((feature, index) => (
+
+                <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                 <div className="flex justify-center mb-4">{application.icon}</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{application.title}</h3>
                 <p className="text-gray-600">{application.description}</p>
@@ -245,7 +262,9 @@ export default function QuantumComputingSolutionsPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
+              {features.map((feature, index) => (
+
+                <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">{benefit.icon}</div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
@@ -269,7 +288,9 @@ export default function QuantumComputingSolutionsPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {pricing.map((plan, index) => (
-              <div key={index} className={`bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''}`}>
+              {features.map((feature, index) => (
+
+                <div key={index} className={`bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''}`}>
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</span>

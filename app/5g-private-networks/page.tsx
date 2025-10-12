@@ -1,39 +1,21 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Shield, Lock, Cpu, Globe, Zap } from 'lucide-react';;
+import { CheckCircle, ArrowRight, Shield, Lock, Cpu, Globe, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const FiveGPrivateNetworksPage: React.FC = () => {
-  const privateNetworkServices = [
+export default function FiveGPrivateNetworksPage() {
+  const features = [
     {
-      icon: <Shield className="w-8 h-8 text-blue-500" />,
-      title: 'Private 5G Core',
-      description: 'Dedicated 5G core network infrastructure for enterprise environments with enhanced security.',
-      features: ['Dedicated core network', 'Enhanced security', 'Custom policies', 'Network isolation', 'Performance optimization'],
-      pricing: 'Starting at $20,000/month'
+      title: "Feature 1",
+      description: "Description of feature 1"
     },
     {
-      icon: <Lock className="w-8 h-8 text-green-500" />,
-      title: 'Dedicated Spectrum',
-      description: 'Exclusive spectrum allocation for private 5G networks with guaranteed performance.',
-      features: ['Spectrum allocation', 'Interference management', 'Performance guarantees', 'Regulatory compliance', 'Network planning'],
-      pricing: 'Starting at $15,000/month'
-    },
-    {
-      icon: <Cpu className="w-8 h-8 text-purple-500" />,
-      title: 'Enterprise Integration',
-      description: 'Seamless integration with existing enterprise systems and applications.',
-      features: ['System integration', 'API development', 'Legacy compatibility', 'Custom solutions', 'Training & support'],
-      pricing: 'Starting at $10,000'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-orange-500" />,
-      title: 'Network Monitoring',
-      description: '24/7 monitoring and management of private 5G networks with proactive maintenance.',
-      features: ['24/7 monitoring', 'Proactive maintenance', 'Performance analytics', 'Incident response', 'Regular reporting'],
-      pricing: 'Starting at $5,000/month'
+      title: "Feature 2",
+      description: "Description of feature 2"
     }
   ];
+
+  return (
 
   const benefits = [
     {
@@ -108,7 +90,9 @@ const FiveGPrivateNetworksPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-20">
             {privateNetworkServices.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              {features.map((feature, index) => (
+
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
@@ -146,7 +130,9 @@ const FiveGPrivateNetworksPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+              {features.map((feature, index) => (
+
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="mb-4 flex justify-center">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
@@ -188,3 +174,5 @@ const FiveGPrivateNetworksPage: React.FC = () => {
 };
 
 export default FiveGPrivateNetworksPage;
+  );
+}

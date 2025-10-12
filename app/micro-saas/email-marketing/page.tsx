@@ -51,7 +51,6 @@ const EmailMarketingSuitePage: React.FC = () => {
 export default EmailMarketingSuitePage
   </button>
 
-const EmailMarketingSuitePage: React.FC = () => {return (<></>
       <Helmet>
         <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
         <meta name="description" content="AI-powered email marketing automation. Create, send, and optimize email campaigns with intelligent automation." />

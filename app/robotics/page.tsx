@@ -57,7 +57,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
-const PagePage: React.FC = () => {const features = [
     {icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'}

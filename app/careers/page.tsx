@@ -1,45 +1,9 @@
 import React from 'react';
-import { ArrowRight, Users, Briefcase, Clock, Star } from 'lucide-react';;
+import { ArrowRight, Users, Briefcase, Clock, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const CareersPage: React.FC = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const _openPositions = [
-    {
-      title: 'Senior AI Engineer',
-      department: 'AI Research',
-      location: 'Remote / New York',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
-      requirements: [
-        'PhD in Computer Science or related field',
-        '5+ years experience in AI/ML',
-        'Expertise in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, Azure, GCP)',
-        'Strong problem-solving and communication skills'
-      ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Learning budget']
-    },
-    {
-      title: 'Cloud Solutions Architect',
-      department: 'Cloud Services',
-      location: 'San Francisco, CA',
-      type: 'Full-time',
-      experience: '7+ years',
-      description: 'Design and implement scalable cloud architectures for enterprise clients.',
-      requirements: [
-        'Bachelor\'s degree in Computer Science',
-        '7+ years cloud architecture experience',
-        'AWS/Azure/GCP certifications preferred',
-        'Experience with Kubernetes, Docker',
-        'Strong client-facing skills'
-      ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Learning budget']
-    }
-  ];
-
+export default function CareersPage() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const _benefits = [
     {
@@ -125,5 +89,3 @@ const CareersPage: React.FC = () => {
     </div>
   );
 };
-
-export default CareersPage;

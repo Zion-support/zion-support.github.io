@@ -52,8 +52,6 @@ const MicroSaaSPage: React.FC = () => {
 export default MicroSaaSPage
   </button>
 
-const MicroSaaSPage: React.FC = () => {const serviceName = 'chat-analytics'
-  const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');return (<></>
       <Helmet>}
         <title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
         <meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} />

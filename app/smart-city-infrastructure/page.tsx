@@ -6,7 +6,6 @@ const PagePage: React.FC = () => {
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database } from 'lucide-react';
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-const SmartCityInfrastructurePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -71,7 +70,6 @@ const SmartCityInfrastructurePage: React.FC = () => {
         </div>
       </section>
 
-const PagePage: React.FC = () => {const features = [
     {icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'}
@@ -249,7 +247,6 @@ export default PagePage
         </div>
       </section>
     </div>)};export default PagePage
-  const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',

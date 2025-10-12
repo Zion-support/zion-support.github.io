@@ -1,39 +1,21 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Wifi, Cpu, Database, Shield } from 'lucide-react';;
+import { CheckCircle, ArrowRight, Wifi, Cpu, Database, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const FiveGIoTSolutionsPage: React.FC = () => {
-  const iotServices = [
+export default function FiveGIotSolutionsPage() {
+  const features = [
     {
-      icon: <Wifi className="w-8 h-8 text-blue-500" />,
-      title: '5G IoT Device Integration',
-      description: 'Seamless integration of IoT devices with 5G networks for enhanced connectivity and performance.',
-      features: ['Device connectivity', 'Protocol optimization', 'Network configuration', 'Performance tuning', 'Remote management'],
-      pricing: 'Starting at $5,000'
+      title: "Feature 1",
+      description: "Description of feature 1"
     },
     {
-      icon: <Database className="w-8 h-8 text-green-500" />,
-      title: 'Real-time Data Processing',
-      description: 'Advanced data processing platforms for real-time IoT data analysis and insights.',
-      features: ['Stream processing', 'Real-time analytics', 'Data visualization', 'Alert systems', 'Performance monitoring'],
-      pricing: 'Starting at $3,000/month'
-    },
-    {
-      icon: <Cpu className="w-8 h-8 text-purple-500" />,
-      title: 'Edge Computing Deployment',
-      description: 'Edge computing solutions for ultra-low latency IoT applications and data processing.',
-      features: ['Edge server setup', 'Distributed processing', 'Latency optimization', 'Edge AI integration', 'Content delivery'],
-      pricing: 'Starting at $8,000/month'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
-      title: 'IoT Security Solutions',
-      description: 'Comprehensive security solutions for 5G IoT networks and connected devices.',
-      features: ['Device security', 'Network encryption', 'Threat detection', 'Access control', 'Compliance management'],
-      pricing: 'Starting at $2,000/month'
+      title: "Feature 2",
+      description: "Description of feature 2"
     }
   ];
+
+  return (
 
   const useCases = [
     {
@@ -108,7 +90,9 @@ const FiveGIoTSolutionsPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-20">
             {iotServices.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              {features.map((feature, index) => (
+
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
@@ -146,7 +130,9 @@ const FiveGIoTSolutionsPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:bg-white/15 transition-all duration-300">
+              {features.map((feature, index) => (
+
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:bg-white/15 transition-all duration-300">
                 <div className="text-4xl mb-4">{useCase.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
@@ -188,3 +174,5 @@ const FiveGIoTSolutionsPage: React.FC = () => {
 };
 
 export default FiveGIoTSolutionsPage;
+  );
+}

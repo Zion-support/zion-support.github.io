@@ -61,9 +61,10 @@ const StatusPage = lazy(() => import('./status/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
 
 // Loading component
+const AppLoadingSpinner = () => <LoadingSpinner />;
 
-);
-
+const App = () => {
+  return (
     <ErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>

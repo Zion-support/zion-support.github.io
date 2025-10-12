@@ -1,39 +1,21 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Globe, Users, Eye } from 'lucide-react';;
+import { CheckCircle, ArrowRight, Zap, Globe, Users, Eye } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const FiveGMobileApplicationsPage: React.FC = () => {
-  const mobileAppServices = [
+export default function FiveGMobileApplicationsPage() {
+  const features = [
     {
-      icon: <Eye className="w-8 h-8 text-blue-500" />,
-      title: 'AR/VR Applications',
-      description: 'Immersive augmented and virtual reality applications optimized for 5G networks.',
-      features: ['AR/VR development', 'Real-time rendering', 'Spatial computing', 'Gesture recognition', 'Multi-user experiences'],
-      pricing: 'Starting at $30,000'
+      title: "Feature 1",
+      description: "Description of feature 1"
     },
     {
-      icon: <Zap className="w-8 h-8 text-green-500" />,
-      title: 'Real-time Streaming',
-      description: 'High-quality video and audio streaming applications with ultra-low latency.',
-      features: ['4K/8K streaming', 'Low latency optimization', 'Adaptive bitrate', 'Multi-platform support', 'Content delivery'],
-      pricing: 'Starting at $25,000'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-purple-500" />,
-      title: 'Cloud Gaming',
-      description: 'Cloud gaming platforms that leverage 5G for seamless gaming experiences.',
-      features: ['Cloud gaming platform', 'Game streaming', 'Low latency optimization', 'Cross-platform gaming', 'Performance monitoring'],
-      pricing: 'Starting at $40,000'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-orange-500" />,
-      title: 'Collaboration Apps',
-      description: 'Real-time collaboration applications for remote work and virtual meetings.',
-      features: ['Video conferencing', 'Real-time collaboration', 'Screen sharing', 'File sharing', 'Mobile optimization'],
-      pricing: 'Starting at $20,000'
+      title: "Feature 2",
+      description: "Description of feature 2"
     }
   ];
+
+  return (
 
   const appTypes = [
     {
@@ -108,7 +90,9 @@ const FiveGMobileApplicationsPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-20">
             {mobileAppServices.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              {features.map((feature, index) => (
+
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
@@ -146,7 +130,9 @@ const FiveGMobileApplicationsPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {appTypes.map((appType, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:bg-white/15 transition-all duration-300">
+              {features.map((feature, index) => (
+
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center hover:bg-white/15 transition-all duration-300">
                 <div className="text-4xl mb-4">{appType.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{appType.title}</h3>
                 <p className="text-gray-300 text-sm">{appType.description}</p>
@@ -188,3 +174,5 @@ const FiveGMobileApplicationsPage: React.FC = () => {
 };
 
 export default FiveGMobileApplicationsPage;
+  );
+}

@@ -146,7 +146,6 @@ export default ServicesPage
   </button>
   </span>
 
-const ServicesPage: React.FC = () => {const features = [
     {icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'}

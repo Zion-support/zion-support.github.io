@@ -1,42 +1,9 @@
 import React from 'react';
-import { ArrowRight, Calendar, User } from 'lucide-react';;
+import { ArrowRight, Calendar, User } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const BlogPage: React.FC = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: 'The Future of AI in Enterprise: Trends and Predictions for 2024',
-      excerpt: 'Explore the latest trends in enterprise AI adoption and how businesses are leveraging artificial intelligence to drive innovation and growth.',
-      author: 'Sarah Johnson',
-      date: '2024-01-15',
-      readTime: '8 min read',
-      category: 'AI & Machine Learning',
-      featured: true
-    },
-    {
-      id: 2,
-      title: '5G Implementation: A Complete Guide for Businesses',
-      excerpt: 'Everything you need to know about implementing 5G technology in your business, from planning to deployment and optimization.',
-      author: 'Michael Chen',
-      date: '2024-01-12',
-      readTime: '12 min read',
-      category: '5G Technology',
-      featured: false
-    },
-    {
-      id: 3,
-      title: 'Cloud Migration Best Practices: Avoiding Common Pitfalls',
-      excerpt: 'Learn from our experience helping 500+ companies migrate to the cloud successfully. Discover the best practices and common mistakes to avoid.',
-      author: 'Emily Rodriguez',
-      date: '2024-01-10',
-      readTime: '10 min read',
-      category: 'Cloud Computing',
-      featured: false
-    }
-  ];
-
+export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -93,5 +60,3 @@ const BlogPage: React.FC = () => {
     </div>
   );
 };
-
-export default BlogPage;

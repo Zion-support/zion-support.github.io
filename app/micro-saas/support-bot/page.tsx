@@ -51,7 +51,6 @@ const SmartSupportBotPage: React.FC = () => {
 export default SmartSupportBotPage
   </button>
 
-const SmartSupportBotPage: React.FC = () => {return (<></>
       <Helmet>
         <title>Smart Support Bot | Zion Tech Group - AI Customer Service Automation</title>
         <meta name="description" content="AI-powered customer service automation with intelligent support bot. 24/7 customer assistance and automated responses." />

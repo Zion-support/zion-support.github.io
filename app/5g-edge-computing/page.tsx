@@ -1,39 +1,21 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Cpu, Zap, Globe, Database, Shield, Clock, Users } from 'lucide-react';;
+import { CheckCircle, ArrowRight, Cpu, Zap, Globe, Database, Shield, Clock, Users } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const FiveGEdgeComputingPage: React.FC = () => {
-  const edgeServices = [
+export default function FiveGEdgeComputingPage() {
+  const features = [
     {
-      icon: <Cpu className="w-8 h-8 text-blue-500" />,
-      title: 'Edge Server Deployment',
-      description: 'Deploy edge computing servers at strategic locations for ultra-low latency processing.',
-      features: ['Edge server setup', 'Hardware optimization', 'Network configuration', 'Performance tuning', 'Monitoring setup'],
-      pricing: 'Starting at $10,000'
+      title: "Feature 1",
+      description: "Description of feature 1"
     },
     {
-      icon: <Zap className="w-8 h-8 text-green-500" />,
-      title: 'Distributed Computing',
-      description: 'Distributed computing architecture for processing data closer to its source.',
-      features: ['Distributed processing', 'Load balancing', 'Fault tolerance', 'Auto-scaling', 'Resource optimization'],
-      pricing: 'Starting at $5,000/month'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-purple-500" />,
-      title: 'Content Delivery Optimization',
-      description: 'Optimize content delivery with edge caching and CDN integration.',
-      features: ['Edge caching', 'CDN integration', 'Content optimization', 'Traffic management', 'Performance monitoring'],
-      pricing: 'Starting at $3,000/month'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-orange-500" />,
-      title: 'Edge AI Integration',
-      description: 'Integrate AI and machine learning capabilities at the edge for real-time processing.',
-      features: ['AI model deployment', 'Real-time inference', 'Edge training', 'Model optimization', 'Performance monitoring'],
-      pricing: 'Starting at $8,000/month'
+      title: "Feature 2",
+      description: "Description of feature 2"
     }
   ];
+
+  return (
 
   const benefits = [
     {
@@ -108,7 +90,9 @@ const FiveGEdgeComputingPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-20">
             {edgeServices.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              {features.map((feature, index) => (
+
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
@@ -146,7 +130,9 @@ const FiveGEdgeComputingPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+              {features.map((feature, index) => (
+
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="mb-4 flex justify-center">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
@@ -188,3 +174,5 @@ const FiveGEdgeComputingPage: React.FC = () => {
 };
 
 export default FiveGEdgeComputingPage;
+  );
+}

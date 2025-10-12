@@ -1,41 +1,39 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, BarChart3, Zap, Globe, Cpu, Clock, TrendingUp } from 'lucide-react';;
+import { CheckCircle, ArrowRight, BarChart3, Zap, Globe, Cpu, Clock, TrendingUp } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const FiveGDataAnalyticsPage: React.FC = () => {
-  const analyticsServices = [
+export default function FiveGDataAnalyticsPage() {
+  const features = [
     {
-      icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
-      title: 'Real-time Monitoring',
-      description: 'Comprehensive real-time monitoring of 5G network performance and user experience.',
-      features: ['Network monitoring', 'Performance metrics', 'Real-time alerts', 'Dashboard visualization', 'Custom reports'],
-      pricing: 'Starting at $5,000/month'
+      title: "Feature 1",
+      description: "Description of feature 1"
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-green-500" />,
-      title: 'Performance Analytics',
-      description: 'Advanced analytics for network optimization and performance improvement.',
-      features: ['Performance analysis', 'Trend identification', 'Optimization recommendations', 'Capacity planning', 'ROI analysis'],
-      pricing: 'Starting at $8,000/month'
-    },
-    {
-      icon: <Cpu className="w-8 h-8 text-purple-500" />,
-      title: 'Predictive Maintenance',
-      description: 'AI-powered predictive maintenance to prevent network issues before they occur.',
-      features: ['Predictive modeling', 'Anomaly detection', 'Maintenance scheduling', 'Risk assessment', 'Cost optimization'],
-      pricing: 'Starting at $10,000/month'
-    },
-    {
-      icon: <Globe className="w-8 h-8 text-orange-500" />,
-      title: 'Traffic Analysis',
-      description: 'Deep analysis of network traffic patterns and user behavior for optimization.',
-      features: ['Traffic analysis', 'User behavior insights', 'Capacity optimization', 'Quality of service metrics', 'Usage patterns'],
-      pricing: 'Starting at $6,000/month'
+      title: "Feature 2",
+      description: "Description of feature 2"
     }
   ];
 
   const analyticsFeatures = [
+    {
+      title: "Real-time Analytics",
+      description: "Get instant insights from your data"
+    },
+    {
+      title: "Advanced Reporting",
+      description: "Comprehensive reports and dashboards"
+    }
+  ];
+
+  const benefits = [
+    "Improved data visibility",
+    "Better decision making",
+    "Cost optimization"
+  ];
+
+  return (
+
     {
       title: 'Real-time Insights',
       description: 'Get instant insights into network performance and user experience',
@@ -108,7 +106,9 @@ const FiveGDataAnalyticsPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-20">
             {analyticsServices.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              {features.map((feature, index) => (
+
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
@@ -146,7 +146,9 @@ const FiveGDataAnalyticsPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {analyticsFeatures.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+              {features.map((feature, index) => (
+
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
                 <div className="mb-4 flex justify-center">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 text-sm">{feature.description}</p>
@@ -188,3 +190,5 @@ const FiveGDataAnalyticsPage: React.FC = () => {
 };
 
 export default FiveGDataAnalyticsPage;
+  );
+}

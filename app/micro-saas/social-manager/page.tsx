@@ -51,7 +51,6 @@ const SocialMediaManagerPage: React.FC = () => {
 export default SocialMediaManagerPage
   </button>
 
-const SocialMediaManagerPage: React.FC = () => {return (<></>
       <Helmet>
         <title>Social Media Manager | Zion Tech Group - AI Social Media Automation</title>
         <meta name="description" content="AI-powered social media management and automation. Schedule posts, analyze engagement, and grow your social presence." />
