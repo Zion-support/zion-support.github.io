@@ -1,34 +1,44 @@
 import React from 'react';
-'use client';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const AiConversationAnalyticsPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Ai Conversation Analytics - Zion Tech Group</title>
-        <meta name="description" content="Ai Conversation Analytics services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="ai-conversation-analytics, AI solutions, IT services" />
+        <title>AI Conversation Analytics - Zion Tech Group</title>
+        <meta name="description" content="AI Conversation Analytics services by Zion Tech Group. Professional AI and IT solutions for conversation analysis and insights." />
+        <meta name="keywords" content="ai-conversation-analytics, AI solutions, IT services, conversation analytics, AI insights" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5h-5ml-2" />
-              <span className="w-5h-5ml-2" />Ai Conversation Analytics
+        <div className="max-w-7xl mx-auto px-4 py-20">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                AI Conversation Analytics
               </span>
             </h1>
-            <p className="w-5h-5ml-2">Professional ai conversation analytics services by Zion Tech Group.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional AI conversation analytics services by Zion Tech Group. 
+              Advanced AI-powered analysis of conversations for insights and optimization.
             </p>
           </div>
 
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
-            <p className="w-5h-5ml-2">We're working on bringing you comprehensive ai conversation analytics solutions. 
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+              We're working on bringing you comprehensive AI conversation analytics solutions. 
               Contact us to learn more about our services.
             </p>
-            <button className="w-5h-5ml-2">Contact Us
-            </button>
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-block"
+            >
+              Contact Us
+            </Link>
           </div>
+        </div>
       </div>
     </>
   );

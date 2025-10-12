@@ -113,7 +113,7 @@ export default function AIContentGeneratorPage() {
       name: 'Sarah Johnson',
       role: 'Content Marketing Manager',
       company: 'TechFlow Inc.',
-      content: 'Zion's AI Content Generator has revolutionized our content strategy. We've increased our content output by 300% while maintaining quality.',
+      content: 'Zion\'s AI Content Generator has revolutionized our content strategy. We\'ve increased our content output by 300% while maintaining quality.',
       rating: 5,
       avatar: 'SJ'
     },
@@ -165,7 +165,7 @@ export default function AIContentGeneratorPage() {
   return (
     <>
       <Helmet>
-        <title />AI Content Generator - Advanced AI Writing Assistant | Zion Tech Group</title>
+        <title>AI Content Generator - Advanced AI Writing Assistant | Zion Tech Group</title>
         <meta name="description" content="Transform your content creation with our AI Content Generator. Generate high-quality, SEO-optimized content in 50+ languages. Starting at $29/month. Free trial available." />
         <meta name="keywords" content="AI content generator, content writing, SEO content, blog writing, social media content, email marketing, content automation, AI writing assistant" />
         <meta name="robots" content="index, follow" />
@@ -177,28 +177,27 @@ export default function AIContentGeneratorPage() {
         <section className="w-5h-5ml-2" />
           {/* Animated Background */}
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           {/* Floating Elements */}
-          <div className="absolute top-20 left-10 w-16 h-16 bg-cyan-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '0.5 s' }}  />
-          <div className="absolute top-40 right-20 w-12 h-12 bg-purple-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '1.5 s' }}  />
-          <div className="absolute bottom-20 left-1/4 w-8 h-8 bg-pink-400/20 rounded-fullblur-xlanimate-bounce" style="{{" animationDelay: '2.5 s' }}  />
+          <div className="absolute top-20 left-10 w-16 h-16 bg-cyan-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '0.5s' }} />
+          <div className="absolute top-40 right-20 w-12 h-12 bg-purple-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '1.5s' }} />
+          <div className="absolute bottom-20 left-1/4 w-8 h-8 bg-pink-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '2.5s' }} />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <Sparkles className="w-5h-5ml-2" />
-              <span />AI-Powered Content Creation</span>
+              <span>AI-Powered Content Creation</span>
             </div>
             
-            <h1 className="w-5h-5ml-2" />
+            <h1 className="w-5 h-5 ml-2">
               AI Content
               <br />
-              <span className="w-5h-5ml-2" />Generator
-              </span>
+              <span className="w-5 h-5 ml-2">Generator</span>
             </h1>
             
-            <p className="w-5h-5ml-2" />
+            <p className="w-5 h-5 ml-2">
               Create high-quality, SEO-optimized content in seconds with our advanced AI writing assistant. 
               <br />
-              <span className="w-5h-5ml-2" />50+ languages • 500+ templates • 99.9% accuracy</span>
+              <span className="w-5 h-5 ml-2">50+ languages • 500+ templates • 99.9% accuracy</span>
             </p>
             
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">

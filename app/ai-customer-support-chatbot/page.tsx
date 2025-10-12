@@ -125,10 +125,10 @@ export default function AICustomerSupportChatbot() {
         <title>AI Customer Support Chatbot - Zion Tech Group</title>
         <meta name="description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta name="keywords" content="AI chatbot, customer support, AI solutions, IT services, Zion Tech Group" />
-        <meta property="og:title" content="AI Customer Support Chatbot - Zion Tech Group" /  />
-        <meta property="og:description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." /  />
-        <meta property="og:type" content="website" /  />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-customer-support-chatbot" /  />
+        <meta property="og:title" content="AI Customer Support Chatbot - Zion Tech Group" />
+        <meta property="og:description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-customer-support-chatbot" />
       </Helmet>
 
       <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
