@@ -1,89 +1,89 @@
 #!/usr/bin/env python3
 """
-Script to resolve merge conflicts by choosing the most complete version
+Script to resolve merge conflicts by choosing the incoming changes (PR branch)
 """
 import os
 import re
+import subprocess
 import sys
 
-def resolve_merge_conflicts(file_path):
-    """Resolve merge conflicts in a file by choosing the most complete version"""
+def resolve_merge_conflicts():
+    """Resolve merge conflicts by choosing incoming changes"""
+    
+    # Get list of files with merge conflicts
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+        result = subprocess.run(['git', 'status', '--porcelain'], 
+                              capture_output=True, text=True, check=True)
+        conflicted_files = []
         
-        # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
+        for line in result.stdout.split('\n'):
+            if line.startswith('UU ') or line.startswith('AA ') or line.startswith('DD '):
+                file_path = line[3:].strip()
+                if file_path:
+                    conflicted_files.append(file_path)
         
-        print(f"Resolving merge conflicts in: {file_path}")
+        print(f"Found {len(conflicted_files)} files with merge conflicts")
         
-        # Split by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
-        
-        if len(parts) < 3:
-            # Try alternative pattern for nested conflicts
-            parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
-        
-        if len(parts) < 3:
-            print(f"Could not parse merge conflicts in {file_path}")
-            return False
-        
-        # Choose the version with more content (usually the more complete one)
-        resolved_content = ""
-        for i in range(0, len(parts), 2):
-            if i + 1 < len(parts):
-                # Compare the two versions
-                version1 = parts[i].strip()
-                version2 = parts[i + 1].strip()
+        # Resolve conflicts by choosing incoming changes
+        for file_path in conflicted_files:
+            if not os.path.exists(file_path):
+                print(f"File {file_path} does not exist, skipping...")
+                continue
                 
-                # Choose the longer/more complete version
-                if len(version2) > len(version1):
-                    resolved_content += version2
-                else:
-                    resolved_content += version1
-            else:
-                resolved_content += parts[i]
+            print(f"Resolving conflicts in {file_path}...")
+            
+            try:
+                # Read the file
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                # Remove merge conflict markers and keep incoming changes
+                # Pattern: <<<<<<< HEAD ... ======= ... >>>>>>> branch
+                pattern = r'<<<<<<< HEAD.*?=======(.*?)>>>>>>> [^\n]+'
+                replacement = r'\1'
+                
+                # Apply the pattern multiple times to handle nested conflicts
+                new_content = content
+                while re.search(pattern, new_content, re.DOTALL):
+                    new_content = re.sub(pattern, replacement, new_content, flags=re.DOTALL)
+                
+                # Also handle simple conflicts without branch names
+                pattern2 = r'<<<<<<< HEAD.*?=======(.*?)>>>>>>>'
+                new_content = re.sub(pattern2, r'\1', new_content, flags=re.DOTALL)
+                
+                # Write the resolved content
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(new_content)
+                
+                # Add the file to staging
+                subprocess.run(['git', 'add', file_path], check=True)
+                print(f"✓ Resolved conflicts in {file_path}")
+                
+            except Exception as e:
+                print(f"✗ Error resolving {file_path}: {e}")
+                continue
         
-        # Clean up any remaining conflict markers
-        resolved_content = re.sub(r'<<<<<<< HEAD.*?>>>>>>> [^\n]+', '', resolved_content, flags=re.DOTALL)
-        resolved_content = re.sub(r'=======.*?>>>>>>> [^\n]+', '', resolved_content, flags=re.DOTALL)
+        print(f"\nResolved conflicts in {len(conflicted_files)} files")
         
-        # Write the resolved content
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(resolved_content)
+        # Check if there are any remaining conflicts
+        result = subprocess.run(['git', 'status', '--porcelain'], 
+                              capture_output=True, text=True, check=True)
+        remaining_conflicts = [line for line in result.stdout.split('\n') 
+                             if line.startswith('UU ') or line.startswith('AA ') or line.startswith('DD ')]
         
-        print(f"Successfully resolved merge conflicts in: {file_path}")
-        return True
-        
-    except Exception as e:
-        print(f"Error resolving conflicts in {file_path}: {e}")
-        return False
-
-def main():
-    # Files with merge conflicts
-    files_to_fix = [
-        '/workspace/app/types/next.d.ts',
-        '/workspace/app/ai-content-writer/page.tsx',
-        '/workspace/app/ai-api-management/page.tsx',
-        '/workspace/app/consultation/page.tsx',
-        '/workspace/app/case-studies/page.tsx',
-        '/workspace/app/careers/page.tsx',
-        '/workspace/app/ai-api-manager/page.tsx',
-        '/workspace/app/cloud-services/page.tsx',
-        '/workspace/app/utils/accessibilityEnhancer.ts',
-        '/workspace/app/blog/page.tsx'
-    ]
-    
-    resolved_count = 0
-    for file_path in files_to_fix:
-        if os.path.exists(file_path):
-            if resolve_merge_conflicts(file_path):
-                resolved_count += 1
+        if remaining_conflicts:
+            print(f"Warning: {len(remaining_conflicts)} files still have conflicts")
+            for conflict in remaining_conflicts:
+                print(f"  - {conflict[3:]}")
         else:
-            print(f"File not found: {file_path}")
-    
-    print(f"Resolved merge conflicts in {resolved_count} files")
+            print("✓ All merge conflicts resolved!")
+            
+    except subprocess.CalledProcessError as e:
+        print(f"Error running git command: {e}")
+        sys.exit(1)
+    except Exception as e:
+        print(f"Unexpected error: {e}")
+        sys.exit(1)
 
 if __name__ == "__main__":
-    main()
+    resolve_merge_conflicts()

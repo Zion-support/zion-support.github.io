@@ -1,15 +1,7 @@
 import React, { useEffect } from 'react';
-
-
-
-'use client';
-=======
 import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
 
-
-
-
->>>>>>> main
+'use client';
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
@@ -28,7 +20,7 @@ const PerformanceMonitor: React.FC = () => {
     };
     // Monitor performance metrics
     const monitorPerformance = () => {
-      if ('performance' in, window) {
+      if ('performance' in window) {
         window.addEventListener('load', () => {
           setTimeout(() => {
             const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -36,7 +28,7 @@ const PerformanceMonitor: React.FC = () => {
             console.log('Performance Metrics: ', {
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
               loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-              firstPaint: paint.find(const entry = > entry.name === 'first-paint')?.startTime,
+              firstPaint: paint.find((entry) => entry.name === 'first-paint')?.startTime,
               firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
             });
           }, 0);
@@ -45,9 +37,9 @@ const PerformanceMonitor: React.FC = () => {
     };
     // Monitor memory usage
     const monitorMemory = () => {
-      if ('memory' in, performance) {
+      if ('memory' in performance) {
         setInterval(() => {
-          const memory = (performance as, any).memory;
+          const memory = (performance as any).memory;
           console.log('Memory Usage: ', {
             used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
             total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',

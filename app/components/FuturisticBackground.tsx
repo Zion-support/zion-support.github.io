@@ -4,29 +4,29 @@ import { useEffect, useRef} from 'react';
 
 
 const FuturisticBackground: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement />(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext('2 d');
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-      canvas.const height = window.innerHeight;
+      canvas.height = window.innerHeight;
     };
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     // Particle system
-    const particles: Array<{,
-  x: number;,
-  y: number;,
-  vx: number;,
-  vy: number;,
-  size: number;,
-  opacity: number;,
-  color: string;
+    const particles: Array<{
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+      color: string;
     }> = [];
-    const colors = ['#00 d4 ff', '#ff0080', '#00 ff88', '#a855 f7', '#ff6 b35'];
+    const colors = ['#00d4ff', '#ff0080', '#00ff88', '#a855f7', '#ff6b35'];
     // Create particles
     for (let i = 0; i < 100; i++) {
       particles.push({

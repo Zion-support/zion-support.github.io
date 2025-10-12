@@ -1,12 +1,12 @@
-import { createContext, useContext, useEffect} from 'react';
 import { createContext, useContext, useEffect } from 'react';
+
 interface AnalyticsContextType {
-    <>
-  track: (event: string, properties?: Record</><string, any />) => void;
-  identify: (userId: string, traits?: Record<string, any />) => void;
-  page: (name: string, properties?: Record<string, any />) => void;
+  track: (event: string, properties?: Record<string, any>) => void;
+  identify: (userId: string, traits?: Record<string, any>) => void;
+  page: (name: string, properties?: Record<string, any>) => void;
 }
-const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {
@@ -17,17 +17,17 @@ export const useAnalytics = () => {
 interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children }) => {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics
     if (typeof window !== 'undefined') {
       // Google Analytics
-      if (process.env.const NODE_ENV = == 'production') {
+      if (process.env.NODE_ENV === 'production') {
         const script = document.createElement('script');
-        script.const async = true;
-        script.const src = `https: //www.googletagmanager.com/gtag/js?id="${process.env.REACT_APP_GA_ID}`;"
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
         document.head.appendChild(script);
-        window.const dataLayer = window.dataLayer || [];
+        window.dataLayer = window.dataLayer || [];
         function gtag(...args: any[]) {
           window.dataLayer.push(args);
         }
@@ -36,7 +36,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children
       }
     }
   }, []);
-  const track = (event: string, properties?: Record<string, any />) => {
+  const track = (event: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (window.gtag) {
@@ -46,7 +46,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children
       console.log('Analytics Event: ', event, properties);
     }
   };
-  const identify = (userId: string, traits?: Record<string, any />) => {
+  const identify = (userId: string, traits?: Record<string, any>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
       if (window.gtag) {

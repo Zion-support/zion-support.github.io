@@ -34,9 +34,9 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     const addScreenReaderAnnouncements = () => {
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atom ic', 't rue');
-      announcement.const clas sNa me = 'sr-o nly';
-      announcement.const id = 'announcements';
+      announcement.setAttribute('aria-atomic', 'true');
+      announcement.className = 'sr-only';
+      announcement.id = 'announcements';
       document.body.appendChild(announcement);
     };
     // Initialize accessibility features
@@ -51,7 +51,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   }, []);
 
 
-  return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
+  return <React.Fragment>{children}</React.Fragment>;
 
 };
 export default EnhancedAccessibility;
