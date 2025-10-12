@@ -1,3 +1,4 @@
+'use client';
 /**
  * API Client Utility
  * Provides a centralized API client with error handling and caching

@@ -1,3 +1,4 @@
+'use client';
 ursor/website-audit-and-update-with-deployment-a178
 ursor/
                 Enhanced Accessibility

@@ -1,3 +1,4 @@
+'use client';
 // Optimized icon system to reduce bundle size
 // Only import icons that are actually used
 

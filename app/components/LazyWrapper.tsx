@@ -1,3 +1,4 @@
+'use client';
 import React, { Suspense, lazy, ComponentType } from 'react'
 
 interface LazyWrapperProps {

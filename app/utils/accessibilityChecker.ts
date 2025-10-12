@@ -1,3 +1,4 @@
+'use client';
 /**
  * Accessibility Checker Utility
  * Provides functions to check and validate accessibility features

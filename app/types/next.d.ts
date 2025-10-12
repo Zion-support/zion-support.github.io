@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 // Type definitions for Next.js
       NODE_ENV: 'development' | 'production' | 'test'

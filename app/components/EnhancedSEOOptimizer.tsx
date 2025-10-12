@@ -1,3 +1,4 @@
+'use client';
 import { Helmet } from 'react-helmet-async';
 ursor/
       description: 'Advanced AI technology to automatically optimize your website for search engines',

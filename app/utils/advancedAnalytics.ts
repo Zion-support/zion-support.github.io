@@ -1,3 +1,4 @@
+'use client';
 /**
  * Advanced Analytics Utility
  * Provides comprehensive analytics tracking and reporting functionality

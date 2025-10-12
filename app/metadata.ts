@@ -1,3 +1,4 @@
+'use client';
 // Define metadata type for compatibility
   title: string;
   description: string;

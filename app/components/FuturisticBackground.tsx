@@ -1,136 +1,90 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
-interface FuturisticBackgroundProps {
-  children: React.ReactNode;
-  variant?: 'default' | 'hero' | 'services' | 'contact';
-}
-
-export default function FuturisticBackground({ children, variant = 'default' }: FuturisticBackgroundProps) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const animationRef = useRef<number>();
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    let isVisible = true;
-
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Particle system
-    const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
-    }> = [];
-
-    const colors = [
-      '#00ffff', '#ff00ff', '#00ff00', '#ffff00', '#ff0080', '#8000ff'
-    ];
-
-    // Create particles - reduced count for better performance
-    for (let i = 0; i < 25; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-        size: Math.random() * 1.5 + 0.5,
-        opacity: Math.random() * 0.3 + 0.1,
-        color: colors[Math.floor(Math.random() * colors.length)]
-      });
-    }
-
-    const animate = () => {
-      if (!isVisible) return;
-
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-        // Update position
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-
-        // Wrap around screen
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
-
-        // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
-        ctx.fill();
-
-        // Draw connections
-        particles.slice(index + 1).forEach(otherParticle => {
-          const distance = Math.sqrt(
-            Math.pow(particle.x - otherParticle.x, 2) + 
-            Math.pow(particle.y - otherParticle.y, 2)
-          );
-
-          if (distance < 150) {
-            ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = particle.color + Math.floor((1 - distance / 150) * 80).toString(16).padStart(2, '0');
-            ctx.lineWidth = 1;
-            ctx.stroke();
-          }
-        });
-      });
-
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-    // Start animation
-    animate();
-
-    // Handle visibility change
-    const handleVisibilityChange = () => {
-      isVisible = !document.hidden;
-      if (isVisible) {
-        animate();
-      }
-    };
-
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-      window.removeEventListener('resize', resizeCanvas);
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-  }, []);
-
+const FuturisticBackground: React.FC = () => {
   return (
-    <div className="relative min-h-screen">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full opacity-30"
-        style={{ zIndex: 1 }}
-      />
-      <div className="relative z-10">
-        {children}
-      </div>
+    <div className="fixed inset-0 -z-10 overflow-hidden">
+      {/* Animated Grid Background */}
+      <div className="absolute inset-0 cyber-grid opacity-30"></div>
+      
+      {/* Floating Particles */}
+      <div className="absolute inset-0 particles opacity-20"></div>
+      
+      {/* Gradient Orbs */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-pink-500/20 to-orange-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+      
+      {/* Neural Network Lines */}
+      <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1000 1000">
+        <defs>
+          <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="#06b6d4" />
+            <stop offset="50%" stopColor="#8b5cf6" />
+            <stop offset="100%" stopColor="#ec4899" />
+          </linearGradient>
+        </defs>
+        
+        {/* Neural Network Nodes */}
+        <circle cx="200" cy="200" r="3" fill="url(#neuralGradient)" className="animate-pulse">
+          <animate attributeName="r" values="3;6;3" dur="3s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="400" cy="150" r="3" fill="url(#neuralGradient)" className="animate-pulse">
+          <animate attributeName="r" values="3;6;3" dur="3s" repeatCount="indefinite" begin="0.5s" />
+        </circle>
+        <circle cx="600" cy="200" r="3" fill="url(#neuralGradient)" className="animate-pulse">
+          <animate attributeName="r" values="3;6;3" dur="3s" repeatCount="indefinite" begin="1s" />
+        </circle>
+        <circle cx="800" cy="300" r="3" fill="url(#neuralGradient)" className="animate-pulse">
+          <animate attributeName="r" values="3;6;3" dur="3s" repeatCount="indefinite" begin="1.5s" />
+        </circle>
+        <circle cx="300" cy="400" r="3" fill="url(#neuralGradient)" className="animate-pulse">
+          <animate attributeName="r" values="3;6;3" dur="3s" repeatCount="indefinite" begin="2s" />
+        </circle>
+        <circle cx="700" cy="500" r="3" fill="url(#neuralGradient)" className="animate-pulse">
+          <animate attributeName="r" values="3;6;3" dur="3s" repeatCount="indefinite" begin="2.5s" />
+        </circle>
+        <circle cx="150" cy="600" r="3" fill="url(#neuralGradient)" className="animate-pulse">
+          <animate attributeName="r" values="3;6;3" dur="3s" repeatCount="indefinite" begin="3s" />
+        </circle>
+        <circle cx="500" cy="700" r="3" fill="url(#neuralGradient)" className="animate-pulse">
+          <animate attributeName="r" values="3;6;3" dur="3s" repeatCount="indefinite" begin="3.5s" />
+        </circle>
+        <circle cx="850" cy="800" r="3" fill="url(#neuralGradient)" className="animate-pulse">
+          <animate attributeName="r" values="3;6;3" dur="3s" repeatCount="indefinite" begin="4s" />
+        </circle>
+        
+        {/* Neural Network Connections */}
+        <line x1="200" y1="200" x2="400" y2="150" stroke="url(#neuralGradient)" strokeWidth="1" opacity="0.6">
+          <animate attributeName="opacity" values="0.6;0.2;0.6" dur="4s" repeatCount="indefinite" />
+        </line>
+        <line x1="400" y1="150" x2="600" y2="200" stroke="url(#neuralGradient)" strokeWidth="1" opacity="0.6">
+          <animate attributeName="opacity" values="0.6;0.2;0.6" dur="4s" repeatCount="indefinite" begin="0.5s" />
+        </line>
+        <line x1="600" y1="200" x2="800" y2="300" stroke="url(#neuralGradient)" strokeWidth="1" opacity="0.6">
+          <animate attributeName="opacity" values="0.6;0.2;0.6" dur="4s" repeatCount="indefinite" begin="1s" />
+        </line>
+        <line x1="200" y1="200" x2="300" y2="400" stroke="url(#neuralGradient)" strokeWidth="1" opacity="0.6">
+          <animate attributeName="opacity" values="0.6;0.2;0.6" dur="4s" repeatCount="indefinite" begin="1.5s" />
+        </line>
+        <line x1="300" y1="400" x2="700" y2="500" stroke="url(#neuralGradient)" strokeWidth="1" opacity="0.6">
+          <animate attributeName="opacity" values="0.6;0.2;0.6" dur="4s" repeatCount="indefinite" begin="2s" />
+        </line>
+        <line x1="700" y1="500" x2="150" y2="600" stroke="url(#neuralGradient)" strokeWidth="1" opacity="0.6">
+          <animate attributeName="opacity" values="0.6;0.2;0.6" dur="4s" repeatCount="indefinite" begin="2.5s" />
+        </line>
+        <line x1="150" y1="600" x2="500" y2="700" stroke="url(#neuralGradient)" strokeWidth="1" opacity="0.6">
+          <animate attributeName="opacity" values="0.6;0.2;0.6" dur="4s" repeatCount="indefinite" begin="3s" />
+        </line>
+        <line x1="500" y1="700" x2="850" y2="800" stroke="url(#neuralGradient)" strokeWidth="1" opacity="0.6">
+          <animate attributeName="opacity" values="0.6;0.2;0.6" dur="4s" repeatCount="indefinite" begin="3.5s" />
+        </line>
+      </svg>
+      
+      {/* Matrix Rain Effect */}
+      <div className="absolute inset-0 matrix-rain opacity-5"></div>
     </div>
   );
-}
+};
+
+export default FuturisticBackground;
