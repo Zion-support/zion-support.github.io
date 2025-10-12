@@ -2,7 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Languages, Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
+=======
+import { Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-09f3
 import Layout from '../layout';
 =======
 import { ArrowRight, Globe, Zap, Shield } from 'lucide-react';
@@ -78,11 +82,12 @@ const AITranslationServicePage = () => {
         'Priority support',
         'API access',
         'Team collaboration',
+<<<<<<< HEAD
         'Custom terminology',
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-09f3
         'Advanced quality checks',
-        'Priority support',
-        'Custom integrations',
-        'Team collaboration'
+        'Custom integrations'
       ],
       popular: true
     },
@@ -255,6 +260,7 @@ const AITranslationServicePage = () => {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
       </div>
 
       {/* CTA Section */}
@@ -284,3 +290,6 @@ const AITranslationServicePage = () => {
 
 export default AITranslationServicePage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c493
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-09f3

@@ -2,7 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Cloud, Shield, Zap, CheckCircle } from 'lucide-react';
+=======
+import { Cloud, Shield, Zap, CheckCircle, Database } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-09f3
 import Layout from '../layout';
 =======
 import { ArrowRight, Cloud, Zap, Shield } from 'lucide-react';
@@ -158,6 +162,7 @@ const CloudMigrationProPage = () => {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
 =======
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -214,6 +219,22 @@ const CloudMigrationProPage = () => {
               </div>
           </div>
 <<<<<<< HEAD
+=======
+
+          {/* Features Section */}
+          <section className="py-20">
+            <div className="container mx-auto px-4">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold text-white mb-4">
+                  Migration Features
+                </h2>
+                <p className="text-gray-300 text-lg">
+                  Comprehensive cloud migration solutions
+                </p>
+              </div>
+            </div>
+          </section>
+>>>>>>> cursor/fix-errors-and-merge-to-main-09f3
 
           {/* Migration Process Section */}
           <div className="mb-16">

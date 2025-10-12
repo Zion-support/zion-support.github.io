@@ -349,6 +349,7 @@ const AISupplyChainOptimizerPage = () => {
             </div>
           </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             {/* CTA Section */}
             <div className="text-center">
@@ -437,6 +438,8 @@ const AISupplyChainOptimizerPage = () => {
               </div>
             ))}
           </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-09f3
         </div>
       </section>
 

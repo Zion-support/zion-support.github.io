@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-09f3
 
 interface SEOHeadProps {
 =======
@@ -16,6 +20,9 @@ interface SEOProps {
   twitterCard?: string;
   structuredData?: object;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-09f3
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -27,6 +34,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData
+<<<<<<< HEAD
 =======
   noindex?: boolean;
   nofollow?: boolean;
@@ -44,6 +52,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   noindex = false,
   nofollow = false
 >>>>>>> cursor/fix-errors-and-merge-to-main-c493
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-09f3
 }) => {
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -84,14 +94,18 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       "Software Development",
       "Data Analytics",
       "Machine Learning"
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-c493
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-09f3
     ]
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <>
       {/* Basic Meta Tags */}
@@ -112,10 +126,18 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       
       {/* Open Graph */}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c493
+=======
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={canonical} />
+>>>>>>> cursor/fix-errors-and-merge-to-main-09f3
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:type" content={ogType} />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <meta property="og:url" content={canonical} />
       
@@ -125,10 +147,13 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       
       {/* Twitter Card */}
 >>>>>>> cursor/fix-errors-and-merge-to-main-c493
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-09f3
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
+<<<<<<< HEAD
       
 <<<<<<< HEAD
       {/* Additional Meta Tags */}
@@ -160,6 +185,12 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       {/* Additional SEO Scripts */}
       <script type="application/ld+json">
         {JSON.stringify({
+=======
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
+      <script type="application/ld+json">{JSON.stringify({
+>>>>>>> cursor/fix-errors-and-merge-to-main-09f3
           "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "Zion Tech Group",
@@ -169,16 +200,23 @@ const EnhancedSEO: React.FC<SEOProps> = ({
             "target": "https://ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
           }
+<<<<<<< HEAD
         })}
       </script>
       
       {/* Security Headers */}
       <meta httpEquiv="X-Frame-Options" content="DENY" />
     </>
+=======
+        })}</script>
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+    </Helmet>
+>>>>>>> cursor/fix-errors-and-merge-to-main-09f3
   );
 };
 
 export default SEOHead;
+<<<<<<< HEAD
 =======
     </Helmet>
   );
@@ -186,3 +224,5 @@ export default SEOHead;
 
 export default EnhancedSEO;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c493
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-09f3
