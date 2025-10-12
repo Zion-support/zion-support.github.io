@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function AIVoiceAssistant() {
   const features = [
@@ -121,68 +119,6 @@ export default function AIVoiceAssistant() {
       description="Transform user interaction with AI-powered voice assistants. Natural language processing, human-like voice synthesis, and seamless integration. Start your free trial today."
       keywords="AI voice assistant, voice AI, speech recognition, voice synthesis, conversational AI, voice automation"
     >
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Mic, Brain, Zap, CheckCircle, ArrowRight, Users, Award, Star, Globe, Settings } from 'lucide-react';
-
-const AIVoiceAssistantPage: React.FC = () => {
-  const features = [
-    {
-      icon: Mic,
-      title: 'Speech Recognition',
-      description: 'Advanced speech-to-text technology with high accuracy and noise cancellation.'
-    },
-    {
-      icon: Brain,
-      title: 'Natural Language Understanding',
-      description: 'Understand context, intent, and complex commands for natural interactions.'
-    },
-    {
-      icon: Globe,
-      title: 'Multi-language Support',
-      description: 'Support for multiple languages and accents for global accessibility.'
-    },
-    {
-      icon: Settings,
-      title: 'Custom Wake Words',
-      description: 'Personalize your assistant with custom wake words and activation phrases.'
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'Smart Home Control',
-      description: 'Control lights, temperature, and devices with voice commands.',
-      icon: Zap
-    },
-    {
-      title: 'Business Automation',
-      description: 'Automate tasks, schedule meetings, and manage workflows hands-free.',
-      icon: Users
-    },
-    {
-      title: 'Customer Service',
-      description: 'Provide voice-based customer support with intelligent responses.',
-      icon: Star
-    },
-    {
-      title: 'Accessibility',
-      description: 'Make technology accessible for users with disabilities.',
-      icon: Award
-    }
-  ];
-
-  return (
-    <>
-      <Helmet>
-        <title>AI Voice Assistant - Zion Tech Group</title>
-        <meta name="description" content="Build intelligent voice assistants with our AI Voice Assistant platform. Speech recognition, natural language processing, and custom wake words for hands-free automation." />
-        <meta name="keywords" content="AI voice assistant, speech recognition, voice automation, natural language processing, hands-free control" />
-      </Helmet>
-
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-32 pb-20">
@@ -413,16 +349,6 @@ const AIVoiceAssistantPage: React.FC = () => {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </Layout>
   )
 }
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
-=======
-    </>
-  );
-};
-
-export default AIVoiceAssistantPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
