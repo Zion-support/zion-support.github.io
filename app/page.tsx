@@ -40,33 +40,41 @@ export default function HomePage() {
       title: 'AI Content Generation',
       description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      link: '/ai-content-generation',
+      link: '/ai-content-generator',
       features: ['Automated content creation', 'SEO optimization', 'Multi-language support'],
       price: 'Starting at $99/month'
     },
     {
-      title: 'IT Services & Solutions',
-      description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      link: '/it-services',
-      features: ['Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'],
-      price: 'Starting at $2,500/project'
+      title: 'AI CRM Assistant',
+      description: 'Boost sales by 45% with AI-powered lead scoring, email automation, and predictive analytics.',
+      icon: <Users className="w-8 h-8 text-purple-400" />,
+      link: '/ai-crm-assistant',
+      features: ['AI lead scoring', 'Email automation', 'Predictive analytics'],
+      price: 'Starting at $49/month'
     },
     {
-      title: 'Cloud Services',
-      description: 'Scalable, secure, and reliable cloud infrastructure solutions for your business.',
-      icon: <Cloud className="w-8 h-8 text-blue-400" />,
-      link: '/cloud-services',
-      features: ['Scalable infrastructure', '99.9% uptime', 'Global CDN'],
+      title: 'AI Social Media Manager',
+      description: 'Increase engagement by 200% with AI-powered social media automation and content generation.',
+      icon: <MessageSquare className="w-8 h-8 text-pink-400" />,
+      link: '/ai-social-media-manager',
+      features: ['AI content generation', 'Smart scheduling', 'Analytics insights'],
+      price: 'Starting at $29/month'
+    },
+    {
+      title: 'AI Cybersecurity Suite',
+      description: 'Protect your business with 99.9% threat detection accuracy using advanced AI security.',
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      link: '/ai-cybersecurity-suite',
+      features: ['AI threat detection', 'Zero trust security', 'Automated response'],
       price: 'Starting at $199/month'
     },
     {
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with our comprehensive cybersecurity services and monitoring.',
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      link: '/cybersecurity',
-      features: ['Threat detection', 'Security audits', 'Compliance management'],
-      price: 'Starting at $499/month'
+      title: 'AI Smart City Solutions',
+      description: 'Transform urban infrastructure with AI-powered smart city technologies and IoT integration.',
+      icon: <Globe className="w-8 h-8 text-green-400" />,
+      link: '/ai-smart-city-solutions',
+      features: ['Traffic optimization', 'Energy management', 'IoT integration'],
+      price: 'Starting at $50,000/project'
     },
     {
       title: '5G Implementation',
@@ -75,14 +83,6 @@ export default function HomePage() {
       link: '/5g-implementation',
       features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing'],
       price: 'Starting at $5,000/project'
-    },
-    {
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics platform.',
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      link: '/data-analytics',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards'],
-      price: 'Starting at $299/month'
     }
   ];
 
