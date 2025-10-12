@@ -1,12 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
-=======
-export default EnhancedFooter;
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 
 const EnhancedFooter: React.FC = () => {
   return (
@@ -27,14 +21,13 @@ const EnhancedFooter: React.FC = () => {
             </Link>
           </div>
 
-<<<<<<< HEAD
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/ai-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Solutions</Link></li>
+              <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Solutions</Link></li>
               <li><Link to="/it-services" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Services</Link></li>
-              <li><Link to="/cloud-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">Cloud Solutions</Link></li>
-              <li><Link to="/cybersecurity" className="text-gray-300 hover:text-cyan-400 transition-colors">Cybersecurity</Link></li>
+              <li><Link to="/cloud-infrastructure" className="text-gray-300 hover:text-cyan-400 transition-colors">Cloud Solutions</Link></li>
+              <li><Link to="/cybersecurity-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">Cybersecurity</Link></li>
             </ul>
           </div>
 
@@ -42,7 +35,6 @@ const EnhancedFooter: React.FC = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors">About Us</Link></li>
-              <li><Link to="/team" className="text-gray-300 hover:text-cyan-400 transition-colors">Our Team</Link></li>
               <li><Link to="/careers" className="text-gray-300 hover:text-cyan-400 transition-colors">Careers</Link></li>
               <li><Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors">Contact</Link></li>
             </ul>
@@ -69,18 +61,6 @@ const EnhancedFooter: React.FC = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-=======
-                Get Started;
-            <h4 className="text-lg font-semibold text-whitemb-4">Services</h4>
-              <li /><Link to="/ai-solutions" className="text-gray-300 hover:text-cyan-400transition-colors">AI Solutions</Link></li>
-              <li /><Link to="/it-services" className="text-gray-300 hover:text-cyan-400transition-colors">IT Services</Link></li>
-              <li /><Link to="/cloud-solutions" className="text-gray-300 hover:text-cyan-400transition-colors">Cloud Solutions</Link></li>
-              <li /><Link to="/cybersecurity" className="text-gray-300 hover:text-cyan-400transition-colors">Cybersecurity</Link></li>
-            <h4 className="text-lg font-semibold text-whitemb-4">Contact</h4>
-                <span>contact@ziontechgroup.com</span>
-                <span>+1 (555) 123-4567</span>
-                <span>New York, NY</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
             © 2024 Zion Tech Group. All rights reserved.
           </p>
         </div>
@@ -89,7 +69,4 @@ const EnhancedFooter: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedFooter;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
