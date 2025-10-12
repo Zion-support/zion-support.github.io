@@ -86,10 +86,10 @@ const defaultSlides: Slide[] = [
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   <h3 className="text-3 xlfont-bold text-white"  >{slide.title}</h3>
                   <p className="text-lgtext-gray-300">{slide.description}</p>
-                  <ul className="w-5h-5ml-2" />
+                  <ul className="w-5 h-5 ml-2" />
                     {slide.features.map((feature, index) => (
                       <li key="{index}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5h-5ml-2" />
+                        <CheckCircle className="w-5 h-5 ml-2" />
                         {feature}
                       </li>
                     ))}
@@ -97,7 +97,7 @@ const defaultSlides: Slide[] = [
                 </div>
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <Cloud className="w-5h-5ml-2" />
+                    <Cloud className="w-5 h-5 ml-2" />
                   </div>
               </div>
           ))}
@@ -108,13 +108,13 @@ const defaultSlides: Slide[] = [
           onClick="{prevSlide}"
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
           aria-label="Previous slide" />
-          <ChevronLeft className="w-5h-5ml-2" />
+          <ChevronLeft className="w-5 h-5 ml-2" />
         </button>
         <button
           onClick="{nextSlide}"
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
           aria-label="Next slide" />
-          <ChevronRight className="w-5h-5ml-2" />
+          <ChevronRight className="w-5 h-5 ml-2" />
         </button>
       </div>
 
@@ -124,7 +124,7 @@ const defaultSlides: Slide[] = [
           onClick="{togglePlayPause}"
           className="bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
           aria-label="{isPlaying" ? 'Pause' : 'Play'} />
-          {isPlaying ? <Pause className="w-5h-5ml-2" /> : <Play className="w-5h-5ml-2" />}
+          {isPlaying ? <Pause className="w-5 h-5 ml-2" /> : <Play className="w-5 h-5 ml-2" />}
         </button>
 
         {/* Slide Indicators */}

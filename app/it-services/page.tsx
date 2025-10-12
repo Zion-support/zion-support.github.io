@@ -434,13 +434,13 @@ const ITServicesPage: React.FC = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
-        <section className="w-5h-5ml-2" />
+        <section className="w-5 h-5 ml-2" />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
                 IT Services
-                <span className="w-5h-5ml-2" />& Solutions
+                <span className="w-5 h-5 ml-2" />& Solutions
                 </span>
               </h1>
               <p className="{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
@@ -454,7 +454,7 @@ const ITServicesPage: React.FC = () => {
         >
           Get Started Today
                   
-          <ArrowRight className="w-5h-5ml-2" />
+          <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
                 <a
                   href="tel:+13024640950"
@@ -466,7 +466,7 @@ const ITServicesPage: React.FC = () => {
         </section>
 
         {/* Category Filter */}
-        <section className="w-5h-5ml-2" />
+        <section className="w-5 h-5 ml-2" />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {categories.map((category) => (
@@ -486,7 +486,7 @@ const ITServicesPage: React.FC = () => {
         </section>
 
         {/* Services Grid */}
-        <section className="w-5h-5ml-2" />
+        <section className="w-5 h-5 ml-2" />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {filteredServices.map((service, index) => (
@@ -497,14 +497,14 @@ const ITServicesPage: React.FC = () => {
                     <div className="{`inline- flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl mb-4`} />
                       <service.icon className="h-8w-8text-white"  />
                     </div>
-                    <h3 className="w-5h-5ml-2" />{service.title}</h3>
-                    <p className="w-5h-5ml-2">{service.description}</p>
+                    <h3 className="w-5 h-5 ml-2" />{service.title}</h3>
+                    <p className="w-5 h-5 ml-2">{service.description}</p>
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{service.price}</div>
 
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     {service.features.map((feature, idx) => (
                       <div key="{idx}" className="flex items-centertext-sm text-gray-300" />
-                        <CheckCircle className="w-5h-5ml-2" />
+                        <CheckCircle className="w-5 h-5 ml-2" />
                         <span />{feature}</span>
                       </div>
                     ))}
@@ -517,7 +517,7 @@ const ITServicesPage: React.FC = () => {
         >
           Get Quote
                       
-          <ArrowRight className="w-5h-5ml-2" />
+          <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
                     <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-whitetransition-all duration-300">Learn More
                     </Link>
@@ -527,11 +527,11 @@ const ITServicesPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" />
+        <section className="w-5 h-5 ml-2" />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />Ready to Transform Your IT Infrastructure?
+            <h2 className="w-5 h-5 ml-2" />Ready to Transform Your IT Infrastructure?
             </h2>
-            <p className="w-5h-5ml-2">Let our expert team help you build, secure, and optimize your technology infrastructure 
+            <p className="w-5 h-5 ml-2">Let our expert team help you build, secure, and optimize your technology infrastructure 
               for maximum performance and security.
             </p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -541,7 +541,7 @@ const ITServicesPage: React.FC = () => {
         >
           Get Started Today
                 
-          <ArrowRight className="w-5h-5ml-2" />
+          <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
               <a
                 href="tel:+13024640950"
@@ -558,13 +558,13 @@ const ITServicesPage: React.FC = () => {
         </section>
 
         {/* Services Grid */}
-        <section className="w-5h-5ml-2" />
+        <section className="w-5 h-5 ml-2" />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />
-                Our <span className="w-5h-5ml-2" />IT Solutions</span>
+              <h2 className="w-5 h-5 ml-2" />
+                Our <span className="w-5 h-5 ml-2" />IT Solutions</span>
               </h2>
-              <p className="w-5h-5ml-2">End-to-end IT services designed to modernize your infrastructure and accelerate your digital transformation
+              <p className="w-5 h-5 ml-2">End-to-end IT services designed to modernize your infrastructure and accelerate your digital transformation
               </p>
             </div>
 
@@ -577,29 +577,29 @@ const ITServicesPage: React.FC = () => {
                     <service.icon className="w-8 h-8text-white"  />
                   </div>
                   
-                  <h3 className="w-5h-5ml-2" />{service.title}
+                  <h3 className="w-5 h-5 ml-2" />{service.title}
                   </h3>
                   
-                  <p className="w-5h-5ml-2">{service.description}
+                  <p className="w-5 h-5 ml-2">{service.description}
                   </p>
 
-                  <ul className="w-5h-5ml-2" />
+                  <ul className="w-5 h-5 ml-2" />
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-centertext-sm text-gray-300" />
-                        <CheckCircle className="w-5h-5ml-2" />
+                        <CheckCircle className="w-5 h-5 ml-2" />
                         {feature}
                       </li>
                     ))}
                   </ul>
 
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5h-5ml-2" />{service.price}</span>
+                    <span className="w-5 h-5 ml-2" />{service.price}</span>
                     <Link
           to="{service.link}"
           className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1inline-flex items-center"
         >
           Learn More 
-          <ArrowRight className="w-5h-5ml-2" />
+          <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
                   </div>
               ))}
@@ -607,13 +607,13 @@ const ITServicesPage: React.FC = () => {
         </section>
 
         {/* Process Section */}
-        <section className="w-5h-5ml-2" />
+        <section className="w-5 h-5 ml-2" />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />
-                Our <span className="w-5h-5ml-2" />Process</span>
+              <h2 className="w-5 h-5 ml-2" />
+                Our <span className="w-5 h-5 ml-2" />Process</span>
               </h2>
-              <p className="w-5h-5ml-2">A proven methodology that ensures successful project delivery and maximum value for your investment
+              <p className="w-5 h-5 ml-2">A proven methodology that ensures successful project delivery and maximum value for your investment
               </p>
             </div>
 
@@ -621,63 +621,63 @@ const ITServicesPage: React.FC = () => {
               {process.map((step, index) => (
                 <div key={index} className="text-centergroup" />
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5h-5ml-2" />{step.step}</span>
+                    <span className="w-5 h-5 ml-2" />{step.step}</span>
                   </div>
-                  <h3 className="w-5h-5ml-2" />{step.title}</h3>
-                  <p className="w-5h-5ml-2">{step.description}</p>
+                  <h3 className="w-5 h-5 ml-2" />{step.title}</h3>
+                  <p className="w-5 h-5 ml-2">{step.description}</p>
                 </div>
               ))}
             </div>
         </section>
 
         {/* Why Choose Us */}
-        <section className="w-5h-5ml-2" />
+        <section className="w-5 h-5 ml-2" />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />
-                Why Choose <span className="w-5h-5ml-2" />Zion Tech Group</span>?
+              <h2 className="w-5 h-5 ml-2" />
+                Why Choose <span className="w-5 h-5 ml-2" />Zion Tech Group</span>?
               </h2>
-              <p className="w-5h-5ml-2">We deliver exceptional IT solutions through expertise, innovation, and unwavering commitment to your success
+              <p className="w-5 h-5 ml-2">We deliver exceptional IT solutions through expertise, innovation, and unwavering commitment to your success
               </p>
             </div>
 
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Zap className="w-5h-5ml-2" />
+                  <Zap className="w-5 h-5 ml-2" />
                 </div>
-                <h3 className="w-5h-5ml-2" />Rapid Deployment</h3>
-                <p className="w-5h-5ml-2">Fast implementation with minimal downtime. We get your solutions up and running quickly.
+                <h3 className="w-5 h-5 ml-2" />Rapid Deployment</h3>
+                <p className="w-5 h-5 ml-2">Fast implementation with minimal downtime. We get your solutions up and running quickly.
                 </p>
               </div>
 
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Users className="w-5h-5ml-2" />
+                  <Users className="w-5 h-5 ml-2" />
                 </div>
-                <h3 className="w-5h-5ml-2" />Expert Team</h3>
-                <p className="w-5h-5ml-2">Certified professionals with years of experience in enterprise IT solutions and cloud technologies.
+                <h3 className="w-5 h-5 ml-2" />Expert Team</h3>
+                <p className="w-5 h-5 ml-2">Certified professionals with years of experience in enterprise IT solutions and cloud technologies.
                 </p>
               </div>
 
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Award className="w-5h-5ml-2" />
+                  <Award className="w-5 h-5 ml-2" />
                 </div>
-                <h3 className="w-5h-5ml-2" />Proven Results</h3>
-                <p className="w-5h-5ml-2">Track record of successful projects with measurable business impact and client satisfaction.
+                <h3 className="w-5 h-5 ml-2" />Proven Results</h3>
+                <p className="w-5 h-5 ml-2">Track record of successful projects with measurable business impact and client satisfaction.
                 </p>
               </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" />
+        <section className="w-5 h-5 ml-2" />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />Ready to Modernize Your IT Infrastructure?
+              <h2 className="w-5 h-5 ml-2" />Ready to Modernize Your IT Infrastructure?
               </h2>
-              <p className="w-5h-5ml-2">Let's discuss your IT needs and create a customized solution that drives your business forward.
+              <p className="w-5 h-5 ml-2">Let's discuss your IT needs and create a customized solution that drives your business forward.
               </p>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project
@@ -687,6 +687,7 @@ const ITServicesPage: React.FC = () => {
               </div>
           </div>
         </section>
+              </div>
       </div>
     </>
   );

@@ -2,8 +2,8 @@
 
 'use client';
 
-import React from 'react';
 'use client';
+import React from 'react';
 
 interface SEOHeadProps {
   title?: string;

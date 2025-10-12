@@ -45,34 +45,34 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5h-5ml-2" />
-              <span className="w-5h-5ml-2" />EnhancedLoadingSkeleton
+            <h1 className="w-5 h-5 ml-2" />
+              <span className="w-5 h-5 ml-2" />EnhancedLoadingSkeleton
               </span>
               <br />
               <span className="text-white"  >Solutions</span>
             </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced enhancedloadingskeleton solutions.
+            <p className="w-5 h-5 ml-2">Transform your business with our advanced enhancedloadingskeleton solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button className="w-5h-5ml-2">Get Started
+              <button className="w-5 h-5 ml-2">Get Started
               </button>
-              <button className="w-5h-5ml-2">Learn More
+              <button className="w-5 h-5 ml-2">Learn More
               </button>
             </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />Why Choose Our EnhancedLoadingSkeleton Solutions?
+            <h2 className="w-5 h-5 ml-2" />Why Choose Our EnhancedLoadingSkeleton Solutions?
             </h2>
-            <p className="w-5h-5ml-2">Our comprehensive approach ensures maximum efficiency and results for your business.
+            <p className="w-5 h-5 ml-2">Our comprehensive approach ensures maximum efficiency and results for your business.
             </p>
           </div>
 
@@ -90,19 +90,19 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />Key Benefits
+            <h2 className="w-5 h-5 ml-2" />Key Benefits
             </h2>
-            <p className="w-5h-5ml-2">Discover the advantages of our enhancedloadingskeleton solutions.
+            <p className="w-5 h-5 ml-2">Discover the advantages of our enhancedloadingskeleton solutions.
             </p>
           </div>
 
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {benefits.map((benefit, index) => (
               <div key={index} className="flexitems-startspace-x-3" />
-                <CheckCircle className="w-5h-5ml-2" />
+                <CheckCircle className="w-5 h-5 ml-2" />
                 <p className="text-gray-300">{benefit}</p>
               </div>
             ))}
@@ -110,18 +110,18 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <h2 className="w-5h-5ml-2" />Ready to Get Started?
+          <h2 className="w-5 h-5 ml-2" />Ready to Get Started?
           </h2>
-          <p className="w-5h-5ml-2">Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.
+          <p className="w-5 h-5 ml-2">Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.
           </p>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <button className="w-5h-5ml-2" />
+            <button className="w-5 h-5 ml-2" />
               Get Started Now
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </button>
-            <button className="w-5h-5ml-2">Contact Sales
+            <button className="w-5 h-5 ml-2">Contact Sales
             </button>
           </div>
       </section>

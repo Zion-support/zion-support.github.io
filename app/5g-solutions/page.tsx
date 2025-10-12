@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>5G Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive 5G solutions by Zion Tech Group. Transform your business with our expert 5G technology solutions." />

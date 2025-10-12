@@ -1,45 +1,48 @@
+'use client';
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-export default function InfrastructureManagementPage() {
+const ServicePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title />Infrastructure Management Services - Zion Tech Group</title>
-        <meta name="description" content="Complete IT infrastructure setup, management, and optimization services." />
+        <title>Service - Zion Tech Group</title>
+        <meta name="description" content="Service services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="service, AI solutions, IT services" />
       </Helmet>
       
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <h1 className="w-5h-5ml-2">Infrastructure Management
+      <div className="max-w-7xl mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Service
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              {' '}Solutions
+            </span>
           </h1>
-          <p className="w-5h-5ml-2">Complete IT infrastructure setup, management, and optimization services.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional service services by Zion Tech Group.
           </p>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 max-w-2xl mx-auto">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive service solutions. 
+              Contact us to learn more about our services.
+            </p>
             <Link
-          to="/contact"
-          className="bg-gradient-to-rfrom-blue-600to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-        >
-          Get Started
-              
-          <ArrowRight className="w-5h-5ml-2" />
-        </Link>
-            <Link to="/it-services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">All IT Services
+              to="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Contact Us
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
-      </section>
-
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <h2 className="w-5h-5ml-2" />Coming Soon</h2>
-          <p className="w-5h-5ml-2">We're developing comprehensive infrastructure management services. Contact us to discuss your infrastructure needs.
-          </p>
-          <Link to="/contact" className="bg-gradient-to-rfrom-purple-600to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700transition-all duration-300">Contact Us
-          </Link>
         </div>
-      </section>
+      </div>
     </div>
   );
-}
+};
+
+export default ServicePage;

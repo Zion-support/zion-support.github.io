@@ -57,7 +57,7 @@ interface FormData {
   if (isSubmitted) {
     return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <CheckCircle className="w-5h-5ml-2" />
+        <CheckCircle className="w-5 h-5 ml-2" />
         <h3 className="text-2 xl font-bold text-whitemb-2"  >Message Sent!</h3>
         <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
       </div>
@@ -176,7 +176,7 @@ interface FormData {
             </>
           ) : (
             <>
-              <Send className="w-5h-5ml-2" />
+              <Send className="w-5 h-5 ml-2" />
               Send Message
             </>
           )}
@@ -186,15 +186,15 @@ interface FormData {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Mail className="w-5h-5ml-2" />
+            <Mail className="w-5 h-5 ml-2" />
             <span className="text-gray-300"  >kleber@ziontechgroup.com</span>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Phone className="w-5h-5ml-2" />
+            <Phone className="w-5 h-5 ml-2" />
             <span className="text-gray-300"  >+1 (302) 464-0950</span>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <MessageSquare className="w-5h-5ml-2" />
+            <MessageSquare className="w-5 h-5 ml-2" />
             <span className="text-gray-300"  >24/7 Support</span>
           </div>
       </div>

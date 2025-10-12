@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, ShoppingCart } from 'lucide-react';
 'use client';
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, BarChart, Brain, FileText, Users, LinkIcon, Shield, Zap, CheckCircle, TrendingUp } from 'lucide-react';
 
 const ZionAnalyticsProPage: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
@@ -38,307 +40,213 @@ const ZionAnalyticsProPage: React.FC = () => {
       title: 'API Integrations',
       description: 'Connect with 100+ popular business tools and platforms seamlessly',
       icon: LinkIcon,
-      color: 'from-cyan-500 to-blue-500'
+      color: 'from-indigo-500 to-blue-500'
     },
     {
-      title: 'Mobile App Access',
-      description: 'Access your analytics on-the-go with our native iOS and Android apps',
-      icon: Smartphone,
-      color: 'from-indigo-500 to-purple-500'
+      title: 'Advanced Security',
+      description: 'Enterprise-grade security with role-based access control and data encryption',
+      icon: Shield,
+      color: 'from-red-500 to-pink-500'
     }
   ];
+
   const pricingPlans = [
     {
       name: 'Starter',
       price: '$99',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small businesses getting started with analytics',
       features: [
-        'Up to 5 users',
-        '10 data sources',
+        'Up to 5 data sources',
         'Basic dashboards',
+        'Standard reports',
         'Email support',
-        '1 GB data storage',
-        'Standard reports'
+        '1 user account'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$199',
+      price: '$299',
       period: '/month',
-      description: 'Ideal for growing companies',
+      description: 'Advanced features for growing businesses',
       features: [
-        'Up to 25 users',
-        'Unlimited data sources',
+        'Up to 25 data sources',
         'Advanced dashboards',
-        'Priority support',
-        '10 GB data storage',
         'Custom reports',
-        'API access',
-        'White-label options'
+        'Priority support',
+        'Up to 10 user accounts',
+        'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$399',
-      period: '/month',
-      description: 'For large organizations',
+      price: 'Custom',
+      period: '',
+      description: 'Full-scale solution for large organizations',
       features: [
-        'Unlimited users',
         'Unlimited data sources',
-        'Enterprise dashboards',
-        '24/7 phone support',
-        'Unlimited data storage',
+        'Custom dashboards',
         'Advanced analytics',
-        'Custom integrations',
-        'Dedicated account manager'
+        'Dedicated support',
+        'Unlimited users',
+        'White-label solution'
       ],
       popular: false
     }
   ];
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechStart Inc.',
-      role: 'CEO',
-      content: 'Zion Analytics Pro has transformed how we understand our business. The AI insights have helped us increase revenue by 40%.',
-      rating: 5,
-      avatar: 'SJ'
-    },
-    {
-      name: 'Michael Chen',
-      company: 'DataFlow Solutions',
-      role: 'CTO',
-      content: 'The real-time dashboards and predictive analytics have given us a competitive edge. Highly recommended!',
-      rating: 5,
-      avatar: 'MC'
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'GrowthCorp',
-      role: 'Marketing Director',
-      content: 'Easy to use, powerful features, and excellent support. Our team productivity has increased significantly.',
-      rating: 5,
-      avatar: 'ER'
-    }
-  ];
+
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title />Zion Analytics Pro - AI-Powered Business Intelligence Platform</title>
-        <meta const name = "description" content="Transform your business with Zion Analytics Pro - the most advanced AI-powered business intelligence platform. Real-time analytics, predictive insights, and custom reporting." /  />
-        <meta name="keywords" content="business intelligence, analytics platform, AI insights, data visualization, business dashboard, predictive analytics" />
+        <title>Zion Analytics Pro - AI-Powered Business Intelligence Platform</title>
+        <meta name="description" content="Transform your business with Zion Analytics Pro - the most advanced AI-powered business intelligence platform. Real-time analytics, predictive insights, and custom reporting." />
+        <meta name="keywords" content="business intelligence, analytics platform, AI insights, data visualization, business analytics, predictive insights, custom reporting" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        {/* Hero Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <div />
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Sparkles className="w-5h-5ml-2" />
-                  AI-Powered Analytics
-                </div>
-                <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                  Zion Analytics
-                  <span className="w-5h-5ml-2" />Pro
-                  </span>
-                </h1>
-                <p className="{`text-xl" text-gray-300 mb-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                  The most advanced AI-powered business intelligence platform. Get real-time insights, 
-                  predictive analytics, and custom reports that drive your business forward.
-                </p>
-                <div className="{`flex" flex-col sm: flex-row gap-4 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                  <Link
-          to="/contact"
-          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
-        >
-          Start Free Trial
-                    
-          <ArrowRight className="w-5h-5ml-2" />
-        </Link>
-                  <button className="w-5h-5ml-2" />
-                    <Play className="w-5h-5ml-2" />
-                    Watch Demo
-                  </button>
-                </div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-5w-5tex t-yellow-400fill-current"  />
-                      ))}
-                    </div>
-                    <span className="w-5h-5ml-2" />4.9/5 (127, reviews)</span>
-                  </div>
-              </div>
-              <div className="{`transition-all" duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                        <h3 className="w-5h-5ml-2" />Revenue Analytics</h3>
-                        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                          <TrendingUp className="w-5h-5ml-2" />
-                          +24.5%
-                        </div>
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                        <BarChart className="w-5h-5ml-2" />
-                      </div>
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">$2.4 M</div>
-                          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Total Revenue</div>
-                        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">1,247</div>
-                          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Customers</div>
-                        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">89%</div>
-                          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Satisfaction</div>
-                      </div>
-                  </div>
-              </div>
+      {/* Hero Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Zion Analytics
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              {' '}Pro
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your business with the most advanced AI-powered business intelligence platform. 
+            Real-time analytics, predictive insights, and custom reporting.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              to="/demo"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              View Demo
+            </Link>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />Powerful Features for Modern Businesses
-              </h2>
-              <p className="w-5h-5ml-2">Everything you need to transform your data into actionable insights and drive business growth.
-              </p>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              {features.map((feature, index) => (
-                <div key={index} className="group" />
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="{`inline- flex" items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`} />
-                      <feature.icon className="h-6w-6text-white"  />
-                    </div>
-                    <h3 className="w-5h-5ml-2" />{feature.title}</h3>
-                    <p className="w-5h-5ml-2">{feature.description}</p>
-                  </div>
-              ))}
-            </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />Choose Your Plan
-              </h2>
-              <p className="w-5h-5ml-2">Flexible pricing options to fit businesses of all sizes. Start with a free trial, no credit card required.
-              </p>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              {pricingPlans.map((plan, index) => (
-                <div
-                  key="{index}"
-                  className="{`relative" bg-gray-800 rounded-xl p-8 ${
-                    plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
-                  }`} />
-                  {plan.popular && (
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <span className="w-5h-5ml-2" />Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                    <p className="w-5h-5ml-2">{plan.description}</p>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                      <span className="w-5h-5ml-2" />{plan.price}</span>
-                      <span className="w-5h-5ml-2" />{plan.period}</span>
-                    </div>
-                  <ul className="w-5h-5ml-2" />
-                    {plan.features.map((feature, idx) => (
-                      <li key="{idx}" className="flex items-center text-gray-300" />
-                        <CheckCircle className="w-5h-5ml-2" />
-                        <span />{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
-                        : 'border border-gray-600 text-gray-300 hover: bg-gray-700 hover:text-white'
-                    }`} />
-                    Get Started
-                    <ArrowRight className="w-5h-5ml-2" />
-                  </Link>
-                </div>
-              ))}
-            </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />What Our Customers Say
-              </h2>
-              <p className="w-5h-5ml-2">Join thousands of businesses already using Zion Analytics Pro to drive growth.
-              </p>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-gray-800 rounded-xl p-6 borderborder-gray-700" />
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
-                    </div>
-                    <div />
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.role}, {testimonial.company}</div>
-                  </div>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4w-4tex t-yellow-400fill-current"  />
-                    ))}
-                  </div>
-                  <p className="w-5h-5ml-2">"{testimonial.content}"</p>
-                </div>
-              ))}
-            </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />Ready to Transform Your Analytics?
-            </h2>
-            <p className="w-5h-5ml-2">Start your free trial today and see how Zion Analytics Pro can revolutionize your business intelligence.
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Everything you need to transform your data into actionable business insights.
             </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <Link
-          to="/contact"
-          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl"
-        >
-          Start Free Trial
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300">
+                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your business needs. All plans include 14-day free trials.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div
+                key={index}
+                className={`bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+                  plan.popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20' : 'border-slate-700'
+                } relative`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
                 
-          <ArrowRight className="w-5h-5ml-2" />
-        </Link>
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300transformhover:scale-105" />
-                Call +1 302 464 0950
-              </a>
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <p />Email: kleber@ziontechgroup.com</p>
-              <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-        </section>
-      </div>
-    </>
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <Link
+                  to="/contact"
+                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                  }`}
+                >
+                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business Intelligence?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of businesses already using Zion Analytics Pro to make data-driven decisions and drive growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Start Free Trial
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              to="/demo"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              Schedule Demo
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

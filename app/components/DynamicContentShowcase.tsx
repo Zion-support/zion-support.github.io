@@ -90,7 +90,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
             onClick="{prevItem}"
             className="p-2rou nded-full bg-white/10hover:bg-white/20 transition-colors"
             aria-label="Previous item" />
-            <ChevronLeft className="w-5h-5ml-2" />
+            <ChevronLeft className="w-5 h-5 ml-2" />
           </button>
 
           <button
@@ -98,9 +98,9 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
             className="p-2rou nded-full bg-white/10hover:bg-white/20 transition-colors"
             aria-label="{isPlaying" ? 'Pause' : 'Play'} />
             {isPlaying ? (
-              <Pause className="w-5h-5ml-2" />
+              <Pause className="w-5 h-5 ml-2" />
             ) : (
-              <Play className="w-5h-5ml-2" />
+              <Play className="w-5 h-5 ml-2" />
             )}
           </button>
 
@@ -108,7 +108,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
             onClick="{nextItem}"
             className="p-2rou nded-full bg-white/10hover:bg-white/20 transition-colors"
             aria-label="Next item" />
-            <ChevronRight className="w-5h-5ml-2" />
+            <ChevronRight className="w-5 h-5 ml-2" />
           </button>
         </div>
 
@@ -130,7 +130,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <IconComponent className="w-5h-5ml-2" />
+              <IconComponent className="w-5 h-5 ml-2" />
             </div>
 
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -148,7 +148,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {currentItem.features.map((feature, index) => (
                 <div key={index} className="flex items-centertext-sm text-gray-300" />
-                  <CheckCircle className="w-5h-5ml-2" />
+                  <CheckCircle className="w-5 h-5 ml-2" />
                   <span  >{feature}</span>
                 </div>
               ))}
@@ -160,9 +160,9 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
                 </div>
               )}
 
-              <button className="w-5h-5ml-2" />
+              <button className="w-5 h-5 ml-2" />
                 Learn More
-                <ArrowRight className="w-5h-5ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
         </div>

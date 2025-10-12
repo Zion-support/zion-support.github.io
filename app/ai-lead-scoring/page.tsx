@@ -8,37 +8,37 @@ import { Link } from 'react-router-dom';
 const AILeadScoringPage: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-5h-5ml-2" />,
+      icon: <Brain className="w-5 h-5 ml-2" />,
       title: 'AI Lead Scoring',
       description: 'Advanced machine learning algorithms automatically score leads based on behavior, demographics, and engagement patterns.',
       benefits: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking', 'Predictive modeling']
     },
     {
-      icon: <Target className="w-5h-5ml-2" />,
+      icon: <Target className="w-5 h-5 ml-2" />,
       title: 'Intent Detection',
       description: 'AI identifies buying intent signals and purchase readiness to prioritize high-value prospects.',
       benefits: ['Intent signals', 'Purchase readiness', 'Priority scoring', 'Conversion prediction']
     },
     {
-      icon: <TrendingUp className="w-5h-5ml-2" />,
+      icon: <TrendingUp className="w-5 h-5 ml-2" />,
       title: 'Conversion Analytics',
       description: 'Comprehensive analytics with AI insights to optimize lead qualification and improve conversion rates.',
       benefits: ['Conversion tracking', 'ROI analysis', 'Funnel optimization', 'Performance metrics']
     },
     {
-      icon: <Zap className="w-5h-5ml-2" />,
+      icon: <Zap className="w-5 h-5 ml-2" />,
       title: 'Automated Workflows',
       description: 'AI-powered lead nurturing workflows that automatically engage prospects based on their score and behavior.',
       benefits: ['Auto-nurturing', 'Behavioral triggers', 'Personalized content', 'Multi-channel engagement']
     },
     {
-      icon: <BarChart3 className="w-5h-5ml-2" />,
+      icon: <BarChart3 className="w-5 h-5 ml-2" />,
       title: 'Sales Intelligence',
       description: 'AI provides sales teams with actionable insights and recommendations for each lead.',
       benefits: ['Sales insights', 'Action recommendations', 'Lead context', 'Next best actions']
     },
     {
-      icon: <Shield className="w-5h-5ml-2" />,
+      icon: <Shield className="w-5 h-5 ml-2" />,
       title: 'CRM Integration',
       description: 'Seamlessly integrate with popular CRMs and marketing automation platforms for unified lead management.',
       benefits: ['CRM sync', 'Data consistency', 'Workflow automation', 'Real-time updates']
@@ -117,10 +117,10 @@ const AILeadScoringPage: React.FC = () => {
   ]
 
   const stats = [
-    { number: '180%', label: 'Conversion Increase', icon: <TrendingUp className="w-5h-5ml-2" /> },
-    { number: '250%', label: 'ROI Improvement', icon: <DollarSign className="w-5h-5ml-2" /> },
-    { number: '3 x', label: 'Faster Lead Identification', icon: <Target className="w-5h-5ml-2" /> },
-    { number: '95%', label: 'Scoring Accuracy', icon: <Award className="w-5h-5ml-2" /> }
+    { number: '180%', label: 'Conversion Increase', icon: <TrendingUp className="w-5 h-5 ml-2" /> },
+    { number: '250%', label: 'ROI Improvement', icon: <DollarSign className="w-5 h-5 ml-2" /> },
+    { number: '3 x', label: 'Faster Lead Identification', icon: <Target className="w-5 h-5 ml-2" /> },
+    { number: '95%', label: 'Scoring Accuracy', icon: <Award className="w-5 h-5 ml-2" /> }
   ]
 
   return (
@@ -134,79 +134,79 @@ const AILeadScoringPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <Target className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <Target className="w-5 h-5 ml-2" />
             <span />AI-Powered Sales Intelligence</span>
           </div>
           
-          <h1 className="w-5h-5ml-2" />
+          <h1 className="w-5 h-5 ml-2" />
             AI Lead
             <br />
-            <span className="w-5h-5ml-2" />Scoring Pro
+            <span className="w-5 h-5 ml-2" />Scoring Pro
             </span>
           </h1>
           
-          <p className="w-5h-5ml-2">Transform your sales process with AI-powered lead scoring, 
+          <p className="w-5 h-5 ml-2">Transform your sales process with AI-powered lead scoring, 
             intent detection, and conversion analytics that increase conversion rates by 180%.
           </p>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <Link to="/contact" className="groupbg-gradient-to-r from-teal-500 to-cyan-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-teal-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40transformhover:scale-105" />
               <span />Start Free Trial</span>
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link to="#demo" className="groupborder-2 border-teal-400 text-teal-400 px-10 py-4 rounded-xl font-semibold hover:bg-teal-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
               <span />Watch Demo</span>
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
       </section>
 
       {/* Stats Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <section className="w-5 h-5 ml-2" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {stats.map((stat, index) => (
               <div key={index} className="text-centerbg-white/5 backdrop-blur-sm rounded-2 xl p-6 borderborder-white/10" />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.icon}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.icon}
                 </div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}
                 </div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}
                 </div>
             ))}
           </div>
       </section>
 
       {/* Features Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Advanced <span className="w-5h-5ml-2" />Features</span>
+      <section className="w-5 h-5 ml-2" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5 ml-2" />
+              Advanced <span className="w-5 h-5 ml-2" />Features</span>
             </h2>
-            <p className="w-5h-5ml-2">Our AI-powered lead scoring platform uses machine learning to identify, 
+            <p className="w-5 h-5 ml-2">Our AI-powered lead scoring platform uses machine learning to identify, 
               score, and prioritize leads that are most likely to convert.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {features.map((feature, index) => (
               <div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105" />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
                 </div>
-                <h3 className="w-5h-5ml-2" />{feature.title}
+                <h3 className="w-5 h-5 ml-2" />{feature.title}
                 </h3>
-                <p className="w-5h-5ml-2">{feature.description}
+                <p className="w-5 h-5 ml-2">{feature.description}
                 </p>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="flex items-center space-x-2text-gray-400text-sm" />
-                      <CheckCircle className="w-5h-5ml-2" />
+                      <CheckCircle className="w-5 h-5 ml-2" />
                       <span />{benefit}</span>
                     </div>
                   ))}
@@ -216,18 +216,18 @@ const AILeadScoringPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Flexible <span className="w-5h-5ml-2" />Pricing</span>
+      <section className="w-5 h-5 ml-2" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5 ml-2" />
+              Flexible <span className="w-5 h-5 ml-2" />Pricing</span>
             </h2>
-            <p className="w-5h-5ml-2">Choose the perfect plan for your lead scoring needs. All plans include our core AI features 
+            <p className="w-5 h-5 ml-2">Choose the perfect plan for your lead scoring needs. All plans include our core AI features 
               with scalable options for businesses of all sizes.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {pricingPlans.map((plan, index) => (
               <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
                 plan.popular 
@@ -235,24 +235,24 @@ const AILeadScoringPage: React.FC = () => {
                   : 'border-white/20 hover: border-white/40'
               }`} />
                 {plan.popular && (
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular
                     </div>
                 )}
                 
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                  <p className="w-5h-5ml-2">{plan.description}</p>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <span className="w-5h-5ml-2" />{plan.price}</span>
-                    <span className="w-5h-5ml-2" />{plan.period}</span>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <h3 className="w-5 h-5 ml-2" />{plan.name}</h3>
+                  <p className="w-5 h-5 ml-2">{plan.description}</p>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                    <span className="w-5 h-5 ml-2" />{plan.price}</span>
+                    <span className="w-5 h-5 ml-2" />{plan.period}</span>
                   </div>
                 
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   {plan.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-centerspace-x-3" />
-                      <CheckCircle className="w-5h-5ml-2" />
-                      <span className="w-5h-5ml-2" />{feature}</span>
+                      <CheckCircle className="w-5 h-5 ml-2" />
+                      <span className="w-5 h-5 ml-2" />{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -272,57 +272,57 @@ const AILeadScoringPage: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />
-              Trusted by <span className="w-5h-5ml-2" />Sales Teams</span>
+      <section className="w-5 h-5 ml-2" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <h2 className="w-5 h-5 ml-2" />
+              Trusted by <span className="w-5 h-5 ml-2" />Sales Teams</span>
             </h2>
-            <p className="w-5h-5ml-2">See how AI Lead Scoring is transforming sales processes for businesses worldwide.
+            <p className="w-5 h-5 ml-2">See how AI Lead Scoring is transforming sales processes for businesses worldwide.
             </p>
           </div>
           
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10backdrop-blur-lg rounded-2 xl p-8 borderborder-white/20" />
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
                   </div>
                   <div />
-                    <h4 className="w-5h-5ml-2" />{testimonial.name}</h4>
-                    <p className="w-5h-5ml-2">{testimonial.company}</p>
+                    <h4 className="w-5 h-5 ml-2" />{testimonial.name}</h4>
+                    <p className="w-5 h-5 ml-2">{testimonial.company}</p>
                   </div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5h-5tex t-yellow-400fill-current"  />
                   ))}
                 </div>
-                <p className="w-5h-5ml-2">"{testimonial.content}"</p>
+                <p className="w-5 h-5 ml-2">"{testimonial.content}"</p>
               </div>
             ))}
           </div>
       </section>
 
       {/* CTA Section */}
-      <section className="w-5h-5ml-2" />
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <h2 className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <h2 className="w-5 h-5 ml-2" />
             Ready to Transform Your
             <br />
-            <span className="w-5h-5ml-2" />Sales Process?
+            <span className="w-5 h-5 ml-2" />Sales Process?
             </span>
           </h2>
-          <p className="w-5h-5ml-2">Join thousands of sales teams already increasing conversion rates and ROI with AI Lead Scoring. 
+          <p className="w-5 h-5 ml-2">Join thousands of sales teams already increasing conversion rates and ROI with AI Lead Scoring. 
             Start your free trial today - no credit card required.
           </p>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <Link to="/contact" className="groupbg-white text-teal-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" />
               <span />Start Free Trial</span>
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link to="/pricing" className="groupborder-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" />
               <span />View All Plans</span>
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
       </section>

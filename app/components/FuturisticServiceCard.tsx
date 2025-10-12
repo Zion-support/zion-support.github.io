@@ -42,36 +42,36 @@ import { ArrowRight } from 'lucide-react';
       </Helmet>
 
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5h-5ml-2" />
-              <span className="w-5h-5ml-2" />FuturisticServiceCard
+            <h1 className="w-5 h-5 ml-2" />
+              <span className="w-5 h-5 ml-2" />FuturisticServiceCard
               </span>
               <br />
-              <span className="w-5h-5ml-2" />Solutions</span>
+              <span className="w-5 h-5 ml-2" />Solutions</span>
             </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced futuristic service card solutions.
+            <p className="w-5 h-5 ml-2">Transform your business with our advanced futuristic service card solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button className="w-5h-5ml-2" />
+              <button className="w-5 h-5 ml-2" />
                 Get Started
-                <ArrowRight className="w-5h-5ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="w-5h-5ml-2">Learn More
+              <button className="w-5 h-5 ml-2">Learn More
               </button>
             </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />Our Features
+            <h2 className="w-5 h-5 ml-2" />Our Features
             </h2>
-            <p className="w-5h-5ml-2">Discover the powerful features that make our futuristic service card solutions stand out.
+            <p className="w-5 h-5 ml-2">Discover the powerful features that make our futuristic service card solutions stand out.
             </p>
           </div>;
         </div></section>)};export default FuturisticServiceCardPage

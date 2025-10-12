@@ -55,13 +55,13 @@ const LazyImage: React.FC<LazyImageProps /> = ({
     <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
       {!isInView && (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <Loader2 className="w-5h-5ml-2" />
+          <Loader2 className="w-5 h-5 ml-2" />
         </div>
       )}
       
       {isInView && !isLoaded && !hasError && (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <Loader2 className="w-5h-5ml-2" />
+          <Loader2 className="w-5 h-5 ml-2" />
         </div>
       )}
       

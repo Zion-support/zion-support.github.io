@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
   return (
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>Service - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
@@ -16,7 +16,7 @@ import { ArrowRight } from 'lucide-react';
           className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-centermx-auto w-fit"
         >
           Contact Us
-          <ArrowRight className="w-5h-5ml-2" />
+          <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
       </div>
     </div>

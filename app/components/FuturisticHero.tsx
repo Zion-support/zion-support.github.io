@@ -43,36 +43,36 @@ const FuturisticHeroPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5h-5ml-2" />
-              <span className="w-5h-5ml-2" />Futuristic Hero
+            <h1 className="w-5 h-5 ml-2" />
+              <span className="w-5 h-5 ml-2" />Futuristic Hero
               </span>
               <br />
               <span className="text-white"  >Solutions</span>
             </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced futuristic hero solutions.
+            <p className="w-5 h-5 ml-2">Transform your business with our advanced futuristic hero solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button className="w-5h-5ml-2" />
+              <button className="w-5 h-5 ml-2" />
                 Get Started
-                <ArrowRight className="w-5h-5ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="w-5h-5ml-2">Learn More
+              <button className="w-5 h-5 ml-2">Learn More
               </button>
             </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />Why Choose Our Futuristic Hero Solutions?
+            <h2 className="w-5 h-5 ml-2" />Why Choose Our Futuristic Hero Solutions?
             </h2>
-            <p className="w-5h-5ml-2">Our futuristic hero solutions deliver unmatched performance, security, and scalability.
+            <p className="w-5 h-5 ml-2">Our futuristic hero solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -89,18 +89,18 @@ const FuturisticHeroPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />Key Benefits
+            <h2 className="w-5 h-5 ml-2" />Key Benefits
             </h2>
-            <p className="w-5h-5ml-2">Experience the power of our futuristic hero solutions for your business.
+            <p className="w-5 h-5 ml-2">Experience the power of our futuristic hero solutions for your business.
             </p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {benefits.map((benefit, index) => (
               <div key={index} className="flexitems-startspace-x-3" />
-                <CheckCircle className="w-5h-5ml-2" />
+                <CheckCircle className="w-5 h-5 ml-2" />
                 <p className="text-gray-300text-lg">{benefit}</p>
               </div>
             ))}
@@ -108,17 +108,17 @@ const FuturisticHeroPage: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />Ready to Get Started?
+            <h2 className="w-5 h-5 ml-2" />Ready to Get Started?
             </h2>
-            <p className="w-5h-5ml-2">Contact us today to learn more about our futuristic hero solutions and how they can benefit your business.
+            <p className="w-5 h-5 ml-2">Contact us today to learn more about our futuristic hero solutions and how they can benefit your business.
             </p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button className="w-5h-5ml-2">Contact Us
+              <button className="w-5 h-5 ml-2">Contact Us
               </button>
-              <button className="w-5h-5ml-2">Schedule Demo
+              <button className="w-5 h-5 ml-2">Schedule Demo
               </button>
             </div>
         </div>

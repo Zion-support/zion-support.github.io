@@ -105,7 +105,7 @@ const Layout: React.FC<LayoutProps /> = ({
         </Helmet>
 
         <Navigation />
-        <main className="w-5h-5ml-2" />{children}
+        <main className="w-5 h-5 ml-2" />{children}
         </main>
 
         <Footer />

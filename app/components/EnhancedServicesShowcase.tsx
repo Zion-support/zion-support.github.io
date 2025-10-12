@@ -45,9 +45,9 @@ const EnhancedServicesShowcase: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <h2 className="w-5h-5ml-2" />Our Core Services
+          <h2 className="w-5 h-5 ml-2" />Our Core Services
           </h2>
-          <p className="w-5h-5ml-2">Comprehensive AI and IT solutions designed to transform your business and drive innovation
+          <p className="w-5 h-5 ml-2">Comprehensive AI and IT solutions designed to transform your business and drive innovation
           </p>
         </div>
 
@@ -57,28 +57,28 @@ const EnhancedServicesShowcase: React.FC = () => {
               <div key={index} className="cyber-card p-8 grouphover:scale-105transition-transform" />
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 <service.icon className="h-12w-12tex t-cyan-400mr-4"  />
-                <h3 className="w-5h-5ml-2" />{service.title}
+                <h3 className="w-5 h-5 ml-2" />{service.title}
                 </h3>
               </div>
 
-              <p className="w-5h-5ml-2">{service.description}
+              <p className="w-5 h-5 ml-2">{service.description}
               </p>
 
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 <h4 className="text-sm font-semiboldtext-cyan-400mb-3"  >Key Features</h4>
-                <ul className="w-5h-5ml-2" />
+                <ul className="w-5 h-5 ml-2" />
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-centertext-sm text-gray-300" />
-                      <CheckCircle className="w-5h-5ml-2" />
+                      <CheckCircle className="w-5 h-5 ml-2" />
                       {feature}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <button className="w-5h-5ml-2" />
+              <button className="w-5 h-5 ml-2" />
                 Learn More
-                <ArrowRight className="w-5h-5ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
             </div>
           ))}

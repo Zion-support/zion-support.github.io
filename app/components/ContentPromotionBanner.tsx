@@ -50,7 +50,7 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-centertext-sm" />
-                  <CheckCircle className="w-5h-5ml-2" />
+                  <CheckCircle className="w-5 h-5 ml-2" />
                   <span  >{feature}</span>
                 </div>
               ))}
@@ -61,7 +61,7 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
               onClick="{onButtonClick}"
               className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-centergap-2" />
               {buttonText}
-              <ArrowRight className="w-5h-5ml-2" />
+              <ArrowRight className="w-5 h-5 ml-2" />
             </button>
           </div>
       </div>

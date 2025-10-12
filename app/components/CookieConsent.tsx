@@ -41,12 +41,12 @@ const CookieConsent: React.FC = () => {
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Cookie className="w-5h-5ml-2" />
+                  <Cookie className="w-5 h-5 ml-2" />
                 </div>
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <h3 className="w-5h-5ml-2" />We use cookies
+                  <h3 className="w-5 h-5 ml-2" />We use cookies
                   </h3>
-                  <p className="w-5h-5ml-2">We use cookies to enhance your browsing experience, serve personalized content,
+                  <p className="w-5 h-5 ml-2">We use cookies to enhance your browsing experience, serve personalized content,
                     and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
                   </p>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -71,7 +71,7 @@ const CookieConsent: React.FC = () => {
                   onClick="{acceptNecessary}"
                   className="text-gray-400hover:text-white transition-colors"
                   aria-label="Close" />
-                  <X className="w-5h-5ml-2" />
+                  <X className="w-5 h-5 ml-2" />
                 </button>
               </div>
           ) : (
@@ -84,50 +84,50 @@ const CookieConsent: React.FC = () => {
                   className="text-gray-400hover:text-white transition-colors"
                   aria-label="Close details"
                 >
-                  <X className="w-5h-5ml-2" />
+                  <X className="w-5 h-5 ml-2" />
                 </button>
               </div>
 
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                 {/* Necessary Cookies */}
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Shield className="w-5h-5ml-2" />
+                  <Shield className="w-5 h-5 ml-2" />
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                       <h4 className="font-semibold text-white"  >Necessary Cookies</h4>
                       <span className="text-smtext-green-400font-medium"  >Always Active</span>
                     </div>
-                    <p className="w-5h-5ml-2">These cookies are essential for the website to function properly. They cannot be disabled.
+                    <p className="w-5 h-5 ml-2">These cookies are essential for the website to function properly. They cannot be disabled.
                     </p>
                   </div>
 
                 {/* Analytics Cookies */}
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <BarChart3 className="w-5h-5ml-2" />
+                  <BarChart3 className="w-5 h-5 ml-2" />
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                       <h4 className="font-semibold text-white"  >Analytics Cookies</h4>
-                      <label className="w-5h-5ml-2" />
+                      <label className="w-5 h-5 ml-2" />
                         <input type="checkbox" className="sr-onlypeer" defaultChecked  />
                         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                       </label>
                     </div>
-                    <p className="w-5h-5ml-2">These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.
+                    <p className="w-5 h-5 ml-2">These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.
                     </p>
                   </div>
 
                 {/* Marketing Cookies */}
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <Settings className="w-5h-5ml-2" />
+                  <Settings className="w-5 h-5 ml-2" />
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                       <h4 className="font-semibold text-white"  >Marketing Cookies</h4>
-                      <label className="w-5h-5ml-2" />
+                      <label className="w-5 h-5 ml-2" />
                         <input type="checkbox" className="sr-onlypeer"  />
                         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                       </label>
                     </div>
-                    <p className="w-5h-5ml-2">These cookies are used to track visitors across websites to display relevant and engaging advertisements.
+                    <p className="w-5 h-5 ml-2">These cookies are used to track visitors across websites to display relevant and engaging advertisements.
                     </p>
                   </div>
               </div>

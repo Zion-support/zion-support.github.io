@@ -28,10 +28,10 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           <button
             onClick="{onClose}"
             className="text-gray-300 hover:text-white transition-colors" />
-            <X className="w-5h-5ml-2" />
+            <X className="w-5 h-5 ml-2" />
           </button>
         </div>
-        <nav className="w-5h-5ml-2" />
+        <nav className="w-5 h-5 ml-2" />
           {navigationItems.map((item, index) => (
             <Link
               key="{index}"

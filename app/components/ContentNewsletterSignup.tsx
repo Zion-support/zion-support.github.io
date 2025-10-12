@@ -57,11 +57,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <CheckCircle className="w-5h-5ml-2" />
+              <CheckCircle className="w-5 h-5 ml-2" />
             </div>
-            <h2 className="w-5h-5ml-2" />Thank You for Subscribing!
+            <h2 className="w-5 h-5 ml-2" />Thank You for Subscribing!
             </h2>
-            <p className="w-5h-5ml-2">You'll receive our latest insights and updates soon.
+            <p className="w-5 h-5 ml-2">You'll receive our latest insights and updates soon.
             </p>
             <button
               onClick="{()" =  />setIsSubscribed(false)}
@@ -79,9 +79,9 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />{title}
+            <h2 className="w-5 h-5 ml-2" />{title}
             </h2>
-            <p className="w-5h-5ml-2">{subtitle}
+            <p className="w-5 h-5 ml-2">{subtitle}
             </p>
           </div>
 
@@ -109,7 +109,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
                 ) : (
                   <>
                     <span  >{buttonText}</span>
-                    <ArrowRight className="w-5h-5ml-2" />
+                    <ArrowRight className="w-5 h-5 ml-2" />
                   </>
                 )}
               </button>

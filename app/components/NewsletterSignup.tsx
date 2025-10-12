@@ -51,9 +51,9 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
   const content = (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <Mail className="w-5h-5ml-2" />
+        <Mail className="w-5 h-5 ml-2" />
         <h3 className="text-2 xl font-boldmb-2"  >Stay Updated</h3>
-        <p className="w-5h-5ml-2">Get the latest updates on AI technology, IT solutions, and industry insights.
+        <p className="w-5 h-5 ml-2">Get the latest updates on AI technology, IT solutions, and industry insights.
         </p>
       </div>
 
@@ -78,7 +78,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
               </>
             ) : (
               <>
-                <Send className="w-5h-5ml-2" />
+                <Send className="w-5 h-5 ml-2" />
                 Subscribe
               </>
             )}
@@ -90,9 +90,9 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
             status === 'success' ? 'text-green-200' : 'text-red-200'
           }`} />
             {status === 'success' ? (
-              <CheckCircle className="w-5h-5ml-2" />
+              <CheckCircle className="w-5 h-5 ml-2" />
             ) : (
-              <AlertCircle className="w-5h-5ml-2" />
+              <AlertCircle className="w-5 h-5 ml-2" />
             )}
             <span  >{message}</span>
           </div>

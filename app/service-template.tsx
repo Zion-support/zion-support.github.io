@@ -35,9 +35,9 @@ interface ServicePageProps {
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{icon}
           </div>
-          <h1 className="w-5h-5ml-2">{title}
+          <h1 className="w-5 h-5 ml-2">{title}
           </h1>
-          <p className="w-5h-5ml-2">{description}
+          <p className="w-5 h-5 ml-2">{description}
           </p>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <Link
@@ -46,7 +46,7 @@ interface ServicePageProps {
         >
           Get Started
               
-          <ArrowRight className="w-5h-5ml-2" />
+          <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
             <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More
             </Link>
@@ -55,10 +55,10 @@ interface ServicePageProps {
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div />
             <h2 className="text-3 xl font-bold text-white mb-6"  >Key Benefits</h2>
-            <ul className="w-5h-5ml-2" />
+            <ul className="w-5 h-5 ml-2" />
               {benefits.map((benefit, index) => (
                 <li key="{index}" className="flexitems-start" />
-                  <CheckCircle className="w-5h-5ml-2" />
+                  <CheckCircle className="w-5 h-5 ml-2" />
                   <span className="text-gray-300"  >{benefit}</span>
                 </li>
               ))}
@@ -66,10 +66,10 @@ interface ServicePageProps {
           </div>
           <div />
             <h2 className="text-3 xl font-bold text-white mb-6"  >Features</h2>
-            <ul className="w-5h-5ml-2" />
+            <ul className="w-5 h-5 ml-2" />
               {features.map((feature, index) => (
                 <li key="{index}" className="flexitems-start" />
-                  <CheckCircle className="w-5h-5ml-2" />
+                  <CheckCircle className="w-5 h-5 ml-2" />
                   <span className="text-gray-300"  >{feature}</span>
                 </li>
               ))}

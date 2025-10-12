@@ -41,39 +41,39 @@ ursor/
       </Helmet>
 
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5h-5ml-2" />
-              <span className="w-5h-5ml-2" />Enhanced SEO
+            <h1 className="w-5 h-5 ml-2" />
+              <span className="w-5 h-5 ml-2" />Enhanced SEO
                 Enhanced SEO Optimizer
               </span>
               <br />
               <span className="text-white"  >Optimizer</span>
             </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced SEO optimization solutions.
+            <p className="w-5 h-5 ml-2">Transform your business with our advanced SEO optimization solutions.
               Powered by cutting-edge AI technology and industry expertise.
               Optimize your website for search engines with our advanced AI-powered SEO optimization solutions.
               Improve rankings and drive more organic traffic.
             </p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button className="w-5h-5ml-2" />
+              <button className="w-5 h-5 ml-2" />
                 Get Started
-                <ArrowRight className="w-5h-5ml-2" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </button>
-              <button className="w-5h-5ml-2">Learn More
+              <button className="w-5 h-5 ml-2">Learn More
               </button>
             </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />Our Features
+            <h2 className="w-5 h-5 ml-2" />Our Features
             </h2>
-            <p className="w-5h-5ml-2">Discover the powerful features that make our enhanced SEO optimizer solutions stand out.
+            <p className="w-5 h-5 ml-2">Discover the powerful features that make our enhanced SEO optimizer solutions stand out.
             </p>
           </div>
 
@@ -83,9 +83,9 @@ ursor/
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
                   <feature.icon className="w-6 h-6text-white"  />
                 </div>
-                <h3 className="w-5h-5ml-2" />{feature.title}
+                <h3 className="w-5 h-5 ml-2" />{feature.title}
                 </h3>
-                <p className="w-5h-5ml-2">{feature.description}
+                <p className="w-5 h-5 ml-2">{feature.description}
                 </p>
               </div>
             ))}
@@ -93,12 +93,12 @@ ursor/
       </section>
 
       {/* Benefits Section */}
-      <section className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />Why Choose Our Solutions?
+            <h2 className="w-5 h-5 ml-2" />Why Choose Our Solutions?
             </h2>
-            <p className="w-5h-5ml-2">Experience the benefits of working with our cutting-edge enhanced SEO optimizer solutions.
+            <p className="w-5 h-5 ml-2">Experience the benefits of working with our cutting-edge enhanced SEO optimizer solutions.
             </p>
           </div>
 
@@ -106,9 +106,9 @@ ursor/
             {benefits.map((benefit, index) => (
               <div key={index} className="flexitems-start space-x-4" />
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                  <CheckCircle className="w-5h-5ml-2" />
+                  <CheckCircle className="w-5 h-5 ml-2" />
                 </div>
-                <p className="w-5h-5ml-2">{benefit}
+                <p className="w-5 h-5 ml-2">{benefit}
                 </p>
               </div>
             ))}
@@ -116,17 +116,17 @@ ursor/
       </section>
 
       {/* Contact Section */}
-      <section className="w-5h-5ml-2" />
+      <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h2 className="w-5h-5ml-2" />Ready to Get Started?
+            <h2 className="w-5 h-5 ml-2" />Ready to Get Started?
             </h2>
-            <p className="w-5h-5ml-2">Contact us today to learn more about our SEO optimization solutions and how they can benefit your business.
+            <p className="w-5 h-5 ml-2">Contact us today to learn more about our SEO optimization solutions and how they can benefit your business.
             </p>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button className="w-5h-5ml-2">Contact Us
+              <button className="w-5 h-5 ml-2">Contact Us
               </button>
-              <button className="w-5h-5ml-2">Schedule Demo
+              <button className="w-5 h-5 ml-2">Schedule Demo
               </button>
             </div>
         </div>
