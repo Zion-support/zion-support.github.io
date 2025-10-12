@@ -51,6 +51,16 @@ export default function Footer() {
                   AI Blockchain Solutions
                 </Link>
               </li>
+              <li>
+                <Link to="/ai-3d-generation" className="text-gray-400 hover:text-white transition-colors">
+                  AI 3D Generation
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-accounting-assistant" className="text-gray-400 hover:text-white transition-colors">
+                  AI Accounting Assistant
+                </Link>
+              </li>
             </ul>
           </div>
 

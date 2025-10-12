@@ -16,6 +16,8 @@ import AICybersecuritySuitePage from './app/ai-cybersecurity-suite/page'
 import AIBlockchainSolutionsPage from './app/ai-blockchain-solutions/page'
 import AIExpenseTrackerPage from './app/ai-expense-tracker/page'
 import CloudMigrationPage from './app/cloud-migration/page'
+import AI3DGenerationPage from './app/ai-3d-generation/page'
+import AIAccountingAssistantPage from './app/ai-accounting-assistant/page'
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function App() {
             <Route path="/ai-blockchain-solutions" element={<AIBlockchainSolutionsPage />} />
             <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
             <Route path="/cloud-migration" element={<CloudMigrationPage />} />
+            <Route path="/ai-3d-generation" element={<AI3DGenerationPage />} />
+            <Route path="/ai-accounting-assistant" element={<AIAccountingAssistantPage />} />
           </Routes>
         </main>
         <Footer />

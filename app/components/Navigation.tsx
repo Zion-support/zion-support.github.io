@@ -23,7 +23,9 @@ export default function Navigation() {
       subServices: [
         { title: 'AI CRM Assistant', href: '/ai-crm-assistant', description: 'Smart customer relationship management' },
         { title: 'AI Cybersecurity Suite', href: '/ai-cybersecurity-suite', description: 'Advanced AI security solutions' },
-        { title: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', description: 'Blockchain with AI integration' }
+        { title: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', description: 'Blockchain with AI integration' },
+        { title: 'AI 3D Generation', href: '/ai-3d-generation', description: 'AI-powered 3D model creation' },
+        { title: 'AI Accounting Assistant', href: '/ai-accounting-assistant', description: 'Automated accounting and bookkeeping' }
       ]
     },
     {
