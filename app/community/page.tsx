@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -9,60 +8,45 @@ const PagePage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international businesses',
     }
   ];
-=======
-<<<<<<< HEAD
 'use client';
 import React, {useState}from 'react';
 import {Helmet}}from 'react-helmet-async';
 import {Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart}}from 'lucide-react';
->>>>>>> origin/main
 
 const CommunityPage: React.FC = () => {,
   const [activeTab, setActiveTab] = useState('overview');
 
-=======
 'use client'
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart } from 'lucide-react'
 const CommunityPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview')
->>>>>>> origin/main
   const communityStats = [
-<<<<<<< HEAD
     { icon: Users, value: '5,000+', label: 'Active Members' ,},
     {icon: MessageCircle, value: '50+', label: 'Discussions Daily' ,},
     {icon: Calendar, value: '12', label: 'Events Monthly' ,},
     {icon: Star, value: '4.9', label: 'Average Rating' ,}];
-=======
-    { icon: Users, value: '5,000+', label: 'Active Members' },
-    { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
-    { icon: Calendar, value: '12', label: 'Events Monthly' },
-    { icon: Star, value: '4.9', label: 'Average Rating' }
-<<<<<<< HEAD
   ];];];
->>>>>>> origin/main
-=======
   ]
->>>>>>> origin/main
   const events = [
     {title: 'AI Development Workshop',
       date: '2024-02-15',
@@ -81,13 +65,7 @@ const CommunityPage: React.FC = () => {
       time: '3:00 PM EST',
       type: 'Panel',
       attendees: 200,
-<<<<<<< HEAD
       description: 'Expert panel on scaling SaaS businesses',}];
-=======
-      description: 'Expert panel on scaling SaaS businesses'
-    }
-  ]
->>>>>>> origin/main
   const forums = [
     {name: 'AI Services',
       description: 'Discuss AI development, machine learning, and automation',
@@ -104,17 +82,9 @@ const CommunityPage: React.FC = () => {
     {name: 'General Discussion',
       description: 'General tech discussions and community updates',
       posts: 2100,
-<<<<<<< HEAD
       members: 3000;,}];
-=======
-      members: 3000
-    }
-<<<<<<< HEAD
   ];];];
->>>>>>> origin/main
-=======
   ]
->>>>>>> origin/main
   const benefits = [
     {icon: Users,
       title: 'Network with Peers',
@@ -127,44 +97,22 @@ const CommunityPage: React.FC = () => {
       description: 'Access to workshops, webinars, and networking events'},
     {icon: Award,
       title: 'Recognition',
-<<<<<<< HEAD
       description: 'Showcase your projects and get community recognition',}]
 
   return(<>)
       <Helmet />
-=======
-      description: 'Showcase your projects and get community recognition'
-    }
-  ]
-
-  return (
-    <>
-      <Helmet>
-<<<<<<< HEAD
->>>>>>> origin/main
         <title>Community - Zion Tech Group</title>
-=======
         </Helmet><title>Community - Zion Tech Group</title>
->>>>>>> origin/main
         <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
         <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
         <link rel="canonical" href="https: //ziontechgroup.com/community" />,
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
         <div className="container mx-auto px-4 py-16 pt-24">{/* Header */</div>} <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                 <Users className="w-8 h-8 text-white" />
-=======
-        </div><div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
-          </div><div className="text-center mb-16">
-            </div><div className="flex items-center justify-center mb-6">
-              </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-                </div><Users className="w-8 h-8 text-white" />
->>>>>>> origin/main
               </div>
               <h1 className="text-4xl md: text-5xl font-bold text-white neon-text-enhanced">,</h1>
                 Community;
@@ -174,31 +122,19 @@ const CommunityPage: React.FC = () => {
               Connect, learn, and grow together.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-<<<<<<< HEAD
               <a;
-=======
-              </div><$2 />
->>>>>>> origin/main
                 href="#join"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300",
               >
                 Join Community;
               </a>
-<<<<<<< HEAD
               <a;
-=======
-              <$2 />
->>>>>>> origin/main
                 href="#events"
                 className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300",
               >
                 View Events;
               </a>
-<<<<<<< HEAD
               <a;
-=======
-              <$2 />
->>>>>>> origin/main
                 href="#forums"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-slate-900 transition-all duration-300",
               >
@@ -207,7 +143,6 @@ const CommunityPage: React.FC = () => {
             </div>
           </div>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -228,26 +163,14 @@ const CommunityPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-=======
-          {/* Stats */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-16">,</div>
-            {communityStats.map((stat, index) => (
-<<<<<<< HEAD
               <div key={index}className="cyber-card-enhanced p-6 text-center">
                 <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
                 <div className="text-2xl font-bold text-white mb-2">{stat.value</div>}</div>
                 <div className="text-gray-300">{stat.label</div>}</div>
-=======
-              </div><div key={index} className="cyber-card-enhanced p-6 text-center">
-                </div><stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-                <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300">{stat.label}</div>
->>>>>>> origin/main
->>>>>>> origin/main
               </div>
             ))}
           </div>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -299,8 +222,6 @@ const CommunityPage: React.FC = () => {
 };
 
 export default PagePage;
-=======
-<<<<<<< HEAD
           {/* Tabs */} <div className="mb-8">
             <div className="flex flex-wrap justify-center gap-4">{[</div>
                 { id: 'overview', name: 'Overview' ,},
@@ -310,22 +231,6 @@ export default PagePage;
                 <button;
                   key={tab.id}onClick={() =>setActiveTab(tab.id)</button>}className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     activeTab === tab.id;
-=======
-          {/* Tabs */}
-          <div className="mb-8">
-            </div><div className="flex flex-wrap justify-center gap-4">
-              {[
-                { id: 'overview', name: 'Overview' },
-                { id: 'events', name: 'Events' },
-                { id: 'forums', name: 'Forums' },
-                { id: 'benefits', name: 'Benefits' }
-              ].map((tab) => (
-                </div><$2 />
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    activeTab === tab.id
->>>>>>> origin/main
                       ? 'bg-cyan-500 text-white'
                       : 'bg-slate-800 text-gray-300 hover: bg-slate-700',}`}
                 >
@@ -334,13 +239,7 @@ export default PagePage;
             </div>
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
           {/* Overview Tab */}{activeTab === 'overview' && (
-=======
-          {/* Overview Tab */},
-    {activeTab === 'overview' && (
->>>>>>> origin/main
             <div className="space-y-12">
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Welcome to Our Community</h2>
@@ -368,7 +267,6 @@ export default PagePage;
                       <li className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                         Industry insights and trends;
-=======
           {/* Overview Tab */}
           {activeTab === 'overview' && (
             <div className="space-y-12">
@@ -399,14 +297,12 @@ export default PagePage;
                       <li className="flex items-center text-gray-300">
                         </li><CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                         Industry insights and trends
->>>>>>> origin/main
                       </li>
                     </ul>
                   </div>
                   <div>
                     </div><h3 className="text-lg font-semibold text-white mb-3">Community Guidelines</h3>
                     <ul className="space-y-2">
-<<<<<<< HEAD
                       <li className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                         Be respectful and inclusive;
@@ -422,39 +318,15 @@ export default PagePage;
                       <li className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                         Keep discussions relevant and constructive;
-=======
-                      </ul><li className="flex items-center text-gray-300">
-                        </li><CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                        Be respectful and inclusive
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        </li><CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                        Share knowledge generously
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        </li><CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                        Help others learn and grow
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        </li><CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                        Keep discussions relevant and constructive
->>>>>>> origin/main
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           )}
 
           {/* Events Tab */}{activeTab === 'events' && (
-=======
-          )},
-    {/* Events Tab */},
-    {activeTab === 'events' && (
->>>>>>> origin/main
             <div className="space-y-8">
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Upcoming Events</h2>
@@ -474,7 +346,6 @@ export default PagePage;
                             <span className="flex items-center">
                               <Users className="w-4 h-4 mr-1" />
                               {event.attendees}attendees;
-=======
           )}
 
           {/* Events Tab */}
@@ -501,50 +372,28 @@ export default PagePage;
                             <span className="flex items-center">
                               </span><Users className="w-4 h-4 mr-1" />
                               {event.attendees} attendees
->>>>>>> origin/main
                             </span>
                           </div>
                         </div>
                         <div className="ml-6">
-<<<<<<< HEAD
                           <span className="px-3 py-1 bg-cyan-600 text-white text-xs font-semibold rounded">{event.type</span>} </span>
                         </div>
                       </div>
                       <a;
-=======
-                          </div><span className="px-3 py-1 bg-cyan-600 text-white text-xs font-semibold rounded">
-                            {event.type}
-                          </span>
-                        </div>
-                      </div>
-                      <$2 />
->>>>>>> origin/main
                         href="#"
                         className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 inline-flex items-center",
                       >
-<<<<<<< HEAD
                         Register Now;
                         <ArrowRight className="w-4 h-4 ml-2" />
-=======
-                        Register Now
-                        </a><ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> origin/main
                       </a>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           )}
 
           {/* Forums Tab */}{activeTab === 'forums' && (
-=======
-          )},
-    {/* Forums Tab */},
-    {activeTab === 'forums' && (
->>>>>>> origin/main
             <div className="space-y-8">
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Community Forums</h2>
@@ -566,7 +415,6 @@ export default PagePage;
                         </div>
                       </div>
                       <a;
-=======
           )}
 
           {/* Forums Tab */}
@@ -592,33 +440,20 @@ export default PagePage;
                         </div>
                       </div>
                       <$2 />
->>>>>>> origin/main
                         href="#"
                         className="text-cyan-400 hover: text-cyan-300 font-semibold flex items-center",
                       >
-<<<<<<< HEAD
                         Visit Forum;
                         <ArrowRight className="w-4 h-4 ml-1" />
-=======
-                        Visit Forum
-                        </a><ArrowRight className="w-4 h-4 ml-1" />
->>>>>>> origin/main
                       </a>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           )}
 
           {/* Benefits Tab */}{activeTab === 'benefits' && (
-=======
-          )},
-    {/* Benefits Tab */},
-    {activeTab === 'benefits' && (
->>>>>>> origin/main
             <div className="space-y-8">
               <div className="cyber-card-enhanced p-8">
                 <h2 className="text-2xl font-bold text-white mb-6">Community Benefits</h2>
@@ -633,7 +468,6 @@ export default PagePage;
                       <div>
                         <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                         <p className="text-gray-300">{benefit.description</p>}</p>
-=======
           )}
 
           {/* Benefits Tab */}
@@ -652,30 +486,21 @@ export default PagePage;
                       <div>
                         </div><h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                         <p className="text-gray-300">{benefit.description}</p>
->>>>>>> origin/main
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           )}
 
           {/* Join Community CTA */} <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center">
-=======
-          )},
-    {/* Join Community CTA */}
-          <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center">
->>>>>>> origin/main
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Join Our Community?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of developers and entrepreneurs who are already part of our vibrant community.</p>
               Start connecting, learning, and growing today.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a;
-=======
           )}
 
           {/* Join Community CTA */}
@@ -687,28 +512,20 @@ export default PagePage;
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               </div><$2 />
->>>>>>> origin/main
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300",
               >
                 Join Now;
               </a>
-<<<<<<< HEAD
               <a;
                 href="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300",
               >
                 Learn More;
-=======
-              < href="/contact"$2 />
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300" /></a>
-                Learn More
->>>>>>> origin/main
               </a>
             </div>
           </div>
 
-<<<<<<< HEAD
           {/* Contact Information */} <div className="cyber-card-enhanced p-8 mt-8">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">Get in Touch</h2>
             <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,</div>
@@ -718,33 +535,15 @@ export default PagePage;
                   <div className="text-white font-semibold">Email</div>
                   <a href="mailto: community@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">,
                     community@ziontechgroup.com;
-=======
-          {/* Contact Information */}
-          <div className="cyber-card-enhanced p-8 mt-8">
-            </div><h2 className="text-2xl font-bold text-white mb-6 text-center">Get in Touch</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              </div><div className="flex items-center space-x-3">
-                </div><Mail className="w-6 h-6 text-cyan-400" />
-                <div>
-                  </div><div className="text-white font-semibold">Email</div>
-                  <a href="mailto:community@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-                    community@ziontechgroup.com
->>>>>>> origin/main
                   </a>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 </div><Phone className="w-6 h-6 text-cyan-400" />
                 <div>
-<<<<<<< HEAD
                   <div className="text-white font-semibold">Phone</div>
                   <a href="tel: +13024640950" className="text-cyan-400 hover:text-cyan-300">,
                     +1 (302) 464-0950;
-=======
-                  </div><div className="text-white font-semibold">Phone</div>
-                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
-                    +1 (302) 464-0950
->>>>>>> origin/main
                   </a>
                 </div>
               </div>
@@ -804,4 +603,3 @@ export default CommunityPage
   )
 }
 export default CommunityPage</div></div></div></div></div></div></div></div></div></div></span></button></p></p></p></p></h1></h2></h2></h3>
->>>>>>> origin/main

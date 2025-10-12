@@ -20,7 +20,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   async function commitJson(path)
         data) {/* TODO: Fix JSX expression */}
   n: 'no_token' }
-    const headers = {/* TODO: Fix JSX expression */}
+    const headers = {/* TODO: Fix JSX expression */};
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-a11 y-quickscan'}
@@ -158,7 +158,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   e: 'Button has no accessible text'}
         })
     })
-    const report = {/* TODO: Fix JSX expression */}
+    const report = {/* TODO: Fix JSX expression */};
   s: buttons.length },
       issues,
       summar,
@@ -235,7 +235,7 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
   e: 'h1.multiple'} messag)
   e: 'Multiple H1 elements' }); const buttons = Array.from(html.matchAll(/<button\\b[^>]*>([\\s\\S]*?)<\\/button>/gi));' buttons.forEach(([) text]) => {/* TODO: Fix JSX expression */}
   e: 'button.text.empty'} messag,
-  e: 'Button has no accessible text' }); }); const report = {/* TODO: Fix JSX expression */}
+  e: 'Button has no accessible text' }); }); const report = {/* TODO: Fix JSX expression */};
   s: buttons.length }, issues,' summar,
   y: {/* TODO: Fix JSX expression */}
   y: issues.length > 10 ? 'high' : issues.length > 0 ? 'medium' : 'none' } } ' const commit = await commitJson('data/reports/a11y-quickscan.json') report); return {/* TODO: Fix JSX expression */}

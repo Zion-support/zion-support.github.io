@@ -5,18 +5,18 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'}
+        'Access-Control-Allow-Origin': '*'};
       },
       body: JSON.stringify({message: Content freshness score runner executed successfully)
         timestamp: new Date().toISOString()
-        function: 'content-freshness-score-runner'
+        function: 'content-freshness-score-runner',
         source: event.source || 'unknown',
         scoring: {,
           status: 'active',
           pagesScored: 0
           averageScore: 0,
           lastScore: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+    const result = {/* TODO: Fix JSX expression */};
         'Access-Control-Allow-Origin': '*'}
       },
       bod,

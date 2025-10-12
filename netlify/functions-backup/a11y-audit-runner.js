@@ -20,7 +20,7 @@ exports.config = {schedule: '0 * * * *'} // hourly
   r: res.stderr || '',
   }
 }
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '0 * * * *'} // hourly
 }
 exports.handler = async () => {const logs = []}

@@ -7,7 +7,7 @@ async function mockProviderCall<T>(
   details: Record<string, any>
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
-}
+};
 // CRM actions
 export const crm = {
   async syncContact(
@@ -35,7 +35,7 @@ export async function simulateAction<T = unknown>(
     const log: SyncLogEntry = {,
     id: Math.random().toString(36).substr(2, 9),
 // Simple UUID generator since uuid package is not available
-  }
+  };
 }
 
 // Simple UUID generator since uuid package is not available
@@ -141,7 +141,7 @@ export async function simulateAction<T = any>(connectio,
     log.message = `Action ${action} completed with warnings`
   }
 
-  const result = {/* TODO: Fix JSX expression */}
+  const result = {/* TODO: Fix JSX expression */};
   } as T
   return { log, result }
 }
@@ -207,7 +207,7 @@ export const ats = {
     return simulateAction(connection, 'ats.pushApplicant', { applicant })
 export const ats = {
   async pushApplicant(connection: ProviderConnection, applicant: Record<string, unknown>) {
-export const ats = {/* TODO: Fix JSX expression */}
+export const ats = {/* TODO: Fix JSX expression */};
     return simulateAction(connection, 'ats.pushApplicant', { applicant })
   },
 
@@ -232,7 +232,7 @@ export const crm = {
   async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
 export async function testConnection(connectio,
   n: ProviderConnection,)
-): Promise<boolean> {/* TODO: Fix JSX expression */}
+): Promise<boolean> {/* TODO: Fix JSX expression */};
   } catch {/* TODO: Fix JSX expression */}
   }
 }
@@ -303,7 +303,7 @@ export async function syncData(connectio,
     logs.push({)
       id: Math.random().toString(36).substr(2, 9),
       connectionId: connection.id,
-      action: 'sync_data'
+      action: 'sync_data',
       status: 'error',
       message: error instanceof Error ? error.message : 'Unknown error',
       timestamp: new Date()})

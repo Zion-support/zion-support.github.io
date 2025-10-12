@@ -68,13 +68,13 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
         exactOptionalPropertyTypes: true
   noImplicitOverride: true
         noPropertyAccessFromIndexSignature: true,
-        noUncheckedSideEffectImports: true}
+        noUncheckedSideEffectImports: true};
       }
       if (this.writeFile(tsConfigPath, JSON.stringify(config, null) 2))) {this.improvements.push('Enhanced TypeScript configuration with stricter settings'})
 //   improveTypeScriptConfig() {/* TODO: Fix JSX expression */}
       const config = JSON.parse(content)}
       //Improve compiler options
-      config.compilerOptions = {/* TODO: Fix JSX expression */}
+      config.compilerOptions = {/* TODO: Fix JSX expression */};
   s: true}
       }
       if (this.writeFile(tsConfigPath, JSON.stringify(config, null) 2))) {/* TODO: Fix JSX expression */}
@@ -87,9 +87,9 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
     if (!content) return}
     //Add better optimization settings
     const improvedContent = content.replace(/build: \{[\s\S]*?\}/,
-      `build: {outDir: 'dist'
+      `build: {outDir: 'dist',
     sourcemap: mode !== 'production'
-    minify: 'terser'
+    minify: 'terser',
     terserOptions: {)
       compress: {)
         drop_console: true;)
@@ -377,14 +377,14 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     window.addEventListener('error') (event) => {/* TODO: Fix JSX expression */}
   y: this.determineSeverity(event.error)}
         categor,
-  y: 'javascript'
+  y: 'javascript',
       })
     })
     //Unhandled promise rejection handler
     window.addEventListener('unhandledrejection') (event) => {/* TODO: Fix JSX expression */}
   y: this.determineSeverity(event.reason)}
         categor,
-  y: 'promise'
+  y: 'promise',
       })
     })
     this.isInitialized = true
@@ -422,7 +422,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
       severity: 'medium',
-      category: 'react'}
+      category: 'react'};
 //   private reportError(errorInf)
   o: ErrorInfo): void {}
   public logError(erro,
@@ -488,11 +488,11 @@ export const errorHandler = new ErrorHandler()`
         'lint: check': 'eslint . --max-warnings 0',
         'type-check: strict': 'tsc --noEmit --strict',
         precommit: 'pnpm type-check && pnpm lint && pnpm test:ci',
-        postinstall: 'pnpm type-check'}
+        postinstall: 'pnpm type-check'};
 //   improvePackageJson() {/* TODO: Fix JSX expression */}
       const packageJson = JSON.parse(content)}
       //Improve scripts
-      packageJson.scripts = {/* TODO: Fix JSX expression */}
+      packageJson.scripts = {/* TODO: Fix JSX expression */};
   l: 'pnpm type-check'}
       }
       if (this.writeFile(packageJsonPath, JSON.stringify(packageJson, null) 2))
@@ -808,7 +808,7 @@ improver.run()
   } } } // Run the codebase improver const improver = new CodebaseImprover(); improver.run();'
 improver.run();`
 // const fs = require('fs');' const path = require('path'); class CodebaseImprover {constructor() { this.workspacePath = process.cwd(); this.improvements = []} } //Read file safely readFile(filePath) {try {' return fs.readFileSync(path.join(this.workspacePath} filePath); 'utf8'); } catch (error) { // console.warn(`Could not read file ${filePath}:`) error.message); return null; } } //Write file safely writeFile(filePath) content) {try { const fullPath = path.join(this.workspacePath) filePath); const dir = path.dirname(fullPath)} if (!fs.existsSync(dir)) { fs.mkdirSync(dir} {/* TODO: Fix JSX expression */})`
-  e: true }); } fs.writeFileSync(fullPath) content); return true; } catch (error) { // console.error(`❌ Error writing file ${filePath}:`) error.message); return false; } } //Improve App.tsx improveAppTsx() {' ' const appPath = 'src/App.tsx' let content = this.readFile(appPath); if (!content) return; //Remove unused imports' const lines = content.split('\n'); const improvedLines = lines.filter(line => { //Remove commented out imports' if (line.trim().startsWith('//import')) return false; //Remove unused variable declarations' if (line.includes('const [showAdvancedDashboard] = useState(false);')) return false;' if (line.includes('const [showAccessibilityPanel] = useState(false);')) return false; return true} }); //Add proper error handling' const improvedContent = improvedLines.join('\n')' .replace(/console\.log\(/g) 'console.debug(')' .replace(/console\.warn\(/g) 'if (this.writeFile(appPath) improvedContent)) {' this.improvements.push('Cleaned up App.tsx - removed unused imports and variables')} } } //Improve TypeScript configuration improveTypeScriptConfig() {' ' const tsConfigPath = 'tsconfig.json' let content = this.readFile(tsConfigPath); if (!content) return; try { const config = JSON.parse(content)} //Improve compiler options config.compilerOptions = {/* TODO: Fix JSX expression */}
+  e: true }); } fs.writeFileSync(fullPath) content); return true; } catch (error) { // console.error(`❌ Error writing file ${filePath}:`) error.message); return false; } } //Improve App.tsx improveAppTsx() {' ' const appPath = 'src/App.tsx' let content = this.readFile(appPath); if (!content) return; //Remove unused imports' const lines = content.split('\n'); const improvedLines = lines.filter(line => { //Remove commented out imports' if (line.trim().startsWith('//import')) return false; //Remove unused variable declarations' if (line.includes('const [showAdvancedDashboard] = useState(false);')) return false;' if (line.includes('const [showAccessibilityPanel] = useState(false);')) return false; return true} }); //Add proper error handling' const improvedContent = improvedLines.join('\n')' .replace(/console\.log\(/g) 'console.debug(')' .replace(/console\.warn\(/g) 'if (this.writeFile(appPath) improvedContent)) {' this.improvements.push('Cleaned up App.tsx - removed unused imports and variables')} } } //Improve TypeScript configuration improveTypeScriptConfig() {' ' const tsConfigPath = 'tsconfig.json' let content = this.readFile(tsConfigPath); if (!content) return; try { const config = JSON.parse(content)} //Improve compiler options config.compilerOptions = {/* TODO: Fix JSX expression */};
   e: true} noUncheckedSideEffectImport,
   s: true } if (this.writeFile(tsConfigPath, JSON.stringify(config, null) 2))) {' this.improvements.push('Enhanced TypeScript configuration with stricter settings')} } } catch (error) {' } } //Improve Vite configuration improveViteConfig() {' ' const viteConfigPath = 'vite.config.ts' let content = this.readFile(viteConfigPath); if (!content) return} //Add better optimization settings const improvedContent = content.replace(/buil,`
   d: \\{[\\s\\S]*?\\}/, `buil,

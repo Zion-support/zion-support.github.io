@@ -41,7 +41,7 @@ export const aiServices: Service[] = [
     pricing: {
       starting: '$299/month',
       popular: '$599/month',
-      enterprise: 'Custom'
+      enterprise: 'Custom',
     },
     marketPrice: '$500-2000/month',
     link: '/ai-chatbot-builder',
@@ -71,7 +71,7 @@ export const aiServices: Service[] = [
     pricing: {
       starting: '$199/month',
       popular: '$399/month',
-      enterprise: 'Custom'
+      enterprise: 'Custom',
     },
     marketPrice: '$300-1500/month',
     link: '/ai-content-generator',
@@ -101,7 +101,7 @@ export const aiServices: Service[] = [
     pricing: {
       starting: '$499/month',
       popular: '$999/month',
-      enterprise: 'Custom'
+      enterprise: 'Custom',
     },
     marketPrice: '$800-3000/month',
     link: '/ai-data-analytics',
@@ -131,7 +131,7 @@ export const aiServices: Service[] = [
     pricing: {
       starting: '$399/month',
       popular: '$799/month',
-      enterprise: 'Custom'
+      enterprise: 'Custom',
     },
     marketPrice: '$600-2500/month',
     link: '/ai-customer-support',
@@ -161,7 +161,7 @@ export const aiServices: Service[] = [
     pricing: {
       starting: '$599/month',
       popular: '$1199/month',
-      enterprise: 'Custom'
+      enterprise: 'Custom',
     },
     marketPrice: '$1000-4000/month',
     link: '/ai-cybersecurity',
@@ -191,7 +191,7 @@ export const aiServices: Service[] = [
     pricing: {
       starting: '$299/month',
       popular: '$599/month',
-      enterprise: 'Custom'
+      enterprise: 'Custom',
     },
     marketPrice: '$500-2000/month',
     link: '/ai-ecommerce-optimizer',
@@ -223,7 +223,7 @@ export const itServices: Service[] = [
     pricing: {
       starting: '$2,000/project',
       popular: '$5,000/project',
-      enterprise: 'Custom'
+      enterprise: 'Custom',
     },
     marketPrice: '$3000-15000/project',
     link: '/cloud-migration',
@@ -253,7 +253,7 @@ export const itServices: Service[] = [
     pricing: {
       starting: '$1,500/month',
       popular: '$3,000/month',
-      enterprise: 'Custom'
+      enterprise: 'Custom',
     },
     marketPrice: '$2000-8000/month',
     link: '/devops-ci-cd',
@@ -283,7 +283,7 @@ export const itServices: Service[] = [
     pricing: {
       starting: '$2,500/audit',
       popular: '$5,000/audit',
-      enterprise: 'Custom'
+      enterprise: 'Custom',
     },
     marketPrice: '$3000-12000/audit',
     link: '/cybersecurity-audit',
@@ -313,7 +313,7 @@ export const itServices: Service[] = [
     pricing: {
       starting: '$500/month',
       popular: '$1,200/month',
-      enterprise: 'Custom'
+      enterprise: 'Custom',
     },
     marketPrice: '$800-3000/month',
     link: '/managed-it-services',
@@ -343,7 +343,7 @@ export const itServices: Service[] = [
     pricing: {
       starting: '$1,000/month',
       popular: '$2,500/month',
-      enterprise: 'Custom'
+      enterprise: 'Custom',
     },
     marketPrice: '$1500-5000/month',
     link: '/database-optimization',
@@ -373,7 +373,7 @@ export const itServices: Service[] = [
     pricing: {
       starting: '$800/month',
       popular: '$1,800/month',
-      enterprise: 'Custom'
+      enterprise: 'Custom',
     },
     marketPrice: '$1200-4000/month',
     link: '/network-security',
@@ -405,7 +405,7 @@ export const microSaasServices: Service[] = [
     pricing: {
       starting: '$29/month',
       popular: '$59/month',
-      enterprise: '$99/month'
+      enterprise: '$99/month',
     },
     marketPrice: '$50-200/month',
     link: '/analytics-dashboard',
@@ -435,7 +435,7 @@ export const microSaasServices: Service[] = [
     pricing: {
       starting: '$39/month',
       popular: '$79/month',
-      enterprise: '$149/month'
+      enterprise: '$149/month',
     },
     marketPrice: '$60-300/month',
     link: '/email-marketing-automation',
@@ -465,7 +465,7 @@ export const microSaasServices: Service[] = [
     pricing: {
       starting: '$19/month',
       popular: '$39/month',
-      enterprise: '$79/month'
+      enterprise: '$79/month',
     },
     marketPrice: '$30-150/month',
     link: '/social-media-scheduler',
@@ -495,7 +495,7 @@ export const microSaasServices: Service[] = [
     pricing: {
       starting: '$15/month',
       popular: '$29/month',
-      enterprise: '$49/month'
+      enterprise: '$49/month',
     },
     marketPrice: '$25-100/month',
     link: '/expense-tracker',
@@ -525,7 +525,7 @@ export const microSaasServices: Service[] = [
     pricing: {
       starting: '$25/month',
       popular: '$49/month',
-      enterprise: '$99/month'
+      enterprise: '$99/month',
     },
     marketPrice: '$40-200/month',
     link: '/project-management',
@@ -555,7 +555,7 @@ export const microSaasServices: Service[] = [
     pricing: {
       starting: '$35/month',
       popular: '$69/month',
-      enterprise: '$129/month'
+      enterprise: '$129/month',
     },
     marketPrice: '$50-250/month',
     link: '/inventory-manager',

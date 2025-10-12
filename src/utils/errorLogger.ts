@@ -57,7 +57,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 
 }
     const,
-  entry: ErrorLogEntry = {/* TODO: Fix JSX expression */}
+  entry: ErrorLogEntry = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 

@@ -12,9 +12,8 @@ class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
     this.state = { hasError: false }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-
+;
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
     name: "Marketplace API",
@@ -306,7 +305,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
                   className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
                 >
                   <$2 />
-                    href={statusUrl} 
+                    href={statusUrl} ;
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="flex items-center gap-2"

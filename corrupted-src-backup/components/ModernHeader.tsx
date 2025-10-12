@@ -6,8 +6,8 @@ impo, r, t {/* TODO: Fix JSX expression */}"
 const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     { na, m, e: 'Ho, m, e', hr, e, f: '/' }
     { 
-      na, m, e: 'Solutio, n, s'
-      hr, e, f: '/solutio, n, s'
+      na, m, e: 'Solutio, n, s',
+      hr, e, f: '/solutio, n, s',
       dropdo, w, n: [,
     {/* TODO: Fix JSX expression */}
         { na, m, e: 'Enterprise, Solution, s', hr, e, f: '/solutio, n, s/enterpri, s, e' }
@@ -19,8 +19,8 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       ]
     }
     { 
-      na, m, e: 'Servic, e, s'
-      hr, e, f: '/servic, e, s'
+      na, m, e: 'Servic, e, s',
+      hr, e, f: '/servic, e, s',
       dropdo, w, n: [,
     {/* TODO: Fix JSX expression */}
         { na, m, e: 'AI, Solution, s', hr, e, f: '/servic, e, s/ai-solutio, n, s' }
@@ -32,8 +32,8 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       ]
     }
     { 
-      na, m, e: 'Resourc, e, s'
-      hr, e, f: '/resourc, e, s'
+      na, m, e: 'Resourc, e, s',
+      hr, e, f: '/resourc, e, s',
       dropdo, w, n: [,
     {/* TODO: Fix JSX expression */}
         { na, m, e: 'Case, Studie, s', hr, e, f: '/ca, s, e-studi, e, s' }
@@ -46,8 +46,8 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     { na, m, e: 'Bl, o, g', hr, e, f: '/bl, o, g' }
     { 
-      na, m, e: 'Compa, n, y'
-      hr, e, f: '/abo, u, t'
+      na, m, e: 'Compa, n, y',
+      hr, e, f: '/abo, u, t',
       dropdo, w, n: [,
     {/* TODO: Fix JSX expression */}
         { na, m, e: 'About, U, s', hr, e, f: '/abo, u, t' }

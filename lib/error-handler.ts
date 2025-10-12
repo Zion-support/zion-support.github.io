@@ -120,7 +120,7 @@ export const asyncHandler =
       message: message || 'Internal Server Error'),
       statusCode),
       ...(process.env['NODE_ENV'] === 'development' && { stack: err.stack })
-export const asyncHandler = {}
+export const asyncHandler = {};
   (f)
   n: Function) =>
   (re,
@@ -247,7 +247,7 @@ export const asyncHandler = (f,
   t: Function) => {/* TODO: Fix JSX expression */}
   }
 
-export const asyncHandler = {}
+export const asyncHandler = {};
   (f)
   n: Function) =>
   (re,
@@ -256,7 +256,7 @@ export const asyncHandler = {}
   t: Function) => {/* TODO: Fix JSX expression */}
   }
 
-export const asyncHandler = {}
+export const asyncHandler = {};
   (f)
   n: Function) =>
   (re,

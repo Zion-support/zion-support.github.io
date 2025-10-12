@@ -81,7 +81,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete legal AI platform with contract analysis, risk assessment, and compliance checking capabilities.',
@@ -132,7 +132,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete HR AI platform with recruitment automation, predictive analytics, and performance optimization.',
@@ -183,7 +183,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete market research AI platform with real-time monitoring, competitive intelligence, and predictive analytics.',
@@ -234,7 +234,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete sales AI platform with lead scoring, predictive analytics, and process automation capabilities.',
@@ -285,7 +285,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete video AI platform with automated editing, content creation, and optimization capabilities.',
@@ -336,7 +336,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete personalization AI platform with real-time optimization, A/B testing, and conversion optimization capabilities.',
@@ -387,7 +387,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete customer service AI platform with chatbot automation, intelligent routing, and satisfaction optimization.',
@@ -438,7 +438,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete analytics AI platform with predictive modeling, automated reporting, and intelligent insights.',
@@ -489,7 +489,7 @@ export const specializedAIServices: SpecializedAIService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete SEO AI platform with content optimization, search analysis, and performance tracking capabilities.',

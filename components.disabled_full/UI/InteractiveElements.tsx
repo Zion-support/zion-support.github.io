@@ -94,7 +94,7 @@ import React,{useEffect}useRef;useState } from 'react; import {motion}useAnimati
   n: React.ReactNode; className?: string; delay?: number} direction?: 'up' | 'down' | 'left' | 'right}} } ; export const,
   AnimatedCard: React.FC<AnimatedCardProps> = ({children,className = } )delay = 0}direction = 'up' }) => {; const ref = useRef<HTMLDivElement | null>(null)} const isInView = useInView(ref){/* TODO: Fix JSX expression */}
   e: 'true'}margi,
-  n: '-100px' }); const controls = useAnimation(); useEffect(() => {; if (isInView) controls.start('visible')}}},[isInView,controls]); const directionVariants = {/* TODO: Fix JSX expression */}
+  n: '-100px' }); const controls = useAnimation(); useEffect(() => {; if (isInView) controls.start('visible')}}},[isInView,controls]); const directionVariants = {/* TODO: Fix JSX expression */};
   n: { y: 50}opacit,
   y: '0' },visibl,
   e: {y: 0}opacit,

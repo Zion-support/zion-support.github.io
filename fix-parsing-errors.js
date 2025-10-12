@@ -56,7 +56,7 @@ function fixEmojis(content) {
     '🎮': 'gamepad',
     '🎲': 'dice',
     '🎯': 'target'
-  }
+  };
   let fixed = content
   for (const [emoji, replacement] of Object.entries(emojiMap)) {
     fixed = fixed.replace(new RegExp(emoji, 'g'), replacement)

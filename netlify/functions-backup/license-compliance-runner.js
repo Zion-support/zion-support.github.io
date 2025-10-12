@@ -20,7 +20,7 @@ exports.config = { schedule: '0 2 * * *' } // daily at 02: 00 UTC,
   r: res.stderr || '',
   }
 }
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '0 2 * * *' } // daily at,
   02: 00 UTC,
 exports.handler = async () => {const logs = []}
@@ -45,7 +45,7 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   g: 'utf8' });' return {/* TODO: Fix JSX expression */}
   s: res.status || 0} stdou,
   t: res.stdout || '', stder,
-  r: res.stderr || '' } } ' exports.config = {/* TODO: Fix JSX expression */}
+  r: res.stderr || '' } } ' exports.config = {/* TODO: Fix JSX expression */};
   e: '0 2 * * *' } // daily at,`
   02:00 UTC exports.handler = async () => {const logs = []} function step(name) rel} args = []) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = runNode(rel) args); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' step('licens)
   e: scan') 'automation/license-compliance.cjs');' step('gi)

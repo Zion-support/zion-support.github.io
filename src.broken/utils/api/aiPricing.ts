@@ -10,18 +10,18 @@ export type TalentRateRequest = {
   skills: string[]
   yearsExperience: number
   location: string
-}
+};
 export type BudgetSuggestion = {
-  currency: 'USD'
+  currency: 'USD',
   min: number; // inclusive
   max: number; // inclusive
   confidence: 'Low' | 'Medium' | 'High'
   rationale: string
   modelUsed: string
   source: 'openai' | 'heuristic' | 'hybrid'
-}
+};
 export type TalentRateSuggestion = {
-  currency: 'USD'
+  currency: 'USD',
   hourlyRate: number
   min: number
   max: number
@@ -29,7 +29,7 @@ export type TalentRateSuggestion = {
   rationale: string
   modelUsed: string
   source: 'openai' | 'heuristic' | 'hybrid'
-}
+};
 function roundMoney(value: number): number {
   if (!isFinite(value)) return 0
   // Round to nearest $5 for cleaner display
@@ -163,7 +163,7 @@ Constraints:
       confidence: (json.confidence as BudgetSuggestion['confidence']) || 'Medium',
       rationale: String(json.rationale || ''),
       modelUsed: response.model || (process.env.OPENAI_MODEL || 'gpt-4o-mini'),
-      source: 'openai'}
+      source: 'openai'};
       source: 'openai',
     }
     const range = clampRange(suggestion.min, suggestion.max)
@@ -211,7 +211,7 @@ Constraints:
       confidence: (json.confidence as TalentRateSuggestion['confidence']) || 'Medium',
       rationale: String(json.rationale || ''),
       modelUsed: response.model || (process.env.OPENAI_MODEL || 'gpt-4o-mini'),
-      source: 'openai'}
+      source: 'openai'};
       source: 'openai',
     }
     const range = clampRange(suggestion.min, suggestion.max)

@@ -37,7 +37,7 @@ pricing: {
   supportLevel: string
   accuracy: string}
 // Zion Tech Group Contact Information
-const "zionContact": unknown = {}
+const "zionContact": unknown = {};
   "phone": "+1 302 464 0950","
   "email": "kleber@ziontechgroup.com","
   "website": "https://ziontechgroup.com",

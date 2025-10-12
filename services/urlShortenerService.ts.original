@@ -1,18 +1,13 @@
-<<<<<<< HEAD
 
 export interface ShortUrl {
 export interface ShortUrl {;
 
-=======
-export interface ShortUrl {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   originalUrl: string;
   shortCode: string;
   shortUrl: string;
   createdAt: Date;
   expiresAt?: Date;
-<<<<<<< HEAD
 
 
 
@@ -32,20 +27,10 @@ export interface ShortUrl {
   totalClicks: number;
   uniqueVisitors: number;
 
-=======
-  isActive: boolean;
-  userId?: string;
-}
-
-export interface UrlAnalytics {
-  totalClicks: number;
-  uniqueVisitors: number;
->>>>>>> origin/auto/autonomy-17186719616
   referrers: string[];
   countries: string[];
   devices: string[];
   browsers: string[];
-<<<<<<< HEAD
 
 
   last_clicked: Date,
@@ -63,22 +48,10 @@ export interface UrlAnalytics {
   timestamp: Date;
   ip_address: string;
   user_agent: string;
-=======
-  lastClicked: Date;
-  clickHistory: ClickEvent[];
-}
-
-export interface ClickEvent {
-  id: string;
-  timestamp: Date;
-  ipAddress: string;
-  userAgent: string;
->>>>>>> origin/auto/autonomy-17186719616
   referrer: string;
   country: string;
   city: string;
   device: string;
-<<<<<<< HEAD
 
 
     const shortCode = request && request.customCode || this && this.generateShortCode(),
@@ -278,7 +251,6 @@ class UrlShortenerService {;
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -293,7 +265,6 @@ class UrlShortenerService {;
     const urlClicks = this.clicks.get(shortCode) |[];
     urlClicks.push(clickEvent);
     this.clicks.set(shortCode, urlClicks);
-=======
   browser: string;
   os: string;
 }
@@ -369,12 +340,10 @@ class UrlShortenerService {
     urlClicks.push(clickEvent);
     this.clicks.set(shortCode, urlClicks);
 
->>>>>>> origin/auto/autonomy-17186719616
     const analytics = this.analytics.get(shortCode);
     if (analytics) {
       analytics.totalClicks++;
       analytics.lastClicked = new Date();
-<<<<<<< HEAD
       if (!analytics.referrers.includes(clickData.referrer)) {
         analytics.referrers.push(clickData.referrer)
 
@@ -475,7 +444,6 @@ class UrlShortenerService {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
     }
@@ -493,9 +461,7 @@ class UrlShortenerService {
 
 
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
     }
     return url;
   }
@@ -571,8 +537,6 @@ if ( {) {
     let result = '';
     for (let index = 0, i < 6, i++) {
       result += chars.char_at (Math.floor (Math.random () * chars.length));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
       
       if (!analytics.referrers.includes(clickData.referrer)) {
         analytics.referrers.push(clickData.referrer);
@@ -618,12 +582,10 @@ if ( {) {
     let result = '';
     for (let i = 0; i < 6; i++) {
       result += chars.charAt(Math.floor(Math.random() * chars.length));
->>>>>>> origin/auto/autonomy-17186719616
     }
     return result;
   }
 
-<<<<<<< HEAD
 
 
 
@@ -634,16 +596,10 @@ if ( {) {
 
 
 
-=======
-  private generateId(): string {
-    return Math.random().toString(36).substr(2, 9);
-  }
->>>>>>> origin/auto/autonomy-17186719616
 
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
     return {
-<<<<<<< HEAD
 
       urls: Array && Array.from(this && this.urls.entries());
       analytics: Array && Array.from(this && this.analytics.entries()),
@@ -685,13 +641,11 @@ export const urlShortenerService = new UrlShortenerService ();
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 export const urlShortenerService = new UrlShortenerService();
 
-=======
       urls: Array.from(this.urls.entries()),
       analytics: Array.from(this.analytics.entries()),
       clicks: Array.from(this.clicks.entries())
@@ -706,4 +660,3 @@ export const urlShortenerService = new UrlShortenerService();
 }
 
 export const urlShortenerService = new UrlShortenerService();
->>>>>>> origin/auto/autonomy-17186719616

@@ -3,7 +3,7 @@ export type ServiceTier = { name: string; price: string; includes: string[]}; ex
 export type ServiceTier = {
 	"name": string
 	price: string
-	includes: string[]}
+	includes: string[]};
 export type ServiceItem = {
 	"slug": string
 	title: string
@@ -12,14 +12,14 @@ export type ServiceItem = {
 	description: string[]
 	features: string[]
 	benefits: string[]
-	pricing: ServiceTier[] | { model: string; from?: string; notes?: string }
+	pricing: ServiceTier[] | { model: string; from?: string; notes?: string };
 	"links": { landing: string; docs?: string; contact?: string }}
 export const contact = {
 	"phone": '+1 302 464 0950',
 	"email": 'kleber@ziontechgroup.com',
 	"address": '364 E Main St STE 1008 Middletown DE 19709',
 	"website": 'https://ziontechgroup.com'
-}
+};
 export const "addedServices": ServiceItem[] = [{
 		slug: 'ai-customer-support-copilot',
 		"title": 'AI Customer Support Copilot',

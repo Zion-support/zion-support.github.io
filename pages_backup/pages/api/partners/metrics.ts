@@ -165,7 +165,7 @@ export default async function handler(req, res) {
     total_job_creations,
       conversion_rate: total_signups ? total_profile_completions / total_signups : 0,
       payout_amount,
-      currency: 'USD'
+      currency: 'USD',
     })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
@@ -181,4 +181,3 @@ export default async function handler(req, res) {
     return res.status (500).json ({ error: e?.message })
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

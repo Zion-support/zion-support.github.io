@@ -17,8 +17,6 @@ export interface Application {
   createdAtIso: string
 }
 export type UserRole = 'admin' | 'user' | 'guest'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed'
 export type Job = {
   id: string
@@ -33,7 +31,7 @@ export type Job = {
   status: JobStatus
   createdAtIso: string
   updatedAtIso: string
-}
+};
 export type ApplicationStatus = 'applied' | 'skipped' | 'withdrawn'
 export type Application = {
   id: string
@@ -41,13 +39,13 @@ export type Application = {
   talentSlug: string
   status: ApplicationStatus
   createdAtIso: string
-}
-export type Participant = { type: 'email' | 'talent'; id: string }
+};
+export type Participant = { type: 'email' | 'talent'; id: string };
 export type Attachment = {
   name: string
   url: string
   sizeBytes?: number
-}
+};
 export type Message = {
   id: string
   conversationId: string
@@ -64,4 +62,4 @@ export type Conversation = {
   createdAtIso: string
   updatedAtIso: string
   messages: Message[]
-}
+};

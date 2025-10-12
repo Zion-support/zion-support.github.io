@@ -22,7 +22,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.png',
     description: description,
-    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']}
+    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']};
   return(<Helmet>
       <title>{fullTitle}
       <meta name="description" content={description} />
@@ -61,7 +61,7 @@ const,
     ? canonicalUrl;`
     : `http,`
   s://zion.app${canonicalUrl}`
-  const defaultStructuredData = {/* TODO: Fix JSX expression */}
+  const defaultStructuredData = {/* TODO: Fix JSX expression */};
   }
   return (<Helmet></Helmet>
       <title>{fullTitle}</title>
@@ -112,4 +112,4 @@ export default SEOHead
 "`
   </SEOHeadProps>
   </SEOHeadProps>
-</li></li></li></li></li></li>
+</li></li></li>

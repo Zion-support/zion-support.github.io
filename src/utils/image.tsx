@@ -143,7 +143,7 @@ quality = 75,
     if (onError) onError()
   }, [onError])
   const,
-  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
+  imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 //     ...style,
@@ -155,7 +155,7 @@ quality = 75,
       left: 0,
       width: '100%',
       height: '100%',
-      objectFit: 'cover'
+      objectFit: 'cover',
     })
   }
   if (hasError) {/* TODO: Fix JSX expression */}

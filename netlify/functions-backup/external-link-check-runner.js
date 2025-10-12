@@ -5,18 +5,18 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'}
+        'Access-Control-Allow-Origin': '*'};
       },
       body: JSON.stringify({message: External link check runner executed successfully)
         timestamp: new Date().toISOString()
-        function: 'external-link-check-runner'
+        function: 'external-link-check-runner',
         source: event.source || 'unknown',
         checking: {,
           status: 'active',
           linksChecked: 0
           brokenLinks: 0,
           lastCheck: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+    const result = {/* TODO: Fix JSX expression */};
         'Access-Control-Allow-Origin': '*'}
       },
       bod,

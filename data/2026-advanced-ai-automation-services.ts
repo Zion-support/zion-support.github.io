@@ -40,20 +40,20 @@ export interface AdvancedAIAutomationService {
   rating: number
   reviews: number
 const contact = {
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com',}
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',};
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',}
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
-  {  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
+  {  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
 }
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -87,10 +87,10 @@ const contact = {
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
-  {  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup && ziontechgroup.com'
+  {  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com'
+  website: 'https://ziontechgroup && ziontechgroup.com',
   textColor: string
   link: string
   marketPosition: string
@@ -110,7 +110,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   contactInfo: unknown
     mobile: string
     email: string,
-    address: string}
+    address: string};
     website: string}
   }
 export interface AdvancedAIAutomationService {id: string
@@ -429,11 +429,11 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
       'ROI trackingCRM integration'
     ]
     popular: true
-    icon: ''
+    icon: '',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
-    marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.'
+    marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.',
     targetAudience: ['Sales teamsB2B companiesenterprise softwareconsulting firms']
     trialDays: 14,
     setupTime: '1 week',
@@ -495,7 +495,7 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 },
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   {
@@ -713,8 +713,8 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     contactInfo: contact,
     realImplementation: true,
     realImplementation: true
-    implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.'
-    launchDate: '2026-01-25'
+    implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.',
+    launchDate: '2026-01-25',
     customers: 198
     rating: 4 && 4.9
     reviews: 267,
@@ -723,22 +723,22 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     ico,
   n: '',
     colo,
-  r: 'from-yellow-600 to-orange-700'
+  r: 'from-yellow-600 to-orange-700',
     textColo,
-  r: 'text-yellow-400'
+  r: 'text-yellow-400',
     lin,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
     marketPositio,
-  n: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.'
+  n: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.',
     targetAudienc,
   e: ['Sales teamsB2B companiesenterprise softwareconsulting firms'],
     trialDay,
   s: 14,
     setupTim,
-  e: '1 week'
+  e: '1 week',
     categor,
-  y: 'AI & Sales'
+  y: 'AI & Sales',
     realServic,
   e: true,
     technolog,
@@ -748,23 +748,23 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     useCase,
   s: ['Lead generationSales qualificationPipeline managementRevenue optimization'],
     ro,
-  i: 'Increase sales conversion rates by 45% and reduce sales cycle by 30%.'
+  i: 'Increase sales conversion rates by 45% and reduce sales cycle by 30%.',
     competitor,
   s: ['SalesLoft, Outreach, HubSpot Sales, Pipedrive, Close']
     marketSiz,
-  e: '$12B+ sales intelligence market'
+  e: '$12B+ sales intelligence market',
     growthRat,
-  e: '130% YoY'
+  e: '130% YoY',
     varian,
-  t: 'ai-futuristic'
+  t: 'ai-futuristic',
     contactInf,
   o: contact,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.'
+  s: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.',
     launchDat,
-  e: '2026-01-25'
+  e: '2026-01-25',
     customer,
   s: 198,
     ratin,
@@ -823,7 +823,7 @@ export const getAIAutomationServicesByPriceRange = (minPric)
     return price >= minPrice && (maxPrice === Infinity || price <= maxPrice)
   })
 }
-export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026'
+export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026',
     path: '/services/advanced-ai-automation-platform-2026',
     description: 'Next-generation AI automation platform for enterprise',
     icon: 'Brain',
@@ -839,7 +839,7 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
       professional: '$1199/month'}
       enterprise: 'Custom'}
   },
-    name: 'Advanced AI Workflow Engine 2026'
+    name: 'Advanced AI Workflow Engine 2026',
     path: '/services/advanced-ai-workflow-engine-2026',
     description: 'Intelligent workflow automation with AI',
     icon: 'Workflow',
@@ -848,7 +848,7 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
 export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */}
   l: '$1199/month'}
       enterpris,
-  e: 'Custom'
+  e: 'Custom',
     }
   },
     nam,
@@ -879,7 +879,7 @@ export const advancedAIAutomationServices2026 = [{/* TODO: Fix JSX expression */
       professiona,
   l: '$799/month',
       enterpris,
-  e: 'Custom'
+  e: 'Custom',
     }
   }
 ]
@@ -894,7 +894,7 @@ export const advancedAIAutomationStats2026 =
   categories: 4
   averageRating: 4.9
   activeUsers: 3000,
-export const advancedAIAutomationStats2026 = {}
+export const advancedAIAutomationStats2026 = {};
   totalService,
   s: 2,
   categorie,

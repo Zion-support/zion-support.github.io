@@ -22,8 +22,8 @@ async function handler(req, res) {
       productId,
       userId: userId || null,
       timestamp: new Date().toISOString(),
-      status: 'pending'
-    }
+      status: 'pending',
+    };
     // In a real implementation, you would:
     // 1. Create a session with your payment provider (Stripe, PayPal, etc.)
     // 2. Store session data in your database

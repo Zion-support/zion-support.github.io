@@ -46,7 +46,7 @@ export default function handler(req, res) {
     dimensions,
     rate: totalRate,
     timestamp: new Date().toISOString()
-  }
+  };
   existing.push(newRate)
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2))

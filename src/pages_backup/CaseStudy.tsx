@@ -308,7 +308,7 @@ if ( {) {
             <Link href="/case - studies">
               <ArrowLeft className="mr - 2 h - 4 w - 4" /> Back to Case Studies</$1>
           <img
-            src = {study.company_logo, }
+            src = {study.company_logo, };
             alt={`${study.company} logo`}
             className='h - 12 mb - 4'
             loading='lazy'

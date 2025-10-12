@@ -254,8 +254,8 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */
       warnin, g, s
       issu, e, s
       metri, c, s: {,
-        pageTit, l, e: 'Zion, Tech, Group - Leading, A, I & Technology, Solution, s'
-        metaDescripti, o, n: 'Cutti, n, g-edge, A, I, clo, u, d, and, digital, transformation solutions, for, modern enterpris, e, s. Expert, IT, consulting and, innovative, technology implementatio, n, s.'
+        pageTit, l, e: 'Zion, Tech, Group - Leading, A, I & Technology, Solution, s',
+        metaDescripti, o, n: 'Cutti, n, g-edge, A, I, clo, u, d, and, digital, transformation solutions, for, modern enterpris, e, s. Expert, IT, consulting and, innovative, technology implementatio, n, s.',
         headin, g, s: { h,
   1: 1, h2: 8, h3: 15, h4: 12, h5: 6, h6: 2 }
         imag, e, s: { to, t, a

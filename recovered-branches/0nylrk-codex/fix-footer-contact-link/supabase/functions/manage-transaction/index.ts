@@ -3,7 +3,7 @@ import Stripe from "https://esm.sh/stripe@14.21.0"
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0"
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 }
 serve(async (req) => {
@@ -70,7 +70,7 @@ serve(async (req) => {
             completed_at: new Date().toISOString() 
           })
           .eq("id", transactionId)
-        result = { message: "Funds released from escrow" }
+        result = { message: "Funds released from escrow" };
         break
       case 'refund':
         // Check if transaction can be refunded
@@ -97,7 +97,7 @@ serve(async (req) => {
               .eq("id", transactionId)
           }
         }
-        result = { message: "Refund processed successfully" }
+        result = { message: "Refund processed successfully" };
         break
       case 'cancel':
         // Only allow cancellation for pending transactions
@@ -112,7 +112,7 @@ serve(async (req) => {
             cancelled_at: new Date().toISOString() 
           })
           .eq("id", transactionId)
-        result = { message: "Transaction cancelled successfully" }
+        result = { message: "Transaction cancelled successfully" };
         break
       default:
         throw new Error("Invalid action")

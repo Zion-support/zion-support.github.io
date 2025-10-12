@@ -81,7 +81,6 @@ export default async function handler(
 }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { createServerClient } from '../../../utils/supabase/server'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {

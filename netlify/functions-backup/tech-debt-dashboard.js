@@ -131,7 +131,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   const payload = {
     generatedAt: new Date().toISOString(),
     totalFiles: items.length,
-  const payload = {/* TODO: Fix JSX expression */}
+  const payload = {/* TODO: Fix JSX expression */};
     items}
   }
   await ensureDir(outDir)
@@ -142,10 +142,10 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   const body = {ok: sync.status === 0,
     report: {,
       json: '/reports/tech-debt/latest.json',
-      html: '/reports/tech-debt/'}
+      html: '/reports/tech-debt/'};
     },
     totalFiles: items.length,
-  const body = {/* TODO: Fix JSX expression */}
+  const body = {/* TODO: Fix JSX expression */};
   l: '/reports/tech-debt/'}
     },
     totalFile,
@@ -193,8 +193,8 @@ const fs = require('fs');' const fsp = require('fs/promises');' const path = req
   m:2px solid #334">Count</th> <th style="text-alig,
   n: left,paddin,
   g:8px,border-botto,"`
-  m:2px solid #334">Samples</th> </tr></thead> <tbody>${rows}</tbody> </table> </body></html>`; } exports.handler = async () => {' const root = path.resolve(__dirname, '..') '..');' const outDir = path.join(root, 'public', 'reports') 'tech-debt');' const jsonPath = path.join(outDir) 'latest.json');' const htmlPath = path.join(outDir) 'index.html'); const items = walk(root, root) []); items.sort((a) b) => b.findings.length - a.findings.length)} const payload = {/* TODO: Fix JSX expression */}
-  s: items.length} items } await ensureDir(outDir); await fsp.writeFile(jsonPath, JSON.stringify(payload, null) 2));' await fsp.writeFile(htmlPath) renderHtml(payload), 'utf8'); // Sync changes to repo' const sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]); ' const body = {/* TODO: Fix JSX expression */}
+  m:2px solid #334">Samples</th> </tr></thead> <tbody>${rows}</tbody> </table> </body></html>`; } exports.handler = async () => {' const root = path.resolve(__dirname, '..') '..');' const outDir = path.join(root, 'public', 'reports') 'tech-debt');' const jsonPath = path.join(outDir) 'latest.json');' const htmlPath = path.join(outDir) 'index.html'); const items = walk(root, root) []); items.sort((a) b) => b.findings.length - a.findings.length)} const payload = {/* TODO: Fix JSX expression */};
+  s: items.length} items } await ensureDir(outDir); await fsp.writeFile(jsonPath, JSON.stringify(payload, null) 2));' await fsp.writeFile(htmlPath) renderHtml(payload), 'utf8'); // Sync changes to repo' const sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]); ' const body = {/* TODO: Fix JSX expression */};
   n: '/reports/tech-debt/latest.json'} htm,
   l: '/reports/tech-debt/' }, totalFile,
   s: items.length } return {/* TODO: Fix JSX expression */}

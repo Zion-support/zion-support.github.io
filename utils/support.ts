@@ -4,7 +4,7 @@ export const support = {
   logEvent: (event: any) => null
   getArticles: () => []
   getArticleById: (id: string) => null
-}
+};
   logEvent: (event: any) => null,
   getArticles: () => [],
   getArticleById: (id: string) => null
@@ -50,11 +50,11 @@ export type HelpArticle = {
   category: 'Getting Started' | 'Hiring' | 'Profile Setup' | 'Payments' | 'Disputes'
   updatedAt: string
   keywords?: string[]
-}
+};
 export type IntentResult = {
   intentMatched: boolean
   matchedArticleIds: string[]
-}
+};
 export function matchIntent(query: string, articles: HelpArticle[]): IntentResult {
   const q = query.toLowerCase()
   const matched = new Set<string>()

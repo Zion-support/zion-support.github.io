@@ -721,7 +721,7 @@ class EnhancedErrorHandler {
   g: Partial<ErrorHandlerConfig> = {}) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    this.config = {/* TODO: Fix JSX expression */}
+    this.config = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -939,7 +939,7 @@ const originalFetch = window.fetch
                 message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
                 duration: entry.duration,
                 category: 'performance'
-
+,
               }
   )
             }

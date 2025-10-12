@@ -83,7 +83,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Quantum-secure cloud infrastructure with post-quantum cryptography and quantum key distribution.',
@@ -135,7 +135,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Edge computing orchestration platform with intelligent workload distribution and edge-to-cloud synchronization.',
@@ -187,7 +187,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Neuromorphic computing infrastructure with brain-inspired neural architecture and ultra-efficient AI processing.',
@@ -239,7 +239,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Hybrid quantum-classical infrastructure with seamless resource orchestration and hybrid algorithm optimization.',
@@ -291,7 +291,7 @@ export const innovativeITInfrastructureServices2025: InnovativeITInfrastructureS
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Autonomous data center management platform with AI-powered optimization and zero human intervention.',
@@ -372,7 +372,7 @@ export const innovativeITInfrastructureServices2025 = [
       'AI Security',
       'Threat Detection',
       'Network Security'],
-    website: 'https://ziontechgroup.com / zero - trust - quantum - security - platform'
+    website: 'https://ziontechgroup.com / zero - trust - quantum - security - platform',
     contact: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com'},
@@ -420,12 +420,12 @@ export const innovativeITInfrastructureServices2025 = [
     name: 'Autonomous DevOps Intelligence Platform',
     description:,
     i,
-  d: 'autonomous-devops-intelligence-platform'
+  d: 'autonomous-devops-intelligence-platform',
     nam,
-  e: 'Autonomous DevOps Intelligence Platform'
+  e: 'Autonomous DevOps Intelligence Platform',
     descriptio,
   n:
-      'Intelligent DevOps platform that autonomously manages software development, deployment, and operations using AI, machine learning, and advanced automation.'
+      'Intelligent DevOps platform that autonomously manages software development, deployment, and operations using AI, machine learning, and advanced automation.',
     feature,
   s: [
       'Autonomous code review and quality assurance'
@@ -441,7 +441,7 @@ export const innovativeITInfrastructureServices2025 = [
     ]
     pricing: starter: unknown
         price: 149,
-        period: 'month'
+        period: 'month',
         features: [
     pricin,
   g: starte,
@@ -449,7 +449,7 @@ export const innovativeITInfrastructureServices2025 = [
         pric,
   e: 149,
         perio,
-  d: 'month'
+  d: 'month',
         feature,
   s: [,
           'Basic DevOps automation'
@@ -457,13 +457,13 @@ export const innovativeITInfrastructureServices2025 = [
           'Email support',
           'Limited environments']}
       professional: price: 449,
-        period: 'month'
+        period: 'month',
         features: [
       professiona,
   l: pric,
   e: 449,
         perio,
-  d: 'month'
+  d: 'month',
         feature,
   s: [,
           'AI-powered automation'
@@ -539,11 +539,11 @@ export const innovativeITInfrastructureServices2025 = [
     complianc,
   e: ['SOC2', 'ISO 27001', 'GDPR', 'Industry - specific regulations']},
     i,
-  d: 'quantum-cloud-infrastructure-platform'
+  d: 'quantum-cloud-infrastructure-platform',
     nam,
-  e: 'Quantum Cloud Infrastructure Platform'
+  e: 'Quantum Cloud Infrastructure Platform',
     descriptio,
-  n: 'Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented performance and scalability.'
+  n: 'Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented performance and scalability.',
     feature,
   s: [
       'Quantum-enhanced cloud processing'
@@ -559,7 +559,7 @@ export const innovativeITInfrastructureServices2025 = [
     ]
     pricing: starter: unknown
         price: 299,
-        period: 'month'
+        period: 'month',
         features: [
     pricin,
   g: starte,
@@ -567,7 +567,7 @@ export const innovativeITInfrastructureServices2025 = [
         pric,
   e: 299,
         perio,
-  d: 'month'
+  d: 'month',
         feature,
   s: [,
           'Basic quantum cloud'
@@ -575,13 +575,13 @@ export const innovativeITInfrastructureServices2025 = [
           'Email support',
           'Limited resources']}
       professional: price: 899,
-        period: 'month'
+        period: 'month',
         features: [
       professiona,
   l: pric,
   e: 899,
         perio,
-  d: 'month'
+  d: 'month',
         feature,
   s: [,
           'Advanced quantum processing'
@@ -613,7 +613,7 @@ export const innovativeITInfrastructureServices2025 = [
       'Hybrid Computing',
       'Infrastructure Optimization',
       'Quantum Security'],
-    website: 'https://ziontechgroup.com / quantum - cloud - infrastructure - platform'
+    website: 'https://ziontechgroup.com / quantum - cloud - infrastructure - platform',
     contact: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com'},
@@ -663,12 +663,12 @@ export const innovativeITInfrastructureServices2025 = [
     name: 'AI-Powered Data Center Automation',
     description:,
     i,
-  d: 'ai-powered-data-center-automation'
+  d: 'ai-powered-data-center-automation',
     nam,
-  e: 'AI-Powered Data Center Automation'
+  e: 'AI-Powered Data Center Automation',
     descriptio,
   n:
-      'Intelligent data center management platform that uses AI and machine learning to autonomously optimize operations, reduce costs, and improve efficiency.'
+      'Intelligent data center management platform that uses AI and machine learning to autonomously optimize operations, reduce costs, and improve efficiency.',
     feature,
   s: [
       'Autonomous data center operations'
@@ -684,7 +684,7 @@ export const innovativeITInfrastructureServices2025 = [
     ]
     pricing: starter: unknown
         price: 399,
-        period: 'month'
+        period: 'month',
         features: [
     pricin,
   g: starte,
@@ -692,7 +692,7 @@ export const innovativeITInfrastructureServices2025 = [
         pric,
   e: 399,
         perio,
-  d: 'month'
+  d: 'month',
         feature,
   s: [,
           'Basic automation'
@@ -700,13 +700,13 @@ export const innovativeITInfrastructureServices2025 = [
           'Email support',
           'Limited data centers']}
       professional: price: 1199,
-        period: 'month'
+        period: 'month',
         features: [
       professiona,
   l: pric,
   e: 1199,
         perio,
-  d: 'month'
+  d: 'month',
         feature,
   s: [,
           'Advanced AI automation'
@@ -738,7 +738,7 @@ export const innovativeITInfrastructureServices2025 = [
       'Energy Optimization',
       'Predictive Maintenance',
       'Infrastructure Management'],
-    website: 'https://ziontechgroup.com / ai - powered - data - center - automation'
+    website: 'https://ziontechgroup.com / ai - powered - data - center - automation',
     contact: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -754,9 +754,9 @@ export const innovativeITInfrastructureServices2025 = [
     marketSiz,
   e: '$31 && 31.2B',
     targetAudienc,
-  e: 'Data center operators, cloud providers, enterprise businesses, colocation facilities'
+  e: 'Data center operators, cloud providers, enterprise businesses, colocation facilities',
     competitiveAdvantag,
-  e: 'AI-powered autonomous operations, comprehensive energy optimization, and predictive maintenance capabilities'
+  e: 'AI-powered autonomous operations, comprehensive energy optimization, and predictive maintenance capabilities',
     useCase,
   s: [,
       'Data center operations automation'
@@ -807,7 +807,7 @@ export const innovativeITInfrastructureServices2025 = [
         features: ['Full quantum suiteCustom deploymentDedicated supportUnlimited nodes']}
     }
     category: 'IT Infrastructure', tags: ['Quantum ComputingEdge ComputingIoTReal-time ProcessingInfrastructure Orchestration']
-    website: 'https://ziontechgroup.com/quantum-edge-computing-orchestrator'
+    website: 'https://ziontechgroup.com/quantum-edge-computing-orchestrator',
     contact: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -848,7 +848,7 @@ export const innovativeITInfrastructureServices2025 = [
       phon,
   e: '+1 302 464 0950',
       emai,
-  l: 'kleber@ziontechgroup.com'
+  l: 'kleber@ziontechgroup.com',
     },
     marketSiz,
   e: '$28.7B',
@@ -888,7 +888,7 @@ export const innovativeITInfrastructureServices2025 = [
         features: ['Complete security suiteCustom deploymentDedicated supportWhite-label solution']}
     }
     category: 'Cybersecurity', tags: ['Zero TrustQuantum SecurityAI SecurityThreat DetectionNetwork Security']
-    website: 'https://ziontechgroup.com/zero-trust-quantum-security-platform'
+    website: 'https://ziontechgroup.com/zero-trust-quantum-security-platform',
     contact: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -929,7 +929,7 @@ export const innovativeITInfrastructureServices2025 = [
       phon,
   e: '+1 302 464 0950',
       emai,
-  l: 'kleber@ziontechgroup.com'
+  l: 'kleber@ziontechgroup.com',
     },
     marketSiz,
   e: '$42.3B',
@@ -969,7 +969,7 @@ export const innovativeITInfrastructureServices2025 = [
         features: ['Full autonomous suiteCustom deploymentDedicated supportUnlimited environments']}
     }
     category: 'DevOps & Automation', tags: ['DevOpsAI AutomationCI/CDPerformance MonitoringIncident Response']
-    website: 'https://ziontechgroup.com/autonomous-devops-intelligence-platform'
+    website: 'https://ziontechgroup.com/autonomous-devops-intelligence-platform',
     contact: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1010,7 +1010,7 @@ export const innovativeITInfrastructureServices2025 = [
       phon,
   e: '+1 302 464 0950',
       emai,
-  l: 'kleber@ziontechgroup.com'
+  l: 'kleber@ziontechgroup.com',
     },
     marketSiz,
   e: '$35.8B',
@@ -1026,8 +1026,8 @@ export const innovativeITInfrastructureServices2025 = [
   s: ['Git platformsCloud providersMonitoring toolsSecurity platformsCommunication tools'],
     complianc,
   e: ['SOC2ISO 27001GDPRIndustry-specific regulations']}
-    id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform'
-    description: 'Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented performance and scalability.'
+    id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
+    description: 'Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented performance and scalability.',
     features: [
       'Quantum-enhanced cloud processingHybrid quantum-classical computingIntelligent resource allocationQuantum-secure data transmissionAdvanced load balancing and scalingMulti-cloud quantum orchestrationAI-powered infrastructure optimizationReal-time performance analytics'
       'Quantum-resistant encryptionAutonomous infrastructure management'
@@ -1046,7 +1046,7 @@ export const innovativeITInfrastructureServices2025 = [
         features: ['Full quantum suiteCustom deploymentDedicated supportUnlimited resources']}
     }
     category: 'Cloud Computing', tags: ['Quantum ComputingCloud InfrastructureHybrid ComputingInfrastructure OptimizationQuantum Security']
-    website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform'
+    website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform',
     contact: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1097,7 +1097,7 @@ export const innovativeITInfrastructureServices2025 = [
       phon,
   e: '+1 302 464 0950',
       emai,
-  l: 'kleber@ziontechgroup.com'
+  l: 'kleber@ziontechgroup.com',
     },
     marketSiz,
   e: '$65.4B',
@@ -1137,7 +1137,7 @@ export const innovativeITInfrastructureServices2025 = [
         features: ['Complete automation suiteCustom deploymentDedicated supportUnlimited data centers']}
     }
     category: 'Data Center Management', tags: ['AI AutomationData CenterEnergy OptimizationPredictive MaintenanceInfrastructure Management']
-    website: 'https://ziontechgroup.com/ai-powered-data-center-automation'
+    website: 'https://ziontechgroup.com/ai-powered-data-center-automation',
     contact: unknown,
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -1178,7 +1178,7 @@ export const innovativeITInfrastructureServices2025 = [
       phon,
   e: '+1 302 464 0950',
       emai,
-  l: 'kleber@ziontechgroup.com'
+  l: 'kleber@ziontechgroup.com',
     },
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
       'SOC2'

@@ -221,7 +221,7 @@ const TaskManagerProPage: React.FC = () => {
       descriptio,
   n: 'Intelligent task prioritization that analyzes deadlines, dependencies, and importance to optimize your workflow.',
       benefi,
-  t: 'Increase productivity by 40%'
+  t: 'Increase productivity by 40%',
     },
       icon: Users,
       title: 'Team Collaboration',

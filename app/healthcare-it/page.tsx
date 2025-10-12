@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -6,24 +5,12 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight}}from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
 
 export default function HealthcareITPage() {
   const features = [
     {
       icon: Heart,
-=======
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react'
-import SEOOptimizer from '../components/SEOOptimizer'
->>>>>>> origin/main
 icon: Heart,
->>>>>>> origin/main
       title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
       benefits: ['Automated compliance', 'Audit trails', 'Risk management'],
@@ -31,7 +18,6 @@ icon: Heart,
     {icon: Zap,
       title: 'Patient Data Security',
       description: 'Bank-level security for patient data with encryption, access controls, and monitoring.',
-<<<<<<< HEAD
       benefits: ['Data encryption', 'Access controls', 'Security monitoring']},
     {icon: Clock,
       title: '24/7 System Monitoring',
@@ -48,105 +34,42 @@ icon: Heart,
     {icon: BarChart,
       title: 'Healthcare Analytics',
       description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
-<<<<<<< HEAD
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']}]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>)
-=======
-      benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
-  },
-  ]
-=======
-      benefits: ['Data encryption', 'Access controls', 'Security monitoring'],
-  },
-    {
-    icon: Clock,
-      title: '24/7 System Monitoring',
-      description: 'Continuous monitoring of healthcare systems with real-time alerts and notifications.',
-      benefits: ['Always-on monitoring', 'Instant alerts', 'System health'],
-  },
-    {
-    icon: Users,
-      title: 'Interoperability',
-      description: 'Seamless integration with EHR systems, medical devices, and healthcare applications.',
-      benefits: ['EHR integration', 'Device connectivity', 'Data exchange'],
-  },
-    {
-    icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Advanced cybersecurity measures designed specifically for healthcare environments.',
-      benefits: ['Threat detection', 'Incident response', 'Security training'],
-  },
-    {
-    icon: BarChart,
-      title: 'Healthcare Analytics',
-      description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
-      benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking'],
-  }
-    ]
->>>>>>> origin/main
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
->>>>>>> origin/main
       <SEOOptimizer>
-<<<<<<< HEAD
       <Navigation />
       {/* Hero Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
-      </SEOOptimizer><Navigation>
-      {/* Hero Section */}
-      </Navigation><section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
->>>>>>> origin/main
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
+          <section>
+        <div>
+          <div>
+            <h2>Section Title</h2>
+            <p>Section description</p>
           </div>
-        </section>
+        </div>
+      </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
-<<<<<<< HEAD
           <h1>Healthcare;</h1>
             <span>IT Solutions;</span>
             </span>
           </h1>
           <p>Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.;</p>
-=======
-          <h1>
-            Healthcare</h1><span>
-              IT Solutions
-            </span>
-          </h1>
-          <p></p>
-            Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.
->>>>>>> origin/main
             Protect patient data while improving operational efficiency.
           </p>
               <ArrowRight></ArrowRight>
             </button>
-<<<<<<< HEAD
             <button>Learn More;</button>
-=======
-            <button></button>
-              Learn More
->>>>>>> origin/main
             </button>
 </div>
         </div>
       </section>
-<<<<<<< HEAD
 {/* Features Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
-      benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
-    }
-<<<<<<< HEAD
   ];
 
   const stats = [
@@ -170,9 +93,6 @@ return (
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
 
-=======
-  ]
->>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEOOptimizer 
@@ -182,9 +102,8 @@ return (
       />
       <Navigation />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        </section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" />
+      <section$1>
+        <div$2>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -193,7 +112,6 @@ return (
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations. 
             Protect patient data while improving operational efficiency.
-<<<<<<< HEAD
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -270,26 +188,13 @@ return (
             <h2 className="text-4xl font-bold text-white mb-4">Healthcare Services</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive healthcare technology solutions for every medical need
-=======
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More
-{/* Features Section */}
-      <section className="py-20 px-4">
-<<<<<<< HEAD
         </section>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
->>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
-        </section>
-<<<<<<< HEAD
+        </div>
+      </section>
             <p>Comprehensive IT solutions for all aspects of healthcare delivery and management.</p>
->>>>>>> origin/main
             </p>
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
@@ -306,9 +211,7 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
             <p></p>
->>>>>>> origin/main
               Comprehensive IT solutions for all aspects of healthcare delivery and management.
             </p>
           </div>
@@ -316,29 +219,19 @@ return (
             {
     services.map((service, index) => ()
             ))}
-<<<<<<< HEAD
           </div>
         ))
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
-        </section>
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-=======
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
->>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
-        </section>
-<<<<<<< HEAD
+        </div>
+      </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Why Choose Our Healthcare IT Solutions?</h2>
@@ -353,18 +246,12 @@ return (
                   <CheckCircle />
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-=======
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="text-center mb-16" / /></div>
-            <h2></h2>
->>>>>>> origin/main
               Why Choose Our Healthcare IT Solutions?
             </h2>
             <p></p>
               Experience the benefits of modern healthcare technology with our proven solutions.
             </p>
           </div>
-<<<<<<< HEAD
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
@@ -375,20 +262,13 @@ return (
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
 
               </div>
-=======
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" / /></div>
-            {benefits.map((benefit, index) => ()
->>>>>>> origin/main
->>>>>>> origin/main
             ))}
-<<<<<<< HEAD
           ))
         </div>
       </section>
 
       {/* CTA Section */}
 <section className="py-20 px-4">
-<<<<<<< HEAD
 
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -403,9 +283,6 @@ return (
             </button>
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">
               View Case Studies
-=======
-=======
->>>>>>> origin/main
       {/* CTA Section */}
 <section className="py-20 px-4">
           </section>< className="$2 />
@@ -413,21 +290,12 @@ return (
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
->>>>>>> origin/main
-        </section>
+        </div>
+      </section>
             </button>
-<<<<<<< HEAD
             <button className="border border-white text-white hover:bg-white hover:text-purple-600 font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Contact Sales
-=======
-<<<<<<< HEAD
             <button>View Case Studies;</button>
-=======
-            <button></button>
-              View Case Studies
->>>>>>> origin/main
->>>>>>> origin/main
             </button>
           </div>
         </div>

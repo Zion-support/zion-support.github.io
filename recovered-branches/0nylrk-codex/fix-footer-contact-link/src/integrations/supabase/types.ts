@@ -15,7 +15,7 @@ export type Database = {
           message: string
           response: string
           user_id: string
-        }
+        };
         Insert: {
           created_at?: string
           id?: string

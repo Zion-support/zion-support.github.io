@@ -116,7 +116,7 @@ class HealthCheckService {
       timestamp: now,
       uptime: now - this.startTime,
       checks
-    }
+    };
     // Cache the result
     this.cachedStatus = healthStatus
     this.lastCheckTime = now
@@ -299,7 +299,7 @@ const hasFailures = checks.some((c) => c.status === 'fail')
       status = 'healthy'
     }
     const,
-  healthStatus: HealthStatus = {/* TODO: Fix JSX expression */}
+  healthStatus: HealthStatus = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 //       status,
@@ -462,7 +462,7 @@ $4}
 
   name: 'memory',
         status: 'pass',
-        message: 'Memory API not available'
+        message: 'Memory API not available',
       }
     }
     try {
@@ -518,7 +518,7 @@ let,
   name: 'memory',
         status: 'warn',
         message: 'Could not check memory usage'
-
+,
       }
     }
   }
@@ -581,7 +581,7 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
   name: 'performance',
         status: 'warn',
         message: 'Could not check performance'
-
+,
       }
     }
   }
@@ -700,7 +700,7 @@ $4}
   name: 'browser-apis',
       status: 'pass',
       message: 'All required browser APIs available'
-
+,
     }
   }
   /**
@@ -734,7 +734,7 @@ $4}
   name: 'storage',
           status: 'fail',
           message: 'LocalStorage not working correctly'
-
+,
         }
       }
       // Check available space (approximate)
@@ -753,7 +753,7 @@ $4}
 
   name: 'storage',
           status: 'warn',
-          message: 'LocalStorage space limited'
+          message: 'LocalStorage space limited',
         }
       }
       return {
@@ -766,7 +766,7 @@ $4}
         statu,
   s: 'pass',
         messag,
-  e: 'Storage working correctly'
+  e: 'Storage working correctly',
       }
     } catch {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -778,7 +778,7 @@ $4}
   name: 'storage',
         status: 'fail',
         message: 'LocalStorage not available'
-
+,
       }
     }
   }

@@ -54,7 +54,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     // Fix malformed object properties
-    if (content.includes('const config = {/* TODO: Fix JSX expression */}
+    if (content.includes('const config = {/* TODO: Fix JSX expression */};
         })
         newLines.push(line)
       }

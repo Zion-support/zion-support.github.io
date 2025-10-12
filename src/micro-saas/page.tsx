@@ -259,22 +259,22 @@ export default function MicroSaasPage() {
     {
       icon: TrendingUp,
       title: 'Proven ROI',
-      description: 'Average 300% return on investment for our micro SAAS clients'
+      description: 'Average 300% return on investment for our micro SAAS clients',
     },
     {
       icon: Users,
       title: 'Easy Setup',
-      description: 'Get started in minutes with our intuitive setup process'
+      description: 'Get started in minutes with our intuitive setup process',
     },
     {
       icon: Clock,
       title: '24/7 Support',
-      description: 'Round-the-clock support with guaranteed response times'
+      description: 'Round-the-clock support with guaranteed response times',
     },
     {
       icon: Shield,
       title: 'Secure & Reliable',
-      description: 'Enterprise-grade security with 99.9% uptime guarantee'
+      description: 'Enterprise-grade security with 99.9% uptime guarantee',
     }
   ]
   const stats = [
@@ -500,17 +500,11 @@ export default function MicroSaasPage() {
   </li>
   </li>
   </li>
-  </li>
-  </li>
   </Link>
   </li>
   </li>
   </li>
-  </li>
-  </li>
   </Link>
-  </li>
-  </li>
   </li>
   </li>
   </div>

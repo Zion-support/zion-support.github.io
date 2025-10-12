@@ -139,7 +139,7 @@ const report = {
   additionalMissing: additionalMissing
   brokenLinks: brokenLinks,
   existingPages: allPages.map(p => p.path)}
-
+;
 fs.writeFileSync(
   path.join(__dirname, '..', 'website-audit-report.json'),
   JSON.stringify(report, null, 2)

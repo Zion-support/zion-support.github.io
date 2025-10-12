@@ -52,7 +52,7 @@ export default function handler(req, res) {
     name: name || '',
     preferences: preferences || {},
     timestamp: new Date().toISOString(),
-    status: 'active'
+    status: 'active',
   }
   existing.push(newSubscriber)
   try {

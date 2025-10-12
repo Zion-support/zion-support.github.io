@@ -75,7 +75,7 @@ export const,
 }) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  const seo = {/* TODO: Fix JSX expression */}
+  const seo = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   titl,
@@ -119,7 +119,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
     if (author) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      baseStructuredData.author = {/* TODO: Fix JSX expression */}
+      baseStructuredData.author = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
         '@type': 'Person',

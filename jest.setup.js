@@ -4,15 +4,9 @@ require('@testing-library/jest-dom')
 const React = require('react')
 const { TextEncoder, TextDecoder } = require('util')
 // Polyfills for Node.js environment
-<<<<<<< HEAD
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 
-=======
-global.TextEncoder = TextEncoder
-global.TextDecoder = TextDecoder
-// Mock files that use import.meta.env
->>>>>>> origin/main
 jest.mock('./src/utils/logger.ts', () => ({
   logger: {
     debug: jest.fn(),

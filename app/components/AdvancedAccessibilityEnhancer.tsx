@@ -1,34 +1,29 @@
-<<<<<<< HEAD
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-=======
->>>>>>> origin/main
+      description: 'Worldwide deployment and support for international businesses',
     }
   ];
 
@@ -52,9 +47,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -81,9 +75,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AdvancedAccessibilityEnhancer?
@@ -108,9 +101,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        </section>
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
@@ -132,9 +124,8 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-4xl mx-auto text-center">
+      <section$1>
+        <div$2>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -160,9 +151,6 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
 };
 
 export default AdvancedAccessibilityEnhancerPage;
-<<<<<<< HEAD
-=======
-=======
 import React, {useEffect, useState}from 'react';
 interface AccessibilityEnhancerProps {children: React.ReactNode;,}}const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({children ,}) => {const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState('medium');
@@ -170,7 +158,6 @@ interface AccessibilityEnhancerProps {children: React.ReactNode;,}}const Advance
   useEffect(() => {
     // Check for user's motion preferences;
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');,
-=======
 'use client'
 import React, { useEffect, useState } from 'react'
 interface AccessibilityEnhancerProps {
@@ -183,7 +170,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
   useEffect(() => {
     // Check for user's motion preferences
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
->>>>>>> origin/main
     setIsReducedMotion(mediaQuery.matches)
     // Check for high contrast preference;
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)'),
@@ -194,26 +180,13 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
       document.documentElement.classList.add('high-contrast')}if (isReducedMotion) {document.documentElement.classList.add('reduced-motion')}// Add keyboard navigation support;
     const handleKeyDown = (event: KeyboardEvent) => {,
     if (event.key === 'Tab') {
-<<<<<<< HEAD
         document.body.classList.add('keyboard-navigation')}}
     const handleMouseDown = () => {document.body.classList.remove('keyboard-navigation')}document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
-<<<<<<< HEAD
     return () => {document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown)}}, [isHighContrast, isReducedMotion]);
   const toggleHighContrast = () => {setIsHighContrast(!isHighContrast);
     document.documentElement.classList.toggle('high-contrast')}const changeFontSize = (size: string) => {,
-=======
-=======
-        document.body.classList.add('keyboard-navigation')
-  }
-    }
-    const handleMouseDown = () => {
-    document.body.classList.remove('keyboard-navigation')
-  }
-    document.addEventListener('keydown', handleKeyDown)
-    document.addEventListener('mousedown', handleMouseDown)
->>>>>>> origin/main
     return () => {
     document.removeEventListener('keydown', handleKeyDown)
       document.removeEventListener('mousedown', handleMouseDown)
@@ -224,9 +197,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
     document.documentElement.classList.toggle('high-contrast')
   }
   const changeFontSize = (size: string) => {
->>>>>>> origin/main
     setFontSize(size),
-<<<<<<< HEAD
     document.documentElement.setAttribute('data-font-size', size)}return(<div className="accessibility-enhanced">)</div>
       <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 ,}}>
         <button;
@@ -254,17 +225,11 @@ const AdvancedAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ c
   </
         </div>
       </div>
-<<<<<<< HEAD
       {children} </div>
-=======
-      {children}
-    </div>;
->>>>>>> origin/main
   );
 };
 
 export default AdvancedAccessibilityEnhancer;
-=======
     document.documentElement.setAttribute('data-font-size', size)
   }
   return (
@@ -306,10 +271,7 @@ export default AdvancedAccessibilityEnhancer;
   )
 }
 export default AdvancedAccessibilityEnhancer
->>>>>>> origin/main
   </button>
   </button>
   </button>
   </AccessibilityEnhancerProps>
->>>>>>> origin/main
->>>>>>> origin/main

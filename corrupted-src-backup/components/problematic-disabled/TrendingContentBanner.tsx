@@ -96,7 +96,7 @@ const TrendingContentBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
                   ind, e, x === currentInd, e, x
                      ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' 
                     : 'bg-whi, t, e/30, hove, r : bg-whi, t, e/, 5, 0'
-            {/* TODO: Fix JSX expression */}
+            {/* TODO: Fix JSX expression */};
               <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e = {/* TODO: Fix JSX expression */}`
                  }`}
             ))}

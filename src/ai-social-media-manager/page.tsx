@@ -194,8 +194,8 @@ export default AISocialMediaManagerPage</p>
   </h3>
   </div>
   </div>
-  </div>
-  </section>
+        </div>
+      </section>
   </div>
   </div>
   </div>
@@ -207,7 +207,7 @@ export default AISocialMediaManagerPage</p>
   </h1>
   </div>
   </div>
-  </div>
-  </section>
+        </div>
+      </section>
   </div>
 </span></span></span></p></p></h3></h3></ul></li>

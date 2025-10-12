@@ -54,7 +54,7 @@ interface LazyComponentProps {/* TODO: Fix JSX expression */}
   rootMargin?: string,
 }
 // Higher-order component for lazy loading
-export const _withLazyLoading = {}
+export const _withLazyLoading = {};
           <P extends object>()
   Componen,
   t: ComponentType,
@@ -145,7 +145,7 @@ export const preloadComponent = (importFunctio)
   }
 }
 // Lazy load with preloading
-export const createLazyComponent = {}
+export const createLazyComponent = {};
           <P extends object>()
   importFunctio,
   n: () => Promise,

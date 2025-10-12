@@ -65,10 +65,10 @@ export type ExpandedServicePricing =
     address: string}}
 // 1. CYBERSECURITY SERVICES PRICING
 export const cybersecurityPricing: ExpandedServicePricing[] = [
-    serviceId: 'quantum-threat-hunter'
-    serviceName: 'Quantum Threat Hunter'
-    category: 'Cybersecurity'
-    subcategory: 'Threat Intelligence'
+    serviceId: 'quantum-threat-hunter',
+    serviceName: 'Quantum Threat Hunter',
+    category: 'Cybersecurity',
+    subcategory: 'Threat Intelligence',
     pricingTiers: starter: unknown
         price: 2500,
         currency: 'USD',
@@ -249,7 +249,7 @@ export const,
         setupFe,
   e: 5000,
         contractTer,
-  m: '12 months'
+  m: '12 months',
       },
       professiona,
   l: unknown,
@@ -290,7 +290,7 @@ export const,
         setupFe,
   e: 10000,
         contractTer,
-  m: '12 months'
+  m: '12 months',
       },
       enterpris,
   e: unknown,
@@ -325,14 +325,14 @@ export const,
         setupFee: 25000,
         contractTerm: '24 months'},
       custom: unknown,
-        priceRange: 'Contact Sales'
+        priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
         features[,
         setupFe,
   e: 25000,
         contractTer,
-  m: '24 months'
+  m: '24 months',
       },
       custo,
   m: unknown,
@@ -375,7 +375,7 @@ export const,
         setupFe,
   e: 50000,
         contractTer,
-  m: 'negotiable'
+  m: 'negotiable',
       }
     },
     marketCompariso,
@@ -386,7 +386,7 @@ export const,
       priceAdvantag,
   e: '20-30% more cost-effective than competitors',
       valuePropositio,
-  n: 'Quantum-resistant security with AI-powered threat detection'
+  n: 'Quantum-resistant security with AI-powered threat detection',
     },
     roiAnalysi,
   s: unknown,
@@ -411,8 +411,8 @@ export const,
       ]
     },
     implementation: unknown,
-      setupTime: '2-4 weeks'
-      trainingRequired: '2-3 days for security team'
+      setupTime: '2-4 weeks',
+      trainingRequired: '2-3 days for security team',
       integrationComplexity: 'medium',
       supportIncluded: '24/7 Security Operations Center',
       customizationOptions[,
@@ -434,15 +434,15 @@ export const,
       ]
     },
     contactInfo: unknown,
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-threat-hunter',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
   },
-    serviceId: 'ai-compliance-automator'
-    serviceName: 'AI Compliance Automator'
-    category: 'Cybersecurity'
-    subcategory: 'Compliance Automation'
+    serviceId: 'ai-compliance-automator',
+    serviceName: 'AI Compliance Automator',
+    category: 'Cybersecurity',
+    subcategory: 'Compliance Automation',
     pricingTiers: starter: unknown
         price: 1500,
         currency: 'USD',
@@ -458,7 +458,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com/quantum-threat-hunter',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
     serviceI,
@@ -506,7 +506,7 @@ export const,
         setupFe,
   e: 2000,
         contractTer,
-  m: '12 months'
+  m: '12 months',
       },
       professiona,
   l: unknown,
@@ -546,7 +546,7 @@ export const,
         setupFe,
   e: 5000,
         contractTer,
-  m: '12 months'
+  m: '12 months',
       },
       enterpris,
   e: unknown,
@@ -577,14 +577,14 @@ export const,
         setupFee: 10000,
         contractTerm: '24 months'},
       custom: unknown,
-        priceRange: 'Contact Sales'
+        priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
         features[,
         setupFe,
   e: 10000,
         contractTer,
-  m: '24 months'
+  m: '24 months',
       },
       custo,
   m: unknown,
@@ -623,7 +623,7 @@ export const,
         setupFe,
   e: 20000,
         contractTer,
-  m: 'negotiable'
+  m: 'negotiable',
       }
     },
     marketCompariso,
@@ -634,7 +634,7 @@ export const,
       priceAdvantag,
   e: '15-25% more affordable than competitors',
       valuePropositio,
-  n: 'AI-powered compliance automation with comprehensive framework support'
+  n: 'AI-powered compliance automation with comprehensive framework support',
     },
     roiAnalysi,
   s: unknown,
@@ -659,8 +659,8 @@ export const,
       ]
     },
     implementation: unknown,
-      setupTime: '1-2 weeks'
-      trainingRequired: '1-2 days for compliance team'
+      setupTime: '1-2 weeks',
+      trainingRequired: '1-2 days for compliance team',
       integrationComplexity: 'low',
       supportIncluded: 'Business hours + emergency support',
       customizationOptions[,
@@ -682,7 +682,7 @@ export const,
       ]
     },
     contactInfo: unknown,
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-compliance-automator',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -696,16 +696,16 @@ export const,
   e: 'http,
   s://ziontechgroup.com/ai-compliance-automator',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ]
 // 2. DATA ANALYTICS SERVICES PRICING
 export const dataAnalyticsPricing: ExpandedServicePricing[] = [
-    serviceId: 'predictive-insights-engine'
-    serviceName: 'Predictive Insights Engine'
-    category: 'Data Analytics'
-    subcategory: 'Predictive Analytics'
+    serviceId: 'predictive-insights-engine',
+    serviceName: 'Predictive Insights Engine',
+    category: 'Data Analytics',
+    subcategory: 'Predictive Analytics',
     pricingTiers: starter: unknown
         price: 1800,
         currency: 'USD',
@@ -758,7 +758,7 @@ export const,
         setupFe,
   e: 3000,
         contractTer,
-  m: '12 months'
+  m: '12 months',
       },
       professiona,
   l: unknown,
@@ -797,7 +797,7 @@ export const,
         setupFe,
   e: 6000,
         contractTer,
-  m: '12 months'
+  m: '12 months',
       },
       enterpris,
   e: unknown,
@@ -828,14 +828,14 @@ export const,
         setupFee: 15000,
         contractTerm: '24 months'},
       custom: unknown,
-        priceRange: 'Contact Sales'
+        priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
         features[,
         setupFe,
   e: 15000,
         contractTer,
-  m: '24 months'
+  m: '24 months',
       },
       custo,
   m: unknown,
@@ -874,7 +874,7 @@ export const,
         setupFe,
   e: 30000,
         contractTer,
-  m: 'negotiable'
+  m: 'negotiable',
       }
     },
     marketCompariso,
@@ -885,7 +885,7 @@ export const,
       priceAdvantag,
   e: '25-35% more cost-effective than competitors',
       valuePropositio,
-  n: 'AI-powered predictive analytics with advanced machine learning capabilities'
+  n: 'AI-powered predictive analytics with advanced machine learning capabilities',
     },
     roiAnalysi,
   s: unknown,
@@ -910,8 +910,8 @@ export const,
       ]
     },
     implementation: unknown,
-      setupTime: '2-3 weeks'
-      trainingRequired: '2-3 days for data team'
+      setupTime: '2-3 weeks',
+      trainingRequired: '2-3 days for data team',
       integrationComplexity: 'medium',
       supportIncluded: 'Business hours + 24/7 emergency',
       customizationOptions[,
@@ -933,7 +933,7 @@ export const,
       ]
     },
     contactInfo: unknown,
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/predictive-insights-engine',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -947,16 +947,16 @@ export const,
   e: 'http,
   s://ziontechgroup.com/predictive-insights-engine',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ]
 // 3. CLOUD & DEVOPS SERVICES PRICING
 export const cloudDevOpsPricing: ExpandedServicePricing[] = [
-    serviceId: 'multi-cloud-orchestrator'
-    serviceName: 'Multi-Cloud Orchestrator'
-    category: 'Cloud & DevOps'
-    subcategory: 'Multi-Cloud Management'
+    serviceId: 'multi-cloud-orchestrator',
+    serviceName: 'Multi-Cloud Orchestrator',
+    category: 'Cloud & DevOps',
+    subcategory: 'Multi-Cloud Management',
     pricingTiers: starter: unknown
         price: 2000,
         currency: 'USD',
@@ -1009,7 +1009,7 @@ export const,
         setupFe,
   e: 4000,
         contractTer,
-  m: '12 months'
+  m: '12 months',
       },
       professiona,
   l: unknown,
@@ -1048,7 +1048,7 @@ export const,
         setupFe,
   e: 8000,
         contractTer,
-  m: '12 months'
+  m: '12 months',
       },
       enterpris,
   e: unknown,
@@ -1079,14 +1079,14 @@ export const,
         setupFee: 20000,
         contractTerm: '24 months'},
       custom: unknown,
-        priceRange: 'Contact Sales'
+        priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
         features[,
         setupFe,
   e: 20000,
         contractTer,
-  m: '24 months'
+  m: '24 months',
       },
       custo,
   m: unknown,
@@ -1125,7 +1125,7 @@ export const,
         setupFe,
   e: 40000,
         contractTer,
-  m: 'negotiable'
+  m: 'negotiable',
       }
     },
     marketCompariso,
@@ -1136,7 +1136,7 @@ export const,
       priceAdvantag,
   e: '30-40% more cost-effective than competitors',
       valuePropositio,
-  n: 'Intelligent multi-cloud orchestration with AI-powered optimization'
+  n: 'Intelligent multi-cloud orchestration with AI-powered optimization',
     },
     roiAnalysi,
   s: unknown,
@@ -1161,8 +1161,8 @@ export const,
       ]
     },
     implementation: unknown,
-      setupTime: '4-6 weeks'
-      trainingRequired: '3-5 days for DevOps team'
+      setupTime: '4-6 weeks',
+      trainingRequired: '3-5 days for DevOps team',
       integrationComplexity: 'high',
       supportIncluded: '24/7 cloud operations support',
       customizationOptions[,
@@ -1184,7 +1184,7 @@ export const,
       ]
     },
     contactInfo: unknown,
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/multi-cloud-orchestrator',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1198,16 +1198,16 @@ export const,
   e: 'http,
   s://ziontechgroup.com/multi-cloud-orchestrator',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ]
 // 4. IOT & EDGE COMPUTING SERVICES PRICING
 export const iotEdgePricing: ExpandedServicePricing[] = [
-    serviceId: 'industrial-iot-intelligence'
-    serviceName: 'Industrial IoT Intelligence Platform'
-    category: 'IoT & Edge Computing'
-    subcategory: 'Industrial IoT'
+    serviceId: 'industrial-iot-intelligence',
+    serviceName: 'Industrial IoT Intelligence Platform',
+    category: 'IoT & Edge Computing',
+    subcategory: 'Industrial IoT',
     pricingTiers: starter: unknown
         price: 2800,
         currency: 'USD',
@@ -1260,7 +1260,7 @@ export const,
         setupFe,
   e: 5000,
         contractTer,
-  m: '12 months'
+  m: '12 months',
       },
       professiona,
   l: unknown,
@@ -1299,7 +1299,7 @@ export const,
         setupFe,
   e: 10000,
         contractTer,
-  m: '12 months'
+  m: '12 months',
       },
       enterpris,
   e: unknown,
@@ -1330,14 +1330,14 @@ export const,
         setupFee: 25000,
         contractTerm: '24 months'},
       custom: unknown,
-        priceRange: 'Contact Sales'
+        priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
         features[,
         setupFe,
   e: 25000,
         contractTer,
-  m: '24 months'
+  m: '24 months',
       },
       custo,
   m: unknown,
@@ -1376,7 +1376,7 @@ export const,
         setupFe,
   e: 50000,
         contractTer,
-  m: 'negotiable'
+  m: 'negotiable',
       }
     },
     marketCompariso,
@@ -1387,7 +1387,7 @@ export const,
       priceAdvantag,
   e: '25-35% more affordable than competitors',
       valuePropositio,
-  n: 'AI-powered industrial IoT with predictive maintenance and optimization'
+  n: 'AI-powered industrial IoT with predictive maintenance and optimization',
     },
     roiAnalysi,
   s: unknown,
@@ -1412,8 +1412,8 @@ export const,
       ]
     },
     implementation: unknown,
-      setupTime: '6-8 weeks'
-      trainingRequired: '3-5 days for operations team'
+      setupTime: '6-8 weeks',
+      trainingRequired: '3-5 days for operations team',
       integrationComplexity: 'high',
       supportIncluded: '24/7 industrial support',
       customizationOptions[,
@@ -1435,7 +1435,7 @@ export const,
       ]
     },
     contactInfo: unknown,
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/industrial-iot-intelligence',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1449,16 +1449,16 @@ export const,
   e: 'http,
   s://ziontechgroup.com/industrial-iot-intelligence',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ]
 // 5. FINANCIAL TECHNOLOGY SERVICES PRICING
 export const finTechPricing: ExpandedServicePricing[] = [
-    serviceId: 'quantum-financial-modeling'
-    serviceName: 'Quantum Financial Modeling Platform'
-    category: 'Financial Technology'
-    subcategory: 'Quantum Finance'
+    serviceId: 'quantum-financial-modeling',
+    serviceName: 'Quantum Financial Modeling Platform',
+    category: 'Financial Technology',
+    subcategory: 'Quantum Finance',
     pricingTiers: starter: unknown
         price: 8000,
         currency: 'USD',
@@ -1511,7 +1511,7 @@ export const,
         setupFe,
   e: 15000,
         contractTer,
-  m: '12 months'
+  m: '12 months',
       },
       professiona,
   l: unknown,
@@ -1550,7 +1550,7 @@ export const,
         setupFe,
   e: 30000,
         contractTer,
-  m: '12 months'
+  m: '12 months',
       },
       enterpris,
   e: unknown,
@@ -1581,14 +1581,14 @@ export const,
         setupFee: 75000,
         contractTerm: '24 months'},
       custom: unknown,
-        priceRange: 'Contact Sales'
+        priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
         features[,
         setupFe,
   e: 75000,
         contractTer,
-  m: '24 months'
+  m: '24 months',
       },
       custo,
   m: unknown,
@@ -1627,7 +1627,7 @@ export const,
         setupFe,
   e: 150000,
         contractTer,
-  m: 'negotiable'
+  m: 'negotiable',
       }
     },
     marketCompariso,
@@ -1638,7 +1638,7 @@ export const,
       priceAdvantag,
   e: '40-60% more cost-effective than competitors',
       valuePropositio,
-  n: 'Quantum-powered financial modeling with unprecedented speed and accuracy'
+  n: 'Quantum-powered financial modeling with unprecedented speed and accuracy',
     },
     roiAnalysi,
   s: unknown,
@@ -1663,8 +1663,8 @@ export const,
       ]
     },
     implementation: unknown,
-      setupTime: '8-12 weeks'
-      trainingRequired: '1-2 weeks for financial team'
+      setupTime: '8-12 weeks',
+      trainingRequired: '1-2 weeks for financial team',
       integrationComplexity: 'high',
       supportIncluded: '24/7 financial support',
       customizationOptions[,
@@ -1686,7 +1686,7 @@ export const,
       ]
     },
     contactInfo: unknown,
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-financial-modeling',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1700,16 +1700,16 @@ export const,
   e: 'http,
   s://ziontechgroup.com/quantum-financial-modeling',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ]
 // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING
 export const healthcarePricing: ExpandedServicePricing[] = [
-    serviceId: 'ai-diagnostic-assistant'
-    serviceName: 'AI Diagnostic Assistant'
-    category: 'Healthcare Technology'
-    subcategory: 'AI Diagnostics'
+    serviceId: 'ai-diagnostic-assistant',
+    serviceName: 'AI Diagnostic Assistant',
+    category: 'Healthcare Technology',
+    subcategory: 'AI Diagnostics',
     pricingTiers: starter: unknown
         price: 3500,
         currency: 'USD',
@@ -1762,7 +1762,7 @@ export const,
         setupFe,
   e: 7000,
         contractTer,
-  m: '12 months'
+  m: '12 months',
       },
       professiona,
   l: unknown,
@@ -1801,7 +1801,7 @@ export const,
         setupFe,
   e: 15000,
         contractTer,
-  m: '12 months'
+  m: '12 months',
       },
       enterpris,
   e: unknown,
@@ -1832,14 +1832,14 @@ export const,
         setupFee: 35000,
         contractTerm: '24 months'},
       custom: unknown,
-        priceRange: 'Contact Sales'
+        priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
         features[,
         setupFe,
   e: 35000,
         contractTer,
-  m: '24 months'
+  m: '24 months',
       },
       custo,
   m: unknown,
@@ -1878,7 +1878,7 @@ export const,
         setupFe,
   e: 70000,
         contractTer,
-  m: 'negotiable'
+  m: 'negotiable',
       }
     },
     marketCompariso,
@@ -1889,7 +1889,7 @@ export const,
       priceAdvantag,
   e: '30-40% more affordable than competitors',
       valuePropositio,
-  n: 'AI-powered diagnostic assistance with advanced medical AI capabilities'
+  n: 'AI-powered diagnostic assistance with advanced medical AI capabilities',
     },
     roiAnalysi,
   s: unknown,
@@ -1914,8 +1914,8 @@ export const,
       ]
     },
     implementation: unknown,
-      setupTime: '6-8 weeks'
-      trainingRequired: '2-3 days for medical staff'
+      setupTime: '6-8 weeks',
+      trainingRequired: '2-3 days for medical staff',
       integrationComplexity: 'high',
       supportIncluded: '24/7 medical support',
       customizationOptions[,
@@ -1937,7 +1937,7 @@ export const,
       ]
     },
     contactInfo: unknown,
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-diagnostic-assistant',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1951,7 +1951,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com/ai-diagnostic-assistant',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ]

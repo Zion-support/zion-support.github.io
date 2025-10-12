@@ -83,7 +83,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced photonic computing platform with cloud access, development tools, and research collaboration features. Includes academic partnerships and hardware integration.',
@@ -135,7 +135,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete holographic platform with projection technology, content creation tools, and collaboration features. Includes mobile apps and hardware integration.',
@@ -187,7 +187,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum internet security platform with comprehensive protection, monitoring tools, and integration capabilities. Includes compliance certifications and 24/7 support.',
@@ -239,7 +239,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete autonomous business platform with AI agents, decision-making systems, and comprehensive business automation. Includes enterprise security and compliance.',
@@ -291,7 +291,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced biotech AI platform with comprehensive research tools, collaboration features, and regulatory compliance. Includes academic partnerships and research support.',
@@ -343,7 +343,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete edge computing orchestration platform with AI-powered management, monitoring tools, and automation features. Includes enterprise security and compliance.',
@@ -395,7 +395,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete 5G private network solution with deployment tools, management platform, and monitoring systems. Includes enterprise security and compliance features.',

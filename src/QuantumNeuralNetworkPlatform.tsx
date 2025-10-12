@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-      description: 'Unbreakable encryption using quantum key distribution and post-quantum cryptography.'
+      description: 'Unbreakable encryption using quantum key distribution and post-quantum cryptography.',
     },
     {
       icon: TrendingUp,
       title: 'Performance Scaling',
-      description: 'Exponential performance improvements over classical neural networks.'
+      description: 'Exponential performance improvements over classical neural networks.',
       title: "Drug Discovery",
       description: "Accelerate pharmaceutical research with quantum-powered molecular modeling."
       title: "Drug Discovery",
@@ -142,8 +142,8 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Features Section */}
         <section className="py-20">
@@ -219,8 +219,8 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                 </p>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Applications Section */}
         <section className="py-20 bg-gray-900/50">
@@ -318,8 +318,8 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20">
@@ -885,8 +885,8 @@ export default function QuantumNeuralNetworkPlatform() {
                 Schedule Demo
               </button>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Features Section */}
         <section className="py-20 relative">
@@ -917,8 +917,8 @@ export default function QuantumNeuralNetworkPlatform() {
                 )
               })}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Use Cases Section */}
         <section className="py-20 relative bg-gray-900/30">
@@ -949,8 +949,8 @@ export default function QuantumNeuralNetworkPlatform() {
                 )
               })}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Benefits Section */}
         <section className="py-20 relative">
@@ -992,8 +992,8 @@ export default function QuantumNeuralNetworkPlatform() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
       <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto">
@@ -1948,8 +1948,8 @@ export default function QuantumNeuralNetworkPlatform() {
                 View Pricing
               </Link>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </div>
     </>
         {/* CTA Section */}
@@ -1990,8 +1990,8 @@ export default function QuantumNeuralNetworkPlatform() {
                 Contact Support →
               </Link>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </div>
     </>
   )
@@ -2104,4 +2104,4 @@ export default function QuantumNeuralNetworkPlatform() {
     </div>
   )
 }
-export default QuantumNeuralNetworkPlatform</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></button></p></p></p></p></p></p></p></h2></ul></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>
+export default QuantumNeuralNetworkPlatform</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></button></p></p></p></p></p></p></p></h2></ul></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>

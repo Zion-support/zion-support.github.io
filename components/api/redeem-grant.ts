@@ -77,7 +77,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     grantCode,
     courseId,
     redeemedAt: now,
-  }
+  };
   records && records.push(record)
   await fs && fs.writeJSON(REDEMPTIONS_FILE, records, { spaces: 2 })
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201)
@@ -169,7 +169,7 @@ if ( {) {
     grant_code,
     course_id,
 redeemed_at: now,
-  }
+  };
   records.push (record)
   await fs.writeJSON (REDEMPTIONS_FILE, records, { spaces: 2 })
   await record_request (req, res, auth.partner, auth.api_key, started, 201)
@@ -242,7 +242,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   const { studentEmail, grantCode, courseId } = req.body || {}
   if (!studentEmail || !grantCode || !courseId) {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     redeemedAt: now,
   }
   records.push(record)

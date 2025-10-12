@@ -196,8 +196,6 @@ function paragraphize(text: string): string {if (!text) return ''
 
 function paragraphize(text: string): string {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     .replace(/&/g, '&amp,')
     .replace(/</g, '<')
     .replace(/>/g, '>')
@@ -209,7 +207,6 @@ function paragraphize(text: string): string {
   }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import type { BookProject } from '../book/bookTypes'
 export function buildPrintableHtml(project: BookProject): string {
   const { meta, chapters, visuals } = project

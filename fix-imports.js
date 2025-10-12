@@ -3,35 +3,35 @@ import fs from 'fs'
 import path from 'path'
 //Mapping of broken imports to correct imports
 const iconMappings = {
-  rrowleft: 'ArrowLeft'
-  alendar: 'Calendar'
-  ser: 'User'
-  lock: 'Clock'
-  ag: 'Tag'
-  rendingup: 'TrendingUp'
-  ollarsign: 'DollarSign'
-  sers: 'Users'
-  arget: 'Target'
-  rain: 'Brain'
-  ap: 'Zap'
-  hield: 'Shield'
-  rrowright: 'ArrowRight'
-  og: 'Log'
-  pu: 'Cpu'
-  lobe: 'Globe'
-  ocket: 'Rocket'
+  rrowleft: 'ArrowLeft',
+  alendar: 'Calendar',
+  ser: 'User',
+  lock: 'Clock',
+  ag: 'Tag',
+  rendingup: 'TrendingUp',
+  ollarsign: 'DollarSign',
+  sers: 'Users',
+  arget: 'Target',
+  rain: 'Brain',
+  ap: 'Zap',
+  hield: 'Shield',
+  rrowright: 'ArrowRight',
+  og: 'Log',
+  pu: 'Cpu',
+  lobe: 'Globe',
+  ocket: 'Rocket',
   heckcircle: 'CheckCircle',
   hare2: 'Share2',
   ookmark: 'Bookmark',
   ot: 'Bot',
-  ookopen: 'BookOpen'}
+  ookopen: 'BookOpen'};
 //Function to fix imports in a file
 function fixImportsInFile(filePath) {
   try {
     //Fix lucide-react imports
     for (const [broken, correct] of Object.entries(iconMappings)) {
       //       const oldImport = `lucide-react/dist/esm/icons/${broken}`
-const iconMappings = {/* TODO: Fix JSX expression */}
+const iconMappings = {/* TODO: Fix JSX expression */};
 }
 //Function to fix imports in a file
 function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}

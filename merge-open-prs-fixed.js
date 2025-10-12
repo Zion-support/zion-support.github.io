@@ -108,7 +108,7 @@ const summary = {
   failedMerges: failCount
   results: results,
   timestamp: new Date().toISOString(),
-const summary = {/* TODO: Fix JSX expression */}
+const summary = {/* TODO: Fix JSX expression */};
 }
 
 fs.writeFileSync('pr-merge-results.json', JSON.stringify(summary, null, 2))

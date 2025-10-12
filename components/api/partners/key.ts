@@ -55,7 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     id: uuidv4(), partnerId: auth.partner.id,
     key: uuidv4(), active: true,
     createdAt: now,
-    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60}
+    rateLimitPerMinute: apiKey.rateLimitPerMinute ?? 60};
   keys.push(newKey as any)
   await saveApiKeys(keys)
   return res.status(201).json({ apiKey: newKey.key })
@@ -116,7 +116,7 @@ if (existing.active = false) {
     active: true,
     created_at: now,
     rateLimitPerMinute: api_key.rateLimitPerMinute ?? 60,
-  }
+  };
   keys.push (new_key as any)
   await saveApiKeys (keys)
   return res.status (201).json ({ api_key: new_key.key });    id: uuidv4 ()

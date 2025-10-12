@@ -270,25 +270,25 @@ export default function HelpCenter() {
       title: 'Getting Started with Zion Tech Group',
       description: 'Complete guide to setting up your account and first project',
       category: 'Getting Started',
-      readTime: '5 min read'
+      readTime: '5 min read',
     },
     {
       title: 'Understanding AI Service Pricing',
       description: 'Learn about our pricing structure and cost optimization',
       category: 'Billing & Payments',
-      readTime: '8 min read'
+      readTime: '8 min read',
     },
     {
       title: 'Security Best Practices',
       description: 'Essential security measures for your data and applications',
       category: 'Account & Security',
-      readTime: '10 min read'
+      readTime: '10 min read',
     },
     {
       title: 'Troubleshooting Common Issues',
       description: 'Solutions to frequently encountered problems',
       category: 'Technical Support',
-      readTime: '6 min read'
+      readTime: '6 min read',
     }
   ]
   const helpCategories = [
@@ -451,7 +451,7 @@ const HelpCenter = () => {
         'Emergency Contacts',
         'Support Hours'
       ],
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-500 to-red-500',
     }
   ]
   const quickActions = [
@@ -724,7 +724,7 @@ const HelpCenter = () => {
       readTime: '5 min read',
       views: '2.4k',
       helpful: '98%',
-      excerpt: 'Step-by-step guide to creating your first automated workflow using our AI-powered platform.'
+      excerpt: 'Step-by-step guide to creating your first automated workflow using our AI-powered platform.',
     },
     {
       id: 'ai-workflows-1',
@@ -733,7 +733,7 @@ const HelpCenter = () => {
       readTime: '8 min read',
       views: '1.8k',
       helpful: '95%',
-      excerpt: 'Learn how our AI makes decisions and how to optimize your workflows for better results.'
+      excerpt: 'Learn how our AI makes decisions and how to optimize your workflows for better results.',
     },
     {
       id: 'integrations-1',
@@ -742,7 +742,7 @@ const HelpCenter = () => {
       readTime: '6 min read',
       views: '1.6k',
       helpful: '92%',
-      excerpt: 'Complete guide to integrating your workflows with Salesforce CRM for seamless data flow.'
+      excerpt: 'Complete guide to integrating your workflows with Salesforce CRM for seamless data flow.',
     },
     {
       id: 'troubleshooting-1',
@@ -751,7 +751,7 @@ const HelpCenter = () => {
       readTime: '4 min read',
       views: '1.9k',
       helpful: '96%',
-      excerpt: 'Common reasons why workflows might not trigger and how to fix them quickly.'
+      excerpt: 'Common reasons why workflows might not trigger and how to fix them quickly.',
     }
   ]
   const faqs = [
@@ -851,37 +851,37 @@ const HelpCenter = () => {
       id: 'faq-1',
       question: 'How do I reset my password?',
       answer: 'To reset your password, go to the login page and click "Forgot Password". Enter your email address and we\'ll send you a secure link to reset your password. The link expires in 1 hour for security reasons.',
-      category: 'account'
+      category: 'account',
     },
     {
       id: 'faq-2',
       question: 'Can I export my workflow data?',
       answer: 'Yes, you can export your workflow data in multiple formats including CSV, JSON, and Excel. Go to your workflow dashboard, select the workflow, and click the export button. You can choose the date range and format for your export.',
-      category: 'data'
+      category: 'data',
     },
     {
       id: 'faq-3',
       question: 'How do I add team members to my account?',
       answer: 'To add team members, go to Settings > Team Management. Click "Invite Member" and enter their email address. They\'ll receive an invitation email with a secure link to join your team. You can assign different permission levels to each member.',
-      category: 'team'
+      category: 'team',
     },
     {
       id: 'faq-4',
       question: 'What happens if I exceed my monthly workflow limit?',
       answer: 'If you exceed your monthly workflow limit, you\'ll receive a notification. You can either upgrade your plan for more workflows or wait until the next billing cycle. Existing workflows continue to run normally.',
-      category: 'billing'
+      category: 'billing',
     },
     {
       id: 'faq-5',
       question: 'How secure is my data?',
       answer: 'Your data is protected with enterprise-grade security including AES-256 encryption, SOC2 compliance, and regular security audits. We never share your data with third parties and all data transmission is encrypted using TLS 1.3.',
-      category: 'security'
+      category: 'security',
     },
     {
       id: 'faq-6',
       question: 'Can I schedule workflows to run at specific times?',
       answer: 'Yes, you can schedule workflows to run at specific times, on specific days, or based on custom intervals. Use the scheduling feature in the workflow editor to set up recurring or one-time schedules.',
-      category: 'workflows'
+      category: 'workflows',
     }
   ]
   const supportChannels = [
@@ -891,7 +891,7 @@ const HelpCenter = () => {
       icon: MessageCircle,
       availability: '24/7',
       responseTime: 'Usually within 2 minutes',
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-500 to-emerald-500',
     },
     {
       name: 'Email Support',
@@ -899,7 +899,7 @@ const HelpCenter = () => {
       icon: Mail,
       availability: '24/7',
       responseTime: 'Within 4 hours',
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-500 to-cyan-500',
     },
     {
       name: 'Phone Support',
@@ -907,7 +907,7 @@ const HelpCenter = () => {
       icon: Phone,
       availability: '9 AM - 6 PM EST',
       responseTime: 'Immediate',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-500 to-pink-500',
     },
     {
       name: 'Community Forum',
@@ -915,7 +915,7 @@ const HelpCenter = () => {
       icon: Users,
       availability: '24/7',
       responseTime: 'Varies',
-      color: 'from-orange-500 to-red-500'
+      color: 'from-orange-500 to-red-500',
     }
   ]
   CheckCircle,
@@ -940,42 +940,42 @@ export default function HelpCenter() {
       title: 'Getting Started',
       icon: BookOpen,
       color: 'from-blue-500 to-cyan-500',
-      description: 'New to Zion Tech Group? Start here'
+      description: 'New to Zion Tech Group? Start here',
     },
     {
       id: 'ai-services',
       title: 'AI Services',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
-      description: 'AI and machine learning services'
+      description: 'AI and machine learning services',
     },
     {
       id: 'technical-support',
       title: 'Technical Support',
       icon: Settings,
       color: 'from-green-500 to-emerald-500',
-      description: 'Technical issues and troubleshooting'
+      description: 'Technical issues and troubleshooting',
     },
     {
       id: 'billing',
       title: 'Billing & Pricing',
       icon: FileText,
       color: 'from-orange-500 to-yellow-500',
-      description: 'Pricing, billing, and payment questions'
+      description: 'Pricing, billing, and payment questions',
     },
     {
       id: 'security',
       title: 'Security & Compliance',
       icon: Shield,
       color: 'from-red-500 to-pink-500',
-      description: 'Security features and compliance'
+      description: 'Security features and compliance',
     },
     {
       id: 'integrations',
       title: 'Integrations',
       icon: Network,
       color: 'from-indigo-500 to-purple-500',
-      description: 'Third-party integrations and APIs'
+      description: 'Third-party integrations and APIs',
   Mail, 
   FileText,
   Video,
@@ -1130,28 +1130,28 @@ const HelpCenter = () => {
       description: 'Comprehensive guides and API references',
       icon: FileText,
       link: '/docs',
-      type: 'Documentation'
+      type: 'Documentation',
     },
     {
       title: 'Video Tutorials',
       description: 'Step-by-step video guides',
       icon: Video,
       link: '/tutorials',
-      type: 'Tutorials'
+      type: 'Tutorials',
     },
     {
       title: 'Download Center',
       description: 'SDKs, tools, and resources',
       icon: Download,
       link: '/downloads',
-      type: 'Downloads'
+      type: 'Downloads',
     },
     {
       title: 'Community Forum',
       description: 'Connect with other users',
       icon: Users,
       link: '/community',
-      type: 'Community'
+      type: 'Community',
     }
   ]
   const faqs = [
@@ -1159,49 +1159,49 @@ const HelpCenter = () => {
       id: 1,
       question: "How do I get started with Zion Tech Group's AI services?",
       answer: "Getting started is easy! Simply contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and recommend the best AI solutions for your business. Our team will guide you through the entire onboarding process.",
-      category: 'getting-started'
+      category: 'getting-started',
     },
     {
       id: 2,
       question: "What AI services do you offer?",
       answer: "We offer a comprehensive range of AI services including AI autonomous systems, machine learning solutions, natural language processing, computer vision, predictive analytics, and custom AI development. Each service is tailored to meet your specific business requirements.",
-      category: 'ai-services'
+      category: 'ai-services',
     },
     {
       id: 3,
       question: "How secure are your AI solutions?",
       answer: "Security is our top priority. All our AI solutions include enterprise-grade security features, SOC2 compliance, encryption at rest and in transit, and regular security audits. We follow industry best practices and comply with all relevant security standards.",
-      category: 'security'
+      category: 'security',
     },
     {
       id: 4,
       question: "What is your pricing structure?",
       answer: "Our pricing is transparent and flexible. We offer subscription-based models, project-based pricing, and custom enterprise solutions. Pricing depends on the scope of services, complexity, and duration. Contact us for a personalized quote.",
-      category: 'billing'
+      category: 'billing',
     },
     {
       id: 5,
       question: "Do you provide technical support?",
       answer: "Yes, we provide 24/7 technical support for all our services. Our support team includes AI experts, engineers, and technical specialists. We offer multiple support channels including phone, email, chat, and dedicated support portals.",
-      category: 'technical-support'
+      category: 'technical-support',
     },
     {
       id: 6,
       question: "Can you integrate with our existing systems?",
       answer: "Absolutely! We specialize in seamless integrations with existing enterprise systems. Our team will assess your current infrastructure and design integration solutions that work with your existing tools and workflows.",
-      category: 'integrations'
+      category: 'integrations',
     },
     {
       id: 7,
       question: "What industries do you serve?",
       answer: "We serve a wide range of industries including healthcare, finance, manufacturing, retail, technology, and government. Our solutions are adaptable and can be customized for any industry-specific requirements.",
-      category: 'getting-started'
+      category: 'getting-started',
     },
     {
       id: 8,
       question: "How long does implementation take?",
       answer: "Implementation timelines vary depending on the complexity of the solution. Simple AI integrations can take 2-4 weeks, while complex enterprise solutions may take 3-6 months. We'll provide a detailed timeline during our initial consultation.",
-      category: 'technical-support'
+      category: 'technical-support',
     }
   ]
   const filteredFaqs = activeCategory 
@@ -1252,19 +1252,19 @@ const HelpCenter = () => {
           title: 'How to Set Up Your Account',
           description: 'Step-by-step guide to create and configure your Zion Tech Group account',
           readTime: '5 min read',
-          difficulty: 'Beginner'
+          difficulty: 'Beginner',
         },
         {
           title: 'First Steps with AI Solutions',
           description: 'Quick start guide for implementing AI-powered solutions',
           readTime: '8 min read',
-          difficulty: 'Beginner'
+          difficulty: 'Beginner',
         },
         {
           title: 'Understanding Quantum Technology',
           description: 'Introduction to quantum computing and its applications',
           readTime: '12 min read',
-          difficulty: 'Intermediate'
+          difficulty: 'Intermediate',
         }
       ]
     },
@@ -1278,19 +1278,19 @@ const HelpCenter = () => {
           title: 'AI Autonomous Systems Setup',
           description: 'Complete setup guide for autonomous AI systems',
           readTime: '15 min read',
-          difficulty: 'Advanced'
+          difficulty: 'Advanced',
         },
         {
           title: 'Training Your AI Models',
           description: 'Best practices for training and optimizing AI models',
           readTime: '20 min read',
-          difficulty: 'Advanced'
+          difficulty: 'Advanced',
         },
         {
           title: 'AI Research Assistant Usage',
           description: 'How to effectively use the AI research assistant',
           readTime: '10 min read',
-          difficulty: 'Intermediate'
+          difficulty: 'Intermediate',
         }
       ]
     },
@@ -1304,19 +1304,19 @@ const HelpCenter = () => {
           title: 'Quantum Neural Network Basics',
           description: 'Understanding quantum neural network fundamentals',
           readTime: '18 min read',
-          difficulty: 'Advanced'
+          difficulty: 'Advanced',
         },
         {
           title: 'Quantum Computing Applications',
           description: 'Real-world applications and use cases',
           readTime: '15 min read',
-          difficulty: 'Intermediate'
+          difficulty: 'Intermediate',
         },
         {
           title: 'Quantum Security Implementation',
           description: 'Implementing quantum-safe security measures',
           readTime: '25 min read',
-          difficulty: 'Advanced'
+          difficulty: 'Advanced',
         }
       ]
     },
@@ -1330,19 +1330,19 @@ const HelpCenter = () => {
           title: 'SOC2 Compliance Guide',
           description: 'Complete guide to SOC2 compliance automation',
           readTime: '30 min read',
-          difficulty: 'Advanced'
+          difficulty: 'Advanced',
         },
         {
           title: 'Security Best Practices',
           description: 'Essential security measures for your organization',
           readTime: '12 min read',
-          difficulty: 'Intermediate'
+          difficulty: 'Intermediate',
         },
         {
           title: 'Threat Detection Setup',
           description: 'Setting up advanced threat detection systems',
           readTime: '20 min read',
-          difficulty: 'Advanced'
+          difficulty: 'Advanced',
         }
       ]
     },
@@ -1356,19 +1356,19 @@ const HelpCenter = () => {
           title: '5G Network Configuration',
           description: 'Setting up enterprise 5G network infrastructure',
           readTime: '25 min read',
-          difficulty: 'Advanced'
+          difficulty: 'Advanced',
         },
         {
           title: 'Cloud Migration Guide',
           description: 'Step-by-step cloud migration process',
           readTime: '35 min read',
-          difficulty: 'Advanced'
+          difficulty: 'Advanced',
         },
         {
           title: 'DevOps Automation Setup',
           description: 'Implementing automated DevOps processes',
           readTime: '20 min read',
-          difficulty: 'Intermediate'
+          difficulty: 'Intermediate',
         }
       ]
     }
@@ -1378,19 +1378,19 @@ const HelpCenter = () => {
       title: 'Quick Troubleshooting Guide',
       description: 'Common issues and their solutions',
       views: '2.5k',
-      category: 'General'
+      category: 'General',
     },
     {
       title: 'API Integration Examples',
       description: 'Code examples for integrating our services',
       views: '1.8k',
-      category: 'Development'
+      category: 'Development',
     },
     {
       title: 'Performance Optimization Tips',
       description: 'Best practices for optimal system performance',
       views: '1.2k',
-      category: 'Performance'
+      category: 'Performance',
     }
   ]
   const supportChannels = [
@@ -1568,28 +1568,28 @@ const HelpCenter = () => {
       description: 'Get instant help from our support team',
       icon: MessageCircle,
       action: 'Start Chat',
-      color: 'from-blue-500 to-cyan-600'
+      color: 'from-blue-500 to-cyan-600',
     },
     {
       title: 'Phone Support',
       description: 'Speak directly with our experts',
       icon: Phone,
       action: 'Call Now',
-      color: 'from-green-500 to-emerald-600'
+      color: 'from-green-500 to-emerald-600',
     },
     {
       title: 'Email Support',
       description: 'Send us a detailed message',
       icon: Mail,
       action: 'Send Email',
-      color: 'from-purple-500 to-pink-600'
+      color: 'from-purple-500 to-pink-600',
     },
     {
       title: 'Documentation',
       description: 'Comprehensive guides and references',
       icon: BookOpen,
       action: 'Browse Docs',
-      color: 'from-orange-500 to-red-600'
+      color: 'from-orange-500 to-red-600',
     }
   ]
   const filteredCategories = categories.filter(category =>
@@ -1659,7 +1659,7 @@ export default function HelpCenter() {
         },
         {
           question: 'What services do you offer for small businesses?',
-          answer: 'We offer a comprehensive range of services including AI solutions, cybersecurity, cloud infrastructure, and custom software development tailored specifically for small and medium businesses.'
+          answer: 'We offer a comprehensive range of services including AI solutions, cybersecurity, cloud infrastructure, and custom software development tailored specifically for small and medium businesses.',
         },
         {
           question: 'How long does implementation typically take?',
@@ -1673,15 +1673,15 @@ export default function HelpCenter() {
       faqs: [
         {
           question: 'How can I get technical support?',
-          answer: 'We provide 24/7 technical support through multiple channels: phone, email, live chat, and our support portal. Premium customers also have access to dedicated support engineers.'
+          answer: 'We provide 24/7 technical support through multiple channels: phone, email, live chat, and our support portal. Premium customers also have access to dedicated support engineers.',
         },
         {
           question: 'What is your response time for support tickets?',
-          answer: 'We prioritize support tickets based on severity. Critical issues are addressed within 1 hour, high priority within 4 hours, and standard issues within 24 hours during business days.'
+          answer: 'We prioritize support tickets based on severity. Critical issues are addressed within 1 hour, high priority within 4 hours, and standard issues within 24 hours during business days.',
         },
         {
           question: 'Do you provide remote support?',
-          answer: 'Yes, we offer remote support for most technical issues. Our engineers can securely access your systems (with your permission) to diagnose and resolve problems quickly.'
+          answer: 'Yes, we offer remote support for most technical issues. Our engineers can securely access your systems (with your permission) to diagnose and resolve problems quickly.',
         }
       ]
     },
@@ -1691,7 +1691,7 @@ export default function HelpCenter() {
       faqs: [
         {
           question: 'What payment methods do you accept?',
-          answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment plans for enterprise clients. All payments are processed securely through our payment partners.'
+          answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment plans for enterprise clients. All payments are processed securely through our payment partners.',
         },
         {
           question: 'Do you offer refunds?',
@@ -1710,28 +1710,28 @@ export default function HelpCenter() {
       description: 'Comprehensive guides and API documentation',
       icon: FileText,
       link: '/docs',
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-500 to-cyan-500',
     },
     {
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all features',
       icon: Video,
       link: '/tutorials',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-500 to-pink-500',
     },
     {
       title: 'Download Center',
       description: 'Software, tools, and resources',
       icon: Download,
       link: '/downloads',
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-500 to-emerald-500',
     },
     {
       title: 'Community Forum',
       description: 'Connect with other users and experts',
       icon: Users,
       link: '/community',
-      color: 'from-orange-500 to-yellow-500'
+      color: 'from-orange-500 to-yellow-500',
     }
   ]
   const supportChannels = [
@@ -1741,7 +1741,7 @@ export default function HelpCenter() {
       icon: Phone,
       contact: '+1 (555) 123-4567',
       availability: '24/7',
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-500 to-emerald-500',
     },
     {
       title: 'Email Support',
@@ -1749,7 +1749,7 @@ export default function HelpCenter() {
       icon: Mail,
       contact: 'support@ziontechgroup.com',
       availability: '24/7',
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-500 to-cyan-500',
     },
     {
       title: 'Live Chat',
@@ -1757,7 +1757,7 @@ export default function HelpCenter() {
       icon: MessageCircle,
       contact: 'Available on website',
       availability: 'Business hours',
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-500 to-pink-500',
   const [activeCategory, setActiveCategory] = useState('all')
   const categories = [
     { id: 'all', name: 'All Topics', icon: HelpCircle, count: 50 },
@@ -1845,8 +1845,7 @@ export default function HelpCenter() {
                 placeholder="Search for help articles..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:border-cyan-400 transition-colors text-lg"
-                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                className="w-full pl-12 pr-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:border-cyan-400 transition-colors text-lg w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
 import React from 'react'
 import { SEO } from '@/components/SEO'
 import { GradientHeading } from '@/components/GradientHeading'
@@ -2437,8 +2436,8 @@ export default function HelpCenter() {
                 </button>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -2960,8 +2959,7 @@ export default function HelpCenter() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <$2 />
               to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
               Find answers to common questions, access helpful resources, and get the support you need. 
@@ -3190,11 +3188,11 @@ export default function HelpCenter() {
       items: [
         {
           question: 'How do I create an account?',
-          answer: 'Click the "Sign Up" button in the top right corner and fill out the registration form with your email and password.'
+          answer: 'Click the "Sign Up" button in the top right corner and fill out the registration form with your email and password.',
         },
         {
           question: 'How do I post a job or service?',
-          answer: 'After logging in, go to your dashboard and click "Post Job" or "Create Service" to get started.'
+          answer: 'After logging in, go to your dashboard and click "Post Job" or "Create Service" to get started.',
         },
         {
           question: 'What information do I need to create a profile?',
@@ -3212,11 +3210,11 @@ export default function HelpCenter() {
         },
         {
           question: 'How do payments work?',
-          answer: 'We support secure payments through Stripe. Payments are held in escrow until the work is completed and approved.'
+          answer: 'We support secure payments through Stripe. Payments are held in escrow until the work is completed and approved.',
         },
         {
           question: 'What if I\'m not satisfied with the work?',
-          answer: 'We have a dispute resolution process. Contact our support team if you need help resolving an issue.'
+          answer: 'We have a dispute resolution process. Contact our support team if you need help resolving an issue.',
         }
       ]
     },
@@ -3226,15 +3224,15 @@ export default function HelpCenter() {
       items: [
         {
           question: 'How do I update my profile?',
-          answer: 'Go to your dashboard and click on "Edit Profile" to make changes to your information.'
+          answer: 'Go to your dashboard and click on "Edit Profile" to make changes to your information.',
         },
         {
           question: 'How do I change my password?',
-          answer: 'Go to Account Settings and click on "Change Password" to update your password.'
+          answer: 'Go to Account Settings and click on "Change Password" to update your password.',
         },
         {
           question: 'What are the fees?',
-          answer: 'We charge a small percentage fee on successful transactions. There are no upfront costs to use our platform.'
+          answer: 'We charge a small percentage fee on successful transactions. There are no upfront costs to use our platform.',
         }
       ]
     },
@@ -3244,7 +3242,7 @@ export default function HelpCenter() {
       items: [
         {
           question: 'The website is not loading properly',
-          answer: 'Try refreshing the page, clearing your browser cache, or using a different browser. If the issue persists, contact support.'
+          answer: 'Try refreshing the page, clearing your browser cache, or using a different browser. If the issue persists, contact support.',
         },
         {
           question: 'I can\'t upload files',
@@ -3252,7 +3250,7 @@ export default function HelpCenter() {
         },
         {
           question: 'How do I contact support?',
-          answer: 'You can reach us through the contact form, email us at support@ziontechgroup.com, or call us at +1 (555) 123-4567.'
+          answer: 'You can reach us through the contact form, email us at support@ziontechgroup.com, or call us at +1 (555) 123-4567.',
         }
       ]
     }
@@ -3401,8 +3399,8 @@ export default HelpCenter
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Contact Support */}
         <section className="py-16 px-4">
@@ -3449,8 +3447,8 @@ export default HelpCenter
                 </a>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </div>
     </>
   )
@@ -3687,4 +3685,4 @@ function CreditCard(props: React.SVGProps<SVGSVGElement>) {
     </div>
   )
 }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>

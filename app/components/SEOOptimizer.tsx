@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 'use client';
 interface SEOOptimizerProps {title: string;,}
@@ -28,8 +27,6 @@ interface SEOOptimizerProps {title: string;,}
       {/* Twitter Card */} <meta name="twitter: card" content="summary_large_image" />,
       <meta name="twitter: title" content={title,}/>
       <meta name="twitter: description" content={description,}/>
-=======
-<<<<<<< HEAD
 'use client';
 
 import React, { useEffect } from 'react';
@@ -208,23 +205,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   return (
     <Head>
       <title>{title}</title>
-=======
-'use client'
-interface SEOOptimizerProps {
-  title: string
-  description: string
-  keywords?: string[]
-  canonicalUrl?: string
-  structuredData?: object
-}
-
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ()
-}) => {
-  const keywordsString = keywords.join(', ')
-  return (
-    </SEOOptimizerProps><Helmet>
-      </Helmet><title>{title}</title>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <link rel="canonical" href={canonicalUrl} />
@@ -241,20 +221,15 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ()
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
     </Helmet>
   )
 }
 export default SEOOptimizer
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       <meta name="twitter:image" content={ogImage} />
       
       {/* Additional SEO meta tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
-<<<<<<< HEAD
       <meta name="theme-color" content="#1e40af" />
       
       {/* Structured Data */}
@@ -271,16 +246,3 @@ export default SEOOptimizer
 };
 
 export default SEOOptimizer;
-=======
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-      )}
-  )
-}
-export default SEOOptimizer
-</li>
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe

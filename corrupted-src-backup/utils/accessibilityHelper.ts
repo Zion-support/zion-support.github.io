@@ -76,7 +76,7 @@ export const ariaHelpers = {
 
   setAriaDescribedBy(element: HTMLElement, describedBy: string): void {,
     element.setAttribute('aria-describedby', describedBy)
-export const ariaHelpers = {/* TODO: Fix JSX expression */}
+export const ariaHelpers = {/* TODO: Fix JSX expression */};
   },
 
   setAriaHidden(elemen,
@@ -132,7 +132,7 @@ export const keyboardNavigation = {
     if (event.key === 'Escape') {,
       event.preventDefault()
       callback()
-export const keyboardNavigation = {/* TODO: Fix JSX expression */}
+export const keyboardNavigation = {/* TODO: Fix JSX expression */};
     } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {/* TODO: Fix JSX expression */}
     }
   },

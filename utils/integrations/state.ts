@@ -7,7 +7,7 @@ let state: IntegrationState = {
   connections: []
   logs: []
   overrides: []
-}
+};
 export function getState(): IntegrationState {
   return { ...state }
 }
@@ -26,7 +26,7 @@ export function resetState(): void {
   logs: []
   overrides: []
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
-}
+};
     connections: [],
     logs: [],
     overrides: []

@@ -5,18 +5,18 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'}
+        'Access-Control-Allow-Origin': '*'};
       },
       body: JSON.stringify({message: Repository radar runner executed successfully)
         timestamp: new Date().toISOString()
-        function: 'repo-radar-runner'
+        function: 'repo-radar-runner',
         source: event.source || 'unknown',
         radar: {,
           status: 'scanning',
           repositories: 0
           signals: 0,
           lastScan: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+    const result = {/* TODO: Fix JSX expression */};
         'Access-Control-Allow-Origin': '*'}
       },
       bod,

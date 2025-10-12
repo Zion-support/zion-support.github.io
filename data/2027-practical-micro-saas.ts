@@ -31,8 +31,8 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-}
+  website: 'https://ziontechgroup.com',
+};
 export const practicalMicroSaasServices2027: PracticalMicroSaasService2027[] = [
   // 1. AI-Powered Customer Success Automation Platform
   {

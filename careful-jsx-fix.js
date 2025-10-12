@@ -5,23 +5,23 @@ const fixes = [
   // Fix corrupted closing tags
   {
     pattern: /<\/di><\/div>/g,
-    replacement: '</div>'
+    replacement: '</div>',
   },
   {
     pattern: /<\/Ap><\/App>/g,
-    replacement: '</App>'
+    replacement: '</App>',
   },
   {
     pattern: /<\/HomePag><\/HomePage>/g,
-    replacement: '</HomePage>'
+    replacement: '</HomePage>',
   },
   {
     pattern: /<\/LoadingSpinne><\/LoadingSpinner>/g,
-    replacement: '</LoadingSpinner>'
+    replacement: '</LoadingSpinner>',
   },
   {
     pattern: /<\/Reac><\/React>/g,
-    replacement: '</React>'
+    replacement: '</React>',
   },
   // Fix other corrupted patterns
   {

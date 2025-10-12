@@ -10,7 +10,7 @@ export type CaseStudy = {
   duration: string,
   imageUrl?: string
   }
-
+;
 export const caseStudies: CaseStudy[] = [
   {
     id: 'global-energy-digital-twin-850 m',
@@ -72,7 +72,7 @@ export const caseStudies: CaseStudy[] = [
     duration: '8 weeks',
     imageUrl: '/images/case-studies/healthcare-chatbot.jpg'},
   {
-    id: 'ecommerce-optimization'
+    id: 'ecommerce-optimization',
     title: 'E-commerce AI Optimization Suite',
     company: 'RetailMax Online',
     industry: 'E-commerce',
@@ -139,7 +139,7 @@ export const caseStudies: CaseStudy[] = [
     duration: '20 weeks',
     imageUrl: '/images/case-studies/cybersecurity.jpg'},
   {
-    id: 'telco-edge-observability'
+    id: 'telco-edge-observability',
     title: 'Telco Edge Observability Overhaul',
     company: 'GlobalTel Communications',
     industry: 'Telecommunications',
@@ -155,7 +155,7 @@ export const caseStudies: CaseStudy[] = [
     duration: '18 weeks',
     imageUrl: '/images/case-studies/telco-edge.jpg'},
   {
-    id: 'enterprise-rag-rollout'
+    id: 'enterprise-rag-rollout',
     title: 'Enterprise RAG Rollout at Fortune 500',
     company: 'Global Consumer Goods Co.',
     industry: 'Consumer Goods',
@@ -170,7 +170,7 @@ export const caseStudies: CaseStudy[] = [
     technologies: ['RAG', 'Vector DB', 'TypeScript', 'OpenAI', 'ClickHouse'],
     duration: '10 weeks',
     imageUrl: '/images/case-studies/enterprise-rag.jpg',
-export type CaseStudy = {/* TODO: Fix JSX expression */}
+export type CaseStudy = {/* TODO: Fix JSX expression */};
 }
 
 export const,

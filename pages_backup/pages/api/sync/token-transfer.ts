@@ -33,13 +33,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const event = {
     eventId: uuidv4()
     type: "token_transfer" as const
-    payload: { id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp |Date.now() }
+    payload: { id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp |Date.now() };
     originInstanceId: state.config.instanceId
     version
     timestamp: Date.now()}
   upsertEvent(state, event)
   writeState(state)
-  const body = { ...event, propagate: false }
+  const body = { ...event, propagate: false };
   const headers: Record<string, string> = {}
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
@@ -233,4 +233,3 @@ export default async function handler(req, res) {
   }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

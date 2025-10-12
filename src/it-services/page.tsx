@@ -16,7 +16,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Reliable infrastructure', 'Reduced capital costs', 'Expert management', 'Compliance support'],
       technologies: ['VMware', 'Hyper-V', 'SAN Storage', 'Backup Software', 'Monitoring Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'Cloud Infrastructure & Migration',
@@ -28,7 +28,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Scalable infrastructure', 'Reduced costs', 'Improved performance', 'Enhanced security'],
       technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-blue-400'
+      color: 'text-blue-400',
     },
     // Cybersecurity Services
     {
@@ -41,7 +41,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Prevent 99.9% of threats', 'Reduce response time by 80%', 'Compliance assurance', '24/7 monitoring'],
       technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'AI/ML', 'Threat Intelligence'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'Identity & Access Management',
@@ -53,7 +53,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Enhanced security', 'Improved user experience', 'Compliance support', 'Reduced IT overhead'],
       technologies: ['Azure AD', 'Okta', 'Ping Identity', 'CyberArk', 'SailPoint', 'ForgeRock'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'Security Compliance & Audit',
@@ -65,7 +65,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Achieve compliance', 'Reduce audit time', 'Minimize risks', 'Build trust'],
       technologies: ['GRC Tools', 'Risk Management', 'Compliance Frameworks', 'Audit Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'Security Operations Center (SOC)',
@@ -77,7 +77,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Continuous protection', 'Rapid response', 'Expert analysis', 'Proactive defense'],
       technologies: ['SIEM', 'SOAR', 'EDR', 'Threat Intelligence', 'Forensic Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     // Database & Data Management
     {
@@ -90,7 +90,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Improved performance', 'Reduced downtime', 'Cost optimization', 'Data protection'],
       technologies: ['SQL Server', 'Oracle', 'MySQL', 'PostgreSQL', 'MongoDB', 'Redis'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'Data Backup & Disaster Recovery',
@@ -102,7 +102,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Minimize data loss', 'Rapid recovery', 'Business continuity', 'Compliance support'],
       technologies: ['Veeam', 'Commvault', 'Rubrik', 'AWS Backup', 'Azure Backup', 'Google Cloud Backup'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'Data Migration Services',
@@ -114,7 +114,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Risk-free migration', 'Minimal downtime', 'Data integrity', 'Cost savings'],
       technologies: ['AWS DMS', 'Azure Data Factory', 'Google Cloud Data Transfer', 'Custom Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     // DevOps & Development
     {
@@ -127,7 +127,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Faster deployments', 'Improved quality', 'Reduced errors', 'Better collaboration'],
       technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Kubernetes', 'Docker', 'Terraform'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'Microservices Architecture',
@@ -139,7 +139,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Improved scalability', 'Better maintainability', 'Faster development', 'Technology flexibility'],
       technologies: ['Kubernetes', 'Istio', 'Docker', 'API Gateway', 'Service Mesh', 'Monitoring Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'API Development & Management',
@@ -151,7 +151,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Better integration', 'Improved security', 'Enhanced performance', 'Developer experience'],
       technologies: ['Node.js', 'Python', 'Java', 'Kong', 'Apigee', 'AWS API Gateway'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     // IT Support & Management
     {
@@ -164,7 +164,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Reduced IT costs', 'Improved uptime', 'Expert support', 'Proactive maintenance'],
       technologies: ['RMM Tools', 'PSA Software', 'Remote Access', 'Monitoring Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'IT Strategy & Consulting',
@@ -176,7 +176,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Strategic alignment', 'Cost optimization', 'Risk reduction', 'Competitive advantage'],
       technologies: ['Strategy Frameworks', 'Assessment Tools', 'Planning Software'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'IT Asset Management',
@@ -188,7 +188,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Cost savings', 'Compliance assurance', 'Better planning', 'Reduced risks'],
       technologies: ['Asset Management Tools', 'License Management', 'CMDB', 'Reporting Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     // Specialized Services
     {
@@ -201,7 +201,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Improved collaboration', 'Enhanced security', 'Cost savings', 'Better productivity'],
       technologies: ['Microsoft 365', 'Azure AD', 'PowerShell', 'Migration Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'VoIP & Unified Communications',
@@ -213,7 +213,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Cost savings', 'Improved collaboration', 'Better mobility', 'Enhanced features'],
       technologies: ['Cisco', 'Microsoft Teams', 'Zoom', '8x8', 'RingCentral', 'Avaya'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'IT Training & Certification',
@@ -225,7 +225,7 @@ const ITServicesPage: React.FC = () => {
       benefits: ['Improved skills', 'Better productivity', 'Reduced support needs', 'Career development'],
       technologies: ['Learning Management Systems', 'Virtual Labs', 'Certification Programs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     },
     {
       title: 'IT Project Management',
@@ -236,7 +236,7 @@ const ITServicesPage: React.FC = () => {
       category: 'Project Management',
       benefits: ['On-time delivery', 'Cost control', 'Quality assurance', 'Risk mitigation'],
       technologies: ['Project Management Tools', 'Agile Methodologies', 'Risk Management Tools'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
     }
   ]
   const categories = [
@@ -260,7 +260,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Seamless migration to AWS, Azure, or GCP with 99.9% uptime guarantee.',
       features: ['AWS/Azure/GCP Migration', 'Cloud Architecture Design', 'Cost Optimization', '24/7 Monitoring'],
       price: 'Starting at $1,299/month',
-      color: 'text-blue-400'
+      color: 'text-blue-400',
     },
     {
       icon: Shield,
@@ -268,7 +268,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Comprehensive security solutions with threat detection and automated response.',
       features: ['Threat Detection', 'Vulnerability Assessment', 'Automated Response', 'Compliance Reporting'],
       price: 'Starting at $799/month',
-      color: 'text-red-400'
+      color: 'text-red-400',
     },
     {
       icon: Settings,
@@ -276,7 +276,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Streamline development workflows with automated testing, deployment, and monitoring.',
       features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure as Code', 'Performance Monitoring'],
       price: 'Starting at $599/month',
-      color: 'text-green-400'
+      color: 'text-green-400',
     },
     {
       icon: Database,
@@ -284,7 +284,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Database design, optimization, migration, and management with AI-powered performance tuning.',
       features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
       price: 'Starting at $399/month',
-      color: 'text-teal-400'
+      color: 'text-teal-400',
     },
     {
       icon: Globe,
@@ -292,7 +292,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Enterprise networking with high-speed connectivity and advanced security features.',
       features: ['Network Design', 'Security Implementation', 'Performance Optimization', '24/7 Support'],
       price: 'Starting at $699/month',
-      color: 'text-purple-400'
+      color: 'text-purple-400',
     },
     {
       icon: Smartphone,
@@ -300,7 +300,7 @@ const ITServicesPage: React.FC = () => {
       description: 'Native and cross-platform mobile applications with modern UI/UX design.',
       features: ['iOS & Android Apps', 'Cross-Platform Development', 'UI/UX Design', 'App Store Optimization'],
       price: 'Starting at $2,500/project',
-      color: 'text-orange-400'
+      color: 'text-orange-400',
     }
   ]
   const additionalServices = [
@@ -308,59 +308,59 @@ const ITServicesPage: React.FC = () => {
       icon: Users,
       title: 'IT Consulting',
       description: 'Strategic IT planning and technology roadmap development.',
-      price: '$200/hour'
+      price: '$200/hour',
     },
     {
       icon: Server,
       title: 'Server Management',
       description: '24/7 server monitoring, maintenance, and optimization.',
-      price: 'Starting at $299/month'
+      price: 'Starting at $299/month',
     },
     {
       icon: HardDrive,
       title: 'Data Backup & Recovery',
       description: 'Automated backup solutions and disaster recovery planning.',
-      price: 'Starting at $199/month'
+      price: 'Starting at $199/month',
     },
     {
       icon: Monitor,
       title: 'System Integration',
       description: 'API development and system integration services.',
-      price: 'Starting at $1,500/project'
+      price: 'Starting at $1,500/project',
     },
     {
       icon: Printer,
       title: 'Hardware Support',
       description: 'Computer, printer, and network equipment support.',
-      price: 'Starting at $99/month'
+      price: 'Starting at $99/month',
     },
     {
       icon: Router,
       title: 'Network Security',
       description: 'Firewall configuration and network security implementation.',
-      price: 'Starting at $399/month'
+      price: 'Starting at $399/month',
     }
   ]
   const benefits = [
     {
       icon: Star,
       title: 'Proven Expertise',
-      description: '10+ years of experience with 100+ successful projects'
+      description: '10+ years of experience with 100+ successful projects',
     },
     {
       icon: Clock,
       title: '24/7 Support',
-      description: 'Round-the-clock technical support and monitoring'
+      description: 'Round-the-clock technical support and monitoring',
     },
     {
       icon: ShieldCheck,
       title: 'Enterprise Security',
-      description: 'Bank-level security and compliance for all solutions'
+      description: 'Bank-level security and compliance for all solutions',
     },
     {
       icon: Award,
       title: 'Certified Professionals',
-      description: 'Microsoft, AWS, and Google certified engineers'
+      description: 'Microsoft, AWS, and Google certified engineers',
     }
   ]
   return (
@@ -532,15 +532,10 @@ export default ITServicesPage</a>
   </a>
   </li>
   </li>
-  </li>
-  </li>
   </a>
   </li>
   </li>
-  </li>
-  </li>
   </a>
-  </li>
   </li>
   </li>
   </any>
@@ -548,4 +543,4 @@ export default ITServicesPage</a>
   </a>
   </a>
   </span>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></h3></h3></h3></h4></h4></h4></ul></ul></ul></ul></ul></ul></li></li></li></main></section></section></section></section></section>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></h3></h3></h3></h4></h4></h4></ul></ul></ul></ul></ul></ul></li></li></main></section></section></section></section></section>

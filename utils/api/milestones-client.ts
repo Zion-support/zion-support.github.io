@@ -65,9 +65,9 @@ export async function createMilestone(projectId: string, payload: any) {
   }
 }
 export async function updateMilestoneStatus() {
-  const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {method: 'PATCH'
+  const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {method: 'PATCH',
     headers: { 'Content-Type': 'application/json' }
-    credentials: 'include'
+    credentials: 'include',
     body: JSON.stringify(body)})
   if (!res.ok) throw new Error(await res.text())
   return res.json()
@@ -108,7 +108,6 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
     body: JSON.stringify(body)}),
   if (!res.ok) throw new Error(await res.text())
   return res.json()
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export async function fetchMilestones(projectId: string) {
   const res = await fetch(`/api/projects/${projectId}/milestones`, {

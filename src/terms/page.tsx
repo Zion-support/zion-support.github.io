@@ -7,32 +7,32 @@ export default function TermsPage() {
     {
       title: 'Acceptance of Terms',
       icon: CheckCircle,
-      content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.'
+      content: 'By accessing and using our website and services, you accept and agree to be bound by the terms and provision of this agreement.',
     },
     {
       title: 'Use License',
       icon: Key,
-      content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.'
+      content: 'Permission is granted to temporarily download one copy of the materials on our website for personal, non-commercial transitory viewing only.',
     },
     {
       title: 'Service Availability',
       icon: Server,
-      content: 'We strive to maintain 99.9% uptime for our services, but we do not guarantee uninterrupted access and reserve the right to modify or discontinue services.'
+      content: 'We strive to maintain 99.9% uptime for our services, but we do not guarantee uninterrupted access and reserve the right to modify or discontinue services.',
     },
     {
       title: 'User Responsibilities',
       icon: User,
-      content: 'Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account.'
+      content: 'Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account.',
     },
     {
       title: 'Intellectual Property',
       icon: FileText,
-      content: 'All content, trademarks, and intellectual property on our website are owned by Zion Tech Group and protected by applicable copyright and trademark laws.'
+      content: 'All content, trademarks, and intellectual property on our website are owned by Zion Tech Group and protected by applicable copyright and trademark laws.',
     },
     {
       title: 'Limitation of Liability',
       icon: Shield,
-      content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'
+      content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.',
     }
   ]
   const prohibitedUses = [
@@ -50,25 +50,25 @@ export default function TermsPage() {
       service: 'AI Services',
       uptime: '99.9%',
       support: '24/7',
-      response: '1 hour'
+      response: '1 hour',
     },
     {
       service: 'IT Infrastructure',
       uptime: '99.95%',
       support: '24/7',
-      response: '30 minutes'
+      response: '30 minutes',
     },
     {
       service: 'Cloud Services',
       uptime: '99.9%',
       support: '24/7',
-      response: '1 hour'
+      response: '1 hour',
     },
     {
       service: 'Support Services',
       uptime: 'N/A',
       support: 'Business Hours',
-      response: '4 hours'
+      response: '4 hours',
     }
   ]
   return (

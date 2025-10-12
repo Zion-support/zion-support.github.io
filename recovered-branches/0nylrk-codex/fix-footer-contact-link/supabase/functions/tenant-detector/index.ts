@@ -13,7 +13,7 @@ const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type, Authorization, x-client-info',
-  'Access-Control-Max-Age': '86400'}
+  'Access-Control-Max-Age': '86400'};
   'Access-Control-Max-Age': '86400',
 }
 // Initialize Supabase client
@@ -88,7 +88,7 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({
         tenant: tenantInfo,
-        status: 'success'
+        status: 'success',
       }),
       {
         headers: {
@@ -103,7 +103,7 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({ 
         error: error.message || 'Internal server error',
-        status: 'error'
+        status: 'error',
       }),
       {
         status: 500,

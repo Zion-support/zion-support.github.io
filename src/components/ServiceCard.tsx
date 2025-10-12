@@ -7,7 +7,7 @@ const,
   ServiceCard: React.FC<ServiceCardProps> = memo(({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }
-  const bgColorClasses = {/* TODO: Fix JSX expression */}
+  const bgColorClasses = {/* TODO: Fix JSX expression */};
   }
   return (<article></article>
       className="quantum-card p-4,"

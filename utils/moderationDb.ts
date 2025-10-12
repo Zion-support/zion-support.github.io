@@ -109,7 +109,7 @@ export async function createFlag(init: Omit<FlaggedContent, 'id' | 'createdAt' |
     status: init.status || 'pending',
     aiScores: init.aiScores || generateAiScores(init.contentId + init.userId),
     ...init,
-  }
+  };
   const all = await readAllFlags()
   all.push(flag)
   await writeAllFlags(all)

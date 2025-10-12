@@ -39,7 +39,7 @@ export default defineConfig({
           launchOptions.args.push('--disable-ipv6')
         }
         return launchOptions
-    supportFile: 'cypress/support/e2e.ts'
+    supportFile: 'cypress/support/e2e.ts',
     experimentalModifyObstructiveThirdPartyCode: true
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
@@ -52,7 +52,7 @@ export default defineConfig({
     env: {
     defaultCommandTimeout: 10000
   }
-  reporter: 'junit'
+  reporter: 'junit',
   reporterOptions: {
     mochaFile: 'cypress/results/junit-[hash].xml',
     toConsole: true,
@@ -76,9 +76,9 @@ export default defineConfig({
   },
   reporter: 'junit',
   reporterOptions: {
-    mochaFile: 'cypress/results/junit-[hash].xml'
+    mochaFile: 'cypress/results/junit-[hash].xml',
     toConsole: true
-  },});    mochaFile: 'cypress/results/junit-[hash].xml'
+  },});    mochaFile: 'cypress/results/junit-[hash].xml',
     baseUrl: 'http://localhost:3000', // Standard Next.js port
     supportFile: 'cypress/support/e2e.ts', experimentalModifyObstructiveThirdPartyCode: true,
     supportFile: 'cypress/support/e2e.ts',
@@ -157,12 +157,10 @@ export default defineConfig({
   reporter_options: {
     mocha_file: 'cypress / results / junit-[hash].xml',
     to_console: true,
-  }, });    mocha_file: 'cypress / results / junit-[hash].xml'
+  }, });    mocha_file: 'cypress / results / junit-[hash].xml',
     to_console: true
   }
 })
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           launchOptions.args.push('--disable-ipv6')
         }
         return launchOptions

@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
   | { type: 'invite'; section: keyof OrgData; person: BasePerson }
   | {
-      type: 'promote'
+      type: 'promote',
       section: keyof OrgData
       id: string
       updates: Partial < BasePerson>

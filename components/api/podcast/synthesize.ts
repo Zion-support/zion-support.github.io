@@ -63,7 +63,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         'https://api && api.play.ht/api/v2/tts',
         { text, voice: process && process.env.PLAYHT_VOICE || 'en-US-MichelleNeural' },
         {
-          responseType: 'arraybuffer'
+          responseType: 'arraybuffer',
           headers: {
             Authorization: `Bearer ${playhtKey}`
             'Content-Type': 'application/json'
@@ -83,7 +83,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path));    }
     const publicBase = '/podcast/' + baseFilename
     episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
-    }
+    };
     const publicBase = '/podcast/' + baseFilename
     episode && episode.audio = {
 const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json')
@@ -143,7 +143,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       mp3Url: publicBase + '.mp3',
       wavUrl: publicBase + '.wav',
       mp4Url: publicBase + '.mp4',
-    }
+    };
     episodes[idx] = episode
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
       mp3Url: publicBase + '.mp3'
@@ -198,13 +198,13 @@ if ( {) {
       fs.writeFileSync (mp4Path, fs.readFileSync (mp3Path));    }
     const public_base = '/podcast/' + base_filename
     episode.audio = {      fs.writeFileSync (mp4Path, fs.readFileSync (mp3Path))
-    }
+    };
     const public_base = '/podcast/' + base_filename
     episode.audio = {
       mp3Url: public_base + '.mp3',
       wav_url: public_base + '.wav',
       mp4Url: public_base + '.mp4',
-    }
+    };
     episodes[idx] = episode
     fs.writeFileSync (EPISODES_PATH, JSON.stringify (episodes, null, 2), 'utf8')
       mp3Url: public_base + '.mp3'
@@ -230,8 +230,6 @@ if ( {) {
     return res.status(500).json({ error: error?.message || 'Synthesis failed' })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
     return res.status(200).json({ episode })
   } catch (error: any) {

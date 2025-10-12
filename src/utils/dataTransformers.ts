@@ -51,7 +51,7 @@ export function deepMerge
   e: Partial<T>): T {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  const output = { ...target }
+  const output = { ...target };
   for (const key in source) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -217,7 +217,7 @@ export function omit
           <T, K> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  const result = { ...obj }
+  const result = { ...obj };
   keys.forEach(key => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

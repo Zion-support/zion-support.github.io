@@ -21,12 +21,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       { name: "Cloud Infrastructure", level: 4, endorsements: 62 },
       { name: "Enterprise Solutions", level: 5, endorsements: 93 },
       { name: "Data Engineering", level: 4, endorsements: 54 },
-<<<<<<< HEAD
       { name: "API Development", level: 4, endorsements: 48 }],
-=======
-      { name: "API Development", level: 4, endorsements: 48 },
-    ],
->>>>>>> origin/auto/autonomy-17186719616
     projects: [
       {
         id: "p1",
@@ -103,12 +98,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       { name: "Python", level: 5, endorsements: 45 },
       { name: "Computer Vision", level: 4, endorsements: 27 },
       { name: "NLP", level: 4, endorsements: 21 },
-<<<<<<< HEAD
       { name: "Data Science", level: 5, endorsements: 39 }],
-=======
-      { name: "Data Science", level: 5, endorsements: 39 },
-    ],
->>>>>>> origin/auto/autonomy-17186719616
     projects: [
       {
         id: "p1",

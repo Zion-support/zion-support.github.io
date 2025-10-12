@@ -1,4 +1,3 @@
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string
   title: string
   summary: string
@@ -111,7 +110,7 @@ class MarketplaceStore {
       ...project
       ...updates
       updatedAt: new Date().toISOString()
-    }
+    };
     this && this.projects.set(id, updatedProject)
     return updatedProject
   }
@@ -140,11 +139,11 @@ class MarketplaceStore {
   }
   async updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {
     if (!offer) return null
-    const updatedOffer = { ...offer, ...updates }
+    const updatedOffer = { ...offer, ...updates };
     this.offers.set(id, updatedOffer)
     const offer = this && this.offers.get(id)
     if (!offer) return null,
-    const updatedOffer = { ...offer, ...updates }
+    const updatedOffer = { ...offer, ...updates };
     this && this.offers.set(id, updatedOffer)
     return updatedOffer
   }
@@ -170,11 +169,11 @@ class MarketplaceStore {
   }
   async updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {
     if (!application) return null
-    const updatedApplication = { ...application, ...updates }
+    const updatedApplication = { ...application, ...updates };
     this.applications.set(id, updatedApplication)
     const application = this && this.applications.get(id)
     if (!application) return null,
-    const updatedApplication = { ...application, ...updates }
+    const updatedApplication = { ...application, ...updates };
     this && this.applications.set(id, updatedApplication)
     return updatedApplication
   }
@@ -200,11 +199,11 @@ class MarketplaceStore {
   }
   async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
     if (!message) return null
-    const updatedMessage = { ...message, ...updates }
+    const updatedMessage = { ...message, ...updates };
     this.messages.set(id, updatedMessage)
     const message = this && this.messages.get(id)
     if (!message) return null,
-    const updatedMessage = { ...message, ...updates }
+    const updatedMessage = { ...message, ...updates };
     this && this.messages.set(id, updatedMessage)
     return updatedMessage
   }
@@ -234,11 +233,11 @@ class MarketplaceStore {
   }
   async updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {
     if (!conversation) return null
-    const updatedConversation = { ...conversation, ...updates }
+    const updatedConversation = { ...conversation, ...updates };
     this.conversations.set(id, updatedConversation)
     const conversation = this && this.conversations.get(id)
     if (!conversation) return null,
-    const updatedConversation = { ...conversation, ...updates }
+    const updatedConversation = { ...conversation, ...updates };
     this && this.conversations.set(id, updatedConversation)
     return updatedConversation
   }
@@ -287,7 +286,7 @@ if (return null, ) {
       ...updates,
       updated_at: new Date ().toISOString ()
     }
-
+;
     this.projects.set (id, updated_project)
     return updated_project
   }
@@ -317,7 +316,7 @@ if (return null, ) {
 if (return null, ) {
   $2
 }
-    const updated_offer = { ...offer, ...updates }
+    const updated_offer = { ...offer, ...updates };
     this.offers.set (id, updated_offer)
     return updated_offer
   }
@@ -347,7 +346,7 @@ if (return null, ) {
 if (return null, ) {
   $2
 }
-    const updated_application = { ...application, ...updates }
+    const updated_application = { ...application, ...updates };
     this.applications.set (id, updated_application)
     return updated_application
   }
@@ -377,7 +376,7 @@ if (return null, ) {
 if (return null, ) {
   $2
 }
-    const updated_message = { ...message, ...updates }
+    const updated_message = { ...message, ...updates };
     this.messages.set (id, updated_message)
     return updated_message
   }
@@ -411,7 +410,7 @@ if (return null, ) {
 if (return null, ) {
   $2
 }
-    const updated_conversation = { ...conversation, ...updates }
+    const updated_conversation = { ...conversation, ...updates };
     this.conversations.set (id, updated_conversation)
     return updated_conversation
   }
@@ -657,12 +656,10 @@ export function createMessageData(
     ...additionalData
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function generate_id (prefix: string = 'item'): string {
   return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import fs from "fs"
 import path from "path"
 import { MarketplaceDb, Offer, Project } from "./types"
@@ -673,7 +670,7 @@ function ensureDataFile(): void {
     fs.mkdirSync(DATA_DIR, { recursive: true })
   }
   if (!fs.existsSync(DB_PATH)) {
-    const initial: MarketplaceDb = { offers: [], projects: [] }
+    const initial: MarketplaceDb = { offers: [], projects: [] };
     fs.writeFileSync(DB_PATH, JSON.stringify(initial, null, 2), "utf-8")
   }
 }

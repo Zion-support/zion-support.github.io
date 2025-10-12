@@ -42,42 +42,42 @@ const ITServicesPage: React.FC = () => {
       name: 'Infrastructure & Cloud',
       icon: <Server className="w-6 h-6" />,
       description: 'Scalable cloud solutions and infrastructure management',
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-500 to-cyan-500',
     },
     {
       id: 'security',
       name: 'Cybersecurity',
       icon: <Shield className="w-6 h-6" />,
       description: 'Advanced security and compliance solutions',
-      color: 'from-red-500 to-pink-500'
+      color: 'from-red-500 to-pink-500',
     },
     {
       id: 'ai-ml',
       name: 'AI & Machine Learning',
       icon: <Brain className="w-6 h-6" />,
       description: 'Intelligent automation and data insights',
-      color: 'from-purple-500 to-indigo-500'
+      color: 'from-purple-500 to-indigo-500',
     },
     {
       id: 'devops',
       name: 'DevOps & Automation',
       icon: <Zap className="w-6 h-6" />,
       description: 'Streamlined development and deployment',
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-500 to-emerald-500',
     },
     {
       id: 'data',
       name: 'Data & Analytics',
       icon: <Database className="w-6 h-6" />,
       description: 'Data management and business intelligence',
-      color: 'from-yellow-500 to-orange-500'
+      color: 'from-yellow-500 to-orange-500',
     },
     {
       id: 'digital',
       name: 'Digital Transformation',
       icon: <Globe className="w-6 h-6" />,
       description: 'Modernize your business operations',
-      color: 'from-indigo-500 to-purple-500'
+      color: 'from-indigo-500 to-purple-500',
     }
   ]
   const itServices = [
@@ -825,22 +825,22 @@ const SERVICE_BENEFITS = [
   {
     icon: <Zap className="h-12 w-12 text-zion-cyan" />,
     title: 'Increased Efficiency',
-    description: 'Streamline operations and improve productivity with optimized IT solutions'
+    description: 'Streamline operations and improve productivity with optimized IT solutions',
   },
   {
     icon: <Shield className="h-12 w-12 text-zion-purple" />,
     title: 'Enhanced Security',
-    description: 'Protect your business with enterprise-grade security and compliance solutions'
+    description: 'Protect your business with enterprise-grade security and compliance solutions',
   },
   {
     icon: <TrendingUp className="h-12 w-12 text-zion-cyan" />,
     title: 'Cost Optimization',
-    description: 'Reduce IT costs while improving performance and reliability'
+    description: 'Reduce IT costs while improving performance and reliability',
   },
   {
     icon: <Users className="h-12 w-12 text-zion-purple" />,
     title: 'Expert Support',
-    description: 'Access to certified IT professionals and 24/7 technical support'
+    description: 'Access to certified IT professionals and 24/7 technical support',
   }
 ]
 export default function ITServicesPage() {
@@ -1524,7 +1524,7 @@ export default function ITServicesPage() {
       rating: 4.9,
       reviewCount: 234,
       deliveryTime: '4-8 weeks',
-      link: '/services/cloud-migration'
+      link: '/services/cloud-migration',
     },
     {
       id: 'cybersecurity-audit',
@@ -1538,7 +1538,7 @@ export default function ITServicesPage() {
       rating: 4.8,
       reviewCount: 189,
       deliveryTime: '2-4 weeks',
-      link: '/services/cybersecurity-audit'
+      link: '/services/cybersecurity-audit',
     },
     {
       id: 'devops-implementation',
@@ -1551,7 +1551,7 @@ export default function ITServicesPage() {
       rating: 4.7,
       reviewCount: 156,
       deliveryTime: '6-10 weeks',
-      link: '/services/devops-implementation'
+      link: '/services/devops-implementation',
     },
     {
       id: 'data-backup-recovery',
@@ -1564,7 +1564,7 @@ export default function ITServicesPage() {
       rating: 4.6,
       reviewCount: 98,
       deliveryTime: '2-3 weeks',
-      link: '/services/data-backup-recovery'
+      link: '/services/data-backup-recovery',
     },
     {
       id: 'network-infrastructure',
@@ -1577,7 +1577,7 @@ export default function ITServicesPage() {
       rating: 4.8,
       reviewCount: 134,
       deliveryTime: '4-6 weeks',
-      link: '/services/network-infrastructure'
+      link: '/services/network-infrastructure',
     },
     {
       id: 'managed-it-services',
@@ -1591,7 +1591,7 @@ export default function ITServicesPage() {
       rating: 4.5,
       reviewCount: 67,
       deliveryTime: '1-2 weeks',
-      link: '/services/managed-it-services'
+      link: '/services/managed-it-services',
     },
     {
       id: 'mobile-app-development',
@@ -1604,7 +1604,7 @@ export default function ITServicesPage() {
       rating: 4.7,
       reviewCount: 89,
       deliveryTime: '8-16 weeks',
-      link: '/services/mobile-app-development'
+      link: '/services/mobile-app-development',
     },
     {
       id: 'web-application',
@@ -1617,7 +1617,7 @@ export default function ITServicesPage() {
       rating: 4.6,
       reviewCount: 112,
       deliveryTime: '6-12 weeks',
-      link: '/services/web-application'
+      link: '/services/web-application',
     },
     {
       id: 'it-consulting',
@@ -1630,7 +1630,7 @@ export default function ITServicesPage() {
       rating: 4.9,
       reviewCount: 78,
       deliveryTime: '2-4 weeks',
-      link: '/services/it-consulting'
+      link: '/services/it-consulting',
     },
     {
       id: 'data-analytics',
@@ -1643,7 +1643,7 @@ export default function ITServicesPage() {
       rating: 4.7,
       reviewCount: 95,
       deliveryTime: '4-8 weeks',
-      link: '/services/data-analytics'
+      link: '/services/data-analytics',
     },
     {
       id: 'endpoint-security',
@@ -1656,7 +1656,7 @@ export default function ITServicesPage() {
       rating: 4.6,
       reviewCount: 73,
       deliveryTime: '2-3 weeks',
-      link: '/services/endpoint-security'
+      link: '/services/endpoint-security',
     },
     {
       id: 'it-automation',
@@ -1669,7 +1669,7 @@ export default function ITServicesPage() {
       rating: 4.5,
       reviewCount: 56,
       deliveryTime: '3-5 weeks',
-      link: '/services/it-automation'
+      link: '/services/it-automation',
     }
   ]
   const categories = [
@@ -1719,8 +1719,8 @@ export default function ITServicesPage() {
                 </Button>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Services Grid */}
         <section className="py-20 bg-background">
@@ -1817,8 +1817,8 @@ export default function ITServicesPage() {
                 </Card>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-cyan-dark">
@@ -1838,8 +1838,8 @@ export default function ITServicesPage() {
                 <Link to="/contact">Schedule a Call</Link>
               </Button>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </main>
       
       <Footer />

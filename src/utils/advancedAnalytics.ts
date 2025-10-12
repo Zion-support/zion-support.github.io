@@ -82,7 +82,7 @@ class AdvancedAnalytics {
   private constructor() {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    this.config = {/* TODO: Fix JSX expression */}
+    this.config = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -216,7 +216,7 @@ class AdvancedAnalytics {
     const element = this.getElementInfo(target)
   }
       const,
-  clickEvent: UserEvent = {/* TODO: Fix JSX expression */}
+  clickEvent: UserEvent = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -270,7 +270,7 @@ class AdvancedAnalytics {
   O: Add content,}
 }
         const,
-  scrollEvent: UserEvent = {/* TODO: Fix JSX expression */}
+  scrollEvent: UserEvent = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -317,7 +317,7 @@ class AdvancedAnalytics {
       const formData = new FormData(form)
       const formFields = Array.from(formData.keys())
       const,
-  submitEvent: UserEvent = {/* TODO: Fix JSX expression */}
+  submitEvent: UserEvent = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -364,7 +364,7 @@ class AdvancedAnalytics {
   O: Add content,}
 }
         const,
-  downloadEvent: UserEvent = {/* TODO: Fix JSX expression */}
+  downloadEvent: UserEvent = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -414,7 +414,7 @@ class AdvancedAnalytics {
   O: Add content,}
 }
             const,
-  paintEvent: UserEvent = {/* TODO: Fix JSX expression */}
+  paintEvent: UserEvent = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -449,7 +449,7 @@ class AdvancedAnalytics {
 //           'navigation'
         )[0] as PerformanceNavigationTiming
         const,
-  performanceEvent: UserEvent = {/* TODO: Fix JSX expression */}
+  performanceEvent: UserEvent = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 

@@ -59,7 +59,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
         published_date: publishedDate,
         expiry_date: expiryDate,
         is_remote: isRemote,
-        user_id: user.id}
+        user_id: user.id};
         user_id: user.id,
       }
       if (onSuccess) {

@@ -1374,7 +1374,7 @@ export default function CybersecurityServicesPage() {
                     <div className="flex gap-2">
                       {service.website && (
                         <$2 />
-                          href={service.website} 
+                          href={service.website} ;
                           target="_blank" 
                           rel="noopener noreferrer"
                           className="flex-1"
@@ -1578,7 +1578,7 @@ const CybersecurityServicesPage = () => {
               <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-red-500/20">
                 <div className="relative">
                   <img 
-                    src={service.images[0]} 
+                    src={service.images[0]} ;
                     alt={service.title}
                     className="w-full h-64 object-cover rounded-t-lg"
                   />

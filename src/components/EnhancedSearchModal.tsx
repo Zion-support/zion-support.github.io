@@ -23,7 +23,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'Micro SAAS',
     type: 'service',
     popularity: 95,
-    lastModified: '2024-01-15'
+    lastModified: '2024-01-15',
   },
   {
     id: '2',
@@ -33,7 +33,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'AI Services',
     type: 'service',
     popularity: 88,
-    lastModified: '2024-01-10'
+    lastModified: '2024-01-10',
   },
   {
     id: '3',
@@ -43,7 +43,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'Company',
     type: 'page',
     popularity: 75,
-    lastModified: '2024-01-08'
+    lastModified: '2024-01-08',
   },
   {
     id: '4',
@@ -53,7 +53,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'AI Services',
     type: 'service',
     popularity: 90,
-    lastModified: '2024-01-14'
+    lastModified: '2024-01-14',
   },
   {
     id: '5',
@@ -63,7 +63,7 @@ const mockSearchResults: SearchResult[] = [
     category: 'Documentation',
     type: 'documentation',
     popularity: 80,
-    lastModified: '2024-01-05'
+    lastModified: '2024-01-05',
   }
 ]
 const recentSearches = [

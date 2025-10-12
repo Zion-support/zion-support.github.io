@@ -5,7 +5,7 @@ export type ProjectParticipants = {
   clientUserId: string
   talentUserId: string
 }
-
+;
 export type Project = {  id: string
   title: string
   description?: string
@@ -14,7 +14,7 @@ export type Project = {  id: string
   status: 'pending' | 'completed' | 'cancelled'
   attachments?: MilestoneAttachment[]
   updatedAt: string
-}
+};
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
   return (
     value === 'Pending' |
@@ -53,7 +53,6 @@ export function isOverdue(milestone: Milestone): boolean {
   }
   return new Date(milestone.dueDate) < new Date()
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export type MilestoneStatus =
   | 'Pending'
   | 'In Progress'
@@ -67,7 +66,7 @@ export type MilestoneAttachment = {
   label?: string
   uploadedByUserId: string
   uploadedAt: string; // ISO date
-}
+};
 export type Milestone = {
   id: string
   title: string
@@ -81,12 +80,12 @@ export type Milestone = {
   paidAt?: string; // ISO date
   createdAt: string; // ISO date
   updatedAt: string; // ISO date
-}
+};
 export type ProjectParticipantRole = 'client' | 'talent'
 export type ProjectParticipants = {
   clientUserId: string
   talentUserId: string
-}
+};
 export type Project = {
   id: string
   name: string
@@ -94,7 +93,7 @@ export type Project = {
   milestones: Milestone[]
   createdAt: string
   updatedAt: string
-}
+};
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
   return (
     value === 'Pending' ||

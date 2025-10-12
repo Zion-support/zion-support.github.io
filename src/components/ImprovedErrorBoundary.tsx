@@ -26,7 +26,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null,
       errorCount: 0
-    }
+    };
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
@@ -85,7 +85,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     constructor(props: ErrorBoundaryProps) {
     super(props),
     this.state = {// TODO: Add content
-  }
+  };
 }
   hasErro,
   r: false,
@@ -334,7 +334,7 @@ const styles = {
     justifyContent: 'center',
     padding: '20px',
     backgroundColor: '#f5f5f5',
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
   },
   content: {
     maxWidth: '600px',
@@ -425,7 +425,7 @@ $4}
 }
 const styles = {
     // TODO: Add content
-  }
+  };
 }
   containe,
   r: {/* TODO: Fix JSX expression */}
@@ -444,7 +444,7 @@ const styles = {
     backgroundColo,
   r: '#f5f5f5',
     fontFamil,"
-  y: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+  y: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
   },
   conten,
   t: {/* TODO: Fix JSX expression */}
@@ -472,7 +472,7 @@ const styles = {
   fontSiz,
   e: '48px',
     marginBotto,
-  m: '20px'
+  m: '20px',
   },
   titl,
   e: {/* TODO: Fix JSX expression */}
@@ -485,7 +485,7 @@ const styles = {
     colo,
   r: '#333',
     marginBotto,
-  m: '16px'
+  m: '16px',
   },
   messag,
   e: {/* TODO: Fix JSX expression */}
@@ -498,7 +498,7 @@ const styles = {
     marginBotto,
   m: '32px',
     lineHeigh,
-  t: '1.6'
+  t: '1.6',
   },
   detail,
   s: {/* TODO: Fix JSX expression */}
@@ -515,7 +515,7 @@ const styles = {
     borderRadiu,
   s: '4px',
     borde,
-  r: '1px solid #e0e0e0'
+  r: '1px solid #e0e0e0',
   },
   summar,
   y: {/* TODO: Fix JSX expression */}
@@ -535,7 +535,7 @@ const styles = {
   O: Add content,}
 }
   fontSiz,
-  e: '14px'
+  e: '14px',
   },
   errorMessag,
   e: {/* TODO: Fix JSX expression */}
@@ -544,7 +544,7 @@ const styles = {
   marginBotto,
   m: '12px',
     colo,
-  r: '#d32f2f'
+  r: '#d32f2f',
   },
   stac,
   k: {/* TODO: Fix JSX expression */}
@@ -601,14 +601,14 @@ const styles = {
     curso,
   r: 'pointer',
     transitio,
-  n: 'background-color 0.2s'
+  n: 'background-color 0.2s',
   },
   secondaryButto,
   n: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   backgroundColo,
-  r: '#6c757d'
+  r: '#6c757d',
   },
   errorCoun,
   t: {/* TODO: Fix JSX expression */}
@@ -619,7 +619,7 @@ const styles = {
     fontSiz,
   e: '14px',
     colo,
-  r: '#999'
+  r: '#999',
   }
 }
   </State>

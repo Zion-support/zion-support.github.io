@@ -50,8 +50,8 @@ const ${serviceName}Page: React.FC = () => {
                 </button>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -142,8 +142,8 @@ const ${serviceName}Page: React.FC = () => {
                 </ul>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
@@ -224,8 +224,8 @@ const ${serviceName}Page: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -246,8 +246,8 @@ const ${serviceName}Page: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </div>
     </>
   );
@@ -261,121 +261,121 @@ const remainingZionConfigs = {
     name: 'ZionAIAccountingAssistant',
     title: 'Zion AI Accounting Assistant',
     description: 'Intelligent accounting automation with AI-powered bookkeeping, financial analysis, and automated reporting for streamlined financial management.',
-    keywords: 'AI accounting, automated bookkeeping, financial analysis, accounting automation, financial reporting'
+    keywords: 'AI accounting, automated bookkeeping, financial analysis, accounting automation, financial reporting',
   },
   'zion-ai-code-reviewer': {
     name: 'ZionAICodeReviewer',
     title: 'Zion AI Code Reviewer',
     description: 'Automated code review and quality assurance with AI-powered analysis, bug detection, and intelligent suggestions for better code quality.',
-    keywords: 'AI code review, automated testing, code quality, bug detection, code analysis'
+    keywords: 'AI code review, automated testing, code quality, bug detection, code analysis',
   },
   'zion-ai-content-moderation': {
     name: 'ZionAIContentModeration',
     title: 'Zion AI Content Moderation',
     description: 'Automated content moderation with AI-powered filtering, inappropriate content detection, and community management for safe platforms.',
-    keywords: 'content moderation, AI filtering, content safety, automated moderation, platform safety'
+    keywords: 'content moderation, AI filtering, content safety, automated moderation, platform safety',
   },
   'zion-ai-contract-analyzer': {
     name: 'ZionAIContractAnalyzer',
     title: 'Zion AI Contract Analyzer',
     description: 'Intelligent contract analysis with AI-powered review, risk assessment, and automated contract management for legal compliance.',
-    keywords: 'contract analysis, AI legal, contract review, risk assessment, legal automation'
+    keywords: 'contract analysis, AI legal, contract review, risk assessment, legal automation',
   },
   'zion-ai-customer-service-pro': {
     name: 'ZionAICustomerServicePro',
     title: 'Zion AI Customer Service Pro',
     description: 'Advanced AI customer service platform with intelligent routing, automated responses, and comprehensive customer support management.',
-    keywords: 'AI customer service, automated support, customer service AI, support automation, customer experience'
+    keywords: 'AI customer service, automated support, customer service AI, support automation, customer experience',
   },
   'zion-ai-data-cleaner': {
     name: 'ZionAIDataCleaner',
     title: 'Zion AI Data Cleaner',
     description: 'Intelligent data cleaning and validation with AI-powered data quality assessment, automated cleaning, and data standardization.',
-    keywords: 'data cleaning, data validation, data quality, data standardization, AI data processing'
+    keywords: 'data cleaning, data validation, data quality, data standardization, AI data processing',
   },
   'zion-ai-document-ai': {
     name: 'ZionAIDocumentAI',
     title: 'Zion AI Document AI',
     description: 'Advanced document processing with AI-powered extraction, classification, and analysis for comprehensive document management.',
-    keywords: 'document AI, document processing, document analysis, automated extraction, document management'
+    keywords: 'document AI, document processing, document analysis, automated extraction, document management',
   },
   'zion-ai-email-assistant': {
     name: 'ZionAIEmailAssistant',
     title: 'Zion AI Email Assistant',
     description: 'Intelligent email management with AI-powered organization, automated responses, and smart email productivity tools.',
-    keywords: 'email AI, email automation, email management, email productivity, smart email'
+    keywords: 'email AI, email automation, email management, email productivity, smart email',
   },
   'zion-ai-energy-manager': {
     name: 'ZionAIEnergyManager',
     title: 'Zion AI Energy Manager',
     description: 'Smart energy management with AI-powered optimization, consumption analysis, and automated energy efficiency recommendations.',
-    keywords: 'energy management, AI optimization, energy efficiency, smart energy, consumption analysis'
+    keywords: 'energy management, AI optimization, energy efficiency, smart energy, consumption analysis',
   },
   'zion-ai-fraud-detector': {
     name: 'ZionAIFraudDetector',
     title: 'Zion AI Fraud Detector',
     description: 'Advanced fraud detection with AI-powered analysis, real-time monitoring, and automated fraud prevention for secure transactions.',
-    keywords: 'fraud detection, AI security, fraud prevention, transaction monitoring, security AI'
+    keywords: 'fraud detection, AI security, fraud prevention, transaction monitoring, security AI',
   },
   'zion-ai-marketing-automation': {
     name: 'ZionAIMarketingAutomation',
     title: 'Zion AI Marketing Automation',
     description: 'Intelligent marketing automation with AI-powered campaigns, customer segmentation, and automated marketing workflows.',
-    keywords: 'marketing automation, AI marketing, campaign automation, customer segmentation, marketing AI'
+    keywords: 'marketing automation, AI marketing, campaign automation, customer segmentation, marketing AI',
   },
   'zion-ai-meeting-assistant': {
     name: 'ZionAIMeetingAssistant',
     title: 'Zion AI Meeting Assistant',
     description: 'Smart meeting management with AI-powered scheduling, automated note-taking, and intelligent meeting insights.',
-    keywords: 'meeting AI, meeting automation, meeting assistant, automated notes, meeting insights'
+    keywords: 'meeting AI, meeting automation, meeting assistant, automated notes, meeting insights',
   },
   'zion-ai-predictive-maintenance': {
     name: 'ZionAIPredictiveMaintenance',
     title: 'Zion AI Predictive Maintenance',
     description: 'Intelligent equipment maintenance with AI-powered predictions, automated scheduling, and preventive maintenance optimization.',
-    keywords: 'predictive maintenance, equipment AI, maintenance automation, preventive maintenance, equipment optimization'
+    keywords: 'predictive maintenance, equipment AI, maintenance automation, preventive maintenance, equipment optimization',
   },
   'zion-ai-recruitment-pro': {
     name: 'ZionAIRecruitmentPro',
     title: 'Zion AI Recruitment Pro',
     description: 'Advanced recruitment automation with AI-powered candidate screening, resume analysis, and intelligent hiring workflows.',
-    keywords: 'recruitment AI, hiring automation, candidate screening, resume analysis, recruitment optimization'
+    keywords: 'recruitment AI, hiring automation, candidate screening, resume analysis, recruitment optimization',
   },
   'zion-ai-seo-optimizer': {
     name: 'ZionAISEOOptimizer',
     title: 'Zion AI SEO Optimizer',
     description: 'Intelligent SEO optimization with AI-powered keyword analysis, content optimization, and automated SEO recommendations.',
-    keywords: 'SEO AI, SEO optimization, keyword analysis, content optimization, SEO automation'
+    keywords: 'SEO AI, SEO optimization, keyword analysis, content optimization, SEO automation',
   },
   'zion-ai-supply-chain-optimizer': {
     name: 'ZionAISupplyChainOptimizer',
     title: 'Zion AI Supply Chain Optimizer',
     description: 'Smart supply chain management with AI-powered optimization, demand forecasting, and automated logistics management.',
-    keywords: 'supply chain AI, logistics optimization, demand forecasting, supply chain automation, logistics AI'
+    keywords: 'supply chain AI, logistics optimization, demand forecasting, supply chain automation, logistics AI',
   },
   'zion-ai-survey-builder': {
     name: 'ZionAISurveyBuilder',
     title: 'Zion AI Survey Builder',
     description: 'Intelligent survey creation with AI-powered question generation, response analysis, and automated survey insights.',
-    keywords: 'survey AI, survey automation, question generation, response analysis, survey insights'
+    keywords: 'survey AI, survey automation, question generation, response analysis, survey insights',
   },
   'zion-ai-translator-pro': {
     name: 'ZionAITranslatorPro',
     title: 'Zion AI Translator Pro',
     description: 'Advanced translation services with AI-powered language processing, real-time translation, and multi-language support.',
-    keywords: 'AI translation, language processing, real-time translation, multi-language, translation AI'
+    keywords: 'AI translation, language processing, real-time translation, multi-language, translation AI',
   },
   'zion-ai-video-editor': {
     name: 'ZionAIVideoEditor',
     title: 'Zion AI Video Editor',
     description: 'Intelligent video editing with AI-powered automation, smart cuts, and automated video production for content creators.',
-    keywords: 'video AI, video editing, automated video, video production, AI video tools'
+    keywords: 'video AI, video editing, automated video, video production, AI video tools',
   },
   'zion-customer-insights': {
     name: 'ZionCustomerInsights',
     title: 'Zion Customer Insights',
     description: 'Comprehensive customer analytics with AI-powered insights, behavior analysis, and automated customer intelligence.',
-    keywords: 'customer insights, customer analytics, behavior analysis, customer intelligence, AI analytics'
+    keywords: 'customer insights, customer analytics, behavior analysis, customer intelligence, AI analytics',
   }
 };
 

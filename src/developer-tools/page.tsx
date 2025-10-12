@@ -118,7 +118,7 @@ $4}
       benefit,
   s: ['Increase Productivity by 60%', 'Reduce Coding Time by 50%', 'Improve Code Quality', 'Learn Best Practices'],
       pric,
-  e: 'Starting at $99/month'
+  e: 'Starting at $99/month',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -134,7 +134,7 @@ $4}
       benefit,
   s: ['Ensure API Reliability', 'Reduce Testing Time by 70%', 'Improve Performance', 'Prevent Downtime'],
       pric,
-  e: 'Starting at $149/month'
+  e: 'Starting at $149/month',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -150,7 +150,7 @@ $4}
       benefit,
   s: ['Improve Database Performance', 'Reduce Query Time by 80%', 'Automate Backups', 'Prevent Data Loss'],
       pric,
-  e: 'Starting at $199/month'
+  e: 'Starting at $199/month',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -166,7 +166,7 @@ $4}
       benefit,
   s: ['Faster Deployments', 'Reduce Errors by 90%', 'Improve Collaboration', 'Scale Efficiently'],
       pric,
-  e: 'Starting at $299/month'
+  e: 'Starting at $299/month',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -182,7 +182,7 @@ $4}
       benefit,
   s: ['Improve Code Quality', 'Catch Bugs Early', 'Enforce Standards', 'Reduce Review Time'],
       pric,
-  e: 'Starting at $79/month'
+  e: 'Starting at $79/month',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -198,7 +198,7 @@ $4}
       benefit,
   s: ['Improve App Performance', 'Reduce Load Times', 'Optimize Resources', 'Enhance User Experience'],
       pric,
-  e: 'Starting at $179/month'
+  e: 'Starting at $179/month',
     }
   ]
   return (<div>Coming Soon</div>)
@@ -364,8 +364,8 @@ $4}
                 Email Us,
   
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
         <Footer />
         {/* CTA Section */}"
         <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"
@@ -388,8 +388,8 @@ $4}
 //                 Email Us
           </a>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </main>
       <Footer /></Footer>
     </div>
@@ -397,4 +397,4 @@ $4}
 }
 export default DeveloperToolsPage</a>
   </a>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></p></p></h2></h2></h2></h3></h4></h4></ul></ul></ul></ul></li></li></section>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></p></p></h2></h2></h2></h3></h4></h4></ul></ul></ul></ul></li></section>

@@ -25,7 +25,7 @@ async function analyzeWithGPT(
           : 'Moderate Trust'
     return {
       riskLevel: heuristic as TrustScoreBreakdown['riskLevel']
-      reasonSummary: 'Heuristic classification (no OpenAI key set).'
+      reasonSummary: 'Heuristic classification (no OpenAI key set).',
     };  }import { supabase } from '../../../utils/supabase/client'
 import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust'
 import { supabase } from '../../../utils/supabase/client'
@@ -44,7 +44,7 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
       model: 'gpt-4o-mini',
       messages: [
         {
-          role: 'system'
+          role: 'system',
           content:
             'You are an impartial risk and trust analyst for a talent marketplace.',
         },
@@ -141,7 +141,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const result: TrustScoreBreakdown = {
         ...breakdown,
         riskLevel: riskLevelOverride || breakdown && breakdown.riskLevel,
-      }
+      };
         ...breakdown
         riskLevel: riskLevelOverride || breakdown.riskLevel}
       // Persist latest score when possible
@@ -283,7 +283,7 @@ if ( {) {
         ...breakdown,
         risk_level: riskLevelOverride || breakdown.risk_level,
       }
-
+;
       // Persist latest score when possible
       try {
         await supabase

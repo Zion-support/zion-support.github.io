@@ -98,7 +98,7 @@ export const usePageLoadPerformance = () => {
             domInteractive: navigation.domInteractive - navigation.navigationStart,
             totalLoadTime: navigation.loadEventEnd - navigation.navigationStart
   }
-
+;
           // Track each metric
           Object.entries(metrics).forEach(([key, value]) => {
 export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */}

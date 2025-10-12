@@ -17,16 +17,11 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     renderTime: 0,
     memoryUsage: 0,
     fps: 0
-<<<<<<< HEAD
   });
-<<<<<<< HEAD
 fps
       }
-=======
->>>>>>> main
       setMetrics(newMetrics);
       onMetricsUpdate?.(newMetrics);
-=======
   })
   const [isMonitoring, setIsMonitoring] = useState(false)
   const [alerts, setAlerts] = useState<string[]>([])
@@ -77,7 +72,6 @@ fps
       }
       setMetrics(newMetrics)
       onMetricsUpdate?.(newMetrics)
->>>>>>> origin/main
       // Check for performance alerts
       checkPerformanceAlerts(newMetrics)
     }
@@ -169,9 +163,4 @@ export default PerformanceDashboard</div>
   </div>
   </PerformanceMetrics>
   </PerformanceProps>
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
 </div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></h4></ul></li>
->>>>>>> origin/main

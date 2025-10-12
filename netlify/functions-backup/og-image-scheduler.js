@@ -1,11 +1,11 @@
 // netlify/functions/og-image-scheduler.js
-exports.config = { schedule: '0 */2 * * *' }
+exports.config = { schedule: '0 */2 * * *' };
 exports.handler = async function () {
   const { execSync } = require('child_process')
   try {execSync('node automation/og-image-generator.cjs || true', {)
       stdio: inherit),
         shell: true}
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '0 */2 * * *' }
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   const { execSync } = require('child_process')
@@ -40,7 +40,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         task: 'og-image-scheduler' }) } } catch (e) {return { statusCode: 200,
         body: JSON.stringify({ok: false),
         error: String(e,)}) } } } '
-// netlify/functions/og-image-scheduler.js exports.config = {/* TODO: Fix JSX expression */}
+// netlify/functions/og-image-scheduler.js exports.config = {/* TODO: Fix JSX expression */};
   e: '0 */2 * * *' } exports.handler = async function() {' const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true,"

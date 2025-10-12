@@ -7,15 +7,15 @@ export type WatchlistMatch = {
   referenceId?: string
   detailsUrl?: string
 }
-
+;
 export type AmlCheckResult = {
-}
+};
 export type AmlCheckResult = {
   status: 'clear' | 'match' | 'review' | 'unknown'
   matches: WatchlistMatch[]
   checked_at: string; // ISO
   provider: 'mock' | 'remote'
-}
+};
 export interface AmlProvider {
 }
 export interface AmlProvider {
@@ -65,8 +65,8 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
     low: 'green',
     medium: 'yellow',
     high: 'orange',
-    critical: 'red'
-  }
+    critical: 'red',
+  };
   return colors[riskLevel]
 }
   async check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult> {
@@ -96,14 +96,13 @@ export function getAmlProvider(): AmlProvider {
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ()
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 export type AmlCheckResult = {
   status: 'clear' | 'match' | 'review' | 'unknown'
   matches: WatchlistMatch[]
   checkedAt: string; // ISO
   provider: 'mock' | 'remote'
-}
+};
 export interface AmlProvider {
   checkPerson(input: { fullLegalName: string; country?: string; dob?: string }): Promise<AmlCheckResult>
   checkBusiness(input: { businessName: string; country?: string; registrationNumber?: string }): Promise<AmlCheckResult>

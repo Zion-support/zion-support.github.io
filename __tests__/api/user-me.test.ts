@@ -5,7 +5,7 @@ function mockReq(method: string, body?: any) {
   return { method, body } as any
 }
 function mockRes() {
-  const res: unknown = {}
+  const res: unknown = {};
   res.status = vi.fn().mockReturnValue(res)
   res.json = vi.fn().mockReturnValue(res)
   res.setHeader = vi.fn()

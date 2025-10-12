@@ -63,7 +63,7 @@ export class CacheManager {
   storage: CacheStorage,
   private,
   cleanupInterval: NodeJS.Timeout | null = null,
-  private stats = {/* TODO: Fix JSX expression */}
+  private stats = {/* TODO: Fix JSX expression */};
   s: 0 }
   constructor(_confi)
   g: CacheConfig = {}) {/* TODO: Fix JSX expression */}

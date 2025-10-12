@@ -46,8 +46,8 @@ const Pagetsx: React.FC = () => {
                 View Demo,
               </a>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">

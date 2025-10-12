@@ -49,7 +49,7 @@ const,
       telephone: '+1-555-0123',
       contactType: 'customer service',
       availableLanguage: 'English',
-  const defaultStructuredData = {/* TODO: Fix JSX expression */}
+  const defaultStructuredData = {/* TODO: Fix JSX expression */};
   o: `${window.location.origin}/logo.png`,
     sameA,
   s: ['http,
@@ -181,4 +181,4 @@ export default SEOEnhancer
 "`
   </SEOEnhancerProps>
   </SEOEnhancerProps>
-</li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>
+</li></li></li></li></li></li></li></li></li>

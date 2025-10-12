@@ -59,8 +59,8 @@ function handler() {
       model: 'gpt - 4o - mini',
       messages: [
         {
-          role: 'system'
-          content: 'You are a concise, practical course assistant.'
+          role: 'system',
+          content: 'You are a concise, practical course assistant.',
         }
         { role: 'user', content: prompt }
       ]

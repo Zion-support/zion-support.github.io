@@ -8,9 +8,9 @@ const config: Config = {,
     extend: {
       colors: {
         primary: {
-          cyan: '#00ffff'
-          purple: '#8b5cf6'
-          pink: '#ec4899'
+          cyan: '#00ffff',
+          purple: '#8b5cf6',
+          pink: '#ec4899',
           blue: '#3b82f6',
           green: '#10b981',
           orange: '#f59e0b',

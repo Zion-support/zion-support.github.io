@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -11,15 +10,8 @@ const AiCybersecurityPage: React.FC = () => {,
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-<<<<<<< HEAD
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
-=======
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
-  },
-    {
-    icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -30,60 +22,29 @@ const AiCybersecurityPage: React.FC = () => {,
     {icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-<<<<<<< HEAD
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
-=======
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-  },
-  ];];
->>>>>>> origin/main
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology';
-<<<<<<< HEAD
   ]
 return(<>)
       <Helmet />
-=======
-  ];
-return (
-    <>
-  </>
-      <Helmet>
->>>>>>> origin/main
         <title>Ai Cybersecurity - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation />
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-        </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <section$1>
+        <div$2>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Ai Cybersecurity
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900"></div>
-        {/* Hero Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
-          <div className="relative max-w-7xl mx-auto text-center"></div>
-            <h1>Ai Cybersecurity;</h1>
->>>>>>> origin/main
             </h1>
             <p>Advanced AI-powered ai cybersecurity solution for modern businesses.</p>
             </p>
@@ -93,23 +54,19 @@ return (
               <button>View Demo,</button>
               </button>
             </div>
-          </div>
-        </section>
-<<<<<<< HEAD
+        </div>
+      </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4">
-        </section>
-=======
-        {/* Features Section */} <section className="py-20 px-4">
->>>>>>> origin/main
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
+        <section$1>
+        <section>
+        <div>
+          <div>
+            <h2>Section Title</h2>
+            <p>Section description</p>
           </div>
-        </section>
+        </div>
+      </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2>Key Features;</h2>
@@ -137,23 +94,19 @@ return (
               ))}
 
             </div>
-          </div>
-        </section>
-<<<<<<< HEAD
+        </div>
+      </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4">
-        </section>
-=======
-        {/* Benefits Section */} <section className="py-20 px-4">
->>>>>>> origin/main
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
+        <section$1>
+        <section>
+        <div>
+          <div>
+            <h2>Section Title</h2>
+            <p>Section description</p>
           </div>
-        </section>
+        </div>
+      </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2>Why Choose Our Solution?</h2>
@@ -172,12 +125,10 @@ return (
             </div>
           ))
         </section>
-<<<<<<< HEAD
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-        </section>
-          <div className="max-w-4xl mx-auto text-center">
+        <section$1>
+        <div$2>
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
@@ -193,64 +144,36 @@ return (
                   Learn More
                 </button>
               </div>
-=======
-        {/* CTA Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
->>>>>>> origin/main
             </div>
           ))
         </section>
-<<<<<<< HEAD
       </div>
       <Footer />
 
   );
 };
-=======
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
-              <h2>Ready to Get Started?</h2>
-              </h2>
-              <p>Contact our experts to discuss your requirements and get started today.</p>
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>Contact Us;</button>
-                </button>
-                <button>Learn More;</button>
-                </button>
-=======
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Shield, Lock, CheckCircle, ArrowRight } from 'lucide-react'
->>>>>>> origin/main
 
 const AICybersecurityPage: React.FC = () => {
   const features = [
-<<<<<<< HEAD
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international businesses',
     }
   ];
 
@@ -265,16 +188,6 @@ const AICybersecurityPage: React.FC = () => {
     'Proven track record of success'
   ];
 
-=======
-    'AI-powered threat detection',
-    'Real-time monitoring',
-    'Automated response',
-    'Behavioral analysis',
-    'Predictive security',
-    'Compliance management'
-  ]
-
->>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -307,26 +220,18 @@ const AICybersecurityPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-<<<<<<< HEAD
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-=======
-              <div key={index} className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                <span>{feature}</span>
->>>>>>> origin/main
->>>>>>> origin/main
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -350,8 +255,6 @@ const AICybersecurityPage: React.FC = () => {
         </div>
       </section>
 
-=======
->>>>>>> origin/main
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -367,17 +270,10 @@ const AICybersecurityPage: React.FC = () => {
           </button>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
       <Footer />
->>>>>>> origin/main
     </div>
   )
 }
 
-<<<<<<< HEAD
 export default PagePage;
-=======
-export default AICybersecurityPage
->>>>>>> origin/main

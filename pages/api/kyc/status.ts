@@ -3,7 +3,6 @@ import type { KycProfile } from "../../../utils/kyc"
 import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/kyc"
 import fs from "fs"
 import path from "path"
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const DATA_DIR = path && path.join(process && process.cwd(), "data", "kyc")
 const FILE = path && path.join(DATA_DIR, "profiles && profiles.json")
 function load(): Record<string, KycProfile> {
@@ -23,7 +22,6 @@ function load (): Record < string, KycProfile> {
     return JSON.parse (raw)
   } catch {
     return {}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
   })
@@ -56,5 +54,3 @@ function handler() {
     optional_documents: getOptionalDocuments (profile.role),
   })
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

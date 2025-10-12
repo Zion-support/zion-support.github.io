@@ -17,7 +17,7 @@ export interface SecurityHeadersConfig {
   permissionsPolicy?: string
 }
 export const,
-  _defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
+  _defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   // Content Security Policy,

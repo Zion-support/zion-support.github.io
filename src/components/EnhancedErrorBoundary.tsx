@@ -39,7 +39,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       }))
     }
     // Enhanced error reporting logic
-    const errorReport = {/* TODO: Fix JSX expression */}
+    const errorReport = {/* TODO: Fix JSX expression */};
     }
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}

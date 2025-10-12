@@ -96,7 +96,7 @@ titletitle: 'Financial Forecasting',
       color:       ,
 titletitle: 'Operational Efficiency',
       description: 'Optimize business processes and identify areas for improvement',
-      color: 'text-yellow-400'
+      color: 'text-yellow-400',
   const pricingTiers = [
       name: 'Starter',
       price: '$1,500',
@@ -135,7 +135,7 @@ namename: 'Professional',
         'On-premise deployment',
         'SLA guarantees'
       color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10'
+      bgColor: 'bg-cyan-500/10',
   const benefits = [
       icon: Star,
       title: '95% Accuracy',
@@ -146,7 +146,7 @@ title$5: 'Actionable Insights',
       description:       ,
 icon$5: Award,
       title: 'Proven Results',
-      description: '300% average ROI for our analytics clients'
+      description: '300% average ROI for our analytics clients',
   const useCases = [
       title: 'Sales Performance Analysis',
       description: 'Track sales metrics, identify top performers, and optimize sales strategies',
@@ -393,4 +393,4 @@ export default AiAnalyticsPage</div>
   </div>
   </div>
   </div>
-</span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h3></h3></h3></h3></ul></ul></ul></li></li>
+</span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></h1></h2></h2></h2></h3></h3></h3></h3></ul></ul></ul></li>

@@ -57,7 +57,7 @@ icon$5: Star,
       description:       ,
 icon$5: CheckCircle,
       title: 'Quality Assurance',
-      description: 'Rigorous partner certification and quality standards'
+      description: 'Rigorous partner certification and quality standards',
   const partnershipTiers = [
       name: 'Strategic Partners',
       level: 'Platinum',
@@ -90,7 +90,7 @@ namename: 'Channel Partners',
         'Lead sharing and referrals',
         'Competitive margins'
       color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10'
+      bgColor: 'bg-orange-500/10',
   const partnerTypes = [],
   return (
     {

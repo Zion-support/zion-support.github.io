@@ -233,7 +233,7 @@ const announceToScreenReader = useCallback((messag)
 const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
+    const newSettings = {/* TODO: Fix JSX expression */};
   t: !settings.highContrast }
     saveSettings(newSettings);`
     announceToScreenReader(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`)
@@ -241,7 +241,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   const toggleLargeText = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
+    const newSettings = {/* TODO: Fix JSX expression */};
   t: !settings.largeText }
     saveSettings(newSettings);`
     announceToScreenReader(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`)
@@ -249,7 +249,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   const toggleReducedMotion = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
+    const newSettings = {/* TODO: Fix JSX expression */};
   n: !settings.reducedMotion }
     saveSettings(newSettings);`
     announceToScreenReader(`Reduced motion ${newSettings.reducedMotion ? 'enabled' : 'disabled'}`)
@@ -257,7 +257,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   const toggleScreenReader = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
+    const newSettings = {/* TODO: Fix JSX expression */};
   r: !settings.screenReader }
     saveSettings(newSettings);`
     announceToScreenReader(`Screen reader mode ${newSettings.screenReader ? 'enabled' : 'disabled'}`)
@@ -265,7 +265,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   const toggleFocusVisible = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
+    const newSettings = {/* TODO: Fix JSX expression */};
   e: !settings.focusVisible }
     saveSettings(newSettings);`
     announceToScreenReader(`Focus indicators ${newSettings.focusVisible ? 'enabled' : 'disabled'}`)
@@ -275,7 +275,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta))
-    const newSettings = {/* TODO: Fix JSX expression */}
+    const newSettings = {/* TODO: Fix JSX expression */};
   l: newZoom }
     saveSettings(newSettings);`
     announceToScreenReader(`Zoom level set to ${newZoom}%`)
@@ -284,7 +284,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   e: AccessibilitySettings['colorBlind']) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const newSettings = {/* TODO: Fix JSX expression */}
+    const newSettings = {/* TODO: Fix JSX expression */};
   d: type }
     saveSettings(newSettings);`
     announceToScreenReader(`Color blind support set to ${type === 'none' ? 'none' : type}`)

@@ -78,8 +78,6 @@ export default QuantumComputingPage</a>
   </a>
   </li>
   </li>
-  </li>
-  </li>
   </p>
   </h1>
 </div></div></div></div></div></div></p></p></p></p></h2></h2></h3></h4></h4></h4>

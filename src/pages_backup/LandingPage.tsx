@@ -1,7 +1,6 @@
 BarChart3,
   Smartphone,
 } from 'lucide-react'
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -95,25 +94,25 @@ function LandingPage() {
       title: t('home.tool_talent')
       description: t('home.tool_talent_desc')
       icon: <Users className='h-6 w-6 text-zion-purple' />
-      link: '/talent'
+      link: '/talent',
     }
     {
       title: t('home.tool_services')
       description: t('home.tool_services_desc')
       icon: <Zap className='h-6 w-6 text-zion-cyan' />
-      link: '/services'
+      link: '/services',
     }
     {
       title: t('home.tool_equipment')
       description: t('home.tool_equipment_desc')
       icon: <Settings className='h-6 w-6 text-zion-purple' />
-      link: '/equipment'
+      link: '/equipment',
     }
     {
       title: t('home.tool_analytics')
       description: t('home.tool_analytics_desc')
       icon: <BarChart3 className='h-6 w-6 text-zion-cyan' />
-      link: '/analytics'
+      link: '/analytics',
     }
     {
       title: t ('home.tool_analytics'),
@@ -248,8 +247,8 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <HeroSection />
     <div className="min-h-screen bg-zion-blue text-white">
       <SEO 
-        title={t("home.seo_title")} 
-        description={t("home.seo_description")} 
+        title={t("home.seo_title")} ;
+        description={t("home.seo_description")} ;
         keywords={t("home.seo_keywords")}
         canonical="https://app.ziontechgroup.com/"
       />
@@ -281,8 +280,8 @@ export default function LandingPage() { const { t  } = useTranslation(),
           <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto ${isRTL ? 'rtl' : ''}`}>
             {toolsFeatures.map((feature, index) => (
               <$2 />
-                key={index} 
-                href={feature.link} 
+                key={index} ;
+                href={feature.link} ;
                 className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
               >
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">

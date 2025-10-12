@@ -5,18 +5,18 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'}
+        'Access-Control-Allow-Origin': '*'};
       },
       body: JSON.stringify({message: Link and health scheduler executed successfully)
         timestamp: new Date().toISOString()
-        function: 'link-and-health-scheduler'
+        function: 'link-and-health-scheduler',
         source: event.source || 'unknown',
         scheduling: {,
           status: 'active',
           linksScheduled: 0
           healthChecks: 0,
           lastSchedule: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+    const result = {/* TODO: Fix JSX expression */};
         'Access-Control-Allow-Origin': '*'}
       },
       bod,

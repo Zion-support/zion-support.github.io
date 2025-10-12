@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 
@@ -18,53 +17,6 @@ const TutorialsPage: React.FC = () => {
     </div>
   );
 };
-=======
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { BookOpen, Play, ArrowRight } from 'lucide-react'
-
-const TutorialsPage: React.FC = () => {
-  const tutorials = [
-    {
-      title: 'Getting Started with AI',
-      description: 'Learn the basics of artificial intelligence and how to implement it in your business.',
-      duration: '30 min',
-      level: 'Beginner'
-    },
-    {
-      title: 'Cloud Infrastructure Setup',
-      description: 'Step-by-step guide to setting up your cloud infrastructure for optimal performance.',
-      duration: '45 min',
-      level: 'Intermediate'
-    },
-    {
-      title: 'Cybersecurity Best Practices',
-      description: 'Essential security measures to protect your business from cyber threats.',
-      duration: '60 min',
-      level: 'Advanced'
-    }
-  ]
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Learn & <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Grow</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Master the latest technologies with our comprehensive tutorials and guides.
-            </p>
-          </div>
-        </div>
-      </section>
->>>>>>> origin/main
 
       {/* Tutorials Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">

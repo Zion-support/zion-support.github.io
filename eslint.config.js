@@ -34,26 +34,8 @@ export default [
       'fix-*.js',
       '*.cjs',
       '*.js.broken',
-<<<<<<< HEAD
       'jest.setup.js'
     ],
-=======
-      'components.disabled_full/**',
-      'backup/**',
-      'backup-merge-conflicts/**',
-      'backup-pages/**',
-      'backup-problematic/**',
-      'backup-problematic-files/**',
-      'clean-build/**',
-      'ci-cd-reports/**',
-      'apps.backup/**',
-      '.next/**',
-      'out/**',
-      '*.min.js',
-      '*.min.css',
-      'chunk-*.js'
-    ]
->>>>>>> origin/main
   },
   // Base JavaScript configuration
   {

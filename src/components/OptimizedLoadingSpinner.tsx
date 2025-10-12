@@ -20,9 +20,9 @@ const,
       m,
   d: 'w-8 h-8',
       l,
-  g: 'w-12 h-12'
+  g: 'w-12 h-12',
     }
-    const colorClasses = {/* TODO: Fix JSX expression */}
+    const colorClasses = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   primar,
@@ -30,7 +30,7 @@ const,
       secondar,
   y: 'text-purple-400',
       whit,
-  e: 'text-white'
+  e: 'text-white',
     }
     return (<div>Coming Soon</div>)
   )
@@ -76,7 +76,7 @@ $4}
       primary: 'text-cyan-400',
       secondary: 'text-purple-400',
       white:     ,
-$4}
+$4};
     return (
       <$2 />
         className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}

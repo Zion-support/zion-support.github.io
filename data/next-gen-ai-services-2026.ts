@@ -81,7 +81,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete AI creative platform with multiple AI models, content management, collaboration tools, and enterprise features. Includes mobile apps and API access.',
@@ -133,7 +133,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete autonomous business platform with AI-powered systems for all business functions. Includes enterprise features, custom AI training, and comprehensive integration.',
@@ -185,7 +185,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete emotional intelligence platform with real-time emotion analysis, response generation, and analytics. Includes privacy protection and compliance features.',
@@ -237,7 +237,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete multimodal AI platform with unified processing across all data types. Includes custom model training, API access, and enterprise features.',
@@ -289,7 +289,7 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Complete AI-quantum hybrid platform with access to multiple quantum computers, custom algorithm development, and comprehensive support services.',
@@ -301,8 +301,8 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-}
+  website: 'https://ziontechgroup.com',
+};
 export const nextGenAIServices2026: NextGenAIService2026[] = [
   {
     id: 'ai-emotional-intelligence-platform',

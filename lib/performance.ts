@@ -121,7 +121,7 @@ function getRating(name: string, value: number): 'good' | 'needs-improvement' | 
     FCP: [1800, 3000],
     LCP: [2500, 4000],
     TTFB: [800, 1800]}
-
+;
   const [good, poor] = thresholds[name as keyof typeof thresholds] || [0, 0]
   if (value <= good) return 'good'
   if (value <= poor) return 'needs-improvement'

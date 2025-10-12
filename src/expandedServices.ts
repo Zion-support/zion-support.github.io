@@ -1337,7 +1337,7 @@ export const CONTACT_INFO = {
   address: "123 Tech Street, Innovation City, IC 12345",
   mobile: "+1 (555) 123-4567",
   website: "https://ziontechgroup.com"
-}
+};
 export const PRICING_TIERS = [
   {
     name: "Starter",

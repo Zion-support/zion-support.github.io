@@ -13,7 +13,7 @@ export const realServicesQ22025: RealServiceQ22025[] = [
     tagline: 'Second quarter service offering',
     price: '$299',
     features: ['Core features', 'Standard performance', 'Basic integration'],
-    category: 'Q2 Services'
+    category: 'Q2 Services',
   },
   {
     id: 'q2-service-2',
@@ -21,6 +21,6 @@ export const realServicesQ22025: RealServiceQ22025[] = [
     tagline: 'Advanced Q2 solutions',
     price: '$499',
     features: ['Advanced features', 'Enhanced performance', 'Full integration'],
-    category: 'Q2 Services'
+    category: 'Q2 Services',
   }
 ]

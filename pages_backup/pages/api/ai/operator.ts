@@ -29,7 +29,6 @@ function isRateLimited(ip: string): boolean {
   return limited
   ipToRequests[ip] = bucket
   return limited
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -69,7 +68,7 @@ const { prompt, system, temperature } = (typeof req.body === 'string') ? JSON.pa
     }
 const sys = system |'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.'
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini'
+      model: 'gpt-4o-mini',
       temperature: typeof temperature === 'number' ? temperature : 0.7
       messages: [
         { role: 'system', content: sys }
@@ -128,4 +127,3 @@ export default async function handler(req, res) {
 }
 }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

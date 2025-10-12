@@ -244,8 +244,8 @@ export default function AIServicesPage() {
   
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
         {/* Stats Section */}
         <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-900/50">
           <div className="container mx-auto px-4">
@@ -330,8 +330,8 @@ export default function AIServicesPage() {
                 Email Us
   
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </div>
     </React.Fragment>
   ),

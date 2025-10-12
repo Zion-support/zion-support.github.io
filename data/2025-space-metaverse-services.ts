@@ -30,9 +30,9 @@ export interface SpaceMetaverseService {
     setupTime: string
       'Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis, Blockchain platforms'],
     realImplementation: true
-    implementationDetails: 'Production-ready metaverse platform with comprehensive development tools, 3D engine, and blockchain integration. Includes mobile SDK and developer portal.'
+    implementationDetails: 'Production-ready metaverse platform with comprehensive development tools, 3D engine, and blockchain integration. Includes mobile SDK and developer portal.',
     roi: 'Developers achieve 400% ROI through reduced development costs and increased monetization opportunities.',
-    roi: 'Developers achieve 400% ROI through reduced development costs and increased monetization opportunities.'
+    roi: 'Developers achieve 400% ROI through reduced development costs and increased monetization opportunities.',
     useCases: [}
     realImplementatio,
   n: true,
@@ -59,7 +59,7 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     tagline: 'Build immersive virtual worlds with AI - powered tools',
     description: unknown,
       'Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive virtual worlds with AI - powered tools and blockchain integration.',
-    category: 'Metaverse & Virtual Reality'
+    category: 'Metaverse & Virtual Reality',
     price: unknown
       monthly: 299
       yearly: 2990,
@@ -166,11 +166,11 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     support: unknown,
       '24 / 7 technical support, development consulting, custom development, and dedicated success manager.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
-    link: 'https://ziontechgroup.com / metaverse - development - platform'
-    icon: ''
-    color: 'from - purple - 500 to - pink - 600'
+    link: 'https://ziontechgroup.com / metaverse - development - platform',
+    icon: '',
+    color: 'from - purple - 500 to - pink - 600',
     popular: true
-    launch_date: '2024 - 01 - 15'
+    launch_date: '2024 - 01 - 15',
     customers: 3200
     rating: 4 && 4.7
     reviews: 2400,
@@ -182,11 +182,11 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     tagline: 'Ultra - secure space communications with quantum entanglement',
     description: unknown,
       'Breakthrough quantum communications network that enables ultra - secure, high - speed communications between Earth, satellites, and space stations using quantum entanglement.',
-    category: 'Quantum Space Communications'
+    category: 'Quantum Space Communications',
     price: unknown
       monthly: 1299
       yearly: 12990
-      currency: 'USD'
+      currency: 'USD',
       trial_days: 30,
       setup_time: '4 - 6 weeks',
       enterprise: 'Custom pricing',
@@ -309,11 +309,11 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     complianc,
   e: [,
       'International space law, Government security requirements, Industry standards'],
-    link: 'https://ziontechgroup.com / quantum - space - communications - network'
-    icon: ''
-    color: 'from - indigo - 500 to - purple - 600'
+    link: 'https://ziontechgroup.com / quantum - space - communications - network',
+    icon: '',
+    color: 'from - indigo - 500 to - purple - 600',
     popular: true
-    launch_date: '2024 - 03 - 01'
+    launch_date: '2024 - 03 - 01',
     customers: 85
     rating: 4 && 4.9
     reviews: 65,
@@ -324,11 +324,11 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     tagline: 'Intelligent space traffic control with collision prevention',
     description: unknown,
       'Advanced AI platform that monitors, predicts, and manages space traffic to prevent collisions, optimize orbital paths, and ensure safe space operations.',
-    category: 'Space Traffic Management & Safety'
+    category: 'Space Traffic Management & Safety',
     price: unknown
       monthly: 599
       yearly: 5990
-      currency: 'USD'
+      currency: 'USD',
       trial_days: 21,
       setup_time: '2 - 3 weeks',
       enterprise: 'Custom pricing',
@@ -398,8 +398,8 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     competitors: ['LeoLabs, Space-Track, Commercial space monitoring services'],
     techStack: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true,
-    implementationDetails: 'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.'
-    roi: 'Space organizations achieve 400% ROI through improved safety and reduced collision risks.'
+    implementationDetails: 'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.',
+    roi: 'Space organizations achieve 400% ROI through improved safety and reduced collision risks.',
     useCases: [,
       'Leading AI-powered space traffic management platform. Competes with LeoLabs ($500-2000/month), Space-Track (free), and commercial space monitoring services. Our,
   advantage: AI intelligence and automated collision prevention.',
@@ -410,9 +410,9 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.'
+  s: 'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.',
     ro,
-  i: 'Space organizations achieve 400% ROI through improved safety and reduced collision risks.'
+  i: 'Space organizations achieve 400% ROI through improved safety and reduced collision risks.',
     useCase,
   s: [,
       'Satellite collision avoidance'
@@ -429,7 +429,7 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
       'Space agencies, Satellite operators, Ground stations, Custom space systems'
     ]
     suppor,
-  t: '24/7 technical support, space safety consulting, custom development, and dedicated success manager.'
+  t: '24/7 technical support, space safety consulting, custom development, and dedicated success manager.',
     complianc,
   e: [,
       'International space law, Government regulations, Industry safety standards'],
@@ -483,11 +483,11 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     complianc,
   e: [,
       'International space law, Government regulations, Industry safety standards'],
-    link: 'https://ziontechgroup.com / ai - powered - space - traffic - management'
-    icon: ''
-    color: 'from - green - 500 to - emerald - 600'
+    link: 'https://ziontechgroup.com / ai - powered - space - traffic - management',
+    icon: '',
+    color: 'from - green - 500 to - emerald - 600',
     popular: true
-    launch_date: '2024 - 02 - 15'
+    launch_date: '2024 - 02 - 15',
     customers: 420
     rating: 4 && 4.8
     reviews: 320,
@@ -496,8 +496,8 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     competitors: ['Pico, Meta Quest Pro, HTC Vive, Varjo, Magic Leap'],
     techStack: ['Unity, Unreal Engine, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true,
-    implementationDetails: 'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.'
-    roi: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.'
+    implementationDetails: 'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.',
+    roi: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.',
     useCases: [,
     lin,
   k: 'http,
@@ -525,9 +525,9 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.'
+  s: 'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.',
     ro,
-  i: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.'
+  i: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.',
     useCase,
   s: [,
       'Employee training'
@@ -544,7 +544,7 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
       'HR systems, Learning management systems, Project management tools, Custom enterprise systems'
     ]
     suppor,
-  t: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
+  t: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     complianc,
   e: [,
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards']];      'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'
@@ -554,11 +554,11 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     tagline: 'Transform business operations with immersive VR solutions',
     description: unknown,
       'Comprehensive enterprise VR platform that enables businesses to create immersive training, collaboration, and visualization solutions for improved productivity and engagement.',
-    category: 'Enterprise VR & Immersive Technology'
+    category: 'Enterprise VR & Immersive Technology',
     price: unknown
       monthly: 199
       yearly: 1990
-      currency: 'USD'
+      currency: 'USD',
       trial_days: 14,
       setup_time: '1 - 2 weeks',
       enterprise: 'Custom pricing',
@@ -656,11 +656,11 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     complianc,
   e: [,
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry - specific standards'],
-    link: 'https://ziontechgroup.com / virtual - reality - enterprise - platform'
-    icon: ''
-    color: 'from - orange - 500 to - red - 600'
+    link: 'https://ziontechgroup.com / virtual - reality - enterprise - platform',
+    icon: '',
+    color: 'from - orange - 500 to - red - 600',
     popular: true
-    launch_date: '2024 - 01 - 20'
+    launch_date: '2024 - 01 - 20',
     customers: 1800
     rating: 4 && 4.7
     reviews: 1400,
@@ -689,10 +689,10 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
 ];      'Employee training_virtual meetings_product design review_safety training_remote collaboration_customer presentations'
     ]
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems']
-    icon: ''
-    color: 'from - orange - 500 to - red - 600'
+    icon: '',
+    color: 'from - orange - 500 to - red - 600',
     popular: true
-    launch_date: '2024 - 01 - 20'
+    launch_date: '2024 - 01 - 20',
     customers: 1800
     rating: 4 && 4.7
     reviews: 1400
@@ -774,11 +774,11 @@ export interface SpaceMetaverseService {/* TODO: Fix JSX expression */}
     ico,
   n: '',
     colo,
-  r: 'from - orange - 500 to - red - 600'
+  r: 'from - orange - 500 to - red - 600',
     popula,
   r: true,
     launch_dat,
-  e: '2024 - 01 - 20'
+  e: '2024 - 01 - 20',
     customer,
   s: 1800,
     ratin,
@@ -833,15 +833,15 @@ export interface SpaceMetaverseService {
 }
 export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
   {
-    id: 'ai-powered-space-resource-intelligence'
-    name: 'AI-Powered Space Resource Intelligence Platform'
+    id: 'ai-powered-space-resource-intelligence',
+    name: 'AI-Powered Space Resource Intelligence Platform',
     tagline: 'Discover and optimize space resources with AI-driven analytics',
-    description: 'Revolutionary platform that uses AI to analyze space data, identify valuable resources, and optimize space exploration and mining operations for maximum efficiency.'
+    description: 'Revolutionary platform that uses AI to analyze space data, identify valuable resources, and optimize space exploration and mining operations for maximum efficiency.',
     category: 'Space Technology & Resource Intelligence'}
     price: {}
       monthly: 799
       yearly: 7990
-      currency: 'USD'
+      currency: 'USD',
       trialDays: 30
       setupTime: '2-4 weeks',
 ]
@@ -886,17 +886,17 @@ export interface SpaceMetaverseService {
 
 export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
   {
-    id: 'ai-powered-space-resource-intelligence'
-    name: 'AI-Powered Space Resource Intelligence Platform'
-    tagline: 'Discover and optimize space resources with AI-driven analytics'
-    description: 'Revolutionary platform that uses AI to analyze space data, identify valuable resources, and optimize space exploration and mining operations for maximum efficiency.'
+    id: 'ai-powered-space-resource-intelligence',
+    name: 'AI-Powered Space Resource Intelligence Platform',
+    tagline: 'Discover and optimize space resources with AI-driven analytics',
+    description: 'Revolutionary platform that uses AI to analyze space data, identify valuable resources, and optimize space exploration and mining operations for maximum efficiency.',
     category: 'Space Technology & Resource Intelligence'}
     price: {}
       monthly: 799
       yearly: 7990
-      currency: 'USD'
+      currency: 'USD',
       trialDays: 30
-      setupTime: '2-4 weeks'
+      setupTime: '2-4 weeks',
       enterprise: 'Custom pricing'}
     features: [
       'AI-powered resource detectionMulti-spectral data analysis3D mapping and visualizationResource optimization algorithmsReal-time satellite data processingPredictive resource modelingMining operation planningCost-benefit analysis'
@@ -911,32 +911,32 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     competitors: ['Traditional space agencies, Private space companies, Research institutions']
     techStack: ['OpenAI GPT-4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis']
     realImplementation: true,
-    implementationDetails: 'Production-ready space resource platform with AI models, satellite data integration, and comprehensive analytics. Includes 3 D visualization and planning tools.'
+    implementationDetails: 'Production-ready space resource platform with AI models, satellite data integration, and comprehensive analytics. Includes 3 D visualization and planning tools.',
     roi: 'Space organizations achieve 500% ROI through improved resource discovery and optimized operations.',
     useCases: [,
       'Asteroid mining planningLunar resource explorationMars mission planningSatellite constellation optimizationSpace tourism route planningResource extraction planning'];,
     integrations: ['NASA APIs, ESA data, SpaceX data, Custom space agency systems']
-    support: 'Space technology experts, implementation consulting, custom development, and dedicated success manager.'
+    support: 'Space technology experts, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['International space law, Government regulations, Industry standards']
-    link: 'https://ziontechgroup.com/ai-powered-space-resource-intelligence'
-    icon: ''
-    color: 'from-blue-500 to-indigo-600'
+    link: 'https://ziontechgroup.com/ai-powered-space-resource-intelligence',
+    icon: '',
+    color: 'from-blue-500 to-indigo-600',
     popular: true
-    launchDate: '2024-02-01'
+    launchDate: '2024-02-01',
     customers: 180
     rating: 4.9
     reviews: 120,
   }
   {
-    id: 'metaverse-development-platform'
-    name: 'Metaverse Development Platform'
+    id: 'metaverse-development-platform',
+    name: 'Metaverse Development Platform',
     tagline: 'Build immersive virtual worlds with AI-powered tools',
-    description: 'Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive virtual worlds with AI-powered tools and blockchain integration.'
+    description: 'Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive virtual worlds with AI-powered tools and blockchain integration.',
     category: 'Metaverse & Virtual Reality'}
     price: {}
       monthly: 299
       yearly: 2990
-      currency: 'USD'
+      currency: 'USD',
       trialDays: 21
       setupTime: '1-2 weeks',
       enterprise: 'Custom pricing'}
@@ -953,32 +953,32 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     competitors: ['Unity, Unreal Engine, Roblox Studio, Decentraland, The Sandbox']
     techStack: ['Unity, Unreal Engine, React, Node.js, PostgreSQL, Redis, Blockchain platforms']
     realImplementation: true,
-    implementationDetails: 'Production-ready metaverse platform with comprehensive development tools, 3 D engine, and blockchain integration. Includes mobile SDK and developer portal.'
+    implementationDetails: 'Production-ready metaverse platform with comprehensive development tools, 3 D engine, and blockchain integration. Includes mobile SDK and developer portal.',
     roi: 'Developers achieve 400% ROI through reduced development costs and increased monetization opportunities.',
     useCases: [,
       'Virtual reality gamesVirtual events and conferencesVirtual real estateEducational simulationsBrand experiencesSocial virtual worlds'];,
     integrations: ['VR headsets, AR devices, Blockchain wallets, Payment processors']
-    support: '24/7 technical support, development consulting, custom development, and dedicated success manager.'
+    support: '24/7 technical support, development consulting, custom development, and dedicated success manager.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001']
-    link: 'https://ziontechgroup.com/metaverse-development-platform'
-    icon: ''
-    color: 'from-purple-500 to-pink-600'
+    link: 'https://ziontechgroup.com/metaverse-development-platform',
+    icon: '',
+    color: 'from-purple-500 to-pink-600',
     popular: true
-    launchDate: '2024-01-15'
+    launchDate: '2024-01-15',
     customers: 3200
     rating: 4.7
     reviews: 2400,
   }
   {
-    id: 'quantum-space-communications-network'
-    name: 'Quantum Space Communications Network'
+    id: 'quantum-space-communications-network',
+    name: 'Quantum Space Communications Network',
     tagline: 'Ultra-secure space communications with quantum entanglement',
-    description: 'Breakthrough quantum communications network that enables ultra-secure, high-speed communications between Earth, satellites, and space stations using quantum entanglement.'
+    description: 'Breakthrough quantum communications network that enables ultra-secure, high-speed communications between Earth, satellites, and space stations using quantum entanglement.',
     category: 'Quantum Space Communications'}
     price: {}
       monthly: 1299
       yearly: 12990
-      currency: 'USD'
+      currency: 'USD',
       trialDays: 30
       setupTime: '4-6 weeks',
       enterprise: 'Custom pricing'}
@@ -995,32 +995,32 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     competitors: ['Classical space communications, Satellite communications companies']
     techStack: ['Quantum hardware, Quantum protocols, Python, C++, Custom quantum software']
     realImplementation: true,
-    implementationDetails: 'Production-ready quantum space communications network with quantum hardware, satellite integration, and comprehensive monitoring. Includes quantum network management tools.'
+    implementationDetails: 'Production-ready quantum space communications network with quantum hardware, satellite integration, and comprehensive monitoring. Includes quantum network management tools.',
     roi: 'Space organizations achieve unlimited ROI through unbreakable communications and enhanced mission security.',
     useCases: [,
       'Satellite communicationsSpace station communicationsDeep space missionsMilitary space operationsResearch collaborationsSpace tourism communications'];,
     integrations: ['Satellite systems, Ground stations, Space agencies, Custom space systems']
-    support: 'Quantum experts, space technology consulting, custom protocol development, and 24/7 technical support.'
+    support: 'Quantum experts, space technology consulting, custom protocol development, and 24/7 technical support.',
     compliance: ['International space law, Government security requirements, Industry standards']
-    link: 'https://ziontechgroup.com/quantum-space-communications-network'
-    icon: ''
-    color: 'from-indigo-500 to-purple-600'
+    link: 'https://ziontechgroup.com/quantum-space-communications-network',
+    icon: '',
+    color: 'from-indigo-500 to-purple-600',
     popular: true
-    launchDate: '2024-03-01'
+    launchDate: '2024-03-01',
     customers: 85
     rating: 4.9
     reviews: 65,
   }
   {
-    id: 'ai-powered-space-traffic-management'
-    name: 'AI-Powered Space Traffic Management Platform'
+    id: 'ai-powered-space-traffic-management',
+    name: 'AI-Powered Space Traffic Management Platform',
     tagline: 'Intelligent space traffic control with collision prevention',
-    description: 'Advanced AI platform that monitors, predicts, and manages space traffic to prevent collisions, optimize orbital paths, and ensure safe space operations.'
+    description: 'Advanced AI platform that monitors, predicts, and manages space traffic to prevent collisions, optimize orbital paths, and ensure safe space operations.',
     category: 'Space Traffic Management & Safety'}
     price: {}
       monthly: 599
       yearly: 5990
-      currency: 'USD'
+      currency: 'USD',
       trialDays: 21
       setupTime: '2-3 weeks',
       enterprise: 'Custom pricing'}
@@ -1037,43 +1037,43 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     competitors: ['LeoLabs, Space-Track, Commercial space monitoring services']
     techStack: ['OpenAI GPT-4, TensorFlow, React, Node.js, PostgreSQL, Redis']
     realImplementation: true,
-    implementationDetails: 'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.'
+    implementationDetails: 'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.',
     roi: 'Space organizations achieve 400% ROI through improved safety and reduced collision risks.',
     useCases: [,
       'Satellite collision avoidanceSpace debris monitoringOrbital path optimizationMission planningRegulatory complianceInsurance risk assessment'];,
     integrations: ['Space agencies, Satellite operators, Ground stations, Custom space systems']
-    support: '24/7 technical support, space safety consulting, custom development, and dedicated success manager.'
+    support: '24/7 technical support, space safety consulting, custom development, and dedicated success manager.',
     compliance: ['International space law, Government regulations, Industry safety standards']
-    link: 'https://ziontechgroup.com/ai-powered-space-traffic-management'
-    icon: ''
-    color: 'from-green-500 to-emerald-600'
+    link: 'https://ziontechgroup.com/ai-powered-space-traffic-management',
+    icon: '',
+    color: 'from-green-500 to-emerald-600',
     popular: true
-    launchDate: '2024-02-15'
+    launchDate: '2024-02-15',
     customers: 420
     rating: 4.8
     reviews: 320,
   }
   {
-    id: 'virtual-reality-enterprise-platform'
-    name: 'Virtual Reality Enterprise Platform'
+    id: 'virtual-reality-enterprise-platform',
+    name: 'Virtual Reality Enterprise Platform',
     tagline: 'Transform business operations with immersive VR solutions',
-    description: 'Comprehensive enterprise VR platform that enables businesses to create immersive training, collaboration, and visualization solutions for improved productivity and engagement.'
+    description: 'Comprehensive enterprise VR platform that enables businesses to create immersive training, collaboration, and visualization solutions for improved productivity and engagement.',
     category: 'Enterprise VR & Immersive Technology'}
     price: {}
       monthly: 199
       yearly: 1990
-      currency: 'USD'
+      currency: 'USD',
       trialDays: 14
       setupTime: '1-2 weeks',
-    tagline: 'Transform business operations with immersive VR solutions'
-    description: 'Comprehensive enterprise VR platform that enables businesses to create immersive training, collaboration, and visualization solutions for improved productivity and engagement.'
+    tagline: 'Transform business operations with immersive VR solutions',
+    description: 'Comprehensive enterprise VR platform that enables businesses to create immersive training, collaboration, and visualization solutions for improved productivity and engagement.',
     category: 'Enterprise VR & Immersive Technology'}
     price: {}
       monthly: 199
       yearly: 1990
-      currency: 'USD'
+      currency: 'USD',
       trialDays: 14
-      setupTime: '1-2 weeks'
+      setupTime: '1-2 weeks',
       enterprise: 'Custom pricing'}
     features: [
       'VR training simulationsVirtual collaboration spaces3D visualization toolsCustom VR applicationsMulti-user VR experiencesAnalytics and reportingMobile VR supportAPI for integration'
@@ -1088,18 +1088,18 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     competitors: ['Pico, Meta Quest Pro, HTC Vive, Varjo, Magic Leap']
     techStack: ['Unity, Unreal Engine, React, Node.js, PostgreSQL, Redis']
     realImplementation: true,
-    implementationDetails: 'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.'
+    implementationDetails: 'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.',
     roi: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.',
     useCases: [,
       'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'];,
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems']
-    support: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
+    support: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards']
-    link: 'https://ziontechgroup.com/virtual-reality-enterprise-platform'
-    icon: ''
-    color: 'from-orange-500 to-red-600'
+    link: 'https://ziontechgroup.com/virtual-reality-enterprise-platform',
+    icon: '',
+    color: 'from-orange-500 to-red-600',
     popular: true
-    launchDate: '2024-01-20'
+    launchDate: '2024-01-20',
     customers: 1800
     rating: 4.7
     reviews: 1400,
@@ -1111,22 +1111,22 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     ]
     targetAudience: [,
       'Manufacturing companiesHealthcare organizationsEducational institutionsTraining companiesReal estate companiesArchitecture firms'];,
-    marketPosition: 'Leading enterprise VR platform. Competes with Pico ($299-599), Meta Quest Pro ($999), and HTC Vive ($699-1399). Our advantage: Enterprise-focused features and comprehensive solutions.'
+    marketPosition: 'Leading enterprise VR platform. Competes with Pico ($299-599), Meta Quest Pro ($999), and HTC Vive ($699-1399). Our advantage: Enterprise-focused features and comprehensive solutions.',
     competitors: ['Pico, Meta Quest Pro, HTC Vive, Varjo, Magic Leap']
     techStack: ['Unity, Unreal Engine, React, Node.js, PostgreSQL, Redis']
     realImplementation: true
-    implementationDetails: 'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.'
-    roi: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.'
+    implementationDetails: 'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.',
+    roi: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.',
     useCases: [,
       'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'];,
     integrations: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems']
-    support: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
+    support: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards']
-    link: 'https://ziontechgroup.com/virtual-reality-enterprise-platform'
-    icon: ''
-    color: 'from-orange-500 to-red-600'
+    link: 'https://ziontechgroup.com/virtual-reality-enterprise-platform',
+    icon: '',
+    color: 'from-orange-500 to-red-600',
     popular: true
-    launchDate: '2024-01-20'
+    launchDate: '2024-01-20',
     customers: 1800
     rating: 4.7
     reviews: 1400
@@ -1198,7 +1198,7 @@ export const,
       setupTim,
   e: '2-4 weeks',
       enterpris,
-  e: 'Custom pricing'
+  e: 'Custom pricing',
     }
     feature,
   s: [,
@@ -1223,7 +1223,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Production-ready space resource platform with AI models, satellite data integration, and comprehensive analytics. Includes 3D visualization and planning tools.'
+  s: 'Production-ready space resource platform with AI models, satellite data integration, and comprehensive analytics. Includes 3D visualization and planning tools.',
     ro,
   i: 'Space organizations achieve 500% ROI through improved resource discovery and optimized operations.',
     useCase,
@@ -1233,7 +1233,7 @@ export const,
     integration,
   s: ['NASA APIs, ESA data, SpaceX data, Custom space agency systems']
     suppor,
-  t: 'Space technology experts, implementation consulting, custom development, and dedicated success manager.'
+  t: 'Space technology experts, implementation consulting, custom development, and dedicated success manager.',
     complianc,
   e: ['International space law, Government regulations, Industry standards']
     lin,
@@ -1268,7 +1268,7 @@ export const,
       setupTim,
   e: '1-2 weeks',
       enterpris,
-  e: 'Custom pricing'
+  e: 'Custom pricing',
     }
     feature,
   s: [,
@@ -1293,7 +1293,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Production-ready metaverse platform with comprehensive development tools, 3D engine, and blockchain integration. Includes mobile SDK and developer portal.'
+  s: 'Production-ready metaverse platform with comprehensive development tools, 3D engine, and blockchain integration. Includes mobile SDK and developer portal.',
     ro,
   i: 'Developers achieve 400% ROI through reduced development costs and increased monetization opportunities.',
     useCase,
@@ -1303,7 +1303,7 @@ export const,
     integration,
   s: ['VR headsets, AR devices, Blockchain wallets, Payment processors']
     suppor,
-  t: '24/7 technical support, development consulting, custom development, and dedicated success manager.'
+  t: '24/7 technical support, development consulting, custom development, and dedicated success manager.',
     complianc,
   e: ['GDPR, CCPA, SOC 2 Type II, ISO 27001']
     lin,
@@ -1338,7 +1338,7 @@ export const,
       setupTim,
   e: '4-6 weeks',
       enterpris,
-  e: 'Custom pricing'
+  e: 'Custom pricing',
     }
     feature,
   s: [,
@@ -1364,7 +1364,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Production-ready quantum space communications network with quantum hardware, satellite integration, and comprehensive monitoring. Includes quantum network management tools.'
+  s: 'Production-ready quantum space communications network with quantum hardware, satellite integration, and comprehensive monitoring. Includes quantum network management tools.',
     ro,
   i: 'Space organizations achieve unlimited ROI through unbreakable communications and enhanced mission security.',
     useCase,
@@ -1374,7 +1374,7 @@ export const,
     integration,
   s: ['Satellite systems, Ground stations, Space agencies, Custom space systems']
     suppor,
-  t: 'Quantum experts, space technology consulting, custom protocol development, and 24/7 technical support.'
+  t: 'Quantum experts, space technology consulting, custom protocol development, and 24/7 technical support.',
     complianc,
   e: ['International space law, Government security requirements, Industry standards']
     lin,
@@ -1409,7 +1409,7 @@ export const,
       setupTim,
   e: '2-3 weeks',
       enterpris,
-  e: 'Custom pricing'
+  e: 'Custom pricing',
     }
     feature,
   s: [,
@@ -1434,7 +1434,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.'
+  s: 'Production-ready space traffic management platform with real-time monitoring, AI prediction models, and comprehensive analytics. Includes mobile app and API.',
     ro,
   i: 'Space organizations achieve 400% ROI through improved safety and reduced collision risks.',
     useCase,
@@ -1444,7 +1444,7 @@ export const,
     integration,
   s: ['Space agencies, Satellite operators, Ground stations, Custom space systems']
     suppor,
-  t: '24/7 technical support, space safety consulting, custom development, and dedicated success manager.'
+  t: '24/7 technical support, space safety consulting, custom development, and dedicated success manager.',
     complianc,
   e: ['International space law, Government regulations, Industry safety standards']
     lin,
@@ -1479,7 +1479,7 @@ export const,
       setupTim,
   e: '1-2 weeks',
       enterpris,
-  e: 'Custom pricing'
+  e: 'Custom pricing',
     }
     feature,
   s: [,
@@ -1504,7 +1504,7 @@ export const,
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.'
+  s: 'Production-ready enterprise VR platform with comprehensive tools, security features, and mobile support. Includes admin dashboard and analytics.',
     ro,
   i: 'Enterprises achieve 400% ROI through improved training effectiveness and reduced operational costs.',
     useCase,
@@ -1514,7 +1514,7 @@ export const,
     integration,
   s: ['HR systems, Learning management systems, Project management tools, Custom enterprise systems']
     suppor,
-  t: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'
+  t: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     complianc,
   e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards']
     lin,

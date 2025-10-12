@@ -79,7 +79,7 @@ const "zionContact": ServiceContact = {
   phone: "+1 302 464 0950",
   "email": "kleber@ziontechgroup.com",
   "website": "https://ziontechgroup.com",
-  "address": "364 E Main St STE 1008 Middletown DE 19709"}
+  "address": "364 E Main St STE 1008 Middletown DE 19709"};
 // Innovative Micro SAAS Services 2031 (minimal stubbed data to satisfy imports)
 export const "innovativeMicroSaasServices2031": MicroSaasService[] = [{
     id: 1,

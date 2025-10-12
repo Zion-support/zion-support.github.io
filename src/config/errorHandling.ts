@@ -45,7 +45,7 @@ export interface ErrorConfig {
   }
 export const _errorHandlingConfig: ErrorConfig = {
     export interface ErrorConfig {// TODO: Add content
-  }
+  };
 }
   enabled: boolean
     logToConsole: boolean,,
@@ -57,7 +57,7 @@ export const _errorHandlingConfig: ErrorConfig = {
 }
 export const _errorHandlingConfig: ErrorConfig = {
     // TODO: Add content
-  }
+  };
 }
   enabled: true,
   logToConsole: process.env['NODE_ENV'] !== 'production',
@@ -111,7 +111,7 @@ export class AppError extends Error {
     timeou,
   t: 'Request timed out. Please try again.',
     serverErro,
-  r: 'Server error occurred. Our team has been notified.'
+  r: 'Server error occurred. Our team has been notified.',
   },
   validatio,
   n: {/* TODO: Fix JSX expression */}
@@ -122,7 +122,7 @@ export class AppError extends Error {
     invali,
   d: 'Please enter a valid value.',
     forma,
-  t: 'Invalid format. Please check your input.'
+  t: 'Invalid format. Please check your input.',
   },
   authenticatio,
   n: {/* TODO: Fix JSX expression */}
@@ -133,7 +133,7 @@ export class AppError extends Error {
     expire,
   d: 'Your session has expired. Please log in again.',
     unauthorize,
-  d: 'You are not authorized to access this resource.'
+  d: 'You are not authorized to access this resource.',
   },
   generi,
   c: {/* TODO: Fix JSX expression */}
@@ -142,7 +142,7 @@ export class AppError extends Error {
   unknow,
   n: 'An unexpected error occurred. Please try again.',
     retr,
-  y: 'Please try again in a few moments.'
+  y: 'Please try again in a few moments.',
   }
 }
 export class AppError extends Error {/* TODO: Fix JSX expression */}
@@ -155,7 +155,7 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 }
   offline: 'You are currently offline. Please check your internet connection.',
     timeout: 'Request timed out. Please try again.',
-    serverError: 'Server error occurred. Our team has been notified.'
+    serverError: 'Server error occurred. Our team has been notified.',
   },
   validation: {
     // TODO: Add content
@@ -163,7 +163,7 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 }
   required: 'This field is required.',
     invalid: 'Please enter a valid value.',
-    format: 'Invalid format. Please check your input.'
+    format: 'Invalid format. Please check your input.',
   },
   authentication: {
     // TODO: Add content
@@ -171,14 +171,14 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 }
   failed: 'Authentication failed. Please try logging in again.',
     expired: 'Your session has expired. Please log in again.',
-    unauthorized: 'You are not authorized to access this resource.'
+    unauthorized: 'You are not authorized to access this resource.',
   },
   generic: {
     // TODO: Add content
   }
 }
   unknown: 'An unexpected error occurred. Please try again.',
-    retry: 'Please try again in a few moments.'
+    retry: 'Please try again in a few moments.',
   }
 }
 export class AppError extends Error {

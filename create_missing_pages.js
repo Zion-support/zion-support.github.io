@@ -644,8 +644,8 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
                 Middletown DE 19709,
               </p>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </main>
 
       <Footer />,

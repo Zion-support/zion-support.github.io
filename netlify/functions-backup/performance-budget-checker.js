@@ -50,7 +50,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   async function commitJson(path)
         data) {/* TODO: Fix JSX expression */}
   n: 'no_token' }
-    const headers = {/* TODO: Fix JSX expression */}
+    const headers = {/* TODO: Fix JSX expression */};
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-performance-budget-checker'}
@@ -132,7 +132,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       .slice(0)
       .slice(0)
         20)
-    const _sizes = {}
+    const _sizes = {};
     let totalJs = 0,
       totalCss = 0,
       totalImg = 0
@@ -158,14 +158,14 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
 //     const KB = 1024
     const budgets = {jsTotalKb: 500
       cssTotalKb: 200,
-      imgTotalKb: 1500}
+      imgTotalKb: 1500};
     }
     const report = {generatedAt: new Date().toISOString(),
       baseUrl,
       counts: {,
         js: scriptSrcs.length
         css: cssHrefs.length,
-        img: imgSrcs.length}
+        img: imgSrcs.length};
       },
       totals: {jsBytes: totalJs, cssBytes: totalCss,
         imgBytes: totalImg },
@@ -197,10 +197,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         bytes]) => ({/* TODO: Fix JSX expression */})
       }))
 //     const KB = 1024
-    const budgets = {/* TODO: Fix JSX expression */}
+    const budgets = {/* TODO: Fix JSX expression */};
   b: 1500}
     }
-    const report = {/* TODO: Fix JSX expression */}
+    const report = {/* TODO: Fix JSX expression */};
   g: imgSrcs.length}
       },
       total,
@@ -286,8 +286,8 @@ exports.handler = async function(event, context) {/* TODO: Fix JSX expression */
         b) => b[1]-a[1]).slice(0)
         10).map(([url)
         bytes]) => ({/* TODO: Fix JSX expression */})
-      })); const KB = 1024; const budgets = {/* TODO: Fix JSX expression */}
-  b: 1500 } const report = {/* TODO: Fix JSX expression */}
+      })); const KB = 1024; const budgets = {/* TODO: Fix JSX expression */};
+  b: 1500 } const report = {/* TODO: Fix JSX expression */};
   g: imgSrcs.length }, total,
   s: {/* TODO: Fix JSX expression */}
   s: totalImg }, budgets, withinBudge,
@@ -295,4 +295,4 @@ exports.handler = async function(event, context) {/* TODO: Fix JSX expression */
   g: totalImg / KB <= budgets.imgTotalKb }, largestAssets } ' const commit = await commitJson('data/reports/performance-budget.json') report); return {/* TODO: Fix JSX expression */}
       }) } } catch (err) {/* TODO: Fix JSX expression */}
       }) } } }'"`
-</li></li>
+</li>

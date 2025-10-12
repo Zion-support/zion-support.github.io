@@ -166,7 +166,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       '/team': () => import('../pages/Team'),
       '/privacy': () => import('../pages/Privacy'),
       '/terms': () => import('../pages/Terms'),
-  setupRouteBasedSplitting() {/* TODO: Fix JSX expression */}
+  setupRouteBasedSplitting() {/* TODO: Fix JSX expression */};
     }
 
     // Preload next likely routes

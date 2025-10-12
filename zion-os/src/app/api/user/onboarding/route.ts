@@ -14,7 +14,7 @@ if (!session?.user?.email) {
     })
     return NextResponse.json(
       {
-        message: 'Onboarding completed successfully'
+        message: 'Onboarding completed successfully',
         user: {
           id: updatedUser && updatedUser.id,
           name: updatedUser && updatedUser.name,
@@ -74,7 +74,6 @@ export async function POST(request: NextRequest) {
     console.error("Onboarding completion error:", error)
     return NextResponse.json(
       { error: "Internal server error" }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       { status: 500 }
     )
   }
@@ -89,7 +88,7 @@ export async function POST(request: NextRequest) { try {
       role: 'user',
       onboardingCompleted: true,
       preferences
-    }
+    };
     return NextResponse.json({
       message: "Onboarding completed successfully",
       user: {

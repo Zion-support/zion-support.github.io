@@ -1,6 +1,6 @@
 const { execSync } = require('child_process')
 exports.config = {schedule: '*/7 * * * *'} // every 7 minutes
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/7 * * * *'} // every 7 minutes
 }
 exports.handler = async () => {const logs = []}

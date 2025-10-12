@@ -4,7 +4,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2"
 const OPENAI_API_KEY = Deno.env.get("OPENAI_API_KEY")
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 }
 serve(async (req) => {
@@ -29,7 +29,7 @@ serve(async (req) => {
       systemPrompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately."
     }
     // Create translations for each target language
-    const translations = {}
+    const translations = {};
     for (const targetLang of targetLanguages) {
       if (targetLang === sourceLanguage) {
         translations[targetLang] = content

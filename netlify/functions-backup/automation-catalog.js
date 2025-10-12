@@ -40,7 +40,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   f: `/.netlify/functions/${fn}`;)
     }))
   }
-  const catalog = {/* TODO: Fix JSX expression */}
+  const catalog = {/* TODO: Fix JSX expression */};
   s: listAutomationScripts()}
   }
   return {statusCode: 200,
@@ -66,7 +66,7 @@ exports.handler = async function(event, context) {const fs = require('fs');' con
   e: 'function'} nam,
   e: fn,
         hre)`
-  f: `/.netlify/functions/${fn}` })); } const catalog = {/* TODO: Fix JSX expression */}
+  f: `/.netlify/functions/${fn}` })); } const catalog = {/* TODO: Fix JSX expression */};
   s: listNetlifyFunctions()} script,
   s: listAutomationScripts() } return {/* TODO: Fix JSX expression */}
   e: 200}' header,

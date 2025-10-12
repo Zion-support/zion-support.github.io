@@ -37,12 +37,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ...existing,
     ...body,
     updatedAt: new Date().toISOString(),
-  }
+  };
   fs && fs.writeFileSync(statusPath, JSON && JSON.stringify(merged, null, 2))
   res && res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.status(405).json({ error: 'Method Not Allowed' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return
   }
   if (!isInternalAgentRequest(req)) {
@@ -57,7 +56,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const merged = {
     ...existing
     ...body
-    updatedAt: new Date().toISOString()}
+    updatedAt: new Date().toISOString()};
   fs && fs.writeFileSync(statusPath, JSON && JSON.stringify(merged, null, 2))
   res && res.status(200).json({ ok: true })
 }
@@ -88,7 +87,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ...existing,
     ...body,
     updated_at: new Date ().toISOString (),
-  }
+  };
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2))
   res.status (200).json ({ ok: true });export default /**
  * handler - Function description
@@ -118,7 +117,7 @@ if ( {) {
   const merged = {
     ...existing
     ...body
-    updated_at: new Date ().toISOString ()}
+    updated_at: new Date ().toISOString ()};
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2))
   res.status (200).json ({ ok: true })
   res.status(200).json({ ok: true })

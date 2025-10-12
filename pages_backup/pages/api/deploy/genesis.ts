@@ -68,7 +68,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         initialized: true
         routes: ["/gpt", "/gpt/router"]
         agents: ["proposal-writer", "resume-generator"]
-      }
+      };
       daoAndToken: {
         token: tokenActivation ? "ZION$" : "disabled"
         treasury: tokenActivation ? `${provisionId}-treasury` : null
@@ -172,7 +172,7 @@ if ( {) {
         modules
         bonusModules
       )
-    }
+    };
           pdf: "/book / manifesto.pdf",
           trailer_script: "/trailer / script",
         },
@@ -199,7 +199,7 @@ if ( {) {
         bonus_modules,
       ),
     }
-
+;
     const access = {
       roles: ["Founder", "Superadmin", "DAO Multisig"]
       export: {
@@ -218,7 +218,7 @@ export default async function handler(req, res) {
   try {
   if (req.method !== 'POST') {
     return res.status(405).json({
-      error: 'Method not allowed'
+      error: 'Method not allowed',
     })
     } catch (error) {
     console.error("Error:", error)
@@ -235,7 +235,7 @@ export default async function handler(req, res) {
 }
     const operator = {
       activeModulesSummary: summarizeModules(modules, bonusModules),
-      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)}
+      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
     const access = {
       roles: ['FounderSuperadminDAO Multisig'],
       export: {
@@ -272,7 +272,7 @@ export default async function handler(req, res) {
     } = body
     if (!instanceName || !deploymentRegion) {
       return res.status(400).json({
-        error: 'Missing required fields: instanceName, deploymentRegion'
+        error: 'Missing required fields: instanceName, deploymentRegion',
       })
       } catch (error) {
     console.error("Error:", error)
@@ -299,16 +299,16 @@ export default async function handler(req, res) {
       daoAndToken: {
         token: tokenActivation ? 'ZION$' : 'disabled',
         treasury: tokenActivation ? `${provisionId}-treasury` : null,
-        votingDashboard: '/dao'
+        votingDashboard: '/dao',
       },
       assets: {
         whitepaper: '/whitepaper',
         roadmap: '/roadmap',
         book: {
           pdf: '/book/manifesto.pdf',
-          trailerScript: '/trailer/script'
+          trailerScript: '/trailer/script',
         },
-        summit: '/summit'
+        summit: '/summit',
       },
       publicPages: []
     }
@@ -320,7 +320,7 @@ export default async function handler(req, res) {
     })
   } catch (error) {
     res.status(500).json({
-      error: 'Internal server error'
+      error: 'Internal server error',
     })
 import type { NextApiRequest, NextApiResponse } from 'next'
 function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {
@@ -389,7 +389,7 @@ export default async function handler(req, res) {
       tokenActivation,
       governanceMode,
       branding,
-      modules = {}
+      modules = {};
       bonusModules = {}} = body
     if (!instanceName || !deploymentRegion) {
       return res.status(400).json({ error: 'Missing required fields: instanceName, deploymentRegion' })
@@ -414,7 +414,7 @@ export default async function handler(req, res) {
       zionGPT: {
         initialized: true
         routes: ['/gpt/gpt/router']
-        agents: ['proposal-writerresume-generator']}
+        agents: ['proposal-writerresume-generator']};
       daoAndToken: {
         token: tokenActivation ? 'ZION$' : 'disabled'
         treasury: tokenActivation ? `${provisionId}-treasury` : null,
@@ -448,7 +448,7 @@ export default async function handler(req, res) {
     const access = {
       roles: ['FounderSuperadminDAO Multisig']
       export: {
-        type: 'application/json'
+        type: 'application/json',
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}}
     return res.status(200).json({ outputActions, deployLog, access, operator })
   } catch (err: any) {
@@ -471,7 +471,6 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
   } catch (error) {

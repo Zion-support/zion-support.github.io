@@ -103,7 +103,7 @@ titletitle: 'API Reference',
 titletitle: 'Download Center',
       description: 'SDKs, tools, and resources for developers',
       icon: Download,
-      count: '25+ downloads'
+      count: '25+ downloads',
   const supportChannels = [
       title: 'Live Chat',
       description: 'Get instant help from our support team',
@@ -122,7 +122,7 @@ titletitle: 'Phone Support',
 titletitle: 'Community Forum',
       description: 'Connect with other users and share knowledge',
       icon: Users,
-      responseTime: 'Community driven'
+      responseTime: 'Community driven',
   const faqs = [
       question: 'How quickly can I get started with your AI services?',
       answer: 'Most of our AI services can be set up within 24-48 hours. We provide comprehensive onboarding support to ensure you\'re up and running quickly.'
@@ -133,7 +133,7 @@ questionquestion: 'What kind of support do you provide?',
 questionquestion: 'Can I integrate your services with my existing systems?',
       answer:       ,
 questionquestion: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.'
+      answer: 'Yes, we offer a 14-day free trial for most of our services. This allows you to test our platform and see how it fits your business needs before committing to a paid plan.',
   const getCurrentArticles = () => {
     return helpArticles[activeCategory as keyof typeof helpArticles] || []
   const filteredArticles = getCurrentArticles().filter(article =>
@@ -276,7 +276,7 @@ const categories = [
       colo,
   r: 'text-blue-400',
       bgColo,
-  r: 'bg-blue-500/10'
+  r: 'bg-blue-500/10',
     },
       i,
   d: 'troubleshooting',
@@ -297,10 +297,10 @@ const categories = [
       colo,
   r: 'text-purple-400',
       bgColo,
-  r: 'bg-purple-500/10'
+  r: 'bg-purple-500/10',
     }
   ]
-  const helpArticles = {/* TODO: Fix JSX expression */}
+  const helpArticles = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
     'getting-started': [
@@ -353,7 +353,7 @@ const categories = [
       ico,
   n: Users,
       responseTim,
-  e: 'Community driven'
+  e: 'Community driven',
           <MessageSquare className="w-5 h-5 mr-2" />
 // Contact Support
                 href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"

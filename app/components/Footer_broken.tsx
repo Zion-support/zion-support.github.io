@@ -90,7 +90,7 @@ const Footer: React.FC = memo(() => {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST',
-    emergency: '24/7 Emergency Support Available'
+    emergency: '24/7 Emergency Support Available',
   };
   return (
     <footer className="bg-gray-900 text-white">

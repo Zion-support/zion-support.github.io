@@ -5,7 +5,7 @@ export default function ContactSection() {
     email: '',
     company: '',
     service: '',
-    message: ''
+    message: '',
   })
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -26,7 +26,7 @@ export default function ContactSection() {
       ),
       title: 'Email Us',
       details: 'info@ziontechgroup.com',
-      link: 'mailto:info@ziontechgroup.com'
+      link: 'mailto:info@ziontechgroup.com',
     },
     {
       icon: (
@@ -35,7 +35,7 @@ export default function ContactSection() {
       ),
       title: 'Call Us',
       details: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      link: 'tel:+15551234567',
     },
     {
       icon: (
@@ -45,7 +45,7 @@ export default function ContactSection() {
       ),
       title: 'Visit Us',
       details: '123 Tech Street, Innovation City, IC 12345',
-      link: '#'
+      link: '#',
     }
   ]
   const services = [
@@ -191,8 +191,8 @@ export default function ContactSection() {
             </form>
           </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
   ),
 }
   </button>
@@ -202,4 +202,4 @@ export default function ContactSection() {
   </h3>
   </h3>
   </HTMLInputElement>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></h2></h3></h4></ul></li></li></li></li>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></h2></h3></h4></ul></li></li>

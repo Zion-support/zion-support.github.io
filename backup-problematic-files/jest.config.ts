@@ -1,4 +1,3 @@
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import type { Config } from 'jest'
 import nextJest from 'next/jest.js'
 import type { Config } from "jest"
@@ -24,8 +23,6 @@ import type { Config } from "jest"
 import type { Config } from 'jest'
 import nextJest from 'next/jest.js'
 ursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const createJestConfig = nextJest({
   // Provide the path to your Next && Next.js app to load next && next.config.js and .env files
 import type { Config } from './jest'
@@ -92,12 +89,11 @@ export default createJestConfig(config)
 import type { Config } from "jest"
 import nextJest from "next/jest.js"
 const createJestConfig = nextJest({ dir: "./" })
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 const config: Config = {
   coverageProvider: "v8"
   testEnvironment: "jsdom"
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"]
-  moduleNameMapping: { "^@/(.*)$": "<rootDir>/src/$1" }
+  moduleNameMapping: { "^@/(.*)$": "<rootDir>/src/$1" };
   testMatch: [
     "**/__tests__*.(js|jsx|ts|tsx)"
     "***.{js,jsx,ts,tsx}"

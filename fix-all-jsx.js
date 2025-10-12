@@ -36,12 +36,12 @@ function fixMalformedJSX(filePath) {
       // Fix extra closing div tags
       {
         pattern: /<\/div><\/div>/g,
-        replacement: '</div>'
+        replacement: '</div>',
       },
       // Fix malformed nav tags
       {
         pattern: /<\/nav><div className="[^"]*">/g,
-        replacement: '<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">'
+        replacement: '<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">',
       },
       // Fix malformed div tags with extra closing
       {
@@ -54,17 +54,17 @@ function fixMalformedJSX(filePath) {
       // Fix malformed Link tags
       {
         pattern: /<\/Link><div className="[^"]*">/g,
-        replacement: '<div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">'
+        replacement: '<div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">',
       },
       // Fix malformed span tags
       {
         pattern: /<\/span><br \/>[^<]*<\/span>/g,
-        replacement: '</span><br />'
+        replacement: '</span><br />',
       },
       // Fix malformed h3 tags
       {
         pattern: /<\/h3><div className="[^"]*">\s*<\/div><\/div><Brain[^>]*\/>\s*<\/div>\s*<\/div>\s*AI Services\s*<\/h3>/g,
-        replacement: '<h3 className="text-lg font-bold mb-6 text-cyan-400 flex items-center neon-text-enhanced">\n                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">\n                  <Brain className="w-5 h-5 text-white" />\n                </div>\n                AI Services\n              </h3>'
+        replacement: '<h3 className="text-lg font-bold mb-6 text-cyan-400 flex items-center neon-text-enhanced">\n                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3">\n                  <Brain className="w-5 h-5 text-white" />\n                </div>\n                AI Services\n              </h3>',
       },
       // Fix malformed button tags
       {

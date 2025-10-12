@@ -46,7 +46,7 @@ export const DEFAULT_OPTIMIZATION_CONFIG: OptimizationConfig = {
     enableStructuredData: true
     enableCanonicalUrl: true,
 export const,
-  DEFAULT_OPTIMIZATION_CONFIG: OptimizationConfig = {/* TODO: Fix JSX expression */}
+  DEFAULT_OPTIMIZATION_CONFIG: OptimizationConfig = {/* TODO: Fix JSX expression */};
   },
   performanc,
   e: {/* TODO: Fix JSX expression */}
@@ -195,7 +195,7 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
       if (this.config.accessibility.enableFocusManagement) {
         results.accessibility = {
           focusManagement: 'enabled',
-    try {/* TODO: Fix JSX expression */}
+    try {/* TODO: Fix JSX expression */};
         }
       }
 
@@ -230,7 +230,7 @@ export class ComprehensiveOptimizer {/* TODO: Fix JSX expression */}
   public updateConfig(newConfig: Partial<OptimizationConfig>): void {,
   public updateConfig(newConfi)
   g: Partial<OptimizationConfig>): void {/* TODO: Fix JSX expression */}
-    this.config = { ...this.config, ...newConfig }
+    this.config = { ...this.config, ...newConfig };
   }
 
   /**

@@ -199,7 +199,7 @@ if ( {) {
         fundsReleased: 0
         updates: []
         votes: []
-      }
+      };
       fs.writeFileSync(
         path.join(GRANTS_DIR, `${id}.json`)
         JSON.stringify(record, null, 2)
@@ -257,7 +257,7 @@ if ( {) {
         fundsReleased: 0,
         updates: [],
         votes: [],
-      }
+      };
       fs.writeFileSync(path.join(GRANTS_DIR, `${id}.json`), JSON.stringify(record, null, 2), 'utf8')
       res.status(201).json({ id, record })
     } catch (e: any) {
@@ -288,8 +288,6 @@ if ( {) {
 }
 }
   res.status(405).end('Method Not Allowed')
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   res.setHeader('Allow', 'GET, POST')
   res.status(405).end('Method Not Allowed')
 }

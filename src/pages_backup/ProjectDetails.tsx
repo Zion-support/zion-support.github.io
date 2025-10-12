@@ -1,7 +1,7 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
   
   static getDerivedStateFromError(error) {
@@ -315,8 +315,8 @@ function ProjectDetailsContent() {
                             on_change={e => setNewNote (e.target.value)}
                             className='min - h-[100px] mb - 2'                          />
                           <Button
-                            on_click = {handleSubmitNote, }
-                            disabled = {!new_note.trim () || isSubmittingNote, }
+                            on_click = {handleSubmitNote, };
+                            disabled = {!new_note.trim () || isSubmittingNote, };
                           >
                             {isSubmittingNote ? 'Posting...' : 'Post Note'}
                           </Button></$1>)}
@@ -470,8 +470,8 @@ function ProjectDetailsContent() {
                             on_change={e => setNewNote (e.target.value)}
                             className='min - h-[100px] mb - 2'                          />
                           <Button
-                            on_click = {handleSubmitNote, }
-                            disabled = {!new_note.trim () || isSubmittingNote, }
+                            on_click = {handleSubmitNote, };
+                            disabled = {!new_note.trim () || isSubmittingNote, };
                           >
                             {isSubmittingNote ? 'Posting...' : 'Post Note'}
                           </Button></$1>)}
@@ -490,7 +490,7 @@ function ProjectDetailsContent() {
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-
+;
                           loading='lazy'                        />
                           loading="lazy"
                         />
@@ -569,7 +569,7 @@ function ProjectDetailsContent() {
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
 
-
+;
                           loading="lazy"
                         />
 
@@ -1306,7 +1306,7 @@ setIsSubmittingNote (true)
 try {
   if (error) throw error
 //Refresh notes 
-}catch (err: any) {'
+}catch (err: any) {',
   logErrorToProduction ('Error adding note:', {
   data: err 
 })

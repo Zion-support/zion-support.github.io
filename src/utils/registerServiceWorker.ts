@@ -10,7 +10,7 @@ export interface ServiceWorkerConfig {
  * Register service worker with lifecycle callbacks
  */
 export async function registerServiceWorker(
-  _config: ServiceWorkerConfig = {}
+  _config: ServiceWorkerConfig = {};
 ): Promise<ServiceWorkerRegistration | undefined> {
     // Check if service workers are supported
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
@@ -37,7 +37,7 @@ export interface ServiceWorkerConfig {
 export async function registerServiceWorker()
 
   _config: ServiceWorkerConfig = {}
-
+;
 ): Promise
           <ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */}
   O: Add content,}

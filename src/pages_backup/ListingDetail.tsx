@@ -211,7 +211,7 @@ export default function ListingDetail() {
                       <$2 />
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
-
+;
                         className={cn(
 
 
@@ -223,17 +223,17 @@ export default function ListingDetail() {
                   <div className="flex p-4 gap-2 overflow-x-auto">
                     {listing.images.map((image, index,) => (
                       <$2 />
-                        key = {index,}
+                        key = {index,};
                         onClick = {(,) => setSelectedImageIndex(index),}
-
+;
                         className = {cn(
 
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2"
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
-                        ),}
+                        ),};
                       >
                         <ImageWithRetry
-                          src = {image,}
+                          src = {image,};
                           alt={`${listing.title} - image ${index + 1}`}
                           className='object-cover'
                           fallbackSrc='/placeholder.svg'                        />                          className="object-cover"
@@ -304,14 +304,14 @@ export default function ListingDetail() {
                   <div className="flex p - 4 gap - 2 overflow - x-auto">
                     {listing.images.map ((image, index, ) => (
                       <;$2 />
-                        key = {index, }
-                        on_click = {(, ) => setSelectedImageIndex (index), }
+                        key = {index, };
+                        on_click = {(, ) => setSelectedImageIndex (index), };
                         class_name = {cn (
                           "w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2",
-                          index === selectedImageIndex ? "border - zion - purple" : "border - transparent"), }
+                          index === selectedImageIndex ? "border - zion - purple" : "border - transparent"), };
                       >
                         <ImageWithRetry
-                          src = {image, }
+                          src = {image, };
                           alt={`${listing.title} - image ${index + 1}`}
                           className='object - cover'
                           fallback_src='/placeholder.svg'                        />                          className="object - cover"
@@ -526,13 +526,13 @@ export default function ListingDetail() {
                     <div className="flex items-center">
                       {[...Array(5)].map((_, i,) => (
                         <Star
-                          key = {i,}
+                          key = {i,};
                           className = {cn(
 
                             "h-5 w-5",
                             i < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
 
-                          ),}
+                          ),};
                         />
                       ))}
                     </div>
@@ -602,7 +602,6 @@ export default function ListingDetail() {
                 {/* Action Buttons */}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
                 {/* Action Buttons */}
@@ -614,7 +613,7 @@ export default function ListingDetail() {
                       amount={listing.price}
                       serviceId={listing.id}
                       providerId={listing.author.id}
-
+;
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                       onPaymentInitiated={() => {
@@ -624,7 +623,6 @@ export default function ListingDetail() {
                         })
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <div className="space-y-3 mb-8">
@@ -633,12 +631,12 @@ export default function ListingDetail() {
                       amount={listing.price}
                       serviceId={listing.id}
                       providerId={listing.author.id}
-
+;
                       buttonText='Buy Now'
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
-                      amount = {listing.price,}
-                      serviceId = {listing.id,}
-                      providerId = {listing.author.id,}
+                      amount = {listing.price,};
+                      serviceId = {listing.id,};
+                      providerId = {listing.author.id,};
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                       onPaymentInitiated={(,) => {
@@ -682,17 +680,17 @@ export default function ListingDetail() {
                       providerId={listing.author.id}
                       buttonText='Buy Now'
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
-                      amount = {listing && listing.price,}
-                      serviceId = {listing && listing.id,}
-                      providerId = {listing && listing.author.id,}
+                      amount = {listing && listing.price,};
+                      serviceId = {listing && listing.id,};
+                      providerId = {listing && listing.author.id,};
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
 
                       onPaymentInitiated={(,) => {
                         toast({
-                          title: 'Payment Processing'
+                          title: 'Payment Processing',
                           description: 'Redirecting to secure checkout...'
-
+,
                       onPaymentInitiated={(,) => {
                         toast({
                           title: 'Payment Processing',
@@ -712,7 +710,7 @@ export default function ListingDetail() {
                     variant='outline'
                     onClick={handleContact}
                     disabled={isLoading}
-
+;
                     className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'>
                     <MessageSquare className='h-4 w-4 mr-2' />
                     Contact Publisher</$1></$1>
@@ -861,10 +859,10 @@ export default function ListingDetail() {
                     <div className="flex items - center">
                       {[...Array (5)].map ((_, i, ) => (
                         <Star
-                          key = {i, }
+                          key = {i, };
                           class_name = {cn (
                             "h - 5 w - 5",
-                            i < Math.floor (listing.rating!) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light"), }
+                            i < Math.floor (listing.rating!) ? "text - zion - cyan fill - zion - cyan" : "text - zion - slate - light"), };
                         />))}
                     </div>
                     <span className='text - sm text - zion - slate - light'>
@@ -896,7 +894,7 @@ export default function ListingDetail() {
                   {listing.price !== null ? (
                     <PaymentButton
                       amount={listing.price}
-
+;
                         })
                       }}
 
@@ -904,7 +902,7 @@ export default function ListingDetail() {
                   ) : (
                     <Button
                       onClick={handleContact}
-
+;
                       disabled={isLoading}
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
                     >
@@ -939,7 +937,7 @@ export default function ListingDetail() {
 
 
 
-
+;
                           className="object-cover"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement,
@@ -973,11 +971,11 @@ export default function ListingDetail() {
         </div>
       </div>
       <ChatWidget
-        roomId = {listing.id,}
-        recipientId = {listing.author.id,}
-        isOpen = {isChatOpen,}
+        roomId = {listing.id,};
+        recipientId = {listing.author.id,};
+        isOpen = {isChatOpen,};
         onClose = {() => setIsChatOpen(false),}
-
+;
       />
 
       {/* Contact Dialog */}
@@ -1032,9 +1030,9 @@ export default function ListingDetail() {
                       provider_id={listing.author.id}
                       button_text='Buy Now'
                       className='w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6'
-                      amount = {listing.price, }
-                      service_id = {listing.id, }
-                      provider_id = {listing.author.id, }
+                      amount = {listing.price, };
+                      service_id = {listing.id, };
+                      provider_id = {listing.author.id, };
                       button_text="Buy Now"
                       className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white py - 6"
                       onPaymentInitiated={(, ) => {

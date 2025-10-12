@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import {Settings, ArrowRight}}from 'lucide-react';
@@ -8,12 +7,6 @@ const MicroSaaSPage: React.FC = () => {,
 return(<>,)
       <Helmet />} <title>{title}| Zion Tech Group - Micro SaaS Solutions</title>
         <meta />
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Settings, ArrowRight } from 'lucide-react'
-const MicroSaaSPage: React.FC = () => {
-<<<<<<< HEAD
   const serviceName = 'content-generator';
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 
@@ -27,9 +20,8 @@ const MicroSaaSPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <section className="pt-24 pb-16 px-4">
-        </section>
-          <div className="max-w-7xl mx-auto text-center"></div>
+        <section$1>
+        <div$2></div>
             <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
               <Settings className="w-4 h-4" />
               <span>{title}</span>
@@ -48,16 +40,6 @@ const MicroSaaSPage: React.FC = () => {
               </button>
               <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
                 View Demo
-=======
-    const serviceName = 'content-generator'
-  const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-return (
-    <>,
-      <Helmet>
-  }
-        </Helmet><title>{title} | Zion Tech Group - Micro SaaS Solutions</title>
-        <meta>
->>>>>>> origin/main
         <link>
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
@@ -67,16 +49,12 @@ return (
               </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
           <div className="max-w-7xl mx-auto text-center"></div>
             <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
               <Settings>
-<<<<<<< HEAD
               <span>{title</span>}</span>
-=======
-              </Settings><span>{title}</span>
->>>>>>> origin/main
             </div>
             <h1>{title</h1>} </h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Solution</span>
@@ -88,29 +66,19 @@ return (
                 </button><span>Get Started</span>
                 <ArrowRight>
               </button>
-<<<<<<< HEAD
               <button>View Demo,</button>
-=======
-              <button></button>
-                View Demo,
->>>>>>> origin/main
->>>>>>> origin/main
               </button>
             </li>
-          </li>
         </section>
-<<<<<<< HEAD
 
-        <section className="py-16 px-4">
-        </section>
-          <div className="max-w-7xl mx-auto"></div>
+        <section$1>
+        <div$2></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!
               </p>
             </li>
-          </li>
         </section>
       </li>
 
@@ -118,28 +86,11 @@ return (
 };
 
 export default MicroSaaSPage;
-=======
-        <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-7xl mx-auto" / /></div>
-            <div className="text-center mb-16" / /></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-<<<<<<< HEAD
               <p>We're developing powerful {title.toLowerCase()</p>}}solutions. Stay tuned for updates!
-=======
-              <p></p>
-                We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!
->>>>>>> origin/main
               </p>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </div>
     </>
   )
@@ -184,4 +135,3 @@ const MicroSaaSPage: React.FC = () => {
 export default MicroSaaSPage
 </div></div></div></div></div></div></span></span></span></button></button></p></p></h1></h2></li></section></section>
 </li>
->>>>>>> origin/main

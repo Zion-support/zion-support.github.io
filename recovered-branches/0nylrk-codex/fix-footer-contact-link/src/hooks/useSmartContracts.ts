@@ -68,7 +68,7 @@ export function useSmartContracts() {
         contractType: 'escrow',
         createdAt: new Date().toISOString(),
         createdBy: user.id,
-        status: 'deployed'
+        status: 'deployed',
       }
       // Wait to simulate blockchain transaction time
       await new Promise(resolve => setTimeout(resolve, 2000))

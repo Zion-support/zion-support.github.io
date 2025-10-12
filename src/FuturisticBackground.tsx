@@ -66,35 +66,35 @@ export function FuturisticBackground({
             primary: '#8c15e9',
             secondary: '#22ddd2',
             accent: '#ff0080',
-            background: 'rgba(8, 8, 8, 0.8)'
+            background: 'rgba(8, 8, 8, 0.8)',
           }
         case 'neon':
           return {
             primary: '#00ffff',
             secondary: '#ff00ff',
             accent: '#ffff00',
-            background: 'rgba(0, 0, 0, 0.9)'
+            background: 'rgba(0, 0, 0, 0.9)',
           }
         case 'holographic':
           return {
             primary: '#ff6b6b',
             secondary: '#4ecdc4',
             accent: '#45b7d1',
-            background: 'rgba(0, 0, 0, 0.7)'
+            background: 'rgba(0, 0, 0, 0.7)',
           }
         case 'matrix':
           return {
             primary: '#00ff00',
             secondary: '#00cc00',
             accent: '#009900',
-            background: 'rgba(0, 0, 0, 0.95)'
+            background: 'rgba(0, 0, 0, 0.95)',
           }
         default:
           return {
             primary: '#8c15e9',
             secondary: '#22ddd2',
             accent: '#ff0080',
-            background: 'rgba(8, 8, 8, 0.8)'
+            background: 'rgba(8, 8, 8, 0.8)',
           }
       }
     }
@@ -279,7 +279,7 @@ export function FuturisticBackground({
         ref={canvasRef}
         className="w-full h-full"
         style={{
-          background: 'radial-gradient(ellipse at center, rgba(23, 45, 103, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%)'
+          background: 'radial-gradient(ellipse at center, rgba(23, 45, 103, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%)',
         }}
       />
       

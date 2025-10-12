@@ -1,7 +1,6 @@
 import { Skill } from '@/types/resume'
 export interface SkillsFormProps {
   resumeId: string
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   skills: Skill[]
   onComplete: () => void
   onBack: () => void

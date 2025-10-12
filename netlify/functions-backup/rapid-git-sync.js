@@ -17,7 +17,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   r: res.stderr || '',
   }
 }
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/1 * * * *' }
 exports.handler = async () => {const { status, stdout} stderr } = runNode('automation/advanced-git-sync.cjs')
   )
@@ -35,7 +35,7 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   g: 'utf8' });' return {/* TODO: Fix JSX expression */}
   s: res.status || 0} stdou,
   t: res.stdout || '', stder,
-  r: res.stderr || '' } } ' exports.config = {/* TODO: Fix JSX expression */}
+  r: res.stderr || '' } } ' exports.config = {/* TODO: Fix JSX expression */};
   e: '*/1 * * * *' } exports.handler = async () => {' const { status, stdout} stderr } = runNode('automation/advanced-git-sync.cjs');' const body = ['=== gi,`
   t: sync ===', stdout || '', stderr || '', `exit=${status}`].join('\n'); return {/* TODO: Fix JSX expression */}
   e: 200} body } }'`

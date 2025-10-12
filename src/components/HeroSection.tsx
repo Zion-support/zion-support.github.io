@@ -72,8 +72,8 @@ export default function HeroSection() {
         <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-pulse"></div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
   )
 }
 export default HeroSection;"`

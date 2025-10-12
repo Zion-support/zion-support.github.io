@@ -38,7 +38,6 @@ if (!id) return
     // Only fetch if id is available (from router)
     if (id) {
       fetchProduct()
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -48,9 +47,9 @@ if (!id) return
   return (
     <>
       <SEO
-        title = {product.title,}
-        description = {product.description,}
-        ogImage = {product.images?.[0],}
+        title = {product.title,};
+        description = {product.description,};
+        ogImage = {product.images?.[0],};
     return <div className="p-6 text-white">Product not found</div>
   }, [id]), // id is now from router.query
   if (!product && !id) { // If no id from router yet, it might still be loading
@@ -87,13 +86,13 @@ if (!id) return
         {product.images?.length ? (
           <div className="mb-4 relative w-full h-64">
             <Image
-              src = {product.images[0] |'/placeholder.svg',}
+              src = {product.images[0] |'/placeholder.svg',};
               alt = {product.title,}
 
-
+;
               src={product.images[0] || '/placeholder.svg'}
               alt={product.title}
-
+;
               className="object-cover rounded-md"
               fill
             />
@@ -190,7 +189,7 @@ if (return) {
 }
 set_adding (true)
 dispatch ({
-  type: 'ADD ITEM'
+  type: 'ADD ITEM',
 payload: {
   id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 
 })

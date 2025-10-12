@@ -56,7 +56,7 @@ global.cancelAnimationFrame = jest.fn(id => clearTimeout(id))
 // Mock localStorage
 const localStorageMock = {
     // TODO: Add content
-  }
+  };
 }
   getItem: jest.fn(),
   setItem: jest.fn(),
@@ -68,7 +68,7 @@ Object.defineProperty(window, 'localStorage', {
 }
   value: localStorageMock
 // Mock sessionStorage,
-const sessionStorageMock = {Object.defineProperty(window, 'sessionStorage', {}
+const sessionStorageMock = {Object.defineProperty(window, 'sessionStorage', {};
   // TODO: Add content,
 }
   value: sessionStorageMock
@@ -96,7 +96,7 @@ delete (window as unknown as Record
           <string, unknown>).location
 (window as unknown as Record<string, unknown>).location = {
     // TODO: Add content
-  }
+  };
 }
 // eslint-disable-next-line no-console
 console.info = (...args) => {

@@ -12,7 +12,6 @@ if (typeof window !== 'undefined') {
     tracesSampleRate: 0.1,
     integrations: []
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)})
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 import * as Sentry from '@sentry/react'
 if (typeof window !== 'undefined') {

@@ -24,7 +24,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Beginner',
       readTime: '10 min',
       icon: Zap,
-      content: 'Learn how to set up your account, configure your first AI service, and start getting results immediately.'
+      content: 'Learn how to set up your account, configure your first AI service, and start getting results immediately.',
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Intermediate',
       readTime: '25 min',
       icon: Code,
-      content: 'Detailed API documentation including endpoints, parameters, authentication, and code examples.'
+      content: 'Detailed API documentation including endpoints, parameters, authentication, and code examples.',
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Advanced',
       readTime: '45 min',
       icon: Brain,
-      content: 'Step-by-step guide to integrating our machine learning capabilities into your business processes.'
+      content: 'Step-by-step guide to integrating our machine learning capabilities into your business processes.',
     },
     {
       id: 4,
@@ -54,7 +54,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Intermediate',
       readTime: '20 min',
       icon: BarChart,
-      content: 'Learn how to set up dashboards, configure data sources, and create custom visualizations.'
+      content: 'Learn how to set up dashboards, configure data sources, and create custom visualizations.',
     },
     {
       id: 5,
@@ -64,7 +64,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Intermediate',
       readTime: '15 min',
       icon: Shield,
-      content: 'Best practices for API authentication, security headers, and data protection.'
+      content: 'Best practices for API authentication, security headers, and data protection.',
     },
     {
       id: 6,
@@ -74,7 +74,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Beginner',
       readTime: '12 min',
       icon: Settings,
-      content: 'Common issues and their solutions, including error codes and debugging tips.'
+      content: 'Common issues and their solutions, including error codes and debugging tips.',
     },
     {
       id: 7,
@@ -84,7 +84,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Intermediate',
       readTime: '30 min',
       icon: FileText,
-      content: 'Complete guide to using our content generation API for blogs, social media, and marketing materials.'
+      content: 'Complete guide to using our content generation API for blogs, social media, and marketing materials.',
     },
     {
       id: 8,
@@ -94,7 +94,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Advanced',
       readTime: '35 min',
       icon: MessageSquare,
-      content: 'Configure webhooks to receive real-time updates and synchronize data across your systems.'
+      content: 'Configure webhooks to receive real-time updates and synchronize data across your systems.',
     },
     {
       id: 9,
@@ -104,7 +104,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Intermediate',
       readTime: '25 min',
       icon: Bot,
-      content: 'Complete setup guide for deploying intelligent customer support bots on your website.'
+      content: 'Complete setup guide for deploying intelligent customer support bots on your website.',
     },
     {
       id: 10,
@@ -114,7 +114,7 @@ const DocsPage: React.FC = () => {
       difficulty: 'Advanced',
       readTime: '40 min',
       icon: Zap,
-      content: 'Advanced techniques for optimizing API calls, reducing latency, and minimizing costs.'
+      content: 'Advanced techniques for optimizing API calls, reducing latency, and minimizing costs.',
     }
   ]
   const quickLinks = [
@@ -123,28 +123,28 @@ const DocsPage: React.FC = () => {
       description: 'Complete API documentation',
       icon: Code,
       link: '/api-docs',
-      color: 'text-blue-400'
+      color: 'text-blue-400',
     },
     {
       title: 'SDK Downloads',
       description: 'Client libraries and tools',
       icon: Download,
       link: '/downloads',
-      color: 'text-green-400'
+      color: 'text-green-400',
     },
     {
       title: 'Video Tutorials',
       description: 'Step-by-step video guides',
       icon: Play,
       link: '/tutorials',
-      color: 'text-purple-400'
+      color: 'text-purple-400',
     },
     {
       title: 'Community Forum',
       description: 'Connect with other developers',
       icon: Users,
       link: '/community',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     }
   ]
   const filteredDocs = selectedCategory === 'all' 
@@ -281,8 +281,8 @@ const DocsPage: React.FC = () => {
                   Request Demo
   
               </div>
-            </div>
-          </section>
+        </div>
+      </section>
         </main>
         <Footer />
       </div>

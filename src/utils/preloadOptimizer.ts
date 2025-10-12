@@ -66,7 +66,7 @@ export const preloadRoute = (route: string) => {
 }
   if (typeof window === 'undefined') return
   // Preload route-specific resources
-const routeResources = {/* TODO: Fix JSX expression */}
+const routeResources = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
     '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],

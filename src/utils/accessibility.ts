@@ -76,7 +76,7 @@ $4})
           type: 'empty-alt',
           element: img['src'] || 'unknown',
           message: 'Image has empty alt text',
-          suggestion: 'Provide descriptive alt text or use alt="" for decorative images'
+          suggestion: 'Provide descriptive alt text or use alt="" for decorative images',
         })
       }
     })
@@ -340,7 +340,7 @@ class AccessibilityService {
           element: img['src'] || 'unknown',
           message: 'Image missing alt attribute',
           wcag: '1.1.1 (Level A)'
-
+,
         })
       } else if (img.alt === '') {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -352,7 +352,7 @@ class AccessibilityService {
   type: 'empty-alt',
           element: img['src'] || 'unknown',
           message: 'Image has empty alt text',
-          suggestion: 'Provide descriptive alt text or use alt="" for decorative images'
+          suggestion: 'Provide descriptive alt text or use alt="" for decorative images',
         }
 
   )
@@ -377,7 +377,7 @@ class AccessibilityService {
           element: input.tagName.toLowerCase(),
           message: 'Form element missing label',
           wcag: '1.3.1 (Level A), 3.3.2 (Level A)'
-
+,
         }
   )
       }
@@ -399,7 +399,7 @@ class AccessibilityService {
           element: heading.tagName.toLowerCase(),
           message: `Heading level skipped from h${prevLevel} to h${level}`,
           suggestion: 'Maintain proper heading hierarchy'
-
+,
         }
   )
       }
@@ -417,7 +417,7 @@ const hasSkipLink = document.querySelector('a[to="#main"], a[to="#content"]')
   type: 'missing-skip-link',
         element: 'body',
         message: 'No skip navigation link found',
-        suggestion: 'Add a skip link to main content for keyboard users'
+        suggestion: 'Add a skip link to main content for keyboard users',
       }
 
   )
@@ -435,7 +435,7 @@ const html = document.documentElement
         element: 'html',
         message: 'Missing lang attribute on html element',
         wcag: '3.1.1 (Level A)'
-
+,
       }
   )
     }
@@ -456,7 +456,7 @@ const html = document.documentElement
           element: link.href || 'unknown',
           message: 'Link has no accessible text',
           wcag: '2.4.4 (Level A)'
-
+,
         })
       } else if (['click here', 'read more', 'more'].includes(text.toLowerCase())) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -468,7 +468,7 @@ const html = document.documentElement
   type: 'generic-link-text',
           element: text,
           message: 'Link text is not descriptive',
-          suggestion: 'Use more descriptive link text that makes sense out of context'
+          suggestion: 'Use more descriptive link text that makes sense out of context',
         }
 
   )
@@ -491,7 +491,7 @@ const html = document.documentElement
           element: element.tagName.toLowerCase(),
           message: `Touch target too small: ${Math.round(rect.width)}x${Math.round(rect.height)}px`,
           suggestion: 'Increase touch target size to at least 44x44px'
-
+,
         }
   )
       }

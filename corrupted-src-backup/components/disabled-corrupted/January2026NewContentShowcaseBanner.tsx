@@ -19,7 +19,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
   e: "Neuromorphi, c, A, I", de, s, c: "Bra, i, n-inspired, computi, n, g" }
   ]; return (<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-      transiti, o, n = {/* TODO: Fix JSX expression */}
+      transiti, o, n = {/* TODO: Fix JSX expression */};
   n: , 0., 8 }}"
       classNa, m, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, rounde, d-2x, l, p-8, tex, t-whi, t, e"
     >
@@ -38,7 +38,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
         <div, className="te, x, t-center, m, b-8">
           <moti, o, n.div, initia, l={{ sca, l, e: , 0., 9 }}
             anima, t, e = {{ sc, a, l, e:  , 1 }}
-            transiti, o, n = {/* TODO: Fix JSX expression */}
+            transiti, o, n = {/* TODO: Fix JSX expression */};
   n: 0., 6 }}"
             classNa, m, e = "inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4"
           ></moti>"
@@ -46,7 +46,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
             January, 202, 6 - Revolutionary, AI, Breakthroughs
           <moti, o, n.h2, initia, l={{ opac, i, t, y:  , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {/* TODO: Fix JSX expression */}
+            transiti, o, n = {/* TODO: Fix JSX expression */};
   n: 0., 6 }}"
             classNa, m, e = "te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-white, t, o-bl, u, e-200, b, g-cl, i, p-text, tex, t-transparent, m, b-4"
           >
@@ -62,7 +62,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
         {/* Features, Gri, d */}
         <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-5, ga, p-6, m, b-8">
           { featur, e, s.m, a, p((fea, t, u, r, e, ind, e, x) = > (
-            transiti, o, n = {/* TODO: Fix JSX expression */}
+            transiti, o, n = {/* TODO: Fix JSX expression */};
   n: 0., 6 }}"
             classNa, m, e = "te, x, t-xl, tex, t-bl, u, e-100, ma, x-w-3xl, m, x-au, t, o"
           >
@@ -73,7 +73,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
           {/* TODO: Fix JSX expression */}
             <moti, o, n.div, ke, y = { featu, r, e.ti, t, l, e  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
               anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-              transiti, o, n = {/* TODO: Fix JSX expression */}
+              transiti, o, n = {/* TODO: Fix JSX expression */};
   n: 0., 6 }}"
               classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, tex, t-center, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"
             ></moti>"
@@ -85,7 +85,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
         {/* Sta, t, s */}
         <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
           anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-          transiti, o, n = {/* TODO: Fix JSX expression */}
+          transiti, o, n = {/* TODO: Fix JSX expression */};
   n: 0., 6 }}"
           classNa, m, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-8"
         >
@@ -113,7 +113,7 @@ const January2026NewContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX 
         {/* C, T, A */}
         <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
           anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-          transiti, o, n = {/* TODO: Fix JSX expression */}
+          transiti, o, n = {/* TODO: Fix JSX expression */};
   n: 0., 6 }}"
           classNa, m, e = "te, x, t-cent, e, r"
         >

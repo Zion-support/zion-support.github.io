@@ -17,7 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     utm
     ts: new Date().toISOString()
     ua: req.headers['user-agent'] |''
-  }
+  };
   const list: any[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'))
   list.push(entry)
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8')
@@ -36,7 +36,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).end()
   ensure()
   const { url, title, network, utm } = req.body || {}
-  const entry = { url, title, network, utm, ts: new Date().toISOString(), ua: req.headers['user-agent'] || '' }
+  const entry = { url, title, network, utm, ts: new Date().toISOString(), ua: req.headers['user-agent'] || '' };
   const list: any[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'))
   list.push(entry)
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8')
@@ -46,13 +46,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const list: any[] = JSON.parse (fs.readFileSync (FILE_PATH, 'utf8'))
   list.push (entry)
   fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8')
-  res.status (200).json ({ ok: true });  const entry = { url, title, network, utm, ts: new Date ().toISOString (), ua: req.headers['user - agent'] || '' }
+  res.status (200).json ({ ok: true });  const entry = { url, title, network, utm, ts: new Date ().toISOString (), ua: req.headers['user - agent'] || '' };
   const list: any[] = JSON.parse (fs.readFileSync (FILE_PATH, 'utf8'))
   list.push (entry)
   fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8')
   res.status (200).json ({ ok: true })
 }
   res.status(200).json({ ok: true })
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   res.status(200).json({ ok: true })
 }

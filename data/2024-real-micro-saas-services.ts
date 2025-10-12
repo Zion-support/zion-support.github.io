@@ -1,4 +1,4 @@
-export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024'
+export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024',
     path: '/services/real-micro-saas-platform-2024',
     description: 'Comprehensive micro-SaaS development and management platform',
     icon: 'Rocket',
@@ -14,7 +14,7 @@ export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024'
       professional: '$399/month'}
       enterprise: 'Custom'}
   },
-    name: 'Real SaaS Analytics 2024'
+    name: 'Real SaaS Analytics 2024',
     path: '/services/real-saas-analytics-2024',
     description: 'Comprehensive SaaS performance and user analytics',
     icon: 'BarChart3',
@@ -23,7 +23,7 @@ export const realMicroSaasServices2024 = [{name: 'Real Micro-SaaS Platform 2024'
 export const realMicroSaasServices2024 = [{/* TODO: Fix JSX expression */}
   l: '$399/month'}
       enterpris,
-  e: 'Custom'
+  e: 'Custom',
     }
   },
     nam,
@@ -54,7 +54,7 @@ export const realMicroSaasServices2024 = [{/* TODO: Fix JSX expression */}
       professiona,
   l: '$199/month',
       enterpris,
-  e: 'Custom'
+  e: 'Custom',
     }
   }
 ]
@@ -69,7 +69,7 @@ export const realMicroSaasStats2024 =
   categories: 4
   averageRating: 4.7
   activeUsers: 1200,
-export const realMicroSaasStats2024 = {}
+export const realMicroSaasStats2024 = {};
   totalService,
   s: 2,
   categorie,

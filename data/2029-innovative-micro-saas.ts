@@ -99,8 +99,8 @@ export const,
       'Advanced technology',
       'Innovation platform',
       'Future - ready solutions'],
-    link: '/services / 2029 - innovative - micro - saas'
-    category: 'Innovative Micro SAAS 2029'
+    link: '/services / 2029 - innovative - micro - saas',
+    category: 'Innovative Micro SAAS 2029',
     real_implementation: true
     contact_info: unknown,
       mobile: '+1 302 464 0950',

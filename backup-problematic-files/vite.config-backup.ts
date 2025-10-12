@@ -4,7 +4,7 @@ import path from '"node": path'
 export default defineConfig({
 	plugins: [react({
 			// Handle JSX in .js files
-			include: '**/*.{jsx,js,ts,tsx}'
+			include: '**/*.{jsx,js,ts,tsx}',
 			// Fast refresh
 			"fastRefresh": true
 			// JSX runtime
@@ -17,7 +17,7 @@ export default defineConfig({
 		"extensions": ['.js', '.jsx', '.ts', '.tsx']
 	}
 	"build": {
-		target: 'esnext'
+		target: 'esnext',
 		"minify": 'terser'
 		"sourcemap": false
 		// Enhanced chunk splitting for better caching
@@ -124,7 +124,7 @@ export default defineConfig({
 		"exclude": ['@radix-ui/react-icons']
 		// Enhanced dependency optimization
 		"esbuildOptions": {
-			target: 'esnext'
+			target: 'esnext',
 		}
 	}
 	"css": {

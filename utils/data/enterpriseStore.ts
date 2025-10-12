@@ -1,11 +1,11 @@
 const generateId = () => Math.random().toString(36).slice(2, 10)
-const seedCompany: CompanyRecord = {id: 'cmp_acme'
-  name: 'Acme Corporation'
-  slug: 'acme'
-  logoUrl: '/logo-acme.svg'
-  brandColor: '#4F46E5'
+const seedCompany: CompanyRecord = {id: 'cmp_acme',
+  name: 'Acme Corporation',
+  slug: 'acme',
+  logoUrl: '/logo-acme.svg',
+  brandColor: '#4F46E5',
   plan: {
-    tier: 'business'
+    tier: 'business',
     seatsPurchased: 25
     seatsUsed: 3
     usageLimits: {
@@ -36,7 +36,7 @@ export const store = {getCompanyBySlug(slug: string) {
       logoUrl: input.logoUrl
       brandColor: input.brandColor |'#111827'
       plan: input.plan |{
-        tier: 'teams'
+        tier: 'teams',
         seatsPurchased: 10
         seatsUsed: 0
         usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000 }}
@@ -150,7 +150,7 @@ export const store = {
   }
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {const company = companiesById[companyId]
     if (!company) return false
-    company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd }
+    company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd };
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } })
     return true
   }
@@ -192,7 +192,7 @@ export const store = {
       name: input.name || 'New Company',
       slug,
       logoUrl: input.logoUrl,
-const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany }
+const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
 const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany }
 export const store = {
   getCompanyBySlug(slug: string) {
@@ -291,7 +291,7 @@ export const store = {
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {
     const company = companiesById[companyId]
     if (!company) return false
-    company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd }
+    company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd };
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } })
     return true
   },

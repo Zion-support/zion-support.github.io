@@ -187,7 +187,7 @@ const analyzeResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
 }
     if (typeof window === 'undefined' || !('performance' in window)) return
     const resources = performance.getEntriesByType('resource')
-    const resourceMetrics = {/* TODO: Fix JSX expression */}
+    const resourceMetrics = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   totalResource,
@@ -289,7 +289,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
     const resourceMetrics = analyzeResourceTiming()
     const memoryUsage = getMemoryUsage()
     const networkInfo = getNetworkInfo()
-    const report = {/* TODO: Fix JSX expression */}
+    const report = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   timestam,

@@ -25,7 +25,7 @@ function processFile(filePath) {
         (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//')) ||,
         (line.includes('images:') && !line.includes('<meta') && !line.includes('//')) ||,
         (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||,
-function processFile(filePath) {/* TODO: Fix JSX expression */}
+function processFile(filePath) {/* TODO: Fix JSX expression */};
         (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||
         (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata'))
       ) {/* TODO: Fix JSX expression */}

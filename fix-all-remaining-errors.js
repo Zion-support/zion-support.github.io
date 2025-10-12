@@ -37,12 +37,12 @@ function fixCommonSyntaxErrors(content) {
     // Fix malformed function with missing return
     {
       pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}\s*const\s+(\w+)\s*=\s*\[\s*}/g,
-      replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  const $3 = [];\n  return ('
+      replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  const $3 = [];\n  return (',
     },
     // Fix malformed function with missing return
     {
       pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*const\s+(\w+)\s*=\s*\[\s*}/g,
-      replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  return ('
+      replacement: 'const $1: React.FC = () => {\n  const $2 = [];\n  return (',
     },
     // Fix malformed function with missing return
     {
@@ -63,17 +63,17 @@ function fixCommonSyntaxErrors(content) {
     // Fix malformed object with missing commas
     {
       pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-      replacement: '$1: $2,\n    $3:'
+      replacement: '$1: $2,\n    $3:',
     },
     // Fix malformed array with missing commas
     {
       pattern: /(\w+):\s*\[\s*}\s*(\w+):/g,
-      replacement: '$1: [],\n    $2:'
+      replacement: '$1: [],\n    $2:',
     },
     // Fix malformed object with missing commas
     {
       pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
-      replacement: '$1: $2,\n    $3:'
+      replacement: '$1: $2,\n    $3:',
     }
   ]
   for (const fix of objectFixes) {
@@ -89,17 +89,17 @@ function fixCommonSyntaxErrors(content) {
     // Fix malformed JSX attributes
     {
       pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
-      replacement: '$1="$2" $3'
+      replacement: '$1="$2" $3',
     },
     // Fix malformed JSX closing tags
     {
       pattern: /<(\w+)([^>]*)>([^<]*)<\/?$/gm,
-      replacement: '<$1$2>$3</$1>'
+      replacement: '<$1$2>$3</$1>',
     },
     // Fix malformed JSX with missing closing tags
     {
       pattern: /<(\w+)([^>]*)>([^<]*)<\/?$/gm,
-      replacement: '<$1$2>$3</$1>'
+      replacement: '<$1$2>$3</$1>',
     }
   ]
   for (const fix of jsxFixes) {
@@ -115,12 +115,12 @@ function fixCommonSyntaxErrors(content) {
     // Fix malformed comments
     {
       pattern: /\/\/\s*(\w+);/g,
-      replacement: '// $1'
+      replacement: '// $1',
     },
     // Fix malformed comments
     {
       pattern: /\/\/\s*(\w+);/g,
-      replacement: '// $1'
+      replacement: '// $1',
     }
   ]
   for (const fix of commentFixes) {

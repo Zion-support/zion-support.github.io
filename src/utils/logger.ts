@@ -159,7 +159,7 @@ class Logger {/* TODO: Fix JSX expression */}
     } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      context = {/* TODO: Fix JSX expression */}
+      context = {/* TODO: Fix JSX expression */};
   t: errorOrContextOrMetadata }
       meta = contextOrMetadata as Record
           <string>

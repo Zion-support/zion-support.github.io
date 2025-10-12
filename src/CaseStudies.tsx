@@ -131,7 +131,7 @@ const CaseStudies = () => {
       metrics: {
         roi: '320%',
         timeframe: '12 months',
-        teamSize: '20 people'
+        teamSize: '20 people',
       },
       image: '/api/placeholder/400/300',
       tags: ['Quantum Security', 'Financial Trading', 'AI Prediction', 'Risk Management']
@@ -1385,8 +1385,8 @@ const CaseStudies = () => {
                 Share Your Story
               </button>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Metrics Section */}
         <section className="py-20 relative">
@@ -1418,8 +1418,8 @@ const CaseStudies = () => {
                 )
               })}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Case Studies Section */}
         <section className="py-20 relative bg-gray-900/30">
@@ -1478,8 +1478,8 @@ const CaseStudies = () => {
                 )
               })}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Industries Section */}
         <section className="py-20 relative">
@@ -2476,7 +2476,7 @@ const CaseStudies = () => {
       ],
       technologies: ['AI/ML', 'Computer Vision', 'HIPAA Compliance', 'Predictive Analytics'],
       image: '🏥',
-      readTime: '5 min read'
+      readTime: '5 min read',
     },
     {
       id: 2,
@@ -2493,7 +2493,7 @@ const CaseStudies = () => {
       ],
       technologies: ['AI/ML', 'Risk Management', 'Fraud Detection', 'Compliance Automation'],
       image: '🏦',
-      readTime: '7 min read'
+      readTime: '7 min read',
     },
     {
       id: 3,
@@ -2510,7 +2510,7 @@ const CaseStudies = () => {
       ],
       technologies: ['IoT', 'Predictive Analytics', 'Automation', 'Quality Control'],
       image: '🏭',
-      readTime: '6 min read'
+      readTime: '6 min read',
     },
     {
       id: 4,
@@ -2527,7 +2527,7 @@ const CaseStudies = () => {
       ],
       technologies: ['E-commerce', 'AI Personalization', 'Inventory Management', 'Omnichannel'],
       image: '🛍️',
-      readTime: '8 min read'
+      readTime: '8 min read',
     },
     {
       id: 5,
@@ -2544,7 +2544,7 @@ const CaseStudies = () => {
       ],
       technologies: ['Cybersecurity', 'AI Threat Detection', 'Compliance', 'Automated Response'],
       image: '🏛️',
-      readTime: '6 min read'
+      readTime: '6 min read',
     },
     {
       id: 6,
@@ -2561,7 +2561,7 @@ const CaseStudies = () => {
       ],
       technologies: ['AI/ML', 'Learning Analytics', 'Adaptive Learning', 'Automated Assessment'],
       image: '🎓',
-      readTime: '7 min read'
+      readTime: '7 min read',
     }
   ]
   const industries = [
@@ -3715,8 +3715,8 @@ const CaseStudies = () => {
                 )
               })}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Case Studies Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -3807,8 +3807,8 @@ const CaseStudies = () => {
                 )
               })}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Testimonials Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
@@ -3858,8 +3858,8 @@ const CaseStudies = () => {
                 </button>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
@@ -3983,8 +3983,8 @@ const CaseStudies = () => {
                 </Link>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -4073,8 +4073,8 @@ const CaseStudies = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Case Studies Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -4135,8 +4135,8 @@ const CaseStudies = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Industries Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
@@ -4161,8 +4161,8 @@ const CaseStudies = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -4248,7 +4248,7 @@ export default function CaseStudies() {
         'Real-time monitoring of 1000+ risk factors',
         '$50M+ in risk mitigation savings'
       ],
-      image: '/images/case-studies/financial-risk.jpg'
+      image: '/images/case-studies/financial-risk.jpg',
     },
     {
       id: 3,
@@ -4263,7 +4263,7 @@ export default function CaseStudies() {
         'Predictive maintenance preventing 95% of breakdowns',
         '15% reduction in operational costs'
       ],
-      image: '/images/case-studies/manufacturing-ai.jpg'
+      image: '/images/case-studies/manufacturing-ai.jpg',
     },
     {
       id: 4,
@@ -4278,7 +4278,7 @@ export default function CaseStudies() {
         'Zero successful breaches since implementation',
         '50% reduction in security team workload'
       ],
-      image: '/images/case-studies/cybersecurity.jpg'
+      image: '/images/case-studies/cybersecurity.jpg',
     },
     {
       id: 5,
@@ -4293,7 +4293,7 @@ export default function CaseStudies() {
         '20% increase in average order value',
         'Real-time optimization across 500+ locations'
       ],
-      image: '/images/case-studies/retail-cx.jpg'
+      image: '/images/case-studies/retail-cx.jpg',
     },
     {
       id: 6,
@@ -4308,7 +4308,7 @@ export default function CaseStudies() {
         'Predictive maintenance reducing outages by 60%',
         '$100M+ in operational savings annually'
       ],
-      image: '/images/case-studies/energy-grid.jpg'
+      image: '/images/case-studies/energy-grid.jpg',
     }
   ]
   const industries = ['All', 'Healthcare', 'Financial Services', 'Manufacturing', 'Government', 'Retail', 'Energy & Utilities']
@@ -4381,10 +4381,10 @@ export default function CaseStudies() {
         efficiency: '85%',
         costReduction: '60%',
         timeToMarket: '70%',
-        customerSatisfaction: '95%'
+        customerSatisfaction: '95%',
       },
       image: '/api/placeholder/400/250',
-      category: 'AI & Automation'
+      category: 'AI & Automation',
     },
     {
       id: 2,
@@ -4397,10 +4397,10 @@ export default function CaseStudies() {
         efficiency: '90%',
         costReduction: '45%',
         timeToMarket: '80%',
-        customerSatisfaction: '98%'
+        customerSatisfaction: '98%',
       },
       image: '/api/placeholder/400/250',
-      category: 'Healthcare AI'
+      category: 'Healthcare AI',
     },
     {
       id: 3,
@@ -4413,10 +4413,10 @@ export default function CaseStudies() {
         efficiency: '75%',
         costReduction: '55%',
         timeToMarket: '65%',
-        customerSatisfaction: '92%'
+        customerSatisfaction: '92%',
       },
       image: '/api/placeholder/400/250',
-      category: 'Industrial AI'
+      category: 'Industrial AI',
     },
     {
       id: 4,
@@ -4429,10 +4429,10 @@ export default function CaseStudies() {
         efficiency: '80%',
         costReduction: '40%',
         timeToMarket: '75%',
-        customerSatisfaction: '96%'
+        customerSatisfaction: '96%',
       },
       image: '/api/placeholder/400/250',
-      category: 'Retail AI'
+      category: 'Retail AI',
     },
     {
       id: 5,
@@ -4445,10 +4445,10 @@ export default function CaseStudies() {
         efficiency: '70%',
         costReduction: '50%',
         timeToMarket: '85%',
-        customerSatisfaction: '94%'
+        customerSatisfaction: '94%',
       },
       image: '/api/placeholder/400/250',
-      category: 'Government Tech'
+      category: 'Government Tech',
     },
     {
       id: 6,
@@ -4461,10 +4461,10 @@ export default function CaseStudies() {
         efficiency: '85%',
         costReduction: '35%',
         timeToMarket: '90%',
-        customerSatisfaction: '97%'
+        customerSatisfaction: '97%',
       },
       image: '/api/placeholder/400/250',
-      category: 'EdTech'
+      category: 'EdTech',
     }
   ]
   const categories = ['All', 'AI & Automation', 'Healthcare AI', 'Industrial AI', 'Retail AI', 'Government Tech', 'EdTech']
@@ -4750,4 +4750,4 @@ export default CaseStudies
     </div>
   )
 }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></p></p></ul></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></p></p></ul></ul></ul></ul></ul></ul></li></li></li></li></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section></section>

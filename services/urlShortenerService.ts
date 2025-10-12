@@ -212,7 +212,7 @@ class UrlShortenerService {
     const clickEvent: ClickEvent = {
       id: this.generateId()
       ...clickData
-    }
+    };
     const urlClicks = this.clicks.get(shortCode) |[]
     urlClicks.push(clickEvent)
     this.clicks.set(shortCode, urlClicks)
@@ -273,7 +273,7 @@ class UrlShortenerService {
     const clickEvent: ClickEvent = {
       id: this.generateId(),
       ...clickData
-    }
+    };
     const urlClicks = this.clicks.get(shortCode) || []
     urlClicks.push(clickEvent)
     this.clicks.set(shortCode, urlClicks)
@@ -370,7 +370,7 @@ if (return) {
       id: this.generate_id (),
       ...click_data
     }
-
+;
     const url_clicks = this.clicks.get (short_code) || []
     url_clicks.push (click_event)
     this.clicks.set (short_code, url_clicks)

@@ -52,7 +52,7 @@ export const services: Service[] = [
       starter: '$29/month',
       professional: '$99/month',
       enterprise: '$299/month',
-      custom: 'Contact for enterprise pricing'
+      custom: 'Contact for enterprise pricing',
     },
     technologyStack: ['OpenAI GPT-4', 'Claude 3', 'Python', 'React', 'Node.js', 'PostgreSQL'],
     benefits: [
@@ -76,7 +76,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -97,7 +97,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$49/month',
       professional: '$149/month',
-      enterprise: '$399/month'
+      enterprise: '$399/month',
     },
     technologyStack: ['GPT-4', 'Claude 3', 'BERT', 'React', 'FastAPI', 'MongoDB'],
     benefits: [
@@ -120,7 +120,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -141,7 +141,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$79/month',
       professional: '$199/month',
-      enterprise: '$599/month'
+      enterprise: '$599/month',
     },
     technologyStack: ['Python', 'TensorFlow', 'PyTorch', 'React', 'FastAPI', 'Apache Kafka'],
     benefits: [
@@ -164,7 +164,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // IT Services
@@ -186,7 +186,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$99/month per user',
       professional: '$149/month per user',
-      enterprise: '$199/month per user'
+      enterprise: '$199/month per user',
     },
     technologyStack: ['Microsoft 365', 'AWS', 'Azure', 'Cisco', 'Fortinet', 'Veeam'],
     benefits: [
@@ -209,7 +209,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -230,7 +230,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$2,999/assessment',
       professional: '$5,999/comprehensive',
-      enterprise: '$12,999/enterprise'
+      enterprise: '$12,999/enterprise',
     },
     technologyStack: ['Nessus', 'Metasploit', 'Burp Suite', 'Wireshark', 'Custom tools'],
     benefits: [
@@ -253,7 +253,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // Micro SAAS
@@ -275,7 +275,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$19/month',
       professional: '$49/month',
-      enterprise: '$99/month'
+      enterprise: '$99/month',
     },
     technologyStack: ['React', 'Node.js', 'PostgreSQL', 'OpenAI API', 'Stripe'],
     benefits: [
@@ -298,7 +298,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -319,7 +319,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$15/month per user',
       professional: '$25/month per user',
-      enterprise: '$35/month per user'
+      enterprise: '$35/month per user',
     },
     technologyStack: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'Socket.io'],
     benefits: [
@@ -342,7 +342,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // Blockchain Services
@@ -364,7 +364,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$5,000/audit',
       professional: '$15,000/audit',
-      enterprise: '$50,000/audit'
+      enterprise: '$50,000/audit',
     },
     technologyStack: ['Solidity', 'Vyper', 'Foundry', 'Slither', 'Mythril'],
     benefits: [
@@ -387,7 +387,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // IoT & Edge Computing
@@ -409,7 +409,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$10/device/month',
       professional: '$25/device/month',
-      enterprise: '$50/device/month'
+      enterprise: '$50/device/month',
     },
     technologyStack: ['Python', 'MQTT', 'Kubernetes', 'InfluxDB', 'Grafana'],
     benefits: [
@@ -432,7 +432,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // Cloud & DevOps
@@ -454,7 +454,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$99/month',
       professional: '$299/month',
-      enterprise: '$799/month'
+      enterprise: '$799/month',
     },
     technologyStack: ['Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'Prometheus'],
     benefits: [
@@ -477,7 +477,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // Data & Analytics
@@ -499,7 +499,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$199/month',
       professional: '$499/month',
-      enterprise: '$1,299/month'
+      enterprise: '$1,299/month',
     },
     technologyStack: ['Snowflake', 'Apache Airflow', 'dbt', 'Tableau', 'Python'],
     benefits: [
@@ -522,7 +522,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ]
@@ -589,7 +589,7 @@ export const services: Service[] = [
       starter: '$29/month',
       professional: '$99/month',
       enterprise: '$299/month',
-      custom: 'Contact for enterprise pricing'
+      custom: 'Contact for enterprise pricing',
     },
     technologyStack: ['OpenAI GPT-4', 'Claude 3', 'Python', 'React', 'Node.js', 'PostgreSQL'],
     benefits: [
@@ -613,7 +613,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -634,7 +634,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$49/month',
       professional: '$149/month',
-      enterprise: '$399/month'
+      enterprise: '$399/month',
     },
     technologyStack: ['GPT-4', 'Claude 3', 'BERT', 'React', 'FastAPI', 'MongoDB'],
     benefits: [
@@ -657,7 +657,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -678,7 +678,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$79/month',
       professional: '$199/month',
-      enterprise: '$599/month'
+      enterprise: '$599/month',
     },
     technologyStack: ['Python', 'TensorFlow', 'PyTorch', 'React', 'FastAPI', 'Apache Kafka'],
     benefits: [
@@ -701,7 +701,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // IT Services
@@ -723,7 +723,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$99/month per user',
       professional: '$149/month per user',
-      enterprise: '$199/month per user'
+      enterprise: '$199/month per user',
     },
     technologyStack: ['Microsoft 365', 'AWS', 'Azure', 'Cisco', 'Fortinet', 'Veeam'],
     benefits: [
@@ -746,7 +746,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -767,7 +767,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$2,999/assessment',
       professional: '$5,999/comprehensive',
-      enterprise: '$12,999/enterprise'
+      enterprise: '$12,999/enterprise',
     },
     technologyStack: ['Nessus', 'Metasploit', 'Burp Suite', 'Wireshark', 'Custom tools'],
     benefits: [
@@ -790,7 +790,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // Micro SAAS
@@ -812,7 +812,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$19/month',
       professional: '$49/month',
-      enterprise: '$99/month'
+      enterprise: '$99/month',
     },
     technologyStack: ['React', 'Node.js', 'PostgreSQL', 'OpenAI API', 'Stripe'],
     benefits: [
@@ -835,7 +835,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -856,7 +856,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$15/month per user',
       professional: '$25/month per user',
-      enterprise: '$35/month per user'
+      enterprise: '$35/month per user',
     },
     technologyStack: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'Socket.io'],
     benefits: [
@@ -879,7 +879,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // Blockchain Services
@@ -901,7 +901,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$5,000/audit',
       professional: '$15,000/audit',
-      enterprise: '$50,000/audit'
+      enterprise: '$50,000/audit',
     },
     technologyStack: ['Solidity', 'Vyper', 'Foundry', 'Slither', 'Mythril'],
     benefits: [
@@ -924,7 +924,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // IoT & Edge Computing
@@ -946,7 +946,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$10/device/month',
       professional: '$25/device/month',
-      enterprise: '$50/device/month'
+      enterprise: '$50/device/month',
     },
     technologyStack: ['Python', 'MQTT', 'Kubernetes', 'InfluxDB', 'Grafana'],
     benefits: [
@@ -969,7 +969,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // Cloud & DevOps
@@ -991,7 +991,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$99/month',
       professional: '$299/month',
-      enterprise: '$799/month'
+      enterprise: '$799/month',
     },
     technologyStack: ['Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'Prometheus'],
     benefits: [
@@ -1014,7 +1014,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // Data & Analytics
@@ -1036,7 +1036,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$199/month',
       professional: '$499/month',
-      enterprise: '$1,299/month'
+      enterprise: '$1,299/month',
     },
     technologyStack: ['Snowflake', 'Apache Airflow', 'dbt', 'Tableau', 'Python'],
     benefits: [
@@ -1059,7 +1059,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ]
@@ -1073,7 +1073,6 @@ export const getCategories = () => {
   return Array.from(new Set(services.map((service) => service.category)))
 }
 export interface Service {id: string
->>>>>>> 34a771692059 (feat(content): add 3 new services and advertise on homepage; fix services page conflicts; minimal fixes to admin pages and eslint)
 export interface Service {
   id: string
   name: string
@@ -1119,7 +1118,7 @@ export const services: Service[] = [
       starter: '$29/month',
       professional: '$99/month',
       enterprise: '$299/month',
-      custom: 'Contact for enterprise pricing'
+      custom: 'Contact for enterprise pricing',
     },
     technologyStack: ['OpenAI GPT-4', 'Claude 3', 'Python', 'React', 'Node.js', 'PostgreSQL'],
     benefits: [
@@ -1143,7 +1142,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -1163,7 +1162,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$49/month',
       professional: '$149/month',
-      enterprise: '$399/month'
+      enterprise: '$399/month',
     },
     technologyStack: ['GPT-4', 'Claude 3', 'BERT', 'React', 'FastAPI', 'MongoDB'],
     benefits: [
@@ -1186,7 +1185,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -1206,7 +1205,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$79/month',
       professional: '$199/month',
-      enterprise: '$599/month'
+      enterprise: '$599/month',
     },
     technologyStack: ['Python', 'TensorFlow', 'PyTorch', 'React', 'FastAPI', 'Apache Kafka'],
     benefits: [
@@ -1229,7 +1228,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -1247,7 +1246,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$59/month per seat',
       professional: '$129/month per seat',
-      enterprise: 'Contact us'
+      enterprise: 'Contact us',
     },
     technologyStack: ['Node.js', 'React', 'OpenAI API', 'PostgreSQL'],
     benefits: [
@@ -1267,7 +1266,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -1285,7 +1284,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$149/month',
       professional: '$399/month',
-      enterprise: 'Contact us'
+      enterprise: 'Contact us',
     },
     technologyStack: ['TypeScript', 'Kubernetes', 'Terraform', 'AWS', 'GCP', 'Azure'],
     benefits: [
@@ -1304,7 +1303,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -1322,7 +1321,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$299/month',
       professional: '$799/month',
-      enterprise: 'Contact us'
+      enterprise: 'Contact us',
     },
     technologyStack: ['Python', 'FastAPI', 'Elasticsearch', 'OpenAI API'],
     benefits: [
@@ -1341,7 +1340,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // IT Services
@@ -1362,7 +1361,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$99/month per user',
       professional: '$149/month per user',
-      enterprise: '$199/month per user'
+      enterprise: '$199/month per user',
     },
     technologyStack: ['Microsoft 365', 'AWS', 'Azure', 'Cisco', 'Fortinet', 'Veeam'],
     benefits: [
@@ -1385,7 +1384,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -1405,7 +1404,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$2,999/assessment',
       professional: '$5,999/comprehensive',
-      enterprise: '$12,999/enterprise'
+      enterprise: '$12,999/enterprise',
     },
     technologyStack: ['Nessus', 'Metasploit', 'Burp Suite', 'Wireshark', 'Custom tools'],
     benefits: [
@@ -1428,7 +1427,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // Micro SAAS
@@ -1449,7 +1448,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$19/month',
       professional: '$49/month',
-      enterprise: '$99/month'
+      enterprise: '$99/month',
     },
     technologyStack: ['React', 'Node.js', 'PostgreSQL', 'OpenAI API', 'Stripe'],
     benefits: [
@@ -1472,7 +1471,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -1492,7 +1491,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$15/month per user',
       professional: '$25/month per user',
-      enterprise: '$35/month per user'
+      enterprise: '$35/month per user',
     },
     technologyStack: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'Socket.io'],
     benefits: [
@@ -1515,7 +1514,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // Blockchain Services
@@ -1536,7 +1535,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$5,000/audit',
       professional: '$15,000/audit',
-      enterprise: '$50,000/audit'
+      enterprise: '$50,000/audit',
     },
     technologyStack: ['Solidity', 'Vyper', 'Foundry', 'Slither', 'Mythril'],
     benefits: [
@@ -1559,7 +1558,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // IoT & Edge Computing
@@ -1580,7 +1579,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$10/device/month',
       professional: '$25/device/month',
-      enterprise: '$50/device/month'
+      enterprise: '$50/device/month',
     },
     technologyStack: ['Python', 'MQTT', 'Kubernetes', 'InfluxDB', 'Grafana'],
     benefits: [
@@ -1603,7 +1602,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // Cloud & DevOps
@@ -1624,7 +1623,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$99/month',
       professional: '$299/month',
-      enterprise: '$799/month'
+      enterprise: '$799/month',
     },
     technologyStack: ['Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'Prometheus'],
     benefits: [
@@ -1647,7 +1646,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   // Data & Analytics
@@ -1668,7 +1667,7 @@ export const services: Service[] = [
     pricing: {
       starter: '$199/month',
       professional: '$499/month',
-      enterprise: '$1,299/month'
+      enterprise: '$1,299/month',
     },
     technologyStack: ['Snowflake', 'Apache Airflow', 'dbt', 'Tableau', 'Python'],
     benefits: [
@@ -1691,7 +1690,7 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ]

@@ -77,7 +77,7 @@ export const securityConfig = {
     encodeSpecialChars: true
     trimWhitespace: true
     removeNullBytes: true,
-export const securityConfig = {/* TODO: Fix JSX expression */}
+export const securityConfig = {/* TODO: Fix JSX expression */};
     },
     reportOnl,
   y: false},

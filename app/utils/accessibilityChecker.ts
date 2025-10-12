@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
-=======
 
 
-=======
+
+
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -18,44 +11,25 @@ const AccessibilityCheckerPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-<<<<<<< HEAD
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-=======
-      description: 'Advanced AI technology to transform your business operations and improve efficiency';}
->>>>>>> origin/main
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-<<<<<<< HEAD
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-=======
-      description: 'Lightning-fast processing and real-time analytics for optimal results';}
->>>>>>> origin/main
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-<<<<<<< HEAD
-      description: 'Bank-level security with encryption and compliance standards'
-=======
-      description: 'Bank-level security with encryption and compliance standards';}
->>>>>>> origin/main
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international businesses',
     }
   ];
 
-=======
-      description: 'Worldwide deployment and support for international businesses';}
-    }
-  ]
->>>>>>> origin/main
->>>>>>> origin/main
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -66,7 +40,6 @@ const AccessibilityCheckerPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-<<<<<<< HEAD
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -77,12 +50,8 @@ const AccessibilityCheckerPage: React.FC = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-        </section>
-=======
->>>>>>> origin/main
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -109,12 +78,8 @@ const AccessibilityCheckerPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-        </section>
-=======
->>>>>>> origin/main
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AccessibilityChecker?
@@ -133,22 +98,14 @@ const AccessibilityCheckerPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-<<<<<<< HEAD
             )</div>
-=======
-            ))}
->>>>>>> origin/main
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-<<<<<<< HEAD
-        </section>
-=======
->>>>>>> origin/main
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
@@ -164,22 +121,14 @@ const AccessibilityCheckerPage: React.FC = () => {
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-<<<<<<< HEAD
             )</div>
-=======
-            ))}
->>>>>>> origin/main
           </div>
         ))
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-        </section>
-=======
->>>>>>> origin/main
-        <div className="max-w-4xl mx-auto text-center">
+      <section$1>
+        <div$2>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -202,16 +151,9 @@ const AccessibilityCheckerPage: React.FC = () => {
       </section>
     </div>
   );
-<<<<<<< HEAD
 };
 
 export default AccessibilityCheckerPage;
-=======
-}
-
-export default AccessibilityCheckerPage;
->>>>>>> main
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
@@ -219,8 +161,8 @@ export default AccessibilityCheckerPage;
         <meta name="description" content="Professional AccessibilityChecker services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="accessibilityChecker, AI solutions, IT services, Zion Tech Group, accessibilitychecker" /></$1>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
+      <section$1>
+        <div$2></div>
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -237,8 +179,8 @@ export default AccessibilityCheckerPage;
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More</$1></$1></$1></$1></$1>
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
+      <section$1>
+        <div$2></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AccessibilityChecker?</$1>
@@ -254,8 +196,8 @@ export default AccessibilityCheckerPage;
             ))}
           </div></$1></$1>
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
-        <div className="max-w-7xl mx-auto"></div>
+      <section$1>
+        <div$2></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits</$1>
@@ -269,8 +211,8 @@ export default AccessibilityCheckerPage;
             ))}
           </div></$1></$1>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
+      <section$1>
+        <div$2></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?</$1>
@@ -287,5 +229,3 @@ export default AccessibilityCheckerPage;
 }
 export default AccessibilityCheckerPage
 </span></button></button></button></button></p></p></p></p></h1></h2></h2></h2>
->>>>>>> origin/main
->>>>>>> origin/main

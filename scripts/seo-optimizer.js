@@ -279,7 +279,7 @@ ${/* TODO: Fix JSX expression */}
 
 function optimizeMetaTags() {/* TODO: Fix JSX expression */}
 }
-  const metaOptimizations = {/* TODO: Fix JSX expression */}
+  const metaOptimizations = {/* TODO: Fix JSX expression */};
   }
   
   fs.writeFileSync()
@@ -325,7 +325,7 @@ Allo,
 
 function generateStructuredData() {/* TODO: Fix JSX expression */}
 }
-  const structuredData = {/* TODO: Fix JSX expression */}
+  const structuredData = {/* TODO: Fix JSX expression */};
     },"
     "address": {/* TODO: Fix JSX expression */}
     },"

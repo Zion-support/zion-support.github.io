@@ -32,7 +32,6 @@ export function buildPressRelease(
   type: PressReleaseType,
   params: {
     companyName: string
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     date: string
     raiseAmount?: string
     tokenName?: string
@@ -56,7 +55,7 @@ export function buildTimeline(startDate: Date) {
     { label: 'Week 1: Closed Beta Invite', date: fmt(addDays(startDate, 0)) }
     { label: 'Week 2: ZionGPT Core Reveal', date: fmt(addDays(startDate, 7)) }
     {
-      label: 'Week 3: Token Airdrop Snapshot'
+      label: 'Week 3: Token Airdrop Snapshot',
       date: fmt(addDays(startDate, 14))
     }
     { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
@@ -104,7 +103,6 @@ function title_case() {
   return s.replace (
     /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export type MediaBundle = 'general' | 'web3' | 'institutional'
 export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale'
 export type MediaAsset = {
@@ -129,7 +127,7 @@ export function getDefaultAssets(bundle: MediaBundle): MediaAsset[] {
     web3: web3Legal,
     institutional: institutionalLegal,
   }
-  const brandGuidelines: MediaAsset = { path: '', filename: 'brand/brand-guidelines.md', type: 'text', content: buildBrandGuidelines() }
+  const brandGuidelines: MediaAsset = { path: '', filename: 'brand/brand-guidelines.md', type: 'text', content: buildBrandGuidelines() };
   const colors: MediaAsset = { path: '', filename: 'brand/colors-typography.json', type: 'text', content: JSON.stringify(buildColorsAndTypography(), null, 2) }
   return [...common, ...social, brandGuidelines, colors, ...legalByBundle[bundle]]
 }
@@ -142,7 +140,7 @@ export function buildColorsAndTypography() {
       primary: '#0A84FF',
       secondary: '#0B1220',
       accent: '#C3F53C',
-      neutral: '#9CA3AF'
+      neutral: '#9CA3AF',
     },
     typography: {
       heading: { family: 'Inter', weight: 700 },

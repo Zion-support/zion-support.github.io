@@ -84,8 +84,8 @@ const AIVoiceCloningPage: React.FC = () => {
                   Listen to Samples,
   
               </div>
-            </div>
-          </section>
+        </div>
+      </section>
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Advanced Voice Cloning Features
@@ -158,8 +158,8 @@ const AIVoiceCloningPage: React.FC = () => {
                   <span>Call +1 302 464 0950</span>
                 </a>
               </div>
-            </div>
-          </section>
+        </div>
+      </section>
         </main>
         <Footer />
       </div>

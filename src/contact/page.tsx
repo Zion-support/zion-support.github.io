@@ -19,7 +19,7 @@ $4})
   const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     message: '',
     budget: '',
-    timeline: ''
+    timeline: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -51,8 +51,8 @@ $4})
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
-    hours: 'Mon-Fri: 9AM-6PM EST'
-  }
+    hours: 'Mon-Fri: 9AM-6PM EST',
+  };
   const services = [
     'AI Services',
     'IT Services',
@@ -111,7 +111,7 @@ export default ContactPage,
       phone: '+1 (302) 464-0950',
       email: 'kleber@ziontechgroup.com',
       hours: 'Mon-Fri: 9AM-6PM EST',
-      timezone: 'Eastern Time'
+      timezone: 'Eastern Time',
     },
     {
       city: 'San Francisco, CA',
@@ -119,7 +119,7 @@ export default ContactPage,
       phone: '+1 (415) 555-0123',
       email: 'sf@ziontechgroup.com',
       hours: 'Mon-Fri: 9AM-6PM PST',
-      timezone: 'Pacific Time'
+      timezone: 'Pacific Time',
     },
     {
       city: 'London, UK',
@@ -127,25 +127,25 @@ export default ContactPage,
       phone: '+44 20 7946 0958',
       email: 'london@ziontechgroup.com',
       hours: 'Mon-Fri: 9AM-6PM GMT',
-      timezone: 'Greenwich Mean Time'
+      timezone: 'Greenwich Mean Time',
     }
   ]
   const faqs = [
     {
       question: 'How quickly can you start my project?',
-      answer: 'We can typically begin most projects within 1-2 weeks of contract signing. For urgent projects, we offer expedited onboarding.'
+      answer: 'We can typically begin most projects within 1-2 weeks of contract signing. For urgent projects, we offer expedited onboarding.',
     },
     {
       question: 'Do you offer ongoing support?',
-      answer: 'Yes, we provide comprehensive support and maintenance packages for all our solutions, including 24/7 monitoring and updates.'
+      answer: 'Yes, we provide comprehensive support and maintenance packages for all our solutions, including 24/7 monitoring and updates.',
     },
     {
       question: 'What industries do you serve?',
-      answer: 'We serve clients across healthcare, finance, manufacturing, retail, education, and government sectors.'
+      answer: 'We serve clients across healthcare, finance, manufacturing, retail, education, and government sectors.',
     },
     {
       question: 'Do you work with small businesses?',
-      answer: 'Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.'
+      answer: 'Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.',
     }
   ]
   if (isSubmitted) {

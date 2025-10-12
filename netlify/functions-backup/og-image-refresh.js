@@ -1,4 +1,4 @@
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/20 * * * *' }
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   const { execSync } = require('child_process')
@@ -32,7 +32,7 @@ exports.config = { schedule: '*/20 * * * *' } exports.handler = async function()
         tool: 'og-image-refresh' }) } } catch (e) {return { statusCode: 200,
         body: JSON.stringify({ok: false),
         error: String(e,)}) } } }'
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/20 * * * *' } exports.handler = async function() {' const { execSync } = require('child_process');' const run = (cmd) => execSync(cmd) {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true,

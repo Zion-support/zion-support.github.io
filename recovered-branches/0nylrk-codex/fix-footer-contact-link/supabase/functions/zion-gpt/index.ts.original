@@ -4,12 +4,7 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
->>>>>>> origin/auto/autonomy-17186719616
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -37,12 +32,7 @@ serve(async (req) => {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`,
-<<<<<<< HEAD
         "Content-Type": "application/json"},
-=======
-        "Content-Type": "application/json",
-      },
->>>>>>> origin/auto/autonomy-17186719616
       body: JSON.stringify({
         model: model,
         messages: [{ 
@@ -50,13 +40,7 @@ serve(async (req) => {
           content: prompt 
         }],
         max_tokens: maxTokens,
-<<<<<<< HEAD
         temperature: temperature})});
-=======
-        temperature: temperature,
-      }),
-    });
->>>>>>> origin/auto/autonomy-17186719616
 
     if (!response.ok) {
       const errorData = await response.json();
@@ -73,12 +57,7 @@ serve(async (req) => {
         tokensUsed: data.usage?.total_tokens || 0
       }),
       {
-<<<<<<< HEAD
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
-=======
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
->>>>>>> origin/auto/autonomy-17186719616
     );
   } catch (error) {
     console.error("Error in zion-gpt function:", error);
@@ -87,12 +66,7 @@ serve(async (req) => {
       JSON.stringify({ error: error.message }),
       {
         status: 500,
-<<<<<<< HEAD
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
-=======
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      }
->>>>>>> origin/auto/autonomy-17186719616
     );
   }
 });

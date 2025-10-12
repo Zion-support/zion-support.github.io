@@ -1,11 +1,11 @@
 // netlify/functions/repo-graph-runner.js
-exports.config = { schedule: '0 5 * * 1' }
+exports.config = { schedule: '0 5 * * 1' };
 exports.handler = async function () {
   const { execSync } = require('child_process')
   try {execSync('node automation/repo-knowledge-graph.cjs || true', {)
       stdio: inherit),
         shell: true}
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '0 5 * * 1' }
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   const { execSync } = require('child_process')
@@ -40,7 +40,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         task: 'repo-graph-runner' }) } } catch (e) {return { statusCode: 200,
         body: JSON.stringify({ok: false),
         error: String(e,)}) } } }'
-// netlify/functions/repo-graph-runner.js exports.config = {/* TODO: Fix JSX expression */}
+// netlify/functions/repo-graph-runner.js exports.config = {/* TODO: Fix JSX expression */};
   e: '0 5 * * 1' } exports.handler = async function() {' const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true,"

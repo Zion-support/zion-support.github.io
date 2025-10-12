@@ -144,7 +144,7 @@ function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
     successful: 0
     failed: 0,
     methods: { direct: 0, theirs: 0, ours: 0, manual: 0, failed: 0 },
-// const results = {/* TODO: Fix JSX expression */}
+// const results = {/* TODO: Fix JSX expression */};
   d: 0 }}}
 
 //Merge each branch

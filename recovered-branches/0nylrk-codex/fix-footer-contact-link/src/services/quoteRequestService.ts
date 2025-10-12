@@ -51,7 +51,7 @@ export const quoteRequestService = {
   },
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
-    const updates: any = { status }
+    const updates: any = { status };
     // If marking as responded, set replied_at
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()

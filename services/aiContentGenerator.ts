@@ -52,7 +52,7 @@ export class AIContentGeneratorService {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
       const response = await fetch(`${this.baseUrl}/content/generate`, {
-        method: 'POST'
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
           'Content-Type': 'application/json'}
@@ -159,35 +159,35 @@ if ( {) {
   async get_templates (): Promise < ContentTemplate[]> {
     return [
       {
-        id: 'blog - post - starter'
-        name: 'Blog Post Starter'
-        description: 'Professional blog post template with SEO optimization'
-        type: 'blog - post'
+        id: 'blog - post - starter',
+        name: 'Blog Post Starter',
+        description: 'Professional blog post template with SEO optimization',
+        type: 'blog - post',
         preview: 'Create engaging blog posts that rank well in search engines...',
         price: 29
       }
       {
-        id: 'social - media - campaign'
-        name: 'Social Media Campaign'
-        description: 'Complete social media content strategy and posts'
-        type: 'social - media'
+        id: 'social - media - campaign',
+        name: 'Social Media Campaign',
+        description: 'Complete social media content strategy and posts',
+        type: 'social - media',
         preview: 'Engage your audience with compelling social media content...',
         price: 49
       }
       {
-        id: 'email - sequence'
-        name: 'Email Sequence'
-        description: 'Convert prospects with persuasive email sequences'
-        type: 'email'
+        id: 'email - sequence',
+        name: 'Email Sequence',
+        description: 'Convert prospects with persuasive email sequences',
+        type: 'email',
         preview: 'Build relationships and drive sales with email automation...',
         price: 39
       }
       {
-        id: 'landing - page - copy'
-        name: 'Landing Page Copy'
-        description: 'High-converting landing page content'
-        type: 'landing-page'
-        preview: 'Turn visitors into customers with compelling copy...'
+        id: 'landing - page - copy',
+        name: 'Landing Page Copy',
+        description: 'High-converting landing page content',
+        type: 'landing-page',
+        preview: 'Turn visitors into customers with compelling copy...',
         price: 59
 
   async getTemplates(): Promise<ContentTemplate[]> {
@@ -419,15 +419,15 @@ ${request.topic} represents a significant opportunity for organizations looking 
 // Pricing tiers for the AI Content Generator
 export const AI_CONTENT_PRICING = {
   starter: {
-    name: 'Starter'
+    name: 'Starter',
     price: 29
     period: '/month',
     features: [
       '100 content generations per month_basic templatesSEO analysis_email support_standard quality'
     ]
-  }
+  };
   professional: {
-    name: 'Professional'
+    name: 'Professional',
     price: 99
     period: '/month',
     features: [
@@ -435,9 +435,9 @@ export const AI_CONTENT_PRICING = {
     ]
   }
   enterprise: {
-    name: 'Enterprise'
+    name: 'Enterprise',
     price: 299
-    period: '/month'
+    period: '/month',
     features: [
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]
@@ -469,8 +469,6 @@ export const AI_CONTENT_PRICING = {
     features: [
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 ## Key Points

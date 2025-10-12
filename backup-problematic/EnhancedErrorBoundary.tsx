@@ -7,7 +7,7 @@ interface State {/* TODO: Fix JSX expression */}
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
   static getDerivedStateFromError(error: Error): State {,
     return { hasError: true, error }

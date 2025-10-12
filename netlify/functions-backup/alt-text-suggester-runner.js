@@ -20,7 +20,7 @@ exports.config = {schedule: '0 */2 * * *'} // every 2 hours
   r: res.stderr || '',
   }
 }
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '0 */2 * * *'} // every 2 hours
 }
 exports.handler = async () => {const logs = []}

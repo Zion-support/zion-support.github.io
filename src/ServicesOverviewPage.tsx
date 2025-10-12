@@ -461,8 +461,8 @@ export default function ServicesOverviewPage() {
                 </a>
               </Button>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Contact Info Banner */}
         <section className="py-8 bg-zion-blue-light border-b border-zion-blue-light">
@@ -496,8 +496,8 @@ export default function ServicesOverviewPage() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Service Categories Overview */}
         <section className="py-20 bg-zion-blue">
@@ -556,8 +556,8 @@ export default function ServicesOverviewPage() {
                 </Card>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Key Benefits */}
         <section className="py-20 bg-zion-blue-dark">
@@ -602,8 +602,8 @@ export default function ServicesOverviewPage() {
                 <p className="text-zion-slate-light">24/7 technical support and dedicated account management</p>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Pricing Tiers */}
         <section className="py-20 bg-zion-blue">
@@ -650,8 +650,8 @@ export default function ServicesOverviewPage() {
                 </Card>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Service Highlights */}
         <section className="py-20 bg-zion-blue-dark">
@@ -712,8 +712,8 @@ export default function ServicesOverviewPage() {
                 <p className="text-zion-slate-light">Built with emerging technologies and forward-thinking architecture</p>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-blue">
@@ -761,8 +761,8 @@ export default function ServicesOverviewPage() {
                 Monday - Friday: 9:00 AM - 6:00 PM EST
               </p>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </main>
       
       <Footer />

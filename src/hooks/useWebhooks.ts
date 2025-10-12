@@ -28,7 +28,7 @@ export const useWebhooks = () => {
           events: ['user.created', 'user.updated'],
           isActive: true,
           createdAt: '2024-01-01T00:00:00Z',
-          lastTriggered: '2024-01-15T10:30:00Z'
+          lastTriggered: '2024-01-15T10:30:00Z',
         },
         {
           id: '2',
@@ -37,7 +37,7 @@ export const useWebhooks = () => {
           events: ['payment.completed', 'payment.failed'],
           isActive: true,
           createdAt: '2024-01-02T00:00:00Z',
-          lastTriggered: '2024-01-14T15:45:00Z'
+          lastTriggered: '2024-01-14T15:45:00Z',
         }
       ];
       setWebhooks(mockWebhooks);

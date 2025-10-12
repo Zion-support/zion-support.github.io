@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 
 export interface InnovativeMicroSaas {
 export interface InnovativeMicroSaas {;
 
-=======
-export interface InnovativeMicroSaas {
->>>>>>> origin/auto/autonomy-17186719616
   id: string;
   name: string;
   tagline: string;
@@ -36,7 +32,6 @@ export interface InnovativeMicroSaas {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
 
 
 
@@ -1004,13 +999,11 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   }
 ];
 
 
-=======
     website: string;
   };
   realImplementation: boolean;
@@ -1278,4 +1271,3 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     reviews: 1600
   }
 ];
->>>>>>> origin/auto/autonomy-17186719616

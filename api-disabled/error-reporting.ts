@@ -54,5 +54,5 @@
   t: true }, {/* TODO: Fix JSX expression */}
   e: errorReport.timestamp} shor)
   t: true } ] }] }) })} } catch (error) {/* TODO: Fix JSX expression */}
-  alert: '} error)} } // Get error reports (for admin dashboard) export async function getErrorReports() { return errorReports} '
+  alert: '} error)} } // Get error reports (for admin dashboard) export async function getErrorReports() { return errorReports} ',
 `

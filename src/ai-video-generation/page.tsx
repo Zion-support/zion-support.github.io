@@ -84,8 +84,8 @@ const AIVideoGenerationPage: React.FC = () => {
                   Watch Demo,
   
               </div>
-            </div>
-          </section>
+        </div>
+      </section>
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Powerful AI Video Features
@@ -158,8 +158,8 @@ const AIVideoGenerationPage: React.FC = () => {
                   <span>Call +1 302 464 0950</span>
                 </a>
               </div>
-            </div>
-          </section>
+        </div>
+      </section>
         </main>
         <Footer />
       </div>

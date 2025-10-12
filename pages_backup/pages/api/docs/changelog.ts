@@ -2,7 +2,7 @@
   if (req.method === 'POST') {
     try {
       const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body
-      const payload = { content: body?.content || '' }
+      const payload = { content: body?.content || '' };
       fs.mkdirSync(path.dirname(filePath), { recursive: true })
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2))
       res.status(200).json({ ok: true })
@@ -34,7 +34,7 @@ if ( {) {
     try {
       const body =
         typeof req.body === "string" ? JSON.parse (req.body) : req.body
-      const payload = { content: body?.content || "" }
+      const payload = { content: body?.content || "" };
       fs.mkdir_sync (path.dirname (file_path), { recursive: true })
       fs.writeFileSync (file_path, JSON.stringify (payload, null, 2))
       res.status (200).json ({ ok: true })
@@ -69,5 +69,3 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

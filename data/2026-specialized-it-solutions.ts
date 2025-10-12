@@ -223,14 +223,14 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup.com'}  mobil,
-  e: '+1 302 464 0950'
+  e: '+1 302 464 0950',
   emai,
-  l: 'kleber@ziontechgroup.com'
+  l: 'kleber@ziontechgroup.com',
   addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
   websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s://ziontechgroup.com',
 }
   mobil,
   e: '+1 302 464 0950',
@@ -241,14 +241,14 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'}  mobil,
-  e: '+1 302 464 0950'
+  e: '+1 302 464 0950',
   emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com'
+  l: 'kleber@ziontechgroup && ziontechgroup.com',
   addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',
   websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com'
+  s://ziontechgroup && ziontechgroup.com',
   i,
   d: string, nam,
   e: string,
@@ -325,7 +325,7 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     description: unknown,
   websit,
   e: 'http,
-  s://ziontechgroup.com'
+  s://ziontechgroup.com',
 }
 export const,
   specializedITSolutions2026: SpecializedITSolution2026[] = [,
@@ -355,8 +355,8 @@ export const,
       'Custom automation workflows',
       'Advanced analytics and reporting'],
     popular: true,
-    icon: ''
-    color: 'from - blue - 600 to - indigo - 600'
+    icon: '',
+    color: 'from - blue - 600 to - indigo - 600',
     text_color: 'text - blue - 400',
     link: 'https://ziontechgroup.com / cloud - infrastructure - automation',
     market_position: unknown,
@@ -364,7 +364,7 @@ export const,
     target_audience: unknown,
       'DevOps teams, Cloud architects, IT operationstups, Enterprises',
     trial_days: 14,
-    setup_time: '4 - 6 hours'
+    setup_time: '4 - 6 hours',
     category: 'Cloud Infrastructure & DevOps',
     real_service: true,
     technology: [,
@@ -419,13 +419,13 @@ export const,
       'Security compliance'],
     roi: 'Organizations report 200% ROI through reduced infrastructure costs and improved operational efficiency.',
     competitors: ['Terraform Cloud', 'AWS CloudFormation', 'Pulumi', 'Ansible'],
-    market_size: '$45.2B cloud infrastructure market'
-    growth_rate: '25% annual growth'
+    market_size: '$45.2B cloud infrastructure market',
+    growth_rate: '25% annual growth',
     contact_info: contact
     real_implementation: true
     implementation_details: unknown,
       'Cloud - native infrastructure automation platform with AI - powered optimization, multi - cloud orchestration, and comprehensive DevOps tools.',
-    launch_date: '2024 - 12 - 01'
+    launch_date: '2024 - 12 - 01',
     customers: 89
     rating: 4 && 4.8
     reviews: 45,
@@ -489,8 +489,8 @@ export const,
       'Advanced threat hunting capabilities',
       'Comprehensive security reporting'],
     popular: true,
-    icon: ''
-    color: 'from - red - 600 to - pink - 600'
+    icon: '',
+    color: 'from - red - 600 to - pink - 600',
     text_color: 'text - red - 400',
     link: 'https://ziontechgroup.com / ai - cybersecurity - threat - intelligence',
     market_position: unknown,
@@ -498,7 +498,7 @@ export const,
     target_audience: unknown,
       'Security teams, IT administrators, Small to medium businesses, Enterprises',
     trial_days: 14,
-    setup_time: '3 - 4 hours'
+    setup_time: '3 - 4 hours',
     category: 'Cybersecurity & Threat Intelligence',
     real_service: true,
     technology: [,
@@ -552,13 +552,13 @@ export const,
       'Compliance reporting'],
     roi: 'Organizations see 300% ROI through improved security posture and reduced breach risks.',
     competitors: ['CrowdStrike', 'Palo Alto Networks', 'Symantec', 'McAfee'],
-    market_size: '$20.1B cybersecurity market'
-    growth_rate: '32% annual growth'
+    market_size: '$20.1B cybersecurity market',
+    growth_rate: '32% annual growth',
     contact_info: contact
     real_implementation: true
     implementation_details: unknown,
       'AI - powered cybersecurity platform with machine learning algorithms for threat detection, automated response, and comprehensive security analytics.',
-    launch_date: '2024 - 11 - 15'
+    launch_date: '2024 - 11 - 15',
     customers: 156
     rating: 4 && 4.7
     reviews: 78,
@@ -624,8 +624,8 @@ export const,
       'Advanced analytics and visualization',
       'API for custom integrations'],
     popular: false,
-    icon: ''
-    color: 'from - green - 600 to - emerald - 600'
+    icon: '',
+    color: 'from - green - 600 to - emerald - 600',
     text_color: 'text - green - 400',
     link: 'https://ziontechgroup.com / ai - data - engineering - platform',
     market_position: unknown,
@@ -633,7 +633,7 @@ export const,
     target_audience: unknown,
       'Data engineers, Data scientists, Analytics teams, IT departments',
     trial_days: 14,
-    setup_time: '3 - 4 hours'
+    setup_time: '3 - 4 hours',
     category: 'Data Engineering & Analytics',
     real_service: true,
     technology: [,
@@ -688,13 +688,13 @@ export const,
       'Data governance'],
     roi: 'Data teams report 250% ROI through improved pipeline efficiency and data quality.',
     competitors: ['Apache Airflow', 'DataFactory', 'Fivetran', 'Talend'],
-    market_size: '$28.5B data engineering market'
-    growth_rate: '22% annual growth'
+    market_size: '$28.5B data engineering market',
+    growth_rate: '22% annual growth',
     contact_info: contact
     real_implementation: true
     implementation_details: unknown,
       'AI - powered data engineering platform with automated pipeline creation, data quality monitoring, and comprehensive analytics capabilities.',
-    launch_date: '2024 - 10 - 20'
+    launch_date: '2024 - 10 - 20',
     customers: 67
     rating: 4 && 4.6
     reviews: 34,
@@ -760,8 +760,8 @@ export const,
       'Real - time monitoring and alerting',
       'Advanced reporting and analytics'],
     popular: false,
-    icon: ''
-    color: 'from - purple - 600 to - indigo - 600'
+    icon: '',
+    color: 'from - purple - 600 to - indigo - 600',
     text_color: 'text - purple - 400',
     link: 'https://ziontechgroup.com / ai - api - management - platform',
     market_position: unknown,
@@ -819,13 +819,13 @@ export const,
       'Analytics and monitoring'],
     roi: 'Organizations report 200% ROI through improved API performance and developer productivity.',
     competitors: ['Kong', 'Apigee', 'AWS API Gateway', 'Azure API Management'],
-    market_size: '$15.8B API management market'
-    growth_rate: '28% annual growth'
+    market_size: '$15.8B API management market',
+    growth_rate: '28% annual growth',
     contact_info: contact
     real_implementation: true
     implementation_details: unknown,
       'AI - powered API management platform with intelligent optimization, comprehensive monitoring, and developer experience enhancement.',
-    launch_date: '2024 - 09 - 25'
+    launch_date: '2024 - 09 - 25',
     customers: 43
     rating: 4 && 4.5
     reviews: 22,
@@ -891,8 +891,8 @@ export const,
       'Mobile app for network administrators',
       'API for custom integrations'],
     popular: false,
-    icon: ''
-    color: 'from - cyan - 600 to - blue - 600'
+    icon: '',
+    color: 'from - cyan - 600 to - blue - 600',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / ai - network - monitoring - suite',
     market_position: unknown,
@@ -943,13 +943,13 @@ export const,
       'Capacity planning'],
     roi: 'Organizations see 250% ROI through reduced network downtime and improved performance.',
     competitors: ['SolarWinds', 'PRTG', 'Nagios', 'Zabbix'],
-    market_size: '$12.3B network monitoring market'
-    growth_rate: '18% annual growth'
+    market_size: '$12.3B network monitoring market',
+    growth_rate: '18% annual growth',
     contact_info: contact
     real_implementation: true
     implementation_details: unknown,
       'AI - powered network monitoring platform with intelligent issue detection, automated resolution, and comprehensive analytics.',
-    launch_date: '2024 - 08 - 30'
+    launch_date: '2024 - 08 - 30',
     customers: 78
     rating: 4 && 4.4
     reviews: 39,
@@ -1015,8 +1015,8 @@ export const,
       'Automated maintenance scheduling',
       'Advanced reporting and insights'],
     popular: false,
-    icon: ''
-    color: 'from - orange - 600 to - red - 600'
+    icon: '',
+    color: 'from - orange - 600 to - red - 600',
     text_color: 'text - orange - 400',
     link: 'https://ziontechgroup.com / ai - database - optimization - platform',
     market_position: unknown,
@@ -1024,7 +1024,7 @@ export const,
     target_audience: unknown,
       'Database administrators, DevOps engineers, IT operations, Enterprises',
     trial_days: 14,
-    setup_time: '2 - 3 hours'
+    setup_time: '2 - 3 hours',
     category: 'Database Management & Optimization',
     real_service: true,
     technology: [,
@@ -1085,20 +1085,20 @@ export const,
       'Quest Foglight',
       'Redgate SQL Monitor',
       'Idera SQL Diagnostic Manager'],
-    market_size: '$8.9B database management market'
-    growth_rate: '15% annual growth'
+    market_size: '$8.9B database management market',
+    growth_rate: '15% annual growth',
     contact_info: contact
     real_implementation: true
     implementation_details: unknown,
       'AI - powered database optimization platform with intelligent tuning, performance monitoring, and automated maintenance capabilities.',
-    launch_date: '2024 - 07 - 15'
+    launch_date: '2024 - 07 - 15',
     customers: 54
     rating: 4 && 4.3
     reviews: 28,
   },
       'AI-powered ticket routing and prioritization',
   // IT Service Management
-    id: 'ai - itsm - platform'
+    id: 'ai - itsm - platform',
     name: 'AI IT Service Management Platform',
     tagline: 'Intelligent IT service management with AI - powered automation',
     price: '$129',
@@ -1151,15 +1151,15 @@ export const,
       'Mobile app for users and agents',
       'API for custom integrations'],
     popular: false,
-    icon: ''
-    color: 'from - teal - 600 to - cyan - 600'
+    icon: '',
+    color: 'from - teal - 600 to - cyan - 600',
     text_color: 'text - teal - 400',
     link: 'https://ziontechgroup.com / ai - itsm - platform',
     market_position: unknown,
       'Competes with ServiceNow ($100 / user / month), Jira Service Management ($20 / user / month), Freshservice ($19 / user / month). Our advantage: AI automation reduces ticket resolution time by 60% and improves user satisfaction.',
     target_audience: 'IT service desks, Help desk teams, MSPs, Enterprises',
     trial_days: 14,
-    setup_time: '2 - 3 hours'
+    setup_time: '2 - 3 hours',
     category: 'IT Service Management',
     real_service: true,
     technology: [,
@@ -1219,20 +1219,20 @@ export const,
       'Jira Service Management',
       'Freshservice',
       'Zendesk'],
-    market_size: '$18.5B IT service management market'
-    growth_rate: '20% annual growth'
+    market_size: '$18.5B IT service management market',
+    growth_rate: '20% annual growth',
     contact_info: contact
     real_implementation: true
     implementation_details: unknown,
       'AI - powered IT service management platform with intelligent automation, workflow optimization, and comprehensive service analytics.',
-    launch_date: '2024 - 06 - 20'
+    launch_date: '2024 - 06 - 20',
     customers: 89
     rating: 4 && 4.5
     reviews: 45,
   },
       'AI-powered backup optimization',
   // Backup & Disaster Recovery
-    id: 'ai-backup-disaster-recovery'
+    id: 'ai-backup-disaster-recovery',
     name: 'AI Backup & Disaster Recovery Platform',
     tagline: 'Intelligent backup and recovery with AI-powered automation',
     price: '$199',
@@ -1260,18 +1260,18 @@ export const,
       'AI-powered backup optimization',
   // Backup & Disaster Recovery
     i,
-  d: 'ai-backup-disaster-recovery'
+  d: 'ai-backup-disaster-recovery',
     nam,
-  e: 'AI Backup & Disaster Recovery Platform'
+  e: 'AI Backup & Disaster Recovery Platform',
     taglin,
-  e: 'Intelligent backup and recovery with AI-powered automation'
+  e: 'Intelligent backup and recovery with AI-powered automation',
     pric,
-  e: '$199'
+  e: '$199',
     perio,
-  d: '/month'
+  d: '/month',
     descriptio,
   n:
-      'Advanced backup and disaster recovery platform that uses AI to optimize backup strategies, automate recovery processes, and ensure business continuity. Features include intelligent backup scheduling, automated testing, and recovery orchestration.'
+      'Advanced backup and disaster recovery platform that uses AI to optimize backup strategies, automate recovery processes, and ensure business continuity. Features include intelligent backup scheduling, automated testing, and recovery orchestration.',
     feature,
   s: [
       'AI-powered backup optimization'
@@ -1286,16 +1286,16 @@ export const,
       'API for custom integrations'
     ]
     popular: false,
-    icon: ''
-    color: 'from-gray-600 to-slate-600'
+    icon: '',
+    color: 'from-gray-600 to-slate-600',
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/ai-backup-disaster-recovery',
     marketPosition:,
       'Competes with Veeam ($1000+/month), Commvault ($800/month), Acronis ($500/month). Our advantage: AI automation reduces backup time by 50% and improves recovery success rates by 90%.',
-    targetAudience: 'IT administrators, DevOps teams, Enterprises, MSPs'
+    targetAudience: 'IT administrators, DevOps teams, Enterprises, MSPs',
     trialDays: 14
-    setupTime: '3-4 hours'
-    category: 'Backup & Disaster Recovery'
+    setupTime: '3-4 hours',
+    category: 'Backup & Disaster Recovery',
     realService: true
     technology: [,
     popula,
@@ -1303,24 +1303,24 @@ export const,
     ico,
   n: '',
     colo,
-  r: 'from-gray-600 to-slate-600'
+  r: 'from-gray-600 to-slate-600',
     textColo,
-  r: 'text-gray-400'
+  r: 'text-gray-400',
     lin,
   k: 'http,
-  s://ziontechgroup.com/ai-backup-disaster-recovery'
+  s://ziontechgroup.com/ai-backup-disaster-recovery',
     marketPositio,
   n:
       'Competes with Veeam ($1000+/month), Commvault ($800/month), Acronis ($500/month). Our,
-  advantage: AI automation reduces backup time by 50% and improves recovery success rates by 90%.'
+  advantage: AI automation reduces backup time by 50% and improves recovery success rates by 90%.',
     targetAudienc,
-  e: 'IT administrators, DevOps teams, Enterprises, MSPs'
+  e: 'IT administrators, DevOps teams, Enterprises, MSPs',
     trialDay,
   s: 14,
     setupTim,
-  e: '3-4 hours'
+  e: '3-4 hours',
     categor,
-  y: 'Backup & Disaster Recovery'
+  y: 'Backup & Disaster Recovery',
     realServic,
   e: true,
     technolog,
@@ -1351,20 +1351,20 @@ export const,
       'Compliance management'],
     roi: 'Organizations report 400% ROI through improved data protection and reduced downtime.',
     competitors: ['Veeam', 'Commvault', 'Acronis', 'Rubrik']
-    marketSize: '$11.8 B backup and recovery market'
-    growthRate: '16% annual growth'
+    marketSize: '$11.8 B backup and recovery market',
+    growthRate: '16% annual growth',
     contactInfo: contact
     realImplementation: true,
     implementationDetails: export const specializedITSolutions2026: SpecializedITSolution2026[] = [,
   // Cloud Infrastructure & DevOps
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
-    launchDate: '2024-05-25'
+    launchDate: '2024-05-25',
     customers: 67
     rating: 4.4
     reviews: 33,
   }
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
-    launchDate: '2024-05-25'
+    launchDate: '2024-05-25',
     customers: 67
     rating: 4.4
     reviews: 33,
@@ -1375,13 +1375,13 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
       'Compliance management'
     ]
     ro,
-  i: 'Organizations report 400% ROI through improved data protection and reduced downtime.'
+  i: 'Organizations report 400% ROI through improved data protection and reduced downtime.',
     competitor,
   s: ['Veeam', 'Commvault', 'Acronis', 'Rubrik']
     marketSiz,
-  e: '$11.8B backup and recovery market'
+  e: '$11.8B backup and recovery market',
     growthRat,
-  e: '16% annual growth'
+  e: '16% annual growth',
     contactInf,
   o: contact,
     realImplementatio,
@@ -1392,7 +1392,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
   // Cloud Infrastructure & DevOps
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
     launchDat,
-  e: '2024-05-25'
+  e: '2024-05-25',
     customer,
   s: 67,
     ratin,
@@ -1439,7 +1439,7 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPric)
     id: 'cloud-infrastructure-automation', name: 'Cloud Infrastructure Automation Platform',
     tagline: 'Automate cloud infrastructure deployment and management with intelligent orchestration', price: '$399',
     period: '/month',
-    description: 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.'
+    description: 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.',
     features: [,
       'Infrastructure as Code (IaC) automationMulti-cloud management and orchestrationAutomated resource scaling and optimizationCost monitoring and optimizationSecurity compliance automationDisaster recovery orchestrationPerformance monitoring and alertingIntegration with major cloud providers',
       'Custom automation workflowsAdvanced analytics and reporting'],
@@ -1647,7 +1647,7 @@ export const getSpecializedITSolutions2026ByCategory = (category: string) =>,
     perio,
   d: '/month',
     descriptio,
-  n: 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.'
+  n: 'Advanced cloud infrastructure automation platform that uses AI to optimize resource allocation, automate deployments, and manage multi-cloud environments. Features include infrastructure as code, automated scaling, and cost optimization.',
     feature,
   s: [,
       'Infrastructure as Code (IaC) automationMulti-cloud management and orchestrationAutomated resource scaling and optimizationCost monitoring and optimizationSecurity compliance automationDisaster recovery orchestrationPerformance monitoring and alertingIntegration with major cloud providers'

@@ -37,7 +37,7 @@ if (!resp && resp.ok)
       }) } } ' const pkg = JSON.parse (fs.readFileSync (pkg_path) 'utf - 8')), const deps = { ...(pkg.dependencies || {}), ...(pkg.dev_dependencies || {}) }, const entries = [], for (const [name)
         current] of Object.entries (deps)) {} const latest = await get_latest (name); // Check condition; if (continue) ) {} $2;' }'' entries.push ({/* TODO: Fix JSX expression */})
   e: current.replace (/^[^0 - 9]*/} '') !== latest
-      }); } const report = {/* TODO: Fix JSX expression */}
+      }); } const report = {/* TODO: Fix JSX expression */};
   t: Date.now ()} entries }, const owner = process.env.GITHUB_OWNER, const repo = process.env.GITHUB_REPO, const token = process.env.GITHUB_TOKEN, // Check condition; if ( {) {} $2;' }'' await upsert_file ({/* TODO: Fix JSX expression */})
   e: 'chore (automation): weekly dependency insights'} token
       }); } return {/* TODO: Fix JSX expression */}

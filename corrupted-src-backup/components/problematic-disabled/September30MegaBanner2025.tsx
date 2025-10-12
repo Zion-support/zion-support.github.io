@@ -19,7 +19,7 @@ const September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
   ]; return(<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 4, 0 }}
   ]; return (<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 4, 0 }}
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-      transiti, o, n = {/* TODO: Fix JSX expression */}
+      transiti, o, n = {/* TODO: Fix JSX expression */};
   n: , 0., 8 }}"
       classNa, m, e = "relative, overflo, w-hidden, rounde, d-3xl, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, shado, w-2xl, m, y-16, border, border-purp, l, e-5, 0, 0/30"
     >
@@ -51,7 +51,7 @@ const September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
         <div, classNam, e = "te, x, t-center, m, b-12">
           <moti, o, n.div, initia, l={{ sca, l, e: , 0., 9, opaci, t, y:  , 0 }}
             anima, t, e = {{ sc, a, l, e:  , 1, opaci, t, y:  , 1 }}
-            transiti, o, n = {/* TODO: Fix JSX expression */}
+            transiti, o, n = {/* TODO: Fix JSX expression */};
   n: 0., 6 }}"
             classNa, m, e = "inli, n, e-flex, item, s-center, ga, p-3, m, b-8"
           >
@@ -92,7 +92,7 @@ const September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
           {/* TODO: Fix JSX expression */}
             <moti, o, n.div, ke, y = { artic, l, e.s, l, u, g  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 3, 0 }}
               anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-              transiti, o, n = {/* TODO: Fix JSX expression */}
+              transiti, o, n = {/* TODO: Fix JSX expression */};
   n: 0., 6 }}
               whileHov, e, r = {{ sca, l, e: 1., 0, 5, translat, e, Y: -, 8 }}"
               classNa, m, e = "group, relativ, e"

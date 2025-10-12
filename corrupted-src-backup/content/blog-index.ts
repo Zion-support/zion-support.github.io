@@ -83,7 +83,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     featured: true,
     valueProposition: '$215M annual value'},
   {
-    slug: 'ai-2025-oct-03-autonomous-cloud-security'
+    slug: 'ai-2025-oct-03-autonomous-cloud-security',
     title: 'Autonomous Cloud Security 2025',
     description: '99.98% threat neutralization under 5 seconds with policy-backed automations.',
     category: 'Security',
@@ -165,6 +165,6 @@ export const blogStats = {
   categories: getAllCategories().length
   tags: getAllTags().length,
   totalValue: getTotalValueProposition(),
-export const blogStats = {/* TODO: Fix JSX expression */}
+export const blogStats = {/* TODO: Fix JSX expression */};
 }
 `

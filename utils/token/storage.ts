@@ -17,15 +17,15 @@ export interface TokenStoreData {
 }
 class TokenStore {
   private config: TokenConfig = {
-    tokenName: 'ZION$'
-    tokenSymbol: 'ZION'
+    tokenName: 'ZION$',
+    tokenSymbol: 'ZION',
     decimals: 18
     totalSupply: 1000000000
     issueRate: 1.0
     redeemRate: 1.0
     minIssueAmount: 1
     maxIssueAmount: 10000
-  }
+  };
 export interface TokenStoreData {
   }
 export interface TokenStoreData {
@@ -64,8 +64,6 @@ function readFromDisk(): TokenStoreData | null {
     return this && this.data
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 function writeToDisk(data: TokenStoreData): void {
   try {

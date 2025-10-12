@@ -1,48 +1,33 @@
-<<<<<<< HEAD
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
 const AiWorkflowAutomationPage: React.FC = () => {,
     const features = [
-=======
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
-=======
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Workflow, Zap, Brain, Target, Clock, Shield, CheckCircle, Star, ArrowRight, Users, BarChart, Settings } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
 
 const AiWorkflowAutomationPage: React.FC = () => {
   const features = [
->>>>>>> origin/main
     {
       icon: Brain,
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international businesses',
     }
   ];
 
@@ -55,10 +40,6 @@ const AiWorkflowAutomationPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-=======
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-<<<<<<< HEAD
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
       title: 'Advanced Analytics',
@@ -88,8 +69,8 @@ return(<>)
       </Helmet>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900"></div>
-        {/* Hero Section */} <section className="relative py-20 px-4 overflow-hidden"></section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
+        {/* Hero Section */} <section$1>
+        <div$2></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>
           <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1>Ai Workflow Automation;</h1>
@@ -102,10 +83,10 @@ return(<>)
               <button>View Demo,</button>
               </button>
             </div>
-          </div>
-        </section>
-        {/* Features Section */} <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
+        </div>
+      </section>
+        {/* Features Section */} <section$1>
+        <div$2></div>
             <div className="text-center mb-16"></div>
               <h2>Key Features;</h2>
               </h2>
@@ -124,11 +105,7 @@ return(<>)
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />
 
-<<<<<<< HEAD
 import React, {useState, useEffect}from 'react';
-=======
-import React, { useState, useEffect } from 'react';
->>>>>>> main
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -237,8 +214,8 @@ const AIWorkflowAutomation: React.FC = () => {,
                   </div>
                 ))}
               </div>
-            </div>
-          </section>
+        </div>
+      </section>
 
           {/* Features Section */} <section className="py-16">
             <div className="container mx-auto px-4">
@@ -266,10 +243,10 @@ const AIWorkflowAutomation: React.FC = () => {,
               ))}
 
             </div>
-          </div>
-        </section>
-        {/* Benefits Section */} <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
+        </div>
+      </section>
+        {/* Benefits Section */} <section$1>
+        <div$2></div>
             <div className="text-center mb-16"></div>
               <h2>Why Choose Our Solution?;</h2>
               </h2>
@@ -285,10 +262,10 @@ const AIWorkflowAutomation: React.FC = () => {,
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-        {/* CTA Section */} <section className="py-20 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
+        </div>
+      </section>
+        {/* CTA Section */} <section$1>
+        <div$2></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
               <h2>Ready to Get Started?;</h2>
               </h2>
@@ -302,8 +279,8 @@ const AIWorkflowAutomation: React.FC = () => {,
                   </div>
                 ))}
               </div>
-            </div>
-          </section>
+        </div>
+      </section>
 
           {/* Services Section */} <section className="py-16 bg-gray-900/50">
             <div className="container mx-auto px-4">
@@ -335,7 +312,6 @@ const AIWorkflowAutomation: React.FC = () => {,
                     </a>
                   </div>
                 ))}
-=======
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
     },
     {
@@ -363,7 +339,6 @@ const AIWorkflowAutomation: React.FC = () => {,
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology';
->>>>>>> origin/main
   ];
 
   return (
@@ -374,7 +349,6 @@ const AIWorkflowAutomation: React.FC = () => {,
         <meta name="description" content="Transform your business with AI-powered workflow automation solutions. Increase efficiency, reduce costs, and scale operations with intelligent automation." />
         <meta name="keywords" content="AI workflow automation, business process automation, intelligent automation, workflow optimization" />
       </Helmet>
-<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -386,20 +360,12 @@ const AIWorkflowAutomation: React.FC = () => {,
               </span>
               <br />
               <span className="text-white">Solutions</span>
-=======
-      <Navigation />
-      
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-<<<<<<< HEAD
-        <section className="relative py-20 px-4 overflow-hidden">
-        </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <section$1>
+        <div$2>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Ai Workflow Automation
->>>>>>> origin/main
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai workflow automation solution for modern businesses.
@@ -412,10 +378,9 @@ const AIWorkflowAutomation: React.FC = () => {,
                 View Demo
               </button>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -436,13 +401,6 @@ const AIWorkflowAutomation: React.FC = () => {,
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-=======
-        {/* Features Section */}
-        <section className="py-20 px-4">
-        </section>
-=======
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -458,181 +416,13 @@ const AIWorkflowAutomation: React.FC = () => {,
                   Learn More
                 </button>
 
->>>>>>> origin/main
-=======
                           {benefit}
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
                   </div>
                 </div>
               ))}
-=======
-      title: 'Intelligent Process Discovery',
-      description: 'AI automatically maps your business processes and identifies automation opportunities',
-      details: ['Process Mining', 'Bottleneck Detection', 'Optimization Suggestions', 'ROI Analysis']
-    },
-    {
-      icon: Workflow,
-      title: 'Visual Workflow Builder',
-      description: 'Drag-and-drop interface to create complex workflows without coding',
-      details: ['No-Code Design', 'Pre-built Templates', 'Conditional Logic', 'Error Handling']
-    },
-    {
-      icon: Zap,
-      title: 'Smart Automation',
-      description: 'AI-powered automation that learns and adapts to your business needs',
-      details: ['Machine Learning', 'Adaptive Workflows', 'Self-Optimization', 'Predictive Actions']
-    },
-    {
-      icon: Target,
-      title: 'Multi-System Integration',
-      description: 'Connect and automate across all your business applications',
-      details: ['500+ Integrations', 'API Management', 'Data Synchronization', 'Real-time Updates']
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with compliance and audit trails',
-      details: ['End-to-End Encryption', 'Role-Based Access', 'Audit Logs', 'Compliance Ready']
-    },
-    {
-      icon: Clock,
-      title: '24/7 Operation',
-      description: 'Automated processes that run continuously without human intervention',
-      details: ['Always-On Processing', 'Scheduled Tasks', 'Event Triggers', 'Monitoring Alerts']
-    }
-  ]
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$149',
-      period: '/month',
-      description: 'Perfect for small teams',
-      features: [
-        'Up to 10 workflows',
-        '1,000 automation runs/month',
-        'Basic integrations',
-        'Email support',
-        'Standard templates',
-        '1 user'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$399',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Up to 50 workflows',
-        '10,000 automation runs/month',
-        'Advanced integrations',
-        'Priority support',
-        'Custom templates',
-        '5 users',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$999',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited workflows',
-        'Unlimited automation runs',
-        'All integrations',
-        'Dedicated support',
-        'Custom development',
-        'Unlimited users',
-        'On-premise deployment',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
-  ]
-
-  const stats = [
-    { value: '75%', label: 'Time Savings', icon: <Clock className="w-8 h-8 text-green-400" /> },
-    { value: '90%', label: 'Error Reduction', icon: <Shield className="w-8 h-8 text-blue-400" /> },
-    { value: '60%', label: 'Cost Reduction', icon: <BarChart className="w-8 h-8 text-purple-400" /> },
-    { value: '99.9%', label: 'Reliability', icon: <Zap className="w-8 h-8 text-cyan-400" /> }
-  ]
-
-  const automationTypes = [
-    {
-      title: 'Sales Automation',
-      description: 'Automate lead scoring, follow-ups, and pipeline management',
-      icon: <Target className="w-8 h-8 text-green-400" />
-    },
-    {
-      title: 'HR Automation',
-      description: 'Streamline recruitment, onboarding, and employee management',
-      icon: <Users className="w-8 h-8 text-blue-400" />
-    },
-    {
-      title: 'Finance Automation',
-      description: 'Automate invoicing, expense management, and financial reporting',
-      icon: <BarChart className="w-8 h-8 text-yellow-400" />
-    },
-    {
-      title: 'IT Automation',
-      description: 'Automate system monitoring, backups, and maintenance tasks',
-      icon: <Settings className="w-8 h-8 text-purple-400" />
-    }
-  ]
-
-  const testimonials = [
-    {
-      name: 'Maria Santos',
-      role: 'Operations Director, TechFlow',
-      content: 'AI Workflow Automation reduced our manual processes by 80% and increased efficiency by 300%.',
-      rating: 5,
-      company: 'TechFlow'
-    },
-    {
-      name: 'John Thompson',
-      role: 'CEO, DataSync Corp',
-      content: 'The automation platform is incredibly powerful. We automated 15 processes in the first month.',
-      rating: 5,
-      company: 'DataSync Corp'
-    },
-    {
-      name: 'Sarah Lee',
-      role: 'VP Operations, InnovateNow',
-      content: 'ROI was achieved in 2 months. The time savings alone paid for the platform.',
-      rating: 5,
-      company: 'InnovateNow'
-    }
-  ]
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI-Powered <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Workflow Automation</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Automate your business processes with intelligent AI workflows. 
-              Reduce manual work by 75% and increase productivity by 300%.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Watch Demo
-              </button>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
             </div>
           </div>
         </div>
@@ -827,11 +617,9 @@ const AIWorkflowAutomation: React.FC = () => {,
         </div>
       </section>
 
-<<<<<<< HEAD
         {/* Benefits Section */}
-        <section className="py-20 px-4">
-        </section>
-          <div className="max-w-7xl mx-auto">
+        <section$1>
+        <div$2>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our Solution?
@@ -855,9 +643,8 @@ const AIWorkflowAutomation: React.FC = () => {,
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4">
-        </section>
-          <div className="max-w-4xl mx-auto text-center">
+        <section$1>
+        <div$2>
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
@@ -872,37 +659,20 @@ const AIWorkflowAutomation: React.FC = () => {,
                 <button className="border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
-=======
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
               </div>
             </div>
           ))
         </section>
       </div>
-<<<<<<< HEAD
       <Footer />
 
   );
 };
-=======
-      <Footer>
-    </>
-  ),
-}
-export default AiWorkflowAutomationPage;
->>>>>>> origin/main
 
-<<<<<<< HEAD
 export default PagePage;
-=======
->>>>>>> origin/main
-=======
       <Footer />
     </div>
   )
 }
 
 export default AiWorkflowAutomationPage
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9

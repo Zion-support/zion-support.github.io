@@ -2,27 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
-<<<<<<< HEAD
   
   <!-- Homepage -->
-=======
->>>>>>> origin/main
   <url>
-<<<<<<< HEAD
     <loc>https://ziontechgroup.com</loc>
     <lastmod>2025-10-11T00:27:54.804Z</lastmod>
-=======
-    <loc>https://ziontechgroup.com/</loc>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-=======
-    <lastmod>2025-10-11T11:31:56.972Z</lastmod>
->>>>>>> origin/main
->>>>>>> origin/main
-=======
     <lastmod>2025-10-11T11:47:00.786Z</lastmod>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -35,44 +21,27 @@
   <!-- About Page -->
   <url>
     <loc>https://ziontechgroup.com/about</loc>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-=======
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- AI Services -->
   <url>
-<<<<<<< HEAD
     <loc>https://ziontechgroup.com/ai-services</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-=======
-<<<<<<< HEAD
     <lastmod>2025-10-11T00:27:54.804Z</lastmod>
-=======
-    <lastmod>2025-10-11T11:31:56.972Z</lastmod>
->>>>>>> origin/main
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/services</loc>
-<<<<<<< HEAD
     <lastmod>2025-10-11T00:27:54.804Z</lastmod>
-=======
-    <lastmod>2025-10-11T11:31:56.972Z</lastmod>
->>>>>>> origin/main
->>>>>>> origin/main
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   
   <url>
-<<<<<<< HEAD
     <loc>https://ziontechgroup.com/ai-solutions</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -82,13 +51,9 @@
   <url>
     <loc>https://ziontechgroup.com/machine-learning</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-=======
-<<<<<<< HEAD
     <loc>https://ziontechgroup.com/pricing</loc>
     <lastmod>2025-10-11T00:27:54.804Z</lastmod>
->>>>>>> origin/main
     <changefreq>weekly</changefreq>
-=======
     <loc>https://ziontechgroup.com/services</loc>
     <lastmod>2025-10-11T11:47:00.786Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -98,7 +63,6 @@
     <loc>https://ziontechgroup.com/contact</loc>
     <lastmod>2025-10-11T11:47:00.786Z</lastmod>
     <changefreq>monthly</changefreq>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     <priority>0.8</priority>
   </url>
   
@@ -193,42 +157,20 @@
   <!-- Contact -->
   <url>
     <loc>https://ziontechgroup.com/contact</loc>
-<<<<<<< HEAD
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
-=======
-    <lastmod>2025-10-11T00:27:54.804Z</lastmod>
-=======
-    <loc>https://ziontechgroup.com/contact</loc>
-    <lastmod>2025-10-11T11:31:56.972Z</lastmod>
->>>>>>> origin/main
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-<<<<<<< HEAD
   
-=======
-  <url>
-    <loc>https://ziontechgroup.com/pricing</loc>
-<<<<<<< HEAD
     <lastmod>2025-10-11T11:31:56.972Z</lastmod>
->>>>>>> origin/main
-=======
     <lastmod>2025-10-11T11:47:00.786Z</lastmod>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/blog</loc>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <lastmod>2025-10-11T00:27:54.804Z</lastmod>
     <changefreq>weekly</changefreq>
-=======
-    <lastmod>2025-10-11T11:31:56.972Z</lastmod>
-=======
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -236,7 +178,6 @@
     <loc>https://ziontechgroup.com/case-studies</loc>
     <lastmod>2025-10-11T11:47:00.786Z</lastmod>
     <changefreq>monthly</changefreq>
->>>>>>> origin/main
     <priority>0.7</priority>
   </url>
   <url>
@@ -247,30 +188,18 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/careers</loc>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <lastmod>2025-10-11T00:27:54.804Z</lastmod>
-=======
-    <lastmod>2025-10-11T11:31:56.972Z</lastmod>
-=======
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/ai-services</loc>
-<<<<<<< HEAD
     <lastmod>2025-10-11T11:31:56.972Z</lastmod>
->>>>>>> origin/main
-=======
     <lastmod>2025-10-11T11:47:00.786Z</lastmod>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-<<<<<<< HEAD
     <loc>https://ziontechgroup.com/partners</loc>
     <lastmod>2025-10-11T00:27:54.804Z</lastmod>
     <changefreq>monthly</changefreq>
@@ -297,19 +226,12 @@
   <url>
     <loc>https://ziontechgroup.com/consultation</loc>
     <lastmod>2025-10-11T00:27:54.804Z</lastmod>
-=======
-    <loc>https://ziontechgroup.com/ai-chatbot-builder</loc>
-<<<<<<< HEAD
     <lastmod>2025-10-11T11:31:56.972Z</lastmod>
->>>>>>> origin/main
-=======
     <lastmod>2025-10-11T11:47:00.786Z</lastmod>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-<<<<<<< HEAD
     <loc>https://ziontechgroup.com/micro-saas</loc>
     <lastmod>2025-10-11T00:27:54.804Z</lastmod>
     <changefreq>weekly</changefreq>
@@ -319,197 +241,10 @@
     <loc>https://ziontechgroup.com/ai-services</loc>
     <lastmod>2025-10-11T00:27:54.804Z</lastmod>
     <changefreq>weekly</changefreq>
-=======
-    <loc>https://ziontechgroup.com/ai-content-generation</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-data-analytics</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-computer-vision</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-voice-solutions</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-automation</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-healthcare</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-financial-services</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-document-processing</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-predictive-analytics</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-hr-solutions</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-edge-computing</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-video-analysis</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-speech-synthesis</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-recommendation-engine</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-sentiment-analysis</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-chatbot-enterprise</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-content-moderation</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-predictive-modeling</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-document-intelligence</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-conversation-analytics</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-supply-chain-ai</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-healthcare-diagnostics</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-financial-forecasting</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-iot-analytics</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-conversational-ai</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-automated-testing</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-knowledge-management</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-customer-churn</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-automated-reporting</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-voice-assistant</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://ziontechgroup.com/ai-content-generation-pro</loc>
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
-    <changefreq>monthly</changefreq>
->>>>>>> origin/main
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ziontechgroup.com/it-services</loc>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <lastmod>2025-10-11T00:27:54.804Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -1053,11 +788,6 @@
     <lastmod>2025-10-11T00:27:54.804Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-=======
-    <lastmod>2025-10-11T11:31:56.972Z</lastmod>
-=======
-    <lastmod>2025-10-11T11:47:00.786Z</lastmod>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -1534,7 +1264,5 @@
     <lastmod>2025-10-11T11:47:00.786Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
->>>>>>> origin/main
   </url>
->>>>>>> origin/main
 </urlset>

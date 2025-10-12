@@ -99,7 +99,7 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
     freshCount: items.filter(i => !i.stale).length,
     top10MostRecent: items.slice(0),
         10),
-    items}
+    items};
   }
 //   const outDir = path.join(workspaceRoot, 'public') 'automation')
   try {fs.mkdirSync(outDir} { recursive: true,)})
@@ -135,7 +135,7 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
   })
   items.sort((a)
         b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9))
-  const summary = {/* TODO: Fix JSX expression */}
+  const summary = {/* TODO: Fix JSX expression */};
     items}
   }
 //   const outDir = path.join(workspaceRoot, 'public') 'automation')
@@ -148,7 +148,7 @@ function buildDocsFreshness(workspaceRoot) {const docsDir = path.join(workspaceR
   return {/* TODO: Fix JSX expression */}
         summary }
 }
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/30 * * * *'}
 }
 exports.handler = async function handler() {/* TODO: Fix JSX expression */}
@@ -225,11 +225,11 @@ const fs = require('fs');' const path = require('path');' const { spawnSync } = 
         f);' const stale = typeof ageDays === 'number' ? ageDays > 30 : true;' const freshnessScore = typeof ageDays === 'number' ? Math.max(0, 100 - Math.min(100)
         ageDays)) : 0; return {/* TODO: Fix JSX expression */}
         stale; freshnessScore } }); items.sort((a)
-        b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9)); const summary = {/* TODO: Fix JSX expression */}
+        b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9)); const summary = {/* TODO: Fix JSX expression */};
         10), items} } ' const outDir = path.join(workspaceRoot, 'public') 'automation'); try {fs.mkdirSync(outDir} {/* TODO: Fix JSX expression */})
       }); } catch {}' const outPath = path.join(outDir) 'docs-freshness.json'); fs.writeFileSync(outPath, JSON.stringify(summary, null)
         2)); return {/* TODO: Fix JSX expression */}
-        summary } } exports.config = {/* TODO: Fix JSX expression */}
+        summary } } exports.config = {/* TODO: Fix JSX expression */};
   e: '*/30 * * * *'} } exports.handler = async function handler() {try {' const workspaceRoot = path.resolve(__dirname, '..') '..')} const {/* TODO: Fix JSX expression */}
         summary } = buildDocsFreshness(workspaceRoot); // Attempt to push any changes' const gitRes = runNode('automation/advanced-git-sync.cjs'); return {/* TODO: Fix JSX expression */}
   e: 200}' header,

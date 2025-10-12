@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
     id: 'customer - feedback - intelligence',
@@ -937,9 +936,6 @@
 		reviews: 6
 	}
 ];
-=======
-import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
->>>>>>> origin/auto/autonomy-17186719616
 
 const contact = {
 	mobile: '+1 302 464 0950',
@@ -949,7 +945,6 @@ const contact = {
 };
 
 export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
-<<<<<<< HEAD
   {
     id: 'affiliate-analytics-starter',
     name: 'Affiliate Analytics Starter',
@@ -1446,22 +1441,12 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		id: 'affiliate-analytics-starter';
 	{
 		id: 'affiliate-analytics-starter',
-=======
-
-=======
-	{
-		id: 'affiliate-analytics-starter',
->>>>>>> origin/auto/autonomy-17186719616
 		name: 'Affiliate Analytics Starter',
 		tagline: 'Attribution, fraud detection and automated payouts for SMBs',
 		price: '$129',
 		period: '/month',
 		description: 'Lightweight affiliate tracking with UTM/coupon support, heuristic fraud signals, and one-click Stripe/PayPal payouts.',
-<<<<<<< HEAD
 		features: ['UTM and coupon attributionFraud heuristics', 'Stripe/PayPal payoutsPartner portal and reporting'],
-=======
-		features: ['UTM and coupon attribution', 'Fraud heuristics', 'Stripe/PayPal payouts', 'Partner portal and reporting'],
->>>>>>> origin/auto/autonomy-17186719616
 		popular: false,
 		icon: '🤝',
 		color: 'from-emerald-600 to-teal-700',
@@ -1474,17 +1459,10 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		trialDays: 14,
 		setupTime: '1 day',
 		technology: ['Next.js, Stripe, Webhooks'],
-<<<<<<< HEAD
 		integrations: ['StripePayPal', 'Google Analytics'],
 		useCases: ['Partner growthAutomated payouts'],
 		roi: 'Grow partner revenue by 10–25%',
 		competitors: ['ImpactPartnerStack'],
-=======
-		integrations: ['Stripe', 'PayPal', 'Google Analytics'],
-		useCases: ['Partner growth', 'Automated payouts'],
-		roi: 'Grow partner revenue by 10–25%',
-		competitors: ['Impact', 'PartnerStack'],
->>>>>>> origin/auto/autonomy-17186719616
 		marketSize: '$5B+',
 		growthRate: '12% YoY',
 		variant: 'neural-quantum',
@@ -1503,11 +1481,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		price: '$149',
 		period: '/month',
 		description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.',
-<<<<<<< HEAD
 		features: ['Multichannel ingestionLLM clustering and themes', 'Impact scoringRoadmap export'],
-=======
-		features: ['Multichannel ingestion', 'LLM clustering and themes', 'Impact scoring', 'Roadmap export'],
->>>>>>> origin/auto/autonomy-17186719616
 		popular: true,
 		icon: '💬',
 		color: 'from-cyan-600 to-blue-700',
@@ -1520,17 +1494,10 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		trialDays: 14,
 		setupTime: '1 hour',
 		technology: ['Embeddings, Vector DB, Next.js'],
-<<<<<<< HEAD
 		integrations: ['ZendeskIntercom', 'G2Capterra'],
 		useCases: ['Prioritize roadmapReduce churn'],
 		roi: 'Ship high-impact features faster',
 		competitors: ['UnitQEnjoyHQ'],
-=======
-		integrations: ['Zendesk', 'Intercom', 'G2', 'Capterra'],
-		useCases: ['Prioritize roadmap', 'Reduce churn'],
-		roi: 'Ship high-impact features faster',
-		competitors: ['UnitQ', 'EnjoyHQ'],
->>>>>>> origin/auto/autonomy-17186719616
 		marketSize: '$2B+',
 		growthRate: '18% CAGR',
 		variant: 'ai-futuristic',
@@ -1549,11 +1516,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		price: '$199',
 		period: '/month',
 		description: 'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate-limits, and common vulnerabilities with pull request annotations.',
-<<<<<<< HEAD
 		features: ['OpenAPI scanningAuth/rate limit tests', 'OWASP API checksPR annotations and diffs'],
-=======
-		features: ['OpenAPI scanning', 'Auth/rate limit tests', 'OWASP API checks', 'PR annotations and diffs'],
->>>>>>> origin/auto/autonomy-17186719616
 		popular: true,
 		icon: '🛡️',
 		color: 'from-rose-600 to-pink-700',
@@ -1566,17 +1529,10 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		trialDays: 14,
 		setupTime: '30 minutes',
 		technology: ['OpenAPI, Node, CI'],
-<<<<<<< HEAD
 		integrations: ['GitHubGitLab', 'Jenkins'],
 		useCases: ['Pre-deploy API checksSecurity posture'],
 		roi: 'Reduce security escapes by 60%',
 		competitors: ['StackHawk42Crunch'],
-=======
-		integrations: ['GitHub', 'GitLab', 'Jenkins'],
-		useCases: ['Pre-deploy API checks', 'Security posture'],
-		roi: 'Reduce security escapes by 60%',
-		competitors: ['StackHawk', '42Crunch'],
->>>>>>> origin/auto/autonomy-17186719616
 		marketSize: '$4B',
 		growthRate: '20% CAGR',
 		variant: 'quantum-cyberpunk',
@@ -1595,11 +1551,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		price: '$59',
 		period: '/month',
 		description: 'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.',
-<<<<<<< HEAD
 		features: ['Flexible cron/rateIdempotency and retries', 'Run historyAlerting and webhooks'],
-=======
-		features: ['Flexible cron/rate', 'Idempotency and retries', 'Run history', 'Alerting and webhooks'],
->>>>>>> origin/auto/autonomy-17186719616
 		popular: false,
 		icon: '⏰',
 		color: 'from-amber-500 to-orange-600',
@@ -1611,19 +1563,11 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		targetAudience: 'SaaS and platform teams',
 		trialDays: 14,
 		setupTime: '2 hours',
-<<<<<<< HEAD
 		technology: ['Workers/LambdaWebhooks'],
 		integrations: ['AWSCloudflare', 'GCP'],
 		useCases: ['Billing cyclesData syncs'],
 		roi: 'Fewer missed jobs and incidents',
 		competitors: ['Temporal (overkill)DIY'],
-=======
-		technology: ['Workers/Lambda', 'Webhooks'],
-		integrations: ['AWS', 'Cloudflare', 'GCP'],
-		useCases: ['Billing cycles', 'Data syncs'],
-		roi: 'Fewer missed jobs and incidents',
-		competitors: ['Temporal (overkill)', 'DIY'],
->>>>>>> origin/auto/autonomy-17186719616
 		marketSize: '$1B+',
 		growthRate: '15% CAGR',
 		variant: 'holographic-matrix',
@@ -1642,11 +1586,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		price: '$39',
 		period: '/month',
 		description: 'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead-letter queues.',
-<<<<<<< HEAD
 		features: ['Signature strippingAttachment handling', 'Webhook retries/DLQInspector UI'],
-=======
-		features: ['Signature stripping', 'Attachment handling', 'Webhook retries/DLQ', 'Inspector UI'],
->>>>>>> origin/auto/autonomy-17186719616
 		popular: false,
 		icon: '📨',
 		color: 'from-indigo-600 to-blue-700',
@@ -1658,19 +1598,11 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		targetAudience: 'Developers and platform',
 		trialDays: 14,
 		setupTime: '30 minutes',
-<<<<<<< HEAD
 		technology: ['SMTP/WebhooksVirus scan'],
 		integrations: ['SESSendGrid', 'Mailgun'],
 		useCases: ['Ticket intakeCRM capture'],
 		roi: 'Automate manual email triage',
 		competitors: ['MailparserIntegromat'],
-=======
-		technology: ['SMTP/Webhooks', 'Virus scan'],
-		integrations: ['SES', 'SendGrid', 'Mailgun'],
-		useCases: ['Ticket intake', 'CRM capture'],
-		roi: 'Automate manual email triage',
-		competitors: ['Mailparser', 'Integromat'],
->>>>>>> origin/auto/autonomy-17186719616
 		marketSize: '$0.8B',
 		growthRate: '10% CAGR',
 		variant: 'neural-quantum',
@@ -1689,11 +1621,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		price: '$119',
 		period: '/month',
 		description: 'Generate on-brand content with templates, tone control, compliance checks, and multi-channel export.',
-<<<<<<< HEAD
 		features: ['Brand/tone controlsTemplates and briefs', 'Compliance checksMulti-channel export'],
-=======
-		features: ['Brand/tone controls', 'Templates and briefs', 'Compliance checks', 'Multi-channel export'],
->>>>>>> origin/auto/autonomy-17186719616
 		popular: true,
 		icon: '📝',
 		color: 'from-fuchsia-600 to-pink-700',
@@ -1706,17 +1634,10 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		trialDays: 14,
 		setupTime: '30 minutes',
 		technology: ['LLMs, Style prompts'],
-<<<<<<< HEAD
 		integrations: ['HubSpotMailchimp', 'Webflow'],
 		useCases: ['Blog, email, ads'],
 		roi: 'Scale content 5× faster',
 		competitors: ['JasperWriter'],
-=======
-		integrations: ['HubSpot', 'Mailchimp', 'Webflow'],
-		useCases: ['Blog, email, ads'],
-		roi: 'Scale content 5× faster',
-		competitors: ['Jasper', 'Writer'],
->>>>>>> origin/auto/autonomy-17186719616
 		marketSize: '$3B+',
 		growthRate: '22% CAGR',
 		variant: 'ai-futuristic',
@@ -1735,11 +1656,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		price: '$19',
 		period: '/month',
 		description: 'Audit security headers across environments and get pull request annotations, weekly reports and diffs.',
-<<<<<<< HEAD
 		features: ['CSP/HSTS checksCookie flags', 'PR annotationsWeekly reports'],
-=======
-		features: ['CSP/HSTS checks', 'Cookie flags', 'PR annotations', 'Weekly reports'],
->>>>>>> origin/auto/autonomy-17186719616
 		popular: false,
 		icon: '🔐',
 		color: 'from-sky-600 to-blue-700',
@@ -1751,15 +1668,9 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		targetAudience: 'Developers and security',
 		trialDays: 14,
 		setupTime: '15 minutes',
-<<<<<<< HEAD
 		technology: ['NodePlaywright'],
 		integrations: ['GitHubGitLab'],
 		useCases: ['Header hardeningCompliance reports'],
-=======
-		technology: ['Node', 'Playwright'],
-		integrations: ['GitHub', 'GitLab'],
-		useCases: ['Header hardening', 'Compliance reports'],
->>>>>>> origin/auto/autonomy-17186719616
 		roi: 'Reduce risk and review toil',
 		competitors: ['Mozilla Observatory'],
 		marketSize: '$0.5B',
@@ -1780,11 +1691,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		price: '$149',
 		period: '/month',
 		description: 'Ship ML features faster with versioning, validation rules, lineage, and low-latency serving APIs.',
-<<<<<<< HEAD
 		features: ['Feature versioningValidation rules', 'Lineage trackingOnline serving API'],
-=======
-		features: ['Feature versioning', 'Validation rules', 'Lineage tracking', 'Online serving API'],
->>>>>>> origin/auto/autonomy-17186719616
 		popular: false,
 		icon: '📦',
 		color: 'from-emerald-600 to-teal-700',
@@ -1797,17 +1704,10 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		trialDays: 14,
 		setupTime: '1 day',
 		technology: ['DB, Vector/Key-Value'],
-<<<<<<< HEAD
 		integrations: ['Databricksdbt', 'Airflow'],
 		useCases: ['Faster model delivery'],
 		roi: 'Shorter time-to-prod models',
 		competitors: ['TectonFeast'],
-=======
-		integrations: ['Databricks', 'dbt', 'Airflow'],
-		useCases: ['Faster model delivery'],
-		roi: 'Shorter time-to-prod models',
-		competitors: ['Tecton', 'Feast'],
->>>>>>> origin/auto/autonomy-17186719616
 		marketSize: '$1B+',
 		growthRate: '20% CAGR',
 		variant: 'neural-quantum',
@@ -1826,11 +1726,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		price: '$49',
 		period: '/month',
 		description: 'Define SLOs, compute error budgets and get proactive coaching with burn-rate alerts tied to runbooks.',
-<<<<<<< HEAD
 		features: ['SLO editorBurn-rate alerts', 'Runbook hintsIntegrations and webhooks'],
-=======
-		features: ['SLO editor', 'Burn-rate alerts', 'Runbook hints', 'Integrations and webhooks'],
->>>>>>> origin/auto/autonomy-17186719616
 		popular: false,
 		icon: '📈',
 		color: 'from-lime-500 to-emerald-600',
@@ -1843,13 +1739,8 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		trialDays: 14,
 		setupTime: '1 hour',
 		technology: ['Prom/OTEL'],
-<<<<<<< HEAD
 		integrations: ['PagerDutySlack'],
 		useCases: ['Error budgetsCoaching'],
-=======
-		integrations: ['PagerDuty', 'Slack'],
-		useCases: ['Error budgets', 'Coaching'],
->>>>>>> origin/auto/autonomy-17186719616
 		roi: 'Fewer incidents',
 		competitors: ['Nobl9'],
 		marketSize: '$0.8B',
@@ -1870,11 +1761,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		price: '$69',
 		period: '/month',
 		description: 'Improve Core Web Vitals with RUM/synthetic insights, performance budgets, and PR annotations for bundle changes.',
-<<<<<<< HEAD
 		features: ['RUM + syntheticBudgets and alerts', 'Bundle diff and PR notesEdge hints'],
-=======
-		features: ['RUM + synthetic', 'Budgets and alerts', 'Bundle diff and PR notes', 'Edge hints'],
->>>>>>> origin/auto/autonomy-17186719616
 		popular: false,
 		icon: '⚡',
 		color: 'from-cyan-600 to-purple-700',
@@ -1887,17 +1774,10 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		trialDays: 14,
 		setupTime: '2 hours',
 		technology: ['Lighthouse, RUM'],
-<<<<<<< HEAD
 		integrations: ['GitHubVercel', 'Netlify'],
 		useCases: ['CWV, bundle size'],
 		roi: '+20 LCP, fewer regressions',
 		competitors: ['SpeedCurveCalibre'],
-=======
-		integrations: ['GitHub', 'Vercel', 'Netlify'],
-		useCases: ['CWV, bundle size'],
-		roi: '+20 LCP, fewer regressions',
-		competitors: ['SpeedCurve', 'Calibre'],
->>>>>>> origin/auto/autonomy-17186719616
 		marketSize: '$0.5B',
 		growthRate: '12% CAGR',
 		variant: 'neural-quantum-cyberpunk',
@@ -1916,11 +1796,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		price: '$499',
 		period: '/month',
 		description: 'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.',
-<<<<<<< HEAD
 		features: ['Budgets and ownersAnomaly detection', 'Policy guardrailsIaC recommendation exports'],
-=======
-		features: ['Budgets and owners', 'Anomaly detection', 'Policy guardrails', 'IaC recommendation exports'],
->>>>>>> origin/auto/autonomy-17186719616
 		popular: true,
 		icon: '💸',
 		color: 'from-amber-600 to-orange-700',
@@ -1933,17 +1809,10 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		trialDays: 14,
 		setupTime: '3 days',
 		technology: ['AWS/GCP/Azure APIs'],
-<<<<<<< HEAD
 		integrations: ['DatadogSlack', 'Jira'],
 		useCases: ['Spend controlChargeback'],
 		roi: 'Reduce overspend by 10–30%',
 		competitors: ['CloudZeroFinout'],
-=======
-		integrations: ['Datadog', 'Slack', 'Jira'],
-		useCases: ['Spend control', 'Chargeback'],
-		roi: 'Reduce overspend by 10–30%',
-		competitors: ['CloudZero', 'Finout'],
->>>>>>> origin/auto/autonomy-17186719616
 		marketSize: '$12B',
 		growthRate: '25% YoY',
 		variant: 'quantum-holographic',
@@ -1962,11 +1831,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		price: '$59',
 		period: '/month',
 		description: 'Turn OpenAPI/GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.',
-<<<<<<< HEAD
 		features: ['Docs from schemasSDK generation', 'ChangelogsSearchable portal'],
-=======
-		features: ['Docs from schemas', 'SDK generation', 'Changelogs', 'Searchable portal'],
->>>>>>> origin/auto/autonomy-17186719616
 		popular: false,
 		icon: '📘',
 		color: 'from-cyan-600 to-blue-700',
@@ -1979,17 +1844,10 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		trialDays: 14,
 		setupTime: '30 minutes',
 		technology: ['OpenAPI, GraphQL, MDX'],
-<<<<<<< HEAD
 		integrations: ['GitHubGitLab'],
 		useCases: ['Dev portalsSDKs'],
 		roi: 'Docs/SDKs 5× faster',
 		competitors: ['ReadMeRedocly'],
-=======
-		integrations: ['GitHub', 'GitLab'],
-		useCases: ['Dev portals', 'SDKs'],
-		roi: 'Docs/SDKs 5× faster',
-		competitors: ['ReadMe', 'Redocly'],
->>>>>>> origin/auto/autonomy-17186719616
 		marketSize: '$1.5B',
 		growthRate: '18% CAGR',
 		variant: 'neural-quantum',
@@ -2001,10 +1859,6 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		rating: 4.7,
 		reviews: 6
 	}
-<<<<<<< HEAD
 ];
 
 
-=======
-];
->>>>>>> origin/auto/autonomy-17186719616

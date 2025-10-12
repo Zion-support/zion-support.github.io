@@ -81,7 +81,7 @@ export const futuristic2034Services: Service2034[] = [
     scalability: 'Unlimited neural connections',
     uptime: '99.99% neural interface availability',
     contact: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com/ai-quantum-hybrid-brain-interface'
+    website: 'https://ziontechgroup.com/ai-quantum-hybrid-brain-interface',
   },
   {
     id: 'quantum-dna-storage-platform',
@@ -138,7 +138,7 @@ export const futuristic2034Services: Service2034[] = [
     scalability: 'Unlimited DNA storage capacity',
     uptime: '99.99% DNA storage availability',
     contact: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com/quantum-dna-storage-platform'
+    website: 'https://ziontechgroup.com/quantum-dna-storage-platform',
   },
   {
     id: 'autonomous-space-colony-ai',
@@ -195,7 +195,7 @@ export const futuristic2034Services: Service2034[] = [
     scalability: 'Unlimited colony management',
     uptime: '99.999% space operations availability',
     contact: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com/autonomous-space-colony-ai'
+    website: 'https://ziontechgroup.com/autonomous-space-colony-ai',
   },
   {
     id: 'quantum-emotional-intelligence',
@@ -252,7 +252,7 @@ export const futuristic2034Services: Service2034[] = [
     scalability: 'Unlimited emotional analysis',
     uptime: '99.99% emotional intelligence availability',
     contact: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com/quantum-emotional-intelligence'
+    website: 'https://ziontechgroup.com/quantum-emotional-intelligence',
   },
   {
     id: 'ai-quantum-creativity-studio',
@@ -309,7 +309,7 @@ export const futuristic2034Services: Service2034[] = [
     scalability: 'Unlimited creative generation',
     uptime: '99.99% creativity platform availability',
     contact: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com/ai-quantum-creativity-studio'
+    website: 'https://ziontechgroup.com/ai-quantum-creativity-studio',
   },
   {
     id: 'quantum-financial-prediction',
@@ -366,6 +366,6 @@ export const futuristic2034Services: Service2034[] = [
     scalability: 'Unlimited financial analysis',
     uptime: '99.99% prediction platform availability',
     contact: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com/quantum-financial-prediction'
+    website: 'https://ziontechgroup.com/quantum-financial-prediction',
   }
 ]

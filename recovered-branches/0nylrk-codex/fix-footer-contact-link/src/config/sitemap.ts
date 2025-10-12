@@ -9,7 +9,7 @@ export type SitemapItem = {
   requiredAuth?: boolean
   requiredRoles?: Array<'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin'>
   children?: SitemapItem[]
-}
+};
 // Current date for lastmod
 const currentDate = '2025-05-15'
 // Public Pages - Accessible to all users
@@ -342,7 +342,7 @@ export const dynamicPaths = {
   projectRoom: '/project/:projectId/room',
   jobDetails: '/job/:id',
   categoryDetails: '/categories/:slug',
-  disputeDetails: '/dashboard/disputes/:disputeId'}
+  disputeDetails: '/dashboard/disputes/:disputeId'};
   disputeDetails: '/dashboard/disputes/:disputeId',
 }
 // The complete sitemap

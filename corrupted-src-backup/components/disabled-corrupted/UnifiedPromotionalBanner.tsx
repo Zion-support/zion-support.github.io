@@ -26,9 +26,9 @@ export interface UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */}
  }
 const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  } const buttonTheme, s = {/* TODO: Fix JSX expression */}
+  } const buttonTheme, s = {/* TODO: Fix JSX expression */};
   }
-  // Icon selection const IconCompone n t = {/* TODO: Fix JSX expression */}
+  // Icon selection const IconCompone n t = {/* TODO: Fix JSX expression */};
   }[ic, o, n]
   // Varia n t-specific styles const variantClass e s = {
     defau, l, t: 'py-8 p, x-, 6',
@@ -80,7 +80,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
                 : varia, n, t === 'compa, c, t'
                    ? 'te, x, t-xl, m, d:te, x, t-2, x, l'
                   : 'te, x, t-2 xl, m, d : te, x, t-3, x, l'
-           }
+           };
         <, classNam, e = {/* TODO: Fix JSX expression */}$2 />
            }`
         `}

@@ -26,7 +26,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
         : ''
       const headers = {
         ...instance.defaults.headers.common,
-        ...(init as any).headers}
+        ...(init as any).headers};
         ...(init as any).headers,
       }
       const opts = { ...init, headers } as RequestInit
@@ -37,7 +37,7 @@ export function create(config: { baseURL?: string; withCredentials?: boolean } =
       const headers = {
         'Content-Type': 'application/json',
         ...instance.defaults.headers.common,
-        ...(init as any).headers}
+        ...(init as any).headers};
       const opts = { ...init, body: JSON.stringify(data), headers } as RequestInit
       return request(baseURL + url, 'POST', opts)
     }}

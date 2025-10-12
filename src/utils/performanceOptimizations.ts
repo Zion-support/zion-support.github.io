@@ -48,7 +48,7 @@ export const throttle =
 export const useIntersectionObserver = ()
 
   callback: (entries: IntersectionObserverEntry[]) => void,
-  _options: IntersectionObserverInit = {}
+  _options: IntersectionObserverInit = {};
 ) => {
     // TODO: Add content
   }

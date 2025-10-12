@@ -12,7 +12,7 @@ Title: ${slide.title}\nContent:\n${slide.content}`
     let content = slide.content
     try {
       const chat = await client.chat.completions.create({
-        model: 'gpt-4o-mini'
+        model: 'gpt-4o-mini',
         messages: [
     } catch (err) {
       // keep original if AI fails
@@ -38,7 +38,7 @@ ${slide.content}`
         const rewritten = {
           title: title + ' (Enhanced)',
           content: content + ' [AI Enhanced]'
-        }
+        };
         res.json({ slide: rewritten })
       } catch (aiError) {
         console.error('AI rewrite error:', aiError)
@@ -53,4 +53,3 @@ ${slide.content}`
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

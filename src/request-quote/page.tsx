@@ -472,7 +472,7 @@ $4}
       titl,
   e: 'Free Quote',
       descriptio,
-  n: 'Get a detailed, no-obligation quote within 24 hours'
+  n: 'Get a detailed, no-obligation quote within 24 hours',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -482,7 +482,7 @@ $4}
       titl,
   e: 'Quick Response',
       descriptio,
-  n: 'We respond to all quote requests within 4 hours'
+  n: 'We respond to all quote requests within 4 hours',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -492,7 +492,7 @@ $4}
       titl,
   e: 'Transparent Pricing',
       descriptio,
-  n: 'Clear, detailed pricing with no hidden fees'
+  n: 'Clear, detailed pricing with no hidden fees',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -502,7 +502,7 @@ $4}
       titl,
   e: 'Expert Consultation',
       descriptio,
-  n: 'Free consultation with our technology experts'
+  n: 'Free consultation with our technology experts',
     }
   ]
   const whyChooseUs = [
@@ -517,7 +517,7 @@ $4}
       titl,
   e: '50+ Successful Projects',
       descriptio,
-  n: 'Proven track record of delivering results'
+  n: 'Proven track record of delivering results',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -527,7 +527,7 @@ $4}
       titl,
   e: '300% Average ROI',
       descriptio,
-  n: 'Our clients see significant returns on investment'
+  n: 'Our clients see significant returns on investment',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -537,7 +537,7 @@ $4}
       titl,
   e: '24/7 Support',
       descriptio,
-  n: 'Round-the-clock support for all our clients'
+  n: 'Round-the-clock support for all our clients',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -547,7 +547,7 @@ $4}
       titl,
   e: '99.9% Uptime',
       descriptio,
-  n: 'Reliable, high-performance solutions'
+  n: 'Reliable, high-performance solutions',
     }
   ]
   if (isSubmitted) {/* TODO: Fix JSX expression */}

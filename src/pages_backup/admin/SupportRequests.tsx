@@ -2,15 +2,15 @@
 
 const MOCK_SUPPORT_REQUESTS = [
   {
-    id: 'SR-1001'
-    user: 'john.doe@example.com'
-    userId: 'user-123'
-    issue: 'Cannot access account after password reset'
-    status: 'open'
-    priority: 'high'
-    createdAt: '2023-12-15T14:30:00Z'
-    lastUpdated: '2023-12-15T15:45:00Z'
-    category: 'authentication'
+    id: 'SR-1001',
+    user: 'john.doe@example.com',
+    userId: 'user-123',
+    issue: 'Cannot access account after password reset',
+    status: 'open',
+    priority: 'high',
+    createdAt: '2023-12-15T14:30:00Z',
+    lastUpdated: '2023-12-15T15:45:00Z',
+    category: 'authentication',
   }
   {
     id: 'SR - 1001',
@@ -101,7 +101,7 @@ const MOCK_SUPPORT_REQUESTS = [
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
 
 
@@ -265,7 +265,6 @@ export default function SupportRequests() {
     setPriorityFilter(null)
     setCategoryFilter(null)
   }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -483,7 +482,7 @@ export default function SupportRequests() {
                 value={statusFilter || ''}
                 onValueChange={value => setStatusFilter(value || null)}
 
-              
+              ;
               <Button variant="outline" onClick={resetFilters} className="md:w-auto">
                 <Filter className="h-4 w-4 mr-2" /> Reset Filters
               </Button>
@@ -634,7 +633,7 @@ export default function SupportRequests() {
                 value={priority_filter || ''}
                 onValueChange={value => setPriorityFilter (value || null)}
 
-
+;
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Priority' /></$1>
@@ -647,7 +646,7 @@ export default function SupportRequests() {
                 value={category_filter || ''}
                 onValueChange={value => setCategoryFilter (value || null)}
 
-
+;
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Category' /></$1>

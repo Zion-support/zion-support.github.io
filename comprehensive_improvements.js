@@ -10,7 +10,7 @@ packageJson.scripts = {
     'optimize: all': 'pnpm run optimize:images && pnpm run optimize:css && pnpm run build:optimized',
     'analyze: bundle': 'vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html',
     'perf:audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html',
-packageJson.scripts = {/* TODO: Fix JSX expression */}
+packageJson.scripts = {/* TODO: Fix JSX expression */};
 }
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))

@@ -7,7 +7,7 @@ const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || ''
 const supabase = createClient(supabaseUrl, supabaseServiceKey)
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 }
 interface Service {
@@ -67,7 +67,7 @@ serve(async (req) => {
             messages: [
               {
                 role: 'system',
-                content: 'You are an AI assistant that helps analyze service requests and generate tags and summaries for them.'
+                content: 'You are an AI assistant that helps analyze service requests and generate tags and summaries for them.',
               },
               {
                 role: 'user',
@@ -112,7 +112,7 @@ serve(async (req) => {
           start_date: quoteDetails.startDate,
           end_date: quoteDetails.endDate,
           ai_analysis: aiAnalysis,
-          status: 'pending'
+          status: 'pending',
         }
       ])
       .select()

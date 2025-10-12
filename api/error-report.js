@@ -1,14 +1,10 @@
 // Error reporting API endpoint
 export default function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
-=======
-    return
->>>>>>> origin/main
   }
 
   try {
@@ -37,7 +33,6 @@ export default function handler(req, res) {
     res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 
       success: true, 
-<<<<<<< HEAD
       message: 'Error report received',
       timestamp: new Date().toISOString()
     }));
@@ -50,17 +45,5 @@ export default function handler(req, res) {
       error: 'Failed to process error report',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
     }));
-=======
-      message: 'Error report received' 
-    }))
-  } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error reporting error:', error)
-    }
-    res.statusCode = 500
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Failed to process error report' }))
->>>>>>> origin/main
   }
 }

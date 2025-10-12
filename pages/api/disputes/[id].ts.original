@@ -24,7 +24,6 @@ export default async function handler(
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "GET") {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const dispute = await getDisputeById(id);
     if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
     try {
@@ -38,15 +37,11 @@ export default async function handler(
   res && res.setHeader("Allow", "GET");
   return res && res.status(405).end("Method Not Allowed");
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById  } from '../../../utils / fsdb';
 import {
@@ -73,4 +68,3 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

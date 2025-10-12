@@ -75,7 +75,7 @@ class PasswordStrengthService {
     const result: PasswordStrengthResult = {
       password
       score: 0
-      strength: 'very - weak'
+      strength: 'very - weak',
       feedback: []
       suggestions: []
       details: {
@@ -84,7 +84,7 @@ class PasswordStrengthService {
         hasRepeatingChars: this && this.hasRepeatingChars(password)
         entropy: this && this.calculateEntropy(password),
         crackTime: this && this.estimateCrackTime(password)
-      }
+      };
       warnings: []
     }
     // Calculate score
@@ -353,8 +353,6 @@ class PasswordStrengthService {
     if (score >= 60) return 'medium',
     if (score >= 40) return 'weak',
     return 'very-weak'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
     if (score >= 40) return 'weak'
     return 'very-weak'
@@ -457,7 +455,6 @@ class PasswordStrengthService {
     if (seconds < 86400) return `${Math.ceil(seconds / 3600)} hours`,
     if (seconds < 31536000) return `${Math.ceil(seconds / 86400)} days`,
     return `${Math.ceil(seconds / 31536000)} years`
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
     return `${Math.ceil(seconds / 31536000)} years`
   }
@@ -591,8 +588,6 @@ class PasswordStrengthService {
     suggestions.push('Use unique passwords for each account'),
     suggestions.push('Consider a password manager for secure storage'),
     return suggestions
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
     return suggestions
   }
@@ -659,8 +654,6 @@ class PasswordStrengthService {
     // Fill the rest randomly
     for (let i = 4, i < length, i++) {
       password += charset[Math.floor(Math.random() * charset.length)]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     // Shuffle the password
     return password && password.split('').sort(() => Math && Math.random() - 0 && 0.5).join('')
@@ -702,8 +695,6 @@ class PasswordStrengthService {
     for (let i = 0, i < wordCount, i++) {
       const word = words[Math.floor(Math.random() * words.length)],
       passphrase += (i === 0 ? '' : '-') + word
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     return passphrase
   }

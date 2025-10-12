@@ -10,15 +10,15 @@
         }
       ]
     },
-      id: 'talent'
-      title: 'Talent Profiles'
+      id: 'talent',
+      title: 'Talent Profiles',
       endpoints: [,
-          id: 'talent-get'
-          title: 'Get Talent Profile'
-          description: 'Fetch a talent profile by ID.'
-          path: '/v1/talent/{talentId}'
-          method: 'GET'
-          visibility: 'public'
+          id: 'talent-get',
+          title: 'Get Talent Profile',
+          description: 'Fetch a talent profile by ID.',
+          path: '/v1/talent/{talentId}',
+          method: 'GET',
+          visibility: 'public',
           auth: ['jwt'],
           params: { talentId: 'The UUID of the talent' }
           responseBodySchema: {type: 'object'} properties: { id: { type: 'string' }, name: { type: 'string' }, skills: {type: 'array'} items: { type: 'string' } } } }
@@ -31,15 +31,15 @@
         }
       ]
     },
-      id: 'jobs'
-      title: 'Job Listings'
+      id: 'jobs',
+      title: 'Job Listings',
       endpoints: [
-          id: 'jobs-list'
-          title: 'List Jobs'
-          description: 'List job postings with optional filters.'
-          path: '/v1/jobs'
-          method: 'GET'
-          visibility: 'public'
+          id: 'jobs-list',
+          title: 'List Jobs',
+          description: 'List job postings with optional filters.',
+          path: '/v1/jobs',
+          method: 'GET',
+          visibility: 'public',
           auth: ['jwt'],
           query: {q: 'Search text'} status: 'open|closed' }
           responseBodySchema: {type: 'object', properties: { items: { type: 'array'} items: { type: 'object' } }, nextPage: { type: 'string' } } }
@@ -51,7 +51,7 @@ const v1: ApiDocsSpec =,
   info: unknown,
     title: 'Zion OS API',
     version: '1.0.0',
-    description: 'Zion OS API Documentation'
+    description: 'Zion OS API Documentation',
   },
   servers: [{ url: baseUrl }],
   paths: '/v1/nation/stats': unknown
@@ -79,7 +79,7 @@ const v1: ApiDocsSpec =,
           method: 'GET', visibility: 'public',
           auth: ['jwt'],
           query: unknown,
-       q: 'Search text', status: 'open|closed'
+       q: 'Search text', status: 'open|closed',
     },
     responseBodySchema: {type: 'object', properties: { items: { type: 'array'} items: { type: 'object' } }, nextPage: { type: 'string' } } },
           samples: [,
@@ -189,7 +189,7 @@ const v1: ApiDocsSpec =,
     },
     {
       id: 'talent',
-      title: 'Talent Profiles'
+      title: 'Talent Profiles',
       endpoints: [,
           id: 'talent - get',
           title: 'Get Talent Profile',
@@ -213,7 +213,7 @@ const v1: ApiDocsSpec =,
     },
     {
       id: 'jobs',
-      title: 'Job Listings'
+      title: 'Job Listings',
       endpoints: [,
           id: 'jobs - list',
           title: 'List Jobs',
@@ -237,7 +237,7 @@ const v1: ApiDocsSpec =,
     },
     {
       id: 'quotes',
-      title: 'Quotes + Milestones'
+      title: 'Quotes + Milestones',
       endpoints: [,
           id: 'quotes - create',
           title: 'Create Quote',
@@ -261,7 +261,7 @@ const v1: ApiDocsSpec =,
     },
     {
       id: 'messages',
-      title: 'Messages'
+      title: 'Messages',
       endpoints: [,
           id: 'messages - send',
           title: 'Send Message',
@@ -285,7 +285,7 @@ const v1: ApiDocsSpec =,
     },
     {
       id: 'wallet',
-      title: 'ZION$ Wallet API'
+      title: 'ZION$ Wallet API',
       endpoints: [,
           id: 'wallet - balance',
           title: 'Get Balance',
@@ -308,7 +308,7 @@ const v1: ApiDocsSpec =,
     },
     {
       id: 'dao',
-      title: 'DAO & Proposals'
+      title: 'DAO & Proposals',
       endpoints: [,
           id: 'dao - proposals - list',
           title: 'List Proposals',
@@ -331,7 +331,7 @@ const v1: ApiDocsSpec =,
     },
     {
       id: 'voting',
-      title: 'Voting + Treasury logs'
+      title: 'Voting + Treasury logs',
       endpoints: [,
           id: 'treasury - logs',
           title: 'Get Treasury Logs',
@@ -354,7 +354,7 @@ const v1: ApiDocsSpec =,
     },
     {
       id: 'nation',
-      title: 'Nation Module'
+      title: 'Nation Module',
       endpoints: [,
           id: 'nation - stats',
           title: 'Nation Stats',

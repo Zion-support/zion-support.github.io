@@ -81,51 +81,51 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     }
     realImplementation: true
-    implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture, real-time learning, and autonomous decision-making capabilities. Includes custom hardware integration and robotics control.'
-    launchDate: '2026-04-01'
+    implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture, real-time learning, and autonomous decision-making capabilities. Includes custom hardware integration and robotics control.',
+    launchDate: '2026-04-01',
     customers: 150
     rating: 4.9
     reviews: 100,
   }
   // DNA Computing Platform
   {
-    id: 'dna-computing-platform-2026'
-    name: 'DNA Computing Platform 2026'
-    tagline: 'Molecular computing for complex problem solving and data storage'
-    price: '$4,999'
-    period: '/month'
-    description: 'Cutting-edge DNA computing platform that leverages molecular biology for ultra-dense data storage and complex computational problems.'
+    id: 'dna-computing-platform-2026',
+    name: 'DNA Computing Platform 2026',
+    tagline: 'Molecular computing for complex problem solving and data storage',
+    price: '$4,999',
+    period: '/month',
+    description: 'Cutting-edge DNA computing platform that leverages molecular biology for ultra-dense data storage and complex computational problems.',
     features: [,
       'Molecular data storageDNA-based computationUltra-dense information encodingParallel processing capabilitiesBiological error correctionMolecular programming interfaceDNA synthesis integrationBioinformatics analysis'
       'Molecular robotics controlBiological security protocols'
     ]
     popular: true
-    icon: ''
-    color: 'from-emerald-600 to-teal-700'
-    textColor: 'text-emerald-400'
-    link: 'https://ziontechgroup.com/dna-computing-platform-2026'
-    marketPosition: 'Competitive with Microsoft DNA Storage ($1000-5000), Catalog DNA ($500-2000), and Twist Bioscience ($200-1000). Our advantage: Advanced molecular computing, parallel processing, and biological integration.'
-    targetAudience: 'Biotechnology companies, Pharmaceutical companies, Research institutions, Data storage companies, Healthcare organizations, Government agencies'
+    icon: '',
+    color: 'from-emerald-600 to-teal-700',
+    textColor: 'text-emerald-400',
+    link: 'https://ziontechgroup.com/dna-computing-platform-2026',
+    marketPosition: 'Competitive with Microsoft DNA Storage ($1000-5000), Catalog DNA ($500-2000), and Twist Bioscience ($200-1000). Our advantage: Advanced molecular computing, parallel processing, and biological integration.',
+    targetAudience: 'Biotechnology companies, Pharmaceutical companies, Research institutions, Data storage companies, Healthcare organizations, Government agencies',
     trialDays: 7
-    setupTime: '24 hours'
-    category: 'Emerging Technology & Biotechnology'
+    setupTime: '24 hours',
+    category: 'Emerging Technology & Biotechnology',
     realService: true
     technology: ['DNA ComputingMolecular BiologyBioinformaticsReactNode.jsPostgreSQLRedisAWS']
     integrations: ['DNA synthesis platformsBioinformatics toolsLaboratory equipmentResearch databasesMolecular modeling software']
     useCases: ['Complex problem solvingUltra-dense data storageDrug discoveryGenetic researchMolecular roboticsBiological computing']
-    roi: 'Average customer sees 800% ROI within 24 months through revolutionary computing capabilities and data storage density.'
+    roi: 'Average customer sees 800% ROI within 24 months through revolutionary computing capabilities and data storage density.',
     competitors: ['Microsoft DNA StorageCatalog DNATwist BioscienceIlluminaPacific Biosciences']
-    marketSize: '$12.5B market'
-    growthRate: '500% annual growth'
+    marketSize: '$12.5B market',
+    growthRate: '500% annual growth',
     variant: 'ai-futuristic'}
     contactInfo: {}
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum consciousness simulation platform with research-grade algorithms and comprehensive collaboration tools.',
@@ -215,7 +215,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Full-featured holographic metaverse platform with AI-powered world generation and comprehensive collaboration tools.',
@@ -311,7 +311,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Production autonomous manufacturing platform with comprehensive AI capabilities and equipment integration.',
@@ -406,7 +406,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced photonic computing platform with light-speed processing, quantum optical computing, and ultra-low latency capabilities. Includes optical network integration and quantum communication.',
@@ -458,7 +458,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced space technology platform with AI-powered satellite management and comprehensive space operations tools.',
@@ -510,7 +510,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Production quantum energy management platform with advanced optimization algorithms and comprehensive utility integration.',
@@ -606,7 +606,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Full-featured AI robotics platform with comprehensive robot programming and coordination tools.',
@@ -702,7 +702,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Production quantum logistics platform with advanced optimization algorithms and comprehensive supply chain integration.',
@@ -798,7 +798,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Full-featured virtual events platform with AI-powered engagement and comprehensive event management tools.',
@@ -855,7 +855,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.',

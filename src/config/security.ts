@@ -7,7 +7,7 @@
 export const _securityHeaders = {
     // TODO: Add content
   }
-
+;
 }
   // Content Security Policy,
   contentSecurityPolic,
@@ -59,7 +59,7 @@ export const _securityHeaders = {
 // 'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
 }
  * Rate limiting configuration
-export const rateLimitConfig = {/* TODO: Fix JSX expression */}
+export const rateLimitConfig = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   windowM,
@@ -67,9 +67,9 @@ export const rateLimitConfig = {/* TODO: Fix JSX expression */}
   ma,
   x: 100, // Limit each IP to 100 requests per windowMs,
   messag,
-  e: 'Too many requests from this IP, please try again later.'
+  e: 'Too many requests from this IP, please try again later.',
  * CORS configuration
-export const corsConfig = {/* TODO: Fix JSX expression */}
+export const corsConfig = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -79,7 +79,7 @@ export const corsConfig = {/* TODO: Fix JSX expression */}
   credentials: true,
   maxAge: 86400, // 24 hours
  * Session configuration
-export const sessionConfig = {/* TODO: Fix JSX expression */}
+export const sessionConfig = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   secre,
@@ -101,7 +101,7 @@ maxAg,
     sameSit,
   e: 'strict' as const
  * Input validation patterns,
-export const validationPatterns = {/* TODO: Fix JSX expression */}
+export const validationPatterns = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 

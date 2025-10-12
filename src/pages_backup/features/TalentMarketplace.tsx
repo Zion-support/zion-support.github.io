@@ -1,7 +1,7 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
   
   static getDerivedStateFromError(error) {
@@ -53,7 +53,7 @@ export default function TalentMarketplace() {
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
 
-  }
+  };
   return (
     <>
                 Create a free account and send a message or job invite directly
@@ -177,7 +177,7 @@ export default function TalentMarketplace() {
     "name": "Talent Marketplace",
     "description": "Hire vetted AI and tech professionals from around the world on Zion."
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
-  }
+  };
   return (
     <>
       <SEO

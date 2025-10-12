@@ -9,7 +9,7 @@ export const fsDb = {
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
   delete: (path: string) => null
-}
+};
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,

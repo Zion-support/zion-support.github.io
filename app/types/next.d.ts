@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Next.js type declarations
 
 import { NextPage, NextPageContext } from 'next';
@@ -208,56 +207,40 @@ declare global {
 }
 
 export {};
-=======
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-=======
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
 const NextPage: React.FC = () => {
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
->>>>>>> origin/main
 const Next.dPage: React.FC = () => {
->>>>>>> origin/main
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international businesses',
     }
   ]
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -268,7 +251,6 @@ const Next.dPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-<<<<<<< HEAD
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -291,11 +273,7 @@ const Next.dPage: React.FC = () => {
   alternates?: {
     canonical?: string;
     languages?: Record<string, string>;
-<<<<<<< HEAD
   };
-=======
-  }
->>>>>>> origin/main
   openGraph?: {
     title?: string;
     description?: string;
@@ -336,7 +314,6 @@ const Next.dPage: React.FC = () => {
     yandex?: string;
     yahoo?: string;
     other?: Record<string, string>;
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -433,34 +410,21 @@ export interface Metadata {
     yandex?: string
     yahoo?: string
     other?: Record<string, string>
->>>>>>> origin/main
   }
 }
 
 export interface MetadataRoute {
   url: string,
-<<<<<<< HEAD
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
-=======
-  lastModified?: string | Date
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number
->>>>>>> origin/main
 }
 
 export interface MetadataRouteSitemap extends MetadataRoute {
   url: string,
-<<<<<<< HEAD
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
-=======
-  lastModified?: string | Date
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
-  priority?: number
->>>>>>> origin/main
 }
 
 // Custom Next.js types
@@ -469,18 +433,14 @@ export interface NextPageProps {
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-<<<<<<< HEAD
 export interface MetadataRouteSitemap extends MetadataRoute {
   url: string;
   lastModified?: string | Date;
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
-=======
-<<<<<<< HEAD
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -507,9 +467,8 @@ export interface MetadataRouteSitemap extends MetadataRoute {
       </section>
 
 {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Next.d?
@@ -534,9 +493,8 @@ export interface MetadataRouteSitemap extends MetadataRoute {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        </section>
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
@@ -558,9 +516,8 @@ export interface MetadataRouteSitemap extends MetadataRoute {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-4xl mx-auto text-center">
+      <section$1>
+        <div$2>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -583,35 +540,9 @@ export interface MetadataRouteSitemap extends MetadataRoute {
       </section>
     </div>
   );
->>>>>>> origin/main
 }
 
-<<<<<<< HEAD
 export default Next.dPage;
-=======
-export default NextPage;
-
-// Client components types
-export interface ClientComponentProps {
-  children?: React.ReactNode;
-  className?: string;
-=======
-// API route types
-export interface ApiRouteHandler {
-  (req: Request): Promise<Response>
-}
-
-// Server components types
-export interface ServerComponentProps {
-  params: { [key: string]: string }
-  searchParams: { [key: string]: string | string[] | undefined }
-}
-
-// Client components types
-export interface ClientComponentProps {
-  children?: React.ReactNode
-  className?: string
->>>>>>> origin/main
 }
 
 // Route handlers
@@ -631,65 +562,36 @@ export interface DynamicRoute {
 // Static generation types
 export interface StaticProps {
   props: { [key: string]: any }
-<<<<<<< HEAD
   revalidate?: number;
   notFound?: boolean;
-=======
-  revalidate?: number
-  notFound?: boolean
->>>>>>> origin/main
 }
 
 // ISR types
 export interface ISRConfig {
-<<<<<<< HEAD
   revalidate: number;
-=======
-  revalidate: number
->>>>>>> origin/main
   tags?: string[]
 }
 
 // Edge runtime types
 export interface EdgeRuntime {
-<<<<<<< HEAD
   runtime: 'edge';
-=======
-  runtime: 'edge'
->>>>>>> origin/main
 }
 
 // Node.js runtime types
 export interface NodeRuntime {
-<<<<<<< HEAD
   runtime: 'nodejs';
-=======
-  runtime: 'nodejs'
->>>>>>> origin/main
 }
 
 // Extend Next.js types
 declare module 'next' {
   interface NextApiRequest {
     user?: {
-<<<<<<< HEAD
       id: string;
       email: string;
       name?: string;
-=======
-      id: string
-      email: string
-      name?: string
->>>>>>> origin/main
     }
   }
 }
 
-<<<<<<< HEAD
 export {}
->>>>>>> main
-=======
 export {}</div></div></div></div></div></div></div></div></button></button></p></p></p></h2></h2></section></section>
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main

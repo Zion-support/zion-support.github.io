@@ -11,7 +11,7 @@ export const innovative2025AIAutonomousEcosystem = [
       starter: '$299/month',
       professional: '$799/month',
       enterprise: '$1,999/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'Fully autonomous content generation',
@@ -60,7 +60,7 @@ export const innovative2025AIAutonomousEcosystem = [
     website: 'https://ziontechgroup.com',
     slug: '/ai-autonomous-content-creation-2025',
     demoUrl: 'https://ziontechgroup.com/demo/ai-content-creation',
-    documentation: 'https://ziontechgroup.com/docs/ai-content-creation'
+    documentation: 'https://ziontechgroup.com/docs/ai-content-creation',
   },
   // AI-Powered Autonomous Customer Service Platform
   {
@@ -74,7 +74,7 @@ export const innovative2025AIAutonomousEcosystem = [
       starter: '$399/month',
       professional: '$999/month',
       enterprise: '$2,499/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'Fully autonomous customer support',
@@ -123,7 +123,7 @@ export const innovative2025AIAutonomousEcosystem = [
     website: 'https://ziontechgroup.com',
     slug: '/ai-autonomous-customer-service-2025',
     demoUrl: 'https://ziontechgroup.com/demo/ai-customer-service',
-    documentation: 'https://ziontechgroup.com/docs/ai-customer-service'
+    documentation: 'https://ziontechgroup.com/docs/ai-customer-service',
   },
   // AI-Powered Autonomous Sales Intelligence Platform
   {
@@ -137,7 +137,7 @@ export const innovative2025AIAutonomousEcosystem = [
       starter: '$499/month',
       professional: '$1,299/month',
       enterprise: '$3,499/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'Fully autonomous lead generation',
@@ -186,7 +186,7 @@ export const innovative2025AIAutonomousEcosystem = [
     website: 'https://ziontechgroup.com',
     slug: '/ai-autonomous-sales-intelligence-2025',
     demoUrl: 'https://ziontechgroup.com/demo/ai-sales-intelligence',
-    documentation: 'https://ziontechgroup.com/docs/ai-sales-intelligence'
+    documentation: 'https://ziontechgroup.com/docs/ai-sales-intelligence',
   },
   // AI-Powered Autonomous Financial Analysis Platform
   {
@@ -200,7 +200,7 @@ export const innovative2025AIAutonomousEcosystem = [
       starter: '$599/month',
       professional: '$1,599/month',
       enterprise: '$4,999/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'Fully autonomous financial analysis',
@@ -249,7 +249,7 @@ export const innovative2025AIAutonomousEcosystem = [
     website: 'https://ziontechgroup.com',
     slug: '/ai-autonomous-financial-analysis-2025',
     demoUrl: 'https://ziontechgroup.com/demo/ai-financial-analysis',
-    documentation: 'https://ziontechgroup.com/docs/ai-financial-analysis'
+    documentation: 'https://ziontechgroup.com/docs/ai-financial-analysis',
   },
   // AI-Powered Autonomous Healthcare Diagnostics Platform
   {
@@ -263,7 +263,7 @@ export const innovative2025AIAutonomousEcosystem = [
       starter: '$799/month',
       professional: '$1,999/month',
       enterprise: '$5,999/month',
-      custom: 'Contact for pricing'
+      custom: 'Contact for pricing',
     },
     features: [
       'Fully autonomous medical image analysis',
@@ -312,6 +312,6 @@ export const innovative2025AIAutonomousEcosystem = [
     website: 'https://ziontechgroup.com',
     slug: '/ai-autonomous-healthcare-diagnostics-2025',
     demoUrl: 'https://ziontechgroup.com/demo/ai-healthcare-diagnostics',
-    documentation: 'https://ziontechgroup.com/docs/ai-healthcare-diagnostics'
+    documentation: 'https://ziontechgroup.com/docs/ai-healthcare-diagnostics',
   }
 ]

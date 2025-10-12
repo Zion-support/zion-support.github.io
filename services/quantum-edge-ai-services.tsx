@@ -27,7 +27,7 @@ export default function quantumedgeaiservices() {
         </div>)
       </div>)
 export const,
-  metadata: Metadata = {/* TODO: Fix JSX expression */}
+  metadata: Metadata = {/* TODO: Fix JSX expression */};
   }}
 export default function quantumedgeaiservices() {/* TODO: Fix JSX expression */}
 }

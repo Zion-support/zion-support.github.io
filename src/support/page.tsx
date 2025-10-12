@@ -21,37 +21,37 @@ const SupportPage: React.FC = () => {
       id: 1,
       question: 'How do I get started with Zion Tech Group services?',
       answer: 'Getting started is easy! Contact our team at +1 302 464 0950 or email kleber@ziontechgroup.com for a free consultation. We\'ll assess your needs and recommend the best AI solutions for your business.',
-      category: 'getting-started'
+      category: 'getting-started',
     },
     {
       id: 2,
       question: 'What AI services do you offer?',
       answer: 'We offer comprehensive AI services including Machine Learning, Natural Language Processing, Computer Vision, AI Automation, Quantum AI Computing, and AI Cybersecurity. We also provide Micro SAAS solutions for immediate deployment.',
-      category: 'ai-services'
+      category: 'ai-services',
     },
     {
       id: 3,
       question: 'How much do your services cost?',
       answer: 'Our pricing starts at $299/month for the Starter plan. We offer flexible pricing based on your specific needs. Contact us for a custom quote tailored to your requirements.',
-      category: 'billing'
+      category: 'billing',
     },
     {
       id: 4,
       question: 'Do you provide 24/7 technical support?',
       answer: 'Yes! We offer 24/7 technical support for all our clients. Our expert team is always available to help with any technical issues or questions you may have.',
-      category: 'technical'
+      category: 'technical',
     },
     {
       id: 5,
       question: 'How do I integrate your AI services with my existing systems?',
       answer: 'Our team provides comprehensive integration support. We work with your existing infrastructure and provide APIs, SDKs, and custom integration solutions to ensure seamless implementation.',
-      category: 'api'
+      category: 'api',
     },
     {
       id: 6,
       question: 'What is your typical project timeline?',
       answer: 'Project timelines vary based on complexity. Simple AI implementations can take 2-4 weeks, while complex enterprise transformations may take 3-6 months. We provide detailed timelines during our consultation.',
-      category: 'getting-started'
+      category: 'getting-started',
     }
   ]
   const supportChannels = [
@@ -61,7 +61,7 @@ const SupportPage: React.FC = () => {
       description: 'Speak directly with our AI experts',
       contact: '+1 302 464 0950',
       availability: '24/7 Available',
-      color: 'text-green-400'
+      color: 'text-green-400',
     },
     {
       icon: Mail,
@@ -69,7 +69,7 @@ const SupportPage: React.FC = () => {
       description: 'Get detailed responses via email',
       contact: 'kleber@ziontechgroup.com',
       availability: 'Response within 2 hours',
-      color: 'text-blue-400'
+      color: 'text-blue-400',
     },
     {
       icon: MessageSquare,
@@ -77,7 +77,7 @@ const SupportPage: React.FC = () => {
       description: 'Instant support through our chat system',
       contact: 'Start Chat',
       availability: 'Mon-Fri 9AM-6PM EST',
-      color: 'text-purple-400'
+      color: 'text-purple-400',
     },
     {
       icon: Calendar,
@@ -85,7 +85,7 @@ const SupportPage: React.FC = () => {
       description: 'Book a consultation with our team',
       contact: 'Book Now',
       availability: 'Flexible scheduling',
-      color: 'text-cyan-400'
+      color: 'text-cyan-400',
     }
   ]
   const resources = [
@@ -93,37 +93,37 @@ const SupportPage: React.FC = () => {
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
       icon: FileText,
-      link: '/docs'
+      link: '/docs',
     },
     {
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all services',
       icon: Eye,
-      link: '/tutorials'
+      link: '/tutorials',
     },
     {
       title: 'Case Studies',
       description: 'Real-world examples and success stories',
       icon: BarChart,
-      link: '/case-studies'
+      link: '/case-studies',
     },
     {
       title: 'API Reference',
       description: 'Complete API documentation and examples',
       icon: Code,
-      link: '/api-docs'
+      link: '/api-docs',
     },
     {
       title: 'Best Practices',
       description: 'Industry best practices and guidelines',
       icon: Award,
-      link: '/best-practices'
+      link: '/best-practices',
     },
     {
       title: 'Community Forum',
       description: 'Connect with other users and experts',
       icon: Users,
-      link: '/community'
+      link: '/community',
     }
   ]
   const filteredFaqs = selectedCategory === 'all' 
@@ -246,8 +246,8 @@ const SupportPage: React.FC = () => {
                   Send Email
   
               </div>
-            </div>
-          </section>
+        </div>
+      </section>
         </main>
         <Footer />
       </div>

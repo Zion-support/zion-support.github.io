@@ -116,7 +116,7 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     contact: {
       phone: '+1-800-ZION-TECH',
       email: 'ai-quantum@ziontechgroup.com',
-      address: 'Zion Tech Group, Innovation District, Tech City'
+      address: 'Zion Tech Group, Innovation District, Tech City',
     },
     trialDays: 30,
     setupTime: '2-4 weeks',
@@ -138,7 +138,7 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
     marketPosition: 'Market Leader',
     technology: ['AI', 'Quantum Computing', 'Machine Learning'],
     growthRate: '45% YoY',
-    variant: 'premium'
+    variant: 'premium',
   }
 ]
   realImplementation: boolean
@@ -155,8 +155,8 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-}
+  website: 'https://ziontechgroup.com',
+};
 export const emergingTechInnovations: EmergingTechInnovation[] = [
   // Quantum Internet & Communication Services
   {
@@ -218,7 +218,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Quantum repeater networks',
       'Quantum entanglement distribution'
     ],
-    marketAdvantage: 'First commercial quantum internet protocol stack with proven infrastructure'
+    marketAdvantage: 'First commercial quantum internet protocol stack with proven infrastructure',
   },
   // Autonomous Vehicle AI Services
   {
@@ -280,7 +280,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Safety-critical decisions',
       'Multi-sensor fusion'
     ],
-    marketAdvantage: 'Most comprehensive autonomous vehicle AI platform with proven safety record'
+    marketAdvantage: 'Most comprehensive autonomous vehicle AI platform with proven safety record',
   },
   // Digital Twin & IoT Services
   {
@@ -342,7 +342,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'IoT integration',
       'Performance optimization'
     ],
-    marketAdvantage: 'Most comprehensive digital twin platform with advanced 3D visualization and AI analytics'
+    marketAdvantage: 'Most comprehensive digital twin platform with advanced 3D visualization and AI analytics',
   },
   // Advanced Robotics & Automation Services
   {
@@ -404,7 +404,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Performance monitoring',
       'Safety management'
     ],
-    marketAdvantage: 'Most advanced AI robotics orchestration platform with proven enterprise deployment'
+    marketAdvantage: 'Most advanced AI robotics orchestration platform with proven enterprise deployment',
   },
   // Quantum Materials & Chemistry Services
   {
@@ -466,7 +466,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Property prediction',
       'Workflow automation'
     ],
-    marketAdvantage: 'Only quantum-powered materials discovery platform with proven research applications'
+    marketAdvantage: 'Only quantum-powered materials discovery platform with proven research applications',
   },
   // Metaverse & Virtual Reality Services
   {
@@ -528,7 +528,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'VR/AR optimization',
       'Business integration'
     ],
-    marketAdvantage: 'Most comprehensive enterprise metaverse platform with proven business applications'
+    marketAdvantage: 'Most comprehensive enterprise metaverse platform with proven business applications',
   },
   // Advanced Energy & Sustainability Services
   {
@@ -590,7 +590,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Energy storage optimization',
       'Carbon tracking'
     ],
-    marketAdvantage: 'Only quantum-powered energy optimization platform with proven grid applications'
+    marketAdvantage: 'Only quantum-powered energy optimization platform with proven grid applications',
   },
   // Advanced Biotechnology Services
   {
@@ -652,7 +652,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Pathway simulation',
       'High-throughput screening'
     ],
-    marketAdvantage: 'Most comprehensive AI biotech platform with proven research applications'
+    marketAdvantage: 'Most comprehensive AI biotech platform with proven research applications',
   },
   // Advanced Cybersecurity & Threat Intelligence
   {
@@ -714,6 +714,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Quantum encryption',
       'Threat hunting'
     ],
-    marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
+    marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration',
   }
 ]

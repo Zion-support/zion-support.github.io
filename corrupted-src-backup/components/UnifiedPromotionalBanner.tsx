@@ -84,13 +84,13 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
                 : varia, n, t === 'compa, c, t'
                    ? 'te, x, t-xl, m, d:te, x, t-2, x, l'
                   : 'te, x, t-2xl, m, d : te, x, t-3, x, l'
-export, interface, FeaturedItem {/* TODO: Fix JSX expression */}
+export, interface, FeaturedItem {/* TODO: Fix JSX expression */};
 }
 export, interface, UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */}
 }
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  } const, buttonTheme, s = {/* TODO: Fix JSX expression */}
+  } const, buttonTheme, s = {/* TODO: Fix JSX expression */};
   } const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n (<, classNam, e = {/* TODO: Fix JSX expression */}$2 />
         bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl
         ${variantClass, e, s[varia, n, t]} 

@@ -86,7 +86,7 @@ const report = {
   functionsCount: execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim(),
   optimizationStatus: 'Completed',
   improvements: [,
-const report = {/* TODO: Fix JSX expression */}
+const report = {/* TODO: Fix JSX expression */};
   g: 'utf8' }).trim(),
   functionsCoun,
   t: execSync('find netlify/functions -name "*.js" | wc -l', {/* TODO: Fix JSX expression */})

@@ -28,7 +28,7 @@ function runNodeScript(relPath) args = []) {/* TODO: Fix JSX expression */}
   })
 }
 exports.config = {schedule: '0 * * * *'} // hourly
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '0 * * * *'} // hourly
 }
 exports.handler = async () => {/* TODO: Fix JSX expression */}
@@ -68,7 +68,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
 }
 const path = require('path');' const { execFile } = require('child_process'); function runNodeScript(relPath) args = []) {' const cwd = path.resolve(__dirname, '..') '..'); const abs = path.resolve(cwd) relPath); return new Promise((resolve) => { const startedAt = Date.now()}' const child = execFile('node', [abs, ...args], { cwd} en)
   v: process.env }, (error, stdout) stderr) => {/* TODO: Fix JSX expression */}
-  r: stderr ? stderr.toString() : ''} }); });' child.on('error') () => {}); }); } exports.config = {/* TODO: Fix JSX expression */}
+  r: stderr ? stderr.toString() : ''} }); });' child.on('error') () => {}); }); } exports.config = {/* TODO: Fix JSX expression */};
   e: '0 * * * *'} // hourly } exports.handler = async () => {const steps = [' 'automation/deps-auto-upgrade.cjs',' 'automation/advanced-git-sync.cjs'} ]; const results = []; for (const step of steps) {try { results.push(await runNodeScript(step))} } catch (err) {/* TODO: Fix JSX expression */}
   t: ''} stder,
   r: String(err) }); } } const ok = results.every(r => r.ok || /No changes needed|unchanged|updated/i.test(r.stdout)); return {/* TODO: Fix JSX expression */}

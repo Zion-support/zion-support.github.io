@@ -143,7 +143,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   g: Partial<LoggerConfig> = {}) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    this.config = { ...defaultConfig, ...config }
+    this.config = { ...defaultConfig, ...config };
   }
   /**
    * Get singleton instance of EnhancedLogger
@@ -273,11 +273,11 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   }
 
 }
-    const logData = { ...data }
+    const logData = { ...data };
     if (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      logData.error = {/* TODO: Fix JSX expression */}
+      logData.error = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   nam,
@@ -309,11 +309,11 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   }
 
 }
-    const logData = { ...data }
+    const logData = { ...data };
     if (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      logData.error = {/* TODO: Fix JSX expression */}
+      logData.error = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   nam,
@@ -410,7 +410,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     if (level;)
           < this.config.minLevel) return
     const,
-  logEntry: LogEntry = {/* TODO: Fix JSX expression */}
+  logEntry: LogEntry = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -483,7 +483,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     if (this.config.enableStructured) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      const structuredLog = {/* TODO: Fix JSX expression */}
+      const structuredLog = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -789,7 +789,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   }
 
 }
-    this.config = { ...this.config, ...config }
+    this.config = { ...this.config, ...config };
   }
   /**
    * Export logs as JSON

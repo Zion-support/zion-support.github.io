@@ -36,7 +36,7 @@ const icon_map = {
   "Code": Code
   "FileText": FileText
   "Megaphone": Megaphone
-}
+};
 function CategoryContent({
   categoryId
   category

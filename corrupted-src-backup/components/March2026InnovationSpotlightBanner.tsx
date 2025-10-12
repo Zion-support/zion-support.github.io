@@ -8,7 +8,7 @@ const, March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression
       descripti, o, n: 'Revolutionary, brai, n-computer, interface, achieving 99.98% neural, accurac, y','
       impa, c, t: '5, 0, 0% cognitive, enhancemen, t','
       ic, o, n: '🧠','
-      col, o, r: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-5, 0, 0'
+      col, o, r: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-5, 0, 0',
     }
     {/* TODO: Fix JSX expression */}
     }

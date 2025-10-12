@@ -73,7 +73,7 @@ namename: 'Enterprise',
         'Custom workflows',
         'SLA guarantee',
         'On-premise deployment'
-      color: 'green'
+      color: 'green',
   const testimonials = [
       name: 'Sarah Johnson',
       role: 'Freelance Designer',
@@ -90,7 +90,7 @@ namename: 'Emily Rodriguez',
       role: 'Accountant',
       company: 'Finance Pro',
       content: 'Compliance features are outstanding. Never worry about tax calculations or regulatory requirements again.',
-      avatar: '👩‍💻'
+      avatar: '👩‍💻',
   const useCases = [
       title: 'Freelancers & Consultants',
       description: 'Streamline invoicing for project-based work with AI that understands your service offerings.',
@@ -274,21 +274,21 @@ export default AIInvoiceGeneratorPage</div>
   </span>
   </div>
   </div>
-  </div>
-  </section>
+        </div>
+      </section>
   </ul>
   </div>
   </div>
-  </div>
-  </section>
+        </div>
+      </section>
   </div>
   </div>
   </div>
   </p>
   </h2>
   </div>
-  </div>
-  </section>
+        </div>
+      </section>
   </div>
   </div>
   </a>

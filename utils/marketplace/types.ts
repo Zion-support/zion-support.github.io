@@ -1,6 +1,4 @@
 export interface Offer {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string
   createdAtIso: string
   client_id: string
@@ -54,7 +52,7 @@ export type Milestone = {
   dueDateIso?: string
   amountUsd?: number
   status?: "planned" | "in-progress" | "done"
-}
+};
 export type PaymentTerms =
   | { type: "hourly"; hourlyRateUsd: number }
   | { type: "fixed"; fixedAmountUsd: number }
@@ -76,14 +74,14 @@ export type Offer = {
   status: OfferStatus
   changeRequestNote?: string
   projectId?: string
-}
+};
 export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED"
 export type ProjectDocument = {
   id: string
   name: string
   url?: string
   uploadedAtIso: string
-}
+};
   id: string
   authorId: string
   authorRole: string
@@ -104,7 +102,7 @@ export type ProjectNote = {
   authorRole: "client" | "talent"
   content: string
   createdAtIso: string
-}
+};
 export type Project = {
   id: string
   title: string
@@ -116,8 +114,8 @@ export type Project = {
   timeline: Milestone[]
   documents: ProjectDocument[]
   notes: ProjectNote[]
-}
+};
 export type MarketplaceDb = {
   offers: Offer[]
   projects: Project[]
-}
+};

@@ -4,7 +4,7 @@
   r: Error} errorInf)
   o: ErrorInfo) => void} interface State {/* TODO: Fix JSX expression */}
   r: boolean} error?: Error} errorInfo?: ErrorInfo} class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-  s: Props) { super(props)} this.state = {/* TODO: Fix JSX expression */}
+  s: Props) { super(props)} this.state = {/* TODO: Fix JSX expression */};
   r: false }} static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}
   r: true} error }} override componentDidCatch(erro)

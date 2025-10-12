@@ -73,7 +73,7 @@ export interface ErrorBoundaryConfig {
   serverErro,
   r: 'Server error occurred. Please try again later.',
   validatio,
-  n: 'Validation error. Please check your input.'
+  n: 'Validation error. Please check your input.',
 }
 /**
  * Get error boundary configuration based on environment

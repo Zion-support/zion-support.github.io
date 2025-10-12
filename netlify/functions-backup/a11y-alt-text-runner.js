@@ -5,7 +5,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'}
+        'Access-Control-Allow-Origin': '*'};
       },
       body: JSON.stringify({message: Accessibility alt-text runner executed successfully),
         timestamp: new Date().toISOString(),
@@ -25,7 +25,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       body: JSON.stringify({error: 'Internal server error'),
         message: error.message),
         function: 'a11y-alt-text-runner'}
-    const result = {/* TODO: Fix JSX expression */}
+    const result = {/* TODO: Fix JSX expression */};
         'Access-Control-Allow-Origin': '*'}
       },
       bod,

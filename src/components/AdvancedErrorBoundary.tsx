@@ -30,7 +30,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       error: null,
       errorInfo: null,
       errorId: null
-    }
+    };
   }
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
@@ -67,7 +67,7 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
         errorTimestamp: new Date().toISOString(),
         errorUserAgent: typeof window !== 'undefined' ? window.navigator.userAgent : null,
         errorUrl: typeof window !== 'undefined' ? window.location.href : null
-      }
+      };
       // Send to error reporting service
       await fetch('/api/error-report', {
         method: 'POST',

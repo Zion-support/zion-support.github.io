@@ -35,4 +35,4 @@ interface SEOProps {/* TODO: Fix JSX expression */}
   r:image" content={image} /></meta>"
       <link rel="canonical" href={url} />
 }"
-</li></li>
+</li>

@@ -615,8 +615,8 @@ export default function FAQ() {
                 className="w-full pl-12 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
               />
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* FAQ Content */}
         <section className="py-16">

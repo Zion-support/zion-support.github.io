@@ -25,7 +25,7 @@ class AccessibilityEnhancer {
       enableFocusManagement: true
       enableARIALabels: true,
       ...config,
-class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
+class AccessibilityEnhancer {/* TODO: Fix JSX expression */};
   g: Partial<AccessibilityConfig> = {}) {/* TODO: Fix JSX expression */}
     }
   }

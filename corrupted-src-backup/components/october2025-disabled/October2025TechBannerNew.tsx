@@ -9,7 +9,7 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
   ]; return(<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
   ]; return (<moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
       anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-      transiti, o, n = {/* TODO: Fix JSX expression */}
+      transiti, o, n = {/* TODO: Fix JSX expression */};
   n: , 0., 6 }}"
       classNa, m, e = "relative, overflo, w-hidden, rounde, d-2xl, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-90, 0, p-8, m, d: p-12, shado, w-2xl, m, y-12"
     >
@@ -64,7 +64,7 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
           {/* TODO: Fix JSX expression */}
             <moti, o, n.div, ke, y = { artic, l, e.s, l, u, g  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
               anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-              transiti, o, n = {/* TODO: Fix JSX expression */}
+              transiti, o, n = {/* TODO: Fix JSX expression */};
   n: , 0., 5, del, a, y: ind, e, x * 0., 1 }}
               whileHov, e, r = {{ sca, l, e: 1., 0, 5 }}"
               classNa, m, e = "relative, grou, p"
@@ -138,9 +138,9 @@ const October2025TechBannerNe, w = () => {/* TODO: Fix JSX expression */}
             sty, l, e={/* TODO: Fix JSX expression */}`
               le, f, t: `${Ma, t, h.ran, d, o, m() * 10, 0}%`,`
               t, o, p: `${Ma, t, h.rand, o, m() * 10, 0}%`}}
-            anima, t, e = {/* TODO: Fix JSX expression */}
+            anima, t, e = {/* TODO: Fix JSX expression */};
             }}
-            transiti, o, n = {/* TODO: Fix JSX expression */}
+            transiti, o, n = {/* TODO: Fix JSX expression */};
             }}
         ))}
       </div></moti>

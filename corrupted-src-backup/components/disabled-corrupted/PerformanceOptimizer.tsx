@@ -112,7 +112,7 @@ const PerformanceOptimize, r: React.FC<PerformanceOptimizerPro, p, s> = ({/* TOD
                   optimizati, o, n.startsW, i, t, h('✓')
                      ? 'te, x, t-gre, e, n-6, 0, 0'
                      : 'te, x, t-gr, a, y-6, 0, 0'
-      {/* TODO: Fix JSX expression */}
+      {/* TODO: Fix JSX expression */};
               <, ke, y = { in, d, e, x   }, classNa, m, e = {/* TODO: Fix JSX expression */}`$2 />
                  }`}
               >

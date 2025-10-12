@@ -39,7 +39,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const serviceMatch = prompt && prompt.match(/^(.*?)\s+in\s+/i)
       const service = serviceMatch ? serviceMatch[1].trim() : undefined
       const genReq = await fetch(`${process.env.SELF_HOST |'http://localhost:3000'}/api/seo/generate`, {
-        method: 'POST'
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ prompt, region, service })
       })

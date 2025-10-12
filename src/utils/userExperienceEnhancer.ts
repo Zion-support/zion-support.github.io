@@ -222,7 +222,7 @@ $4})
       userAgent: navigator.userAgent,
       referrer: document.referrer
     }
-    
+    ;
     this.sendAnalytics('page_view', pageData)
   }
   private trackUserInteractions(): void {
@@ -237,7 +237,7 @@ $4})
         text: target.textContent?.substring(0, 100),
         timestamp: Date.now()
       }
-      
+      ;
       this.sendAnalytics('user_interaction', interactionData)
     })
     // Track form submissions
@@ -314,7 +314,7 @@ $4})
       timestamp: Date.now(),
       userAgent: navigator.userAgent
     }
-    
+    ;
     this.sendAnalytics('error', errorData)
   }
   private setupNotifications(): void {
@@ -634,7 +634,7 @@ class UserExperienceEnhancer {
       enableDarkMode: false,
       enableAnimations: true}
     
-    this.metrics = {pageLoadTime: 0}
+    this.metrics = {pageLoadTime: 0};
       interactionTime: 0,
       bounceRate: 0,
       userSatisfaction: 0,

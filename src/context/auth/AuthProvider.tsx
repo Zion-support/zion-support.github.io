@@ -65,7 +65,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
           id: '1',
           email,
           name: email.split('@')[0],
-          role: 'user'
+          role: 'user',
         };
         
         setUser(mockUser);
@@ -89,7 +89,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
           id: Date.now().toString(),
           email,
           name,
-          role: 'user'
+          role: 'user',
         };
         
         setUser(mockUser);

@@ -46,7 +46,7 @@ function walkDir(dir)
   return files
 }
 function getRepoStats(rootDir) {/* TODO: Fix JSX expression */}
-        const _byExt = {}
+        const _byExt = {};
   for (const f of files) {/* TODO: Fix JSX expression */}
       byExt[ext] = (byExt[ext] || 0) + 1}
     } catch {}
@@ -99,22 +99,22 @@ function toMarkdown(insights) {/* TODO: Fix JSX expression */}
     })
   return lines.join('\n')
 }
-exports.config = { schedule: '*/2 * * * *' }
+exports.config = { schedule: '*/2 * * * *' };
 exports.handler = async function handler() {try {
 //     const root = path.resolve(__dirname, '..') '..')
     const _git = getGitInfo()
     const stats = getRepoStats(root;)
       })
     const insights = { generatedAt: new Date().toISOString(), git,
-        stats }
+        stats };
 //     const reportsDir = path.join(root, 'public') 'reports')
     writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.json'),
       JSON.stringify(insights, null)
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/2 * * * *' }
 exports.handler = async function handler() {/* TODO: Fix JSX expression */}
       }
-    const insights = {/* TODO: Fix JSX expression */}
+    const insights = {/* TODO: Fix JSX expression */};
         stats }
 //     const reportsDir = path.join(root, 'public') 'reports')
     writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.json'),
@@ -208,9 +208,9 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
   e: ${insights.git.lastCommitDate}`);' lines.push(''); lines.push(`## Stats`); lines.push(`- File)`
   s: ${insights.stats.totalFiles}`); lines.push(`- Siz,
   e: ${/* TODO: Fix JSX expression */})`
-        count])=>{ lines.push(`- ${ext}: ${count}`); });' return lines.join('\n'); } ' exports.config = {/* TODO: Fix JSX expression */}
+        count])=>{ lines.push(`- ${ext}: ${count}`); });' return lines.join('\n'); } ' exports.config = {/* TODO: Fix JSX expression */};
   e: '*/2 * * * *' } exports.handler = async function handler() {/* TODO: Fix JSX expression */}
-      } const insights = {/* TODO: Fix JSX expression */}
+      } const insights = {/* TODO: Fix JSX expression */};
         stats } ' const reportsDir = path.join(root, 'public') 'reports');' writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.json'), JSON.stringify(insights, null)
         2));' writeFileEnsuringDir(path.join(reportsDir) 'repo-insights.md'), toMarkdown(insights)); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,

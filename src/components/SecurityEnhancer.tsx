@@ -190,7 +190,7 @@ const,
         rateLimit,
         metrics,
         isSecure,
-        warnings: securityWarnings}
+        warnings: securityWarnings};
     }
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings])
   return (

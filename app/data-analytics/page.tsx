@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -39,49 +38,14 @@ const DataAnalyticsPage: React.FC = () => {,
       title: 'Data Integration',
       description: 'Connect and analyze data from multiple sources to get a complete picture of your business.',},
     {icon: TrendingUp,
-=======
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { BarChart, CheckCircle, ArrowRight, Phone, Mail, TrendingUp, Database, Brain, PieChart, LineChart } from 'lucide-react'
-
-const DataAnalyticsPage: React.FC = () => {
-  const features = [
-    {
-      icon: BarChart,
-      title: 'Advanced Data Visualization',
-      description: 'Transform complex data into clear, actionable insights with interactive dashboards and reports.'
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Analytics',
-      description: 'Leverage machine learning and artificial intelligence to uncover hidden patterns and trends.'
-    },
-    {
-      icon: Database,
-      title: 'Data Integration',
-      description: 'Connect and analyze data from multiple sources to get a complete picture of your business.'
-    },
-    {
-      icon: TrendingUp,
->>>>>>> origin/main
       title: 'Predictive Analytics',
-<<<<<<< HEAD
       description: 'Forecast future trends and make data-driven decisions with predictive modeling.',}}
   ]
-=======
-      description: 'Forecast future trends and make data-driven decisions with predictive modeling.'
-    }
-<<<<<<< HEAD
   ];];];
->>>>>>> origin/main
 const benefits = [
-=======
   ]
 
   const benefits = [
->>>>>>> origin/main
     'Make data-driven business decisions',
     'Identify new opportunities and trends',
     'Improve operational efficiency',
@@ -92,41 +56,26 @@ const benefits = [
     'Custom analytics solutions'
   ]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     'Custom analytics solutions'
   ]
 return(<>)
       <Helmet />
-=======
-    'Custom analytics solutions';
-  ];
-return (
-    <>
-  </>
-      <Helmet>
->>>>>>> origin/main
         <title>Data Analytics Services - Zion Tech Group | Business Intelligence</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-        </section>
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        {/* Hero Section */} <section className="py-20 px-4">
->>>>>>> origin/main
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
+        <section$1>
+        <section>
+        <div>
+          <div>
+            <h2>Section Title</h2>
+            <p>Section description</p>
           </div>
-        </section>
+        </div>
+      </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h1>Data Analytics Services;</h1>
@@ -145,23 +94,19 @@ return (
                 </button>
               </div>
             </div>
-          </div>
-        </section>
-<<<<<<< HEAD
+        </div>
+      </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-=======
-        {/* Features Section */} <section className="py-20 px-4">
->>>>>>> origin/main
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
+        <section$1>
+        <section>
+        <div>
+          <div>
+            <h2>Section Title</h2>
+            <p>Section description</p>
           </div>
-        </section>
+        </div>
+      </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2>Our Analytics Solutions;</h2>
@@ -179,23 +124,19 @@ return (
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-<<<<<<< HEAD
+        </div>
+      </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        </section>
-=======
-        {/* Benefits Section */} <section className="py-20 px-4">
->>>>>>> origin/main
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
+        <section$1>
+        <section>
+        <div>
+          <div>
+            <h2>Section Title</h2>
+            <p>Section description</p>
           </div>
-        </section>
+        </div>
+      </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2>Key Benefits;</h2>
@@ -213,28 +154,13 @@ return (
             </div>
           ))
         </section>
-<<<<<<< HEAD
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-          <div className="max-w-4xl mx-auto text-center">
+        <section$1>
+        <div$2>
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Unlock Your Data?
-=======
-        {/* CTA Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
-          </div>
-        </section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
-              <h2>Ready to Unlock Your Data?</h2>
->>>>>>> origin/main
               </h2>
               <p>Contact our analytics experts to discuss your data needs and get a customized solution.</p>
               </p>
@@ -252,15 +178,9 @@ return (
           ))
         </section>
       </div>
-<<<<<<< HEAD
 
   );
-=======
-    </>
-  ),
->>>>>>> origin/main
 };
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -288,7 +208,6 @@ return (
           </div>
         </div>
       </section>
->>>>>>> origin/main
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

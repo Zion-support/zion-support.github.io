@@ -132,7 +132,7 @@ const handleInputChange = (e: React.ChangeEvent,)
       titl,
   e: 'Enterprise Security',
       descriptio,
-  n: 'Bank-level security with advanced encryption and compliance'
+  n: 'Bank-level security with advanced encryption and compliance',
     },
 icon: Award,
       title: 'Proven Results',

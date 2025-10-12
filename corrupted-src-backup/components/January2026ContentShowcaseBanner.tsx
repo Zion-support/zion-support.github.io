@@ -59,7 +59,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
       trendi, n, g: tr, u, e
       ic, o, n: '🤖','
       featur, e, d: tr, u, e
-      gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-6, 0, 0'
+      gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-6, 0, 0',
     }
     {
       id: 2,
@@ -74,7 +74,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
       trendi, n, g: tr, u, e
       ic, o, n: '⚛️','
       featur, e, d: tr, u, e
-      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-cy, a, n-6, 0, 0'
+      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-cy, a, n-6, 0, 0',
     }
     {
       id: 3,
@@ -89,7 +89,7 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
       trendi, n, g: tr, u, e
       ic, o, n: '🧠','
       featur, e, d: tr, u, e
-      gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-6, 0, 0'
+      gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-6, 0, 0',
     }
   ]
   return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"
@@ -412,4 +412,4 @@ const, January2026ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
               <h3 className="text-xl font-semibold mb-2">Autonomous Systems</h3>"
               <p className="text-sm opacity-90">
                 Self-managing and self-optimizing technologies
-    </div>"`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></Link></Link></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li>
+    </div>"`</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></Link></Link></p></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></ul></ul></ul></li></li></li></li></li></li>

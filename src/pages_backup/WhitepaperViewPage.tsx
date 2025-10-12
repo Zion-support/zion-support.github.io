@@ -86,7 +86,7 @@ if (.whitepaper_data) {) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
   
   static getDerivedStateFromError(error) {
@@ -248,10 +248,10 @@ const WhitepaperViewPage: React.FC = () => {
             )}
         </div>
       <WhitepaperPreviewPanel
-        sections = {whitepaper.sections,}
-        distributionChartData = {whitepaper.distributionChartData,}
-        tokenName = {whitepaper.tokenName,}
-        tokenSupply = {whitepaper.tokenSupply,}
+        sections = {whitepaper.sections,};
+        distributionChartData = {whitepaper.distributionChartData,};
+        tokenName = {whitepaper.tokenName,};
+        tokenSupply = {whitepaper.tokenSupply,};
       />
     </div>
   )
@@ -318,10 +318,10 @@ export default WhitepaperViewPage
         </div>
       <WhitepaperPreviewPanel
 
-        sections = {whitepaper && whitepaper.sections,}
-        distributionChartData = {whitepaper && whitepaper.distributionChartData,}
-        tokenName = {whitepaper && whitepaper.tokenName,}
-        tokenSupply = {whitepaper && whitepaper.tokenSupply,}
+        sections = {whitepaper && whitepaper.sections,};
+        distributionChartData = {whitepaper && whitepaper.distributionChartData,};
+        tokenName = {whitepaper && whitepaper.tokenName,};
+        tokenSupply = {whitepaper && whitepaper.tokenSupply,};
       /></$1>
   )
 },
@@ -379,10 +379,10 @@ if ( {) {
                     Private (Admin View)</$1>)}
         </div>
       <WhitepaperPreviewPanel
-        sections = {whitepaper.sections, }
-        distributionChartData = {whitepaper.distributionChartData, }
-        token_name = {whitepaper.token_name, }
-        token_supply = {whitepaper.token_supply, }
+        sections = {whitepaper.sections, };
+        distributionChartData = {whitepaper.distributionChartData, };
+        token_name = {whitepaper.token_name, };
+        token_supply = {whitepaper.token_supply, };
       /></$1>)
 },
 export default WhitepaperViewPage,

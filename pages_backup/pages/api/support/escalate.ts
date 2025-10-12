@@ -40,7 +40,7 @@ function handler() {
     tag: tag ?? "escalate"
     status: "open"
     createdAt: Date.now()
-  }
+  };
   requests.push(record)
   writeJson("support/requests.json", requests)
   await tagOperatorSession(sessionId, tag ?? "escalate")
@@ -59,7 +59,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!sessionId) return res.status($1).json({$2})
   const requests = readJson<any[]>('support/requests.json', [])
   const id = `sr_${Math.random().toString(36).slice(2)}_${Date.now()}`
-  const record = { id, sessionId, reason: reason ?? 'User requested escalation', tag: tag ?? 'escalate', status: 'open', createdAt: Date.now() }
+  const record = { id, sessionId, reason: reason ?? 'User requested escalation', tag: tag ?? 'escalate', status: 'open', createdAt: Date.now() };
   requests.push(record)
   writeJson('support/requests.json', requests)
   await tagOperatorSession(sessionId, tag ?? 'escalate')

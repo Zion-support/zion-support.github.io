@@ -14,11 +14,11 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
   return {
     colors: {
-      primary: '#007AFF'
-      secondary: '#5856D6'
-      success: '#34C759'
-      warning: '#FF9500'
-      error: '#FF3B30'
+      primary: '#007AFF',
+      secondary: '#5856D6',
+      success: '#34C759',
+      warning: '#FF9500',
+      error: '#FF3B30',
     }
     typography: {
       heading1: { fontSize: 32, fontWeight: 'bold' }
@@ -162,7 +162,7 @@ export type DesignMap = {
     dao: DesignMapSection[]
     admin: DesignMapSection[]
     mobile: DesignMapSection[]
-  }
+  };
 }
 export function getZionDesignMap(): DesignMap {
   return {
@@ -418,7 +418,7 @@ export type TokenSet = {
   colors: Record<string, string>
   typography: {
     fontSizes: Record<string, string>
-  }
+  };
 }
 export async function buildTokenSet(): Promise<TokenSet> {
   // Dynamically import Tailwind config for color extraction

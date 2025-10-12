@@ -82,7 +82,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum AI blockchain analytics platform with real-time monitoring, fraud detection, and predictive insights. Includes comprehensive analytics tools and compliance features.',
@@ -134,7 +134,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum AI code review platform with real-time analysis, bug detection, and security scanning. Includes IDE integration and team collaboration features.',
@@ -186,7 +186,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum AI data analytics platform with real-time processing, predictive modeling, and automated insights. Includes comprehensive visualization and reporting tools.',
@@ -238,7 +238,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum AI evaluation platform with real-time assessment, personalized feedback, and skill gap analysis. Includes comprehensive analytics and reporting tools.',
@@ -290,7 +290,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum AI safety platform with real-time monitoring, ethical governance, and risk assessment. Includes comprehensive safety features and compliance tools.',
@@ -342,7 +342,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum AI recruitment platform with automated screening, skill assessment, and performance prediction. Includes comprehensive HR features and compliance tools.',
@@ -394,7 +394,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum AI IoT platform with real-time management, predictive maintenance, and security monitoring. Includes comprehensive IoT features and analytics tools.',
@@ -446,7 +446,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum AI legal platform with automated contract review, risk assessment, and compliance checking. Includes comprehensive legal features and collaboration tools.',
@@ -498,7 +498,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum AI market research platform with real-time analysis, trend prediction, and consumer insights. Includes comprehensive research tools and analytics.',
@@ -550,7 +550,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum AI phone agent platform with natural language processing and human-like conversations. Includes comprehensive phone features and analytics tools.',

@@ -9,7 +9,7 @@ const,
   AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
-    const baseStructuredData = {/* TODO: Fix JSX expression */}
+    const baseStructuredData = {/* TODO: Fix JSX expression */};
       },
       addres,
   s: {/* TODO: Fix JSX expression */}
@@ -37,7 +37,7 @@ const,
   // Generate Twitter Card data
   const generateTwitterCardData = useCallback(() => {/* TODO: Fix JSX expression */}
     if (!enableTwitterCards) return {}
-    const faqData = {/* TODO: Fix JSX expression */}
+    const faqData = {/* TODO: Fix JSX expression */};
           }},
         {/* TODO: Fix JSX expression */}
           }},
@@ -144,4 +144,4 @@ const,
 export default AdvancedSEOOptimizer
 "
   </AdvancedSEOOptimizerProps>
-</li></li></li></li></li></li></li></li></li>
+</li></li></li></li></li>

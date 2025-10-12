@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 
@@ -48,7 +47,6 @@ if ( {) {
 }
     state.proposalMerkleById[entity_id] = event.merkle_root;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   }
   if (isNewer) {
@@ -57,7 +55,6 @@ if ( {) {
   state.events.push(event);
   state.seenEventIds[event.eventId] = true;
   state.lastSyncedAt = Math.max(state.lastSyncedAt |0, event.timestamp |0);
-=======
 import fs from "fs";
 import path from "path";
 import { MultiverseState, InstanceConfig, SyncEvent } from "./types";
@@ -141,12 +138,10 @@ export function upsertEvent(state: MultiverseState, event: SyncEvent): Multivers
   state.events.push(event);
   state.seenEventIds[event.eventId] = true;
   state.lastSyncedAt = Math.max(state.lastSyncedAt || 0, event.timestamp || 0);
->>>>>>> origin/auto/autonomy-17186719616
   return state;
 }
 
 export function getEntityId(event: SyncEvent): string {
-<<<<<<< HEAD
   switch (event && event.type) {
     case 'proposal':
       return (event && event.payload as any).proposalId;
@@ -164,26 +159,10 @@ export function getEntityId(event: SyncEvent): string {
       );
     default:
       return (event.payload as any).id |event.eventId;
-=======
-  switch (event.type) {
-    case "proposal":
-      return (event.payload as any).proposalId;
-    case "token_transfer":
-      return (event.payload as any).txId;
-    case "talent_mobility":
-      return (event.payload as any).personId + ":" + (event.payload as any).startDate;
-    case "dao_endorsement":
-      return (event.payload as any).resolutionId;
-    case "leaderboard_entry":
-      return (event.payload as any).subjectId + ":" + (event.payload as any).period;
-    default:
-      return (event.payload as any).id || event.eventId;
->>>>>>> origin/auto/autonomy-17186719616
   }
 }
 
 export function filterEventsByScope(
-<<<<<<< HEAD
   events: SyncEvent[]
   scope: InstanceConfig['scope']
 ): SyncEvent[] {
@@ -227,7 +206,6 @@ const default_state: SyncState = {
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   }
   // Check condition
@@ -293,7 +271,6 @@ if ( {) {
 }
 
 
-=======
   events: SyncEvent[],
   scope: InstanceConfig["scope"]
 ): SyncEvent[] {
@@ -306,4 +283,3 @@ if ( {) {
   }
   return events;
 }
->>>>>>> origin/auto/autonomy-17186719616

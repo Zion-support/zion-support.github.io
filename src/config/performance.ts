@@ -228,7 +228,7 @@ export const _performanceConfig = {
 // sendToAnalytic,
   s: true,
 // logThreshol,
-  d: 'needsImprovement'
+  d: 'needsImprovement',
   }
 }
 export type PerformanceConfig = typeof performanceConfig

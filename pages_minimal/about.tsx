@@ -34,7 +34,7 @@ export default function about() {
         </div>)
       </div>)
 export const,
-  metadata: Metadata = {/* TODO: Fix JSX expression */}
+  metadata: Metadata = {/* TODO: Fix JSX expression */};
   }}
 export default function about() {/* TODO: Fix JSX expression */}
 }

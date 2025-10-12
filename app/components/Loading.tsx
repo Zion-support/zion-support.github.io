@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 const LoadingPage: React.FC = () => {,
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-const LoadingPage: React.FC = () => {
->>>>>>> origin/main
     const features = [
     {
       icon: Brain,
@@ -24,21 +16,12 @@ const LoadingPage: React.FC = () => {
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
-<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses',}}
   ]
-=======
-      description: 'Worldwide deployment and support for international businesses'
-  }
-    }
-<<<<<<< HEAD
   ];];];
->>>>>>> origin/main
 const benefits = [
-=======
   ]
   const benefits = [
->>>>>>> origin/main
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -50,7 +33,6 @@ const benefits = [
 
     'Cost-effective pricing plans',
     'Proven track record of success'
-<<<<<<< HEAD
   ];
 
   return (
@@ -166,8 +148,3 @@ const benefits = [
 };
 
 export default LoadingPage;
-=======
-  ]
-}
-export default LoadingPage
->>>>>>> origin/main

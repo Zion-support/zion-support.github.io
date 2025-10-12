@@ -1,5 +1,5 @@
 const { execSync } = require('child_process')
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '11 */6 * * *'}
 }
 exports.handler = async function () {try {
@@ -37,7 +37,7 @@ const { execSync } = require('child_process'); exports.config = {' schedule: '11
         task: 'orphan-routes-detector' }) } } catch (e) {return { statusCode: 200,
         body: JSON.stringify({ok: false),
         error: String(e,)}) } } }'
-const { execSync } = require('child_process'); exports.config = {/* TODO: Fix JSX expression */}
+const { execSync } = require('child_process'); exports.config = {/* TODO: Fix JSX expression */};
   e: '11 */6 * * *'} } exports.handler = async function() {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true,"

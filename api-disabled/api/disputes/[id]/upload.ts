@@ -5,7 +5,7 @@
   t: "20mb" } }; }; export default async function handler(re)
   q: NextApiRequest) re,
   s: NextApiResponse; ) {/* TODO: Fix JSX expression */}"
-  r: "Invalid id" }); import type {NextApiRequest} NextApiResponse } from 'next'' import path from 'path'' import {ensureDisputeUploadDir} getDisputeById; upsertDispute } from '../../../../utils/fsdb'' import {parseUserFromRequest} ensureInvolvedOrAdmin } from '../../../../utils/auth' export const config = {/* TODO: Fix JSX expression */}
+  r: "Invalid id" }); import type {NextApiRequest} NextApiResponse } from 'next'' import path from 'path'' import {ensureDisputeUploadDir} getDisputeById; upsertDispute } from '../../../../utils/fsdb'' import {parseUserFromRequest} ensureInvolvedOrAdmin } from '../../../../utils/auth' export const config = {/* TODO: Fix JSX expression */};
   t: '20mb' } }}; export default async function handler(re)
   q: NextApiRequest) re,"
   s: NextApiResponse) { const { id } = req.query; if (typeof id !== "string") return res && res.status(400).json({/* TODO: Fix JSX expression */}")

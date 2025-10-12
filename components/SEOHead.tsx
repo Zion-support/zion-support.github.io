@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
-=======
-import React from 'react'
-import Head from 'next/head'
->>>>>>> origin/main
 interface SEOHeadProps {
   title?: string
   description?: string
@@ -143,11 +138,5 @@ export default function SEOHead({
       {/* Additional Performance Hints */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
     </Head>
-<<<<<<< HEAD
   );
 }
-=======
-  )
-}
-</li></li></li></li></li></li></li></li></li></li></li></li>
->>>>>>> origin/main

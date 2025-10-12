@@ -21,7 +21,7 @@ $4}
     primary: 'text-cyan-400',
     secondary: 'text-purple-400',
     accent:   ,
-$4}
+$4};
   const spinnerClasses = `
     ${sizeClasses[size]}
     ${colorClasses[color]}
@@ -68,9 +68,9 @@ const,
     l,
   g: 'w-12 h-12',
     x,
-  l: 'w-16 h-16'
+  l: 'w-16 h-16',
   }
-  const colorClasses = {/* TODO: Fix JSX expression */}
+  const colorClasses = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   primar,
@@ -78,7 +78,7 @@ const,
     secondar,
   y: 'text-purple-400',
     accen,
-  t: 'text-pink-400'
+  t: 'text-pink-400',
   }
   const spinnerClasses = `
     ${sizeClasses[size]}

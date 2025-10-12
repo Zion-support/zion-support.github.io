@@ -127,7 +127,7 @@ if (author_name = "Anonymous") {
       totalCompletedProjects,
       most_recent: public_reviews.slice (0, 5),
     }
-
+;
     return res.status (200).json ({ summary, reviews: public_reviews })
   } catch (error: any) {
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
@@ -241,7 +241,7 @@ export default async function handler(req, res) {
       averageRating
       totalReviews
       totalCompletedProjects
-      mostRecent: publicReviews.slice(0, 5)}
+      mostRecent: publicReviews.slice(0, 5)};
     return res.status(200).json({ summary, reviews: publicReviews })
   } catch (error) {
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
@@ -271,4 +271,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

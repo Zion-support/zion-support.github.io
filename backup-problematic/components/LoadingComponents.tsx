@@ -14,7 +14,7 @@ export const,
   LoadingSpinner: React.FC<LoadingSpinnerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }
-  const colorClasses = {/* TODO: Fix JSX expression */}
+  const colorClasses = {/* TODO: Fix JSX expression */};
   }
   return(<div className={`flex items-center justify-center ${className}`}>
       <;)$2 />

@@ -99,8 +99,8 @@ export const,
       'Future capabilities',
       'Advanced features',
       'Expert insights'],
-    link: '/services / 2028 - emerging - tech - service'
-    category: 'Emerging Tech Services 2028'
+    link: '/services / 2028 - emerging - tech - service',
+    category: 'Emerging Tech Services 2028',
     real_implementation: true
     contact_info: unknown,
       mobile: '+1 302 464 0950',

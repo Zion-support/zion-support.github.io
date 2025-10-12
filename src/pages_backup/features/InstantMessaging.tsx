@@ -1,7 +1,7 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
   
   static getDerivedStateFromError(error) {
@@ -53,7 +53,7 @@ export default function InstantMessaging() {
     "description": "Chat in real time with clients and freelancers using Socket.IO based messaging.",
     "url": "https://app.ziontechgroup.com/features/instant-messaging"
 
-  }
+  };
   return (
     <>
             <li>
@@ -187,7 +187,7 @@ export default function InstantMessaging() {
     "name": "Instant Messaging",
     "description": "Chat in real time with clients and freelancers using Socket.IO based messaging."
     "url": "https://app.ziontechgroup.com/features/instant-messaging"
-  }
+  };
   return (
     <>
       <SEO

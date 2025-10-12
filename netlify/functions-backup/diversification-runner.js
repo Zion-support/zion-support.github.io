@@ -27,7 +27,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     }
   }
 }
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/45 * * * *'}
 }
 exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/diversification-orchestrator.cjs || true') { stdio: 'inherit'} shell: true,
@@ -45,5 +45,5 @@ exports.handler = async function() { const { execSync } = require('child_process
   l: true,
       });' return {/* TODO: Fix JSX expression */}
   k: 'diversification-runner' }) } } catch (e) {/* TODO: Fix JSX expression */}
-      }) } } } exports.config = {/* TODO: Fix JSX expression */}
+      }) } } } exports.config = {/* TODO: Fix JSX expression */};
   e: '*/45 * * * *'} }'"

@@ -5,18 +5,18 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'}
+        'Access-Control-Allow-Origin': '*'};
       },
       body: JSON.stringify({message: Dead code report executed successfully)
         timestamp: new Date().toISOString()
-        function: 'dead-code-report'
+        function: 'dead-code-report',
         source: event.source || 'unknown',
         report: {,
           status: 'generated',
           filesScanned: 0
           deadCodeFound: 0,
           lastReport: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+    const result = {/* TODO: Fix JSX expression */};
         'Access-Control-Allow-Origin': '*'}
       },
       bod,

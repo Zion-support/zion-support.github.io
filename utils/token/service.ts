@@ -27,7 +27,7 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount
-    type: 'issue'
+    type: 'issue',
     reason
     timestamp: Date.now()
   }
@@ -122,7 +122,7 @@ export function earnTokens(
     reason,
     metadata,
     createdAt: new Date().toISOString(),
-  }
+  };
   tokenStore.addTransaction(tx)
   return tx
 }
@@ -145,7 +145,7 @@ export function burnTokens(
     reason,
     metadata,
     createdAt: new Date().toISOString(),
-  }
+  };
   tokenStore.addTransaction(tx)
   return tx
 }

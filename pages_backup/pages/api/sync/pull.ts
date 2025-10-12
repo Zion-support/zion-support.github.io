@@ -17,7 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     instanceId: 'sync-instance',
     lastSyncedAt: Date.now(),
     events: [],
-    scope: 'global'
+    scope: 'global',
   })
 import type { NextApiRequest, NextApiResponse } from "next",
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",

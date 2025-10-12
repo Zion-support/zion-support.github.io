@@ -8,10 +8,10 @@ export function getUserFromRequest(req: any): User | null {
   const token = authHeader.substring(7)
   if (token && token.length > 0) {
     return {
-      id: 'user-1'
-      email: 'user@example.com'
-      role: 'client'
-      name: 'Test User'
+      id: 'user-1',
+      email: 'user@example.com',
+      role: 'client',
+      name: 'Test User',
     }
   }
   return null
@@ -52,7 +52,7 @@ if ( {) {
       id: 'user - 1',
       email: 'user@example.com',
       role: 'client',
-      name: 'Test User'
+      name: 'Test User',
     }
   }
   return null
@@ -85,9 +85,8 @@ if ( {) {
   }
   return user
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { NextApiRequest } from "next"
-type DemoUser = { id: string; role: "client" | "talent"; talentSlug?: string }
+type DemoUser = { id: string; role: "client" | "talent"; talentSlug?: string };
 export function getDemoUser(req: NextApiRequest): DemoUser {
   // Prefer headers for server-side calls; fallback to cookies-like header or defaults
   const role = (req.headers["x-demo-user-role"] as string) || "client"

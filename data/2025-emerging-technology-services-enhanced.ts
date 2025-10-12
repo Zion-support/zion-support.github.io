@@ -83,7 +83,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade quantum computing platform with access to multiple quantum processors and comprehensive development tools.',
@@ -135,7 +135,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade blockchain infrastructure platform with multi-chain support and comprehensive development tools.',
@@ -187,7 +187,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive edge computing orchestration platform with intelligent resource management and real-time processing capabilities.',
@@ -239,7 +239,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive metaverse development platform with integrated tools for creating immersive virtual experiences.',
@@ -291,7 +291,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade space technology platform with comprehensive satellite management and space data analytics capabilities.',

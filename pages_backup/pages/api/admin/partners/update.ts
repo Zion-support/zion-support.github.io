@@ -29,7 +29,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
     if (req.method === 'POST') {
       const { code, status, commission_rate } = req.body
       if (!code) return res.status(400).json({ error: 'Code required' })
-      const updates: any = {}
+      const updates: any = {};
       if (status) updates.status = status
       if (typeof commission_rate === 'number') updates.commission_rate = commission_rate
       // Mock update - replace with real database update
@@ -43,4 +43,3 @@ import type { NextApiRequest, NextApiResponse } from 'next'
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

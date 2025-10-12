@@ -83,7 +83,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade marketing automation platform with AI-powered predictive analytics and campaign optimization.',
@@ -135,7 +135,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Intelligent sales platform with AI-powered lead scoring and sales process optimization.',
@@ -187,7 +187,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive HR management platform with AI-powered automation and people analytics capabilities.',
@@ -239,7 +239,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade financial analytics platform with AI-powered forecasting and risk management.',
@@ -291,7 +291,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive supply chain optimization platform with AI-powered demand forecasting and inventory management.',

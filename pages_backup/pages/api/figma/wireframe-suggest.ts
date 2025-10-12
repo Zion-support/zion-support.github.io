@@ -10,7 +10,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return
   }
   try {const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role |'Talent'}\n- Return a compact outline with bullets and short labels.`
-    const completion = await openai.chat.completions.create({model: 'gpt-4o-mini'
+    const completion = await openai.chat.completions.create({model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' }
         { role: 'user', content: prompt }]
@@ -31,7 +31,7 @@ export default async function handler(req, res) {
   try {
   if (req.method !== 'POST') {
     res.status(405).json({
-      error: 'Method not allowed'
+      error: 'Method not allowed',
     })
     return
     } catch (error) {
@@ -50,7 +50,7 @@ export default async function handler(req, res) {
   const { screenName, role } = req.body || {}
   if (!screenName) {
     res.status(400).json({
-      error: 'screenName is required'
+      error: 'screenName is required',
     })
     return
     } catch (error) {
@@ -72,7 +72,7 @@ export default async function handler(req, res) {
       model: 'gpt-4o-mini',
       messages: [{
         role: 'system',
-        content: 'You are a senior product designer. Respond with a compact wireframe outline.'
+        content: 'You are a senior product designer. Respond with a compact wireframe outline.',
       }, {
         role: 'user',
         content: prompt
@@ -141,7 +141,7 @@ export default async function handler(req, res) {
   try {
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini'
+      model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },
         { role: 'user', content: prompt }]
@@ -163,7 +163,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
   } catch (error) {

@@ -241,8 +241,8 @@ const EnhancedServicesShowcase: React.FC = () => {
               Get Free Consultation
           </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
   )
 }
 export default EnhancedServicesShowcase</a>

@@ -234,7 +234,7 @@ const results = {
   broken: [],
   errors: [],
   total: 0
-}
+};
 // Helper function to make HTTP requests
 function makeRequest(url) {
   return new Promise((resolve, reject) => {

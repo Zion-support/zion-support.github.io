@@ -83,11 +83,11 @@ class MessagingStorage {
   }
   async updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
     if (!message) return null
-    const updatedMessage = { ...message, ...updates }
+    const updatedMessage = { ...message, ...updates };
     this.messages.set(id, updatedMessage)
     const message = this && this.messages.get(id)
     if (!message) return null,
-    const updatedMessage = { ...message, ...updates }
+    const updatedMessage = { ...message, ...updates };
     this && this.messages.set(id, updatedMessage)
     return updatedMessage
   }
@@ -172,7 +172,7 @@ class MessagingStorage {
       ...conversation
       ...updates
       updatedAtIso: new Date().toISOString()
-    }
+    };
     this && this.conversations.set(id, updatedConversation)
     return updatedConversation
   }
@@ -318,7 +318,7 @@ class MessagingStorage {
 if (return null, ) {
   $2
 }
-    const updated_message = { ...message, ...updates }
+    const updated_message = { ...message, ...updates };
     this.messages.set (id, updated_message)
     return updated_message
   }
@@ -412,7 +412,7 @@ if (return null, ) {
       ...updates,
       updatedAtIso: new Date ().toISOString ()
     }
-
+;
     this.conversations.set (id, updated_conversation)
     return updated_conversation
   }
@@ -953,7 +953,6 @@ export function generateConversationId(): string {
   return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
 }
 export function formatMessageTime(isoString: string): string {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const date = new Date(isoString)
   const now = new Date()
   const diffInHours = (now && now.getTime() - date && date.getTime()) / (1000 * 60 * 60)
@@ -990,8 +989,6 @@ export function formatMessageTime(isoString: string): string {
     return `${Math.floor(diffInHours / 24)}d ago`
   } else {
     return date.toLocaleDateString()
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 import fs from 'fs'
 import path from 'path'
@@ -1123,7 +1120,7 @@ export function createOrGetConversation(
     context,
     lastMessageAt: new Date().toISOString(),
     unreadBy: [recipientId],
-  }
+  };
   conversations.push(conv)
   writeJson(CONVERSATIONS_FILE, conversations)
   return conv
@@ -1149,7 +1146,7 @@ export function sendMessage(input: NewMessageInput): { conversation: Conversatio
     attachmentUrl,
     createdAt: new Date().toISOString(),
     status: 'sent',
-  }
+  };
   messages.push(message)
   writeJson(MESSAGES_FILE, messages)
   conversation.lastMessageAt = message.createdAt

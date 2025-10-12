@@ -62,7 +62,7 @@ export type ProposalPayload = {
   contentMarkdown: string
   language?: string
   metadata?: Record<string, any>
-}
+};
 const dataDir = path.join(process.cwd(), 'dataproposals'),
 const publicDir = path.join(process.cwd(), 'publicproposals'),
 function ensureDirs() {
@@ -104,7 +104,7 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {
     budgetOrResolution: payload.budgetOrResolution
     supportingMultiverses: payload.supportingMultiverses |[]
     languages: payload.language ? [payload.language] : ['en']
-    status: 'Draft'
+    status: 'Draft',
     artifacts: {
       markdownPath: `/proposals/${id}/proposal.md`
       jsonPath: path.relative(process.cwd(), jsonPath)}}
@@ -279,7 +279,7 @@ export type ProposalPayload = {
   contentMarkdown: string
   language?: string
   metadata?: Record<string, any>
-}
+};
 const dataDir = path.join(process.cwd(), 'dataproposals'),
 const publicDir = path.join(process.cwd(), 'publicproposals'),
 function ensureDirs() {
@@ -406,7 +406,6 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
   return updateProposalMeta(id, (meta) => ({
     ...meta
     artifacts: { ...meta.artifacts, ...artifacts }}))
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 }
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {

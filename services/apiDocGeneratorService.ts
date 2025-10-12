@@ -250,14 +250,14 @@ export class APIDocGeneratorService {
               in: 'query',
               required: false,
               schema: { type: 'integer', minimum: 1, default: 1 },
-              description: 'Page number for pagination'
+              description: 'Page number for pagination',
             },
             {
               name: 'limit',
               in: 'query',
               required: false,
               schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 },
-              description: 'Number of users per page'
+              description: 'Number of users per page',
             }
           ],
           requestBody: undefined,
@@ -275,7 +275,7 @@ export class APIDocGeneratorService {
                         items: { $ref: '#/components/schemas/User' }
                       },
                       pagination: {
-                        $ref: '#/components/schemas/Pagination'
+                        $ref: '#/components/schemas/Pagination',
                       }
                     }
                   }
@@ -287,7 +287,7 @@ export class APIDocGeneratorService {
           deprecated: false,
           rateLimit: {
             requests: 100,
-            window: '1m'
+            window: '1m',
           },
           authentication: {
             type: 'bearer',
@@ -307,7 +307,7 @@ export class APIDocGeneratorService {
               in: 'path',
               required: true,
               schema: { type: 'string', format: 'uuid' },
-              description: 'User unique identifier'
+              description: 'User unique identifier',
             }
           ],
           requestBody: undefined,
@@ -323,7 +323,7 @@ export class APIDocGeneratorService {
             },
             {
               code: '404',
-              description: 'User not found'
+              description: 'User not found',
             }
           ],
           tags: ['Users'],
@@ -366,7 +366,7 @@ export class APIDocGeneratorService {
           },
           {
             code: '400',
-            description: 'Invalid input data'
+            description: 'Invalid input data',
           }
         ],
         tags: ['Products'],
@@ -393,7 +393,7 @@ export class APIDocGeneratorService {
             in: 'query',
             required: false,
             schema: { type: 'string', enum: ['pending', 'processing', 'completed', 'cancelled'] },
-            description: 'Filter orders by status'
+            description: 'Filter orders by status',
           }
         ],
         requestBody: undefined,
@@ -431,7 +431,7 @@ export class APIDocGeneratorService {
           updatedAt: { type: 'string', format: 'date-time' }
         },
         required: ['id', 'email', 'name'],
-        description: 'User entity schema'
+        description: 'User entity schema',
       },
       {
         type: 'object',
@@ -444,7 +444,7 @@ export class APIDocGeneratorService {
           inStock: { type: 'boolean' }
         },
         required: ['id', 'name', 'price'],
-        description: 'Product entity schema'
+        description: 'Product entity schema',
       },
       {
         type: 'object',
@@ -466,7 +466,7 @@ export class APIDocGeneratorService {
           status: { type: 'string', enum: ['pending', 'processing', 'completed', 'cancelled'] }
         },
         required: ['id', 'userId', 'items', 'total'],
-        description: 'Order entity schema'
+        description: 'Order entity schema',
       },
       {
         type: 'object',
@@ -477,7 +477,7 @@ export class APIDocGeneratorService {
           pages: { type: 'integer', minimum: 1 }
         },
         required: ['page', 'limit', 'total', 'pages'],
-        description: 'Pagination metadata schema'
+        description: 'Pagination metadata schema',
       }
     ]
     return schemas
@@ -549,7 +549,7 @@ export class APIDocGeneratorService {
         responses: [
           {
             code: '200',
-            description: 'API is healthy'
+            description: 'API is healthy',
           }
         ],
         tags: ['System'],

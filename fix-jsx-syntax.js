@@ -46,7 +46,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   // Fix malformed JSX fragments
   {
     pattern: /<>\s*<div([^>]*)>([^<]*?)<\/div>\s*<\/>/g,
-    replacement: '<div$1>$2</div>'
+    replacement: '<div$1>$2</div>',
   }
 ]
 function fixFile(filePath) {

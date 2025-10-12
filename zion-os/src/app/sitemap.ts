@@ -57,7 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return allRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date()
-    changeFrequency: 'weekly'
+    changeFrequency: 'weekly',
 export default function sitemap (): MetadataRoute.Sitemap {
   const base_url = 'https: //ziontechgroup.com'
   const routes = [
@@ -92,7 +92,7 @@ export default function sitemap (): MetadataRoute.Sitemap {
   return all_routes.map ((route) => ({
     url: `${base_url}${route}`,
     last_modified: new Date ()
-    change_frequency: 'weekly'
+    change_frequency: 'weekly',
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https: //ziontechgroup.com'
   const routes = [
@@ -127,7 +127,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return allRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date()
-    changeFrequency: 'weekly'
+    changeFrequency: 'weekly',
     priority: route === '' ? 1 : 0.8}))
 }
 import { MetadataRoute } from 'next'

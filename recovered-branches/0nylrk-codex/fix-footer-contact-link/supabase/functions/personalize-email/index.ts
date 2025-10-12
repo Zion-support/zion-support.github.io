@@ -3,7 +3,7 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts"
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY")
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 }
 serve(async (req) => {
@@ -17,7 +17,7 @@ serve(async (req) => {
       emailType, 
       userData, 
       activityData,
-      template = {} 
+      template = {} ;
     } = await req.json()
     if (!emailType || !userData) {
       throw new Error("Missing required parameters: emailType and userData")

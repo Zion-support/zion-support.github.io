@@ -99,8 +99,8 @@ export const,
       'Future capabilities',
       'Innovation platform',
       'Expert insights'],
-    link: '/services / 2028 - futuristic - innovation'
-    category: 'Futuristic Innovations 2028'
+    link: '/services / 2028 - futuristic - innovation',
+    category: 'Futuristic Innovations 2028',
     real_implementation: true
     contact_info: unknown,
       mobile: '+1 302 464 0950',

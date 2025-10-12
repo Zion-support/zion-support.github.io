@@ -72,7 +72,7 @@ export const validatePassword = (password: string): ValidationResult => {
   if (!isValidPassword(password)) {
     return { 
       isValid: false, 
-      error: 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character' 
+      error: 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character' ,
     }
   }
   

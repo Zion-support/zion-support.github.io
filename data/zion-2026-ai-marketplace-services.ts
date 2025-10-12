@@ -28,7 +28,7 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
     id: 'ai-marketplace-001',
     name: 'Zion AI Service Marketplace Platform',
     description: 'A comprehensive AI service marketplace that connects businesses with AI service providers, featuring automated matching, quality assurance, and seamless integration.',
-    category: 'AI Marketplace'
+    category: 'AI Marketplace',
     price: unknown
       monthly: 299
       yearly: 2999
@@ -98,7 +98,7 @@ export const,
       enterpris,
   e: 9999,
       currenc,
-  y: 'USD'
+  y: 'USD',
     },
     feature,
   s: [,
@@ -158,7 +158,7 @@ export const,
       'Ongoing maintenance'
     ],
     contactInfo: unknown,
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -166,7 +166,7 @@ export const,
     id: 'ai-marketplace-002',
     name: 'AI Service Integration Hub',
     description: 'A centralized platform for integrating multiple AI services into existing business workflows, providing seamless connectivity and unified management.',
-    category: 'AI Integration'
+    category: 'AI Integration',
     price: unknown
       monthly: 199
       yearly: 1999
@@ -182,7 +182,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
     i,
@@ -202,7 +202,7 @@ export const,
       enterpris,
   e: 7999,
       currenc,
-  y: 'USD'
+  y: 'USD',
     },
     feature,
   s: [,
@@ -262,7 +262,7 @@ export const,
       'Ongoing support'
     ],
     contactInfo: unknown,
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -270,7 +270,7 @@ export const,
     id: 'ai-marketplace-003',
     name: 'AI Service Quality Assurance Platform',
     description: 'An automated platform for testing, validating, and ensuring the quality of AI services through comprehensive testing frameworks and continuous monitoring.',
-    category: 'AI Automation'
+    category: 'AI Automation',
     price: unknown
       monthly: 149
       yearly: 1499
@@ -286,7 +286,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
     i,
@@ -306,7 +306,7 @@ export const,
       enterpris,
   e: 5999,
       currenc,
-  y: 'USD'
+  y: 'USD',
     },
     feature,
   s: [,
@@ -366,7 +366,7 @@ export const,
       'Ongoing maintenance'
     ],
     contactInfo: unknown,
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -374,7 +374,7 @@ export const,
     id: 'ai-marketplace-004',
     name: 'AI Service Analytics Dashboard',
     description: 'A comprehensive analytics platform that provides insights into AI service performance, usage patterns, and business impact across the organization.',
-    category: 'AI Analytics'
+    category: 'AI Analytics',
     price: unknown
       monthly: 99
       yearly: 999
@@ -390,7 +390,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
     i,
@@ -410,7 +410,7 @@ export const,
       enterpris,
   e: 3999,
       currenc,
-  y: 'USD'
+  y: 'USD',
     },
     feature,
   s: [,
@@ -470,7 +470,7 @@ export const,
       'Ongoing support'
     ],
     contactInfo: unknown,
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
@@ -478,7 +478,7 @@ export const,
     id: 'ai-marketplace-005',
     name: 'AI Service Development Studio',
     description: 'A comprehensive development environment for creating, testing, and deploying custom AI services with pre-built templates and automated deployment pipelines.',
-    category: 'AI Development'
+    category: 'AI Development',
     price: unknown
       monthly: 399
       yearly: 3999
@@ -494,7 +494,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
     i,
@@ -514,7 +514,7 @@ export const,
       enterpris,
   e: 14999,
       currenc,
-  y: 'USD'
+  y: 'USD',
     },
     feature,
   s: [,
@@ -574,7 +574,7 @@ export const,
       'Ongoing development support'
     ],
     contactInfo: unknown,
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -588,7 +588,7 @@ export const,
   e: 'http,
   s://ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ]

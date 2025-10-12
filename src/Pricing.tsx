@@ -217,7 +217,7 @@ export default function Pricing() {
       ],
       popular: false,
       icon: Building,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-500 to-emerald-500',
     }
   ]
   const addOns = [
@@ -250,48 +250,48 @@ export default function Pricing() {
     {
       icon: Award,
       title: 'Industry Leading',
-      description: 'Recognized as top AI solutions provider'
+      description: 'Recognized as top AI solutions provider',
     },
     {
       icon: Globe,
       title: 'Global Support',
-      description: '24/7 support across all time zones'
+      description: '24/7 support across all time zones',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security and compliance'
+      description: 'Bank-level security and compliance',
     },
     {
       icon: Zap,
       title: 'Fast Implementation',
-      description: 'Get started in days, not months'
+      description: 'Get started in days, not months',
     }
   ]
   const faqs = [
     {
       question: 'Can I change my plan at any time?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.'
+      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.',
     },
     {
       question: 'Is there a setup fee?',
-      answer: 'No setup fees for any of our plans. You only pay for the services you use.'
+      answer: 'No setup fees for any of our plans. You only pay for the services you use.',
     },
     {
       question: 'Do you offer custom pricing?',
-      answer: 'Yes, we offer custom pricing for enterprise clients with specific requirements.'
+      answer: 'Yes, we offer custom pricing for enterprise clients with specific requirements.',
     },
     {
       question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans.'
+      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans.',
     },
     {
       question: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial for all plans with full access to features.'
+      answer: 'Yes, we offer a 14-day free trial for all plans with full access to features.',
     },
     {
       question: 'Can I cancel my subscription?',
-      answer: 'Yes, you can cancel your subscription at any time with no penalties or fees.'
+      answer: 'Yes, you can cancel your subscription at any time with no penalties or fees.',
     }
   ]
   const handlePlanSelect = (planId: string) => {
@@ -367,22 +367,22 @@ export default function Pricing() {
     {
       icon: Zap,
       title: 'Fast Implementation',
-      description: 'Get started in minutes with our pre-built templates and intuitive interface'
+      description: 'Get started in minutes with our pre-built templates and intuitive interface',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with SOC2 compliance, encryption, and regular security audits'
+      description: 'Bank-level security with SOC2 compliance, encryption, and regular security audits',
     },
     {
       icon: Users,
       title: 'Scalable Solutions',
-      description: 'Grow from startup to enterprise with flexible plans that adapt to your needs'
+      description: 'Grow from startup to enterprise with flexible plans that adapt to your needs',
     },
     {
       icon: Globe,
       title: 'Global Support',
-      description: '24/7 support across all time zones with dedicated success managers'
+      description: '24/7 support across all time zones with dedicated success managers',
     }
   ]
   const faqs = [
@@ -392,23 +392,23 @@ export default function Pricing() {
     },
     {
       question: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.'
+      answer: 'Yes, we offer a 14-day free trial for all plans. No credit card required to start your trial.',
     },
     {
       question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, PayPal, and wire transfers for annual plans. Enterprise customers can also pay via invoice.'
+      answer: 'We accept all major credit cards, PayPal, and wire transfers for annual plans. Enterprise customers can also pay via invoice.',
     },
     {
       question: 'Do you offer discounts for nonprofits?',
-      answer: 'Yes, we offer special pricing for qualified nonprofits and educational institutions. Contact our sales team for details.'
+      answer: 'Yes, we offer special pricing for qualified nonprofits and educational institutions. Contact our sales team for details.',
     },
     {
       question: 'Can I cancel my subscription?',
-      answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
+      answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.',
     },
     {
       question: 'What happens to my data if I cancel?',
-      answer: 'Your data is preserved for 30 days after cancellation. You can reactivate your account during this period to restore access.'
+      answer: 'Your data is preserved for 30 days after cancellation. You can reactivate your account during this period to restore access.',
     }
   ]
   const handlePlanSelect = (planId: string) => {
@@ -679,7 +679,7 @@ export default function Pricing() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
               {plans.map((plan, index) => (
                 <Card 
-                  key={index} 
+                  key={index} ;
                   className={`relative hover:shadow-xl transition-all duration-300 ${
                     plan.popular ? 'ring-2 ring-zion-blue scale-105' : ''
                   }`}
@@ -740,25 +740,25 @@ export default function Pricing() {
       name: 'AI Training & Workshops',
       price: '$299',
       period: '/session',
-      description: 'Custom AI training for your team'
+      description: 'Custom AI training for your team',
     },
     {
       name: 'Security Audit',
       price: '$1,499',
       period: '/audit',
-      description: 'Comprehensive security assessment'
+      description: 'Comprehensive security assessment',
     },
     {
       name: 'Cloud Migration',
       price: '$4,999',
       period: '/project',
-      description: 'Complete cloud infrastructure setup'
+      description: 'Complete cloud infrastructure setup',
     },
     {
       name: 'Custom Development',
       price: '$150',
       period: '/hour',
-      description: 'Tailored software development'
+      description: 'Tailored software development',
     }
   ]
   return (

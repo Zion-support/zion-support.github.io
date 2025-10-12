@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   r: 'GITHUB_TOKEN required' })
     }
   }
-  const ghHeaders = {/* TODO: Fix JSX expression */}
+  const ghHeaders = {/* TODO: Fix JSX expression */};
   n: `token ${githubToken}`,
     'Content-Type': 'application/json',
     'User-Agent': 'netlify-ai-issue-labeler'}
@@ -121,7 +121,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   const log = {generatedAt: new Date().toISOString(),
     totalOpen: issues.length
     labeled: actions.length,
-    actions}
+    actions};
   }
   // Try to store log as an artifact in repo
   try {const headers = ghHeaders
@@ -147,7 +147,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     actions.push({/* TODO: Fix JSX expression */})
       })
   }
-  const log = {/* TODO: Fix JSX expression */}
+  const log = {/* TODO: Fix JSX expression */};
     actions}
   }
   // Try to store log as an artifact in repo

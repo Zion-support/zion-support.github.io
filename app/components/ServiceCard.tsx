@@ -1,32 +1,29 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-<<<<<<< HEAD
 const ServiceCardPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international businesses',
     }
   ];
 
@@ -76,15 +73,10 @@ const ServiceCardPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
-
-  return (
->>>>>>> origin/main
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our ServiceCard?
@@ -109,9 +101,8 @@ const ServiceCardPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        </section>
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
@@ -133,9 +124,8 @@ const ServiceCardPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-4xl mx-auto text-center">
+      <section$1>
+        <div$2>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -156,7 +146,6 @@ const ServiceCardPage: React.FC = () => {
           ))
         </div>
       </section>
-=======
 import {ArrowRight, CheckCircle}}from 'lucide-react';
 interface ServiceCardProps {title: string;,}
   description: string;,
@@ -185,7 +174,6 @@ interface ServiceCardProps {title: string;,}
           <div key={index}className="flex items-center gap-2">
             <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
             <span className="text-gray-300 text-sm">{feature</span>}</span>
-=======
 'use client'
 import React from 'react'
 import { ArrowRight, CheckCircle } from 'lucide-react'
@@ -225,52 +213,29 @@ const ServiceCard: React.FC<ServiceCardProps> = ()
           </div><div key={index} className="flex items-center gap-2">
             </div><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
             <span className="text-gray-300 text-sm">{feature}</span>
->>>>>>> origin/main
           </div>
         ))}
       {price && (
         <div className="mb-6">
-<<<<<<< HEAD
           <div className="text-3xl font-bold text-white mb-1">{price</div>}</div>
           <div className="text-gray-400 text-sm">per month</div>
         </div>
-<<<<<<< HEAD
       )}
       {onSelect && (
         <button;
           onClick={onSelect}className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group">,</button>
           Get Started;
           <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />,
-=======
-      )},
-    {onSelect && (
-        <button
-          onClick={onSelect}
-          className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group">
-          Get Started
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
->>>>>>> origin/main
         </button>
       )}
->>>>>>> origin/main
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default ServiceCardPage;
-=======
-<<<<<<< HEAD
 export default ServiceCardPage;
-=======
-<<<<<<< HEAD
 export default ServiceCard;
   </ServiceCardProps>
-=======
-export default ServiceCard
-  </ServiceCardProps>
->>>>>>> origin/main
-=======
           </div><div className="text-3xl font-bold text-white mb-1">{price}</div>
           <div className="text-gray-400 text-sm">per month</div>
         </div>
@@ -293,6 +258,3 @@ export default ServiceCard
   )
 }
 export default ServiceCard</div></div></div></div></div></div></div></div></span></span></p></h3>
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main

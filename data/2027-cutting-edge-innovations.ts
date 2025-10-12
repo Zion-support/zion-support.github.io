@@ -1,4 +1,4 @@
-export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 2027'
+export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 2027',
     path: '/services/cutting-edge-ai-innovation-2027',
     description: 'Next-generation AI innovations for 2027',
     icon: 'Brain',
@@ -14,7 +14,7 @@ export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 20
       professional: '$1399/month'}
       enterprise: 'Custom'}
   },
-    name: 'Cutting Edge Tech Innovation 2027'
+    name: 'Cutting Edge Tech Innovation 2027',
     path: '/services/cutting-edge-tech-innovation-2027',
     description: 'Revolutionary technology innovations for 2027',
     icon: 'Zap',
@@ -23,7 +23,7 @@ export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 20
 export const cuttingEdge2027Innovations = [{/* TODO: Fix JSX expression */}
   l: '$1399/month'}
       enterpris,
-  e: 'Custom'
+  e: 'Custom',
     }
   },
     nam,
@@ -54,7 +54,7 @@ export const cuttingEdge2027Innovations = [{/* TODO: Fix JSX expression */}
       professiona,
   l: '$1199/month',
       enterpris,
-  e: 'Custom'
+  e: 'Custom',
     }
   }
 ]
@@ -69,7 +69,7 @@ export const cuttingEdge2027Stats =
   categories: 4
   averageRating: 4.9
   activeUsers: 3500,
-export const cuttingEdge2027Stats = {}
+export const cuttingEdge2027Stats = {};
   totalService,
   s: 2,
   categorie,

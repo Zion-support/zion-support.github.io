@@ -5,18 +5,18 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'}
+        'Access-Control-Allow-Origin': '*'};
       },
       body: JSON.stringify({message: Code smell audit runner executed successfully)
         timestamp: new Date().toISOString()
-        function: 'code-smell-audit-runner'
+        function: 'code-smell-audit-runner',
         source: event.source || 'unknown',
         audit: {,
           status: 'active',
           filesScanned: 0
           smellsFound: 0,
           lastAudit: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+    const result = {/* TODO: Fix JSX expression */};
         'Access-Control-Allow-Origin': '*'}
       },
       bod,

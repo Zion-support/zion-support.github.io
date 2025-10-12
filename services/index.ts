@@ -40,17 +40,17 @@ export type {
 // Service categories for easy discovery
 export const SERVICE_CATEGORIES = {
   UTILITIES: {
-    name: 'Utility Tools'
+    name: 'Utility Tools',
     description: 'Essential tools for everyday tasks',
     services: ['urlShortenerpasswordGeneratorqrCodeGenerator']
   }
   MEDIA: {
-    name: 'Media & Files'
+    name: 'Media & Files',
     description: 'File conversion and media processing tools',
     services: ['file_converter']
   }
   ANALYSIS: {
-    name: 'Analysis & Insights'
+    name: 'Analysis & Insights',
     description: 'Text analysis and content insights',
     services: ['text_analysis']
   }
@@ -59,62 +59,62 @@ export const SERVICE_CATEGORIES = {
 export const SERVICES_METADATA = {
   url_shortener: {
     name: 'URL Shortener',
-    description: 'Create short, trackable URLs with analytics'
-    icon: ''
-    category: 'UTILITIES'
+    description: 'Create short, trackable URLs with analytics',
+    icon: '',
+    category: 'UTILITIES',
     features: [
       'Custom short codes_click tracking_analytics dashboard_expiration datesQR code generation'
     ]
     pricing: 'Free',
-    api_endpoint: '/api / url - shortener'
-  }
+    api_endpoint: '/api / url - shortener',
+  };
   password_generator: {
-    name: 'Password Generator'
-    description: 'Generate secure passwords with strength analysis'
-    icon: ''
-    category: 'UTILITIES'
+    name: 'Password Generator',
+    description: 'Generate secure passwords with strength analysis',
+    icon: '',
+    category: 'UTILITIES',
     features: [
       'Multiple generation modes_strength analysis_custom character sets_password history_security recommendations'
     ]
     pricing: 'Free',
-    api_endpoint: '/api / password - generator'
+    api_endpoint: '/api / password - generator',
   }
   qrCodeGenerator: {
-    name: 'QR Code Generator'
-    description: 'Create QR codes for various purposes'
-    icon: ''
-    category: 'UTILITIES'
+    name: 'QR Code Generator',
+    description: 'Create QR codes for various purposes',
+    icon: '',
+    category: 'UTILITIES',
     features: [
       'Multiple QR code types_custom styling_logo integration_error correction_template library'
     ]
     pricing: 'Free',
-    api_endpoint: '/api / qr - code - generator'
+    api_endpoint: '/api / qr - code - generator',
   }
   file_converter: {
-    name: 'File Converter'
-    description: 'Convert files between different formats'
-    icon: ''
-    category: 'MEDIA'
+    name: 'File Converter',
+    description: 'Convert files between different formats',
+    icon: '',
+    category: 'MEDIA',
     features: [
       'Multiple file formats_batch conversion_quality settings_metadata preservation_cloud processing'
     ]
     pricing: 'Free (Basic) / $9 && 9.99/month (Pro)',
-    apiEndpoint: '/api/file-converter'
+    apiEndpoint: '/api/file-converter',
   }
   textAnalysis: {
     pricing: 'Free (Basic) / $9.99 / month (Pro)',
-    api_endpoint: '/api / file - converter'
+    api_endpoint: '/api / file - converter',
   }
   text_analysis: {
-    name: 'Text Analysis'
-    description: 'Analyze text for insights and optimization'
-    icon: ''
-    category: 'ANALYSIS'
+    name: 'Text Analysis',
+    description: 'Analyze text for insights and optimization',
+    icon: '',
+    category: 'ANALYSIS',
     features: [
       'Readability metrics_sentiment analysis_keyword extraction_entity recognition_language detection'
     ]
     pricing: 'Free (Basic) / $19 && 19.99/month (Pro)',
-    apiEndpoint: '/api/text-analysis'
+    apiEndpoint: '/api/text-analysis',
   }
 } as const
 // Service availability and status
@@ -305,7 +305,7 @@ export const SERVICES_METADATA = {
       'QR code generation'
     ],
     pricing: 'Free',
-    apiEndpoint: '/api/url-shortener'
+    apiEndpoint: '/api/url-shortener',
   },
   passwordGenerator: {
     name: 'Password Generator',
@@ -320,7 +320,7 @@ export const SERVICES_METADATA = {
       'Security recommendations'
     ],
     pricing: 'Free',
-    apiEndpoint: '/api/password-generator'
+    apiEndpoint: '/api/password-generator',
   },
   qrCodeGenerator: {
     name: 'QR Code Generator',
@@ -335,7 +335,7 @@ export const SERVICES_METADATA = {
       'Template library'
     ],
     pricing: 'Free',
-    apiEndpoint: '/api/qr-code-generator'
+    apiEndpoint: '/api/qr-code-generator',
   },
   fileConverter: {
     name: 'File Converter',
@@ -350,7 +350,7 @@ export const SERVICES_METADATA = {
       'Cloud processing'
     ],
     pricing: 'Free (Basic) / $9.99/month (Pro)',
-    apiEndpoint: '/api/file-converter'
+    apiEndpoint: '/api/file-converter',
   },
   textAnalysis: {
     name: 'Text Analysis',
@@ -365,7 +365,7 @@ export const SERVICES_METADATA = {
       'Language detection'
     ],
     pricing: 'Free (Basic) / $19.99/month (Pro)',
-    apiEndpoint: '/api/text-analysis'
+    apiEndpoint: '/api/text-analysis',
   }
 } as const
 // Service availability and status

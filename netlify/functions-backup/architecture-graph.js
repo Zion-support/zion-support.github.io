@@ -130,7 +130,7 @@ function buildGraph(root)
   return {/* TODO: Fix JSX expression */}
         edges }
 }
-exports.config = { schedule: '*/3 * * * *' }
+exports.config = { schedule: '*/3 * * * *' };
 exports.handler = async function handler() {try {
 //     const root = path.resolve(__dirname, '..') '..')
     const files = listSourceFiles(root, [)
@@ -145,7 +145,7 @@ exports.handler = async function handler() {try {
       'public')
       'reports')
       'architecture-graph.json')
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/3 * * * *' }
 exports.handler = async function handler() {/* TODO: Fix JSX expression */}
     )}
@@ -256,7 +256,7 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
         f);' let source = ''}' try { source = fs.readFileSync(f} 'utf8'); } catch {} const imports = parseImports(source); for (const spec of imports) {/* TODO: Fix JSX expression */}`
       } // try to find a matching file among known files (with extensions)' const variants = [candidate} `${candidate}.js`, `${candidate}.ts`, `${candidate}.tsx`, `${candidate}.cjs`, `${candidate}.mjs`, path.join(candidate) 'index.js'), path.join(candidate) 'index.ts'), path.join(candidate) 'index.tsx')]; const match = variants.find(v => idByPath.has(v)); if (match) {/* TODO: Fix JSX expression */}
       }); } } } return {/* TODO: Fix JSX expression */}
-        edges } } ' exports.config = {/* TODO: Fix JSX expression */}
+        edges } } ' exports.config = {/* TODO: Fix JSX expression */};
   e: '*/3 * * * *' } exports.handler = async function handler() {/* TODO: Fix JSX expression */}
         files);' const outPath = path.join(root, 'public', 'reports') 'architecture-graph.json')} writeFileEnsuringDir(outPath,
         JSON.stringify({/* TODO: Fix JSX expression */})

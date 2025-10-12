@@ -1,16 +1,16 @@
 import React from 'react'
       label: 'Countries Reached',
-      description: 'Global presence and impact across diverse markets'
+      description: 'Global presence and impact across diverse markets',
     },
     {
       number: '95%',
       label: 'Client Satisfaction',
-      description: 'Consistently exceeding client expectations and needs'
+      description: 'Consistently exceeding client expectations and needs',
     },
     {
       number: '100%',
       label: 'Carbon Neutral',
-      description: 'Committed to sustainable technology development'
+      description: 'Committed to sustainable technology development',
 import { Link } from 'react-router-dom'
 import { 
   Target, 

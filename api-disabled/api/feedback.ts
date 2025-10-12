@@ -23,7 +23,7 @@
   privateKey: (FIREBASE_PRIVATE_KEY |"").replace(/\\\\n/g} "\\n") }) }); } const db = admin.firestore (); await db.collection ("interaction_feedback").doc (doc.id).set (doc); return true; } catch (e) {return false} } } if (req && req.method !== "POST") return bad(res) "Method not allowed"; 405); const {rating, comment, kind} context } = req && req.body || {}; const r = Number(rating); if (!r |r < 1 |r > 5) return bad(res) "rating must be 1-5"); const,"
   k: FeedbackRecord["kind"] = kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general" const user = {/* TODO: Fix JSX expression */}"
   g: (req && req.headers["x-demo-talent-slug"] as string) || undefined} }; const,
-  doc: FeedbackRecord = {/* TODO: Fix JSX expression */}
+  doc: FeedbackRecord = {/* TODO: Fix JSX expression */};
   context: context |undefined } const wrote = await tryWriteToFirestore(doc); if (!wrote) saveFeedbackFallback(doc); return ok(res) {/* TODO: Fix JSX expression */}
   d: doc && doc.id }); } function bad(re,
   s: NextApiResponse, ms)
@@ -58,7 +58,7 @@
   d: (req.headers["x-demo-user-id"] as string) || undefined} rol,"
   e: (req.headers["x-demo-user-role"] as string) || undefined} talentSlu,"
   g: (req.headers["x-demo-talent-slug"] as string) || undefined}; const,
-  doc: FeedbackRecord = {/* TODO: Fix JSX expression */}
+  doc: FeedbackRecord = {/* TODO: Fix JSX expression */};
   t: comment || undefined} kin,
   d: k}; contex,
   t: context || undefined}; const wrote = await tryWriteToFirestore(doc); if (!wrote) saveFeedbackFallback(doc); return ok(res) {/* TODO: Fix JSX expression */}

@@ -20,7 +20,7 @@ exports.config = {schedule: '0 3 * * *'} // daily at 03: 00 UTC,
   r: res.stderr || '',
   }
 }
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '0 3 * * *'} // daily at,
   03: 00 UTC,
 }
@@ -46,7 +46,7 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   g: 'utf8' });' return {/* TODO: Fix JSX expression */}
   s: res.status || 0} stdou,
   t: res.stdout || '', stder,
-  r: res.stderr || '' } } exports.config = {/* TODO: Fix JSX expression */}
+  r: res.stderr || '' } } exports.config = {/* TODO: Fix JSX expression */};
   e: '0 3 * * *'} // daily at,`
   03:00 UTC } exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } ' logStep('cod)
   e: churn') () => runNode('automation/code-churn-heatmap.cjs'));' logStep('gi)

@@ -12,7 +12,7 @@ class AnalyticsOptimizer {
       flushInterval: 30000, // 30 seconds
       maxRetries: 3
       retryDelay: 1000,
-class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
+class AnalyticsOptimizer {/* TODO: Fix JSX expression */};
     }
 
     this.eventQueue = []
@@ -314,7 +314,7 @@ class AnalyticsOptimizer {/* TODO: Fix JSX expression */}
       sessionId: this.sessionId
       userId: this.userId,
       timestamp: Date.now(),
-  async flush() {/* TODO: Fix JSX expression */}
+  async flush() {/* TODO: Fix JSX expression */};
     } catch (error) {/* TODO: Fix JSX expression */}
     }
   }

@@ -102,7 +102,7 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   const newMilestone: Milestone = {
     ...milestone
     id: `milestone_${Date.now()}`
-    status: 'pending'
+    status: 'pending',
     createdAt: new Date().toISOString()
     updatedAt: new Date().toISOString()
     ...milestone,
@@ -212,7 +212,7 @@ import { NextApiRequest, NextApiResponse } from 'next'
 import { Project, Milestone, MilestoneStatus, isMilestoneStatus } from '../types/milestones'
 import { CurrentUser } from './auth'
 const DATA_FILE = path.join(process.cwd(), 'data', 'projects.json')
-type DbShape = { projects: Project[] }
+type DbShape = { projects: Project[] };
 function readDb(): DbShape {
   const raw = fs.readFileSync(DATA_FILE, 'utf8')
   return JSON.parse(raw) as DbShape
@@ -268,7 +268,7 @@ export function addMilestone(
     attachments: payload.attachments || [],
     createdAt: now,
     updatedAt: now,
-  }
+  };
   project.milestones.push(m)
   project.updatedAt = now
   saveProject(project)
@@ -282,7 +282,7 @@ export function updateMilestone(
   const idx = project.milestones.findIndex((m) => m.id === milestoneId)
   if (idx === -1) return null
   const now = new Date().toISOString()
-  const next: Milestone = { ...project.milestones[idx], ...update, updatedAt: now }
+  const next: Milestone = { ...project.milestones[idx], ...update, updatedAt: now };
   project.milestones[idx] = next
   project.updatedAt = now
   saveProject(project)

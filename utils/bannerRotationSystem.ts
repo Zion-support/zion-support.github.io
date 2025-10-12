@@ -70,7 +70,7 @@ export const recordBannerImpression = (
       sessionId: getSessionId(),
 export const recordBannerImpression = (impressio,
   n: Omit<BannerImpression, 'timestamp' | 'sessionId'></BannerImpression>)
-) => {/* TODO: Fix JSX expression */}
+) => {/* TODO: Fix JSX expression */};
     }
 
     impressions.push(newImpression)

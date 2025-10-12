@@ -5,7 +5,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'}
+        'Access-Control-Allow-Origin': '*'};
       },
       body: JSON.stringify({message: Home visionary expander executed successfully)
         timestamp: new Date().toISOString()
@@ -15,7 +15,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
           status: 'visionary',
           expansions: 0,
           lastExpansion: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+    const result = {/* TODO: Fix JSX expression */};
         'Access-Control-Allow-Origin': '*'}
       },
       bod,

@@ -7,12 +7,11 @@ export function getUserFromRequest(req: any): User | null {
   }
   return user
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { NextApiRequest, NextApiResponse } from 'next'
 export type CurrentUser = {
   userId: string
   role: 'client' | 'talent' | 'admin'
-}
+};
 export function getCurrentUser(req: NextApiRequest): CurrentUser | null {
   const headerUser = req.headers['x-user-id']
   const headerRole = req.headers['x-user-role'] as string | undefined

@@ -92,8 +92,8 @@ export const ultimate2026Services: Ultimate2026Service[] = [
       'Premium features'
       '24/7 support'
     ]
-    link: '/services/2026-ultimate-service'
-    category: 'Ultimate 2026 Services'
+    link: '/services/2026-ultimate-service',
+    category: 'Ultimate 2026 Services',
     realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -134,18 +134,18 @@ export const ultimate2026 Services: Ultimate2026 Service[] = [,
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
     lin,
-  k: '/services/2026-ultimate-service'
+  k: '/services/2026-ultimate-service',
     categor,
-  y: 'Ultimate 2026 Services'
+  y: 'Ultimate 2026 Services',
     realImplementatio,
   n: true,
     contactInf,
   o: mobil,
-  e: '+1 302 464 0950'
+  e: '+1 302 464 0950',
       emai,
-  l: 'kleber@ziontechgroup.com'
+  l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ];      mobil,"

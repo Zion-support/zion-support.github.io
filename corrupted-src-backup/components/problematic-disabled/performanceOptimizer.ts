@@ -46,7 +46,7 @@ export class PerformanceOptimizer {
         const entrie, s = li, s, t.getEntr, i, e, s(); const lastEntr, y = entri, e, s[entri, e, s.leng, t, h - 1]; th, i, s.metri, c, s.loadTi, m, e = lastEnt, r, y.startTi, m, e; th, i, s.reportMetr, i, c('LC, P', lastEnt, r, y.startTi, m, e)
 export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   construct, o, r(conf, i, g: Parti, a, l<OptimizationCon, f, i, g > = {}) {/* TODO: Fix JSX expression */}
-    } th, i, s.metri, c, s = {/* TODO: Fix JSX expression */}
+    } th, i, s.metri, c, s = {/* TODO: Fix JSX expression */};
     } th, i, s.initializePerformanceMonitori, n, g()
   }
 

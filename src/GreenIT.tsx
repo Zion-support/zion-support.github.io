@@ -304,25 +304,25 @@ const GreenIT = () => {
       benefit: 'Reduced Carbon Footprint',
       description: 'Lower energy consumption and greenhouse gas emissions',
       icon: '🌱',
-      impact: 'Up to 40% reduction in IT carbon emissions'
+      impact: 'Up to 40% reduction in IT carbon emissions',
     },
     {
       benefit: 'Energy Cost Savings',
       description: 'Lower electricity bills and operational costs',
       icon: '💰',
-      impact: '20-30% reduction in energy costs'
+      impact: '20-30% reduction in energy costs',
     },
     {
       benefit: 'Resource Efficiency',
       description: 'Optimized use of computing resources and materials',
       icon: '♻️',
-      impact: 'Improved resource utilization by 25-35%'
+      impact: 'Improved resource utilization by 25-35%',
     },
     {
       benefit: 'Compliance & Certification',
       description: 'Meet environmental standards and regulations',
       icon: '✅',
-      impact: 'Achieve green IT certifications and compliance'
+      impact: 'Achieve green IT certifications and compliance',
     }
   ]
   const greenPractices = [
@@ -405,22 +405,22 @@ const GreenIT = () => {
     {
       name: 'ISO 14001',
       description: 'Environmental Management Systems',
-      icon: '🌍'
+      icon: '🌍',
     },
     {
       name: 'Energy Star',
       description: 'Energy Efficiency Certification',
-      icon: '⭐'
+      icon: '⭐',
     },
     {
       name: 'LEED',
       description: 'Leadership in Energy and Environmental Design',
-      icon: '🏗️'
+      icon: '🏗️',
     },
     {
       name: 'Carbon Trust',
       description: 'Carbon Reduction Certification',
-      icon: '🌱'
+      icon: '🌱',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"

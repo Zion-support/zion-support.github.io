@@ -83,7 +83,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Full enterprise blockchain platform with high performance, security, compliance, and comprehensive development tools.',
@@ -135,7 +135,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Full enterprise DeFi platform with institutional security, compliance tools, and comprehensive risk management.',
@@ -187,7 +187,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Full enterprise NFT platform with multi-chain support, advanced features, and comprehensive management tools.',
@@ -239,7 +239,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Full blockchain supply chain platform with traceability, automation, and comprehensive management tools.',
@@ -291,7 +291,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Full blockchain identity platform with self-sovereign identity, zero-knowledge proofs, and comprehensive security features.',

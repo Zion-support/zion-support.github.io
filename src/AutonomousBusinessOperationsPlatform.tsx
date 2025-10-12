@@ -90,8 +90,8 @@ export default function AutonomousBusinessOperationsPlatform() {
                 business processes automatically with unprecedented efficiency and intelligence.
               </p>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -112,8 +112,8 @@ export default function AutonomousBusinessOperationsPlatform() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gray-900">
@@ -133,8 +133,8 @@ export default function AutonomousBusinessOperationsPlatform() {
                 Schedule Demo
               </button>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </div>
     </>
   );

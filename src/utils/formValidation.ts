@@ -33,7 +33,7 @@ export interface FieldValidation {
 export const _validationRules = {
     // TODO: Add content
   }
-
+;
 }
   /**
    * Validate required field

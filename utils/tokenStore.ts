@@ -80,8 +80,8 @@ function save_config (config: TokenConfig): void {
 }
 function getDefaultConfig (): TokenConfig {
   return {
-    name: 'ZION Token'
-    symbol: 'ZION$'
+    name: 'ZION Token',
+    symbol: 'ZION$',
     totalSupply: 1000000000
     circulatingSupply: 250000000
     exchangeRate: 0.05

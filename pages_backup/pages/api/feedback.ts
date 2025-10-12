@@ -42,7 +42,7 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
     id: (req && req.headers["x-demo-user-id"] as string) || undefined,
     role: (req && req.headers["x-demo-user-role"] as string) || undefined,
     talentSlug: (req && req.headers["x-demo-talent-slug"] as string) || undefined,
-  }
+  };
   const doc: FeedbackRecord = {
     id: uuidv4()
     createdAtIso: new Date().toISOString()
@@ -51,7 +51,7 @@ async function tryWriteToFirestore(doc: FeedbackRecord) {
     comment: comment |undefined
     kind: k
     context: context |undefined
-  }
+  };
   const wrote = await tryWriteToFirestore(doc)
   if (!wrote) saveFeedbackFallback(doc)
   return ok(res, { id: doc && doc.id })
@@ -110,8 +110,8 @@ export default async function handler(req, res) {
     rating: 5,
     comment: 'feedback comment',
     kind: 'general',
-    context: 'api'
-  }
+    context: 'api',
+  };
   return ok(res, {
     id: doc.id
   })
@@ -339,7 +339,7 @@ export default async function handler(req, res) {
     comment: comment || undefined,
     kind: k,
     context: context || undefined,
-  }
+  };
 const wrote = await tryWriteToFirestore(doc)
   if (!wrote) saveFeedbackFallback(doc)
   return ok(res, { id: doc.id })
@@ -348,7 +348,7 @@ const wrote = await tryWriteToFirestore(doc)
   const user = {
     id: (req.headers["x-demo-user-id"] as string) || undefined
     role: (req.headers["x-demo-user-role"] as string) || undefined
-    talentSlug: (req.headers["x-demo-talent-slug"] as string) || undefined}
+    talentSlug: (req.headers["x-demo-talent-slug"] as string) || undefined};
   const doc: FeedbackRecord = {
     id: uuidv4()
     createdAtIso: new Date().toISOString()

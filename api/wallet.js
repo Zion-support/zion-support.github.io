@@ -53,8 +53,8 @@ export default function handler(req, res) {
     name: name || '',
     userId: userId || '',
     timestamp: new Date().toISOString(),
-    status: 'active'
-  }
+    status: 'active',
+  };
   existing.push(newWallet)
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2))

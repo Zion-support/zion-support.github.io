@@ -41,7 +41,7 @@ class AdvancedCache
   s: CacheOptions = {}) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    this.options = {/* TODO: Fix JSX expression */}
+    this.options = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   tt,
@@ -101,7 +101,7 @@ class AdvancedCache
   O: Add content,}
 }
       const storage = this.getStorage()
-      const data = {/* TODO: Fix JSX expression */}
+      const data = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   cach,

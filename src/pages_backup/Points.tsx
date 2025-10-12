@@ -76,7 +76,7 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
     try {
       await fetch('/api/points/redeem', {
 
-        method: 'POST'
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' }
 
         body: JSON.stringify({
@@ -208,16 +208,16 @@ if (return) {
 
 
       icon: <Users className='h-5 w-5' />
-      title: 'Sign Up & Profile Setup'
-      description: 'Complete your profile and verify your email'
-      points: '50 pts'
+      title: 'Sign Up & Profile Setup',
+      description: 'Complete your profile and verify your email',
+      points: '50 pts',
       action: isAuthenticated ? '✓ Completed' : 'Get Started'
     }
       icon: <ShoppingBag className='h-5 w-5' />
-      title: 'First Purchase'
-      description: 'Make your first purchase on the marketplace'
-      points: '100 pts'
-      action: 'Browse Marketplace'
+      title: 'First Purchase',
+      description: 'Make your first purchase on the marketplace',
+      points: '100 pts',
+      action: 'Browse Marketplace',
     }
 
     {
@@ -267,31 +267,31 @@ if (return) {
     }
 
       icon: <Users className='h-5 w-5' />
-      title: 'Refer Friends'
-      description: 'Invite friends to join Zion marketplace'
-      points: '200 pts per referral'
-      action: 'Share Referral Link'
+      title: 'Refer Friends',
+      description: 'Invite friends to join Zion marketplace',
+      points: '200 pts per referral',
+      action: 'Share Referral Link',
     },  ]
   const upcomingRewards = [
 
     {
-      id: 'premium1'
-      title: 'Premium Features (1 month)'
+      id: 'premium1',
+      title: 'Premium Features (1 month)',
       cost: 1000
-      category: 'Subscription'
+      category: 'Subscription',
     }
     {
-      id: 'swag'
-      title: 'Zion Swag Pack'
+      id: 'swag',
+      title: 'Zion Swag Pack',
       cost: 1500
-      category: 'Merchandise'
+      category: 'Merchandise',
     }
     {
 
-      id: 'coupon25'
-      title: '$25 Off Coupon'
+      id: 'coupon25',
+      title: '$25 Off Coupon',
       cost: 2000
-      category: 'Discount'
+      category: 'Discount',
     }
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
 
@@ -925,7 +925,7 @@ if (return) {
                       size='sm'
                       onClick={() => handleRedeem(reward)}
                       disabled={redeeming}
-
+;
                     >                      {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
                   ) : (
@@ -957,7 +957,7 @@ if (return) {
                     <Button
                       size='sm'
                       onClick={() => handleRedeem(reward)}
-
+;
                       disabled={redeeming}
                     >                      {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
@@ -1021,7 +1021,7 @@ if (return) {
                     <Badge
                       variant="outline"
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
-
+;
                     >
                       {entry.delta >= 0 ? '+' : ''}
                       {entry.delta} pts</$1></$1>
@@ -1114,7 +1114,7 @@ if (return) {
                           ? 'bg - green - 100 text - green - 800'
                           : 'bg - red - 100 text - red - 800'
                       }                      variant="outline"
-                      class_name = {entry.delta >= 0 ? 'bg - green - 100 text - green - 800' : 'bg - red - 100 text - red - 800', }
+                      class_name = {entry.delta >= 0 ? 'bg - green - 100 text - green - 800' : 'bg - red - 100 text - red - 800', };
                     >
                       {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge></$1>))}
               </div></$1>)}

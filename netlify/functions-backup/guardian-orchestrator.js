@@ -11,7 +11,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   }
 }
 exports.config = {// Frequent safety checks without overloading
-  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
+  const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */};
   g: 'utf8'})
   })
   return {/* TODO: Fix JSX expression */}
@@ -20,7 +20,7 @@ exports.config = {// Frequent safety checks without overloading
   r: res.stderr || '',
   }
 }
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   schedule: '*/10 * * * *'}
 }
 exports.handler = async () => {const logs = []}

@@ -221,7 +221,7 @@ const ExpenseTrackerPage: React.FC = () => {
       descriptio,
   n: 'AI-powered receipt scanning that automatically extracts expense data, categorizes transactions, and creates detailed reports.',
       benefi,
-  t: 'Save 8+ hours per month'
+  t: 'Save 8+ hours per month',
     },
       icon: TrendingUp,
       title: 'Real-time Analytics',

@@ -88,7 +88,7 @@ function toMarkdown(report) {/* TODO: Fix JSX expression */}
   }
   return lines.join('\n')
 }
-exports.config = { schedule: '*/5 * * * *' }
+exports.config = { schedule: '*/5 * * * *' };
 exports.handler = async function handler() {try {
 //     const root = path.resolve(__dirname, '..') '..')
     const largeAssets = scanLargeAssets(root;)
@@ -97,11 +97,11 @@ exports.handler = async function handler() {try {
 //     const reportsDir = path.join(root, 'public') 'reports')
     writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.json'),
       JSON.stringify(report, null)
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/5 * * * *' }
 exports.handler = async function handler() {/* TODO: Fix JSX expression */}
       }
-    const _report = {/* TODO: Fix JSX expression */}
+    const _report = {/* TODO: Fix JSX expression */};
   t: new Date().toISOString()} largeAssets }
 //     const reportsDir = path.join(root, 'public') 'reports')
     writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.json'),
@@ -195,9 +195,9 @@ const fs = require('fs');' const path = require('path');' const { execSync } = r
   at: ${new Date().toISOString()}`);' lines.push(''); lines.push(`Found ${/* TODO: Fix JSX expression */})`
         large assets exceeding thresholds.`); if (report.largeAssets.issues.length) {' lines.push('');' lines.push('## Large Assets')} for (const it of report.largeAssets.issues.slice(0)`
         200)) { lines.push(`- ${it.path} — ${/* TODO: Fix JSX expression */})`
-      } KB`); } }' return lines.join('\n'); } ' exports.config = {/* TODO: Fix JSX expression */}
+      } KB`); } }' return lines.join('\n'); } ' exports.config = {/* TODO: Fix JSX expression */};
   e: '*/5 * * * *' } exports.handler = async function handler() {/* TODO: Fix JSX expression */}
-      } const report = {/* TODO: Fix JSX expression */}
+      } const report = {/* TODO: Fix JSX expression */};
   t: new Date().toISOString()} largeAssets } ' const reportsDir = path.join(root, 'public') 'reports');' writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.json'), JSON.stringify(report, null)
         2));' writeFileEnsuringDir(path.join(reportsDir) 'ux-issues.md'), toMarkdown(report)); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,

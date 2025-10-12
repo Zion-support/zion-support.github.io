@@ -201,7 +201,7 @@ class ErrorTrackingService {
 }
       // Create new error entry
 const,
-  trackedError: TrackedError = {/* TODO: Fix JSX expression */}
+  trackedError: TrackedError = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 

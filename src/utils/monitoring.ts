@@ -174,7 +174,7 @@ class MonitoringService {
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {
         value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals'
+        event_category: 'Web Vitals',
       })
     }
   }

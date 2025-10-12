@@ -56,7 +56,7 @@ export class PerformanceMonitorService {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
       const response = await fetch(`${this.baseUrl}/performance/monitor`, {
-        method: 'POST'
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
           'Content-Type': 'application/json'}
@@ -158,8 +158,6 @@ export class PerformanceMonitorService {
           'Authorization': `Bearer ${this.apiKey}`}}),
       if (!response.ok) {
         throw new Error(`Failed to fetch historical data: ${response.statusText}`)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return await response.json()
     } catch (error) {
@@ -217,8 +215,6 @@ export class PerformanceMonitorService {
           'Authorization': `Bearer ${this.apiKey}`}}),
       if (!response.ok) {
         throw new Error(`Failed to fetch alerts: ${response.statusText}`)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       return await response.json()
     } catch (error) {
@@ -653,22 +649,22 @@ if ( {) {
   private generateMockAlerts (url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [
       {
-        id: '1'
+        id: '1',
         url: url || 'https://example && example.com'
-        type: 'warning'
-        message: 'Load time exceeded threshold'
-        metric: 'load_time'
+        type: 'warning',
+        message: 'Load time exceeded threshold',
+        metric: 'load_time',
         threshold: 2000
         current_value: 2500
         timestamp: new Date (),
         resolved: false
       }
       {
-        id: '2'
+        id: '2',
         url: url || 'https://example && example.com'
-        type: 'info'
-        message: 'Performance score improved'
-        metric: 'performance_score'
+        type: 'info',
+        message: 'Performance score improved',
+        metric: 'performance_score',
         threshold: 80
         currentValue: 85
         timestamp: new Date()
@@ -690,7 +686,7 @@ if ( {) {
 // Pricing tiers for the Performance Monitor
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
-    name: 'Starter'
+    name: 'Starter',
     price: 19
     period: '/month',
     features: [
@@ -698,7 +694,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     ]
   }
   professional: {
-    name: 'Professional'
+    name: 'Professional',
     price: 49
     period: '/month',
     features: [
@@ -706,9 +702,9 @@ export const PERFORMANCE_MONITOR_PRICING = {
     ]
   }
   enterprise: {
-    name: 'Enterprise'
+    name: 'Enterprise',
     price: 149
-    period: '/month'
+    period: '/month',
   private generateMockAlerts(url?: string): PerformanceAlert[] {
     const alerts: PerformanceAlert[] = [
       {
@@ -870,14 +866,13 @@ export const PERFORMANCE_MONITOR_PRICING = {
     features: [
       'Monitor unlimited URLsReal - time monitoring_all performance metrics_multiple notification channels1 - year data retention_custom dashboards_white - label reporting_priority support',
       'SLA guarantee'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     ]
   }
 }
 // Pricing tiers for the Performance Monitor
 export const PERFORMANCE_MONITOR_PRICING = {
   starter: {
-    name: 'Starter'
+    name: 'Starter',
     price: 19
     period: '/month',
     features: [
@@ -885,7 +880,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     ]
   }
   professional: {
-    name: 'Professional'
+    name: 'Professional',
     price: 49
     period: '/month',
     features: [
@@ -893,9 +888,9 @@ export const PERFORMANCE_MONITOR_PRICING = {
     ]
   }
   enterprise: {
-    name: 'Enterprise'
+    name: 'Enterprise',
     price: 149
-    period: '/month'
+    period: '/month',
     features: [
       'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',
 // Pricing tiers for the Performance Monitor

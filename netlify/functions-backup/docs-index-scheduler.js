@@ -1,11 +1,11 @@
 // netlify/functions/docs-index-scheduler.js
-exports.config = { schedule: '0 */12 * * *' }
+exports.config = { schedule: '0 */12 * * *' };
 exports.handler = async function () {
   const { execSync } = require('child_process')
   try {execSync('node automation/docs-pages-indexer.cjs || true', {)
       stdio: inherit),
         shell: true}
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '0 */12 * * *' }
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   const { execSync } = require('child_process')
@@ -40,7 +40,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         task: 'docs-index-scheduler' }) } } catch (e) {return { statusCode: 200,
         body: JSON.stringify({ok: false),
         error: String(e,)}) } } }'
-// netlify/functions/docs-index-scheduler.js exports.config = {/* TODO: Fix JSX expression */}
+// netlify/functions/docs-index-scheduler.js exports.config = {/* TODO: Fix JSX expression */};
   e: '0 */12 * * *' } exports.handler = async function() {' const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true,"

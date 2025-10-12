@@ -75,7 +75,7 @@ export const _defaultErrorHandlerConfig: ErrorHandlerConfig = {
   enableUserNotification: true,
   enableConsoleLogging: true,
   enableNetworkLogging: true,
-  logLevel: 'error'
+  logLevel: 'error',
 }
 // Error Handler class
 export class ErrorHandler {
@@ -84,7 +84,7 @@ export class ErrorHandler {
   private errors: AppError[] = []
   private retryQueue: Array<{ error: AppError, retryCount: number }> = []
   constructor(config: Partial<ErrorHandlerConfig> = {}) {
-    this.config = { ...defaultErrorHandlerConfig, ...config }
+    this.config = { ...defaultErrorHandlerConfig, ...config };
   }
   static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {
     if (!ErrorHandler.instance) {
@@ -126,7 +126,7 @@ export interface ErrorHandlerConfig {/* TODO: Fix JSX expression */}
 }
 // Default configuration
 export const,
-  _defaultErrorHandlerConfig: ErrorHandlerConfig = {/* TODO: Fix JSX expression */}
+  _defaultErrorHandlerConfig: ErrorHandlerConfig = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   enableLogging: true,
@@ -137,7 +137,7 @@ export const,
   enableUserNotification: true,
   enableConsoleLogging: true,
   enableNetworkLogging: true,
-  logLevel: 'error'
+  logLevel: 'error',
 }
 // Error Handler class
 export class ErrorHandler {/* TODO: Fix JSX expression */}
@@ -157,7 +157,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   g: Partial<ErrorHandlerConfig> = {}) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    this.config = { ...defaultErrorHandlerConfig, ...config }
+    this.config = { ...defaultErrorHandlerConfig, ...config };
   }
   static getInstance(config?: Partial;)
           <ErrorHandlerConfig>): ErrorHandler {/* TODO: Fix JSX expression */}
@@ -177,11 +177,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   // Handle error
   handleError(erro,
   r: Error, errorInfo?: ErrorInfo, context?: Record;)
-          <string, unknown>): AppError {/* TODO: Fix JSX expression */}
+          <string, unknown>): AppError {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
     const,
-  appError: AppError = {/* TODO: Fix JSX expression */}
+  appError: AppError = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   id: this.generateErrorId(),
@@ -242,11 +242,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   // Handle network error
   handleNetworkError(erro,
   r: Error, ur)
-  l: string, status?: number): AppError {/* TODO: Fix JSX expression */}
+  l: string, status?: number): AppError {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
     const,
-  appError: AppError = {/* TODO: Fix JSX expression */}
+  appError: AppError = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   id: this.generateErrorId(),
@@ -288,11 +288,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   // Handle validation error
   handleValidationError(fiel,
   d: string, messag)
-  e: string, value?: unknown): AppError {/* TODO: Fix JSX expression */}
+  e: string, value?: unknown): AppError {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
     const,
-  appError: AppError = {/* TODO: Fix JSX expression */}
+  appError: AppError = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   id: this.generateErrorId(),
@@ -593,7 +593,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   }
   // Schedule retry
   private scheduleRetry(error: AppError) {
-    const retryItem = { error, retryCount: error.retryCount! + 1 }
+    const retryItem = { error, retryCount: error.retryCount! + 1 };
     this.retryQueue.push(retryItem)
     setTimeout(() => {
     this.retryError(retryItem)
@@ -803,7 +803,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   r: AppError) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const retryItem = {/* TODO: Fix JSX expression */}
+    const retryItem = {/* TODO: Fix JSX expression */};
   t: error.retryCount! + 1 }
     this.retryQueue.push(retryItem)
     setTimeout(() => {/* TODO: Fix JSX expression */}
@@ -1019,7 +1019,7 @@ export class ErrorBoundary extends React.Component<
   private errorHandler: ErrorHandler
   constructor(props: { children: React.ReactNode, fallback?: React.ReactNode }) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
     this.errorHandler = ErrorHandler.getInstance()
   }
   static getDerivedStateFromError(error: Error) {
@@ -1056,7 +1056,7 @@ export class ErrorBoundary extends React.Component
   O: Add content,}
 }
     super(props)
-    this.state = {/* TODO: Fix JSX expression */}
+    this.state = {/* TODO: Fix JSX expression */};
   r: false }
     this.errorHandler = ErrorHandler.getInstance()
   }
@@ -1075,7 +1075,7 @@ export class ErrorBoundary extends React.Component
     this.errorHandler.handleError(error, errorInfo, {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-  component: 'ErrorBoundary'
+  component: 'ErrorBoundary',
     }
   )
   }
@@ -1105,7 +1105,7 @@ $4}}
               Try again
         )
       )
-                cursor: 'pointer'
+                cursor: 'pointer',
               }}
 >
               Try again</$1>

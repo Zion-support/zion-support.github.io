@@ -51,8 +51,6 @@ export const suggestDidYouMean = (query: string) => {
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export type SearchType = 'all' | 'talent' | 'jobs' | 'projects'
 export type ParsedFilters = {
   type: SearchType
@@ -62,7 +60,7 @@ export type ParsedFilters = {
   maxBudgetUsd?: number
   availability?: 'full-time' | 'part-time' | 'contract'
   keywords: string[]
-}
+};
 function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: number } {
   const lower = text.toLowerCase()
   // Examples: "$50/hr", "under 50", "< 100", "between 40 and 80", "50-100"
@@ -144,7 +142,7 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
     availability: extractAvailability(query),
     ...extractBudget(query),
     keywords: extractKeywords(query),
-  }
+  };
   const apiKey = process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY
   if (!apiKey) return base
   try {

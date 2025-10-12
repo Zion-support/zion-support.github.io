@@ -197,8 +197,8 @@ const SitemapPage: React.FC = () => {
                   Request Demo
   
               </div>
-            </div>
-          </section>
+        </div>
+      </section>
         </main>
         <Footer />
       </div>

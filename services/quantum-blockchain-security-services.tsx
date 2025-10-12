@@ -28,7 +28,7 @@ export default function quantumblockchainsecurityservices() {
         </div>)
       </div>)
 export const,
-  metadata: Metadata = {/* TODO: Fix JSX expression */}
+  metadata: Metadata = {/* TODO: Fix JSX expression */};
   }}
 export default function quantumblockchainsecurityservices() {/* TODO: Fix JSX expression */}
 }

@@ -8,7 +8,7 @@ exports.handler = async function () {try {
     })
     execSync('node automation/optimize-images.cjs || true', {stdio: inherit),
         shell: true}
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '0 */3 * * *'} // every 3 hours
 }
 exports.handler = async function () {/* TODO: Fix JSX expression */}
@@ -46,7 +46,7 @@ const { execSync } = require('child_process'); exports.config = {' schedule: '0 
         task: 'broken-image-defender' }) } } catch (e) {return { statusCode: 200,
         body: JSON.stringify({ok: false),
         error: String(e,)}) } } }'
-const { execSync } = require('child_process'); exports.config = {/* TODO: Fix JSX expression */}
+const { execSync } = require('child_process'); exports.config = {/* TODO: Fix JSX expression */};
   e: '0 */3 * * *' // every 3 hours } exports.handler = async function() {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true,

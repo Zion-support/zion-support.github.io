@@ -93,7 +93,7 @@ if ( {) {
         paymentTerms: paymentTerms as PaymentTerms
         agreementUrl
         status: "SENT"
-      }
+      };
       saveOffer(offer)
       return res.status(201).json({ ok: true, offer })
     }
@@ -247,7 +247,7 @@ if ( {) {
         existing.status = "CONFIRMED"
         // Create a project upon acceptance
         const project: Project = {
-  }
+  };
           id: uuidv4 (),
           title: `Project with ${existing.talent_slug}`,
           summary: existing.scope_summary,
@@ -319,7 +319,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         paymentTerms: paymentTerms as PaymentTerms
         agreementUrl
         status: "SENT"
-      }
+      };
       saveOffer(offer)
       return res.status(201).json({ ok: true, offer })
     }
@@ -389,7 +389,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         scopeSummary,
         paymentTerms: paymentTerms as PaymentTerms,
         agreementUrl,
-      }
+      };
       saveOffer(offer)
       return res.status(201).json({ ok: true, offer })
     }
@@ -417,7 +417,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           startDateIso: existing && existing.startDateIso,
           status: "ACTIVE",
           timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           documents: existing.agreementUrl
             ? [
                 {

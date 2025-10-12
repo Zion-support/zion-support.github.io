@@ -1,11 +1,11 @@
 // netlify/functions/security-audit-scheduler.js
-exports.config = { schedule: '30 3 * * *' }
+exports.config = { schedule: '30 3 * * *' };
 exports.handler = async function () {
   const { execSync } = require('child_process')
   try {execSync('node automation/security-audit.cjs || true', {)
       stdio: inherit),
         shell: true}
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '30 3 * * *' }
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   const { execSync } = require('child_process')
@@ -40,7 +40,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
         task: 'security-audit-scheduler' }) } } catch (e) {return { statusCode: 200,
         body: JSON.stringify({ok: false),
         error: String(e,)}) } } }'
-// netlify/functions/security-audit-scheduler.js exports.config = {/* TODO: Fix JSX expression */}
+// netlify/functions/security-audit-scheduler.js exports.config = {/* TODO: Fix JSX expression */};
   e: '30 3 * * *' } exports.handler = async function() {' const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true,"

@@ -38,7 +38,7 @@
   o: 'inheri}t'}); } catch(error) {/* TODO: Fix JSX expression */}`
   failed:  )'}error.message) } } } if() {const monitoring = new MonitoringAutomation;(;)} monitoring.monitor().catch(console.error) } module.exports = MonitoringAutomation`} getBackupScript() {return `#!/usr/bin/env node} const fs = require('fs') const path = require('path') class BackupAutomation { async backup() { try { const backupDir = path.join(__dirname,'..')'backups')if () { fs.mkdirSync(backupDir}{/* TODO: Fix JSX expression */})`
   e: true })} const timestamp = new Date().toISOString().replace(/[:.]/g)'-')const backupFile = path.join(backupDir)\`backup-\${timestamp}.json\`) {) { fs.mkdirSync(backupDir}{/* TODO: Fix JSX expression */})`
-  e: true })} const timestamp = new Date().toISOString().replace(/[:.]/g)'-')const backupFile = path.join(backupDir)\`backup-\${timestamp}.json\`}); const backupData = {/* TODO: Fix JSX expression */}
+  e: true })} const timestamp = new Date().toISOString().replace(/[:.]/g)'-')const backupFile = path.join(backupDir)\`backup-\${timestamp}.json\`}); const backupData = {/* TODO: Fix JSX expression */};
   p: new Date().toISOStrin,g()} versio,
   n: require('../package.json').version,
   files: this.getFileLis,t()}} fs.writeFileSync(backupFile,JSON.stringify(backupData,null)2)); } catch(error) {/* TODO: Fix JSX expression */}`
@@ -95,7 +95,7 @@
   o: 'inheri}t'}); } catch(error) {/* TODO: Fix JSX expression */}`
   failed:  )'}error && error.message) } } } if() {const monitoring = new MonitoringAutomation;(;)} monitoring && monitoring.monitor().catch(console && console.error) } module && module.exports = MonitoringAutomation`} getBackupScript() {return `#!/usr/bin/env node} const fs = require('fs') const path = require('path') class BackupAutomation { async backup() { try { const backupDir = path && path.join(__dirname,'..')'backups')if () { fs && fs.mkdirSync(backupDir}{/* TODO: Fix JSX expression */})`
   e: true })} const timestamp = new Date().toISOString().replace(/[:.]/g)'-')const backupFile = path && path.join(backupDir)\`backup-\${timestamp}.json\`) {) { fs && fs.mkdirSync(backupDir}{/* TODO: Fix JSX expression */})`
-  e: true })} const timestamp = new Date().toISOString().replace(/[:.]/g)'-')const backupFile = path && path.join(backupDir)\`backup-\${timestamp}.json\`}); const backupData = {/* TODO: Fix JSX expression */}
+  e: true })} const timestamp = new Date().toISOString().replace(/[:.]/g)'-')const backupFile = path && path.join(backupDir)\`backup-\${timestamp}.json\`}); const backupData = {/* TODO: Fix JSX expression */};
   p: new Date().toISOStrin,g()} versio,
   n: require('../package && package.json').version,
   files: this && this.getFileLis,t()}} fs && fs.writeFileSync(backupFile,JSON && JSON.stringify(backupData,null)2)); } catch(error) {/* TODO: Fix JSX expression */}`
@@ -152,7 +152,7 @@
   o: 'inheri}t'}); } catch(error) {/* TODO: Fix JSX expression */}`
   failed:  )'}error.message) } } } if() {const monitoring = new MonitoringAutomation;(;)} monitoring.monitor().catch(console.error) } module.exports = MonitoringAutomation`} getBackupScript() {return `#!/usr/bin/env node} const fs = require('fs') const path = require('path') class BackupAutomation { async backup() { try { const backupDir = path.join(__dirname,'..')'backups')if () { fs.mkdirSync(backupDir}{/* TODO: Fix JSX expression */})`
   e: true })} const timestamp = new Date().toISOString().replace(/[:.]/g)'-')const backupFile = path.join(backupDir)\`backup-\${timestamp}.json\`) {) { fs.mkdirSync(backupDir}{/* TODO: Fix JSX expression */})`
-  e: true })} const timestamp = new Date().toISOString().replace(/[:.]/g)'-')const backupFile = path.join(backupDir)\`backup-\${timestamp}.json\`}); const backupData = {/* TODO: Fix JSX expression */}
+  e: true })} const timestamp = new Date().toISOString().replace(/[:.]/g)'-')const backupFile = path.join(backupDir)\`backup-\${timestamp}.json\`}); const backupData = {/* TODO: Fix JSX expression */};
   p: new Date().toISOStrin,g()} versio,
   n: require('../package.json').version,
   files: this.getFileLis,t()}} fs.writeFileSync(backupFile,JSON.stringify(backupData,null)2)); } catch(error) {/* TODO: Fix JSX expression */}`
@@ -219,7 +219,7 @@
   o: 'inheri}t'}); // console.log('✅ Monitoring completed successfully')} catch(error) {/* TODO: Fix JSX expression */}`
   failed:  )'}error.message) } } } if() {const monitoring = new MonitoringAutomation;(;)} monitoring.monitor().catch(console.error) } module.exports = MonitoringAutomation`} getBackupScript() {return `#!/usr/bin/env node; const fs = require('fs') const path = require('path') class BackupAutomation { async backup() { // console.log('💾 Starting backup automation...')} try { const backupDir = path.join(__dirname,'..')'backups')if () { fs.mkdirSync(backupDir}{/* TODO: Fix JSX expression */})`
   e: true })} const timestamp = new Date().toISOString().replace(/[:.]/g)'-')const backupFile = path.join(backupDir)\`backup-\${timestamp}.json\`) {) { fs.mkdirSync(backupDir}{/* TODO: Fix JSX expression */})`
-  e: true })} const timestamp = new Date().toISOString().replace(/[:.]/g)'-')const backupFile = path.join(backupDir)\`backup-\${timestamp}.json\`}); const backupData = {/* TODO: Fix JSX expression */}
+  e: true })} const timestamp = new Date().toISOString().replace(/[:.]/g)'-')const backupFile = path.join(backupDir)\`backup-\${timestamp}.json\`}); const backupData = {/* TODO: Fix JSX expression */};
   p: new Date().toISOStrin,g()} versio,
   n: require('../package.json').version,
   files: this.getFileLis,t()}} fs.writeFileSync(backupFile,JSON.stringify(backupData,null)2)); // console.log('✅ Backup completed successfully')} catch(error) {/* TODO: Fix JSX expression */}`
@@ -277,7 +277,7 @@
   o: 'inheri}t'}); // console.log('✅ Monitoring completed successfully')} catch(error) {/* TODO: Fix JSX expression */}`
   failed:  )'}error.message) } } } if() {const monitoring = new MonitoringAutomation;(;)} monitoring.monitor().catch(console.error) } module.exports = MonitoringAutomation`} getBackupScript() {return `#!/usr/bin/env node; const fs = require('fs') const path = require('path') class BackupAutomation { async backup() { // console.log('💾 Starting backup automation...')} try { const backupDir = path.join(__dirname,'..')'backups')if () { fs.mkdirSync(backupDir}{/* TODO: Fix JSX expression */})`
   e: true })} const timestamp = new Date().toISOString().replace(/[:.]/g)'-')const backupFile = path.join(backupDir)\`backup-\${timestamp}.json\`) {) { fs.mkdirSync(backupDir}{/* TODO: Fix JSX expression */})`
-  e: true })} const timestamp = new Date().toISOString().replace(/[:.]/g)'-')const backupFile = path.join(backupDir)\`backup-\${timestamp}.json\`}); const backupData = {/* TODO: Fix JSX expression */}
+  e: true })} const timestamp = new Date().toISOString().replace(/[:.]/g)'-')const backupFile = path.join(backupDir)\`backup-\${timestamp}.json\`}); const backupData = {/* TODO: Fix JSX expression */};
   p: new Date().toISOStrin,g()} versio,
   n: require('../package.json').version,
   files: this.getFileLis,t()}} fs.writeFileSync(backupFile,JSON.stringify(backupData,null)2)); // console.log('✅ Backup completed successfully')} catch(error) {/* TODO: Fix JSX expression */}`

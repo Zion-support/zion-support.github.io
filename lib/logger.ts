@@ -20,7 +20,7 @@ class Logger {
       prefix: config.prefix || 'APP',
       timestamp: config.timestamp !== false,
       colorize: config.colorize !== false && typeof window !== 'undefined',
-class Logger {/* TODO: Fix JSX expression */}
+class Logger {/* TODO: Fix JSX expression */};
   g: Partial<LoggerConfig> = {}) {/* TODO: Fix JSX expression */}
     }
   }

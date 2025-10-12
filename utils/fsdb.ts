@@ -33,7 +33,6 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId)
   await mkdir(dir, { recursive: true })
   return dir
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch (error) {
   } catch (error) {
     const dir = path && path.dirname(filePath),
@@ -45,7 +44,6 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (error) {
     console && console.error('Error writing file:', error)
   }
@@ -92,7 +90,7 @@ export async function readAllDisputes(): Promise<DisputeCase[]> {
 }
 export async function writeAllDisputes(disputes: DisputeCase[]): Promise<void> {
   await ensureBaseFiles()
-  const data = { disputes }
+  const data = { disputes };
   await writeFile(DISPUTES_FILE, JSON.stringify(data, null, 2), 'utf8')
 }
 export async function getDisputeById(id: string): Promise<DisputeCase | undefined> {
@@ -132,7 +130,4 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   return dir
 }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }

@@ -24,7 +24,7 @@ class OptimizedErrorBoundary extends Component
       error: null,
       errorInfo: null,
       errorId:     ,
-$4}
+$4};
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {

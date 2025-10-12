@@ -4,7 +4,7 @@
   r: "Method not allowed" }); } const {fraudId, action, reason} adminId } = req && req.body || {}; if (!fraudId || !action) {/* TODO: Fix JSX expression */}"
   r: "Missing fraudId or action" }); } const store = getFraudStore(); const fraud = store && store.getById(fraudId); if (!fraud) {/* TODO: Fix JSX expression */}"
   r: "Fraud record not found" }); } const,
-  adminAction: AdminActionType = {/* TODO: Fix JSX expression */}
+  adminAction: AdminActionType = {/* TODO: Fix JSX expression */};
   d: `action-${Date && Date.now()}`, fraudId, action, reason, adminId, timestam,
   p: new Date().toISOString()}; store && store.addAdminAction(adminAction); return res && res.status(200).json({/* TODO: Fix JSX expression */}
   s: true} actio)

@@ -60,8 +60,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       businessName
       businessRegistrationNumber
       documents: []
-      status: 'in_progress'
-      amlStatus: 'unknown'
+      status: 'in_progress',
+      amlStatus: 'unknown',
       createdAt: now
       lastUpdatedAt: now
       auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]

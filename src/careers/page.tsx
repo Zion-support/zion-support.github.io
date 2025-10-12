@@ -112,22 +112,22 @@ const CareersPage: React.FC = () => {
     {
       icon: Heart,
       title: 'Health & Wellness',
-      description: 'Comprehensive health insurance, dental, vision, and mental health support'
+      description: 'Comprehensive health insurance, dental, vision, and mental health support',
     },
     {
       icon: Zap,
       title: 'Learning & Growth',
-      description: 'Professional development budget, conference attendance, and skill development programs'
+      description: 'Professional development budget, conference attendance, and skill development programs',
     },
     {
       icon: Shield,
       title: 'Work-Life Balance',
-      description: 'Flexible work hours, remote work options, and unlimited PTO'
+      description: 'Flexible work hours, remote work options, and unlimited PTO',
     },
     {
       icon: Star,
       title: 'Recognition',
-      description: 'Performance bonuses, stock options, and recognition programs'
+      description: 'Performance bonuses, stock options, and recognition programs',
     }
   ]
   const culture = [
@@ -302,4 +302,4 @@ export default CareersPage</Link>
   </p>
   </Link>
   </Link>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></p></p></p></p></p></h2></h3></h3></h3></h4></h4></ul></ul></ul></li></li></li></section></section></section>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></p></p></p></p></p></h2></h3></h3></h3></h4></h4></ul></ul></ul></li></li></section></section></section>

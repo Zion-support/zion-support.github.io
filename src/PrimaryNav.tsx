@@ -99,7 +99,7 @@ function PrimaryNav() {
         .catch(err =>
           logErrorToProduction('Search navigation failed', err, {
             query: trimmed
-            component: 'PrimaryNav'
+            component: 'PrimaryNav',
           })
         ) }
   const handle_submit = (e: React.FormEvent) =>: any {
@@ -272,7 +272,7 @@ if ( {) {
                       suggestion_id: sugg && sugg.id || sugg && sugg.slug
 })}
                 }}
-                searchSuggestions = {suggestions,}
+                searchSuggestions = {suggestions,};
               /></$1>
             {/* Compact actions group */}
             <div className='flex items-center gap-1'>
@@ -601,7 +601,7 @@ setLoginOpen (true)
 }}
               animate = {
   { opacity: 1
-  height: 'auto'
+  height: 'auto',
 }}
               exit = {
   { opacity: 0
@@ -752,7 +752,7 @@ setLoginOpen (true)
 }}
               animate = {
   { opacity: 1,
-  height: 'auto'
+  height: 'auto',
 }}
               exit = {
   { opacity: 0,
@@ -782,22 +782,22 @@ setLoginOpen (true)
                         </Link>))}
                     </div></$1>))}
                 <div className="pt - 4 border - t border - white / 10 space - y-2">
-                  <                    to="/solutions";$2 />
+                  <                    to="/solutions"$2 />
                     className="block text - gray - 300 hover:text - white transition - colors duration - 200"
                     on_click={: unknown setIsOpen (false)}
                   >
                     Solutions</$1>
-                  <                    to="/about";$2 />
+                  <                    to="/about"$2 />
                     className="block text - gray - 300 hover:text - white transition - colors duration - 200"
                     on_click={: unknown setIsOpen (false)}
                   >
                     About</$1>
-                  <                    to="/blog";$2 />
+                  <                    to="/blog"$2 />
                     className="block text - gray - 300 hover:text - white transition - colors duration - 200"
                     on_click={: unknown setIsOpen (false)}
                   >
                     Blog</$1>
-                  <                    to="/contact";$2 />
+                  <                    to="/contact"$2 />
                     className="block text - gray - 300 hover:text - white transition - colors duration - 200"
                     on_click={: unknown setIsOpen (false)}
                   >

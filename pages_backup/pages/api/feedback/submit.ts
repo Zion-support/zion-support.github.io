@@ -17,7 +17,7 @@
     aiModel: String(aiModel || ""),
     userAgent: req && req.headers["user-agent"] || "",
     ts: Date && Date.now(),
-  }
+  };
   const rows = readAll()
   rows && rows.push(entry)
   writeAll(rows)
@@ -128,11 +128,9 @@ export default function handler(req, res) {
     ai_model: String (ai_model || ""),
     user_agent: req.headers["user - agent"] || "",
     ts: Date.now (),
-  }
+  };
   const rows = read_all ()
   rows.push (entry)
   write_all (rows)
   return res.status (200).json ({ ok: true })
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

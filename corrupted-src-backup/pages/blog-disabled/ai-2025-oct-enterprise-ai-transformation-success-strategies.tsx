@@ -664,10 +664,6 @@ export default EnterpriseAITransformationSuccessStrategies</div>
 </li>
 </li>
 </li>
-</li>
-</li>
-</li>
-</li>
 </ArrowLeft>
 </ArrowLeft>
 </TrendingUp>

@@ -130,21 +130,21 @@ const AiContentGeneratorPage: React.FC = () => {
       role: 'Content Manager, TechBlog',
       content: 'AI Content Generator increased our content output by 500% while maintaining quality.',
       rating: 5,
-      company: 'TechBlog'
+      company: 'TechBlog',
     },
     {
       name: 'Mike Chen',
       role: 'Marketing Director, E-commerce Plus',
       content: 'The SEO optimization feature improved our organic traffic by 200% in 3 months.',
       rating: 5,
-      company: 'E-commerce Plus'
+      company: 'E-commerce Plus',
     },
     {
       name: 'Lisa Rodriguez',
       role: 'Founder, Creative Agency',
       content: 'We can now serve 3x more clients with the same team. Game-changing tool!',
       rating: 5,
-      company: 'Creative Agency'
+      company: 'Creative Agency',
     }
   ]
 

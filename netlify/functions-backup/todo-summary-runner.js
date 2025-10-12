@@ -9,7 +9,7 @@ exports.handler = async function (event, context) {
       body: JSON.stringify({)
         message: 'Todo summary runner executed successfully')
         timestamp: new Date().toISOString()
-        function: 'todo-summary-runner'
+        function: 'todo-summary-runner',
         source: event.source || 'unknown',
         summary: {,
           status: 'active',

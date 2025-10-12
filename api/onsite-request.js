@@ -1,16 +1,6 @@
-<<<<<<< HEAD
 const { withSentry } = require('./withSentry.cjs');
 
 async function handler(req, res) {
-=======
-const fs = require('fs')
-const path = require('path')
-// Simple wrapper function to replace withSentry
-const withSentry = (handler) => handler
-const dir = path.join(process.cwd(), 'data')
-const file = path.join(dir, 'onsite-requests.json')
-export default function handler(req, res) {
->>>>>>> origin/main
   if (req.method !== 'POST') {
     res.statusCode = 405
     res.setHeader('Content-Type', 'application/json')
@@ -18,7 +8,6 @@ export default function handler(req, res) {
     return
   }
 
-<<<<<<< HEAD
   try {
     const {
       name,
@@ -51,7 +40,7 @@ export default function handler(req, res) {
       location: location || 'Not specified',
       details: details || 'No additional details',
       timestamp: new Date().toISOString(),
-      status: 'pending'
+      status: 'pending',
     };
 
     // Log the request (in production, save to database)
@@ -78,64 +67,5 @@ export default function handler(req, res) {
 }
 
 module.exports = withSentry(handler);
-=======
-  const { name, email, company, phone, message, location } = req.body || {}
-
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })
-  }
-
-  let existing = []
-  try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, 'utf8')
-      existing = JSON.parse(data)
-      if (!Array.isArray(existing)) existing = []
-  }
-  } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error reading existing requests:', error)
-  }
-    existing = []
-  }
-
-  const newRequest = {
-    id: Date.now().toString(),
-    name,
-    email,
-    company,
-    phone,
-    message,
-    location,
-    timestamp: new Date().toISOString(),
-    status: 'pending'
-  }
-
-  existing.push(newRequest)
-  try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2))
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Onsite request submitted successfully',
-      id: newRequest.id
-    }))
-  } catch (error) {
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error saving onsite request:', error)
-  }
-    res.statusCode = 500
-    res.setHeader('Content-Type', 'application/json')
-    res.end(JSON.stringify({ error: 'Failed to save request' }))
-  }
-}
-<<<<<<< HEAD
 module.exports = handler;
 
-=======
-module.exports = handler
->>>>>>> origin/main
->>>>>>> origin/main

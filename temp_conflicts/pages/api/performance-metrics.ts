@@ -111,14 +111,14 @@ export default async function handler(
       console.error('Error processing request:', error),
       res.status(500).json({ 
         success: false, 
-        message: 'Internal server error' 
+        message: 'Internal server error' ,
       }),
     }
   } catch (error) {
     console.error('Error processing request:', error),
     res.status(500).json({ 
       success: false, 
-      message: 'Internal server error' 
+      message: 'Internal server error' ,
     }),
     return,
           })
@@ -131,14 +131,14 @@ export default async function handler(
       console.error('Error processing request:', error)
       res.status(500).json({ 
         success: false, 
-        message: 'Internal server error' 
+        message: 'Internal server error' ,
       })
     }
   } catch (error) {
     console.error('Error processing request:', error)
     res.status(500).json({ 
       success: false, 
-      message: 'Internal server error' 
+      message: 'Internal server error' ,
     })
     return
   }
@@ -194,14 +194,14 @@ export default async function handler(
       } else {
         res.status(400).json({ 
           success: false, 
-          message: 'Invalid type parameter' 
+          message: 'Invalid type parameter' ,
         }),
       }
     } catch (error) {
       console.error('Error retrieving data:', error),
       res.status(500).json({ 
         success: false, 
-        message: 'Internal server error' 
+        message: 'Internal server error' ,
       }),
     }
   } else {
@@ -216,7 +216,7 @@ export default async function handler(
       console.error('Error retrieving data:', error)
       res.status(500).json({ 
         success: false, 
-        message: 'Internal server error' 
+        message: 'Internal server error' ,
       })
     }
   } else {

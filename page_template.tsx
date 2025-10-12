@@ -165,8 +165,8 @@ const PageTemplate: React.FC<{
                 Middletown DE 19709,
   
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </main>
       <Footer />,
     </div>)

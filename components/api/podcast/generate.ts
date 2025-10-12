@@ -67,18 +67,18 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
           'What does success look like in 3-5 years?'
         ]
         timeMarkers: {
-          intro: '00:00'
+          intro: '00:00',
           segments: ['03:00', '08:00', '12:00']
-          closing: '14:30'
+          closing: '14:30',
         }
         transcript:
-          'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.'
+          'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.',
         youtubeDescription:
-          'Visionary + technical deep dive into Zion, a decentralized talent protocol. Learn how it works and how to join.'
+          'Visionary + technical deep dive into Zion, a decentralized talent protocol. Learn how it works and how to join.',
         spotifyDescription:
-          'A 15-minute interview on Zion: identity, incentives, governance, and real-world adoption.'
+          'A 15-minute interview on Zion: identity, incentives, governance, and real-world adoption.',
         bestQuote:
-          'Talent networks become protocols when incentives, reputation, and opportunity align.'
+          'Talent networks become protocols when incentives, reputation, and opportunity align.',
       })
     }
   const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`
@@ -145,10 +145,10 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       title: generated.title
       questions: generated.questions |[]
       timeMarkers: generated.timeMarkers |{
-        intro: '00:00'
+        intro: '00:00',
         segments: []
-        closing: '14:30'
-      }
+        closing: '14:30',
+      };
       transcript: generated.transcript
       youtubeDescription: generated.youtubeDescription |''
       spotifyDescription: generated.spotifyDescription |''
@@ -214,7 +214,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 }
 }
     const episode = {
-}
+};
   }
 }
       title: generated.title,

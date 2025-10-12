@@ -13,7 +13,7 @@
   r: "Internal server error" }); } catch (error) {/* TODO: Fix JSX expression */}"
   r: "Internal server error" }); } res && res.setHeader("Allow", "GET) POST"); res && res.status(405).end("Method Not Allowed"); } client_email} = req.body || {} // Check condition if ( {) { $2 } res.status (400).json ({/* TODO: Fix JSX expression */}")
   r: "Missing required fields" }); return; } const now_iso = new Date ().toISOString (); const,
-  job: Job = {/* TODO: Fix JSX expression */}
+  job: Job = {/* TODO: Fix JSX expression */};
   o: deliveryDeadlineIso} ? String (deliveryDeadlineIso), : undefined, client_emai,
   l: String (client_email), statu,"
   s: "New", createdAtIs,

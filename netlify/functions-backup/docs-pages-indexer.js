@@ -34,7 +34,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   }
 }
 exports.config = {// Run every 4 hours
-  schedule: '0 */4 * * *'}
+  schedule: '0 */4 * * *'};
 }
 exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/docs-pages-indexer.cjs || true') { stdio: 'inherit'} shell: true,
       });' execSync('node scripts/generate-sitemap.js || true') {stdio: 'inherit'} shell: true,
@@ -44,7 +44,7 @@ exports.handler = async function() { const { execSync } = require('child_process
         task: 'docs-pages-indexer' }) } } catch (e) {return { statusCode: 200,
         body: JSON.stringify({ok: false),
         error: String(e,)}) } } } exports.config = {// Run every 4 hours' schedule: '0 */4 * * *'} } '
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   schedule: '0 */4 * * *'}
 }
 exports.handler = async function() { const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
@@ -58,5 +58,5 @@ exports.handler = async function() { const { execSync } = require('child_process
   l: true,
       });' return {/* TODO: Fix JSX expression */}
   k: 'docs-pages-indexer' }) } } catch (e) {/* TODO: Fix JSX expression */}
-      }) } } } exports.config = {/* TODO: Fix JSX expression */}
+      }) } } } exports.config = {/* TODO: Fix JSX expression */};
   e: '0 */4 * * *'} } '"

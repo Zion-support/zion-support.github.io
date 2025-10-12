@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 'use client';
 import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-<<<<<<< HEAD
 import { AppHeader } from './layout/AppHeader';
 import { EnhancedFuturisticFooter as Footer } from './components/EnhancedFuturisticFooter';
 import { ChatAssistant } from './components/ChatAssistant';
@@ -15,12 +13,6 @@ import PromotionalBanner from './components/PromotionalBanner';
 import NewContentPromotionalBanner from './components/NewContentPromotionalBanner';
 // Removed direct import to avoid name collision with lazy import below
 import { ServicesHighlight } from './components/ServicesHighlight';
-=======
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import LoadingSpinner from './components/LoadingSpinner';
-import ErrorBoundary from './components/ErrorBoundary';
->>>>>>> origin/main
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -181,7 +173,6 @@ const NotFoundPage: React.FC = () => (
 );
 
 export default App;
-=======
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import ErrorBoundary from './components/ErrorBoundary'
@@ -460,4 +451,3 @@ const App: React.FC = () => {
   )
 }
 export default App</div>
->>>>>>> origin/main

@@ -16,7 +16,7 @@ export function middleware(request: NextRequest) {
   }
   return NextResponse.next()
 }
-export const config = {matcher: ['/dashboard/dashboard/']}
+export const config = {matcher: ['/dashboard/dashboard/']};
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 export function middleware(request: NextRequest) {
@@ -33,9 +33,9 @@ export function middleware(request: NextRequest) {
 }
 export const config = {
   matcher: ['/dashboard / dashboard/']}
-
+;
 export const config = {
-  matcher: ['/dashboard/dashboard/']}
+  matcher: ['/dashboard/dashboard/']};
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 export function middleware(request: NextRequest) {
@@ -49,4 +49,4 @@ export function middleware(request: NextRequest) {
 }
 export const config = {
   matcher: ['/dashboard', '/dashboard/'],
-}
+};

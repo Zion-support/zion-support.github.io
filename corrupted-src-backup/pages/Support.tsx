@@ -7,35 +7,35 @@ const, Suppor, t: Rea, c, t.FC = () => {
   const, supportChannel, s = [
     {
       ic, o, n: Pho, n, e
-      tit, l, e: 'Phone, Suppor, t'
-      descripti, o, n: 'Speak, directly, with our, technical, experts'
+      tit, l, e: 'Phone, Suppor, t',
+      descripti, o, n: 'Speak, directly, with our, technical, experts',
       availabili, t, y: '24/7',
-      responseTi, m, e: '< 2, minute, s'
-      conta, c, t: '+1 (5, 5, 5) 1, 2, 3-45, 6, 7'
+      responseTi, m, e: '< 2, minute, s',
+      conta, c, t: '+1 (5, 5, 5) 1, 2, 3-45, 6, 7',
     }
     {
       ic, o, n: MessageCirc, l, e
-      tit, l, e: 'Live, Cha, t'
-      descripti, o, n: 'Get, instant, help through, our, chat syst, e, m'
+      tit, l, e: 'Live, Cha, t',
+      descripti, o, n: 'Get, instant, help through, our, chat syst, e, m',
       availabili, t, y: '24/7',
-      responseTi, m, e: '< 30, second, s'
-      conta, c, t: 'Start, Cha, t'
+      responseTi, m, e: '< 30, second, s',
+      conta, c, t: 'Start, Cha, t',
     }
     {
       ic, o, n: Ma, i, l
-      tit, l, e: 'Email, Suppor, t'
-      descripti, o, n: 'Send, us, detailed questions, and, get comprehensive, answer, s'
+      tit, l, e: 'Email, Suppor, t',
+      descripti, o, n: 'Send, us, detailed questions, and, get comprehensive, answer, s',
       availabili, t, y: '24/7',
-      responseTi, m, e: '< 2, hour, s'
-      conta, c, t: 'suppo, r, t@ziontechgro, u, p.c, o, m'
+      responseTi, m, e: '< 2, hour, s',
+      conta, c, t: 'suppo, r, t@ziontechgro, u, p.c, o, m',
     }
     {
       ic, o, n: Vid, e, o
-      tit, l, e: 'Video, Cal, l'
-      descripti, o, n: 'Schedule, a, screen sharing, session, with our, expert, s'
-      availabili, t, y: 'Business, Hour, s'
-      responseTi, m, e: '< 4, hour, s'
-      conta, c, t: 'Schedule, Cal, l'
+      tit, l, e: 'Video, Cal, l',
+      descripti, o, n: 'Schedule, a, screen sharing, session, with our, expert, s',
+      availabili, t, y: 'Business, Hour, s',
+      responseTi, m, e: '< 4, hour, s',
+      conta, c, t: 'Schedule, Cal, l',
 const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -67,10 +67,10 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
     {
-      catego, r, y: 'gener, a, l'
-      questi, o, n: 'What, is, your response, time, for support, request, s?'
+      catego, r, y: 'gener, a, l',
+      questi, o, n: 'What, is, your response, time, for support, request, s?',
       answ, e, r: 'We, guarantee, response times, based, on your, support, pla
-  n: Premi, u, m (30, minute, s), Standa, r, d (2, hour, s), Bas, i, c (24, hour, s).'
+  n: Premi, u, m (30, minute, s), Standa, r, d (2, hour, s), Bas, i, c (24, hour, s).',
     }
   ]
   const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => )
@@ -212,7 +212,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
               <p, className="te, x, t-xl, tex, t-gr, a, y-6, 0, 0">
                 Find, quick, answers to, common, questions
       quest, i, o
-  n: 'Is, there, a community, where, I can, get, help from, other, users?'
+  n: 'Is, there, a community, where, I can, get, help from, other, users?',
       quest, i, o,
   n: 'Is, there, a community, where, I can, get, help from, other, users?'"
       answ, e, r: "Y, e, s! We, have, an active, community, forum where, users, can ask, question, s, share, best, practices, and, get, help from, both, our team, and, other experienced, user, s. It's, a, great place, to, learn and, networ, k."
@@ -375,4 +375,4 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   )
 }
 export default Support;"`
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></button></p></p></p></p></p></p></h2></h2></h2></h2></h2></h3></h3></li></li></section></section></section></section></section></section></section></section>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></button></p></p></p></p></p></p></h2></h2></h2></h2></h2></h3></h3></li></section></section></section></section></section></section></section></section>

@@ -122,7 +122,7 @@ $4}
       titl,
   e: 'Secure Access',
       descriptio,
-  n: 'Bank-level security with multi-factor authentication'
+  n: 'Bank-level security with multi-factor authentication',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -132,7 +132,7 @@ $4}
       titl,
   e: '24/7 Support',
       descriptio,
-  n: 'Round-the-clock support for all your needs'
+  n: 'Round-the-clock support for all your needs',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -142,7 +142,7 @@ $4}
       titl,
   e: 'Mobile Ready',
       descriptio,
-  n: 'Access your account from any device, anywhere'
+  n: 'Access your account from any device, anywhere',
     }
   ]
   return (<div>Coming Soon</div>)

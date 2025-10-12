@@ -17,7 +17,7 @@ export default function ClientPage() {
       "category": String(body.category),
       "timelineWeeks": typeof body.timelineWeeks === 'number' ? body.timelineWeeks : undefined,
       "scope": body.scope ? String(body.scope) : undefined,
-      "experienceLevel": body.experienceLevel as ClientBudgetRequest['experienceLevel']}
+      "experienceLevel": body.experienceLevel as ClientBudgetRequest['experienceLevel']};
     const suggestion = await generateClientBudgetSuggestion(input)
     await logPricingAnalytics({ "kind": 'client_suggestion', "payload": { input, suggestion } })
     return res.status(200).json({ suggestion, "disclaimer": 'Based on market data & trends' })} catch (error) {

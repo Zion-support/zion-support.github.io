@@ -27,7 +27,7 @@ function processFile(filePath) {
         metadata = {
           title: 'Zion Tech Group',
           description: 'Advanced AI and IT Solutions',
-function processFile(filePath) {/* TODO: Fix JSX expression */}
+function processFile(filePath) {/* TODO: Fix JSX expression */};
       } catch (e) {/* TODO: Fix JSX expression */}
         }
       }

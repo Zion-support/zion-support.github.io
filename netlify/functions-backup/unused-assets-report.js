@@ -89,7 +89,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   const report = {generatedAt: new Date().toISOString(),
     totalAssets: assets.length
     unusedCount: unused.length,
-  const report = {/* TODO: Fix JSX expression */}
+  const report = {/* TODO: Fix JSX expression */};
     unused}
   }
 //   const outDir = path.join(publicDir, 'reports') 'assets')

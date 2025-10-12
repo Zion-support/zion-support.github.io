@@ -39,10 +39,10 @@ export interface ComprehensiveService {
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trial_days: 60
-    setup_time: '4 - 6 weeks'
+    setup_time: '4 - 6 weeks',
     competitors: ['PTCSiemensGE DigitalRockwell Automation']
-    roi: 'Average customer sees 600% ROI through operational improvements'
-    launch_date: '2024 - 01 - 10'
+    roi: 'Average customer sees 600% ROI through operational improvements',
+    launch_date: '2024 - 01 - 10',
     customers: 950
     rating: 4 && 4.9
     reviews: 520,
@@ -78,7 +78,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-content-factory-pro', name: 'AI Content Factory Pro',
     tagline: 'Enterprise-grade AI content generation with brand voice consistency',
     description: 'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.',
-    price: '$49', period: '/month'
+    price: '$49', period: '/month',
     features: [,
       'GPT-4 powered content generation with 99.2% accuracyMulti-language support (25+ languages) with cultural adaptationAdvanced SEO optimization with real-time keyword researchBrand voice training and consistency maintenancePlagiarism detection with 99.8% accuracyContent calendar and automated schedulingTeam collaboration with version controlAnalytics dashboard with performance metrics',
       'API access for enterprise integrationsCustom AI model training for industry-specific content'],
@@ -105,7 +105,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-customer-success-platform', name: 'AI Customer Success Platform',
     tagline: 'Predictive customer success with AI-powered insights',
     description: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',
-    price: '$199', period: '/month'
+    price: '$199', period: '/month',
     features: [,
       'AI-powered churn prediction with 92% accuracyAutomated customer health scoringIntelligent engagement workflowsReal-time customer sentiment analysisPredictive analytics for upsell opportunitiesAutomated onboarding sequencesCustomer journey mapping and optimizationIntegration with major CRM platforms',
       'Advanced reporting and analyticsMobile app for customer success managers'],
@@ -129,7 +129,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-financial-risk-manager', name: 'AI Financial Risk Manager',
     tagline: 'Real-time financial risk assessment and compliance',
     description: 'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.',
-    price: '$299', period: '/month'
+    price: '$299', period: '/month',
     features: [,
       'Real-time risk assessment and scoringAutomated compliance monitoringRegulatory reporting automationFraud detection with 95% accuracyCredit risk modeling and analysisMarket risk assessment and alertsOperational risk managementStress testing and scenario analysis',
       'Integration with core banking systemsAdvanced analytics and reporting'],
@@ -153,7 +153,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-healthcare-diagnostics', name: 'AI Healthcare Diagnostics Platform',
     tagline: 'AI-powered medical imaging and diagnostic support',
     description: 'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.',
-    price: '$399', period: '/month'
+    price: '$399', period: '/month',
     features: [,
       'Medical image analysis with 96% accuracyDiagnostic support and recommendationsPatient data analytics and insightsAutomated report generationIntegration with PACS and EHR systemsReal-time alerts and notificationsMulti-modality image supportClinical decision support tools',
       'Compliance with medical standardsAdvanced security and privacy controls'],
@@ -177,7 +177,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-ecommerce-optimizer', name: 'AI E-commerce Optimizer',
     tagline: 'Intelligent e-commerce optimization and personalization',
     description: 'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.',
-    price: '$149', period: '/month'
+    price: '$149', period: '/month',
     features: [,
       'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights',
       'Integration with major e-commerce platformsReal-time analytics and reporting'],
@@ -201,7 +201,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-cybersecurity-suite', name: 'AI Cybersecurity Suite',
     tagline: 'Intelligent threat detection and response',
     description: 'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.',
-    price: '$249', period: '/month'
+    price: '$249', period: '/month',
     features: [,
       'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response',
       'Cloud security monitoringAdvanced security analytics'],
@@ -225,7 +225,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-data-pipeline-platform', name: 'AI Data Pipeline Platform',
     tagline: 'Intelligent data processing and analytics automation',
     description: 'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.',
-    price: '$179', period: '/month'
+    price: '$179', period: '/month',
     features: [,
       'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure',
       'Advanced monitoring and alertingCollaborative data workspace'],
@@ -249,7 +249,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-hr-recruitment-platform', name: 'AI HR Recruitment Platform',
     tagline: 'Intelligent talent acquisition and HR automation',
     description: 'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.',
-    price: '$129', period: '/month'
+    price: '$129', period: '/month',
     features: [,
       'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics',
       'Integration with major HR systemsAdvanced reporting and insights'],
@@ -273,7 +273,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-legal-contract-analyzer', name: 'AI Legal Contract Analyzer',
     tagline: 'Intelligent contract analysis and legal automation',
     description: 'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.',
-    price: '$199', period: '/month'
+    price: '$199', period: '/month',
     features: [,
       'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval',
       'Collaborative review workflowsAudit trail and version control'],
@@ -297,7 +297,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-manufacturing-optimizer', name: 'AI Manufacturing Optimizer',
     tagline: 'Intelligent manufacturing optimization and predictive maintenance',
     description: 'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.',
-    price: '$299', period: '/month'
+    price: '$299', period: '/month',
     features: [,
       'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting',
       'Integration with ERP and MES systemsMobile app for field workers'],
@@ -322,15 +322,15 @@ export interface ComprehensiveService {}
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trialDays: 60
-    setupTime: '4-6 weeks'
+    setupTime: '4-6 weeks',
     competitors: ['PTCSiemensGE DigitalRockwell Automation']
-    roi: 'Average customer sees 600% ROI through operational improvements'
-    launchDate: '2024-01-10'
+    roi: 'Average customer sees 600% ROI through operational improvements',
+    launchDate: '2024-01-10',
     customers: 950
     rating: 4.9
     reviews: 520
 ],      phon,
-  e: '+1 302 464 0950'
+  e: '+1 302 464 0950',
   i,
   d: string,
   nam,
@@ -368,22 +368,22 @@ export interface ComprehensiveService {}
     emai,
   l: string,
 ],      phon,
-  e: '+1 302 464 0950'
+  e: '+1 302 464 0950',
       emai,
-  l: 'kleber@ziontechgroup.com'
+  l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
     trial_day,
   s: 60,
     setup_tim,
-  e: '4 - 6 weeks'
+  e: '4 - 6 weeks',
     competitor,
   s: ['PTCSiemensGE DigitalRockwell Automation'],
     ro,
-  i: 'Average customer sees 600% ROI through operational improvements'
+  i: 'Average customer sees 600% ROI through operational improvements',
     launch_dat,
-  e: '2024 - 01 - 10'
+  e: '2024 - 01 - 10',
     customer,
   s: 950,
     ratin,
@@ -488,7 +488,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 14, setupTim,
@@ -541,7 +541,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 21, setupTim,
@@ -594,7 +594,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 30, setupTim,
@@ -647,7 +647,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 60, setupTim,
@@ -700,7 +700,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 14, setupTim,
@@ -753,7 +753,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 30, setupTim,
@@ -806,7 +806,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 21, setupTim,
@@ -859,7 +859,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 14, setupTim,
@@ -912,7 +912,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 30, setupTim,
@@ -965,7 +965,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 60, setupTim,
@@ -984,22 +984,22 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   }
 ]
 ];      phon,
-  e: '+1 302 464 0950'
+  e: '+1 302 464 0950',
       emai,
-  l: 'kleber@ziontechgroup.com'
+  l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
     trialDay,
   s: 60,
     setupTim,
-  e: '4-6 weeks'
+  e: '4-6 weeks',
     competitor,
   s: ['PTCSiemensGE DigitalRockwell Automation'],
     ro,
-  i: 'Average customer sees 600% ROI through operational improvements'
+  i: 'Average customer sees 600% ROI through operational improvements',
     launchDat,
-  e: '2024-01-10'
+  e: '2024-01-10',
     customer,
   s: 950,
     ratin,
@@ -1054,7 +1054,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
 export const comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {,
-    id: 'ai-content-factory-pro'
+    id: 'ai-content-factory-pro',
     name: 'AI Content Factory Pro',
   trialDays: number
   setupTime: string
@@ -1085,20 +1085,20 @@ export const,
   comprehensiveRealServices: ComprehensiveService[] = [
   // AI & Machine Learning Services
   {,
-    id: 'ai-content-factory-pro'
-    name: 'AI Content Factory Pro'
+    id: 'ai-content-factory-pro',
+    name: 'AI Content Factory Pro',
     tagline: 'Enterprise-grade AI content generation with brand voice consistency',,
-  description: 'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.'
-    price: '$49'
-    period: '/month'
+  description: 'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.',
+    price: '$49',
+    period: '/month',
     features: [
       'GPT-4 powered content generation with 99.2% accuracyMulti-language support (25+ languages) with cultural adaptationAdvanced SEO optimization with real-time keyword researchBrand voice training and consistency maintenancePlagiarism detection with 99.8% accuracyContent calendar and automated schedulingTeam collaboration with version controlAnalytics dashboard with performance metrics'
       'API access for enterprise integrationsCustom AI model training for industry-specific content'
     ]
-    category: 'AI & Content Creation'
+    category: 'AI & Content Creation',
     marketSize: '$15.2 B',
-    targetAudience: 'Marketing agencies, content creators, enterprise businesses, e-commerce companies'
-    competitiveAdvantage: 'Industry-leading AI accuracy, comprehensive SEO integration, enterprise-grade collaboration tools, and custom model training capabilities'
+    targetAudience: 'Marketing agencies, content creators, enterprise businesses, e-commerce companies',
+    competitiveAdvantage: 'Industry-leading AI accuracy, comprehensive SEO integration, enterprise-grade collaboration tools, and custom model training capabilities',
     useCases: [
       'Blog content creation and optimizationSocial media content generationProduct descriptions and marketing copyEmail marketing campaignsTechnical documentation and whitepapers'
     ]
@@ -1106,34 +1106,34 @@ export const,
     compliance: ['GDPRCCPASOC2 ISO 27001'],
     website: 'https://ziontechgroup.com/ai-content-factory-pro'}
     contact: {}
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trialDays: 14
-    setupTime: '5 minutes'
+    setupTime: '5 minutes',
     competitors: ['JasperCopy.aiWritesonicGrammarly Business']
-    roi: 'Average customer sees 300% ROI within 3 months'
-    launchDate: '2024-01-15'
+    roi: 'Average customer sees 300% ROI within 3 months',
+    launchDate: '2024-01-15',
     customers: 2500
     rating: 4.8
     reviews: 1250,
   }
   // Customer Success & Support
   {
-    id: 'ai-customer-success-platform'
+    id: 'ai-customer-success-platform',
     name: 'AI Customer Success Platform',
     tagline: 'Predictive customer success with AI-powered insights',,
-  description: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.'
-    price: '$199'
-    period: '/month'
+  description: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',
+    price: '$199',
+    period: '/month',
     features: [
       'AI-powered churn prediction with 92% accuracyAutomated customer health scoringIntelligent engagement workflowsReal-time customer sentiment analysisPredictive analytics for upsell opportunitiesAutomated onboarding sequencesCustomer journey mapping and optimizationIntegration with major CRM platforms'
       'Advanced reporting and analyticsMobile app for customer success managers'
     ]
-    category: 'Customer Success & Support'
+    category: 'Customer Success & Support',
     marketSize: '$8.4 B',
-    targetAudience: 'SaaS companies, subscription businesses, customer success teams, B2 B companies'
-    competitiveAdvantage: 'Industry-leading churn prediction accuracy, comprehensive automation capabilities, and deep CRM integrations'
+    targetAudience: 'SaaS companies, subscription businesses, customer success teams, B2 B companies',
+    competitiveAdvantage: 'Industry-leading churn prediction accuracy, comprehensive automation capabilities, and deep CRM integrations',
     useCases: [
       'Customer churn preventionUpsell and cross-sell optimizationCustomer onboarding automationCustomer health monitoringCustomer success team productivity'
     ]
@@ -1141,34 +1141,34 @@ export const,
     compliance: ['GDPRCCPASOC2 ISO 27001'],
     website: 'https://ziontechgroup.com/ai-customer-success-platform'}
     contact: {}
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trialDays: 21
-    setupTime: '1-2 days'
+    setupTime: '1-2 days',
     competitors: ['GainsightTotangoClientSuccessChurnZero']
-    roi: 'Average customer sees 400% ROI through reduced churn'
-    launchDate: '2024-02-20'
+    roi: 'Average customer sees 400% ROI through reduced churn',
+    launchDate: '2024-02-20',
     customers: 1800
     rating: 4.9
     reviews: 950,
   }
   // Financial Technology
   {
-    id: 'ai-financial-risk-manager'
+    id: 'ai-financial-risk-manager',
     name: 'AI Financial Risk Manager',
     tagline: 'Real-time financial risk assessment and compliance',,
-  description: 'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.'
-    price: '$299'
-    period: '/month'
+  description: 'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.',
+    price: '$299',
+    period: '/month',
     features: [
       'Real-time risk assessment and scoringAutomated compliance monitoringRegulatory reporting automationFraud detection with 95% accuracyCredit risk modeling and analysisMarket risk assessment and alertsOperational risk managementStress testing and scenario analysis'
       'Integration with core banking systemsAdvanced analytics and reporting'
     ]
-    category: 'Financial Technology'
+    category: 'Financial Technology',
     marketSize: '$12.8 B',
-    targetAudience: 'Banks, credit unions, fintech companies, investment firms, insurance companies'
-    competitiveAdvantage: 'Real-time risk assessment, comprehensive compliance coverage, and deep integration capabilities with core banking systems'
+    targetAudience: 'Banks, credit unions, fintech companies, investment firms, insurance companies',
+    competitiveAdvantage: 'Real-time risk assessment, comprehensive compliance coverage, and deep integration capabilities with core banking systems',
     useCases: [
       'Credit risk assessmentFraud detection and preventionCompliance monitoring and reportingMarket risk managementOperational risk assessment'
     ]
@@ -1176,34 +1176,34 @@ export const,
     compliance: ['Basel IIIDodd-FrankSOXGDPRSOC2 ISO 27001'],
     website: 'https://ziontechgroup.com/ai-financial-risk-manager'}
     contact: {}
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trialDays: 30
-    setupTime: '2-4 weeks'
+    setupTime: '2-4 weeks',
     competitors: ['SASIBMOracleSAP']
-    roi: 'Average customer sees 500% ROI through risk reduction'
-    launchDate: '2024-03-10'
+    roi: 'Average customer sees 500% ROI through risk reduction',
+    launchDate: '2024-03-10',
     customers: 1200
     rating: 4.7
     reviews: 680,
   }
   // Healthcare & Biotech
   {
-    id: 'ai-healthcare-diagnostics'
+    id: 'ai-healthcare-diagnostics',
     name: 'AI Healthcare Diagnostics Platform',
     tagline: 'AI-powered medical imaging and diagnostic support',,
-  description: 'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.'
-    price: '$399'
-    period: '/month'
+  description: 'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.',
+    price: '$399',
+    period: '/month',
     features: [
       'Medical image analysis with 96% accuracyDiagnostic support and recommendationsPatient data analytics and insightsAutomated report generationIntegration with PACS and EHR systemsReal-time alerts and notificationsMulti-modality image supportClinical decision support tools'
       'Compliance with medical standardsAdvanced security and privacy controls'
     ]
-    category: 'Healthcare & Biotech'
+    category: 'Healthcare & Biotech',
     marketSize: '$18.5 B',
-    targetAudience: 'Hospitals, clinics, diagnostic centers, radiologists, healthcare providers'
-    competitiveAdvantage: 'High diagnostic accuracy, comprehensive medical image support, and deep integration with healthcare systems'
+    targetAudience: 'Hospitals, clinics, diagnostic centers, radiologists, healthcare providers',
+    competitiveAdvantage: 'High diagnostic accuracy, comprehensive medical image support, and deep integration with healthcare systems',
     useCases: [
       'Radiology image analysisPathology slide analysisCardiology imaging supportOncology diagnostic assistanceEmergency department support'
     ]
@@ -1211,34 +1211,34 @@ export const,
     compliance: ['HIPAAFDACE MarkSOC2 ISO 27001 ISO 13485'],
     website: 'https://ziontechgroup.com/ai-healthcare-diagnostics'}
     contact: {}
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trialDays: 60
-    setupTime: '4-6 weeks'
+    setupTime: '4-6 weeks',
     competitors: ['IBM Watson HealthGoogle HealthMicrosoft HealthcarePhilips']
-    roi: 'Average customer sees 600% ROI through improved diagnostic accuracy'
-    launchDate: '2024-01-30'
+    roi: 'Average customer sees 600% ROI through improved diagnostic accuracy',
+    launchDate: '2024-01-30',
     customers: 850
     rating: 4.9
     reviews: 420,
   }
   // E-commerce & Retail
   {
-    id: 'ai-ecommerce-optimizer'
+    id: 'ai-ecommerce-optimizer',
     name: 'AI E-commerce Optimizer',
     tagline: 'Intelligent e-commerce optimization and personalization',,
-  description: 'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.'
-    price: '$149'
-    period: '/month'
+  description: 'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.',
+    price: '$149',
+    period: '/month',
     features: [
       'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights'
       'Integration with major e-commerce platformsReal-time analytics and reporting'
     ]
-    category: 'E-commerce & Retail'
+    category: 'E-commerce & Retail',
     marketSize: '$22.1 B',
-    targetAudience: 'E-commerce businesses, online retailers, digital marketplaces, D2 C brands'
-    competitiveAdvantage: 'Advanced personalization algorithms, comprehensive e-commerce integration, and proven ROI improvement'
+    targetAudience: 'E-commerce businesses, online retailers, digital marketplaces, D2 C brands',
+    competitiveAdvantage: 'Advanced personalization algorithms, comprehensive e-commerce integration, and proven ROI improvement',
     useCases: [
       'Product recommendation optimizationPricing strategy optimizationCustomer experience personalizationMarketing campaign optimizationInventory and supply chain optimization'
     ]
@@ -1246,34 +1246,34 @@ export const,
     compliance: ['GDPRCCPAPCI DSSSOC2 ISO 27001'],
     website: 'https://ziontechgroup.com/ai-ecommerce-optimizer'}
     contact: {}
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trialDays: 14
-    setupTime: '1-2 days'
+    setupTime: '1-2 days',
     competitors: ['Dynamic YieldOptimizelyKlevuAlgolia']
-    roi: 'Average customer sees 350% ROI through increased conversions'
-    launchDate: '2024-02-15'
+    roi: 'Average customer sees 350% ROI through increased conversions',
+    launchDate: '2024-02-15',
     customers: 3200
     rating: 4.8
     reviews: 1680,
   }
   // Cybersecurity & Compliance
   {
-    id: 'ai-cybersecurity-suite'
+    id: 'ai-cybersecurity-suite',
     name: 'AI Cybersecurity Suite',
     tagline: 'Intelligent threat detection and response',,
-  description: 'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.'
-    price: '$249'
-    period: '/month'
+  description: 'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.',
+    price: '$249',
+    period: '/month',
     features: [
       'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response'
       'Cloud security monitoringAdvanced security analytics'
     ]
-    category: 'Cybersecurity & Compliance'
+    category: 'Cybersecurity & Compliance',
     marketSize: '$19.8 B',
-    targetAudience: 'Enterprises, government agencies, healthcare organizations, financial institutions, educational institutions'
-    competitiveAdvantage: 'High threat detection accuracy, comprehensive security coverage, and automated response capabilities'
+    targetAudience: 'Enterprises, government agencies, healthcare organizations, financial institutions, educational institutions',
+    competitiveAdvantage: 'High threat detection accuracy, comprehensive security coverage, and automated response capabilities',
     useCases: [
       'Threat detection and preventionIncident response automationCompliance monitoring and reportingVulnerability managementSecurity operations optimization'
     ]
@@ -1281,34 +1281,34 @@ export const,
     compliance: ['SOC2 ISO 27001 NISTGDPRHIPAAPCI DSS'],
     website: 'https://ziontechgroup.com/ai-cybersecurity-suite'}
     contact: {}
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trialDays: 30
-    setupTime: '1-2 weeks'
+    setupTime: '1-2 weeks',
     competitors: ['CrowdStrikeSentinelOneCarbon BlackCylance']
-    roi: 'Average customer sees 450% ROI through threat prevention'
-    launchDate: '2024-03-01'
+    roi: 'Average customer sees 450% ROI through threat prevention',
+    launchDate: '2024-03-01',
     customers: 2100
     rating: 4.9
     reviews: 1100,
   }
   // Data & Analytics
   {
-    id: 'ai-data-pipeline-platform'
+    id: 'ai-data-pipeline-platform',
     name: 'AI Data Pipeline Platform',
     tagline: 'Intelligent data processing and analytics automation',,
-  description: 'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.'
-    price: '$179'
-    period: '/month'
+  description: 'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.',
+    price: '$179',
+    period: '/month',
     features: [
       'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure'
       'Advanced monitoring and alertingCollaborative data workspace'
     ]
-    category: 'Data & Analytics'
+    category: 'Data & Analytics',
     marketSize: '$25.3 B',
-    targetAudience: 'Data teams, analytics professionals, data scientists, enterprises, startups'
-    competitiveAdvantage: 'Advanced automation capabilities, comprehensive data quality management, and scalable cloud infrastructure'
+    targetAudience: 'Data teams, analytics professionals, data scientists, enterprises, startups',
+    competitiveAdvantage: 'Advanced automation capabilities, comprehensive data quality management, and scalable cloud infrastructure',
     useCases: [
       'Data pipeline automationData quality managementReal-time analyticsMachine learning operationsData governance and compliance'
     ]
@@ -1316,34 +1316,34 @@ export const,
     compliance: ['SOC2 ISO 27001 GDPRCCPAHIPAA'],
     website: 'https://ziontechgroup.com/ai-data-pipeline-platform'}
     contact: {}
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trialDays: 21
-    setupTime: '1-2 weeks'
+    setupTime: '1-2 weeks',
     competitors: ['FivetranAlteryxTalendInformatica']
-    roi: 'Average customer sees 400% ROI through data automation'
-    launchDate: '2024-02-01'
+    roi: 'Average customer sees 400% ROI through data automation',
+    launchDate: '2024-02-01',
     customers: 2800
     rating: 4.8
     reviews: 1450,
   }
   // Human Resources
   {
-    id: 'ai-hr-recruitment-platform'
+    id: 'ai-hr-recruitment-platform',
     name: 'AI HR Recruitment Platform',
     tagline: 'Intelligent talent acquisition and HR automation',,
-  description: 'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.'
-    price: '$129'
-    period: '/month'
+  description: 'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.',
+    price: '$129',
+    period: '/month',
     features: [
       'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics'
       'Integration with major HR systemsAdvanced reporting and insights'
     ]
-    category: 'Human Resources'
+    category: 'Human Resources',
     marketSize: '$16.7 B',
-    targetAudience: 'HR departments, recruitment agencies, talent acquisition teams, growing companies'
-    competitiveAdvantage: 'Advanced candidate matching algorithms, comprehensive HR automation, and proven hiring success rates'
+    targetAudience: 'HR departments, recruitment agencies, talent acquisition teams, growing companies',
+    competitiveAdvantage: 'Advanced candidate matching algorithms, comprehensive HR automation, and proven hiring success rates',
     useCases: [
       'Candidate sourcing and screeningInterview process optimizationDiversity and inclusion initiativesEmployee onboarding automationPerformance management and tracking'
     ]
@@ -1351,34 +1351,34 @@ export const,
     compliance: ['EEOCOFCCPGDPRCCPASOC2 ISO 27001'],
     website: 'https://ziontechgroup.com/ai-hr-recruitment-platform'}
     contact: {}
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trialDays: 14
-    setupTime: '1-2 days'
+    setupTime: '1-2 days',
     competitors: ['HireVuePymetricsHiredScoreEntelo']
-    roi: 'Average customer sees 300% ROI through improved hiring'
-    launchDate: '2024-01-20'
+    roi: 'Average customer sees 300% ROI through improved hiring',
+    launchDate: '2024-01-20',
     customers: 1900
     rating: 4.7
     reviews: 890,
   }
   // Legal & Compliance
   {
-    id: 'ai-legal-contract-analyzer'
+    id: 'ai-legal-contract-analyzer',
     name: 'AI Legal Contract Analyzer',
     tagline: 'Intelligent contract analysis and legal automation',,
-  description: 'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.'
-    price: '$199'
-    period: '/month'
+  description: 'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.',
+    price: '$199',
+    period: '/month',
     features: [
       'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval'
       'Collaborative review workflowsAudit trail and version control'
     ]
-    category: 'Legal & Compliance'
+    category: 'Legal & Compliance',
     marketSize: '$14.2 B',
-    targetAudience: 'Law firms, corporate legal departments, compliance teams, contract managers'
-    competitiveAdvantage: 'High accuracy contract analysis, comprehensive risk assessment, and deep legal system integration'
+    targetAudience: 'Law firms, corporate legal departments, compliance teams, contract managers',
+    competitiveAdvantage: 'High accuracy contract analysis, comprehensive risk assessment, and deep legal system integration',
     useCases: [
       'Contract review and analysisRisk assessment and managementCompliance monitoringLegal document automationContract lifecycle management'
     ]
@@ -1386,34 +1386,34 @@ export const,
     compliance: ['SOC2 ISO 27001 GDPRCCPAAttorney-client privilege'],
     website: 'https://ziontechgroup.com/ai-legal-contract-analyzer'}
     contact: {}
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}
     trialDays: 30
-    setupTime: '1-2 weeks'
+    setupTime: '1-2 weeks',
     competitors: ['EvisortContractPodAiKira SystemsLuminance']
-    roi: 'Average customer sees 500% ROI through contract automation'
-    launchDate: '2024-02-10'
+    roi: 'Average customer sees 500% ROI through contract automation',
+    launchDate: '2024-02-10',
     customers: 1100
     rating: 4.8
     reviews: 580,
   }
   // Manufacturing & IoT
   {
-    id: 'ai-manufacturing-optimizer'
+    id: 'ai-manufacturing-optimizer',
     name: 'AI Manufacturing Optimizer',
     tagline: 'Intelligent manufacturing optimization and predictive maintenance',,
-  description: 'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.'
-    price: '$299'
-    period: '/month'
+  description: 'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.',
+    price: '$299',
+    period: '/month',
     features: [
       'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting'
       'Integration with ERP and MES systemsMobile app for field workers'
     ]
-    category: 'Manufacturing & IoT'
+    category: 'Manufacturing & IoT',
     marketSize: '$28.9 B',
-    targetAudience: 'Manufacturing companies, industrial facilities, supply chain managers, operations teams'
-    competitiveAdvantage: 'High accuracy predictive maintenance, comprehensive IoT integration, and proven operational improvements'
+    targetAudience: 'Manufacturing companies, industrial facilities, supply chain managers, operations teams',
+    competitiveAdvantage: 'High accuracy predictive maintenance, comprehensive IoT integration, and proven operational improvements',
     useCases: [
       'Predictive maintenance optimizationProduction efficiency improvementQuality control automationSupply chain optimizationEnergy consumption reduction'
     ]
@@ -1421,7 +1421,7 @@ export const,
     compliance: ['ISO 9001 ISO 14001 OHSAS 18001 SOC2 ISO 27001'],
     website: 'https://ziontechgroup.com/ai-manufacturing-optimizer'}
     contact: {}
-      phone: '+1 302 464 0950'
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
   {/* TODO: Fix JSX expression */}
@@ -1433,7 +1433,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
     trialDay,
   s: 14,
@@ -1461,7 +1461,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
     trialDay,
   s: 21,
@@ -1489,7 +1489,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
     trialDay,
   s: 30,
@@ -1517,7 +1517,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
     trialDay,
   s: 60,
@@ -1545,7 +1545,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
     trialDay,
   s: 14,
@@ -1573,7 +1573,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
     trialDay,
   s: 30,
@@ -1601,7 +1601,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
     trialDay,
   s: 21,
@@ -1629,7 +1629,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
     trialDay,
   s: 14,
@@ -1657,7 +1657,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
     trialDay,
   s: 30,
@@ -1685,7 +1685,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
     trialDay,
   s: 60,
@@ -1776,8 +1776,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'},
-    roi: 'Average customer sees 300% ROI within 3 months'
-    launch_date: '2024 - 01 - 15'
+    roi: 'Average customer sees 300% ROI within 3 months',
+    launch_date: '2024 - 01 - 15',
     customers: 2500
     rating: 4 && 4.8
     reviews: 1250,
@@ -1807,18 +1807,18 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     review,
   s: 1250},
     i,
-  d: 'ai-content-factory-pro'
+  d: 'ai-content-factory-pro',
     nam,
-  e: 'AI Content Factory Pro'
+  e: 'AI Content Factory Pro',
     taglin,
-  e: 'Enterprise-grade AI content generation with brand voice consistency'
+  e: 'Enterprise-grade AI content generation with brand voice consistency',
     descriptio,
   n:
-      'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.'
+      'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.',
     pric,
-  e: '$49'
+  e: '$49',
     perio,
-  d: '/month'
+  d: '/month',
       'GPT-4 powered content generation with 99.2% accuracy'
       'Multi-language support (25+ languages) with cultural adaptation'
       'Advanced SEO optimization with real-time keyword research'
@@ -1835,14 +1835,14 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Custom AI model training for industry-specific content'
     ]
     categor,
-  y: 'AI & Content Creation'
+  y: 'AI & Content Creation',
     marketSiz,
-  e: '$15.2B'
+  e: '$15.2B',
     targetAudienc,
   e:
-      'Marketing agencies, content creators, enterprise businesses, e-commerce companies'
+      'Marketing agencies, content creators, enterprise businesses, e-commerce companies',
     competitiveAdvantag,
-  e: 'Industry-leading AI accuracy, comprehensive SEO integration, enterprise-grade collaboration tools, and custom model training capabilities'
+  e: 'Industry-leading AI accuracy, comprehensive SEO integration, enterprise-grade collaboration tools, and custom model training capabilities',
     useCase,
   s: [,
       'Blog content creation and optimization'
@@ -1868,8 +1868,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trialDays: 14,
     setupTime: '5 minutes',
     competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly Business']
-    roi: 'Average customer sees 300% ROI within 3 months'
-    launchDate: '2024-01-15'
+    roi: 'Average customer sees 300% ROI within 3 months',
+    launchDate: '2024-01-15',
     customers: 2500
     rating: 4.8
     reviews: 1250,
@@ -1890,25 +1890,25 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   e: ['GDPR', 'CCPA', 'SOC2', 'ISO 27001']
     websit,
   e: 'http,
-  s://ziontechgroup.com/ai-content-factory-pro'
+  s://ziontechgroup.com/ai-content-factory-pro',
     contac,
   t: phon,
-  e: '+1 302 464 0950'
+  e: '+1 302 464 0950',
       emai,
-  l: 'kleber@ziontechgroup.com'
+  l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
     trialDay,
   s: 14,
     setupTim,
-  e: '5 minutes'
+  e: '5 minutes',
     competitor,
   s: ['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly Business']
     ro,
-  i: 'Average customer sees 300% ROI within 3 months'
+  i: 'Average customer sees 300% ROI within 3 months',
     launchDat,
-  e: '2024-01-15'
+  e: '2024-01-15',
     customer,
   s: 2500,
     ratin,
@@ -1916,18 +1916,18 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     review,
   s: 1250}
   // Customer Success & Support,
-  id: 'ai-customer-success-platform'
+  id: 'ai-customer-success-platform',
     nam,
-  e: 'AI Customer Success Platform'
+  e: 'AI Customer Success Platform',
     taglin,
-  e: 'Predictive customer success with AI-powered insights'
+  e: 'Predictive customer success with AI-powered insights',
     descriptio,
   n:
-      'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.'
+      'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',
     pric,
-  e: '$199'
+  e: '$199',
     perio,
-  d: '/month'
+  d: '/month',
     feature,
   s: [,
       'Automated customer health scoring',
@@ -1942,9 +1942,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     categor,
   y: 'Customer Success & Support',
     targetAudienc,
-  e: 'SaaS companies, subscription businesses, customer success teams, B2B companies'
+  e: 'SaaS companies, subscription businesses, customer success teams, B2B companies',
     competitiveAdvantag,
-  e: 'Industry-leading churn prediction accuracy, comprehensive automation capabilities, and deep CRM integrations'
+  e: 'Industry-leading churn prediction accuracy, comprehensive automation capabilities, and deep CRM integrations',
     useCase,
   s: [,
       'Customer churn prevention'
@@ -1971,8 +1971,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 21,
     setup_time: '1 - 2 days',
     competitors: ['Gainsight', 'Totango', 'ClientSuccess', 'ChurnZero'],
-    roi: 'Average customer sees 400% ROI through reduced churn'
-    launch_date: '2024 - 02 - 20'
+    roi: 'Average customer sees 400% ROI through reduced churn',
+    launch_date: '2024 - 02 - 20',
     customers: 1800
     rating: 4 && 4.9
     reviews: 950,
@@ -2013,18 +2013,18 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     review,
   s: 950},
   // Financial Technology,
-  id: 'ai-financial-risk-manager'
+  id: 'ai-financial-risk-manager',
     nam,
-  e: 'AI Financial Risk Manager'
+  e: 'AI Financial Risk Manager',
     taglin,
-  e: 'Real-time financial risk assessment and compliance'
+  e: 'Real-time financial risk assessment and compliance',
     descriptio,
   n:
-      'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.'
+      'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.',
     pric,
-  e: '$299'
+  e: '$299',
     perio,
-  d: '/month'
+  d: '/month',
     feature,
   s: [,
       'Automated compliance monitoring',
@@ -2039,9 +2039,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     categor,
   y: 'Financial Technology',
     targetAudienc,
-  e: 'Banks, credit unions, fintech companies, investment firms, insurance companies'
+  e: 'Banks, credit unions, fintech companies, investment firms, insurance companies',
     competitiveAdvantag,
-  e: 'Real-time risk assessment, comprehensive compliance coverage, and deep integration capabilities with core banking systems'
+  e: 'Real-time risk assessment, comprehensive compliance coverage, and deep integration capabilities with core banking systems',
     useCase,
   s: [,
       'Credit risk assessment'
@@ -2067,8 +2067,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 30,
     setup_time: '2 - 4 weeks',
     competitors: ['SAS', 'IBM', 'Oracle', 'SAP'],
-    roi: 'Average customer sees 500% ROI through risk reduction'
-    launch_date: '2024 - 03 - 10'
+    roi: 'Average customer sees 500% ROI through risk reduction',
+    launch_date: '2024 - 03 - 10',
     customers: 1200
     rating: 4 && 4.7
     reviews: 680,
@@ -2107,18 +2107,18 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     review,
   s: 680},
   // Healthcare & Biotech,
-  id: 'ai-healthcare-diagnostics'
+  id: 'ai-healthcare-diagnostics',
     nam,
-  e: 'AI Healthcare Diagnostics Platform'
+  e: 'AI Healthcare Diagnostics Platform',
     taglin,
-  e: 'AI-powered medical imaging and diagnostic support'
+  e: 'AI-powered medical imaging and diagnostic support',
     descriptio,
   n:
-      'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.'
+      'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.',
     pric,
-  e: '$399'
+  e: '$399',
     perio,
-  d: '/month'
+  d: '/month',
     feature,
   s: [,
       'Medical image analysis with 96% accuracy',
@@ -2134,9 +2134,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     categor,
   y: 'Healthcare & Biotech',
     targetAudienc,
-  e: 'Hospitals, clinics, diagnostic centers, radiologists, healthcare providers'
+  e: 'Hospitals, clinics, diagnostic centers, radiologists, healthcare providers',
     competitiveAdvantag,
-  e: 'High diagnostic accuracy, comprehensive medical image support, and deep integration with healthcare systems'
+  e: 'High diagnostic accuracy, comprehensive medical image support, and deep integration with healthcare systems',
     useCase,
   s: [,
       'Radiology image analysis'
@@ -2183,8 +2183,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Google Health',
       'Microsoft Healthcare',
       'Philips'],
-    roi: 'Average customer sees 600% ROI through improved diagnostic accuracy'
-    launch_date: '2024 - 01 - 30'
+    roi: 'Average customer sees 600% ROI through improved diagnostic accuracy',
+    launch_date: '2024 - 01 - 30',
     customers: 850
     rating: 4 && 4.9
     reviews: 420,
@@ -2209,18 +2209,18 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     review,
   s: 420},
   // E-commerce & Retail,
-  id: 'ai-ecommerce-optimizer'
+  id: 'ai-ecommerce-optimizer',
     nam,
-  e: 'AI E-commerce Optimizer'
+  e: 'AI E-commerce Optimizer',
     taglin,
-  e: 'Intelligent e-commerce optimization and personalization'
+  e: 'Intelligent e-commerce optimization and personalization',
     descriptio,
   n:
-      'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.'
+      'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.',
     pric,
-  e: '$149'
+  e: '$149',
     perio,
-  d: '/month'
+  d: '/month',
     feature,
   s: [,
       'Dynamic pricing optimization',
@@ -2233,9 +2233,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
       'Integration with major e - commerce platforms',
       'Real - time analytics and reporting'],
     targetAudienc,
-  e: 'E-commerce businesses, online retailers, digital marketplaces, D2C brands'
+  e: 'E-commerce businesses, online retailers, digital marketplaces, D2C brands',
     competitiveAdvantag,
-  e: 'Advanced personalization algorithms, comprehensive e-commerce integration, and proven ROI improvement'
+  e: 'Advanced personalization algorithms, comprehensive e-commerce integration, and proven ROI improvement',
     useCase,
   s: [,
       'Product recommendation optimization'
@@ -2262,8 +2262,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 14,
     setup_time: '1 - 2 days',
     competitors: ['Dynamic Yield', 'Optimizely', 'Klevu', 'Algolia'],
-    roi: 'Average customer sees 350% ROI through increased conversions'
-    launch_date: '2024 - 02 - 15'
+    roi: 'Average customer sees 350% ROI through increased conversions',
+    launch_date: '2024 - 02 - 15',
     customers: 3200
     rating: 4 && 4.8
     reviews: 1680,
@@ -2304,18 +2304,18 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     review,
   s: 1680},
   // Cybersecurity & Compliance,
-  id: 'ai-cybersecurity-suite'
+  id: 'ai-cybersecurity-suite',
     nam,
-  e: 'AI Cybersecurity Suite'
+  e: 'AI Cybersecurity Suite',
     taglin,
-  e: 'Intelligent threat detection and response'
+  e: 'Intelligent threat detection and response',
     descriptio,
   n:
-      'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.'
+      'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.',
     pric,
-  e: '$249'
+  e: '$249',
     perio,
-  d: '/month'
+  d: '/month',
     feature,
   s: [,
       'Automated incident response and remediation',
@@ -2330,9 +2330,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     categor,
   y: 'Cybersecurity & Compliance',
     targetAudienc,
-  e: 'Enterprises, government agencies, healthcare organizations, financial institutions, educational institutions'
+  e: 'Enterprises, government agencies, healthcare organizations, financial institutions, educational institutions',
     competitiveAdvantag,
-  e: 'High threat detection accuracy, comprehensive security coverage, and automated response capabilities'
+  e: 'High threat detection accuracy, comprehensive security coverage, and automated response capabilities',
     useCase,
   s: [,
       'Threat detection and prevention'
@@ -2359,8 +2359,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 30,
     setup_time: '1 - 2 weeks',
     competitors: ['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Cylance'],
-    roi: 'Average customer sees 450% ROI through threat prevention'
-    launch_date: '2024 - 03 - 01'
+    roi: 'Average customer sees 450% ROI through threat prevention',
+    launch_date: '2024 - 03 - 01',
     customers: 2100
     rating: 4 && 4.9
     reviews: 1100,
@@ -2401,18 +2401,18 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     review,
   s: 1100},
   // Data & Analytics,
-  id: 'ai-data-pipeline-platform'
+  id: 'ai-data-pipeline-platform',
     nam,
-  e: 'AI Data Pipeline Platform'
+  e: 'AI Data Pipeline Platform',
     taglin,
-  e: 'Intelligent data processing and analytics automation'
+  e: 'Intelligent data processing and analytics automation',
     descriptio,
   n:
-      'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.'
+      'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.',
     pric,
-  e: '$179'
+  e: '$179',
     perio,
-  d: '/month'
+  d: '/month',
     feature,
   s: [,
       'Automated data pipeline orchestration',
@@ -2428,9 +2428,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     categor,
   y: 'Data & Analytics',
     targetAudienc,
-  e: 'Data teams, analytics professionals, data scientists, enterprises, startups'
+  e: 'Data teams, analytics professionals, data scientists, enterprises, startups',
     competitiveAdvantag,
-  e: 'Advanced automation capabilities, comprehensive data quality management, and scalable cloud infrastructure'
+  e: 'Advanced automation capabilities, comprehensive data quality management, and scalable cloud infrastructure',
     useCase,
   s: [,
       'Data pipeline automation'
@@ -2457,8 +2457,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 21,
     setup_time: '1 - 2 weeks',
     competitors: ['Fivetran', 'Alteryx', 'Talend', 'Informatica'],
-    roi: 'Average customer sees 400% ROI through data automation'
-    launch_date: '2024 - 02 - 01'
+    roi: 'Average customer sees 400% ROI through data automation',
+    launch_date: '2024 - 02 - 01',
     customers: 2800
     rating: 4 && 4.8
     reviews: 1450,
@@ -2499,18 +2499,18 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     review,
   s: 1450},
   // Human Resources,
-  id: 'ai-hr-recruitment-platform'
+  id: 'ai-hr-recruitment-platform',
     nam,
-  e: 'AI HR Recruitment Platform'
+  e: 'AI HR Recruitment Platform',
     taglin,
-  e: 'Intelligent talent acquisition and HR automation'
+  e: 'Intelligent talent acquisition and HR automation',
     descriptio,
   n:
-      'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.'
+      'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.',
     pric,
-  e: '$129'
+  e: '$129',
     perio,
-  d: '/month'
+  d: '/month',
     feature,
   s: [,
       'Automated resume screening',
@@ -2525,9 +2525,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     categor,
   y: 'Human Resources',
     targetAudienc,
-  e: 'HR departments, recruitment agencies, talent acquisition teams, growing companies'
+  e: 'HR departments, recruitment agencies, talent acquisition teams, growing companies',
     competitiveAdvantag,
-  e: 'Advanced candidate matching algorithms, comprehensive HR automation, and proven hiring success rates'
+  e: 'Advanced candidate matching algorithms, comprehensive HR automation, and proven hiring success rates',
     useCase,
   s: [,
       'Candidate sourcing and screening'
@@ -2554,8 +2554,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 14,
     setup_time: '1 - 2 days',
     competitors: ['HireVue', 'Pymetrics', 'HiredScore', 'Entelo'],
-    roi: 'Average customer sees 300% ROI through improved hiring'
-    launch_date: '2024 - 01 - 20'
+    roi: 'Average customer sees 300% ROI through improved hiring',
+    launch_date: '2024 - 01 - 20',
     customers: 1900
     rating: 4 && 4.7
     reviews: 890,
@@ -2596,18 +2596,18 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     review,
   s: 890},
   // Legal & Compliance,
-  id: 'ai-legal-contract-analyzer'
+  id: 'ai-legal-contract-analyzer',
     nam,
-  e: 'AI Legal Contract Analyzer'
+  e: 'AI Legal Contract Analyzer',
     taglin,
-  e: 'Intelligent contract analysis and legal automation'
+  e: 'Intelligent contract analysis and legal automation',
     descriptio,
   n:
-      'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.'
+      'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.',
     pric,
-  e: '$199'
+  e: '$199',
     perio,
-  d: '/month'
+  d: '/month',
     feature,
   s: [,
       'Risk identification and assessment',
@@ -2622,9 +2622,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     categor,
   y: 'Legal & Compliance',
     targetAudienc,
-  e: 'Law firms, corporate legal departments, compliance teams, contract managers'
+  e: 'Law firms, corporate legal departments, compliance teams, contract managers',
     competitiveAdvantag,
-  e: 'High accuracy contract analysis, comprehensive risk assessment, and deep legal system integration'
+  e: 'High accuracy contract analysis, comprehensive risk assessment, and deep legal system integration',
     useCase,
   s: [,
       'Contract review and analysis'
@@ -2658,8 +2658,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 30,
     setup_time: '1 - 2 weeks',
     competitors: ['Evisort', 'ContractPodAi', 'Kira Systems', 'Luminance'],
-    roi: 'Average customer sees 500% ROI through contract automation'
-    launch_date: '2024 - 02 - 10'
+    roi: 'Average customer sees 500% ROI through contract automation',
+    launch_date: '2024 - 02 - 10',
     customers: 1100
     rating: 4 && 4.8
     reviews: 580,
@@ -2698,18 +2698,18 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     review,
   s: 580},
   // Manufacturing & IoT,
-  id: 'ai-manufacturing-optimizer'
+  id: 'ai-manufacturing-optimizer',
     nam,
-  e: 'AI Manufacturing Optimizer'
+  e: 'AI Manufacturing Optimizer',
     taglin,
-  e: 'Intelligent manufacturing optimization and predictive maintenance'
+  e: 'Intelligent manufacturing optimization and predictive maintenance',
     descriptio,
   n:
-      'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.'
+      'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.',
     pric,
-  e: '$299'
+  e: '$299',
     perio,
-  d: '/month'
+  d: '/month',
     feature,
   s: [,
       'Predictive maintenance with 94% accuracy',
@@ -2725,9 +2725,9 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     categor,
   y: 'Manufacturing & IoT',
     targetAudienc,
-  e: 'Manufacturing companies, industrial facilities, supply chain managers, operations teams'
+  e: 'Manufacturing companies, industrial facilities, supply chain managers, operations teams',
     competitiveAdvantag,
-  e: 'High accuracy predictive maintenance, comprehensive IoT integration, and proven operational improvements'
+  e: 'High accuracy predictive maintenance, comprehensive IoT integration, and proven operational improvements',
     useCase,
   s: [,
       'Predictive maintenance optimization',
@@ -2744,8 +2744,8 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
     trial_days: 60,
     setup_time: '4 - 6 weeks',
     competitors: ['PTC', 'Siemens', 'GE Digital', 'Rockwell Automation'],
-    roi: 'Average customer sees 600% ROI through operational improvements'
-    launch_date: '2024 - 01 - 10'
+    roi: 'Average customer sees 600% ROI through operational improvements',
+    launch_date: '2024 - 01 - 10',
     customers: 950
     rating: 4 && 4.9
     reviews: 520,
@@ -2777,13 +2777,13 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   g: 4 && 4.9,
     review,
   s: 520}];      phon,
-  e: '+1 302 464 0950'
+  e: '+1 302 464 0950',
     competitor,
   s: ['PTCSiemensGE DigitalRockwell Automation'],
     ro,
-  i: 'Average customer sees 600% ROI through operational improvements'
+  i: 'Average customer sees 600% ROI through operational improvements',
     launch_dat,
-  e: '2024 - 01 - 10'
+  e: '2024 - 01 - 10',
     customer,
   s: 950,
     review,
@@ -2802,8 +2802,8 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-}
+  website: 'https://ziontechgroup.com',
+};
 export const comprehensiveRealServices2025: ComprehensiveRealService2025[] = [
   {
     id: 'ai-business-intelligence-suite',
@@ -2978,7 +2978,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-customer-success-platform', name: 'AI Customer Success Platform',
     tagline: 'Predictive customer success with AI-powered insights',
     description: 'Intelligent customer success platform that uses AI to predict churn, identify upsell opportunities, and automate customer engagement. Provides real-time insights and automated workflows to improve customer retention.',
-    price: '$199', period: '/month'
+    price: '$199', period: '/month',
     features: [,
       'AI-powered churn prediction with 92% accuracyAutomated customer health scoringIntelligent engagement workflowsReal-time customer sentiment analysisPredictive analytics for upsell opportunitiesAutomated onboarding sequencesCustomer journey mapping and optimizationIntegration with major CRM platforms',
       'Advanced reporting and analyticsMobile app for customer success managers'],
@@ -3002,7 +3002,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-financial-risk-manager', name: 'AI Financial Risk Manager',
     tagline: 'Real-time financial risk assessment and compliance',
     description: 'AI-powered financial risk management platform that provides real-time risk assessment, compliance monitoring, and automated reporting for financial institutions. Helps banks and fintech companies manage regulatory requirements and reduce risk exposure.',
-    price: '$299', period: '/month'
+    price: '$299', period: '/month',
     features: [,
       'Real-time risk assessment and scoringAutomated compliance monitoringRegulatory reporting automationFraud detection with 95% accuracyCredit risk modeling and analysisMarket risk assessment and alertsOperational risk managementStress testing and scenario analysis',
       'Integration with core banking systemsAdvanced analytics and reporting'],
@@ -3026,7 +3026,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-healthcare-diagnostics', name: 'AI Healthcare Diagnostics Platform',
     tagline: 'AI-powered medical imaging and diagnostic support',
     description: 'Advanced AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through machine learning algorithms.',
-    price: '$399', period: '/month'
+    price: '$399', period: '/month',
     features: [,
       'Medical image analysis with 96% accuracyDiagnostic support and recommendationsPatient data analytics and insightsAutomated report generationIntegration with PACS and EHR systemsReal-time alerts and notificationsMulti-modality image supportClinical decision support tools',
       'Compliance with medical standardsAdvanced security and privacy controls'],
@@ -3050,7 +3050,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-ecommerce-optimizer', name: 'AI E-commerce Optimizer',
     tagline: 'Intelligent e-commerce optimization and personalization',
     description: 'AI-powered e-commerce optimization platform that personalizes customer experiences, optimizes pricing, and increases conversion rates. Uses machine learning to analyze customer behavior and provide actionable insights for business growth.',
-    price: '$149', period: '/month'
+    price: '$149', period: '/month',
     features: [,
       'AI-powered product recommendationsDynamic pricing optimizationCustomer behavior analysisPersonalized marketing campaignsInventory optimization and forecastingCustomer segmentation and targetingA/B testing automationRevenue optimization insights',
       'Integration with major e-commerce platformsReal-time analytics and reporting'],
@@ -3074,7 +3074,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-cybersecurity-suite', name: 'AI Cybersecurity Suite',
     tagline: 'Intelligent threat detection and response',
     description: 'Comprehensive AI-powered cybersecurity platform that provides advanced threat detection, automated incident response, and compliance management. Helps organizations protect against evolving cyber threats while maintaining regulatory compliance.',
-    price: '$249', period: '/month'
+    price: '$249', period: '/month',
     features: [,
       'AI-powered threat detection with 98% accuracyAutomated incident response and remediationBehavioral analytics and anomaly detectionVulnerability assessment and managementCompliance monitoring and reportingSecurity orchestration and automationThreat intelligence and sharingEndpoint detection and response',
       'Cloud security monitoringAdvanced security analytics'],
@@ -3098,7 +3098,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-data-pipeline-platform', name: 'AI Data Pipeline Platform',
     tagline: 'Intelligent data processing and analytics automation',
     description: 'AI-powered data pipeline platform that automates data processing, quality management, and analytics workflows. Helps organizations build reliable, scalable data infrastructure for advanced analytics and machine learning.',
-    price: '$179', period: '/month'
+    price: '$179', period: '/month',
     features: [,
       'Automated data pipeline orchestrationAI-powered data quality monitoringReal-time data processing and streamingAdvanced analytics and visualizationMachine learning model deploymentData governance and complianceIntegration with major data sourcesScalable cloud infrastructure',
       'Advanced monitoring and alertingCollaborative data workspace'],
@@ -3122,7 +3122,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-hr-recruitment-platform', name: 'AI HR Recruitment Platform',
     tagline: 'Intelligent talent acquisition and HR automation',
     description: 'AI-powered HR recruitment platform that streamlines the hiring process, improves candidate matching, and automates HR workflows. Uses machine learning to identify top talent and optimize recruitment strategies.',
-    price: '$129', period: '/month'
+    price: '$129', period: '/month',
     features: [,
       'AI-powered candidate matchingAutomated resume screeningInterview scheduling and coordinationCandidate assessment and scoringDiversity and inclusion analyticsTalent pipeline managementEmployee onboarding automationPerformance tracking and analytics',
       'Integration with major HR systemsAdvanced reporting and insights'],
@@ -3146,7 +3146,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-legal-contract-analyzer', name: 'AI Legal Contract Analyzer',
     tagline: 'Intelligent contract analysis and legal automation',
     description: 'AI-powered legal contract analysis platform that automates contract review, identifies risks, and ensures compliance. Helps legal teams process contracts faster while reducing errors and improving risk management.',
-    price: '$199', period: '/month'
+    price: '$199', period: '/month',
     features: [,
       'AI-powered contract analysis and reviewRisk identification and assessmentCompliance monitoring and reportingContract template managementAutomated clause extractionLegal document generationIntegration with legal systemsAdvanced search and retrieval',
       'Collaborative review workflowsAudit trail and version control'],
@@ -3170,7 +3170,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
     id: 'ai-manufacturing-optimizer', name: 'AI Manufacturing Optimizer',
     tagline: 'Intelligent manufacturing optimization and predictive maintenance',
     description: 'AI-powered manufacturing optimization platform that improves production efficiency, predicts equipment failures, and optimizes supply chains. Uses IoT data and machine learning to drive operational excellence.',
-    price: '$299', period: '/month'
+    price: '$299', period: '/month',
     features: [,
       'Predictive maintenance with 94% accuracyProduction optimization and schedulingQuality control and defect detectionSupply chain optimizationEnergy consumption optimizationReal-time monitoring and alertsIoT device integration and managementAdvanced analytics and reporting',
       'Integration with ERP and MES systemsMobile app for field workers'],
@@ -3235,7 +3235,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [,
 export const,
   comprehensiveRealServices: ComprehensiveService[] = [,
   // AI & Machine Learning Services,
-  address: '364 E Main St STE 1008 Middletown DE 19709'
+  address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 14, setupTim,
@@ -3288,7 +3288,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 21, setupTim,
@@ -3341,7 +3341,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 30, setupTim,
@@ -3394,7 +3394,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 60, setupTim,
@@ -3447,7 +3447,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 14, setupTim,
@@ -3500,7 +3500,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 30, setupTim,
@@ -3553,7 +3553,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 21, setupTim,
@@ -3606,7 +3606,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 14, setupTim,
@@ -3659,7 +3659,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 30, setupTim,
@@ -3712,7 +3712,7 @@ export const,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDay,
   s: 60, setupTim,

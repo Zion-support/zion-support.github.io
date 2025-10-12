@@ -37,17 +37,17 @@ function fixFile(filePath) {
       // Fix missing comma after array in object
       {
         pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:/g,
-        replacement: '$1: [$2],\n    $3:'
+        replacement: '$1: [$2],\n    $3:',
       },
       // Fix missing comma after object property
       {
         pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2],\n    $3: ['
+        replacement: '$1: [$2],\n    $3: [',
       },
       // Fix missing comma after string array
       {
         pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2],\n    $3: ['
+        replacement: '$1: [$2],\n    $3: [',
       }
     ]
     for (const fix of commaFixes) {
@@ -63,12 +63,12 @@ function fixFile(filePath) {
       // Fix missing semicolon after array declaration
       {
         pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2];\n  const $3 = ['
+        replacement: '$1: [$2];\n  const $3 = [',
       },
       // Fix missing semicolon after const declaration
       {
         pattern: /const\s+(\w+)\s*=\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: 'const $1 = [$2];\n  const $3 = ['
+        replacement: 'const $1 = [$2];\n  const $3 = [',
       }
     ]
     for (const fix of semicolonFixes) {
@@ -128,17 +128,17 @@ function fixFile(filePath) {
       // Fix missing closing bracket in features array
       {
         pattern: /const\s+features\s*=\s*\[([^\]]+)\]\s*const\s+benefits/g,
-        replacement: 'const features = [$1];\n  const benefits'
+        replacement: 'const features = [$1];\n  const benefits',
       },
       // Fix missing semicolon after features array
       {
         pattern: /const\s+features\s*=\s*\[([^\]]+)\]\s*const\s+benefits/g,
-        replacement: 'const features = [$1];\n  const benefits'
+        replacement: 'const features = [$1];\n  const benefits',
       },
       // Fix missing comma in object properties
       {
         pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2],\n    $3: ['
+        replacement: '$1: [$2],\n    $3: [',
       }
     ]
     for (const fix of specificFixes) {

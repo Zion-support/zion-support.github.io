@@ -29,7 +29,7 @@ export default async function handler(
       author: body.author |"anon"
       text: body.text |""
       createdAt: new Date().toISOString()
-    }
+    };
 import type { NextApiRequest, NextApiResponse } from 'next'
 import fs from 'fs-extra'
 import path from 'path'
@@ -63,7 +63,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       author: body.author || 'anon',
       text: body.text || '',
       createdAt: new Date().toISOString()
-    }
+    };
     data.comments.push(comment)
     await fs.writeJson(FILE_PATH, data, { spaces: 2 })
     return res.status(201).json(comment)
@@ -187,7 +187,7 @@ if ( {) {
       author: body.author || "anon",
       text: body.text || "",
       created_at: new Date ().toISOString (),
-    }
+    };
     data.comments.push (comment)
     await fs.write_json (FILE_PATH, data, { spaces: 2 })
     return res.status (201).json (comment)

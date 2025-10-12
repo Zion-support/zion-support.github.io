@@ -1,11 +1,10 @@
-  model: 'gpt-4o-mini'
+  model: 'gpt-4o-mini',
 messages: [ {
-  role: 'system', content: 'You are a helpful assistant.' 
+  role: 'system', content: 'You are a helpful assistant.' ,
 // Create utility
 export const Create = () => {
   // Implementation here
   return null
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 {
   role: 'user', content: prompt
@@ -43,7 +42,7 @@ async function summarizeWithOpenAI(description: string) {
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
     const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`
     const response = await client.chat.completions.create({
-      model: 'gpt-4o-mini'
+      model: 'gpt-4o-mini',
       messages: [
     })
     const content = response.choices[0]?.message?.content |''
@@ -135,9 +134,9 @@ function handler() {
     talentSlug: talentSlug |null
     aiSummary: ai.summary
     aiType: ai.type
-    status: 'new'
+    status: 'new',
     createdAt: now
-    updatedAt: now}
+    updatedAt: now};
     if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' }
     const { OpenAI } = await import('openai')
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
@@ -179,7 +178,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     status: 'new',
     createdAt: now,
     updatedAt: now,
-  }
+  };
   requests.push(record)
   await saveRequests(requests)
   // TODO: Integrate notifications (email/webhook) for admin and talent
@@ -203,7 +202,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     talent_slug: talent_slug || null
     ai_summary: ai.summary
     ai_type: ai.type
-    status: 'new'
+    status: 'new',
     created_at: now,
     updated_at: now}
   requests.push (record)

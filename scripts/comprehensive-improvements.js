@@ -30,7 +30,7 @@ packageJson.scripts = {
 // const packageJsonPath = path.join(__dirname, '..', 'package.json')
 const _packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'))
 // Add new scripts for better development experience
-packageJson.scripts = {/* TODO: Fix JSX expression */}
+packageJson.scripts = {/* TODO: Fix JSX expression */};
   t:all': 'prettier --write "**/*.{ts,tsx,js,jsx,json,css,md}"',
   'clea,
   n:all': 'rm -rf dist node_modules/.vite .next .turbo',
@@ -42,7 +42,7 @@ fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
 // // 2. Create TypeScript configuration improvements
 // // const tsConfigPath = path.join(__dirname, '..', 'tsconfig.json')
 let _tsConfig = {}
-
+;
 if (fs.existsSync(tsConfigPath)) {/* TODO: Fix JSX expression */}
 }
 
@@ -70,7 +70,7 @@ const improvedTsConfig = {
     verbatimModuleSyntax: true
   },
   include: [,
-const improvedTsConfig = {/* TODO: Fix JSX expression */}
+const improvedTsConfig = {/* TODO: Fix JSX expression */};
   },
   includ,
   e: [
@@ -97,7 +97,7 @@ fs.writeFileSync(tsConfigPath, JSON.stringify(improvedTsConfig, null, 2))
     '@typescript-eslint/recommended',
     'plugin: react/recommended',
     'plugin: react-hooks/recommended'],
-  parser: '@typescript-eslint/parser'
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2022,
     sourceType: 'module',
@@ -109,7 +109,7 @@ fs.writeFileSync(tsConfigPath, JSON.stringify(improvedTsConfig, null, 2))
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-// const eslintConfig = {/* TODO: Fix JSX expression */}
+// const eslintConfig = {/* TODO: Fix JSX expression */};
     }},
   plugin,
   s: ['@typescript-eslint', 'react', 'react-hooks'],
@@ -143,23 +143,23 @@ fs.writeFileSync(path.join(__dirname, '..', '.eslintrc.json'), JSON.stringify(es
 // // 4. Create Prettier configuration
 // const prettierConfig = {
   semi: true
-  trailingComma: 'es5'
+  trailingComma: 'es5',
   singleQuote: true
   printWidth: 80
   tabWidth: 2
   useTabs: false
   bracketSpacing: true
-  arrowParens: 'avoid'
-  endOfLine: 'lf'
+  arrowParens: 'avoid',
+  endOfLine: 'lf',
   jsxSingleQuote: true
-  quoteProps: 'as-needed'
+  quoteProps: 'as-needed',
   bracketSameLine: false
-  proseWrap: 'preserve'
-  htmlWhitespaceSensitivity: 'css'
+  proseWrap: 'preserve',
+  htmlWhitespaceSensitivity: 'css',
   vueIndentScriptAndStyle: false,
   embeddedLanguageFormatting: 'auto',
   singleAttributePerLine: false,
-// const prettierConfig = {/* TODO: Fix JSX expression */}
+// const prettierConfig = {/* TODO: Fix JSX expression */};
 }
 
 fs.writeFileSync(path.join(__dirname, '..', '.prettierrc.json'), JSON.stringify(prettierConfig, null, 2))
@@ -186,8 +186,8 @@ export default defineConfig({
       gzipSize: true),
       brotliSize: true)})],
   build: {
-    target: 'esnext'
-    minify: 'terser'
+    target: 'esnext',
+    minify: 'terser',
     sourcemap: true,
     rollupOptions: {,
       output: {,

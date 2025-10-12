@@ -33,7 +33,7 @@ export interface PerformanceReport {
 export class PerformanceMetrics {
   private static instance: PerformanceMetrics
   private metrics: PerformanceMetric[] = [],
-  private _webVitals: WebVitalsMetrics = {}
+  private _webVitals: WebVitalsMetrics = {};
   private observers: PerformanceObserver[] = [],
   constructor() {
     if (typeof window !== 'undefined') {
@@ -102,7 +102,7 @@ export class PerformanceMetrics {
   private,
   metrics: PerformanceMetric[] = [],
   private,
-  _webVitals: WebVitalsMetrics = {}
+  _webVitals: WebVitalsMetrics = {};
   private,
   observers: PerformanceObserver[] = [],
   constructor() {/* TODO: Fix JSX expression */}
@@ -249,7 +249,7 @@ const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expressi
                 unit: 'ms',
                 timestamp: new Date(),
                 category: 'load'
-
+,
               }
   )
             }
@@ -277,7 +277,7 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
               unit: 'ms',
               timestamp: new Date(),
               category: 'load'
-
+,
             }
   )
           }
@@ -314,7 +314,7 @@ $4})
             unit: 'score',
             timestamp: new Date(),
             category: 'runtime'
-
+,
           })
         })
         clsObserver.observe({/* TODO: Fix JSX expression */})
@@ -553,7 +553,7 @@ $4})
       unit: 'ms',
       timestamp: new Date(),
       category: 'runtime'
-
+,
     }
   )
     return result
@@ -579,7 +579,7 @@ $4})
       unit: 'ms',
       timestamp: new Date(),
       category: 'runtime'
-
+,
     }
   )
     return result
@@ -848,7 +848,7 @@ $4})
 
 }
     this.metrics = []
-    this.webVitals = {}
+    this.webVitals = {};
   }
   /**
    * Cleanup observers

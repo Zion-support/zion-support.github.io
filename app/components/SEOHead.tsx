@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 interface SEOHeadProps {title?: string;}
@@ -21,17 +20,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
 
   twitterCard = 'summary_large_image',
 
-<<<<<<< HEAD
   structuredData;}}) => {}const fullTitle = title.includes('Zion Tech Group') ? title : `${title}| Zion Tech Group`
-=======
-  structuredData
-  }
-}) => {}
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
->>>>>>> origin/main
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 const defaultStructuredData = {"@context": "https: //schema.org",
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 interface SEOHeadProps {
@@ -51,7 +42,6 @@ const SEOHead: React.FC<SEOHeadProps> = ()
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
 const defaultStructuredData = {
     "@context": "https: //schema.org",
->>>>>>> origin/main
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https: //ziontechgroup.com",
@@ -67,42 +57,21 @@ const defaultStructuredData = {
     "contactPoint": {"@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-<<<<<<< HEAD
       "email": "kleber@ziontechgroup.com"},
     "sameAs": [;
-=======
-      "email": "kleber@ziontechgroup.com"
-  },
-    "sameAs": [
->>>>>>> origin/main
       "https: //www.linkedin.com/company/zion-tech-group",
       "https: //twitter.com/ziontechgroup",
     ],
   }
-<<<<<<< HEAD
 return(<Helmet />)
       {/* Basic Meta Tags */} <title>{fullTitle}</title>
-=======
-return (
-    </SEOHeadProps><Helmet>
-      {/* Basic Meta Tags */}
-      </Helmet><title>{fullTitle}</title>
->>>>>>> origin/main
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-<<<<<<< HEAD
       <meta />
       {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
 {/* Open Graph Meta Tags */} <meta name="description" content="AI-powered solution" />
-=======
-      <meta>
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-{/* Open Graph Meta Tags */}
-      <meta name="description" content="AI-powered solution" />
->>>>>>> origin/main
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -162,7 +131,6 @@ export default SEOHead
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       {/* Structured Data */}
       <script type="application/ld+json">
-<<<<<<< HEAD
         {JSON.stringify(structuredData || defaultStructuredData</div>
       </script>
     </Helmet>
@@ -170,11 +138,3 @@ export default SEOHead
 };
 
 export default SEOHead;
-=======
-        {JSON.stringify(structuredData || defaultStructuredData)}
-  )
-}
-export default SEOHead
-</li>
-</li>
->>>>>>> origin/main

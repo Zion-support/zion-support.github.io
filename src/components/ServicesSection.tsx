@@ -118,8 +118,8 @@ export default function ServicesSection() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+        </div>
+      </section>
   ),
 }
   </a>

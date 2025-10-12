@@ -100,7 +100,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       ic, o, n: <Atom, className="w-8 h-8" />,"
       gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-5, 0, 0','
       bad, g, e: 'QUANTUM, A, I','
-      sta, t, s: '10,000 x, Speed, Boost'
+      sta, t, s: '10,000 x, Speed, Boost',
     }
     {
       id: 2,
@@ -114,7 +114,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       ic, o, n: <Brain, className="w-8 h-8" />,"
       gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
       bad, g, e: 'SE, L, F-EVOLVI, N, G','
-      sta, t, s: '99.7% Au, t, o-Improveme, n, t'
+      sta, t, s: '99.7% Au, t, o-Improveme, n, t',
     }
     {
       id: 3,
@@ -128,7 +128,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       ic, o, n: <Target, className="w-8 h-8" />,"
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0','
       bad, g, e: 'PREDICTI, V, E','
-      sta, t, s: '99.9% Accura, c, y'
+      sta, t, s: '99.9% Accura, c, y',
     }
     {
       id: 4,
@@ -142,7 +142,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       ic, o, n: <Rocket, className="w-8 h-8" />,"
       gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0','
       bad, g, e: 'IMMERSI, V, E','
-      sta, t, s: '1, 0, 0% Integrati, o, n'
+      sta, t, s: '1, 0, 0% Integrati, o, n',
     }
     {
       id: 5,
@@ -156,7 +156,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       ic, o, n: <Shield, className="w-8 h-8" />,"
       gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-5, 0, 0','
       bad, g, e: 'QUANT, U, M-SECU, R, E','
-      sta, t, s: 'Unbreakable, Securit, y'
+      sta, t, s: 'Unbreakable, Securit, y',
     }
     {
       id: 6,
@@ -170,7 +170,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
       ic, o, n: <Bot, className="w-8 h-8" />,"
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0','
       bad, g, e: 'ME, T, A-COGNITI, V, E','
-      sta, t, s: 'Autonomous, Orchestratio, n'
+      sta, t, s: 'Autonomous, Orchestratio, n',
     }
   ]
   return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">"

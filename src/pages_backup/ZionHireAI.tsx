@@ -1,7 +1,7 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
   
   static getDerivedStateFromError(error) {
@@ -236,8 +236,8 @@ export default function ZionHireAI() {
 
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Features Section */}
 
@@ -550,8 +550,8 @@ export default function ZionHireAI() {
                 </CardContent>
               </Card>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
 
@@ -573,7 +573,6 @@ export default function ZionHireAI() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1033,4 +1032,4 @@ export default function ZionHireAI() {
     </>)
 }
 
-</div></div></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></main>
+</div></div></ul></ul></ul></li></li></li></li></li></li></main>

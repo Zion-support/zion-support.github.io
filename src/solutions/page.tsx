@@ -254,7 +254,7 @@ $4}
       bgColo,
   r: 'bg-purple-500/10',
       descriptio,
-  n: 'Transform your business with cutting-edge artificial intelligence'
+  n: 'Transform your business with cutting-edge artificial intelligence',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -270,7 +270,7 @@ $4}
       bgColo,
   r: 'bg-blue-500/10',
       descriptio,
-  n: 'Robust and scalable IT infrastructure solutions'
+  n: 'Robust and scalable IT infrastructure solutions',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -286,7 +286,7 @@ $4}
       bgColo,
   r: 'bg-red-500/10',
       descriptio,
-  n: 'Comprehensive security solutions for your digital assets'
+  n: 'Comprehensive security solutions for your digital assets',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -302,10 +302,10 @@ $4}
       bgColo,
   r: 'bg-yellow-500/10',
       descriptio,
-  n: 'Streamline operations with intelligent automation'
+  n: 'Streamline operations with intelligent automation',
     }
   ]
-  const solutions = {/* TODO: Fix JSX expression */}
+  const solutions = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   a,
@@ -326,7 +326,7 @@ $4}
         ico,
   n: BarChart,
         colo,
-  r: 'text-blue-400'
+  r: 'text-blue-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -342,7 +342,7 @@ $4}
         ico,
   n: Target,
         colo,
-  r: 'text-pink-400'
+  r: 'text-pink-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -358,7 +358,7 @@ $4}
         ico,
   n: Users,
         colo,
-  r: 'text-green-400'
+  r: 'text-green-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -374,7 +374,7 @@ $4}
         ico,
   n: Zap,
         colo,
-  r: 'text-yellow-400'
+  r: 'text-yellow-400',
       }
 //     ],
     i,
@@ -395,7 +395,7 @@ $4}
         ico,
   n: Cloud,
         colo,
-  r: 'text-blue-400'
+  r: 'text-blue-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -411,7 +411,7 @@ $4}
         ico,
   n: Globe,
         colo,
-  r: 'text-green-400'
+  r: 'text-green-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -427,7 +427,7 @@ $4}
         ico,
   n: Zap,
         colo,
-  r: 'text-purple-400'
+  r: 'text-purple-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -443,7 +443,7 @@ $4}
         ico,
   n: BarChart,
         colo,
-  r: 'text-orange-400'
+  r: 'text-orange-400',
       }
 //     ],
     securit,
@@ -464,7 +464,7 @@ $4}
         ico,
   n: Shield,
         colo,
-  r: 'text-red-400'
+  r: 'text-red-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -480,7 +480,7 @@ $4}
         ico,
   n: Brain,
         colo,
-  r: 'text-purple-400'
+  r: 'text-purple-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -496,7 +496,7 @@ $4}
         ico,
   n: CheckCircle,
         colo,
-  r: 'text-green-400'
+  r: 'text-green-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -512,7 +512,7 @@ $4}
         ico,
   n: Users,
         colo,
-  r: 'text-blue-400'
+  r: 'text-blue-400',
       }
 //     ],
     automatio,
@@ -533,7 +533,7 @@ $4}
         ico,
   n: Zap,
         colo,
-  r: 'text-yellow-400'
+  r: 'text-yellow-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -549,7 +549,7 @@ $4}
         ico,
   n: Cloud,
         colo,
-  r: 'text-blue-400'
+  r: 'text-blue-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -565,7 +565,7 @@ $4}
         ico,
   n: Target,
         colo,
-  r: 'text-pink-400'
+  r: 'text-pink-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -581,7 +581,7 @@ $4}
         ico,
   n: BarChart,
         colo,
-  r: 'text-green-400'
+  r: 'text-green-400',
       }
 //     ]
   }
@@ -597,7 +597,7 @@ $4}
       titl,
   e: 'Proven Results',
       descriptio,
-  n: '300% average ROI and 95% process automation for our clients'
+  n: '300% average ROI and 95% process automation for our clients',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -607,7 +607,7 @@ $4}
       titl,
   e: 'Enterprise Security',
       descriptio,
-  n: 'Bank-level security and compliance for all our solutions'
+  n: 'Bank-level security and compliance for all our solutions',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -617,7 +617,7 @@ $4}
       titl,
   e: 'Global Support',
       descriptio,
-  n: '24/7 support and services across multiple time zones'
+  n: '24/7 support and services across multiple time zones',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -627,7 +627,7 @@ $4}
       titl,
   e: 'Expert Team',
       descriptio,
-  n: 'Certified professionals with years of industry experience'
+  n: 'Certified professionals with years of industry experience',
     }
   ]
   return (<div>Coming Soon</div>)

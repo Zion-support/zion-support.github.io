@@ -45,8 +45,8 @@ describe('/api/auth/login API Handler', () => {'  beforeEach(() => {
   })
   it('should successfully log in a verified user and set authToken cookie', async () => {'    const testEmail = verified@example.com';    const testPassword = password123';    const mockAuthToken = mock-access-token';    const mockSessionData = {
       access_token: mockAuthToken,
-      refresh_token: mock-refresh-token',    }
-    const mockUserData = { id: user-123', email: testEmail }
+      refresh_token: mock-refresh-token',    };
+    const mockUserData = { id: user-123', email: testEmail };
     mockSignInWithPassword.mockResolvedValueOnce({
       data: { session: mockSessionData, user: mockUserData },
       error: null

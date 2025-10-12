@@ -148,7 +148,7 @@ export function appendLog(entry: Omit<LogEntry, 'id' | 'timestamp'>): void {
     const enriched: LogEntry = {
       id: randomUUID(),
       timestamp: new Date().toISOString(),
-      ...entry}
+      ...entry};
       ...entry,
     }
     current.entries.push(enriched)

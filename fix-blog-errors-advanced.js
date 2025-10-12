@@ -72,7 +72,7 @@ const fixes = [
   metadata: Metadata = \{\/\* content \*\/\}/g,
     replacemen,
   t: 'export const,
-  metadata: Metadata = {/* TODO: Fix JSX expression */}
+  metadata: Metadata = {/* TODO: Fix JSX expression */};
   },
   //Fix missing closing braces in metadata
   {/* TODO: Fix JSX expression */})

@@ -110,7 +110,7 @@ export function createProposal(params: {
     proposalNumber,
     status: 'draft',
     versions: [firstVersion],
-    latestVersion: 1}
+    latestVersion: 1};
     latestVersion: 1,
   }
   proposals.push(proposal)
@@ -152,7 +152,7 @@ export function updateProposal(id: string, update: {
     status: update.status ?? current.status,
     versions: [...current.versions, nextVersion],
     latestVersion: nextVersion.version,
-    votingResultUrl: update.votingResultUrl ?? current.votingResultUrl}
+    votingResultUrl: update.votingResultUrl ?? current.votingResultUrl};
     votingResultUrl: update.votingResultUrl ?? current.votingResultUrl,
   }
   proposals[index] = next

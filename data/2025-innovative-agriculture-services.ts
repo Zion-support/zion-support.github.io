@@ -41,8 +41,8 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-}
+  website: 'https://ziontechgroup.com',
+};
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
     id: 'ai-powered-precision-agriculture',
@@ -63,39 +63,39 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Compliance management'
     ]
     popular: true
-    icon: ''
-    color: 'from-green-600 to-emerald-700'
-    textColor: 'text-green-400'
-    link: 'https://ziontechgroup.com/ai-powered-precision-agriculture'
-    marketPosition: 'Leading AI-powered precision agriculture platform for crop monitoring and yield optimization.'
-    targetAudience: 'Farmers, Agricultural companies, Crop consultants, Food producers'
+    icon: '',
+    color: 'from-green-600 to-emerald-700',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup.com/ai-powered-precision-agriculture',
+    marketPosition: 'Leading AI-powered precision agriculture platform for crop monitoring and yield optimization.',
+    targetAudience: 'Farmers, Agricultural companies, Crop consultants, Food producers',
     trialDays: 30
-    setupTime: '2 weeks'
-    category: 'Agriculture & Food Technology'
+    setupTime: '2 weeks',
+    category: 'Agriculture & Food Technology',
     realService: true
     technology: ['AI/ML, Precision agriculture, Crop monitoring, IoT sensors, Machine learning']
     integrations: ['IoT devices, Weather stations, Soil sensors, Analytics platforms']
     useCases: ['Crop monitoring, Irrigation optimization, Yield prediction, Resource management']
-    roi: 'Increase crop yields by 25% and reduce water usage by 30%'
+    roi: 'Increase crop yields by 25% and reduce water usage by 30%',
     competitors: ['John Deere, Trimble, Raven Industries, AGCO']
-    marketSize: '$12.8B+ precision agriculture market'
-    growthRate: '200% YoY'
-    variant: 'ai-futuristic'
+    marketSize: '$12.8B+ precision agriculture market',
+    growthRate: '200% YoY',
+    variant: 'ai-futuristic',
     contactInfo: contact
     realImplementation: true
-    implementationDetails: 'AI-powered precision agriculture platform with intelligent crop monitoring and optimization capabilities.'
-    launchDate: '2025-01-09'
+    implementationDetails: 'AI-powered precision agriculture platform with intelligent crop monitoring and optimization capabilities.',
+    launchDate: '2025-01-09',
     customers: 234
     rating: 4.8}
     reviews: 178}
   }
   {
-    id: 'quantum-agriculture-optimization'
-    name: 'Quantum Agriculture Optimization'
-    tagline: 'Quantum-powered agriculture optimization for crop planning and resource allocation'
-    price: '$4,999'
+    id: 'quantum-agriculture-optimization',
+    name: 'Quantum Agriculture Optimization',
+    tagline: 'Quantum-powered agriculture optimization for crop planning and resource allocation',
+    price: '$4,999',
     period: '/month',,
-  description: 'Revolutionary agriculture optimization platform that uses quantum computing to optimize crop planning, resource allocation, and maximize agricultural efficiency.'
+  description: 'Revolutionary agriculture optimization platform that uses quantum computing to optimize crop planning, resource allocation, and maximize agricultural efficiency.',
     features: [,
       'Quantum optimization algorithmsCrop planning optimizationResource allocationReal-time adaptationPerformance analyticsCost optimizationEfficiency analysisRegulatory compliance'
       'Multi-crop support'
@@ -147,39 +147,39 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Compliance management'
     ]
     popular: true
-    icon: ''
-    color: 'from-red-600 to-pink-700'
-    textColor: 'text-red-400'
-    link: 'https://ziontechgroup.com/ai-powered-food-safety-monitoring'
-    marketPosition: 'Leading AI-powered food safety monitoring platform for contamination detection and quality control.'
-    targetAudience: 'Food producers, Food processors, Restaurants, Food safety inspectors'
+    icon: '',
+    color: 'from-red-600 to-pink-700',
+    textColor: 'text-red-400',
+    link: 'https://ziontechgroup.com/ai-powered-food-safety-monitoring',
+    marketPosition: 'Leading AI-powered food safety monitoring platform for contamination detection and quality control.',
+    targetAudience: 'Food producers, Food processors, Restaurants, Food safety inspectors',
     trialDays: 30
-    setupTime: '2 weeks'
-    category: 'Agriculture & Food Technology'
+    setupTime: '2 weeks',
+    category: 'Agriculture & Food Technology',
     realService: true
     technology: ['AI/ML, Food safety, Contamination detection, Quality monitoring, Machine learning']
     integrations: ['Food safety systems, Quality control tools, Compliance databases, Analytics platforms']
     useCases: ['Contamination detection, Quality monitoring, Safety compliance, Risk assessment']
-    roi: 'Reduce food safety incidents by 80% and improve compliance by 90%'
+    roi: 'Reduce food safety incidents by 80% and improve compliance by 90%',
     competitors: ['FoodLogiQ, SafetyChain, TraceGains, FoodShield']
-    marketSize: '$15.6B+ food safety market'
-    growthRate: '220% YoY'
-    variant: 'ai-futuristic'
+    marketSize: '$15.6B+ food safety market',
+    growthRate: '220% YoY',
+    variant: 'ai-futuristic',
     contactInfo: contact
     realImplementation: true
-    implementationDetails: 'AI-powered food safety monitoring platform with intelligent contamination detection and quality control capabilities.'
-    launchDate: '2025-01-20'
+    implementationDetails: 'AI-powered food safety monitoring platform with intelligent contamination detection and quality control capabilities.',
+    launchDate: '2025-01-20',
     customers: 189
     rating: 4.7}
     reviews: 145}
   }
   {
-    id: 'blockchain-food-traceability'
-    name: 'Blockchain Food Traceability'
-    tagline: 'Transparent food traceability with blockchain technology and supply chain tracking'
-    price: '$1,799'
+    id: 'blockchain-food-traceability',
+    name: 'Blockchain Food Traceability',
+    tagline: 'Transparent food traceability with blockchain technology and supply chain tracking',
+    price: '$1,799',
     period: '/month',,
-  description: 'Advanced food traceability platform that uses blockchain technology to provide transparent, secure, and immutable tracking of food products throughout the supply chain.'
+  description: 'Advanced food traceability platform that uses blockchain technology to provide transparent, secure, and immutable tracking of food products throughout the supply chain.',
     features: [,
       'Blockchain-based trackingSupply chain transparencyProduct authenticationReal-time monitoringCompliance verificationPerformance analyticsMulti-party collaborationAPI integration'
       'Mobile app support'
@@ -231,28 +231,28 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Compliance management'
     ]
     popular: true
-    icon: ''
-    color: 'from-orange-600 to-red-700'
-    textColor: 'text-orange-400'
-    link: 'https://ziontechgroup.com/ai-powered-vertical-farming'
-    marketPosition: 'Leading AI-powered vertical farming platform for climate control and crop optimization.'
-    targetAudience: 'Vertical farming companies, Urban agriculture, Controlled environment agriculture, Food producers'
+    icon: '',
+    color: 'from-orange-600 to-red-700',
+    textColor: 'text-orange-400',
+    link: 'https://ziontechgroup.com/ai-powered-vertical-farming',
+    marketPosition: 'Leading AI-powered vertical farming platform for climate control and crop optimization.',
+    targetAudience: 'Vertical farming companies, Urban agriculture, Controlled environment agriculture, Food producers',
     trialDays: 30
-    setupTime: '1 month'
-    category: 'Agriculture & Food Technology'
+    setupTime: '1 month',
+    category: 'Agriculture & Food Technology',
     realService: true
     technology: ['AI/ML, Vertical farming, Climate control, IoT sensors, Machine learning']
     integrations: ['Climate control systems, IoT devices, Lighting systems, Analytics platforms']
     useCases: ['Climate control, Crop monitoring, Environmental optimization, Yield maximization']
-    roi: 'Increase crop yields by 300% and reduce energy consumption by 40%'
+    roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
     competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens']
-    marketSize: '$9.3B+ vertical farming market'
-    growthRate: '280% YoY'
-    variant: 'ai-futuristic'
+    marketSize: '$9.3B+ vertical farming market',
+    growthRate: '280% YoY',
+    variant: 'ai-futuristic',
     contactInfo: contact
     realImplementation: true
-    implementationDetails: 'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.'
-    launchDate: '2025-02-02'
+    implementationDetails: 'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.',
+    launchDate: '2025-02-02',
     customers: 123
     rating: 4.6}
     reviews: 89}

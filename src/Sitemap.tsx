@@ -59,17 +59,17 @@ const sitemapSections: SitemapSection[] = [
       {
         title: 'Home',
         href: '/',
-        description: 'Welcome to Zion Tech Group'
+        description: 'Welcome to Zion Tech Group',
       },
       {
         title: 'About Us',
         href: '/about',
-        description: 'Learn about our company and mission'
+        description: 'Learn about our company and mission',
       },
       {
         title: 'Contact',
         href: '/contact',
-        description: 'Get in touch with our team'
+        description: 'Get in touch with our team',
       }
     ]
   },
@@ -83,28 +83,28 @@ const sitemapSections: SitemapSection[] = [
         title: 'Comprehensive Services',
         href: '/comprehensive-services',
         description: 'Full-service technology solutions',
-        badge: 'Popular'
+        badge: 'Popular',
       },
       {
         title: 'AI Services',
         href: '/ai-services',
         description: 'Artificial Intelligence solutions',
-        badge: 'New'
+        badge: 'New',
       },
       {
         title: 'Micro SAAS',
         href: '/micro-saas',
-        description: 'Custom software solutions'
+        description: 'Custom software solutions',
       },
       {
         title: 'Enterprise Solutions',
         href: '/enterprise-solutions',
-        description: 'Large-scale business solutions'
+        description: 'Large-scale business solutions',
       },
       {
         title: 'Services Pricing',
         href: '/services-pricing',
-        description: 'Transparent pricing plans'
+        description: 'Transparent pricing plans',
       }
     ]
   },
@@ -117,22 +117,22 @@ const sitemapSections: SitemapSection[] = [
       {
         title: 'Help Center',
         href: '/help',
-        description: 'Find answers and support'
+        description: 'Find answers and support',
       },
       {
         title: 'Cookie Policy',
         href: '/cookies',
-        description: 'Learn about our cookie usage'
+        description: 'Learn about our cookie usage',
       },
       {
         title: 'Privacy Policy',
         href: '/privacy',
-        description: 'Data protection and privacy'
+        description: 'Data protection and privacy',
       },
       {
         title: 'Terms of Service',
         href: '/terms',
-        description: 'Service terms and conditions'
+        description: 'Service terms and conditions',
       }
     ]
   },
@@ -151,17 +151,17 @@ const sitemapSections: SitemapSection[] = [
       {
         title: 'News & Updates',
         href: '/news',
-        description: 'Latest company news'
+        description: 'Latest company news',
       },
       {
         title: 'Partnerships',
         href: '/partners',
-        description: 'Strategic partnerships'
+        description: 'Strategic partnerships',
       },
       {
         title: 'Sitemap',
         href: '/sitemap',
-        description: 'Site structure overview'
+        description: 'Site structure overview',
       }
     ]
   }
@@ -606,7 +606,7 @@ export default function Sitemap() {
         {pages.map((page) => (
           <li key={page.href}>
             <$2 />
-              to={page.href} 
+              to={page.href} ;
               className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group"
             >
               <span className="w-2 h-2 bg-zion-cyan rounded-full mr-3 group-hover:bg-zion-cyan transition-colors"></span>

@@ -192,7 +192,7 @@ class EnhancedErrorTracker {
 
   component: 'Global',
           action: 'Unhandled Promise Rejection'
-
+,
         }
   )
       }
@@ -207,7 +207,7 @@ class EnhancedErrorTracker {
 }
     if (typeof window === 'undefined') return
     const,
-  trackedError: TrackedError = {/* TODO: Fix JSX expression */}
+  trackedError: TrackedError = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   messag,

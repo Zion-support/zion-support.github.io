@@ -503,7 +503,7 @@ export function validateForm<T extends Record<string, unknown>>()
 
 export const ValidationRulesBuilder = {
     // TODO: Add content
-  }
+  };
 }
   required: 
 
@@ -560,7 +560,7 @@ class DataValidator {
   static getInstance(): DataValidator {
     if (!DataValidator.instance) {
     messag,
-  e: 'This field is required'
+  e: 'This field is required',
   }),
   emai,
   l: (): ValidationRule,
@@ -571,7 +571,7 @@ class DataValidator {
   e: (valu)
   e: string) => validateEmail(value),
     messag,
-  e: 'Please enter a valid email address'
+  e: 'Please enter a valid email address',
   }),
   ur,
   l: (): ValidationRule,
@@ -582,7 +582,7 @@ class DataValidator {
   e: (valu)
   e: string) => validateURL(value),
     messag,
-  e: 'Please enter a valid URL'
+  e: 'Please enter a valid URL',
   }),
   minLengt,
   h: (mi)

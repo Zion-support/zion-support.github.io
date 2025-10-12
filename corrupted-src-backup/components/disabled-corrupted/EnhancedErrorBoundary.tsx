@@ -13,7 +13,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error: null
       errorInfo: null,
       errorId: null
-  }
+  };
   }
   static getDerivedStateFromError(error: Error): Partial<State> {
     // Update state so the next render will show the fallback UI,
@@ -57,7 +57,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       userAgent: navigator.userAgent
       url: window.location.href,
       retryCount: this.retryCount
-  }
+  };
     // Send to error reporting service
     if (typeof window !== 'undefined' && 'fetch' in window) {
       fetch('/api/errors', {)
@@ -113,7 +113,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
       componentStack: this.state.errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
       url: window.location.href
-  }
+  };
     // Create a mailto link with error details
 //     const subject = `Bug Report - Error ID: ${this.state.errorId}`
 //     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`

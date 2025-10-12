@@ -185,7 +185,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
         timelin,
   e: '6 months',
         adoptio,
-  n: '95%'
+  n: '95%',
       },
       tag,
   s: ['AI', 'Business Intelligence', 'Enterprise', 'ROI', '2025']

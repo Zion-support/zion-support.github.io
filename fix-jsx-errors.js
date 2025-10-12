@@ -36,17 +36,17 @@ function fixJSXErrors(filePath) {
       // Fix unclosed JSX fragments
       {
         pattern: /<>([^<]*?)(?=<\/>|$)/g,
-        replacement: '<React.Fragment>$1</React.Fragment>'
+        replacement: '<React.Fragment>$1</React.Fragment>',
       },
       // Fix missing closing tags for React.Fragment
       {
         pattern: /<React\.Fragment>([^<]*?)(?=<\/React\.Fragment>|$)/g,
-        replacement: '<React.Fragment>$1</React.Fragment>'
+        replacement: '<React.Fragment>$1</React.Fragment>',
       },
       // Fix JSX expressions that need parent elements
       {
         pattern: /return\s*\(\s*([^<]*?<[^>]*>[^<]*?<[^>]*>)\s*\)/g,
-        replacement: 'return (\n    <React.Fragment>\n      $1\n    </React.Fragment>\n  )'
+        replacement: 'return (\n    <React.Fragment>\n      $1\n    </React.Fragment>\n  )',
       }
     ]
     for (const fix of jsxFixes) {
@@ -62,22 +62,22 @@ function fixJSXErrors(filePath) {
       // Fix missing comma in object properties
       {
         pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2],\n    $3: ['
+        replacement: '$1: [$2],\n    $3: [',
       },
       // Fix missing semicolon after const declaration
       {
         pattern: /const\s+(\w+)\s*=\s*\[([^\]]+)\]\s*const\s+(\w+)/g,
-        replacement: 'const $1 = [$2];\n  const $3'
+        replacement: 'const $1 = [$2];\n  const $3',
       },
       // Fix missing closing bracket in features array
       {
         pattern: /const\s+features\s*=\s*\[([^\]]+)\]\s*const\s+benefits/g,
-        replacement: 'const features = [$1];\n  const benefits'
+        replacement: 'const features = [$1];\n  const benefits',
       },
       // Fix missing comma after array in object
       {
         pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
-        replacement: '$1: [$2],\n    $3: ['
+        replacement: '$1: [$2],\n    $3: [',
       }
     ]
     for (const fix of syntaxFixes) {
@@ -93,17 +93,17 @@ function fixJSXErrors(filePath) {
       // Fix missing closing tag for main
       {
         pattern: /<main([^>]*)>([^<]*?)(?=<\/main>|$)/g,
-        replacement: '<main$1>$2</main>'
+        replacement: '<main$1>$2</main>',
       },
       // Fix missing closing tag for section
       {
         pattern: /<section([^>]*)>([^<]*?)(?=<\/section>|$)/g,
-        replacement: '<section$1>$2</section>'
+        replacement: '<section$1>$2</section>',
       },
       // Fix missing closing tag for div
       {
         pattern: /<div([^>]*)>([^<]*?)(?=<\/div>|$)/g,
-        replacement: '<div$1>$2</div>'
+        replacement: '<div$1>$2</div>',
       }
     ]
     for (const fix of parsingFixes) {

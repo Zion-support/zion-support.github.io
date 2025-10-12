@@ -100,98 +100,98 @@ const aiPages = [
     name: 'AiApiManager',
     title: 'AI API Manager',
     description: 'Advanced AI-powered API management solution for modern businesses.',
-    keywords: 'AI API manager, artificial intelligence, API management, AI solutions, intelligent automation'
+    keywords: 'AI API manager, artificial intelligence, API management, AI solutions, intelligent automation',
   },
   {
     file: './app/ai-autonomous-systems/page.tsx',
     name: 'AiAutonomousSystems',
     title: 'AI Autonomous Systems',
     description: 'Cutting-edge autonomous systems powered by advanced AI technology.',
-    keywords: 'AI autonomous systems, artificial intelligence, autonomous technology, AI solutions, intelligent automation'
+    keywords: 'AI autonomous systems, artificial intelligence, autonomous technology, AI solutions, intelligent automation',
   },
   {
     file: './app/ai-blockchain-analytics/page.tsx',
     name: 'AiBlockchainAnalytics',
     title: 'AI Blockchain Analytics',
     description: 'Advanced blockchain analytics powered by AI for comprehensive insights.',
-    keywords: 'AI blockchain analytics, artificial intelligence, blockchain technology, AI solutions, crypto analytics'
+    keywords: 'AI blockchain analytics, artificial intelligence, blockchain technology, AI solutions, crypto analytics',
   },
   {
     file: './app/ai-blockchain-solutions/page.tsx',
     name: 'AiBlockchainSolutions',
     title: 'AI Blockchain Solutions',
     description: 'Comprehensive blockchain solutions enhanced with AI technology.',
-    keywords: 'AI blockchain solutions, artificial intelligence, blockchain technology, AI solutions, smart contracts'
+    keywords: 'AI blockchain solutions, artificial intelligence, blockchain technology, AI solutions, smart contracts',
   },
   {
     file: './app/ai-climate-solutions-pro/page.tsx',
     name: 'AiClimateSolutionsPro',
     title: 'AI Climate Solutions Pro',
     description: 'Professional climate solutions powered by advanced AI technology.',
-    keywords: 'AI climate solutions, artificial intelligence, climate technology, AI solutions, environmental AI'
+    keywords: 'AI climate solutions, artificial intelligence, climate technology, AI solutions, environmental AI',
   },
   {
     file: './app/ai-cloud-infrastructure/page.tsx',
     name: 'AiCloudInfrastructure',
     title: 'AI Cloud Infrastructure',
     description: 'Scalable cloud infrastructure enhanced with AI capabilities.',
-    keywords: 'AI cloud infrastructure, artificial intelligence, cloud computing, AI solutions, intelligent infrastructure'
+    keywords: 'AI cloud infrastructure, artificial intelligence, cloud computing, AI solutions, intelligent infrastructure',
   },
   {
     file: './app/ai-code-assistant/page.tsx',
     name: 'AiCodeAssistant',
     title: 'AI Code Assistant',
     description: 'Intelligent code assistant powered by advanced AI technology.',
-    keywords: 'AI code assistant, artificial intelligence, code generation, AI solutions, intelligent programming'
+    keywords: 'AI code assistant, artificial intelligence, code generation, AI solutions, intelligent programming',
   },
   {
     file: './app/ai-code-security-auditor/page.tsx',
     name: 'AiCodeSecurityAuditor',
     title: 'AI Code Security Auditor',
     description: 'Advanced code security auditing powered by AI technology.',
-    keywords: 'AI code security, artificial intelligence, security auditing, AI solutions, intelligent security'
+    keywords: 'AI code security, artificial intelligence, security auditing, AI solutions, intelligent security',
   },
   {
     file: './app/ai-computer-vision/page.tsx',
     name: 'AiComputerVision',
     title: 'AI Computer Vision',
     description: 'Advanced computer vision solutions powered by AI technology.',
-    keywords: 'AI computer vision, artificial intelligence, image recognition, AI solutions, intelligent vision'
+    keywords: 'AI computer vision, artificial intelligence, image recognition, AI solutions, intelligent vision',
   },
   {
     file: './app/ai-content-delivery-network/page.tsx',
     name: 'AiContentDeliveryNetwork',
     title: 'AI Content Delivery Network',
     description: 'Intelligent content delivery network powered by AI technology.',
-    keywords: 'AI CDN, artificial intelligence, content delivery, AI solutions, intelligent networking'
+    keywords: 'AI CDN, artificial intelligence, content delivery, AI solutions, intelligent networking',
   },
   {
     file: './app/ai-content-generation/page.tsx',
     name: 'AiContentGeneration',
     title: 'AI Content Generation',
     description: 'Advanced content generation powered by AI technology.',
-    keywords: 'AI content generation, artificial intelligence, content creation, AI solutions, intelligent writing'
+    keywords: 'AI content generation, artificial intelligence, content creation, AI solutions, intelligent writing',
   },
   {
     file: './app/ai-content-studio/page.tsx',
     name: 'AiContentStudio',
     title: 'AI Content Studio',
     description: 'Professional content studio powered by AI technology.',
-    keywords: 'AI content studio, artificial intelligence, content creation, AI solutions, intelligent design'
+    keywords: 'AI content studio, artificial intelligence, content creation, AI solutions, intelligent design',
   },
   {
     file: './app/ai-content-writer/page.tsx',
     name: 'AiContentWriter',
     title: 'AI Content Writer',
     description: 'Intelligent content writing powered by AI technology.',
-    keywords: 'AI content writer, artificial intelligence, content writing, AI solutions, intelligent writing'
+    keywords: 'AI content writer, artificial intelligence, content writing, AI solutions, intelligent writing',
   },
   {
     file: './app/ai-crm-assistant/page.tsx',
     name: 'AiCrmAssistant',
     title: 'AI CRM Assistant',
     description: 'Intelligent CRM assistant powered by AI technology.',
-    keywords: 'AI CRM assistant, artificial intelligence, customer relationship management, AI solutions, intelligent CRM'
+    keywords: 'AI CRM assistant, artificial intelligence, customer relationship management, AI solutions, intelligent CRM',
   }
 ]
 // Process all AI pages

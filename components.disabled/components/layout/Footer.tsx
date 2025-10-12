@@ -68,7 +68,7 @@ import React from 'react'' import {ArrowRight, Brain, Cloud, Network, Phone, Mai
   s://youtube.com/ziontechgroup'} ico,
   n: Youtube }, {/* TODO: Fix JSX expression */}
   s://instagram.com/ziontechgroup'} ico,
-  n: Instagram } ]; const contactInfo = {/* TODO: Fix JSX expression */}
+  n: Instagram } ]; const contactInfo = {/* TODO: Fix JSX expression */};
   s: '364 E Main St STE 1008} Middletown DE 19709' }; return (<footer className="text-left"> {/* Main Footer Content */}' < className='max-w-7xl mx-auto px-4,$2 />
   sm:px-6,
   lg:px-8 py-16'>' < className='grid grid-cols-1,$2 />

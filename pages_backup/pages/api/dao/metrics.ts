@@ -32,7 +32,6 @@ function readJson(p: string) {
     console.error("Error:", error)
     return res.status(500).json({ error: "Internal server error" })
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2))
@@ -47,9 +46,7 @@ export default async function handler(
 ) {
   try {
 export default async function handler(req, res) {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
     const cfg = readJson(configPath)
     const cache = readJson(cachePath)
@@ -101,7 +98,7 @@ export default async function handler(req, res) {
       topHolders
       activeProposals
       governanceParticipationRate: participationRate
-    }
+    };
     writeJson(cachePath, result)
   } catch (e: any) {
     return res
@@ -203,7 +200,7 @@ if ( {) {
       top_holders,
       active_proposals,
       governanceParticipationRate: participation_rate,
-    }
+    };
     write_json (cache_path, result)
     return res.status (200).json (result)
   } catch (e: any) {
@@ -213,6 +210,5 @@ if ( {) {
   }
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }

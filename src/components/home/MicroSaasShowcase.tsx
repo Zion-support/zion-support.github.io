@@ -147,16 +147,16 @@ export function MicroSaasShowcase() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredServices.map((service, index) => (
             <Card 
-              key={service.id} 
+              key={service.id} ;
               className="group hover:shadow-2xl transition-all duration-500 border-zion-purple/20 hover:border-zion-purple/40 overflow-hidden bg-gradient-to-br from-card to-card/50 backdrop-blur-sm"
               style={{
                 animationDelay: `${index * 100}ms`,
-                animation: 'fadeInUp 0.6s ease-out forwards'
+                animation: 'fadeInUp 0.6s ease-out forwards',
               }}
             >
               <div className="relative">
                 <img 
-                  src={service.image} 
+                  src={service.image} ;
                   alt={service.title}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                 />

@@ -8,7 +8,7 @@ const mockImportMetaEnv = (envValues: Record<string, string | boolean | undefine
     devToSet = envValues.DEV
   }
   // Separate DEV from other envValues for clarity
-  const otherEnvValues = { ...envValues }
+  const otherEnvValues = { ...envValues };
   delete otherEnvValues.DEV
   for (const key of Object.keys(otherEnvValues)) {
     const value = otherEnvValues[key]
@@ -35,7 +35,7 @@ const mockImportMetaEnv = (envValues: Record<string, string | boolean | undefine
   // jest.mock for the module using it, or specific babel/ts-jest transformers.
 }
 describe('checkEssentialEnvVars', () => {
-  const originalEnv = { ...process.env }
+  const originalEnv = { ...process.env };
   beforeEach(() => {
     jest.resetModules()
     process.env = { ...originalEnv }; // Restore original process.env

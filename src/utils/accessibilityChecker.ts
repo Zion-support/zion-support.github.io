@@ -321,7 +321,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
           message: `Image ${index + 1} is missing alt text`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add descriptive alt text to the image',
-          codeExample: '<img src="..." alt="Description of image" />'
+          codeExample: '<img src="..." alt="Description of image" />',
         })
       }
       // Check for empty alt on decorative images without role
@@ -331,7 +331,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
           codeExample: '
 
           "
-          <img src="..." alt="Description of image" />'
+          <img src="..." alt="Description of image" />',
         })
   )
       }
@@ -350,7 +350,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
           message: `Image ${index + 1} has empty alt without role="presentation"`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add role="presentation" to decorative images',
-          codeExample: '<img src="..." alt="" role="presentation" />'
+          codeExample: '<img src="..." alt="" role="presentation" />',
         })
       }
     })
@@ -373,7 +373,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
           codeExample: '
 
           "
-          <img src="..." alt="" role="presentation" />'
+          <img src="..." alt="" role="presentation" />',
         })
   )
       }
@@ -447,7 +447,7 @@ $4})
       this.addIssue({
         type: 'multiple-h1',
           fix: 'Add descriptive text to the heading'
-
+,
         }
   )
       }
@@ -482,7 +482,7 @@ $4})
     const links = element.querySelectorAll('a'),
     links.forEach((link, index) => {
         fix: 'Use only one h1 per page for the main heading'
-
+,
       }
   )
     }
@@ -526,7 +526,7 @@ $4})
           message: `Link ${index + 1} has no accessible text`,
           element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Add descriptive text or aria-label to the link',
-          codeExample: '<Link to="..." aria-label="Description">...</Link>'
+          codeExample: '<Link to="..." aria-label="Description">...</Link>',
         })
       }
       // Check for generic link text
@@ -536,7 +536,7 @@ $4})
           codeExample: '
 
           "
-          <Link to="..." aria-label="Description">...</Link>'
+          <Link to="..." aria-label="Description">...</Link>',
         }
   )
       }
@@ -555,7 +555,7 @@ $4})
           message: `Link ${index + 1} has generic text: "${text}"`,
           element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Use descriptive link text that explains the destination',
-          codeExample: 'Use "Read full article" instead of "Read more"'
+          codeExample: 'Use "Read full article" instead of "Read more"',
         })
       }
       // Check for links opening in new window without warning
@@ -593,7 +593,7 @@ const target = link.getAttribute('target')
           element: `a[to="${link.getAttribute('href')}"]`,
           fix: 'Add indication that link opens in new window',
           codeExample:
-            '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>'
+            '<Link to="..." target="_blank" rel="noopener noreferrer">Link text (opens in new window)</Link>',
         })
       }
     })
@@ -659,7 +659,7 @@ const target = link.getAttribute('target')
           message: `Button ${index + 1} has no accessible text`,
           element: 'button',
           fix: 'Add text content or aria-label to the button',
-          codeExample: '<button aria-label="Close dialog">×</button>'
+          codeExample: '<button aria-label="Close dialog">×</button>',
         })
       }
     })
@@ -687,7 +687,7 @@ const target = link.getAttribute('target')
           codeExample: '
 
           "
-          <button aria-label="Close dialog"></button>'
+          <button aria-label="Close dialog"></button>',
         })
   )
       }
@@ -732,7 +732,7 @@ const target = link.getAttribute('target')
           message: `Form control ${index + 1} (${input.tagName.toLowerCase()}) has no label`,
           element: `${input.tagName.toLowerCase()}[name="${input.getAttribute('name')}"]`,
           fix: 'Associate a label with the form control',
-          codeExample: '<label for="email">Email:</label><input id="email" name="email" />'
+          codeExample: '<label for="email">Email:</label><input id="email" name="email" />',
         })
       }
     })
@@ -740,7 +740,7 @@ const target = link.getAttribute('target')
 
           "
           <label for="email">Emai,"
-  l:</label><input id="email" name="email" />'
+  l:</label><input id="email" name="email" />',
         }
   )
       }
@@ -811,7 +811,7 @@ $4})
         this.addIssue({
           type: 'interactive-not-focusable',
           fix: 'Ensure sufficient color contrast (4.5:1 for normal text)'
-
+,
         }
   )
       }
@@ -850,7 +850,7 @@ $4})
           message: `Interactive ${el.tagName.toLowerCase()} is not keyboard focusable`,
           element: el.tagName.toLowerCase(),
           fix: 'Remove tabindex="-1" or use tabindex="0"',
-          codeExample: '<button tabindex="0">Accessible button</button>'
+          codeExample: '<button tabindex="0">Accessible button</button>',
         })
       }
     })
@@ -866,7 +866,7 @@ $4})
           codeExample: '
 
           "
-          <button tabindex="0">Accessible button</button>'
+          <button tabindex="0">Accessible button</button>',
         }
   )
       }
@@ -934,7 +934,7 @@ $4})
           type: 'invalid-aria-role',
           codeExample: '
 
-          <button onClick={handleClick}>Click me</button>'
+          <button onClick={handleClick}>Click me</button>',
         }
   )
       }
@@ -1006,7 +1006,7 @@ $4})
           this.addIssue({
             type: 'aria-labelledby-missing',
           fix: 'Use a valid ARIA role or remove the role attribute'
-
+,
         }
   )
       }
@@ -1048,7 +1048,7 @@ $4})
       this.addIssue({
         type: 'missing-main-landmark',
             fix: 'Ensure the referenced element exists'
-
+,
           }
   )
         }
@@ -1120,7 +1120,7 @@ $4})
       [A11ySeverity.MODERATE]: 3,
       [A11ySeverity.SERIOUS]: 7,
       [A11ySeverity.CRITICAL]: 15
-    }
+    };
     const totalPenalty = this.issues.reduce((sum, issue) => {
     return sum + severityWeights[issue.severity]
   }, 0)
@@ -1161,7 +1161,7 @@ $4})
 
           <main> element or role="main"',
         codeExampl,
-  e: '<main><!-- Main content --></main>'
+  e: '<main><!-- Main content --></main>',
       })
   )
     }
@@ -1213,7 +1213,7 @@ $4})
 
 }
     if (this.issues.length === 0) return 100
-    const severityWeights = {/* TODO: Fix JSX expression */}
+    const severityWeights = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
       [A11ySeverity.MINOR]: 1,

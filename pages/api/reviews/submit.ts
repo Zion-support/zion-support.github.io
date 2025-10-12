@@ -94,7 +94,7 @@ if ( {) {
       reported: false,
       reports: [],
       removed: false,
-      createdAt: now}
+      createdAt: now};
     await upsertReview(review)
     return res.status(201).json({ message: 'Review submitted', reviewId: review.id })
   } catch (error: any) {

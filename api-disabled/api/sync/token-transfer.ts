@@ -35,7 +35,7 @@ export default async function handler(re,
       toSubnet,
       timestamp: timestamp || Date.now()},
     originInstanceId: state.config.instanceId
-  const event = {/* TODO: Fix JSX expression */}
+  const event = {/* TODO: Fix JSX expression */};
     },
     originInstanceI,
   d: state.config.instanceId,
@@ -44,7 +44,7 @@ export default async function handler(re,
   p: Date.now()}
   upsertEvent(state, event)
   writeState(state)
-  //   const body = {/* TODO: Fix JSX expression */}
+  //   const body = {/* TODO: Fix JSX expression */};
   e: false }
   const,
   headers: Record<string, string> = {}

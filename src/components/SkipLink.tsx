@@ -19,7 +19,7 @@ const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {</SkipLinkProps
         transition: 'top 0.3 s',
         borderRadius: '4 px',
         fontSize: '14 px',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
       }}
       onFocus={
     (e) => {

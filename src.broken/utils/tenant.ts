@@ -26,7 +26,7 @@ export interface TenantsFile {
   tenants: Tenant[]
 }
 const FILE = 'tenants.json'
-const FALLBACK: TenantsFile = { tenants: [] }
+const FALLBACK: TenantsFile = { tenants: [] };
 export function getTenants(): Tenant[] {
   const data = readJsonFile<TenantsFile>(FILE, FALLBACK)
   return data.tenants
@@ -47,7 +47,7 @@ export function createTenant(branding: TenantBranding): Tenant {
     branding,
     members: [],
     createdAt: now,
-    updatedAt: now}
+    updatedAt: now};
     updatedAt: now,
   }
   updateJsonFile<TenantsFile>(FILE, (curr) => ({ tenants: [...(curr.tenants || []), tenant] }), FALLBACK)
@@ -71,7 +71,7 @@ export function rotateTenantApiKey(tenantId: string): Tenant | undefined {
   updateJsonFile<TenantsFile>(FILE, (curr) => {
     const tenants = (curr.tenants || []).map(t => {
       if (t.id !== tenantId) return t
-      const updated: Tenant = { ...t, apiKey: crypto.randomBytes(24).toString('hex'), updatedAt: new Date().toISOString() }
+      const updated: Tenant = { ...t, apiKey: crypto.randomBytes(24).toString('hex'), updatedAt: new Date().toISOString() };
       result = updated
       return updated
     })

@@ -79,35 +79,35 @@ const PricingPage: React.FC = () => {
       name: 'Additional AI Models',
       description: 'Extra custom AI models beyond your plan limits',
       price: '$500',
-      period: '/model/month'
+      period: '/model/month',
     },
     {
       name: 'Priority Support',
       description: '24/7 priority support with dedicated account manager',
       price: '$1,000',
-      period: '/month'
+      period: '/month',
     },
     {
       name: 'Custom Integrations',
       description: 'Bespoke integrations with your existing systems',
       price: '$2,000',
-      period: '/integration'
+      period: '/integration',
     },
     {
       name: 'Training & Workshops',
       description: 'On-site or virtual training for your team',
       price: '$5,000',
-      period: '/day'
+      period: '/day',
     }
   ]
   const faqs = [
     {
       question: 'Can I change my plan at any time?',
-      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the beginning of your next billing cycle.'
+      answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the beginning of your next billing cycle.',
     },
     {
       question: 'Is there a free trial available?',
-      answer: 'Yes, we offer a 14-day free trial for our Professional plan. No credit card required to start.'
+      answer: 'Yes, we offer a 14-day free trial for our Professional plan. No credit card required to start.',
     },
     {
       question: 'What happens if I exceed my plan limits?',
@@ -115,15 +115,15 @@ const PricingPage: React.FC = () => {
     },
     {
       question: 'Do you offer custom pricing for large organizations?',
-      answer: 'Yes, we offer custom pricing and enterprise solutions for organizations with specific needs. Contact our sales team for more information.'
+      answer: 'Yes, we offer custom pricing and enterprise solutions for organizations with specific needs. Contact our sales team for more information.',
     },
     {
       question: 'What support is included?',
-      answer: 'All plans include email support. Professional and Enterprise plans include priority support with faster response times.'
+      answer: 'All plans include email support. Professional and Enterprise plans include priority support with faster response times.',
     },
     {
       question: 'Can I cancel anytime?',
-      answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
+      answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.',
     }
   ]
   const getColorClasses = (color: string) => {
@@ -134,7 +134,7 @@ const PricingPage: React.FC = () => {
           text: 'text-blue-500',
           border: 'border-blue-500',
           light: 'bg-blue-50',
-          textLight: 'text-blue-600'
+          textLight: 'text-blue-600',
         }
       case 'cyan':
         return {
@@ -142,7 +142,7 @@ const PricingPage: React.FC = () => {
           text: 'text-cyan-500',
           border: 'border-cyan-500',
           light: 'bg-cyan-50',
-          textLight: 'text-cyan-600'
+          textLight: 'text-cyan-600',
         }
       case 'purple':
         return {
@@ -150,7 +150,7 @@ const PricingPage: React.FC = () => {
           text: 'text-purple-500',
           border: 'border-purple-500',
           light: 'bg-purple-50',
-          textLight: 'text-purple-600'
+          textLight: 'text-purple-600',
         }
       default:
         return {
@@ -158,7 +158,7 @@ const PricingPage: React.FC = () => {
           text: 'text-gray-500',
           border: 'border-gray-500',
           light: 'bg-gray-50',
-          textLight: 'text-gray-600'
+          textLight: 'text-gray-600',
         }
     }
   }
@@ -295,4 +295,4 @@ export default PricingPage</Link>
   </p>
   </h2>
   </div>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></p></p></p></p></p></p></h1></h2></h3></h3></h3></h4></h4></ul></ul></li></li></section></section></section></section>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></p></p></p></p></p></p></h1></h2></h3></h3></h3></h4></h4></ul></ul></li></section></section></section></section>

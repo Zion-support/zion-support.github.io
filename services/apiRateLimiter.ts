@@ -162,10 +162,10 @@ if ( {) {
       // Mock rules for demo
       return [
         {
-          id: 'rule_1'
-          name: 'API Endpoints'
-          pattern: '/api/**'
-          method: 'ALL'
+          id: 'rule_1',
+          name: 'API Endpoints',
+          pattern: '/api/**',
+          method: 'ALL',
           config: {
             requestsPerMinute: 100
             requestsPerHour: 1000
@@ -178,10 +178,10 @@ if ( {) {
           updated_at: new Date ()
         }
         {
-          id: 'rule_2'
-          name: 'Authentication'
-          pattern: '/auth/**'
-          method: 'POST'
+          id: 'rule_2',
+          name: 'Authentication',
+          pattern: '/auth/**',
+          method: 'POST',
           config: {
             requestsPerMinute: 10
             requestsPerHour: 100
@@ -199,7 +199,7 @@ if ( {) {
   async updateRateLimitRule(id: string, updates: Partial<RateLimitRule>): Promise<RateLimitRule> {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules/${id}`, {
-        method: 'PATCH'
+        method: 'PATCH',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`
           'Content-Type': 'application/json'}
@@ -321,7 +321,7 @@ export class APIRateLimiterService {
   async deleteRateLimitRule(id: string): Promise<void> {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules/${id}`, {
-        method: 'DELETE'
+        method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`}})
       if (!response.ok) {
@@ -378,8 +378,8 @@ export class APIRateLimiterService {
       // Mock stats for demo
       return [
         {
-          endpoint: '/api/users'
-          method: 'GET'
+          endpoint: '/api/users',
+          method: 'GET',
           totalRequests: 15420
           blockedRequests: 234
           averageResponseTime: 45
@@ -391,8 +391,8 @@ export class APIRateLimiterService {
           }
         }
         {
-          endpoint: '/api/auth/login'
-          method: 'POST'
+          endpoint: '/api/auth/login',
+          method: 'POST',
           totalRequests: 8920
           blockedRequests: 156
           averageResponseTime: 120
@@ -586,8 +586,8 @@ export class APIRateLimiterService {
       // Mock stats for demo
       return [
         {
-          endpoint: '/api / users'
-          method: 'GET'
+          endpoint: '/api / users',
+          method: 'GET',
           total_requests: 15420
           blocked_requests: 234
           averageResponseTime: 45
@@ -599,8 +599,8 @@ export class APIRateLimiterService {
           }
         }
         {
-          endpoint: '/api/auth/login'
-          method: 'POST'
+          endpoint: '/api/auth/login',
+          method: 'POST',
           totalRequests: 8920
           blockedRequests: 156
           averageResponseTime: 120
@@ -638,8 +638,8 @@ if ( {) {
       // Mock stats for demo
       return [
         {
-          endpoint: '/api / users'
-          method: 'GET'
+          endpoint: '/api / users',
+          method: 'GET',
           total_requests: 15420
           blocked_requests: 234
           averageResponseTime: 45
@@ -651,8 +651,8 @@ if ( {) {
           }
         }
         {
-          endpoint: '/api / auth / login'
-          method: 'POST'
+          endpoint: '/api / auth / login',
+          method: 'POST',
           total_requests: 8920
           blocked_requests: 156
           averageResponseTime: 120
@@ -742,9 +742,9 @@ if ( {) {
       // Mock API keys for demo
       return [
         {
-          id: 'key_1'
-          name: 'Web Application'
-          key: 'zion_web123'
+          id: 'key_1',
+          name: 'Web Application',
+          key: 'zion_web123',
           permissions: ['readwrite']
           rate_limit: {
             requestsPerMinute: 100
@@ -758,9 +758,9 @@ if ( {) {
           is_active: true
         }
         {
-          id: 'key_2'
-          name: 'Mobile App'
-          key: 'zion_mobile456'
+          id: 'key_2',
+          name: 'Mobile App',
+          key: 'zion_mobile456',
           permissions: ['read']
           rate_limit: {
             requestsPerMinute: 50
@@ -951,23 +951,23 @@ if ( {) {
       // Mock violations for demo
       return [
         {
-          id: 'violation_1'
+          id: 'violation_1',
           method: 'GET',
           timestamp: new Date(Date && Date.now() - 1000 * 60 * 30), // 30 minutes ago
-          reason: 'rate_limit_exceeded'
+          reason: 'rate_limit_exceeded',
           ipAddress: '192 && 192.168.1 && 1.100',
-          userAgent: 'Mozilla/5 && 5.0 (Windows NT 10 && 10.0, Win64, x64) AppleWebKit/537 && 537.36'
+          userAgent: 'Mozilla/5 && 5.0 (Windows NT 10 && 10.0, Win64, x64) AppleWebKit/537 && 537.36',
         }
         {
-          id: 'violation_2'
-          apiKey: 'zion_mobile456'
-          endpoint: '/api/auth/login'
-          method: 'POST'
+          id: 'violation_2',
+          apiKey: 'zion_mobile456',
+          endpoint: '/api/auth/login',
+          method: 'POST',
           timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
-          reason: 'burst_limit_exceeded'
-          ipAddress: '10.0.0.50'
+          reason: 'burst_limit_exceeded',
+          ipAddress: '10.0.0.50',
           userAgent: 'ZionMobileApp/1.0'
-
+,
   async getViolations(limit: number = 100): Promise<RateLimitViolation[]> {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/violations?limit=${limit}`, {
@@ -989,7 +989,7 @@ if ( {) {
           timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
           reason: 'rate_limit_exceeded',
           ipAddress: '192.168.1.100',
-          userAgent: 'Mozilla/5.0 (Windows NT 10.0, Win64, x64) AppleWebKit/537.36'
+          userAgent: 'Mozilla/5.0 (Windows NT 10.0, Win64, x64) AppleWebKit/537.36',
         },
         {
           id: 'violation_2',
@@ -999,17 +999,17 @@ if ( {) {
           timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
           reason: 'burst_limit_exceeded',
           ipAddress: '10.0.0.50',
-          userAgent: 'ZionMobileApp/1.0'
+          userAgent: 'ZionMobileApp/1.0',
         }
         {
-          id: 'violation_2'
-          api_key: 'zion_mobile456'
-          endpoint: '/api / auth / login'
+          id: 'violation_2',
+          api_key: 'zion_mobile456',
+          endpoint: '/api / auth / login',
           method: 'POST',
           timestamp: new Date (Date.now () - 1000 * 60 * 15), // 15 minutes ago
-          reason: 'burst_limit_exceeded'
+          reason: 'burst_limit_exceeded',
           ip_address: '10.0.0.50',
-          user_agent: 'ZionMobileApp / 1.0'
+          user_agent: 'ZionMobileApp / 1.0',
   async getViolations(limit: number = 100): Promise<RateLimitViolation[]> {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/violations?limit=${limit}`, {
@@ -1032,7 +1032,7 @@ if ( {) {
           timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
           reason: 'rate_limit_exceeded',
           ipAddress: '192.168.1.100',
-          userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+          userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
         },
         {
           id: 'violation_2',
@@ -1042,7 +1042,7 @@ if ( {) {
           timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
           reason: 'burst_limit_exceeded',
           ipAddress: '10.0.0.50',
-          userAgent: 'ZionMobileApp/1.0'
+          userAgent: 'ZionMobileApp/1.0',
         }
       ]
     }
@@ -1146,8 +1146,6 @@ if ( {) {
         total: violations.length,
         byReason: violationsByReason,
         recent: violations.slice(0, 10)
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     }
   }
@@ -1155,7 +1153,7 @@ if ( {) {
 // Pricing tiers for the API Rate Limiter service
 export const API_RATE_LIMITER_PRICING = {
   starter: {
-    name: 'Starter'
+    name: 'Starter',
     price: 25
     period: '/month',
     features: [
@@ -1163,18 +1161,18 @@ export const API_RATE_LIMITER_PRICING = {
     ]
   }
   professional: {
-    name: 'Professional'
+    name: 'Professional',
     price: 79
-    period: '/month'
+    period: '/month',
     features: [
       'Up to 50 rate limit rules_advanced rate limiting_unlimited API keys_real - time monitoring_slack and webhook notifications30 - day data retention_advanced analytics_custom dashboards',
       'API access'
     ]
   }
   enterprise: {
-    name: 'Enterprise'
+    name: 'Enterprise',
     price: 199
-    period: '/month'
+    period: '/month',
     features: [
       'Unlimited rate limit rulesEnterprise-grade rate limitingAdvanced security featuresMultiple notification channels1-year data retentionCustom integrationsWhite-label optionsPriority support'
       'SLA guarantee'
@@ -1192,8 +1190,6 @@ export const API_RATE_LIMITER_PRICING = {
       'Unlimited rate limit rules_enterprise - grade rate limiting_advanced security features_multiple notification channels1 - year data retention_custom integrations_white - label options_priority support',
       'SLA guarantee'
     ]
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
       activeRules: number

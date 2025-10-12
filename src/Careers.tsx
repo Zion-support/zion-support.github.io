@@ -13,37 +13,37 @@ export default function Careers() {
       id: 'all',
       name: 'All Departments',
       icon: Users,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-500 to-pink-500',
     },
     {
       id: 'ai-research',
       name: 'AI & Research',
       icon: Brain,
-      color: 'from-purple-500 to-pink-500'
+      color: 'from-purple-500 to-pink-500',
     },
     {
       id: 'engineering',
       name: 'Engineering',
       icon: Code,
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-500 to-cyan-500',
     },
     {
       id: 'cybersecurity',
       name: 'Cybersecurity',
       icon: Shield,
-      color: 'from-red-500 to-pink-500'
+      color: 'from-red-500 to-pink-500',
     },
     {
       id: 'quantum',
       name: 'Quantum Technology',
       icon: Cpu,
-      color: 'from-indigo-500 to-purple-500'
+      color: 'from-indigo-500 to-purple-500',
     },
     {
       id: 'cloud',
       name: 'Cloud & Infrastructure',
       icon: Cloud,
-      color: 'from-green-500 to-emerald-500'
+      color: 'from-green-500 to-emerald-500',
     }
 import { Link } from 'react-router-dom'
 import { Link } from 'react-router-dom'
@@ -1228,17 +1228,17 @@ const Careers = () => {
     {
       icon: Zap,
       title: 'Innovation First',
-      description: 'We constantly push boundaries and explore new technologies to solve complex problems.'
+      description: 'We constantly push boundaries and explore new technologies to solve complex problems.',
     },
     {
       icon: Users,
       title: 'Collaboration',
-      description: 'Great ideas come from diverse teams working together towards common goals.'
+      description: 'Great ideas come from diverse teams working together towards common goals.',
     },
     {
       icon: Heart,
       title: 'Customer Focus',
-      description: 'Everything we do is driven by our commitment to customer success.'
+      description: 'Everything we do is driven by our commitment to customer success.',
   const filteredJobs = selectedDepartment === 'all' 
     ? jobOpenings 
     : jobOpenings.filter(job => job.department === selectedDepartment)
@@ -1247,13 +1247,13 @@ const Careers = () => {
       icon: Heart,
       title: 'People First',
       description: 'We believe our team is our greatest asset and invest in their growth and well-being.',
-      color: 'from-red-500 to-pink-500'
+      color: 'from-red-500 to-pink-500',
     },
     {
       icon: Zap,
       title: 'Innovation Driven',
       description: 'We constantly push boundaries and embrace new technologies to solve complex problems.',
-      color: 'from-yellow-500 to-orange-500'
+      color: 'from-yellow-500 to-orange-500',
     },
     {
       icon: Globe,
@@ -1505,7 +1505,7 @@ const Careers = () => {
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
       month: 'long', 
-      day: 'numeric' 
+      day: 'numeric' ,
     })
   }
   const companyValues = [
@@ -1534,32 +1534,32 @@ const Careers = () => {
     {
       icon: '🚀',
       title: 'Innovation First',
-      description: 'Work on cutting-edge AI and quantum technologies'
+      description: 'Work on cutting-edge AI and quantum technologies',
     },
     {
       icon: '🌍',
       title: 'Remote First',
-      description: 'Work from anywhere with flexible schedules'
+      description: 'Work from anywhere with flexible schedules',
     },
     {
       icon: '📚',
       title: 'Continuous Learning',
-      description: 'Access to courses, conferences, and training programs'
+      description: 'Access to courses, conferences, and training programs',
     },
     {
       icon: '💼',
       title: 'Career Growth',
-      description: 'Clear career paths and advancement opportunities'
+      description: 'Clear career paths and advancement opportunities',
     },
     {
       icon: '🏥',
       title: 'Health & Wellness',
-      description: 'Comprehensive health insurance and wellness programs'
+      description: 'Comprehensive health insurance and wellness programs',
     },
     {
       icon: '💰',
       title: 'Competitive Pay',
-      description: 'Above-market salaries with equity options'
+      description: 'Above-market salaries with equity options',
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { 
@@ -2377,7 +2377,7 @@ const Careers = () => {
               </Link>
             </div>
       description: 'Our solutions help businesses worldwide transform and succeed in the digital age.',
-      color: 'from-blue-500 to-cyan-500'
+      color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: "🌱",
@@ -3190,4 +3190,4 @@ export default Careers
     
   )
 }
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></ul></ul></li></li></section></section></section></section></section></section></section></section>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></ul></ul></li></section></section></section></section></section></section></section></section>

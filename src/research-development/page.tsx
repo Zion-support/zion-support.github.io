@@ -295,7 +295,7 @@ $4}
       bgColo,
   r: 'bg-purple-500/10',
       descriptio,
-  n: 'Advancing the frontiers of AI and machine learning'
+  n: 'Advancing the frontiers of AI and machine learning',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -311,7 +311,7 @@ $4}
       bgColo,
   r: 'bg-blue-500/10',
       descriptio,
-  n: 'Exploring quantum algorithms and quantum advantage'
+  n: 'Exploring quantum algorithms and quantum advantage',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -327,7 +327,7 @@ $4}
       bgColo,
   r: 'bg-green-500/10',
       descriptio,
-  n: 'Developing self-managing and intelligent systems'
+  n: 'Developing self-managing and intelligent systems',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -343,10 +343,10 @@ $4}
       bgColo,
   r: 'bg-yellow-500/10',
       descriptio,
-  n: 'Researching next-generation technologies'
+  n: 'Researching next-generation technologies',
     }
   ]
-  const researchProjects = {/* TODO: Fix JSX expression */}
+  const researchProjects = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   a,
@@ -379,7 +379,7 @@ $4}
         ico,
   n: Brain,
         colo,
-  r: 'text-purple-400'
+  r: 'text-purple-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -407,7 +407,7 @@ $4}
         ico,
   n: Target,
         colo,
-  r: 'text-green-400'
+  r: 'text-green-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -435,7 +435,7 @@ $4}
         ico,
   n: Microscope,
         colo,
-  r: 'text-blue-400'
+  r: 'text-blue-400',
       }
 //     ],
     quantu,
@@ -468,7 +468,7 @@ $4}
         ico,
   n: Atom,
         colo,
-  r: 'text-blue-400'
+  r: 'text-blue-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -496,7 +496,7 @@ $4}
         ico,
   n: Zap,
         colo,
-  r: 'text-yellow-400'
+  r: 'text-yellow-400',
       }
 //     ],
     autonomou,
@@ -529,7 +529,7 @@ $4}
         ico,
   n: Rocket,
         colo,
-  r: 'text-green-400'
+  r: 'text-green-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -557,7 +557,7 @@ $4}
         ico,
   n: Users,
         colo,
-  r: 'text-purple-400'
+  r: 'text-purple-400',
       }
 //     ],
     emergin,
@@ -590,7 +590,7 @@ $4}
         ico,
   n: Lightbulb,
         colo,
-  r: 'text-yellow-400'
+  r: 'text-yellow-400',
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -618,7 +618,7 @@ $4}
         ico,
   n: Globe,
         colo,
-  r: 'text-blue-400'
+  r: 'text-blue-400',
       }
 //     ]
   }
@@ -641,7 +641,7 @@ $4}
       impac,
   t: 'High',
       lin,
-  k: '#'
+  k: '#',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -657,7 +657,7 @@ $4}
       impac,
   t: 'High',
       lin,
-  k: '#'
+  k: '#',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -673,7 +673,7 @@ $4}
       impac,
   t: 'Medium',
       lin,
-  k: '#'
+  k: '#',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -689,7 +689,7 @@ $4}
       impac,
   t: 'High',
       lin,
-  k: '#'
+  k: '#',
     }
   ]
   const achievements = [
@@ -704,7 +704,7 @@ $4}
       titl,
   e: '50+ Research Papers',
       descriptio,
-  n: 'Published in top-tier conferences and journals'
+  n: 'Published in top-tier conferences and journals',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -714,7 +714,7 @@ $4}
       titl,
   e: '100+ Researchers',
       descriptio,
-  n: 'World-class research team across multiple disciplines'
+  n: 'World-class research team across multiple disciplines',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -724,7 +724,7 @@ $4}
       titl,
   e: '15+ Patents',
       descriptio,
-  n: 'Innovative technologies and methodologies'
+  n: 'Innovative technologies and methodologies',
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -734,7 +734,7 @@ $4}
       titl,
   e: 'Global Collaborations',
       descriptio,
-  n: 'Partnerships with leading universities and research institutions'
+  n: 'Partnerships with leading universities and research institutions',
     }
   ]
   return (<div>Coming Soon</div>)

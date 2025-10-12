@@ -137,7 +137,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
         options.headers = {
           ...options.headers,
           'X-CSRF-Token': token,
-  addCSRFTokenToAJAX() {/* TODO: Fix JSX expression */}
+  addCSRFTokenToAJAX() {/* TODO: Fix JSX expression */};
     window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */}
         }
       }
@@ -450,7 +450,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
       url: window.location.href,
       userAgent: navigator.userAgent
   }
-
+;
     // Send to security monitoring service
     fetch('/api/security-events', {)
       method: 'POST'),
@@ -526,7 +526,7 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
   }
 
   updateSecurityConfig(newConfig) {/* TODO: Fix JSX expression */}
-    this.securityConfig = { ...this.securityConfig, ...newConfig }
+    this.securityConfig = { ...this.securityConfig, ...newConfig };
   }
 
   validateAndSanitizeInput(input, type = 'text') {/* TODO: Fix JSX expression */}

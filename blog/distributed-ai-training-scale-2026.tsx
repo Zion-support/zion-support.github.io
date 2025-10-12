@@ -224,8 +224,8 @@ const DistributedAITrainingScale2026 = () =>
                     </p>
                   </div>
                 </div>
-              </div>
-            </section>
+        </div>
+      </section>
             <section className="text-left"></section>
               <h2 className="text-left"></h2>
                 <Server className="text-left" />
@@ -501,4 +501,4 @@ export default DistributedAITrainingScale2026
   </span>
   </span>
   </article>
-</div></div></div></div></div></div></div></div></div></span></span></span></a></h2></h3></ul></ul></ul></ul></ul></li></li></li></li></li></li></li></li></li></li></li></li></li></li>
+</div></div></div></div></div></div></div></div></div></span></span></span></a></h2></h3></ul></ul></ul></ul></ul></li></li></li></li></li></li></li>

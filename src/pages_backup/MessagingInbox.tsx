@@ -23,7 +23,6 @@ import { useRouter } from 'next/router', // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger',
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -236,7 +235,7 @@ export default function MessagingInbox() {
               Messages</$1>
             {activeConversation && (
               <Button
-                onClick = {startVideoCall,}
+                onClick = {startVideoCall,};
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">
                 <Video className="h-4 w-4" />
                 Start Call</$1>
@@ -251,10 +250,10 @@ export default function MessagingInbox() {
                   <LoadingSpinner variant="primary" /></$1>
               ) : (
                 <ConversationsList
-                  conversations = {conversations,}
-                  activeConversation = {activeConversation,}
-                  setActiveConversation = {setActiveConversation,}
-                  markAsRead = {markAsRead,}
+                  conversations = {conversations,};
+                  activeConversation = {activeConversation,};
+                  setActiveConversation = {setActiveConversation,};
+                  markAsRead = {markAsRead,};
                 />
               )}
 
@@ -335,7 +334,7 @@ if ( {) {
               Messages</$1>
             {active_conversation && (
               <Button
-                on_click = {startVideoCall, }
+                on_click = {startVideoCall, };
                 className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light"
               >
                 <Video className="h - 4 w - 4" />
@@ -348,10 +347,10 @@ if ( {) {
                 <div className="flex - 1 flex items - center justify - center p - 8">
                   <LoadingSpinner variant="primary" /></$1>) : (
                 <ConversationsList
-                  conversations = {conversations, }
-                  active_conversation = {active_conversation, }
-                  setActiveConversation = {setActiveConversation, }
-                  markAsRead = {markAsRead, }
+                  conversations = {conversations, };
+                  active_conversation = {active_conversation, };
+                  setActiveConversation = {setActiveConversation, };
+                  markAsRead = {markAsRead, };
                 />)}
               {/* Conversation Detail */}
               <ConversationDetailView /></$1></$1></$1>

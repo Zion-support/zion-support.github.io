@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -32,15 +31,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === '' ? 1 : 0.8,
   }));
 }
-=======
-<<<<<<< HEAD
 import {MetadataRoute}}from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {return [;}
-=======
-import { MetadataRoute } from 'next'
-export default function sitemap(): MetadataRoute.Sitemap {
-    return [
->>>>>>> origin/main
     {
       url: 'https://ziontechgroup.com',
       lastModified: new Date(),
@@ -88,4 +80,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,},
   ]
 }
->>>>>>> origin/main

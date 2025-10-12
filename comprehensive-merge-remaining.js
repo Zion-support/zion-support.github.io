@@ -208,7 +208,7 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
       already_merged: 0,
 //Step,
   4: Execute merge strategy,
-// const results = {/* TODO: Fix JSX expression */}
+// const results = {/* TODO: Fix JSX expression */};
     }}}
 
 //Merge all remaining branches
@@ -229,7 +229,7 @@ results.branchCounts = {
   total: remainingBranches.length,
   processed: results.branches.length
   }
-
+;
 fs.writeFileSync('comprehensive-remaining-merge-report.json')
   JSON.stringify(results, null, 2)
 )
@@ -245,7 +245,7 @@ fs.writeFileSync('comprehensive-remaining-merge-report.json')
 //Step,
   5: Generate comprehensive report
 // results.timestamp = new Date().toISOString(),
-results.branchCounts = {/* TODO: Fix JSX expression */}
+results.branchCounts = {/* TODO: Fix JSX expression */};
 }
 
 fs.writeFileSync('comprehensive-remaining-merge-report.json')

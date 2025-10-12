@@ -142,7 +142,7 @@ valuevalue: '100+',
 iconicon: Star,
       value: '4.8',
       label: 'Average Rating',
-      color: 'text-yellow-400'
+      color: 'text-yellow-400',
   const benefits = [
       icon: CheckCircle,
       title: 'Verified Vendors',
@@ -155,7 +155,7 @@ icon$5: Clock,
       description:       ,
 icon$5: Award,
       title: 'Quality Guarantee',
-      description: '100% satisfaction guarantee on all purchases'
+      description: '100% satisfaction guarantee on all purchases',
   return (
     <React.Fragment>
       <Navigation />
@@ -317,7 +317,7 @@ const categories = [
       bgColo,
   r: 'bg-blue-500/10',
       descriptio,
-  n: 'AI-powered software products and solutions'
+  n: 'AI-powered software products and solutions',
     },
       i,
   d: 'talent',

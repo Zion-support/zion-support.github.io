@@ -20,7 +20,7 @@ class AccessibilityOptimizer {
       enableFocusManagement: true
       enableScreenReaderSupport: true,
       ...config,
-class AccessibilityOptimizer {/* TODO: Fix JSX expression */}
+class AccessibilityOptimizer {/* TODO: Fix JSX expression */};
   g: Partial<AccessibilityConfig> = {}) {/* TODO: Fix JSX expression */}
     }
   }

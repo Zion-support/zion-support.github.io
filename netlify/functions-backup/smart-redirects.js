@@ -26,7 +26,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
         i += 1) {const cols = lines[i].split('}')
       if(cols.length < headers.length)
         continue
-      const _row = {}
+      const _row = {};
       headers.forEach((h)
       headers.forEach((h)
         idx) => (row[h] = (cols[idx] || '').trim()))
@@ -108,7 +108,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
     const body = {message)
       content: Buffer.from(contentText) 'utf8').toString('base64'),
       branch: githubBranch,
-      sha}
+      sha};
     }
     try {
       const res = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
@@ -144,7 +144,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
       'User-Agent': 'smart-redirects-function'}
-    const body = {/* TODO: Fix JSX expression */}
+    const body = {/* TODO: Fix JSX expression */};
       sha}
     }
     try {/* TODO: Fix JSX expression */}
@@ -330,7 +330,7 @@ exports.handler = async function (event, context) {const githubToken = process.e
       } } } async function githubPutFile(path, contentText, message)
         sha) {/* TODO: Fix JSX expression */}
   k: false } const headers = {/* TODO: Fix JSX expression */}`
-  n: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'smart-redirects-function' } const body = {/* TODO: Fix JSX expression */}
+  n: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'smart-redirects-function' } const body = {/* TODO: Fix JSX expression */};
         sha } try {/* TODO: Fix JSX expression */}
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */}

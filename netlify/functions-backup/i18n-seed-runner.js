@@ -1,4 +1,4 @@
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/20 * * * *' }
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   const githubToken = process.env.GITHUB_TOKEN || ''}
@@ -37,7 +37,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   async function commitFile(path, content)
         message) {/* TODO: Fix JSX expression */}
   r: 'No GITHUB_TOKEN provided' }
-    const headers = {/* TODO: Fix JSX expression */}
+    const headers = {/* TODO: Fix JSX expression */};
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-i18 n-seed-runner'}
@@ -54,13 +54,13 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     const body = {message,
       content: Buffer.from(content).toString('base64'),
       branch: githubBranch,
-      sha}
+      sha};
     }
     const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
       {method: 'PUT', headers)
         body: JSON.stringify(body,)})
-    const body = {/* TODO: Fix JSX expression */}
+    const body = {/* TODO: Fix JSX expression */};
       sha}
     }`
     const putRes = await fetch(`http,
@@ -125,7 +125,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     }
 //     const unique = Array.from(new Set(raw)).slice(0)
         200)
-    const _entries = {}
+    const _entries = {};
     for (const t of unique) {/* TODO: Fix JSX expression */}
       if (!entries[k]) entries[k] = t}
     }
@@ -189,7 +189,7 @@ exports.config = { schedule: '*/20 * * * *' } exports.handler = async function (
   }) } } catch (e) {return { statusCode: 500,
         body: JSON.stringify({ok: false),
         error: String(e,)}) } } }'
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/20 * * * *' } exports.handler = async function () {' const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/) '');' const githubToken = process.env.GITHUB_TOKEN || ''}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main' function keyify(text) {/* TODO: Fix JSX expression */}
         60) || 'text' } async function commitFile(path, content)
         message) {/* TODO: Fix JSX expression */}

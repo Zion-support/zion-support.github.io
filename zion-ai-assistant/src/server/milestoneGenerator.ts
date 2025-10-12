@@ -7,10 +7,10 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
     startDateIso: input.startDateIso
     endDateIso: input.endDateIso
     projectType: input.projectType
-  }
+  };
   const body = {model: "gpt-4o-mini"
     messages: [
-      { role: "system", content: system }
+      { role: "system", content: system };
       { role: "user", content: `INPUT:\n${JSON.stringify(user, null, 2)}\n\nReturn JSON object: {\"milestones\": [{ title, description, suggestedDueDateIso, estimatedEffortHours }]}` }
     ]
     temperature: 0.3
@@ -83,10 +83,10 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
     startDateIso: input.startDateIso
     endDateIso: input.endDateIso
     projectType: input.projectType
-  }
+  };
   const body = {model: "gpt-4o-mini"
     messages: [
-      { role: "system", content: system }
+      { role: "system", content: system };
       { role: "user", content: `INPUT:\n${JSON.stringify(user, null, 2)}\n\nReturn JSON object: {\"milestones\": [{ title, description, suggestedDueDateIso, estimatedEffortHours }]}` }
     ]
     temperature: 0.3

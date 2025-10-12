@@ -496,7 +496,7 @@ export default function News() {
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
       month: 'long', 
-      day: 'numeric' 
+      day: 'numeric' ,
     })
   }
       {/* Newsletter Section */}
@@ -686,7 +686,7 @@ export default function News() {
       category: 'Product Update',
       date: '2024-08-10',
       readTime: '4 min read',
-      image: '📊'
+      image: '📊',
     },
     {
       id: 5,
@@ -695,7 +695,7 @@ export default function News() {
       category: 'Awards',
       date: '2024-08-05',
       readTime: '2 min read',
-      image: '🏆'
+      image: '🏆',
     },
     {
       id: 6,
@@ -704,7 +704,7 @@ export default function News() {
       category: 'Company',
       date: '2024-07-30',
       readTime: '3 min read',
-      image: '🏢'
+      image: '🏢',
     },
     {
       id: 7,
@@ -713,7 +713,7 @@ export default function News() {
       category: 'Events',
       date: '2024-07-25',
       readTime: '6 min read',
-      image: '🎓'
+      image: '🎓',
     },
     {
       id: 8,
@@ -722,7 +722,7 @@ export default function News() {
       category: 'Research',
       date: '2024-07-20',
       readTime: '8 min read',
-      image: '📋'
+      image: '📋',
     },
     {
       id: 9,
@@ -731,7 +731,7 @@ export default function News() {
       category: 'Case Study',
       date: '2024-07-15',
       readTime: '5 min read',
-      image: '🏭'
+      image: '🏭',
     }
   ]
   const categories = [
@@ -876,8 +876,8 @@ export default function News() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       )}
 
       {/* Categories Filter */}
@@ -972,8 +972,7 @@ export default function News() {
             ))}
           </div>
         </div>
-      </div>
-
+        </div>
       </section>
 
       {/* News Grid */}
@@ -1123,7 +1122,7 @@ export default News
       excerpt: 'Recognition for our groundbreaking work in autonomous AI systems and machine learning solutions that are transforming industries worldwide.',
       date: '2025-01-10',
       category: 'Awards',
-      image: '/images/news/ai-awards.jpg'
+      image: '/images/news/ai-awards.jpg',
     },
     {
       id: 3,
@@ -1131,7 +1130,7 @@ export default News
       excerpt: 'Strategic collaboration to deploy AI-powered diagnostic tools across multiple healthcare facilities, improving patient outcomes and operational efficiency.',
       date: '2025-01-05',
       category: 'Partnerships',
-      image: '/images/news/healthcare-partnership.jpg'
+      image: '/images/news/healthcare-partnership.jpg',
     },
     {
       id: 4,
@@ -1139,7 +1138,7 @@ export default News
       excerpt: 'Our research team publishes groundbreaking findings on the intersection of quantum computing and machine learning algorithms.',
       date: '2024-12-28',
       category: 'Research',
-      image: '/images/news/quantum-ml-research.jpg'
+      image: '/images/news/quantum-ml-research.jpg',
     },
     {
       id: 5,
@@ -1147,7 +1146,7 @@ export default News
       excerpt: 'Opening new offices in Europe and Asia to better serve our growing international client base and accelerate global innovation.',
       date: '2024-12-20',
       category: 'Company News',
-      image: '/images/news/global-expansion.jpg'
+      image: '/images/news/global-expansion.jpg',
     },
     {
       id: 6,
@@ -1155,7 +1154,7 @@ export default News
       excerpt: 'Our advanced cybersecurity platform receives SOC2 Type II certification, demonstrating the highest standards of security and compliance.',
       date: '2024-12-15',
       category: 'Security',
-      image: '/images/news/cybersecurity-certification.jpg'
+      image: '/images/news/cybersecurity-certification.jpg',
     }
   ]
   const categories = ['All', 'Product Launch', 'Awards', 'Partnerships', 'Research', 'Company News', 'Security']
@@ -1195,7 +1194,7 @@ export default News
                       {new Date(item.date).toLocaleDateString('en-US', { 
                         year: 'numeric', 
                         month: 'long', 
-                        day: 'numeric' 
+                        day: 'numeric' ,
                       })}
                     </span>
                   </div>
@@ -1241,7 +1240,7 @@ export default News
                       {new Date(item.date).toLocaleDateString('en-US', { 
                         year: 'numeric', 
                         month: 'short', 
-                        day: 'numeric' 
+                        day: 'numeric' ,
                       })}
                     </span>
                   </div>

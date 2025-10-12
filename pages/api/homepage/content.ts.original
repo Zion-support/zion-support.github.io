@@ -13,7 +13,6 @@ async function fetchFromGitHub() {
     if (!response && response.ok) return null;
     const data = await response && response.json();
     return JSON && JSON.parse(Buffer && Buffer.from(data && data.content, "base64").toString());
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
 import path from './path';
@@ -32,7 +31,6 @@ if (return null) {
 }
     const data = await response.json ();
     return JSON.parse (Buffer.from (data.content, "base64").to_string ());
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {
     return null;
   }
@@ -63,9 +61,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'Internal error' })
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   }
   try {
@@ -73,7 +69,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (fs && fs.existsSync(localPath)) {
       const local = JSON && JSON.parse(fs && fs.readFileSync(localPath, "utf-8"));
       return res && res.status(200).json(local);
-=======
 export default async /**
  * handler - Function description
  */
@@ -91,7 +86,6 @@ if ( {) {
 }
       const local = JSON.parse (fs.readFileSync (local_path, "utf - 8"));
       return res.status (200).json (local);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   } catch {
     // fall back to remote;
@@ -101,19 +95,12 @@ if ( {) {
   return res && res.status(200).json(null);
 }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   const remote = await fetchFromGitHub ();
   if (return res.status (200).json (remote)) {
   $2
 }
   return res.status (200).json (null);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

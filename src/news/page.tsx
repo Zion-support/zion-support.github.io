@@ -14,7 +14,7 @@ const NewsPage: React.FC = () => {
       category: 'Product Launch',
       image: '📊',
       featured: true,
-      readTime: '5 min read'
+      readTime: '5 min read',
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const NewsPage: React.FC = () => {
       category: 'Success Story',
       image: '💰',
       featured: true,
-      readTime: '8 min read'
+      readTime: '8 min read',
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ const NewsPage: React.FC = () => {
       category: 'Technology',
       image: '⚡',
       featured: false,
-      readTime: '6 min read'
+      readTime: '6 min read',
     },
     {
       id: 4,
@@ -44,7 +44,7 @@ const NewsPage: React.FC = () => {
       category: 'Innovation',
       image: '🤖',
       featured: false,
-      readTime: '7 min read'
+      readTime: '7 min read',
     },
     {
       id: 5,
@@ -54,7 +54,7 @@ const NewsPage: React.FC = () => {
       category: 'Security',
       image: '🔒',
       featured: false,
-      readTime: '4 min read'
+      readTime: '4 min read',
     },
     {
       id: 6,
@@ -64,7 +64,7 @@ const NewsPage: React.FC = () => {
       category: 'Product Launch',
       image: '🛠️',
       featured: false,
-      readTime: '5 min read'
+      readTime: '5 min read',
     }
   ]
   const categories = ['All', 'Product Launch', 'Success Story', 'Technology', 'Innovation', 'Security']
@@ -123,7 +123,7 @@ const NewsPage: React.FC = () => {
                         {new Date(article.date).toLocaleDateString('en-US', { 
                           year: 'numeric', 
                           month: 'long', 
-                          day: 'numeric' 
+                          day: 'numeric' ,
                         })}
                   <h3 className="text-2xl font-bold text-white mb-4 hover:text-cyan-400 transition-colors">
                     {article.title}
@@ -153,7 +153,7 @@ const NewsPage: React.FC = () => {
                         {new Date(article.date).toLocaleDateString('en-US', { 
                           month: 'short', 
                           day: 'numeric',
-                          year: 'numeric'
+                          year: 'numeric',
                         })}
                   <h3 className="text-lg font-bold text-white mb-3 hover:text-cyan-400 transition-colors">
                     {article.title}

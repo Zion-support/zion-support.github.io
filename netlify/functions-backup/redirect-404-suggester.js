@@ -20,7 +20,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   async function commitJson(path)
         data) {/* TODO: Fix JSX expression */}
   n: 'no_token' }
-    const headers = {/* TODO: Fix JSX expression */}
+    const headers = {/* TODO: Fix JSX expression */};
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-redirect-404-suggester'}
@@ -116,7 +116,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       suggestions,
       sample: results.slice(0),
         10
-  }
+  };
     }
     const commit = await commitJson('data/reports/redirect-suggestions.json')
       report)
@@ -150,7 +150,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const suggestions = broken.map(b => ({/* TODO: Fix JSX expression */}
   e: 'Auto-suggested fallback to home'})
     }))
-    const report = {/* TODO: Fix JSX expression */}
+    const report = {/* TODO: Fix JSX expression */};
       }
     }
     const commit = await commitJson('data/reports/redirect-suggestions.json')
@@ -218,7 +218,7 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
       } } } try {/* TODO: Fix JSX expression */}
       } ' const suggestions = broken.map(b => ({/* TODO: Fix JSX expression */}
   o: '/'} not)
-  e: 'Auto-suggested fallback to home' })); const report = {/* TODO: Fix JSX expression */}
+  e: 'Auto-suggested fallback to home' })); const report = {/* TODO: Fix JSX expression */};
       }' const commit = await commitJson('data/reports/redirect-suggestions.json') report); return {/* TODO: Fix JSX expression */}
       }) } } catch (e) {/* TODO: Fix JSX expression */}
       }) } } }'`

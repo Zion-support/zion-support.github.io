@@ -1,56 +1,37 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 const PagePage: React.FC = () => {,
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-const PagePage: React.FC = () => {
->>>>>>> origin/main
   const features = [
-<<<<<<< HEAD
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international businesses',
     }
   ];
 
-=======
-<<<<<<< HEAD
     {}}
   ]
-=======
-    {}
-    }
-<<<<<<< HEAD
   ];];];
->>>>>>> origin/main
 const benefits = [
-=======
   ]
->>>>>>> origin/main
   const benefits = [
->>>>>>> origin/main
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -61,7 +42,6 @@ const benefits = [
     'Easy integration with existing systems',
 
     'Cost-effective pricing plans',
-<<<<<<< HEAD
     'Proven track record of success'
   ];
 
@@ -97,23 +77,13 @@ const benefits = [
                 Learn More
               </button>
             </div>
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     'Proven track record of success'
   ]
 return(</div>)
-=======
-    'Proven track record of success';
-  ];
-return (
->>>>>>> origin/main
           </div>
->>>>>>> origin/main
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -132,18 +102,13 @@ return (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
-=======
-          </div>
->>>>>>> origin/main
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
               </div>
-=======
     'Proven track record of success'
   ]
 return ()
->>>>>>> origin/main
             ))}
           </div>
         </div>
@@ -153,7 +118,6 @@ return ()
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -206,7 +170,3 @@ return ()
 };
 
 export default PagePage;
-=======
-}
-export default PagePage
->>>>>>> origin/main

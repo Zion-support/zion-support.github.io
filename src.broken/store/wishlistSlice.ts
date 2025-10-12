@@ -8,7 +8,7 @@ export interface WishlistState {
   items: WishlistItem[]
 }
 const initialState: WishlistState = {
-  items: []}
+  items: []};
   items: [],
 }
 export const getApiUrl = () => {

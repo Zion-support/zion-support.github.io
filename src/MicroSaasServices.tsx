@@ -1389,8 +1389,8 @@ export default function MicroSaasServices() {
                 Contact Sales
               </Button>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Search and Filter Section */}
         <section className="py-8 bg-zion-blue-dark/50 backdrop-blur-sm">
@@ -1528,8 +1528,8 @@ export default function MicroSaasServices() {
                 </Button>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Quick Stats */}
         <section className="py-12 bg-zion-blue-dark">
@@ -1552,8 +1552,8 @@ export default function MicroSaasServices() {
                 <div className="text-zion-slate-light">Support Available</div>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Featured Services */}
         <section className="py-20 bg-background">
@@ -1617,8 +1617,8 @@ export default function MicroSaasServices() {
                 </Card>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Search and Filters */}
         <section className="py-12 bg-zion-blue-dark">
@@ -1661,8 +1661,8 @@ export default function MicroSaasServices() {
                 <div className="text-zion-slate-light">Happy Customers</div>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Filters Section */}
         <section className="py-8 bg-zion-blue">
@@ -1715,8 +1715,8 @@ export default function MicroSaasServices() {
                 </SelectContent>
               </Select>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark relative overflow-hidden">
       <FuturisticAnimatedBackground />
@@ -1920,7 +1920,7 @@ export default function MicroSaasServices() {
                     <div className="flex flex-wrap gap-2 mb-6">
                       {service.tags.slice(0, 3).map((tag, index) => (
                         <Badge 
-                          key={index} 
+                          key={index} ;
                           variant="outline" 
                           className="text-xs border-zion-slate-light/30 text-zion-slate-light hover:border-zion-cyan/50 hover:text-zion-cyan transition-colors"
                         >
@@ -2054,8 +2054,8 @@ export default MicroSaasServices
                 Schedule Demo
               </Button>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </main>
 
       <Footer />
@@ -2340,12 +2340,12 @@ const categoryIcons = {
   'Automation': <Zap className="h-6 w-6" />,
   'Integration': <Globe className="h-6 w-6" />,
   'Consulting': <Users className="h-6 w-6" />
-}
+};
 const statusColors = {
   'Live': 'bg-green-500',
   'Beta': 'bg-yellow-500',
   'Coming Soon': 'bg-blue-500'
-}
+};
 export default function MicroSaasServices() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
   const [searchQuery, setSearchQuery] = useState('')
@@ -2413,7 +2413,7 @@ const categoryIcons = {
   'HealthTech': Heart,
   'E-commerce': ShoppingCart,
   'EdTech': GraduationCap
-}
+};
 const benefits = [
   {
     icon: <Zap className="h-6 w-6" />,
@@ -2727,7 +2727,7 @@ export default function MicroSaasServices() {
                   <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                     <div className="relative">
                       <img 
-                        src={service.images[0]} 
+                        src={service.images[0]} ;
                         alt={service.title}
                         className="w-full h-48 object-cover rounded-t-lg"
                       />
@@ -2773,12 +2773,12 @@ export default function MicroSaasServices() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service) => (
                   <Card 
-                    key={service.id} 
+                    key={service.id} ;
                     className="group bg-zion-blue-dark border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20"
                   >
                     <div className="relative overflow-hidden rounded-t-lg">
                       <img 
-                        src={service.image} 
+                        src={service.image} ;
                         alt={service.title}
                         className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                       />
@@ -3108,8 +3108,8 @@ function ServiceCard({ service }: { service: MicroSaasService }) {
                 Contact Sales Team
               </Button>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </main>
       
       <Footer />

@@ -23,15 +23,15 @@ export const,
   emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =,
   [
       i,
-  d: '2029-emerging-tech-breakthrough'
+  d: '2029-emerging-tech-breakthrough',
       nam,
-  e: '2029 Emerging Tech Breakthrough Platform'
+  e: '2029 Emerging Tech Breakthrough Platform',
       taglin,
-  e: 'Emerging tech breakthroughs for 2029'
+  e: 'Emerging tech breakthroughs for 2029',
       pric,
-  e: '$899/month'
+  e: '$899/month',
       descriptio,
-  n: 'Advanced platform showcasing emerging technology breakthroughs and innovations for 2029.'
+  n: 'Advanced platform showcasing emerging technology breakthroughs and innovations for 2029.',
       feature,
   s: [
         'Emerging tech breakthroughs'
@@ -40,8 +40,8 @@ export const,
         'Advanced features'
         'Expert insights'
       ]
-      link: '/services/2029-emerging-tech-breakthrough'
-      category: 'Emerging Tech Breakthroughs 2029'
+      link: '/services/2029-emerging-tech-breakthrough',
+      category: 'Emerging Tech Breakthroughs 2029',
       realImplementation: true,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -159,18 +159,18 @@ export interface EmergingTechBreakthrough2029 {
       address: "364 E Main St STE 1008 Middletown DE 19709"
     contactInfo: unknown}
       lin,
-  k: '/services/2029-emerging-tech-breakthrough'
+  k: '/services/2029-emerging-tech-breakthrough',
       categor,
-  y: 'Emerging Tech Breakthroughs 2029'
+  y: 'Emerging Tech Breakthroughs 2029',
       realImplementatio,
   n: true,
       contactInf,
   o: mobil,
-  e: '+1 302 464 0950'
+  e: '+1 302 464 0950',
         emai,
-  l: 'kleber@ziontechgroup.com'
+  l: 'kleber@ziontechgroup.com',
         addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
       }
     }
   real_implementatio,
@@ -246,7 +246,7 @@ export interface EmergingTechBreakthrough2029 {/* TODO: Fix JSX expression */}
   }
 export const emergingTechBreakthroughServices2029: EmergingTechBreakthrough2029[] =
   [
-      id: '2029-emerging-tech-breakthrough'
+      id: '2029-emerging-tech-breakthrough',
       name: '2029 Emerging Tech Breakthrough Platform',
       tagline: 'Emerging tech breakthroughs for 2029',
       price: '$899/month',
@@ -272,8 +272,8 @@ export const,
         'Future capabilities',
         'Advanced features',
         'Expert insights'],
-      link: '/services/2029-emerging-tech-breakthrough'
-      category: 'Emerging Tech Breakthroughs 2029'
+      link: '/services/2029-emerging-tech-breakthrough',
+      category: 'Emerging Tech Breakthroughs 2029',
       realImplementation: true
       contactInfo: unknown,
         mobile: '+1 302 464 0950',

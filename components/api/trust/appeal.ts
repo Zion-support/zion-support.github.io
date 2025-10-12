@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
     userId
     message
     contactEmail
-    createdAt: new Date().toISOString()}
+    createdAt: new Date().toISOString()};
   try {
     await supabase && supabase.from('trust_appeals').insert(appeal)
   } catch {}
@@ -33,7 +33,7 @@ if ( {) {
     contact_email,
     created_at: new Date ().toISOString (),
   }
-
+;
   try {
     await supabase.from ('trust_appeals').insert (appeal)
   } catch {}
@@ -53,7 +53,7 @@ if ( {) {
     message
     contact_email
     created_at: new Date ().toISOString ()}
-
+;
   try {
     await supabase.from ('trust_appeals').insert (appeal)
   } catch {}
@@ -73,7 +73,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     message,
     contactEmail,
     createdAt: new Date().toISOString(),
-  }
+  };
   try {
     await supabase.from('trust_appeals').insert(appeal)
   } catch {}

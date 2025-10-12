@@ -1,29 +1,17 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 const PagePage: React.FC = () => {,
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-const PagePage: React.FC = () => {
->>>>>>> origin/main
     const features = [
     {
-<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
-=======
->>>>>>> origin/main
       icon: Zap,
       title: 'High Performance',
-<<<<<<< HEAD
       description: 'Lightning-fast processing and real-time analytics for optimal results',},
     {]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
@@ -33,24 +21,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>}{/* Hero Section */}
             <h2>Why Choose Our Page?</h2>
-=======
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-  },
-    {
-    ]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        </Helmet><title>Page | Zion Tech Group</title>
-        <meta name="description" content="AI-powered solution" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-  }
-
-      {/* Hero Section */}
-            <h2>
-              Why Choose Our Page?
->>>>>>> origin/main
             </h2>
             <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
             </p>
@@ -63,29 +33,19 @@ return (
           </div>
         </div>
       </section>
-<<<<<<< HEAD
             <h2>Key Benefits;</h2>
             </h2>
             <p>Experience the power of our page solutions for your business.</p>
             </p>
               </div>
-=======
-            <h2></h2>
-              Key Benefits
-            </h2>
-            <p></p>
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-<<<<<<< HEAD
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international businesses',
     }
   ];
 
@@ -100,9 +60,6 @@ return (
     'Proven track record of success'
   ];
 
-=======
-  ]
->>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -110,7 +67,6 @@ return (
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -142,13 +98,10 @@ return (
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-=======
->>>>>>> origin/main
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Page?
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our page solutions deliver unmatched performance, security, and scalability.
-<<<<<<< HEAD
             </p>
           </div>
 
@@ -184,21 +137,11 @@ return (
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
-=======
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
-                <p className="text-gray-300">{feature.description}
-            ))}
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
->>>>>>> origin/main
->>>>>>> origin/main
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -227,12 +170,3 @@ return (
 };
 
 export default PagePage;
-=======
-      {/* CTA Section */} </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-export default PagePage</$1></p></p></h2></h3>
->>>>>>> origin/main

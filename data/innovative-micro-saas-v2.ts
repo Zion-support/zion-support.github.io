@@ -6,7 +6,7 @@ export type InnovativeMicroSaasV2 = {
 	price: string
 	rating: number
 	reviews: number
-}
+};
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
 	{
 		id: 'ai-business-intelligence-pro',
@@ -103,7 +103,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI-powered inventory optimization platform with predictive analytics, real-time monitoring, and comprehensive integration capabilities. Includes custom AI model training.',
@@ -154,7 +154,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Production-ready smart contract automation platform with no-code interface, business templates, and multi-blockchain support. Includes custom contract development services.',
@@ -205,7 +205,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI-powered customer success platform with predictive analytics, automated engagement, and comprehensive CRM integration. Includes custom AI model training.',
@@ -256,7 +256,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Production-ready intelligent workflow automation platform with AI-powered optimization, intelligent routing, and comprehensive business tool integration. Includes custom automation development.',
@@ -307,7 +307,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Production-ready AI-powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.',

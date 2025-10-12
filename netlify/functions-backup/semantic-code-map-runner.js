@@ -1,10 +1,10 @@
 const { execSync } = require('child_process')
-exports.config = { schedule: '*/10 * * * *' }
+exports.config = { schedule: '*/10 * * * *' };
 exports.handler = async function () {try {
     execSync('node automation/semantic-code-map.cjs || true', {)
       stdio: inherit),
         shell: true}
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/10 * * * *' }
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   l: true}
@@ -37,7 +37,7 @@ const { execSync } = require('child_process'); ' exports.config = { schedule: '*
         task: 'semantic-code-map-runner' }) } } catch (e) {return { statusCode: 200,
         body: JSON.stringify({ok: false),
         error: String(e,)}) } } }'
-const { execSync } = require('child_process'); ' exports.config = {/* TODO: Fix JSX expression */}
+const { execSync } = require('child_process'); ' exports.config = {/* TODO: Fix JSX expression */};
   e: '*/10 * * * *' } exports.handler = async function() {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true,"

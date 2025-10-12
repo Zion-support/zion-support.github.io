@@ -9,7 +9,7 @@ type Note = {
   text: string
   authorId: string
   createdAt: number
-}
+};
 const notesStore: Note[] = []
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true'
@@ -27,7 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const authorId = String(req.headers['x-admin-user'] |'admin')
     const { targetType, targetId, text } = req.body |{}
     if (!targetType |!targetId |!text?.trim()) return res.status(400).json({ error: 'Missing fields' })
-    const note: Note = { id: randomUUID(), targetType, targetId, text: String(text), authorId, createdAt: Date.now() }
+    const note: Note = { id: randomUUID(), targetType, targetId, text: String(text), authorId, createdAt: Date.now() };
     notesStore.push(note)
     return res.status(200).json({ ok: true, note })
   }
@@ -64,7 +64,7 @@ const notesStore: Note[] = []
         content,
         author,
         createdAt: new Date().toISOString()
-      }
+      };
       notesStore.push(note)
       res.json({ note })
     } else {

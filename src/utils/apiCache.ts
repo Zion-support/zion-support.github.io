@@ -41,7 +41,7 @@ $4})
       maxRetries: config.maxRetries || 3,
       retryDelay: config.retryDelay || 1000,
       deduplicate: config.deduplicate ?? true
-    }
+    };
     // Auto-cleanup every 5 minutes
     setInterval(() => {
 interface PendingRequest
@@ -85,7 +85,7 @@ export class ApiCache {
   storag,
   e: 'memory')
     })
-    this.config = {/* TODO: Fix JSX expression */}
+    this.config = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   tt,
@@ -113,7 +113,7 @@ export class ApiCache {
     options: RequestInit = {},
     cacheConfig?: Partial<ApiCacheConfig>
   ): Promise<T> {
-    const mergedConfig = { ...this.config, ...cacheConfig }
+    const mergedConfig = { ...this.config, ...cacheConfig };
     // Check cache first
     if (this.cache.has(cacheKey)) {
     return this.cache.get(cacheKey) as T
@@ -159,7 +159,7 @@ export class ApiCache {
           <ApiCacheConfig>
   ): Promise<T> {
 
-    const mergedConfig = { ...this.config, ...cacheConfig }
+    const mergedConfig = { ...this.config, ...cacheConfig };
     // Check cache first
     if (this.cache.has(cacheKey)) {/* TODO: Fix JSX expression */}
   O: Add content,}

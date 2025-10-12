@@ -226,7 +226,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
       }
       }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
       id: string
@@ -273,7 +272,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         ...list[idx]
         ...updates
         updated_at: new Date().toISOString()
-      }
+      };
       list[idx] = updated as any
       return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })
     }
@@ -292,7 +291,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const list = MOCK_DATA[type] || []
       const idx = list.findIndex((r: any) => r.id === id)
       if (idx === -1) return res.status(404).json({ error: 'Not found' })
-      const updated = { ...list[idx], ...updates, updated_at: new Date().toISOString() }
+      const updated = { ...list[idx], ...updates, updated_at: new Date().toISOString() };
       list[idx] = updated as any
       return res.status(200).json({ item: updated })
     }
@@ -384,7 +383,7 @@ if ( {) {
         ...list[idx],
         ...updates,
         updated_at: new Date ().toISOString (),
-      }
+      };
       list[idx] = updated as any
       return res.status (200).json ({ item: updated });    }      return res.status (200).json ({ item: updated })
     }
@@ -427,7 +426,6 @@ return res.status (405).json ({ error: 'Method not allowed' })
   }
   if (req.method === 'PATCH') {
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return res.status(200).json({ ok: true })
     } else {
       const list = MOCK_DATA[type] || []

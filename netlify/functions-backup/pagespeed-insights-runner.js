@@ -5,18 +5,18 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'}
+        'Access-Control-Allow-Origin': '*'};
       },
       body: JSON.stringify({message: PageSpeed insights runner executed successfully)
         timestamp: new Date().toISOString()
-        function: 'pagespeed-insights-runner'
+        function: 'pagespeed-insights-runner',
         source: event.source || 'unknown',
         insights: {,
           status: 'active',
           pagesAnalyzed: 0
           averageScore: 0,
           lastAnalysis: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+    const result = {/* TODO: Fix JSX expression */};
         'Access-Control-Allow-Origin': '*'}
       },
       bod,

@@ -353,10 +353,10 @@ export const advancedMicroSaasExpansion2025V2 = [
     ],
   },
   {
-    name: 'AI Threat Detection'
-    description: 'Advanced AI threat detection system'
-    category: 'Cybersecurity'
-    pricing: '$549/month'
+    name: 'AI Threat Detection',
+    description: 'Advanced AI threat detection system',
+    category: 'Cybersecurity',
+    pricing: '$549/month',
     features: [
       'Real-time monitoring'
       'Threat intelligence'

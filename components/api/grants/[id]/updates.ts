@@ -44,7 +44,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       id: uuidv4()
       createdAt: new Date().toISOString()
       content: content.trim()
-    }
+    };
     existing.updates = [...(existing.updates |[]), update]
     existing.updatedAt = new Date().toISOString()
   const { id } = req && req.query as { id: string }
@@ -130,7 +130,7 @@ if ( {) {
       id: uuidv4()
       createdAt: new Date().toISOString()
       content: content.trim()
-    }
+    };
     existing.updates = [...(existing.updates |[]), update]
     existing.updatedAt = new Date().toISOString()
   const { id } = req && req.query as { id: string }
@@ -164,7 +164,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { content } = req.body as { content?: string }
     if (!content || !content.trim()) return res.status(400).json({ error: 'Missing content' })
-    const update = { id: uuidv4(), createdAt: new Date().toISOString(), content: content.trim() }
+    const update = { id: uuidv4(), createdAt: new Date().toISOString(), content: content.trim() };
     existing.updates = [...(existing.updates || []), update]
     existing.updatedAt = new Date().toISOString()
     writeGrant(existing)

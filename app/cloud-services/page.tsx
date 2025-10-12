@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -6,69 +5,37 @@ import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock}}from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {,
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock } from 'lucide-react'
-const CloudServicesPage: React.FC = () => {
->>>>>>> origin/main
   const services = [
     {
       icon: Cloud,
       title: 'Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime and maximum security.',
-<<<<<<< HEAD
-<<<<<<< HEAD
       features: ['AWS, Azure, GCP expertise', 'Zero-downtime migration', 'Cost optimization', 'Security compliance']},
     {icon: Server,
-=======
-      features: ['AWS, Azure, GCP expertise', 'Zero-downtime migration', 'Cost optimization', 'Security compliance'];
-=======
-      features: ['AWS, Azure, GCP expertise', 'Zero-downtime migration', 'Cost optimization', 'Security compliance'],
->>>>>>> origin/main
     },
     {
       icon: Server,
->>>>>>> origin/main
       title: 'Cloud Infrastructure',
       description: 'Design and deploy scalable, secure, and cost-effective cloud infrastructure solutions.',
-<<<<<<< HEAD
       features: ['Auto-scaling', 'Load balancing', 'High availability', 'Disaster recovery']},
     {icon: Database,
       title: 'Database Solutions',
       description: 'Managed database services with automated backups, monitoring, and optimization.',
-<<<<<<< HEAD
       features: ['MySQL, PostgreSQL, MongoDB', 'Automated backups', 'Performance tuning', '24/7 monitoring']},
     {icon: Shield,
       title: 'Cloud Security',}];
   const benefits = [
-=======
-      features: ['MySQL, PostgreSQL, MongoDB', 'Automated backups', 'Performance tuning', '24/7 monitoring']
-=======
-      features: ['Auto-scaling', 'Load balancing', 'High availability', 'Disaster recovery'],
-    },
-    {
-      icon: Database,
-      title: 'Database Solutions',
-      description: 'Managed database services with automated backups, monitoring, and optimization.',
-      features: ['MySQL, PostgreSQL, MongoDB', 'Automated backups', 'Performance tuning', '24/7 monitoring'],
->>>>>>> origin/main
     },
     {
       icon: Shield,
       title: 'Cloud Security',
     }
-<<<<<<< HEAD
   ];];];
   const benefits = [;
->>>>>>> origin/main
   ];
-=======
   ]
   const benefits = [
   ]
->>>>>>> origin/main
   const pricing = [
     {name: 'Starter',
       price: '$2,999',
@@ -79,24 +46,14 @@ const CloudServicesPage: React.FC = () => {
         'Email support',
         'Monthly monitoring',
         'Standard security',
-<<<<<<< HEAD
-<<<<<<< HEAD
         'Up to 5 users'
       ]},
     {name: 'Professional',
-=======
-        'Up to 5 users';
-      ];
-=======
-        'Up to 5 users'
-      ],
->>>>>>> origin/main
     },
     {
-<<<<<<< HEAD
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international businesses',
     }
   ];
 
@@ -111,9 +68,6 @@ const CloudServicesPage: React.FC = () => {
     'Proven track record of success'
   ];
 
-=======
-      name: 'Professional',
->>>>>>> origin/main
       price: '$7,999',
       period: 'per month',
       description: 'Ideal for growing businesses with complex needs',
@@ -137,31 +91,19 @@ const CloudServicesPage: React.FC = () => {
         'Enterprise security',
         'Unlimited users',
         'Custom development'
-<<<<<<< HEAD
-<<<<<<< HEAD
       ]}]
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <Helmet />
-=======
-      ]
-=======
-      ],
->>>>>>> origin/main
     }
 
   ]
->>>>>>> origin/main
   return (
 
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
       <Helmet>
->>>>>>> origin/main
         <title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
-=======
       </div><Helmet>
         </Helmet><title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
->>>>>>> origin/main
         <meta name="description" content="Expert cloud services including migration, infrastructure, security, and database solutions. Transform your business with our cloud expertise." />
         <meta name="keywords" content="cloud services, cloud migration, AWS, Azure, GCP, cloud infrastructure, database solutions, cloud security" />
         <meta property="og: title" content="Cloud Services - Zion Tech Group" />,
@@ -172,21 +114,11 @@ const CloudServicesPage: React.FC = () => {
         <meta name="twitter: description" content="Expert cloud solutions and migration services" />,
       </Helmet>
 
-<<<<<<< HEAD
       {/* Hero Section */} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Cloud Services;</span>
-=======
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        </section>< className="$2 />
-          </div><div className="text-center">
-            </div><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              </h1><span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Cloud Services
->>>>>>> origin/main
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -194,17 +126,10 @@ const CloudServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our comprehensive cloud services.</p>
               From migration to management, we provide end-to-end cloud solutions.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">,</button>
                 Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              </div><button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                </button><ArrowRight className="ml-2 h-5 w-5" />
->>>>>>> origin/main
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-gray-900 transition-all duration-300">,</button>
                 Learn More;
@@ -212,23 +137,13 @@ const CloudServicesPage: React.FC = () => {
             </div>
           </div>
         </div>
-
       </section>
 
-<<<<<<< HEAD
-      {/* Services Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
+      {/* Services Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,<section>
+        <div>
+          <div>
+            <h2>,</h2>
               Our Cloud Services;
-=======
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>< className="$2 />
-          </div><div className="text-center mb-16">
-            </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Cloud Services
->>>>>>> origin/main
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive cloud solutions designed to accelerate your digital transformation.</p>
             </p>
@@ -236,46 +151,31 @@ const CloudServicesPage: React.FC = () => {
 
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>
             {services.map((service, index) => (
-<<<<<<< HEAD
               <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover: bg-white/20 transition-all duration-300">,</div>
                 <div className="flex items-center mb-4">
                   <div className="bg-purple-500 p-3 rounded-lg">
                     <service.icon className="h-6 w-6 text-white" />
-=======
-              </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                </div><div className="flex items-center mb-4">
-                  </div><div className="bg-purple-500 p-3 rounded-lg">
-                    </div><service.icon className="h-6 w-6 text-white" />
->>>>>>> origin/main
                   </div>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description</p>}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
                     <li key={featureIndex}className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature} </li>
-=======
-                    </ul><li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      </li><CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
->>>>>>> origin/main
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
-      {/* Benefits Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">,</section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
+      {/* Benefits Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">,<section>
+        <div>
+          <div>
+            <h2>,</h2>
               Why Choose Our Cloud Services?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of working with cloud experts who understand your business needs.</p>
@@ -295,10 +195,10 @@ const CloudServicesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Pricing Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
+      {/* Pricing Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,<section>
+        <div>
+          <div>
+            <h2>,</h2>
               Flexible Pricing Plans;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the plan that best fits your business needs and budget.</p>
@@ -365,12 +265,6 @@ export default CloudServicesPage;
   </button>
   </h1>
   </div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
->>>>>>> main
-=======
 
 'use client'
 import React from 'react'
@@ -381,22 +275,22 @@ const features = [
     {
       icon: Shield,
       title: 'Secure Cloud Services',
-      description: 'Comprehensive cloud services with enterprise-grade security and reliability'
+      description: 'Comprehensive cloud services with enterprise-grade security and reliability',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast cloud services with optimized performance and scalability'
+      description: 'Lightning-fast cloud services with optimized performance and scalability',
     },
     {
       icon: Brain,
       title: 'AI-Powered Management',
-      description: 'Intelligent cloud management powered by advanced AI technology'
+      description: 'Intelligent cloud management powered by advanced AI technology',
     },
     {
       icon: Globe,
       title: 'Global Deployment',
-      description: 'Worldwide cloud services deployment and support'
+      description: 'Worldwide cloud services deployment and support',
     }
   ]
   const benefits = [
@@ -412,7 +306,6 @@ const features = [
   return (
     <React.Fragment>
       <Helmet>
-<<<<<<< HEAD
         <title>Cloud Services | Zion Tech Group</title>
         <meta name="description" content="Professional cloud services by Zion Tech Group. Advanced cloud solutions for your business." />
         <meta name="keywords" content="cloud services, cloud infrastructure, cloud solutions, Zion Tech Group" />
@@ -421,9 +314,8 @@ const features = [
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -444,14 +336,10 @@ const features = [
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-9d11
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -466,8 +354,8 @@ const features = [
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Benefits Section */}
         <section className="py-16 px-4">
@@ -481,8 +369,8 @@ const features = [
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -505,22 +393,16 @@ const features = [
                 </button>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </div>
     </>
-=======
->>>>>>> origin/main
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
               Why Choose Our Page?
-=======
-              Why Choose Our Cloud Services?
->>>>>>> origin/main
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our cloud solutions deliver unmatched performance, security, and scalability.
@@ -554,7 +436,6 @@ const features = [
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
 <title>Cloud Services | Zion Tech Group
         <meta name="description" content="Professional Cloud Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="cloud services, cloud computing, IT services, Zion Tech Group, cloud solutions" />
@@ -576,13 +457,11 @@ const features = [
           <h2 className="text-3xl font-bold text-white text-center mb-8">
             Why Choose Our Cloud Services?
           <div className="grid md:grid-cols-2 gap-6">
->>>>>>> origin/main
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -615,55 +494,3 @@ const features = [
 };
 
 export default PagePage;
-=======
-        {/* Services Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Our Cloud Services
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive cloud solutions designed to accelerate your digital transformation.
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg mb-6">
-                    <service.icon className="w-8 h-8 text-white" />
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
-                    {service.title}
-                  <p className="text-gray-300 mb-6">{service.description}
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-2 text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        {feature}
-                    ))}
-              ))}
-        {/* Benefits Section */}
-        <section className="py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6">Why Choose Our Cloud Services?
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cloud computing with our expert guidance and support.
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}
-              ))}
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Ready to Move to the Cloud?
-              <p className="text-xl text-gray-300 mb-8">
-                Let our experts help you plan and execute your cloud migration strategy.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">Start Your Cloud Journey
-                <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Schedule Consultation
-  )
-}
-export default CloudServicesPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></p></p></p></p></p></p></p></h1></h2></h2></h2></h2></h3></h3></ul></li></section></section></section>
->>>>>>> origin/main
->>>>>>> origin/main

@@ -311,7 +311,7 @@ export default function ComprehensiveServicesPage() {
     search: '',
     category: '',
     pricingModel: '',
-    priceRange: ''
+    priceRange: '',
   })
   const filteredServices = useMemo(() => {
     return COMPREHENSIVE_SERVICES.filter(service => {
@@ -806,12 +806,12 @@ const pricingModelColors = {
   "monthly": "bg-green-100 text-green-800",
   "hourly": "bg-yellow-100 text-yellow-800",
   "project-based": "bg-purple-100 text-purple-800"
-}
+};
 const supportLevelColors = {
   "basic": "bg-gray-100 text-gray-800",
   "premium": "bg-blue-100 text-blue-800",
   "enterprise": "bg-purple-100 text-purple-800"
-}
+};
 export default function ComprehensiveServicesPage() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
@@ -1206,7 +1206,7 @@ export default function ComprehensiveServicesPage() {
               <Card key={service.id} className="hover:shadow-xl transition-all duration-300 border-2 hover:border-zion-purple/20">
                 <div className="relative">
                   <img 
-                    src={service.images[0]} 
+                    src={service.images[0]} ;
                     alt={service.title}
                     className="w-full h-48 object-cover rounded-t-lg"
                   />

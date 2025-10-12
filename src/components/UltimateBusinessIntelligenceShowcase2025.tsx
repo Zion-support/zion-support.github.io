@@ -168,7 +168,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
         accurac,
   y: '99.9%',
         timelin,
-  e: '12 months'
+  e: '12 months',
       },
       readingTim,
   e: '35 min read',

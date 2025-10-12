@@ -20,7 +20,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   async function commitJson(path)
         data) {/* TODO: Fix JSX expression */}
   n: 'no_token' }
-    const headers = {/* TODO: Fix JSX expression */}
+    const headers = {/* TODO: Fix JSX expression */};
   n: `token ${githubToken}`,
       'Content-Type': 'application/json',
       'User-Agent': 'netlify-og-preview-validator'}
@@ -86,7 +86,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
           'i').exec(html)
       return m ? m[1] : null
     }
-    const fields = {/* TODO: Fix JSX expression */}
+    const fields = {/* TODO: Fix JSX expression */};
   r:card')}
     }
     let _imageStatus = null
@@ -100,7 +100,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         const _head = await fetch(imgUrl} { method: 'HEAD' })
         imageStatus = {ok: head.ok
           status: head.status,
-          contentType: head.headers.get('content-type')}
+          contentType: head.headers.get('content-type')};
         }
       } catch (e) {imageStatus = { ok: false
         error: String(e,),
@@ -108,7 +108,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   g: image']) {/* TODO: Fix JSX expression */}
         const _head = await fetch(imgUrl} {/* TODO: Fix JSX expression */})
   d: 'HEAD' })
-        imageStatus = {/* TODO: Fix JSX expression */}
+        imageStatus = {/* TODO: Fix JSX expression */};
   e: head.headers.get('content-type')}
         }
       } catch (e) {/* TODO: Fix JSX expression */}
@@ -137,7 +137,7 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   g:image.unreachable'} detai,
   l: imageStatus,)
       })
-    const report = {/* TODO: Fix JSX expression */}
+    const report = {/* TODO: Fix JSX expression */};
       issues}
     }
 //     const commit = await commitJson('data/reports/og-preview.json') report)
@@ -201,13 +201,13 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
       }); return {/* TODO: Fix JSX expression */}
   r: putRes.ok ? undefined : await putRes.text() } } ' if (!baseUrl,
         return {/* TODO: Fix JSX expression */}")`
-  r: 'No base URL' }) } try {const res = await fetch(baseUrl); const html = await res.text()} function meta(name) {' const m = new RegExp(`<meta[^>]+property=["']${name}["'][^>]*content=["']([^"']+)["'][^>]*>`, 'i').exec(html)' || new RegExp(`<meta[^>]+name=["']${name}["'][^>]*content=["']([^"']+)["'][^>]*>`, 'i').exec(html); return m ? m[1] : null; } const fields = {/* TODO: Fix JSX expression */}
+  r: 'No base URL' }) } try {const res = await fetch(baseUrl); const html = await res.text()} function meta(name) {' const m = new RegExp(`<meta[^>]+property=["']${name}["'][^>]*content=["']([^"']+)["'][^>]*>`, 'i').exec(html)' || new RegExp(`<meta[^>]+name=["']${name}["'][^>]*content=["']([^"']+)["'][^>]*>`, 'i').exec(html); return m ? m[1] : null; } const fields = {/* TODO: Fix JSX expression */};
   g:image')}' 'twitte,
   r:card': meta('twitte)
   r:card') } let imageStatus = null;' if (fields['o)
   g: image']) {/* TODO: Fix JSX expression */}
   g:image']), try {' const head = await fetch(imgUrl} {/* TODO: Fix JSX expression */})
-  d: 'HEAD' });' imageStatus = {/* TODO: Fix JSX expression */}
+  d: 'HEAD' });' imageStatus = {/* TODO: Fix JSX expression */};
   e: head.headers.get('content-type') } } catch (e) {/* TODO: Fix JSX expression */}
       } } } const issues = [];' if (!fields['o)
   g:title']) issues.push({/* TODO: Fix JSX expression */})
@@ -219,7 +219,7 @@ exports.handler = async function(event, context) {const baseUrl = (process.env.S
         issues.push({/* TODO: Fix JSX expression */}
   g:image.unreachable'} detai,
   l: imageStatus,)
-      }); const report = {/* TODO: Fix JSX expression */}
+      }); const report = {/* TODO: Fix JSX expression */};
         issues } ' const commit = await commitJson('data/reports/og-preview.json') report); return {/* TODO: Fix JSX expression */}
       }) } } catch (e) {/* TODO: Fix JSX expression */}
       }) } } }'"`

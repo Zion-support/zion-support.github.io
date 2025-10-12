@@ -2,7 +2,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest
@@ -23,11 +22,9 @@ export default async function handler(
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -35,12 +32,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
->>>>>>> origin/auto/autonomy-17186719616
     return res.status(400).json({ error: 'Missing required fields' });
   }
 
   try {
-<<<<<<< HEAD
 
     const timestamp = new Date().toISOString();
 
@@ -123,7 +118,6 @@ if ( {) {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -132,7 +126,6 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
@@ -140,7 +133,6 @@ if ( {) {
     return res.status(500).json({ error: 'Internal error' });
   }
 
-=======
     const timestamp = new Date().toISOString();
     console.log('[Operator] New request to hire:', { timestamp, talentSlug, requesterName, requesterEmail, projectInfo });
 
@@ -159,4 +151,3 @@ if ( {) {
     return res.status(500).json({ error: 'Internal error' });
   }
 }
->>>>>>> origin/auto/autonomy-17186719616

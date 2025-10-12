@@ -3,7 +3,7 @@ function run(cmd) {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true })
 }
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/5 * * * *' }
 exports.handler = async () => {/* TODO: Fix JSX expression */}
     run('git push origin main || true')}
@@ -29,7 +29,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
 }
 const { execSync } = require('child_process'); function run(cmd) {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true }); } ' exports.config = {/* TODO: Fix JSX expression */}
+  l: true }); } ' exports.config = {/* TODO: Fix JSX expression */};
   e: '*/5 * * * *' } exports.handler = async () => {try {' run('AUTO_FIX=1 node automation/external-blank-rel-auditor.cjs || true');' run('git config user.name "zion-bot"');' run('git config user.email "bot@zion.app"');' run('git add -A');' run('git commit -m "fix(a11y): add rel to external target=_blank links; update report [skip ci]" || true');' run('git push origin main || true')}' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}

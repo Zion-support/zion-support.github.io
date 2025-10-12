@@ -5,18 +5,18 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'}
+        'Access-Control-Allow-Origin': '*'};
       },
       body: JSON.stringify({message: Orphan pages detector executed successfully)
         timestamp: new Date().toISOString()
-        function: 'orphan-pages-detector'
+        function: 'orphan-pages-detector',
         source: event.source || 'unknown',
         detection: {,
           status: 'active',
           pagesScanned: 0
           orphansFound: 0,
           lastScan: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+    const result = {/* TODO: Fix JSX expression */};
         'Access-Control-Allow-Origin': '*'}
       },
       bod,

@@ -298,7 +298,7 @@ class SEOOptimizer {
 
   private getRobotsContent(): string {// TODO: Add content
   }
-
+;
 }
     if (!this.currentPageData) return 'index, follow'
     const directives = []
@@ -327,7 +327,7 @@ class SEOOptimizer {
   }
 
 }
-    const structuredData = {/* TODO: Fix JSX expression */}
+    const structuredData = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -351,7 +351,7 @@ class SEOOptimizer {
     const structuredData = {
       potentialAction: {// TODO: Add content
   }
-
+;
 }
         '@type': 'SearchAction',
         targe,`
@@ -371,7 +371,7 @@ class SEOOptimizer {
 
 }
     if (!this.currentPageData) return
-    const structuredData = {/* TODO: Fix JSX expression */}
+    const structuredData = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -682,7 +682,7 @@ private addStructuredData(data: unknown): void {
   metric_name: metric,
         metric_value: Math.round(value),
         event_category: 'seo'
-
+,
       }
   )
     }
@@ -707,7 +707,7 @@ private addStructuredData(data: unknown): void {
         lastmod: new Date().toISOString(),
         changefreq: 'daily',
         priority: '1.0'
-
+,
       }
     ]
   }
@@ -826,7 +826,7 @@ const score = Math.max(0, 100 - (issues.length / maxIssues) * 100)
 }
 // Default configuration
 const,
-  defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */}
+  defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 

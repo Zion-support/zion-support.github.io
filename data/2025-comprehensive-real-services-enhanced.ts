@@ -96,7 +96,7 @@ export const microSaasServices: Service[] = [
     website: 'https://ziontechgroup.com/ai-customer-success-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$11.8B',
     targetAudience: 'SaaS companies, subscription businesses, customer success teams, growth companies',
@@ -113,7 +113,7 @@ export const microSaasServices: Service[] = [
     icon: '🎯',
     benefits: ['40% reduction in churn', '60% increase in engagement', '85% accuracy in predictions'],
     marketPrice: '$299',
-    savings: '33%'
+    savings: '33%',
   },
   {
     id: 'quantum-supply-chain-optimizer',
@@ -167,7 +167,7 @@ export const microSaasServices: Service[] = [
     website: 'https://ziontechgroup.com/quantum-supply-chain-optimizer',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$15.4B',
     targetAudience: 'Manufacturing companies, logistics providers, retail chains, e-commerce companies, distribution networks',
@@ -184,7 +184,7 @@ export const microSaasServices: Service[] = [
     icon: '🚛',
     benefits: ['35% cost reduction', '50% efficiency improvement', '90% on-time delivery'],
     marketPrice: '$499',
-    savings: '40%'
+    savings: '40%',
   },
   {
     id: 'blockid-verify-pro',
@@ -238,7 +238,7 @@ export const microSaasServices: Service[] = [
     website: 'https://ziontechgroup.com/blockid-verify-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$13.7B',
     targetAudience: 'Financial institutions, healthcare organizations, government agencies, e-commerce companies, fintech startups',
@@ -255,7 +255,7 @@ export const microSaasServices: Service[] = [
     icon: '🔐',
     benefits: ['99.9% verification accuracy', '60% faster onboarding', 'Zero fraud incidents'],
     marketPrice: '$249',
-    savings: '40%'
+    savings: '40%',
   },
   {
     id: 'hr-analytics-ai-suite',
@@ -309,7 +309,7 @@ export const microSaasServices: Service[] = [
     website: 'https://ziontechgroup.com/hr-analytics-ai-suite',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$9.8B',
     targetAudience: 'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies',
@@ -326,7 +326,7 @@ export const microSaasServices: Service[] = [
     icon: '👥',
     benefits: ['45% reduction in turnover', '30% improvement in performance', '80% faster hiring'],
     marketPrice: '$399',
-    savings: '38%'
+    savings: '38%',
   },
   {
     id: 'quantum-risk-financial-manager',
@@ -380,7 +380,7 @@ export const microSaasServices: Service[] = [
     website: 'https://ziontechgroup.com/quantum-risk-financial-manager',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$28.9B',
     targetAudience: 'Investment firms, banks, hedge funds, asset management companies, financial institutions',
@@ -397,7 +397,7 @@ export const microSaasServices: Service[] = [
     icon: '💰',
     benefits: ['50% better risk assessment', '30% higher returns', '99.9% compliance accuracy'],
     marketPrice: '$699',
-    savings: '43%'
+    savings: '43%',
   },
   {
     id: 'ai-content-studio-pro',
@@ -451,7 +451,7 @@ export const microSaasServices: Service[] = [
     website: 'https://ziontechgroup.com/ai-content-studio-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$6.2B',
     targetAudience: 'Marketing agencies, content creators, small businesses, enterprise marketing teams',
@@ -468,7 +468,7 @@ export const microSaasServices: Service[] = [
     icon: '✍️',
     benefits: ['10x content output', '50% time savings', '40% better engagement'],
     marketPrice: '$199',
-    savings: '50%'
+    savings: '50%',
   },
   {
     id: 'ai-inventory-optimizer',
@@ -522,7 +522,7 @@ export const microSaasServices: Service[] = [
     website: 'https://ziontechgroup.com/ai-inventory-optimizer',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$4.8B',
     targetAudience: 'Retailers, e-commerce companies, manufacturers, distributors, warehouse operators',
@@ -539,7 +539,7 @@ export const microSaasServices: Service[] = [
     icon: '📦',
     benefits: ['30% reduction in carrying costs', '25% improvement in service levels', '50% fewer stockouts'],
     marketPrice: '$299',
-    savings: '40%'
+    savings: '40%',
   },
   {
     id: 'ai-email-marketing-automation',
@@ -593,7 +593,7 @@ export const microSaasServices: Service[] = [
     website: 'https://ziontechgroup.com/ai-email-marketing-automation',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$7.5B',
     targetAudience: 'E-commerce businesses, marketing agencies, SaaS companies, enterprise marketing teams',
@@ -610,7 +610,7 @@ export const microSaasServices: Service[] = [
     icon: '📧',
     benefits: ['65% higher open rates', '40% more conversions', '80% time savings'],
     marketPrice: '$149',
-    savings: '47%'
+    savings: '47%',
   },
   {
     id: 'ai-social-media-manager',
@@ -664,7 +664,7 @@ export const microSaasServices: Service[] = [
     website: 'https://ziontechgroup.com/ai-social-media-manager',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$8.3B',
     targetAudience: 'Social media managers, marketing agencies, brands, influencers, small businesses',
@@ -681,7 +681,7 @@ export const microSaasServices: Service[] = [
     icon: '📱',
     benefits: ['200% engagement increase', '20+ hours saved/week', '40% more reach'],
     marketPrice: '$249',
-    savings: '40%'
+    savings: '40%',
   },
   {
     id: 'ai-project-management-suite',
@@ -735,7 +735,7 @@ export const microSaasServices: Service[] = [
     website: 'https://ziontechgroup.com/ai-project-management-suite',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$5.6B',
     targetAudience: 'Project managers, consulting firms, agencies, enterprise teams, freelancers',
@@ -752,7 +752,7 @@ export const microSaasServices: Service[] = [
     icon: '📊',
     benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy'],
     marketPrice: '$299',
-    savings: '33%'
+    savings: '33%',
   }
 ];
 
@@ -810,7 +810,7 @@ export const aiServices: Service[] = [
     website: 'https://ziontechgroup.com/machine-learning-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$15.9B',
     targetAudience: 'Data science teams, AI engineers, enterprise organizations, tech companies',
@@ -827,7 +827,7 @@ export const aiServices: Service[] = [
     icon: '🧠',
     benefits: ['50% faster model deployment', '90% reduction in model drift', '99.9% uptime'],
     marketPrice: '$4500',
-    savings: '44%'
+    savings: '44%',
   },
   {
     id: 'natural-language-processing-api',
@@ -881,7 +881,7 @@ export const aiServices: Service[] = [
     website: 'https://ziontechgroup.com/natural-language-processing-api',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$12.4B',
     targetAudience: 'Software developers, AI engineers, content platforms, customer service teams',
@@ -898,7 +898,7 @@ export const aiServices: Service[] = [
     icon: '💬',
     benefits: ['95% accuracy', 'Real-time processing', 'Multi-language support'],
     marketPrice: '$3200',
-    savings: '44%'
+    savings: '44%',
   },
   {
     id: 'computer-vision-platform',
@@ -952,7 +952,7 @@ export const aiServices: Service[] = [
     website: 'https://ziontechgroup.com/computer-vision-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$18.7B',
     targetAudience: 'Manufacturing companies, security firms, healthcare organizations, retail companies',
@@ -969,7 +969,7 @@ export const aiServices: Service[] = [
     icon: '👁️',
     benefits: ['99% accuracy', 'Real-time processing', 'Edge deployment'],
     marketPrice: '$3800',
-    savings: '42%'
+    savings: '42%',
   },
   {
     id: 'ai-cybersecurity-suite',
@@ -1023,7 +1023,7 @@ export const aiServices: Service[] = [
     website: 'https://ziontechgroup.com/ai-cybersecurity-suite',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$22.1B',
     targetAudience: 'Security teams, IT departments, enterprises, government agencies, financial institutions',
@@ -1040,7 +1040,7 @@ export const aiServices: Service[] = [
     icon: '🛡️',
     benefits: ['99.9% threat detection', 'Real-time protection', 'Automated response'],
     marketPrice: '$4500',
-    savings: '38%'
+    savings: '38%',
   },
   {
     id: 'ai-healthcare-diagnostics',
@@ -1094,7 +1094,7 @@ export const aiServices: Service[] = [
     website: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$31.2B',
     targetAudience: 'Hospitals, clinics, medical imaging centers, healthcare providers, research institutions',
@@ -1111,7 +1111,7 @@ export const aiServices: Service[] = [
     icon: '🏥',
     benefits: ['Improved accuracy', 'Faster diagnosis', 'Better outcomes'],
     marketPrice: '$6000',
-    savings: '42%'
+    savings: '42%',
   }
 ];
 
@@ -1167,7 +1167,7 @@ export const itServices: Service[] = [
     website: 'https://ziontechgroup.com/cloud-migration-services',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$25.8B',
     targetAudience: 'Enterprises, mid-size companies, startups, government agencies',
@@ -1184,7 +1184,7 @@ export const itServices: Service[] = [
     icon: '☁️',
     benefits: ['50% cost reduction', '99.9% uptime', 'Enhanced security'],
     marketPrice: '$2800',
-    savings: '46%'
+    savings: '46%',
   },
   {
     id: 'cybersecurity-solutions',
@@ -1236,7 +1236,7 @@ export const itServices: Service[] = [
     website: 'https://ziontechgroup.com/cybersecurity-solutions',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$20.3B',
     targetAudience: 'Enterprises, government agencies, financial institutions, healthcare organizations',
@@ -1253,7 +1253,7 @@ export const itServices: Service[] = [
     icon: '🔒',
     benefits: ['Enhanced security', 'Compliance ready', 'Risk reduction'],
     marketPrice: '$3800',
-    savings: '42%'
+    savings: '42%',
   },
   {
     id: 'it-infrastructure-management',
@@ -1305,7 +1305,7 @@ export const itServices: Service[] = [
     website: 'https://ziontechgroup.com/it-infrastructure-management',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$18.7B',
     targetAudience: 'Enterprises, mid-size companies, government agencies, educational institutions',
@@ -1322,7 +1322,7 @@ export const itServices: Service[] = [
     icon: '🖥️',
     benefits: ['Reliable infrastructure', 'Reduced downtime', 'Cost optimization'],
     marketPrice: '$3200',
-    savings: '44%'
+    savings: '44%',
   },
   {
     id: 'devops-cicd-services',
@@ -1374,7 +1374,7 @@ export const itServices: Service[] = [
     website: 'https://ziontechgroup.com/devops-cicd-services',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$16.2B',
     targetAudience: 'Software development teams, tech companies, enterprises, startups',
@@ -1391,7 +1391,7 @@ export const itServices: Service[] = [
     icon: '⚙️',
     benefits: ['Faster deployments', 'Reduced errors', 'Better collaboration'],
     marketPrice: '$2800',
-    savings: '43%'
+    savings: '43%',
   },
   {
     id: 'database-services',
@@ -1443,7 +1443,7 @@ export const itServices: Service[] = [
     website: 'https://ziontechgroup.com/database-services',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$14.8B',
     targetAudience: 'Enterprises, software companies, data-driven organizations, government agencies',
@@ -1460,7 +1460,7 @@ export const itServices: Service[] = [
     icon: '🗄️',
     benefits: ['Optimized performance', 'Data security', 'Reliable backups'],
     marketPrice: '$2200',
-    savings: '45%'
+    savings: '45%',
   }
 ];
 
@@ -1518,7 +1518,7 @@ export const specializedServices: Service[] = [
     website: 'https://ziontechgroup.com/ai-business-intelligence',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$19.4B',
     targetAudience: 'Enterprises, data analysts, business intelligence teams, executives',
@@ -1535,7 +1535,7 @@ export const specializedServices: Service[] = [
     icon: '📊',
     benefits: ['Data-driven decisions', 'Competitive advantage', 'Revenue growth'],
     marketPrice: '$4200',
-    savings: '40%'
+    savings: '40%',
   },
   {
     id: 'blockchain-web3-solutions',
@@ -1587,7 +1587,7 @@ export const specializedServices: Service[] = [
     website: 'https://ziontechgroup.com/blockchain-web3-solutions',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$23.7B',
     targetAudience: 'Fintech companies, enterprises, startups, government agencies, gaming companies',
@@ -1604,7 +1604,7 @@ export const specializedServices: Service[] = [
     icon: '⛓️',
     benefits: ['Future-proof technology', 'Decentralized solutions', 'Enhanced security'],
     marketPrice: '$5000',
-    savings: '40%'
+    savings: '40%',
   },
   {
     id: 'iot-edge-computing',
@@ -1656,7 +1656,7 @@ export const specializedServices: Service[] = [
     website: 'https://ziontechgroup.com/iot-edge-computing',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$17.9B',
     targetAudience: 'Manufacturing companies, smart cities, healthcare organizations, retail companies',
@@ -1673,7 +1673,7 @@ export const specializedServices: Service[] = [
     icon: '🌐',
     benefits: ['Real-time insights', 'Reduced latency', 'Cost efficiency'],
     marketPrice: '$3800',
-    savings: '42%'
+    savings: '42%',
   },
   {
     id: 'mobile-app-development',
@@ -1725,7 +1725,7 @@ export const specializedServices: Service[] = [
     website: 'https://ziontechgroup.com/mobile-app-development',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$21.6B',
     targetAudience: 'Startups, enterprises, agencies, healthcare organizations, retail companies',
@@ -1742,7 +1742,7 @@ export const specializedServices: Service[] = [
     icon: '📱',
     benefits: ['Native performance', 'Cross-platform compatibility', 'AI-powered features'],
     marketPrice: '$3200',
-    savings: '44%'
+    savings: '44%',
   },
   {
     id: 'ecommerce-solutions',
@@ -1794,7 +1794,7 @@ export const specializedServices: Service[] = [
     website: 'https://ziontechgroup.com/ecommerce-solutions',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup.com',
     },
     marketSize: '$26.4B',
     targetAudience: 'Retailers, brands, manufacturers, service providers, entrepreneurs',
@@ -1811,7 +1811,7 @@ export const specializedServices: Service[] = [
     icon: '🛒',
     benefits: ['Increased sales', 'Better user experience', 'AI-powered recommendations'],
     marketPrice: '$3500',
-    savings: '43%'
+    savings: '43%',
   }
 ];
 
@@ -1837,5 +1837,5 @@ export const contactInfo = {
   phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };

@@ -84,7 +84,7 @@ titletitle: 'Environmental Monitoring',
         'Sustainability reporting',
         'Environmental compliance'
       impact: 'Achieve 100% environmental transparency',
-      pricing: 'Starting at $600/month'
+      pricing: 'Starting at $600/month',
   const benefits = [
       icon: TrendingUp,
       title: 'Cost Savings',
@@ -135,7 +135,7 @@ valuevalue: '50%',
       color:       ,
 valuevalue: '100%',
       label: 'Renewable Energy Options',
-      color: 'text-purple-400'
+      color: 'text-purple-400',
   const caseStudies = [
       company: 'TechCorp Manufacturing',
       industry: 'Manufacturing',
@@ -318,7 +318,7 @@ const tabs = [
       colo,
   r: 'text-green-400',
       bgColo,
-  r: 'bg-green-500/10'
+  r: 'bg-green-500/10',
     },
       i,
   d: 'benefits',
@@ -348,7 +348,7 @@ const tabs = [
       impac,
   t: 'Reduce energy consumption by up to 40%',
       pricin,
-  g: 'Starting at $2,500/month'
+  g: 'Starting at $2,500/month',
       titl,
   e: 'Cloud Carbon Footprint Reduction',
       descriptio,
@@ -362,7 +362,7 @@ const tabs = [
       impac,
   t: 'Reduce carbon footprint by up to 60%',
       pricin,
-  g: 'Starting at $1,800/month'
+  g: 'Starting at $1,800/month',
       titl,
   e: 'Sustainable IT Asset Management',
       descriptio,
@@ -376,7 +376,7 @@ const tabs = [
       impac,
   t: 'Extend equipment lifecycle by 50%',
       pricin,
-  g: 'Starting at $1,200/month'
+  g: 'Starting at $1,200/month',
       titl,
   e: 'Green Software Development',
       descriptio,
@@ -392,7 +392,7 @@ const tabs = [
       impac,
   t: 'Reduce software energy consumption by 30%',
       pricin,
-  g: 'Starting at $1,500/month'
+  g: 'Starting at $1,500/month',
       titl,
   e: 'Remote Work Infrastructure',
       descriptio,
@@ -424,7 +424,7 @@ const tabs = [
       impac,
   t: 'Achieve 100% environmental transparency',
       pricin,
-  g: 'Starting at $600/month'
+  g: 'Starting at $600/month',
   const benefits = [,
       ico,
   n: TrendingUp,
@@ -507,7 +507,7 @@ const tabs = [
       labe,
   l: 'Renewable Energy Options',
       colo,
-  r: 'text-purple-400'
+  r: 'text-purple-400',
   const caseStudies = [,
       compan,
   y: 'TechCorp Manufacturing',
@@ -729,4 +729,4 @@ export default GreenItPage</div>
   </div>
   </div>
   </div>
-</div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></button></p></p></p></p></p></p></p></p></h2></h2></h2></h3></h3></h3></h3></h4></h4></h4></h4></ul></ul></ul></li></li></li></li>
+</div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></button></p></p></p></p></p></p></p></p></h2></h2></h2></h3></h3></h3></h3></h4></h4></h4></h4></ul></ul></ul></li></li>

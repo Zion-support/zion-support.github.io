@@ -221,7 +221,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
 }
   theme: 'auto',
     language: 'en',
-    timezone: 'UTC'
+    timezone: 'UTC',
   },
   logging: {
     // TODO: Add content
@@ -774,7 +774,7 @@ const defaultValue = this.getDefaultForKey(key)
   O: Add content,}
 }
     const,
-  defaultValues: AppConfig = {/* TODO: Fix JSX expression */}
+  defaultValues: AppConfig = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   environmen,
@@ -865,7 +865,7 @@ $4},
    * Update API configuration
    */
   updateAPIConfig(config: Partial<AppConfig['api']>): void {
-    this.config.api = { ...this.config.api, ...config }
+    this.config.api = { ...this.config.api, ...config };
   }
   /**
    * Check if in production
@@ -921,7 +921,7 @@ $4},
 }
   theme: 'light',
         language: 'en',
-        timezone: 'UTC'
+        timezone: 'UTC',
       },
       logging: {
     // TODO: Add content
@@ -1011,7 +1011,7 @@ $4},
   }
 
 }
-    this.config.api = { ...this.config.api, ...config }
+    this.config.api = { ...this.config.api, ...config };
   }
   /**
    * Check if in production
@@ -1081,7 +1081,7 @@ $4},
   }
 
 }
-    this.overrides = {}
+    this.overrides = {};
     this.config = this.loadConfig()
   }
   /**

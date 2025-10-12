@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 
@@ -17,43 +16,11 @@ const CybersecuritySolutionsPage: React.FC = () => {,
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Protect your organization with comprehensive cybersecurity solutions including;</p>
               threat detection, vulnerability assessment, and 24/7 security monitoring.
-=======
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Shield, CheckCircle, ArrowRight } from 'lucide-react'
-
-const CybersecuritySolutionsPage: React.FC = () => {
-  const features = [
-    'Threat detection',
-    'Data protection',
-    'Compliance management',
-    'Incident response',
-    'Security monitoring',
-    'Risk assessment'
-  ]
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Cybersecurity <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Protect your business with comprehensive cybersecurity solutions.
->>>>>>> origin/main
             </p>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,</div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Threat Detection</h3>
@@ -137,30 +104,6 @@ const CybersecuritySolutionsPage: React.FC = () => {
       </div>
     </>
   );};
-=======
-      {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Security Features
-            </h2>
-            <p className="text-xl text-gray-300">
-              Comprehensive security solutions to protect your business.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                <span>{feature}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
->>>>>>> origin/main
 
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">

@@ -101,7 +101,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -165,7 +165,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -229,7 +229,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   },
   {
@@ -293,7 +293,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      address: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ]

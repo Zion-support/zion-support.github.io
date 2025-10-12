@@ -83,7 +83,7 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Full-stack neuromorphic computing platform with hardware integration, software development, and comprehensive API access. Includes custom neural architecture development and optimization services.',
@@ -135,7 +135,7 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Commercial DNA computing platform with laboratory integration, molecular programming, and comprehensive problem-solving capabilities. Includes custom DNA algorithm development and laboratory setup services.',
@@ -187,7 +187,7 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade photonic computing platform with optical integration, parallel processing, and comprehensive API access. Includes custom photonic design and optimization services.',
@@ -239,7 +239,7 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive holographic display platform with content creation tools, streaming capabilities, and mobile support. Includes custom holographic solution development and hardware integration.',
@@ -291,7 +291,7 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade quantum internet platform with network infrastructure, security protocols, and comprehensive management tools. Includes custom quantum protocol development and network integration.',

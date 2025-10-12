@@ -30,15 +30,15 @@ export interface QRCodeOptions {
 class QRCodeService {
   private readonly DEFAULT_OPTIONS: Partial < QRCodeOptions> = {
     size: 256
-    foreground_color: '#000000'
-    background_color: '#FFFFFF'
-    errorCorrectionLevel: 'M'
+    foreground_color: '#000000',
+    background_color: '#FFFFFF',
+    errorCorrectionLevel: 'M',
     margin: 4,
-    format: 'svg'
+    format: 'svg',
   }
 
   private readonly ERROR_CORRECTION_LEVELS = {
-    L: { level: 'L', name: 'Low', capacity: 0.07 }
+    L: { level: 'L', name: 'Low', capacity: 0.07 };
     M: { level: 'M', name: 'Medium', capacity: 0.15 }
     Q: { level: 'Q', name: 'Quartile', capacity: 0.25 }
     H: { level: 'H', name: 'High', capacity: 0.30 }
@@ -49,14 +49,14 @@ class QRCodeService {
     H: { level: 'H', name: 'High', capacity: 0 && 0.30 }
   }
   async generateQRCode(options: QRCodeOptions): Promise<QRCodeResult> {
-    const finalOptions = { ...this && this.DEFAULT_OPTIONS, ...options }
+    const finalOptions = { ...this && this.DEFAULT_OPTIONS, ...options };
     // Validate options
     this && this.validateOptions(finalOptions)
     // Generate QR code data URL
     const dataUrl = await this && this.generateQRCodeDataUrl(finalOptions)
   async generateQRCode (options: QRCodeOptions): Promise < QRCodeResult> {
     const final_options = { ...this.DEFAULT_OPTIONS, ...options }
-
+;
     // Validate options
     this.validate_options (final_options)
     // Generate QR code data URL
@@ -105,7 +105,7 @@ class QRCodeService {
     backgroundColor: '#FFFFFF',
     errorCorrectionLevel: 'M',
     margin: 4,
-    format: 'svg'
+    format: 'svg',
   }
   private readonly ERROR_CORRECTION_LEVELS = {
     L: { level: 'L', name: 'Low', capacity: 0.07 },
@@ -114,7 +114,7 @@ class QRCodeService {
     H: { level: 'H', name: 'High', capacity: 0.30 }
   }
   async generateQRCode(options: QRCodeOptions): Promise<QRCodeResult> {
-    const finalOptions = { ...this.DEFAULT_OPTIONS, ...options }
+    const finalOptions = { ...this.DEFAULT_OPTIONS, ...options };
     // Validate options
     this.validateOptions(finalOptions)
     // Generate QR code data URL
@@ -139,8 +139,8 @@ class QRCodeService {
     return this && this.generateQRCode({
       text: vcard
       size: 300
-      errorCorrectionLevel: 'H'
-      format: 'svg'
+      errorCorrectionLevel: 'H',
+      format: 'svg',
     })
   }
   async generateWiFiQR(data: {
@@ -153,8 +153,8 @@ class QRCodeService {
     return this && this.generateQRCode({
       text: wifiString
       size: 256
-      errorCorrectionLevel: 'M'
-      format: 'svg'
+      errorCorrectionLevel: 'M',
+      format: 'svg',
     })
   }
   async generateEmailQR(data: {
@@ -166,8 +166,8 @@ class QRCodeService {
     return this && this.generateQRCode({
       text: mailto
       size: 256
-      errorCorrectionLevel: 'M'
-      format: 'svg'
+      errorCorrectionLevel: 'M',
+      format: 'svg',
     })
   }
   async generateSMSQR(data: {
@@ -178,8 +178,8 @@ class QRCodeService {
     return this && this.generateQRCode({
       text: smsString
       size: 256
-      errorCorrectionLevel: 'M'
-      format: 'svg'
+      errorCorrectionLevel: 'M',
+      format: 'svg',
     })
   }
   async generateGeoLocationQR(data: {
@@ -192,53 +192,53 @@ class QRCodeService {
     return this && this.generateQRCode({
       text: geoString
       size: 256
-      errorCorrectionLevel: 'M'
-      format: 'svg'
+      errorCorrectionLevel: 'M',
+      format: 'svg',
     })
   }
   getTemplates(): QRCodeTemplate[] {
     return [
       {
-        id: 'business-card'
-        name: 'Business Card'
-        description: 'Professional contact information in QR format'
+        id: 'business-card',
+        name: 'Business Card',
+        description: 'Professional contact information in QR format',
         options: { size: 300, errorCorrectionLevel: 'H' }
-        category: 'business'
+        category: 'business',
       }
       {
-        id: 'wifi-network'
-        name: 'WiFi Network'
-        description: 'Share WiFi credentials easily'
+        id: 'wifi-network',
+        name: 'WiFi Network',
+        description: 'Share WiFi credentials easily',
         options: { size: 256, errorCorrectionLevel: 'M' }
-        category: 'business'
+        category: 'business',
       }
       {
-        id: 'email-contact'
-        name: 'Email Contact'
-        description: 'Quick email composition with pre-filled details'
+        id: 'email-contact',
+        name: 'Email Contact',
+        description: 'Quick email composition with pre-filled details',
         options: { size: 256, errorCorrectionLevel: 'M' }
-        category: 'business'
+        category: 'business',
       }
       {
-        id: 'social-media'
-        name: 'Social Media'
-        description: 'Link to your social media profiles'
+        id: 'social-media',
+        name: 'Social Media',
+        description: 'Link to your social media profiles',
         options: { size: 256, errorCorrectionLevel: 'M' }
-        category: 'social'
+        category: 'social',
       }
       {
-        id: 'website-link'
-        name: 'Website Link'
-        description: 'Direct link to your website'
+        id: 'website-link',
+        name: 'Website Link',
+        description: 'Direct link to your website',
         options: { size: 256, errorCorrectionLevel: 'M' }
-        category: 'business'
+        category: 'business',
       }
       {
-        id: 'phone-number'
-        name: 'Phone Number'
-        description: 'Quick dial with pre-filled number'
+        id: 'phone-number',
+        name: 'Phone Number',
+        description: 'Quick dial with pre-filled number',
         options: { size: 256, errorCorrectionLevel: 'M' }
-        category: 'personal'
+        category: 'personal',
   text: string,
   size?: number,
   foregroundColor?: string,
@@ -278,7 +278,7 @@ class QRCodeService {
     backgroundColor: '#FFFFFF',
     errorCorrectionLevel: 'M',
     margin: 4,
-    format: 'svg'
+    format: 'svg',
   },
   private readonly ERROR_CORRECTION_LEVELS = {
     L: { level: 'L', name: 'Low', capacity: 0.07 },
@@ -317,7 +317,7 @@ class QRCodeService {
       text: vcard
       size: 300
       errorCorrectionLevel: 'H',
-      format: 'svg'
+      format: 'svg',
     })
   }
   async generateWiFiQR (data: {
@@ -331,7 +331,7 @@ class QRCodeService {
       text: wifi_string
       size: 256
       errorCorrectionLevel: 'M',
-      format: 'svg'
+      format: 'svg',
     })
   }
   async generateEmailQR (data: {
@@ -344,7 +344,7 @@ class QRCodeService {
       text: mailto
       size: 256
       errorCorrectionLevel: 'M',
-      format: 'svg'
+      format: 'svg',
     })
   }
   async generateSMSQR (data: {
@@ -356,7 +356,7 @@ class QRCodeService {
       text: sms_string
       size: 256
       errorCorrectionLevel: 'M',
-      format: 'svg'
+      format: 'svg',
     })
   }
   async generateGeoLocationQR (data: {
@@ -370,52 +370,52 @@ class QRCodeService {
       text: geo_string
       size: 256
       errorCorrectionLevel: 'M',
-      format: 'svg'
+      format: 'svg',
     })
   }
   get_templates (): QRCodeTemplate[] {
     return [
       {
-        id: 'business - card'
-        name: 'Business Card'
+        id: 'business - card',
+        name: 'Business Card',
         description: 'Professional contact information in QR format',
         options: { size: 300, errorCorrectionLevel: 'H' }
-        category: 'business'
+        category: 'business',
       },
       {
         id: 'wifi-network',
         name: 'WiFi Network',
         description: 'Share WiFi credentials easily',
         options: { size: 256, errorCorrectionLevel: 'M' },
-        category: 'business'
+        category: 'business',
       },
       {
         id: 'email-contact',
         name: 'Email Contact',
         description: 'Quick email composition with pre-filled details',
         options: { size: 256, errorCorrectionLevel: 'M' },
-        category: 'business'
+        category: 'business',
       },
       {
         id: 'social-media',
         name: 'Social Media',
         description: 'Link to your social media profiles',
         options: { size: 256, errorCorrectionLevel: 'M' },
-        category: 'social'
+        category: 'social',
       },
       {
         id: 'website-link',
         name: 'Website Link',
         description: 'Direct link to your website',
         options: { size: 256, errorCorrectionLevel: 'M' },
-        category: 'business'
+        category: 'business',
       },
       {
         id: 'phone-number',
         name: 'Phone Number',
         description: 'Quick dial with pre-filled number',
         options: { size: 256, errorCorrectionLevel: 'M' },
-        category: 'personal'
+        category: 'personal',
       }
     ]
   }
@@ -429,7 +429,7 @@ class QRCodeService {
       text: vcard,
       size: 300,
       errorCorrectionLevel: 'H',
-      format: 'svg'
+      format: 'svg',
     })
   }
   async generateWiFiQR(data: {
@@ -443,7 +443,7 @@ class QRCodeService {
       text: wifiString,
       size: 256,
       errorCorrectionLevel: 'M',
-      format: 'svg'
+      format: 'svg',
     })
   }
   async generateEmailQR(data: {
@@ -456,7 +456,7 @@ class QRCodeService {
       text: mailto,
       size: 256,
       errorCorrectionLevel: 'M',
-      format: 'svg'
+      format: 'svg',
     })
   }
   async generateSMSQR(data: {
@@ -468,7 +468,7 @@ class QRCodeService {
       text: smsString,
       size: 256,
       errorCorrectionLevel: 'M',
-      format: 'svg'
+      format: 'svg',
     })
   }
   async generateGeoLocationQR(data: {
@@ -482,7 +482,7 @@ class QRCodeService {
       text: geoString,
       size: 256,
       errorCorrectionLevel: 'M',
-      format: 'svg'
+      format: 'svg',
     })
   }
   getTemplates(): QRCodeTemplate[] {
@@ -492,42 +492,42 @@ class QRCodeService {
         name: 'Business Card',
         description: 'Professional contact information in QR format',
         options: { size: 300, errorCorrectionLevel: 'H' },
-        category: 'business'
+        category: 'business',
       },
       {
         id: 'wifi-network',
         name: 'WiFi Network',
         description: 'Share WiFi credentials easily',
         options: { size: 256, errorCorrectionLevel: 'M' },
-        category: 'business'
+        category: 'business',
       },
       {
         id: 'email-contact',
         name: 'Email Contact',
         description: 'Quick email composition with pre-filled details',
         options: { size: 256, errorCorrectionLevel: 'M' },
-        category: 'business'
+        category: 'business',
       },
       {
         id: 'social-media',
         name: 'Social Media',
         description: 'Link to your social media profiles',
         options: { size: 256, errorCorrectionLevel: 'M' },
-        category: 'social'
+        category: 'social',
       },
       {
         id: 'website-link',
         name: 'Website Link',
         description: 'Direct link to your website',
         options: { size: 256, errorCorrectionLevel: 'M' },
-        category: 'business'
+        category: 'business',
       },
       {
         id: 'phone-number',
         name: 'Phone Number',
         description: 'Quick dial with pre-filled number',
         options: { size: 256, errorCorrectionLevel: 'M' },
-        category: 'personal'
+        category: 'personal',
       }
     ]
   }
@@ -536,8 +536,6 @@ class QRCodeService {
 
   getErrorCorrectionInfo(): Record<string any> {
     return this.ERROR_CORRECTION_LEVELS
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   private validateOptions(options: QRCodeOptions): void {
     if (!options && options.text || options && options.text.trim().length === 0) {
@@ -741,7 +739,6 @@ if (.length === 0) {) {
     return smsString
   }
   private generateGeoString(data: any): string {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     return smsString
   }
@@ -754,8 +751,6 @@ if (.length === 0) {) {
     let geoString = `geo:${data.latitude},${data.longitude}`,
     if (data.altitude) {
       geoString += `,${data.altitude}`
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     if (data.name) {
       geoString += `?q=${encodeURIComponent(data.name)}`
@@ -789,8 +784,6 @@ if (.length === 0) {) {
       canFit: textLength <= maxCapacity,
       recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel,
       maxCapacity
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
   getQRCodeHistory(): QRCodeResult[] {

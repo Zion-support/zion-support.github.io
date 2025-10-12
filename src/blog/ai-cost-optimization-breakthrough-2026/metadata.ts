@@ -17,7 +17,7 @@ export const metadata = {
         alt:       ,
 $4}
         alt: 'AI Cost Optimization Breakthrough 2026'
-
+,
       }
     ]
   },

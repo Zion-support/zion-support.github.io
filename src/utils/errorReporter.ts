@@ -34,7 +34,7 @@ export class ErrorReporter {
   private errorQueue: ErrorReport[] = [],
   private errorCount: Map<string, number> = new Map()
   private constructor(config: Partial<ErrorReporterConfig> = {}) {
-    this.config = { ...defaultConfig, ...config }
+    this.config = { ...defaultConfig, ...config };
   }
   /**
    * Get singleton instance
@@ -107,7 +107,7 @@ export class ErrorReporter {
   g: Partial<ErrorReporterConfig> = {}) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    this.config = { ...defaultConfig, ...config }
+    this.config = { ...defaultConfig, ...config };
   }
   /**
    * Get singleton instance
@@ -147,10 +147,10 @@ export class ErrorReporter {
           <string, unknown>
   ): void {// TODO: Add content
   }
-
+;
 }
     const,
-  errorReport: ErrorReport = {/* TODO: Fix JSX expression */}
+  errorReport: ErrorReport = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -226,7 +226,7 @@ export class ErrorReporter {
       medium: 'color: #FF9800, font-weight: bold',
       high: 'color: #F44336, font-weight: bold',
       critical:     ,
-$4}
+$4};
     return styles[severity]
   }
   /**
@@ -294,7 +294,7 @@ $4}
   }
 
 }
-    const styles = {/* TODO: Fix JSX expression */}
+    const styles = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -302,7 +302,7 @@ $4}
       medium: 'color: #FF9800, font-weight: bold',
       high: 'color: #F44336, font-weight: bold',
       critical: 'color: #D32F2F; font-weight: bold, font-size: 14px'
-
+,
     }
     return styles[severity]
   }

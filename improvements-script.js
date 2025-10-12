@@ -9,7 +9,7 @@ const config = {
   appDir: path.join(__dirname, 'app'),
   improvements: [],
   errors: []}
-
+;
 // Helper function to read files recursively
 function getAllFiles(_dir, fileList = []) {
 
@@ -18,7 +18,7 @@ function getAllFiles(_dir, fileList = []) {
       // Skip node_modules and .git directories
       if (!file.startsWith('.') && file !== 'node_modules') {
         getAllFiles(filePath, fileList)
-const config = {/* TODO: Fix JSX expression */}
+const config = {/* TODO: Fix JSX expression */};
 }
 
 // Helper function to read files recursively

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, {useState}from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -8,36 +7,15 @@ const DocsPage: React.FC = () => {,
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-=======
-'use client'
-import React, { useState } from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Search, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, ArrowRight, CheckCircle, ExternalLink, Download, FileText, Settings, Database } from 'lucide-react'
-const DocsPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('all')
->>>>>>> origin/main
   const categories = [
-<<<<<<< HEAD
     { id: 'all', name: 'All Documentation', icon: BookOpen ,},
     {id: 'getting-started', name: 'Getting Started', icon: Zap ,},
     {id: 'ai-services', name: 'AI Services', icon: Brain ,},
     {id: 'it-services', name: 'IT Services', icon: Cloud ,},
     {id: 'api', name: 'API Reference', icon: Code ,},
     {id: 'security', name: 'Security', icon: Shield ,}];
-=======
-    { id: 'all', name: 'All Documentation', icon: BookOpen },
-    { id: 'getting-started', name: 'Getting Started', icon: Zap },
-    { id: 'ai-services', name: 'AI Services', icon: Brain },
-    { id: 'it-services', name: 'IT Services', icon: Cloud },
-    { id: 'api', name: 'API Reference', icon: Code },
-    { id: 'security', name: 'Security', icon: Shield }
-<<<<<<< HEAD
   ];];];
->>>>>>> origin/main
-=======
   ]
->>>>>>> origin/main
   const documentation = [
     {id: 1,
       title: 'Getting Started Guide',
@@ -50,22 +28,12 @@ const DocsPage: React.FC = () => {
         'Account Setup',
         'First API Call',
         'Authentication',
-<<<<<<< HEAD
-<<<<<<< HEAD
         'Basic Configuration'
       ]},
     {id: 2,
-=======
-        'Basic Configuration';
-      ];
-=======
-        'Basic Configuration'
-      ],
->>>>>>> origin/main
     },
     {
       id: 2,
->>>>>>> origin/main
       title: 'AI Services Documentation',
       description: 'Comprehensive guide to our AI-powered services',
       category: 'ai-services',
@@ -77,15 +45,8 @@ const DocsPage: React.FC = () => {
         'Content Generation',
         'Data Analytics',
         'Computer Vision'
-<<<<<<< HEAD
       ]},
     {id: 3,
-=======
-      ],
-    },
-    {
-      id: 3,
->>>>>>> origin/main
       title: 'IT Services Guide',
       description: 'Complete documentation for our IT infrastructure services',
       category: 'it-services',
@@ -97,15 +58,8 @@ const DocsPage: React.FC = () => {
         'DevOps & CI/CD',
         'Cybersecurity',
         'Database Management'
-<<<<<<< HEAD
       ]},
     {id: 4,
-=======
-      ],
-    },
-    {
-      id: 4,
->>>>>>> origin/main
       title: 'API Reference',
       description: 'Complete API reference with examples and endpoints',
       category: 'api',
@@ -117,15 +71,8 @@ const DocsPage: React.FC = () => {
         'Endpoints',
         'Error Handling',
         'Rate Limits'
-<<<<<<< HEAD
       ]},
     {id: 5,
-=======
-      ],
-    },
-    {
-      id: 5,
->>>>>>> origin/main
       title: 'Security Best Practices',
       description: 'Security guidelines and best practices for our services',
       category: 'security',
@@ -137,15 +84,8 @@ const DocsPage: React.FC = () => {
         'Access Control',
         'Encryption',
         'Compliance'
-<<<<<<< HEAD
       ]},
     {id: 6,
-=======
-      ],
-    },
-    {
-      id: 6,
->>>>>>> origin/main
       title: 'Troubleshooting Guide',
       description: 'Common issues and their solutions',
       category: 'getting-started',
@@ -157,15 +97,8 @@ const DocsPage: React.FC = () => {
         'Debugging Tips',
         'Performance Issues',
         'Support Resources'
-<<<<<<< HEAD
       ]}];
-=======
-      ],
-    }
-  ]
->>>>>>> origin/main
   const quickLinks = [
-<<<<<<< HEAD
     {title: 'API Reference', url: '/api', icon: Code ,},
     {title: 'Tutorials', url: '/tutorials', icon: BookOpen ,},
     {title: 'Community', url: '/community', icon: Users ,},
@@ -173,16 +106,7 @@ const DocsPage: React.FC = () => {
 
   const filteredDocs = selectedCategory === 'all' 
     ? documentation;
-=======
-    { title: 'API Reference', url: '/api', icon: Code },
-    { title: 'Tutorials', url: '/tutorials', icon: BookOpen },
-    { title: 'Community', url: '/community', icon: Users },
-    { title: 'Support', url: '/support', icon: Shield }
-  ]
-  const filteredDocs = selectedCategory === 'all' 
-<<<<<<< HEAD
     ? documentation ;
->>>>>>> origin/main
     : documentation.filter(doc => doc.category === selectedCategory);
 
   const searchResults = searchQuery;
@@ -195,7 +119,6 @@ const DocsPage: React.FC = () => {
   return(<>)
       <Helmet />
         <title>Documentation - Zion Tech Group</title>
-=======
     ? documentation 
     : documentation.filter(doc => doc.category === selectedCategory)
   const searchResults = searchQuery 
@@ -208,26 +131,16 @@ const DocsPage: React.FC = () => {
     <>
       <Helmet>
         </Helmet><title>Documentation - Zion Tech Group</title>
->>>>>>> origin/main
         <meta name="description" content="Complete documentation for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive guides and API references." />
         <meta name="keywords" content="documentation, API docs, guides, tutorials, developer resources, AI services, IT services" />
         <link rel="canonical" href="https: //ziontechgroup.com/docs" />,
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
         <div className="container mx-auto px-4 py-16 pt-24">{/* Header */</div>} <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                 <BookOpen className="w-8 h-8 text-white" />
-=======
-        </div><div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
-          </div><div className="text-center mb-16">
-            </div><div className="flex items-center justify-center mb-6">
-              </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-                </div><BookOpen className="w-8 h-8 text-white" />
->>>>>>> origin/main
               </div>
               <h1 className="text-4xl md: text-5xl font-bold text-white neon-text-enhanced">,</h1>
                 Documentation;
@@ -238,18 +151,10 @@ const DocsPage: React.FC = () => {
             </p>
           </div>
 
-<<<<<<< HEAD
           {/* Search Bar */} <div className="cyber-card-enhanced p-6 mb-12">
             <div className="relative max-w-2xl mx-auto">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input;
-=======
-          {/* Search Bar */}
-          <div className="cyber-card-enhanced p-6 mb-12">
-            </div><div className="relative max-w-2xl mx-auto">
-              </div><Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
->>>>>>> origin/main
                 type="text"
                 placeholder="Search documentation..."
                 value={searchQuery}onChange={(e) => setSearchQuery(e.target.value)}className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent",
@@ -259,60 +164,31 @@ const DocsPage: React.FC = () => {
 
           {/* Quick Links */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12">,</div>
             {quickLinks.map((link, index) => (
-<<<<<<< HEAD
               <a;
                 key={index}href={link.url}className="cyber-card-enhanced p-6 text-center group hover: scale-105 transition-all duration-300",
               >
                 <link.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover: text-cyan-300" />,
                 <h3 className="text-lg font-semibold text-white group-hover: text-cyan-300">{link.title,}</h3>
-=======
-              </div><$2 />
-                key={index}
-                href={link.url}
-                className="cyber-card-enhanced p-6 text-center group hover:scale-105 transition-all duration-300"
-              >
-                </a><link.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover:text-cyan-300" />
-                <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300">{link.title}</h3>
->>>>>>> origin/main
               </a>
             ))}
           </div>
 
-<<<<<<< HEAD
           {/* Category Filter */} <div className="mb-8">
             <h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2>
             <div className="flex flex-wrap gap-4">{categories.map((category) => (</div>
                 <button;
                   key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     selectedCategory === category.id;
-=======
-          {/* Category Filter */}
-          <div className="mb-8">
-            </div><h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2>
-            <div className="flex flex-wrap gap-4">
-              {categories.map((category) => (
-                </div><$2 />
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    selectedCategory === category.id
->>>>>>> origin/main
                       ? 'bg-cyan-500 text-white'
                       : 'bg-slate-800 text-gray-300 hover: bg-slate-700',}`}
                 >
-<<<<<<< HEAD
                   <category.icon className="w-5 h-5" />
                   <span>{category.name</span>}</span>
-=======
-                  </button><category.icon className="w-5 h-5" />
-                  <span>{category.name}</span>
->>>>>>> origin/main
                 </button>
               ))}
             </div>
           </div>
 
-<<<<<<< HEAD
           {/* Documentation List */} <div className="space-y-6">{searchResults.map((doc) => (</div>
               <div key={doc.id}className="cyber-card-enhanced p-8 group hover: scale-105 transition-all duration-300">,</div>
                 <div className="flex items-start justify-between mb-4">
@@ -331,33 +207,6 @@ const DocsPage: React.FC = () => {
                       <span className="flex items-center">
                         <Database className="w-4 h-4 mr-1" />
                         Updated {doc.lastUpdated}} </span>
-=======
-          {/* Documentation List */}
-          <div className="space-y-6">
-            {searchResults.map((doc) => (
-              </div><div key={doc.id} className="cyber-card-enhanced p-8 group hover:scale-105 transition-all duration-300">
-                </div><div className="flex items-start justify-between mb-4">
-                  </div><div className="flex-1">
-                    </div><h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                      {doc.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4 leading-relaxed">
-                      {doc.description}
-                    </p>
-                    <div className="flex items-center space-x-6 text-sm text-gray-400 mb-4">
-                      </div><span className="flex items-center">
-                        </span><FileText className="w-4 h-4 mr-1" />
-                        {doc.readTime} read
-                      </span>
-                      <span className="flex items-center">
-                        </span><Settings className="w-4 h-4 mr-1" />
-                        {doc.difficulty}
-                      </span>
-                      <span className="flex items-center">
-                        </span><Database className="w-4 h-4 mr-1" />
-                        Updated {doc.lastUpdated}
-                      </span>
->>>>>>> origin/main
                     </div>
                   </div>
                   <div className="ml-6">
@@ -371,58 +220,31 @@ const DocsPage: React.FC = () => {
                 </div>
                 
                 <div className="mb-6">
-<<<<<<< HEAD
                   <h4 className="text-white font-semibold mb-3">Sections: </h4>,
                   <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-2">,</div>
                     {doc.sections.map((section, sectionIndex) => (
                       <div key={sectionIndex}className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {section} </div>
-=======
-                  </div><h4 className="text-white font-semibold mb-3">Sections:</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
-                    {doc.sections.map((section, sectionIndex) => (
-                      </div><div key={sectionIndex} className="flex items-center text-gray-300 text-sm">
-                        </div><CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {section}
-                      </div>
->>>>>>> origin/main
                     ))}
                   </div>
                 </div>
 
                 <div className="flex items-center justify-between">
-<<<<<<< HEAD
                   <div className="flex space-x-4">
                     <a;
-=======
-                  </div><div className="flex space-x-4">
-                    </div><$2 />
->>>>>>> origin/main
                       href={`/docs/${doc.id}`}
                       className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center",
                     >
-<<<<<<< HEAD
                       Read Guide;
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                     <a;
-=======
-                      Read Guide
-                      </a><ArrowRight className="w-4 h-4 ml-2" />
-                    </a>
-                    <$2 />
->>>>>>> origin/main
                       href={`/docs/${doc.id}/download`}
                       className="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center",
                     >
-<<<<<<< HEAD
                       <Download className="w-4 h-4 mr-2" />
                       Download PDF;
-=======
-                      </a><Download className="w-4 h-4 mr-2" />
-                      Download PDF
->>>>>>> origin/main
                     </a>
                   </div>
                 </div>
@@ -430,48 +252,26 @@ const DocsPage: React.FC = () => {
             ))}
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
           {/* No Results */}{searchResults.length === 0 && searchQuery && (
-=======
-          {/* No Results */},
-    {searchResults.length === 0 && searchQuery && (
->>>>>>> origin/main
-=======
           {/* No Results */}
           {searchResults.length === 0 && searchQuery && (
->>>>>>> origin/main
             <div className="cyber-card-enhanced p-8 text-center">
               </div><Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
               <p className="text-gray-300 mb-6">Try adjusting your search terms or browse our documentation categories.</p>
               </p>
-<<<<<<< HEAD
               <button;
                 onClick={() =>setSearchQuery('')</button>}className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300",
-=======
-              <$2 />
-                onClick={() => setSearchQuery('')}
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
->>>>>>> origin/main
               >
                 Clear Search;
               </button>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           )}
 
           {/* Additional Resources */} <div className="cyber-card-enhanced p-8 mt-16">
-=======
-          )},
-    {/* Additional Resources */}
-          <div className="cyber-card-enhanced p-8 mt-16">
->>>>>>> origin/main
             <h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,</div>
               <a;
-=======
           )}
 
           {/* Additional Resources */}
@@ -479,7 +279,6 @@ const DocsPage: React.FC = () => {
             </div><h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               </div><$2 />
->>>>>>> origin/main
                 href="/tutorials"
                 className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300",
               >
@@ -490,11 +289,7 @@ const DocsPage: React.FC = () => {
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
-<<<<<<< HEAD
               <a;
-=======
-              <$2 />
->>>>>>> origin/main
                 href="/api"
                 className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300",
               >
@@ -505,11 +300,7 @@ const DocsPage: React.FC = () => {
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
-<<<<<<< HEAD
               <a;
-=======
-              <$2 />
->>>>>>> origin/main
                 href="/community"
                 className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300",
               >
@@ -520,11 +311,7 @@ const DocsPage: React.FC = () => {
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" / /></ArrowRight>
               </a>
-<<<<<<< HEAD
               <a;
-=======
-              <$2 />
->>>>>>> origin/main
                 href="/support"
                 className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300",
               >
@@ -614,7 +401,6 @@ export default function DocsPage() {
         keywords="documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation"
       />
       <Navigation />
-<<<<<<< HEAD
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
@@ -643,21 +429,15 @@ export default function DocsPage() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
-=======
-<<<<<<< HEAD
       
->>>>>>> origin/main
             </div>
           ))
         </div>
       </section>
 
-=======
->>>>>>> origin/main
       {/* Popular Docs */}
-      <section className="py-16 px-4">
-        </section>
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {popularDocs.map((doc, index) => (;}
@@ -676,9 +456,8 @@ export default function DocsPage() {
                   <ArrowRight className="w-4 h-4" />
             ))}
       {/* Documentation Categories */}
-      <section className="py-16 px-4">
-        </section>
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredDocs.map((category, index) => (
@@ -702,16 +481,12 @@ export default function DocsPage() {
                           <p className="text-gray-300 text-sm">{doc.description}
                         <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
                   ))}
-<<<<<<< HEAD
                 ))
               </div>
-=======
->>>>>>> origin/main
             ))}
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        </section>
-        <div className="max-w-4xl mx-auto text-center">
+      <section$1>
+        <div$2>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Need Help?
           <p className="text-xl text-purple-100 mb-8">
@@ -722,4 +497,4 @@ export default function DocsPage() {
       <Footer />
   )
 }</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></button></button></p></p></p></p></h2></h2></h2></h3></h3></h4></section></section></section>
-</li></li>
+</li>

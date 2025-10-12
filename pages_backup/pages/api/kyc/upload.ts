@@ -6,8 +6,6 @@ import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc'
 import fs from 'fs'
 import path from 'path'
 import crypto from 'crypto'
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8')
@@ -44,7 +42,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   profile.auditTrail.push({
     at: uploadedAt
     by: userId
-    action: 'document_uploaded'
+    action: 'document_uploaded',
     details: { kind, filename }
   })
   db[userId] = profile
@@ -75,7 +73,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     kind,
     filename,
     uploadedAt,
-  }
+  };
   // Replace or add
   }
 }
@@ -137,7 +135,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     id,
     kind,
     filename,
-    uploadedAt}
+    uploadedAt};
   // Replace or add
   const withoutSameKind = (profile.documents || []).filter((d) => d.kind !== kind)
   profile.documents = [...withoutSameKind, doc]

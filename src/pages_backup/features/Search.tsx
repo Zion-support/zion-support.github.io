@@ -1,7 +1,7 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
   
   static getDerivedStateFromError(error) {
@@ -53,7 +53,7 @@ export default function SearchFeature() {
     "description": "Quickly locate products, services and talent using intelligent search filters.",
     "url": "https://app.ziontechgroup.com/features/search"
 
-  }
+  };
   return (
     <>
             <li>
@@ -186,7 +186,7 @@ export default function SearchFeature() {
     "name": "Advanced Search",
     "description": "Quickly locate products, services and talent using intelligent search filters."
     "url": "https://app.ziontechgroup.com/features/search"
-  }
+  };
   return (
     <>
       <SEO

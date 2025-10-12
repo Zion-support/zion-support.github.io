@@ -4,7 +4,7 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1'
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY')
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 }
 serve(async (req) => {
@@ -83,7 +83,7 @@ serve(async (req) => {
         const suggestedSkills = skillsString.split(',').map(s => 
           s.trim().replace(/"/g, '')
         ).filter(Boolean)
-        parsedResponse = { summary, suggestedSkills }
+        parsedResponse = { summary, suggestedSkills };
       } else {
         throw new Error("Failed to parse the generated content")
       }

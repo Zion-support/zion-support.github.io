@@ -1,7 +1,7 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
   
   static getDerivedStateFromError(error) {
@@ -53,7 +53,7 @@ export default function AdminDashboard() {
     "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
     "url": "https://app.ziontechgroup.com/features/admin-dashboard"
 
-  }
+  };
   return (
 
 
@@ -129,7 +129,7 @@ export default function AdminDashboard() {
     "name": "Admin Dashboard",
     "description": "Monitor marketplace activity, manage listings and view analytics in one place."
     "url": "https://app.ziontechgroup.com/features/admin-dashboard"
-  }
+  };
   return (
     <>
       <SEO

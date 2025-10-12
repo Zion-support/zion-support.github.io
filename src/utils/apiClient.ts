@@ -278,7 +278,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    this.config = {/* TODO: Fix JSX expression */}
+    this.config = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -320,7 +320,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
 //       ...config,
 //       url,
       metho,
-  d: 'GET'
+  d: 'GET',
     })
   )
   }
@@ -407,7 +407,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
 //       ...config,
 //       url,
       metho,
-  d: 'DELETE'
+  d: 'DELETE',
     })
   )
   }
@@ -711,7 +711,7 @@ const controller = new AbortController()
   }
 
 }
-    this.config = {/* TODO: Fix JSX expression */}
+    this.config = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 //       ...this.config,

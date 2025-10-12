@@ -17,7 +17,7 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   r: res.stderr || '',
   }
 }
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/30 * * * *' }
 exports.handler = async () => {const logs = []}
   function step(_name) rel} args = []) {/* TODO: Fix JSX expression */}

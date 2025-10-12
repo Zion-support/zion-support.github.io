@@ -100,22 +100,22 @@ function fixParsingErrors(filePath) {
       // Fix missing commas in object literals
       {
         pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:/g,
-        replacement: '$1: [$2],\n    $3:'
+        replacement: '$1: [$2],\n    $3:',
       },
       // Fix missing closing brackets
       {
         pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*\]/g,
-        replacement: '$1: [$2]\n  }'
+        replacement: '$1: [$2]\n  }',
       },
       // Fix JSX fragment issues
       {
         pattern: /<>([^<]+)<\/>/g,
-        replacement: '<React.Fragment>$1</React.Fragment>'
+        replacement: '<React.Fragment>$1</React.Fragment>',
       },
       // Fix missing semicolons
       {
         pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*$/gm,
-        replacement: '$1: [$2],'
+        replacement: '$1: [$2],',
       }
     ]
     for (const fix of fixes) {

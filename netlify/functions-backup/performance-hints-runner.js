@@ -1,4 +1,4 @@
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/15 * * * *' }
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   ).replace(/\/$/} '')
@@ -68,13 +68,13 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     const body = {message,
       content: Buffer.from(content).toString('base64'),
       branch: githubBranch,
-      sha}
+      sha};
     }
     const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
       {method: 'PUT', headers)
         body: JSON.stringify(body,)})
-    const body = {/* TODO: Fix JSX expression */}
+    const body = {/* TODO: Fix JSX expression */};
       sha}
     }`
     const putRes = await fetch(`http,
@@ -156,7 +156,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       large: large.slice(0),
       .sort((a)
         b) => (b.size || 0) - (a.size || 0))
-    const summary = {/* TODO: Fix JSX expression */}
+    const summary = {/* TODO: Fix JSX expression */};
   e: large.length },
       larg,
   e: large.slice(0)
@@ -263,7 +263,7 @@ exports.config = { schedule: '*/15 * * * *' } exports.handler = async function (
   }) } } catch (e) {return { statusCode: 500,
         body: JSON.stringify({ok: false),
         error: String(e,)}) } } }'
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/15 * * * *' } exports.handler = async function () {' const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/} '');' const githubToken = process.env.GITHUB_TOKEN || '';' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'' const githubBranch = process.env.GIT_BRANCH || 'main' ' function absolute(u) {/* TODO: Fix JSX expression */}`
         return `${baseUrl}${u.startsWith('/') ? '' : '/'}${u}`; } async function head(url) {/* TODO: Fix JSX expression */}
   d: 'HEAD'} redirec,
@@ -289,7 +289,7 @@ exports.config = {/* TODO: Fix JSX expression */}
         60)) {/* TODO: Fix JSX expression */}
       } checks.push({/* TODO: Fix JSX expression */})
       }); } ' const large = checks.filter(c => typeof c.size === 'number' && c.size > 200 * 1024).sort((a)
-        b) => (b.size||0)-(a.size||0)); const summary = {/* TODO: Fix JSX expression */}
+        b) => (b.size||0)-(a.size||0)); const summary = {/* TODO: Fix JSX expression */};
   e: large.length }, larg,
   e: large.slice(0,
         50

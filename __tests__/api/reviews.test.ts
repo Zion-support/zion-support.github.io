@@ -88,7 +88,7 @@ describe('/api/reviews API Endpoint', () => {
         resetTokenExpiry: null,
         role: 'USER',
         softDeleted: false,
-        userType: 'individual'
+        userType: 'individual',
       }
       const mockReviewResponse: ProductReview = {
         id: 'review1',
@@ -98,7 +98,7 @@ describe('/api/reviews API Endpoint', () => {
         comment: 'Great!',
         createdAt: new Date(),
         updatedAt: new Date()
-      }
+      };
       const mockSupabaseSession: Session = {
         user: { id: 'supaUserId', email: 'test@example.com' } as SupabaseUser,
         access_token: 'token',
@@ -331,7 +331,7 @@ describe('/api/reviews API Endpoint', () => {'  let _prisma: PrismaClient
     (prisma.$disconnect as jest.Mock).mockReset()
     (supabase.auth.getSession as jest.Mock).mockReset()
   })
-  describe('POST /api/reviews', () => {'    it('should successfully create a review (201), async () => {'      const mockUser = { id: 1, email: test@example.com', name: Test User' };      const mockReview = { id: review1', productId: prod1', userId: 1, rating: 5, comment: Great!' }
+  describe('POST /api/reviews', () => {'    it('should successfully create a review (201), async () => {'      const mockUser = { id: 1, email: test@example.com', name: Test User' };      const mockReview = { id: review1', productId: prod1', userId: 1, rating: 5, comment: Great!' };
       (supabase.auth.getSession as jest.Mock).mockResolvedValue({
         data: { session: { user: { id: supaUserId', email: test@example.com' } } },        error: null
       })

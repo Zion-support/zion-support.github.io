@@ -65,7 +65,7 @@ class PerformanceOptimizer {
 
   }
   private,
-  config: OptimizationConfig = {/* TODO: Fix JSX expression */}
+  config: OptimizationConfig = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -84,7 +84,7 @@ class PerformanceOptimizer {
           <OptimizationConfig>) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    this.config = { ...this.config, ...config }
+    this.config = { ...this.config, ...config };
     this.initializePerformanceMonitoring()
   }
   /**

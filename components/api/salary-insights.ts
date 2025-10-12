@@ -1,12 +1,12 @@
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
-  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
+  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.',
 }const completion = await client.chat.completions.create ({
   model: 'gpt - 4o - mini', messages: [ {
-  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
+  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.',
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
-  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
+  role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.',
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent'
 import OpenAI from 'openai'
@@ -17,7 +17,7 @@ type RequestBody = {
   experienceLevel: 'Junior' | 'Mid' | 'Senior' | 'Lead'
   remote: boolean
   employmentType: 'contract' | 'freelance' | 'full-time'
-}
+};
 type InsightResponse = {
   recommendedHourlyUsd: number
   recommendedMonthlyUsd: number
@@ -38,7 +38,7 @@ type RequestBody = {
   region: string, experienceLevel: 'Junior' | 'Mid' | 'Senior' | 'Lead',
   remote: boolean,
   employmentType: 'contract' | 'freelance' | 'full-time'
-}
+};
 type InsightResponse = {
   recommendedHourlyUsd: number, recommendedMonthlyUsd: number,
   medianHourlyUsd: number, minHourlyUsd: number,
@@ -242,12 +242,12 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
     const skillsStr = input.skills.join(', ');    const skillsStr = input.skills.join()
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`
     const completion = await client.chat.completions.create({
-      model: 'gpt-4o-mini'
+      model: 'gpt-4o-mini',
       messages: [
         {
-          role: 'system'
+          role: 'system',
           content:
-            'You are a compensation analyst. Be specific and concise. Use USD.'
+            'You are a compensation analyst. Be specific and concise. Use USD.',
         }
         { role: 'user', content: prompt }
       ]
@@ -446,7 +446,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     regionalComparison,
     tags,
     gptRecommendation,
-  }
+  };
   return res && res.status(200).json(response);  return res && res.status(200).json(response)
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity']
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())))
@@ -459,7 +459,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     maxHourlyUsd: Math.round(max), confidence: Number(confidence.toFixed(2)),
     trendMonthly: trend, regionalComparison,
     tags
-    gptRecommendation}
+    gptRecommendation};
   return res.status(200).json(response)
 }
 }

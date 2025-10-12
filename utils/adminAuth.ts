@@ -3,7 +3,7 @@
 type ApiRequest = {
   headers: Record<string, string | string[] | undefined>
   [key: string]: any
-}
+};
 export interface Session {
   userId: string
   email: string

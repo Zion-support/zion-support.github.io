@@ -266,7 +266,7 @@ measure: (name: string, startMark?: string, endMark?: string) => {entries.push({
 export const generateTestData = {
     // TODO: Add content
   }
-
+;
 }
   strin,
   g: (length = 10): string => {/* TODO: Fix JSX expression */}
@@ -362,7 +362,7 @@ export class ConsoleSpy {
   constructor() {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    this.originalConsole = { ...console }
+    this.originalConsole = { ...console };
     this.mock()
   }
   private mock(): void {/* TODO: Fix JSX expression */}

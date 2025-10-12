@@ -58,12 +58,11 @@ export default async function handler(req, res) {
     originInstanceId: state.config.instanceId
     version
     timestamp: timestamp |Date.now()
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const version = nextVersionFor(state, milestoneId)
   const event = {
       id: milestoneId,
       subjectId: milestoneId,
-  }
+  };
   const { milestone_id, title, timestamp } = req.body as {
     milestone_id: string
     title: string
@@ -94,7 +93,7 @@ export default async function handler(req, res) {
   }
   upsertEvent(state, event)
   writeState(state)
-  const body = { ...event, propagate: false }
+  const body = { ...event, propagate: false };
   const headers: Record<string, string> = {}
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
@@ -135,7 +134,7 @@ export default async function handler(req, res) {
 
   upsert_event (state, event)
   write_state (state)
-  const body = { ...event, propagate: false }
+  const body = { ...event, propagate: false };
   const headers: Record < string, string> = {}
   const sig = sign_payload (body)
   // Check condition
@@ -161,4 +160,3 @@ if (headers["x - zion - signature"] = sig) {
     return res.status(500).json({ error: "Internal server error" })
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

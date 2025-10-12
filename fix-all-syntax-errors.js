@@ -107,7 +107,7 @@ const fixAllFiles = () => {
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
         replacement: '$1: $2,
-    $3:'
+    $3:',
       },
       // Fix malformed metadata objects
       {
@@ -120,19 +120,19 @@ const fixAllFiles = () => {
         pattern: /export\s+const\s+metadata\s*=\s*{\s*(\w+):\s*"([^"]*)",?\s*}\s*(\w+):/g,
         replacement: 'export const metadata = {
   $1: "$2",
-  $3:'
+  $3:',
       },
       // Fix malformed function parameters
       {
         pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
         replacement: 'export default function $1({
-  $2:'
+  $2:',
       },
       // Fix malformed object literals
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
         replacement: '$1: $2,
-    $3:'
+    $3:',
       },
       // Fix missing semicolons in exports
       {
@@ -145,24 +145,24 @@ const fixAllFiles = () => {
       {
         pattern: /function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
         replacement: 'function $1({
-  $2:'
+  $2:',
       },
       // Fix missing commas in arrays
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
         replacement: '$1: $2,
-    $3:'
+    $3:',
       },
       // Fix malformed JSX attributes
       {
         pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
-        replacement: '$1="$2" $3'
+        replacement: '$1="$2" $3',
       },
       // Fix missing closing braces
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
         replacement: '$1: $2,
-    $3:'
+    $3:',
       }
     ]
     for (const fix of fixes) {
@@ -179,7 +179,7 @@ const fixAllFiles = () => {
       {
         pattern: /(\w+):\s*(\w+),?\s*}\s*(\w+):/g,
         replacement: '$1: $2,
-    $3:'
+    $3:',
       },
       // Fix malformed metadata
       {
@@ -192,7 +192,7 @@ const fixAllFiles = () => {
       {
         pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*}\s*:\s*{\s*\/\/\s*TODO:\s*Add\s+content;\s*}\s*;\s*(\w+):/g,
         replacement: 'export default function $1({
-  $2:'
+  $2:',
       }
     ]
     for (const fix of specificFixes) {

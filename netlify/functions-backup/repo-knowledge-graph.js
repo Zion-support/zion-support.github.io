@@ -29,7 +29,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     }
   }
 }
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '0 */6 * * *'}
 }
 exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/repo-knowledge-graph.cjs || true') { stdio: 'inherit'} shell: true,
@@ -47,5 +47,5 @@ exports.handler = async function() { const { execSync } = require('child_process
   l: true,
       });' return {/* TODO: Fix JSX expression */}
   k: 'repo-knowledge-graph' }) } } catch (e) {/* TODO: Fix JSX expression */}
-      }) } } } exports.config = {/* TODO: Fix JSX expression */}
+      }) } } } exports.config = {/* TODO: Fix JSX expression */};
   e: '0 */6 * * *'} }'

@@ -4,7 +4,7 @@ import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react'
 // eslint-disable-next-line react-refresh/only-export-components
 export const metadata = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.'
+  description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
 }
 export default function HomePage() {
   return (

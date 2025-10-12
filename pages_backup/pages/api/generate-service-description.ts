@@ -18,17 +18,14 @@ export type GenerateServiceDescriptionRequest = {
   targetAudience: string
   additionalNotes?: string
   tone?: "professional" | "friendly" | "persuasive" | "technical"
-}
+};
 export type GenerateServiceDescriptionResponse = {
   description: string
-}
+};
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 export type GenerateServiceDescriptionRequest = {
   title: string
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>
@@ -83,7 +80,7 @@ Requirements:
 }
 export type GenerateServiceDescriptionResponse = {
   description: string
-}
+};
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 export default async function handler(req, res) {
   try {
@@ -214,7 +211,7 @@ Requirements:
 - End with a short call to action`,
     // Using Responses API for modern SDK
     const response = await openai.responses.create({
-      model: 'gpt-4o-mini'
+      model: 'gpt-4o-mini',
       input: prompt
       temperature: 0.7})
     let description = ''

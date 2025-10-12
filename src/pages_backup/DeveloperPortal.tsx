@@ -95,7 +95,7 @@ export function DeveloperPortal() {
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
                 }`}
-                onClick = {(,) => setActiveTab(tab.id),}
+                onClick = {(,) => setActiveTab(tab.id),};
               >
                 <Icon size={16} className='mr-2' />
                 {tab.label}
@@ -188,7 +188,7 @@ function DeveloperPortal() {
                     ? "text - white border - zion - purple"
                     : "text - zinc - 500 border - transparent hover:text - zinc - 400 hover:border - zinc - 700"
                 }`}
-                on_click = {(, ) => setActiveTab (tab.id), }
+                on_click = {(, ) => setActiveTab (tab.id), };
               >
                 <Icon size={16} className='mr - 2' />
                 {tab.label}
@@ -245,7 +245,7 @@ export function DeveloperPortal() {
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
                 }`}
                 onClick = {(,) => setActiveTab(tab && tab.id),}
-
+;
               >
                 <Icon size={16} className='mr-2' />
                 {tab && tab.label}
@@ -276,7 +276,7 @@ export function DeveloperPortal() {
       </div></$1>
   )
                 onClick={() => setActiveTab(tab && tab.id)}
-
+;
               >
                 <Icon size={16} className='mr-2' />
                 {tab && tab.label}
@@ -294,7 +294,6 @@ export function DeveloperPortal() {
 
 
       <div>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

@@ -83,7 +83,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced threat intelligence platform with AI-powered detection, real-time analysis, and automated response capabilities.',
@@ -135,7 +135,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum-resistant cryptography suite with future-proof algorithms, key management, and comprehensive security features.',
@@ -187,7 +187,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI-powered security operations center with intelligent monitoring, automated response, and comprehensive security management capabilities.',
@@ -239,7 +239,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced zero-day vulnerability detection system with AI-powered analysis, proactive protection, and comprehensive security capabilities.',
@@ -291,7 +291,7 @@ export const cybersecuritySolutions2026: CybersecuritySolutions2026[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced blockchain-based identity management system with decentralized verification, advanced security, and comprehensive identity capabilities.',

@@ -21,7 +21,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
         {/* Header, Sect, i, o, n */}
         <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
           anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-          transiti, o, n = {/* TODO: Fix JSX expression */}
+          transiti, o, n = {/* TODO: Fix JSX expression */};
   n: , 0., 6 }}
           classNa, m, e = 'te, x, t-center, m, b-8'
         >
@@ -65,7 +65,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
           {/* Federat, e, d , A, I */}
           <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {/* TODO: Fix JSX expression */}
+            transiti, o, n = {/* TODO: Fix JSX expression */};
   n: , 0., 6, del, a, y: 0., 1 }}
           >
             <, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-advanc, e, d-federat, e, d-ai-enterpri, s, e-revoluti, o, n'$2 />
@@ -112,7 +112,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
           {/* Synthetic, D, a, t, a */}
           <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {/* TODO: Fix JSX expression */}
+            transiti, o, n = {/* TODO: Fix JSX expression */};
   n: , 0., 6, del, a, y: 0., 2 }}
           >
             <, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-synthet, i, c-da, t, a-generati, o, n-enterpri, s, e-breakthrou, g, h'$2 />
@@ -157,7 +157,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
           {/* AI, Governa, n, c, e */}
           <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
             anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-            transiti, o, n = {/* TODO: Fix JSX expression */}
+            transiti, o, n = {/* TODO: Fix JSX expression */};
   n: , 0., 6, del, a, y: 0., 3 }}
           >
             <, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-ai-mod, e, l-governan, c, e-complian, c, e-breakthrou, g, h'$2 />
@@ -202,7 +202,7 @@ export default function October2025NewAdvancedAIContentBann, e, r() {/* TODO: Fi
         {/* Call, to, Acti, o, n */}
         <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
           anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-          transiti, o, n = {/* TODO: Fix JSX expression */}
+          transiti, o, n = {/* TODO: Fix JSX expression */};
   n: , 0., 6, del, a, y: 0., 4 }}
           classNa, m, e = 'te, x, t-cent, e, r'
         >

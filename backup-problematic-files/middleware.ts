@@ -49,8 +49,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
   )
   return response
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   return response
     return response
   // Security headers
@@ -64,15 +62,14 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
   )
   return response
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 return response
 }
 origin/main
 export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"]
-}
+};
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 }
 export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
-}
+};

@@ -1,91 +1,52 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle, ArrowRight, Star, Users, Shield, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 export default function SupportPage() {
   const [searchQuery, setSearchQuery] = useState('');
-=======
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-=======
-<<<<<<< HEAD
 import React from 'react';
 
 const SupportPage: React.FC = () => {
-<<<<<<< HEAD
-=======
-  const [searchQuery, setSearchQuery] = useState('');
-=======
-
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, HelpCircle, BookOpen, Users, Zap, MessageSquare } from 'lucide-react';
-
-interface FAQ {
-  question: string;
-  answer: string;
-  category: string;
-}
->>>>>>> origin/main
 
 const SupportPage: React.FC = () => {
->>>>>>> origin/main
 
   const faqs = [
     {
       question: 'How do I get started with your AI solutions?',
-<<<<<<< HEAD
       answer: 'Getting started is easy! Contact our team for a free consultation where we\'ll assess your needs and create a customized implementation plan.',
-      category: 'Getting Started'
-=======
-<<<<<<< HEAD
+      category: 'Getting Started',
       answer: 'Contact our team for a free consultation where we\'ll assess your needs and recommend the best AI solutions for your business.',
-      category: 'general'
->>>>>>> origin/main
+      category: 'general',
     },
     {
       question: 'What support do you provide after implementation?',
       answer: 'We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly.',
-      category: 'Support'
+      category: 'Support',
     },
     {
       question: 'How secure are your solutions?',
       answer: 'Security is our top priority. We implement enterprise-grade security measures including encryption, access controls, and compliance with industry standards.',
-      category: 'Security'
+      category: 'Security',
     },
     {
-<<<<<<< HEAD
       question: 'Can I integrate with my existing systems?',
       answer: 'Yes! Our solutions are designed to integrate seamlessly with your existing infrastructure and third-party applications.',
-      category: 'Integration'
+      category: 'Integration',
     },
     {
       question: 'What is your response time for support requests?',
       answer: 'We guarantee response times of under 1 hour for critical issues and 4 hours for general inquiries during business hours.',
-      category: 'Support'
+      category: 'Support',
     },
     {
       question: 'Do you offer training for my team?',
       answer: 'Absolutely! We provide comprehensive training programs to ensure your team can effectively use and maintain the solutions.',
-      category: 'Training'
-=======
-      question: 'Do you offer training for our team?',
-      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions.'
-    },
-    {
-      question: 'What if we need custom modifications?',
-      answer: 'Our team can develop custom features and modifications to meet your specific business requirements.'
->>>>>>> origin/main
+      category: 'Training',
     }
   ];
 
@@ -93,61 +54,35 @@ const SupportPage: React.FC = () => {
     {
       icon: Phone,
       title: 'Phone Support',
-<<<<<<< HEAD
       description: 'Call us for immediate assistance',
       contact: '+1 (555) 123-4567',
-      hours: '24/7 Available'
-=======
-      description: 'Call us for immediate assistance',
-      contact: '+1-302-464-0950',
-      availability: '24/7'
-=======
-      answer: 'Getting started is easy! Contact our team for a free consultation where we\'ll assess your needs and recommend the best AI solutions for your business. We\'ll guide you through the entire implementation process.',
-      category: 'Getting Started'
-=======
-'use client'
-import React, { useState } from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { Search, MessageCircle, Phone, Mail, Clock, CheckCircle, ArrowRight, FileText, Video, BookOpen, Headphones } from 'lucide-react'
-
-const SupportPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('all')
-
-  const faqs = [
-    {
-      category: 'General',
-      question: 'How do I get started with your services?',
-      answer: 'Getting started is easy! Contact us through our consultation page or call us directly. We\'ll schedule a free initial consultation to understand your needs and recommend the best solutions.'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
+      hours: '24/7 Available',
     },
     {
       category: 'Technical',
       question: 'What technical support do you provide?',
-      answer: 'We provide 24/7 technical support for all our services. Our support team includes certified engineers who can help with implementation, troubleshooting, and optimization.'
+      answer: 'We provide 24/7 technical support for all our services. Our support team includes certified engineers who can help with implementation, troubleshooting, and optimization.',
     },
     {
       category: 'Billing',
       question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment terms for Enterprise clients. All payments are processed securely through our encrypted payment system.'
+      answer: 'We accept all major credit cards, bank transfers, and can arrange custom payment terms for Enterprise clients. All payments are processed securely through our encrypted payment system.',
     },
     {
       category: 'Technical',
       question: 'Do you offer training for your solutions?',
-      answer: 'Yes! We provide comprehensive training for all our solutions, including documentation, video tutorials, and live training sessions. Training is included with all our service plans.'
+      answer: 'Yes! We provide comprehensive training for all our solutions, including documentation, video tutorials, and live training sessions. Training is included with all our service plans.',
     },
     {
       category: 'General',
       question: 'Can I customize your solutions for my specific needs?',
-      answer: 'Absolutely! All our solutions are designed to be customizable. Our team works closely with you to tailor solutions that meet your specific business requirements and objectives.'
+      answer: 'Absolutely! All our solutions are designed to be customizable. Our team works closely with you to tailor solutions that meet your specific business requirements and objectives.',
     },
     {
       category: 'Technical',
       question: 'What is your uptime guarantee?',
-      answer: 'We guarantee 99.9% uptime for all our services. We have redundant systems and monitoring in place to ensure maximum availability and quick recovery from any issues.'
+      answer: 'We guarantee 99.9% uptime for all our services. We have redundant systems and monitoring in place to ensure maximum availability and quick recovery from any issues.',
     }
-<<<<<<< HEAD
   ];
 
   const categories = ['all', ...Array.from(new Set(faqs.map(faq => faq.category)))];
@@ -158,33 +93,28 @@ const SupportPage: React.FC = () => {
     const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
->>>>>>> origin/main
-=======
   ]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
 
   const faqs = [
     {
       question: 'How do I get started with your AI services?',
-      answer: 'Getting started is easy! Contact our team for a free consultation where we assess your needs and create a customized implementation plan.'
+      answer: 'Getting started is easy! Contact our team for a free consultation where we assess your needs and create a customized implementation plan.',
     },
     {
       question: 'What is your typical project timeline?',
-      answer: 'Project timelines vary based on complexity, but most AI implementations take 4-12 weeks from start to finish.'
+      answer: 'Project timelines vary based on complexity, but most AI implementations take 4-12 weeks from start to finish.',
     },
     {
       question: 'Do you provide ongoing support?',
-      answer: 'Yes, we offer comprehensive support packages including monitoring, maintenance, and optimization services.'
+      answer: 'Yes, we offer comprehensive support packages including monitoring, maintenance, and optimization services.',
     },
     {
       question: 'What technologies do you work with?',
-      answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'
+      answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.',
     }
   ];
   const supportChannels = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'Email Support',
       description: 'Get help via email within 24 hours',
       icon: Mail,
@@ -195,7 +125,7 @@ const SupportPage: React.FC = () => {
       description: 'Speak directly with our technical team',
       icon: Phone,
       contact: '+1 (555) 123-4567',
-      availability: 'Mon-Fri 9AM-6PM EST'
+      availability: 'Mon-Fri 9AM-6PM EST',
     },
     {
       title: 'Live Chat',
@@ -210,7 +140,6 @@ const SupportPage: React.FC = () => {
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
->>>>>>> main
   return (
     <div className="min-h-screen pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -223,55 +152,36 @@ const SupportPage: React.FC = () => {
           </p>
         </div>
       </div>
-=======
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone Support',
       description: 'Call us for immediate assistance',
       contact: '+1 (555) 123-4567',
-      availability: '24/7 for critical issues'
->>>>>>> origin/main
->>>>>>> origin/main
-=======
+      availability: '24/7 for critical issues',
       icon: Phone,
       title: 'Phone Support',
       description: 'Call us for immediate assistance',
       contact: '+1 302 464 0950',
       availability: '24/7',
-      responseTime: 'Immediate'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
+      responseTime: 'Immediate',
     },
     {
       icon: Mail,
       title: 'Email Support',
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: 'Send us a detailed message',
       contact: 'support@ziontechgroup.com',
-      hours: 'Response within 4 hours'
-=======
-      description: 'Get detailed responses to your questions',
-      contact: 'support@ziontechgroup.com',
-<<<<<<< HEAD
-      hours: '24/7'
-=======
-      availability: 'Response within 2 hours'
->>>>>>> origin/main
->>>>>>> origin/main
-=======
+      hours: 'Response within 4 hours',
+      hours: '24/7',
       description: 'Send us an email and we\'ll respond quickly',
       contact: 'kleber@ziontechgroup.com',
       availability: '24/7',
-      responseTime: 'Within 2 hours'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
+      responseTime: 'Within 2 hours',
     },
     {
       icon: MessageCircle,
       title: 'Live Chat',
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: 'Chat with our support team',
       contact: 'Available on website',
-      hours: 'Mon-Fri 9AM-6PM EST'
+      hours: 'Mon-Fri 9AM-6PM EST',
     }
   ];
 
@@ -286,25 +196,7 @@ const SupportPage: React.FC = () => {
       <Helmet>
         <title>Support - Zion Tech Group</title>
         <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Find answers, contact support, and access resources." />
-=======
-      contact: 'Available on website',
-<<<<<<< HEAD
-      availability: '24/7'
-=======
-      availability: 'Mon-Fri 9AM-6PM EST'
-    },
-    {
-      icon: <BookOpen className="w-6 h-6" />,
-      title: 'Knowledge Base',
-      description: 'Browse our documentation',
-      contact: 'Self-service resources',
-      availability: 'Available 24/7'
-=======
-      description: 'Chat with our support team in real-time',
-      contact: 'Available on website',
-      availability: 'Business hours',
-      responseTime: 'Immediate'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
+      availability: '24/7',
     }
   ]
 
@@ -313,45 +205,37 @@ const SupportPage: React.FC = () => {
       icon: BookOpen,
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
-      link: '/docs'
+      link: '/docs',
     },
     {
       icon: Video,
       title: 'Video Tutorials',
       description: 'Step-by-step video guides for all features',
-      link: '/tutorials'
+      link: '/tutorials',
     },
     {
-<<<<<<< HEAD
       title: 'Community Forum',
       description: 'Connect with other users and experts',
       icon: <Users className="w-5 h-5" />,
-      link: '/community'
->>>>>>> origin/main
-=======
+      link: '/community',
       icon: FileText,
       title: 'Knowledge Base',
       description: 'Searchable database of articles and solutions',
-      link: '/knowledge-base'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
+      link: '/knowledge-base',
     }
   ]
 
-<<<<<<< HEAD
   return (
-<<<<<<< HEAD
     <>
   </>
       <Helmet>
         <title>Support - Zion Tech Group | Technical Support & Help</title>
         <meta name="description" content="Get technical support and help for your AI and IT solutions. 24/7 support, documentation, and expert assistance from Zion Tech Group." />
         <meta name="keywords" content="technical support, AI support, IT help, customer service, documentation, troubleshooting" />
->>>>>>> origin/main
       </Helmet>
       
       <Navigation />
       
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -437,37 +321,6 @@ const SupportPage: React.FC = () => {
                 </div>
               </div>
             ))}
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-        </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Technical
-              <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Support
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Get expert help and support for your AI and IT solutions. 
-              Our team is here to ensure your success.
-            </p>
-=======
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Support - Zion Tech Group | Help & Support Center</title>
-        <meta name="description" content="Get help and support for Zion Tech Group's AI and IT solutions. Find answers, contact support, and access resources." />
-        <meta name="keywords" content="support, help, documentation, FAQ, contact support, technical support" />
-      </Helmet>
-=======
-  const filteredFaqs = faqs.filter(faq => 
-    (selectedCategory === 'all' || faq.category === selectedCategory) &&
-    faq.question.toLowerCase().includes(searchQuery.toLowerCase())
-  )
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -518,17 +371,13 @@ const SupportPage: React.FC = () => {
                 <option value="Billing">Billing</option>
               </select>
             </div>
->>>>>>> origin/main
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Search Section */}
-        <section className="py-16 px-4">
-        </section>
-          <div className="max-w-7xl mx-auto">
+        <section$1>
+        <div$2>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">How can we help you?</h2>
               <p className="text-xl text-gray-300">Search our knowledge base or contact our support team</p>
@@ -559,10 +408,6 @@ const SupportPage: React.FC = () => {
                 >
                   {category.name}
                 </button>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
       {/* Support Channels */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -581,11 +426,8 @@ const SupportPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <channel.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
->>>>>>> origin/main
               ))}
             </div>
-=======
                 <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3>
                 <p className="text-gray-300 mb-4">{channel.description}</p>
                 <div className="text-cyan-400 font-semibold mb-2">{channel.contact}</div>
@@ -595,15 +437,12 @@ const SupportPage: React.FC = () => {
                 </div>
               </div>
             ))}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
           </div>
         </div>
-      </section>
-
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section>
+        <div>
+          <div>
+            <h2>
                 Get in Touch
               </h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
@@ -627,9 +466,8 @@ const SupportPage: React.FC = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 px-4">
-        </section>
-          <div className="max-w-4xl mx-auto">
+        <section$1>
+        <div$2>
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
               <p className="text-xl text-gray-300">Find answers to common questions</p>
@@ -642,12 +480,10 @@ const SupportPage: React.FC = () => {
                 </div>
               ))}
             ))
->>>>>>> origin/main
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -666,128 +502,12 @@ const SupportPage: React.FC = () => {
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 Schedule Call
               </button>
-=======
-        {/* Support Hours */}
-        <section className="py-16 px-4">
-        </section>
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-white mb-4">Support Hours</h2>
-                <p className="text-xl text-gray-300">We're here when you need us</p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Emergency Support</h3>
-                  <p className="text-gray-300">24/7 for critical issues</p>
-                  <p className="text-gray-300">Emergency support included</p>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">General Inquiries</h3>
-                  <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM</p>
-                </div>
-              </div>
-            ))
-          </div>
-        </section>
-      </div>
-      
-      <Footer />
-
-=======
-      {/* FAQ Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-300">
-              Find answers to common questions about our services.
-            </p>
-          </div>
-          
-          <div className="space-y-6">
-            {filteredFaqs.map((faq, index) => (
-              <div key={index} className="cyber-card">
-                <div className="flex items-start justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center mb-2">
-                      <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium mr-3">
-                        {faq.category}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
-                    <p className="text-gray-300">{faq.answer}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Resources Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Helpful Resources
-            </h2>
-            <p className="text-xl text-gray-300">
-              Access our comprehensive library of resources and guides.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {resources.map((resource, index) => (
-              <div key={index} className="cyber-card text-center group hover:bg-white/20 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <resource.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{resource.title}</h3>
-                <p className="text-gray-300 mb-4">{resource.description}</p>
-                <button className="text-cyan-400 hover:text-cyan-300 font-medium flex items-center mx-auto group-hover:translate-x-1 transition-transform">
-                  Access Resource
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
->>>>>>> origin/main
     </div>
->>>>>>> origin/main
   );
 };
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
 
-<<<<<<< HEAD
 export default SupportPage;
-=======
-      {/* FAQ Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
-          <div className="space-y-6">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-              <h3 className="text-lg font-semibold text-white mb-2">How do I get started?</h3>
-              <p className="text-gray-300">Simply contact us through any of our support channels and we'll guide you through the setup process.</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-              <h3 className="text-lg font-semibold text-white mb-2">What are your business hours?</h3>
-              <p className="text-gray-300">We provide 24/7 support through our live chat and email systems. Phone support is available during business hours.</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-              <h3 className="text-lg font-semibold text-white mb-2">How quickly can you resolve issues?</h3>
-              <p className="text-gray-300">Most issues are resolved within 24 hours, with critical issues receiving immediate attention.</p>
->>>>>>> origin/main
-            </div>
-=======
 
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -807,20 +527,11 @@ export default SupportPage;
               <Phone className="w-5 h-5 mr-2" />
               Call Us Now
             </button>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-a9d9
           </div>
         </div>
       </section>
 
       <Footer />
     </div>
-<<<<<<< HEAD
   );
 }
-=======
-  )
-}
-
-export default SupportPage
->>>>>>> origin/main
->>>>>>> origin/main

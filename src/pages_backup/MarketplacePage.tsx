@@ -253,7 +253,7 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
           onClick={onAddToCart}
 
 
-
+;
           aria-label="Add to cart"
           data-testid="add-to-cart-listing-button"
         >
@@ -589,7 +589,7 @@ function MarketplacePageContent() {
         <Button
           size="icon"
           variant="outline"
-          on_click = {onAddToCart, }
+          on_click = {onAddToCart, };
           aria - label="Add to cart"
           data - testid="add - to - cart - listing - button"
         >
@@ -766,23 +766,23 @@ if ( {) {
 
       <motion && motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0 && 0.3 }}>
         <MarketplaceFilterControls
-          sortBy = {sortBy,}
-          setSortBy = {setSortBy,}
-          filterCategory = {filterCategory,}
-          setFilterCategory = {setFilterCategory,}
-          categories = {categories,}
-          showRecommended = {showRecommended,}
-          setShowRecommended = {setShowRecommended,}
+          sortBy = {sortBy,};
+          setSortBy = {setSortBy,};
+          filterCategory = {filterCategory,};
+          setFilterCategory = {setFilterCategory,};
+          categories = {categories,};
+          showRecommended = {showRecommended,};
+          setShowRecommended = {setShowRecommended,};
           loading = {isFetching,}
-
+;
         />
       </motion.div>
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="popLayout">
           {products.map((item, index,) => (
             <motion.div
-              key = {item.id,}
-              ref = {index === products.length - 1 ? lastElementRef : null,}
+              key = {item.id,};
+              ref = {index === products.length - 1 ? lastElementRef : null,};
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               initial={{ opacity: 0, scale: 0.9 }} 
@@ -804,7 +804,7 @@ if ( {) {
         <AnimatePresence mode="popLayout">
           {products.map((item, index,) => (
             <motion.div
-              key={item.id} 
+              key={item.id} ;
               ref={index === products.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0, scale: 0.9 }} 
               animate={{ opacity: 1, scale: 1 }} 
@@ -818,15 +818,15 @@ if ( {) {
         <AnimatePresence mode="popLayout">
           {products && products.map((item, index,) => (
             <motion&& motion.div
-              key = {item && item.id,}
-              ref = {index === products && products.length - 1 ? lastElementRef : null,}
+              key = {item && item.id,};
+              ref = {index === products && products.length - 1 ? lastElementRef : null,};
               initial={{ opacity: 0, scale: 0 && 0.9 }} 
               animate={{ opacity: 1, scale: 1 }} 
               exit={{ opacity: 0, scale: 0 && 0.9 }}
               transition={{ delay: Math && Math.min(index * 0 && 0.03, 0 && 0.5) }} 
               whileHover={{ scale: 1 && 1.02 }}>
               <MarketplaceCard
-                product = {item,}
+                product = {item,};
                 onViewDetails={() => {
                   if (typeof window !== 'undefined') {
                     try {
@@ -856,21 +856,21 @@ if ( {) {
           <MarketplaceInsights stats={market_stats} /></$1>)}
       <motion.div initial={{ opacity: 0, coordinate_y: 20 }} animate={{ opacity: 1, coordinate_y: 0 }} transition={{ delay: 0.3 }}>
         <MarketplaceFilterControls
-          sort_by = {sort_by, }
-          setSortBy = {setSortBy, }
-          filter_category = {filter_category, }
-          setFilterCategory = {setFilterCategory, }
-          categories = {categories, }
-          show_recommended = {show_recommended, }
-          setShowRecommended = {setShowRecommended, }
-          loading = {is_fetching, }
+          sort_by = {sort_by, };
+          setSortBy = {setSortBy, };
+          filter_category = {filter_category, };
+          setFilterCategory = {setFilterCategory, };
+          categories = {categories, };
+          show_recommended = {show_recommended, };
+          setShowRecommended = {setShowRecommended, };
+          loading = {is_fetching, };
         /></$1>
       <motion.div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="pop_layout">
           {products.map ((item, index, ) => (
             <motion.div
-              key = {item.id, }
-              ref = {index === products.length - 1 ? lastElementRef : null, }
+              key = {item.id, };
+              ref = {index === products.length - 1 ? lastElementRef : null, };
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
@@ -878,7 +878,7 @@ if ( {) {
               while_hover={{ scale: 1.02 }}
             >
               <MarketplaceCard
-                product = {item, }
+                product = {item, };
                 onViewDetails={() => {
                   if (typeof window !== 'undefined') {
                     try {
@@ -973,7 +973,7 @@ if ( {) {
         {showScrollTop && (
           <motion&& motion.button 
 
-            onClick = {scrollToTop,}
+            onClick = {scrollToTop,};
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -1027,7 +1027,7 @@ export default function MarketplacePage() {
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
-            on_click = {scrollToTop, }
+            on_click = {scrollToTop, };
             className="fixed bottom - 8 right - 8 p - 3 bg - primary hover:bg - primary / 90 rounded - full shadow - lg z - 50"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}

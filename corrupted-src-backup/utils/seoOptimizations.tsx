@@ -4,7 +4,7 @@
  */
 import { Helmet } from 'react-helmet-async'
 // Meta tags utilities
-export const seoUtils = {/* content */}
+export const seoUtils = {/* content */};
   // Generate structured data for organization
   generateOrganizationSchema: () => ({/* content */}
     "@context": "https: //schema.org",
@@ -139,7 +139,7 @@ export const seoUtils = {/* content */}
 })
 }
 // Sitemap generation utilities
-export const sitemapUtils = {/* content */}
+export const sitemapUtils = {/* content */};
   // Generate sitemap entries
   generateSitemapEntry: (url: string, lastmod?: string, changefreq?: string, priority?: string) => {/* content */}
     return {/* content */}
@@ -180,7 +180,7 @@ Sitema,`
   }
 }
 // URL optimization utilities
-export const urlUtils = {/* content */}
+export const urlUtils = {/* content */};
   // Generate canonical URL
   generateCanonicalUrl: (path: string, baseUrl: string = 'https://zion.app') => {/* content */}
     return `${baseUrl}${path}`
@@ -214,7 +214,7 @@ export const urlUtils = {/* content */}
   }
 }
 // Content optimization utilities
-export const contentOptimization = {/* content */}
+export const contentOptimization = {/* content */};
   // Extract keywords from content
   extractKeywords: (content: string, minLength: number = 3): string[] => {/* content */}
   // Extract keywords from content,
@@ -305,7 +305,7 @@ export const performanceSEO = {/* content */}
   }
 }
 // Analytics and tracking utilities
-export const analyticsUtils = {/* content */}
+export const analyticsUtils = {/* content */};
   // Track page views
   trackPageView: (url: string, title: string) => {/* content */}
     if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {/* content */}
@@ -357,7 +357,7 @@ export const analyticsUtils = {/* content */}
   }
 }
 // Core Web Vitals tracking
-export const coreWebVitals = {/* content */}
+export const coreWebVitals = {/* content */};
   // Track Core Web Vitals
   trackCoreWebVitals: () => {/* content */}
     if (typeof window === 'undefined') return
@@ -490,4 +490,4 @@ export const initializeSEO = () => {/* content */}
     }
   }
 }"`
-</li></li>
+</li>

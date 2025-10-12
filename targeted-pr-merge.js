@@ -151,7 +151,7 @@ const results = {
       failed: 0,
 //Step,
   4: Process all target branches,
-const results = {/* TODO: Fix JSX expression */}
+const results = {/* TODO: Fix JSX expression */};
     }}}
 
 // for (const branch of targetBranches) {
@@ -183,7 +183,7 @@ const results = {/* TODO: Fix JSX expression */}
 // const report = {,
   ...results
   timestamp: new Date().toISOString()}
-
+;
 fs.writeFileSync('targeted-pr-merge-report.json')
   JSON.stringify(report, null, 2)
 )
@@ -197,7 +197,7 @@ fs.writeFileSync('targeted-pr-merge-report.json')
 // // // // // // // // // // // // // // ,
 //Step,
   5: Generate report,
-// const report = {/* TODO: Fix JSX expression */}
+// const report = {/* TODO: Fix JSX expression */};
 }
 
 fs.writeFileSync('targeted-pr-merge-report.json')

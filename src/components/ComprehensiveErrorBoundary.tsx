@@ -33,7 +33,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     constructor(props: ErrorBoundaryProps) {
     super(props),
     this.state = {// TODO: Add content
-  }
+  };
 }
   hasErro,
   r: false,

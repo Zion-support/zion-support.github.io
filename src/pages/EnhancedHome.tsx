@@ -22,25 +22,25 @@ const EnhancedHome: React.FC = () => {
       title: 'AI-Powered Solutions',
       description: 'Leverage cutting-edge artificial intelligence to automate processes and gain insights.',
       icon: '🤖',
-      link: '/services/ai-solutions'
+      link: '/services/ai-solutions',
     },
     {
       title: 'Cybersecurity Excellence',
       description: 'Protect your business with enterprise-grade security solutions and threat intelligence.',
       icon: '🛡️',
-      link: '/services/cybersecurity'
+      link: '/services/cybersecurity',
     },
     {
       title: 'Cloud Infrastructure',
       description: 'Scale your operations with robust cloud solutions and seamless migration services.',
       icon: '☁️',
-      link: '/services/cloud-services'
+      link: '/services/cloud-services',
     },
     {
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with advanced analytics and BI solutions.',
       icon: '📊',
-      link: '/services/data-analytics'
+      link: '/services/data-analytics',
     }
   ];
 
@@ -51,7 +51,7 @@ const EnhancedHome: React.FC = () => {
       role: 'CTO',
       content: 'Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300%.',
       rating: 5,
-      avatar: '/api/placeholder/60/60'
+      avatar: '/api/placeholder/60/60',
     },
     {
       name: 'Michael Chen',
@@ -59,7 +59,7 @@ const EnhancedHome: React.FC = () => {
       role: 'CEO',
       content: 'Outstanding cybersecurity implementation. We feel completely secure with their advanced protection systems.',
       rating: 5,
-      avatar: '/api/placeholder/60/60'
+      avatar: '/api/placeholder/60/60',
     },
     {
       name: 'Emily Rodriguez',
@@ -67,7 +67,7 @@ const EnhancedHome: React.FC = () => {
       role: 'VP of Operations',
       content: 'Their data analytics platform gave us insights we never knew existed. Game-changing technology.',
       rating: 5,
-      avatar: '/api/placeholder/60/60'
+      avatar: '/api/placeholder/60/60',
     }
   ];
 

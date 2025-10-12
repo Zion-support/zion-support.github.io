@@ -16,7 +16,7 @@ export type Real2036SpecializedService = {
   integration?: string[]
   useCases?: string[]
   technology?: string[]
-}
+};
 export const real2036SpecializedServices: Real2036SpecializedService[] = [
   // Neuromorphic Computing Platform
   {

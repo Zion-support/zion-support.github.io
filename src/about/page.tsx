@@ -1,67 +1,8 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
-=======
-'use client'
-import React from 'react'
-import { Brain, Shield, Target, Users } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import { Link } from 'react-router-dom'
-import { Users, Target, Brain, Shield } from 'lucide-react'
-import Footer from '../components/Footer'
-const AboutPage: React.FC = () => {
-  const team = [
-    {
-      name: 'Kleber Santos',
-      role: 'CEO & Founder',
-      image: '/images/team/kleber.jpg',
-      bio: 'Visionary leader with 15+ years in AI and technology innovation.'},
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      image: '/images/team/sarah.jpg',
-      bio: 'Technical expert specializing in machine learning and cloud architecture.'},
-    {
-      name: 'Michael Chen',
-      role: 'Lead AI Engineer',
-      image: '/images/team/michael.jpg',
-      bio: 'AI researcher and developer with expertise in deep learning and NLP.'}]
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '5+', label: 'Years Experience' },
-    { number: '99%', label: 'Client Satisfaction' }
-  ]
-  const values = [
-    {
-      icon: Brain,
-      title: 'Innovation',
-      description: 'We constantly push the boundaries of what\'s possible with AI and technology.'},
-    {
-      icon: Shield,
-      title: 'Security',
-      description: 'Your data and systems are protected with enterprise-grade security measures.'},
-    {
-      icon: Target,
-      title: 'Results',
-      description: 'We focus on delivering measurable business outcomes and ROI.'},
-    {
-      icon: Users,
-      title: 'Partnership',
-      description: 'We work closely with our clients as strategic technology partners.'}]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">About Zion Tech Group
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
-import { Users, CheckCircle, Star, Shield, Award, Target, Globe, Brain, Cloud, Code, BarChart, TrendingUp, Phone, Mail, MapPin, Clock, ArrowRight, Zap, Cpu, Database, Lock, Smartphone, Settings, Calendar, FileText, MessageSquare, Star as StarIcon, Award as AwardIcon, Shield as ShieldIcon, Users as UsersIcon } from 'lucide-react'
-export default function AboutPage() {
->>>>>>> origin/main
   const teamMembers = [
     {
       name: 'Kleber Santos',
@@ -101,17 +42,17 @@ export default function AboutPage() {
     {
       icon: Shield,
       title: 'Security & Trust',
-      description: 'Enterprise-grade security and compliance are at the core of everything we build.'
+      description: 'Enterprise-grade security and compliance are at the core of everything we build.',
     },
     {
       icon: Users,
       title: 'Client Success',
-      description: 'Your success is our success. We measure our achievements by your business outcomes.'
+      description: 'Your success is our success. We measure our achievements by your business outcomes.',
     },
     {
       icon: Globe,
       title: 'Global Impact',
-      description: 'We believe technology should make the world better, more efficient, and more connected.'
+      description: 'We believe technology should make the world better, more efficient, and more connected.',
     }
   ]
   const achievements = [
@@ -124,37 +65,37 @@ export default function AboutPage() {
     {
       year: '2018',
       title: 'Company Founded',
-      description: 'Zion Tech Group was established with a vision to democratize AI for enterprises.'
+      description: 'Zion Tech Group was established with a vision to democratize AI for enterprises.',
     },
     {
       year: '2019',
       title: 'First AI Platform',
-      description: 'Launched our flagship AI automation platform, serving 50+ clients.'
+      description: 'Launched our flagship AI automation platform, serving 50+ clients.',
     },
     {
       year: '2020',
       title: 'Quantum Computing Division',
-      description: 'Established quantum computing research and development capabilities.'
+      description: 'Established quantum computing research and development capabilities.',
     },
     {
       year: '2021',
       title: 'Global Expansion',
-      description: 'Expanded operations to serve clients across North America, Europe, and Asia.'
+      description: 'Expanded operations to serve clients across North America, Europe, and Asia.',
     },
     {
       year: '2022',
       title: 'AI Ethics Initiative',
-      description: 'Launched comprehensive AI ethics framework and responsible AI practices.'
+      description: 'Launched comprehensive AI ethics framework and responsible AI practices.',
     },
     {
       year: '2023',
       title: 'Breakthrough Technologies',
-      description: 'Introduced cutting-edge solutions in autonomous systems and edge computing.'
+      description: 'Introduced cutting-edge solutions in autonomous systems and edge computing.',
     },
     {
       year: '2024',
       title: 'Industry Recognition',
-      description: 'Awarded "AI Innovation Leader" by TechCrunch and "Best AI Solutions Provider" by Gartner.'
+      description: 'Awarded "AI Innovation Leader" by TechCrunch and "Best AI Solutions Provider" by Gartner.',
     }
   ]
   return (
@@ -297,13 +238,8 @@ export default function AboutPage() {
   
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
-=======
-        </section>
-      </div>
->>>>>>> origin/main
       {/* Stats Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -489,42 +425,7 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   );
 };
 
 export default AboutPage;
-=======
-  ),
-}
-  </a>
-  </a>
-  </p>
-  </h2>
-  </p>
-  </h2>
-  </p>
-  </h2>
-  </p>
-  </h2>
-  </h2>
-  </h2>
-  </h1>
-  </div>
-  </div>
-  </section>
-  </Link>
-  </Link>
-  </p>
-  </h2>
-  </p>
-  </h2>
-  </Link>
-  </h2>
-  </h2>
-  </section>
-  </div>
-  </div>
-  </div>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></p></h1></h1></h2></h2></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></h3></section></section></section></section></section></section></section></section></section></section>
->>>>>>> origin/main

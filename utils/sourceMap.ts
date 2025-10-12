@@ -44,7 +44,7 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
   }
 }
     connected: false,
-    branch: 'main'
+    branch: 'main',
   }
 }
 export function getSourceMapWithExistence(): SourceNode[] {
@@ -197,7 +197,7 @@ function markExistenceRecursive(node: SourceNode): SourceNode {
   const withExists: SourceNode = {
     ...node,
     exists,
-  }
+  };
   if (node.children && node.children.length > 0) {
     withExists.children = node.children.map(markExistenceRecursive)
   }

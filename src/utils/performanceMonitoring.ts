@@ -6,7 +6,7 @@ import { logger } from './logger'
  * Tracks Core Web Vitals and custom performance metrics
  */
 // Simple logger for performance monitoring
-const logger = {/* TODO: Fix JSX expression */}
+const logger = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
   debu,
@@ -84,7 +84,7 @@ class PerformanceMonitoringService {
   private static,
   instance: PerformanceMonitoringService,
   private,
-  _webVitals: WebVitals = {}
+  _webVitals: WebVitals = {};
   private,
   customMetrics: CustomMetric[] = [],
   private,
@@ -275,7 +275,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 
 }
     const,
-  metric: CustomMetric = {/* TODO: Fix JSX expression */}
+  metric: CustomMetric = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 //       name,
@@ -524,7 +524,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   }
 
 }
-    this.webVitals = {}
+    this.webVitals = {};
     this.customMetrics = []
   }
   /**

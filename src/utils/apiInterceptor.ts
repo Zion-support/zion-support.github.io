@@ -109,7 +109,7 @@ export class APIInterceptor {
   g: Partial<APIConfig> = {}) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    this.config = {/* TODO: Fix JSX expression */}
+    this.config = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 
@@ -585,7 +585,7 @@ const data = await this.parseResponse
   }
 
 }
-    this.config = { ...this.config, ...config }
+    this.config = { ...this.config, ...config };
   }
   /**
    * Get current configuration

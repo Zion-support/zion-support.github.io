@@ -44,8 +44,8 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-}
+  website: 'https://ziontechgroup.com',
+};
 export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [
   {
     id: 'ai-powered-defi-protocol',
@@ -360,7 +360,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced DeFi yield optimization platform with automated strategies, multi-chain support, and professional portfolio management.',
@@ -412,7 +412,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive NFT platform with marketplace creation, trading tools, and enterprise management features.',
@@ -464,7 +464,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive DAO platform with governance tools, treasury management, and community engagement features.',
@@ -516,7 +516,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced cross-chain platform with secure bridging, liquidity management, and multi-chain interoperability.',
@@ -568,7 +568,7 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive Web3 identity platform with decentralized identity management, authentication, and privacy protection.',

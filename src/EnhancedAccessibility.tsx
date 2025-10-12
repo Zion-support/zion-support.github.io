@@ -193,7 +193,7 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
   const announcementRef = useRef<HTMLDivElement>(null)
   // Initialize accessibility features
   useEffect(() => {
-    theme: 'auto'
+    theme: 'auto',
   })
   // Apply accessibility settings to document
   const applySettings = useCallback((newSettings: AccessibilitySettings) => {
@@ -331,8 +331,8 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
       const filters = {
         protanopia: 'url(#protanopia)',
         deuteranopia: 'url(#deuteranopia)',
-        tritanopia: 'url(#tritanopia)'
-      }
+        tritanopia: 'url(#tritanopia)',
+      };
       root.style.setProperty('--color-filter', filters[newSettings.colorBlindness])
     } else {
       root.style.removeProperty('--color-filter')
@@ -374,7 +374,7 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
   }, [applySettings])
   // Update settings
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
-    const newSettings = { ...settings, [key]: value }
+    const newSettings = { ...settings, [key]: value };
     setSettings(newSettings)
     applySettings(newSettings)
   }, [settings, applySettings])
@@ -388,8 +388,8 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
       keyboardNavigation: false,
       focusIndicator: true,
       colorBlindness: 'none',
-      theme: 'auto'
-    }
+      theme: 'auto',
+    };
     setSettings(defaultSettings)
     applySettings(defaultSettings)
   }, [applySettings])
@@ -509,7 +509,7 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     keyboardNavigation: true,
     focusIndicator: true,
     colorBlindness: 'none',
-    fontSize: 'medium'
+    fontSize: 'medium',
   })
   const [issues, setIssues] = useState<AccessibilityIssue[]>([])
   const [isScanning, setIsScanning] = useState(false)
@@ -521,7 +521,7 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     if (settings.highContrast) {
     fontSize: 16,
     colorBlindMode: 'none',
-    deviceMode: 'desktop'
+    deviceMode: 'desktop',
   })
   // Apply accessibility settings to the document
   const applySettings = useCallback((newSettings: AccessibilitySettings) => {
@@ -562,8 +562,8 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
       none: 'none',
       protanopia: 'url(#protanopia)',
       deuteranopia: 'url(#deuteranopia)',
-      tritanopia: 'url(#tritanopia)'
-    }
+      tritanopia: 'url(#tritanopia)',
+    };
     root.style.filter = colorBlindFilters[newSettings.colorBlindMode]
     // Device mode simulation
     if (newSettings.deviceMode !== 'desktop') {
@@ -718,7 +718,7 @@ const EnhancedAccessibility: React.FC = () => {
   }, [settings.screenReader])
   // Update settings
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
-    const newSettings = { ...settings, [key]: value }
+    const newSettings = { ...settings, [key]: value };
     setSettings(newSettings)
     // Announce changes to screen reader
     const settingNames = {
@@ -729,8 +729,8 @@ const EnhancedAccessibility: React.FC = () => {
       keyboardNavigation: 'Keyboard navigation mode',
       fontSize: 'Font size',
       colorBlindMode: 'Color blind mode',
-      deviceMode: 'Device mode'
-    }
+      deviceMode: 'Device mode',
+    };
     announceToScreenReader(`${settingNames[key]} ${value ? 'enabled' : 'disabled'}`)
   }, [settings, announceToScreenReader])
   // Initialize speech recognition
@@ -1003,7 +1003,7 @@ const EnhancedAccessibility: React.FC = () => {
       showKeyboardShortcuts: false,
       showScreenReaderHints: false,
       showAccessibilityInfo: false,
-    }
+    };
     setSettings(defaultSettings)
   }
   const getPositionClasses = () => {
@@ -1094,7 +1094,7 @@ const EnhancedAccessibility: React.FC = () => {
           left: '-10000px', 
           width: '1px', 
           height: '1px', 
-          overflow: 'hidden' 
+          overflow: 'hidden' ,
         }}
       >
         <Eye className="w-6 h-6" />
@@ -1127,8 +1127,8 @@ const EnhancedAccessibility: React.FC = () => {
     const fontSizeMap = {
       small: '14px',
       medium: '16px',
-      large: '18px'
-    }
+      large: '18px',
+    };
     root.style.fontSize = fontSizeMap[settings.fontSize]
     // Reduced motion
     if (settings.reducedMotion) {
@@ -1243,7 +1243,7 @@ const EnhancedAccessibility: React.FC = () => {
       soundEnabled: true,
       focusIndicator: true,
       screenReader: false
-    }
+    };
     setSettings(defaultSettings)
   }
   // Enhanced keyboard navigation for the panel
@@ -2186,7 +2186,7 @@ const EnhancedAccessibility: React.FC = () => {
   }, [settings])
   // Toggle setting with announcement
   const toggleSetting = (key: keyof AccessibilitySettings) => {
-    const newSettings = { ...settings, [key]: !settings[key] }
+    const newSettings = { ...settings, [key]: !settings[key] };
     setSettings(newSettings)
     // Visual accessibility
     if (settings.highContrast) score += 5

@@ -120,11 +120,11 @@ warranty?: string
 returnPolicy?: string 
 }return {
   id: item && item.id, name: item && item.title, description: item && item.description, brand: item && item.brand || 'Unknown', category: item && item.category, subcategory: item && item.subcategory, images: item && item.images || ['https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item && item.price || 0, currency: item && item.currency || '$', rating: item && item.rating, reviewCount: item && item.reviewCount, inStock: item && item.availability === 'In Stock' || !item && item.availability, expectedShipping: item && item.availability || 'In Stock',  specifications: (item && item.specifications || []) .map ( (spec) => ({'
-  name: spec, value: '' 
+  name: spec, value: '' ,
 }) )
 features: item && item.tags || [];'
 warranty: '1 Year Manufacturer Warranty';'
-returnPolicy: '30-day return policy' 
+returnPolicy: '30-day return policy' ,
 // Convert ProductListing to EquipmentDetails format
 function convertProductListingToEquipmentDetails(): any (
   item: ProductListing
@@ -325,11 +325,11 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     expectedShipping: item.availability || 'In Stock',
     specifications: (item.specifications || []).map((spec) => ({
       name: spec,
-      value: ''
+      value: '',
     })),
     features: item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
-    returnPolicy: '30-day return policy'
+    returnPolicy: '30-day return policy',
   }
 }
 
@@ -458,14 +458,11 @@ export default function EquipmentDetail() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
           quantity}}),
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -642,7 +639,7 @@ if ( {) {
               </p>
               <div className="space-x-4">
                 <Button 
-                  onClick={() => router.back()} 
+                  onClick={() => router.back()} ;
                   variant="outline"
                   className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"
                 >
@@ -667,7 +664,7 @@ if ( {) {
     <>
       <NextSeo
         title={`${equipment && equipment.name} - Zion Marketplace`}
-        description = {equipment && equipment.description,}
+        description = {equipment && equipment.description,};
         openGraph={{
 
     loadEquipment()
@@ -843,7 +840,7 @@ if ( {) {
                   <div className='flex items-center gap-2'>
                     <div className='flex items-center'>
                       {[...Array(5)].map((_, i) => (                        <Star
-                          key = {i,}
+                          key = {i,};
                           className={`h-4 w-4 ${
                             i < Math && Math.floor(equipment && equipment.rating!)
                               ? 'text-yellow-400 fill-current'

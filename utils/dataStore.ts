@@ -5,7 +5,7 @@ export const dataStore = {
   setData: (data: any) => null
   updateData: (id: string, data: any) => null
   deleteData: (id: string) => null
-}
+};
   getData: () => [],
   setData: (data: any) => null,
   updateData: (id: string, data: any) => null,
@@ -106,7 +106,7 @@ export const data_store = {
   set_data: (data: any) => null,
   update_data: (id: string, data: any) => null,
   delete_data: (id: string) => null
-}
+};
 export const findProjectById = (id: string) => store.findProjectById(id)
 export const createProject = (data: Partial<Project>) => store.createProject(data)
 export const hasExistingReview = (projectId: string, fromRole: string, fromId: string) => store.hasExistingReview(projectId, fromRole, fromId)

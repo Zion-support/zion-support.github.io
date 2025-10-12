@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,;}
   GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,;
   Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,;
@@ -7,20 +6,6 @@ export const microSAASServices = [
   // Productivity & Management Tools;
   {title: 'AI Project Manager Pro',
     description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',;
-=======
-import {
-    Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,
-  GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,
-  Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,
-  Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon
-  }
-} from 'lucide-react'
-export const microSAASServices = [
-  // Productivity & Management Tools
-  {
-    title: 'AI Project Manager Pro',
-    description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',
->>>>>>> origin/main
     icon: 'bar-chart',
     price: '$99/month',
     originalPrice: '$149/month',
@@ -30,18 +15,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.9,
-<<<<<<< HEAD
     users: '10,000+',}freeTrial: '14 days',},;
   {title: 'AI Meeting Assistant Pro',
     description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',;
-=======
-    users: '10,000+',
-  }
-    freeTrial: '14 days'},
-  {
-    title: 'AI Meeting Assistant Pro',
-    description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
->>>>>>> origin/main
     icon: 'target',
     price: '$79/month',
     originalPrice: '$119/month',
@@ -51,18 +27,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-<<<<<<< HEAD
     users: '20,000+',}freeTrial: '14 days',},;
   {title: 'AI Document Intelligence Pro',
     description: 'Transform any document into actionable insights with AI-powered analysis, summarization, and knowledge extraction.',;
-=======
-    users: '20,000+',
-  }
-    freeTrial: '14 days'},
-  {
-    title: 'AI Document Intelligence Pro',
-    description: 'Transform any document into actionable insights with AI-powered analysis, summarization, and knowledge extraction.',
->>>>>>> origin/main
     icon: '📄',
     price: '$89/month',
     originalPrice: '$129/month',
@@ -72,18 +39,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.7,
-<<<<<<< HEAD
     users: '15,000+',}freeTrial: '7 days',},;
   {title: 'AI Personal Assistant Pro',
     description: 'Your intelligent personal assistant that manages emails, schedules, and tasks with natural language processing.',;
-=======
-    users: '15,000+',
-  }
-    freeTrial: '7 days'},
-  {
-    title: 'AI Personal Assistant Pro',
-    description: 'Your intelligent personal assistant that manages emails, schedules, and tasks with natural language processing.',
->>>>>>> origin/main
     icon: '🤖',
     price: '$49/month',
     originalPrice: '$79/month',
@@ -93,18 +51,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.9,
-<<<<<<< HEAD
     users: '45,000+',}freeTrial: '14 days',},;
   {title: 'AI Team Collaboration Hub',
     description: 'Advanced team collaboration platform with AI-powered insights, smart notifications, and productivity analytics.',;
-=======
-    users: '45,000+',
-  }
-    freeTrial: '14 days'},
-  {
-    title: 'AI Team Collaboration Hub',
-    description: 'Advanced team collaboration platform with AI-powered insights, smart notifications, and productivity analytics.',
->>>>>>> origin/main
     icon: 'users',
     price: '$99/month',
     originalPrice: '$149/month',
@@ -114,18 +63,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-<<<<<<< HEAD
     users: '25,000+',}freeTrial: '14 days',},;
   {title: 'AI Task Manager Pro',
     description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',;
-=======
-    users: '25,000+',
-  }
-    freeTrial: '14 days'},
-  {
-    title: 'AI Task Manager Pro',
-    description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
->>>>>>> origin/main
     icon: 'check',
     price: '$49/month',
     originalPrice: '$79/month',
@@ -135,16 +75,8 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-<<<<<<< HEAD
     users: '25,000+',}freeTrial: '7 days',},;
   {title: 'AI Workflow Automation Pro',
-=======
-    users: '25,000+',
-  }
-    freeTrial: '7 days'},
-  {
-    title: 'AI Workflow Automation Pro',
->>>>>>> origin/main
     description: 'Automate repetitive tasks with AI-powered workflow optimization. Save 20+ hours per week with intelligent automation.',
     icon: 'zap',
     price: '$79/month',
@@ -155,18 +87,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.7,
-<<<<<<< HEAD
     users: '15,000+',}freeTrial: '14 days',},;
   {title: 'AI Meeting Scheduler Pro',
     description: 'Intelligent meeting scheduling with calendar optimization, conflict resolution, and time zone management. Used by Fortune 500 companies.',;
-=======
-    users: '15,000+',
-  }
-    freeTrial: '14 days'},
-  {
-    title: 'AI Meeting Scheduler Pro',
-    description: 'Intelligent meeting scheduling with calendar optimization, conflict resolution, and time zone management. Used by Fortune 500 companies.',
->>>>>>> origin/main
     icon: '📅',
     price: '$39/month',
     originalPrice: '$59/month',
@@ -176,18 +99,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.8,
-<<<<<<< HEAD
     users: '30,000+',}freeTrial: '7 days',},;
   {title: 'AI Time Tracker Pro',
     description: 'Intelligent time tracking with productivity insights, automated reporting, and team analytics. Trusted by remote teams globally.',;
-=======
-    users: '30,000+',
-  }
-    freeTrial: '7 days'},
-  {
-    title: 'AI Time Tracker Pro',
-    description: 'Intelligent time tracking with productivity insights, automated reporting, and team analytics. Trusted by remote teams globally.',
->>>>>>> origin/main
     icon: '⏱️',
     price: '$34/month',
     originalPrice: '$49/month',
@@ -197,20 +111,10 @@ export const microSAASServices = [
     popular: true,
     category: 'Productivity',
     rating: 4.6,
-<<<<<<< HEAD
     users: '50,000+',}freeTrial: '14 days',},;
   // Content & Marketing Tools;
   {title: 'AI Content Writer Pro',
     description: 'Advanced AI content creation with SEO optimization, brand voice consistency, and multi-language support. Generate 10 x more content.',;
-=======
-    users: '50,000+',
-  }
-    freeTrial: '14 days'},
-  // Content & Marketing Tools
-  {
-    title: 'AI Content Writer Pro',
-    description: 'Advanced AI content creation with SEO optimization, brand voice consistency, and multi-language support. Generate 10 x more content.',
->>>>>>> origin/main
     icon: '✍️',
     price: '$89/month',
     originalPrice: '$129/month',
@@ -220,18 +124,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.9,
-<<<<<<< HEAD
     users: '40,000+',}freeTrial: '7 days',},;
   {title: 'AI Video Creator Pro',
     description: 'Professional video creation with AI-powered editing, voice synthesis, and automated production. Create studio-quality videos in minutes.',;
-=======
-    users: '40,000+',
-  }
-    freeTrial: '7 days'},
-  {
-    title: 'AI Video Creator Pro',
-    description: 'Professional video creation with AI-powered editing, voice synthesis, and automated production. Create studio-quality videos in minutes.',
->>>>>>> origin/main
     icon: 'film',
     price: '$149/month',
     originalPrice: '$199/month',
@@ -241,18 +136,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.8,
-<<<<<<< HEAD
     users: '30,000+',}freeTrial: '14 days',},;
   {title: 'AI Podcast Studio Pro',
     description: 'Complete podcast production suite with AI-powered editing, transcription, and distribution. Launch your podcast in 24 hours.',;
-=======
-    users: '30,000+',
-  }
-    freeTrial: '14 days'},
-  {
-    title: 'AI Podcast Studio Pro',
-    description: 'Complete podcast production suite with AI-powered editing, transcription, and distribution. Launch your podcast in 24 hours.',
->>>>>>> origin/main
     icon: '🎙️',
     price: '$79/month',
     originalPrice: '$119/month',
@@ -262,18 +148,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.7,
-<<<<<<< HEAD
     users: '18,000+',}freeTrial: '7 days',},;
   {title: 'AI Graphic Design Studio',
     description: 'Professional graphic design with AI-powered tools, templates, and brand consistency. Create stunning visuals without design skills.',;
-=======
-    users: '18,000+',
-  }
-    freeTrial: '7 days'},
-  {
-    title: 'AI Graphic Design Studio',
-    description: 'Professional graphic design with AI-powered tools, templates, and brand consistency. Create stunning visuals without design skills.',
->>>>>>> origin/main
     icon: 'palette',
     price: '$69/month',
     originalPrice: '$99/month',
@@ -283,18 +160,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.8,
-<<<<<<< HEAD
     users: '35,000+',}freeTrial: '14 days',},;
   {title: 'AI Website Builder Pro',
     description: 'Intelligent website builder with AI-powered design, content generation, and SEO optimization. Launch your site in minutes.',;
-=======
-    users: '35,000+',
-  }
-    freeTrial: '14 days'},
-  {
-    title: 'AI Website Builder Pro',
-    description: 'Intelligent website builder with AI-powered design, content generation, and SEO optimization. Launch your site in minutes.',
->>>>>>> origin/main
     icon: 'globe',
     price: '$89/month',
     originalPrice: '$129/month',
@@ -304,18 +172,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Content',
     rating: 4.9,
-<<<<<<< HEAD
     users: '50,000+',}freeTrial: '14 days',},;
   {title: 'AI Social Media Manager Pro',
     description: 'Automated social media management with AI-powered content creation, scheduling, and analytics. Grow your audience by 300%.',;
-=======
-    users: '50,000+',
-  }
-    freeTrial: '14 days'},
-  {
-    title: 'AI Social Media Manager Pro',
-    description: 'Automated social media management with AI-powered content creation, scheduling, and analytics. Grow your audience by 300%.',
->>>>>>> origin/main
     icon: 'smartphone',
     price: '$69/month',
     originalPrice: '$99/month',
@@ -325,18 +184,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Marketing',
     rating: 4.7,
-<<<<<<< HEAD
     users: '35,000+',}freeTrial: '14 days',},;
   {title: 'AI Email Marketing Suite',
     description: 'Intelligent email marketing with AI-powered personalization, A/B testing, and automation. Increase open rates by 150%.',;
-=======
-    users: '35,000+',
-  }
-    freeTrial: '14 days'},
-  {
-    title: 'AI Email Marketing Suite',
-    description: 'Intelligent email marketing with AI-powered personalization, A/B testing, and automation. Increase open rates by 150%.',
->>>>>>> origin/main
     icon: 'Email:',
     price: '$59/month',
     originalPrice: '$89/month',
@@ -346,18 +196,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Marketing',
     rating: 4.8,
-<<<<<<< HEAD
     users: '28,000+',}freeTrial: '7 days',},;
   {title: 'AI SEO Optimizer Pro',
     description: 'Advanced SEO optimization with AI-powered keyword research, content analysis, and ranking tracking. Boost organic traffic by 200%.',;
-=======
-    users: '28,000+',
-  }
-    freeTrial: '7 days'},
-  {
-    title: 'AI SEO Optimizer Pro',
-    description: 'Advanced SEO optimization with AI-powered keyword research, content analysis, and ranking tracking. Boost organic traffic by 200%.',
->>>>>>> origin/main
     icon: 'search',
     price: '$79/month',
     originalPrice: '$119/month',
@@ -367,18 +208,9 @@ export const microSAASServices = [
     popular: true,
     category: 'Marketing',
     rating: 4.9,
-<<<<<<< HEAD
     users: '22,000+',}freeTrial: '14 days',},;
   {title: 'AI Lead Generation Pro',
     description: 'Automated lead generation with AI-powered prospecting, qualification, and nurturing. Generate 5 x more qualified leads.',;
-=======
-    users: '22,000+',
-  }
-    freeTrial: '14 days'},
-  {
-    title: 'AI Lead Generation Pro',
-    description: 'Automated lead generation with AI-powered prospecting, qualification, and nurturing. Generate 5 x more qualified leads.',
->>>>>>> origin/main
     icon: '🎯',
     price: '$99/month',
     originalPrice: '$149/month',
@@ -388,22 +220,11 @@ export const microSAASServices = [
     popular: true,
     category: 'Marketing',
     rating: 4.8,
-<<<<<<< HEAD
     users: '18,000+',}freeTrial: '7 days',}
 ]
 export const aiServices = [
   {title: 'Machine Learning Solutions',
     description: 'Custom ML models for predictive analytics, decision-making, and intelligent automation. Trusted by Fortune 500 companies.',;
-=======
-    users: '18,000+',
-  }
-    freeTrial: '7 days'}
-]
-export const aiServices = [
-  {
-    title: 'Machine Learning Solutions',
-    description: 'Custom ML models for predictive analytics, decision-making, and intelligent automation. Trusted by Fortune 500 companies.',
->>>>>>> origin/main
     icon: Brain,
     price: '$1,500/month',
     originalPrice: '$2,000/month',
@@ -413,18 +234,9 @@ export const aiServices = [
     popular: true,
     category: 'AI Development',
     rating: 4.9,
-<<<<<<< HEAD
     users: '500+',}freeTrial: '30 days',},;
   {title: 'AI Cybersecurity Shield Pro',
     description: 'Advanced AI-powered security solutions with real-time threat detection, behavioral analysis, and automated response.',;
-=======
-    users: '500+',
-  }
-    freeTrial: '30 days'},
-  {
-    title: 'AI Cybersecurity Shield Pro',
-    description: 'Advanced AI-powered security solutions with real-time threat detection, behavioral analysis, and automated response.',
->>>>>>> origin/main
     icon: Shield,
     price: '$2,200/month',
     originalPrice: '$3,000/month',
@@ -434,18 +246,9 @@ export const aiServices = [
     popular: true,
     category: 'Security',
     rating: 4.8,
-<<<<<<< HEAD
     users: '300+',}freeTrial: '30 days',},;
   {title: 'AI Healthcare Assistant Pro',
     description: 'Revolutionary healthcare AI with diagnostic assistance, patient monitoring, and treatment optimization.',;
-=======
-    users: '300+',
-  }
-    freeTrial: '30 days'},
-  {
-    title: 'AI Healthcare Assistant Pro',
-    description: 'Revolutionary healthcare AI with diagnostic assistance, patient monitoring, and treatment optimization.',
->>>>>>> origin/main
     icon: Stethoscope,
     price: '$3,500/month',
     originalPrice: '$5,000/month',
@@ -455,18 +258,9 @@ export const aiServices = [
     popular: true,
     category: 'Healthcare',
     rating: 4.9,
-<<<<<<< HEAD
     users: '200+',}freeTrial: '30 days',},;
   {title: 'AI Financial Advisor Pro',
     description: 'Intelligent financial planning with portfolio optimization, risk assessment, and automated trading.',;
-=======
-    users: '200+',
-  }
-    freeTrial: '30 days'},
-  {
-    title: 'AI Financial Advisor Pro',
-    description: 'Intelligent financial planning with portfolio optimization, risk assessment, and automated trading.',
->>>>>>> origin/main
     icon: DollarSign,
     price: '$1,800/month',
     originalPrice: '$2,500/month',
@@ -476,18 +270,9 @@ export const aiServices = [
     popular: true,
     category: 'Finance',
     rating: 4.7,
-<<<<<<< HEAD
     users: '400+',}freeTrial: '30 days',},;
   {title: 'AI Supply Chain Optimizer',
     description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',;
-=======
-    users: '400+',
-  }
-    freeTrial: '30 days'},
-  {
-    title: 'AI Supply Chain Optimizer',
-    description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
->>>>>>> origin/main
     icon: Truck,
     price: '$2,500/month',
     originalPrice: '$3,500/month',
@@ -497,18 +282,9 @@ export const aiServices = [
     popular: true,
     category: 'Logistics',
     rating: 4.8,
-<<<<<<< HEAD
     users: '250+',}freeTrial: '30 days',},;
   {title: 'AI Legal Assistant Pro',
     description: 'Advanced legal AI with contract analysis, case research, and document automation.',;
-=======
-    users: '250+',
-  }
-    freeTrial: '30 days'},
-  {
-    title: 'AI Legal Assistant Pro',
-    description: 'Advanced legal AI with contract analysis, case research, and document automation.',
->>>>>>> origin/main
     icon: FileText,
     price: '$2,000/month',
     originalPrice: '$2,800/month',
@@ -518,18 +294,9 @@ export const aiServices = [
     popular: true,
     category: 'Legal',
     rating: 4.6,
-<<<<<<< HEAD
     users: '150+',}freeTrial: '30 days',},;
   {title: 'AI Manufacturing Intelligence',
     description: 'Smart manufacturing with predictive maintenance, quality control, and production optimization.',;
-=======
-    users: '150+',
-  }
-    freeTrial: '30 days'},
-  {
-    title: 'AI Manufacturing Intelligence',
-    description: 'Smart manufacturing with predictive maintenance, quality control, and production optimization.',
->>>>>>> origin/main
     icon: Factory,
     price: '$3,000/month',
     originalPrice: '$4,200/month',
@@ -539,18 +306,9 @@ export const aiServices = [
     popular: true,
     category: 'Manufacturing',
     rating: 4.9,
-<<<<<<< HEAD
     users: '180+',}freeTrial: '30 days',},;
   {title: 'AI Education Platform Pro',
     description: 'Personalized learning with adaptive curriculum, student analytics, and automated assessment.',;
-=======
-    users: '180+',
-  }
-    freeTrial: '30 days'},
-  {
-    title: 'AI Education Platform Pro',
-    description: 'Personalized learning with adaptive curriculum, student analytics, and automated assessment.',
->>>>>>> origin/main
     icon: GraduationCap,
     price: '$1,200/month',
     originalPrice: '$1,800/month',
@@ -560,19 +318,10 @@ export const aiServices = [
     popular: true,
     category: 'Education',
     rating: 4.7,
-<<<<<<< HEAD
     users: '600+',}freeTrial: '30 days',}
 ]
-=======
-    users: '600+',
-  }
-    freeTrial: '30 days'}
-<<<<<<< HEAD
 ];];];
->>>>>>> origin/main
-=======
 ]
->>>>>>> origin/main
 export const itServices = [
   {title: 'Cloud Migration Services',
     description: 'Seamless cloud migration with zero downtime and optimized performance. Migrate to the cloud with confidence.',
@@ -585,18 +334,9 @@ export const itServices = [
     popular: true,
     category: 'Cloud Services',
     rating: 4.8,
-<<<<<<< HEAD
     users: '600+',}freeTrial: '30 days',},;
   {title: 'Enterprise IT Infrastructure',
     description: 'Complete enterprise IT infrastructure with high availability, scalability, and security. Built for Fortune 500 companies.',;
-=======
-    users: '600+',
-  }
-    freeTrial: '30 days'},
-  {
-    title: 'Enterprise IT Infrastructure',
-    description: 'Complete enterprise IT infrastructure with high availability, scalability, and security. Built for Fortune 500 companies.',
->>>>>>> origin/main
     icon: Building,
     price: '$5,000/month',
     originalPrice: '$7,500/month',
@@ -606,18 +346,9 @@ export const itServices = [
     popular: true,
     category: 'Infrastructure',
     rating: 4.9,
-<<<<<<< HEAD
     users: '100+',}freeTrial: '30 days',},;
   {title: 'DevOps & CI/CD Automation',
     description: 'Complete DevOps transformation with automated CI/CD pipelines, infrastructure as code, and monitoring.',;
-=======
-    users: '100+',
-  }
-    freeTrial: '30 days'},
-  {
-    title: 'DevOps & CI/CD Automation',
-    description: 'Complete DevOps transformation with automated CI/CD pipelines, infrastructure as code, and monitoring.',
->>>>>>> origin/main
     icon: SettingsIcon,
     price: '$2,500/month',
     originalPrice: '$3,500/month',
@@ -627,18 +358,9 @@ export const itServices = [
     popular: true,
     category: 'DevOps',
     rating: 4.8,
-<<<<<<< HEAD
     users: '400+',}freeTrial: '30 days',},;
   {title: 'Database Management & Optimization',
     description: 'Advanced database services with performance tuning, backup strategies, and high availability setup.',;
-=======
-    users: '400+',
-  }
-    freeTrial: '30 days'},
-  {
-    title: 'Database Management & Optimization',
-    description: 'Advanced database services with performance tuning, backup strategies, and high availability setup.',
->>>>>>> origin/main
     icon: Database,
     price: '$1,800/month',
     originalPrice: '$2,500/month',
@@ -648,18 +370,9 @@ export const itServices = [
     popular: true,
     category: 'Database',
     rating: 4.7,
-<<<<<<< HEAD
     users: '350+',}freeTrial: '30 days',},;
   {title: 'Network Security & Firewall',
     description: 'Advanced network security with next-generation firewalls, intrusion detection, and threat prevention.',;
-=======
-    users: '350+',
-  }
-    freeTrial: '30 days'},
-  {
-    title: 'Network Security & Firewall',
-    description: 'Advanced network security with next-generation firewalls, intrusion detection, and threat prevention.',
->>>>>>> origin/main
     icon: LockIcon,
     price: '$1,500/month',
     originalPrice: '$2,200/month',
@@ -669,18 +382,9 @@ export const itServices = [
     popular: true,
     category: 'Security',
     rating: 4.9,
-<<<<<<< HEAD
     users: '500+',}freeTrial: '30 days',},;
   {title: 'IT Consulting & Strategy',
     description: 'Strategic IT consulting with digital transformation, technology roadmaps, and implementation planning.',;
-=======
-    users: '500+',
-  }
-    freeTrial: '30 days'},
-  {
-    title: 'IT Consulting & Strategy',
-    description: 'Strategic IT consulting with digital transformation, technology roadmaps, and implementation planning.',
->>>>>>> origin/main
     icon: Building,
     price: '$3,000/month',
     originalPrice: '$4,500/month',
@@ -690,22 +394,11 @@ export const itServices = [
     popular: true,
     category: 'Consulting',
     rating: 4.8,
-<<<<<<< HEAD
     users: '200+',}freeTrial: '30 days',}
 ]
 export const specializedServices = [
   {title: 'Quantum Computing Solutions',
     description: 'Cutting-edge quantum computing with quantum algorithms, optimization, and research. Solve complex problems with quantum power.',;
-=======
-    users: '200+',
-  }
-    freeTrial: '30 days'}
-]
-export const specializedServices = [
-  {
-    title: 'Quantum Computing Solutions',
-    description: 'Cutting-edge quantum computing with quantum algorithms, optimization, and research. Solve complex problems with quantum power.',
->>>>>>> origin/main
     icon: Cpu,
     price: '$5,000/month',
     originalPrice: '$7,500/month',
@@ -715,18 +408,9 @@ export const specializedServices = [
     popular: true,
     category: 'Quantum',
     rating: 4.9,
-<<<<<<< HEAD
     users: '50+',}freeTrial: '60 days',},;
   {title: 'Autonomous Systems',
     description: 'Advanced autonomous systems with robotics, drones, and self-driving technology. Build the future of automation.',;
-=======
-    users: '50+',
-  }
-    freeTrial: '60 days'},
-  {
-    title: 'Autonomous Systems',
-    description: 'Advanced autonomous systems with robotics, drones, and self-driving technology. Build the future of automation.',
->>>>>>> origin/main
     icon: SettingsIcon,
     price: '$4,000/month',
     originalPrice: '$6,000/month',
@@ -736,18 +420,9 @@ export const specializedServices = [
     popular: true,
     category: 'Autonomous',
     rating: 4.8,
-<<<<<<< HEAD
     users: '100+',}freeTrial: '30 days',},;
   {title: 'Blockchain & Web3',
     description: 'Comprehensive blockchain solutions with smart contracts, DeFi, and Web3 development. Build the decentralized future.',;
-=======
-    users: '100+',
-  }
-    freeTrial: '30 days'},
-  {
-    title: 'Blockchain & Web3',
-    description: 'Comprehensive blockchain solutions with smart contracts, DeFi, and Web3 development. Build the decentralized future.',
->>>>>>> origin/main
     icon: LockIcon,
     price: '$2,500/month',
     originalPrice: '$3,500/month',
@@ -757,18 +432,9 @@ export const specializedServices = [
     popular: true,
     category: 'Blockchain',
     rating: 4.7,
-<<<<<<< HEAD
     users: '300+',}freeTrial: '30 days',},;
   {title: 'IoT & Edge Computing',
     description: 'Comprehensive IoT solutions with edge computing, sensor networks, and real-time processing. Connect and optimize everything.',;
-=======
-    users: '300+',
-  }
-    freeTrial: '30 days'},
-  {
-    title: 'IoT & Edge Computing',
-    description: 'Comprehensive IoT solutions with edge computing, sensor networks, and real-time processing. Connect and optimize everything.',
->>>>>>> origin/main
     icon: Globe,
     price: '$1,800/month',
     originalPrice: '$2,500/month',
@@ -778,18 +444,9 @@ export const specializedServices = [
     popular: true,
     category: 'IoT',
     rating: 4.8,
-<<<<<<< HEAD
     users: '400+',}freeTrial: '30 days',}
 ]
 export interface Service {id: string,}
-=======
-    users: '400+',
-  }
-    freeTrial: '30 days'}
-]
-export interface Service {
-    id: string,
->>>>>>> origin/main
   name: string,
   category: 'ai' | 'it' | 'micro-saas' | 'emerging-tech',
   subcategory: string,
@@ -827,18 +484,11 @@ export const services: Service[] = [,
       'Risk prediction and mitigation',
       'Real-time progress tracking',
       'Team collaboration tools',
-<<<<<<< HEAD
       'Integration with 50+ tools';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Integration with 50+ tools'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 299,
       currency: 'USD',
       period: 'month',},
@@ -877,18 +527,11 @@ export const services: Service[] = [,
       'Integration with CRM systems',
       'Sentiment analysis',
       'Escalation to human agents',
-<<<<<<< HEAD
       'Analytics and reporting';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Analytics and reporting'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 199,
       currency: 'USD',
       period: 'month',},
@@ -926,18 +569,11 @@ export const services: Service[] = [,
       'Brand voice consistency',
       'Plagiarism detection',
       'Content scheduling',
-<<<<<<< HEAD
       'Performance analytics';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Performance analytics'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 149,
       currency: 'USD',
       period: 'month',},
@@ -975,18 +611,11 @@ export const services: Service[] = [,
       'Automated report generation',
       'Custom dashboard creation',
       'Data visualization',
-<<<<<<< HEAD
       'Machine learning models';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Machine learning models'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 499,
       currency: 'USD',
       period: 'month',},
@@ -1024,18 +653,11 @@ export const services: Service[] = [,
       'Automated incident response',
       'Vulnerability assessment',
       'Compliance monitoring',
-<<<<<<< HEAD
       'Security training';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Security training'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 799,
       currency: 'USD',
       period: 'month',},
@@ -1061,18 +683,9 @@ export const services: Service[] = [,
     marketPrice: {,
     min: 500,
       max: 2000,
-<<<<<<< HEAD
       currency: 'USD',}},
   // Micro SAAS Services;
   {id: 'ai-social-media-manager',
-=======
-      currency: 'USD'
-  }
-    },
-  // Micro SAAS Services
-  {
-    id: 'ai-social-media-manager',
->>>>>>> origin/main
     name: 'AI Social Media Manager',
     category: 'micro-saas',
     subcategory: 'Social Media',
@@ -1083,18 +696,11 @@ export const services: Service[] = [,
       'Optimal timing analysis',
       'Engagement tracking',
       'Hashtag optimization',
-<<<<<<< HEAD
       'Competitor analysis';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Competitor analysis'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 79,
       currency: 'USD',
       period: 'month',},
@@ -1132,18 +738,11 @@ export const services: Service[] = [,
       'Send time optimization',
       'A/B testing automation',
       'Email template library',
-<<<<<<< HEAD
       'Performance analytics';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Performance analytics'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 99,
       currency: 'USD',
       period: 'month',},
@@ -1181,18 +780,11 @@ export const services: Service[] = [,
       'Competitor analysis',
       'Ranking tracking',
       'Technical SEO audit',
-<<<<<<< HEAD
       'Link building recommendations';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Link building recommendations'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 129,
       currency: 'USD',
       period: 'month',},
@@ -1230,18 +822,11 @@ export const services: Service[] = [,
       'Payment tracking',
       'Recurring billing',
       'Multi-currency support',
-<<<<<<< HEAD
       'Tax calculation';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Tax calculation'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 49,
       currency: 'USD',
       period: 'month',},
@@ -1279,18 +864,11 @@ export const services: Service[] = [,
       'Project time allocation',
       'Team collaboration',
       'Detailed reporting',
-<<<<<<< HEAD
       'Integration with 100+ tools';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Integration with 100+ tools'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 39,
       currency: 'USD',
       period: 'month',},
@@ -1316,18 +894,9 @@ export const services: Service[] = [,
     marketPrice: {,
     min: 20,
       max: 80,
-<<<<<<< HEAD
       currency: 'USD',}},
   // IT Services;
   {id: 'cloud-infrastructure',
-=======
-      currency: 'USD'
-  }
-    },
-  // IT Services
-  {
-    id: 'cloud-infrastructure',
->>>>>>> origin/main
     name: 'Cloud Infrastructure Solutions',
     category: 'it',
     subcategory: 'Cloud Computing',
@@ -1338,18 +907,11 @@ export const services: Service[] = [,
       'Disaster recovery',
       'Security compliance',
       'Performance monitoring',
-<<<<<<< HEAD
       'Cost optimization';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Cost optimization'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 999,
       currency: 'USD',
       period: 'month',},
@@ -1387,18 +949,11 @@ export const services: Service[] = [,
       'Email security',
       'Web application firewall',
       'Compliance reporting',
-<<<<<<< HEAD
       'Incident response';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Incident response'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 1299,
       currency: 'USD',
       period: 'month',},
@@ -1436,18 +991,11 @@ export const services: Service[] = [,
       'Container orchestration',
       'Monitoring and alerting',
       'Security scanning',
-<<<<<<< HEAD
       'Performance optimization';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Performance optimization'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 799,
       currency: 'USD',
       period: 'month',},
@@ -1485,18 +1033,11 @@ export const services: Service[] = [,
       'Performance monitoring',
       'Security hardening',
       'Migration services',
-<<<<<<< HEAD
       '24/7 support';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      '24/7 support'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 599,
       currency: 'USD',
       period: 'month',},
@@ -1522,18 +1063,9 @@ export const services: Service[] = [,
     marketPrice: {,
     min: 300,
       max: 1200,
-<<<<<<< HEAD
       currency: 'USD',}},
   // Emerging Technologies;
   {id: 'quantum-computing',
-=======
-      currency: 'USD'
-  }
-    },
-  // Emerging Technologies
-  {
-    id: 'quantum-computing',
->>>>>>> origin/main
     name: 'Quantum Computing Solutions',
     category: 'emerging-tech',
     subcategory: 'Quantum',
@@ -1544,18 +1076,11 @@ export const services: Service[] = [,
       'Cryptography solutions',
       'Simulation capabilities',
       'Research collaboration',
-<<<<<<< HEAD
       'Custom quantum applications';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Custom quantum applications'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 5000,
       currency: 'USD',
       period: 'month',
@@ -1595,18 +1120,11 @@ export const services: Service[] = [,
       'NFT marketplace development',
       'Blockchain integration',
       'Token development',
-<<<<<<< HEAD
       'Security auditing';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Security auditing'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 2999,
       currency: 'USD',
       period: 'month',
@@ -1646,18 +1164,11 @@ export const services: Service[] = [,
       'Real-time data processing',
       'Predictive maintenance',
       'Device security',
-<<<<<<< HEAD
       'Analytics dashboard';
-<<<<<<< HEAD
     ],;
     pricing: {,
-=======
-=======
-      'Analytics dashboard'
->>>>>>> origin/main
     ],
     pricing: {
->>>>>>> origin/main
       starting: 1299,
       currency: 'USD',
       period: 'month',},
@@ -1710,25 +1221,10 @@ export const serviceCategories = [
     description: 'Next-generation technology solutions',
     icon: '🚀',
     color: 'text-pink-400',
-<<<<<<< HEAD
     bgColor: 'bg-pink-500/10',}}
 ]
 export const contactInfo = {phone: '+1 (302) 464-0950',
-=======
-    bgColor: 'bg-pink-500/10'
-  }
-  }
-]
-export const contactInfo = {
-    phone: '+1 (302) 464-0950',
->>>>>>> origin/main
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown, DE 19709',
   website: 'https://ziontechgroup.com',
-<<<<<<< HEAD
   hours: 'Mon-Fri: 9AM-6PM EST',}}
-=======
-  hours: 'Mon-Fri: 9AM-6PM EST'
-  }
-}
->>>>>>> origin/main

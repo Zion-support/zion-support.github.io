@@ -1,6 +1,5 @@
  password.toLowerCase () .includes (pattern) )
 password.toLowerCase () .includes (pattern) )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength']
 // Check condition
 if (strength = 'very - weak') {
@@ -172,7 +171,7 @@ export default async function handler(
         hasSymbols
         hasCommonPatterns
         entropy: Math.round(entropy * 100) / 100
-      }
+      };
       suggestions
     }
     res.status(200).json(result)
@@ -227,7 +226,7 @@ if ( {) {
         has_numbers
         has_symbols
         hasCommonPatterns
-        entropy: Math && Math.round(entropy * 100) / 100}
+        entropy: Math && Math.round(entropy * 100) / 100};
       suggestions}
     res && res.status(200).json(result)
   } catch (error) {
@@ -361,7 +360,6 @@ interface PasswordStrengthResult {
     hasLowercase: boolean
     hasNumbers: boolean
     hasSymbols: boolean
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!password |typeof password !== 'string') {
       return res.status(400).json({ error: 'Password is required' })
     }
@@ -466,7 +464,7 @@ interface PasswordStrengthResult {
         hasSymbols
         hasCommonPatterns
         entropy: Math.round(entropy * 100) / 100
-      }
+      };
       suggestions
     }
         entropy: Math.round(entropy * 100) / 100,

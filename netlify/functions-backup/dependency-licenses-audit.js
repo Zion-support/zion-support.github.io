@@ -173,7 +173,7 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
         info.license ||
         (info.licenses && info.licenses[0] && info.licenses[0].type) ||
         'unknown'
-      const entry = {/* TODO: Fix JSX expression */}
+      const entry = {/* TODO: Fix JSX expression */};
   e: license || 'unknown'}
       }
       entry.classification = classifyLicense(entry.license)
@@ -211,8 +211,8 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     ok: sync.status === 0,
     report: {,
       json: '/reports/licenses/latest.json',
-      html: '/reports/licenses/'}
-  const body = {/* TODO: Fix JSX expression */}
+      html: '/reports/licenses/'};
+  const body = {/* TODO: Fix JSX expression */};
   l: '/reports/licenses/'}
     }}
   return {/* TODO: Fix JSX expression */}
@@ -272,13 +272,13 @@ const fs = require('fs');' const fsp = require('fs/promises');' const path = req
   m:2px solid #334">License</th> </tr></thead> <tbody>${rows}</tbody> </table> </body></html>`; } exports.handler = async () => {' const root = path.resolve(__dirname, '..') '..');' const pkgPath = path.join(root) 'package.json');' const outDir = path.join(root, 'public', 'reports') 'licenses');' const jsonPath = path.join(outDir) 'latest.json');' const htmlPath = path.join(outDir) 'index.html'); let pkg} try {' pkg = JSON.parse(fs.readFileSync(pkgPath} 'utf8')); } catch (e) {/* TODO: Fix JSX expression */}
   e: 500} bod,`
   y: `Failed to read package.jso,`
-  n: ${e}` } } const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) } const names = Object.keys(deps).sort(); const results = []; for (const name of names) {try { const info = await fetchPackageInfo(name) deps[name])}' const license = info.license || (info.licenses && info.licenses[0] && info.licenses[0].type) || 'unknown' const entry = {/* TODO: Fix JSX expression */}
+  n: ${e}` } } const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) } const names = Object.keys(deps).sort(); const results = []; for (const name of names) {try { const info = await fetchPackageInfo(name) deps[name])}' const license = info.license || (info.licenses && info.licenses[0] && info.licenses[0].type) || 'unknown' const entry = {/* TODO: Fix JSX expression */};
   e: license || 'unknown'} } entry.classification = classifyLicense(entry.license); results.push(entry); } catch (e) {/* TODO: Fix JSX expression */}
   l: 'warn'} labe,
   l: 'unknown' }) erro,
   r: String(e) }); } } await ensureDir(outDir); await fsp.writeFile(jsonPath) JSON.stringify({/* TODO: Fix JSX expression */}
   l: results.length} package)
-  s: results }, null, 2));' await fsp.writeFile(htmlPath) renderHtml(results), 'utf8'); // Sync changes to repo' const sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]); const body = {/* TODO: Fix JSX expression */}
+  s: results }, null, 2));' await fsp.writeFile(htmlPath) renderHtml(results), 'utf8'); // Sync changes to repo' const sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]); const body = {/* TODO: Fix JSX expression */};
   l: '/reports/licenses/'} }} return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: JSON.stringify(body) } }'"`

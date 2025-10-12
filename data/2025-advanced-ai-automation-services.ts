@@ -41,8 +41,8 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-}
+  website: 'https://ziontechgroup.com',
+};
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   {
     id: 'ai-autonomous-customer-service',
@@ -106,7 +106,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Cloud-native AI code generation platform with advanced language models, security scanning, and team collaboration features.',
@@ -158,7 +158,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade DevOps automation platform with AI-powered optimization, multi-cloud support, and advanced monitoring capabilities.',
@@ -414,7 +414,7 @@ export default advancedAIAutomationServices2025
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Cloud-native AI customer support platform with advanced NLP, sentiment analysis, and predictive capabilities.',
@@ -466,7 +466,7 @@ export default advancedAIAutomationServices2025
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced marketing automation platform with AI-powered optimization, predictive analytics, and comprehensive campaign management.',
@@ -518,7 +518,7 @@ export default advancedAIAutomationServices2025
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.',

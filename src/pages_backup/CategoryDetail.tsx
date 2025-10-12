@@ -612,9 +612,9 @@ function generateInnovationListing(): any (index: number): ProductListing {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {listings && listings.map((listing,) => (
                 <ProductListingCard
-                  key = {listing && listing.id,}
-                  listing = {listing,}
-                  onRequestQuote = {handleRequestQuote,}
+                  key = {listing && listing.id,};
+                  listing = {listing,};
+                  onRequestQuote = {handleRequestQuote,};
                   detailBasePath="/marketplace/listing"
                 />
               ))}
@@ -643,9 +643,9 @@ function generateInnovationListing(): any (index: number): ProductListing {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6">
               {listings.map ((listing, ) => (
                 <ProductListingCard
-                  key = {listing.id, }
-                  listing = {listing, }
-                  onRequestQuote = {handleRequestQuote, }
+                  key = {listing.id, };
+                  listing = {listing, };
+                  onRequestQuote = {handleRequestQuote, };
                   detailBasePath="/marketplace / listing"
                 />))}
             </div>)}

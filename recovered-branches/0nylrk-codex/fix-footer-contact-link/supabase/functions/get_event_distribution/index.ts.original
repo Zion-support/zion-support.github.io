@@ -4,12 +4,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
-};
->>>>>>> origin/auto/autonomy-17186719616
 
 serve(async (req) => {
   // Handle CORS preflight request
@@ -63,28 +58,14 @@ serve(async (req) => {
     return new Response(JSON.stringify(result), {
       headers: {
         ...corsHeaders,
-<<<<<<< HEAD
         "Content-Type": "application/json"},
       status: 200});
-=======
-        "Content-Type": "application/json",
-      },
-      status: 200,
-    });
->>>>>>> origin/auto/autonomy-17186719616
   } catch (error) {
     console.error("Error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
       headers: {
         ...corsHeaders,
-<<<<<<< HEAD
         "Content-Type": "application/json"},
       status: 500});
-=======
-        "Content-Type": "application/json",
-      },
-      status: 500,
-    });
->>>>>>> origin/auto/autonomy-17186719616
   }
 });

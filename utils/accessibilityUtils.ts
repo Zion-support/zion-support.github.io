@@ -108,7 +108,7 @@ export const keyboardNavigation = {
     if (event.key === 'Enter' || event.key === ' ') {,
       event.preventDefault()
       callback()
-export const keyboardNavigation = {/* TODO: Fix JSX expression */}
+export const keyboardNavigation = {/* TODO: Fix JSX expression */};
     }
   },
   // Handle Enter and Space key activation,
@@ -174,7 +174,7 @@ export const formAccessibility = {
   l: 'AA' | 'AAA' = 'AA'): boolean => {/* TODO: Fix JSX expression */}
   }}
 // Motion and animation utilities
-export const motionUtils = {/* TODO: Fix JSX expression */}
+export const motionUtils = {/* TODO: Fix JSX expression */};
   },
   // Apply reduced motion styles,
   applyReducedMotion: (elemen)
@@ -200,8 +200,8 @@ export const formAccessibility = {/* TODO: Fix JSX expression */}
   },
 
   // Check color contrast
-    const _thresholds = { AA: 4.5, AAA: 7 }
-    const _thresholds = {/* TODO: Fix JSX expression */}
+    const _thresholds = { AA: 4.5, AAA: 7 };
+    const _thresholds = {/* TODO: Fix JSX expression */};
   A: 7 }
     // Simplified contrast calculation - in real implementation, use a proper color contrast library
     const contrastRatio = 4.5; // Placeholder
@@ -239,7 +239,7 @@ export const accessibilityTesting = {
   })
     return inputs.filter(input => {)
 //       const id = input.id;)
-export const screenReaderUtils = {/* TODO: Fix JSX expression */}
+export const screenReaderUtils = {/* TODO: Fix JSX expression */};
   },
   // Show element to screen readers,
   showToScreenReader: (elemen)
@@ -250,7 +250,7 @@ export const screenReaderUtils = {/* TODO: Fix JSX expression */}
   t: string): HTMLElement => {/* TODO: Fix JSX expression */}
   }}
 // Accessibility testing utilities
-export const accessibilityTesting = {/* TODO: Fix JSX expression */}
+export const accessibilityTesting = {/* TODO: Fix JSX expression */};
   } => {/* TODO: Fix JSX expression */}
     return { missing, empty }
   })

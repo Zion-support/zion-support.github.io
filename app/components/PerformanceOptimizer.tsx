@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 'use client';
-<<<<<<< HEAD
 import React from 'react';
 'use client';
 
@@ -73,108 +71,11 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
     return () => observer.disconnect();
   }, [optimizeImages]);
 
-<<<<<<< HEAD
   return <>{children}</>;
 };
 
 export default PerformanceOptimizer;
-=======
-  useEffect(() => {
-    const interval = setInterval(optimizeMemory, 30000); // Check every 30 seconds
-    return () => clearInterval(interval);
-  }, [optimizeMemory]);
-
-  return (
-    <>
-  </>
-      {children}
-      <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-            <Settings className="h-5 w-5 mr-2 text-blue-600" />
-            Performance Optimizer
-          </h3>
-          <button
-            onClick={runOptimizations}
-            disabled={isOptimizing}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
-          >
-            <Zap className="h-4 w-4 mr-2" />
-            {isOptimizing ? 'Optimizing...' : 'Optimize'}
-          </button>
-        </div>
-
-        {optimizations.length > 0 && (
-          <div className="space-y-2 mb-4">
-            {optimizations.map((optimization, index) => (
-              <div key={index} className="flex items-center text-sm text-green-600">
-                <CheckCircle className="h-4 w-4 mr-2" />
-                {optimization}
-              </div>
-            ))}
-          </div>
-        ))
-        {performanceScore && (
-          <div className="mt-4">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-700">Performance Score</span>
-              <span className="text-sm font-bold text-gray-900">{performanceScore}/100</span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
-              <div
-                className={`h-2 rounded-full transition-all duration-500 ${
-                  performanceScore >= 90 ? 'bg-green-500' : 
-                  performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
-                }`}
-                style={{ width: `${performanceScore}%` }}
-              />
-            </div>
-            {performanceScore < 90 && (
-              <div className="mt-2 flex items-center">
-                <AlertTriangle className="h-4 w-4 text-yellow-600" />
-                <span className="text-sm text-yellow-800 ml-2">
-                  Performance can be improved. Consider additional optimizations.
-                </span>
-              </div>
-            </div>
-          ))
-        </div>
-      </div>
-
-  );
-};
-=======
-import React, {useEffect, useState, useCallback}from 'react';
-import {Settings, Zap, CheckCircle, AlertTriangle}}from 'lucide-react';
-
-interface PerformanceOptimizerProps {children: React.ReactNode;,}
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean,
-  enableCodeSplitting?: boolean;}const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
-  children, 
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true,
-  enableCodeSplitting = true;}) => {const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
-  const [performanceScore, setPerformanceScore] = useState<number | null>(null);
-
-  const optimizeImages = useCallback(() => {;
-    if (!enableImageOptimization) return;
-    
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      if (!img.loading) {
-        img.loading = 'lazy'}if (!img.decoding) {img.decoding = 'async'}})
-  }, [enableImageOptimization]);
-
-<<<<<<< HEAD
   const optimizeMemory = useCallback(() => {if ('memory' in performance) {
-=======
-  const optimizeMemory = useCallback(() => {
-    if ('memory' in performance) {;
->>>>>>> origin/main
       const memory = (performance as any).memory;
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
         // Trigger garbage collection if available;
@@ -183,16 +84,9 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
     }
   }, []);
 
-<<<<<<< HEAD
   const runOptimizations = useCallback(async () => {setIsOptimizing(true);
     const newOptimizations: string[] = [],
     // Optimize images;
-=======
-  const runOptimizations = useCallback(async () => {;
-    setIsOptimizing(true);
-    const newOptimizations: string[] = []
-    // Optimize images
->>>>>>> origin/main
     if (enableImageOptimization) {
       optimizeImages(),
       newOptimizations.push('Images optimized for lazy loading')}// Optimize memory;
@@ -215,17 +109,9 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
     return () => clearTimeout(timer);
   }, [runOptimizations]);
 
-<<<<<<< HEAD
   return(<div className="performance-optimizer">)</div>
       {children}{/* Performance Status Indicator (only in development) */}
       {process.env.NODE_ENV === 'development' && (
-=======
-  return (
-    <div className="performance-optimizer">
-      {children},
-    {/* Performance Status Indicator (only in development) */},
-    {process.env.NODE_ENV === 'development' && (
->>>>>>> origin/main
         <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-white text-sm max-w-xs">
           <div className="flex items-center space-x-2 mb-2">
             <Settings className="w-4 h-4 text-cyan-400" />
@@ -252,7 +138,6 @@ interface PerformanceOptimizerProps {children: React.ReactNode;,}
                         <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
                         <span>{opt</span>}</span>
                       </li>
-=======
 'use client'
 import React, { useEffect, useCallback } from 'react'
 const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -272,7 +157,6 @@ const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ childre
         criticalCSS.rel = 'stylesheet'
       }
       document.head.appendChild(criticalCSS)
->>>>>>> origin/main
                     ))}
                   </ul>
                 ) : ()
@@ -283,7 +167,6 @@ const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ childre
         </div>
       )}
     </div>
-<<<<<<< HEAD
   );
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
@@ -303,16 +186,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
       // Preload critical images;
       const criticalImages = [
         '/images/hero-bg.jpg',
-<<<<<<< HEAD
         '/images/logo.png'
       ]
 
       criticalImages.forEach(src => {)
-=======
-        '/images/logo.png';
-      ];
-      criticalImages.forEach(src => {];];
->>>>>>> origin/main
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = src;
@@ -329,18 +206,10 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
         if (!img.hasAttribute('decoding')) {img.decoding = 'async'}})
     }
 
-<<<<<<< HEAD
     // Intersection Observer for lazy loading;
     if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {)
           if (entry.isIntersecting) {
-=======
-    // Intersection Observer for lazy loading
-    if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {;
->>>>>>> origin/main
             const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
               img.src = img.dataset.src;
@@ -363,7 +232,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
       try {observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'])}})
       } catch (e) {// Fallback for browsers that don't support these entry types;}}
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
-=======
   )
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
 }) => {
@@ -402,8 +270,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ()
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    }
+      rootMargin: '0px 0px -50px 0px',
+    };
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -487,7 +355,6 @@ export default PerformanceOptimizer</PerformanceOptimizerProps>
         })
       }
     }
->>>>>>> origin/main
 
     // Initialize optimizations
     preloadCriticalResources()
@@ -511,7 +378,5 @@ export default PerformanceOptimizer</PerformanceOptimizerProps>
 
   return <>{children}</>
 }
->>>>>>> origin/main
 
 export default PerformanceOptimizer
->>>>>>> origin/main

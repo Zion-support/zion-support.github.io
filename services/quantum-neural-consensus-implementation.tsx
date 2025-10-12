@@ -28,7 +28,7 @@ export default function QuantumNeuralConsensusImplementation() {
         </div>)
       </div>)
 export const,
-  metadata: Metadata = {/* TODO: Fix JSX expression */}
+  metadata: Metadata = {/* TODO: Fix JSX expression */};
   }}
 export default function QuantumNeuralConsensusImplementation() {/* TODO: Fix JSX expression */}
 }

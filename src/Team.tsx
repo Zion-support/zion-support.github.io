@@ -56,7 +56,7 @@ export default function Team() {
       bio: 'Visionary leader with over 15 years of experience in AI and quantum computing. Former CTO at major tech companies.',
       image: '/images/team/kleber-santos.jpg',
       linkedin: 'https://linkedin.com/in/kleber-santos',
-      twitter: 'https://twitter.com/kleber_santos'
+      twitter: 'https://twitter.com/kleber_santos',
     },
     {
       name: 'Dr. Sarah Chen',
@@ -101,40 +101,40 @@ export default function Team() {
       role: 'Head of AI Solutions',
       department: 'AI & Machine Learning',
       bio: 'Leading our AI initiatives with expertise in deep learning and neural networks.',
-      avatar: 'AT'
+      avatar: 'AT',
     },
     {
       name: 'Dr. Lisa Park',
       role: 'Head of Cybersecurity',
       department: 'Security & Compliance',
       bio: 'Cybersecurity expert with certifications in CISSP, CISM, and extensive threat intelligence experience.',
-      avatar: 'LP'
+      avatar: 'LP',
     },
     {
       name: 'David Chen',
       role: 'Head of Cloud Architecture',
       department: 'Cloud & DevOps',
       bio: 'Cloud specialist with expertise in multi-cloud strategies and DevOps automation.',
-      avatar: 'DC'
+      avatar: 'DC',
     },
     {
       name: 'Maria Garcia',
       role: 'Head of Digital Transformation',
       department: 'Business Solutions',
       bio: 'Digital transformation consultant helping businesses navigate technological change.',
-      avatar: 'MG'
+      avatar: 'MG',
     }
   ]
   const companyStats = [
     {
       number: '50+',
       label: 'Team Members',
-      description: 'Diverse professionals from around the world'
+      description: 'Diverse professionals from around the world',
     },
     {
       number: '25+',
       label: 'Countries',
-      description: 'Global team with local expertise'
+      description: 'Global team with local expertise',
     },
     {
       name: 'Client Success',
@@ -278,14 +278,14 @@ export default function Team() {
       role: 'AI Ethics Advisor',
       bio: 'Leading researcher in AI ethics and responsible technology development.',
       image: '/images/team/james-wilson.jpg',
-      linkedin: 'https://linkedin.com/in/james-wilson'
+      linkedin: 'https://linkedin.com/in/james-wilson',
     },
     {
       name: 'Elena Petrova',
       role: 'Quantum Computing Advisor',
       bio: 'Former research director at leading quantum computing labs.',
       image: '/images/team/elena-petrova.jpg',
-      linkedin: 'https://linkedin.com/in/elena-petrova'
+      linkedin: 'https://linkedin.com/in/elena-petrova',
     }
   ]
   return (

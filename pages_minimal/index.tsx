@@ -34,7 +34,7 @@ export default function index() {
         </div>)
       </div>)
 export const,
-  metadata: Metadata = {/* TODO: Fix JSX expression */}
+  metadata: Metadata = {/* TODO: Fix JSX expression */};
   }}
 export default function index() {/* TODO: Fix JSX expression */}
 }

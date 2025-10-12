@@ -50,7 +50,7 @@ constructor(baseUrl: string, options: ServiceOptions = {}) {
     cache: false,
       cacheDuration: 300000, // 5 minutes
 //       ...options
-  }
+  };
    * Check if cached data is still valid
   protected isCacheValid(key: string): boolean {
     const entry = this.cache.get(key)

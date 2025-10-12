@@ -223,7 +223,7 @@ const results = {
       already_merged: 0,
 //Step,
   5: Process each batch,
-const results = {/* TODO: Fix JSX expression */}
+const results = {/* TODO: Fix JSX expression */};
     }}}
 
 for (let i = 0; i < batches.length; i++) {/* TODO: Fix JSX expression */}`
@@ -242,7 +242,7 @@ for (let i = 0; i < batches.length; i++) {/* TODO: Fix JSX expression */}`
       failed: 0
       not_found: 0
       already_merged: 0,
-  const batchResults = {/* TODO: Fix JSX expression */}
+  const batchResults = {/* TODO: Fix JSX expression */};
     }}
 
   for (const branch of batch) {/* TODO: Fix JSX expression */}
@@ -278,7 +278,7 @@ results.summary = {
   failedMerges: results.total.failed,
   successRate: ((results.total.successful / results.total.branches) * 100).toFixed(2) +,
     '%'}
-
+;
 fs.writeFileSync('comprehensive-final-merge-report.json')
   JSON.stringify(results, null, 2)
 )
@@ -290,7 +290,7 @@ fs.writeFileSync('comprehensive-final-merge-report.json')
 //Step,
   6: Generate comprehensive report
 // results.timestamp = new Date().toISOString(),
-results.summary = {/* TODO: Fix JSX expression */}
+results.summary = {/* TODO: Fix JSX expression */};
 }
 
 fs.writeFileSync('comprehensive-final-merge-report.json')

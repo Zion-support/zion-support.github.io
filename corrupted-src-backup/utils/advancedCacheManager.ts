@@ -23,7 +23,7 @@ class AdvancedCacheManager<T> {
       maxAge: 5 * 60 * 1000, // 5 minutes
       maxSize: 1000,
       strategy: 'LRU',
-      ...config}
+      ...config};
   }
 
   public get(key: string): T | null {

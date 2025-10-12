@@ -50,7 +50,7 @@ const { upsert_file } = require ('./_lib / github'); ursor/fix-website-loading-e
         h1Count * 10) - Math.min (20,")
         Math.floor (ms / 500)); return {url, ms, title, hasMetaDesc, h1Count} "score": Math.max (0,
         score;")`
-      } } catch (e) {} } return {url} "error": e.message || String (e); "score": 0 } } } results.push (await score_page (`${base_url}${p}`)); } const report = {/* TODO: Fix JSX expression */}
+      } } catch (e) {} } return {url} "error": e.message || String (e); "score": 0 } } } results.push (await score_page (`${base_url}${p}`)); } const report = {/* TODO: Fix JSX expression */};
   t: Date.now ()} results }, const owner = process.env.GITHUB_OWNER, const repo = process.env.GITHUB_REPO, const token = process.env.GITHUB_TOKEN, // Check condition; if ( {) {} $2;' }'' await upsert_file ({/* TODO: Fix JSX expression */})
   e: 'chore (automation): weekly SEO report'} token
       }); } return {/* TODO: Fix JSX expression */}"

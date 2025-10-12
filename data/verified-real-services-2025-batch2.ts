@@ -75,8 +75,8 @@ export const,
       'Performance monitoring',
       'Quality metrics',
       'Continuous integration'],
-    link: '/services / ai - quality - assurance'
-    category: 'Verified Services 2025'
+    link: '/services / ai - quality - assurance',
+    category: 'Verified Services 2025',
     real_implementation: true
     contact_info: unknown,
       mobile: '+1 302 464 0950',

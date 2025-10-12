@@ -47,7 +47,6 @@ const trapFocus = (element) => {
 // <main>
 //   <nav aria-label="Main navigation">
 //     <ul>
-<<<<<<< HEAD
 //       <li><a href="/">Home</a></li>
 //     </ul>
 //   </nav>
@@ -115,44 +114,3 @@ export const runAccessibilityImprovements = () => {
   improveKeyboardNavigation();
   addAltText();
 };
-=======
-//       <li><a href="/">Home</a>
-//
-//
-//   <section>
-//     <h2>Section Title
-//     <article>
-//       <h3>Article Title
-//
-//
-//
-// 7. Form accessibility
-// Example JSX:
-// <form>
-//   <fieldset>
-//     <legend>Contact Information
-//     <label htmlFor="email">Email:
-//     <input id="email" type="email" required />
-//     <label htmlFor="phone">Phone:
-//     <input id="phone" type="tel" />
-//
-//
-// 8. Color contrast and visual indicators
-// Example CSS:
-// .focus-visible:focus {
-//   outline: 2px solid #0066cc
-//   outline-offset: 2px
-// }
-
-// 9. Keyboard navigation
-// Example JSX:
-// <div role="button" tabIndex={0} onKeyDown={handleKeyDown}>
-//   Clickable div
-//
-// 10. Screen reader announcements
-// Example JSX:
-// <div aria-live="assertive" aria-atomic="true">
-//   {errorMessage}
-//
-export { trapFocus }</div></div></div></div></button></a></a></h1></h2></h2></h3></h3></ul></li></main></section></article></nav>
->>>>>>> origin/main

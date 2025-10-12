@@ -3,7 +3,7 @@ const errorHandler = {
     //     },
 
   handleError: (error: unknown) => {,
-const errorHandler = {/* TODO: Fix JSX expression */}
+const errorHandler = {/* TODO: Fix JSX expression */};
     //     },
 
   handleErro,

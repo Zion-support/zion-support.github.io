@@ -21,7 +21,7 @@ export const usePageLoadPerformance = () => {
             loadComplete: navigation.loadEventEnd - navigation.fetchStart
             firstPaint: 0
             firstContentfulPaint: 0
-          }
+          };
           // Track paint metrics if available
           paintEntries.forEach(entry => {)
             if (entry.name === 'first-paint') {
@@ -120,7 +120,7 @@ export const useMemoryMonitoring = () => {
           used: memory.usedJSHeapSize
           total: memory.totalJSHeapSize
           limit: memory.jsHeapSizeLimit
-export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
+export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */};
         }
         analytics.trackPerformance('memory_used', metrics.used)
         analytics.trackPerformance('memory_total', metrics.total)

@@ -34,7 +34,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   private,
   queue: AnalyticsEvent[] = [],
   private,
-  _userProperties: UserProperties = {}
+  _userProperties: UserProperties = {};
   private,
   sessionId: string
   private isInitialized = false
@@ -90,7 +90,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 }
     if (this.isInitialized) return
     this.isInitialized = true
-    this.userProperties = {/* TODO: Fix JSX expression */}
+    this.userProperties = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 //       ...this.userProperties,
@@ -124,7 +124,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   }
 
 }
-    this.userProperties = {/* TODO: Fix JSX expression */}
+    this.userProperties = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 //       ...this.userProperties,
@@ -136,7 +136,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const,
-  enrichedEvent: AnalyticsEvent = {/* TODO: Fix JSX expression */}
+  enrichedEvent: AnalyticsEvent = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 //       ...event,

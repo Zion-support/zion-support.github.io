@@ -5,18 +5,18 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       statusCode: 200,
       headers: {,
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'}
+        'Access-Control-Allow-Origin': '*'};
       },
       body: JSON.stringify({message: Canonical auditor executed successfully)
         timestamp: new Date().toISOString()
-        function: 'canonical-auditor'
+        function: 'canonical-auditor',
         source: event.source || 'unknown',
         auditing: {,
           status: 'active',
           pagesAudited: 0
           issuesFound: 0,
           lastAudit: new Date().toISOString()}
-    const result = {/* TODO: Fix JSX expression */}
+    const result = {/* TODO: Fix JSX expression */};
         'Access-Control-Allow-Origin': '*'}
       },
       bod,

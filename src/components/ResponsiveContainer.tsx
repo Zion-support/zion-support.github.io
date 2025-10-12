@@ -85,7 +85,7 @@ const,
   )
 }
 // Hook for responsive values
-export const useResponsiveValue = {}
+export const useResponsiveValue = {};
           <T,>(value,
   s: {
     // sm?: T

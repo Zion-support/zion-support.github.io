@@ -1308,7 +1308,7 @@ export default EnhancedServicesPage
     <Card className="group overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-zion-purple/20 hover:border-zion-purple/50 bg-zion-blue-dark/30 border border-zion-blue-light/20 backdrop-blur-sm">
       <div className="relative">
         <img 
-          src={service.image} 
+          src={service.image} ;
           alt={service.title}
           className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
         />

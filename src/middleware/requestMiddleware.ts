@@ -155,7 +155,7 @@ function getAuthToken(): string | null {
 export const errorHandlingMiddleware: Middleware = async (context, next) => {
     // Transform error into a standardized format
   }
-    const standardError = {message: error instanceof Error ? error.message : 'Unknown error'}
+    const standardError = {message: error instanceof Error ? error.message : 'Unknown error'};
       status: context.response?.status || 500,
       method: context.request.method,
     logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {

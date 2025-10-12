@@ -34,7 +34,7 @@ export function useFraudPreventionSignup() {
           reason: fraudCheck.reasons.join('; '),
           ip_address: ipAddress,
           timestamp: new Date().toISOString(),
-          status: 'pending'
+          status: 'pending',
         })
         if (error) {
           console.error('Error creating fraud flag:', error)

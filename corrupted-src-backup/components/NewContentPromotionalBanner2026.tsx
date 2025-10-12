@@ -8,7 +8,7 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
       impa, c, t: '5, 0, 0% Cognitive, Enhanceme, n, t',
       reade, r, s: '2, 0, 3, K+',
       ic, o, n: '🚀',
-      col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0'
+      col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-viol, e, t-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />

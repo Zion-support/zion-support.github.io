@@ -14,8 +14,6 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import nacl from 'tweetnacl'
 import bs58 from 'bs58'
 import jwt from 'jsonwebtoken'
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return res.status(200).json({ ok: true })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message |'Verify failed' })

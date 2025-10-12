@@ -1,7 +1,7 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
   
   static getDerivedStateFromError(error) {
@@ -60,7 +60,6 @@ import {
 
 
 import { Loader2 } from 'lucide-react'
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -134,7 +133,7 @@ function highlight(text: string, term: string) {
               setQuery(searchTerm);              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
 
             }}
-            searchSuggestions = {suggestions,}
+            searchSuggestions = {suggestions,};
             onSelectSuggestion={(suggestion) => {
               const searchTerm = suggestion.text.trim()
               setQuery(searchTerm)
@@ -143,7 +142,7 @@ function highlight(text: string, term: string) {
             searchSuggestions={suggestions}
 
 
-
+;
             placeholder="Search talent, jobs, and projects..."
           />
         </form>
@@ -156,7 +155,7 @@ function highlight(text: string, term: string) {
               const searchTerm = suggestion && suggestion.text.trim()
               setQuery(searchTerm);              router && router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
             }}
-            searchSuggestions = {suggestions,}
+            searchSuggestions = {suggestions,};
             placeholder="Search talent, jobs, and projects..."
           /></$1>
         {loading && (
@@ -290,7 +289,7 @@ if (data && data.results && Array.isArray (data.results) ) {
               const search_term = suggestion.text.trim ()
               set_query (search_term);              router.push (`/search?q=${encodeURIComponent (search_term)}`)
             }}
-            search_suggestions = {suggestions, }
+            search_suggestions = {suggestions, };
             placeholder="Search talent, jobs, and projects..."
           /></$1>
         {loading && (
@@ -413,7 +412,7 @@ logErrorToProduction ('Search API response structure is not as expected:', {
 
   data: data
 })
-}catch (error) {'
+}catch (error) {',
   logErrorToProduction ('Search failed:', {
   data: error
 })

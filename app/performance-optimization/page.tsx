@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -10,27 +8,17 @@ const PagePage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
-=======
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
->>>>>>> origin/main
 },
     {icon: Shield,
->>>>>>> origin/main
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
@@ -48,11 +36,8 @@ const benefits = [
     'Easy integration with existing systems',
 
     'Cost-effective pricing plans',
-<<<<<<< HEAD
 
-<<<<<<< HEAD
     'Proven track record of success'
-<<<<<<< HEAD
   ];
 
   return (
@@ -111,35 +96,22 @@ const benefits = [
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-=======
-  ]
-return(</div>)
-=======
-    'Proven track record of success';
-  ];];];
-return (
-          </div>
->>>>>>> origin/main
         </div>
       </section>
               </div>
-=======
     'Proven track record of success'
   ]
 return ()
->>>>>>> origin/main
             ))}
           </div>
         </div>
       </section>
           </div>
->>>>>>> origin/main
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -192,7 +164,3 @@ return ()
 };
 
 export default PagePage;
-=======
-}
-export default PagePage
->>>>>>> origin/main

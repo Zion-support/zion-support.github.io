@@ -268,7 +268,7 @@ if ( {) {
     <>
       <SEO
         title={`${job.title} - ${is_whitelabel ? brand_name : 'Zion AI Marketplace'}`}
-        description = {job.description.substring (0, 160), }
+        description = {job.description.substring (0, 160), };
       />
       <Header />
       <main className='container mx - auto px - 4 py - 8'>

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -10,37 +8,27 @@ const EnhancedSEOPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international businesses',
     }
   ];
 
   const benefits = [
-=======
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-=======
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
->>>>>>> origin/main
 const benefits = [
->>>>>>> origin/main
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -52,19 +40,10 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     'Proven track record of success'
   ]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet />
-=======
-    'Proven track record of success';
-  ];];];
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
->>>>>>> origin/main
         <title>EnhancedSEO | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -73,7 +52,6 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
     'Proven track record of success'
   ]
 return (
@@ -84,54 +62,30 @@ return (
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-=======
-      <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
->>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
-<<<<<<< HEAD
               <span>EnhancedSEO;</span>
-=======
-              </h1><span>
->>>>>>> origin/main
                 EnhancedSEO
->>>>>>> origin/main
               </span>
               <br>
               <span className="text-white">Solutions</span>
             </h1>
-<<<<<<< HEAD
             <p>Transform your business with our advanced enhancedseo solutions.;</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>Get Started;</button>
                 <ArrowRight>
-=======
-            <p>
-              Transform your business with our advanced enhancedseo solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
-                Get Started
-                </button><ArrowRight>
->>>>>>> origin/main
               </button>
               <button>Learn More,</button>
               </button>
@@ -139,22 +93,15 @@ return (
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Features Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
-      {/* Features Section */}
-      <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
->>>>>>> origin/main
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
+          <section>
+        <div>
+          <div>
+            <h2>Section Title</h2>
+            <p>Section description</p>
           </div>
-        </section>
+        </div>
+      </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Why Choose Our EnhancedSEO?,</h2>
@@ -193,9 +140,8 @@ return (
                 <ArrowRight className="ml-2 h-5 w-5" />
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our EnhancedSEO?
@@ -209,57 +155,33 @@ return (
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
                 <p className="text-gray-300">{feature.description}
             ))}
-<<<<<<< HEAD
           </div>
         </div>
       </section>
       {/* Benefits Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
->>>>>>> origin/main
-              <p className="text-xl text-gray-300">Section description</p>
-            </div>
+          <section>
+        <div>
+          <div>
+            <h2>Section Title</h2>
+            <p>Section description</p>
           </div>
-        </section>
-<<<<<<< HEAD
+        </div>
+      </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>Key Benefits;</h2>
             </h2>
             <p>Experience the power of our enhancedseo solutions for your business.,</p>
-=======
-        <div className="max-w-7xl mx-auto" / /></div>
-          <div className="text-center mb-16" / /></div>
-            <h2></h2>
-              Key Benefits
-            </h2>
-            <p></p>
-              Experience the power of our enhancedseo solutions for your business.,
->>>>>>> origin/main
             </p>
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
             {benefits.map((benefit, index) => (
-<<<<<<< HEAD
                 <div key={index}className="flex items-start space-x-3"></div>
                 <CheckCircle />
                 <p className="text-gray-300 text-lg">{benefit</p>}</p>
-=======
-                <div key={index} className="flex items-start space-x-3"></div>
-                <CheckCircle>
-                </CheckCircle><p className="text-gray-300 text-lg">{benefit}</p>
->>>>>>> origin/main
               </div>
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        </section>
-        <div className="max-w-7xl mx-auto">
+      <section$1>
+        <div$2>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -270,7 +192,6 @@ return (
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}
             ))}
-<<<<<<< HEAD
           </div>
         ))
       </section>
@@ -278,58 +199,32 @@ return (
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-=======
-      {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-4xl mx-auto text-center">
+      <section$1>
+        <div$2>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-=======
-      <section className="py-20 px-4">
-          </section>< className="$2 />
-            </div><div className="text-center mb-16">
-              </div><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
->>>>>>> origin/main
               <p className="text-xl text-gray-300">Section description</p>
             </div>
-          </div>
-        </section>
-<<<<<<< HEAD
+        </div>
+      </section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
             <h2>Ready to Get Started?</h2>
             </h2>
             <p>Contact our experts to discuss your enhancedseo needs and get a customized solution.</p>
-=======
-        <div className="max-w-4xl mx-auto text-center" / /></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" / /></div>
-            <h2></h2>
->>>>>>> origin/main
               Ready to Get Started?
             </h2>
             <p></p>
               Contact our experts to discuss your enhancedseo needs and get a customized solution.
->>>>>>> origin/main
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
               <button>
-<<<<<<< HEAD
                 <Phone>
                 Call Now;
               </button>
               <button>
                 <Mail>
                 Email Us;
-=======
-                </button><Phone>
-                Call Now
-              </button>
-              <button>
-                </button><Mail>
-                Email Us
->>>>>>> origin/main
               </button>
             </div>
           </div>
@@ -348,7 +243,6 @@ export default EnhancedSEOPage
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
-<<<<<<< HEAD
               </button>
             </div>
           </div>
@@ -359,8 +253,3 @@ export default EnhancedSEOPage
 };
 
 export default EnhancedSEOPage;
-=======
-  )
-}
-export default EnhancedSEOPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></button></button></button></button></p></p></p></p></p></p></h1></h2></h2></h2></h3></section></section></section></section>
->>>>>>> origin/main

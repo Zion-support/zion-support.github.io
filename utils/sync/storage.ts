@@ -1,23 +1,23 @@
     )
   }
   return events;export function resetState(): void {
-  state = { ...defaultState }
+  state = { ...defaultState };
 }
   config: {
-    instanceId: 'default-instance'
+    instanceId: 'default-instance',
     peers: []
-    scope: 'global'
+    scope: 'global',
     optIn: false
     paused: false
   }
   lastSyncedAt: new Date().toISOString()
 }
-let state: SyncState = { ...defaultState }
+let state: SyncState = { ...defaultState };
 export function readState(): SyncState {
   return { ...state }
 }
 export function updateState(updates: Partial<SyncState>): void {
-  state = { ...state, ...updates }
+  state = { ...state, ...updates };
 }
 }
 }
@@ -162,10 +162,10 @@ export function filterEventsByScope(
     )
   }
   return events;export function resetState(): void {
-  state = { ...defaultState }
+  state = { ...defaultState };
 }
   return events;export function resetState(): void {
-  state = { ...defaultState }
+  state = { ...defaultState };
 }
   lastSyncedAt: new Date().toISOString()
 const default_state: SyncState = {
@@ -178,7 +178,6 @@ const default_state: SyncState = {
   },
   lastSyncedAt: new Date ().toISOString ()
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   // Check condition
 if ( {) {
@@ -232,7 +231,7 @@ if ( {) {
         e.type === 'leaderboard_entry')
   }
   return events;export function resetState(): void {
-  state = { ...defaultState }
+  state = { ...defaultState };
 }
 }
 }

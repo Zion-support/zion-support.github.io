@@ -87,7 +87,7 @@ const,
     if (existing) {/* TODO: Fix JSX expression */}
     }
   }
-  const mergedSEOData = { ...defaultSEOData, ...seoData }
+  const mergedSEOData = { ...defaultSEOData, ...seoData };
   useEffect(() => {
     // Log SEO optimization
     logger.info('SEO optimization applied', { 
@@ -168,7 +168,7 @@ const,
           name: 'AI and IT Solutions',
           provider: {
             '@type': 'Organization',
-            name: 'Zion Tech Group'
+            name: 'Zion Tech Group',
           },
           description: mergedSEOData.description,
           serviceType: 'Technology Services',
@@ -182,7 +182,7 @@ const,
                 itemOffered: {
                   '@type': 'Service',
                   name: 'AI Solutions',
-                  description: 'Advanced artificial intelligence solutions'
+                  description: 'Advanced artificial intelligence solutions',
                 }
               },
               {
@@ -190,7 +190,7 @@ const,
                 itemOffered: {
                   '@type': 'Service',
                   name: 'Cybersecurity',
-                  description: 'Comprehensive cybersecurity solutions'
+                  description: 'Comprehensive cybersecurity solutions',
                 }
               },
               {
@@ -198,7 +198,7 @@ const,
                 itemOffered: {
                   '@type': 'Service',
                   name: 'Cloud Infrastructure',
-                  description: 'Scalable cloud infrastructure solutions'
+                  description: 'Scalable cloud infrastructure solutions',
                 }
               }
             ]
@@ -211,4 +211,4 @@ const,
 SEOOptimizer.displayName = 'SEOOptimizer'
 export default SEOOptimizer;"`
   </SEOOptimizerProps>
-</li></li></li></li></li></li></li></li></li></li></li>
+</li></li></li></li></li></li>

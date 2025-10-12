@@ -9,13 +9,13 @@ const { execSync } = require('child_process')
 const _path = require('path')
 // Colors for console output
 const colors = {
-  reset: '\x1b[0m'
+  reset: '\x1b[0m',
   red: '\x1b[31m',
   green: '\x1b[32m',
   yellow: '\x1b[33m',
   blue: '\x1b[34m',
   cyan: '\x1b[36m',
-const colors = {/* TODO: Fix JSX expression */}
+const colors = {/* TODO: Fix JSX expression */};
 }
 
 class DeploymentReadinessChecker {/* TODO: Fix JSX expression */}
@@ -96,7 +96,7 @@ function setupChecks(checker) {
       if (!pkg.name || !pkg.version) {
         return {
           success: false,
-          message: 'package.json missing required fields (name, version)'
+          message: 'package.json missing required fields (name, version)',
         }
       }
       

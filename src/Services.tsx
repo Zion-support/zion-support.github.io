@@ -44,7 +44,7 @@ export default function Services() {
           description: 'Advanced autonomous AI systems that operate independently',
           icon: Brain,
           features: ['Self-learning algorithms', 'Predictive analytics', 'Automated decision making'],
-          pricing: 'Starting from $5,000/month'
+          pricing: 'Starting from $5,000/month',
         },
         {
           name: 'AI Research Assistant',
@@ -52,7 +52,7 @@ export default function Services() {
           description: 'AI-powered research automation and insights',
           icon: Brain,
           features: ['Data analysis', 'Literature review', 'Trend identification'],
-          pricing: 'Starting from $3,000/month'
+          pricing: 'Starting from $3,000/month',
         },
         {
           name: 'AI Business Intelligence',
@@ -60,7 +60,7 @@ export default function Services() {
           description: 'Advanced analytics and business insights',
           icon: BarChart3,
           features: ['Real-time dashboards', 'Predictive modeling', 'Performance tracking'],
-          pricing: 'Starting from $4,000/month'
+          pricing: 'Starting from $4,000/month',
         },
         {
           name: 'AI Marketing Automation',
@@ -68,7 +68,7 @@ export default function Services() {
           description: 'Smart marketing optimization and automation',
           icon: Target,
           features: ['Customer segmentation', 'Campaign optimization', 'ROI tracking'],
-          pricing: 'Starting from $2,500/month'
+          pricing: 'Starting from $2,500/month',
         }
       ]
     },
@@ -85,7 +85,7 @@ export default function Services() {
           description: 'Quantum-powered neural networks for complex problems',
           icon: Brain,
           features: ['Quantum algorithms', 'Superior performance', 'Future-proof technology'],
-          pricing: 'Starting from $15,000/month'
+          pricing: 'Starting from $15,000/month',
         },
         {
           name: 'Quantum Computing',
@@ -93,7 +93,7 @@ export default function Services() {
           description: 'Quantum computing platforms and solutions',
           icon: Cpu,
           features: ['Quantum supremacy', 'Complex simulations', 'Cryptography'],
-          pricing: 'Starting from $20,000/month'
+          pricing: 'Starting from $20,000/month',
         }
       ]
     },
@@ -110,7 +110,7 @@ export default function Services() {
           description: 'Complete security solutions for your business',
           icon: Shield,
           features: ['Threat detection', 'Vulnerability assessment', 'Incident response'],
-          pricing: 'Starting from $3,500/month'
+          pricing: 'Starting from $3,500/month',
         },
         {
           name: 'SOC2 Compliance Automation',
@@ -118,7 +118,7 @@ export default function Services() {
           description: 'Automated compliance management and monitoring',
           icon: Lock,
           features: ['Automated audits', 'Real-time monitoring', 'Compliance reporting'],
-          pricing: 'Starting from $4,500/month'
+          pricing: 'Starting from $4,500/month',
         }
       ]
     },
@@ -135,7 +135,7 @@ export default function Services() {
           description: 'Cloud development and operations automation',
           icon: Cloud,
           features: ['CI/CD pipelines', 'Infrastructure as code', 'Monitoring & alerting'],
-          pricing: 'Starting from $3,000/month'
+          pricing: 'Starting from $3,000/month',
         },
         {
           name: 'IT Infrastructure',
@@ -143,7 +143,7 @@ export default function Services() {
           description: 'Complete IT infrastructure solutions',
           icon: Network,
           features: ['Network design', 'Hardware management', 'Performance optimization'],
-          pricing: 'Starting from $2,500/month'
+          pricing: 'Starting from $2,500/month',
         },
         {
           name: '5G Enterprise Solutions',
@@ -151,7 +151,7 @@ export default function Services() {
           description: 'High-speed 5G connectivity solutions',
           icon: Network,
           features: ['Ultra-fast connectivity', 'Low latency', 'High bandwidth'],
-          pricing: 'Starting from $5,000/month'
+          pricing: 'Starting from $5,000/month',
         }
       ]
     },
@@ -168,7 +168,7 @@ export default function Services() {
           description: 'Self-operating business systems and automation',
           icon: Building,
           features: ['Process automation', 'Workflow optimization', 'Performance analytics'],
-          pricing: 'Starting from $6,000/month'
+          pricing: 'Starting from $6,000/month',
         },
         {
           name: 'AI Asset Management',
@@ -176,7 +176,7 @@ export default function Services() {
           description: 'Intelligent IT asset management and tracking',
           icon: Database,
           features: ['Asset tracking', 'Lifecycle management', 'Cost optimization'],
-          pricing: 'Starting from $2,000/month'
+          pricing: 'Starting from $2,000/month',
         }
       ]
     },
@@ -193,7 +193,7 @@ export default function Services() {
           description: 'Technology solutions for healthcare industry',
           icon: Heart,
           features: ['Patient management', 'Medical analytics', 'Compliance'],
-          pricing: 'Starting from $8,000/month'
+          pricing: 'Starting from $8,000/month',
         },
         {
           name: 'Financial Services',
@@ -201,7 +201,7 @@ export default function Services() {
           description: 'Fintech solutions and financial technology',
           icon: DollarSign,
           features: ['Risk management', 'Fraud detection', 'Compliance'],
-          pricing: 'Starting from $7,000/month'
+          pricing: 'Starting from $7,000/month',
         },
         {
           name: 'Manufacturing Intelligence',
@@ -209,7 +209,7 @@ export default function Services() {
           description: 'Smart manufacturing and Industry 4.0 solutions',
           icon: Cpu,
           features: ['Predictive maintenance', 'Quality control', 'Supply chain optimization'],
-          pricing: 'Starting from $6,500/month'
+          pricing: 'Starting from $6,500/month',
         }
       ]
     }
@@ -469,8 +469,7 @@ import {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all duration-300"
-          className="mb-12"
+                  className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all duration-300 mb-12"
         >
           <div className="bg-zion-blue-light/20 backdrop-blur-md border border-zion-purple/30 rounded-2xl p-6">
             {/* Search Bar */}
@@ -827,8 +826,8 @@ import {
                 </div>
               </Link>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <div className="text-center mt-16">
@@ -960,7 +959,7 @@ import {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <$2 />
-                key={index} 
+                key={index} ;
                 className={`group bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 animate-fade-in-up`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -1009,7 +1008,7 @@ import {
                   <div className="flex items-center">
                     {[...Array(5)].map((_, i) => (
                       <Star 
-                        key={i} 
+                        key={i} ;
                         className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'}`} 
                       />
                     ))}
@@ -1097,7 +1096,7 @@ import {
                 <div className="flex flex-wrap gap-2 mb-6">
                   {service.tags.map((tag, idx) => (
                     <$2 />
-                      key={idx} 
+                      key={idx} ;
                       className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600/50"
                     >
                       {tag}
@@ -1340,7 +1339,7 @@ export default function Services() {
       href: '/services/ai',
       color: 'from-purple-500 to-pink-500',
       bgColor: 'bg-purple-500/10',
-      borderColor: 'border-purple-500/30'
+      borderColor: 'border-purple-500/30',
     },
     {
       icon: Cloud,
@@ -1357,7 +1356,7 @@ export default function Services() {
       href: '/services/cloud',
       color: 'from-blue-500 to-cyan-500',
       bgColor: 'bg-blue-500/10',
-      borderColor: 'border-blue-500/30'
+      borderColor: 'border-blue-500/30',
     },
     {
       icon: Shield,
@@ -1374,7 +1373,7 @@ export default function Services() {
       href: '/services/security',
       color: 'from-green-500 to-emerald-500',
       bgColor: 'bg-green-500/10',
-      borderColor: 'border-green-500/30'
+      borderColor: 'border-green-500/30',
     },
     {
       icon: Zap,
@@ -1391,7 +1390,7 @@ export default function Services() {
       href: '/services/transformation',
       color: 'from-yellow-500 to-orange-500',
       bgColor: 'bg-yellow-500/10',
-      borderColor: 'border-yellow-500/30'
+      borderColor: 'border-yellow-500/30',
     },
     {
       icon: Smartphone,
@@ -1408,7 +1407,7 @@ export default function Services() {
       href: '/services/development',
       color: 'from-indigo-500 to-purple-500',
       bgColor: 'bg-indigo-500/10',
-      borderColor: 'border-indigo-500/30'
+      borderColor: 'border-indigo-500/30',
     },
     {
       icon: BarChart3,
@@ -1425,7 +1424,7 @@ export default function Services() {
       href: '/services/analytics',
       color: 'from-red-500 to-pink-500',
       bgColor: 'bg-red-500/10',
-      borderColor: 'border-red-500/30'
+      borderColor: 'border-red-500/30',
     }
   ]
   const stats = [

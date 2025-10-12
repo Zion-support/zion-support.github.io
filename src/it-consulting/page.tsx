@@ -12,7 +12,7 @@ const ITConsultingPage: React.FC = () => {
       icon: Brain,
       features: ['Technology Assessment', 'Digital Strategy Planning', 'Process Optimization', 'Change Management'],
       benefits: ['Increased Efficiency', 'Cost Reduction', 'Better Customer Experience', 'Competitive Advantage'],
-      price: 'Starting at $5,000/month'
+      price: 'Starting at $5,000/month',
     },
     {
       title: 'Cloud Migration',
@@ -20,7 +20,7 @@ const ITConsultingPage: React.FC = () => {
       icon: Cloud,
       features: ['Cloud Architecture Design', 'Data Migration', 'Security Implementation', 'Performance Optimization'],
       benefits: ['Scalability', 'Cost Savings', 'Enhanced Security', 'Improved Performance'],
-      price: 'Starting at $3,500/month'
+      price: 'Starting at $3,500/month',
     }
   ]
   return (<React.Fragment>
@@ -98,8 +98,8 @@ const ITConsultingPage: React.FC = () => {
                   Email Us
   
               </div>
-            </div>
-          </section>
+        </div>
+      </section>
         </main>
         <Footer />
       </div>
@@ -109,4 +109,4 @@ const ITConsultingPage: React.FC = () => {
 export default ITConsultingPage</button>
   </button>
   </button>
-</div></div></div></div></p></p></h2></h3></h4></h4></h4></ul></ul></ul></li></li>
+</div></div></div></div></p></p></h2></h3></h4></h4></h4></ul></ul></ul></li>

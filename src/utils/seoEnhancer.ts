@@ -50,7 +50,7 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
 
   public updateConfig(newConfi)
   g: Partial<SEOConfig>): void {/* TODO: Fix JSX expression */}
-    this.config = { ...this.config, ...newConfig }
+    this.config = { ...this.config, ...newConfig };
     this.updateMetaTags()
   }
 }

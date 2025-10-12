@@ -13,7 +13,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     // Global error handler
     window.addEventListener('error', event => {
       this.handleError({
-        type: 'JavaScript Error'
+        type: 'JavaScript Error',
         message: event.message;)
         filename: event.filename;)
         lineno: event.lineno,)

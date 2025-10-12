@@ -32,7 +32,6 @@ import { Project, ProjectDocument, ProjectNote } from "../../../utils/marketplac
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user && user.role === "client" && user && user.id === project && project.clientId) return true
   if (user && user.role === "talent" && user && user.talentSlug === project && project.talentSlug)
@@ -84,7 +83,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           authorRole: user.role
           content
           createdAtIso: new Date().toISOString()
-        }
+        };
     const { id } = (req.method === "GET" ? req.query : req.body) as { id?: string }
     if (!id) return bad(res, "Missing project id")
     const project = getProjectById(id)
@@ -105,7 +104,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         description: 'Project description',
         status: 'active',
         createdAtIso: new Date().toISOString()
-      }
+      };
       res.status(201).json({
         ok: true,
         project
@@ -161,7 +160,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           content,
           createdAtIso: new Date().toISOString()
           createdAtIso: new Date().toISOString(),
-        }
+        };
         project.notes.push(note)
         saveProject(project)
         return res.json({ ok: true, project })
@@ -174,7 +173,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           name
           url
           uploadedAtIso: new Date().toISOString()
-        }
+        };
           createdAtIso: new Date().toISOString()},
         project.notes.push(note),
         saveProject(project),
@@ -200,7 +199,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           name,
           url,
           uploadedAtIso: new Date().toISOString(),
-        }
+        };
         project.documents.push(doc)
         saveProject(project)
         return res.json({ ok: true, project })

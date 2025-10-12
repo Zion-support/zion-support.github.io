@@ -40,8 +40,8 @@ const ZionAIDocumentAIPage: React.FC = () => {
                 </button>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -132,8 +132,8 @@ const ZionAIDocumentAIPage: React.FC = () => {
                 </ul>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
@@ -214,8 +214,8 @@ const ZionAIDocumentAIPage: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -236,8 +236,8 @@ const ZionAIDocumentAIPage: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </div>
     </>
   );

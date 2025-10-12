@@ -177,7 +177,7 @@ if ( {) {
         legal_disclaimers,
         distribution_breakdown,
 
-      }
+      };
       // Check condition
 if ( {) {
   $2
@@ -363,7 +363,7 @@ if ( {) {
         sections,
         distributionChartData,
         distribution_breakdown,
-      }
+      };
       const { data: response, error: func_error } =
         await supabase.functions.invoke ('create - shared - whitepaper', {
           body: whitepaper_payload,
@@ -484,7 +484,7 @@ if ( {) {
           sections,
           distributionChartData,
           distribution_breakdown,
-        }
+        };
         const { data: link_response, error: linkFuncError } =
           await supabase.functions.invoke ('create - shared - whitepaper', {
             body: whitepaper_payload,
@@ -962,7 +962,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
         distributionChartData,
 
         distributionBreakdown,
-      }
+      };
       const { data: response, error: funcError } =
         await supabase.functions.invoke('create-shared-whitepaper', {
           body: whitepaperPayload,
@@ -1062,7 +1062,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
           sections,
           distributionChartData,
           distributionBreakdown,
-        }
+        };
         const { data: linkResponse, error: linkFuncError } =
           await supabase.functions.invoke('create-shared-whitepaper', {
             body: whitepaperPayload,
@@ -1502,7 +1502,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
               id='token_supply'
               value={token_supply}
               on_change={e => setTokenSupply (e.target.value)}
-
+;
               required
             /></$1>
           <div>
@@ -1628,7 +1628,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
           {sections.length > 0 && (
             <Button
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 

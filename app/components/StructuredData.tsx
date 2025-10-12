@@ -1,19 +1,8 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 
 interface StructuredDataProps {type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness';}
   data?: Record<string, unknown>;}const StructuredData: React.FC<StructuredDataProps> = ({,
-=======
-'use client'
-import React from 'react'
-interface StructuredDataProps {
-  type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness'
-  data?: Record<string, unknown>
-}
-
-const StructuredData: React.FC</string><StructuredDataProps> = ({ 
->>>>>>> origin/main
   type = 'Organization', 
   data;}) => {const getDefaultData = () => {
     switch (type) {
@@ -87,13 +76,7 @@ const StructuredData: React.FC</string><StructuredDataProps> = ({
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-<<<<<<< HEAD
                 "item": "https: //ziontechgroup.com",}]
-=======
-                "item": "https://ziontechgroup.com"
-              }
-  ]
->>>>>>> origin/main
           }
         }
       
@@ -150,17 +133,10 @@ const StructuredData: React.FC</string><StructuredDataProps> = ({
       
       default: return {,}}}
   }
-<<<<<<< HEAD
 
   const structuredData = data || getDefaultData();
 
   return(<script;)
-=======
-  const structuredData = data || getDefaultData()
-  return (
-    <React.Fragment>
-      </StructuredDataProps><script
->>>>>>> origin/main
       type="application/ld+json"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(structuredData, null, 2)}}

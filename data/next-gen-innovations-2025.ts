@@ -88,7 +88,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'AI-powered autonomous fleet management platform with real-time coordination, safety protocols, and comprehensive analytics.',
@@ -139,7 +139,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Quantum-powered bioinformatics platform with DNA analysis, protein folding simulation, and drug discovery acceleration.',
@@ -191,7 +191,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Quantum-powered privacy-preserving AI platform with federated learning, homomorphic encryption, and comprehensive privacy tools.',
@@ -243,7 +243,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Quantum-powered energy optimization platform with grid optimization, renewable integration, and comprehensive sustainability tools.',
@@ -295,7 +295,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'AI-powered industrial automation platform with predictive maintenance, quality control, and comprehensive manufacturing optimization.',
@@ -347,7 +347,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'AI-powered quantum education platform with personalized learning, interactive simulations, and comprehensive curriculum.',
@@ -399,7 +399,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'AI-powered content creation platform with video generation, audio synthesis, and comprehensive creative tools.',
@@ -447,15 +447,15 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
 export const,
   nextGenInnovations2025: NextGenInnovation2025[] = [,
     i,
-  d: 'next-gen-ai-suite'
+  d: 'next-gen-ai-suite',
     nam,
-  e: 'Next-Gen AI Suite'
+  e: 'Next-Gen AI Suite',
     taglin,
-  e: 'Future-ready AI solutions'
+  e: 'Future-ready AI solutions',
     pric,
-  e: '$179/month'
+  e: '$179/month',
     descriptio,
-  n: 'Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.'
+  n: 'Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.',
     feature,
   s: [
       'Next-gen AI models'
@@ -464,8 +464,8 @@ export const,
       'Innovation platform'
       'Expert support'
     ]
-    link: '/services/next-gen-ai-suite'
-    category: 'Next-Gen Innovations 2025'
+    link: '/services/next-gen-ai-suite',
+    category: 'Next-Gen Innovations 2025',
     realImplementation: true,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -496,18 +496,18 @@ export const,
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
     lin,
-  k: '/services/next-gen-ai-suite'
+  k: '/services/next-gen-ai-suite',
     categor,
-  y: 'Next-Gen Innovations 2025'
+  y: 'Next-Gen Innovations 2025',
     realImplementatio,
   n: true,
     contactInf,
   o: mobil,
-  e: '+1 302 464 0950'
+  e: '+1 302 464 0950',
       emai,
-  l: 'kleber@ziontechgroup.com'
+  l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'
+  s: '364 E Main St STE 1008 Middletown DE 19709',
     }
   }
 ];      mobil,

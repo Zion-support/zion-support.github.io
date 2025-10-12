@@ -39,7 +39,7 @@ export default async function handler(
     reviewer_id
     type
     note
-}
+};
     created_at: new Date ().toISOString ()}
 
     createdAt: new Date().toISOString()}
@@ -67,7 +67,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     type
     note
     createdAt: new Date().toISOString()
-  }
+  };
   try {
     await supabase.from('trust_peer_reviews').insert(review)
   } catch {}
@@ -77,12 +77,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     reviewerId
     type
     note
-    createdAt: new Date().toISOString()}
+    createdAt: new Date().toISOString()};
   try {
     await supabase.from('trust_peer_reviews').insert(review)
   } catch {}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     userId,
     reviewerId,
     type,

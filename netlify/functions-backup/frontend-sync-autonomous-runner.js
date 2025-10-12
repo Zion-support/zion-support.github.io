@@ -38,7 +38,7 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     }
   }
 }
-exports.config = {/* TODO: Fix JSX expression */}
+exports.config = {/* TODO: Fix JSX expression */};
   e: '*/5 * * * *'}
 }
 exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/frontend-sync-autonomous-orchestrator.cjs once 0 || true') { stdio: 'inherit'} shell: true,
@@ -60,5 +60,5 @@ exports.handler = async function() { const { execSync } = require('child_process
   l: true,
       });' return {/* TODO: Fix JSX expression */}
   k: 'frontend-sync-autonomous-runner' }) } } catch (e) {/* TODO: Fix JSX expression */}
-      }) } } } exports.config = {/* TODO: Fix JSX expression */}
+      }) } } } exports.config = {/* TODO: Fix JSX expression */};
   e: '*/5 * * * *'} }'"

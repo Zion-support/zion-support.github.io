@@ -461,9 +461,9 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       const,
   newMetrics: SystemMetrics = {
     const _networkInfo = getNetworkInfo()
-  }
+  };
       const,
-  _newMetrics: SystemMetrics = {/* TODO: Fix JSX expression */}
+  _newMetrics: SystemMetrics = {/* TODO: Fix JSX expression */};
   e: performanceScore}
           loadTim,
   e: performanceMetrics?.loadTime || 0,

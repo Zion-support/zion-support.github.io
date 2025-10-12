@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -10,10 +6,6 @@ import Footer from '../components/Footer';
 import { CheckCircle, Brain, BarChart, Target, TrendingUp, Zap, Eye, Users } from 'lucide-react';
 
 const AIAnalyticsPage: React.FC = () => {
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -21,22 +13,13 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
 const AiAnalyticsPage: React.FC = () => {,
->>>>>>> origin/main
->>>>>>> origin/main
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-<<<<<<< HEAD
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
-=======
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis'];
-    },
-    {
-      icon: BarChart,
-<<<<<<< HEAD
 title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
@@ -49,7 +32,6 @@ title: 'Advanced Analytics',
     },
     {
       icon: TrendingUp,
-<<<<<<< HEAD
       title: 'Performance Analytics',
       description: 'Track and analyze performance metrics across all your business operations.',
       benefits: ['KPI tracking', 'Performance monitoring', 'Efficiency metrics', 'Growth analysis']
@@ -65,8 +47,6 @@ title: 'Advanced Analytics',
       title: 'Data Visualization',
       description: 'Transform complex data into clear, actionable insights with advanced visualization tools.',
       benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export options']
-=======
-<<<<<<< HEAD
       title: 'Performance Tracking',
       description: 'Track KPIs and performance metrics with automated alerts and goal monitoring.',
       benefits: ['KPI tracking', 'Goal setting', 'Progress monitoring', 'Alert system']
@@ -82,12 +62,10 @@ title: 'Advanced Analytics',
       title: 'Visual Analytics',
       description: 'Create stunning visualizations and interactive charts for better data understanding.',
       benefits: ['Interactive charts', 'Custom visualizations', 'Export options', 'Sharing features']
->>>>>>> origin/main
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Increase data accuracy by 95%',
     'Reduce analysis time by 80%',
     'Improve decision-making speed by 70%',
@@ -97,21 +75,6 @@ title: 'Advanced Analytics',
     'Scale analytics across departments',
     'Enhance competitive advantage'
   ];
-=======
-    'Increase decision-making speed by 75%',
-    'Reduce data analysis time by 90%',
-    'Improve forecast accuracy by 60%',
-    'Enhance team productivity by 50%',
-    'Optimize resource allocation by 40%',
-    'Boost revenue growth by 35%'
-  ];
-=======
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-=======
->>>>>>> origin/main
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']},
     {icon: TrendingUp,
@@ -129,15 +92,11 @@ title: 'Advanced Analytics',
     {icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
-<<<<<<< HEAD
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']},
->>>>>>> origin/main
   ];
-=======
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     },
   ];];];
->>>>>>> origin/main
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -145,9 +104,6 @@ title: 'Advanced Analytics',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology';
   ];
-<<<<<<< HEAD
->>>>>>> origin/main
->>>>>>> origin/main
 
 return (
     <>
@@ -156,47 +112,39 @@ return (
         <title>Ai Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered ai analytics solution for modern businesses." />
         <meta name="keywords" content="AI ai analytics, artificial intelligence, ai analytics, AI solutions, intelligent automation" />
-=======
   const useCases = [
-<<<<<<< HEAD
     {
       title: 'E-commerce Analytics',
       description: 'Track sales, customer behavior, and inventory with AI-powered insights',
-      icon: '🛒'
+      icon: '🛒',
     },
     {
       title: 'Marketing Intelligence',
       description: 'Analyze campaign performance and optimize marketing spend',
-      icon: '📈'
+      icon: '📈',
     },
     {
-<<<<<<< HEAD
       title: 'Predictive Analytics',
       description: 'Predict future trends and outcomes with AI',
-      icon: '🔮'
+      icon: '🔮',
     },
     {
       title: 'Customer Analytics',
       description: 'Understand customer behavior and preferences',
-      icon: '👥'
+      icon: '👥',
     },
     {
       title: 'Financial Analytics',
       description: 'Monitor financial performance and predict trends',
-=======
-      title: 'Financial Reporting',
-      description: 'Automate financial reporting and compliance monitoring',
->>>>>>> origin/main
-      icon: '💰'
+      icon: '💰',
     },
     {
       title: 'Operations Optimization',
       description: 'Optimize business processes and resource allocation',
-      icon: '⚙️'
+      icon: '⚙️',
     }
   ];
 
-=======
     {title: 'Business Intelligence',
       description: 'Transform raw data into actionable business insights',
       icon: '📊',},
@@ -214,29 +162,16 @@ return (
       icon: '⚙️',},
     {title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
-<<<<<<< HEAD
       icon: '🛡️',}]
   return(<React.Fragment>)</React.Fragment>
       <Helmet />
-=======
-      icon: '🛡️'
-    }
-  ];];];
->>>>>>> origin/main
   return (
     <>
       <Helmet>
->>>>>>> origin/main
         <title>AI Analytics - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Advanced AI-powered analytics solutions for data-driven business decisions. Real-time insights, predictive modeling, and automated reporting." />
-=======
-        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
->>>>>>> origin/main
->>>>>>> origin/main
       </Helmet>
       <Navigation />
-<<<<<<< HEAD
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         {/* Hero Section */}
@@ -261,8 +196,8 @@ return (
                 View Demo
               </button>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -293,8 +228,6 @@ return (
                   </ul>
                 </div>
               ))}
-=======
-<<<<<<< HEAD
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -348,13 +281,10 @@ return (
                     </li>
                   ))}
                 </ul>
-=======
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-        </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <section$1>
+        <div$2>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -370,12 +300,10 @@ return (
               <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
->>>>>>> origin/main
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
-<<<<<<< HEAD
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -385,22 +313,13 @@ return (
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 From startups to enterprises, our AI Analytics solution serves diverse industries
-=======
-        {/* Features Section */}
-        <section className="py-20 px-4">
-        </section>
-=======
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,</h1>
                 AI Analytics;
   </
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Transform your business with intelligent analytics powered by cutting-edge AI technology.</p>
->>>>>>> origin/main
               </p>
-<<<<<<< HEAD
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -424,13 +343,12 @@ return (
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4">
-        </section>
-          <div className="max-w-7xl mx-auto">
+        <section$1>
+        <div$2>
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our Solution?
@@ -450,11 +368,10 @@ return (
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl p-12">
@@ -474,42 +391,13 @@ return (
                 </button>
               </div>
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
       </main>
 
-=======
-        <section className="py-20 px-4">
-        </section>
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-=======
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover: bg-blue-700 transition-colors">,</button>
-                  Get Started;
-  </
-                <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover: bg-blue-50 transition-colors">,</button>
-                  Learn More,
-  </
->>>>>>> origin/main
->>>>>>> origin/main
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -581,20 +469,10 @@ return (
           </div>
         </div>
       </section>
-=======
-        </section>
-<<<<<<< HEAD
       </div>
       <Footer />
->>>>>>> origin/main
 
-=======
-<<<<<<< HEAD
         {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
-=======
-      </main>
-    </>
->>>>>>> origin/main
   );
 }
       </main>
@@ -607,7 +485,6 @@ return (
 }
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
->>>>>>> origin/main
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
@@ -634,8 +511,8 @@ return (
                 </div>
               ))}
             </div>
-          </div>
-        </section>
+        </div>
+      </section>
         {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
@@ -649,111 +526,11 @@ return (
           </div>
         </section>
       </main>
->>>>>>> origin/main
       <Footer />
     </>
-<<<<<<< HEAD
   );
 };
 
 export default AIAnalyticsPage;
-=======
-  ),
-};
-
-<<<<<<< HEAD
 export default AIAnalyticsPage;
-=======
-<<<<<<< HEAD
 export default AiAnalyticsPage;
-=======
-export default AiAnalyticsPage;
-  </button>
-  </h2>
-  </button>
-  </button>
-  </h1>
-=======
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import { BarChart, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react'
-
-const AIAnalyticsPage: React.FC = () => {
-  const features = [
-    'Real-time data processing',
-    'Predictive analytics',
-    'Custom dashboards',
-    'Automated reporting',
-    'Data visualization',
-    'Machine learning insights'
-  ]
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Analytics</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your data into actionable insights with our advanced AI-powered analytics platform.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Analytics Features
-            </h2>
-            <p className="text-xl text-gray-300">
-              Unlock the full potential of your data with our comprehensive analytics solutions.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-center text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                <span>{feature}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Discover how AI analytics can transform your business decision-making process.
-          </p>
-          <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 flex items-center mx-auto">
-            <ArrowRight className="w-5 h-5 mr-2" />
-            Get Started
-          </button>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  )
-}
-
-export default AIAnalyticsPage
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main
->>>>>>> origin/main

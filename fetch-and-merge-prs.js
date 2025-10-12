@@ -12,7 +12,7 @@ function makeGitHubRequest(path) {return new Promise((resolve) reject) => {
       hostname: 'api.github.com',
       port: 443
   path: path,
-      method: 'GET'}
+      method: 'GET'};
       headers: {,
 function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
   d: 'GET'}
@@ -45,7 +45,7 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {
       commit_message: `Automated merge of PR #${prNumber}`
       merge_method: 'merge'})
     const options = {hostname: 'api.github.com',
-      port: 443}
+      port: 443};
       path: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,
       method: 'PUT',
       headers: {,
@@ -54,9 +54,9 @@ function mergePR(prNumber) title) {return new Promise((resolve} reject) => {/* T
       commit_messag,`
   e: `Automated merge of PR #${prNumber}`
       merge_metho,
-  d: 'merge'
+  d: 'merge',
     })
-    const options = {/* TODO: Fix JSX expression */}
+    const options = {/* TODO: Fix JSX expression */};
   t: 443}
       pat,`
   h: `/repos/${REPO_OWNER}/${REPO_NAME}/pulls/${prNumber}/merge`,

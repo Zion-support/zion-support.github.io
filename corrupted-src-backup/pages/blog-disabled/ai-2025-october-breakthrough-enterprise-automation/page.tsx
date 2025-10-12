@@ -597,8 +597,8 @@ const EnterpriseAutomation202, 5 = () => {/* TODO: Fix JSX expression */}
                       View Case Studies,
                     </Link>
                   </div>
-                </div>
-              </section>
+        </div>
+      </section>
             </div>
           </article>
         </div>
@@ -627,8 +627,6 @@ export default EnterpriseAutomation2025</div>
 </a>
 </ul>
 </ul>
-</li>
-</li>
 </li>
 </li>
 </Link>
@@ -662,4 +660,4 @@ export default EnterpriseAutomation2025</div>
   </span>
   </span>
   </h1>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></a></a></a></a></a></a></a></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h3></h3></li></li></li></li></li></li></li></section></section></section></section></section></article></article></article></article></article></article>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></Link></Link></Link></Link></a></a></a></a></a></a></a></p></p></p></p></p></p></p></p></p></p></p></p></h2></h2></h2></h2></h2></h3></h3></li></li></li></li></section></section></section></section></section></article></article></article></article></article></article>

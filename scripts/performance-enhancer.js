@@ -39,7 +39,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 //       const distPath = path.join(process.cwd(), 'dist')
 //       const files = await fs.readdir(distPath)
       let _totalSize = 0
-      const _fileSizes = {}
+      const _fileSizes = {};
       for (const file of files) {/* TODO: Fix JSX expression */}
         }
       }

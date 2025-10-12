@@ -939,31 +939,31 @@ export default function Cookies() {
       name: 'session_id',
       purpose: 'Maintains your session while using the website',
       duration: 'Session',
-      type: 'Essential'
+      type: 'Essential',
     },
     {
       name: 'auth_token',
       purpose: 'Keeps you logged in securely',
       duration: '30 days',
-      type: 'Essential'
+      type: 'Essential',
     },
     {
       name: '_ga',
       purpose: 'Google Analytics - tracks website usage',
       duration: '2 years',
-      type: 'Performance'
+      type: 'Performance',
     },
     {
       name: '_fbp',
       purpose: 'Facebook Pixel - tracks conversions',
       duration: '3 months',
-      type: 'Marketing'
+      type: 'Marketing',
     },
     {
       name: 'language',
       purpose: 'Remembers your language preference',
       duration: '1 year',
-      type: 'Functional'
+      type: 'Functional',
     }
   ]
   return (

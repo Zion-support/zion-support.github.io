@@ -174,7 +174,7 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
       if (navigation) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        const metrics = {/* TODO: Fix JSX expression */}
+        const metrics = {/* TODO: Fix JSX expression */};
   O: Add content,}
 }
 

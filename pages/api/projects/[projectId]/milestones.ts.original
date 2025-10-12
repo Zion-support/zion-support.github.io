@@ -1,6 +1,5 @@
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
@@ -14,11 +13,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   if (req && req.method === "POST") {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   if (req.method === 'POST') {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (!isClient(project, user)) {
 
 
@@ -28,12 +24,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 
 
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { require_user  } from '../../../../utils / api / auth';
 import {
@@ -57,14 +51,10 @@ if (return) {
   // Check condition
 if ( {) {
   $2
-=======
   res.setHeader('AllowGET, POST');
   res.status(405).end('Method Not Allowed')
 }
 
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
     res.status (404).json ({ error: "Project not found" });
     return;
@@ -117,4 +107,3 @@ if ( {) {
   res.set_header ("Allow", "GET, POST");
   res.status (405).end ("Method Not Allowed");
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

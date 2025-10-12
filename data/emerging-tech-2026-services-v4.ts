@@ -81,7 +81,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture and ultra-efficient AI processing.',
@@ -133,7 +133,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Quantum internet security gateway with unbreakable encryption and quantum-resistant algorithms.',
@@ -185,7 +185,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'AI-powered synthetic biology platform with genetic engineering and lab automation integration.',
@@ -237,7 +237,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Autonomous drone fleet management platform with AI-powered navigation and fleet coordination.',
@@ -289,7 +289,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Comprehensive brain-computer interface development kit with neural processing and device control.',
@@ -341,7 +341,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum machine learning platform with quantum algorithms and hybrid ML capabilities.',
@@ -393,7 +393,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails: 'Next-generation autonomous vehicle AI platform with level 5 autonomy and advanced safety systems.',
@@ -445,11 +445,11 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     }
     realImplementation: true
-    implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.'
-    launchDate: '2026-05-15'
+    implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
+    launchDate: '2026-05-15',
     customers: 30
     rating: 4.8
     reviews: 25,

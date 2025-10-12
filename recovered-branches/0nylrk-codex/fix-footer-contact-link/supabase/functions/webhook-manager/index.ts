@@ -105,7 +105,7 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
     }
     return new Response(JSON.stringify({ 
       webhook: data[0],
-      message: 'Webhook created successfully'
+      message: 'Webhook created successfully',
     }), {
       status: 201,
       headers: { 'Content-Type': 'application/json' }})
@@ -344,7 +344,7 @@ function createTestPayload(eventType: string) {
           amount: {
             min: 1000,
             max: 2000,
-            currency: 'USD'
+            currency: 'USD',
           },
           created_at: timestamp
         }
@@ -373,7 +373,7 @@ function createTestPayload(eventType: string) {
           client_id: crypto.randomUUID(),
           job_id: crypto.randomUUID(),
           created_at: timestamp,
-          status: 'offer_accepted'
+          status: 'offer_accepted',
         }
       }
     default:
@@ -382,7 +382,7 @@ function createTestPayload(eventType: string) {
         event_id: eventId,
         timestamp,
         data: {
-          message: 'This is a test webhook event'
+          message: 'This is a test webhook event',
         }
       }
   }

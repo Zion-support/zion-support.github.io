@@ -48,7 +48,7 @@ export default function PaymentSuccess() {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
   const router = useRouter(); // Changed from navigate
   const { t } = useTranslation()
@@ -129,7 +129,7 @@ export default function PaymentSuccess() {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = { hasError: false };
   }
   const router = useRouter(); // Changed from navigate
   const { t } = useTranslation()
@@ -162,7 +162,6 @@ export default function PaymentSuccess() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
   return (

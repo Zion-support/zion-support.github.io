@@ -143,7 +143,7 @@ export default async function handler(req, res) {
   const alreadyPropagated = payload && payload.propagate === false
   if (!alreadyPropagated && currentState && currentState.config.peers && peers.length > 0) {
     const headers: Record<string, string> = {}
-    const localBody = { ...event, propagate: false }
+    const localBody = { ...event, propagate: false };
     const baseSignature = require("../../../utils/sync/signature")
     const sig = baseSignature && baseSignature.signPayload(localBody)
     if (sig) headers["x-zion-signature"] = sig
@@ -162,7 +162,7 @@ export default async function handler(req, res) {
   const alreadyPropagated = payload.propagate === false
   if (!alreadyPropagated && currentState.config.peers.length > 0) {
     const headers: Record<string, string> = {}
-    const localBody = { ...event, propagate: false }
+    const localBody = { ...event, propagate: false };
     const baseSignature = require("../../../utils/sync/signature")
     const sig = baseSignature.signPayload(localBody)
     if (sig) headers["x-zion-signature"] = sig
@@ -239,7 +239,7 @@ if ( {) {
   $2
 }
     const headers: Record < string, string> = {}
-    const local_body = { ...event, propagate: false }
+    const local_body = { ...event, propagate: false };
     const base_signature = require ("../../../utils / sync / signature")
     const sig = base_signature.sign_payload (local_body)
     // Check condition

@@ -31,7 +31,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'GET') {
     const data = await fs.readJson(FILE_PATH)
     return res.status(200).json(data)
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   res.status(405).json({ error: 'Method not allowed' })
 }
@@ -45,7 +44,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       author: body && body.author || "anon",
       text: body && body.text || "",
       createdAt: new Date().toISOString(),
-    }
+    };
     data && data.comments.push(comment)
     await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 })
     return res && res.status(201).json(comment)
@@ -61,7 +60,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(201).json(comment)
   }
   res.status(405).json({ error: 'Method not allowed' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 import type { NextApiRequest, NextApiResponse } from './next'
 import fs from './fs - extra'
@@ -103,7 +101,7 @@ if ( {) {
       author: body.author || "anon",
       text: body.text || "",
       created_at: new Date ().toISOString (),
-    }
+    };
     data.comments.push (comment)
     await fs.write_json (FILE_PATH, data, { spaces: 2 })
     return res.status (201).json (comment)
