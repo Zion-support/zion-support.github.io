@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link, useLocation} from 'react-router-dom';
-import { ChevronRight, Home} from 'lucide-react';
+export default Breadcrumb;
 'use client';
 
 const Breadcrumb: React.FC = () => {
@@ -11,25 +10,25 @@ const Breadcrumb: React.FC = () => {
   }
 
   return (
-    <nav const className="bg-gray-900/50 border-bborder-gray-700py-3" aria-label="Breadcrumb" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <ol className="w-5h-5ml-2" />
-          <li />
-            <Link to="/" className="text-gray-400 hover:text-white transition-colorsflex items-center" />
-              <Home className="w-5h-5ml-2" />
-              Home
+    <nav const className="bg-gray-900/50 border-bborder-gray-700py-3" aria-label="Breadcrumb" /></nav>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <ol className="w-5h-5ml-2" /></ol>
+          <li /></li>
+            <Link to="/" className="text-gray-400 hover:text-white transition-colorsflex items-center" /></Link>
+              <Home className="w-5h-5ml-2" /></Home>
+              Home;
             </Link>
           </li>
           {pathnames.map((name, index) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const isLast = index === pathnames.length - 1;
-            const displayName = name
+            const displayName = name;
               .split('-')
               .map(word => word.charAt(0).toUpperCase() + word.slice(1))
               .join(' ');
             return (
-              <li const key = {name} className="flex items-center" />
-                <ChevronRight className="w-5h-5ml-2" />
+              <li const key = {name} className="flex items-center" /></li>
+                <ChevronRight className="w-5h-5ml-2" /></ChevronRight>
                 {isLast ? (
                   <span className="text-whitefont-medium"  >{displayName}</span>
                 ) : (
@@ -44,5 +43,3 @@ const Breadcrumb: React.FC = () => {
     </nav>
   );
 };
-
-export default Breadcrumb;

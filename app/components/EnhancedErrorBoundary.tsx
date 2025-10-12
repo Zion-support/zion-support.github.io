@@ -1,6 +1,4 @@
-import { Component, ErrorInfo, ReactNode} from 'react';
-import { Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
+export default EnhancedErrorBoundary;
 'use client';
 
 interface Props {
@@ -27,10 +25,10 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo;
     });
 
-    // Log error to monitoring service
+    // Log error to monitoring service;
     console.error('Error caught by boundary: ', error, errorInfo);
   }
 
@@ -45,20 +43,17 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <AlertTriangle className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <AlertTriangle className="w-5h-5ml-2" /></AlertTriangle>
             </div>
-            
-            <h1 className="w-5h-5ml-2">Oops! Something went wrong
+            <h1 className="w-5h-5ml-2">Oops! Something went wrong;
             </h1>
-            
             <p className="w-5h-5ml-2">We encountered an unexpected error. Don't worry, our team has been notified and we're working to fix it.
             </p>
-
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <h3 className="text-red-400font-semiboldmb-2"  >Error Details:</h3>
                 <pre className="w-5h-5ml-2" />{this.state.error.toString()}
                 </pre>
@@ -69,34 +64,32 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
               </div>
             )}
 
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <button;
                 onClick="{this.handleRetry}"
-                className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
-                <RefreshCw className="w-5h-5ml-2" />
-                Try Again
+                className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" /></button>
+                <RefreshCw className="w-5h-5ml-2" /></RefreshCw>
+                Try Again;
               </button>
-              
-              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-all duration-300" />
-                <Home className="w-5h-5ml-2" />
-                Go Home
+              <Link to="/" className="w-full inline-flex items-center justify-center px-6 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-700 hover:text-whitetransition-all duration-300" /></Link>
+                <Home className="w-5h-5ml-2" /></Home>
+                Go Home;
               </Link>
             </div>
-
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <p className="w-5h-5ml-2">Still having issues? Contact our support team:
               </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                <a
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <a;
                   href="mailto:kleber@ziontechgroup.com"
-                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors" />
-                  <Mail className="w-5h-5ml-2" />
-                  kleber@ziontechgroup.com
+                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors" /></a>
+                  <Mail className="w-5h-5ml-2" /></Mail>
+                  kleber@ziontechgroup.com;
                 </a>
                 <span className="hiddensm:inlinetext-gray-500"  >•</span>
-                <a
+                <a;
                   href="tel:+13024640950"
-                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors" />
+                  className="inline-flex items-center text-sm text-purple-400hover:text-purple-300 transition-colors" /></a>
                   <span  >+1 302 464 0950</span>
                 </a>
               </div>
@@ -107,5 +100,3 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
     return this.props.children;
   }
 }
-
-export default EnhancedErrorBoundary;

@@ -1,6 +1,4 @@
-import { useEffect, useState} from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB} from 'web-vitals';
-
+export default EnhancedPerformanceMonitor;
 interface PerformanceMetrics {
   lcp: number | null,
   inp: number | null,
@@ -8,7 +6,7 @@ interface PerformanceMetrics {
   fcp: number | null,
   ttfb: number | null,
   memoryUsage: number | null,
-  loadTime: number | null
+  loadTime: number | null;
 }
 
 interface PerformanceReport {
@@ -16,7 +14,7 @@ interface PerformanceReport {
   timestamp: string,
   userAgent: string,
   connectionType: string,
-  deviceMemory: number | null
+  deviceMemory: number | null;
 }
 
 const EnhancedPerformanceMonitor: React.FC = () => {
@@ -27,7 +25,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     fcp: null,
     ttfb: null,
     memoryUsage: null,
-    loadTime: null
+    loadTime: null;
   })
 
   const [isMonitoring, setIsMonitoring] = useState(false)
@@ -35,7 +33,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   useEffect(() => {
     const startTime = performance.now()
 
-    // Monitor Core Web Vitals
+    // Monitor Core Web Vitals;
     const measureWebVitals = () => {
       onCLS((metric) => {
         setMetrics(prev => ({ ...prev, cls: metric.value }))
@@ -58,37 +56,37 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       })
     }
 
-    // Monitor memory usage
+    // Monitor memory usage;
     const measureMemoryUsage = () => {
       if ('memory' in, performance) {
-        const memory = (performance as, any).memory
+        const memory = (performance as, any).memory;
         setMetrics(prev => ({ 
           ...prev, 
-          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB;
         }))
       }
     }
 
-    // Monitor load time
+    // Monitor load time;
     const measureLoadTime = () => {
       window.addEventListener('load', () => {
-        const loadTime = performance.now() - startTime
+        const loadTime = performance.now() - startTime;
         setMetrics(prev => ({ ...prev, loadTime }))
       })
     }
 
-    // Monitor resource loading
+    // Monitor resource loading;
     const monitorResourceLoading = () => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry) => {
           if (entry.entryType === 'resource') {
-            const resource = entry as PerformanceResourceTiming
-            if (resource.duration > 1000) { // Log slow resources
+            const resource = entry as PerformanceResourceTiming;
+            if (resource.duration > 1000) { // Log slow resources;
               console.warn('Slow resource detected: ', {
                 name: resource.name,
                 duration: resource.duration,
-                size: resource.transferSize
+                size: resource.transferSize;
               })
             }
           }
@@ -97,17 +95,17 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       observer.observe({ entryTypes: ['resource'] })
     }
 
-    // Monitor layout shifts
+    // Monitor layout shifts;
     const monitorLayoutShifts = () => {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry) => {
           if (entry.entryType === 'layout-shift') {
             const layoutShift = entry as PerformanceEntry & { value: number }
-            if (layoutShift.value > 0.1) { // Log significant layout shifts
+            if (layoutShift.value > 0.1) { // Log significant layout shifts;
               console.warn('Significant layout shift detected: ', {
                 value: layoutShift.value,
-                startTime: layoutShift.startTime
+                startTime: layoutShift.startTime;
               })
             }
           }
@@ -116,14 +114,14 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       observer.observe({ entryTypes: ['layout-shift'] })
     }
 
-    // Generate performance report
+    // Generate performance report;
     const generatePerformanceReport = (): PerformanceReport => {
       const report: PerformanceReport = {
         metrics,
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
         connectionType: (navigator as, any).connection?.effectiveType || 'unknown',
-        deviceMemory: (navigator as, any).deviceMemory || null
+        deviceMemory: (navigator as, any).deviceMemory || null;
       }
 
       // Send to analytics (in a real app, you'd send this to your analytics, service)
@@ -139,15 +137,15 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             fcp: metrics.fcp,
             ttfb: metrics.ttfb,
             memory_usage: metrics.memoryUsage,
-            load_time: metrics.loadTime
+            load_time: metrics.loadTime;
           }
         })
       }
 
-      return report
+      return report;
     }
 
-    // Initialize monitoring
+    // Initialize monitoring;
     setIsMonitoring(true)
     measureWebVitals()
     measureMemoryUsage()
@@ -155,20 +153,20 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     monitorResourceLoading()
     monitorLayoutShifts()
 
-    // Generate report after 5 seconds
+    // Generate report after 5 seconds;
     const reportTimer = setTimeout(() => {
       const report = generatePerformanceReport()
       console.log('Performance Report: ', report)
     }, 5000)
 
-    // Cleanup
+    // Cleanup;
     return () => {
       clearTimeout(reportTimer)
       setIsMonitoring(false)
     }
   }, [])
 
-  // Performance optimization suggestions
+  // Performance optimization suggestions;
   const getPerformanceSuggestions = (): string[] => {
     const suggestions: string[] = []
 
@@ -196,20 +194,20 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       suggestions.push('High memory usage detected - consider optimizing memory leaks and reducing bundle size')
     }
 
-    return suggestions
+    return suggestions;
   }
 
   const suggestions = getPerformanceSuggestions()
 
-  // Don't render anything in production
+  // Don't render anything in production;
   if (process.env.NODE_ENV === 'production') {
-    return null
+    return null;
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <h3 className="text-sm font-boldmb-2"  >Performance Monitor</h3>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div  >LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'Measuring...'}</div>
         <div  >INP: {metrics.inp ? `${metrics.inp.toFixed(0)}ms` : 'Measuring...'}</div>
         <div  >CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>
@@ -217,11 +215,10 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         <div  >TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'Measuring...'}</div>
         <div  >Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}MB` : 'N/A'}</div>
         <div  >Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'Measuring...'}</div>
-      
       {suggestions.length > 0 && (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="text-xs font-semiboldmb-1"  >Suggestions:</div>
-          <ul className="w-5h-5ml-2" />
+          <ul className="w-5h-5ml-2" /></ul>
             {suggestions.map((suggestion, index) => (
               <li key="{index}" className="text-yellow-300"  >• {suggestion}</li>
             ))}
@@ -231,5 +228,3 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     </div>
   )
 }
-
-export default EnhancedPerformanceMonitor;

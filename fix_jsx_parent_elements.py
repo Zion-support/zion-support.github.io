@@ -1,57 +1,42 @@
 #!/usr/bin/env python3
 """
-Final comprehensive fix for all syntax errors
+Script to fix JSX expressions that need parent elements
 """
 import os
 import re
 import glob
 from pathlib import Path
 
-def fix_import_placement(content):
-    """Fix import statements that are in the wrong place"""
+def fix_jsx_parent_elements(content):
+    """Fix JSX expressions that need parent elements"""
     lines = content.split('\n')
-    imports = []
-    other_lines = []
+    new_lines = []
+    i = 0
     
-    for line in lines:
-        if line.strip().startswith('import ') or line.strip().startswith('export '):
-            imports.append(line)
-        else:
-            other_lines.append(line)
+    while i < len(lines):
+        line = lines[i]
+        
+        # Check if this line has JSX that needs a parent element
+        if re.search(r'<[A-Z][a-zA-Z0-9]*', line) and not re.search(r'<[A-Z][a-zA-Z0-9]*[^>]*>', line):
+            # This looks like a JSX element that needs a parent
+            # Find the matching closing tag or add one
+            if not re.search(r'</[A-Z][a-zA-Z0-9]*>', line):
+                # No closing tag found, add one
+                element_name = re.search(r'<([A-Z][a-zA-Z0-9]*)', line)
+                if element_name:
+                    element_name = element_name.group(1)
+                    line = line + f'</{element_name}>'
+        
+        new_lines.append(line)
+        i += 1
     
-    # Put imports at the top
-    return '\n'.join(imports + other_lines)
+    return '\n'.join(new_lines)
 
-def fix_jsx_structure(content):
-    """Fix JSX structure issues"""
-    # Fix malformed JSX elements
-    content = re.sub(r'<div([^>]*)></div>', r'<div\1>', content)
-    
-    # Fix unclosed JSX tags
-    content = re.sub(r'<div([^>]*)>\s*$', r'<div\1></div>', content, flags=re.MULTILINE)
-    
-    # Fix JSX fragments
-    content = re.sub(r'<>\s*$', r'<></>', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_jsx_attributes(content):
-    """Fix JSX attribute issues"""
-    # Fix malformed className attributes
-    content = re.sub(r'className\s*=\s*\{[^}]*\s*>\s*\}', lambda m: m.group(0).replace('>', '&gt;'), content)
-    
-    # Fix malformed style attributes
-    content = re.sub(r'style\s*=\s*\{[^}]*\s*>\s*\}', lambda m: m.group(0).replace('>', '&gt;'), content)
-    
-    return content
-
-def fix_jsx_elements(content):
-    """Fix JSX element issues"""
-    # Fix unclosed JSX elements
-    content = re.sub(r'<(\w+)([^>]*)>\s*$', r'<\1\2></\1>', content, flags=re.MULTILINE)
-    
-    # Fix malformed JSX closing tags
-    content = re.sub(r'</\s*(\w+)\s*>\s*$', r'</\1>', content, flags=re.MULTILINE)
+def fix_jsx_fragments(content):
+    """Fix JSX fragments that need proper wrapping"""
+    # Wrap JSX expressions that don't have a parent element
+    content = re.sub(r'<>\s*<([A-Z][a-zA-Z0-9]*)', r'<>\n    <\1', content)
+    content = re.sub(r'</([A-Z][a-zA-Z0-9]*)>\s*</>', r'    </\1>\n</>', content)
     
     return content
 
@@ -81,32 +66,17 @@ def fix_common_syntax_errors(content):
     
     return content
 
-def fix_merge_conflicts(content):
-    """Fix merge conflict markers"""
-    # Remove merge conflict markers and keep the HEAD version
-    content = re.sub(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n', r'\1', content, flags=re.DOTALL)
-    
-    # Remove any remaining conflict markers
-    content = re.sub(r'<<<<<<< [^\n]+\n', '', content)
-    content = re.sub(r'=======\n', '', content)
-    content = re.sub(r'>>>>>>> [^\n]+\n', '', content)
-    
-    return content
-
 def process_file(file_path):
-    """Process a single file to fix all errors"""
+    """Process a single file to fix JSX errors"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Apply all fixes
-        content = fix_merge_conflicts(content)
-        content = fix_import_placement(content)
-        content = fix_jsx_structure(content)
-        content = fix_jsx_attributes(content)
-        content = fix_jsx_elements(content)
+        # Apply fixes
+        content = fix_jsx_parent_elements(content)
+        content = fix_jsx_fragments(content)
         content = fix_jsx_syntax_errors(content)
         content = fix_common_syntax_errors(content)
         

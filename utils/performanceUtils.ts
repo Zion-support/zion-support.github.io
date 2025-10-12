@@ -1,11 +1,19 @@
+export function debounce<T extends (...args: any[]) => any>(
+export function throttle<T extends (...args: any[]) => any>(
+export function createIntersectionObserver(
+export function getMemoryUsage(): any {
+export function preloadCriticalResources(): void {
+export function optimizeImage(src: string, width?: number, height?: number): string {
+export function createLazyImageObserver(): IntersectionObserver | null {
+export function checkPerformanceBudget(): void {
+export function addResourceHints(): void {
 /**
- * Performance optimization utilities for the Zion Tech Group application
+ * Performance optimization utilities for the Zion Tech Group application;
  */
 
-// Debounce function for performance optimization
-export function debounce<T extends (...args: any[]) => any>(
+// Debounce function for performance optimization;
   func: T,
-  wait: number
+  wait: number;
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
@@ -13,10 +21,9 @@ export function debounce<T extends (...args: any[]) => any>(
  func(...args), wait);
   };
 
-// Throttle function for performance optimization
-export function throttle<T extends (...args: any[]) => any>(
+// Throttle function for performance optimization;
   func: T,
-  limit: number
+  limit: number;
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
@@ -26,10 +33,9 @@ export function throttle<T extends (...args: any[]) => any>(
  (inThrottle = false), limit);
   };
 
-// Intersection Observer for lazy loading
-export function createIntersectionObserver(
+// Intersection Observer for lazy loading;
   callback: IntersectionObserverCallback,
-  options?: IntersectionObserverInit
+  options?: IntersectionObserverInit;
 ): IntersectionObserver | null {
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
     return null;
@@ -40,7 +46,7 @@ export function createIntersectionObserver(
     ...options,
   });
 
-// Performance monitoring utilities
+// Performance monitoring utilities;
  void): void {
   if (typeof window === 'undefined' || !('performance' in window)) {
     fn();
@@ -53,15 +59,13 @@ export function createIntersectionObserver(
   if (process.env.NODE_ENV === 'development') {
     console.log(`${name} took ${end - start} milliseconds`);
 
-// Memory usage monitoring
-export function getMemoryUsage(): any {
+// Memory usage monitoring;
   if (typeof window === 'undefined' || !('memory' in performance)) {
     return null;
   
-  return (performance as any).memory;
+  return (performance, as, any).memory;
 
-// Bundle size optimization - preload critical resources
-export function preloadCriticalResources(): void {
+// Bundle size optimization - preload critical resources;
   if (typeof window === 'undefined') return;
   
   const criticalResources = [
@@ -79,18 +83,16 @@ export function preloadCriticalResources(): void {
     document.head.appendChild(link);
   });
 
-// Image optimization utility
-export function optimizeImage(src: string, width?: number, height?: number): string {
-  // Add image optimization parameters if needed
+// Image optimization utility;
+  // Add image optimization parameters if needed;
   const url = new URL(src, window.location.origin);
   if (width) url.searchParams.set('w', width.toString());
   if (height) url.searchParams.set('h', height.toString());
-  url.searchParams.set('q', '80'); // Quality
-  url.searchParams.set('f', 'webp'); // Format
+  url.searchParams.set('q', '80'); // Quality;
+  url.searchParams.set('f', 'webp'); // Format;
   return url.toString();
 
-// Lazy loading utility for images
-export function createLazyImageObserver(): IntersectionObserver | null {
+// Lazy loading utility for images;
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
         const src = img.dataset.src;
@@ -101,21 +103,18 @@ export function createLazyImageObserver(): IntersectionObserver | null {
     });
   });
 
-// Performance budget monitoring
-export function checkPerformanceBudget(): void {
+// Performance budget monitoring;
   if (typeof window === 'undefined') return;
   
   const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
   if (!navigation) return;
   
   const loadTime = navigation.loadEventEnd - navigation.fetchStart;
-  const budget = 3000; // 3 seconds
-  
+  const budget = 3000; // 3 seconds;
  budget) {
  ${budget}ms`);
 
-// Resource hints for better performance
-export function addResourceHints(): void {
+// Resource hints for better performance;
   if (typeof window === 'undefined') return;
   
   const hints = [

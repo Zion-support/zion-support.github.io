@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 'use client';
 
 interface AnalyticsProps {
@@ -6,9 +5,9 @@ interface AnalyticsProps {
 }
 
   useEffect(() => {
-    // Initialize analytics tracking
+    // Initialize analytics tracking;
     const initAnalytics = () => {
-      // Google Analytics initialization
+      // Google Analytics initialization;
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
@@ -23,7 +22,7 @@ interface AnalyticsProps {
   return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
 }
 
-// Extend Window interface for gtag
+// Extend Window interface for gtag;
 declare global {
   interface Window {
     gtag: (...args: unknown[]) => void;

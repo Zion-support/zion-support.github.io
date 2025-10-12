@@ -1,32 +1,31 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
+#!/usr/bin/env node;
 
-// Function to fix common syntax errors in TSX files
+// Function to fix common syntax errors in TSX files;
 function fixSyntaxErrors(content) {
-  // Fix invalid characters in import statements
+  // Fix invalid characters in import statements;
   content = content.replace(/\\'/g, "'");
   
-  // Fix malformed JSX elements with missing spaces in className
-    // Add space between concatenated class names
+  // Fix malformed JSX elements with missing spaces in className;
+    // Add space between concatenated class names;
     return prefix + char1 + ' ' + char2;
   });
   
-  // Fix malformed JSX closing tags
+  // Fix malformed JSX closing tags;
 ');
   
-  // Fix malformed JSX opening tags
+  // Fix malformed JSX opening tags;
   content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s*\/\s*>/g, '<$1 />');
   
-  // Fix malformed JSX with missing closing tags
+  // Fix malformed JSX with missing closing tags;
   content = content.replace(/<([a-zA-Z][a-zA-Z0-9]*)\s+className="[^"]*"\s*\/\s*>/g, '<$1 className="$2" />');
   
-  // Fix specific patterns found in the files
+  // Fix specific patterns found in the files;
     return `className="${prefix}${char1} ${char2}`;
   });
   
-  // Fix specific malformed patterns
+  // Fix specific malformed patterns;
   content = content.replace(/className="([^"]*?)pt-20"/g, 'className="$1 pt-20"');
   content = content.replace(/className="([^"]*?)py-12"/g, 'className="$1 py-12"');
   content = content.replace(/className="([^"]*?)gap-8"/g, 'className="$1 gap-8"');
@@ -56,7 +55,7 @@ function fixSyntaxErrors(content) {
   
   return content;
 
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -71,14 +70,14 @@ function processFile(filePath) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
 
-// Function to recursively find and process TSX files
+// Function to recursively find and process TSX files;
 function processDirectory(dirPath) {
   let processedCount = 0;
   
   function walkDir(currentPath) {
     const items = fs.readdirSync(currentPath);
     
-    for (const item of items) {
+    for (const item, of, items) {
       const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
       
@@ -91,11 +90,11 @@ function processDirectory(dirPath) {
   walkDir(dirPath);
   return processedCount;
 
-// Main execution
+// Main execution;
 console.log('Starting syntax error fixes...');
 const processedCount = processDirectory('./app');
 console.log(`Processed ${processedCount} files.`);
 
-// Also process the root EnhancedFooter.tsx
+// Also process the root EnhancedFooter.tsx;
 if (processFile('./EnhancedFooter.tsx')) {
   console.log('Fixed: EnhancedFooter.tsx');

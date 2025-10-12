@@ -1,13 +1,11 @@
-import { useState, useRef, useEffect} from 'react';
-import { Loader2 } from 'lucide-react';
-
+export default LazyImage;
 interface LazyImageProps {
   src: string,
-  alt: string
-  className?: string
-  placeholder?: string
-  onLoad?: () => void
-  onError?: () => void
+  alt: string;
+  className?: string;
+  placeholder?: string;
+  onLoad?: () => void;
+  onError?: () => void;
 }
 
 const LazyImage: React.FC<LazyImageProps /> = ({
@@ -16,7 +14,7 @@ const LazyImage: React.FC<LazyImageProps /> = ({
   const className = '',
   placeholder,
   onLoad,
-  onError
+  onError;
 }) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
@@ -52,21 +50,21 @@ const LazyImage: React.FC<LazyImageProps /> = ({
   }
 
   return (
-    <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
+    <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} /></div>
       {!isInView && (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <Loader2 className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <Loader2 className="w-5h-5ml-2" /></Loader2>
         </div>
       )}
       
       {isInView && !isLoaded && !hasError && (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <Loader2 className="w-5h-5ml-2" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <Loader2 className="w-5h-5ml-2" /></Loader2>
         </div>
       )}
       
       {isInView && (
-        <img
+        <img;
           src="{src}"
           alt="{alt}"
           onLoad="{handleLoad}"
@@ -75,12 +73,12 @@ const LazyImage: React.FC<LazyImageProps /> = ({
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           loading="lazy"
-         />
+         /></img>
       )}
       
       {hasError && (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="w-8 h-8mx-au tomb-2"  >📷</div>
             <p className="text-sm">Image failed to load</p>
           </div>
@@ -88,5 +86,3 @@ const LazyImage: React.FC<LazyImageProps /> = ({
     </div>
   )
 }
-
-export default LazyImage;

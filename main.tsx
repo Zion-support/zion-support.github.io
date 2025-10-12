@@ -6,7 +6,7 @@ import './app/globals.css'
 ReactDOM.createRoot(document.getElementById('root')!).render(
 );
 
-// Register service worker for PWA functionality
+// Register service worker for PWA functionality;
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {

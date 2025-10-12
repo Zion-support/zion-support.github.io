@@ -1,11 +1,10 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+export default function AICustomerSupportChatbot() {
+export default AiCustomerSupportChatbotPage;
+export default AiCustomerSupportChatbotPage;
 'use client';
 
 const AiCustomerSupportChatbotPage: React.FC = () => {
-export default function AICustomerSupportChatbot() {
   const features = [
     {
       icon: <Brain className="w-6 h-6text-cyan-400" />,
@@ -62,7 +61,7 @@ export default function AICustomerSupportChatbot() {
         'Basic analytics',
         'Website integration'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -78,7 +77,7 @@ export default function AICustomerSupportChatbot() {
         'Multi-channel support',
         'API access'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -94,7 +93,7 @@ export default function AICustomerSupportChatbot() {
         'Advanced analytics',
         'SLA guarantee'
       ],
-      popular: false
+      popular: false;
     }
   ]
 
@@ -103,59 +102,57 @@ export default function AICustomerSupportChatbot() {
       name: 'Lisa Chen',
       company: 'E-commerce Store',
       content: 'AI Customer Support Chatbot reduced our support tickets by 60% and improved customer satisfaction by 40%.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'John Martinez',
       company: 'SaaS Company',
       content: 'The chatbot handles 80% of our support queries automatically. Our team can focus on complex issues.',
-      rating: 5
+      rating: 5;
     },
     {
       name: 'Sarah Johnson',
       company: 'Service Provider',
       content: '24/7 support without additional costs. Our customers love the instant responses and availability.',
-      rating: 5
+      rating: 5;
     }
   ]
 
   return (
-    <>
-      <Helmet>
+    <></>
+      <Helmet></Helmet>
         <title>AI Customer Support Chatbot - Zion Tech Group</title>
-        <meta name="description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI chatbot, customer support, AI solutions, IT services, Zion Tech Group" />
-        <meta property="og:title" content="AI Customer Support Chatbot - Zion Tech Group" /  />
-        <meta property="og:description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." /  />
-        <meta property="og:type" content="website" /  />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-customer-support-chatbot" /  />
+        <meta name="description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." /></meta>
+        <meta name="keywords" content="AI chatbot, customer support, AI solutions, IT services, Zion Tech Group" /></meta>
+        <meta property="og:title" content="AI Customer Support Chatbot - Zion Tech Group" /  /></meta>
+        <meta property="og:description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." /  /></meta>
+        <meta property="og:type" content="website" /  /></meta>
+        <meta property="og:url" content="https://ziontechgroup.com/ai-customer-support-chatbot" /  /></meta>
       </Helmet>
-
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         {/* Hero Section */}
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5h-5ml-2" />
-              <span className="w-5h-5ml-2" />AI Customer Support Chatbot
+        <section className="w-5h-5ml-2" /></section>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h1 className="w-5h-5ml-2" /></h1>
+              <span className="w-5h-5ml-2" />AI Customer Support Chatbot;
               </span>
             </h1>
             <p className="w-5h-5ml-2">Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs.
             </p>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <Link
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <Link;</Link></Link>
           to="/contact"
           className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
-        >
-          Get Started
-                
-          <ArrowRight className="w-5h-5ml-2" />
+        ></Link>
+          Get Started;
+          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
         </Link>
-              <Link to="/contact" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More
+              <Link to="/contact" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More;
               </Link>
             </div>
         </section>
-
         {/* CTA Section */}
+<<<<<<< HEAD
 
               <h2 className="w-5 h-5ml-2" />Ready to Get Started?
               <p className="w-5 h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
@@ -177,3 +174,26 @@ export default function AiCustomerSupportChatbot() {
   );
 }
 
+=======
+        <section className="w-5h-5ml-2" /></section>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <h2 className="w-5h-5ml-2" />Ready to Get Started?
+              </h2>
+              <p className="w-5h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
+              </p>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Contact Us;
+                </Link>
+                <Link to="/services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All Services;
+                </Link>
+              </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

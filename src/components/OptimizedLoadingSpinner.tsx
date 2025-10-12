@@ -1,12 +1,12 @@
+export default OptimizedLoadingSpinner;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
   text?: string;
   className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
   fullScreen?: boolean;
-    fullScreen = false
-    // Note: fullScreen parameter is used in containerClasses calculation below
-    
+    fullScreen = false;
+    // Note: fullScreen parameter is used in containerClasses calculation below;
     );
     
     );
@@ -42,4 +42,3 @@
   );
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
-export default OptimizedLoadingSpinner;

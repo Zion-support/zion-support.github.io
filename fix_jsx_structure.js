@@ -1,54 +1,51 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
+#!/usr/bin/env node;
 
-// Function to fix JSX structure issues
+// Function to fix JSX structure issues;
 function fixJSXStructure(content) {
-  // Fix the specific pattern where div has className="$2" and is self-closing
+  // Fix the specific pattern where div has className="$2" and is self-closing;
   content = content.replace(/<div className="\$2" \/>/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">');
   
-  // Fix the pattern where Helmet is self-closing
+  // Fix the pattern where Helmet is self-closing;
   content = content.replace(/<Helmet \/>/g, '<Helmet>');
   
-  // Fix the pattern where div has className="$2" and is self-closing (for inner div)
+  // Fix the pattern where div has className="$2" and is self-closing (for, inner, div)
   content = content.replace(/<div className="\$2" \/>/g, '<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">');
   
-  // Fix malformed className attributes with spaces
+  // Fix malformed className attributes with spaces;
   content = content.replace(/className="t e xt-4xl/g, 'className="text-4xl');
   content = content.replace(/className="t e xt-lg/g, 'className="text-lg');
   content = content.replace(/className="b g-g radient-to-r/g, 'className="bg-gradient-to-r');
   content = content.replace(/className="\$2"/g, 'className="w-5 h-5 ml-2"');
   
-  // Fix missing closing tags for Helmet
+  // Fix missing closing tags for Helmet;
   content = content.replace(/<\/Helmet>/g, '</Helmet>');
   
-  // Fix missing closing tags for divs
+  // Fix missing closing tags for divs;
   content = content.replace(/<\/div>/g, '</div>');
   
   // Fix the specific structure issue where we have:
-  // <div>
-  //   <Helmet>
+  // <div></div>
+  //   <Helmet></Helmet>
   //     ...
   //   </Helmet>
-  //   <div>
+  //   <div></div>
   //     ...
   //   </div>
   // </div>
-  
   // This should be:
-  // <div>
-  //   <Helmet>
+  // <div></div>
+  //   <Helmet></Helmet>
   //     ...
   //   </Helmet>
-  //   <div>
+  //   <div></div>
   //     ...
   //   </div>
   // </div>
-  
   return content;
 
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
@@ -63,14 +60,14 @@ function processFile(filePath) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
 
-// Function to recursively find and process TSX files
+// Function to recursively find and process TSX files;
 function processDirectory(dirPath) {
   let processedCount = 0;
   
   function walkDir(currentPath) {
     const items = fs.readdirSync(currentPath);
     
-    for (const item of items) {
+    for (const item, of, items) {
       const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
       
@@ -83,7 +80,7 @@ function processDirectory(dirPath) {
   walkDir(dirPath);
   return processedCount;
 
-// Main execution
+// Main execution;
 console.log('Starting JSX structure fixes...');
 const processedCount = processDirectory('./app');
 console.log(`Processed ${processedCount} files.`);

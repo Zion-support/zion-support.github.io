@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+export default AiChatbotEnterprisePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 'use client';
 =======
 import React from 'react';
@@ -12,6 +17,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const AiChatbotEnterprisePage: React.FC = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   return (
     <>
@@ -27,12 +33,27 @@ const AiChatbotEnterprisePage: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 AI Chatbot Enterprise
+=======
+  return (
+    <></>
+      <Helmet></Helmet>
+        <title>Ai Chatbot Enterprise - Zion Tech Group</title>
+        <meta name="description" content="Ai Chatbot Enterprise services by Zion Tech Group. Professional AI and IT solutions." /></meta>
+        <meta name="keywords" content="ai-chatbot-enterprise, AI solutions, IT services" /></meta>
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h1 className="w-5h-5ml-2" /></h1>
+              <span className="w-5h-5ml-2" />Ai Chatbot Enterprise;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional AI chatbot enterprise services by Zion Tech Group.
             </p>
           </div>
+<<<<<<< HEAD
 
           <div className="text-center mt-16">
             <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
@@ -46,6 +67,15 @@ const AiChatbotEnterprisePage: React.FC = () => {
             >
               Contact Us
             </Link>
+=======
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensive ai chatbot enterprise solutions. 
+              Contact us to learn more about our services.
+            </p>
+            <button className="w-5h-5ml-2">Contact Us;
+            </button>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
           </div>
         </div>
       </div>
@@ -269,5 +299,8 @@ const AiChatbotEnterprisePage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
   );
 };
+<<<<<<< HEAD
 
 export default AiChatbotEnterprisePage;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

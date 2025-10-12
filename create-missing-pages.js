@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+import React from 'react';
+export default ${title}Page;`;
 
-// List of pages that need to be created based on App.tsx imports
+// List of pages that need to be created based on App.tsx imports;
 const missingPages = [
   'pricing', 'blog', 'case-studies', 'careers', 'ai-services', 'it-services', 
   'micro-saas', 'consultation', 'support', 'privacy', 'terms', 'cookies', 
@@ -31,41 +33,34 @@ const missingPages = [
   'faq', 'docs', 'api-docs', 'community', 'compliance'
 ];
 
-// Template for page components
+// Template for page components;
  `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
   return (
     
         <title>${title} - Zion Tech Group</title>
-      
                 ${title}
               Professional ${title.toLowerCase()} services by Zion Tech Group.
 
             <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
               We're working on bringing you comprehensive ${title.toLowerCase()} solutions. 
               Contact us to learn more about our services.
-              Contact Us
-
+              Contact Us;
   );
 };
 
-export default ${title}Page;`;
 
-// Create missing pages
- 
+// Create missing pages;
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');
   
   const pageDir = path.join('/workspace/app', pageName);
   const pageFile = path.join(pageDir, 'page.tsx');
   
-  // Create directory if it doesn't exist
+  // Create directory if it doesn't exist;
   if (!fs.existsSync(pageDir)) {
     fs.mkdirSync(pageDir, { recursive: true });
   
-  // Create page file if it doesn't exist
+  // Create page file if it doesn't exist;
   if (!fs.existsSync(pageFile)) {
     fs.writeFileSync(pageFile, pageTemplate(pageName, title));
     console.log(`Created: ${pageFile}`);

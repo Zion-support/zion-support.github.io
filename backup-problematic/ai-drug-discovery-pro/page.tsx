@@ -1,21 +1,14 @@
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
-import { ArrowRight } from 'lucide-react';
-
 export default function AiDrugDiscoveryProPage() {
   return (
         <title>AI Drug Discovery Pro - Zion Tech Group</title>
-
       {/* Hero Section */}
-              AI Drug Discovery Pro
+              AI Drug Discovery Pro;
               Revolutionize pharmaceutical research with our advanced AI-powered drug discovery platform.
               Accelerate drug development, reduce costs, and improve success rates with cutting-edge technology.
-                Get Started
-                Request Demo
-
+                Get Started;
+                Request Demo;
       {/* Features Section */}
-              Advanced Drug Discovery Features
+              Advanced Drug Discovery Features;
               Cutting-edge AI technology to accelerate pharmaceutical research and development.
 
  (
@@ -25,9 +18,8 @@ export default function AiDrugDiscoveryProPage() {
             ))}
 
       {/* Applications Section */}
-                Research Applications
-                Our AI drug discovery platform supports research across multiple therapeutic areas
-
+                Research Applications;
+                Our AI drug discovery platform supports research across multiple therapeutic areas;
  (
                   <span className="text-sm">{application}</span>
               ))}
@@ -35,20 +27,18 @@ export default function AiDrugDiscoveryProPage() {
       {/* CTA Section */}
               Ready to Accelerate Drug Discovery?
               Transform your pharmaceutical research with our AI-powered drug discovery platform.
-                Contact Our Experts
-                View All AI Services
-      </section>    <div>
+                Contact Our Experts;
+                View All AI Services;
+      </section>    <div></div>
         <title>AI Drug Discovery Pro - Zion Tech Group</title>
-
       {/* Hero Section */}
-              AI Drug Discovery Pro
+              AI Drug Discovery Pro;
               Revolutionize pharmaceutical research with our advanced AI-powered drug discovery platform.
               Accelerate drug development, reduce costs, and improve success rates with cutting-edge technology.
-                Get Started
-                Request Demo
-
+                Get Started;
+                Request Demo;
       {/* Features Section */}
-              Advanced Drug Discovery Features
+              Advanced Drug Discovery Features;
               Cutting-edge AI technology to accelerate pharmaceutical research and development.
 
  (
@@ -58,9 +48,8 @@ export default function AiDrugDiscoveryProPage() {
             ))}
 
       {/* Applications Section */}
-                Research Applications
-                Our AI drug discovery platform supports research across multiple therapeutic areas
-
+                Research Applications;
+                Our AI drug discovery platform supports research across multiple therapeutic areas;
  (
                   <span className="text-sm">{application}</span>
               ))}
@@ -68,6 +57,6 @@ export default function AiDrugDiscoveryProPage() {
       {/* CTA Section */}
               Ready to Accelerate Drug Discovery?
               Transform your pharmaceutical research with our AI-powered drug discovery platform.
-                Contact Our Experts
-                View All AI Services
+                Contact Our Experts;
+                View All AI Services;
   );

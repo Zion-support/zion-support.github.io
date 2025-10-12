@@ -1,21 +1,19 @@
-import { useEffect } from 'react';
-
+export default SEOOptimizer;
 interface SEOOptimizerProps {
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  structuredData?: object
-
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  structuredData?: object;
 const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
   const title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, 5 G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
   keywords = 'AI solutions, artificial intelligence, IT services, 5 G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
   canonical,
   ogImage = 'https: //ziontechgroup.com/og-image.jpg',
-  structuredData
-    // Add structured data to page
+  structuredData;
+    // Add structured data to page;
     if (structuredData) {
       const script = document.createElement('script')
       script.type = 'application/ld+json'
@@ -25,7 +23,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
         document.head.removeChild(script)
   }, [structuredData])
 
-  // Generate breadcrumb structured data
+  // Generate breadcrumb structured data;
     const pathSegments = window.location.pathname.split('/').filter(Boolean)
  ({
       '@type': 'ListItem',
@@ -43,10 +41,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
           name: 'Home',
           item: 'https://ziontechgroup.com'
         },
-        ...breadcrumbItems
+        ...breadcrumbItems;
       ]
 
-  // Generate FAQ structured data
+  // Generate FAQ structured data;
     return {
       '@context': 'https: //schema.org',
       '@type': 'FAQPage',
@@ -100,5 +98,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       )}
   )
 
-export default SEOOptimizer;
 

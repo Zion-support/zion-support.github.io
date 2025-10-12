@@ -1,6 +1,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+export default PageFixedPage;
 'use client';
 const PageFixedPage: React.FC = () => {
     const features = [
@@ -30,11 +31,11 @@ const PageFixedPage: React.FC = () => {
   }
     ]
 return (
-    <>
+    <></>
       <Helmet  > </Helmet><title>Page Fixed - Zion Tech Group</title>
-        <meta />
+        <meta /></meta>
       </Helmet>
-      <Navigation />
+      <Navigation /></Navigation>
       <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         {/* Hero Section */}
         <section className="py-20px-4"  > </section><div className="</div><divclassName="text-center mb-16"  > </div><h2 className="text-4xl font-bold text-white mb-4"  >Section Title</h2>
@@ -44,30 +45,30 @@ return (
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  /></div>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 />Page Fixed
+            <h1 />Page Fixed;
             </h1>
             <p></p>
               Advanced page fixed solutions powered by AI technology.
             </p>
             <div className="flexflex-col sm: flex-rowgap-4 justify-center" /  /></div>
               <button /></button>
-                Get Started
+                Get Started;
               </button>
               <button /></button>
                 Learn More,
               </button>
             </div>
         </section>
-        <section className="w-5h-5ml-2" />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  />
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <h1 className="w-5h-5ml-2" />Page Fixed
-            <p className="w-5h-5ml-2" />
+        <section className="w-5h-5ml-2" /></section>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="absoluteinset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  /></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <h1 className="w-5h-5ml-2" />Page Fixed;
+            <p className="w-5h-5ml-2" /></p>
               Advanced page fixed solutions powered by AI technology.
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <button className="w-5h-5ml-2" />Get Started
-              <button className="w-5h-5ml-2" />Learn More
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <button className="w-5h-5ml-2" />Get Started;
+              <button className="w-5h-5ml-2" />Learn More;
         {/* Features Section */}
         <section className="py-20px-4"  > </section><div className="</div><divclassName="text-center mb-16"  > </div><h2 className="text-4xl font-bold text-white mb-4"  >Section Title</h2>
               <p className="text-xltext-gray-300">Section description</p>
@@ -76,24 +77,24 @@ return (
           <div className="max-w-7xlmx-auto" /  /></div>
             <div className="text-centermb-16" /  /></div>
               <h2 /></h2>
-                Key Features
+                Key Features;
               </h2>
               <p></p>
-                Powerful AI technology that drives results
+                Powerful AI technology that drives results;
               </p>
             </div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5backdrop-blur-sm rounded-2 xl p-8 hover:bg-white/10 transition-all duration-300group" /></div>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <feature />
+                    <feature /></feature>
                   <h3 className="text-xlfont-bold text-white mb-4"  >{feature.title}</h3>
                   <p className="text-gray-300mb-4">{feature.description}</p>
                   {
     feature.benefits && (;
                     <ul />{feature.benefits.map((benefit, idx) => (
   }
-                        </ul><li  > </li><CheckCircle />
+                        </ul><li  > </li><CheckCircle /></CheckCircle>
                           {benefit}
                         </li>
                       ))}
@@ -104,22 +105,22 @@ return (
 
             </div>
         </section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h2 className="w-5h-5ml-2" />Key Features
-              <p className="text-xltext-gray-300 max-w-3xl mx-auto">Powerful AI technology that drives results
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <h2 className="w-5h-5ml-2" />Key Features;
+              <p className="text-xltext-gray-300 max-w-3xl mx-auto">Powerful AI technology that drives results;
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/5backdrop-blur-sm rounded-2 xl p-8 hover:bg-white/10 transition-all duration-300group" />
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-                    <feature.icon className="w-8 h-8text-white"  />
+                <div key={index} className="bg-white/5backdrop-blur-sm rounded-2 xl p-8 hover:bg-white/10 transition-all duration-300group" /></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <feature.icon className="w-8 h-8text-white"  /></feature>
                   <h3 className="w-5h-5ml-2" />{feature.title}
                   <p className="text-gray-300mb-4">{feature.description}
                   {feature.benefits && (
-                    <ul className="w-5h-5ml-2" />
+                    <ul className="w-5h-5ml-2" /></ul>
                       {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-centertext-sm text-gray-400" />
-                          <CheckCircle className="w-5h-5ml-2" />
+                        <li key={idx} className="flex items-centertext-sm text-gray-400" /></li>
+                          <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
                           {benefit}
                       ))}
                   )}
@@ -139,17 +140,16 @@ return (
               </p>
               <div className="flexflex-col sm: flex-rowgap-4 justify-center" /  /></div>
                 <button /></button>
-                  Contact Us
+                  Contact Us;
                 </button>
                 <button /></button>
-                  Learn More
+                  Learn More;
                 </button>
               </div>
           </div>
         </section>
       </div>
-      <Footer /></Footer>
-    </>
+      <Footer />    </Footer>
+</>
   ),
 };
-export default PageFixedPage;

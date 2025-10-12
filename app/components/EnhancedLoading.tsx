@@ -1,10 +1,11 @@
 import React from 'react';
+export default EnhancedLoading;
 
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg'
-  text?: string
-  fullScreen?: boolean
-  color?: string
+  text?: string;
+  fullScreen?: boolean;
+  color?: string;
 }
 
 const EnhancedLoading: React.FC<LoadingProps /> = ({
@@ -28,8 +29,8 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
   }
 
   const spinner = (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`}  />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`}  /></div>
       {text && (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{text}
         </div>
@@ -44,7 +45,5 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
     )
   }
 
-  return spinner
+  return spinner;
 }
-
-export default EnhancedLoading;

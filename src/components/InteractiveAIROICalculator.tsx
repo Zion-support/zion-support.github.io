@@ -1,3 +1,4 @@
+export default InteractiveAIROICalculator;
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
@@ -8,7 +9,7 @@
     return Math.max(0, roi);
   };
   const roi = calculateROI();
-          AI ROI Calculator
+          AI ROI Calculator;
                   Current Annual Cost ($)
                 
  setCurrentCost(Number(e.target.value))}
@@ -28,9 +29,8 @@
                   <option value={12}>12 months</option>
                   <option value={18}>18 months</option>
                   <option value={24}>24 months</option>
-                Your ROI Projection
+                Your ROI Projection;
                   {roi.toFixed(0)}%
-                  Expected return on investment over {timeframe} months
+                  Expected return on investment over {timeframe} months;
   );
 };
-export default InteractiveAIROICalculator;

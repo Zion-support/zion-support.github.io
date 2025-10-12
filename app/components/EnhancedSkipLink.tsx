@@ -1,4 +1,5 @@
 import React from 'react';
+export default EnhancedSkipLink;
 'use client';
 
 const EnhancedSkipLink: React.FC = () => {
@@ -22,18 +23,18 @@ const EnhancedSkipLink: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <button
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <button;
         onClick="{handleSkipToMain}"
         className="skip-link"
         aria-label="Skip to main content"
-        />Skip to main content
+        />Skip to main content;
       </button>
-      <button
+      <button;
         onClick="{handleSkipToNavigation}"
         className="skip-link"
         aria-label="Skip to navigation"
-        />Skip to navigation
+        />Skip to navigation;
       </button>
       <style jsx  />{`
         .skip-links {;
@@ -71,5 +72,3 @@ const EnhancedSkipLink: React.FC = () => {
     </div>
   );
 };
-
-export default EnhancedSkipLink;

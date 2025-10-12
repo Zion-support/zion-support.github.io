@@ -1,12 +1,10 @@
 import React, { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 import { getCLS, getFID, getFCP, getLCP, getTTFB };
+export default PerformanceMonitor;
 'use client';
-import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
-
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    // Monitor Core Web Vitals
+    // Monitor Core Web Vitals;
     const monitorCoreWebVitals = () => {
       if (typeof window !== 'undefined') {
         getCLS(console.log);
@@ -30,7 +28,7 @@ const PerformanceMonitor: React.FC = () => {
       }
     };
 
-    // Monitor performance metrics
+    // Monitor performance metrics;
     const monitorPerformance = () => {
       if ('performance' in, window) {
         window.addEventListener('load', () => {
@@ -48,7 +46,7 @@ const PerformanceMonitor: React.FC = () => {
       }
     };
 
-    // Monitor memory usage
+    // Monitor memory usage;
     const monitorMemory = () => {
       if ('memory' in, performance) {
         setInterval(() => {
@@ -58,23 +56,22 @@ const PerformanceMonitor: React.FC = () => {
             total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
             limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
           });
-        }, 30000); // Check every 30 seconds
+        }, 30000); // Check every 30 seconds;
       }
     };
 
-    // Initialize monitoring
+    // Initialize monitoring;
     monitorCoreWebVitals();
     monitorPerformance();
     monitorMemory();
 
-    // Cleanup
+    // Cleanup;
     return () => {
-      // Cleanup if needed
+      // Cleanup if needed;
     };
   }, []);
 
   return null;
 };
 
-export default PerformanceMonitor;
 }

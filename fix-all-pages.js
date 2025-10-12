@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+import React from 'react';
+export default ${componentName};`;
 
-// Get all AI service pages from App.tsx
+// Get all AI service pages from App.tsx;
 const aiServicePages = [
   'ai-analytics', 'ai-automation', 'ai-chatbot-builder', 'ai-cybersecurity', 
   'ai-crm', 'ai-data-analytics', 'ai-healthcare', 'ai-financial-services', 
@@ -66,32 +68,25 @@ const allPages = [
   ...microSaasPages, 
   ...emergingTechPages, 
   ...companyPages, 
-  ...resourcePages
+  ...resourcePages;
 ];
 
  `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
   return (
     
         <title>${title} - Zion Tech Group</title>
-      
                 ${title}
               Professional ${title.toLowerCase()} services by Zion Tech Group.
 
             <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
               We're working on bringing you comprehensive ${title.toLowerCase()} solutions. 
               Contact us to learn more about our services.
-              Contact Us
-
+              Contact Us;
   );
 };
 
-export default ${componentName};`;
 
-// Fix all pages
- 
+// Fix all pages;
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');
 
@@ -101,11 +96,11 @@ export default ${componentName};`;
   const pageDir = path.join('/workspace/app', pageName);
   const pageFile = path.join(pageDir, 'page.tsx');
   
-  // Create directory if it doesn't exist
+  // Create directory if it doesn't exist;
   if (!fs.existsSync(pageDir)) {
     fs.mkdirSync(pageDir, { recursive: true });
   
-  // Overwrite page file with correct template
+  // Overwrite page file with correct template;
   fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName));
   console.log(`Fixed: ${pageFile}`);
 });

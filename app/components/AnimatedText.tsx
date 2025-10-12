@@ -1,4 +1,4 @@
-import { useEffect, useState} from 'react';
+export default AnimatedText;
 'use client';
 
 interface AnimatedTextProps {
@@ -64,5 +64,3 @@ const AnimatedText: React.FC<AnimatedTextProps >= ({
     </span>
   );
 };
-
-export default AnimatedText;
