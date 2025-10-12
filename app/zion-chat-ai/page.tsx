@@ -1,40 +1,361 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, MessageCircle, Brain, Globe, Users, Zap, Shield, Star, DollarSign, Clock, Target, Cloud, Settings, Eye, FileText, Calendar, Package, Monitor, Heart, Code, Lock, Wifi, MessageSquare, CheckSquare, Box, Link as LinkIcon, Server, Workflow, Sparkles, Award, Globe as GlobeIcon, Mail, Phone, MapPin } from 'lucide-react';
 
 const ZionChatAiPage: React.FC = () => {
+  const features = [
+    {
+      icon: MessageCircle,
+      title: '24/7 Customer Support',
+      description: 'Provide round-the-clock customer support with intelligent chatbots that never sleep.',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: Globe,
+      title: 'Multi-language Support',
+      description: 'Support customers in 50+ languages with automatic translation and localization.',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: Brain,
+      title: 'Natural Language Processing',
+      description: 'Understand customer intent and context with advanced NLP and machine learning.',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: Users,
+      title: 'Human Handoff',
+      description: 'Seamlessly transfer complex queries to human agents when needed.',
+      color: 'from-teal-500 to-cyan-500'
+    },
+    {
+      icon: BarChart,
+      title: 'Analytics Dashboard',
+      description: 'Track performance, customer satisfaction, and conversation insights in real-time.',
+      color: 'from-orange-500 to-red-500'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with end-to-end encryption and compliance standards.',
+      color: 'from-red-500 to-pink-500'
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$49',
+      period: '/month',
+      description: 'Perfect for small businesses starting with AI chatbots',
+      features: [
+        'Up to 1,000 conversations/month',
+        'Basic NLP capabilities',
+        '5 languages supported',
+        'Email support',
+        'Standard integrations',
+        'Basic analytics'
+      ],
+      color: 'from-green-500 to-emerald-500',
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$99',
+      period: '/month',
+      description: 'Ideal for growing businesses with advanced chatbot needs',
+      features: [
+        'Up to 10,000 conversations/month',
+        'Advanced NLP capabilities',
+        '25 languages supported',
+        'Priority support',
+        'All integrations',
+        'Advanced analytics',
+        'Custom training',
+        'API access'
+      ],
+      color: 'from-blue-500 to-purple-500',
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+      description: 'Complete solution for large organizations with complex requirements',
+      features: [
+        'Unlimited conversations',
+        'Premium NLP capabilities',
+        '50+ languages supported',
+        '24/7 dedicated support',
+        'Custom integrations',
+        'Advanced security',
+        'White-label options',
+        'On-premise deployment'
+      ],
+      color: 'from-purple-500 to-pink-500',
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Jennifer Martinez',
+      role: 'Customer Success Manager, RetailPlus',
+      content: 'Zion Chat AI reduced our response time by 80% and improved customer satisfaction significantly. Our customers love the instant support!',
+      avatar: 'JM',
+      rating: 5
+    },
+    {
+      name: 'David Kim',
+      role: 'Founder, TechStartup',
+      content: 'The multi-language support and natural language processing are incredible. We can now serve customers globally without language barriers.',
+      avatar: 'DK',
+      rating: 5
+    },
+    {
+      name: 'Lisa Thompson',
+      role: 'Operations Director, ServiceCo',
+      content: 'Easy to set up, powerful features, and excellent ROI. Zion Chat AI has transformed our customer service operations.',
+      avatar: 'LT',
+      rating: 5
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>Zion Chat Ai - Zion Tech Group</title>
-        <meta name="description" content="Zion Chat Ai services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="zion-chat-ai, AI solutions, IT services" />
+        <title>Zion Chat AI - Intelligent Customer Support Chatbot | Zion Tech Group</title>
+        <meta name="description" content="Transform your customer support with Zion Chat AI - the most advanced AI-powered chatbot platform. 24/7 support, multi-language, and intelligent conversations." />
+        <meta name="keywords" content="AI chatbot, customer support, natural language processing, multi-language support, conversational AI" />
+        <meta property="og:title" content="Zion Chat AI - Intelligent Customer Support Chatbot" />
+        <meta property="og:description" content="Transform your customer support with AI-powered chatbots and intelligent conversations." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/zion-chat-ai" />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Zion Chat Ai
+        {/* Hero Section */}
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-purple-500/10 to-pink-500/10"></div>
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <div className="inline-flex items-center bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">
+              <MessageCircle className="w-5 h-5 text-green-400 mr-2" />
+              <span className="text-green-400 font-medium">AI Customer Support</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-green-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Zion Chat AI
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional zion chat ai services by Zion Tech Group.
+            
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              The most intelligent customer support chatbot platform. Provide 24/7 support with natural language processing, multi-language support, and seamless human handoff.
             </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link 
+                to="/contact"
+                className="bg-gradient-to-r from-green-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25 flex items-center justify-center group"
+              >
+                Start Free Trial
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link 
+                to="#demo"
+                className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-500/10 transition-all duration-300 transform hover:scale-105"
+              >
+                Watch Demo
+              </Link>
+            </div>
+            
+            <div className="flex items-center justify-center space-x-8 text-gray-400">
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                <span>14-day free trial</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                <span>No setup fees</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                <span>Setup in minutes</span>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300 mb-6">
-              We're working on bringing you comprehensive zion chat ai solutions. 
-              Contact us to learn more about our services.
-            </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-              Contact Us
-            </button>
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Powerful Features for <span className="bg-gradient-to-r from-green-400 to-purple-400 bg-clip-text text-transparent">Intelligent Support</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to provide exceptional customer support with AI
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div 
+                  key={index}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300 group hover:transform hover:scale-105"
+                >
+                  <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Simple, Transparent <span className="bg-gradient-to-r from-green-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the plan that fits your customer support needs. All plans include our core features.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricingPlans.map((plan, index) => (
+                <div 
+                  key={index}
+                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-xl p-8 hover:transform hover:scale-105 transition-all duration-300 ${
+                    plan.popular 
+                      ? 'border-purple-500/50 shadow-lg shadow-purple-500/25' 
+                      : 'border-gray-700/50 hover:border-green-400/40'
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-400 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link 
+                    to="/contact"
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
+                        : 'bg-gradient-to-r from-green-500 to-purple-500 text-white hover:from-green-600 hover:to-purple-600'
+                    }`}
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                What Our <span className="bg-gradient-to-r from-green-400 to-purple-400 bg-clip-text text-transparent">Customers Say</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Join thousands of businesses that trust Zion Chat AI
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div 
+                  key={index}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6"
+                >
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">
+                    "{testimonial.content}"
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <div className="text-white font-semibold">{testimonial.name}</div>
+                      <div className="text-gray-400 text-sm">{testimonial.role}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-green-900/50 to-purple-900/50 backdrop-blur-sm border border-green-500/20 rounded-2xl p-12 text-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 to-purple-500/5"></div>
+              <div className="relative z-10">
+                <h2 className="text-4xl font-bold text-white mb-6">
+                  Ready to Transform Your Customer Support?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                  Start your free trial today and see how Zion Chat AI can revolutionize your customer service.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link 
+                    to="/contact"
+                    className="bg-gradient-to-r from-green-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
+                  >
+                    Start Free Trial
+                  </Link>
+                  <Link 
+                    to="/contact"
+                    className="border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-500/10 transition-all duration-300 transform hover:scale-105"
+                  >
+                    Schedule Demo
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );

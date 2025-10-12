@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -42,41 +41,6 @@ const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
 const TermsPage = React.lazy(() => import('./app/terms/page'));
 const CookiesPage = React.lazy(() => import('./app/cookies/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
-=======
-import React, { Suspense } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HelmetProvider } from 'react-helmet-async'
-import Navigation from './app/components/Navigation'
-import Footer from './app/components/Footer'
-import ErrorBoundary from './app/components/ErrorBoundary'
-import LoadingSpinner from './app/components/LoadingSpinner'
-import SEOHead from './app/components/SEOHead'
-
-// Lazy load pages for better performance
-const HomePage = React.lazy(() => import('./app/page'))
-const AboutPage = React.lazy(() => import('./app/about/page'))
-const ContactPage = React.lazy(() => import('./app/contact/page'))
-const AIServicesPage = React.lazy(() => import('./app/ai-services/page'))
-const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
-const MicroSaasServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
-const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'))
-const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
-const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'))
-const PrivacyPage = React.lazy(() => import('./app/privacy/page'))
-const TermsPage = React.lazy(() => import('./app/terms/page'))
-const AIContentGeneratorPage = React.lazy(() => import('./app/ai-content-generator/page'))
-const AIChatbotBuilderPage = React.lazy(() => import('./app/ai-chatbot-builder/page'))
-const AIAnalyticsDashboardPage = React.lazy(() => import('./app/ai-analytics-dashboard/page'))
-const AIEmailAssistantPage = React.lazy(() => import('./app/ai-email-assistant/page'))
-const AIVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/page'))
-const AIAutomationPage = React.lazy(() => import('./app/ai-automation/page'))
-const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'))
-const CybersecuritySolutionsPage = React.lazy(() => import('./app/cybersecurity-solutions/page'))
-const DevOpsCICDPage = React.lazy(() => import('./app/devops-cicd/page'))
-const DataAnalyticsPage = React.lazy(() => import('./app/data-analytics/page'))
-const MobileDevelopmentPage = React.lazy(() => import('./app/mobile-development/page'))
-const WebDevelopmentPage = React.lazy(() => import('./app/web-development/page'))
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
@@ -229,7 +193,6 @@ const App: React.FC = () => {
         <SkipLink />
         <ServiceWorker />
         <Router>
-<<<<<<< HEAD
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
               <PerformanceOptimizer>
