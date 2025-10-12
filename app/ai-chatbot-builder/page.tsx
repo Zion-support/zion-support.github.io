@@ -49,13 +49,8 @@ const AiChatbotBuilderPage: React.FC = () => {
       color: 'from-orange-500 to-red-500'
     },
     {
-<<<<<<< HEAD
-      title: 'AI Training',
-      description: 'Train your chatbot with your own data and knowledge base for personalized responses',
-=======
       title: 'AI-Powered Responses',
       description: 'Natural language processing and machine learning for intelligent, contextual conversations',
->>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
       icon: Brain,
       color: 'from-yellow-500 to-orange-500'
     }

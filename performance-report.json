@@ -1,33 +1,5 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-10-12T10:31:19.019Z",
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-10-12T09:35:03.911Z",
-=======
-  "timestamp": "2025-10-12T09:55:11.833Z",
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
-  "timestamp": "2025-10-12T09:57:08.457Z",
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
-  "timestamp": "2025-10-12T10:09:06.751Z",
->>>>>>> cursor/analyze-improve-and-deploy-application-7694
-=======
-  "timestamp": "2025-10-12T10:15:20.767Z",
->>>>>>> cursor/website-audit-and-update-with-deployment-7d13
-=======
-  "timestamp": "2025-10-12T10:18:06.034Z",
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
-=======
-  "timestamp": "2025-10-12T10:29:20.454Z",
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
->>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
+  "timestamp": "2025-10-12T10:41:38.427Z",
   "optimizations": [
     "Icon imports optimized",
     "Bundle splitting improved",
