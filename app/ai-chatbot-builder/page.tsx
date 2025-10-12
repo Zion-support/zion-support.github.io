@@ -58,8 +58,7 @@ export default function AIChatbotBuilderPage() {
     'Order tracking',
     'Technical support',
     'Sales consultation'
-    }
-  ]
+  ];
 
   const pricingPlans = [
     {

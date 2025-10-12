@@ -1,56 +1,62 @@
 'use client';
 
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string, pagePath: string) => void;
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackPageView: (pageName: string) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
+export function useAnalytics() {
   const context = useContext(AnalyticsContext);
+  if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
-};
-
-  children: ReactNode;
 }
 
-    // Initialize Google Analytics if available
-      const gtag = (window as { gtag: (command: string, targetId: string, config?: Record<string, unknown>) => void }).gtag;
-      
-      // Configure Google Analytics
-      });
-    }
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+  useEffect(() => {
+    // Initialize analytics
+    // Analytics initialization logic here
   }, []);
 
-    if (typeof window === 'undefined') return;
+  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, parameters);
+    }
+  };
 
-    // Google Analytics
+  const trackPageView = (pageName: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: pageName,
+        page_location: window.location.href,
       });
     }
-
-    // Console logging for development
-      console.log('Analytics Event:', eventName, parameters);
-    }
   };
 
-    if (typeof window === 'undefined') return;
-
-    // Google Analytics
-      });
-    }
-
-    // Console logging for development
-      console.log('Page View:', pageName, pagePath);
-    }
+  const value: AnalyticsContextType = {
+    trackEvent,
+    trackPageView,
   };
 
-  };
-
+  return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
-};
+}
+
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
+}

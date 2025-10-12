@@ -1,118 +1,33 @@
-ursor/
-    // Load Google Analytics
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
-        page_title: document.title,
-        page_location: window.location.href
-      })
-    }
-  }
+'use client';
 
-  const initializePerformanceMonitoring = () => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      // Monitor Core Web Vitals
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log)
-        getFID(console.log)
-        getFCP(console.log)
-        getLCP(console.log)
-        getTTFB(console.log)
-      })
-    }
-  }
+import React, { useEffect } from 'react';
 
-  const initializeErrorTracking = () => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('error', (event) => {
-        console.error('JavaScript Error:', {
-          message: event.message,
-          filename: event.filename,
-          lineno: event.lineno,
-          colno: event.colno,
-          error: event.error
-        })
-      })
-
-  const initializeGoogleAnalytics = () => {
-      window.addEventListener('unhandledrejection', (event) => {
-        console.error('Unhandled Promise Rejection:', event.reason)
-        // Send to error tracking service
-      })
-    }
-  }
-
-  const initializeUserBehaviorTracking = () => {
-    // Initialize user behavior tracking
-    if (typeof window !== 'undefined') {
-      // Track page views
-      const trackPageView = () => {
-        console.log('Page View:', {
-          url: window.location.href,
-          title: document.title,
-          timestamp: new Date().toISOString()
-        })
-      }
-
-      // Track clicks
-      const trackClick = (event: Event) => {
-        const target = event.target as HTMLElement
-        if (target.tagName === 'A' || target.tagName === 'BUTTON') {
-          if (window.gtag) {
-            window.gtag('event', 'click', {
-              event_category: 'engagement',
-              event_label: target.textContent || target.getAttribute('aria-label') || 'unknown'
-            })
-          }
-        }
-      }
-
-      // Track scroll depth
-            })
-          }
-        }
-      }
-
-      // Track scroll depth
-      let maxScrollDepth = 0
-      const trackScroll = () => {
-        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
-        if (scrollPercent > maxScroll) {
-          maxScroll = scrollPercent
-          if (window.gtag) {
-            window.gtag('event', 'scroll', {
-              event_category: 'engagement',
-              event_label: `${scrollPercent}%`
-      let maxScrollDepth = 0
-      const trackScrollDepth = () => {
-        const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
-        if (scrollDepth > maxScrollDepth) {
-          maxScrollDepth = scrollDepth
-          if (window.gtag) {
-            window.gtag('event', 'scroll', {
-              event_category: 'engagement',
-              event_label: `${scrollDepth}%`
-            })
-          }
-        }
-      }
-
-      // Add event listeners
-      // Initialize tracking
-      trackPageView()
-      document.addEventListener('click', trackClick)
-      window.addEventListener('scroll', trackScroll)
-      trackPageView()
-
-      // Cleanup
-      return () => {
-        document.removeEventListener('click', trackClick)
-        window.removeEventListener('scroll', trackScrollDepth)
-      }
-    }
-  }
-
-  return null
+interface AnalyticsProps {
+  children: React.ReactNode;
 }
 
-export default Analytics
+export default function Analytics({ children }: AnalyticsProps) {
+  useEffect(() => {
+    // Initialize analytics tracking
+    const initAnalytics = () => {
+      // Google Analytics initialization
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('config', 'GA_MEASUREMENT_ID', {
+          page_title: document.title,
+          page_location: window.location.href,
+        });
+      }
+    };
+
+    initAnalytics();
+  }, []);
+
+  return <>{children}</>;
+}
+
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
+}

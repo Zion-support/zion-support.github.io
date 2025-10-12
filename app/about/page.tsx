@@ -12,15 +12,7 @@ import {
   Users, 
   Award, 
   Target,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  Github,
-  Linkedin,
-  Twitter
+  ArrowRight
 } from 'lucide-react';
 
 export default function AboutPage() {

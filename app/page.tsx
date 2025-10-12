@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
@@ -9,28 +9,13 @@ import {
   Shield, 
   Zap, 
   Globe, 
-  Database, 
-  Code, 
-  Smartphone, 
   ArrowRight, 
   CheckCircle, 
   Star,
   Users,
   TrendingUp,
-  Lock,
-  Cpu,
-  Wifi,
   BarChart3,
-  MessageSquare,
-  FileText,
-  Camera,
-  Mail,
-  Phone,
-  MapPin,
-  Github,
-  Linkedin,
-  Twitter,
-  Loader2
+  MessageSquare
 } from 'lucide-react';
 
 // Note: Lazy loading components will be implemented in future iterations
@@ -92,14 +77,6 @@ export default function HomePage() {
     }
   ];
 
-  const additionalServices = [
-    { name: 'Web Development', link: '/web-development' },
-    { name: 'Mobile Development', link: '/mobile-development' },
-    { name: 'DevOps', link: '/devops' },
-    { name: 'IT Consulting', link: '/it-consulting' },
-    { name: 'Blockchain Solutions', link: '/blockchain' },
-    { name: 'IoT Development', link: '/iot' }
-  ];
 
   const testimonials = [
     {

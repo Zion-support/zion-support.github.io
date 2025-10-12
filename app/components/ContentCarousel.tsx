@@ -1,134 +1,153 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Play, Pause, Cloud3, Users, Target, CheckCircle } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Play, Pause, Cloud, CheckCircle } from 'lucide-react';
 
+interface Slide {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  features: string[];
+}
+
+interface ContentCarouselProps {
+  slides?: Slide[];
+  autoPlay?: boolean;
+  interval?: number;
+}
+
+const defaultSlides: Slide[] = [
+  {
+    id: 1,
+    title: 'AI-Powered Solutions',
+    description: 'Transform your business with cutting-edge artificial intelligence technologies.',
+    image: '/api/placeholder/600/400',
+    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision']
+  },
+  {
+    id: 2,
+    title: 'Cloud Infrastructure',
+    description: 'Scalable and secure cloud solutions for modern businesses.',
+    image: '/api/placeholder/600/400',
+    features: ['Scalable Architecture', '99.9% Uptime', 'Global CDN']
+  },
+  {
+    id: 3,
+    title: 'Cybersecurity',
+    description: 'Protect your business with comprehensive security solutions.',
+    image: '/api/placeholder/600/400',
+    features: ['Threat Detection', 'Security Audits', 'Compliance Management']
+  }
+];
+
+export default function ContentCarousel({ 
+  slides = defaultSlides, 
+  autoPlay = true, 
+  interval = 5000 
+}: ContentCarouselProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(autoPlay);
 
-  ];
-
+  useEffect(() => {
+    if (isPlaying) {
+      const timer = setInterval(() => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-      }, 5000);
+      }, interval);
       return () => clearInterval(timer);
     }
-    
-      // No cleanup needed when not playing
-    };
-  }, [isPlaying, slides.length]);
+  }, [isPlaying, slides.length, interval]);
 
+  const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
   };
 
+  const prevSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
   };
 
+  const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
 
+  const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
 
-  const currentSlideData = slides[currentSlide];
-
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore our comprehensive suite of AI and IT solutions designed to transform your business.
-          </p>
-        </div>
-
-        {/* Carousel Container */}
-        <div className="relative">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-white/20 overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Content */}
-              <div className="space-y-6">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${currentSlideData.color} rounded-xl flex items-center justify-center`}>
-                    <currentSlideData.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      {currentSlideData.title}
-                    </h3>
-                    <p className="text-gray-300">
-                      {currentSlideData.description}
-                    </p>
-                  </div>
+  return (
+    <div className="relative w-full max-w-4xl mx-auto">
+      {/* Main Carousel */}
+      <div className="relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20">
+        <div 
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        >
+          {slides.map((slide) => (
+            <div key={slide.id} className="w-full flex-shrink-0">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
+                <div className="space-y-6">
+                  <h3 className="text-3xl font-bold text-white">{slide.title}</h3>
+                  <p className="text-lg text-gray-300">{slide.description}</p>
+                  <ul className="space-y-3">
+                    {slide.features.map((feature, index) => (
+                      <li key={index} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-
-                <div className="space-y-3">
-                    <div key={index} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="flex gap-4">
-                  <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
-                    Learn More
-                  </button>
-                  <button className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                    Get Started
-                  </button>
-                </div>
-              </div>
-
-              {/* Visual Element */}
-              <div className="relative">
-                <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className={`w-32 h-32 bg-gradient-to-r ${currentSlideData.color} rounded-full mx-auto mb-6 flex items-center justify-center`}>
-                      <currentSlideData.icon className="w-16 h-16 text-white" />
-                    </div>
-                    <div className="text-4xl font-bold text-white mb-2">
-                      {currentSlideData.title}
-                    </div>
-                    <div className="text-gray-300">
-                      Slide {currentSlide + 1} of {slides.length}
-                    </div>
+                <div className="flex items-center justify-center">
+                  <div className="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                    <Cloud className="w-24 h-24 text-white opacity-50" />
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          ))}
+        </div>
 
-          {/* Navigation Controls */}
-          <div className="flex items-center justify-center gap-4 mt-8">
-            
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
+        {/* Navigation Arrows */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+          aria-label="Next slide"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+      </div>
 
-            >
-              {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
-            </button>
+      {/* Controls */}
+      <div className="flex items-center justify-center mt-6 space-x-4">
+        <button
+          onClick={togglePlayPause}
+          className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
+          aria-label={isPlaying ? 'Pause' : 'Play'}
+        >
+          {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+        </button>
 
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
-          </div>
-
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-6 space-x-2">
-              
-                onClick={() => goToSlide(index)}
-                  index === currentSlide ? 'bg-purple-400' : 'bg-white/30'
-                }`}
-              />
-            ))}
-          </div>
+        {/* Slide Indicators */}
+        <div className="flex space-x-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentSlide ? 'bg-white' : 'bg-white/30'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
         </div>
       </div>
     </div>
   );
-};
-
-export default ContentCarousel;
+}
