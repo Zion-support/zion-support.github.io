@@ -2,11 +2,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
-=======
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, Users, BarChart3, Settings, Mail, MessageSquare, FileText, Receipt, Video, Mic } from 'lucide-react'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +73,6 @@ const Navigation: React.FC = () => {
 
   // Service data
   const aiServices = [
-<<<<<<< HEAD
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
@@ -135,7 +129,7 @@ const Navigation: React.FC = () => {
     { name: 'IT Project Management', href: '/it-project-management', icon: Calendar, description: 'Professional project management' },
     { name: 'Cloud-Native Development', href: '/cloud-native-development', icon: Cloud, description: 'Microservices & containers' },
     { name: 'AI Integration Services', href: '/ai-integration-services', icon: Brain, description: 'AI model integration' },
-    { name: 'Blockchain Development', href: '/blockchain-development', icon: Link, description: 'Smart contracts & DeFi' },
+    { name: 'Blockchain Development', href: '/blockchain-development', icon: LinkIcon, description: 'Smart contracts & DeFi' },
     { name: 'IoT Development', href: '/iot-development', icon: Wifi, description: 'Connected device solutions' },
     { name: 'E-commerce Development', href: '/e-commerce-development', icon: ShoppingCart, description: 'Online store platforms' },
     { name: 'Advanced API Development', href: '/api-development-advanced', icon: Code, description: 'Enterprise-grade APIs' },
@@ -144,7 +138,7 @@ const Navigation: React.FC = () => {
     { name: 'Cloud Migration', href: '/cloud-migration-advanced', icon: Cloud, description: 'Zero-downtime migration' },
     { name: 'Advanced DevOps & SRE', href: '/devops-advanced', icon: Settings, description: 'Site reliability engineering' },
     { name: 'MLOps & AI Operations', href: '/machine-learning-ops', icon: Cpu, description: 'ML model deployment' },
-    { name: 'Enterprise Integration', href: '/enterprise-integration', icon: Link, description: 'System integration' },
+    { name: 'Enterprise Integration', href: '/enterprise-integration', icon: LinkIcon, description: 'System integration' },
     { name: 'Performance Optimization', href: '/performance-optimization', icon: Zap, description: 'App & infrastructure optimization' },
     { name: 'Disaster Recovery', href: '/disaster-recovery-advanced', icon: Shield, description: 'Business continuity' },
     { name: 'Compliance Automation', href: '/compliance-automation', icon: CheckCircle, description: 'Regulatory compliance' },
