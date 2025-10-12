@@ -12,4 +12,3 @@ export default InstantmessagingPage;
               Learn More;
   );
 };
-

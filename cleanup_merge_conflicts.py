@@ -1,49 +1,45 @@
 #!/usr/bin/env python3
+"""
+Script to clean up merge conflict markers from files
+"""
 import os
 import re
 import glob
 
 def clean_merge_conflicts(file_path):
-    """Clean merge conflict markers from a file, keeping our version (after =======)"""
+    """Clean merge conflict markers from a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Pattern to match merge conflict markers
-        # Keep everything before <<<<<<< HEAD and after =======
-        # Remove everything between <<<<<<< HEAD and =======
-        # Remove everything after >>>>>>> until end of conflict
-        pattern = r'<<<<<<< HEAD.*?=======(.*?)>>>>>>>.*?(?=<<<<<<< HEAD|$)'
+        # Remove merge conflict markers and their content
+        # Pattern to match <<<<<<< HEAD ... ======= ... >>>>>>> branch
+        pattern = r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]+'
+        cleaned_content = re.sub(pattern, '', content, flags=re.DOTALL)
         
-        # Replace with just our version (what's after =======)
-        cleaned = re.sub(pattern, r'\1', content, flags=re.DOTALL)
+        # Remove any remaining conflict markers
+        cleaned_content = re.sub(r'<<<<<<< HEAD.*', '', cleaned_content, flags=re.DOTALL)
+        cleaned_content = re.sub(r'=======.*', '', cleaned_content, flags=re.DOTALL)
+        cleaned_content = re.sub(r'>>>>>>> [^\n]+.*', '', cleaned_content, flags=re.DOTALL)
         
-        # Also handle cases where there's no ======= (just remove the conflict markers)
-        cleaned = re.sub(r'<<<<<<< HEAD.*?>>>>>>>.*?(?=<<<<<<< HEAD|$)', '', cleaned, flags=re.DOTALL)
+        # Clean up extra whitespace and empty lines
+        cleaned_content = re.sub(r'\n\s*\n\s*\n', '\n\n', cleaned_content)
+        cleaned_content = cleaned_content.strip() + '\n'
         
-        # Clean up any remaining conflict markers
-        cleaned = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>>.*?(?=<<<<<<< HEAD|$)', '', cleaned, flags=re.DOTALL)
-        cleaned = re.sub(r'<<<<<<< HEAD.*?>>>>>>>.*?(?=<<<<<<< HEAD|$)', '', cleaned, flags=re.DOTALL)
-        
-        # Remove any remaining individual conflict markers
-        cleaned = re.sub(r'<<<<<<< HEAD.*', '', cleaned)
-        cleaned = re.sub(r'=======.*', '', cleaned)
-        cleaned = re.sub(r'>>>>>>>.*', '', cleaned)
-        
-        # Clean up extra whitespace
-        cleaned = re.sub(r'\n\s*\n\s*\n', '\n\n', cleaned)
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(cleaned)
-        
-        print(f"Cleaned: {file_path}")
-        return True
+        # Only write if content changed
+        if cleaned_content != content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(cleaned_content)
+            print(f"Cleaned: {file_path}")
+            return True
+        return False
     except Exception as e:
-        print(f"Error cleaning {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript and JavaScript files
+    """Main function to process all files"""
+    # File patterns to process
     patterns = [
         '**/*.tsx',
         '**/*.ts', 
@@ -51,19 +47,21 @@ def main():
         '**/*.jsx'
     ]
     
-    files_to_clean = []
-    for pattern in patterns:
-        files_to_clean.extend(glob.glob(pattern, recursive=True))
-    
-    # Filter out node_modules
-    files_to_clean = [f for f in files_to_clean if 'node_modules' not in f]
-    
     cleaned_count = 0
-    for file_path in files_to_clean:
-        if clean_merge_conflicts(file_path):
-            cleaned_count += 1
+    total_count = 0
     
-    print(f"Cleaned {cleaned_count} files")
+    for pattern in patterns:
+        files = glob.glob(pattern, recursive=True)
+        for file_path in files:
+            # Skip node_modules and other directories
+            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', '.next']):
+                continue
+                
+            total_count += 1
+            if clean_merge_conflicts(file_path):
+                cleaned_count += 1
+    
+    print(f"\nProcessed {total_count} files, cleaned {cleaned_count} files")
 
 if __name__ == "__main__":
     main()

@@ -1,47 +1,43 @@
 import React from 'react';
-export default SEOHead;
+import { Helmet } from 'react-helmet-async';
 
+interface SEOHeadProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+}
 
-
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  description = "Leading provider of AI and IT solutions for businesses worldwide. Expert consulting, development, and implementation services.",
+  keywords = "AI solutions, IT consulting, software development, machine learning, artificial intelligence, business automation",
+  canonical
+}) => {
   return (
-
-        <title>5G Data Analytics - Zion Tech Group</title>
-      <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+    <Helmet>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      {canonical && <link rel="canonical" href={canonical} />}
+      
       {/* Open Graph Meta Tags */}
-    
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />
+      
       {/* Twitter Card Meta Tags */}
-    
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      
       {/* Additional SEO Meta Tags */}
-
-      {/* Structured Data */}
-      <script type="application/ld+json"  />{JSON.stringify({
-          "@context": "https: //schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-          "url": "https: //ziontechgroup.com",
-          "logo": "https: //ziontechgroup.com/logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "customer service",
-            "email": "kleber@ziontechgroup.com"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "364 E Main St STE 1008",
-            "addressLocality": "Middletown",
-            "addressRegion": "DE",
-            "postalCode": "19709",
-            "addressCountry": "US"
-          },
-          "sameAs": [
-            "https: //github.com/ziontechgroup",
-            "https: //linkedin.com/company/ziontechgroup",
-            "https://twitter.com/ziontechgroup"
-          ]
-        })}
-
+      <meta name="robots" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </Helmet>
   );
 };
 
+export default SEOHead;

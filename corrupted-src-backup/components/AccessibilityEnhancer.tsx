@@ -13,4 +13,3 @@ export default AccessibilityenhancerPage;
               Learn More;
   );
 };
-

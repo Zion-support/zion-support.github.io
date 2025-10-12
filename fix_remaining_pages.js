@@ -47,7 +47,6 @@ const pagesToFix = [
                 <li>• Benefit 4</li>
   )
 
-
 // Page configurations;
 const pageConfigs = {
   'ai-website-builder': {

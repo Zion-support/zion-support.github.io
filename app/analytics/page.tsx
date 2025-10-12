@@ -1,38 +1,42 @@
+'use client';
+
 import React from 'react';
-export default Page;
-const Page: React.FC = () => {
+
+export default function Analytics() {
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-        <title>Analytics - Zion Tech Group</title>
-        <h1 className="text-4 xl font-boldtext-whitemb-6">Analytics</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional analytics services coming soon.</p>
-          Contact Us
-    
-      </>
-  );
-}
-
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <Helmet></Helmet>
-        <title>Service - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
-      </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
-        <h1 className="text-4 xl font-bold text-white mb-6"  >Analytics</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional analytics services coming soon.</p>
-        <Link;</Link></Link>
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-centermx-auto w-fit"
-        ></Link>
-          Contact Us;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white mb-8">
+          Analytics
+        </h1>
+        <div className="bg-white/10 backdrop-blur-lg rounded-lg p-8">
+          <p className="text-white text-lg mb-6">
+            This page is under development. Please check back later for more information about our analytics services.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white/5 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">Expert Consultation</h3>
+              <p className="text-gray-300">Get personalized advice from our team of experts.</p>
+            </div>
+            <div className="bg-white/5 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">Custom Solutions</h3>
+              <p className="text-gray-300">Tailored solutions designed for your specific needs.</p>
+            </div>
+            <div className="bg-white/5 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-white mb-3">24/7 Support</h3>
+              <p className="text-gray-300">Round-the-clock support for all your requirements.</p>
+            </div>
+          </div>
+          <div className="mt-8 text-center">
+            <a
+              href="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+            >
+              Get Started Today
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
+}

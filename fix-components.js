@@ -16,7 +16,6 @@ const componentsToFix = [
   );
 };
 
-
 // Fix components;
   const componentFile = path.join('/workspace/app/components', `${componentName}.tsx`);
   

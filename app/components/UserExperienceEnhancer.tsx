@@ -3,33 +3,32 @@ import React, { useState, useEffect } from 'react';
 
 interface UserExperienceEnhancerProps {
 
-  children: React.ReactNode;
-  className?: string;
+children: React.ReactNode;
+className?: string;
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
-  children,
-  className = ''
+children,
+className = '';
 
-    rating: number;
-    comment: string;
-    submitted: boolean;
+rating: number;
+comment: string;
+submitted: boolean;
 ({
 
-    rating: 0,
-    comment: '',
-    submitted: false,
-  });
+rating: 0,
+comment: '',
+submitted: false,
+});
 
-    // UX enhancement logic;
-      // Add smooth scrolling;
-      document.documentElement.style.scrollBehavior = 'smooth';
+// UX enhancement logic;
+// Add smooth scrolling;
+document.documentElement.style.scrollBehavior = 'smooth';
 
-      // Add loading states for interactive elements;
-      const buttons = document.querySelectorAll('button');
-          button.classList.add('opacity-75', 'cursor-not-allowed');
-            button.classList.remove('opacity-75', 'cursor-not-allowed');
-          }, 1000);
-        });
-      });
+// Add loading states for interactive elements;
+const buttons = document.querySelectorAll('button');
+button.classList.add('opacity-75', 'cursor-not-allowed');
+button.classList.remove('opacity-75', 'cursor-not-allowed');
+}, 1000);
+});
+});
 
 interface UserExperienceEnhancerProps {children: React.ReactNode}
-

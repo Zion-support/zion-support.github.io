@@ -1,4 +1,4 @@
-    // Monitor page load performance;
+// Monitor page load performance;
       if ('performance' in window) {
             const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
             const paint = performance.getEntriesByType('paint');

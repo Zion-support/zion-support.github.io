@@ -23,7 +23,6 @@ const pagesToFix = [
   );
 };
 
-
 // Fix pages;
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');

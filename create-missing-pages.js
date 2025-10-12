@@ -48,7 +48,6 @@ const missingPages = [
   );
 };
 
-
 // Create missing pages;
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');

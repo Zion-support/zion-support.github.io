@@ -1,4 +1,4 @@
-  loadTime: number;
+loadTime: number;
   domContentLoaded: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;

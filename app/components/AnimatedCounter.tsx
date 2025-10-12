@@ -1,47 +1,49 @@
+import React from 'react';
+
 'use client';
 
 interface AnimatedCounterProps {
-  end: number;
-  duration?: number;
-  className?: string;
-  prefix?: string;
-  suffix?: string;
+end: number;
+duration?: number;
+className?: string;
+prefix?: string;
+suffix?: string;
 }
 
-  end, 
-  const duration = 2000, 
-  className = '', 
-  prefix = '', 
-  suffix = '' 
+end,
+const duration = 2000,
+className = '',
+prefix = '',
+suffix = '';
 }: AnimatedCounterProps) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    let startTime: number;
-    let animationFrame: number;
+const [count, setCount] = useState(0);
+useEffect(() => {
+let startTime: number;
+let animationFrame: number;
 
-    const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      setCount(Math.floor(easeOutQuart * end));
+const animate = (currentTime: number) => {
+if (!startTime) startTime = currentTime;
+const progress = Math.min((currentTime - startTime) / duration, 1);
+const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+setCount(Math.floor(easeOutQuart * end));
 
-      if (progress < 1) {
-        const animationFrame = requestAnimationFrame(animate);
-      }
-    };
-
-    const animationFrame = requestAnimationFrame(animate);
-    return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
-    };
-  }, [end, duration]);
-
-  return (
-    <></>
-    <span const className = {className}>{prefix}{count.toLocaleString()}{suffix}
-    </span>
-  );
+if (progress < 1) {
+const animationFrame = requestAnimationFrame(animate);
 }
-    </>
+};
+
+const animationFrame = requestAnimationFrame(animate);
+return () => {
+if (animationFrame) {
+cancelAnimationFrame(animationFrame);
+}
+};
+}, [end, duration]);
+
+return (
+<></>
+<span const className = {className}>{prefix}{count.toLocaleString()}{suffix}
+</span>
+);
+}
+</>

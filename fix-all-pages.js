@@ -85,7 +85,6 @@ const allPages = [
   );
 };
 
-
 // Fix all pages;
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');

@@ -12,4 +12,3 @@ export default SearchPage;
               Learn More;
   );
 };
-

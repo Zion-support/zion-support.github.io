@@ -1,4 +1,4 @@
-    const body = JSON.stringify(metric);
+const body = JSON.stringify(metric);
     const url = '/api/analytics';
       navigator.sendBeacon(url, body);
       fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error);

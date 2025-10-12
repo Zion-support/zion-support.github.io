@@ -27,4 +27,3 @@ export {};
   const content: string;
 
   const content: string;
-

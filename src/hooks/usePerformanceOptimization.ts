@@ -1,4 +1,4 @@
-  loadTime: number;
+loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
