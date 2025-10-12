@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react'
+import { CheckCircle, ArrowRight, Star, Users, Globe, Zap } from 'lucide-react';
 
 interface ContentNewsletterSignupProps {
   title?: string

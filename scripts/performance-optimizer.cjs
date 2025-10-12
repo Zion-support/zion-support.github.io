@@ -10,55 +10,40 @@ const optimizePerformance = () => {
 const performanceObserver = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
     if (entry.entryType === 'navigation') {
-      console.log('Page Load Time:', entry.loadEventEnd - entry.loadEventStart, 'ms');
-    }
-    if (entry.entryType === 'paint') {
-      console.log(entry.name + ':', entry.startTime, 'ms');
+      console.log('Page load time:', entry.loadEventEnd - entry.loadEventStart);
     }
   }
 });
 
-performanceObserver.observe({ entryTypes: ['navigation', 'paint'] });
+performanceObserver.observe({ entryTypes: ['navigation'] });
 
-// Web Vitals
-function sendToAnalytics(metric) {
-  // Send to your analytics service
-  console.log('Web Vital:', metric.name, metric.value);
-}
-
-// LCP
-new PerformanceObserver((entryList) => {
-  for (const entry of entryList.getEntries()) {
-    sendToAnalytics({ name: 'LCP', value: entry.startTime });
-  }
-}).observe({ entryTypes: ['largest-contentful-paint'] });
-
-// FID
-new PerformanceObserver((entryList) => {
-  for (const entry of entryList.getEntries()) {
-    sendToAnalytics({ name: 'FID', value: entry.processingStart - entry.startTime });
-  }
-}).observe({ entryTypes: ['first-input'] });
-
-// CLS
-let clsValue = 0;
-new PerformanceObserver((entryList) => {
-  for (const entry of entryList.getEntries()) {
-    if (!entry.hadRecentInput) {
-      clsValue += entry.value;
-      sendToAnalytics({ name: 'CLS', value: clsValue });
+// Lazy loading for images
+const images = document.querySelectorAll('img[data-src]');
+const imageObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.src = img.dataset.src;
+      img.classList.remove('lazy');
+      observer.unobserve(img);
     }
-  }
-}).observe({ entryTypes: ['layout-shift'] });
+  });
+});
+
+images.forEach(img => imageObserver.observe(img));
 `;
 
-  // Write performance script to public directory
-  const publicDir = path.join(__dirname, '..', 'public');
-  const performancePath = path.join(publicDir, 'performance.js');
-  fs.writeFileSync(performancePath, performanceScript);
+  // Write performance script to dist
+  const distDir = path.join(__dirname, '..', 'dist');
+  if (!fs.existsSync(distDir)) {
+    fs.mkdirSync(distDir, { recursive: true });
+  }
   
-  console.log('Performance monitoring script created');
-  console.log('Performance optimization completed');
+  const scriptPath = path.join(distDir, 'performance.js');
+  fs.writeFileSync(scriptPath, performanceScript);
+  
+  console.log('Performance optimization completed!');
+  console.log('Performance script created at:', scriptPath);
 };
 
 optimizePerformance();
