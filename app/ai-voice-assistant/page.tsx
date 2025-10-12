@@ -326,4 +326,3 @@ export default function AIVoiceAssistant() {
     </Layout>
   )
 }
-export default AiVoiceAssistantPage;
