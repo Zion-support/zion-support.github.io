@@ -22,6 +22,7 @@ ai-autonomous-systems
 ai-blockchain-analytics
 ai-blockchain-solutions
 ai-business-intelligence
+ai-business-intelligence-pro
 ai-chatbot-builder
 ai-chatbot-enterprise
 ai-climate-prediction-engine
@@ -35,6 +36,7 @@ ai-content-delivery-network
 ai-content-generation
 ai-content-generation-pro
 ai-content-generator
+ai-content-management
 ai-content-moderation
 ai-content-studio
 ai-content-writer
@@ -43,6 +45,7 @@ ai-conversation-analytics
 ai-crm
 ai-crm-assistant
 ai-customer-churn
+ai-customer-insights
 ai-customer-service
 ai-customer-support
 ai-customer-support-bot
@@ -71,6 +74,7 @@ ai-energy
 ai-energy-grid-management-pro
 ai-enterprise-solutions
 ai-expense-tracker
+ai-expense-tracker-pro
 ai-fashion-design
 ai-financial-advisor
 ai-financial-analyzer
@@ -110,6 +114,7 @@ ai-logo-designer
 ai-manufacturing
 ai-marketing
 ai-meeting-assistant
+ai-meeting-transcriber
 ai-mental-health-companion
 ai-ml
 ai-ml-platform
@@ -157,8 +162,10 @@ ai-services/process-automation
 ai-services/quality-assurance
 ai-services/supply-chain
 ai-smart-calendar
+ai-smart-city-solutions
 ai-smart-contract-auditor
 ai-smart-home-controller
+ai-smart-invoice
 ai-social-media-manager
 ai-social-media-scheduler
 ai-solutions
@@ -224,6 +231,7 @@ compliance-automation
 computer-vision
 consultation
 contact
+cookie-policy
 cookies
 crm-lite
 custom-development
@@ -244,6 +252,7 @@ developer-tools
 devops
 devops-advanced
 devops-cicd
+devops-solutions
 digital-transformation
 digital-twin-platform
 disaster-recovery-advanced
@@ -259,6 +268,7 @@ enterprise-solutions
 expense-tracker
 financial-it
 gdpr
+gdpr-compliance
 health
 healthcare-it
 help
@@ -319,11 +329,13 @@ network-security
 network-solutions
 news
 nlp
+not-found
 offline
 page.tsx
 partners
 penetration-testing
 performance-optimization
+press
 pricing
 privacy
 privacy-policy
@@ -333,6 +345,7 @@ project-management-pro
 quantum-ai
 quantum-computing
 quantum-computing-solutions
+resources
 robotics
 robotics-integration
 search
@@ -355,6 +368,7 @@ status
 support
 system-admin
 system-administration
+system-integration
 system-status
 task-manager-pro
 team

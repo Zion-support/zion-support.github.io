@@ -1,89 +1,80 @@
 #!/usr/bin/env python3
-"""
-Script to fix JSX structure issues
-"""
 import os
 import re
 import glob
 
 def fix_jsx_structure(file_path):
-    """Fix JSX structure issues in a single file"""
+    """Fix JSX structure issues in React/TypeScript files"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        print(f"Fixing JSX structure in {file_path}")
+        original_content = content
         
-        # Remove any remaining merge conflict markers
-        content = re.sub(r'<<<<<<< HEAD.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'=======.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'>>>>>>> cursor/fix-errors-and-merge-to-main-[a-f0-9]+.*?\n', '', content, flags=re.DOTALL)
-        content = re.sub(r'>>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d.*?\n', '', content, flags=re.DOTALL)
+        # Fix missing closing tags by adding them at the end
+        if 'export default' in content and content.count('<div') > content.count('</div>'):
+            # Count opening and closing divs
+            open_divs = content.count('<div')
+            close_divs = content.count('</div>')
+            missing_divs = open_divs - close_divs
+            
+            # Add missing closing divs before the closing of the component
+            if missing_divs > 0:
+                # Find the last return statement and add missing closing tags
+                last_return = content.rfind('return (')
+                if last_return != -1:
+                    # Find the end of the JSX
+                    jsx_end = content.rfind(')')
+                    if jsx_end != -1:
+                        # Add missing closing divs
+                        missing_tags = '</div>' * missing_divs
+                        content = content[:jsx_end] + missing_tags + content[jsx_end:]
         
-        # Remove any stray closing tags at the end
-        content = re.sub(r'export default \w+;\n</\w+>$', r'export default \1;', content, flags=re.MULTILINE)
-        
-        # Ensure proper JSX structure
-        lines = content.split('\n')
-        fixed_lines = []
-        open_tags = []
-        
-        for i, line in enumerate(lines):
-            # Skip empty lines
-            if not line.strip():
-                fixed_lines.append(line)
-                continue
+        # Fix missing closing tags for other elements
+        if 'export default' in content:
+            # Fix missing closing section tags
+            if content.count('<section') > content.count('</section>'):
+                open_sections = content.count('<section')
+                close_sections = content.count('</section>')
+                missing_sections = open_sections - close_sections
                 
-            # Track opening tags
-            opening_tags = re.findall(r'<(\w+)(?:\s[^>]*)?(?:>|/>)', line)
-            for tag in opening_tags:
-                if not line.strip().endswith('/>') and not line.strip().endswith('</' + tag + '>'):
-                    open_tags.append(tag)
-            
-            # Track closing tags
-            closing_tags = re.findall(r'</(\w+)>', line)
-            for tag in closing_tags:
-                if tag in open_tags:
-                    open_tags.remove(tag)
-            
-            fixed_lines.append(line)
+                if missing_sections > 0:
+                    jsx_end = content.rfind(')')
+                    if jsx_end != -1:
+                        missing_tags = '</section>' * missing_sections
+                        content = content[:jsx_end] + missing_tags + content[jsx_end:]
         
-        # Add missing closing tags at the end if needed
-        while open_tags:
-            tag = open_tags.pop()
-            fixed_lines.append(f'</{tag}>')
+        # Clean up any remaining issues
+        content = re.sub(r'\n\n\n+', '\n\n', content)
+        content = re.sub(r'[ \t]+$', '', content, flags=re.MULTILINE)
         
-        content = '\n'.join(fixed_lines)
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"Fixed JSX structure in: {file_path}")
+            return True
         
-        # Write the fixed content back
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-            
-        return True
+        return False
     except Exception as e:
         print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix all JSX structure issues"""
-    # Find all TypeScript/React files in the app directory
+    # Find all TypeScript/JavaScript files
     patterns = [
         'app/**/*.tsx',
-        'app/**/*.ts'
+        'app/**/*.ts',
+        'app/**/*.js',
+        'app/**/*.jsx'
     ]
     
-    files_fixed = 0
-    total_files = 0
-    
+    fixed_count = 0
     for pattern in patterns:
-        files = glob.glob(pattern, recursive=True)
-        for file_path in files:
-            if os.path.isfile(file_path):
-                total_files += 1
-                if fix_jsx_structure(file_path):
-                    files_fixed += 1
+        for file_path in glob.glob(pattern, recursive=True):
+            if fix_jsx_structure(file_path):
+                fixed_count += 1
     
-    print(f"Fixed JSX structure in {files_fixed} out of {total_files} files")
+    print(f"Fixed JSX structure in {fixed_count} files")
 
 if __name__ == "__main__":
     main()
