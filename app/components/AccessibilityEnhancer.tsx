@@ -8,18 +8,18 @@ const AccessibilityEnhancer: React.FC = () => {
 
   useEffect(() => {
     // Check for user's preferred color scheme
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
+    // Check for user preferences
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
     if (prefersHighContrast) {
       setIsHighContrast(true)
       document.documentElement.classList.add('high-contrast')
     }
 
-    // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    // Apply reduced motion if preferred
     if (prefersReducedMotion) {
-      document.documentElement.classList.add('reduce-motion')
+      document.documentElement.classList.add('reduced-motion')
     }
 
     // Add keyboard navigation support

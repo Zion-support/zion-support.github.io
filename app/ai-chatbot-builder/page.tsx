@@ -13,7 +13,7 @@ import { CheckCircle, ArrowRight, MessageCircle, Users, Zap, Shield, Brain, Glob
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { CheckCircle, ArrowRight, MessageCircle, Users, Zap, Shield, Brain, Globe, Clock, Star, Target, DollarSign, BarChart3 } from 'lucide-react'
+import { CheckCircle, ArrowRight, MessageCircle, Users, Zap, Shield, Brain, BarChart3 } from 'lucide-react'
 
 export default function AIChatbotBuilderPage() {
   const features = [

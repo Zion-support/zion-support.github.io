@@ -9,7 +9,7 @@ import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight } from 'luci
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Database, Zap } from 'lucide-react'
 
 export default function Footer() {
   const aiServices = [

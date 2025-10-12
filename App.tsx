@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
 import ErrorBoundary from './app/components/ErrorBoundary'
+<<<<<<< HEAD
 import LoadingSpinner from './app/components/LoadingSpinner'
 import SEOHead from './app/components/SEOHead'
 import PerformanceMonitor from './app/components/PerformanceMonitor'
@@ -33,6 +34,59 @@ const PageLoader = () => (
 )
 
 function App() {
+=======
+import OptimizedLoading from './app/components/OptimizedLoading'
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
+import HomePage from './app/page'
+import AboutPage from './app/about/page'
+import ContactPage from './app/contact/page'
+import AIServicesPage from './app/ai-services/page'
+import PricingPage from './app/pricing/page'
+import BlogPage from './app/blog/page'
+import NewsPage from './app/news/page'
+import SupportPage from './app/support/page'
+import CareersPage from './app/careers/page'
+import InvestorsPage from './app/investors/page'
+import StatusPage from './app/status/page'
+import SystemStatusPage from './app/system-status/page'
+import NotFoundPage from './app/not-found'
+import MicroSaasPage from './app/micro-saas/page'
+import MicroSaasAnalyticsDashboardPage from './app/micro-saas/analytics-dashboard/page'
+import MicroSaasAppointmentSchedulerPage from './app/micro-saas/appointment-scheduler/page'
+import MicroSaasChatAnalyticsPage from './app/micro-saas/chat-analytics/page'
+import MicroSaasContentGeneratorPage from './app/micro-saas/content-generator/page'
+import MicroSaasDocumentProcessorPage from './app/micro-saas/document-processor/page'
+import MicroSaasEmailMarketingPage from './app/micro-saas/email-marketing/page'
+import MicroSaasExpenseTrackerPage from './app/micro-saas/expense-tracker/page'
+import MicroSaasInventoryManagementPage from './app/micro-saas/inventory-management/page'
+import MicroSaasLeadScoringPage from './app/micro-saas/lead-scoring/page'
+import MicroSaasSeoOptimizerPage from './app/micro-saas/seo-optimizer/page'
+import MicroSaasSocialManagerPage from './app/micro-saas/social-manager/page'
+import MicroSaasSupportBotPage from './app/micro-saas/support-bot/page'
+import AIAutomatedReportingPage from './app/ai-automated-reporting/page'
+import AIChatbotBuilderPage from './app/ai-chatbot-builder/page'
+import AIExpenseTrackerPage from './app/ai-expense-tracker/page'
+import AIPasswordManagerPage from './app/ai-password-manager/page'
+import AITaskManagerPage from './app/ai-task-manager/page'
+import BusinessIntelligencePage from './app/business-intelligence/page'
+import ITConsultingPage from './app/it-consulting/page'
+import ITServicesPage from './app/it-services/page'
+import CybersecurityPage from './app/cybersecurity/page'
+import DataCenterPage from './app/data-center/page'
+import DatabaseServicesPage from './app/database-services/page'
+import DatabasePage from './app/database/page'
+import DevOpsPage from './app/devops/page'
+import EnterprisePage from './app/enterprise/page'
+import EnterpriseSecurityPage from './app/enterprise-security/page'
+import GDPRPage from './app/gdpr/page'
+import IOTEdgeComputingPage from './app/iot-edge-computing/page'
+import RoboticsPage from './app/robotics/page'
+import SmartCityInfrastructurePage from './app/smart-city-infrastructure/page'
+import TaskManagerProPage from './app/task-manager-pro/page'
+import TrainingPage from './app/training/page'
+import ServicesAdvertisingPage from './app/services-advertising/page'
+import FiveGImplementationPage from './app/5g-implementation/page'
+>>>>>>> cursor/analyze-improve-and-deploy-application-4ebe
 
 const App: React.FC = () => {
   return (
@@ -40,6 +94,7 @@ const App: React.FC = () => {
       <ErrorBoundary>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<<<<<<< HEAD
             <SEOHead />
             <Navigation />
             <Suspense fallback={<PageLoader />}>
@@ -73,8 +128,11 @@ const App: React.FC = () => {
                 } />
               </Routes>
             </Suspense>
+=======
+            <a href="#main-content" className="skip-link">Skip to main content</a>
+>>>>>>> cursor/analyze-improve-and-deploy-application-4ebe
             <Navigation />
-            <main className="min-h-screen">
+            <main id="main-content" className="min-h-screen">
               <Suspense fallback={<OptimizedLoading />}>
                 <Routes>
                   {/* Main Pages */}
@@ -141,6 +199,7 @@ const App: React.FC = () => {
               </Suspense>
             </main>
             <Footer />
+            <AccessibilityEnhancer />
           </div>
         </Router>
       </ErrorBoundary>

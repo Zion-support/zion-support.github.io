@@ -247,4 +247,49 @@ select:focus {
   border-color: #10b981;
   box-shadow: 0 0 0 1px #10b981;
 }
+<<<<<<< HEAD
+=======
+
+/* Large text mode */
+.large-text {
+  font-size: 1.2em;
+}
+
+.large-text h1 { font-size: 2.5em; }
+.large-text h2 { font-size: 2em; }
+.large-text h3 { font-size: 1.75em; }
+.large-text p { font-size: 1.2em; }
+
+/* Skip links for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High contrast improvements */
+.high-contrast {
+  filter: contrast(150%);
+}
+
+.high-contrast .bg-gradient-to-r {
+  background: linear-gradient(90deg, #000 0%, #333 100%) !important;
+}
+
+/* Reduced motion support */
+.reduced-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+>>>>>>> cursor/analyze-improve-and-deploy-application-4ebe
 }
