@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { 
   Brain, Shield, BarChart, MessageCircle, Eye, Mic, 
   FileText, Users, Heart, DollarSign, Target, Settings, 
-  CheckCircle, ArrowRight, Star, TrendingUp,
+  CheckCircle, ArrowRight, TrendingUp,
   Cpu
 } from 'lucide-react';
 

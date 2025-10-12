@@ -1,6 +1,9 @@
-'use client'
+'use client';
+import React from 'react';
+import { ArrowRight, Brain, Zap, Shield, BarChart3 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-import { ArrowRight } from 'lucide-react';
+const FuturisticServiceCardPage: React.FC = () => {
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -11,6 +14,7 @@ import { ArrowRight } from 'lucide-react';
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
+
   const features = [
     {
       icon: Brain,
@@ -19,51 +23,45 @@ import { ArrowRight } from 'lucide-react';
     },
     {
       icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
+      title: 'Lightning Fast Performance',
+      description: 'Optimized for speed and efficiency with cutting-edge technology',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
+      description: 'Bank-level security with advanced encryption and compliance standards',
     },
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
+      icon: BarChart3,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive insights and reporting to drive business growth',
     }
   ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Futuristic Service Card | Zion Tech Group</title>
-        <meta name="description" content="Professional futuristic service card solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="futuristic service card, AI solutions, IT services, Zion Tech Group" />
-      </Helmet>
-
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                FuturisticServiceCard
+              Futuristic Service
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                {" "}Card Solutions
               </span>
-              <br />
-              <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced futuristic service card solutions.
-              Powered by cutting-edge AI technology and industry expertise.
+              Experience the future of service delivery with our cutting-edge AI-powered solutions
+              designed to transform your business operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
                 Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
             </div>
           </div>
         </div>
@@ -80,5 +78,10 @@ import { ArrowRight } from 'lucide-react';
               Discover the powerful features that make our futuristic service card solutions stand out.
             </p>
           </div>
-        </div></div></section>)};export default FuturisticServiceCardPage
-}
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default FuturisticServiceCardPage;
