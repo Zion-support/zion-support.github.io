@@ -30,20 +30,7 @@ export { APIError };
 }
 
   private baseURL: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-  private defaultHeaders: Record<string, string>;
-  private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
-    <></>
->>>>>>> origin/main
-  private defaultHeaders: Record<string, string />;
-  private cache: Map<string, { data: unknown; timestamp: number; ttl: number } /> = new Map();
-=======
-  private defaultHeaders: Record<string, string>;
-  private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
     this.baseURL = baseURL;
       ...defaultHeaders;
