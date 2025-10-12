@@ -1,35 +1,11 @@
-import React, { useState, useEffect } from 'react';
-'use client';
+import React from 'react';
 
-interface UserExperienceEnhancerProps {
+interface UserexperienceenhancerProps {
+  children?: React.ReactNode;
+}
 
-  children: React.ReactNode;
-  className?: string;
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
-  children,
-  className = ''
+const Userexperienceenhancer: React.FC<UserexperienceenhancerProps> = ({ children }) => {
+  return <div>{children}</div>;
+};
 
-    rating: number;
-    comment: string;
-    submitted: boolean;
-({
-
-    rating: 0,
-    comment: '',
-    submitted: false,
-  });
-
-    // UX enhancement logic;
-      // Add smooth scrolling;
-      document.documentElement.style.scrollBehavior = 'smooth';
-
-      // Add loading states for interactive elements;
-      const buttons = document.querySelectorAll('button');
-          button.classList.add('opacity-75', 'cursor-not-allowed');
-            button.classList.remove('opacity-75', 'cursor-not-allowed');
-          }, 1000);
-        });
-      });
-
-interface UserExperienceEnhancerProps {children: React.ReactNode}
-
+export default Userexperienceenhancer;

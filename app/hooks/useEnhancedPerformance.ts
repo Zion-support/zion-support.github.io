@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react';
+
 export const useEnhancedPerformance = () => {
 interface PerformanceMetrics {
   loadTime: number;
@@ -36,7 +38,7 @@ interface PerformanceMetrics {
     // Measure memory usage;
     const measureMemoryUsage = () => {
       if ('memory' in performance) {
-        const memory = (performance, as, any).memory;
+        const memory = (performance as any).memory;
         const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB;
         setMetrics(prev => ({ ...prev, memoryUsage }));
       }

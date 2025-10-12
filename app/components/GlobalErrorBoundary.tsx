@@ -1,11 +1,11 @@
-              </button>
-              <Link;</Link></Link>
-                const to = "/"
-                className="border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center  justify-center"
-               /></Link>
-                <Home className="w-5h-5ml-2" /></Home>
-                Go Home;
-              </Link>
-            </div>
-        </div>
-;
+import React from 'react';
+
+interface GlobalerrorboundaryProps {
+  children?: React.ReactNode;
+}
+
+const Globalerrorboundary: React.FC<GlobalerrorboundaryProps> = ({ children }) => {
+  return <div>{children}</div>;
+};
+
+export default Globalerrorboundary;

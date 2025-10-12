@@ -1,5 +1,6 @@
 import React from 'react';
-'use client'
+import { Helmet } from 'react-helmet-async';
+import { Brain, Zap, Shield, Globe, ArrowRight, CheckCircle, Phone, Mail } from 'lucide-react';
 
 const MainPage: React.FC = () => {
   const features = [
@@ -24,6 +25,7 @@ const MainPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses',
     }
   ];
+
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -34,95 +36,109 @@ const MainPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet>
         <title>Main | Zion Tech Group</title>
-        <meta name="description" content="Professional Main services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
-        <meta name="keywords" content="main, AI solutions, IT services, Zion Tech Group, main" /></meta>
+        <meta name="description" content="Professional Main services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="main, AI solutions, IT services, Zion Tech Group, main" />
       </Helmet>
+      
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
-              <span className="w-5h-5ml-2" />Main;
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Main
               </span>
-              <br /></br>
-              <span className="text-white"  >Solutions</span>
+              <br />
+              <span className="text-white">Solutions</span>
             </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced main solutions.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced main solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" /></button>
-                Get Started;
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="w-5h-5ml-2">Learn More;
+              <button className="bg-transparent border border-white text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors">
+                Learn More
               </button>
             </div>
+          </div>
         </div>
       </section>
+
       {/* Features Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Why Choose Our Main?
-            </h2>
-            <p className="w-5h-5ml-2">Our main solutions deliver unmatched performance, security, and scalability.
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">Why Choose Our Main?</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Our main solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-all duration-300" /></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <feature.icon className="h-6w-6text-white"  /></feature>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semiboldtext-whitemb-3"  >{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
+        </div>
       </section>
+
       {/* Benefits Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Key Benefits;
-            </h2>
-            <p className="w-5h-5ml-2">Experience the power of our main solutions for your business.
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-white mb-4">Key Benefits</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Experience the power of our main solutions for your business.
             </p>
           </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flexitems-startspace-x-3" /></div>
-                <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                <p className="text-gray-300text-lg">{benefit}</p>
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-5 w-5 text-green-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
           </div>
+        </div>
       </section>
+
       {/* CTA Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" />Ready to Get Started?
-            </h2>
-            <p className="w-5h-5ml-2">Contact our experts to discuss your main needs and get a customized solution.
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Contact our experts to discuss your main needs and get a customized solution.
             </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" /></button>
-                <Phone className="w-5h-5ml-2" /></Phone>
-                Call Now;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
+                <Phone className="h-5 w-5 mr-2" />
+                Call Now
               </button>
-              <button className="w-5h-5ml-2" /></button>
-                <Mail className="w-5h-5ml-2" /></Mail>
-                Email Us;
+              <button className="bg-transparent border border-white text-white px-8 py-3 rounded-lg hover:bg-white/10 transition-colors flex items-center">
+                <Mail className="h-5 w-5 mr-2" />
+                Email Us
               </button>
             </div>
+          </div>
         </div>
       </section>
     </div>
-  )
+  );
 };
+
+export default MainPage;

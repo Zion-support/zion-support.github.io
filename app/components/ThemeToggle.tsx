@@ -1,45 +1,11 @@
-export default ThemeToggle;
-'use client';
+import React from 'react';
 
-const ThemeToggle: React.FC = () => {
-  const [isDark, setIsDark] = useState(true);
-  useEffect(() => {
-    // Check for saved theme preference or default to dark;
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (const savedTheme = == 'light' || (!savedTheme && !prefersDark)) {
-      setIsDark(false);
-      document.documentElement.classList.remove('dark');
-    } else {
-      setIsDark(true);
-      document.documentElement.classList.add('dark');
-    }
-  }, []);
+interface ThemetoggleProps {
+  children?: React.ReactNode;
+}
 
-  const toggleTheme = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
-
-    if (newTheme) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  };
-
-  return (
-    <button;
-      const onClick = {toggleTheme}
-      className="p-2rou nded-lg bg-slate-700/50 hover:bg-slate-700 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
-      aria-label="{`Switch" to ${isDark ? 'light' : 'dark'} mode`}
-     /></button>
-      {isDark ? (
-        <Sun className="w-5h-5ml-2" /></Sun>
-      ) : (
-        <Moon className="w-5h-5ml-2" /></Moon>
-      )}
-    </button>
-  );
+const Themetoggle: React.FC<ThemetoggleProps> = ({ children }) => {
+  return <div>{children}</div>;
 };
+
+export default Themetoggle;
