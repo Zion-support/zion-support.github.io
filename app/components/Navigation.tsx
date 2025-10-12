@@ -1,7 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react'
 
-import { Menu, X, ChevronDown, Database, Code, Brain } from 'lucide-react';
+import { Menu, X, ChevronDown, Database, Code, Brain, Zap, Search, Smartphone, Server, BarChart3, Cloud, Shield, Wifi, Cpu } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import SearchModal from './SearchModal'
 import ThemeToggle from './ThemeToggle'
 

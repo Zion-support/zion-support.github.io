@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { Mail, ArrowRight, Brain } from 'lucide-react';
+import { Mail, ArrowRight, Brain, Shield, Cpu, Wifi, Phone, MapPin, Github, Linkedin, Twitter, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import NewsletterSignup from './NewsletterSignup'
 
 export default function Footer() {
