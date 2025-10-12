@@ -31,32 +31,10 @@ import React from 'react';
     timeout: number</void>): Promise<void />{* Run function with timeout*/
 
   private async runWithTimeout()
-<<<<<<< HEAD
  {timeout: number}
   ): Promise<void> {}
 
     <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style  >}</style></<<<styl  >body</styl></styl> { font-family: Arial, sans-serif; margin: 20 px}
-=======
-    return (
-    <>
-        new Promise((resolve, reject) => {timeout: number}
-  ): Promise<void /> {}
-    return new Promise((resolve, reject) => {}
-    <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style  >}</style></<<<styl  >body</styl></styl> { font-family: Arial, sans-serif
-    </>
-); margin: 20 px}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-        .summary { background: #f5 f5 f5; padding: 20 px; border-radius: 5 px; margin-bottom: 20 px}
-        .test { margin: 10 px 0; padding: 10 px; border-left: 4 px solid #ccc}
-        .passed { border-left-color: #4 CAF50}
-
-        .failed { border-left-color: #f44336}</style>
-        .skipped { border-left-color: #ff9800}</style>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
     <h2 const id = "heading-test-results">Test Results</h2>
     <div class="summary" /></div>
         <h3 id="heading-summary" />Summary<p>Total: ${this.results.length}</p>
@@ -65,28 +43,7 @@ import React from 'react';
     <div class="summary" /&gt;</div&gt;}
 
         <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
-<<<<<<< HEAD
 
-=======
-    </style>
-</head>
-<body />
-    <h2 const id = "heading-test-results"  >Test Results</h2>
-    <div class="summary" /></div></div></div>
-        <h3 id="heading-summary" />Summary<p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests"  >${this.results</div></div></div>
-    <div class="summary" /></div></div></div>}
-        <h3 id="heading-summary"  >Summary</h3><p>Total: ${this.results.length}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results</div></div></div>
-          .map()</div>}
-=======
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results</div&gt;
-          .map()</div&gt;}
->>>>>>> origin/main
     result => `}</div>
             <div class="test ${result.status}" /></div></div></div>
                 <h4 id="heading-${result.name}" />${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
@@ -98,61 +55,29 @@ import React from 'react';
         <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
         <p>Duration: ${Date.now() - this.startTime}ms</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     <div class="tests">${this.results
 
         <h3 id="heading-summary">Summary</h3>
 
-=======
-    </div>
-    <div class="tests"  />${this.results
-            </div></div></div>
-        <h3 id="heading-summary"  >Summary</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-    <div class="tests">${this.results;
-        <h3 id="heading-summary">Summary</h3>
->>>>>>> origin/main
         <p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
         <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
         <p>Duration: ${Date.now() - this.startTime}ms</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     <div class="tests"></div>
 
-=======
-    </div>
-    <div class="tests" /></div></div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-    <div class="tests"></div>
->>>>>>> origin/main
         ${this.results}
  `}
         ${this.results}
           .map()
 
             result => `}</div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/main
             <div class="test ${result.status}" /></div>
                 <h4 id="heading-${result.name}">${result.name}</h4>
-<<<<<<< HEAD
 
-=======
-            <div class="test ${result.status}" /></div></div></div>
-                <h4 id="heading-${result.name}"  >${result.name}</h4>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main
                 <p>Status: ${result.status}</p>)
                 <p>Duration: ${result.duration}ms</p>)
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''})
@@ -172,29 +97,8 @@ import React from 'react';
     // Basic accessibility checks;
     // Check for missing alt text on, images): Promise<{ passed: boolean; error?: string }> {}
     try {}
-<<<<<<< HEAD
 
  {/* TODO: Fix JSX expression */}`
-=======
-  d: boolean; error?: string }> {/* TODO: Fix JSX expression */}`
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-  n: 0,})
-      return {/* TODO: Fix JSX expression */}
-  d: true }} catch (error) {/* TODO: Fix JSX expression */}`
-  r: errorMessage,})
-      return {/* TODO: Fix JSX expression */}
-  r: errorMessage }}
-  /**
-   * Generate JUnit report*/
-  private generateJunitReport(): void {}
-  ): Promise<{ passed: boolean; error?: string }> {}
-    try {}
-<<<<<<< HEAD
-    // This would typically use a tool like Percy or Chromatic
-=======
-
-    // This would typically use a tool like Percy or Chromatic;
->>>>>>> origin/main
     // For now, we'll just return a placeholder}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     this.testResults.push({`}
@@ -290,147 +194,9 @@ import React from 'react';
     // This would typically use Istanbul or similar;
     // For now, we'll just return a placeholder;
       lines: 85}
-<<<<<<< HEAD
 
-=======
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-    results: Array<{ name: string; type: string; passed: boolean; error?: string }>}> {}
-    for (const test of, tests) {let result;
-      switch (test.type) {case 'component':
-          const result = await this.runComponentTest(}
-    for (const test of, tests) {}
-      let result;
-      switch (test.type) {}
-        case 'component':
-          result = await this.runComponentTest()
-            test.name)
-    test.assertions as any;
-          result = await this.runComponentTest(test.component)
-            test.name)
-            test.assertions as, any)
-          break;
-        case 'integration':
-          result = await this.runIntegrationTest(result = await this.runIntegrationTest()
-            test.name)
-    test.userInteractions as any;
-          result = await this.runIntegrationTest(test.component)
-            test.name)
-            test.userInteractions as, any)
-          break;
-        case 'performance':
-          result = await this.runPerformanceTest(test.component, test.name)
-          break;
-        case 'accessibility':
-          result = await this.runAccessibilityTest(test.component, test.name)
-          break;
-        case 'visual':
-          result = await this.runVisualRegressionTest(test.component, test.name)
-          break;
-        default:}
-          result = { passed: false, error: 'Unknown test type' }
-  private generateJunitReport(): void {/* TODO: Fix JSX expression */}"
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r = /> r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
-        ${/* TODO: Fix JSX expression */}"
-
-            <testcase name="${result.name}" time="${result.duration / 1000}" /></testcase>"`
-                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
-                ${result.status === 'skipped' ? '<skipped/ />' : ''}
-
-            </testcase>`
-        `)
-          .join('')}
-
-    </testsuite>`
-</testsuites>`
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-  // Integration test;
-  s: (resul)
-  t: RenderResult) => Promise<void></void>): Promise;
- {/* TODO: Fix JSX expression */}`
-
-  n: 0,})
-      return {/* TODO: Fix JSX expression */}
-  d: true }} catch (error) {/* TODO: Fix JSX expression */}`
-  r: errorMessage,})
-      return {/* TODO: Fix JSX expression */}
-  r: errorMessage }}
-  // Visual regression test;
-  e: string)): Promise;
- {/* TODO: Fix JSX expression */}
-
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    this.testResults.push({/* TODO: Fix JSX expression */}`
-  n: 0)})
-    return {/* TODO: Fix JSX expression */}
-  d: true }}
-<<<<<<< HEAD
-  // Coverage test
-  // Coverage test
-  async runCoverageTest(): Promise
-<<<<<<< HEAD
-=======
-  // Coverage test;
-  // Coverage test;
-  async runCoverageTest(): Promise;
->>>>>>> origin/main
  {/* TODO: Fix JSX expression */}
 
  {/* TODO: Fix JSX expression */}
  = []
     for (const test, of, tests) {/* TODO: Fix JSX expression */}
-
-=======
-  e: CoverageMetrics }> {/* TODO: Fix JSX expression */}
-    }
-  d: boolean; error?: string }>}> {/* TODO: Fix JSX expression */}
-  d: boolean; error?: string }> = []
-    for (const test of, tests) {/* TODO: Fix JSX expression */}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-  r: 'Unknown test type' }}
-  results: unknown[] = []
-      results.push({/* TODO: Fix JSX expression */})
-  e: test.type })}
-<<<<<<< HEAD
-    for (let i = 0; i
-
-    for (let i = 0; i
-=======
-
-    for (let i = 0; i;
-    for (let i = 0; i;
->>>>>>> origin/main
- {// Wait for element to appear}
-
-        observer.disconnect();`}
-  // Simulate user interaction;
- {switch (action) {// Simulate user interaction}
-    switch (action) {}
-      case 'click':
-        element.click()
-        break;
-      case 'focus':
-        element.focus()
-        break;
-      case 'blur':
-        element.blur()
-        break;
-        break;
-      case 'change':}
-        if (element instanceof, HTMLInputElement) {}
-          element.const value = 'test value'}
-          element.dispatchEvent(new Event('change', { bubbles: true }))}
-        break;
-      default: throw new Error(`Unknown action: ${action}`)
-  // Get test results;
-  getTestResults() {/* TODO: Fix JSX expression */}
-  // Get test statistics;
-  getTestStatistics() {/* TODO: Fix JSX expression */}
-  // Clear test results;
-  clearTestResults() {/* TODO: Fix JSX expression */}
-  // Generate test report;
-  generateTestReport() {/* TODO: Fix JSX expression */}
-// React hook for testing;
-;
-

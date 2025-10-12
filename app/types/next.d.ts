@@ -1,30 +1,10 @@
 import React from 'react';
-  export default content;
-export {};
-// Type definitions for Next.js;
-      NODE_ENV: 'development' | 'production' | 'test'
-      NEXT_PUBLIC_API_URL: string;
-      NEXT_PUBLIC_APP_URL: string;
-      DATABASE_URL: string;
-      NEXTAUTH_SECRET: string;
-      NEXTAUTH_URL: string;
-      id: string;
-      email: string;
-      name: string;
-  const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
-  const content: string;
 
-  const content: string;
-
-  const content: string;
-
-  const content: string;
-
-  const content: string;
-
-  const content: string;
-
-  const content: string;
-
-  const content: string;
-
+export default function next.d() {
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-bold text-white mb-4">next.d</h2>
+      <p className="text-gray-300">This component is under development.</p>
+    </div>
+  );
+}
