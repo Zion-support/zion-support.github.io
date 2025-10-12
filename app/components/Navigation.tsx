@@ -21,7 +21,8 @@ const Navigation: React.FC = () => {
         { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
         { name: 'AI Email Marketing', path: '/ai-email-marketing' },
         { name: 'AI Document Processing', path: '/ai-document-processing' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' }
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+        { name: 'View All AI Services', path: '/ai-services' }
       ]
     },
     {
@@ -37,7 +38,8 @@ const Navigation: React.FC = () => {
         { name: 'Database Management', path: '/database-management' },
         { name: 'System Integration', path: '/system-integration' },
         { name: 'IT Consulting', path: '/it-consulting' },
-        { name: 'Network Infrastructure', path: '/network-infrastructure' }
+        { name: 'Network Infrastructure', path: '/network-infrastructure' },
+        { name: 'View All IT Services', path: '/it-services' }
       ]
     },
     {
@@ -45,16 +47,16 @@ const Navigation: React.FC = () => {
       path: '/micro-saas-services',
       icon: Code,
       dropdown: [
-        { name: 'AI-Powered CRM', path: '/ai-crm' },
-        { name: 'Smart Analytics', path: '/smart-analytics' },
-        { name: 'Automated Testing', path: '/ai-automated-testing' },
-        { name: 'Content Management', path: '/ai-content-management' },
-        { name: 'Email Marketing', path: '/ai-email-marketing' },
-        { name: 'Social Media Manager', path: '/ai-social-media-manager' },
-        { name: 'Project Management', path: '/ai-project-management' },
-        { name: 'Customer Support', path: '/ai-customer-support' },
-        { name: 'Invoice Generator', path: '/ai-invoice-generator' },
-        { name: 'Task Manager', path: '/ai-task-manager' }
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+        { name: 'AI Project Management', path: '/ai-project-management' },
+        { name: 'AI Email Marketing Automation', path: '/ai-email-marketing-automation' },
+        { name: 'AI Content Generator', path: '/ai-content-generator' },
+        { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
+        { name: 'AI Task Manager', path: '/ai-task-manager' },
+        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
+        { name: 'AI Automated Testing', path: '/ai-automated-testing' },
+        { name: 'AI Customer Support', path: '/ai-customer-support' }
       ]
     },
     {
@@ -83,8 +85,10 @@ const Navigation: React.FC = () => {
   }
 
   return (
-    <nav className="bg-gray-900/95 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-gray-900/95 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50 relative">
+      {/* Neon glow effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-cyan-500/10 to-blue-500/10 opacity-0 hover:opacity-100 transition-opacity duration-300" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between h-20">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 group">

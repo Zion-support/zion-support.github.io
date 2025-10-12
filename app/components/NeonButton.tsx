@@ -1,81 +1,47 @@
-'use client';
+import React from 'react'
+import { cn } from '../lib/utils'
 
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-
-interface NeonButtonProps {
-  children: React.ReactNode;
-  href?: string;
-  onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'accent';
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-  icon?: React.ReactNode;
-  disabled?: boolean;
+interface NeonButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'primary' | 'secondary' | 'accent'
+  size?: 'sm' | 'md' | 'lg'
+  children: React.ReactNode
 }
 
-const NeonButton: React.FC<NeonButtonProps> = ({
-  children,
-  href,
-  onClick,
-  variant = 'primary',
-  size = 'md',
-  className = '',
-  icon,
-  disabled = false
+const NeonButton: React.FC<NeonButtonProps> = ({ 
+  variant = 'primary', 
+  size = 'md', 
+  className, 
+  children, 
+  ...props 
 }) => {
-  const baseClasses = 'relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100';
+  const baseClasses = "relative font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95"
+  
+  const variantClasses = {
+    primary: "bg-gradient-to-r from-purple-500 to-blue-600 text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40",
+    secondary: "bg-transparent border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 shadow-lg shadow-cyan-400/25 hover:shadow-cyan-400/40",
+    accent: "bg-gradient-to-r from-pink-500 to-red-600 text-white shadow-lg shadow-pink-500/25 hover:shadow-pink-500/40"
+  }
   
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg'
-  };
-
-  const variantClasses = {
-    primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-blue-500/25 hover:shadow-2xl',
-    secondary: 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg hover:shadow-purple-500/25 hover:shadow-2xl',
-    accent: 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2xl'
-  };
-
-  const neonEffect = 'before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10';
-
-  const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
-
-  const content = (
-    <>
-      {icon && <span className="mr-2">{icon}</span>}
-      {children}
-      {!icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />}
-    </>
-  );
-
-  if (href) {
-    return (
-      <a
-        href={href}
-        className={buttonClasses}
-        style={{
-          boxShadow: '0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(147, 51, 234, 0.2)',
-        }}
-      >
-        {content}
-      </a>
-    );
+    sm: "px-4 py-2 text-sm rounded-lg",
+    md: "px-6 py-3 text-base rounded-xl",
+    lg: "px-8 py-4 text-lg rounded-2xl"
   }
-
+  
   return (
     <button
-      onClick={onClick}
-      disabled={disabled}
-      className={buttonClasses}
-      style={{
-        boxShadow: '0 0 20px rgba(59, 130, 246, 0.3), 0 0 40px rgba(147, 51, 234, 0.2)',
-      }}
+      className={cn(
+        baseClasses,
+        variantClasses[variant],
+        sizeClasses[size],
+        "before:absolute before:inset-0 before:rounded-inherit before:bg-gradient-to-r before:from-purple-500/20 before:to-blue-600/20 before:blur-sm before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300",
+        className
+      )}
+      {...props}
     >
-      {content}
+      <span className="relative z-10">{children}</span>
     </button>
-  );
-};
+  )
+}
 
-export default NeonButton;
+export default NeonButton

@@ -26,14 +26,14 @@ const Footer: React.FC = () => {
   ];
 
   const microSaasServices = [
-    { name: 'AI-Powered CRM', path: '/ai-crm' },
-    { name: 'Smart Analytics', path: '/smart-analytics' },
-    { name: 'Automated Testing', path: '/ai-automated-testing' },
-    { name: 'Content Management', path: '/ai-content-management' },
-    { name: 'Email Marketing', path: '/ai-email-marketing' },
-    { name: 'Social Media Manager', path: '/ai-social-media-manager' },
-    { name: 'Project Management', path: '/ai-project-management' },
-    { name: 'Customer Support', path: '/ai-customer-support' }
+    { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
+    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+    { name: 'AI Project Management', path: '/ai-project-management' },
+    { name: 'AI Email Marketing Automation', path: '/ai-email-marketing-automation' },
+    { name: 'AI Content Generator', path: '/ai-content-generator' },
+    { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
+    { name: 'AI Task Manager', path: '/ai-task-manager' },
+    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' }
   ];
 
   const companyLinks = [

@@ -4,6 +4,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
+import FuturisticBackground from './components/FuturisticBackground';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -76,7 +77,8 @@ const Layout: React.FC<LayoutProps> = ({
 
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <FuturisticBackground />
         <Helmet>
           <title>{title}</title>
           <meta name="description" content={description} />
