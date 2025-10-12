@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
@@ -245,92 +246,46 @@ import { CheckCircle, ArrowRight, MessageCircle, Users, Zap, Shield, Brain, Glob
       {/* Features Section */}
       <section className="py-20 px-4 relative">
         <div className="relative max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Features</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Everything you need to create, deploy, and manage intelligent chatbots that deliver exceptional user experiences.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {feature.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-      {/* Pricing Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-purple-900/50 relative">
-        <div className="relative max-w-7xl mx-auto">
+const AiChatbotBuilderPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Ai Chatbot Builder - Zion Tech Group</title>
+        <meta name="description" content="Ai Chatbot Builder services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="ai-chatbot-builder, AI solutions, IT services" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+>>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Choose the perfect plan for your business needs. All plans include our core features.
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Ai Chatbot Builder
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional ai chatbot builder services by Zion Tech Group.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
-                plan.popular 
-                  ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20' 
-                  : 'border-white/20 hover:border-white/40'
-              }`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </div>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
-                  </div>
-                </div>
-                
-                <div className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                <Link 
-                  to="/contact"
-                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
-                      : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
-                  }`}
-                >
-                  Get Started
-                </Link>
-              </div>
-            ))}
+
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive ai chatbot builder solutions. 
+              Contact us to learn more about our services.
+            </p>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+              Contact Us
+            </button>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
 <<<<<<< HEAD
@@ -462,3 +417,11 @@ import { CheckCircle, ArrowRight, MessageCircle, Users, Zap, Shield, Brain, Glob
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   )
 }
+=======
+      </div>
+    </>
+  );
+};
+
+export default AiChatbotBuilderPage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-9d9d

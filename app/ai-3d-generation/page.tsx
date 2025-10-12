@@ -1,20 +1,42 @@
 'use client';
 import React from 'react';
-import GenericServicePage from '../components/GenericServicePage';
-import { Box } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const Ai3dGenerationPage: React.FC = () => {
   return (
-    <GenericServicePage
-      title="AI 3D Generation"
-      description="Revolutionary AI-powered 3D content creation and generation for immersive experiences."
-      icon={Box}
-      features={["3D Model Generation","Texture Creation","Animation Generation","VR/AR Content","Real-time Rendering","Custom Training"]}
-      benefits={["Faster Creation","Cost Reduction","High Quality","Scalable Production"]}
-      pricing="$1,999/month"
-      category="Emerging"
-      color="from-purple-500 to-pink-600"
-    />
+    <>
+      <Helmet>
+        <title>Ai 3d Generation - Zion Tech Group</title>
+        <meta name="description" content="Ai 3d Generation services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="ai-3d-generation, AI solutions, IT services" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Ai 3d Generation
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional ai 3d generation services by Zion Tech Group.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive ai 3d generation solutions. 
+              Contact us to learn more about our services.
+            </p>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -66,7 +66,19 @@ export default defineConfig({
           if (id.includes('web-vitals')) {
             return 'performance'
           }
-          // Large page components (lazy load)
+          // AI service pages
+          if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
+            return 'ai-pages'
+          }
+          // IT service pages
+          if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {
+            return 'it-pages'
+          }
+          // Micro SAAS pages
+          if (id.includes('/app/zion-') && id.includes('/page.tsx')) {
+            return 'saas-pages'
+          }
+          // Other pages
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
           }
@@ -78,15 +90,12 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
-      },
-    },
     // Optimize bundle size
-    chunkSizeWarningLimit: 500,
+    chunkSizeWarningLimit: 1000,
     // Enable tree shaking
     treeshake: true,
+    // Enable compression
+    reportCompressedSize: true,
   },
   server: {
     port: 3000,

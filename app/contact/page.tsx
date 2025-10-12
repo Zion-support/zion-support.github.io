@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 <<<<<<< HEAD
@@ -225,10 +226,17 @@ export default function ContactPage() {
     )
   }
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
 
+const ContactPage: React.FC = () => {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <title>Contact Zion Tech Group - Get Your Free Consultation Today</title>
         <meta name="description" content="Contact Zion Tech Group for AI solutions, IT services, and digital transformation. Free consultation, 24/7 support, and expert guidance. Call +1 (302) 464-0950 or email kleber@ziontechgroup.com" />
@@ -308,212 +316,110 @@ export default function ContactPage() {
               <br />
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
                 Future Together
+=======
+        <title>Contact Us - Zion Tech Group</title>
+        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts today." />
+        <meta name="keywords" content="contact, AI solutions, IT services, consultation, support" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Contact Us
+>>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
               </span>
             </h1>
-            
-            <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Ready to transform your business with cutting-edge technology? 
-              Get a free consultation with our experts and discover how we can help you achieve your goals.
-              <br />
-              <span className="text-cyan-400 font-semibold">Your success story starts here.</span>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Ready to transform your business with AI and IT solutions? Let's discuss your project.
             </p>
           </div>
-        </section>
 
-        {/* Contact Form & Info Section */}
-        <section className="py-20 px-4 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5" />
-          <div className="relative max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
-              <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20">
-                <div className="mb-8">
-                  <h2 className="text-3xl font-bold text-white mb-4">
-                    Send us a <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Message</span>
-                  </h2>
-                  <p className="text-gray-300">
-                    Fill out the form below and we'll get back to you within 24 hours with a personalized solution.
-                  </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8">
+              <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    className="w-full px-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none"
+                  />
                 </div>
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none"
+                />
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none"
+                />
+                <select className="w-full px-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white focus:border-cyan-400 focus:outline-none">
+                  <option>Select Service</option>
+                  <option>AI Solutions</option>
+                  <option>IT Services</option>
+                  <option>Consultation</option>
+                  <option>Support</option>
+                </select>
+                <textarea
+                  placeholder="Tell us about your project"
+                  rows={4}
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none"
+                ></textarea>
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
 
-                {submitStatus === 'success' && (
-                  <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-green-400" />
-                    <span className="text-green-400">Thank you! Your message has been sent successfully.</span>
-                  </div>
-                )}
-
-                {submitStatus === 'error' && (
-                  <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center space-x-3">
-                    <AlertCircle className="w-5 h-5 text-red-400" />
-                    <span className="text-red-400">Sorry, there was an error sending your message. Please try again.</span>
-                  </div>
-                )}
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="John Doe"
-                      />
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Get in Touch</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                      <span className="text-cyan-400">📧</span>
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="john@company.com"
-                      />
+                      <p className="text-white font-semibold">Email</p>
+                      <p className="text-gray-300">kleber@ziontechgroup.com</p>
                     </div>
                   </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                        Company Name
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="Acme Corp"
-                      />
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                      <span className="text-cyan-400">📞</span>
                     </div>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                        placeholder="+1 (555) 123-4567"
-                      />
+                      <p className="text-white font-semibold">Phone</p>
+                      <p className="text-gray-300">+1 (302) 464-0950</p>
                     </div>
                   </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                        Service Interest *
-                      </label>
-                      <select
-                        id="service"
-                        name="service"
-                        value={formData.service}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      >
-                        <option value="">Select a service</option>
-                        {services.map((service, index) => (
-                          <option key={index} value={service} className="bg-gray-800 text-white">
-                            {service}
-                          </option>
-                        ))}
-                      </select>
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                      <span className="text-cyan-400">📍</span>
                     </div>
                     <div>
-                      <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
-                        Project Budget
-                      </label>
-                      <select
-                        id="budget"
-                        name="budget"
-                        value={formData.budget}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                      >
-                        <option value="">Select budget range</option>
-                        {budgetRanges.map((range, index) => (
-                          <option key={index} value={range} className="bg-gray-800 text-white">
-                            {range}
-                          </option>
-                        ))}
-                      </select>
+                      <p className="text-white font-semibold">Address</p>
+                      <p className="text-gray-300">364 E Main St STE 1008<br />Middletown, DE 19709</p>
                     </div>
                   </div>
-
-                  <div>
-                    <label htmlFor="urgency" className="block text-sm font-medium text-gray-300 mb-2">
-                      Project Timeline
-                    </label>
-                    <div className="grid grid-cols-2 gap-3">
-                      {urgencyLevels.map((level, index) => (
-                        <label key={index} className="flex items-center space-x-3 p-3 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 cursor-pointer">
-                          <input
-                            type="radio"
-                            name="urgency"
-                            value={level.value}
-                            checked={formData.urgency === level.value}
-                            onChange={handleInputChange}
-                            className="w-4 h-4 text-cyan-500 bg-white/10 border-white/20 focus:ring-cyan-500"
-                          />
-                          <span className={`text-sm ${level.color}`}>{level.label}</span>
-                        </label>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Project Details *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={5}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-                      placeholder="Tell us about your project, goals, and any specific requirements..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                        <span>Sending...</span>
-                      </>
-                    ) : (
-                      <>
-                        <Send className="w-5 h-5" />
-                        <span>Send Message</span>
-                      </>
-                    )}
-                  </button>
-                </form>
+                </div>
               </div>
 
+<<<<<<< HEAD
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
@@ -737,100 +643,38 @@ export default function ContactPage() {
                 <Clock className="w-4 h-4 mr-2" />
                 Mon-Fri 9:00 AM - 6:00 PM PST
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
+=======
+              <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Business Hours</h3>
+                <div className="space-y-2 text-gray-300">
+                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                  <p>Saturday: 10:00 AM - 4:00 PM</p>
+                  <p>Sunday: Closed</p>
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* FAQ Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-purple-900/50 relative">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
-          <div className="relative max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Frequently Asked <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Questions</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                Quick answers to common questions about our services and process.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-                  <h3 className="text-lg font-bold text-white mb-3">How quickly can you start my project?</h3>
-                  <p className="text-gray-300">Most projects can begin within 1-2 weeks of contract signing. We'll provide a detailed timeline during our initial consultation.</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-                  <h3 className="text-lg font-bold text-white mb-3">Do you offer ongoing support?</h3>
-                  <p className="text-gray-300">Yes! We provide 24/7 support and maintenance packages to ensure your solutions continue to perform optimally.</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-                  <h3 className="text-lg font-bold text-white mb-3">What's included in the free consultation?</h3>
-                  <p className="text-gray-300">A comprehensive analysis of your needs, technology recommendations, project scope, timeline, and cost estimates.</p>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-                  <h3 className="text-lg font-bold text-white mb-3">Do you work with small businesses?</h3>
-                  <p className="text-gray-300">Absolutely! We work with businesses of all sizes, from startups to enterprise corporations.</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-                  <h3 className="text-lg font-bold text-white mb-3">What technologies do you specialize in?</h3>
-                  <p className="text-gray-300">AI/ML, cloud computing, cybersecurity, mobile development, web development, and emerging technologies like 5G and IoT.</p>
-                </div>
-                <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-                  <h3 className="text-lg font-bold text-white mb-3">How do you ensure data security?</h3>
-                  <p className="text-gray-300">We follow industry best practices, use enterprise-grade security tools, and maintain compliance with major security standards.</p>
-                </div>
+              <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 backdrop-blur-sm border border-green-500/20 rounded-xl p-6">
+                <h3 className="text-xl font-bold text-white mb-4">Quick Response</h3>
+                <p className="text-gray-300">
+                  We typically respond to inquiries within 24 hours. For urgent matters, please call us directly.
+                </p>
+>>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
               </div>
             </div>
           </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
-          <div className="relative max-w-7xl mx-auto">
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden">
-                <div className="relative z-10">
-                  <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                    Ready to Get <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">Started?</span>
-                  </h2>
-                  
-                  <p className="text-xl sm:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
-                    Don't wait to transform your business. Get your free consultation today and discover 
-                    how our technology solutions can drive your success.
-                  </p>
-                  
-                  <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                    <a 
-                      href="tel:+13024640950" 
-                      className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
-                    >
-                      <Phone className="w-5 h-5" />
-                      <span>Call Now</span>
-                    </a>
-                    <a 
-                      href="mailto:kleber@ziontechgroup.com" 
-                      className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
-                    >
-                      <Mail className="w-5 h-5" />
-                      <span>Email Us</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
 <<<<<<< HEAD
     </>
   );
+<<<<<<< HEAD
 =======
     </div>
   )
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }
+=======
+};
+
+export default ContactPage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-9d9d

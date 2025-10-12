@@ -1,24 +1,47 @@
 <<<<<<< HEAD
 'use client';
 import React from 'react';
-import GenericServicePage from '../components/GenericServicePage';
-import { Mic } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const AiVoiceAssistantPage: React.FC = () => {
   return (
-    <GenericServicePage
-      title="AI Voice Assistant Platform"
-      description="Enterprise-grade voice assistant platform for hands-free operations and improved productivity."
-      icon={Mic}
-      features={["Voice Commands","Natural Language Processing","Multi-device Support","Custom Skills","Integration APIs","Analytics Dashboard"]}
-      benefits={["Hands-free Operation","Improved Productivity","Better Accessibility","Easy Integration"]}
-      pricing="$699/month"
-      category="AI"
-      color="from-orange-500 to-red-600"
-    />
+    <>
+      <Helmet>
+        <title>Ai Voice Assistant - Zion Tech Group</title>
+        <meta name="description" content="Ai Voice Assistant services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="ai-voice-assistant, AI solutions, IT services" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Ai Voice Assistant
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional ai voice assistant services by Zion Tech Group.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive ai voice assistant solutions. 
+              Contact us to learn more about our services.
+            </p>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
+<<<<<<< HEAD
 export default AiVoiceAssistantPage;
 =======
 import React from 'react'
@@ -355,3 +378,6 @@ export default function AIVoiceAssistant() {
   )
 }
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
+=======
+export default AiVoiceAssistantPage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-9d9d

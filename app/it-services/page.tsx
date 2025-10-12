@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
@@ -163,10 +164,17 @@ export default function ITServicesPage() {
     }
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   ]
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
 
+const ItServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <title>IT Services - Zion Tech Group | Comprehensive Technology Solutions</title>
         <meta name="description" content="Professional IT services including web development, cloud migration, cybersecurity, and infrastructure management. Trusted by businesses worldwide." />
@@ -273,14 +281,26 @@ export default function ITServicesPage() {
       {/* IT Services Grid */}
       <section className="py-20 px-4 relative">
         <div className="relative max-w-7xl mx-auto">
+=======
+        <title>It Services - Zion Tech Group</title>
+        <meta name="description" content="It Services services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="it-services, AI solutions, IT services" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+>>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our <span className="bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">IT Solutions</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              End-to-end technology services designed to modernize your infrastructure and accelerate growth.
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                It Services
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional it services services by Zion Tech Group.
             </p>
           </div>
+<<<<<<< HEAD
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
@@ -382,42 +402,23 @@ export default function ITServicesPage() {
         </div>
 <<<<<<< HEAD
       </section>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-blue-500/10 to-purple-500/10" />
-        <div className="relative max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden">
-              <div className="relative z-10">
-                <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Ready to <span className="bg-gradient-to-r from-emerald-300 to-blue-300 bg-clip-text text-transparent">Modernize</span> Your IT?
-                </h2>
-                <p className="text-xl sm:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
-                  Let's discuss how our IT solutions can transform your technology infrastructure and drive business success.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <Link 
-                    to="/contact" 
-                    className="group bg-white text-emerald-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
-                  >
-                    <span>Start Your Project</span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <Link 
-                    to="/pricing" 
-                    className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
-                  >
-                    <span>View Pricing</span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              </div>
-            </div>
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive it services solutions. 
+              Contact us to learn more about our services.
+            </p>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+              Contact Us
+            </button>
           </div>
         </div>
-      </section>
+      </div>
     </>
+<<<<<<< HEAD
 =======
 
         {/* CTA Section */}
@@ -450,3 +451,9 @@ export default function ITServicesPage() {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   )
 }
+=======
+  );
+};
+
+export default ItServicesPage;
+>>>>>>> cursor/analyze-improve-and-deploy-application-9d9d

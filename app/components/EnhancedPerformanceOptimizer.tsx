@@ -162,3 +162,5 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     </div>
   )
 }
+
+export default EnhancedPerformanceOptimizer;
