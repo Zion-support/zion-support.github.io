@@ -1,47 +1,19 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by keeping the newer version (after =======)
+# Resolve merge conflicts by keeping HEAD version
+git merge origin/main --no-commit
 
-echo "Resolving merge conflicts in all files..."
+# Get list of conflicted files
+conflicted_files=$(git diff --name-only --diff-filter=U)
 
-# Find all files with merge conflicts
-files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
-
-for file in $files; do
-    echo "Processing: $file"
-    
-    # Create a temporary file
-    temp_file="${file}.tmp"
-    
-    # Process the file to resolve conflicts
-    awk '
-    /<<<<<<< HEAD/ {
-        in_conflict = 1
-        next
-    }
-    /=======/ {
-        if (in_conflict) {
-            in_conflict = 2
-            next
-        }
-    }
-    />>>>>>> / {
-        if (in_conflict == 2) {
-            in_conflict = 0
-            next
-        }
-    }
-    {
-        if (in_conflict == 0) {
-            print
-        } else if (in_conflict == 2) {
-            print
-        }
-    }
-    ' "$file" > "$temp_file"
-    
-    # Replace original file with processed version
-    mv "$temp_file" "$file"
+# Resolve each conflict by keeping HEAD version
+for file in $conflicted_files; do
+    echo "Resolving conflict in: $file"
+    git checkout --ours "$file"
+    git add "$file"
 done
 
-echo "Merge conflicts resolved in all files."
+# Commit the merge
+git commit -m "Resolve merge conflicts by keeping HEAD version"
+
+echo "All conflicts resolved and committed"
