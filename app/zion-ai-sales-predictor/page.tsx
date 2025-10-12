@@ -1,0 +1,366 @@
+'use client';
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Star, TrendingUp, BarChart, Users, DollarSign, Zap, Shield, Clock, Target, Brain, Cloud, Database, Smartphone, Globe, Settings, FileText, MessageCircle, Eye, Mic, Package, Monitor, Wifi, Server, Lock, Calendar, CheckSquare, Heart, DollarSign as DollarIcon, Box, Link as LinkIcon, Workflow, MessageSquare, CheckCircle as CheckIcon, ShoppingCart, Clock as ClockIcon } from 'lucide-react';
+
+const ZionAiSalesPredictorPage: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Forecasting',
+      description: 'Advanced machine learning algorithms analyze historical data and market trends to predict sales with 95% accuracy',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: BarChart,
+      title: 'Real-time Analytics',
+      description: 'Live dashboards and reports that update in real-time, giving you instant insights into sales performance',
+      color: 'from-cyan-500 to-blue-500'
+    },
+    {
+      icon: Target,
+      title: 'Lead Scoring',
+      description: 'Intelligent lead scoring system that identifies high-value prospects and prioritizes sales efforts',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Revenue Optimization',
+      description: 'Identify opportunities to increase revenue through pricing optimization and cross-selling recommendations',
+      color: 'from-orange-500 to-red-500'
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: 'Starter',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for small businesses',
+      features: [
+        'Up to 1,000 leads analyzed',
+        'Basic sales forecasting',
+        'Email support',
+        'Standard reporting',
+        '1 user account'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$79',
+      period: '/month',
+      description: 'Ideal for growing teams',
+      features: [
+        'Up to 10,000 leads analyzed',
+        'Advanced AI forecasting',
+        'Priority support',
+        'Custom dashboards',
+        'Up to 5 user accounts',
+        'API access',
+        'Advanced analytics'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited leads analyzed',
+        'Custom AI models',
+        '24/7 dedicated support',
+        'White-label solution',
+        'Unlimited user accounts',
+        'Custom integrations',
+        'Advanced security',
+        'Dedicated account manager'
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'Sales Director',
+      company: 'TechCorp Inc.',
+      content: 'Zion AI Sales Predictor increased our sales accuracy by 40% and helped us identify the best leads. ROI was achieved in just 2 months.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      role: 'VP of Sales',
+      company: 'GrowthLabs',
+      content: 'The AI forecasting is incredibly accurate. We can now plan our sales strategy with confidence and have seen a 25% increase in revenue.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'Sales Manager',
+      company: 'InnovateCorp',
+      content: 'The lead scoring feature is a game-changer. We focus on high-value prospects and our conversion rate has improved by 35%.',
+      rating: 5
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Zion AI Sales Predictor - AI-Powered Sales Forecasting | Zion Tech Group</title>
+        <meta name="description" content="Boost your sales with AI-powered forecasting, lead scoring, and revenue optimization. Predict sales with 95% accuracy and increase revenue by 25%." />
+        <meta name="keywords" content="AI sales prediction, sales forecasting, lead scoring, revenue optimization, machine learning, sales analytics" />
+        <meta property="og:title" content="Zion AI Sales Predictor - AI-Powered Sales Forecasting" />
+        <meta property="og:description" content="Boost your sales with AI-powered forecasting, lead scoring, and revenue optimization. Predict sales with 95% accuracy and increase revenue by 25%." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-sales-predictor" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-6 border border-cyan-500/30">
+                <Brain className="w-5 h-5 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 font-medium">AI-Powered Sales Intelligence</span>
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+                  Zion AI Sales Predictor
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+                Predict sales with 95% accuracy using advanced AI. Boost revenue by 25% with intelligent lead scoring and forecasting.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <Link 
+                  to="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
+                >
+                  Start Free Trial
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link 
+                  to="#pricing"
+                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+                >
+                  View Pricing
+                </Link>
+              </div>
+              
+              {/* Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div className="text-center group">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <TrendingUp className="w-8 h-8 text-cyan-400" />
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">95%</div>
+                  <div className="text-gray-400 text-sm">Forecasting Accuracy</div>
+                </div>
+                <div className="text-center group">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <DollarSign className="w-8 h-8 text-purple-400" />
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">25%</div>
+                  <div className="text-gray-400 text-sm">Revenue Increase</div>
+                </div>
+                <div className="text-center group">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Target className="w-8 h-8 text-green-400" />
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">40%</div>
+                  <div className="text-gray-400 text-sm">Better Lead Quality</div>
+                </div>
+                <div className="text-center group">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <Clock className="w-8 h-8 text-orange-400" />
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">2x</div>
+                  <div className="text-gray-400 text-sm">Faster Sales Cycles</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Features</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced AI technology that transforms your sales process and drives revenue growth
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div 
+                  key={index}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
+                >
+                  <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section id="pricing" className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the perfect plan for your business needs. All plans include 14-day free trial.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricingPlans.map((plan, index) => (
+                <div 
+                  key={index}
+                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-xl p-8 transition-all duration-300 group hover:transform hover:scale-105 ${
+                    plan.popular 
+                      ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/25' 
+                      : 'border-gray-700/50 hover:border-cyan-400/40'
+                  }`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-400 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-5xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400 ml-2">{plan.period}</span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    to="/contact"
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
+                        : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10'
+                    }`}
+                  >
+                    Start Free Trial
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                What Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Customers Say</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Join thousands of businesses that have transformed their sales with AI
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic">
+                    "{testimonial.content}"
+                  </p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                      {testimonial.name.split(' ').map(n => n[0]).join('')}
+                    </div>
+                    <div>
+                      <div className="text-white font-semibold">{testimonial.name}</div>
+                      <div className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
+              <div className="relative z-10">
+                <h2 className="text-4xl font-bold text-white mb-6">
+                  Ready to Transform Your Sales?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                  Start your free trial today and see how AI can revolutionize your sales process.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link 
+                    to="/contact"
+                    className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                  >
+                    Start Free Trial
+                  </Link>
+                  <Link 
+                    to="/demo"
+                    className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+                  >
+                    Schedule Demo
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default ZionAiSalesPredictorPage;
