@@ -17,27 +17,22 @@ export default function AIEmailMarketingAutomationPage() {
       description: 'Generate personalized email content with AI that adapts to your brand voice and audience'
     },
     {
-      icon: <Target className="w-6 h-6 text-emerald-400" />,
       title: 'Smart Segmentation',
       description: 'Automatically segment your audience based on behavior, preferences, and engagement patterns'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
       title: 'Predictive Analytics',
       description: 'AI-powered insights predict the best send times, subject lines, and content for maximum engagement'
     },
     {
-      icon: <Zap className="w-6 h-6 text-orange-400" />,
       title: 'Automated Workflows',
       description: 'Create intelligent email sequences that adapt based on recipient behavior and engagement'
     },
     {
-      icon: <Eye className="w-6 h-6 text-pink-400" />,
       title: 'A/B Testing AI',
       description: 'Automatically test and optimize email elements with AI-driven insights and recommendations'
     },
     {
-      icon: <Shield className="w-6 h-6 text-red-400" />,
       title: 'Deliverability Optimization',
       description: 'AI-powered tools ensure maximum inbox placement and compliance with email regulations'
     }
@@ -121,34 +116,24 @@ export default function AIEmailMarketingAutomationPage() {
 
   const benefits = [
     {
-      icon: <TrendingUp className="w-8 h-8 text-cyan-400" />,
       title: '150% Higher Open Rates',
       description: 'AI-optimized subject lines and send times maximize engagement'
     },
     {
-      icon: <DollarSign className="w-8 h-8 text-emerald-400" />,
       title: '40% Revenue Increase',
       description: 'Personalized content and smart segmentation drive conversions'
     },
     {
-      icon: <Clock className="w-8 h-8 text-purple-400" />,
       title: 'Save 20+ Hours Weekly',
       description: 'Automated workflows and AI content generation eliminate manual work'
     },
     {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
       title: '95% Deliverability',
       description: 'AI-powered optimization ensures maximum inbox placement'
     }
   ]
 
   const emailTypes = [
-    { name: 'Welcome Series', icon: '👋', description: 'Onboard new subscribers with personalized sequences' },
-    { name: 'Product Recommendations', icon: '🛍️', description: 'AI-powered product suggestions based on behavior' },
-    { name: 'Cart Abandonment', icon: '🛒', description: 'Recover lost sales with intelligent follow-up campaigns' },
-    { name: 'Re-engagement', icon: '🔄', description: 'Win back inactive subscribers with targeted content' },
-    { name: 'Birthday & Anniversaries', icon: '🎉', description: 'Celebrate special moments with personalized messages' },
-    { name: 'Educational Content', icon: '📚', description: 'Nurture leads with valuable, AI-generated content' }
   ]
 
   return (

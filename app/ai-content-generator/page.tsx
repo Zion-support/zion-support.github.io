@@ -20,31 +20,26 @@ export default function AIContentGeneratorPage() {
       benefits: ['Natural language processing', 'Context-aware generation', 'Multi-language support', 'Brand voice adaptation']
     },
     {
-      icon: <FileText className="w-6 h-6 text-emerald-400" />,
       title: 'Content Templates',
       description: '500+ professionally designed templates for blogs, social media, emails, ads, and more.',
       benefits: ['Industry-specific templates', 'Customizable layouts', 'SEO-optimized structure', 'Mobile-responsive design']
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
       title: 'SEO Optimization',
       description: 'Built-in SEO tools with keyword research, density analysis, and readability scoring.',
       benefits: ['Keyword optimization', 'Meta tag generation', 'Readability analysis', 'Competitor analysis']
     },
     {
-      icon: <Palette className="w-6 h-6 text-pink-400" />,
       title: 'Brand Voice Training',
       description: 'Train AI to match your unique brand voice and tone across all content types.',
       benefits: ['Voice consistency', 'Tone adaptation', 'Style guidelines', 'Brand personality']
     },
     {
-      icon: <Globe className="w-6 h-6 text-orange-400" />,
       title: 'Multi-Language Support',
       description: 'Generate content in 50+ languages with native-level quality and cultural adaptation.',
       benefits: ['50+ languages', 'Cultural adaptation', 'Local SEO optimization', 'Regional preferences']
     },
     {
-      icon: <Shield className="w-6 h-6 text-red-400" />,
       title: 'Plagiarism Detection',
       description: 'Built-in plagiarism checker with 99.8% accuracy and originality scoring.',
       benefits: ['Real-time checking', 'Originality reports', 'Citation suggestions', 'Copyright compliance']
@@ -144,25 +139,21 @@ export default function AIContentGeneratorPage() {
     {
       title: 'Blog Content',
       description: 'Generate engaging blog posts with SEO optimization and brand voice consistency.',
-      icon: <FileText className="w-8 h-8 text-cyan-400" />,
       examples: ['How-to guides', 'Industry insights', 'Product reviews', 'Thought leadership']
     },
     {
       title: 'Social Media',
       description: 'Create compelling social media posts for all platforms with optimal engagement.',
-      icon: <Share className="w-8 h-8 text-emerald-400" />,
       examples: ['Facebook posts', 'Twitter threads', 'LinkedIn articles', 'Instagram captions']
     },
     {
       title: 'Email Marketing',
       description: 'Generate personalized email campaigns that convert and engage your audience.',
-      icon: <Mail className="w-8 h-8 text-purple-400" />,
       examples: ['Newsletters', 'Promotional emails', 'Welcome sequences', 'Follow-up campaigns']
     },
     {
       title: 'Ad Copy',
       description: 'Create high-converting ad copy for Google, Facebook, and other advertising platforms.',
-      icon: <Target className="w-8 h-8 text-pink-400" />,
       examples: ['Google Ads', 'Facebook Ads', 'LinkedIn Ads', 'Display banners']
     }
   ]

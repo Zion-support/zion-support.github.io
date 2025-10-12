@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Code, Zap, CheckCircle, ArrowRight, Users, Award, Star, Globe, Settings } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 
 const WebDevelopmentPage: React.FC = () => {
   const services = [
@@ -17,7 +10,6 @@ const WebDevelopmentPage: React.FC = () => {
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Code,
       title: 'Backend Development',
       description: 'Robust server-side applications with Node.js, Python, and scalable architectures.',
       features: ['Node.js/Python', 'RESTful APIs', 'Database Design', 'Cloud Integration'],
@@ -25,7 +17,6 @@ const WebDevelopmentPage: React.FC = () => {
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Globe,
       title: 'Full-Stack Development',
       description: 'Complete web solutions from frontend to backend with seamless integration.',
       features: ['End-to-End Development', 'Database Integration', 'API Development', 'Deployment'],
@@ -33,7 +24,6 @@ const WebDevelopmentPage: React.FC = () => {
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Settings,
       title: 'E-commerce Solutions',
       description: 'Custom e-commerce platforms with payment integration and inventory management.',
       features: ['Payment Integration', 'Inventory Management', 'Order Processing', 'Admin Dashboard'],

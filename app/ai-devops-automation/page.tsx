@@ -31,19 +31,16 @@ export default function AIDevOpsAutomationPage() {
     {
       title: 'Predictive Infrastructure Monitoring',
       description: 'Advanced AI algorithms predict system failures, optimize resource allocation, and prevent downtime before it happens.',
-      icon: <BarChart3 className="w-6 h-6 text-blue-400" />,
       benefits: ['Failure prediction', 'Resource optimization', 'Proactive alerts', 'Performance tuning']
     },
     {
       title: 'Automated Security Scanning',
       description: 'AI-driven security analysis that continuously scans for vulnerabilities, compliance issues, and potential threats.',
-      icon: <Shield className="w-6 h-6 text-red-400" />,
       benefits: ['Vulnerability scanning', 'Compliance monitoring', 'Threat detection', 'Auto remediation']
     },
     {
       title: 'Smart Resource Management',
       description: 'Intelligent auto-scaling and resource allocation based on real-time demand patterns and predictive analytics.',
-      icon: <Server className="w-6 h-6 text-green-400" />,
       benefits: ['Auto-scaling', 'Cost optimization', 'Load balancing', 'Capacity planning']
     }
   ];
@@ -120,10 +117,6 @@ export default function AIDevOpsAutomationPage() {
   ];
 
   const stats = [
-    { number: '80%', label: 'Faster Deployments', icon: <Zap className="w-6 h-6" /> },
-    { number: '95%', label: 'Issue Reduction', icon: <Shield className="w-6 h-6" /> },
-    { number: '300+', label: 'Companies Using', icon: <Users className="w-6 h-6" /> },
-    { number: '40%', label: 'Cost Reduction', icon: <TrendingUp className="w-6 h-6" /> }
   ];
 
   return (

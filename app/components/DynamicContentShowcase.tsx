@@ -26,7 +26,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
       id: 'ai-content',
       title: 'AI Content Generation',
       description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
-      icon: Zap,
       features: ['Automated content creation', 'SEO optimization', 'Multi-language support'],
       price: 'Starting at $99/month',
       category: 'AI Services'
@@ -35,7 +34,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
       id: 'cloud-services',
       title: 'Cloud Infrastructure',
       description: 'Scalable, secure, and reliable cloud infrastructure solutions for your business.',
-      icon: Cloud,
       features: ['Scalable infrastructure', '99.9% uptime', 'Global CDN'],
       price: 'Starting at $199/month',
       category: 'IT Services'
@@ -44,7 +42,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
       id: 'cybersecurity',
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with our comprehensive cybersecurity services and monitoring.',
-      icon: Shield,
       features: ['Threat detection', 'Security audits', 'Compliance management'],
       price: 'Starting at $499/month',
       category: 'Security'

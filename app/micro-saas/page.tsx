@@ -57,7 +57,6 @@ const MicroSaasPage: React.FC = () => {
         'Live chat handoff',
         'Knowledge base management'
       ],
-      icon: MessageCircle,
       color: 'from-green-500 to-teal-500',
       category: 'Customer Support',
       rating: 4.8,
@@ -80,7 +79,6 @@ const MicroSaasPage: React.FC = () => {
         'Mobile device management',
         'Firewall management'
       ],
-      icon: Shield,
       color: 'from-red-500 to-orange-500',
       category: 'Security',
       rating: 4.9,
@@ -103,7 +101,6 @@ const MicroSaasPage: React.FC = () => {
         'Unlimited storage',
         'Mobile access'
       ],
-      icon: Cloud,
       color: 'from-cyan-500 to-blue-500',
       category: 'Backup & Recovery',
       rating: 4.7,
@@ -126,7 +123,6 @@ const MicroSaasPage: React.FC = () => {
         'Video creation tools',
         'Performance tracking'
       ],
-      icon: FileText,
       color: 'from-purple-500 to-pink-500',
       category: 'Content Creation',
       rating: 4.6,
@@ -149,7 +145,6 @@ const MicroSaasPage: React.FC = () => {
         'Team collaboration',
         'Mobile CRM access'
       ],
-      icon: Users,
       color: 'from-indigo-500 to-purple-500',
       category: 'CRM',
       rating: 4.8,
@@ -172,7 +167,6 @@ const MicroSaasPage: React.FC = () => {
         'API integrations',
         'Monitoring dashboard'
       ],
-      icon: Database,
       color: 'from-emerald-500 to-green-500',
       category: 'Data Management',
       rating: 4.5,
@@ -195,7 +189,6 @@ const MicroSaasPage: React.FC = () => {
         'Form builder',
         'Social media integration'
       ],
-      icon: Target,
       color: 'from-yellow-500 to-orange-500',
       category: 'Marketing',
       rating: 4.7,
@@ -218,7 +211,6 @@ const MicroSaasPage: React.FC = () => {
         'Progress reporting',
         'Mobile app'
       ],
-      icon: CheckSquare,
       color: 'from-violet-500 to-purple-500',
       category: 'Project Management',
       rating: 4.8,
@@ -241,7 +233,6 @@ const MicroSaasPage: React.FC = () => {
         'Drip campaigns',
         'Integration APIs'
       ],
-      icon: Mail,
       color: 'from-pink-500 to-rose-500',
       category: 'Email Marketing',
       rating: 4.6,
@@ -264,7 +255,6 @@ const MicroSaasPage: React.FC = () => {
         'Reporting dashboard',
         'Mobile app'
       ],
-      icon: Box,
       color: 'from-teal-500 to-cyan-500',
       category: 'Inventory',
       rating: 4.7,
@@ -287,7 +277,6 @@ const MicroSaasPage: React.FC = () => {
         'Financial reporting',
         'Multi-currency support'
       ],
-      icon: DollarSign,
       color: 'from-green-500 to-emerald-500',
       category: 'Finance',
       rating: 4.8,

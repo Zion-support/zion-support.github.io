@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Smartphone, Code, Zap, CheckCircle, ArrowRight, Users, Award, Star, Globe, Settings } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 
 const MobileDevelopmentPage: React.FC = () => {
   const services = [
@@ -17,7 +10,6 @@ const MobileDevelopmentPage: React.FC = () => {
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Smartphone,
       title: 'Android Development',
       description: 'Native Android apps built with Kotlin and Jetpack Compose for modern Android development.',
       features: ['Kotlin & Jetpack Compose', 'Google Play Optimization', 'Material Design', 'Room Database'],
@@ -25,7 +17,6 @@ const MobileDevelopmentPage: React.FC = () => {
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Code,
       title: 'React Native',
       description: 'Cross-platform mobile apps that work on both iOS and Android with a single codebase.',
       features: ['Cross-platform', 'Hot Reload', 'Native Performance', 'Third-party Integrations'],
@@ -33,7 +24,6 @@ const MobileDevelopmentPage: React.FC = () => {
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Code,
       title: 'Flutter Development',
       description: 'Beautiful, fast mobile apps built with Google\'s Flutter framework for multiple platforms.',
       features: ['Multi-platform', 'Custom UI', 'Fast Development', 'Google Services'],

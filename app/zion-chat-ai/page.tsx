@@ -27,31 +27,26 @@ const ZionChatAiPage: React.FC = () => {
     {
       title: 'Sentiment Analysis',
       description: 'Understand customer emotions and respond appropriately with AI-powered sentiment detection',
-      icon: Heart,
       color: 'from-pink-500 to-rose-500'
     },
     {
       title: 'Escalation Management',
       description: 'Seamlessly transfer complex queries to human agents with full context',
-      icon: Users,
       color: 'from-blue-500 to-purple-500'
     },
     {
       title: 'Performance Analytics',
       description: 'Track response times, satisfaction scores, and conversation outcomes',
-      icon: BarChart,
       color: 'from-orange-500 to-red-500'
     },
     {
       title: 'Custom Training',
       description: 'Train the AI on your specific products, services, and company knowledge',
-      icon: Brain,
       color: 'from-purple-500 to-indigo-500'
     },
     {
       title: 'Integration APIs',
       description: 'Connect with your existing CRM, helpdesk, and business tools',
-      icon: LinkIcon,
       color: 'from-cyan-500 to-blue-500'
     }
   ];

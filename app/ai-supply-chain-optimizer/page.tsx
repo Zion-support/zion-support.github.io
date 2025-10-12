@@ -31,19 +31,16 @@ export default function AISupplyChainOptimizerPage() {
     {
       title: 'Smart Route Optimization',
       description: 'Advanced logistics algorithms optimize delivery routes, reduce fuel costs, and improve delivery times.',
-      icon: <Truck className="w-6 h-6 text-blue-400" />,
       benefits: ['Route optimization', 'Fuel cost reduction', 'Delivery time improvement', 'Real-time tracking']
     },
     {
       title: 'Automated Inventory Management',
       description: 'Intelligent inventory control with automated reordering, stock level monitoring, and waste reduction.',
-      icon: <Package className="w-6 h-6 text-purple-400" />,
       benefits: ['Auto reordering', 'Stock monitoring', 'Waste reduction', 'Cost optimization']
     },
     {
       title: 'Risk Management & Compliance',
       description: 'Comprehensive risk assessment and compliance monitoring to ensure supply chain resilience.',
-      icon: <Shield className="w-6 h-6 text-red-400" />,
       benefits: ['Risk assessment', 'Compliance monitoring', 'Disruption alerts', 'Mitigation strategies']
     }
   ];
@@ -120,10 +117,6 @@ export default function AISupplyChainOptimizerPage() {
   ];
 
   const stats = [
-    { number: '35%', label: 'Cost Reduction', icon: <TrendingUp className="w-6 h-6" /> },
-    { number: '92%', label: 'Forecast Accuracy', icon: <Target className="w-6 h-6" /> },
-    { number: '500+', label: 'Companies Using', icon: <Globe className="w-6 h-6" /> },
-    { number: '40%', label: 'Delivery Improvement', icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (

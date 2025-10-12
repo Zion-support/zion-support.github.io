@@ -27,31 +27,26 @@ const ZionAnalyticsProPage: React.FC = () => {
     {
       title: 'AI-Powered Predictive Insights',
       description: 'Get intelligent forecasts and recommendations based on your data patterns',
-      icon: Brain,
       color: 'from-purple-500 to-pink-500'
     },
     {
       title: 'Custom Report Generation',
       description: 'Create personalized reports with drag-and-drop interface and automated scheduling',
-      icon: FileText,
       color: 'from-green-500 to-teal-500'
     },
     {
       title: 'Team Collaboration Tools',
       description: 'Share insights, create annotations, and collaborate with your team in real-time',
-      icon: Users,
       color: 'from-orange-500 to-red-500'
     },
     {
       title: 'API Integrations',
       description: 'Connect with 100+ popular business tools and platforms seamlessly',
-      icon: LinkIcon,
       color: 'from-cyan-500 to-blue-500'
     },
     {
       title: 'Mobile App Access',
       description: 'Access your analytics on-the-go with our native iOS and Android apps',
-      icon: Smartphone,
       color: 'from-indigo-500 to-purple-500'
     }
   ];

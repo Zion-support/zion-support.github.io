@@ -12,17 +12,14 @@ export default function AISmartScheduler() {
       description: 'Intelligent scheduling that learns from your patterns and preferences'
     },
     {
-      icon: <Users className="w-6 h-6 text-purple-400" />,
       title: 'Team Coordination',
       description: 'Seamlessly coordinate meetings across multiple time zones and schedules'
     },
     {
-      icon: <Zap className="w-6 h-6 text-yellow-400" />,
       title: 'Auto-Optimization',
       description: 'Automatically finds the best meeting times for maximum productivity'
     },
     {
-      icon: <Globe className="w-6 h-6 text-green-400" />,
       title: 'Global Integration',
       description: 'Works with all major calendar platforms and time zones'
     }

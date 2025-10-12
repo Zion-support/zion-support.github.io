@@ -12,17 +12,14 @@ export default function CybersecurityConsulting() {
       description: 'Comprehensive security audits to identify vulnerabilities and assess your current security posture'
     },
     {
-      icon: <Lock className="w-6 h-6 text-purple-400" />,
       title: 'Compliance Management',
       description: 'Ensure compliance with GDPR, HIPAA, SOX, PCI-DSS, and other regulatory requirements'
     },
     {
-      icon: <Eye className="w-6 h-6 text-yellow-400" />,
       title: 'Threat Intelligence',
       description: 'Advanced threat detection and response with 24/7 monitoring and incident management'
     },
     {
-      icon: <Brain className="w-6 h-6 text-green-400" />,
       title: 'Security Training',
       description: 'Comprehensive security awareness training for your team to prevent human error attacks'
     }

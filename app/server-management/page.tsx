@@ -11,27 +11,22 @@ const ServerManagementPage: React.FC = () => {
       description: 'Continuous monitoring of server performance, uptime, and health with instant alerts.'
     },
     {
-      icon: <Shield className="w-6 h-6 text-emerald-400" />,
       title: 'Advanced Security',
       description: 'Comprehensive security measures including firewalls, intrusion detection, and threat prevention.'
     },
     {
-      icon: <Zap className="w-6 h-6 text-purple-400" />,
       title: 'Performance Optimization',
       description: 'Automatic optimization of server resources for maximum performance and efficiency.'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
       title: 'Analytics & Reporting',
       description: 'Detailed analytics and reports on server performance, usage patterns, and trends.'
     },
     {
-      icon: <Clock className="w-6 h-6 text-pink-400" />,
       title: 'Automated Backups',
       description: 'Regular automated backups with point-in-time recovery and disaster recovery planning.'
     },
     {
-      icon: <Users className="w-6 h-6 text-blue-400" />,
       title: 'Expert Support',
       description: '24/7 expert support from certified server administrators and engineers.'
     }
@@ -39,25 +34,21 @@ const ServerManagementPage: React.FC = () => {
 
   const services = [
     {
-      icon: <Server className="w-8 h-8 text-cyan-400" />,
       title: 'Server Setup & Configuration',
       description: 'Complete server setup, configuration, and optimization for your specific needs.',
       features: ['OS installation', 'Software configuration', 'Security hardening', 'Performance tuning']
     },
     {
-      icon: <Shield className="w-8 h-8 text-emerald-400" />,
       title: 'Security Management',
       description: 'Comprehensive security management including firewalls, antivirus, and threat monitoring.',
       features: ['Firewall configuration', 'Antivirus setup', 'Intrusion detection', 'Security audits']
     },
     {
-      icon: <Zap className="w-8 h-8 text-purple-400" />,
       title: 'Performance Monitoring',
       description: 'Real-time monitoring and optimization of server performance and resource usage.',
       features: ['CPU monitoring', 'Memory tracking', 'Disk usage', 'Network analysis']
     },
     {
-      icon: <Database className="w-8 h-8 text-orange-400" />,
       title: 'Database Management',
       description: 'Expert database administration, optimization, and maintenance services.',
       features: ['Database optimization', 'Query tuning', 'Backup management', 'Replication setup']

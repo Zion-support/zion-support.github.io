@@ -23,28 +23,24 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
       id: 'users',
       value: 1200,
       label: 'Active Users',
-      icon: Users,
       suffix: '+'
     },
     {
       id: 'projects',
       value: 99.8,
       label: 'Success Rate',
-      icon: Award,
       suffix: '%'
     },
     {
       id: 'uptime',
       value: 99.9,
       label: 'Uptime',
-      icon: CheckCircle,
       suffix: '%'
     },
     {
       id: 'performance',
       value: 300,
       label: 'Performance Boost',
-      icon: Zap,
       suffix: '%'
     }
   ],

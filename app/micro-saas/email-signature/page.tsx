@@ -11,27 +11,22 @@ const EmailSignaturePage: React.FC = () => {
       description: 'Beautiful, professional email signature templates that match your brand identity.'
     },
     {
-      icon: <Users className="w-6 h-6 text-emerald-400" />,
       title: 'Team Management',
       description: 'Manage signatures for your entire team with centralized control and consistency.'
     },
     {
-      icon: <Zap className="w-6 h-6 text-purple-400" />,
       title: 'One-Click Setup',
       description: 'Deploy signatures across your organization with just one click.'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
       title: 'Analytics & Tracking',
       description: 'Track email engagement and signature performance with detailed analytics.'
     },
     {
-      icon: <Shield className="w-6 h-6 text-pink-400" />,
       title: 'Security & Compliance',
       description: 'Ensure all signatures meet security standards and compliance requirements.'
     },
     {
-      icon: <Clock className="w-6 h-6 text-blue-400" />,
       title: 'Auto-Updates',
       description: 'Automatically update signatures when team members change roles or information.'
     }

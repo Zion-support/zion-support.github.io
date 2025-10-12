@@ -6,17 +6,14 @@ ursor/
     {
       icon: Brain,
       title: 'AI-Powered SEO Optimization',
-      icon: Zap,
       title: 'Real-time Analysis',
       description: 'Lightning-fast SEO analysis and optimization with instant recommendations',
     },
     {
-      icon: Shield,
       title: 'White-Hat Techniques',
       description: 'Ethical SEO practices with long-term sustainable results and compliance',
     },
     {
-      icon: Globe,
       title: 'Global Optimization',
       description: 'Worldwide SEO optimization and support for international businesses',
     }

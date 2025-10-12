@@ -20,27 +20,22 @@ export default function AICybersecuritySuiteProPage() {
       description: 'Advanced machine learning algorithms detect and prevent threats in real-time with 99.9% accuracy'
     },
     {
-      icon: <Shield className="w-6 h-6 text-emerald-400" />,
       title: 'Zero-Trust Architecture',
       description: 'Implement comprehensive zero-trust security model with continuous verification and monitoring'
     },
     {
-      icon: <Activity className="w-6 h-6 text-purple-400" />,
       title: 'Real-time Monitoring',
       description: '24/7 network monitoring with instant alerts and automated response to security incidents'
     },
     {
-      icon: <Key className="w-6 h-6 text-orange-400" />,
       title: 'Advanced Encryption',
       description: 'Military-grade encryption with quantum-resistant algorithms for maximum data protection'
     },
     {
-      icon: <Network className="w-6 h-6 text-pink-400" />,
       title: 'Network Security',
       description: 'Comprehensive network protection with AI-powered intrusion detection and prevention'
     },
     {
-      icon: <Alert className="w-6 h-6 text-red-400" />,
       title: 'Incident Response',
       description: 'Automated incident response with AI-driven forensics and rapid threat containment'
     }
@@ -124,22 +119,18 @@ export default function AICybersecuritySuiteProPage() {
 
   const benefits = [
     {
-      icon: <Shield className="w-8 h-8 text-cyan-400" />,
       title: '99.9% Threat Detection',
       description: 'AI-powered detection prevents security breaches before they happen'
     },
     {
-      icon: <Clock className="w-8 h-8 text-emerald-400" />,
       title: 'Real-time Response',
       description: 'Instant threat containment and automated incident response'
     },
     {
-      icon: <Target className="w-8 h-8 text-purple-400" />,
       title: 'Zero False Positives',
       description: 'Advanced AI eliminates false alarms and focuses on real threats'
     },
     {
-      icon: <Lock className="w-8 h-8 text-orange-400" />,
       title: 'Enterprise Security',
       description: 'Military-grade encryption and compliance with industry standards'
     }
@@ -149,37 +140,31 @@ export default function AICybersecuritySuiteProPage() {
     { 
       title: 'Threat Intelligence', 
       description: 'Global threat intelligence feeds with AI-powered analysis',
-      icon: '🧠',
       benefit: 'Prevent 99.9% of known threats'
     },
     { 
       title: 'Vulnerability Scanning', 
       description: 'Automated vulnerability assessment and patch management',
-      icon: '🔍',
       benefit: 'Identify risks before attackers'
     },
     { 
       title: 'Email Security', 
       description: 'Advanced email protection against phishing and malware',
-      icon: '📧',
       benefit: 'Block 99.8% of malicious emails'
     },
     { 
       title: 'Endpoint Protection', 
       description: 'Comprehensive endpoint security with behavioral analysis',
-      icon: '💻',
       benefit: 'Protect all devices 24/7'
     },
     { 
       title: 'Network Monitoring', 
       description: 'Real-time network traffic analysis and anomaly detection',
-      icon: '🌐',
       benefit: 'Detect intrusions instantly'
     },
     { 
       title: 'Compliance Management', 
       description: 'Automated compliance monitoring and reporting',
-      icon: '📋',
       benefit: 'Maintain compliance effortlessly'
     }
   ]

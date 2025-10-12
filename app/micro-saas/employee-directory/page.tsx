@@ -11,27 +11,22 @@ const EmployeeDirectoryPage: React.FC = () => {
       description: 'Find employees instantly with powerful search filters and smart suggestions.'
     },
     {
-      icon: <Users className="w-6 h-6 text-emerald-400" />,
       title: 'Team Organization',
       description: 'Organize employees by department, role, location, and custom categories.'
     },
     {
-      icon: <Shield className="w-6 h-6 text-purple-400" />,
       title: 'Privacy Controls',
       description: 'Granular privacy settings to control what information is visible to whom.'
     },
     {
-      icon: <Phone className="w-6 h-6 text-orange-400" />,
       title: 'Contact Integration',
       description: 'Seamless integration with phone systems and communication platforms.'
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-pink-400" />,
       title: 'Analytics Dashboard',
       description: 'Track directory usage and employee engagement with detailed analytics.'
     },
     {
-      icon: <Clock className="w-6 h-6 text-blue-400" />,
       title: 'Real-time Updates',
       description: 'Automatic updates when employee information changes across all systems.'
     }

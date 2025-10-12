@@ -24,31 +24,26 @@ export default function CloudMigrationPage() {
       benefits: ['AWS expertise', 'Azure migration', 'Google Cloud setup', 'Hybrid cloud solutions']
     },
     {
-      icon: <Shield className="w-6 h-6 text-emerald-400" />,
       title: 'Security-First Approach',
       description: 'Enterprise-grade security with zero-downtime migration and comprehensive compliance validation.',
       benefits: ['Zero-downtime migration', 'Security compliance', 'Data encryption', 'Access controls']
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
       title: 'Cost Optimization',
       description: 'Intelligent resource allocation and cost monitoring to reduce cloud expenses by up to 40%.',
       benefits: ['Cost analysis', 'Resource optimization', 'Auto-scaling', 'Budget monitoring']
     },
     {
-      icon: <Zap className="w-6 h-6 text-pink-400" />,
       title: 'Performance Enhancement',
       description: 'Optimize application performance with advanced monitoring, caching, and load balancing.',
       benefits: ['Performance monitoring', 'Load balancing', 'Caching strategies', 'Auto-scaling']
     },
     {
-      icon: <Database className="w-6 h-6 text-orange-400" />,
       title: 'Database Migration',
       description: 'Seamless database migration with minimal downtime and data integrity guarantees.',
       benefits: ['Zero data loss', 'Schema migration', 'Data validation', 'Backup strategies']
     },
     {
-      icon: <Network className="w-6 h-6 text-red-400" />,
       title: 'Network Architecture',
       description: 'Design and implement robust cloud network architecture with high availability and scalability.',
       benefits: ['VPC design', 'Load balancing', 'CDN setup', 'Global distribution']
@@ -146,42 +141,36 @@ export default function CloudMigrationPage() {
       step: '01',
       title: 'Assessment & Planning',
       description: 'Comprehensive analysis of your current infrastructure and cloud readiness assessment.',
-      icon: <Search className="w-8 h-8 text-cyan-400" />,
       duration: '1-2 weeks'
     },
     {
       step: '02',
       title: 'Strategy Design',
       description: 'Custom migration strategy tailored to your business needs and technical requirements.',
-      icon: <Target className="w-8 h-8 text-emerald-400" />,
       duration: '1 week'
     },
     {
       step: '03',
       title: 'Pre-Migration Setup',
       description: 'Cloud environment preparation, security configuration, and testing environment setup.',
-      icon: <Settings className="w-8 h-8 text-purple-400" />,
       duration: '2-3 weeks'
     },
     {
       step: '04',
       title: 'Data Migration',
       description: 'Secure data transfer with zero data loss guarantee and real-time validation.',
-      icon: <Database className="w-8 h-8 text-pink-400" />,
       duration: '1-2 weeks'
     },
     {
       step: '05',
       title: 'Application Migration',
       description: 'Application deployment, configuration, and optimization in the cloud environment.',
-      icon: <Server className="w-8 h-8 text-orange-400" />,
       duration: '2-4 weeks'
     },
     {
       step: '06',
       title: 'Testing & Optimization',
       description: 'Comprehensive testing, performance optimization, and security validation.',
-      icon: <CheckCircle className="w-8 h-8 text-red-400" />,
       duration: '1-2 weeks'
     }
   ]
@@ -189,25 +178,21 @@ export default function CloudMigrationPage() {
   const cloudProviders = [
     {
       name: 'Amazon Web Services',
-      icon: <Cloud className="w-8 h-8 text-orange-400" />,
       description: 'Leading cloud platform with comprehensive services and global reach',
       features: ['EC2, S3, RDS', 'Lambda functions', 'CloudFront CDN', 'Auto Scaling']
     },
     {
       name: 'Microsoft Azure',
-      icon: <Cloud className="w-8 h-8 text-blue-400" />,
       description: 'Enterprise-focused cloud platform with strong Microsoft integration',
       features: ['Virtual Machines', 'Azure SQL', 'App Service', 'Active Directory']
     },
     {
       name: 'Google Cloud Platform',
-      icon: <Cloud className="w-8 h-8 text-green-400" />,
       description: 'AI and machine learning focused cloud with advanced analytics',
       features: ['Compute Engine', 'BigQuery', 'AI/ML services', 'Kubernetes Engine']
     },
     {
       name: 'Hybrid Cloud',
-      icon: <Network className="w-8 h-8 text-purple-400" />,
       description: 'Best of both worlds with on-premises and cloud integration',
       features: ['Hybrid connectivity', 'Data synchronization', 'Unified management', 'Flexible deployment']
     }

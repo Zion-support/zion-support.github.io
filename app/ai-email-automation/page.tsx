@@ -12,31 +12,26 @@ const AIEmailAutomationPage: React.FC = () => {
       benefits: ['Personalized content', 'A/B testing', 'Brand voice training', 'Multi-language support']
     },
     {
-      icon: <Send className="w-8 h-8 text-emerald-400" />,
       title: 'Smart Automation',
       description: 'Create complex email workflows with AI-powered triggers, segmentation, and behavioral targeting.',
       benefits: ['Behavioral triggers', 'Smart segmentation', 'Dynamic content', 'Cross-channel sync']
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
       title: 'Performance Analytics',
       description: 'Advanced analytics with AI insights to optimize email performance and improve ROI.',
       benefits: ['Open rate optimization', 'Click-through analysis', 'Revenue tracking', 'Predictive insights']
     },
     {
-      icon: <Zap className="w-8 h-8 text-red-400" />,
       title: 'Automated Sequences',
       description: 'AI-powered email sequences that adapt based on recipient behavior and engagement patterns.',
       benefits: ['Adaptive sequences', 'Behavioral triggers', 'Personalization', 'Optimal timing']
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-orange-400" />,
       title: 'Lead Scoring',
       description: 'AI automatically scores leads based on email engagement and behavior to prioritize follow-ups.',
       benefits: ['Lead scoring', 'Engagement tracking', 'Priority alerts', 'CRM integration']
     },
     {
-      icon: <Shield className="w-8 h-8 text-pink-400" />,
       title: 'Deliverability Optimization',
       description: 'AI ensures maximum deliverability with reputation monitoring and content optimization.',
       benefits: ['Reputation monitoring', 'Content optimization', 'Spam prevention', 'Compliance checks']
@@ -115,10 +110,6 @@ const AIEmailAutomationPage: React.FC = () => {
   ]
 
   const stats = [
-    { number: '300%', label: 'Revenue Increase', icon: <DollarSign className="w-6 h-6 text-cyan-400" /> },
-    { number: '150%', label: 'Conversion Boost', icon: <TrendingUp className="w-6 h-6 text-emerald-400" /> },
-    { number: '20hrs', label: 'Time Saved/Week', icon: <Clock className="w-6 h-6 text-purple-400" /> },
-    { number: '95%', label: 'Deliverability Rate', icon: <Shield className="w-6 h-6 text-orange-400" /> }
   ]
 
   return (

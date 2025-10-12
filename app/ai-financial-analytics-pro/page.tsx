@@ -45,31 +45,26 @@ export default function AiFinancialAnalyticsProPage() {
       benefits: ['Predictive analytics', 'Risk assessment', 'Trend identification', 'Anomaly detection']
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
       title: 'Real-Time Analytics',
       description: 'Monitor your financial performance with live dashboards and instant reporting',
       benefits: ['Live data feeds', 'Instant alerts', 'Real-time KPIs', 'Dynamic reporting']
     },
     {
-      icon: <Shield className="w-8 h-8 text-purple-400" />,
       title: 'Enterprise Security',
       description: 'Bank-grade security with end-to-end encryption and compliance standards',
       benefits: ['256-bit encryption', 'SOC 2 compliance', 'GDPR ready', 'Audit trails']
     },
     {
-      icon: <Target className="w-8 h-8 text-orange-400" />,
       title: 'Custom Dashboards',
       description: 'Create personalized financial dashboards tailored to your business needs',
       benefits: ['Drag-and-drop builder', 'Custom widgets', 'Role-based views', 'Mobile optimization']
     },
     {
-      icon: <Zap className="w-8 h-8 text-red-400" />,
       title: 'Automated Reporting',
       description: 'Generate comprehensive financial reports automatically with AI-driven insights',
       benefits: ['Scheduled reports', 'Custom templates', 'Multi-format export', 'Email delivery']
     },
     {
-      icon: <Globe className="w-8 h-8 text-blue-400" />,
       title: 'Multi-Currency Support',
       description: 'Handle multiple currencies and global financial operations seamlessly',
       benefits: ['Real-time exchange rates', 'Currency conversion', 'Global compliance', 'Tax calculations']
@@ -79,7 +74,6 @@ export default function AiFinancialAnalyticsProPage() {
   const analyticsTypes = [
     {
       category: 'Revenue Analytics',
-      icon: <DollarSign className="w-6 h-6 text-green-400" />,
       items: [
         'Revenue forecasting',
         'Sales performance tracking',
@@ -90,7 +84,6 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Expense Management',
-      icon: <Calculator className="w-6 h-6 text-red-400" />,
       items: [
         'Cost center analysis',
         'Budget variance tracking',
@@ -101,7 +94,6 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Cash Flow Analysis',
-      icon: <Activity className="w-6 h-6 text-blue-400" />,
       items: [
         'Cash flow forecasting',
         'Working capital analysis',
@@ -112,7 +104,6 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Investment Analytics',
-      icon: <TrendingUp className="w-6 h-6 text-purple-400" />,
       items: [
         'Portfolio performance',
         'Risk-return analysis',
@@ -123,7 +114,6 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Compliance & Audit',
-      icon: <Lock className="w-6 h-6 text-orange-400" />,
       items: [
         'Regulatory compliance',
         'Audit trail management',
@@ -134,7 +124,6 @@ export default function AiFinancialAnalyticsProPage() {
     },
     {
       category: 'Predictive Modeling',
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
       items: [
         'Financial forecasting',
         'Scenario planning',
@@ -231,21 +220,9 @@ export default function AiFinancialAnalyticsProPage() {
   ];
 
   const stats = [
-    { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-6 h-6" /> },
-    { number: '1M+', label: 'Transactions Analyzed', icon: <Database className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-6 h-6" /> },
-    { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-6 h-6" /> }
   ];
 
   const integrations = [
-    { name: 'QuickBooks', icon: <Calculator className="w-6 h-6" />, category: 'Accounting' },
-    { name: 'Xero', icon: <FileText className="w-6 h-6" />, category: 'Accounting' },
-    { name: 'SAP', icon: <Database className="w-6 h-6" />, category: 'ERP' },
-    { name: 'Oracle', icon: <Building2 className="w-6 h-6" />, category: 'ERP' },
-    { name: 'Salesforce', icon: <TrendingUp className="w-6 h-6" />, category: 'CRM' },
-    { name: 'HubSpot', icon: <Target className="w-6 h-6" />, category: 'CRM' },
-    { name: 'Stripe', icon: <CreditCard className="w-6 h-6" />, category: 'Payments' },
-    { name: 'PayPal', icon: <Wallet className="w-6 h-6" />, category: 'Payments' }
   ];
 
   return (
