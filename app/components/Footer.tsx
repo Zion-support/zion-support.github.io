@@ -20,21 +20,21 @@ const Footer = () => {
     { name: 'AI Content Generator', path: '/ai-content-generator' },
     { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-    { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+    { name: 'AI Customer Insights', path: '/ai-customer-insights' },
+    { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
+    { name: 'AI Blockchain Analytics', path: '/ai-blockchain-analytics' },
+    { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
-    { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
-    { name: 'AI Automation Suite', path: '/ai-automation' },
-    { name: 'AI Project Manager', path: '/ai-project-manager' },
-    { name: 'AI 3D Generation', path: '/ai-3d-generation' },
-    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
+    { name: 'AI Email Marketing', path: '/ai-email-marketing' },
+    { name: 'AI Document Processing', path: '/ai-document-processing' }
   ];
 
   const itServices = [
     { name: 'Web Development', path: '/web-development' },
     { name: 'Mobile Development', path: '/mobile-development' },
-    { name: 'DevOps', path: '/devops' },
+    { name: 'DevOps Solutions', path: '/devops-solutions' },
     { name: 'Cloud Migration', path: '/cloud-migration' },
     { name: 'API Development', path: '/api-development' },
     { name: 'Database Management', path: '/database-management' },
@@ -58,6 +58,7 @@ const Footer = () => {
   ];
 
   const fiveGServices = [
+    { name: '5G Implementation', path: '/5g-implementation' },
     { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
     { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
     { name: '5G Edge Computing', path: '/5g-edge-computing' },
@@ -66,10 +67,22 @@ const Footer = () => {
     { name: '5G Data Analytics', path: '/5g-data-analytics' }
   ];
 
+  const companyPages = [
+    { name: 'About Us', path: '/about' },
+    { name: 'Our Team', path: '/team' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Careers', path: '/careers' },
+    { name: 'News', path: '/news' },
+    { name: 'Press', path: '/press' },
+    { name: 'Partners', path: '/partners' },
+    { name: 'Investors', path: '/investors' },
+    { name: 'Community', path: '/community' }
+  ];
+
   return (
     <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -157,6 +170,23 @@ const Footer = () => {
                     className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                   >
                     {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company Pages */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-orange-400">Company</h3>
+            <ul className="space-y-2">
+              {companyPages.slice(0, 6).map((page, index) => (
+                <li key={index}>
+                  <Link 
+                    to={page.path} 
+                    className="text-gray-300 hover:text-orange-400 transition-colors text-sm"
+                  >
+                    {page.name}
                   </Link>
                 </li>
               ))}
