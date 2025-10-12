@@ -6,37 +6,37 @@ export default function AiCybersecurityMonitorProPage() {
 
   const features = [
     {
-      icon: <Brain className="w-8h-8text-cyan-400" />,
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: 'AI Threat Detection',
       description: 'Advanced machine learning algorithms detect and prevent cyber threats in real-time',
       benefits: ['Behavioral analysis', 'Anomaly detection', 'Threat prediction', 'Zero-day protection']
     },
     {
-      icon: <Shield className="w-8h-8text-green-400" />,
+      icon: <Shield className="w-8 h-8 text-green-400" />,
       title: '24/7 Monitoring',
       description: 'Continuous security monitoring with instant threat response and automated remediation',
       benefits: ['Real-time alerts', 'Automated response', 'Incident management', 'Threat hunting']
     },
     {
-      icon: <Eye className="w-8h-8text-purple-400" />,
+      icon: <Eye className="w-8 h-8 text-purple-400" />,
       title: 'Network Visibility',
       description: 'Complete visibility into your network infrastructure with advanced traffic analysis',
       benefits: ['Network mapping', 'Traffic analysis', 'Device discovery', 'Vulnerability scanning']
     },
     {
-      icon: <Lock className="w-8h-8text-orange-400" />,
+      icon: <Lock className="w-8 h-8 text-orange-400" />,
       title: 'Compliance Management',
       description: 'Automated compliance monitoring for GDPR, HIPAA, SOX, and other regulatory standards',
       benefits: ['Regulatory compliance', 'Audit trails', 'Policy enforcement', 'Risk assessment']
     },
     {
-      icon: <Zap className="w-8h-8text-red-400" />,
+      icon: <Zap className="w-8 h-8 text-red-400" />,
       title: 'Automated Response',
       description: 'Intelligent incident response with automated threat containment and remediation',
       benefits: ['Auto-quarantine', 'Threat isolation', 'System restoration', 'Forensic analysis']
     },
     {
-      icon: <Globe className="w-8h-8text-blue-400" />,
+      icon: <Globe className="w-8 h-8 text-blue-400" />,
       title: 'Global Threat Intelligence',
       description: 'Access to global threat intelligence feeds and security research databases',
       benefits: ['Threat intelligence', 'IOC feeds', 'Malware analysis', 'Attack patterns']
@@ -45,7 +45,7 @@ export default function AiCybersecurityMonitorProPage() {
   const securityCapabilities = [
     {
       category: 'Threat Detection',
-      icon: <AlertTriangle className="w-6h-6text-red-400" />,
+      icon: <AlertTriangle className="w-6 h-6 text-red-400" />,
       items: [
         'Malware detection',
         'Phishing prevention',
@@ -56,7 +56,7 @@ export default function AiCybersecurityMonitorProPage() {
     },
     {
       category: 'Network Security',
-      icon: <Network className="w-6h-6text-blue-400" />,
+      icon: <Network className="w-6 h-6 text-blue-400" />,
       items: [
         'Firewall management',
         'Intrusion detection',
@@ -67,7 +67,7 @@ export default function AiCybersecurityMonitorProPage() {
     },
     {
       category: 'Endpoint Protection',
-      icon: <Monitor className="w-6h-6text-green-400" />,
+      icon: <Monitor className="w-6 h-6 text-green-400" />,
       items: [
         'Device monitoring',
         'Application control',
@@ -78,7 +78,7 @@ export default function AiCybersecurityMonitorProPage() {
     },
     {
       category: 'Data Protection',
-      icon: <Database className="w-6h-6text-purple-400" />,
+      icon: <Database className="w-6 h-6 text-purple-400" />,
       items: [
         'Data encryption',
         'Access controls',
@@ -89,7 +89,7 @@ export default function AiCybersecurityMonitorProPage() {
     },
     {
       category: 'Incident Response',
-      icon: <AlertCircle className="w-6h-6text-orange-400" />,
+      icon: <AlertCircle className="w-6 h-6 text-orange-400" />,
       items: [
         'Automated response',
         'Incident tracking',
@@ -100,7 +100,7 @@ export default function AiCybersecurityMonitorProPage() {
     },
     {
       category: 'Security Analytics',
-      icon: <BarChart3 className="w-6h-6text-cyan-400" />,
+      icon: <BarChart3 className="w-6 h-6 text-cyan-400" />,
       items: [
         'Security dashboards',
         'Risk assessment',
@@ -194,23 +194,23 @@ export default function AiCybersecurityMonitorProPage() {
     }
   ];
   const stats = [
-    { number: '1 M+', label: 'Threats Blocked', icon: <Shield className="w-6h-6" /> },
-    { number: '500+', label: 'Enterprise Clients', icon: <Building2 className="w-6h-6" /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Activity className="w-6h-6" /> },
-    { number: '24/7', label: 'Security Monitoring', icon: <Eye className="w-6h-6" /> }
+    { number: '1 M+', label: 'Threats Blocked', icon: <Shield className="w-6 h-6" /> },
+    { number: '500+', label: 'Enterprise Clients', icon: <Building2 className="w-6 h-6" /> },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Activity className="w-6 h-6" /> },
+    { number: '24/7', label: 'Security Monitoring', icon: <Eye className="w-6 h-6" /> }
   ];
   const threatTypes = [
-    { name: 'Malware', icon: <Bug className="w-6h-6" />, category: 'Malicious Software' },
-    { name: 'Phishing', icon: <Target className="w-6h-6" />, category: 'Social Engineering' },
-    { name: 'Ransomware', icon: <Lock className="w-6h-6" />, category: 'Data Encryption' },
-    { name: 'DDoS', icon: <Network className="w-6h-6" />, category: 'Network Attacks' },
-    { name: 'Insider Threats', icon: <Users className="w-6h-6" />, category: 'Internal Risks' },
-    { name: 'Zero-Day', icon: <AlertCircle className="w-6h-6" />, category: 'Unknown Vulnerabilities' },
-    { name: 'APTs', icon: <Search className="w-6h-6" />, category: 'Advanced Persistent Threats' },
-    { name: 'IoT Attacks', icon: <Smartphone className="w-6h-6" />, category: 'Device Vulnerabilities' }
+    { name: 'Malware', icon: <Bug className="w-6 h-6" />, category: 'Malicious Software' },
+    { name: 'Phishing', icon: <Target className="w-6 h-6" />, category: 'Social Engineering' },
+    { name: 'Ransomware', icon: <Lock className="w-6 h-6" />, category: 'Data Encryption' },
+    { name: 'DDoS', icon: <Network className="w-6 h-6" />, category: 'Network Attacks' },
+    { name: 'Insider Threats', icon: <Users className="w-6 h-6" />, category: 'Internal Risks' },
+    { name: 'Zero-Day', icon: <AlertCircle className="w-6 h-6" />, category: 'Unknown Vulnerabilities' },
+    { name: 'APTs', icon: <Search className="w-6 h-6" />, category: 'Advanced Persistent Threats' },
+    { name: 'IoT Attacks', icon: <Smartphone className="w-6 h-6" />, category: 'Device Vulnerabilities' }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet />
         <title   />AI Cybersecurity Monitor Pro - Zion Tech Group | Advanced Security Intelligence Platform</title>
         <meta name="description" content="Protect your business with AI Cybersecurity Monitor Pro. Advanced threat detection, 24/7 monitoring, and automated response for enterprise-grade security. Start your free trial today." / / />
@@ -261,40 +261,37 @@ export default function AiCybersecurityMonitorProPage() {
         </script>
       </Helmet>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6lg:px-8py-16">
+      <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Hero Section */}
         <div className="text-centermb-16">
-          <h1 className="text-4xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6" />
+          <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-bold text-white mb-6" />
             AI Cybersecurity Monitor{' '}
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500bg-clip-texttext-transparent"  />Pro
+            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-texttext-transparent"  />Pro
             </span>
           </h1>
-          <p className="text-lg sm:text-xl text-gray-300 max-w-4 xlmx-automb-8">
-              Protect your business with AI-powered threat detection, 24/7 monitoring, 
-            and automated response. Enterprise-grade security powered by artificial intelligence.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4justify-centermb-8">
+          <p className="text-lg sm:text-xl text-gray-300 max-w-4 xlmx-automb-8">Protect your business with AI-powered threat detection, 24/7 monitoring, 
+            and automated response. Enterprise-grade security powered by artificial intelligence.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-centermb-8">
             <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-centerjustify-center" >
           Start Free Trial
               
-          <ArrowRight className="w-5h-5ml-2"  />
+          <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
-            <Link to="/ai-services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-centerjustify-center">View All AI Services
-            </Link>
+            <Link to="/ai-services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-centerjustify-center">View All AI Services</Link>
           </div>
           <div className="text-smtext-gray-400"  />✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 security monitoring
           </div>
 
         {/* Stats Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xlmb-16" />
-          <div className="max-w-7xlmx-auto">
-            <div className="grid grid-cols-2md:grid-cols-4gap-8">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2 xlmb-16" />
+          <div className="max-w-7 xlmx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key="{index}" className="text-center" />
                   <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-fullmx-automb-4">
-                    <stat.icon className="h-8w-8text-white" />
+                    <stat.icon className="h-8 w-8 text-white" />
                   </div>
-                  <div className="text-3 xl md: text-4xl font-bold text-white mb-2"   />{stat.number}</div>
+                  <div className="text-3 xl md: text-4 xl font-bold text-white mb-2"   />{stat.number}</div>
                   <div className="text-gray-300"   />{stat.label}</div>
               ))}
             </div>
@@ -304,25 +301,22 @@ export default function AiCybersecurityMonitorProPage() {
         <section className="mb-16" />
           <div className="text-centermb-12">
             <h2 className="text-3 xl font-bold text-white mb-4"   />Advanced Security Features</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto">
-              Our AI Cybersecurity Monitor Pro leverages cutting-edge artificial intelligence 
-              to provide comprehensive protection against evolving cyber threats.
-            </p>
+            <p className="text-lg text-gray-300 max-w-3 xlmx-auto">Our AI Cybersecurity Monitor Pro leverages cutting-edge artificial intelligence 
+              to provide comprehensive protection against evolving cyber threats.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key="{index}" className="bg-slate-800/50 rounded-2 xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-allduration-300group" />
+              <div key="{index}" className="bg-slate-800/50 rounded-2 xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-allduration-300 group" />
                 <div className="mb-6">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4group-hover:scale-110transition-transform"  />{feature.icon}
+                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4 group-hover:scale-110 transition-transform"  />{feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3text-center"   />{feature.title}</h3>
-                  <p className="text-gray-300 mb-4text-center">
-              {feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center"   />{feature.title}</h3>
+                  <p className="text-gray-300 mb-4 text-center">{feature.description}</p>
                   <ul className="space-y-2" />
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key="{benefitIndex}" className="flex items-centertext-smtext-gray-300" />
-                        <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
@@ -336,14 +330,12 @@ export default function AiCybersecurityMonitorProPage() {
         <section className="mb-16" />
           <div className="text-centermb-12">
             <h2 className="text-3 xl font-bold text-white mb-4"   />Comprehensive Security Coverage</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto">
-              Protect every aspect of your digital infrastructure with our comprehensive security capabilities.
-            </p>
+            <p className="text-lg text-gray-300 max-w-3 xlmx-auto">Protect every aspect of your digital infrastructure with our comprehensive security capabilities.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-3gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {securityCapabilities.map((capability, index) => (
-              <div key="{index}" className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30transition-allduration-300" />
+              <div key="{index}" className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-allduration-300" />
                 <div className="flex items-centermb-4">
                   {capability.icon}
                   <h3 className="text-lg font-semiboldtext-whiteml-3"   />{capability.category}</h3>
@@ -351,7 +343,7 @@ export default function AiCybersecurityMonitorProPage() {
                 <ul className="space-y-2" />
                   {capability.items.map((item, itemIndex) => (
                     <li key="{itemIndex}" className="flex items-centertext-smtext-gray-300" />
-                      <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -365,19 +357,16 @@ export default function AiCybersecurityMonitorProPage() {
         <section className="mb-16" />
           <div className="text-centermb-12">
             <h2 className="text-3 xl font-bold text-white mb-4"   />Threat Protection</h2>
-            <p className="text-lg text-gray-300 max-w-3xlmx-auto">
-              Advanced AI detection and prevention for all types of cyber threats and attacks.
-            </p>
+            <p className="text-lg text-gray-300 max-w-3 xlmx-auto">Advanced AI detection and prevention for all types of cyber threats and attacks.</p>
           </div>
           
-          <div className="grid grid-cols-2md:grid-cols-4gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {threatTypes.map((threat, index) => (
-              <div key="{index}" className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300text-centergroup" />
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-3group-hover:scale-110transition-transform"  />{threat.icon}
+              <div key="{index}" className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 text-centergroup" />
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-3 group-hover:scale-110 transition-transform"  />{threat.icon}
                 </div>
                 <h3 className="text-whitefont-semiboldmb-1"   />{threat.name}</h3>
-                <p className="text-gray-400text-sm">
-              {threat.category}</p>
+                <p className="text-gray-400 text-sm">{threat.category}</p>
               </div>
             ))}
           </div>
@@ -387,18 +376,16 @@ export default function AiCybersecurityMonitorProPage() {
         <section className="mb-16" />
           <div className="text-centermb-12">
             <h2 className="text-3 xl font-bold text-white mb-4"   />Choose Your Security Plan</h2>
-            <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Flexible pricing plans designed to protect businesses of all sizes.
-            </p>
+            <p className="text-lg text-gray-300 max-w-2 xlmx-auto">Flexible pricing plans designed to protect businesses of all sizes.</p>
           </div>
           
-          <div className="grid grid-cols-1md:grid-cols-3gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key="{index}" className="{`bg-slate-800/50" rounded-2 xl p-8 border transition-all duration-300 relative ${
                 plan.popular ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' : 'border-slate-700 hover: border-cyan-500/30'
               }`} />
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2transform-translate-x-1/2">
+                  <div className="absolute -top-3 left-1/2 transform-translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
                     </span>
                   </div>
@@ -407,17 +394,16 @@ export default function AiCybersecurityMonitorProPage() {
                 <div className="text-centermb-6">
                   <h3 className="text-2 xl font-bold text-white mb-2"   />{plan.name}</h3>
                   <div className="flex items-baselinejustify-centermb-2">
-                    <span className="text-4xlfont-boldtext-cyan-400"   />{plan.price}</span>
-                    <span className="text-gray-400ml-1"   />{plan.period}</span>
+                    <span className="text-4 xlfont-boldtext-cyan-400"   />{plan.price}</span>
+                    <span className="text-gray-400 ml-1"   />{plan.period}</span>
                   </div>
-                  <p className="text-gray-300">
-              {plan.description}</p>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
                 
-                <ul className="space-y-3mb-8" />
+                <ul className="space-y-3 mb-8" />
                   {plan.features.map((feature, featureIndex) => (
                     <li key="{featureIndex}" className="flex items-center text-gray-300" />
-                      <CheckCircle className="w-5 h-5 text-green-400mr-3flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -431,7 +417,7 @@ export default function AiCybersecurityMonitorProPage() {
                   }`} >
           {plan.cta}
                   
-          <ArrowRight className="w-4h-4ml-2"  />
+          <ArrowRight className="w-4 h-4 ml-2" />
         </Link>
               </div>
             ))}
@@ -439,36 +425,31 @@ export default function AiCybersecurityMonitorProPage() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xlmb-16" />
-          <div className="max-w-7xlmx-auto">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2 xlmb-16" />
+          <div className="max-w-7 xlmx-auto">
             <div className="text-centermb-12">
               <h2 className="text-3 xl font-bold text-white mb-4"   />What Our Customers Say</h2>
-              <p className="text-lg text-gray-300 max-w-2xlmx-auto">
-              Join hundreds of security professionals who trust AI Cybersecurity Monitor Pro.
-              </p>
+              <p className="text-lg text-gray-300 max-w-2 xlmx-auto">Join hundreds of security professionals who trust AI Cybersecurity Monitor Pro.</p>
             </div>
             
-            <div className="grid grid-cols-1md:grid-cols-3gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6borderborder-slate-700" />
+                <div key="{index}" className="bg-slate-800/50 rounded-xl p-6 borderborder-slate-700" />
                   <div className="flex items-centermb-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-whitefont-boldmr-4"  />{testimonial.avatar}
                     </div>
                     <div>
             <h4 className="text-whitefont-semibold"   />{testimonial.name}</h4>
-                      <p className="text-gray-400text-sm">
-              {testimonial.role}</p>
-                      <p className="text-cyan-400text-smfont-semibold">
-              {testimonial.company}</p>
+                      <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                      <p className="text-cyan-400 text-smfont-semibold">{testimonial.company}</p>
                     </div>
                   <div className="flex items-centermb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-4 h-4text-yellow-400fill-current" />
+                      <Star key="{i}" className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300italicmb-3">
-              "{testimonial.content}"</p>
-                  <div className="text-cyan-400font-semiboldtext-sm"  />Result: {testimonial.results}
+                  <p className="text-gray-300 italicmb-3">"{testimonial.content}"</p>
+                  <div className="text-cyan-400 font-semiboldtext-sm"  />Result: {testimonial.results}
                   </div>
               ))}
             </div>
@@ -476,26 +457,24 @@ export default function AiCybersecurityMonitorProPage() {
 
         {/* CTA Section */}
         <section className="text-center" />
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-12borderborder-cyan-500/30">
+          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2 xl p-12 borderborder-cyan-500/30">
             <h2 className="text-3 xl font-bold text-white mb-4"  />Ready to Secure Your Business?
             </h2>
-            <p className="text-lg text-gray-300 mb-8 max-w-3xlmx-auto">
-              Start your free trial today and experience enterprise-grade security powered by AI. 
-              Join hundreds of organizations already protected by our advanced threat detection.
-            </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center">
+            <p className="text-lg text-gray-300 mb-8 max-w-3 xlmx-auto">Start your free trial today and experience enterprise-grade security powered by AI. 
+              Join hundreds of organizations already protected by our advanced threat detection.</p>
+            <div className="flex flex-col sm:flex-rowgap-4 justify-center">
               <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-centerjustify-center" >
           Start Free Trial
                 
-          <Sparkles className="w-5h-5ml-2" /  />
+          <Sparkles className="w-5 h-5 ml-2" /  />
         </Link>
               <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-centerjustify-center" >
           Learn More
                 
-          <Shield className="w-5h-5ml-2" /  />
+          <Shield className="w-5 h-5 ml-2" /  />
         </Link>
             </div>
-            <div className="mt-8text-white/80text-sm">
+            <div className="mt-8 text-white/80 text-sm">
               <p />✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 monitoring • ✓ Cancel anytime</p>
             </div>
         </section>
