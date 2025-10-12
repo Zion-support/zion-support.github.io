@@ -1,46 +1,19 @@
-'use client'
-import React from 'react'
-import SEOHead from './components/SEOHead'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock } from 'lucide-react'
-import { Link } from 'react-router-dom'
-
-const HomePage: React.FC = () => {
-  const features = [
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Cloud, 
   Shield, 
-  Zap, 
-  Globe, 
   Database, 
   Code, 
-  Smartphone, 
   ArrowRight, 
-  CheckCircle, 
-  Star,
-  Users,
-  TrendingUp,
-  Lock,
-  Cpu,
-  Wifi,
+  Network,
   BarChart3,
-  MessageSquare,
-  FileText,
-  Camera,
-  Mail,
-  Phone,
-  MapPin,
-  Github,
-  Linkedin,
-  Twitter
+  Bot
 } from 'lucide-react';
 
 export default function HomePage() {
-  const aiServices = [
+  const features = [
     {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
       title: 'AI-Powered Solutions',
@@ -61,31 +34,6 @@ export default function HomePage() {
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with our advanced analytics platform.'
     }
-  ]
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Home</h1>
-          <p className="text-xl text-gray-300 mb-8">Welcome to Zion Tech Group - Advanced AI and IT Solutions</p>
-          <a
-            href="/"
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-          >
-            Go Home
-          </a>
-        </div>
-import { Link } from 'react-router-dom';
-import SEOHead from './components/SEOHead';
-import FuturisticBackground from './components/FuturisticBackground';
-import FuturisticCard from './components/FuturisticCard';
-import NeonButton from './components/NeonButton';
-import AnimatedText from './components/AnimatedText';
-
-export default function HomePage() {
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99%', label: 'Success Rate' },
-    { number: '24/7', label: 'Support' }
   ];
 
   const services = [
@@ -109,25 +57,17 @@ export default function HomePage() {
       title: 'AI Automation',
       description: 'Intelligent automation solutions to streamline your business processes.'
     }
-  ]
+  ];
 
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '100+', label: 'Happy Clients' },
     { number: '24/7', label: 'Support Available' },
     { number: '99.9%', label: 'Uptime Guarantee' }
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOHead 
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI-powered IT solutions, cloud infrastructure, cybersecurity, and digital transformation services."
-        keywords="AI solutions, IT services, cloud computing, cybersecurity, digital transformation"
-      />
-      
-      <Navigation />
-      
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -250,21 +190,11 @@ export default function HomePage() {
                 >
                   Explore AI Services
                 </Link>
-                </NeonButton>
               </div>
             </div>
           </div>
         </div>
       </section>
-        </section>
-
-      <Footer />
     </div>
-  )
-}
-
-export default HomePage
-      </div>
-    </>
   );
 }
