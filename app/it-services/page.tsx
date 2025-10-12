@@ -13,8 +13,9 @@ import {
   Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, 
   RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, 
   Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, 
-  Angry, Surprised, Confused, Wink, Kiss, Tongue, FileText, Package
-} from '../components/Icons'
+  Angry, Surprised, Confused, Wink, Kiss, Tongue, FileText, Package,
+  Settings, ShoppingCart, Link, Wifi
+} from 'lucide-react'
 
 export default function ITServicesPage() {
   const itServices = [
@@ -125,6 +126,303 @@ export default function ITServicesPage() {
       features: ['24/7 support', 'Proactive monitoring', 'Issue resolution', 'System updates', 'Performance optimization'],
       link: '/it-support',
       category: 'Support'
+    },
+    {
+      icon: <Cloud className="w-8 h-8 text-cyan-400" />,
+      title: 'Cloud Infrastructure',
+      description: 'Comprehensive cloud infrastructure solutions with AWS, Azure, and Google Cloud Platform expertise.',
+      price: 'Starting at $299/month',
+      features: ['Multi-cloud strategy', 'Infrastructure as code', 'Auto-scaling', 'Cost optimization', 'Security hardening'],
+      link: '/cloud-infrastructure',
+      category: 'Cloud Services'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: 'Cybersecurity Solutions',
+      description: 'Advanced cybersecurity solutions with threat detection, incident response, and compliance management.',
+      price: 'Starting at $399/month',
+      features: ['Threat detection', 'Incident response', 'Compliance management', 'Security audits', 'Penetration testing'],
+      link: '/cybersecurity-solutions',
+      category: 'Security'
+    },
+    {
+      icon: <Code className="w-8 h-8 text-purple-400" />,
+      title: 'Web Development',
+      description: 'Modern web applications built with React, Next.js, and cutting-edge technologies for optimal performance.',
+      price: 'Starting at $2,500/project',
+      features: ['Modern frameworks', 'Responsive design', 'SEO optimization', 'Performance tuning', 'Maintenance support'],
+      link: '/web-development',
+      category: 'Development'
+    },
+    {
+      icon: <Smartphone className="w-8 h-8 text-green-400" />,
+      title: 'Mobile Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android with seamless user experiences.',
+      price: 'Starting at $3,500/project',
+      features: ['iOS & Android apps', 'Cross-platform solutions', 'App store optimization', 'Push notifications', 'Offline functionality'],
+      link: '/mobile-development',
+      category: 'Development'
+    },
+    {
+      icon: <Code className="w-8 h-8 text-orange-400" />,
+      title: 'API Development',
+      description: 'Robust RESTful APIs and GraphQL endpoints with comprehensive documentation and testing.',
+      price: 'Starting at $1,800/project',
+      features: ['RESTful APIs', 'GraphQL endpoints', 'API documentation', 'Rate limiting', 'Authentication'],
+      link: '/api-development',
+      category: 'Development'
+    },
+    {
+      icon: <Database className="w-8 h-8 text-indigo-400" />,
+      title: 'Database Management',
+      description: 'Expert database design, optimization, and maintenance for MySQL, PostgreSQL, MongoDB, and more.',
+      price: 'Starting at $299/month',
+      features: ['Database design', 'Performance optimization', 'Backup & recovery', 'Security hardening', 'Monitoring'],
+      link: '/database-management',
+      category: 'Data Services'
+    },
+    {
+      icon: <Settings className="w-8 h-8 text-pink-400" />,
+      title: 'DevOps & CI/CD',
+      description: 'Automate deployment, monitoring, and scaling with CI/CD pipelines and infrastructure as code.',
+      price: 'Starting at $499/month',
+      features: ['CI/CD pipelines', 'Infrastructure as code', 'Container orchestration', 'Monitoring & alerting', 'Auto-scaling'],
+      link: '/devops-cicd',
+      category: 'Operations'
+    },
+    {
+      icon: <BarChart className="w-8 h-8 text-yellow-400" />,
+      title: 'Data Analytics & BI',
+      description: 'Transform raw data into actionable insights with advanced analytics and visualization tools.',
+      price: 'Starting at $349/month',
+      features: ['Data visualization', 'Predictive analytics', 'Custom dashboards', 'Real-time reporting', 'Data integration'],
+      link: '/data-analytics-bi',
+      category: 'Data Services'
+    },
+    {
+      icon: <Code className="w-8 h-8 text-teal-400" />,
+      title: 'Custom Software',
+      description: 'Tailored software solutions designed specifically for your business needs and requirements.',
+      price: 'Starting at $5,000/project',
+      features: ['Custom development', 'Business logic', 'Integration support', 'Scalable architecture', 'Ongoing maintenance'],
+      link: '/custom-software',
+      category: 'Development'
+    },
+    {
+      icon: <Network className="w-8 h-8 text-rose-400" />,
+      title: 'Network Infrastructure',
+      description: 'Design and implement robust network infrastructure with high availability and security.',
+      price: 'Starting at $1,200/setup',
+      features: ['Network design', 'Hardware installation', 'Security configuration', 'Performance monitoring', 'Maintenance'],
+      link: '/network-infrastructure',
+      category: 'Infrastructure'
+    },
+    {
+      icon: <Package className="w-8 h-8 text-cyan-400" />,
+      title: 'IT Asset Management',
+      description: 'Complete IT asset lifecycle management with tracking, optimization, and compliance.',
+      price: 'Starting at $199/month',
+      features: ['Asset tracking', 'Lifecycle management', 'Compliance reporting', 'Cost optimization', 'Inventory management'],
+      link: '/it-asset-management',
+      category: 'Management'
+    },
+    {
+      icon: <Lock className="w-8 h-8 text-red-400" />,
+      title: 'IT Security Services',
+      description: 'Comprehensive security services including assessment, monitoring, and incident response.',
+      price: 'Starting at $299/month',
+      features: ['Security assessment', 'Threat monitoring', 'Incident response', 'Compliance audit', 'Security training'],
+      link: '/it-security-services',
+      category: 'Security'
+    },
+    {
+      icon: <Calendar className="w-8 h-8 text-purple-400" />,
+      title: 'IT Project Management',
+      description: 'Professional project management for IT initiatives with agile methodologies and best practices.',
+      price: 'Starting at $179/month',
+      features: ['Agile methodologies', 'Project planning', 'Resource management', 'Risk assessment', 'Quality assurance'],
+      link: '/it-project-management',
+      category: 'Management'
+    },
+    {
+      icon: <Cloud className="w-8 h-8 text-blue-400" />,
+      title: 'Cloud-Native Development',
+      description: 'Build scalable, cloud-native applications using microservices and container technologies.',
+      price: 'Starting at $4,500/project',
+      features: ['Microservices architecture', 'Container orchestration', 'Serverless functions', 'Cloud-native patterns', 'DevOps integration'],
+      link: '/cloud-native-development',
+      category: 'Development'
+    },
+    {
+      icon: <Brain className="w-8 h-8 text-pink-400" />,
+      title: 'AI Integration Services',
+      description: 'Integrate AI and machine learning capabilities into your existing systems and workflows.',
+      price: 'Starting at $2,999/project',
+      features: ['AI model integration', 'Data pipeline setup', 'API development', 'Performance optimization', 'Training & support'],
+      link: '/ai-integration-services',
+      category: 'AI Integration'
+    },
+    {
+      icon: <Link className="w-8 h-8 text-indigo-400" />,
+      title: 'Blockchain Development',
+      description: 'Build decentralized applications and smart contracts using blockchain technologies.',
+      price: 'Starting at $6,000/project',
+      features: ['Smart contracts', 'DApp development', 'Token creation', 'DeFi solutions', 'Blockchain consulting'],
+      link: '/blockchain-development',
+      category: 'Blockchain'
+    },
+    {
+      icon: <Wifi className="w-8 h-8 text-green-400" />,
+      title: 'IoT Development',
+      description: 'Connected device solutions with IoT platforms, sensors, and real-time data processing.',
+      price: 'Starting at $3,500/project',
+      features: ['IoT platform setup', 'Sensor integration', 'Data processing', 'Device management', 'Analytics dashboard'],
+      link: '/iot-development',
+      category: 'IoT'
+    },
+    {
+      icon: <ShoppingCart className="w-8 h-8 text-orange-400" />,
+      title: 'E-commerce Development',
+      description: 'Complete e-commerce solutions with payment processing, inventory management, and analytics.',
+      price: 'Starting at $4,000/project',
+      features: ['Online store setup', 'Payment integration', 'Inventory management', 'Order processing', 'Analytics & reporting'],
+      link: '/e-commerce-development',
+      category: 'E-commerce'
+    },
+    {
+      icon: <Code className="w-8 h-8 text-cyan-400" />,
+      title: 'Advanced API Development',
+      description: 'Enterprise-grade API development with advanced features, security, and scalability.',
+      price: 'Starting at $3,000/project',
+      features: ['Enterprise APIs', 'Advanced security', 'Rate limiting', 'API versioning', 'Comprehensive testing'],
+      link: '/api-development-advanced',
+      category: 'Development'
+    },
+    {
+      icon: <Database className="w-8 h-8 text-purple-400" />,
+      title: 'Data Engineering',
+      description: 'Build robust data pipelines and warehouses for big data processing and analytics.',
+      price: 'Starting at $2,500/month',
+      features: ['Data pipeline design', 'ETL processes', 'Data warehousing', 'Big data processing', 'Data quality management'],
+      link: '/data-engineering',
+      category: 'Data Services'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: 'Advanced Cybersecurity',
+      description: 'Next-generation cybersecurity with threat hunting, zero-trust architecture, and AI-powered defense.',
+      price: 'Starting at $599/month',
+      features: ['Threat hunting', 'Zero-trust architecture', 'AI-powered defense', 'Advanced monitoring', 'Incident forensics'],
+      link: '/cybersecurity-advanced',
+      category: 'Security'
+    },
+    {
+      icon: <Cloud className="w-8 h-8 text-blue-400" />,
+      title: 'Cloud Migration Advanced',
+      description: 'Complex cloud migration with zero downtime, data integrity, and performance optimization.',
+      price: 'Starting at $5,000/migration',
+      features: ['Zero downtime migration', 'Data integrity', 'Performance optimization', 'Cost optimization', 'Security enhancement'],
+      link: '/cloud-migration-advanced',
+      category: 'Cloud Services'
+    },
+    {
+      icon: <Settings className="w-8 h-8 text-green-400" />,
+      title: 'Advanced DevOps & SRE',
+      description: 'Site reliability engineering with advanced monitoring, automation, and incident response.',
+      price: 'Starting at $799/month',
+      features: ['Site reliability engineering', 'Advanced monitoring', 'Automation', 'Incident response', 'Performance optimization'],
+      link: '/devops-advanced',
+      category: 'Operations'
+    },
+    {
+      icon: <Cpu className="w-8 h-8 text-purple-400" />,
+      title: 'MLOps & AI Operations',
+      description: 'Machine learning operations with model deployment, monitoring, and lifecycle management.',
+      price: 'Starting at $1,299/month',
+      features: ['Model deployment', 'ML monitoring', 'Model versioning', 'A/B testing', 'Performance tracking'],
+      link: '/machine-learning-ops',
+      category: 'AI Operations'
+    },
+    {
+      icon: <Link className="w-8 h-8 text-indigo-400" />,
+      title: 'Enterprise Integration',
+      description: 'Connect and integrate enterprise systems with modern integration platforms and APIs.',
+      price: 'Starting at $2,000/month',
+      features: ['System integration', 'API management', 'Data synchronization', 'Workflow automation', 'Legacy system modernization'],
+      link: '/enterprise-integration',
+      category: 'Integration'
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      title: 'Performance Optimization',
+      description: 'Optimize application and infrastructure performance for maximum speed and efficiency.',
+      price: 'Starting at $1,500/optimization',
+      features: ['Application optimization', 'Infrastructure tuning', 'Database optimization', 'Caching strategies', 'Load testing'],
+      link: '/performance-optimization',
+      category: 'Optimization'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: 'Disaster Recovery Advanced',
+      description: 'Comprehensive disaster recovery solutions with business continuity planning and testing.',
+      price: 'Starting at $999/month',
+      features: ['Business continuity planning', 'Disaster recovery testing', 'Data backup strategies', 'Failover systems', 'Recovery procedures'],
+      link: '/disaster-recovery-advanced',
+      category: 'Business Continuity'
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8 text-green-400" />,
+      title: 'Compliance Automation',
+      description: 'Automate compliance management for GDPR, HIPAA, SOX, and other regulatory requirements.',
+      price: 'Starting at $699/month',
+      features: ['Compliance monitoring', 'Automated reporting', 'Policy management', 'Audit trails', 'Risk assessment'],
+      link: '/compliance-automation',
+      category: 'Compliance'
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8 text-cyan-400" />,
+      title: 'Cloud Cost Optimization',
+      description: 'Optimize cloud costs with intelligent resource management and cost monitoring.',
+      price: 'Starting at $399/month',
+      features: ['Cost analysis', 'Resource optimization', 'Automated scaling', 'Cost monitoring', 'Budget management'],
+      link: '/cloud-cost-optimization',
+      category: 'Cloud Services'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-orange-400" />,
+      title: 'Security Automation',
+      description: 'Automate security processes with AI-powered threat detection and response.',
+      price: 'Starting at $599/month',
+      features: ['Automated threat detection', 'Response automation', 'Security orchestration', 'Compliance automation', 'Incident management'],
+      link: '/security-automation',
+      category: 'Security'
+    },
+    {
+      icon: <BarChart className="w-8 h-8 text-purple-400" />,
+      title: 'Data Visualization & BI',
+      description: 'Advanced data visualization and business intelligence with interactive dashboards.',
+      price: 'Starting at $449/month',
+      features: ['Interactive dashboards', 'Data storytelling', 'Advanced visualizations', 'Self-service BI', 'Mobile analytics'],
+      link: '/data-visualization',
+      category: 'Data Services'
+    },
+    {
+      icon: <Settings className="w-8 h-8 text-pink-400" />,
+      title: 'Workflow Automation',
+      description: 'Automate business processes with intelligent workflow management and integration.',
+      price: 'Starting at $299/month',
+      features: ['Process automation', 'Workflow design', 'Integration management', 'Task automation', 'Performance monitoring'],
+      link: '/workflow-automation',
+      category: 'Automation'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-blue-400" />,
+      title: 'Cloud-Native Security',
+      description: 'Specialized security solutions for cloud-native applications and container environments.',
+      price: 'Starting at $499/month',
+      features: ['Container security', 'Kubernetes security', 'Cloud security', 'Runtime protection', 'Vulnerability scanning'],
+      link: '/cloud-native-security',
+      category: 'Security'
     }
   ]
 
@@ -135,7 +433,19 @@ export default function ITServicesPage() {
     'Security',
     'Data Services',
     'Operations',
-    'Support'
+    'Support',
+    'Cloud Services',
+    'Management',
+    'AI Integration',
+    'Blockchain',
+    'IoT',
+    'E-commerce',
+    'AI Operations',
+    'Integration',
+    'Optimization',
+    'Business Continuity',
+    'Compliance',
+    'Automation'
   ]
 
   const stats = [

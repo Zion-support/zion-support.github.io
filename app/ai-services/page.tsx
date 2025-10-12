@@ -153,6 +153,618 @@ export default function AIServicesPage() {
       features: ['Real-time translation', 'Document translation', 'Website localization', 'Voice translation', 'Quality assurance'],
       link: '/ai-translation-services',
       category: 'Language Services'
+    },
+    {
+      icon: <Heart className="w-8 h-8 text-red-400" />,
+      title: 'AI Healthcare Diagnostics',
+      description: 'Advanced medical AI for diagnostic imaging, patient monitoring, and treatment recommendations.',
+      price: 'Starting at $499/month',
+      features: ['Medical imaging analysis', 'Patient monitoring', 'Treatment recommendations', 'Drug interaction checking', 'Clinical decision support'],
+      link: '/ai-healthcare-diagnostics',
+      category: 'Healthcare'
+    },
+    {
+      icon: <DollarSign className="w-8 h-8 text-green-400" />,
+      title: 'AI Financial Forecasting',
+      description: 'Predict market trends, analyze investment opportunities, and optimize financial portfolios with AI.',
+      price: 'Starting at $299/month',
+      features: ['Market prediction', 'Portfolio optimization', 'Risk assessment', 'Algorithmic trading', 'Financial modeling'],
+      link: '/ai-financial-forecasting',
+      category: 'Financial Services'
+    },
+    {
+      icon: <Cpu className="w-8 h-8 text-purple-400" />,
+      title: 'AI IoT Analytics',
+      description: 'Intelligent analysis of IoT data streams for predictive maintenance and operational optimization.',
+      price: 'Starting at $199/month',
+      features: ['IoT data processing', 'Predictive maintenance', 'Anomaly detection', 'Real-time monitoring', 'Edge computing'],
+      link: '/ai-iot-analytics',
+      category: 'IoT Solutions'
+    },
+    {
+      icon: <MessageCircle className="w-8 h-8 text-cyan-400" />,
+      title: 'AI Conversational AI Platform',
+      description: 'Enterprise-grade conversational AI platform with advanced natural language understanding.',
+      price: 'Starting at $399/month',
+      features: ['Advanced NLP', 'Multi-turn conversations', 'Context awareness', 'Voice integration', 'Custom training'],
+      link: '/ai-conversational-ai',
+      category: 'Conversational AI'
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8 text-emerald-400" />,
+      title: 'AI Automated Testing',
+      description: 'Intelligent test automation with AI-powered test generation, execution, and maintenance.',
+      price: 'Starting at $179/month',
+      features: ['Test generation', 'Automated execution', 'Bug detection', 'Performance testing', 'Regression testing'],
+      link: '/ai-automated-testing',
+      category: 'Quality Assurance'
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-indigo-400" />,
+      title: 'AI Knowledge Management',
+      description: 'Intelligent knowledge base with automated content organization and smart search capabilities.',
+      price: 'Starting at $129/month',
+      features: ['Content organization', 'Smart search', 'Knowledge extraction', 'Auto-categorization', 'Expert recommendations'],
+      link: '/ai-knowledge-management',
+      category: 'Knowledge Management'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-pink-400" />,
+      title: 'AI Customer Churn Prediction',
+      description: 'Predict and prevent customer churn with AI-powered behavioral analysis and retention strategies.',
+      price: 'Starting at $199/month',
+      features: ['Churn prediction', 'Behavioral analysis', 'Retention strategies', 'Risk scoring', 'Intervention alerts'],
+      link: '/ai-customer-churn',
+      category: 'Customer Analytics'
+    },
+    {
+      icon: <BarChart className="w-8 h-8 text-orange-400" />,
+      title: 'AI Automated Reporting',
+      description: 'Generate intelligent reports automatically with AI-powered data analysis and insights.',
+      price: 'Starting at $89/month',
+      features: ['Auto report generation', 'Data visualization', 'Insight extraction', 'Scheduled reports', 'Custom templates'],
+      link: '/ai-automated-reporting',
+      category: 'Business Intelligence'
+    },
+    {
+      icon: <Mic className="w-8 h-8 text-teal-400" />,
+      title: 'AI Voice Assistant Platform',
+      description: 'Build custom voice assistants with advanced speech recognition and natural language processing.',
+      price: 'Starting at $249/month',
+      features: ['Speech recognition', 'Voice synthesis', 'Command processing', 'Multi-language support', 'Custom wake words'],
+      link: '/ai-voice-assistant',
+      category: 'Voice Technology'
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-purple-400" />,
+      title: 'AI Content Generation Pro',
+      description: 'Advanced content creation with AI-powered writing, editing, and optimization for all formats.',
+      price: 'Starting at $179/month',
+      features: ['Multi-format content', 'SEO optimization', 'Brand voice training', 'Plagiarism detection', 'Content planning'],
+      link: '/ai-content-generation-pro',
+      category: 'Content Creation'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: 'AI Cyber Defense Matrix',
+      description: 'Advanced AI-powered cybersecurity with threat hunting, incident response, and security orchestration.',
+      price: 'Starting at $599/month',
+      features: ['Threat hunting', 'Incident response', 'Security orchestration', 'Behavioral analysis', 'Zero-day detection'],
+      link: '/ai-cyber-defense-matrix',
+      category: 'Cybersecurity'
+    },
+    {
+      icon: <BarChart className="w-8 h-8 text-cyan-400" />,
+      title: 'AI Business Intelligence Pro',
+      description: 'Enterprise-grade business intelligence with advanced analytics, forecasting, and strategic insights.',
+      price: 'Starting at $399/month',
+      features: ['Advanced analytics', 'Strategic forecasting', 'Executive dashboards', 'Data storytelling', 'ROI optimization'],
+      link: '/ai-business-intelligence-pro',
+      category: 'Business Intelligence'
+    },
+    {
+      icon: <Heart className="w-8 h-8 text-pink-400" />,
+      title: 'AI Drug Discovery Pro',
+      description: 'Accelerate pharmaceutical research with AI-powered drug discovery and molecular analysis.',
+      price: 'Starting at $999/month',
+      features: ['Molecular analysis', 'Drug design', 'Clinical trial optimization', 'Side effect prediction', 'Patent analysis'],
+      link: '/ai-drug-discovery-pro',
+      category: 'Pharmaceutical'
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-green-400" />,
+      title: 'AI Agricultural Intelligence Pro',
+      description: 'Smart farming solutions with AI-powered crop monitoring, yield prediction, and resource optimization.',
+      price: 'Starting at $299/month',
+      features: ['Crop monitoring', 'Yield prediction', 'Resource optimization', 'Pest detection', 'Weather analysis'],
+      link: '/ai-agricultural-intelligence-pro',
+      category: 'Agriculture'
+    },
+    {
+      icon: <Cloud className="w-8 h-8 text-blue-400" />,
+      title: 'AI Cloud Infrastructure',
+      description: 'Intelligent cloud management with AI-powered optimization, cost management, and security.',
+      price: 'Starting at $199/month',
+      features: ['Resource optimization', 'Cost management', 'Security monitoring', 'Auto-scaling', 'Performance tuning'],
+      link: '/ai-cloud-infrastructure',
+      category: 'Cloud Computing'
+    },
+    {
+      icon: <Code className="w-8 h-8 text-orange-400" />,
+      title: 'AI Code Generation',
+      description: 'Generate high-quality code automatically with AI-powered development tools and frameworks.',
+      price: 'Starting at $149/month',
+      features: ['Code generation', 'Framework support', 'Bug fixing', 'Documentation', 'Testing automation'],
+      link: '/ai-code-generation',
+      category: 'Development Tools'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: 'AI Code Security Auditor',
+      description: 'Automated code security analysis with vulnerability detection and remediation recommendations.',
+      price: 'Starting at $179/month',
+      features: ['Vulnerability scanning', 'Security analysis', 'Compliance checking', 'Remediation guidance', 'Risk assessment'],
+      link: '/ai-code-security-auditor',
+      category: 'Security'
+    },
+    {
+      icon: <Cloud className="w-8 h-8 text-indigo-400" />,
+      title: 'AI Content Delivery Network',
+      description: 'Intelligent CDN with AI-powered content optimization, caching, and global distribution.',
+      price: 'Starting at $99/month',
+      features: ['Smart caching', 'Content optimization', 'Global distribution', 'Performance monitoring', 'DDoS protection'],
+      link: '/ai-content-delivery-network',
+      category: 'Content Delivery'
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-purple-400" />,
+      title: 'AI Content Management',
+      description: 'Intelligent content management with AI-powered organization, tagging, and workflow automation.',
+      price: 'Starting at $119/month',
+      features: ['Auto-tagging', 'Content organization', 'Workflow automation', 'Version control', 'Collaboration tools'],
+      link: '/ai-content-management',
+      category: 'Content Management'
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-pink-400" />,
+      title: 'AI Content Writer',
+      description: 'Professional AI writing assistant for blogs, articles, marketing copy, and technical documentation.',
+      price: 'Starting at $79/month',
+      features: ['Multi-format writing', 'SEO optimization', 'Tone adjustment', 'Plagiarism check', 'Grammar correction'],
+      link: '/ai-content-writer',
+      category: 'Content Creation'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: 'AI Content Moderation',
+      description: 'Automated content moderation with AI-powered filtering, classification, and policy enforcement.',
+      price: 'Starting at $139/month',
+      features: ['Content filtering', 'Policy enforcement', 'Spam detection', 'Inappropriate content detection', 'Custom rules'],
+      link: '/ai-content-moderation',
+      category: 'Content Moderation'
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-cyan-400" />,
+      title: 'AI Content Studio',
+      description: 'Complete content creation studio with AI-powered ideation, creation, and optimization tools.',
+      price: 'Starting at $159/month',
+      features: ['Content ideation', 'Multi-format creation', 'Brand consistency', 'Performance analytics', 'Team collaboration'],
+      link: '/ai-content-studio',
+      category: 'Content Creation'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-emerald-400" />,
+      title: 'AI Conversation Analytics',
+      description: 'Analyze customer conversations with AI-powered sentiment analysis and engagement insights.',
+      price: 'Starting at $169/month',
+      features: ['Sentiment analysis', 'Engagement metrics', 'Conversation insights', 'Trend analysis', 'Performance tracking'],
+      link: '/ai-conversation-analytics',
+      category: 'Analytics'
+    },
+    {
+      icon: <MessageCircle className="w-8 h-8 text-blue-400" />,
+      title: 'AI Conversational AI',
+      description: 'Build sophisticated conversational AI with advanced natural language understanding and generation.',
+      price: 'Starting at $229/month',
+      features: ['Advanced NLP', 'Context management', 'Multi-turn conversations', 'Intent recognition', 'Response generation'],
+      link: '/ai-conversational-ai',
+      category: 'Conversational AI'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-purple-400" />,
+      title: 'AI CRM Assistant',
+      description: 'Intelligent CRM assistant with automated lead scoring, customer insights, and sales optimization.',
+      price: 'Starting at $189/month',
+      features: ['Lead scoring', 'Customer insights', 'Sales optimization', 'Pipeline management', 'Automated follow-ups'],
+      link: '/ai-crm-assistant',
+      category: 'CRM'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-pink-400" />,
+      title: 'AI Customer Service',
+      description: 'Comprehensive AI customer service with automated responses, ticket routing, and resolution.',
+      price: 'Starting at $199/month',
+      features: ['Automated responses', 'Ticket routing', 'Resolution tracking', 'Customer satisfaction', 'Multi-channel support'],
+      link: '/ai-customer-service',
+      category: 'Customer Service'
+    },
+    {
+      icon: <MessageCircle className="w-8 h-8 text-cyan-400" />,
+      title: 'AI Customer Support',
+      description: 'Advanced customer support with AI-powered assistance, knowledge base, and escalation management.',
+      price: 'Starting at $179/month',
+      features: ['AI assistance', 'Knowledge base', 'Escalation management', 'Performance metrics', 'Customer insights'],
+      link: '/ai-customer-support',
+      category: 'Customer Support'
+    },
+    {
+      icon: <MessageCircle className="w-8 h-8 text-green-400" />,
+      title: 'AI Customer Support Bot',
+      description: 'Intelligent support bot with natural language processing and automated problem resolution.',
+      price: 'Starting at $149/month',
+      features: ['Natural language processing', 'Problem resolution', 'Escalation handling', 'Learning capabilities', 'Integration support'],
+      link: '/ai-customer-support-bot',
+      category: 'Customer Support'
+    },
+    {
+      icon: <MessageCircle className="w-8 h-8 text-indigo-400" />,
+      title: 'AI Customer Support Chatbot',
+      description: 'Advanced chatbot for customer support with context awareness and human handoff capabilities.',
+      price: 'Starting at $129/month',
+      features: ['Context awareness', 'Human handoff', 'Multi-language support', 'Custom training', 'Analytics dashboard'],
+      link: '/ai-customer-support-chatbot',
+      category: 'Customer Support'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: 'AI Cybersecurity Monitor',
+      description: 'Real-time cybersecurity monitoring with AI-powered threat detection and response automation.',
+      price: 'Starting at $299/month',
+      features: ['Real-time monitoring', 'Threat detection', 'Response automation', 'Incident analysis', 'Security reporting'],
+      link: '/ai-cybersecurity-monitor',
+      category: 'Cybersecurity'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-orange-400" />,
+      title: 'AI Cybersecurity Suite',
+      description: 'Comprehensive cybersecurity suite with AI-powered protection, monitoring, and incident response.',
+      price: 'Starting at $399/month',
+      features: ['Comprehensive protection', 'Advanced monitoring', 'Incident response', 'Compliance management', 'Security analytics'],
+      link: '/ai-cybersecurity-suite',
+      category: 'Cybersecurity'
+    },
+    {
+      icon: <BarChart className="w-8 h-8 text-cyan-400" />,
+      title: 'AI Data Analytics',
+      description: 'Advanced data analytics with AI-powered insights, predictive modeling, and automated reporting.',
+      price: 'Starting at $199/month',
+      features: ['Predictive modeling', 'Automated insights', 'Data visualization', 'Trend analysis', 'Custom dashboards'],
+      link: '/ai-data-analytics',
+      category: 'Data Analytics'
+    },
+    {
+      icon: <BarChart className="w-8 h-8 text-purple-400" />,
+      title: 'AI Data Visualization',
+      description: 'Intelligent data visualization with AI-powered chart generation and interactive dashboards.',
+      price: 'Starting at $149/month',
+      features: ['Smart chart generation', 'Interactive dashboards', 'Data storytelling', 'Custom visualizations', 'Export capabilities'],
+      link: '/ai-data-visualization',
+      category: 'Data Visualization'
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-pink-400" />,
+      title: 'AI Design Studio',
+      description: 'AI-powered design studio with automated graphic creation, branding, and visual content generation.',
+      price: 'Starting at $179/month',
+      features: ['Automated design', 'Brand consistency', 'Template generation', 'Visual content creation', 'Design optimization'],
+      link: '/ai-design-studio',
+      category: 'Design'
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-indigo-400" />,
+      title: 'AI Document Intelligence',
+      description: 'Intelligent document processing with AI-powered extraction, analysis, and workflow automation.',
+      price: 'Starting at $189/month',
+      features: ['Document extraction', 'Intelligent analysis', 'Workflow automation', 'Template recognition', 'Batch processing'],
+      link: '/ai-document-intelligence',
+      category: 'Document Processing'
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-blue-400" />,
+      title: 'AI Document Processor',
+      description: 'Advanced document processing with OCR, data extraction, and intelligent classification.',
+      price: 'Starting at $159/month',
+      features: ['OCR technology', 'Data extraction', 'Classification', 'Format conversion', 'Quality assurance'],
+      link: '/ai-document-processor',
+      category: 'Document Processing'
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-green-400" />,
+      title: 'AI Document Scanner',
+      description: 'Intelligent document scanning with AI-powered recognition, processing, and organization.',
+      price: 'Starting at $119/month',
+      features: ['Smart scanning', 'Text recognition', 'Document organization', 'Search capabilities', 'Cloud storage'],
+      link: '/ai-document-scanner',
+      category: 'Document Processing'
+    },
+    {
+      icon: <Heart className="w-8 h-8 text-red-400" />,
+      title: 'AI Healthcare',
+      description: 'Comprehensive healthcare AI solutions for diagnostics, treatment planning, and patient care.',
+      price: 'Starting at $399/month',
+      features: ['Medical diagnostics', 'Treatment planning', 'Patient monitoring', 'Drug discovery', 'Clinical research'],
+      link: '/ai-healthcare',
+      category: 'Healthcare'
+    },
+    {
+      icon: <DollarSign className="w-8 h-8 text-green-400" />,
+      title: 'AI Financial Services',
+      description: 'Advanced financial AI for trading, risk management, fraud detection, and investment analysis.',
+      price: 'Starting at $299/month',
+      features: ['Algorithmic trading', 'Risk management', 'Fraud detection', 'Investment analysis', 'Regulatory compliance'],
+      link: '/ai-financial-services',
+      category: 'Financial Services'
+    },
+    {
+      icon: <Camera className="w-8 h-8 text-purple-400" />,
+      title: 'AI Computer Vision',
+      description: 'Advanced computer vision solutions for image recognition, object detection, and visual analysis.',
+      price: 'Starting at $249/month',
+      features: ['Image recognition', 'Object detection', 'Visual analysis', 'Custom models', 'Real-time processing'],
+      link: '/ai-computer-vision',
+      category: 'Computer Vision'
+    },
+    {
+      icon: <Mic className="w-8 h-8 text-cyan-400" />,
+      title: 'AI Voice Solutions',
+      description: 'Comprehensive voice AI solutions including speech recognition, synthesis, and voice analytics.',
+      price: 'Starting at $199/month',
+      features: ['Speech recognition', 'Voice synthesis', 'Voice analytics', 'Multi-language support', 'Custom training'],
+      link: '/ai-voice-solutions',
+      category: 'Voice Technology'
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-pink-400" />,
+      title: 'AI E-commerce Solutions',
+      description: 'Intelligent e-commerce solutions with AI-powered recommendations, pricing, and customer insights.',
+      price: 'Starting at $229/month',
+      features: ['Product recommendations', 'Dynamic pricing', 'Customer insights', 'Inventory optimization', 'Personalization'],
+      link: '/ai-ecommerce-solutions',
+      category: 'E-commerce'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-emerald-400" />,
+      title: 'AI HR Solutions',
+      description: 'Comprehensive HR AI solutions for recruitment, employee management, and workforce analytics.',
+      price: 'Starting at $189/month',
+      features: ['Recruitment automation', 'Employee analytics', 'Performance management', 'Workforce planning', 'Compliance tracking'],
+      link: '/ai-hr-solutions',
+      category: 'Human Resources'
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-purple-400" />,
+      title: 'AI Content Generation',
+      description: 'Advanced content generation with AI-powered writing, editing, and optimization for all content types.',
+      price: 'Starting at $149/month',
+      features: ['Multi-format content', 'SEO optimization', 'Brand voice training', 'Plagiarism detection', 'Content planning'],
+      link: '/ai-content-generation',
+      category: 'Content Creation'
+    },
+    {
+      icon: <Settings className="w-8 h-8 text-orange-400" />,
+      title: 'AI Workflow Automation',
+      description: 'Intelligent workflow automation with AI-powered process optimization and task management.',
+      price: 'Starting at $169/month',
+      features: ['Process optimization', 'Task automation', 'Workflow design', 'Performance monitoring', 'Integration support'],
+      link: '/ai-workflow-automation',
+      category: 'Automation'
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-indigo-400" />,
+      title: 'AI Document Processing',
+      description: 'Intelligent document processing with AI-powered extraction, analysis, and workflow automation.',
+      price: 'Starting at $179/month',
+      features: ['Document extraction', 'Intelligent analysis', 'Workflow automation', 'Template recognition', 'Batch processing'],
+      link: '/ai-document-processing',
+      category: 'Document Processing'
+    },
+    {
+      icon: <BarChart className="w-8 h-8 text-cyan-400" />,
+      title: 'AI Predictive Analytics',
+      description: 'Advanced predictive analytics with AI-powered forecasting, modeling, and strategic insights.',
+      price: 'Starting at $219/month',
+      features: ['Predictive modeling', 'Forecasting', 'Risk assessment', 'Strategic insights', 'Scenario planning'],
+      link: '/ai-predictive-analytics',
+      category: 'Analytics'
+    },
+    {
+      icon: <Cpu className="w-8 h-8 text-purple-400" />,
+      title: 'AI Edge Computing',
+      description: 'Intelligent edge computing solutions with AI-powered processing and real-time decision making.',
+      price: 'Starting at $199/month',
+      features: ['Edge processing', 'Real-time decisions', 'Low latency', 'Offline capabilities', 'Resource optimization'],
+      link: '/ai-edge-computing',
+      category: 'Edge Computing'
+    },
+    {
+      icon: <Camera className="w-8 h-8 text-blue-400" />,
+      title: 'AI Video Analysis',
+      description: 'Advanced video analysis with AI-powered content recognition, object tracking, and scene understanding.',
+      price: 'Starting at $229/month',
+      features: ['Content recognition', 'Object tracking', 'Scene understanding', 'Motion analysis', 'Real-time processing'],
+      link: '/ai-video-analysis',
+      category: 'Video Analysis'
+    },
+    {
+      icon: <Mic className="w-8 h-8 text-green-400" />,
+      title: 'AI Speech Synthesis',
+      description: 'Advanced speech synthesis with AI-powered voice generation, emotion, and natural language processing.',
+      price: 'Starting at $159/month',
+      features: ['Voice generation', 'Emotion synthesis', 'Natural language', 'Custom voices', 'Multi-language support'],
+      link: '/ai-speech-synthesis',
+      category: 'Speech Technology'
+    },
+    {
+      icon: <Target className="w-8 h-8 text-pink-400" />,
+      title: 'AI Recommendation Engine',
+      description: 'Intelligent recommendation engine with AI-powered personalization and behavioral analysis.',
+      price: 'Starting at $179/month',
+      features: ['Personalization', 'Behavioral analysis', 'A/B testing', 'Real-time recommendations', 'Performance tracking'],
+      link: '/ai-recommendation-engine',
+      category: 'Recommendation Systems'
+    },
+    {
+      icon: <Heart className="w-8 h-8 text-red-400" />,
+      title: 'AI Sentiment Analysis',
+      description: 'Advanced sentiment analysis with AI-powered emotion detection and social media monitoring.',
+      price: 'Starting at $139/month',
+      features: ['Emotion detection', 'Social monitoring', 'Brand sentiment', 'Trend analysis', 'Real-time alerts'],
+      link: '/ai-sentiment-analysis',
+      category: 'Sentiment Analysis'
+    },
+    {
+      icon: <MessageCircle className="w-8 h-8 text-cyan-400" />,
+      title: 'AI Chatbot Enterprise',
+      description: 'Enterprise-grade chatbot platform with advanced AI capabilities and seamless integration.',
+      price: 'Starting at $299/month',
+      features: ['Enterprise features', 'Advanced AI', 'Seamless integration', 'Custom training', 'Analytics dashboard'],
+      link: '/ai-chatbot-enterprise',
+      category: 'Enterprise Solutions'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-orange-400" />,
+      title: 'AI Content Moderation',
+      description: 'Automated content moderation with AI-powered filtering, classification, and policy enforcement.',
+      price: 'Starting at $169/month',
+      features: ['Content filtering', 'Policy enforcement', 'Spam detection', 'Inappropriate content', 'Custom rules'],
+      link: '/ai-content-moderation',
+      category: 'Content Moderation'
+    },
+    {
+      icon: <BarChart className="w-8 h-8 text-purple-400" />,
+      title: 'AI Predictive Modeling',
+      description: 'Advanced predictive modeling with AI-powered machine learning and statistical analysis.',
+      price: 'Starting at $239/month',
+      features: ['Machine learning', 'Statistical analysis', 'Model training', 'Validation', 'Deployment support'],
+      link: '/ai-predictive-modeling',
+      category: 'Machine Learning'
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-indigo-400" />,
+      title: 'AI Document Intelligence',
+      description: 'Intelligent document processing with AI-powered extraction, analysis, and workflow automation.',
+      price: 'Starting at $189/month',
+      features: ['Document extraction', 'Intelligent analysis', 'Workflow automation', 'Template recognition', 'Batch processing'],
+      link: '/ai-document-intelligence',
+      category: 'Document Intelligence'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-teal-400" />,
+      title: 'AI Conversation Analytics',
+      description: 'Analyze customer conversations with AI-powered sentiment analysis and engagement insights.',
+      price: 'Starting at $169/month',
+      features: ['Sentiment analysis', 'Engagement metrics', 'Conversation insights', 'Trend analysis', 'Performance tracking'],
+      link: '/ai-conversation-analytics',
+      category: 'Analytics'
+    },
+    {
+      icon: <Package className="w-8 h-8 text-green-400" />,
+      title: 'AI Supply Chain AI',
+      description: 'Intelligent supply chain optimization with AI-powered demand forecasting and logistics management.',
+      price: 'Starting at $279/month',
+      features: ['Demand forecasting', 'Logistics optimization', 'Inventory management', 'Supplier coordination', 'Risk assessment'],
+      link: '/ai-supply-chain-ai',
+      category: 'Supply Chain'
+    },
+    {
+      icon: <Heart className="w-8 h-8 text-red-400" />,
+      title: 'AI Healthcare Diagnostics',
+      description: 'Advanced medical AI for diagnostic imaging, patient monitoring, and treatment recommendations.',
+      price: 'Starting at $499/month',
+      features: ['Medical imaging', 'Patient monitoring', 'Treatment recommendations', 'Drug interactions', 'Clinical support'],
+      link: '/ai-healthcare-diagnostics',
+      category: 'Healthcare'
+    },
+    {
+      icon: <DollarSign className="w-8 h-8 text-green-400" />,
+      title: 'AI Financial Forecasting',
+      description: 'Predict market trends, analyze investment opportunities, and optimize financial portfolios with AI.',
+      price: 'Starting at $299/month',
+      features: ['Market prediction', 'Portfolio optimization', 'Risk assessment', 'Algorithmic trading', 'Financial modeling'],
+      link: '/ai-financial-forecasting',
+      category: 'Financial Services'
+    },
+    {
+      icon: <Cpu className="w-8 h-8 text-purple-400" />,
+      title: 'AI IoT Analytics',
+      description: 'Intelligent analysis of IoT data streams for predictive maintenance and operational optimization.',
+      price: 'Starting at $199/month',
+      features: ['IoT data processing', 'Predictive maintenance', 'Anomaly detection', 'Real-time monitoring', 'Edge computing'],
+      link: '/ai-iot-analytics',
+      category: 'IoT Solutions'
+    },
+    {
+      icon: <MessageCircle className="w-8 h-8 text-cyan-400" />,
+      title: 'AI Conversational AI',
+      description: 'Build sophisticated conversational AI with advanced natural language understanding and generation.',
+      price: 'Starting at $229/month',
+      features: ['Advanced NLP', 'Context management', 'Multi-turn conversations', 'Intent recognition', 'Response generation'],
+      link: '/ai-conversational-ai',
+      category: 'Conversational AI'
+    },
+    {
+      icon: <CheckCircle className="w-8 h-8 text-emerald-400" />,
+      title: 'AI Automated Testing',
+      description: 'Intelligent test automation with AI-powered test generation, execution, and maintenance.',
+      price: 'Starting at $179/month',
+      features: ['Test generation', 'Automated execution', 'Bug detection', 'Performance testing', 'Regression testing'],
+      link: '/ai-automated-testing',
+      category: 'Quality Assurance'
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-indigo-400" />,
+      title: 'AI Knowledge Management',
+      description: 'Intelligent knowledge base with automated content organization and smart search capabilities.',
+      price: 'Starting at $129/month',
+      features: ['Content organization', 'Smart search', 'Knowledge extraction', 'Auto-categorization', 'Expert recommendations'],
+      link: '/ai-knowledge-management',
+      category: 'Knowledge Management'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-pink-400" />,
+      title: 'AI Customer Churn',
+      description: 'Predict and prevent customer churn with AI-powered behavioral analysis and retention strategies.',
+      price: 'Starting at $199/month',
+      features: ['Churn prediction', 'Behavioral analysis', 'Retention strategies', 'Risk scoring', 'Intervention alerts'],
+      link: '/ai-customer-churn',
+      category: 'Customer Analytics'
+    },
+    {
+      icon: <BarChart className="w-8 h-8 text-orange-400" />,
+      title: 'AI Automated Reporting',
+      description: 'Generate intelligent reports automatically with AI-powered data analysis and insights.',
+      price: 'Starting at $89/month',
+      features: ['Auto report generation', 'Data visualization', 'Insight extraction', 'Scheduled reports', 'Custom templates'],
+      link: '/ai-automated-reporting',
+      category: 'Business Intelligence'
+    },
+    {
+      icon: <Mic className="w-8 h-8 text-teal-400" />,
+      title: 'AI Voice Assistant',
+      description: 'Build custom voice assistants with advanced speech recognition and natural language processing.',
+      price: 'Starting at $249/month',
+      features: ['Speech recognition', 'Voice synthesis', 'Command processing', 'Multi-language support', 'Custom wake words'],
+      link: '/ai-voice-assistant',
+      category: 'Voice Technology'
+    },
+    {
+      icon: <FileText className="w-8 h-8 text-purple-400" />,
+      title: 'AI Content Generation Pro',
+      description: 'Advanced content generation with AI-powered writing, editing, and optimization for all content types.',
+      price: 'Starting at $179/month',
+      features: ['Multi-format content', 'SEO optimization', 'Brand voice training', 'Plagiarism detection', 'Content planning'],
+      link: '/ai-content-generation-pro',
+      category: 'Content Creation'
     }
   ]
 
