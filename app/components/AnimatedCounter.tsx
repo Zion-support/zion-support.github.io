@@ -7,6 +7,8 @@ interface AnimatedCounterProps {
   prefix?: string
   suffix?: string
   className?: string
+  isVisible?: boolean
+  delay?: number
 }
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
@@ -14,11 +16,15 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   duration = 2000,
   prefix = '',
   suffix = '',
-  className = ''
+  className = '',
+  isVisible = true,
+  delay = 0
 }) => {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
+    if (!isVisible) return
+
     let startTime: number
     let animationFrame: number
 
@@ -31,24 +37,23 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       const currentCount = Math.floor(easeOutQuart * end)
       
       setCount(currentCount)
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate)
       }
     }
 
-    animationFrame = requestAnimationFrame(animate)
+    const timer = setTimeout(() => {
+      animationFrame = requestAnimationFrame(animate)
+    }, delay)
 
     return () => {
+      clearTimeout(timer)
       if (animationFrame) {
         cancelAnimationFrame(animationFrame)
       }
     }
-  }, [end, duration])
+  }, [isVisible, delay, duration, end])
 
   return (
     <span className={className}>
