@@ -49,11 +49,15 @@ export default function Navigation() {
   ]
 
   return (
-    <nav className="bg-white/10 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50">
+    <nav className="bg-white/10 backdrop-blur-lg border-b border-white/20 sticky top-0 z-50" role="navigation" aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link 
+            to="/" 
+            className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-lg p-1"
+            aria-label="Zion Tech Group - Go to homepage"
+          >
             <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">Z</span>
             </div>
@@ -64,13 +68,14 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
-              className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+              aria-current="page"
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900"
             >
               About
             </Link>
@@ -79,7 +84,10 @@ export default function Navigation() {
             <div className="relative">
               <button
                 onClick={toggleServices}
-                className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                aria-expanded={isServicesOpen}
+                aria-haspopup="true"
+                aria-label="Services menu"
               >
                 Services
                 <ChevronDown className={`ml-1 w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
@@ -125,7 +133,10 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-white hover:text-purple-300 p-2 rounded-md transition-colors"
+              className="text-white hover:text-purple-300 p-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
+              aria-label="Toggle mobile menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -134,8 +145,8 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/10 backdrop-blur-lg rounded-lg mt-2 border border-white/20">
+          <div className="md:hidden" id="mobile-menu">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white/10 backdrop-blur-lg rounded-lg mt-2 border border-white/20" role="menu">
               <Link 
                 to="/" 
                 className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium"

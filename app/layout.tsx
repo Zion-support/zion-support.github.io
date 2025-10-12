@@ -25,11 +25,13 @@ const Layout: React.FC<LayoutProps> = ({
     "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
+    "foundingDate": "2020",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+      "email": "kleber@ziontechgroup.com",
+      "availableLanguage": "English"
     },
     "address": {
       "@type": "PostalAddress",
@@ -44,34 +46,48 @@ const Layout: React.FC<LayoutProps> = ({
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup"
     ],
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "AI Services",
-        "description": "Comprehensive AI solutions including content generation, chatbots, and automation",
-        "price": "500",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "500",
-          "priceCurrency": "USD",
-          "unitText": "MONTH"
+    "serviceArea": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Technology Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI Services",
+            "description": "Comprehensive AI solutions including content generation, chatbots, and automation"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "IT Services",
+            "description": "Complete IT infrastructure services including cloud migration, cybersecurity, and mobile development"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "5G Implementation",
+            "description": "Next-generation 5G network implementation and optimization"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cloud Services",
+            "description": "Professional cloud services including migration, infrastructure setup, and security"
+          }
         }
-      },
-      {
-        "@type": "Offer",
-        "name": "IT Services",
-        "description": "Complete IT infrastructure services including cloud migration, cybersecurity, and mobile development",
-        "price": "2500",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "2500",
-          "priceCurrency": "USD",
-          "unitText": "PROJECT"
-        }
-      }
-    ]
+      ]
+    }
   };
 
   return (
@@ -98,10 +114,34 @@ const Layout: React.FC<LayoutProps> = ({
           <meta name="twitter:site" content="@ziontechgroup" />
           
           {/* Additional SEO Meta Tags */}
-          <meta name="robots" content="index, follow" />
+          <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
           <meta name="author" content="Zion Tech Group" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <meta name="theme-color" content="#8b5cf6" />
+          <meta name="color-scheme" content="dark light" />
+          <meta name="format-detection" content="telephone=no" />
+          
+          {/* Performance and Security */}
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="referrer" content="strict-origin-when-cross-origin" />
+          
+          {/* Additional SEO */}
+          <meta name="language" content="English" />
+          <meta name="geo.region" content="US-DE" />
+          <meta name="geo.placename" content="Middletown" />
+          <meta name="geo.position" content="39.4496;-75.7163" />
+          <meta name="ICBM" content="39.4496, -75.7163" />
+          
+          {/* Preconnect to external domains for performance */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          
+          {/* Favicon and Icons */}
+          <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+          <link rel="manifest" href="/site.webmanifest" />
           
           {/* Structured Data */}
           <script type="application/ld+json">
