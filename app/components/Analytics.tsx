@@ -34,6 +34,7 @@ ursor/
         })
       })
 
+  const initializeGoogleAnalytics = () => {
       window.addEventListener('unhandledrejection', (event) => {
         console.error('Unhandled Promise Rejection:', event.reason)
         // Send to error tracking service
@@ -61,6 +62,12 @@ ursor/
             window.gtag('event', 'click', {
               event_category: 'engagement',
               event_label: target.textContent || target.getAttribute('aria-label') || 'unknown'
+            })
+          }
+        }
+      }
+
+      // Track scroll depth
             })
           }
         }
