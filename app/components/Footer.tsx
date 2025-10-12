@@ -21,6 +21,11 @@ export default function Footer() {
     { name: 'Web Development', path: '/web-development' }
   ]
 
+  const legalPages = [
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' }
+  ]
+
   const quickLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
@@ -34,7 +39,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
             <div className="flex items-center mb-4">
@@ -104,6 +109,23 @@ export default function Footer() {
                     className="text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal Pages */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+            <ul className="space-y-2">
+              {legalPages.map((page) => (
+                <li key={page.name}>
+                  <Link
+                    to={page.path}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {page.name}
                   </Link>
                 </li>
               ))}
