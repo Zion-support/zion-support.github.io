@@ -10,6 +10,7 @@ const Navigation: React.FC = () => {
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
+  const [emergingTechOpen, setEmergingTechOpen] = useState(false);
 
   // Handle scroll effect
   useEffect(() => {
@@ -61,31 +62,40 @@ const Navigation: React.FC = () => {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
+    setEmergingTechOpen(false);
   }, [microSaasOpen]);
 
+  const toggleEmergingTech = useCallback(() => {
+    setEmergingTechOpen(!emergingTechOpen);
+    setServicesOpen(false);
+    setAiServicesOpen(false);
+    setItServicesOpen(false);
+    setMicroSaasOpen(false);
+  }, [emergingTechOpen]);
+
   const aiServices = [
-    { name: 'AI Analytics', url: '/ai-analytics', icon: BarChart },
-    { name: 'AI Automation', url: '/ai-automation', icon: Workflow },
-    { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', icon: MessageCircle },
-    { name: 'AI Content Generation', url: '/ai-content-generation', icon: FileText },
-    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', icon: Shield },
-    { name: 'AI CRM', url: '/ai-crm', icon: Users },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', icon: Database },
-    { name: 'AI Healthcare', url: '/ai-healthcare', icon: Heart },
+    { name: 'AI Analytics Dashboard Pro', url: '/ai-analytics-dashboard-pro', icon: BarChart, isPopular: true },
+    { name: 'AI Content Generation Pro', url: '/ai-content-generation-pro', icon: FileText, isNew: true },
+    { name: 'AI Customer Support Enterprise', url: '/ai-customer-support-enterprise', icon: MessageCircle, isPopular: true },
+    { name: 'AI Workflow Automation Pro', url: '/ai-workflow-automation-pro', icon: Workflow },
+    { name: 'AI Cybersecurity Monitor Pro', url: '/ai-cybersecurity-monitor-pro', icon: Shield, isPopular: true },
+    { name: 'AI Predictive Analytics Enterprise', url: '/ai-predictive-analytics-enterprise', icon: TrendingUp },
     { name: 'AI Computer Vision', url: '/ai-computer-vision', icon: Eye },
     { name: 'AI Voice Solutions', url: '/ai-voice-solutions', icon: Mic },
-    { name: 'AI Workflow Automation', url: '/ai-workflow-automation', icon: Settings },
-    { name: 'AI Document Processing', url: '/ai-document-processing', icon: FileText }
+    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', icon: Heart },
+    { name: 'AI Financial Services', url: '/ai-financial-services', icon: DollarSign },
+    { name: 'AI Document Processing', url: '/ai-document-processing', icon: FileText },
+    { name: 'AI HR Solutions', url: '/ai-hr-solutions', icon: Users }
   ];
 
   const itServices = [
-    { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', icon: Cloud },
-    { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', icon: Shield },
-    { name: 'Web Development', url: '/web-development', icon: Code },
-    { name: 'Mobile Development', url: '/mobile-development', icon: Smartphone },
-    { name: 'API Development', url: '/api-development', icon: LinkIcon },
+    { name: 'Cloud Infrastructure Enterprise', url: '/cloud-infrastructure-enterprise', icon: Cloud, isPopular: true },
+    { name: 'Cybersecurity Solutions Advanced', url: '/cybersecurity-solutions-advanced', icon: Shield, isPopular: true },
+    { name: 'Custom Web Development Enterprise', url: '/custom-web-development-enterprise', icon: Code, isPopular: true },
+    { name: 'Mobile Development Enterprise', url: '/mobile-development-enterprise', icon: Smartphone },
+    { name: 'API Development Enterprise', url: '/api-development-enterprise', icon: LinkIcon },
+    { name: 'DevOps & CI/CD Enterprise', url: '/devops-cicd-enterprise', icon: Settings, isPopular: true },
     { name: 'Database Management', url: '/database-management', icon: Database },
-    { name: 'DevOps & CI/CD', url: '/devops-cicd', icon: Settings },
     { name: 'IT Support', url: '/it-support', icon: Users },
     { name: 'Data Analytics & BI', url: '/data-analytics-bi', icon: BarChart },
     { name: 'Custom Software', url: '/custom-software', icon: Code },
@@ -94,12 +104,12 @@ const Navigation: React.FC = () => {
   ];
 
   const microSaasServices = [
-    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', icon: BarChart },
-    { name: 'Zion Chat AI', url: '/zion-chat-ai', icon: MessageCircle },
-    { name: 'Zion Security Shield', url: '/zion-security-shield', icon: Shield },
+    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', icon: BarChart, isPopular: true },
+    { name: 'Zion Chat AI', url: '/zion-chat-ai', icon: MessageCircle, isPopular: true },
+    { name: 'Zion Security Shield', url: '/zion-security-shield', icon: Shield, isPopular: true },
     { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', icon: Cloud },
     { name: 'Zion Content Studio', url: '/zion-content-studio', icon: FileText },
-    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', icon: Users },
+    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', icon: Users, isPopular: true },
     { name: 'Zion Data Sync', url: '/zion-data-sync', icon: Database },
     { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', icon: Target },
     { name: 'Zion Project Master', url: '/zion-project-master', icon: CheckSquare },
@@ -108,27 +118,40 @@ const Navigation: React.FC = () => {
     { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', icon: DollarSign }
   ];
 
+  const emergingTechServices = [
+    { name: '5G Implementation Enterprise', url: '/5g-implementation-enterprise', icon: Wifi, isNew: true },
+    { name: 'AI 3D Generation Pro', url: '/ai-3d-generation-pro', icon: Cpu, isNew: true },
+    { name: 'Quantum Computing Solutions', url: '/quantum-computing-solutions', icon: Cpu, isNew: true },
+    { name: 'AR/VR Solutions Enterprise', url: '/ar-vr-solutions-enterprise', icon: Eye },
+    { name: 'Blockchain Development Enterprise', url: '/blockchain-development-enterprise', icon: LinkIcon },
+    { name: 'IoT Integration', url: '/iot-integration', icon: Wifi }
+  ];
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg border-b border-purple-500/20' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-              <Brain className="h-5 w-5 text-white" />
+          <Link to="/" className="flex items-center space-x-2 group">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:shadow-lg group-hover:shadow-purple-500/50 transition-all duration-300">
+              <Brain className="h-5 w-5 text-white group-hover:animate-pulse" />
             </div>
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">
+              Zion Tech Group
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors hover:text-purple-400 relative group">
               Home
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors hover:text-purple-400 relative group">
               About
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 group-hover:w-full transition-all duration-300"></span>
             </Link>
             
             {/* Services Dropdown */}
@@ -176,7 +199,17 @@ const Navigation: React.FC = () => {
                       className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
                       <service.icon className="h-4 w-4 mr-3" />
-                      {service.name}
+                      <span className="flex-1">{service.name}</span>
+                      {service.isPopular && (
+                        <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-xs font-bold px-2 py-1 rounded-full ml-2">
+                          POPULAR
+                        </span>
+                      )}
+                      {service.isNew && (
+                        <span className="bg-gradient-to-r from-green-400 to-cyan-400 text-black text-xs font-bold px-2 py-1 rounded-full ml-2">
+                          NEW
+                        </span>
+                      )}
                     </Link>
                   ))}
                 </div>
@@ -201,7 +234,12 @@ const Navigation: React.FC = () => {
                       className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
                       <service.icon className="h-4 w-4 mr-3" />
-                      {service.name}
+                      <span className="flex-1">{service.name}</span>
+                      {service.isPopular && (
+                        <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-xs font-bold px-2 py-1 rounded-full ml-2">
+                          POPULAR
+                        </span>
+                      )}
                     </Link>
                   ))}
                 </div>
@@ -226,7 +264,42 @@ const Navigation: React.FC = () => {
                       className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
                     >
                       <service.icon className="h-4 w-4 mr-3" />
-                      {service.name}
+                      <span className="flex-1">{service.name}</span>
+                      {service.isPopular && (
+                        <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-xs font-bold px-2 py-1 rounded-full ml-2">
+                          POPULAR
+                        </span>
+                      )}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Emerging Technologies Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={toggleEmergingTech}
+                className="flex items-center text-gray-300 hover:text-white transition-colors"
+              >
+                Emerging Tech
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              {emergingTechOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-gray-800 rounded-lg shadow-xl border border-gray-700 py-2 max-h-96 overflow-y-auto">
+                  {emergingTechServices.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={service.url}
+                      className="flex items-center px-4 py-2 text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >
+                      <service.icon className="h-4 w-4 mr-3" />
+                      <span className="flex-1">{service.name}</span>
+                      {service.isNew && (
+                        <span className="bg-gradient-to-r from-green-400 to-cyan-400 text-black text-xs font-bold px-2 py-1 rounded-full ml-2">
+                          NEW
+                        </span>
+                      )}
                     </Link>
                   ))}
                 </div>
@@ -245,10 +318,13 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               to="/contact"
-              className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 relative overflow-hidden group"
             >
-              Get Started
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <span className="relative z-10 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
           </div>
 

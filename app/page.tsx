@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart, BarChart, Mail, MapPin } from 'lucide-react';
+import { allServices, getPopularServices, getNewServices, getServicesByCategory } from './data/servicesData';
 
 const HomePage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -45,110 +46,13 @@ const HomePage: React.FC = () => {
     }
   ];
 
-  const aiServices = [
-    {
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence with predictive insights',
-      price: '$299/month',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],
-      icon: BarChart,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'AI Content Generator',
-      description: 'Automated content creation for blogs, social media, and marketing',
-      price: '$199/month',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice training', 'Content scheduling'],
-      icon: FileText,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'AI Customer Support',
-      description: '24/7 intelligent customer service with natural language processing',
-      price: '$399/month',
-      features: ['Multi-channel support', 'Sentiment analysis', 'Escalation management', 'Performance analytics'],
-      icon: MessageCircle,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'AI Workflow Automation',
-      description: 'Streamline business processes with intelligent automation',
-      price: '$249/month',
-      features: ['Process mapping', 'Automated workflows', 'Integration APIs', 'Performance monitoring'],
-      icon: Workflow,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
+  const aiServices = getServicesByCategory('ai').slice(0, 6);
+  const itServices = getServicesByCategory('it').slice(0, 6);
+  const microSaasServices = getServicesByCategory('micro-saas').slice(0, 8);
+  const emergingTechServices = getServicesByCategory('emerging').slice(0, 4);
+  const popularServices = getPopularServices().slice(0, 4);
+  const newServices = getNewServices().slice(0, 3);
 
-  const itServices = [
-    {
-      title: 'Cloud Migration',
-      description: 'Seamless migration to AWS, Azure, or Google Cloud',
-      price: 'Starting at $5,000',
-      features: ['Zero-downtime migration', 'Security compliance', 'Cost optimization', '24/7 support'],
-      icon: Cloud,
-      color: 'from-cyan-500 to-blue-500'
-    },
-    {
-      title: 'Cybersecurity Audit',
-      description: 'Comprehensive security assessment and implementation',
-      price: 'Starting at $3,000',
-      features: ['Vulnerability assessment', 'Penetration testing', 'Security policies', 'Staff training'],
-      icon: Shield,
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      title: 'Custom Web Development',
-      description: 'Modern, responsive web applications built to scale',
-      price: 'Starting at $8,000',
-      features: ['Responsive design', 'SEO optimization', 'Performance tuning', 'Maintenance support'],
-      icon: Code,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications',
-      price: 'Starting at $12,000',
-      features: ['iOS & Android', 'Cross-platform', 'App store optimization', 'Push notifications'],
-      icon: Smartphone,
-      color: 'from-purple-500 to-pink-500'
-    }
-  ];
-
-  const microSaasProducts = [
-    {
-      title: 'Zion Analytics Pro',
-      description: 'Advanced business intelligence platform with AI insights',
-      price: '$99/month',
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Team collaboration'],
-      icon: BarChart,
-      color: 'from-blue-500 to-purple-500'
-    },
-    {
-      title: 'Zion Security Shield',
-      description: 'Comprehensive cybersecurity monitoring and threat detection',
-      price: '$149/month',
-      features: ['Threat detection', 'Vulnerability scanning', 'Incident response', 'Compliance reporting'],
-      icon: Shield,
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      title: 'Zion Content Studio',
-      description: 'AI-powered content creation and management platform',
-      price: '$79/month',
-      features: ['AI content generation', 'Multi-platform publishing', 'Brand consistency', 'Performance tracking'],
-      icon: FileText,
-      color: 'from-green-500 to-teal-500'
-    },
-    {
-      title: 'Zion CRM Intelligence',
-      description: 'Smart customer relationship management with AI insights',
-      price: '$129/month',
-      features: ['Lead scoring', 'Sales forecasting', 'Customer insights', 'Automation workflows'],
-      icon: Users,
-      color: 'from-purple-500 to-pink-500'
-    }
-  ];
 
   return (
     <>
@@ -247,37 +151,58 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* AI Services Section */}
-        <section className="py-20 bg-gradient-to-br from-purple-900 to-slate-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 bg-gradient-to-br from-purple-900 to-slate-900 relative overflow-hidden">
+          {/* Futuristic Background Effects */}
+          <div className="absolute inset-0 quantum-field opacity-30"></div>
+          <div className="absolute inset-0 holographic-grid opacity-20"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-advanced">
                 AI-Powered Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Harness the power of artificial intelligence to transform your business operations and drive growth.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {aiServices.map((service, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg mb-4`}>
-                      <service.icon className="h-6 w-6 text-white" />
+                <div key={service.id} className="group">
+                  <div className="holographic-card p-6 h-full hover-lift">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg`}>
+                        <BarChart className="h-6 w-6 text-white" />
+                      </div>
+                      {service.isPopular && (
+                        <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-xs font-bold px-2 py-1 rounded-full">
+                          POPULAR
+                        </span>
+                      )}
+                      {service.isNew && (
+                        <span className="bg-gradient-to-r from-green-400 to-cyan-400 text-black text-xs font-bold px-2 py-1 rounded-full">
+                          NEW
+                        </span>
+                      )}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <div className="text-2xl font-bold text-purple-400 mb-4">{service.price}</div>
+                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-2xl font-bold text-purple-400">{service.price}</div>
+                      {service.marketPrice && (
+                        <div className="text-sm text-gray-400 line-through">{service.marketPrice}</div>
+                      )}
+                    </div>
                     <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, idx) => (
+                      {service.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                          {feature}
+                          <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                          <span className="truncate">{feature}</span>
                         </li>
                       ))}
                     </ul>
                     <Link
-                      to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+                      to={service.link}
+                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 btn-quantum"
                     >
                       Get Started
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -286,41 +211,66 @@ const HomePage: React.FC = () => {
                 </div>
               ))}
             </div>
+            <div className="text-center mt-12">
+              <Link
+                to="/ai-services"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+              >
+                View All AI Services
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
           </div>
         </section>
 
         {/* IT Services Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900 relative overflow-hidden">
+          {/* Futuristic Background Effects */}
+          <div className="absolute inset-0 plasma-effect opacity-20"></div>
+          <div className="absolute inset-0 data-stream opacity-30"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-cyberpunk">
                 IT Infrastructure & Development
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive IT services to build, secure, and optimize your technology infrastructure.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {itServices.map((service, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg mb-4`}>
-                      <service.icon className="h-6 w-6 text-white" />
+                <div key={service.id} className="group">
+                  <div className="holographic-card p-6 h-full hover-quantum">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg`}>
+                        <Cloud className="h-6 w-6 text-white" />
+                      </div>
+                      {service.isPopular && (
+                        <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-xs font-bold px-2 py-1 rounded-full">
+                          POPULAR
+                        </span>
+                      )}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 mb-4">{service.description}</p>
-                    <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
+                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                      {service.marketPrice && (
+                        <div className="text-sm text-gray-400 line-through">{service.marketPrice}</div>
+                      )}
+                    </div>
                     <ul className="space-y-2 mb-6">
-                      {service.features.map((feature, idx) => (
+                      {service.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                          {feature}
+                          <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                          <span className="truncate">{feature}</span>
                         </li>
                       ))}
                     </ul>
                     <Link
-                      to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300"
+                      to={service.link}
+                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 btn-quantum"
                     >
                       Get Quote
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -329,14 +279,27 @@ const HomePage: React.FC = () => {
                 </div>
               ))}
             </div>
+            <div className="text-center mt-12">
+              <Link
+                to="/it-services"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                View All IT Services
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
           </div>
         </section>
 
         {/* Micro SAAS Products Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-900 to-purple-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 bg-gradient-to-br from-gray-900 to-purple-900 relative overflow-hidden">
+          {/* Futuristic Background Effects */}
+          <div className="absolute inset-0 cyber-grid opacity-20"></div>
+          <div className="absolute inset-0 neural-network-bg opacity-30"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-advanced">
                 Micro SAAS Products
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -344,26 +307,38 @@ const HomePage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {microSaasProducts.map((product, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700">
-                    <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${product.color} rounded-lg mb-4`}>
-                      <product.icon className="h-6 w-6 text-white" />
+              {microSaasServices.map((product, index) => (
+                <div key={product.id} className="group">
+                  <div className="holographic-card p-6 h-full hover-lift">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${product.color} rounded-lg`}>
+                        <BarChart className="h-6 w-6 text-white" />
+                      </div>
+                      {product.isPopular && (
+                        <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-black text-xs font-bold px-2 py-1 rounded-full">
+                          POPULAR
+                        </span>
+                      )}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3">{product.title}</h3>
-                    <p className="text-gray-300 mb-4">{product.description}</p>
-                    <div className="text-2xl font-bold text-green-400 mb-4">{product.price}</div>
+                    <p className="text-gray-300 mb-4 text-sm">{product.description}</p>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-2xl font-bold text-green-400">{product.price}</div>
+                      {product.marketPrice && (
+                        <div className="text-sm text-gray-400 line-through">{product.marketPrice}</div>
+                      )}
+                    </div>
                     <ul className="space-y-2 mb-6">
-                      {product.features.map((feature, idx) => (
+                      {product.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-                          {feature}
+                          <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                          <span className="truncate">{feature}</span>
                         </li>
                       ))}
                     </ul>
                     <Link
-                      to="/contact"
-                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
+                      to={product.link}
+                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 btn-quantum"
                     >
                       Start Free Trial
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -372,37 +347,124 @@ const HomePage: React.FC = () => {
                 </div>
               ))}
             </div>
+            <div className="text-center mt-12">
+              <Link
+                to="/micro-saas"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
+              >
+                View All Micro SAAS Products
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Emerging Technologies Section */}
+        <section className="py-20 bg-gradient-to-br from-indigo-900 to-purple-900 relative overflow-hidden">
+          {/* Futuristic Background Effects */}
+          <div className="absolute inset-0 quantum-field opacity-40"></div>
+          <div className="absolute inset-0 matrix-rain opacity-20"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-cyberpunk">
+                Emerging Technologies
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Cutting-edge solutions powered by the latest technologies including 5G, Quantum Computing, AR/VR, and Blockchain.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {emergingTechServices.map((service, index) => (
+                <div key={service.id} className="group">
+                  <div className="holographic-card p-6 h-full hover-quantum">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg`}>
+                        <Cpu className="h-6 w-6 text-white" />
+                      </div>
+                      {service.isNew && (
+                        <span className="bg-gradient-to-r from-green-400 to-cyan-400 text-black text-xs font-bold px-2 py-1 rounded-full">
+                          NEW
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="text-2xl font-bold text-indigo-400">{service.price}</div>
+                      {service.marketPrice && (
+                        <div className="text-sm text-gray-400 line-through">{service.marketPrice}</div>
+                      )}
+                    </div>
+                    <ul className="space-y-2 mb-6">
+                      {service.features.slice(0, 4).map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
+                          <span className="truncate">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link
+                      to={service.link}
+                      className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 btn-quantum"
+                    >
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-12">
+              <Link
+                to="/emerging-tech"
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Explore All Emerging Technologies
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900 relative overflow-hidden">
+          {/* Futuristic Background Effects */}
+          <div className="absolute inset-0 scan-lines opacity-30"></div>
+          <div className="absolute inset-0 holographic opacity-20"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 neon-advanced">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Contact us today to discuss your project and discover how our AI and IT solutions can drive your success.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl btn-quantum"
                 >
                   Contact Us Now
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <a
                   href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105 hover-glow"
                 >
                   Call +1 302 464 0950
                 </a>
               </div>
-              <div className="mt-8 text-gray-400">
-                <p>Email: kleber@ziontechgroup.com</p>
-                <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+              <div className="mt-8 text-gray-400 space-y-2">
+                <p className="flex items-center justify-center">
+                  <Mail className="h-4 w-4 mr-2" />
+                  Email: kleber@ziontechgroup.com
+                </p>
+                <p className="flex items-center justify-center">
+                  <MapPin className="h-4 w-4 mr-2" />
+                  Address: 364 E Main St STE 1008, Middletown DE 19709
+                </p>
               </div>
             </div>
           </div>
