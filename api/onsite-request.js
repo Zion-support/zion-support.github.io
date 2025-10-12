@@ -5,8 +5,6 @@ const path = require('path');
 function withSentry(handler) {
   return handler;
 }
-// Simple wrapper function to replace withSentry;
- handler;
 
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
@@ -59,23 +57,17 @@ function handler(req, res) {
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Request submitted successfully',
-      id: newRequest.id )
+      id: newRequest.id
     }));
   } catch (error) {
-    console.error('Error writing request:', error);
-      success: true,
-      id: newRequest.id;
-    }));
-  } catch (error) {
-    // Log error for debugging in development;
+    // Log error for debugging in development
     console.error('Error saving onsite request:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: false, 
-      error: 'Failed to save request' )
+      error: 'Failed to save request'
     }));
-    res.end(JSON.stringify({ error: 'Failed to save request' }));
   }
 }
 
