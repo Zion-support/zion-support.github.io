@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/enhance-app-with-new-services-and-futuristic-design-00bf
 ursor/website-audit-and-update-with-deployment-a178
   )
@@ -55,6 +56,9 @@ const FuturisticBackgroundPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced futuristicbackground solutions powered by AI technology.
+=======
+import React from 'react'
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -65,6 +69,7 @@ const FuturisticBackgroundPage: React.FC = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -91,6 +96,9 @@ const FuturisticBackgroundPage: React.FC = () => {
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-fabc
+=======
+  )
+}
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
 
 export default FuturisticBackgroundPage
->>>>>>> cursor/analyze-improve-and-deploy-application-edcb

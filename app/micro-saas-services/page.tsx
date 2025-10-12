@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React from 'react';
@@ -98,11 +99,37 @@ const MicroSAASServicesPage: React.FC = () => {
       features: ['Carbon tracking', 'Sustainability goals', 'Impact reporting', 'Green recommendations'],
       pricing: 'Starting at $35/month',
       link: '/ai-climate-solutions-pro'
+=======
+      link: '/ai-task-manager',
+      popular: true
+    },
+    {
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-purple-500" />,
+      title: 'AI Password Manager',
+      link: '/ai-password-manager',
+      popular: false
+    },
+    {
+      icon: <Code className="w-8 h-8 text-orange-500" />,
+      title: 'AI Invoice Generator',
+      link: '/ai-invoice-generator',
+      popular: true
+    },
+    {
+      popular: true
+    },
+    {
+      icon: <Users className="w-8 h-8 text-indigo-500" />,
+      popular: false
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
     }
   ];
 
   const features = [
     {
+<<<<<<< HEAD
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
       title: 'AI-Powered',
       description: 'All our micro SAAS solutions leverage cutting-edge AI technology.'
@@ -184,6 +211,36 @@ const MicroSAASServicesPage: React.FC = () => {
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+=======
+    }
+  ];
+
+  const stats = [
+    { number: '10,000+', label: 'Active Users' },
+    { number: '99.9%', label: 'Uptime' },
+    { number: '50+', label: 'AI Tools' },
+    { number: '24/7', label: 'Support' }
+  ];
+
+  return (
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Our Micro SaaS Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Focused solutions for specific business needs
+            </p>
+          </div>
+          
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
                       {feature}
                     </li>
                   ))}
@@ -201,6 +258,7 @@ const MicroSAASServicesPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -248,6 +306,8 @@ const MicroSAASServicesPage: React.FC = () => {
                   <p className="font-semibold text-white">{testimonial.name}</p>
                   <p className="text-gray-400 text-sm">{testimonial.company}</p>
                 </div>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
               </div>
             ))}
           </div>
@@ -255,6 +315,7 @@ const MicroSAASServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -279,12 +340,36 @@ const MicroSAASServicesPage: React.FC = () => {
                 </Link>
               </div>
             </div>
+=======
+            Ready to Boost Your Productivity?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Start using our micro SaaS applications today and experience the difference.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Start Free Trial
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link 
+              to="/it-services" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            >
+              Explore IT Services
+            </Link>
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
           </div>
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default MicroSAASServicesPage;
 >>>>>>> cursor/analyze-improve-and-deploy-application-41ac
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b

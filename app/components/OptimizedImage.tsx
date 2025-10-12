@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ursor/analyze-improve-and-deploy-application-edcb
 =======
 'use client'
@@ -218,3 +219,6 @@ export default OptimizedImagePage
     </div>)};export default OptimizedImagePage
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-fabc
+=======
+'use client'
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 
 import React from 'react';
@@ -29,6 +30,8 @@ export default function ITServicesPage() {
 }
 =======
 import { CheckCircle, ArrowRight, Cloud, Shield, Server, Database, Smartphone, Globe, MessageCircle, Code, Network, Settings, DollarSign, Clock, Users, Star } from 'lucide-react';
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -37,6 +40,7 @@ const ITServicesPage: React.FC = () => {
     {
       icon: <Cloud className="w-8 h-8 text-blue-500" />,
       title: 'Cloud Migration',
+<<<<<<< HEAD
       description: 'Seamlessly migrate your infrastructure to the cloud with our expert cloud migration services.',
       features: ['AWS/Azure/GCP expertise', 'Zero-downtime migration', 'Cost optimization', 'Security compliance'],
       pricing: 'Starting at $2,500',
@@ -81,14 +85,28 @@ const ITServicesPage: React.FC = () => {
       features: ['Modern frameworks', 'Responsive design', 'SEO optimization', 'Performance tuning'],
       pricing: 'Starting at $3,000',
       link: '/web-development'
+=======
+      link: '/cloud-migration',
+      popular: true
+    },
+    {
+      link: '/data-analytics',
+      popular: false
+    },
+    {
+      popular: false
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
     }
   ];
 
   const features = [
     {
+<<<<<<< HEAD
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
       title: '24/7 Support',
       description: 'Round-the-clock technical support to ensure your systems run smoothly.'
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
@@ -107,6 +125,7 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -171,11 +190,31 @@ const ITServicesPage: React.FC = () => {
                   </div>
                 </div>
               </Link>
+=======
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Helmet>
+              >
+                Why Choose Us
+              </button>
+            </div>
+          </div>
+
+          {/* Stats Section */}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -194,12 +233,15 @@ const ITServicesPage: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
               </div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Testimonials Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -223,6 +265,8 @@ const ITServicesPage: React.FC = () => {
                   <p className="font-semibold text-white">{testimonial.name}</p>
                   <p className="text-gray-400 text-sm">{testimonial.company}</p>
                 </div>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
               </div>
             ))}
           </div>
@@ -230,6 +274,7 @@ const ITServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-12 sm:py-16 lg:py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -254,12 +299,35 @@ const ITServicesPage: React.FC = () => {
                 </Link>
               </div>
             </div>
+=======
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let our experts help you modernize your technology stack and drive business growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Get Free Consultation
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link 
+              to="/ai-services" 
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+            >
+              Explore AI Services
+            </Link>
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
           </div>
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default ITServicesPage;
 >>>>>>> cursor/analyze-improve-and-deploy-application-41ac
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b

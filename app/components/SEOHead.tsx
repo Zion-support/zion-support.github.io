@@ -7,6 +7,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
+<<<<<<< HEAD
   title?: string;
   description?: string;
   keywords?: string;
@@ -91,6 +92,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       }
     ]
   };
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
 
 >>>>>>> cursor/analyze-improve-and-deploy-application-41ac
   return (
@@ -98,6 +101,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <link rel="canonical" href={canonical || window.location.href} />
       
@@ -158,10 +162,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
+=======
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
       </script>
 >>>>>>> cursor/analyze-improve-and-deploy-application-41ac
     </Helmet>
   );
 };
 
+<<<<<<< HEAD
 export default SEOHead;
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-072b
