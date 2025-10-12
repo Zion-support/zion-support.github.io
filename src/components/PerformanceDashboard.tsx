@@ -1,3 +1,4 @@
+export default PerformanceDashboard;
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
@@ -7,17 +8,15 @@
   memoryUsage: number;
   fps: number;
   [key: string]: number;
-    fps: 0
+    fps: 0;
   });
   const [isVisible, setIsVisible] = useState(false);
-    
       )[0] as PerformanceNavigationTiming;
-      
         : 0;
-      // Measure render time
+      // Measure render time;
       const renderStart = performance.now();
-      const renderTime = performance.now() - renderStart;
-      // Measure memory usage
+const renderTime = performance.now() - renderStart;
+      // Measure memory usage;
       let memoryUsage = 0;
         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
@@ -25,7 +24,6 @@
       let fps = 0;
         let lastTime = performance.now();
         let frameCount = 0;
-        
           frameCount++;
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
             frameCount = 0;
@@ -33,33 +31,30 @@
           requestAnimationFrame(measureFPS);
         };
         requestAnimationFrame(measureFPS);
-        fps
+        fps;
       });
     };
     updateMetrics();
-    // Update metrics every 5 seconds
+    // Update metrics every 5 seconds;
     const interval = setInterval(updateMetrics, 5000);
  clearInterval(interval);
   }, []);
-      
  setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
-        Show Performance
+        className = "fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors";
+        Show Performance;
     );
-        <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
-        
+        <h3 className = "text-lg font-semibold text-gray-800">Performance Dashboard</h3>
  setIsVisible(false)}
           className="text-gray-500 hover:text-gray-700"
           ×
-          <span className="text-sm text-gray-600">Load Time:</span>
-            {metrics.loadTime.toFixed(2)}ms
-          <span className="text-sm text-gray-600">Render Time:</span>
-            {metrics.renderTime.toFixed(2)}ms
-          <span className="text-sm text-gray-600">Memory Usage:</span>
-            {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
-          <span className="text-sm text-gray-600">FPS:</span>
+          <span className="text-sm text-gray-600">Load Time:</span>;
+            {metrics.loadTime.toFixed(2)}ms;
+          <span className = "text-sm text-gray-600">Render Time:</span>;
+            {metrics.renderTime.toFixed(2)}ms;
+          <span className = "text-sm text-gray-600">Memory Usage:</span>;
+            {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
+          <span className = "text-sm text-gray-600">FPS:</span>
           <span className="text-sm font-mono">{metrics.fps}</span>
-            Last updated: {new Date().toLocaleTimeString()}
+            Last updated: {new Date().toLocaleTimeString()};
   );
 };
-export default PerformanceDashboard;

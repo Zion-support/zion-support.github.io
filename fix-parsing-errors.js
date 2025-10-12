@@ -1,18 +1,14 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
-
-// Function to fix common parsing errors
+export { fixFileContent, processFile };
+#!/usr/bin/env node;
+// Function to fix common parsing errors;
 function fixFileContent(content) {
   let fixed = content;
-  
-  // Fix invalid escape sequences in import statements
+  // Fix invalid escape sequences in import statements;
   fixed = fixed.replace(/import\s+([^']+)from\s+\\'([^']+)\\'/g, "import $1 from '$2'");
-  
-  // Fix className spacing issues (missing spaces between classes)
-    // Only fix if it looks like a className issue (contains common Tailwind patterns)
+  // Fix className spacing issues (missing spaces, between, classes)
+    // Only fix if it looks like a className issue (contains common, Tailwind, patterns)
     if (match.includes('from-') || match.includes('to-') || match.includes('bg-') || 
         match.includes('text-') || match.includes('border-') || match.includes('px-') || 
         match.includes('py-') || match.includes('mb-') || match.includes('mt-') ||
@@ -24,8 +20,7 @@ function fixFileContent(content) {
       return p1 + ' ' + p2 + p3;
     return match;
   });
-  
-  // Fix specific common patterns
+  // Fix specific common patterns;
   fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20');
   fixed = fixed.replace(/text-whitemb-6/g, 'text-white mb-6');
   fixed = fixed.replace(/text-gray-300mb-8/g, 'text-gray-300 mb-8');
@@ -35,32 +30,25 @@ function fixFileContent(content) {
   fixed = fixed.replace(/px-4 sm:px-6 lg:px-8py-12/g, 'px-4 sm:px-6 lg:px-8 py-12');
   fixed = fixed.replace(/grid-cols-1 md:grid-cols-4gap-8/g, 'grid-cols-1 md:grid-cols-4 gap-8');
   fixed = fixed.replace(/col-span-1md:col-span-2/g, 'col-span-1 md:col-span-2');
-  
-  // Fix malformed JSX - add missing opening tags
-  fixed = fixed.replace(/<div className="[^"]*" \/>/g, (match) => {
+  // Fix malformed JSX - add missing opening tags;
+  fixed = fixed.replace(/<div className="[^"]*" \/>/g, (match) => {;
     const className = match.match(/className="([^"]*)"/)[1];
     return `<div className="${className}">`;
   });
-  
-  // Fix self-closing divs that should be opening tags
+  // Fix self-closing divs that should be opening tags;
   fixed = fixed.replace(/<div className="([^"]*)" \/>\s*<([^>]+)>/g, '<div className="$1">\n        <$2>');
-  
   // Remove invalid 'use client' directive (this is a Vite project, not Next.js)
   fixed = fixed.replace(/'use client';\s*\n/g, '');
-  
-  // Fix JSX expressions that need parent elements
+  // Fix JSX expressions that need parent elements;
   fixed = fixed.replace(/<Helmet \/>\s*<title>/g, '<Helmet>\n        <title>');
   fixed = fixed.replace(/<\/title>\s*<meta/g, '</title>\n        <meta');
   fixed = fixed.replace(/<\/meta>\s*<\/Helmet>/g, '</meta>\n      </Helmet>');
-  
   return fixed;
-
-// Function to process a single file
+// Function to process a single file;
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixFileContent(content);
-    
+const fixed = fixFileContent(content);
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
@@ -69,24 +57,16 @@ function processFile(filePath) {
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-
-// Main function
+// Main function;
 async function main() {
   console.log('Starting to fix parsing errors...');
-  
-  // Get all TypeScript/TSX files
+  // Get all TypeScript/TSX files;
   const files = await glob('**/*.{ts,tsx}', {
-    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
+    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**'];
   });
-  
   let fixedCount = 0;
-  
     if (processFile(file)) {
       fixedCount++;
   });
-  
   console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`);
-
 main().catch(console.error);
-
-export { fixFileContent, processFile };

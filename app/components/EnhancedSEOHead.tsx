@@ -1,10 +1,22 @@
-
-
-'use client';
-
 import React from 'react';
+<<<<<<< HEAD
+export default SEOHead;
 'use client';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+import React from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d941
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -14,7 +26,6 @@ interface SEOHeadProps {
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
-
 const SEOHead: React.FC<SEOHeadProps /> = ({
   const title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.',
@@ -22,9 +33,9 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
   canonical = 'https: //ziontechgroup.com',
   ogImage = 'https: //ziontechgroup.com/og-image.jpg',
   ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData
-  const defaultStructuredData = {
+  twitterCard = 'summary_large_image',;
+  structuredData;
+const defaultStructuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -59,32 +70,24 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
       "Software Development",
       "Data Analytics",
       "Machine Learning"
-    ]
+    ];
   };
   const finalStructuredData = structuredData || defaultStructuredData;
   return (
-
+    <div>Content</div>
+  );
         <title>5G Data Analytics - Zion Tech Group</title>
       {/* Basic Meta Tags */}
-    
       <title>{title}</title>
       {/* Canonical URL */}
       {/* Open Graph Meta Tags */}
-    
       {/* Twitter Card Meta Tags */}
-    
       {/* Additional Meta Tags */}
-    
       {/* Favicon and Icons */}
-
       {/* Preconnect to external domains */}
-    
       {/* DNS Prefetch */}
-    
       {/* Structured Data */}
-    
-      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
-
+      <script type = "application/ld+json">{JSON.stringify(finalStructuredData)}
       {/* Additional SEO Scripts */}
       <script type="application/ld+json"  />{JSON.stringify({
           "@context": "https: //schema.org",
@@ -96,14 +99,39 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
             "target": "https: //ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
         })}
-      
       {/* Performance Hints */}
-
-      {/* Security Headers */}
-    
+      {/* Security Headers */};
       <meta httpEquiv="X-Frame-Options" content="DENY" / / />;
   );
+<<<<<<< HEAD
 };
 
-export default SEOHead;
 
+=======
+export default function ComponentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d941
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b

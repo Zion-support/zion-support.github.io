@@ -1,25 +1,23 @@
-/**
- * System Monitor Component
- * Real-time monitoring dashboard for performance, errors, and system health
- */
 import React, { useState, useEffect, useCallback } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
-import { errorHandler } from '../utils/enhancedErrorHandler';
-// Removed unused collectPerformanceMetrics function
-// Helper functions
-
+export default SystemMonitor;
+/**
+ * System Monitor Component;
+ * Real-time monitoring dashboard for performance, errors, and system health;
+ */
+// Removed unused collectPerformanceMetrics function;
+// Helper functions;
   const metrics = performanceOptimizer.getMetrics();
   if (!metrics) return 0;
   let score = 100;
-  // Deduct points for slow load times
+  // Deduct points for slow load times;
  3000) score -= 20;
  5000) score -= 30;
-  // Deduct points for slow paint times
+  // Deduct points for slow paint times;
  2000) score -= 15;
  3000) score -= 25;
   return Math.max(0, score);
 };
-// Network connection interface
+// Network connection interface;
   effectiveType?: string;
   downlink?: number;
   rtt?: number;
@@ -38,7 +36,7 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
     byType: Record<string, number>;
     byCategory: Record<string, number>;
     bySeverity: Record<string, number>;
-    recent: Array
+    recent: Array;
 ;
   };
     used: number;
@@ -55,73 +53,66 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
   showDetails?: boolean;
   enableExport?: boolean;
   className?: string;
-  className = ''
+  className = '';
   const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
-  // Update metrics
-  
+  // Update metrics;
       const performanceMetrics = performanceOptimizer.getMetrics();
-      const performanceScore = calculatePerformanceScore();
+const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
-      // Get memory info
+      // Get memory info;
       const memoryInfo = getMemoryInfo();
-      // Get network info
+      // Get network info;
       const networkInfo = getNetworkInfo();
-          largestContentfulPaint: 0, // Not available in current metrics
-          firstInputDelay: 0, // Not available in current metrics
-          cumulativeLayoutShift: 0, // Not available in current metrics
-            timestamp: error.context.timestamp
+          largestContentfulPaint: 0, // Not available in current metrics;
+          firstInputDelay: 0, // Not available in current metrics;
+          cumulativeLayoutShift: 0, // Not available in current metrics;
+            timestamp: error.context.timestamp;
           }))
-        network: networkInfo
+        network: networkInfo;
       };
       setMetrics(newMetrics);
       setLastUpdate(new Date());
       console.error('Failed to update metrics:', error);
   }, []);
-  // Initialize monitoring
-    
+  // Initialize monitoring;
       setIsMonitoring(true);
       updateMetrics();
     };
     initializeMonitoring();
-      // Stop monitoring (placeholder - implement as needed)
+      // Stop monitoring (placeholder - implement, as, needed)
       setIsMonitoring(false);
     };
   }, [updateMetrics]);
-  // Update metrics periodically
+  // Update metrics periodically;
     if (!isMonitoring) return;
     const interval = setInterval(updateMetrics, refreshInterval);
  clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
-  // Get memory information
-  
+  // Get memory information;
       const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
-      const used = memory.usedJSHeapSize / 1024 / 1024; // MB
-      const total = memory.totalJSHeapSize / 1024 / 1024; // MB
-      const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
+      const used = memory.usedJSHeapSize / 1024 / 1024; // MB;
+      const total = memory.totalJSHeapSize / 1024 / 1024; // MB;
+      const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB;
       const percentage = (used / limit) * 100;
       return { used, total, limit, percentage };
     return { used: 0, total: 0, limit: 0, percentage: 0 };
   };
-  // Get network information
-  
+  // Get network information;
       const nav = navigator as NavigatorWithConnection;
-      const connection = nav.connection;
-        saveData: connection?.saveData || false
+const connection = nav.connection;
+        saveData: connection?.saveData || false;
       };
-      saveData: false
+      saveData: false;
     };
   };
-  // Export data
-  
+  // Export data;
     if (!metrics) return;
-    
     };
-    
     });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+const a = document.createElement('a');
     a.href = url;
     a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
     document.body.appendChild(a);
@@ -129,44 +120,41 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
-  // Get performance score color
-  
+  // Get performance score color;
 = 90) return 'text-green-600';
 = 70) return 'text-yellow-600';
     return 'text-red-600';
   };
-  // Get severity color
-  
+  // Get severity color;
       case 'critical': return 'text-red-600 bg-red-100';
       case 'high': return 'text-red-500 bg-red-50';
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'low': return 'text-green-600 bg-green-100';
       default: return 'text-gray-600 bg-gray-100';
   };
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-          <span className="ml-2 text-gray-600">Loading system metrics...</span>
+          <div className = "animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+          <span className="ml-2 text-gray-600">Loading system metrics...</span>;
   );
-        <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>
+        <h2 className = "text-2xl font-bold text-gray-900">System Monitor</h2>
             <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
-              {isMonitoring ? 'Monitoring' : 'Stopped'}
-            
-              Export Data
+              {isMonitoring ? 'Monitoring' : 'Stopped'};
+              Export Data;
           )}
           Last updated: {lastUpdate.toLocaleTimeString()}
       )}
       {/* Performance Metrics */}
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>
+        <h3 className = "text-lg font-semibold text-gray-900 mb-4">Performance</h3>
               <span className="text-sm font-medium text-gray-600">Performance Score</span>
                 {metrics.performance.score}
-              <span className="text-sm font-medium text-gray-600">Load Time</span>
-                {metrics.performance.loadTime.toFixed(0)}ms
-              <span className="text-sm font-medium text-gray-600">FCP</span>
-                {metrics.performance.firstContentfulPaint.toFixed(0)}ms
-              <span className="text-sm font-medium text-gray-600">LCP</span>
-                {metrics.performance.largestContentfulPaint.toFixed(0)}ms
-              <span className="text-sm font-medium text-gray-600">FID</span>
-                {metrics.performance.firstInputDelay.toFixed(0)}ms
-              <span className="text-sm font-medium text-gray-600">CLS</span>
+              <span className="text-sm font-medium text-gray-600">Load Time</span>;
+                {metrics.performance.loadTime.toFixed(0)}ms;
+              <span className = "text-sm font-medium text-gray-600">FCP</span>;
+                {metrics.performance.firstContentfulPaint.toFixed(0)}ms;
+              <span className = "text-sm font-medium text-gray-600">LCP</span>;
+                {metrics.performance.largestContentfulPaint.toFixed(0)}ms;
+              <span className = "text-sm font-medium text-gray-600">FID</span>;
+                {metrics.performance.firstInputDelay.toFixed(0)}ms;
+              <span className = "text-sm font-medium text-gray-600">CLS</span>
                 {metrics.performance.cumulativeLayoutShift.toFixed(3)}
       {/* Error Metrics */}
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>
@@ -219,7 +207,6 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                     <span className="capitalize">{category}</span>
                     <span>{count}</span>
                 ))}
-      )}
+      )};
   );
 };
-export default SystemMonitor;

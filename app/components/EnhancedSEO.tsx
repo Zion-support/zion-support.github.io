@@ -1,19 +1,23 @@
-
-
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 interface SEOProps {
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object
-  noindex?: boolean
-  nofollow?: boolean
-
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: object;
+  noindex?: boolean;
+  nofollow?: boolean;
 const EnhancedSEO: React.FC<SEOProps /> = ({
   const title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, 5 G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
@@ -23,9 +27,9 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
-  noindex = false,
-  nofollow = false
-  const defaultStructuredData = {
+  noindex = false,;
+  nofollow = false;
+const defaultStructuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -61,31 +65,52 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       "offerCount": "50+",
       "lowPrice": "99",
       "highPrice": "2999",
-      "priceCurrency": "USD"
-
-  const finalStructuredData = structuredData || defaultStructuredData
+      "priceCurrency": "USD";
+  const finalStructuredData = structuredData || defaultStructuredData;
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
-
   return (
-
+    <div>Content</div>
+  );
         <title>5G Data Analytics - Zion Tech Group</title>
       {/* Basic Meta Tags */}
-    
       <title>{title}</title>
       {/* Canonical URL */}
       {/* Open Graph Meta Tags */}
-    
       {/* Twitter Card Meta Tags */}
-    
       {/* Additional SEO Meta Tags */}
-    
       {/* Performance Hints */}
-
       {/* Structured Data */}
-    
       <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
+<<<<<<< HEAD
 
   )
 
-export default EnhancedSEO;
 
+=======
+export default function ComponentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d941
+=======
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b

@@ -1,93 +1,169 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
 import { useState } from 'react';
 import { AlertCircle } from 'lucide-react';
-
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal';
- void;
-
-const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = 'inline', onClose }) => {
+  onClose?: () => void;
+}
+const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = 'inline', onClose }) => {;
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
-
+  const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault();
     if (!email) {
       setStatus('error');
       setMessage('Please enter your email address');
       return;
-
+    }
     if (!/\S+@\S+\.\S+/.test(email)) {
       setStatus('error');
       setMessage('Please enter a valid email address');
       return;
-
+    }
     setStatus('loading');
-
     try {
-      // Simulate API call
- setTimeout(resolve, 1000));
-      // In a real app, you would make an API call here
+      // Simulate API call;
+      await new Promise(const resolve = > setTimeout(resolve, 1000));
+      // In a real app, you would make an API call here;
       setStatus('success');
       setMessage('Thank you for subscribing! Check your email for confirmation.');
       setEmail('');
-
-      // Close modal after success if it's a modal variant
+      // Close modal after success if it's a modal variant;
       if (const variant = == 'modal' && onClose) {
+        setTimeout(() => {;
           onClose();
         }, 2000);
+      }
     } catch (error) {
       setStatus('error');
       setMessage('Something went wrong. Please try again.');
+    }
   };
-
   const content = (
-
-        <h3 className="text-2 xl font-boldmb-2">Stay Updated</h3>
-          Get the latest updates on AI technology, IT solutions, and industry insights.
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <Mail className="w-5h-5ml-2" /></Mail>
+        <h3 className="text-2 xl font-boldmb-2"  >Stay Updated</h3>
+        <p className="w-5h-5ml-2">Get the latest updates on AI technology, IT solutions, and industry insights.
+        </p>
+      </div>
+      <form onSubmit="{handleSubmit}" className="space-y-4" /></form>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
+          <input;            onChange = "{(e)" = /> setEmail(e.target.value)}
             type="email"
             value="{email}"
- setEmail(e.target.value)}
             placeholder="Enter your email address"
             className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50focus:border-transparent"
             disabled="{status" === 'loading'}
-
+          />;
+          <button;            className = "bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center" /></button>
+            type="submit"
+            disabled="{status" === 'loading'}
             {status === 'loading' ? (
-
-        </div></div>
-
+              <></>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 Subscribing...
-
+              </>
             ) : (
-
-                Subscribe
-
+              <></>
+                <Send className="w-5h-5ml-2" /></Send>;
+                Subscribe;
+              </>
             )}
-
+          </button>
+        </div>
         {message && (
+          <div className = "{`flex" items-center space-x-2 text-sm ${          }`} /></div>
+            status === 'success' ? 'text-green-200' : 'text-red-200'
             {status === 'success' ? (
-
+              <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
             ) : (
+              <AlertCircle className="w-5h-5ml-2" /></AlertCircle>
             )}
-    
-            <span>{message}</span>
-
+            <span  >{message}</span>
+          </div>
         )}
-
-          ✓ No spam, unsubscribe anytime<br>
-          ✓ Weekly updates on latest tech trends<br>
-          ✓ Exclusive content and early access
-    
+      </form>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <p /></p>
+          ✓ No spam, unsubscribe anytime<br /></br>
+          ✓ Weekly updates on latest tech trends<br /></br>;
+          ✓ Exclusive content and early access;
+        </p>
+      </div>
   );
   if (const variant = == 'modal') {
     return (
-
-          <div className="relative w-fullmax-w-md">{content}
-
+    <div>Content</div>
   );
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="fixed inset-0 bg-black/50backdrop-blur-sm" onClick="{onClose}"  /></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{content}
+          </div>;
+      </div>);
+  }
   return content;
 };
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 
-export default NewsletterSignup;
-
+export default function ComponentsPage() {
+=======
+export default function NewsletterSignup() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+  return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
+    <>
+<<<<<<< HEAD
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
+          <Link
+=======
+      <Helmet >
+        <title>Newsletter Signup - Zion Tech Group</title>
+        <meta name = "description" content="Professional newsletter signup by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Newsletter Signup</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional newsletter signup coming soon.</p>
+          <Link >
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+      </div>
+    </>;
+  );
+<<<<<<< HEAD
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d941
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b

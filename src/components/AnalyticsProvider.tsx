@@ -1,48 +1,43 @@
+export default AnalyticsProvider;
   const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
-  
-    // Initialize Google Analytics
-    
+    // Initialize Google Analytics;
       const script = document.createElement('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
       document.head.appendChild(script);
-      // Initialize gtag
+      // Initialize gtag;
       (window as { dataLayer: unknown[] }).dataLayer = (window as { dataLayer: unknown[] }).dataLayer || [];
         (window as { dataLayer: unknown[] }).dataLayer.push(args);
       (window as { gtag: typeof gtag }).gtag = gtag;
       gtag('js', new Date());
-        send_page_view: true
+        send_page_view: true;
       });
     };
-    // Track page views
-    
+    // Track page views;
         });
     };
-
-    // Handle route changes
-    
+    // Handle route changes;
         });
     };
-    // Track user interactions
-    
+    // Track user interactions;
         const target = e.target as HTMLElement;
-          const text = target.textContent?.trim() || '';
+const text = target.textContent?.trim() || '';
           const href = target.getAttribute('href') || '';
-              value: href
+              value: href;
             });
       });
-      // Track form submissions
+      // Track form submissions;
         const form = e.target as HTMLFormElement;
             event_label: form.id || 'contact_form'
           });
       });
-      // Track phone number clicks
+      // Track phone number clicks;
         const target = e.target as HTMLElement;
               value: target.getAttribute('href')
             });
       });
     };
-    // Initialize analytics
+    // Initialize analytics;
     initAnalytics();
     trackPageView();
     trackInteractions();
@@ -52,4 +47,3 @@
   }, [GA_TRACKING_ID]);
   return <>{children}</>;
 };
-export default AnalyticsProvider;

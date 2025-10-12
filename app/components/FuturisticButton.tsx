@@ -1,16 +1,24 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
+=======
+'use client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 interface FuturisticButtonProps {
   children: React.ReactNode;
- void;
+  onClick?: () => void;
   variant?: 'primary' | 'secondary' | 'accent' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
   loading?: boolean;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
   children,
   onClick,
   const variant = 'primary',
@@ -19,10 +27,11 @@ interface FuturisticButtonProps {
   loading = false,
   className = '',
   type = 'button'
-}: FuturisticButtonProps) {
+}: FuturisticButtonProps) {;
   const [isHovered, setIsHovered] = useState(false);
+const getVariantClasses = () => {
     switch (variant) {
-      case 'primary':
+      case 'primary':;
         return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
       case 'secondary':
         return 'bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40';
@@ -31,58 +40,153 @@ interface FuturisticButtonProps {
       case 'ghost':
         return 'bg-white/10 backdrop-blur-lg text-white border border-white/20 hover: bg-white/20';,
   default: return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
+    }
   };
+<<<<<<< HEAD
 
+
+=======
+  const getSizeClasses = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
     switch (size) {
-      case 'sm':
+      case 'sm':;
         return 'px-4 py-2 text-sm';
       case 'md':
         return 'px-6 py-3 text-base';
       case 'lg':
         return 'px-8 py-4 text-lg';
       default: return 'px-6 py-3 text-base';
+    }
   };
-
   return (
-    
+    <div>Content</div>
+  );
+    <motion.button;      onMouseEnter = "{()" = /> setIsHovered(true)}
       const type = {type}
       onClick="{onClick}"
       disabled="{disabled" || loading}
- setIsHovered(true)}
- setIsHovered(false)}
-      className="{`"
-        relative overflow-hidden rounded-lg font-semibold transition-all duration-300
+      onMouseLeave="{()" => setIsHovered(false)}
+      className="{`";
+        relative overflow-hidden rounded-lg font-semibold transition-all duration-300;
         ${getVariantClasses()}
         ${getSizeClasses()}
         ${disabled || loading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
         ${className}
       `}
-      whileHover="{{" scale: 1.05 }}
+      whileHover = "{{" scale: 1.05 }}
       whileTap="{{" scale: 0.95 }}
       initial="{{" opacity: 0, y: 20 }}
       animate="{{" opacity: 1, y: 0 }}
       transition="{{" duration: 0.3 }}
-      {/* Animated background sweep */}
-
-      {/* Pulsing glow effect */}
+    >
+      {/* Animated background sweep */};
+      <motion.div;
+        className = "absolute inset-0 bg-gradient-to-r from-white/20to-transparent"
+        initial="{{" x: '-100%' }}
+        animate="{{" x: isHovered ? '100%' : '-100%' }}
+        transition="{{" duration: 0.6 }}
+       /></motion>
+      {/* Pulsing glow effect */};
+      <motion.div;
+        className = "absolute inset-0rounded-lg"
+        style="{{"
+          boxShadow: variant === 'primary'
+            ? '0 0 20 px rgba(6, 182, 212, 0.4)'
+            : variant === 'secondary'
+            ? '0 0 20 px rgba(168, 85, 247, 0.4)'
+            : variant === 'accent'
+            ? '0 0 20 px rgba(34, 197, 94, 0.4)'
+            : '0 0 20 px rgba(255, 255, 255, 0.2)'
+        }}
+        animate="{{"
+          opacity: isHovered ? [0.4, 0.8, 0.4] : 0,
+          scale: isHovered ? [1, 1.05, 1] : 1,
+        }}
+        transition="{{"
+          duration: 1.5,
+          repeat: isHovered ? Infinity : 0,
+          ease: 'easeInOut'
+        }}
+       /></motion>
       {/* Scanning line effect */}
-      {isHovered && (
+      {isHovered && (;
+        <motion.div;
+          className = "absolute inset-0rounded-lg"
+          style="{{"
+            background: 'linear-gradient(90 deg, transparent, rgba(255,255,255,0.3), transparent)',
+            backgroundSize: '200% 100%',
+          }}
+          animate="{{"
+            backgroundPosition: ['200% 0', '-200% 0'],
+          }}
+          transition="{{"
+            duration: 1.5,
+            repeat: Infinity,
+            ease: 'linear',
+          }}
+         /></motion>
       )}
-
       {/* Corner accents */}
+<<<<<<< HEAD
 
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Content */}
+      <span className="w-5h-5ml-2" /></span>
         {loading ? (
-
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      {/* Content */}
+      </div></div><span className="w-5 h-5 ml-2" />
+        {loading ? (
+          <>
+            </><motion .div
+              className="w-4h-4b o rder-2 border-white/30 border-t-white rounded-full mr-2"
+              animate="{{" rotate: 360 }}
+              transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
+             />
+          <></>;
+            <motion.div;             /></motion>
+              className = "w-4h-4bor d er-2 border-white/30 border-t-white rounded-full mr-2"
+              animate="{{" rotate: 360 }}
+              transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
             Loading...
-
-        ) : (
-          children
+          </>
+        ) : (;
+          children;
         )}
+      </span>
+    </motion.button>
+  </div>);
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
+export default function ComponentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+      </div>
+    </>
   );
-
-};
-
-export default FuturisticButton;
-
+>>>>>>> cursor/fix-errors-and-merge-to-main-d941
+}

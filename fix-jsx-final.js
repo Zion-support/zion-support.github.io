@@ -1,55 +1,43 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
-
-// Function to fix common JSX syntax issues
+#!/usr/bin/env node;
+// Function to fix common JSX syntax issues;
 function fixJSXSyntax(content) {
-  // Remove any remaining merge conflict artifacts
-  content = content.replace(/  
-  // Fix common broken JSX patterns
+  // Remove any remaining merge conflict artifacts;
+  content = content.replace(/  ;
+  // Fix common broken JSX patterns;
   content = content.replace(/\}\s*\)\s*\)\s*\)\s*$/gm, '}');
   content = content.replace(/\}\s*\)\s*\)\s*$/gm, '}');
   content = content.replace(/\}\s*\)\s*$/gm, '}');
-  
-  // Fix broken JSX expressions that are missing closing braces
+  // Fix broken JSX expressions that are missing closing braces;
   content = content.replace(/\{\s*([^}]+)\s*\}\s*\)\s*$/gm, '{$1}');
-  
-  // Fix broken closing tags and JSX structure
+  // Fix broken closing tags and JSX structure;
   content = content.replace(/\}\s*\)\s*\}\s*\)\s*\}\s*\)\s*$/gm, '}');
   content = content.replace(/\}\s*\)\s*\}\s*\)\s*$/gm, '}');
   content = content.replace(/\}\s*\)\s*$/gm, '}');
-  
-  // Fix broken JSX fragments
+  // Fix broken JSX fragments;
   content = content.replace(/\<\>\s*$/gm, '');
   content = content.replace(/\<\/\>\s*$/gm, '');
-  
-  // Fix broken return statements
+  // Fix broken return statements;
   content = content.replace(/\}\s*\)\s*;\s*$/gm, '}');
   content = content.replace(/\}\s*\)\s*\)\s*;\s*$/gm, '}');
   content = content.replace(/\}\s*\)\s*\)\s*\)\s*;\s*$/gm, '}');
-  
-  // Fix specific broken patterns
+  // Fix specific broken patterns;
   content = content.replace(/\}\s*\)\s*\}\s*\)\s*\}\s*\)\s*\}\s*\)\s*$/gm, '}');
   content = content.replace(/\}\s*\)\s*\}\s*\)\s*\}\s*\)\s*$/gm, '}');
   content = content.replace(/\}\s*\)\s*\}\s*\)\s*$/gm, '}');
-  
-  // Clean up extra whitespace and newlines
+  // Clean up extra whitespace and newlines;
   content = content.replace(/\n\s*\n\s*\n+/g, '\n\n');
   content = content.replace(/\s+$/gm, '');
-  
   return content;
-
-// Function to fix a specific file
+// Function to fix a specific file;
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     const originalContent = content;
-    
-    // Apply fixes
+    // Apply fixes;
     content = fixJSXSyntax(content);
-    
-    // Only write if content changed
+    // Only write if content changed;
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed syntax in: ${filePath}`);
@@ -58,11 +46,9 @@ function fixFile(filePath) {
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
-
-// Main execution
+// Main execution;
 console.log('Starting final JSX syntax fixes...');
-
-// Focus on the most problematic files first
+// Focus on the most problematic files first;
 const criticalFiles = [
   '/workspace/app/about/page.tsx',
   '/workspace/app/5g-implementation/page.tsx',
@@ -283,14 +269,12 @@ const criticalFiles = [
   '/workspace/app/nlp/page.tsx',
   '/workspace/app/privacy/page.tsx',
   '/workspace/app/seo-optimizer/page.tsx',
-  '/workspace/app/system-administration/page.tsx'
+  '/workspace/app/system-administration/page.tsx';
 ];
-
 let fixedCount = 0;
-for (const file of criticalFiles) {
+for (const file, of, criticalFiles) {
   if (fs.existsSync(file)) {
     if (fixFile(file)) {
       fixedCount++;
-
 console.log(`Fixed syntax in ${fixedCount} files`);
 console.log('Final JSX syntax fixes completed!');

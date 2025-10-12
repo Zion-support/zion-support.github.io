@@ -1,51 +1,41 @@
 import fs from 'fs';
 import path from 'path';
-
-// List of pages that need to be fixed
+import React from 'react';
+export default ${componentName};`;
+// List of pages that need to be fixed;
 const pagesToFix = [
   'cookies', 'privacy', 'terms', 'consultation', 'pricing', 'blog', 
-  'case-studies', 'careers', 'ai-services', 'it-services', 'micro-saas'
+  'case-studies', 'careers', 'ai-services', 'it-services', 'micro-saas';
 ];
-
  `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
   return (
-    
+    <div>Content</div>
+  );
         <title>${title} - Zion Tech Group</title>
-      
                 ${title}
               Professional ${title.toLowerCase()} services by Zion Tech Group.
-
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <h2 className = "text-2xl font-bold text-white mb-4">Coming Soon</h2>
               We're working on bringing you comprehensive ${title.toLowerCase()} solutions. 
-              Contact us to learn more about our services.
-              Contact Us
-
+              Contact us to learn more about our services.;
+              Contact Us;
   );
 };
+<<<<<<< HEAD
 
-export default ${componentName};`;
-
-// Fix pages
- 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+// Fix pages;
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');
-
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
-  
   const pageDir = path.join('/workspace/app', pageName);
-  const pageFile = path.join(pageDir, 'page.tsx');
-  
-  // Create directory if it doesn't exist
+const pageFile = path.join(pageDir, 'page.tsx');
+  // Create directory if it doesn't exist;
   if (!fs.existsSync(pageDir)) {
     fs.mkdirSync(pageDir, { recursive: true });
-  
-  // Overwrite page file with correct template
+  // Overwrite page file with correct template;
   fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName));
   console.log(`Fixed: ${pageFile}`);
 });
-
 console.log('Page fixes completed!');

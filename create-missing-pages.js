@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-
-// List of pages that need to be created based on App.tsx imports
+import React from 'react';
+export default ${title}Page;`;
+// List of pages that need to be created based on App.tsx imports;
 const missingPages = [
   'pricing', 'blog', 'case-studies', 'careers', 'ai-services', 'it-services', 
   'micro-saas', 'consultation', 'support', 'privacy', 'terms', 'cookies', 
@@ -28,47 +29,37 @@ const missingPages = [
   'performance-optimization', 'disaster-recovery-advanced', 'compliance-automation', 
   'cloud-cost-optimization', 'security-automation', 'data-visualization', 
   'workflow-automation', 'cloud-native-security', 'team', 'partners', 'status', 
-  'faq', 'docs', 'api-docs', 'community', 'compliance'
+  'faq', 'docs', 'api-docs', 'community', 'compliance';
 ];
-
-// Template for page components
+// Template for page components;
  `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
   return (
-    
+    <div>Content</div>
+  );
         <title>${title} - Zion Tech Group</title>
-      
                 ${title}
               Professional ${title.toLowerCase()} services by Zion Tech Group.
-
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <h2 className = "text-2xl font-bold text-white mb-4">Coming Soon</h2>
               We're working on bringing you comprehensive ${title.toLowerCase()} solutions. 
-              Contact us to learn more about our services.
-              Contact Us
-
+              Contact us to learn more about our services.;
+              Contact Us;
   );
 };
+<<<<<<< HEAD
 
-export default ${title}Page;`;
-
-// Create missing pages
- 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+// Create missing pages;
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');
-  
   const pageDir = path.join('/workspace/app', pageName);
-  const pageFile = path.join(pageDir, 'page.tsx');
-  
-  // Create directory if it doesn't exist
+const pageFile = path.join(pageDir, 'page.tsx');
+  // Create directory if it doesn't exist;
   if (!fs.existsSync(pageDir)) {
     fs.mkdirSync(pageDir, { recursive: true });
-  
-  // Create page file if it doesn't exist
+  // Create page file if it doesn't exist;
   if (!fs.existsSync(pageFile)) {
     fs.writeFileSync(pageFile, pageTemplate(pageName, title));
     console.log(`Created: ${pageFile}`);
 });
-
 console.log('Missing pages creation completed!');

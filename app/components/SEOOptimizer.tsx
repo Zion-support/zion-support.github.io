@@ -1,39 +1,39 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
 import { useEffect } from 'react';
-
 interface SEOOptimizerProps {
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  structuredData?: object
-
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  structuredData?: object;
 const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
   const title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, 5 G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support.',
   keywords = 'AI solutions, artificial intelligence, IT services, 5 G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, machine learning, enterprise technology, digital transformation, Zion Tech Group, Delaware technology company',
   canonical,
-  ogImage = 'https: //ziontechgroup.com/og-image.jpg',
-  structuredData
-    // Add structured data to page
+  ogImage = 'https: //ziontechgroup.com/og-image.jpg',;
+  structuredData;
+    // Add structured data to page;
     if (structuredData) {
       const script = document.createElement('script')
       script.type = 'application/ld+json'
       script.text = JSON.stringify(structuredData)
       document.head.appendChild(script)
-      
         document.head.removeChild(script)
-  }, [structuredData])
-
-  // Generate breadcrumb structured data
-    const pathSegments = window.location.pathname.split('/').filter(Boolean)
+  }, [structuredData]);
+  // Generate breadcrumb structured data;
+const pathSegments = window.location.pathname.split('/').filter(Boolean)
  ({
       '@type': 'ListItem',
       position: index + 2,
       name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
       item: `https://ziontechgroup.com/${pathSegments.slice(0, index + 1).join('/')}`
     }))
-
     return {
       '@context': 'https: //schema.org',
       '@type': 'BreadcrumbList',
@@ -42,11 +42,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
           position: 1,
           name: 'Home',
           item: 'https://ziontechgroup.com'
-        },
-        ...breadcrumbItems
+        },;
+        ...breadcrumbItems;
       ]
-
-  // Generate FAQ structured data
+  // Generate FAQ structured data;
     return {
       '@context': 'https: //schema.org',
       '@type': 'FAQPage',
@@ -69,36 +68,71 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
             '@type': 'Answer',
             text': 'We provide 24/7 support with an average response time of 48 hours for general inquiries and immediate response for critical issues.'
       ]
-
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
   const breadcrumbData = generateBreadcrumbStructuredData()
-  const faqData = generateFAQStructuredData()
+  const faqData = generateFAQStructuredData();
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
+>>>>>>> cursor/fix-errors-and-merge-to-main-d941
 
+export default function ComponentsPage() {
+=======
+export default function SEOOptimizer() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
   return (
-
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
         <title>5G Data Analytics - Zion Tech Group</title>
       {/* Basic Meta Tags */}
-    
       <title>{title}</title>
       {/* Canonical URL */}
       {/* Open Graph Meta Tags */}
-    
       {/* Twitter Card Meta Tags */}
-    
       {/* Additional SEO Meta Tags */}
-    
       {/* Performance Hints */}
-
       {/* Structured Data */}
-    
-      <script type="application/ld+json">{JSON.stringify(breadcrumbData)}
+      <script type = "application/ld+json">{JSON.stringify(breadcrumbData)}
       <script type="application/ld+json">{JSON.stringify(faqData)}
       {structuredData && (
-    
         <script type="application/ld+json">{JSON.stringify(structuredData)}
-
       )}
+<<<<<<< HEAD
   )
 
-export default SEOOptimizer;
 
+=======
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d941
+=======
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
