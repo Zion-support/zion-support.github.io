@@ -1,20 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
 
-const Page: React.FC = () => {
+export default function AIProjectManagementPro() {
   return (
     <>
       <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
-        <meta property="og:title" content=" - Zion Tech Group" />
-        <meta property="og:description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <title>AI Project Management Pro - Zion Tech Group | Advanced Project Management Solutions</title>
+        <meta name="description" content="Transform your project management with AI-powered tools. Streamline workflows, track progress, and deliver projects on time with our advanced platform." />
+        <meta name="keywords" content="AI project management, project tracking, team collaboration, workflow automation, project analytics" />
+        <meta property="og:title" content="AI Project Management Pro - Zion Tech Group" />
+        <meta property="og:description" content="Transform your project management with AI-powered tools. Streamline workflows, track progress, and deliver projects on time with our advanced platform." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-project-management-pro" />
       </Helmet>
@@ -25,11 +23,12 @@ const Page: React.FC = () => {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                
+                AI Project Management Pro
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
+              Transform your project management with AI-powered tools that streamline workflows, 
+              track progress, and deliver projects on time with intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link 
@@ -45,9 +44,6 @@ const Page: React.FC = () => {
               >
                 Learn More
               </Link>
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
 
   const pricingPlans = [
     {
@@ -78,14 +74,11 @@ const Page: React.FC = () => {
                   </div>
                 </div>
               ))}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
@@ -109,24 +102,13 @@ const Page: React.FC = () => {
                   View All Services
                 </Link>
               </div>
-=======
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
             </div>
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </>
   );
 };
 
 export default Page;
-=======
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
-}
->>>>>>> cursor/website-audit-and-update-with-deployment-6024

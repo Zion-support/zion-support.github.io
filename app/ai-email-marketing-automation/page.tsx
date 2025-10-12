@@ -4,135 +4,15 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
 
-<<<<<<< HEAD
-const Page: React.FC = () => {
-=======
-export default function AIEmailMarketingAutomation() {
-  const features = [
-    {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI Content Generation',
-      description: 'Create compelling email campaigns with AI-powered subject lines, content, and CTAs'
-    },
-    {
-      icon: <Target className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Segmentation',
-      description: 'Automatically segment your audience based on behavior, preferences, and engagement'
-    },
-    {
-      icon: <Clock className="w-6 h-6 text-yellow-400" />,
-      title: 'Automated Workflows',
-      description: 'Set up complex email sequences that trigger based on user actions and behaviors'
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
-      title: 'Advanced Analytics',
-      description: 'Track open rates, click-through rates, conversions, and ROI with detailed insights'
-    }
-  ]
-
-  const automationFeatures = [
-    {
-      category: 'Email Creation',
-      items: ['AI Subject Line Generator', 'Content Templates', 'Personalization Engine', 'A/B Testing', 'Mobile Optimization', 'Spam Score Checker']
-    },
-    {
-      category: 'Automation',
-      items: ['Welcome Series', 'Abandoned Cart Recovery', 'Birthday Campaigns', 'Re-engagement Sequences', 'Lead Nurturing', 'Post-Purchase Follow-up']
-    },
-    {
-      category: 'Segmentation',
-      items: ['Behavioral Triggers', 'Demographic Filters', 'Engagement Levels', 'Purchase History', 'Custom Fields', 'Dynamic Lists']
-    },
-    {
-      category: 'Analytics',
-      items: ['Real-time Dashboard', 'Campaign Performance', 'Revenue Tracking', 'Subscriber Growth', 'Unsubscribe Analysis', 'ROI Reports']
-    }
-  ]
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$39',
-      period: '/month',
-      description: 'Perfect for small businesses and startups',
-      features: [
-        'Up to 1,000 subscribers',
-        'Basic AI features',
-        'Email templates',
-        'Basic automation',
-        'Standard analytics',
-        'Email support'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Up to 10,000 subscribers',
-        'Advanced AI features',
-        'Custom templates',
-        'Advanced automation',
-        'Detailed analytics',
-        'Priority support',
-        'A/B testing'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited subscribers',
-        'Custom AI training',
-        'White-label solution',
-        'Advanced automation',
-        'Custom analytics',
-        'Dedicated support',
-        'API access'
-      ],
-      popular: false
-    }
-  ]
-
-  const testimonials = [
-    {
-      name: 'Jennifer Lee',
-      company: 'E-commerce Store',
-      content: 'AI Email Marketing Automation increased our email revenue by 200% and reduced our workload by 60%.',
-      rating: 5
-    },
-    {
-      name: 'David Park',
-      company: 'SaaS Company',
-      content: 'The automated workflows are incredible. Our lead nurturing process is now completely hands-off.',
-      rating: 5
-    },
-    {
-      name: 'Maria Santos',
-      company: 'Marketing Agency',
-      content: 'Managing multiple client email campaigns is now effortless. The AI content generation saves hours.',
-      rating: 5
-    }
-  ]
-
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
+export default function Page() {
   return (
     <>
       <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <title>Professional Services - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
         <meta property="og:title" content=" - Zion Tech Group" />
-        <meta property="og:description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta property="og:description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-email-marketing-automation" />
       </Helmet>
@@ -142,9 +22,7 @@ export default function AIEmailMarketingAutomation() {
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                
-              </span>
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Professional Services</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
@@ -195,16 +73,9 @@ export default function AIEmailMarketingAutomation() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </>
   );
 };
 
 export default Page;
-=======
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
-}
->>>>>>> cursor/website-audit-and-update-with-deployment-6024

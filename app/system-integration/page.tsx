@@ -1,20 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
 
-const Page: React.FC = () => {
+export default function Page() {
   return (
     <>
       <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <title>Professional Services - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
         <meta property="og:title" content=" - Zion Tech Group" />
-        <meta property="og:description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta property="og:description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/system-integration" />
       </Helmet>
@@ -24,9 +22,7 @@ const Page: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                
-              </span>
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Professional Services</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
@@ -78,11 +74,7 @@ const Page: React.FC = () => {
         </section>
       </div>
     </>
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
     </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
   );
 };
 

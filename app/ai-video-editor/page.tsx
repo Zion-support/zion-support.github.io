@@ -4,135 +4,15 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
 
-<<<<<<< HEAD
-const Page: React.FC = () => {
-=======
-export default function AIVideoEditor() {
-  const features = [
-    {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Editing',
-      description: 'Automatically edit videos with intelligent scene detection, color correction, and audio enhancement'
-    },
-    {
-      icon: <Scissors className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Cut Detection',
-      description: 'AI automatically identifies the best moments and creates seamless cuts and transitions'
-    },
-    {
-      icon: <Play className="w-6 h-6 text-yellow-400" />,
-      title: 'Auto-Generated Content',
-      description: 'Create engaging videos from text, images, and audio with AI-generated animations and effects'
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6 text-green-400" />,
-      title: 'Performance Analytics',
-      description: 'Track video performance, engagement metrics, and optimize content for better results'
-    }
-  ]
-
-  const editingFeatures = [
-    {
-      category: 'AI Editing',
-      items: ['Auto Scene Detection', 'Smart Cuts', 'Color Correction', 'Audio Enhancement', 'Stabilization', 'Background Removal']
-    },
-    {
-      category: 'Content Creation',
-      items: ['Text to Video', 'Image Animation', 'Voice Synthesis', 'Music Generation', 'Template Library', 'Custom Branding']
-    },
-    {
-      category: 'Export & Sharing',
-      items: ['Multiple Formats', 'Social Media Optimization', 'Cloud Storage', 'Direct Publishing', 'Collaboration Tools', 'Version Control']
-    },
-    {
-      category: 'Analytics',
-      items: ['View Metrics', 'Engagement Tracking', 'A/B Testing', 'Performance Reports', 'Audience Insights', 'ROI Analysis']
-    }
-  ]
-
-  const pricingPlans = [
-    {
-      name: 'Creator',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for content creators and influencers',
-      features: [
-        'Up to 10 hours of video/month',
-        'Basic AI features',
-        'Standard templates',
-        'Email support',
-        'Basic analytics',
-        'Mobile app access'
-      ],
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for businesses and agencies',
-      features: [
-        'Up to 50 hours of video/month',
-        'Advanced AI features',
-        'Custom templates',
-        'Priority support',
-        'Advanced analytics',
-        'Team collaboration',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited video processing',
-        'Custom AI training',
-        'White-label solution',
-        'Dedicated support',
-        'Custom integrations',
-        'Advanced analytics',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
-  ]
-
-  const testimonials = [
-    {
-      name: 'Alex Rodriguez',
-      company: 'YouTube Creator',
-      content: 'AI Video Editor cut my editing time by 70%. The auto-generated content is incredibly engaging.',
-      rating: 5
-    },
-    {
-      name: 'Sarah Kim',
-      company: 'Marketing Agency',
-      content: 'Creating professional videos for clients is now effortless. The AI quality is outstanding.',
-      rating: 5
-    },
-    {
-      name: 'Mike Johnson',
-      company: 'E-learning Platform',
-      content: 'The analytics help us understand what content performs best. Our engagement increased by 150%.',
-      rating: 5
-    }
-  ]
-
-<<<<<<< HEAD
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
+export default function Page() {
   return (
     <>
       <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <title>Professional Services - Zion Tech Group</title>
+        <meta name="description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
         <meta property="og:title" content=" - Zion Tech Group" />
-        <meta property="og:description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta property="og:description" content="Professional services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-video-editor" />
       </Helmet>
@@ -142,9 +22,7 @@ export default function AIVideoEditor() {
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                
-              </span>
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Professional Services</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
@@ -195,16 +73,9 @@ export default function AIVideoEditor() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </>
   );
 };
 
 export default Page;
-=======
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
-}
->>>>>>> cursor/website-audit-and-update-with-deployment-6024
