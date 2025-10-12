@@ -1,60 +1,13 @@
 import React from 'react'
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async'
-=======
 import SEOHead from './components/SEOHead'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, CheckCircle, Star, Sparkles, Rocket, Cpu, Wifi, Smartphone } from 'lucide-react'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Smartphone, Cpu, Database } from 'lucide-react'
+import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Smartphone, Cpu, Database, Star, Sparkles, Rocket, Wifi, Globe, Code } from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 
 export default function HomePage() {
   const features = [
     {
-<<<<<<< HEAD
-      icon: <Brain className="w-12 h-12 text-blue-500" />,
-      title: 'AI Services',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      link: '/ai-services'
-    },
-    {
-      icon: <Cpu className="w-12 h-12 text-green-500" />,
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including cloud migration, cybersecurity, and infrastructure management.',
-      benefits: ['Cloud Migration', 'Cybersecurity', 'DevOps', 'Infrastructure Management'],
-      link: '/it-services'
-    },
-    {
-      icon: <Smartphone className="w-12 h-12 text-purple-500" />,
-      title: 'Micro SaaS',
-      description: 'Specialized micro software solutions designed for specific business needs and workflows.',
-      benefits: ['Custom Solutions', 'Rapid Deployment', 'Scalable Architecture', 'Cost Effective'],
-      link: '/micro-saas-services'
-    },
-    {
-      icon: <Zap className="w-12 h-12 text-yellow-500" />,
-      title: '5G Implementation',
-      description: 'Next-generation 5G network implementation and optimization for enhanced connectivity.',
-      benefits: ['Network Design', 'Infrastructure Setup', 'Performance Optimization', 'Security Implementation'],
-      link: '/5g-implementation'
-    },
-    {
-      icon: <Cloud className="w-12 h-12 text-orange-500" />,
-      title: 'Cloud Services',
-      description: 'Professional cloud services including migration, infrastructure setup, security, and optimization.',
-      benefits: ['Cloud Migration', 'Infrastructure Setup', 'Security Solutions', 'Cost Optimization'],
-      link: '/cloud-services'
-    },
-    {
-      icon: <Database className="w-12 h-12 text-red-500" />,
-      title: 'Digital Transformation',
-      description: 'Transform your business for the digital age with comprehensive digital transformation services.',
-      benefits: ['Process Automation', 'Digital Workforce', 'Customer Experience', 'Data Strategy'],
-      link: '/digital-transformation'
-=======
       icon: <Zap className="w-8 h-8 text-cyan-400" />,
       title: 'AI-Powered Solutions',
       description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
@@ -114,8 +67,8 @@ export default function HomePage() {
     },
     {
       name: 'Michael Chen',
-      company: 'DataFlow Solutions',
-      content: 'Their AI solutions helped us automate 80% of our processes. Incredible efficiency gains.',
+      company: 'DataFlow Systems',
+      content: 'Their AI solutions have revolutionized our business processes. Highly recommended!',
       rating: 5,
       avatar: 'MC'
     },
@@ -125,58 +78,18 @@ export default function HomePage() {
       content: 'Professional, reliable, and innovative. Zion Tech Group is our go-to technology partner.',
       rating: 5,
       avatar: 'ER'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
     }
   ]
 
   const stats = [
-<<<<<<< HEAD
-    { number: '500+', label: 'Projects Completed' },
-    { number: '99%', label: 'Client Satisfaction' },
-    { number: '24/7', label: 'Support Available' },
-    { number: '50+', label: 'Expert Team Members' }
-=======
     { number: '500+', label: 'Projects Completed', icon: <Rocket className="w-6 h-6" /> },
     { number: '50+', label: 'Enterprise Clients', icon: <Cpu className="w-6 h-6" /> },
     { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" /> },
     { number: '24/7', label: 'Support Available', icon: <Globe className="w-6 h-6" /> }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, IT services, 5G implementation, cloud services, digital transformation, Zion Tech Group" />
-      </Helmet>
-      
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              Advanced AI & IT Solutions
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8 px-4">
-              Transform your business with cutting-edge artificial intelligence and information technology solutions designed to accelerate growth and efficiency.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/about"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
-=======
       <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your business with cutting-edge technology."
@@ -217,7 +130,6 @@ export default function HomePage() {
                 to="/about" 
                 className="group border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm"
               >
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
                 Learn More
               </Link>
             </div>
@@ -225,32 +137,27 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Stats Section */}
+      {/* Stats Section with Neon Effects */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-300 text-sm">
-                  {stat.label}
-=======
-          {/* Stats Section with Neon Effects */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 mb-20">
             {stats.map((stat, index) => (
               <div key={index} className="group text-center px-2">
-                <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20">
-                  <div className="flex justify-center mb-3">
-                    <div className="p-3 rounded-full bg-gradient-to-r from-cyan-400/20 to-purple-400/20 group-hover:from-cyan-400/30 group-hover:to-purple-400/30 transition-all duration-300">
-                      {stat.icon}
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                  <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 group-hover:border-purple-500/50 transition-all duration-300">
+                    <div className="flex justify-center mb-3">
+                      <div className="p-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg">
+                        {stat.icon}
+                      </div>
+                    </div>
+                    <div className="text-2xl sm:text-3xl font-bold text-white mb-1 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
+                      {stat.number}
+                    </div>
+                    <div className="text-gray-300 text-sm font-medium">
+                      {stat.label}
                     </div>
                   </div>
-                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">{stat.number}</div>
-                  <div className="text-gray-300 text-xs sm:text-sm group-hover:text-white transition-colors">{stat.label}</div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
                 </div>
               </div>
             ))}
@@ -258,118 +165,88 @@ export default function HomePage() {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Services
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+              Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Services</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive solutions tailored to your business needs.
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-=======
-      {/* Features Section with Futuristic Cards */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-              Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Core Services</span>
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-              Comprehensive technology solutions designed to accelerate your digital transformation
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-20">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Link key={index} to={feature.link} className="group">
-                <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group-hover:bg-white/15 group-hover:shadow-2xl group-hover:shadow-cyan-500/20 transform group-hover:scale-105">
-                  <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <div className={`p-4 rounded-xl bg-gradient-to-r ${feature.gradient} bg-opacity-20 inline-block`}>
+              <div key={index} className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 group-hover:border-purple-500/50 transition-all duration-300 h-full">
+                  <div className="flex items-center mb-4">
+                    <div className={`p-3 bg-gradient-to-r ${feature.gradient} rounded-xl mr-4`}>
                       {feature.icon}
                     </div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
+                      {feature.title}
+                    </h3>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-300 transition-colors">{feature.title}</h3>
-                  <p className="text-gray-300 mb-6 group-hover:text-white transition-colors">{feature.description}</p>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {feature.description}
+                  </p>
                   <ul className="space-y-2 mb-6">
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300 group-hover:text-white transition-colors">
-                        <CheckCircle className="w-4 h-4 text-emerald-400 mr-2 flex-shrink-0" />
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-6 flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                  <Link
+                    to={feature.link}
+                    className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300"
+                  >
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                  </Link>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* CTA Section */}
+      {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our AI and IT solutions can drive your success.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
-              >
-                Get Started Today
-              </Link>
-              <Link
-                to="/about"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
-              >
-                Learn More
-              </Link>
-=======
-      {/* Testimonials Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 relative">
-        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-              What Our <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Clients Say</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+              What Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Clients Say</span>
             </h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-              Don't just take our word for it - hear from businesses that have transformed with our solutions
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              Trusted by leading companies worldwide for our innovative solutions and exceptional service.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-6 italic text-lg leading-relaxed">"{testimonial.content}"</p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                    {testimonial.avatar}
+              <div key={index} className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 group-hover:border-purple-500/50 transition-all duration-300 h-full">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                      <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    ))}
                   </div>
+                  <p className="text-gray-300 italic">"{testimonial.content}"</p>
                 </div>
               </div>
             ))}
@@ -377,38 +254,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section with Futuristic Design */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden">
-              {/* Animated Background */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(236,72,153,0.3),transparent_50%)]"></div>
-              
-              <div className="relative">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 px-4">
-                  Ready to Transform Your Business?
-                </h2>
-                <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-3xl mx-auto px-4">
-                  Let's discuss how our AI and IT solutions can drive your success. Get started with a free consultation today.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
-                    to="/contact" 
-                    className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-                  >
-                    Get Free Consultation
-                  </Link>
-                  <Link 
-                    to="/ai-services" 
-                    className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
-                  >
-                    Explore AI Services
-                  </Link>
-                </div>
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl blur-2xl"></div>
+            <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-white/10 rounded-3xl p-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+                Join hundreds of companies that have already transformed their operations with our cutting-edge AI and IT solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+                >
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  to="/about"
+                  className="group border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300 backdrop-blur-sm"
+                >
+                  Learn More About Us
+                </Link>
               </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
             </div>
           </div>
         </div>

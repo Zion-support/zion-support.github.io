@@ -1,66 +1,66 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Users, Briefcase, MapPin, Clock, Star } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const CareersPage: React.FC = () => {
-  const openPositions = [
-    {
-      title: 'Senior AI Engineer',
-      department: 'AI Research',
-      location: 'Remote / New York',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
-      requirements: [
-        'PhD in Computer Science or related field',
-        '5+ years experience in AI/ML',
-        'Expertise in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, Azure, GCP)',
-        'Strong problem-solving and communication skills'
-      ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Learning budget']
-    },
-    {
-      title: 'Cloud Solutions Architect',
-      department: 'Cloud Services',
-      location: 'San Francisco, CA',
-      type: 'Full-time',
-      experience: '7+ years',
-      description: 'Design and implement scalable cloud architectures for enterprise clients.',
-      requirements: [
-        'Bachelor\'s degree in Computer Science',
-        '7+ years cloud architecture experience',
-        'AWS/Azure/GCP certifications preferred',
-        'Experience with Kubernetes, Docker',
-        'Strong client-facing skills'
-      ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Learning budget']
-    }
-  ];
+  // const openPositions = [
+  //   {
+  //     title: 'Senior AI Engineer',
+  //     department: 'AI Research',
+  //     location: 'Remote / New York',
+  //     type: 'Full-time',
+  //     experience: '5+ years',
+  //     description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
+  //     requirements: [
+  //       'PhD in Computer Science or related field',
+  //       '5+ years experience in AI/ML',
+  //       'Expertise in Python, TensorFlow, PyTorch',
+  //       'Experience with cloud platforms (AWS, Azure, GCP)',
+  //       'Strong problem-solving and communication skills'
+  //     ],
+  //     benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Learning budget']
+  //   },
+  //   {
+  //     title: 'Cloud Solutions Architect',
+  //     department: 'Cloud Services',
+  //     location: 'San Francisco, CA',
+  //     type: 'Full-time',
+  //     experience: '7+ years',
+  //     description: 'Design and implement scalable cloud architectures for enterprise clients.',
+  //     requirements: [
+  //       'Bachelor\'s degree in Computer Science',
+  //       '7+ years cloud architecture experience',
+  //       'AWS/Azure/GCP certifications preferred',
+  //       'Experience with Kubernetes, Docker',
+  //       'Strong client-facing skills'
+  //     ],
+  //     benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Learning budget']
+  //   }
+  // ];
 
-  const benefits = [
-    {
-      icon: <Star className="w-8 h-8 text-yellow-500" />,
-      title: 'Competitive Compensation',
-      description: 'Above-market salaries with performance bonuses and stock options.'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-blue-500" />,
-      title: 'Great Team Culture',
-      description: 'Work with talented, passionate professionals in a collaborative environment.'
-    },
-    {
-      icon: <Briefcase className="w-8 h-8 text-green-500" />,
-      title: 'Career Growth',
-      description: 'Clear career paths with opportunities for advancement and skill development.'
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-purple-500" />,
-      title: 'Work-Life Balance',
-      description: 'Flexible work arrangements and generous time off policies.'
-    }
-  ];
+  // const benefits = [
+  //   {
+  //     icon: <Star className="w-8 h-8 text-yellow-500" />,
+  //     title: 'Competitive Compensation',
+  //     description: 'Above-market salaries with performance bonuses and stock options.'
+  //   },
+  //   {
+  //     icon: <Users className="w-8 h-8 text-blue-500" />,
+  //     title: 'Great Team Culture',
+  //     description: 'Work with talented, passionate professionals in a collaborative environment.'
+  //   },
+  //   {
+  //     icon: <Briefcase className="w-8 h-8 text-green-500" />,
+  //     title: 'Career Growth',
+  //     description: 'Clear career paths with opportunities for advancement and skill development.'
+  //   },
+  //   {
+  //     icon: <Clock className="w-8 h-8 text-purple-500" />,
+  //     title: 'Work-Life Balance',
+  //     description: 'Flexible work arrangements and generous time off policies.'
+  //   }
+  // ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

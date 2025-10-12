@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useEffect } from 'react'
 
 interface AnalyticsProps {
@@ -6,6 +7,12 @@ interface AnalyticsProps {
   enablePerformanceMonitoring?: boolean
   enableErrorTracking?: boolean
   enableUserBehaviorTracking?: boolean
+}
+
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void
+  }
 }
 
 const Analytics: React.FC<AnalyticsProps> = ({
@@ -30,7 +37,6 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking])
 
   const initializeGoogleAnalytics = () => {
-<<<<<<< HEAD
     // Load Google Analytics
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
@@ -58,24 +64,17 @@ const Analytics: React.FC<AnalyticsProps> = ({
     // Initialize error tracking
     if (typeof window !== 'undefined') {
       window.addEventListener('error', (event) => {
-        console.error('JavaScript Error:', event.error)
-        // Send to error tracking service
+        console.error('Error caught by Analytics:', event.error)
       })
 
       window.addEventListener('unhandledrejection', (event) => {
-        console.error('Unhandled Promise Rejection:', event.reason)
-        // Send to error tracking service
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
+        console.error('Unhandled promise rejection caught by Analytics:', event.reason)
       })
     }
   }
 
   const initializeUserBehaviorTracking = () => {
-<<<<<<< HEAD
     // Initialize user behavior tracking
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
     if (typeof window !== 'undefined') {
       // Track page views
       const trackPageView = () => {
@@ -90,50 +89,38 @@ const Analytics: React.FC<AnalyticsProps> = ({
       // Track clicks
       const trackClick = (event: Event) => {
         const target = event.target as HTMLElement
-<<<<<<< HEAD
-        if (target.tagName === 'A' || target.tagName === 'BUTTON') {
-          if (window.gtag) {
-            window.gtag('event', 'click', {
-              event_category: 'engagement',
-              event_label: target.textContent || target.getAttribute('aria-label') || 'unknown'
-            })
-          }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
+        if (target && window.gtag) {
+          window.gtag('event', 'click', {
+            event_category: 'engagement',
+            event_label: target.textContent || target.tagName
+          })
         }
       }
 
       // Track scroll depth
-      let maxScroll = 0
-      const trackScroll = () => {
-        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
-        if (scrollPercent > maxScroll) {
-          maxScroll = scrollPercent
-<<<<<<< HEAD
-          if (window.gtag && scrollPercent % 25 === 0) {
-            window.gtag('event', 'scroll', {
+      let maxScrollDepth = 0
+      const trackScrollDepth = () => {
+        const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
+        if (scrollDepth > maxScrollDepth) {
+          maxScrollDepth = scrollDepth
+          if (window.gtag) {
+            window.gtag('event', 'scroll_depth', {
               event_category: 'engagement',
-              event_label: `${scrollPercent}%`,
-              value: scrollPercent
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
+              event_label: `${scrollDepth}%`
             })
           }
         }
       }
 
-<<<<<<< HEAD
-      // Initialize tracking
-      trackPageView()
+      // Add event listeners
       document.addEventListener('click', trackClick)
-      window.addEventListener('scroll', trackScroll)
+      window.addEventListener('scroll', trackScrollDepth)
+      trackPageView()
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
       // Cleanup
       return () => {
         document.removeEventListener('click', trackClick)
-        window.removeEventListener('scroll', trackScroll)
+        window.removeEventListener('scroll', trackScrollDepth)
       }
     }
   }

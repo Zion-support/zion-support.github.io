@@ -1,6 +1,6 @@
 import React from 'react'
 import SEOHead from '../components/SEOHead'
-import { CheckCircle, ArrowRight, Video, Mic, FileText, Clock, Users, Star, Sparkles, Calendar, MessageSquare, Zap } from 'lucide-react'
+import { CheckCircle, ArrowRight, Video, Mic, FileText, Clock, Users, Star, Sparkles, MessageSquare } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export default function AIMeetingAssistantPage() {
