@@ -25,9 +25,20 @@ class ErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError) {
       return (
+        <div className="error-boundary">
+          <h2>Oops! Something went wrong</h2>
+          <p>We're sorry, but something unexpected happened.</p>
+          <button onClick={() => window.location.reload()}>
+            Reload Page
+          </button>
+        </div>
+      );
+    }
 
     return this.props.children;
   }
 }
+
+export default ErrorBoundary;
 
 
