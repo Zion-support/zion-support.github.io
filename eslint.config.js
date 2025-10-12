@@ -7,6 +7,7 @@ export default tseslint.config(
   { 
     ignores: [
       'dist',
+      '.next',
       'backup-problematic/**',
       'corrupted-src-backup/**',
       'src/**',
