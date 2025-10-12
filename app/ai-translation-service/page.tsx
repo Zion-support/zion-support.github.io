@@ -1,16 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Languages, Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
-=======
 import { Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-09f3
 import Layout from '../layout';
-=======
-import { ArrowRight, Globe, Zap, Shield } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-c493
 
 const AITranslationServicePage = () => {
   const features = [
