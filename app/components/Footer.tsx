@@ -9,13 +9,17 @@ export default function Footer() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
     { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
+    { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant' },
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
     { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
     { name: 'AI Automation Suite', path: '/ai-automation' },
     { name: 'AI Project Manager', path: '/ai-project-manager' },
     { name: 'AI 3D Generation', path: '/ai-3d-generation' },
-    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
+    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' },
+    { name: 'AI Business Intelligence', path: '/ai-business-intelligence' },
+    { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+    { name: 'AI Data Analytics', path: '/ai-data-analytics' },
+    { name: 'AI Computer Vision', path: '/ai-computer-vision' }
   ];
 
   const itServices = [

@@ -23,7 +23,8 @@ import {
   Cpu,
   Database,
   Smartphone,
-  BarChart3
+  BarChart3,
+  Camera
 } from 'lucide-react'
 
 const Sidebar: React.FC = () => {
@@ -83,6 +84,10 @@ const Sidebar: React.FC = () => {
         { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', icon: Brain },
         { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant', icon: Users },
         { name: 'AI Project Manager', path: '/ai-project-manager', icon: Settings },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence', icon: BarChart3 },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', icon: Shield },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: BarChart3 },
+        { name: 'AI Computer Vision', path: '/ai-computer-vision', icon: Camera },
       ]
     },
     {
