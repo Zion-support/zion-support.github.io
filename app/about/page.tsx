@@ -1,28 +1,9 @@
 'use client';
 
 import React from 'react';
-import { Users, Target, Award, Globe, Zap, Shield, Database, Brain, Clock, Star, TrendingUp } from 'lucide-react';
+import { Users, Target, Award, Globe, Zap, Shield, Database, Brain, Clock, Star, TrendingUp, Cloud, ArrowRight, CheckCircle, Phone, Mail, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Users, 
-  Award, 
-  Target,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Phone,
-  Mail,
-  MapPin,
-  Github,
-  Linkedin,
-  Twitter
-} from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const values = [
