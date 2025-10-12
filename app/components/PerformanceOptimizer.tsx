@@ -1,110 +1,128 @@
-'use client';
+import React, { useEffect, useState } from 'react'
 
-import { useEffect } from 'react';
+interface PerformanceMetrics {
+  lcp: number | null
+  fid: number | null
+  cls: number | null
+  fcp: number | null
+  ttfb: number | null
+}
 
-export default function PerformanceOptimizer() {
+const PerformanceOptimizer: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    lcp: null,
+    fid: null,
+    cls: null,
+    fcp: null,
+    ttfb: null
+  })
+
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/og-image.jpg',
-        '/logo.png',
-        '/favicon.svg'
-      ];
+      const criticalResources = [
+        '/fonts/inter.woff2',
+        '/images/hero-bg.jpg',
+        '/images/logo.png'
+      ]
 
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
-        document.head.appendChild(link);
-      });
-    };
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link')
+        link.rel = 'preload'
+        link.href = resource
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image'
+        if (resource.endsWith('.woff2')) {
+          link.crossOrigin = 'anonymous'
+        }
+        document.head.appendChild(link)
+      })
+    }
 
     // Optimize images
     const optimizeImages = () => {
-      const images = document.querySelectorAll('img');
+      const images = document.querySelectorAll('img[data-src]')
       images.forEach(img => {
-        // Add loading="lazy" for non-critical images
-        if (!img.hasAttribute('loading')) {
-          img.setAttribute('loading', 'lazy');
+        const imageElement = img as HTMLImageElement
+        if (imageElement.dataset.src) {
+          imageElement.src = imageElement.dataset.src
+          imageElement.removeAttribute('data-src')
         }
-        
-        // Add decoding="async" for better performance
-        if (!img.hasAttribute('decoding')) {
-          img.setAttribute('decoding', 'async');
-        }
-      });
-    };
+      })
+    }
 
-    // Initialize performance optimizations
-    preloadCriticalResources();
-    optimizeImages();
+    // Lazy load non-critical components
+    const lazyLoadComponents = () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const element = entry.target as HTMLElement
+              element.classList.add('loaded')
+              observer.unobserve(element)
+            }
+          })
+        },
+        { threshold: 0.1 }
+      )
+
+      const lazyElements = document.querySelectorAll('[data-lazy]')
+      lazyElements.forEach(el => observer.observe(el))
+    }
 
     // Monitor Core Web Vitals
     const monitorWebVitals = () => {
       if ('web-vitals' in window) {
         import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          // Monitor Core Web Vitals silently
-          getCLS((metric) => {
-            // Send to analytics service
-            if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event', 'web_vitals', {
-                metric_name: 'CLS',
-                metric_value: metric.value,
-                metric_delta: metric.delta
-              });
-            }
-          });
-          getFID((metric) => {
-            if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event', 'web_vitals', {
-                metric_name: 'FID',
-                metric_value: metric.value,
-                metric_delta: metric.delta
-              });
-            }
-          });
-          getFCP((metric) => {
-            if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event', 'web_vitals', {
-                metric_name: 'FCP',
-                metric_value: metric.value,
-                metric_delta: metric.delta
-              });
-            }
-          });
-          getLCP((metric) => {
-            if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event', 'web_vitals', {
-                metric_name: 'LCP',
-                metric_value: metric.value,
-                metric_delta: metric.delta
-              });
-            }
-          });
-          getTTFB((metric) => {
-            if (typeof window !== 'undefined' && window.gtag) {
-              window.gtag('event', 'web_vitals', {
-                metric_name: 'TTFB',
-                metric_value: metric.value,
-                metric_delta: metric.delta
-              });
-            }
-          });
-        });
+          getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
+          getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
+          getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
+          getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
+          getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
+        })
       }
-    };
+    }
 
-    monitorWebVitals();
-  }, []);
+    // Optimize scroll performance
+    const optimizeScroll = () => {
+      let ticking = false
+      
+      const updateScrollPosition = () => {
+        // Throttle scroll events
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            // Update scroll-dependent elements
+            ticking = false
+          })
+          ticking = true
+        }
+      }
 
-  return null;
+      window.addEventListener('scroll', updateScrollPosition, { passive: true })
+      
+      return () => window.removeEventListener('scroll', updateScrollPosition)
+    }
+
+    // Initialize optimizations
+    preloadCriticalResources()
+    optimizeImages()
+    lazyLoadComponents()
+    monitorWebVitals()
+    const cleanupScroll = optimizeScroll()
+
+    // Cleanup
+    return () => {
+      cleanupScroll()
+    }
+  }, [])
+
+  // Log performance metrics in development
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(val => val !== null)) {
+      console.log('Performance Metrics:', metrics)
+    }
+  }, [metrics])
+
+  return null
 }
 
-// Extend Window interface for web-vitals
-declare global {
-  interface Window {
-    'web-vitals': any;
-  }
-}
+export default PerformanceOptimizer
