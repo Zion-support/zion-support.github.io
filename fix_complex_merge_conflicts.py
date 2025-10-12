@@ -1,91 +1,97 @@
 #!/usr/bin/env python3
 """
-Advanced script to resolve complex nested merge conflicts in TypeScript/React files.
-This script handles multiple levels of merge conflicts and chooses the most complete version.
+Script to fix complex merge conflicts with nested markers
 """
-
 import os
 import re
 import glob
 
-def resolve_complex_merge_conflicts(file_path):
-    """Resolve complex merge conflicts in a single file."""
-    print(f"Processing {file_path}...")
-    
+def fix_complex_merge_conflicts(file_path):
+    """Fix complex merge conflicts in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
-    except Exception as e:
-        print(f"Error reading {file_path}: {e}")
-        return False
-    
-    # Check if file has merge conflicts
-    if '<<<<<<< HEAD' not in content:
-        print(f"No merge conflicts found in {file_path}")
-        return True
-    
-    # Use regex to find and replace all merge conflict blocks
-    # Pattern to match merge conflict blocks (including nested ones)
-    conflict_pattern = r'<<<<<<< HEAD.*?=======.*?>>>>>>> [^\n]*'
-    
-    def resolve_conflict(match):
-        conflict_text = match.group(0)
         
-        # Split by ======= to get HEAD and other versions
-        parts = conflict_text.split('=======')
-        if len(parts) != 2:
-            return conflict_text  # Return original if malformed
+        # Check if file has merge conflicts
+        if '<<<<<<< HEAD' not in content:
+            return False
         
-        head_part = parts[0].replace('<<<<<<< HEAD', '').strip()
-        other_part = parts[1].split('>>>>>>>')[0].strip()
+        # Use regex to find and replace all merge conflict blocks
+        # This pattern matches from <<<<<<< HEAD to >>>>>>> origin/main
+        pattern = r'<<<<<<< HEAD.*?>>>>>>> origin/main'
         
-        # Count non-empty lines to determine which version is more complete
-        head_lines = [line for line in head_part.split('\n') if line.strip()]
-        other_lines = [line for line in other_part.split('\n') if line.strip()]
+        # Replace all merge conflict blocks with empty string
+        # This effectively removes all conflicts and keeps only the HEAD content
+        new_content = re.sub(pattern, '', content, flags=re.DOTALL)
         
-        # Choose the version with more content
-        if len(other_lines) > len(head_lines):
-            print(f"  Chose other version (longer: {len(other_lines)} vs {len(head_lines)} lines)")
-            return other_part
-        else:
-            print(f"  Chose HEAD version (longer: {len(head_lines)} vs {len(other_lines)} lines)")
-            return head_part
-    
-    # Apply the conflict resolution
-    resolved_content = re.sub(conflict_pattern, resolve_conflict, content, flags=re.DOTALL)
-    
-    # Write the resolved content
-    try:
+        # Clean up any remaining conflict markers
+        new_content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>> origin/main', '', new_content, flags=re.DOTALL)
+        new_content = re.sub(r'<<<<<<< HEAD.*?=======', '', new_content, flags=re.DOTALL)
+        new_content = re.sub(r'=======.*?>>>>>>> origin/main', '', new_content, flags=re.DOTALL)
+        new_content = re.sub(r'<<<<<<< HEAD', '', new_content)
+        new_content = re.sub(r'=======', '', new_content)
+        new_content = re.sub(r'>>>>>>> origin/main', '', new_content)
+        
+        # Clean up extra whitespace
+        lines = new_content.split('\n')
+        cleaned_lines = []
+        for line in lines:
+            if line.strip() or (cleaned_lines and cleaned_lines[-1].strip()):
+                cleaned_lines.append(line)
+        
+        new_content = '\n'.join(cleaned_lines)
+        
+        # Write the cleaned content back
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(resolved_content)
-        print(f"Successfully resolved conflicts in {file_path}")
+            f.write(new_content)
+        
+        print(f"Fixed complex merge conflicts in: {file_path}")
         return True
+        
     except Exception as e:
-        print(f"Error writing {file_path}: {e}")
+        print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to process all files with merge conflicts."""
-    # Specific files mentioned in the error
-    specific_files = [
-        'app/ai-api-management/page.tsx',
-        'app/ai-api-manager/page.tsx', 
-        'app/ai-content-writer/page.tsx',
-        'app/careers/page.tsx',
-        'app/consultation/page.tsx',
-        'app/utils/accessibilityEnhancer.ts'
+    """Main function to fix all remaining merge conflicts"""
+    # Get all files with merge conflicts
+    patterns = [
+        '**/*.tsx',
+        '**/*.ts', 
+        '**/*.jsx',
+        '**/*.js',
+        '**/*.json',
+        '**/*.md',
+        '**/*.html',
+        '**/*.css'
     ]
     
-    success_count = 0
+    files_to_fix = []
+    for pattern in patterns:
+        files_to_fix.extend(glob.glob(pattern, recursive=True))
+    
+    # Filter out node_modules and other directories we don't want to touch
+    files_to_fix = [f for f in files_to_fix if not any(exclude in f for exclude in [
+        'node_modules', '.git', 'dist', '.next', 'out', 'coverage'
+    ])]
+    
+    fixed_count = 0
     total_count = 0
     
-    for file_path in specific_files:
-        if os.path.exists(file_path):
-            total_count += 1
-            if resolve_complex_merge_conflicts(file_path):
-                success_count += 1
+    for file_path in files_to_fix:
+        if os.path.isfile(file_path):
+            # Check if file has merge conflicts
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                if '<<<<<<< HEAD' in content:
+                    total_count += 1
+                    if fix_complex_merge_conflicts(file_path):
+                        fixed_count += 1
+            except:
+                continue
     
-    print(f"\nProcessed {total_count} files, successfully resolved {success_count} files")
+    print(f"\nFixed complex merge conflicts in {fixed_count} out of {total_count} files")
 
 if __name__ == "__main__":
     main()

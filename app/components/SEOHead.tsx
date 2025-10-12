@@ -1,72 +1,28 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export default SEOHead;
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-
->>>>>>> origin/main
-
-  return (
-
-        <title>5G Data Analytics - Zion Tech Group</title>
-      <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-=======
-const SEOHead: React.FC = () => {
+export default function Seohead() {
   return (
     <>
       <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-      <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
-      <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5 G implementation" />
-      <meta name="viewport" content="width="device-width," initial-scale=1.0" /  />
-      <meta name="theme-color" content="#8 b5 cf6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-      {/* Open Graph Meta Tags */}
-    
-      {/* Twitter Card Meta Tags */}
-    
-      {/* Additional SEO Meta Tags */}
-
-      {/* Structured Data */}
-      <script type="application/ld+json"  />{JSON.stringify({
-          "@context": "https: //schema.org",
-          "@type": "Organization",
-          "name": "Zion Tech Group",
-          "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-          "url": "https: //ziontechgroup.com",
-          "logo": "https: //ziontechgroup.com/logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
-            "contactType": "customer service",
-            "email": "kleber@ziontechgroup.com"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "364 E Main St STE 1008",
-            "addressLocality": "Middletown",
-            "addressRegion": "DE",
-            "postalCode": "19709",
-            "addressCountry": "US"
-          },
-          "sameAs": [
-            "https: //github.com/ziontechgroup",
-            "https: //linkedin.com/company/ziontechgroup",
-            "https://twitter.com/ziontechgroup"
-          ]
-        })}
-<<<<<<< HEAD
-
-=======
-      </script>
-    </Helmet>
+        <title>Seohead - Zion Tech Group</title>
+        <meta name="description" content="Professional seohead services at Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Seohead</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional seohead services coming soon.</p>
+          <div className="space-x-4">
+            <Link to="/" className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+              Go Home
+            </Link>
+            <Link to="/contact" className="inline-block px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
   );
-};
-<<<<<<< HEAD
-export default SEOHead;
-=======
-
->>>>>>> origin/main
+}

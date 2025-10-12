@@ -1,101 +1,28 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
 export default function Status() {
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function StatusPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
   return (
-    
-        <title>Status - Zion Tech Group</title>
-<<<<<<< HEAD
-=======
-export default StatusPage;
-'use client';
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
-
-export default function StatusPage() {
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <>
-      <title>Status - Zion Tech Group</title>
->>>>>>> origin/main
-
-            <h1 className="text-4xl font-bold text-white mb-6">Status</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional status services coming soon.</p>
-            
-              Contact Us
-
-      </>
-  );
-}
-
-=======
-<<<<<<< HEAD
-        <meta name="description" content="Professional status by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Status</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional status coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-    <></>
-      <Helmet></Helmet>
-=======
     <>
       <Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
         <title>Status - Zion Tech Group</title>
-        <meta name="description" content="Professional status solutions and services." />
+        <meta name="description" content="Professional status services at Zion Tech Group." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Status</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional status solutions coming soon.</p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          <p className="text-lg text-gray-300 mb-8">Professional status services coming soon.</p>
+          <div className="space-x-4">
+            <Link to="/" className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+              Go Home
+            </Link>
+            <Link to="/contact" className="inline-block px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
+              Contact Us
+            </Link>
+          </div>
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

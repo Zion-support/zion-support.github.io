@@ -1,86 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
-=======
->>>>>>> origin/main
-'use client';
-
-=======
-import { useState, useEffect} from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-interface AnimatedCounterProps {
-  end: number;
-  duration?: number;
-  className?: string;
-  prefix?: string;
-  suffix?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/main
-
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-  end, 
-  const duration = 2000, 
-  className = '', 
-  prefix = '', 
-  suffix = '' 
-}: AnimatedCounterProps) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    let startTime: number;
-    let animationFrame: number;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-    const animate = (currentTime: number) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-    const animate = (currentTime: number) => {
->>>>>>> origin/main
-      if (!startTime) startTime = currentTime;
-      const progress = Math.min((currentTime - startTime) / duration, 1);
-      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-      setCount(Math.floor(easeOutQuart * end));
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-      if (progress 
-=======
-      if (progress < 1) {
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-      if (progress < 1) {
->>>>>>> origin/main
-        const animationFrame = requestAnimationFrame(animate);
-      }
-    };
-    const animationFrame = requestAnimationFrame(animate);
-    return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
-    };
-  }, [end, duration]);
+export default function Animatedcounter() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-    <span const className = {className}>{prefix}{count.toLocaleString()}{suffix}
-=======
     <>
-    </><span const className = {className}>{prefix}{count.toLocaleString()}{suffix}
-    </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-    <></>
-    <span const className = {className}>{prefix}{count.toLocaleString()}{suffix}
-    </span>
->>>>>>> origin/main
+      <Helmet>
+        <title>Animatedcounter - Zion Tech Group</title>
+        <meta name="description" content="Professional animatedcounter services at Zion Tech Group." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Animatedcounter</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional animatedcounter services coming soon.</p>
+          <div className="space-x-4">
+            <Link to="/" className="inline-block px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+              Go Home
+            </Link>
+            <Link to="/contact" className="inline-block px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors">
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
-    </>
