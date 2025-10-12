@@ -1,144 +1,120 @@
 'use client'
-import React, { useEffect } from 'react'
+import React, {useEffect} from 'react'
 
 interface AnalyticsProps {
   enableGoogleAnalytics?: boolean
-  enablePerformanceMonitoring?: boolean
-  enableErrorTracking?: boolean
-  enableUserBehaviorTracking?: boolean
-}
-
-const Analytics: React.FC<AnalyticsProps> = ({
-  enableGoogleAnalytics = true,
-  enablePerformanceMonitoring = true,
-  enableErrorTracking = true,
-  enableUserBehaviorTracking = true
+  enablePerformanceMonitoring?: boolean;
+  enableErrorTracking?: boolean;
+  enableUserBehaviorTracking?: boolean;
+},
+    const Analytics: React.FC<AnalyticsProps> = ({
+  enableGoogleAnalytics = true
+  enablePerformanceMonitoring = true
+  enableErrorTracking = true
+  enableUserBehaviorTracking = true;
 }) => {
   useEffect(() => {
     if (enableGoogleAnalytics) {
-      initializeGoogleAnalytics()
-    }
+      initializeGoogleAnalytics(
+    },
     if (enablePerformanceMonitoring) {
-      initializePerformanceMonitoring()
-    }
+      initializePerformanceMonitoring(
+    },
     if (enableErrorTracking) {
-      initializeErrorTracking()
-    }
+      initializeErrorTracking(
+    },
     if (enableUserBehaviorTracking) {
-      initializeUserBehaviorTracking()
+      initializeUserBehaviorTracking(
     }
-  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking])
-
+  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]
   const initializeGoogleAnalytics = () => {
-<<<<<<< HEAD
-    // Load Google Analytics
+    // Load Google Analytics;
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
         page_title: document.title,
-        page_location: window.location.href
-      })
+      page_location: window.location.href;
+      }
     }
-  }
-
-  const initializePerformanceMonitoring = () => {
-    // Initialize performance monitoring
+  },
+    const initializePerformanceMonitoring = () => {
+    // Initialize performance monitoring;
     if (typeof window !== 'undefined') {
-      // Monitor Core Web Vitals
+      // Monitor Core Web Vitals;
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS(console.log)
-        getFID(console.log)
-        getFCP(console.log)
-        getLCP(console.log)
-        getTTFB(console.log)
-      })
+        getCLS(console.log
+        getFID(console.log
+        getFCP(console.log
+        getLCP(console.log
+        getTTFB(console.log
+      }
     }
-  }
-
-  const initializeErrorTracking = () => {
-    // Initialize error tracking
+  },
+    const initializeErrorTracking = () => {
+    // Initialize _error tracking;
     if (typeof window !== 'undefined') {
-      window.addEventListener('error', (event) => {
-        console.error('JavaScript Error:', event.error)
-        // Send to error tracking service
-      })
-
-      window.addEventListener('unhandledrejection', (event) => {
-        console.error('Unhandled Promise Rejection:', event.reason)
-        // Send to error tracking service
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
-      })
+      window.addEventListener('_error', (event) => {
+        console._error('JavaScript Error:', event._error
+        // Send to _error tracking service;
+      },
+    window.addEventListener('unhandledrejection', (event) => {
+        console._error('Unhandled Promise Rejection:', event.reason
+        // Send to _error tracking service;
+      }
     }
-  }
-
-  const initializeUserBehaviorTracking = () => {
-<<<<<<< HEAD
-    // Initialize user behavior tracking
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
+  },
+    const initializeUserBehaviorTracking = () => {
+    // Initialize user behavior tracking;
     if (typeof window !== 'undefined') {
-      // Track page views
+      // Track page views;
       const trackPageView = () => {
         if (window.gtag) {
           window.gtag('event', 'page_view', {
             page_title: document.title,
-            page_location: window.location.href
-          })
+      page_location: window.location.href;
+          }
         }
       }
 
-      // Track clicks
+      // Track clicks;
       const trackClick = (event: Event) => {
-        const target = event.target as HTMLElement
-<<<<<<< HEAD
+        const target = event.target as HTMLElement;
         if (target.tagName === 'A' || target.tagName === 'BUTTON') {
           if (window.gtag) {
             window.gtag('event', 'click', {
               event_category: 'engagement',
-              event_label: target.textContent || target.getAttribute('aria-label') || 'unknown'
-            })
+      event_label: target.textContent || target.getAttribute('aria-label') || 'unknown'
+            }
           }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
         }
       }
 
-      // Track scroll depth
-      let maxScroll = 0
+      // Track scroll depth;
+      let maxScroll = 0;
       const trackScroll = () => {
-        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
         if (scrollPercent > maxScroll) {
-          maxScroll = scrollPercent
-<<<<<<< HEAD
+          maxScroll = scrollPercent;
           if (window.gtag && scrollPercent % 25 === 0) {
             window.gtag('event', 'scroll', {
               event_category: 'engagement',
-              event_label: `${scrollPercent}%`,
-              value: scrollPercent
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
-            })
+      event_label: `${scrollPercent}%`
+              value: scrollPercent;
+            }
           }
         }
       }
 
-<<<<<<< HEAD
-      // Initialize tracking
-      trackPageView()
-      document.addEventListener('click', trackClick)
-      window.addEventListener('scroll', trackScroll)
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
-      // Cleanup
+      // Initialize tracking;
+      trackPageView(
+      document.addEventListener('click', trackClick
+      window.addEventListener('scroll', trackScroll
+      // Cleanup;
       return () => {
-        document.removeEventListener('click', trackClick)
-        window.removeEventListener('scroll', trackScroll)
+        document.removeEventListener('click', trackClick
+        window.removeEventListener('scroll', trackScroll
       }
     }
-  }
-
-  return null
-}
-
-export default Analytics
+  },
+    return null;
+},
+    export default Analytics;

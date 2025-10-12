@@ -1,15 +1,10 @@
-<<<<<<< HEAD
-import React from 'react';
-import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {Link} from 'react-router-dom'
 
   const benefits = [
     {
       title: 'Automated Reports',
-<<<<<<< HEAD
       description: 'Generate comprehensive reports automatically without manual intervention.',
       benefits: ['Scheduled reports', 'Multiple formats', 'Custom templates', 'Email delivery']
     },
@@ -73,12 +68,12 @@ import { Link } from 'react-router-dom';
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 5 data sources',
-        '10 automated reports',
-        'Basic analytics',
+        'Up to 5 data sources'
+        '10 automated reports'
+        'Basic analytics'
         'Email support'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -86,13 +81,13 @@ import { Link } from 'react-router-dom';
       period: '/month',
       description: 'Ideal for growing companies',
       features: [
-        'Up to 20 data sources',
-        'Unlimited reports',
-        'Advanced analytics',
-        'Custom dashboards',
+        'Up to 20 data sources'
+        'Unlimited reports'
+        'Advanced analytics'
+        'Custom dashboards'
         'Priority support'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -100,47 +95,47 @@ import { Link } from 'react-router-dom';
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited data sources',
-        'Unlimited reports',
-        'AI-powered insights',
-        'White-label solution',
+        'Unlimited data sources'
+        'Unlimited reports'
+        'AI-powered insights'
+        'White-label solution'
         'Dedicated support'
       ],
-      popular: false
+      popular: false;
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      </Helmet>
         <title>AI Automated Reporting - Zion Tech Group</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered automated reporting solutions. Generate reports instantly and make data-driven decisions." />
         <meta name="keywords" content="AI reporting, automated reports, business intelligence, data analytics, AI insights" />
       </Helmet>
       
       {/* Hero Section */}
-      <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
+      <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12 sm:mb-16"></div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-              AI Automated Reporting
+              AI Automated Reporting;
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
               Transform your data into actionable insights with intelligent automated reporting. Generate comprehensive reports instantly and make data-driven decisions with confidence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <Link;
                 to="/contact" 
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link 
+              <Link;
                 to="/ai-services" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                View All AI Services
+                View All AI Services;
               </Link>
             </div>
           </div>
@@ -148,18 +143,18 @@ import { Link } from 'react-router-dom';
       </section>
 
       {/* Features Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
+      <section className="py-12 sm:py-16 lg:py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12 sm:mb-16"></div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Powerful Features</h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              Everything you need to automate your reporting and gain valuable insights
+              Everything you need to automate your reporting and gain valuable insights;
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group"></div>
                 <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
@@ -178,18 +173,18 @@ import { Link } from 'react-router-dom';
       </section>
 
       {/* Benefits Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
+      <section className="py-12 sm:py-16 lg:py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12 sm:mb-16"></div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our Solution?</h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              Experience the benefits of intelligent automated reporting
+              Experience the benefits of intelligent automated reporting;
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8"></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center"></div>
                 <div className="mb-4 flex justify-center">{benefit.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
@@ -200,29 +195,29 @@ import { Link } from 'react-router-dom';
       </section>
 
       {/* Pricing Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
+      <section className="py-12 sm:py-16 lg:py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12 sm:mb-16"></div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Simple Pricing</h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              Choose the plan that fits your business needs
+              Choose the plan that fits your business needs;
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8"></div>
             {pricing.map((plan, index) => (
-              <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
+              <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}></div>
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
+                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold"></div>
+                      Most Popular;
                     </div>
                   </div>
                 )}
-                <div className="text-center mb-6">
+                <div className="text-center mb-6"></div>
                   <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
+                  <div className="flex items-baseline justify-center"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
@@ -235,15 +230,15 @@ import { Link } from 'react-router-dom';
                     </li>
                   ))}
                 </ul>
-                <Link 
+                <Link;
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular 
+                    plan.popular;
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700' 
                       : 'border-2 border-white text-white hover:bg-white/10'
                   }`}
                 >
-                  Get Started
+                  Get Started;
                 </Link>
               </div>
             ))}
@@ -252,26 +247,26 @@ import { Link } from 'react-router-dom';
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+      <section className="py-12 sm:py-16 lg:py-20 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12"></div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Ready to Automate Your Reporting?</h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
                 Join thousands of businesses already using AI to transform their data into actionable insights.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <Link;
                   to="/contact" 
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Free Trial
+                  Start Free Trial;
                 </Link>
-                <Link 
+                <Link;
                   to="/ai-services" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Explore All AI Services
+                  Explore All AI Services;
                 </Link>
               </div>
             </div>
@@ -283,9 +278,3 @@ import { Link } from 'react-router-dom';
 };
 
 export default AIAutomatedReportingPage;
-=======
-      description: 'Generate reports automatically without manual intervention'
-    }
-  ]
-
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae

@@ -1,120 +1,117 @@
 #!/usr/bin/env python3
 """
-Script to fix parsing errors in TSX files by ensuring proper JSX structure.
+Script to fix specific parsing errors in files.
 """
 
 import os
 import re
 import glob
 
-def fix_tsx_file(file_path):
-    """Fix parsing errors in a single TSX file."""
-    print(f"Fixing parsing errors in {file_path}...")
-    
+def fix_parsing_errors(file_path):
+    """Fix common parsing errors in a file."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Find the component definition
-        component_pattern = r'const\s+(\w+Page):\s*React\.FC\s*=\s*\(\)\s*=>\s*{'
-        match = re.search(component_pattern, content)
+        original_content = content
         
-        if not match:
-            print(f"  No component pattern found in {file_path}")
-            return False
+        # Fix common parsing issues
+        fixes = [
+            # Fix missing semicolons
+            (r'(\w+)\s*$', r'\1;'),
+            # Fix missing closing braces
+            (r'(\w+)\s*$', r'\1}'),
+            # Fix JSX closing tag issues
+            (r'<(\w+)>\s*$', r'</\1>'),
+            # Fix missing imports
+            (r'^import\s+React', 'import React from \'react\''),
+            # Fix const in wrong context
+            (r'const\s+const', 'const'),
+            # Fix missing parentheses
+            (r'(\w+)\s*$', r'\1()'),
+        ]
         
-        component_name = match.group(1)
+        # Apply fixes
+        for pattern, replacement in fixes:
+            content = re.sub(pattern, replacement, content, flags=re.MULTILINE)
         
-        # Extract the component content
-        start_pos = match.start()
+        # Clean up any double semicolons
+        content = re.sub(r';;+', ';', content)
         
-        # Find the return statement
-        return_pattern = r'return\s*\('
-        return_match = re.search(return_pattern, content[start_pos:])
+        # Clean up any double braces
+        content = re.sub(r'\}\}+', '}', content)
         
-        if not return_match:
-            print(f"  No return statement found in {file_path}")
-            return False
-        
-        return_start = start_pos + return_match.start()
-        
-        # Find the JSX content
-        jsx_start = return_start + return_match.end() - 1  # Include the opening parenthesis
-        
-        # Count braces to find the end of JSX
-        brace_count = 0
-        jsx_end = jsx_start
-        in_string = False
-        escape_next = False
-        
-        for i, char in enumerate(content[jsx_start:], jsx_start):
-            if escape_next:
-                escape_next = False
-                continue
-                
-            if char == '\\':
-                escape_next = True
-                continue
-                
-            if char in ['"', "'", '`'] and not escape_next:
-                in_string = not in_string
-                continue
-                
-            if not in_string:
-                if char == '(':
-                    brace_count += 1
-                elif char == ')':
-                    brace_count -= 1
-                    if brace_count == 0:
-                        jsx_end = i + 1
-                        break
-        
-        if brace_count != 0:
-            print(f"  Could not find matching closing parenthesis in {file_path}")
-            return False
-        
-        # Extract JSX content
-        jsx_content = content[jsx_start:jsx_end]
-        
-        # Create a clean component
-        clean_component = f"""'use client';
-import React from 'react';
-import {{ CheckCircle }} from 'lucide-react';
-
-const {component_name}: React.FC = () => {{
-  return (
-{jsx_content}
-  );
-}};
-
-export default {component_name};"""
-        
-        # Write the clean component
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(clean_component)
-        
-        print(f"  Fixed parsing errors in {file_path}")
-        return True
+        # Write back if changes were made
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"Fixed parsing errors in: {file_path}")
+            return True
         
     except Exception as e:
-        print(f"  Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
+def fix_specific_files():
+    """Fix specific files with known issues."""
+    specific_fixes = {
+        '/workspace/app/ai-automated-reporting/page.tsx': [
+            (r'export default AIAutomatedReportingPage;', 'export default AIAutomatedReportingPage;')
+        ],
+        '/workspace/app/components/EnhancedAccessibilityEnhancer.tsx': [
+            (r'export default EnhancedAccessibilityEnhancerPage', 'export default EnhancedAccessibilityEnhancerPage;')
+        ],
+        '/workspace/app/components/FuturisticBackground.tsx': [
+            (r'}\s*$', '}\n')
+        ]
+    }
+    
+    for file_path, fixes in specific_fixes.items():
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            original_content = content
+            
+            for pattern, replacement in fixes:
+                content = re.sub(pattern, replacement, content)
+            
+            if content != original_content:
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                print(f"Fixed specific issues in: {file_path}")
+        
+        except Exception as e:
+            print(f"Error processing {file_path}: {e}")
+
 def main():
-    """Main function to fix all TSX files with parsing errors."""
-    app_dir = '/workspace/app'
-    tsx_files = glob.glob(os.path.join(app_dir, '**', '*.tsx'), recursive=True)
+    """Main function to fix parsing errors."""
+    # Fix specific files first
+    fix_specific_files()
     
-    fixed_count = 0
-    total_count = len(tsx_files)
+    # Then process all files
+    patterns = [
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'components/**/*.tsx',
+        'components/**/*.ts'
+    ]
     
-    print(f"Found {total_count} TSX files to check...")
+    files_processed = 0
+    files_fixed = 0
     
-    for file_path in tsx_files:
-        if fix_tsx_file(file_path):
-            fixed_count += 1
+    for pattern in patterns:
+        for file_path in glob.glob(pattern, recursive=True):
+            # Skip .original files
+            if '.original' in file_path:
+                continue
+                
+            files_processed += 1
+            if fix_parsing_errors(file_path):
+                files_fixed += 1
     
-    print(f"\nFixed {fixed_count} out of {total_count} files")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed parsing errors in {files_fixed} files")
 
 if __name__ == "__main__":
     main()

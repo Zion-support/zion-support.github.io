@@ -1,26 +1,26 @@
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Brain, Database, Code, Smartphone, Cpu, Eye, MessageSquare, BarChart3 } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import {Code, Eye, MessageSquare} from 'lucide-react'
+import {Helmet} from 'react-helmet-async'
+import {Link} from 'react-router-dom'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
       icon: <Brain className="w-12 h-12 text-blue-500" />,
       title: 'AI Content Generator Pro',
-      description: 'Advanced AI-powered content creation tool that generates high-quality articles, blogs, social media posts, and marketing copy.',
+      description: 'Advanced AI-powered content creation tool that generates high-_quality articles, blogs, social media posts, and marketing copy.',
       features: [
-        'Generate 10,000+ words daily',
-        '50+ content templates',
-        'SEO optimization',
-        'Multi-language support',
-        'Brand voice customization',
+        'Generate 10,000+ words daily'
+        '50+ content templates'
+        'SEO optimization'
+        'Multi-language support'
+        'Brand voice customization'
         'Plagiarism detection'
       ],
       pricing: '$29/month',
-      popular: true,
+      popular: true
       link: '/ai-content-generator'
     },
     {
@@ -28,15 +28,15 @@ const AIServicesPage: React.FC = () => {
       title: 'AI Chatbot Builder Enterprise',
       description: 'Create intelligent chatbots for customer service, sales, and support with advanced NLP and machine learning capabilities.',
       features: [
-        'Visual chatbot builder',
-        'Multi-channel deployment',
-        'Advanced analytics',
-        'Custom integrations',
-        '24/7 monitoring',
+        'Visual chatbot builder'
+        'Multi-channel deployment'
+        'Advanced analytics'
+        'Custom integrations'
+        '24/7 monitoring'
         'A/B testing tools'
       ],
       pricing: '$49/month',
-      popular: false,
+      popular: false
       link: '/ai-chatbot-builder'
     },
     {
@@ -44,15 +44,15 @@ const AIServicesPage: React.FC = () => {
       title: 'AI Analytics Dashboard',
       description: 'Comprehensive business intelligence platform with AI-powered insights, predictive analytics, and automated reporting.',
       features: [
-        'Real-time data visualization',
-        'Predictive analytics',
-        'Automated reports',
-        'Custom dashboards',
-        'Data integration',
+        'Real-time data visualization'
+        'Predictive analytics'
+        'Automated reports'
+        'Custom dashboards'
+        'Data integration'
         'Mobile app included'
       ],
       pricing: '$79/month',
-      popular: true,
+      popular: true
       link: '/ai-analytics-dashboard'
     },
     {
@@ -60,15 +60,15 @@ const AIServicesPage: React.FC = () => {
       title: 'AI Email Assistant',
       description: 'Smart email management tool that drafts, schedules, and optimizes emails using AI to improve open rates and engagement.',
       features: [
-        'Smart email drafting',
-        'Send time optimization',
-        'Subject line testing',
-        'Email templates',
-        'Performance analytics',
+        'Smart email drafting'
+        'Send time optimization'
+        'Subject line testing'
+        'Email templates'
+        'Performance analytics'
         'CRM integration'
       ],
       pricing: '$39/month',
-      popular: false,
+      popular: false
       link: '/ai-email-assistant'
     },
     {
@@ -76,15 +76,15 @@ const AIServicesPage: React.FC = () => {
       title: 'AI Voice Assistant',
       description: 'Custom voice assistant for businesses with natural language processing, voice commands, and integration capabilities.',
       features: [
-        'Natural voice recognition',
-        'Custom voice training',
-        'Multi-language support',
-        'API integrations',
-        'Voice analytics',
+        'Natural voice recognition'
+        'Custom voice training'
+        'Multi-language support'
+        'API integrations'
+        'Voice analytics'
         'Custom wake words'
       ],
       pricing: '$59/month',
-      popular: false,
+      popular: false
       link: '/ai-voice-assistant'
     },
     {
@@ -92,15 +92,15 @@ const AIServicesPage: React.FC = () => {
       title: 'AI Automation Suite',
       description: 'Complete workflow automation platform that uses AI to streamline business processes and reduce manual work.',
       features: [
-        'Workflow automation',
-        'Process optimization',
-        'Task scheduling',
-        'Integration hub',
-        'Performance monitoring',
+        'Workflow automation'
+        'Process optimization'
+        'Task scheduling'
+        'Integration hub'
+        'Performance monitoring'
         'Custom triggers'
       ],
       pricing: '$99/month',
-      popular: true,
+      popular: true
       link: '/ai-automation'
     }
   ];
@@ -139,8 +139,8 @@ const AIServicesPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      </Helmet>
         <title>AI Services | Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and predictive analytics for modern businesses." />
         <meta name="keywords" content="AI services, machine learning, artificial intelligence, automation, business intelligence" />
@@ -149,29 +149,29 @@ const AIServicesPage: React.FC = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI-Powered Solutions
+              AI-Powered Solutions;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with our comprehensive AI services. From content generation to automation, 
+              Transform your business with our comprehensive AI services. From content generation to automation
               we provide cutting-edge artificial intelligence solutions to drive growth and efficiency.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/about"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                Learn More
+                Learn More;
               </Link>
             </div>
           </div>
@@ -179,15 +179,15 @@ const AIServicesPage: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8"></div>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+              <div key={index} className="text-center"></div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2"></div>
                   {stat.number}
                 </div>
-                <div className="text-gray-300 text-sm">
+                <div className="text-gray-300 text-sm"></div>
                   {stat.label}
                 </div>
               </div>
@@ -197,28 +197,28 @@ const AIServicesPage: React.FC = () => {
       </section>
 
       {/* AI Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our AI Services
+              Our AI Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose from our comprehensive suite of AI-powered solutions designed to transform your business operations.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {aiServices.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-500/50 transition-all duration-300 group"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  {service.icon}
-                  {service.popular && (
+              <div;
+                key={index},
+    className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-500/50 transition-all duration-300 group"
+              ></div>
+                <div className="flex items-center justify-between mb-4"></div>
+                  {service.icon},
+    {service.popular && (
                     <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Popular
+                      Popular;
                     </span>
                   )}
                 </div>
@@ -240,17 +240,17 @@ const AIServicesPage: React.FC = () => {
                   ))}
                 </ul>
                 
-                <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center justify-between mb-6"></div>
                   <span className="text-2xl font-bold text-white">
                     {service.pricing}
                   </span>
                 </div>
                 
-                <Link
-                  to={service.link}
-                  className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 text-center block group-hover:shadow-lg group-hover:shadow-purple-500/25"
+                <Link;
+                  to={service.link},
+    className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 text-center block group-hover:shadow-lg group-hover:shadow-purple-500/25"
                 >
-                  Learn More
+                  Learn More;
                 </Link>
               </div>
             ))}
@@ -259,21 +259,21 @@ const AIServicesPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              AI Technology Features
+              AI Technology Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI solutions are built with cutting-edge technology to deliver exceptional results.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="text-center"></div>
+                <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">
@@ -289,27 +289,27 @@ const AIServicesPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Contact us today to learn more about our AI services and how they can benefit your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
               >
-                Get Started Today
+                Get Started Today;
               </Link>
-              <Link
+              <Link;
                 to="/about"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                Schedule Demo
+                Schedule Demo;
               </Link>
             </div>
           </div>

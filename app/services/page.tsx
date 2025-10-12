@@ -1,7 +1,7 @@
-import React from 'react';
-import { CheckCircle, Zap, Shield, Globe, Cloud, Database, Code, Smartphone } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import {Cloud, Code} from 'lucide-react'
+import {Helmet} from 'react-helmet-async'
+import {Link} from 'react-router-dom'
 
 const ServicesPage: React.FC = () => {
   const services = [
@@ -68,7 +68,7 @@ const ServicesPage: React.FC = () => {
     {
       step: '04',
       title: 'Testing & Optimization',
-      description: 'Rigorous testing ensures quality and performance optimization for maximum efficiency.'
+      description: 'Rigorous testing ensures _quality and performance optimization for maximum efficiency.'
     },
     {
       step: '05',
@@ -78,19 +78,19 @@ const ServicesPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      </Helmet>
         <title>Our Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI, cloud, cybersecurity, and IT solutions to transform your business. Expert services from Zion Tech Group." />
         <meta name="keywords" content="AI services, cloud solutions, cybersecurity, 5G implementation, data analytics, custom development, mobile apps" />
       </Helmet>
       
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
+      <main className="pt-20 px-4 py-20"></main>
+        <div className="max-w-7xl mx-auto"></div>
           {/* Hero Section */}
-          <div className="text-center mb-20">
+          <div className="text-center mb-20"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our Services
+              Our Services;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
@@ -98,9 +98,9 @@ const ServicesPage: React.FC = () => {
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"></div>
             {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300"></div>
                 <div className="mb-6">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
@@ -117,18 +117,18 @@ const ServicesPage: React.FC = () => {
           </div>
 
           {/* Process Section */}
-          <div className="mb-20">
-            <div className="text-center mb-16">
+          <div className="mb-20"></div>
+            <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Process</h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 A proven methodology that ensures successful project delivery and client satisfaction.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8"></div>
               {processSteps.map((step, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <div key={index} className="text-center"></div>
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"></div>
                     <span className="text-white font-bold text-lg">{step.step}</span>
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
@@ -139,24 +139,24 @@ const ServicesPage: React.FC = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+          <div className="text-center"></div>
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Let's discuss how our services can help you achieve your goals and drive innovation.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+                <Link;
                   to="/contact" 
                   className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Get Started Today
+                  Get Started Today;
                 </Link>
-                <Link 
+                <Link;
                   to="/ai-services" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Explore AI Services
+                  Explore AI Services;
                 </Link>
               </div>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Smartphone, Cpu, Database } from 'lucide-react'
+import {Helmet} from 'react-helmet-async'
+import {Link} from 'react-router-dom'
+import {Cloud} from 'lucide-react'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 
@@ -59,8 +59,8 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      </Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI solutions, IT services, 5G implementation, cloud services, digital transformation, Zion Tech Group" />
@@ -69,28 +69,28 @@ export default function HomePage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
               Advanced AI & IT Solutions
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8 px-4">
               Transform your business with cutting-edge artificial intelligence and information technology solutions designed to accelerate growth and efficiency.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/about"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                Learn More
+                Learn More;
               </Link>
             </div>
           </div>
@@ -98,15 +98,15 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+              <div key={index} className="text-center"></div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2"></div>
                   {stat.number}
                 </div>
-                <div className="text-gray-300 text-sm">
+                <div className="text-gray-300 text-sm"></div>
                   {stat.label}
                 </div>
               </div>
@@ -116,18 +116,18 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Services
+              Our Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive solutions tailored to your business needs.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"></div>
             {features.map((feature, index) => (
               <Link key={index} to={feature.link} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
                 <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
@@ -141,8 +141,8 @@ export default function HomePage() {
                     </li>
                   ))}
                 </ul>
-                <div className="mt-6 flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
-                  Learn More
+                <div className="mt-6 flex items-center text-blue-400 group-hover:text-blue-300 transition-colors"></div>
+                  Learn More;
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
@@ -152,27 +152,27 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-6 sm:p-8 lg:p-12 text-center"></div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
             <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Let's discuss how our AI and IT solutions can drive your success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <Link;
                 to="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300"
               >
-                Get Started Today
+                Get Started Today;
               </Link>
-              <Link
+              <Link;
                 to="/about"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300"
               >
-                Learn More
+                Learn More;
               </Link>
             </div>
           </div>
@@ -181,5 +181,5 @@ export default function HomePage() {
 
       <Footer />
     </div>
-  )
+  
 }

@@ -1,54 +1,52 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { useLocation } from 'react-router-dom'
+import {Helmet} from 'react-helmet-async'
+import {useLocation} from 'react-router-dom'
 
 interface SEOHeadProps {
   title?: string
-  description?: string
-  keywords?: string
-  image?: string
-  url?: string
-  type?: string
-}
-
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - AI & IT Solutions',
-  description = 'Leading provider of AI and IT solutions, transforming businesses through innovative technology and expert consulting.',
-  keywords = 'AI solutions, IT services, artificial intelligence, machine learning, cloud computing, cybersecurity, digital transformation',
-  image = '/og-image.jpg',
-  url,
+  description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
+},
+    const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - AI & IT Solutions'
+  description = 'Leading provider of AI and IT solutions, transforming businesses through innovative technology and expert consulting.'
+  keywords = 'AI solutions, IT services, artificial intelligence, machine learning, cloud computing, cybersecurity, digital transformation'
+  image = '/og-image.jpg'
+  url
   type = 'website'
 }) => {
-  const location = useLocation()
+  const location = useLocation(
   const currentUrl = url || `https://ziontechgroup.com${location.pathname}`
   
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": description,
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
+    "@context": "https://schema.org"
+    "@type": "Organization"
+    "name": "Zion Tech Group"
+    "description": description
+    "url": "https://ziontechgroup.com"
+    "logo": "https://ziontechgroup.com/logo.png"
     "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "sales",
+      "@type": "ContactPoint"
+      "contactType": "sales"
       "email": "contact@ziontechgroup.com"
-    },
+    }
     "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup"
       "https://twitter.com/ziontechgroup"
-    ],
+    ]
     "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "San Francisco",
-      "addressRegion": "CA",
+      "@type": "PostalAddress"
+      "addressLocality": "San Francisco"
+      "addressRegion": "CA"
       "addressCountry": "US"
     }
-  }
-
-  return (
-    <Helmet>
+  },
+    return (
+    </Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -66,7 +64,6 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
         {JSON.stringify(structuredData)}
       </script>
     </Helmet>
-  )
-}
-
-export default EnhancedSEOHead
+  
+},
+    export default EnhancedSEOHead;

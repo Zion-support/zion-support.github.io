@@ -3,7 +3,7 @@ import React from 'react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react'
+import {Building, Users, Cloud, Code, Star, Award, Target, Lock, Eye, Sparkles} from 'lucide-react'
 const EnterprisePage: React.FC = () => {
   const features = [
     {
@@ -70,13 +70,13 @@ const EnterprisePage: React.FC = () => {
     }
   ]
   const benefits = [
-    'Reduce operational costs by 30%',
-    'Improve productivity by 50%',
-    'Enhance security and compliance',
-    'Streamline business processes',
-    'Enable data-driven decisions',
-    'Scale with business growth',
-    'Integrate with existing systems',
+    'Reduce operational costs by 30%'
+    'Improve productivity by 50%'
+    'Enhance security and compliance'
+    'Streamline business processes'
+    'Enable data-driven decisions'
+    'Scale with business growth'
+    'Integrate with existing systems'
     'Provide 24/7 support and monitoring'
   ]
   const stats = [
@@ -94,14 +94,14 @@ const EnterprisePage: React.FC = () => {
       />
       <Navigation />
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      <section className="relative py-20 px-4 overflow-hidden"></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' } /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Enterprise</h1>
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
+              Solutions;
   </
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -110,11 +110,11 @@ const EnterprisePage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-              Get Enterprise Consultation
+              Get Enterprise Consultation;
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Case Studies
+              View Case Studies;
   </
           </div>
         </div>
@@ -173,13 +173,13 @@ const EnterprisePage: React.FC = () => {const features = [
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']}
     }
   ];const benefits = [
-    'Reduce operational costs by 30%',
-    'Improve productivity by 50%',
-    'Enhance security and compliance',
-    'Streamline business processes',
-    'Enable data-driven decisions',
-    'Scale with business growth',
-    'Integrate with existing systems',
+    'Reduce operational costs by 30%'
+    'Improve productivity by 50%'
+    'Enhance security and compliance'
+    'Streamline business processes'
+    'Enable data-driven decisions'
+    'Scale with business growth'
+    'Integrate with existing systems'
     'Provide 24/7 support and monitoring'
   ];const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
@@ -187,7 +187,7 @@ const EnterprisePage: React.FC = () => {const features = [
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
   ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <SEOOptimizer
+      <SEOOptimizer;
         title="Enterprise Solutions - Zion Tech Group"
         description="Comprehensive enterprise-grade solutions for large-scale business operations."
         keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
@@ -196,12 +196,12 @@ const EnterprisePage: React.FC = () => {const features = [
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden"></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' } /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Enterprise</h1>
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
+              Solutions;
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -210,11 +210,11 @@ const EnterprisePage: React.FC = () => {const features = [
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-              Get Enterprise Consultation
+              Get Enterprise Consultation;
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Case Studies
+              View Case Studies;
             </button>
           </div>
         </div>
@@ -235,17 +235,17 @@ const EnterprisePage: React.FC = () => {const features = [
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">
-              Enterprise-Grade Features
+              Enterprise-Grade Features;
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Built for scale, security, and performance to meet the demands of large organizations.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
                   <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
@@ -262,7 +262,7 @@ const EnterprisePage: React.FC = () => {const features = [
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-4xl font-bold text-white mb-4">
-              Enterprise-Grade Features
+              Enterprise-Grade Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Built for scale, security, and performance to meet the demands of large organizations.
@@ -285,7 +285,7 @@ const EnterprisePage: React.FC = () => {const features = [
         </div>
       </section>
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Solutions
+              Comprehensive Solutions;
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               End-to-end enterprise solutions that address every aspect of your business operations.
@@ -296,7 +296,7 @@ const EnterprisePage: React.FC = () => {const features = [
         </div>
       </section>
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Solutions
+              Comprehensive Solutions;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               End-to-end enterprise solutions that address every aspect of your business operations.
@@ -309,7 +309,7 @@ const EnterprisePage: React.FC = () => {const features = [
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4"></section>
                 </button>
               </div>
             </div>
@@ -317,7 +317,7 @@ const EnterprisePage: React.FC = () => {const features = [
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Transform Your Enterprise?
@@ -327,19 +327,19 @@ const EnterprisePage: React.FC = () => {const features = [
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Contact Enterprise Sales
+              Contact Enterprise Sales;
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More
+              Learn More;
   </
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  )}
-export default EnterprisePage
+  )},
+    export default EnterprisePage;
   </button>
   </h2>
   </h2>
@@ -367,14 +367,14 @@ export default EnterprisePage
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Contact Enterprise Sales
+              Contact Enterprise Sales;
               <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More
+              Learn More;
             </button>
           </div>
         </div>
       </section>
       <Footer />
-    </div>)};export default EnterprisePage
+    </div>)};export default EnterprisePage;

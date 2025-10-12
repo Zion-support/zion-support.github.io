@@ -1,6 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin } from 'lucide-react'
+import {Link} from 'react-router-dom'
 
 export default function Footer() {
   const aiServices = [
@@ -32,13 +31,13 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-gray-900 text-white"></footer>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
           {/* Company Info */}
-          <div>
-            <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
+          </div>
+            <div className="flex items-center mb-4"></div>
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2"></div>
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
@@ -46,7 +45,7 @@ export default function Footer() {
             <p className="text-gray-300 mb-4">
               Advanced AI and IT solutions for modern businesses. We help you transform your digital infrastructure with cutting-edge technology.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4"></div>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Mail className="w-5 h-5" />
               </a>
@@ -60,14 +59,14 @@ export default function Footer() {
           </div>
 
           {/* AI Services */}
-          <div>
+          </div>
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
               {aiServices.map((service) => (
                 <li key={service.name}>
                   <Link
-                    to={service.path}
-                    className="text-gray-300 hover:text-white transition-colors"
+                    to={service.path},
+    className="text-gray-300 hover:text-white transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -77,14 +76,14 @@ export default function Footer() {
           </div>
 
           {/* IT Services */}
-          <div>
+          </div>
             <h3 className="text-lg font-semibold mb-4">IT Services</h3>
             <ul className="space-y-2">
               {itServices.map((service) => (
                 <li key={service.name}>
-                  <Link
-                    to={service.path}
-                    className="text-gray-300 hover:text-white transition-colors"
+                  <Link;
+                    to={service.path},
+    className="text-gray-300 hover:text-white transition-colors"
                   >
                     {service.name}
                   </Link>
@@ -94,14 +93,14 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          </div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    to={link.path}
-                    className="text-gray-300 hover:text-white transition-colors"
+                  <Link;
+                    to={link.path},
+    className="text-gray-300 hover:text-white transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -112,22 +111,22 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-800 mt-8 pt-8"></div>
+          <div className="flex flex-col md:flex-row justify-between items-center"></div>
             <p className="text-gray-400 text-sm">
               © 2024 Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex space-x-6 mt-4 md:mt-0"></div>
               <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
+                Privacy Policy;
               </Link>
               <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
+                Terms of Service;
               </Link>
             </div>
           </div>
         </div>
       </div>
     </footer>
-  )
+  
 }

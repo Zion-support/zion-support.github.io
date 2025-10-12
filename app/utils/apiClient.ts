@@ -1,24 +1,22 @@
 /**
- * API Client Utility
- * Provides a centralized API client with error handling and caching
+ * API Client Utility;
+ * Provides a centralized API client with _error handling and caching;
  */
 
 interface RequestConfig {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   headers?: Record<string, string>;
-  body?: any;
+  body?: unknown;
   cache?: boolean;
   cacheTTL?: number;
-}
-
-interface APIResponse<T = any> {
-  data: T;
-  status: number;
-  statusText: string;
-  headers: Record<string, string>;
-}
-
-class APIError extends Error {
+},
+    interface APIResponse<T = any> {
+  data: T;,
+      status: number;
+  statusText: string;,
+      headers: Record<string, string>;
+},
+    class APIError extends Error {
   status?: number;
   code?: string;
 
@@ -28,128 +26,124 @@ class APIError extends Error {
     this.status = status;
     this.code = code;
   }
-}
-
-export class APIClient {
+},
+    export class APIClient {
   private baseURL: string;
   private defaultHeaders: Record<string, string>;
-  private cache: Map<string, { data: any; timestamp: number; ttl: number }> = new Map();
+  private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
 
   constructor(baseURL: string, defaultHeaders: Record<string, string> = {}) {
     this.baseURL = baseURL;
     this.defaultHeaders = {
-      'Content-Type': 'application/json',
-      ...defaultHeaders
+      'Content-Type': 'application/json'
+      ...defaultHeaders;
     };
   }
 
   /**
-   * Make an API request
+   * Make an API request;
    */
   async request<T = any>(
     endpoint: string,
-    config: RequestConfig = {}
+      config: RequestConfig = {}
   ): Promise<APIResponse<T>> {
     const {
-      method = 'GET',
+      method = 'GET'
       headers = {},
-      body,
-      cache = false,
-      cacheTTL = 300000 // 5 minutes default
+    body
+      cache = false
+      cacheTTL = 300000 // 5 minutes default;
     } = config;
 
     const url = `${this.baseURL}${endpoint}`;
     const cacheKey = `${method}:${url}:${JSON.stringify(body || {})}`;
 
-    // Check cache first
+    // Check cache first;
     if (cache && method === 'GET') {
       const cached = this.getFromCache(cacheKey);
       if (cached) {
         return cached;
       }
-    }
-
+    },
     try {
       const response = await fetch(url, {
-        method,
+        method
         headers: {
-          ...this.defaultHeaders,
-          ...headers
+          ...this.defaultHeaders
+          ...headers;
         },
-        body: body ? JSON.stringify(body) : undefined
+    body: body ? JSON.stringify(body) : undefined;
       });
 
       const data = await response.json();
 
       const apiResponse: APIResponse<T> = {
-        data,
+        data
         status: response.status,
-        statusText: response.statusText,
-        headers: this.parseHeaders(response.headers)
+      statusText: response.statusText
+        headers: this.parseHeaders(response.headers
       };
 
-      // Cache successful GET requests
+      // Cache successful GET requests;
       if (cache && method === 'GET' && response.ok) {
         this.setCache(cacheKey, apiResponse, cacheTTL);
-      }
-
-      if (!response.ok) {
+      },
+    if (!response.ok) {
         throw new APIError({
           message: data.message || 'Request failed',
-          status: response.status,
-          code: data.code
+      status: response.status
+          code: data.code;
         });
-      }
-
-      return apiResponse;
-    } catch (error) {
-      if (error instanceof APIError) {
-        throw error;
-      }
-      throw new APIError({
-        message: error instanceof Error ? error.message : 'Network error',
-        code: 'NETWORK_ERROR'
+      },
+    return apiResponse;
+    } catch (_error) {
+      if (_error instanceof APIError) {
+        throw _error;
+      },
+    throw new APIError({
+        message: _error instanceof Error ? _error.message : 'Network _error',
+      code: 'NETWORK_ERROR'
       });
     }
   }
 
   /**
-   * GET request
+   * GET request;
    */
   async get<T = any>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'GET' });
   }
 
   /**
-   * POST request
+   * POST request;
    */
-  async post<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async post<T = any>(endpoint: string, body?: unknown, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'POST', body });
   }
 
   /**
-   * PUT request
+   * PUT request;
    */
-  async put<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async put<T = any>(endpoint: string, body?: unknown, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'PUT', body });
   }
 
   /**
-   * DELETE request
+   * DELETE request;
    */
   async delete<T = any>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'DELETE' });
   }
 
   /**
-   * PATCH request
+   * PATCH request;
    */
-  async patch<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+  async patch<T = any>(endpoint: string, body?: unknown, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
     return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
   }
 
   /**
-   * Get data from cache
+   * Get data from cache;
    */
   private getFromCache(key: string): APIResponse | null {
     const cached = this.cache.get(key);
@@ -159,24 +153,23 @@ export class APIClient {
     if (now - cached.timestamp > cached.ttl) {
       this.cache.delete(key);
       return null;
-    }
-
+    },
     return cached.data;
   }
 
   /**
-   * Set data in cache
+   * Set data in cache;
    */
   private setCache(key: string, data: APIResponse, ttl: number): void {
     this.cache.set(key, {
-      data,
-      timestamp: Date.now(),
-      ttl
+      data
+      timestamp: Date.now()
+      ttl;
     });
   }
 
   /**
-   * Parse response headers
+   * Parse response headers;
    */
   private parseHeaders(headers: Headers): Record<string, string> {
     const result: Record<string, string> = {};
@@ -187,14 +180,14 @@ export class APIClient {
   }
 
   /**
-   * Clear cache
+   * Clear cache;
    */
   clearCache(): void {
     this.cache.clear();
   }
 
   /**
-   * Clear cache for specific endpoint
+   * Clear cache for specific endpoint;
    */
   clearCacheForEndpoint(endpoint: string): void {
     const keysToDelete: string[] = [];
@@ -207,13 +200,13 @@ export class APIClient {
   }
 }
 
-// Export utility functions
+// Export utility functions;
 export const createAPIClient = (baseURL: string, headers?: Record<string, string>) => 
   new APIClient(baseURL, headers);
 
-// Default API client instance
+// Default API client instance;
 export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
 
-// Export types and classes
+// Export types and classes;
 export type { RequestConfig, APIResponse };
 export { APIError };

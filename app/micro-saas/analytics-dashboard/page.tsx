@@ -1,6 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react'
+import {Helmet} from 'react-helmet-async'
+import {Users, DollarSign, Target, Star, Award} from 'lucide-react'
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
     {
@@ -35,11 +35,11 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     }
   ]
   const benefits = [
-    'Real-time data visualization and reporting',
-    'AI-powered predictive analytics',
-    'Customizable dashboard widgets',
-    'Automated report generation',
-    'Multi-platform data integration',
+    'Real-time data visualization and reporting'
+    'AI-powered predictive analytics'
+    'Customizable dashboard widgets'
+    'Automated report generation'
+    'Multi-platform data integration'
     'Mobile-responsive design'
   ]
   const metrics = [
@@ -50,15 +50,15 @@ const AIAnalyticsDashboardPage: React.FC = () => {
   ]
   return (
     <React.Fragment>
-      <Helmet>
+      </Helmet>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting." />
         <meta name="keywords" content="AI analytics dashboard, business intelligence, data visualization, real-time analytics, predictive insights, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/analytics-dashboard" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}</div>
-        <section className="pt-24 pb-16 px-4">
+        <section className="pt-24 pb-16 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
@@ -86,15 +86,15 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-16 px-4">
+        <section className="py-16 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to make data-driven decisions with confidence
+                Everything you need to make data-driven decisions with confidence;
   </
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {features.map((feature, index) => (</div>
                 <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"></div>
@@ -108,15 +108,15 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
         {/* Metrics Section */}
-        <section className="py-16 px-4 bg-slate-800/30">
+        <section className="py-16 px-4 bg-slate-800/30"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Built for scale and reliability
+                Built for scale and reliability;
   </
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
               {metrics.map((metric, index) => (</div>
                 <div key={index} className="text-center"></div>
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
@@ -130,16 +130,16 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-16 px-4">
+        <section className="py-16 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the difference with our AI-powered analytics platform
+                Experience the difference with our AI-powered analytics platform;
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-              <div className="space-y-6">
+              <div className="space-y-6"></div>
                 {benefits.map((benefit, index) => (</div>
                   <div key={index} className="flex items-start space-x-3"></div>
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
@@ -168,14 +168,14 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-16 px-4">
+        <section className="py-16 px-4"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"></div>
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Analytics?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses already using our AI analytics dashboard 
+                Join thousands of businesses already using our AI analytics dashboard;
                 to make smarter, data-driven decisions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -184,7 +184,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <ArrowRight className="w-5 h-5" />
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                  Schedule Demo
+                  Schedule Demo;
   </
               </div>
             </div>
@@ -192,8 +192,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  )}
-export default AIAnalyticsDashboardPage
+  )},
+    export default AIAnalyticsDashboardPage;
   </button>
   </p>
   </p>
@@ -226,19 +226,19 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
       description: 'Monitor KPIs and business objectives with automated alerts.'}
     }
   ];const benefits = [
-    'Real-time data visualization and reporting',
-    'AI-powered predictive analytics',
-    'Customizable dashboard widgets',
-    'Automated report generation',
-    'Multi-platform data integration',
+    'Real-time data visualization and reporting'
+    'AI-powered predictive analytics'
+    'Customizable dashboard widgets'
+    'Automated report generation'
+    'Multi-platform data integration'
     'Mobile-responsive design'
   ];const metrics = [
     { label: 'Data Sources', value: '50+', icon: BarChart },
     { label: 'Update Frequency', value: 'Real-time', icon: Clock },
     { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
     { label: 'User Satisfaction', value: '4.9/5', icon: Star }
-  ];return (<></>
-      <Helmet>
+  ];return (<>
+      </Helmet>
         <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and custom reporting." />
         <meta name="keywords" content="AI analytics dashboard, business intelligence, data visualization, real-time analytics, predictive insights, Zion Tech Group" />
@@ -267,7 +267,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
                   <ArrowRight className="w-5 h-5" />
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                  View Demo
+                  View Demo;
                 </button>
               </div>
             </div>
@@ -279,7 +279,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to make data-driven decisions with confidence
+                Everything you need to make data-driven decisions with confidence;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -300,7 +300,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Built for scale and reliability
+                Built for scale and reliability;
               </p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
@@ -321,7 +321,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the difference with our AI-powered analytics platform
+                Experience the difference with our AI-powered analytics platform;
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
@@ -360,7 +360,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
                 Ready to Transform Your Analytics?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses already using our AI analytics dashboard
+                Join thousands of businesses already using our AI analytics dashboard;
                 to make smarter, data-driven decisions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -369,11 +369,11 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
                   <ArrowRight className="w-5 h-5" />
                 </button>
                 <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                  Schedule Demo
+                  Schedule Demo;
                 </button>
               </div>
             </div>
           </div>
         </section>
       </div>
-    </>)};export default AIAnalyticsDashboardPage
+    </>)};export default AIAnalyticsDashboardPage;

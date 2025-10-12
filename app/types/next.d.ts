@@ -1,68 +1,59 @@
-// Type definitions for Next.js
+// Type definitions for Next.js;
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      NODE_ENV: 'development' | 'production' | 'test'
-      NEXT_PUBLIC_API_URL: string
-      NEXT_PUBLIC_APP_URL: string
-      DATABASE_URL: string
-      NEXTAUTH_SECRET: string
-      NEXTAUTH_URL: string
+      NODE_ENV: 'development' | 'production' | 'test',
+      NEXT_PUBLIC_API_URL: string;
+      NEXT_PUBLIC_APP_URL: string;,
+      DATABASE_URL: string;
+      NEXTAUTH_SECRET: string;,
+      NEXTAUTH_URL: string;
     }
   }
-}
-declare module 'next' {
+},
+    declare module 'next' {
   interface NextRequest {
     user?: {
-      id: string
-      email: string
-      name: string
+      id: string;,
+      email: string;
+      name: string;
     }
   }
-}
-
-declare module '*.svg' {
+},
+    declare module '*.svg' {
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
   export default content;
-}
-declare module '*.png' {
+},
+    declare module '*.png' {
   const content: string;
   export default content;
-}
-
-declare module '*.jpg' {
+},
+    declare module '*.jpg' {
   const content: string;
   export default content;
-}
-
-declare module '*.jpeg' {
+},
+    declare module '*.jpeg' {
   const content: string;
   export default content;
-}
-
-declare module '*.gif' {
+},
+    declare module '*.gif' {
   const content: string;
   export default content;
-}
-
-declare module '*.webp' {
+},
+    declare module '*.webp' {
   const content: string;
   export default content;
-}
-
-declare module '*.ico' {
+},
+    declare module '*.ico' {
   const content: string;
   export default content;
-}
-
-declare module '*.bmp' {
+},
+    declare module '*.bmp' {
   const content: string;
   export default content;
-}
-
-declare module '*.tiff' {
+},
+    declare module '*.tiff' {
   const content: string;
   export default content;
-}
-
-export {};
+},
+    export {};

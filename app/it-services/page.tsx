@@ -1,7 +1,7 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { CheckCircle, ArrowRight, Cloud, Shield, Code, Smartphone, Database, Cpu, Wifi, Server } from 'lucide-react'
+import {Helmet} from 'react-helmet-async'
+import {Link} from 'react-router-dom'
+import {Cloud, Code, Server} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 
@@ -12,15 +12,15 @@ export default function ITServicesPage() {
       title: 'Cloud Migration',
       description: 'Seamlessly migrate your infrastructure to the cloud with our expert cloud migration services.',
       features: [
-        'AWS, Azure, GCP expertise',
-        'Zero-downtime migration',
-        'Cost optimization',
-        'Security compliance',
-        '24/7 monitoring',
+        'AWS, Azure, GCP expertise'
+        'Zero-downtime migration'
+        'Cost optimization'
+        'Security compliance'
+        '24/7 monitoring'
         'Disaster recovery'
       ],
       pricing: 'Starting at $2,500/month',
-      popular: true,
+      popular: true
       link: '/cloud-migration'
     },
     {
@@ -28,15 +28,15 @@ export default function ITServicesPage() {
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with comprehensive cybersecurity solutions and threat monitoring.',
       features: [
-        'Security assessment',
-        'Threat detection',
-        'Incident response',
-        'Compliance management',
-        'Security training',
+        'Security assessment'
+        'Threat detection'
+        'Incident response'
+        'Compliance management'
+        'Security training'
         'Penetration testing'
       ],
       pricing: 'Starting at $1,800/month',
-      popular: false,
+      popular: false
       link: '/cybersecurity-solutions'
     },
     {
@@ -44,15 +44,15 @@ export default function ITServicesPage() {
       title: 'DevOps & CI/CD',
       description: 'Streamline your development process with automated DevOps and continuous integration.',
       features: [
-        'CI/CD pipeline setup',
-        'Container orchestration',
-        'Infrastructure as Code',
-        'Automated testing',
-        'Deployment automation',
+        'CI/CD pipeline setup'
+        'Container orchestration'
+        'Infrastructure as Code'
+        'Automated testing'
+        'Deployment automation'
         'Performance monitoring'
       ],
       pricing: 'Starting at $2,200/month',
-      popular: true,
+      popular: true
       link: '/devops-cicd'
     },
     {
@@ -60,15 +60,15 @@ export default function ITServicesPage() {
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with our advanced analytics solutions.',
       features: [
-        'Data warehousing',
-        'Business intelligence',
-        'Predictive analytics',
-        'Real-time dashboards',
-        'Data visualization',
+        'Data warehousing'
+        'Business intelligence'
+        'Predictive analytics'
+        'Real-time dashboards'
+        'Data visualization'
         'Machine learning integration'
       ],
       pricing: 'Starting at $1,500/month',
-      popular: false,
+      popular: false
       link: '/data-analytics'
     },
     {
@@ -76,15 +76,15 @@ export default function ITServicesPage() {
       title: 'Mobile Development',
       description: 'Build powerful mobile applications for iOS and Android with our expert development team.',
       features: [
-        'Native app development',
-        'Cross-platform solutions',
-        'UI/UX design',
-        'App store optimization',
-        'Performance optimization',
+        'Native app development'
+        'Cross-platform solutions'
+        'UI/UX design'
+        'App store optimization'
+        'Performance optimization'
         'Maintenance & support'
       ],
       pricing: 'Starting at $3,000/month',
-      popular: false,
+      popular: false
       link: '/mobile-development'
     },
     {
@@ -92,15 +92,15 @@ export default function ITServicesPage() {
       title: 'Infrastructure Management',
       description: 'Comprehensive infrastructure management and optimization for your IT environment.',
       features: [
-        'Server management',
-        'Network optimization',
-        'Backup solutions',
-        'Disaster recovery',
-        'Performance tuning',
+        'Server management'
+        'Network optimization'
+        'Backup solutions'
+        'Disaster recovery'
+        'Performance tuning'
         '24/7 support'
       ],
       pricing: 'Starting at $1,200/month',
-      popular: true,
+      popular: true
       link: '/infrastructure-management'
     }
   ]
@@ -136,8 +136,8 @@ export default function ITServicesPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      </Helmet>
         <title>IT Services | Zion Tech Group</title>
         <meta name="description" content="Professional IT services including cloud migration, cybersecurity, DevOps, data analytics, and infrastructure management." />
         <meta name="keywords" content="IT services, cloud migration, cybersecurity, DevOps, data analytics, infrastructure management" />
@@ -146,28 +146,28 @@ export default function ITServicesPage() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Professional IT Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Comprehensive IT solutions to accelerate your digital transformation and drive business growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/about"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                Learn More
+                Learn More;
               </Link>
             </div>
           </div>
@@ -175,15 +175,15 @@ export default function ITServicesPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+              <div key={index} className="text-center"></div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2"></div>
                   {stat.number}
                 </div>
-                <div className="text-gray-300 text-sm">
+                <div className="text-gray-300 text-sm"></div>
                   {stat.label}
                 </div>
               </div>
@@ -193,28 +193,28 @@ export default function ITServicesPage() {
       </section>
 
       {/* IT Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our IT Services
+              Our IT Services;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose from our comprehensive suite of IT services designed to meet your business needs.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {itServices.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-500/50 transition-all duration-300 group"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  {service.icon}
-                  {service.popular && (
+              <div;
+                key={index},
+    className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-purple-500/50 transition-all duration-300 group"
+              ></div>
+                <div className="flex items-center justify-between mb-4"></div>
+                  {service.icon},
+    {service.popular && (
                     <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      Popular
+                      Popular;
                     </span>
                   )}
                 </div>
@@ -236,17 +236,17 @@ export default function ITServicesPage() {
                   ))}
                 </ul>
                 
-                <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center justify-between mb-6"></div>
                   <span className="text-2xl font-bold text-white">
                     {service.pricing}
                   </span>
                 </div>
                 
-                <Link
-                  to={service.link}
-                  className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 text-center block group-hover:shadow-lg group-hover:shadow-purple-500/25"
+                <Link;
+                  to={service.link},
+    className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 text-center block group-hover:shadow-lg group-hover:shadow-purple-500/25"
                 >
-                  Learn More
+                  Learn More;
                 </Link>
               </div>
             ))}
@@ -255,9 +255,9 @@ export default function ITServicesPage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our IT Services?
             </h2>
@@ -266,10 +266,10 @@ export default function ITServicesPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="text-center"></div>
+                <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   {benefit.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">
@@ -285,27 +285,27 @@ export default function ITServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Contact us today to learn more about our IT services and how they can benefit your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
               >
-                Get Started Today
+                Get Started Today;
               </Link>
-              <Link
+              <Link;
                 to="/about"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                Schedule Demo
+                Schedule Demo;
               </Link>
             </div>
           </div>
@@ -314,5 +314,5 @@ export default function ITServicesPage() {
 
       <Footer />
     </div>
-  )
+  
 }

@@ -1,14 +1,12 @@
 'use client'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import {Helmet} from 'react-helmet-async'
 
 const EnhancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered SEO Optimization',
-<<<<<<< HEAD
       description: 'Advanced AI technology to optimize your website for search engines and improve rankings'
     },
     {
@@ -25,61 +23,50 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
       icon: Globe,
       title: 'Global SEO',
       description: 'Optimize your website for international markets and multiple languages'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
     }
   ]
 
   const benefits = [
-    'AI-powered SEO optimization',
-    'Real-time ranking analysis',
-    'White-hat SEO techniques',
-    'Scalable SEO solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective SEO plans',
+    'AI-powered SEO optimization'
+    'Real-time ranking analysis'
+    'White-hat SEO techniques'
+    'Scalable SEO solutions'
+    '24/7 technical support'
+    'Easy integration with existing systems'
+    'Cost-effective SEO plans'
     'Proven track record of success'
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      </Helmet>
         <title>Enhanced SEO Optimizer | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Professional Enhanced SEO Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEO optimizer, search engine optimization, AI solutions, IT services, Zion Tech Group" />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
       </Helmet>
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
                 Enhanced SEO Optimizer
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
               </span>
               <br />
               <span className="text-white">Optimizer</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Optimize your website for search engines with our advanced AI-powered SEO optimization solutions. 
               Improve rankings and drive more organic traffic.
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+                Learn More;
               </button>
             </div>
           </div>
@@ -87,9 +74,9 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our SEO Optimizer?
             </h2>
@@ -97,10 +84,10 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               Our SEO optimization solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -112,19 +99,19 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+              Key Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our SEO optimization solutions for your business.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
+              <div key={index} className="flex items-start space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
@@ -133,32 +120,28 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Contact us today to learn more about our SEO optimization solutions and how they can benefit your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
-                Contact Us
+                Contact Us;
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
           </div>
         </div>
       </section>
     </div>
-  )
-}
-
-export default EnhancedSEOOptimizerPage
+  
+},
+    export default EnhancedSEOOptimizerPage;

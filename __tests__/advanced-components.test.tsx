@@ -1,41 +1,41 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react'
-import { HelmetProvider } from 'react-helmet-async'
-import { MemoryRouter } from 'react-router-dom'
+import {render, screen, fireEvent, waitFor} from '@testing-library/react'
+import {HelmetProvider} from 'react-helmet-async'
+import {MemoryRouter} from 'react-router-dom'
 // Mock components
 const AdvancedErrorBoundary = ({ children }: { children: React.ReactNode }) => {
-  return <div data-testid="error-boundary">{children}</div>}
+  return <div data-testid="_error-boundary">{children}</div>}
 const AdvancedSEOOptimizer = ({ title, description }: { title?: string; description?: string }) => {
   return <div data-testid="seo-optimizer">{title} - {description}</div>}
 const AdvancedPerformanceMonitor = () => {
   return <div data-testid="performance-monitor">Performance Monitor</div>}
-// Mock component that throws an error
+// Mock component that throws an _error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
-    throw new Error('Test error')}
+    throw new Error('Test _error')}
   return <div>Test content</div>}
-// Test component for error boundary tests
+// Test component for _error boundary tests
 // const TestComponent = () => <div>Test component</div>
 // Mock onError callback
 // const onError = jest.fn()
 // Mock helmet context
 // const helmetContext = {}
 describe('AdvancedErrorBoundary', () => {
-  it('renders children when there is no error', () => {
+  it('renders children when there is no _error', () => {
     // Test implementation
   })
 })
 
 describe('Advanced Components', () => {
-  it('renders test content without error', () => {
+  it('renders test content without _error', () => {
     render(
       <MemoryRouter>
         <ThrowError shouldThrow={false} />
       </MemoryRouter>
     )
     expect(screen.getByText('Test content')).toBeInTheDocument()})
-  it('renders error UI when there is an error', () => {
+  it('renders _error UI when there is an _error', () => {
     const consoleSpy = jest
-      .spyOn(console, 'error')
+      .spyOn(console, '_error')
       .mockImplementation(() => {})
     render(
       <MemoryRouter>
@@ -49,10 +49,10 @@ describe('Advanced Components', () => {
     expect(screen.getByText('Reload Page')).toBeInTheDocument()
     expect(screen.getByText('Go to Homepage')).toBeInTheDocument()
     consoleSpy.mockRestore()})
-  it('calls onError callback when error occurs', () => {
+  it('calls onError callback when _error occurs', () => {
     const onError = jest.fn()
     const consoleSpy = jest
-      .spyOn(console, 'error')
+      .spyOn(console, '_error')
       .mockImplementation(() => {})
     render(
       <MemoryRouter>
@@ -65,7 +65,7 @@ describe('Advanced Components', () => {
     consoleSpy.mockRestore()})
   it('retries when retry button is clicked', async () => {
     const consoleSpy = jest
-      .spyOn(console, 'error')
+      .spyOn(console, '_error')
       .mockImplementation(() => {})
     let shouldThrow = true
     const TestComponent = () => <ThrowError shouldThrow={shouldThrow} />
@@ -80,7 +80,7 @@ describe('Advanced Components', () => {
     // Change shouldThrow before clicking retry
     shouldThrow = false
     fireEvent.click(retryButton)
-    // After retry, the error boundary should reset and show the child component
+    // After retry, the _error boundary should reset and show the child component
     await waitFor(() => {
       expect(
         screen.queryByText('Oops! Something went wrong')
@@ -241,27 +241,19 @@ describe('AdvancedPerformanceMonitor', () => {
     // Should show recommendations for poor performance
     expect(screen.getByText('Recommendations:')).toBeInTheDocument()
     Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true })})
-  it('handles error when shouldThrow is true', () => {
+  it('handles _error when shouldThrow is true', () => {
     const consoleSpy = jest
-      .spyOn(console, 'error')
+      .spyOn(console, '_error')
       .mockImplementation(() => {})
-    // In React testing, errors are caught by error boundaries
+    // In React testing, errors are caught by _error boundaries
     // We just verify the component doesn't crash the test
     expect(() => {
       render(
         <MemoryRouter>
           <ThrowError shouldThrow={true} />
         </MemoryRouter>
-<<<<<<< HEAD
       );
     }).not.toThrow();
     consoleSpy.mockRestore();
   });
 });
-=======
-      )
-    }).not.toThrow()
-    consoleSpy.mockRestore()
-  })
-})
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
