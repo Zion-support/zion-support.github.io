@@ -1,31 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-=======
->>>>>>> origin/main
 export default function AnalyticstoolsPage() {
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-        <title>Analytics Tools - Zion Tech Group</title>
-        <h1 className="text-4 xl font-boldtext-whitemb-6">Analytics Tools</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional analytics tools services coming soon.</p>
-          Contact Us
-    
-<<<<<<< HEAD
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Analyticstools - Zion Tech Group</title>
         <meta name="description" content="Professional analyticstools by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -41,30 +21,23 @@ export default function AnalyticstoolsPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
+      </div></>
   );
 
-=======
       </>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title>Service - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AnalyticsToolsPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AnalyticsTools - Zion Tech Group</title>
         <meta name="description" content="Professional analytics tools solutions and services." />
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -78,14 +51,6 @@ export default function AnalyticsToolsPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-<<<<<<< HEAD
-    </div>  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

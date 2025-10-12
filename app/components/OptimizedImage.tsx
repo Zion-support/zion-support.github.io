@@ -1,23 +1,13 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-import { ArrowRight, Mail } from 'lucide-react';
-
-=======
 export default OptimizedImagePage;
 ursor/analyze-improve-and-deploy-application-edcb;
 ursor/analyze-improve-and-deploy-application-edcb;
 'use client'
 
->>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
@@ -169,15 +159,9 @@ const OptimizedImage: React.FC<OptimizedImageProps /> = ({
   const handleLoad = () => {
     setIsLoaded(true)
     onLoad?.()
-<<<<<<< HEAD
-
-  };
-
-=======
 export default function OptimizedImage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Optimized Image - Zion Tech Group</title>
         <meta name="description" content="Professional optimized image by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -193,11 +177,7 @@ export default function OptimizedImage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
   };
->>>>>>> origin/main

@@ -1,4 +1,4 @@
-export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
+export apiClient={new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
 export type { RequestConfig, APIResponse };
 export { APIError };
 /**
@@ -7,7 +7,7 @@ export { APIError };
  */
 
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
-  headers?: Record<string, string>;
+  headers?: Record<string, string}>;
   body?: unknown;
   cache?: boolean;
   cacheTTL?: number;
@@ -30,20 +30,13 @@ export { APIError };
 }
 
   private baseURL: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   private defaultHeaders: Record<string, string>;
   private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
     <></>
->>>>>>> origin/main
   private defaultHeaders: Record<string, string />;
   private cache: Map<string, { data: unknown; timestamp: number; ttl: number } /> = new Map();
-=======
   private defaultHeaders: Record<string, string>;
   private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
     this.baseURL = baseURL;
       ...defaultHeaders;
@@ -57,15 +50,12 @@ export { APIError };
       cacheTTL = 300000 // 5 minutes default;
     } = config;
 
-    const url = `${this.baseURL}${endpoint}`;
-    const cacheKey = `${method}:${url}:${JSON.stringify(body || {})}`;
+    url={`${this.baseURL}${endpoint}`;
+    cacheKey={`${method}:${url}:${JSON.stringify(body || {})}`;
 
     // Check cache first;
       const cached = this.getFromCache(cacheKey);
         return cached;
-      }
-    }
-
       });
 
       const data = await response.json();
@@ -92,7 +82,7 @@ export { APIError };
   /**
    * GET request;
    */
-    return this.request<T>(endpoint, { ...config, method: 'GET' });
+    return this.request<T}}>(endpoint, { ...config, method: 'GET' });
   }
 
   /**
@@ -122,10 +112,10 @@ export { APIError };
   /**
    * Get data from cache;
    */
-    const cached = this.cache.get(key);
+    cached={this.cache.get(key);
     if (!cached) return null;
 
-    const now = Date.now();
+    now={Date.now();
       this.cache.delete(key);
       return null;
     }
@@ -143,7 +133,7 @@ export { APIError };
   /**
    * Parse response headers;
    */
-    const result: Record<string, string> = {};
+    const result: Record<string, string}}> = {};
       result[key] = value;
     });
     return result;

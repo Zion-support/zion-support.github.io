@@ -1,19 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 'use client'
 
 const EnhancedLoadingSkeletonPage: React.FC = () => {
->>>>>>> origin/main
   const features = [
     {
       icon: Brain,
@@ -131,14 +123,9 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       </section>
     </div>
   )
-<<<<<<< HEAD
-};
-
-=======
 export default function EnhancedLoadingSkeletonPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Enhanced Loading Skeleton - Zion Tech Group</title>
         <meta name="description" content="Professional enhanced loading skeleton by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -154,11 +141,7 @@ export default function EnhancedLoadingSkeletonPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 };
->>>>>>> origin/main

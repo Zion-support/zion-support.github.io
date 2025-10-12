@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-import { useState } from 'react';
-import { MessageSquare } from 'lucide-react';
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> origin/main
 
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 interface FormData {
   name: string;,
   email: string;,
@@ -16,15 +8,9 @@ interface FormData {
   company: string;,
   message: string;,
   service: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/main
 
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
   const [formData, setFormData] = useState<FormData />({
     name: '',
     email: '',
@@ -42,12 +28,7 @@ interface FormData {
       [name]: value;
     }));
   };
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
   const handleSubmit = async (e: React.FormEvent) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
@@ -55,7 +36,6 @@ interface FormData {
     setIsSubmitting(false);
     setIsSubmitted(true);
     // Reset form after 3 seconds
-=======
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -67,7 +47,6 @@ interface FormData {
 
     // Reset form after 3 seconds;
     setTimeout(() => {
->>>>>>> origin/main
       setIsSubmitted(false);
       setFormData({
         name: '',
@@ -81,16 +60,9 @@ interface FormData {
   };
   if (isSubmitted) {
     return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <h3 className="text-2 xl font-boldtext-whitemb-2">Message Sent!</h3>
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
         <h3 className="text-2 xl font-bold text-whitemb-2"  >Message Sent!</h3>
->>>>>>> origin/main
         <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
       </div>
     );
@@ -205,20 +177,11 @@ interface FormData {
               Send Message;
             </>
           )}
-<<<<<<< HEAD
-
-            <span className="text-gray-300">kleber@ziontechgroup.com</span>
-            <span className="text-gray-300">+1 (302) 464-0950</span>
-            <span className="text-gray-300">24/7 Support</span>
-
-=======
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         </div></div><CheckCircle className="w-5 h-5 ml-2" />
         <h3 className="text-2 xl font-boldtext-whitemb-2"  >Message Sent!</h3>
         <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
-      </div>
-    </>
+      </div></>
   );
   }
   return (
@@ -320,13 +283,11 @@ interface FormData {
           disabled="{isSubmitting}"
           className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-centerdisabled:opacity-50disabled:cursor-not-allowed" />
           {isSubmitting ? (
-            <>
-              </><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <></><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               Sending...
             </>
           ) : (
-            <>
-              </><Send className="w-5 h-5 ml-2" />
+            <></><Send className="w-5 h-5 ml-2" />
               Send Message
             </>
           )}
@@ -347,8 +308,6 @@ interface FormData {
             <span className="text-gray-300"  >24/7 Support</span>
           </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
         </button>
       </form>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -366,6 +325,5 @@ interface FormData {
             <span className="text-gray-300"  >24/7 Support</span>
           </div>
       </div>
->>>>>>> origin/main
   );
 }

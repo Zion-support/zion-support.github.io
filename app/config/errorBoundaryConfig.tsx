@@ -28,15 +28,6 @@ export default getErrorBoundaryConfig;
 /**
  * Default error messages;
  */
-<<<<<<< HEAD
-
-    <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          >
-
-<<<<<<< HEAD
-=======
     <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div></div></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
@@ -48,8 +39,6 @@ export default getErrorBoundaryConfig;
           Oops! Something went wrong
         <p className="w-5 h-5 ml-2" />
 /**
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
             />
           </svg>
         </div>
@@ -57,7 +46,6 @@ export default getErrorBoundaryConfig;
           Oops! Something went wrong;
         <p className="w-5h-5ml-2" /></p>
 /**
->>>>>>> origin/main
  * Default error messages*/
 ;
 };/**
@@ -66,14 +54,10 @@ export default getErrorBoundaryConfig;
     },}}
 /**
  * Default error fallback component*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             viewBox="0 0 24 24">
->>>>>>> origin/main
 
             />
           </svg>
@@ -83,21 +67,8 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         <p className="w-5h-5ml-2">{error.message || 'An unexpected error occurred'}
         </p>
         {process.env['NODE_ENV'] === 'development' && (}
-<<<<<<< HEAD
-    
-          <pre className="mt-4 p-4 bg-gray-100 roundedtext-xsoverflow-auto">{error.stack}</pre>)}
-        </div></div>
-
-            Try Again
-
- (window.location.href = '/')}
-
-            Go Home
-
-=======
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {return (
-    <>
-      <div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div></div></div>
+    <><div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div></div></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             viewBox="0 0 24 24">
@@ -118,8 +89,6 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
             Go Home
         </div>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
           <pre className="mt-4p-4b g-g ray-100 roundedtext-xsoverflow-auto"  >{error.stack}</pre>)}
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lghover:bg-blue-700 transition-colors">
@@ -129,23 +98,10 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
             Go Home;
         </div>
     </div>
->>>>>>> origin/main
   )}
 /**
  * Network error fallback component;
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        </div></div>
-        </div></div>
-        </div></div>
-
-            Try Again
-
- (window.location.href = '/')}
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
@@ -155,10 +111,8 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
           </button>
             onClick="{()" => (window.location.href = '/')}
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lghover:bg-gray-300 transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
             Go Home
 
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -172,43 +126,19 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
             Go Home;
           </button>
         </div>
->>>>>>> origin/main
     </div>)}
 /**
-<<<<<<< HEAD
- * Network error fallback component*/;
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-centerbg-gray-50px-4"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            viewBox="0 0 24 24">
-
-<<<<<<< HEAD
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (<div>
-        </div></div>
-        </div></div>
-        </div></div>
-
-        <h2 className="mt-4 text-2 xl font-boldtext-centertext-gray-900">Connection Issue</h2>
-          Unable to connect to the server. Please check your internet connection and try again.
-    
-        </div></div>
-
-            Retry Connection
-
-=======
  * Network error fallback component*/
     </>
 );
   return (
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+    <><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
 
       viewBox="0 0 24 24">
 
       />
-      </svg>
-    </>
+      </svg></>
   );
         </div>
         <h2 className="mt-4t ext-2 xl font-boldtext-centertext-gray-900"  >Connection Issue</h2>
@@ -219,8 +149,6 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
             Retry Connection
         </div>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
             />
           </svg>
         </div>
@@ -232,31 +160,10 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
             Retry Connection;
         </div>
     </div>
->>>>>>> origin/main
   )}
 /**
  * Not found error fallback component;
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        </div></div>
-      <div className="max-w-mdw-fulltext-center" /></div>
-        <h1 className="text-6 xlfont-boldtext-gray-900">404</h1>
-        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900">Page Not Found</h2>
-          The page you're looking for doesn't exist or has been moved.
-    
-        </div></div>
-
- (window.location.href = '/')}
-
-            Go Home
-
- window.history.back()}
-
-            Go Back
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
         <h1 className="text-6 xlfont-boldtext-gray-900"  >404</h1>
@@ -272,8 +179,6 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
             Go Back
         </div>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <h1 className="text-6 xlfont-boldtext-gray-900"  >404</h1>
@@ -289,7 +194,6 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
             Go Back;
         </div>
     </div>
->>>>>>> origin/main
   )}
 /**
  * Get error type from error object;
@@ -302,33 +206,12 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
     </div>)}
 /**
  * Not found error fallback component*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-function NotFoundFallback(): JSX.Element {return (<div>
-        </div></div>
-      <div className="max-w-mdw-fulltext-center" /></div>
-        <h1 className="text-6 xlfont-boldtext-gray-900">404</h1>
-        <h2 className="mt-4 text-2 xlfont-boldtext-gray-900">Page Not Found</h2>
-          The page you're looking for doesn't exist or has been moved.
-    
-        </div></div>
-
- (window.location.href = '/')}
-
-            Go Home
-
- window.history.back()}
-
-=======
   return (
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+    <><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
       <h1 className="text-6 xlfont-boldtext-gray-900"  >404</h1>
       <h2 className="mt-4t ext-2 xlfont-boldtext-gray-900"  >Page Not Found</h2>
       <p className="w-5 h-5 ml-2">The page you're looking for doesn't exist or has been moved.
-      </p>
-    </>
+      </p></>
   );
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             onClick="{()" => (window.location.href = '/')}
@@ -337,10 +220,8 @@ function NotFoundFallback(): JSX.Element {return (<div>
           </button>
             onClick="{()" => window.history.back()}
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lghover:bg-gray-300 transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
             Go Back
 
-=======
 function NotFoundFallback(): JSX.Element {return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <h1 className="text-6 xlfont-boldtext-gray-900"  >404</h1>
@@ -357,7 +238,6 @@ function NotFoundFallback(): JSX.Element {return (<div className="min-h-screen b
             Go Back;
           </button>
         </div>
->>>>>>> origin/main
     </div>)}
 /**
  * Get error type from error object*/
@@ -374,30 +254,7 @@ function NotFoundFallback(): JSX.Element {return (<div className="min-h-screen b
 /**
  * Format error for logging;
  */
-<<<<<<< HEAD
-export default getErrorBoundaryConfig
-<<<<<<< HEAD
-
-=======
   }}
-  </button>
-  </button>
-  </button>
-  </path>
-  </button>
-  </button>
-  </h2>
-  </path>
->>>>>>> origin/main
-/**
- * Format error for logging*/
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown',}
-  }}
-
-<<<<<<< HEAD
-;
-
-=======
   </button>
   </button>
   </button>
@@ -409,9 +266,16 @@ export default getErrorBoundaryConfig
 /**
  * Format error for logging*/
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',}
-  }}
+
+  </button>
+  </button>
+  </button>
+  </path>
+  </button>
+  </button>
+  </h2>
+  </path>
+/**
+ * Format error for logging*/
+    url: typeof window !== 'undefined' ? window.location.href : 'unknown',}
 ;
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-;
->>>>>>> origin/main

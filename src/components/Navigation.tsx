@@ -56,7 +56,7 @@ export default Navigation;
                 Get Started;
           {/* Mobile Menu Button */}
           
-            {isMenuOpen ? <X className="w-6 h-6" /&gt; : <Menu className="w-6 h-6" /&gt;}</X></X>
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}</X></X>
         {/* Mobile Menu */}
                   <span>Services</span>
                       <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>

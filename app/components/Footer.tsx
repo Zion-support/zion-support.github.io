@@ -1,14 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shield, Database, Workflow, Link as LinkIcon, Linkedin, Twitter, Github } from 'lucide-react';
-=======
 export default Footer;
->>>>>>> origin/main
 
   const currentYear = new Date().getFullYear();
   
@@ -65,9 +56,9 @@ export default Footer;
   ];
 
   const socialLinks = [
-    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /&gt; },</Twitter></Twitter>
-    { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /&gt; },</Linkedin></Linkedin>
-    { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /&gt; }</Github></Github>
+    { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
+    { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
+    { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /> }
   ];
 
   return (
@@ -80,11 +71,9 @@ export default Footer;
             Advanced AI & IT Solutions;
             © {currentYear} Zion Tech Group. All rights reserved.
 
-=======
 export default function Footer() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Footer - Zion Tech Group</title>
         <meta name="description" content="Professional footer by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -100,12 +89,6 @@ export default function Footer() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
+      </div></>
   );
-<<<<<<< HEAD
-}
-=======
 };
->>>>>>> origin/main

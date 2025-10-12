@@ -1,44 +1,21 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 export default function AIDevOpsAutomationPage() {
 'use client';
->>>>>>> origin/main
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 
 export default function AiDevopsAutomationPage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <>
-      <title>AI DevOps Automation - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AI DevOps Automation</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional AI DevOps automation services coming soon.</p>
-            
-              Contact Us
-
-<<<<<<< HEAD
-  );
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AIDevOpsAutomationPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>A I Dev Ops Automation - Zion Tech Group</title>
         <meta name="description" content="Professional a i dev ops automation services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -55,14 +32,10 @@ export default function AIDevOpsAutomationPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       </>
-=======
     <></>
       <Helmet></Helmet>
         <title>AI DevOps Automation - Smart CI/CD & Infrastructure Management | Zion Tech Group</title>
@@ -244,14 +217,9 @@ export default function AIDevOpsAutomationPage() {
             </FuturisticCard>
           </div>
         </section>
-          </FuturisticBackground>
-</>  );
+          </FuturisticBackground></>  );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AiDevopsAutomation - Zion Tech Group</title>
         <meta name="description" content="Professional ai devops automation solutions and services." />
       </Helmet>
@@ -267,8 +235,6 @@ export default function AIDevOpsAutomationPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-'use client';
-=======
->>>>>>> origin/main
 import React, { useEffect, useState } from 'react';
 export default PerformanceOptimizer;
 export default PerformanceOptimizer;
@@ -157,20 +151,14 @@ const PerformanceOptimizer: React.FC = () => {
       description: "Intelligent caching for improved performance"
     }
   ];
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
 export default function PerformanceOptimizer() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> origin/main
       {/* Hero Section */}
       <section className="relativepy-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -234,13 +222,7 @@ export default function PerformanceOptimizer() {
     }
   }, [metrics]);
 
-<<<<<<< HEAD
-  return null
-
-export default PerformanceOptimizer;
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Performance Optimizer - Zion Tech Group</title>
         <meta name="description" content="Professional performance optimizer by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -256,12 +238,8 @@ export default PerformanceOptimizer;
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
   return null;
 };
->>>>>>> origin/main

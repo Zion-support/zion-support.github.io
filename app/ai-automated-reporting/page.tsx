@@ -1,44 +1,22 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function AiAutomatedReporting() {
-  return (
-<<<<<<< HEAD
-    
-        <title>AiAutomatedReporting - Zion Tech Group</title>
-=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
 export default AiAutomatedReportingPage;
 const AiAutomatedReportingPage: React.FC = () => {
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>AiAutomatedReporting - Zion Tech Group</title>
->>>>>>> origin/main
       
             <h1 className="text-4xl font-bold text-white mb-6">AiAutomatedReporting</h1>
             <p className="text-lg text-gray-300 mb-8">Professional aiautomatedreporting services coming soon.</p>
             
               Contact Us
 
-<<<<<<< HEAD
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AI Automated Reporting - Zion Tech Group</title>
         <meta name="description" content="AI Automated Reporting services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="ai-automated-reporting, AI solutions, IT services" />
@@ -55,28 +33,20 @@ const AiAutomatedReportingPage: React.FC = () => {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
+      </div></>
       </>
->>>>>>> origin/main
   );
 }
 
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title>AI Automated Reporting - Zion Tech Group</title>
         <meta name="description" content="Professional AI automated reporting services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
-=======
 export default function AiAutomatedReportingPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AiAutomatedReporting - Zion Tech Group</title>
         <meta name="description" content="Professional ai automated reporting solutions and services." />
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -90,7 +60,6 @@ export default function AiAutomatedReportingPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }

@@ -1,12 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Loader2 } from 'lucide-react';
-
-=======
 export default OptimizedLoading;
->>>>>>> origin/main
 interface OptimizedLoadingProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   text?: string;
@@ -14,51 +7,26 @@ interface OptimizedLoadingProps {
   className?: string;
 }
 
-const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
-  const size = 'md',
-  text = 'Loading...',
-  fullScreen = false,
-  className = ''
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
-  }
+const OptimizedLoading: React.FC<OptimizedLoadingProps /> = (size) => {sizeClasses}
 
-  const containerClasses = fullScreen;
+  containerClasses={fullScreen;
     ? 'fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4'
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function OptimizedLoading() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-    <div className="{`${containerClasses}" ${className}`} /></div>
+    <div className="{`${containerClasses}" ${className}`} } /></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`}  /></Loader2>
->>>>>>> origin/main
         {text && (
           <p className="w-5 h-5 ml-2">{text}
           </p>
         )}
       </div>
   )
-<<<<<<< HEAD
-
-export default OptimizedLoading;
-
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Optimized Loading - Zion Tech Group</title>
         <meta name="description" content="Professional optimized loading by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -74,11 +42,7 @@ export default OptimizedLoading;
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 }
->>>>>>> origin/main

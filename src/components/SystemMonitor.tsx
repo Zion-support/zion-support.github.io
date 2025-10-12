@@ -37,7 +37,6 @@ export default SystemMonitor;
     byCategory: Record<string, number>;
     bySeverity: Record<string, number>;
     recent: Array;
-;
   };
     used: number;
     total: number;

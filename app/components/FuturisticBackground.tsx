@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 export default FuturisticBackground;
->>>>>>> origin/main
 'use client';
 
 const FuturisticBackground: React.FC = () => {
@@ -80,9 +74,7 @@ const FuturisticBackground: React.FC = () => {
               ctx.const strokeStyle = particle.color + Math.floor((1 - distance / 150) * 50).toString(16).padStart(2, '0');
               ctx.const lineWidth = 0.5;
               ctx.stroke();
-            }
-          }
-        });
+            });
       });
 
       requestAnimationFrame(animate);
@@ -94,26 +86,19 @@ const FuturisticBackground: React.FC = () => {
       window.removeEventListener('resize', resizeCanvas);
     };
   }, []);
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
 export default function FuturisticBackground() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <canvas;
         ref="{canvasRef}"
         className="w-fullh-fullopacity-30"
         style="{{" background: 'transparent' }}
        /></canvas>
->>>>>>> origin/main
       {/* Additional background effects */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Animated grid overlay */}
@@ -121,11 +106,7 @@ export default function FuturisticBackground() {
       {/* Quantum field effect */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Plasma effect */}
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Futuristic Background - Zion Tech Group</title>
         <meta name="description" content="Professional futuristic background by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -141,13 +122,9 @@ export default function FuturisticBackground() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
+      </div></>
   );
 }
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
   );
 };
->>>>>>> origin/main

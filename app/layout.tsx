@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -78,23 +73,15 @@ const Layout: React.FC<LayoutProps /> = ({
       }
     ];
   };
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
 export default function Layout() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <title>5G Data Analytics - Zion Tech Group</title>
-=======
     <ErrorBoundary /></ErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <Helmet></Helmet>
->>>>>>> origin/main
           <title>{title}</title>
           <meta name="description" content="{description}" /></meta>
           <meta name="keywords" content="{keywords}" /></meta>
@@ -131,13 +118,7 @@ export default function Layout() {
     </ErrorBoundary>
   );
 };
-<<<<<<< HEAD
-
-export default Layout;
-
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Layout - Zion Tech Group</title>
         <meta name="description" content="Professional layout by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -153,10 +134,6 @@ export default Layout;
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

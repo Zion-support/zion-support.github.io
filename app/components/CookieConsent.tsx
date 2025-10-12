@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect} from 'react';
-import { X, Cookie} from 'lucide-react';
-=======
 export default CookieConsent;
 'use client';
->>>>>>> origin/main
 
 const CookieConsent: React.FC = () => {
   const [showDetails, setShowDetails] = useState(false);
@@ -36,23 +30,16 @@ const CookieConsent: React.FC = () => {
   };
 
   if (!isVisible) return null;
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
 export default function CookieConsent() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
->>>>>>> origin/main
           {!showDetails ? (
             // Simple view;
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -167,13 +154,7 @@ export default function CookieConsent() {
     </div>
   );
 };
-<<<<<<< HEAD
-
-export default CookieConsent;
-
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Cookie Consent - Zion Tech Group</title>
         <meta name="description" content="Professional cookie consent by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -189,10 +170,6 @@ export default CookieConsent;
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

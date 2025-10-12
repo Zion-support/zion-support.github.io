@@ -1,12 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { X, ArrowRight} from 'lucide-react';
-=======
 export default SearchModal;
->>>>>>> origin/main
 'use client';
 
 interface SearchResult {
@@ -24,42 +17,42 @@ interface SearchModalProps {
 
 const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
   const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[] /&gt;([]);</SearchResult></SearchResult>
+  const [results, setResults] = useState<SearchResult[] />([]);</SearchResult></SearchResult>
   const [isLoading, setIsLoading] = useState(false);
-  const inputRef = useRef<HTMLInputElement /&gt;(null);</HTMLInputElement></HTMLInputElement>
+  inputRef={useRef<HTMLInputElement } />(null);</HTMLInputElement></HTMLInputElement>
   // Mock search data - in a real app, this would come from an API;
   const searchData: SearchResult[] = [
     // AI Services;
-    { title: 'AI Content Generator', description: 'Create high-quality content with AI', path: '/ai-content-generator', category: 'AI Services', icon: <Brain const className="w-4h-4"  /&gt; },</Brain></Brain>
-    { title: 'AI Chatbot Builder', description: 'Build intelligent chatbots for your business', path: '/ai-chatbot-builder', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /&gt; },</Brain></Brain>
-    { title: 'AI Analytics Dashboard', description: 'Advanced analytics powered by AI', path: '/ai-analytics-dashboard', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /&gt; },</Brain></Brain>
-    { title: 'AI Email Assistant', description: 'Automate your email management', path: '/ai-email-assistant', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /&gt; },</Brain></Brain>
-    { title: 'AI Voice Assistant', description: 'Voice-powered AI solutions', path: '/ai-voice-assistant', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /&gt; },</Brain></Brain>
-    { title: 'AI Automation', description: 'Automate business processes with AI', path: '/ai-automation', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /&gt; },</Brain></Brain>
-    { title: 'AI 3 D Generation', description: 'Create 3 D models with AI', path: '/ai-3 d-generation', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /&gt; },</Brain></Brain>
-    { title: 'AI Drug Discovery Pro', description: 'Advanced AI for pharmaceutical research', path: '/ai-drug-discovery-pro', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /&gt; },</Brain></Brain>
+    { title: 'AI Content Generator', description: 'Create high-quality content with AI', path: '/ai-content-generator', category: 'AI Services', icon: <Brain className={"w-4h-4"  } /> },</Brain></Brain>
+    { title: 'AI Chatbot Builder', description: 'Build intelligent chatbots for your business', path: '/ai-chatbot-builder', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /> },</Brain></Brain>
+    { title: 'AI Analytics Dashboard', description: 'Advanced analytics powered by AI', path: '/ai-analytics-dashboard', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /> },</Brain></Brain>
+    { title: 'AI Email Assistant', description: 'Automate your email management', path: '/ai-email-assistant', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /> },</Brain></Brain>
+    { title: 'AI Voice Assistant', description: 'Voice-powered AI solutions', path: '/ai-voice-assistant', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /> },</Brain></Brain>
+    { title: 'AI Automation', description: 'Automate business processes with AI', path: '/ai-automation', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /> },</Brain></Brain>
+    { title: 'AI 3 D Generation', description: 'Create 3 D models with AI', path: '/ai-3 d-generation', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /> },</Brain></Brain>
+    { title: 'AI Drug Discovery Pro', description: 'Advanced AI for pharmaceutical research', path: '/ai-drug-discovery-pro', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /> },</Brain></Brain>
     // IT Services;
-    { title: 'Web Development', description: 'Custom web applications and websites', path: '/web-development', category: 'IT Services', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-    { title: 'Mobile Development', description: 'iOS and Android app development', path: '/mobile-development', category: 'IT Services', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-    { title: 'DevOps', description: 'Streamline your development and operations', path: '/devops', category: 'IT Services', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-    { title: 'Data Analytics', description: 'Transform data into actionable insights', path: '/data-analytics', category: 'IT Services', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-    { title: 'Cloud Services', description: 'Scalable cloud infrastructure solutions', path: '/cloud-services', category: 'IT Services', icon: <Cloud className="w-5h-5ml-2" /&gt; },</Cloud></Cloud>
-    { title: 'Cybersecurity', description: 'Protect your business from cyber threats', path: '/cybersecurity', category: 'IT Services', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
+    { title: 'Web Development', description: 'Custom web applications and websites', path: '/web-development', category: 'IT Services', icon: <Shield className="w-5h-5ml-2" /> },</Shield></Shield>
+    { title: 'Mobile Development', description: 'iOS and Android app development', path: '/mobile-development', category: 'IT Services', icon: <Shield className="w-5h-5ml-2" /> },</Shield></Shield>
+    { title: 'DevOps', description: 'Streamline your development and operations', path: '/devops', category: 'IT Services', icon: <Shield className="w-5h-5ml-2" /> },</Shield></Shield>
+    { title: 'Data Analytics', description: 'Transform data into actionable insights', path: '/data-analytics', category: 'IT Services', icon: <Shield className="w-5h-5ml-2" /> },</Shield></Shield>
+    { title: 'Cloud Services', description: 'Scalable cloud infrastructure solutions', path: '/cloud-services', category: 'IT Services', icon: <Cloud className="w-5h-5ml-2" /> },</Cloud></Cloud>
+    { title: 'Cybersecurity', description: 'Protect your business from cyber threats', path: '/cybersecurity', category: 'IT Services', icon: <Shield className="w-5h-5ml-2" /> },</Shield></Shield>
     // 5 G Services;
-    { title: '5 G Implementation', description: 'Deploy 5 G networks and solutions', path: '/5 g-implementation', category: '5 G Solutions', icon: <Zap className="w-5h-5ml-2" /&gt; },</Zap></Zap>
-    { title: '5 G Network Infrastructure', description: 'Build robust 5 G network infrastructure', path: '/5 g-network-infrastructure', category: '5 G Solutions', icon: <Zap className="w-5h-5ml-2" /&gt; },</Zap></Zap>
-    { title: '5 G IoT Solutions', description: 'Connect devices with 5 G IoT', path: '/5 g-iot-solutions', category: '5 G Solutions', icon: <Zap className="w-5h-5ml-2" /&gt; },</Zap></Zap>
-    { title: '5 G Edge Computing', description: 'Edge computing powered by 5 G', path: '/5 g-edge-computing', category: '5 G Solutions', icon: <Zap className="w-5h-5ml-2" /&gt; },</Zap></Zap>
+    { title: '5 G Implementation', description: 'Deploy 5 G networks and solutions', path: '/5 g-implementation', category: '5 G Solutions', icon: <Zap className="w-5h-5ml-2" /> },</Zap></Zap>
+    { title: '5 G Network Infrastructure', description: 'Build robust 5 G network infrastructure', path: '/5 g-network-infrastructure', category: '5 G Solutions', icon: <Zap className="w-5h-5ml-2" /> },</Zap></Zap>
+    { title: '5 G IoT Solutions', description: 'Connect devices with 5 G IoT', path: '/5 g-iot-solutions', category: '5 G Solutions', icon: <Zap className="w-5h-5ml-2" /> },</Zap></Zap>
+    { title: '5 G Edge Computing', description: 'Edge computing powered by 5 G', path: '/5 g-edge-computing', category: '5 G Solutions', icon: <Zap className="w-5h-5ml-2" /> },</Zap></Zap>
     // Micro SAAS;
-    { title: 'AI Task Manager', description: 'Intelligent task management system', path: '/ai-task-manager', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /&gt; },</Cpu></Cpu>
-    { title: 'AI Expense Tracker', description: 'Smart expense tracking and analysis', path: '/ai-expense-tracker', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /&gt; },</Cpu></Cpu>
-    { title: 'AI Password Manager', description: 'Secure password management with AI', path: '/ai-password-manager', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /&gt; },</Cpu></Cpu>
-    { title: 'AI Invoice Generator', description: 'Automated invoice generation', path: '/ai-invoice-generator', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /&gt; },</Cpu></Cpu>
-    { title: 'AI Health Tracker', description: 'Personal health monitoring with AI', path: '/ai-health-tracker', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /&gt; },</Cpu></Cpu>
-    { title: 'AI Smart Calendar', description: 'Intelligent calendar management', path: '/ai-smart-calendar', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /&gt; },</Cpu></Cpu>
+    { title: 'AI Task Manager', description: 'Intelligent task management system', path: '/ai-task-manager', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /> },</Cpu></Cpu>
+    { title: 'AI Expense Tracker', description: 'Smart expense tracking and analysis', path: '/ai-expense-tracker', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /> },</Cpu></Cpu>
+    { title: 'AI Password Manager', description: 'Secure password management with AI', path: '/ai-password-manager', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /> },</Cpu></Cpu>
+    { title: 'AI Invoice Generator', description: 'Automated invoice generation', path: '/ai-invoice-generator', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /> },</Cpu></Cpu>
+    { title: 'AI Health Tracker', description: 'Personal health monitoring with AI', path: '/ai-health-tracker', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /> },</Cpu></Cpu>
+    { title: 'AI Smart Calendar', description: 'Intelligent calendar management', path: '/ai-smart-calendar', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /> },</Cpu></Cpu>
     // Company Pages;
-    { title: 'About Us', description: 'Learn about Zion Tech Group', path: '/about', category: 'Company', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-    { title: 'Contact', description: 'Get in touch with our team', path: '/contact', category: 'Company', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
+    { title: 'About Us', description: 'Learn about Zion Tech Group', path: '/about', category: 'Company', icon: <Shield className="w-5h-5ml-2" /> },</Shield></Shield>
+    { title: 'Contact', description: 'Get in touch with our team', path: '/contact', category: 'Company', icon: <Shield className="w-5h-5ml-2" /> },</Shield></Shield>
   ];
   useEffect(() => {
     if (isOpen && inputRef.current) {
@@ -71,15 +64,7 @@ const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
     if (query.length > 0) {
       setIsLoading(true);
       // Simulate search delay;
-      const timer = setTimeout(() => {
-        const filteredResults = searchData.filter(item =>
-          item.title.toLowerCase().includes(query.toLowerCase()) ||
-          item.description.toLowerCase().includes(query.toLowerCase()) ||
-          item.category.toLowerCase().includes(query.toLowerCase())
-        );
-        setResults(filteredResults);
-        setIsLoading(false);
-      }, 150);
+      timer={setTimeout(() =}> {filteredResults}, 150);
 
       return () => clearTimeout(timer);
     } else {
@@ -87,26 +72,18 @@ const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
     }
   }, [query]);
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+  handleKeyDown={(e: React.KeyboardEvent) =}> {
     if (e.key === 'Escape') {
       onClose();
     }
   };
 
   if (!isOpen) return null;
-=======
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function SearchModal() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
->>>>>>> origin/main
         {/* Backdrop */}
         <div;
           className="fixed inset-0 bg-black/50backdrop-blur-smtransition-opacity"
@@ -187,13 +164,7 @@ export default function SearchModal() {
       </div>
   </div>);
 };
-<<<<<<< HEAD
-
-export default SearchModal;
-
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Search Modal - Zion Tech Group</title>
         <meta name="description" content="Professional search modal by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -209,10 +180,6 @@ export default SearchModal;
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

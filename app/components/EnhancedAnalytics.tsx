@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 export const useAnalytics = () => {
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps /> = ({ children }) => {
->>>>>>> origin/main
 'use client';
 interface AnalyticsContextType {
     <></>
@@ -41,9 +36,7 @@ interface AnalyticsProviderProps {
         }
         gtag('js', new Date());
         gtag('config', process.env.REACT_APP_GA_ID);
-      }
-    }
-  }, []);
+      }, []);
 
   const track = (event: string, properties?: Record<string, any />) => {
     if (typeof window !== 'undefined') {
@@ -104,9 +97,6 @@ interface AnalyticsProviderProps {
 declare global {
   interface Window {
     dataLayer: any[];,
-<<<<<<< HEAD
- void;
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -114,8 +104,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function AnalyticsProvider() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Analytics Provider - Zion Tech Group</title>
         <meta name="description" content="Professional analytics provider by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -131,14 +120,10 @@ export default function AnalyticsProvider() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
   gtag: (...args: any[]) => void;
   }
 }
     </>
->>>>>>> origin/main

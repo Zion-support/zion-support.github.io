@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 import React from 'react';
 export default SkipLink;
->>>>>>> origin/main
 'use client';
 
 const SkipLink: React.FC = () => {
   return (
-<<<<<<< HEAD
-
-      Skip to main content
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -21,8 +11,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function SkipLink() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Skip Link - Zion Tech Group</title>
         <meta name="description" content="Professional skip link by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -38,12 +27,9 @@ export default function SkipLink() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
+      </div></>
   );
 }
-=======
     <a;
       href="#main-content"
       className="sr-on l yfocus:not-sr-only focus: absolute,
@@ -53,4 +39,3 @@ export default function SkipLink() {
     </a>
   );
 };
->>>>>>> origin/main

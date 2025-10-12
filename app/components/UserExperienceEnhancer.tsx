@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-=======
->>>>>>> origin/main
 import React, { useState, useEffect } from 'react';
 'use client';
 
@@ -38,7 +33,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
 
 interface UserExperienceEnhancerProps {children: React.ReactNode}
 
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -46,8 +40,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function UserExperienceEnhancer() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>User Experience Enhancer - Zion Tech Group</title>
         <meta name="description" content="Professional user experience enhancer by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -63,8 +56,6 @@ export default function UserExperienceEnhancer() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918

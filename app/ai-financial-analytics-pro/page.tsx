@@ -1,26 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-
-import React from 'react';
-
-import { Link } from 'react-router-dom';
-=======
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
 import { Brain, TrendingUp, Zap, CheckCircle, ArrowRight, Star, BarChart3, DollarSign, Shield, Target, PieChart, Activity, Globe, Monitor, Sparkles, Calculator, FileText, Database, Lock, Building2, CreditCard, Wallet } from 'lucide-react';
 
 export default function AiFinancialAnalyticsProPage() {
-<<<<<<< HEAD
-=======
 export default function AiFinancialAnalyticsProPage() {
 'use client';
-
->>>>>>> origin/main
 
   const features = [
     {
@@ -212,10 +196,10 @@ export default function AiFinancialAnalyticsProPage() {
     }
   ];
   const stats = [
-    { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-5h-5ml-2" /&gt; },</Building2></Building2>
-    { number: '1 M+', label: 'Transactions Analyzed', icon: <Database className="w-5h-5ml-2" /&gt; },</Database></Database>
-    { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-    { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-5h-5ml-2" /&gt; }</Zap></Zap>
+    { number: '500+', label: 'Financial Institutions', icon: <Building2 className="w-5h-5ml-2" /> },</Building2></Building2>
+    { number: '1 M+', label: 'Transactions Analyzed', icon: <Database className="w-5h-5ml-2" /> },</Database></Database>
+    { number: '99.9%', label: 'Data Accuracy', icon: <Shield className="w-5h-5ml-2" /> },</Shield></Shield>
+    { number: '50%', label: 'Faster Reporting', icon: <Zap className="w-5h-5ml-2" /> }</Zap></Zap>
   ];
   const integrations = [
     { name: 'QuickBooks', icon: <Calculator className="w-5h-5ml-2" />, category: 'Accounting' },
@@ -228,48 +212,8 @@ export default function AiFinancialAnalyticsProPage() {
     { name: 'PayPal', icon: <Wallet className="w-5h-5ml-2" />, category: 'Payments' }
   ];
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-        <title>AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform</title>
-
-        {/* Open Graph Meta Tags */}
-    
-        {/* Twitter Card Meta Tags */}
-    
-        {/* Structured Data */}
-        <script type="application/ld+json"  />{JSON.stringify({
-            "@context": "https: //schema.org",
-            "@type": "SoftwareApplication",
-            "name": "AI Financial Analytics Pro",
-            "description": "Advanced AI-powered financial analytics platform with machine learning insights, real-time reporting, and predictive modeling for smarter financial decisions.",
-            "url": "https: //ziontechgroup.com/ai-financial-analytics-pro",
-            "applicationCategory": "BusinessApplication",
-            "operatingSystem": "Web, iOS, Android",
-            "offers": {
-              "@type": "Offer",
-              "price": "199",
-              "priceCurrency": "USD",
-              "priceSpecification": {
-                "@type": "PriceSpecification",
-                "price": "199",
-                "priceCurrency": "USD",
-                "unitText": "MONTH"
-            },
-            "provider": {
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https: //ziontechgroup.com"
-          })}
-
-              <p>✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
-
-<<<<<<< HEAD
-=======
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Ai Financial Analytics Pro - Zion Tech Group</title>
         <meta name="description" content="Professional ai financial analytics pro by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -286,20 +230,14 @@ export default function AiFinancialAnalyticsProPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
+      </div></>
       </>
->>>>>>> origin/main
   );
 
-=======
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title>Service - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -307,11 +245,9 @@ import { ArrowRight } from 'lucide-react';
 
 export default function AiFinancialAnalyticsProPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AiFinancialAnalyticsPro - Zion Tech Group</title>
         <meta name="description" content="Professional ai financial analytics pro solutions and services." />
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -325,7 +261,6 @@ export default function AiFinancialAnalyticsProPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }

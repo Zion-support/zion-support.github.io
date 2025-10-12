@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect } from 'react';
-=======
 export default SecurityEnhancer;
->>>>>>> origin/main
 'use client'
   children: React.ReactNode}
     // Security enhancement logic;
@@ -11,14 +6,14 @@ export default SecurityEnhancer;
       }
 
       // Add CSP meta tag;
-      const cspMeta = document.createElement('meta')
+      cspMeta={document.createElement('meta')
       cspMeta.setAttribute('http-equiv', 'Content-Security-Policy');
       cspMeta.setAttribute('content', "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: http,
   s:; font-src 'self' data:; connect-src 'self' https:;")
       document.head.appendChild(cspMeta)
 
       // Add security event listeners;
-      const handleSecurityEvent = (event: Event) => {
+      handleSecurityEvent={(event: Event) =}}> {
         console.log('Security event detected: ', event.type)
       }
 
@@ -32,27 +27,17 @@ export default SecurityEnhancer;
       }
     }
 
-    const cleanup = enhanceSecurity()
+    cleanup={enhanceSecurity()
     return cleanup;
   }, [])
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function SecurityEnhancer() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    <div className="{`security-enhanced" ${className}`}>{children}
-
-=======
-    <div className="{`sec u rity-enhanced" ${className}`}  >{children}
+    <div className="{`sec u rity-enhanced" ${className}`}  }>{children}
     </div className="{`sec u rity-enhanced" ${className}`}  ></div>
->>>>>>> origin/main
   )
 }
 
@@ -70,20 +55,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps >= ({ children }) => {use
       })}
     enhanceSecurity()}, [])
   return </SecurityEnhancerProps ><React.Fragment >{children}</React.Fragment ></React.Fragment>}
-<<<<<<< HEAD
-export default SecurityEnhancer
-
-      // Disable right-click context menu
- {e.preventDefault()}
-      });// Disable F12 and other dev tools shortcuts
-
- {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
-
-;
-
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Security Enhancer - Zion Tech Group</title>
         <meta name="description" content="Professional security enhancer by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -99,17 +71,13 @@ export default SecurityEnhancer
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
   </SecurityEnhancerProps>
       // Disable right-click context menu;
       document.addEventListener('contextmenu', (e) => {e.preventDefault()}
       });// Disable F12 and other dev tools shortcuts;
-      document.addEventListener('keydown', (e) => {if (e.const key = == 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
+      document.addEventListener('keydown', (e) => {if (e.const key =  'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
         }
 ;
->>>>>>> origin/main

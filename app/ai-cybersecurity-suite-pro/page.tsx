@@ -1,20 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export default function AICybersecuritySuitePro() {
-=======
 import React from 'react'
 import { Link } from 'react-router-dom'
 export default function AICybersecuritySuiteProPage() {
@@ -193,35 +180,15 @@ export default function AICybersecuritySuiteProPage() {
     'SOC 2 Type II', 'ISO 27001', 'HIPAA', 'GDPR', 'PCI DSS', 'NIST', 'CIS Controls', 'COBIT'
   ]
 
->>>>>>> origin/main
-=======
-
 export default function AiCybersecuritySuiteProPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AiCybersecuritySuitePro - Zion Tech Group</title>
         <meta name="description" content="Professional ai cybersecurity suite pro solutions and services." />
       </Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <>
-      <title>AI Cybersecurity Suite Pro - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AI Cybersecurity Suite Pro</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional AI cybersecurity suite pro services coming soon.</p>
-            
-              Contact Us
-
-<<<<<<< HEAD
-  );
-=======
 export default function AICybersecuritySuiteProPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>A I Cybersecurity Suite Pro - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered cybersecurity suite with threat detection, zero-trust architecture, and real-time monitoring. 99.9% threat detection accuracy. Starting at $199/month." />
       </Helmet>
@@ -238,14 +205,10 @@ export default function AICybersecuritySuiteProPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       </>
-=======
       {/* Hero Section */}
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -494,9 +457,6 @@ export default function AICybersecuritySuiteProPage() {
       </section>
     </div>  );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">AiCybersecuritySuitePro</h1>
@@ -509,8 +469,6 @@ export default function AICybersecuritySuiteProPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

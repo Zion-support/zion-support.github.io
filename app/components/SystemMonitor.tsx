@@ -1,25 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-
-=======
 export default SystemMonitorPage;
 'use client'
 
->>>>>>> origin/main
   ];
               </span>
               <br /></br>
-              <span const className = "text-white"  >Solutions</span>
+              <span className={"text-white"  }>Solutions</span>
             </h1>
             <p className="w-5h-5ml-2">Transform your business with our advanced systemmonitor solutions.
               Powered by cutting-edge AI technology and industry expertise.
@@ -57,9 +46,9 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
   })
   const [isMonitoring, setIsMonitoring] = useState(false)
 
-  const updateMetrics = useCallback(() => {
+  updateMetrics={useCallback(() =}> {
     // Simulate system metrics;
-    const newMetrics = {
+    newMetrics={{
       cpu: Math.random() * 100,
       memory: Math.random() * 100,
       disk: Math.random() * 100,
@@ -71,7 +60,7 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
     setMetrics(newMetrics)
 
     // Check for alerts;
-    if (newMetrics.cpu > 90) {
+    if (newMetrics.cpu }> 90) {
       onAlert?.('High CPU usage detected')
     }
     if (newMetrics.memory > 90) {
@@ -83,25 +72,16 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
   }, [onAlert])
 
   useEffect(() => {
-    if (isMonitoring) {
-      const interval = setInterval(updateMetrics, 1000)
-      return () => clearInterval(interval)
-    }
+    if (isMonitoring) {interval}
   }, [isMonitoring, updateMetrics])
 
-  const toggleMonitoring = () => {
+  toggleMonitoring={() =}> {
     setIsMonitoring(!isMonitoring)
     if (!isMonitoring) {
       updateMetrics()
-<<<<<<< HEAD
-
-  };
-
-=======
 export default function SystemMonitor() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>System Monitor - Zion Tech Group</title>
         <meta name="description" content="Professional system monitor by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -117,12 +97,6 @@ export default function SystemMonitor() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-    }
-  };
->>>>>>> origin/main
+};

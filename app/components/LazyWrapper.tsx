@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-=======
 export const LazyWrapper: React.FC<LazyWrapperProps /> = ({ 
 export const withLazyLoading = <P extends object />(
 export const preloadComponent = (importFn: () => Promise<any />) => {
 export default LazyWrapper;
->>>>>>> origin/main
 interface LazyWrapperProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;
@@ -22,7 +13,7 @@ const DefaultFallback = () => (
 )
 
   children, 
-  fallback = <DefaultFallback /&gt;</DefaultFallback&gt;
+  fallback = <DefaultFallback /></DefaultFallback>
 }) => {
   return (
     <Suspense fallback="{fallback}"  />{children}
@@ -49,16 +40,9 @@ const DefaultFallback = () => (
     if ('requestIdleCallback' in, window) {
       requestIdleCallback(() => importFn())
     } else {
-<<<<<<< HEAD
- importFn(), 0)
-
-export default LazyWrapper;
-
-=======
 export default function LazyWrapper() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Lazy Wrapper - Zion Tech Group</title>
         <meta name="description" content="Professional lazy wrapper by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -74,14 +58,8 @@ export default function LazyWrapper() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       setTimeout(() => importFn(), 0)
     }
-  }
-}
->>>>>>> origin/main

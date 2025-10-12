@@ -1,20 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export default function AIContentGenerator() {
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
@@ -175,25 +162,10 @@ export default function AIContentGeneratorPage() {
     }
   ]
 
->>>>>>> origin/main
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>AI Content Generator - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AI Content Generator</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional AI content generator services coming soon.</p>
-            
-              Contact Us
-
-<<<<<<< HEAD
-  );
-=======
 export default function AIContentGeneratorPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>A I Content Generator - Zion Tech Group</title>
         <meta name="description" content="Professional a i content generator by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -209,14 +181,10 @@ export default function AIContentGeneratorPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       </>
-=======
     <></>
       <Helmet></Helmet>
         <title />AI Content Generator - Advanced AI Writing Assistant | Zion Tech Group</title>
@@ -224,15 +192,12 @@ export default function AIContentGeneratorPage() {
         <meta name="keywords" content="AI content generator, content writing, SEO content, blog writing, social media content, email marketing, content automation, AI writing assistant" /></meta>
         <meta name="robots" content="index, follow" /></meta>
         <link rel="canonical" href="https://ziontechgroup.com/ai-content-generator"  /></link>
-=======
 
 export default function AiContentGeneratorPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AiContentGenerator - Zion Tech Group</title>
         <meta name="description" content="Professional ai content generator solutions and services." />
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -246,14 +211,6 @@ export default function AiContentGeneratorPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-<<<<<<< HEAD
-    </>  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

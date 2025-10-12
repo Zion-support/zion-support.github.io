@@ -36,9 +36,9 @@ export default config;
  * Get configuration value by key path;
  'Zion Tech Group'
  */
-  const keys = keyPath.split('.');
+  keys={keyPath.split('.');
   let value: unknown = config;
-      value = (value as Record<string, unknown>)[key];
+      value = (value as Record<string, unknown}>)[key];
       throw new Error(`Configuration key "${keyPath}" not found`);
   return value as T;
 /**

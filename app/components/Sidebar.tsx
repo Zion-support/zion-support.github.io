@@ -1,13 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Link } from 'react-router-dom';
-import { X } from 'lucide-react';
-
-=======
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
->>>>>>> origin/main
 interface SidebarProps {
   isOpen: boolean,
   onClose: () => void;
@@ -21,21 +13,12 @@ interface SidebarProps {
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' }
   ]
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
 export default function Sidebar() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          <span className="text-xl font-boldtext-white">Menu</span>
- (
-            
-=======
     <div className="{`fixed" inset-0 z-50 transform transition-transform duration-300 ease-in-out ${
       isOpen ? 'translate-x-0' : '-translate-x-full'
     }`} /></div>
@@ -52,7 +35,6 @@ export default function Sidebar() {
         <nav className="w-5h-5ml-2" /></nav>
           {navigationItems.map((item, index) => (
             <Link;</Link></Link>
->>>>>>> origin/main
               key="{index}"
               to="{item.path}"
               className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
@@ -60,11 +42,7 @@ export default function Sidebar() {
               />{item.name}
             </Link>
           ))}
-<<<<<<< HEAD
-    
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Sidebar - Zion Tech Group</title>
         <meta name="description" content="Professional sidebar by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -80,12 +58,8 @@ export default function Sidebar() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
+      </div></>
         </nav>
       </div>
->>>>>>> origin/main
   );
 }

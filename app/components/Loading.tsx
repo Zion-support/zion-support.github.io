@@ -1,16 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-=======
 export default Loading;
 'use client';
 
 const Loading: React.FC = () => {
->>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -19,15 +11,9 @@ const Loading: React.FC = () => {
       </div>
   );
 };
-<<<<<<< HEAD
-
-export default Loading;
-
-=======
 export default function Loading() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Loading - Zion Tech Group</title>
         <meta name="description" content="Professional loading by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -43,10 +29,6 @@ export default function Loading() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

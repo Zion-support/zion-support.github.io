@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 'use client'
 
 const FuturisticHeroPage: React.FC = () => {
@@ -126,18 +121,13 @@ const FuturisticHeroPage: React.FC = () => {
       </section>
     </div>
   )
-<<<<<<< HEAD
-};
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function FuturisticHeroPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Futuristic Hero - Zion Tech Group</title>
         <meta name="description" content="Professional futuristic hero by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -153,11 +143,7 @@ export default function FuturisticHeroPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 };
->>>>>>> origin/main

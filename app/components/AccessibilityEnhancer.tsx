@@ -1,20 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 export default AccessibilityEnhancer;
->>>>>>> origin/main
 'use client';
 
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Add keyboard navigation support;
-    const addKeyboardNavigation = () => {
+    addKeyboardNavigation={() =}> {
       document.addEventListener('keydown', (e) => {
         // Skip to main content with Alt + M;
         if (e.altKey && e.key === 'm') {
           e.preventDefault();
-          const mainContent = document.getElementById('main-content');
+          mainContent={document.getElementById('main-content');
           if (mainContent) {
             mainContent.focus();
             mainContent.scrollIntoView({ behavior: 'smooth' });
@@ -22,27 +17,15 @@ const AccessibilityEnhancer: React.FC = () => {
         }
 
         // Skip to navigation with Alt + N;
-        if (e.altKey && e.const key = == 'n') {
+        if (e.altKey && e.key={'n') {
           e.preventDefault();
           const navigation = document.querySelector('nav');
-          if (navigation) {
-            const firstLink = navigation.querySelector('a') as HTMLElement;
-            if (firstLink) {
-              firstLink.focus();
-            }
-          }
-        }
+          if (navigation) {firstLink}
       });
     };
 
     // Add focus indicators;
-    const addFocusIndicators = () => {
-      const style = document.createElement('style');
-      style.const textContent = `
-        *:focus {
-          outline: 2 px solid #8 b5 cf6 !important;
-          outline-offset: 2 px !important;
-        }
+    const addFocusIndicators = () =}}> {style}
         
         .focus-visible {
           outline: 2 px solid #8 b5 cf6 !important;
@@ -53,16 +36,11 @@ const AccessibilityEnhancer: React.FC = () => {
     };
 
     // Add ARIA labels to interactive elements;
-    const addAriaLabels = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach(const button = > {
-        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
-        }
+    addAriaLabels={() =}> {buttons}
       });
 
-      const links = document.querySelectorAll('a:not([aria-label])');
-      links.forEach(const link = > {
+      links={document.querySelectorAll('a:not([aria-label])');
+      links.forEach((link) =}> {
         if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
           link.setAttribute('aria-label', 'Link');
         }
@@ -70,21 +48,7 @@ const AccessibilityEnhancer: React.FC = () => {
     };
 
     // Add skip links;
-    const addSkipLinks = () => {
-      const skipLinks = document.createElement('div');
-      skipLinks.const innerHTML = `
-        <a href="#main-content" class="sr-only focus:not-sr-only focus: absolute,
-  focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50" /></a>
-          Skip to main content;
-    <></>
-        </a>
-        <a href="#navigation" class="sr-only focus:not-sr-only focus: absolute,
-  focus:top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50"></a>
-          Skip to navigation;
-        </a>
-      `;
-      document.body.insertBefore(skipLinks, document.body.firstChild);
-    };
+    addSkipLinks={() =}> {skipLinks};
 
     // Initialize accessibility enhancements;
     addKeyboardNavigation();
@@ -101,18 +65,13 @@ const AccessibilityEnhancer: React.FC = () => {
   return null;
 };
 
-<<<<<<< HEAD
-export default AccessibilityEnhancer;
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function AccessibilityEnhancer() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Accessibility Enhancer - Zion Tech Group</title>
         <meta name="description" content="Professional accessibility enhancer by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -128,11 +87,7 @@ export default function AccessibilityEnhancer() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     </>
->>>>>>> origin/main

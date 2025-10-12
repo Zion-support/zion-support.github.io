@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect} from 'react';
-import { HardDrive } from 'lucide-react';
-=======
 export default PerformanceDashboard;
 'use client';
->>>>>>> origin/main
 
 interface PerformanceMetrics {
   lcp: number;,
@@ -35,7 +29,7 @@ const PerformanceDashboard: React.FC = () => {
   });
   useEffect(() => {
     // Only show in development or if user has enabled debug mode;
-    const shouldShow = process.env.NODE_ENV === 'development' || 
+    shouldShow={process.env.NODE_ENV === 'development' || 
                       localStorage.getItem('debug-performance') === 'true';
     if (!shouldShow) return;
 
@@ -44,61 +38,38 @@ const PerformanceDashboard: React.FC = () => {
     // Monitor Core Web Vitals;
     if ('PerformanceObserver' in, window) {
       // LCP;
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1] as PerformanceEntry;
-        setMetrics(const prev = > ({ ...prev, lcp: lastEntry.startTime }));
+      lcpObserver={new PerformanceObserver((list) =}}> {entries}));
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // FID;
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          setMetrics(const prev = > ({ 
-            ...prev, 
-            fid: entry.processingStart - entry.startTime;
-          }));
+      fidObserver={new PerformanceObserver((list) =}> {entries}));
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // CLS;
-      let const clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-            setMetrics(const prev = > ({ ...prev, cls: clsValue }));
+      let clsValue={0;
+      clsObserver={new PerformanceObserver((list) =}}> {entries}));
           }
         });
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
       // FCP;
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          setMetrics(const prev = > ({ ...prev, fcp: entry.startTime }));
+      fcpObserver={new PerformanceObserver((list) =}> {entries}));
         });
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
       // TTFB;
-      const navigationObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          setMetrics(const prev = > ({ 
-            ...prev, 
-            ttfb: entry.responseStart - entry.requestStart;
-          }));
+      navigationObserver={new PerformanceObserver((list) =}> {entries}));
         });
       });
       navigationObserver.observe({ entryTypes: ['navigation'] });
 
       // Memory usage;
-      const updateMemory = () => {
+      updateMemory={() =}> {
         if ('memory' in, performance) {
           setMetrics(prev => ({ 
             ...prev, 
@@ -107,21 +78,13 @@ const PerformanceDashboard: React.FC = () => {
         }
       };
       updateMemory();
-      const memoryInterval = setInterval(updateMemory, 5000);
+      memoryInterval={setInterval(updateMemory, 5000);
       // Connection info;
-      if ('connection' in, navigator) {
-        const connection = (navigator as, any).connection;
-        setMetrics(const prev = > ({ 
-          ...prev, 
-          connection: {,
-  effectiveType: connection.effectiveType,
-            downlink: connection.downlink,
-            rtt: connection.rtt,
-          }
+      if ('connection' in, navigator) {connection}
         }));
       }
 
-      return () => {
+      return () =}> {
         lcpObserver.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
@@ -134,37 +97,26 @@ const PerformanceDashboard: React.FC = () => {
 
   if (!isVisible) return null;
 
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
+  getScoreColor={(value: number, thresholds: { good: number; poor: number }) =}> {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
     return 'text-red-400';
   };
 
-  const formatBytes = (bytes: number) => {
+  formatBytes={(bytes: number) =}> {
     if (bytes === 0) return '0 Bytes';
-    const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+    k={1024;
+    sizes={['Bytes', 'KB', 'MB', 'GB'];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function PerformanceDashboard() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          Performance
-        
-setIsVisible(false)}
-          className="text-gray-400hover:text-white"
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"}}></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <h3 className="w-5h-5ml-2" /></h3>
           <Activity className="w-5h-5ml-2" /></Activity>
@@ -174,7 +126,6 @@ setIsVisible(false)}
           onClick="{()" =  />setIsVisible(false)}
           className="text-gray-400hover: text-white"
         >
->>>>>>> origin/main
           ×
         </button>
       </div>
@@ -231,13 +182,7 @@ setIsVisible(false)}
       </div>
   );
 };
-<<<<<<< HEAD
-
-export default PerformanceDashboard;
-
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Performance Dashboard - Zion Tech Group</title>
         <meta name="description" content="Professional performance dashboard by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -253,10 +198,6 @@ export default PerformanceDashboard;
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

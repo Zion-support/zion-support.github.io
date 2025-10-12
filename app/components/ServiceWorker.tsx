@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-'use client';
-=======
->>>>>>> origin/main
 import React, { useEffect } from 'react';
 export default ServiceWorker;
 'use client';
@@ -24,9 +18,6 @@ const ServiceWorker: React.FC = () => {
   return null;
 };
 
-<<<<<<< HEAD
-export default ServiceWorker;
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -34,8 +25,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function ServiceWorker() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Service Worker - Zion Tech Group</title>
         <meta name="description" content="Professional service worker by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -51,10 +41,6 @@ export default function ServiceWorker() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

@@ -1,43 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Shield, ArrowRight, CheckCircle, Brain, Lock, Star, Eye } from 'lucide-react'
-
-import Layout from '../layout'
-import React from 'react';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AdvancedSecuritySuite() {
-<<<<<<< HEAD
-
-=======
 import React from 'react';
-<<<<<<< HEAD
-export default function AdvancedSecuritySuite() {
->>>>>>> origin/main
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>Advanced Security Suite - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">Advanced Security Suite</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional advanced security suite services coming soon.</p>
-
-<<<<<<< HEAD
-=======
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Advanced Security Suite - Zion Tech Group</title>
         <meta name="description" content="Professional advanced security suite services by Zion Tech Group. Transform your business with our expert cybersecurity solutions." />
         <meta name="keywords" content="cybersecurity, threat detection, security monitoring, compliance, enterprise security, AI security" />
@@ -54,14 +24,10 @@ export default function AdvancedSecuritySuite() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       </>
-=======
     <Layout;</Layout></Layout>
       title="Advanced Security Suite - Enterprise Cybersecurity | Zion Tech Group"
       description="Comprehensive cybersecurity solution with AI threat detection, 24/7 monitoring, and compliance tools. Protect your business from advanced cyber threats. Get your free security assessment today."
@@ -151,17 +117,13 @@ export default function AdvancedSecuritySuite() {
       </div>
     </Layout>  );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AdvancedSecuritySuitePage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AdvancedSecuritySuite - Zion Tech Group</title>
         <meta name="description" content="Professional advanced security suite solutions and services." />
       </Helmet>
@@ -177,8 +139,6 @@ export default function AdvancedSecuritySuitePage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

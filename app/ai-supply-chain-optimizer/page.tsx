@@ -1,43 +1,21 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target } from 'lucide-react';
-
-=======
->>>>>>> origin/main
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 export default function AISupplyChainOptimizerPage() {
 'use client';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 
 export default function AiSupplyChainOptimizerPage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-
-                <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
-
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AISupplyChainOptimizerPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>A I Supply Chain Optimizer - Zion Tech Group</title>
         <meta name="description" content="Professional a i supply chain optimizer services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -54,26 +32,18 @@ export default function AISupplyChainOptimizerPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
+      </div></>
       </>
->>>>>>> origin/main
   );
 
-=======
     <></>
       <Helmet>        <title>AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
         <meta const name = "description" content="Optimize your supply chain with AI-powered demand forecasting, route optimization, and inventory management. Reduce costs by 35% and improve delivery times by 40%." /  /></meta>
         <meta name="keywords" content="AI supply chain, logistics optimization, inventory management, demand forecasting, supply chain AI, logistics technology" /></meta>
         <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer"  /></link>
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AiSupplyChainOptimizer - Zion Tech Group</title>
         <meta name="description" content="Professional ai supply chain optimizer solutions and services." />
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -87,7 +57,6 @@ export default function AISupplyChainOptimizerPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }

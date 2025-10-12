@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect } from 'react';
-
-=======
 export default SEOOptimizer;
->>>>>>> origin/main
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
@@ -77,45 +71,14 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
   const breadcrumbData = generateBreadcrumbStructuredData()
   const faqData = generateFAQStructuredData()
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
 export default function SEOOptimizer() {
   return (
-<<<<<<< HEAD
-
-        <title>5G Data Analytics - Zion Tech Group</title>
-      {/* Basic Meta Tags */}
-    
-      <title>{title}</title>
-      {/* Canonical URL */}
-      {/* Open Graph Meta Tags */}
-    
-      {/* Twitter Card Meta Tags */}
-    
-      {/* Additional SEO Meta Tags */}
-    
-      {/* Performance Hints */}
-
-      {/* Structured Data */}
-    
-      <script type="application/ld+json">{JSON.stringify(breadcrumbData)}
-      <script type="application/ld+json">{JSON.stringify(faqData)}
-      {structuredData && (
-    
-        <script type="application/ld+json">{JSON.stringify(structuredData)}
-
-      )}
-  )
-
-
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>S E O Optimizer - Zion Tech Group</title>
         <meta name="description" content="Professional s e o optimizer by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -131,8 +94,6 @@ export default function SEOOptimizer() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918

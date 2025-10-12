@@ -1,19 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 'use client'
 
 const EnhancedHero: React.FC = () => {
->>>>>>> origin/main
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -117,14 +109,9 @@ const EnhancedHero: React.FC = () => {
           </div>
       </div>
   )
-<<<<<<< HEAD
-};
-
-=======
 export default function EnhancedHero() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Enhanced Hero - Zion Tech Group</title>
         <meta name="description" content="Professional enhanced hero by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -140,11 +127,7 @@ export default function EnhancedHero() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 };
->>>>>>> origin/main

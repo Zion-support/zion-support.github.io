@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
 export default ContentStatistics;
->>>>>>> origin/main
 'use client';
 
 interface StatItem {
@@ -22,15 +16,7 @@ interface ContentStatisticsProps {
   className?: string;
 }
 
-const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
-  const stats = [
-    {
-      id: 'users',
-      value: 1200,
-      label: 'Active Users',
-      icon: Users,
-      suffix: '+'
-    },
+const ContentStatistics: React.FC<ContentStatisticsProps /> = ({stats},
     {
       id: 'projects',
       value: 99.8,
@@ -57,19 +43,7 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
   className = ''
 }) => {
   const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
-  useEffect(() => {
-    const animateValue = (start: number, end: number, duration: number, key: string) => {
-      const startTime = performance.now();
-      const animate = (currentTime: number) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        // Easing function;
-        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-        const currentValue = start + (end - start) * easeOutCubic;
-        setAnimatedValues(const prev = > ({
-          ...prev,
-          [key]: currentValue;
-        }));
+  useEffect(() => {animateValue}));
         if (progress < 1) {
           requestAnimationFrame(animate);
         }
@@ -78,30 +52,18 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
       requestAnimationFrame(animate);
     };
 
-    stats.forEach(const stat = > {
+    stats.forEach((stat) => {
       animateValue(0, stat.value, animationDuration, stat.id);
     });
   }, [stats, animationDuration]);
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function ContentStatistics() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} /></div>
-      {stats.map((stat) => {
->>>>>>> origin/main
-        const animatedValue = animatedValues[stat.id] || 0;
-        const IconComponent = stat.icon;
-        return (
-    <div;
-            const key = {stat.id}
+    <div className={{`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} } /></div>
+      {stats.map((stat) => {animatedValue}
             className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-all duration-300" /></div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -121,13 +83,7 @@ export default function ContentStatistics() {
     </div>
   );
 };
-<<<<<<< HEAD
-
-export default ContentStatistics;
-
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Content Statistics - Zion Tech Group</title>
         <meta name="description" content="Professional content statistics by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -143,10 +99,6 @@ export default ContentStatistics;
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

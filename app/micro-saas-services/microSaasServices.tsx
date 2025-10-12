@@ -1,12 +1,7 @@
 import React from 'react';
 export default MicroSaasServicesPage;
 'use client'
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Mail, Brain } from 'lucide-react';
-=======
 const MicroSaasServicesPage: React.FC = () => {
->>>>>>> origin/main
   const features = [
     {
       icon: Brain,
@@ -40,25 +35,14 @@ const MicroSaasServicesPage: React.FC = () => {
     'Proven track record of success'
   ];
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <title>5G Data Analytics - Zion Tech Group</title>
-
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
->>>>>>> origin/main
         <title>MicroSaasServices | Zion Tech Group</title>
         <meta name="description" content="Professional MicroSaasServices services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
         <meta name="keywords" content="microSaasServices, AI solutions, IT services, Zion Tech Group, microsaasservices" /></meta>
       </Helmet>
       {/* Hero Section */}
-<<<<<<< HEAD
-
-=======
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       </div><Helmet>
         <title>MicroSaasServices | Zion Tech Group
         </title>
@@ -71,16 +55,8 @@ const MicroSaasServicesPage: React.FC = () => {
           </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         </div><h1 className="w-5 h-5 ml-2" />
               <span className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
                 MicroSaasServices
               <span className="text-white">Solutions</span>
-<<<<<<< HEAD
-              Transform your business with our advanced microsaasservices solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-    
-                Get Started
-    
-=======
             </h1>
             <p className="w-5 h-5 ml-2">Transform your business with our advanced microsaasservices solutions.
               Powered by cutting-edge AI technology and industry expertise.
@@ -91,21 +67,9 @@ const MicroSaasServicesPage: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
                 Learn More
 
       {/* Features Section */}
-<<<<<<< HEAD
-    
-              Why Choose Our MicroSaasServices?
-    
-              Our microsaasservices solutions deliver unmatched performance, security, and scalability.
-
- (
-
-                <h3 className="text-xl font-semiboldtext-white mb-3">{feature.title}</h3>
-
-=======
       <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -122,8 +86,6 @@ const MicroSaasServicesPage: React.FC = () => {
                   </div></div><feature.icon className="h-6w-6text-white" />
                 </div>
                 <h3 className="text-xl font-semiboldtext-whitemb-3">{feature.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -163,23 +125,12 @@ const MicroSaasServicesPage: React.FC = () => {
                   <feature.icon className="h-6w-6text-white" /></feature>
                 </div>
                 <h3 className="text-xl font-semiboldtext-whitemb-3">{feature.title}</h3>
->>>>>>> origin/main
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-              Key Benefits
-  
-              Experience the power of our microsaasservices solutions for your business.
-    
- (
-
-=======
       <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -193,8 +144,6 @@ const MicroSaasServicesPage: React.FC = () => {
             {benefits.map((benefit, index) => (
               </div></div><div key={index} className="flexitems-startspace-x-3" />
                 </div></div><CheckCircle className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -208,23 +157,12 @@ const MicroSaasServicesPage: React.FC = () => {
             {benefits.map((benefit, index) => (
               <div key={index} className="flexitems-startspace-x-3" /></div>
                 <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
->>>>>>> origin/main
                 <p className="text-gray-300text-lg">{benefit}</p>
               </div>
             ))}
           </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-              Ready to Get Started?
-    
-              Contact our experts to discuss your microsaasservices needs and get a customized solution.
-    
-                Call Now
-
-=======
       <section className="w-5 h-5 ml-2" />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
           </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -240,15 +178,10 @@ const MicroSaasServicesPage: React.FC = () => {
   </
               <button className="w-5 h-5 ml-2" />
                 <Mail className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
                 Email Us
 
   )}
 export default MicroSaasServicesPage
-<<<<<<< HEAD
-
-=======
-=======
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -271,16 +204,11 @@ export default MicroSaasServicesPage
       </section>
     </div>
   )}
->>>>>>> origin/main
   </button>
   </button>
   </h2>
   </button>
   </span>
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main
     {icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'}
@@ -296,18 +224,12 @@ export default MicroSaasServicesPage
     {icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     }
->>>>>>> origin/main
   ];const benefits = [
-=======
     }
   ]
     </>
 );const benefits = [
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -316,34 +238,17 @@ export default MicroSaasServicesPage
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  ];return (<div>
-        </div></div>
-        <title>5G Data Analytics - Zion Tech Group</title>
-
-=======
   ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"></div>
       <Helmet></Helmet>
->>>>>>> origin/main
         <title>MicroSaasServices | Zion Tech Group</title>
         <meta name="description" content="Professional MicroSaasServices services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
         <meta name="keywords" content="microSaasServices, AI solutions, IT services, Zion Tech Group, microsaasservices" /></meta>
       </Helmet>
       {/* Hero Section */}
-<<<<<<< HEAD
-
-      <section className="relative py-20 px-4sm:px-6lg:px-8" /></section>
-        </div></div>
-          <div className="text-center" /></div>
-=======
   return (
-    <>
-      <Helmet>
+    <><Helmet>
       <title>MicroSaasServices | Zion Tech Group
-      </title>
-    </>
+      </title></>
   );
         <meta name="description" content="Professional MicroSaasServices services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="microSaasServices, AI solutions, IT services, Zion Tech Group, microsaasservices" />
@@ -354,13 +259,9 @@ export default MicroSaasServicesPage
           <div className="text-center"></div></div></div>
             <h1 className="w-5 h-5 ml-2" />
               <span className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
                 MicroSaasServices
     
               <span className="text-white">Solutions</span>
-<<<<<<< HEAD
-              Transform your business with our advanced microsaasservices solutions.
-=======
       <section className="relative py-20 px-4sm:px-6lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
@@ -372,7 +273,6 @@ export default MicroSaasServicesPage
               <span className="text-white">Solutions</span>
             </h1>
             <p className="w-5h-5ml-2">Transform your business with our advanced microsaasservices solutions.
->>>>>>> origin/main
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-rowgap-4 justify-center"></div>
@@ -391,18 +291,6 @@ export default MicroSaasServicesPage
           <div className="text-centermb-16"></div>
             <h2 className="w-5h-5ml-2" /></h2>
               Why Choose Our MicroSaasServices?
-<<<<<<< HEAD
-    
-              Our microsaasservices solutions deliver unmatched performance, security, and scalability.
-    
-        </div></div>
- (}
-    
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" /></div>
-        </div></div>
-                <h3 className="text-xl font-semiboldtext-white mb-3">{feature.title}</h3>
-
-=======
             </h1>
             <p className="w-5 h-5 ml-2">Transform your business with our advanced microsaasservices solutions.
               Powered by cutting-edge AI technology and industry expertise.
@@ -434,8 +322,6 @@ export default MicroSaasServicesPage
                   <feature.icon className="h-6w-6text-white" />
                 </div>
                 <h3 className="text-xl font-semiboldtext-whitemb-3">{feature.title}</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
             </h2>
             <p className="w-5h-5ml-2">Our microsaasservices solutions deliver unmatched performance, security, and scalability.
             </p>
@@ -447,28 +333,11 @@ export default MicroSaasServicesPage
                   <feature.icon className="h-6w-6text-white" /></feature>
                 </div>
                 <h3 className="text-xl font-semiboldtext-whitemb-3">{feature.title}</h3>
->>>>>>> origin/main
                 <p className="text-gray-300">{feature.description}</p>
               </div>))}
           </div>
       </section>
       {/* Benefits Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" /></section>
-        </div></div>
-        </div></div>
-              Key Benefits
-    
-              Experience the power of our microsaasservices solutions for your business.
-    
-        </div></div>
- (}
-
-              <div key={index} className="flexitems-startspace-x-3" /></div>
-
-=======
       <section className="py-20p x-4 sm:px-6lg:px-8bg-white/5"></section>
         <div className="max-w-7xl mx-auto"></div></div></div>
           <div className="text-centermb-16"></div></div></div>
@@ -482,8 +351,6 @@ export default MicroSaasServicesPage
             {benefits.map((benefit, index) => (}
               <div key={index} className="flexitems-startspace-x-3"></div></div></div>
                 <CheckCircle className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       <section className="py-20px-4 s m:px-6lg:px-8bg-white/5"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-centermb-16"></div>
@@ -497,26 +364,11 @@ export default MicroSaasServicesPage
             {benefits.map((benefit, index) => (}
               <div key={index} className="flexitems-startspace-x-3"></div>
                 <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
->>>>>>> origin/main
                 <p className="text-gray-300text-lg">{benefit}</p>
               </div>))}
           </div>
       </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      <section className="py-20 px-4sm:px-6lg:px-8" /></section>
-        </div></div>
-        </div></div>
-              Ready to Get Started?
-    
-              Contact our experts to discuss your microsaasservices needs and get a customized solution.
-
-        </div></div>
-                Call Now
-    
-=======
       <section className="py-20p x-4sm:px-6lg:px-8"></section>
         <div className="max-w-4xlmx-auto text-center"></div></div></div>
           <div className="bg-gradient-to-rfrom-purple-600to-blue-600 rounded-2xlp-8md:p-12"></div></div></div>
@@ -532,10 +384,8 @@ export default MicroSaasServicesPage
               </button>
               <button className="w-5 h-5 ml-2" />
                 <Mail className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
                 Email Us
 
-=======
       <section className="py-20px-4s m:px-6lg:px-8"></section>
         <div className="max-w-4xlmx-auto text-center"></div>
           <div className="bg-gradient-to-rfrom-purple-600to-blue-600 rounded-2xlp-8md:p-12"></div>
@@ -556,4 +406,3 @@ export default MicroSaasServicesPage
             </div>
         </div>
       </section>
->>>>>>> origin/main

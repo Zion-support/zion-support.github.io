@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useRef, useEffect} from 'react';
-import { Loader2 } from 'lucide-react';
-
-=======
 export default LazyImage;
->>>>>>> origin/main
 interface LazyImageProps {
   src: string,
   alt: string;
@@ -18,23 +11,17 @@ interface LazyImageProps {
 const LazyImage: React.FC<LazyImageProps /> = ({
   src,
   alt,
-  const className = '',
+  className={'',
   placeholder,
   onLoad,
   onError;
-}) => {
+}) =}> {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
   const [hasError, setHasError] = useState(false)
-  const imgRef = useRef<HTMLImageElement />(null)
+  imgRef={useRef<HTMLImageElement } />(null)
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true)
-          observer.disconnect()
-        }
+  useEffect(() => {observer}
       },
       { threshold: 0.1 }
     )
@@ -46,32 +33,23 @@ const LazyImage: React.FC<LazyImageProps /> = ({
     return () => observer.disconnect()
   }, [])
 
-  const handleLoad = () => {
+  handleLoad={() =}> {
     setIsLoaded(true)
     onLoad?.()
   }
 
-  const handleError = () => {
+  handleError={() =}> {
     setHasError(true)
     onError?.()
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
   }
->>>>>>> origin/main
 
 export default function LazyImage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} /></div>
->>>>>>> origin/main
       {!isInView && (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <Loader2 className="w-5h-5ml-2" /></Loader2>
@@ -106,13 +84,7 @@ export default function LazyImage() {
       )}
     </div>
   )
-<<<<<<< HEAD
-
-export default LazyImage;
-
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Lazy Image - Zion Tech Group</title>
         <meta name="description" content="Professional lazy image by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -128,11 +100,7 @@ export default LazyImage;
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 }
->>>>>>> origin/main

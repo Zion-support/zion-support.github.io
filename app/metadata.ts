@@ -17,7 +17,6 @@
     url: string;
     siteName: string;
     images: Array;
-;
     locale: string;
     type: string;
   };

@@ -1,31 +1,13 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-=======
->>>>>>> origin/main
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function SearchPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Search - Zion Tech Group</title>
-<<<<<<< HEAD
-        <h1 className="text-4 xl font-boldtext-whitemb-6">Search</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional search services coming soon.</p>
-          Contact Us
-    
-<<<<<<< HEAD
-=======
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       </div><Helmet>
         <title>Service - Zion Tech Group
         </title>
@@ -44,22 +26,15 @@ export default function SearchPage() {
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
       </div>
-    </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
+    </div></>
       </>
->>>>>>> origin/main
   );
 
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title>Service - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
-=======
         <meta name="description" content="Professional search solutions and services." />
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -73,7 +48,6 @@ export default function SearchPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }

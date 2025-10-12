@@ -1,37 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import React from 'react';
-=======
-<<<<<<< HEAD
-'use client';
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
 import React, { useState } from 'react';
->>>>>>> origin/main
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function AiChatbotBuilder() {
-=======
->>>>>>> origin/main
-=======
 export default function AiChatbotBuilderPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AiChatbotBuilder - Zion Tech Group</title>
         <meta name="description" content="Professional ai chatbot builder solutions and services." />
       </Helmet>
@@ -47,19 +23,11 @@ export default function AiChatbotBuilderPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
-<<<<<<< HEAD
-};
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 export default function AiChatbotBuilderPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Ai Chatbot Builder - Zion Tech Group</title>
         <meta name="description" content="Professional ai chatbot builder by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -75,16 +43,8 @@ export default function AiChatbotBuilderPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 export default AiChatbotBuilderPage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

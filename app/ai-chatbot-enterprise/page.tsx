@@ -1,17 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AiChatbotEnterprisePage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AiChatbotEnterprise - Zion Tech Group</title>
         <meta name="description" content="Professional ai chatbot enterprise solutions and services." />
       </Helmet>
@@ -27,23 +21,15 @@ export default function AiChatbotEnterprisePage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
-<<<<<<< HEAD
-};
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AiChatbotEnterprisePage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Ai Chatbot Enterprise - Zion Tech Group</title>
         <meta name="description" content="Professional ai chatbot enterprise by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -59,16 +45,8 @@ export default function AiChatbotEnterprisePage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 export default AiChatbotEnterprisePage;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

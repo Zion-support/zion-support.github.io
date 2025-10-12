@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-    // Prevent zoom on input focus for iOS
-=======
 import { useEffect } from 'react'
 export default MobileOptimizer;
 
     // Prevent zoom on input focus for iOS;
->>>>>>> origin/main
       const viewport = document.querySelector('meta[name="viewport"]')
       if (viewport) {
         viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
@@ -69,15 +59,9 @@ export default MobileOptimizer;
  {})
   }, [])
 
-<<<<<<< HEAD
-  return null
-
-export default MobileOptimizer
-=======
 export default function MobileOptimizer() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Mobile Optimizer - Zion Tech Group</title>
         <meta name="description" content="Professional mobile optimizer by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -93,11 +77,7 @@ export default function MobileOptimizer() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
   return null;
->>>>>>> origin/main

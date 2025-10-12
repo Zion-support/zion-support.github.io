@@ -1,20 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AIContentModerationPro() {
-<<<<<<< HEAD
-=======
 import React from 'react'
 import { Link } from 'react-router-dom'
 export default function AIContentModerationPro() {
@@ -127,55 +116,13 @@ export default function AIContentModerationPro() {
       rating: 5;
     }
   ]
->>>>>>> origin/main
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 
 export default function AiContentModerationProPage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <>
-      <title>AI Content Moderation Pro - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AI Content Moderation Pro</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional AI content moderation pro services coming soon.</p>
-
-      </>
-  );
-}
-
-=======
-<<<<<<< HEAD
-  return (
-    <>
-      <Helmet>
-        <title>A I Content Moderation Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional a i content moderation pro by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">A I Content Moderation Pro</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional a i content moderation pro coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
     <Layout;</Layout></Layout>
       title="AI Content Moderation Pro - Advanced Content Safety Platform | Zion Tech Group"
       description="Protect your platform with AI-powered content moderation. Real-time detection, multi-format support, and 99.7% accuracy. Start your free trial today."
@@ -347,11 +294,7 @@ export default function AiContentModerationProPage() {
     </Layout>
   )
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AiContentModerationPro - Zion Tech Group</title>
         <meta name="description" content="Professional ai content moderation pro solutions and services." />
       </Helmet>
@@ -367,8 +310,6 @@ export default function AiContentModerationProPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

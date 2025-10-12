@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function CloudMigration() {
-=======
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 export default function CloudMigrationPage() {
@@ -216,25 +204,10 @@ export default function CloudMigrationPage() {
     }
   ]
 
->>>>>>> origin/main
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>CloudMigration - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">CloudMigration</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional cloudmigration services coming soon.</p>
-            
-              Contact Us
-
-<<<<<<< HEAD
-  );
-=======
 export default function CloudMigrationPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Cloud Migration - Zion Tech Group</title>
         <meta name="description" content="Professional cloud migration by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -250,14 +223,10 @@ export default function CloudMigrationPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       </>
-=======
     <></>
       <Helmet></Helmet>
         <title>Cloud Migration Services - Expert Cloud Transformation | Zion Tech Group</title>
@@ -265,14 +234,11 @@ export default function CloudMigrationPage() {
         <meta name="keywords" content="cloud migration, AWS migration, Azure migration, Google Cloud migration, cloud transformation, cloud consulting, infrastructure migration" /></meta>
         <meta name="robots" content="index, follow" /></meta>
         <link rel="canonical" href="https://ziontechgroup.com/cloud-migration"  /></link>
-=======
 export default function CloudMigrationPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>CloudMigration - Zion Tech Group</title>
         <meta name="description" content="Professional cloud migration solutions and services." />
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -286,14 +252,6 @@ export default function CloudMigrationPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-<<<<<<< HEAD
-    </>  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

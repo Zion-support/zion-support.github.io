@@ -1,51 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function AICodeAssistantPro() {
-=======
->>>>>>> origin/main
-=======
 export default function AiCodeAssistantProPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AiCodeAssistantPro - Zion Tech Group</title>
         <meta name="description" content="Professional ai code assistant pro solutions and services." />
       </Helmet>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-        <>
-      <title>AI Code Assistant Pro - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AI Code Assistant Pro</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional AI code assistant pro services coming soon.</p>
-            
-              Contact Us
-
-<<<<<<< HEAD
-  );
-=======
 export default function AICodeAssistantProPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>A I Code Assistant Pro - Zion Tech Group</title>
         <meta name="description" content="Revolutionary AI-powered code assistant with intelligent generation, debugging, and analysis. Increase development speed by 300%. Starting at $29/month." />
       </Helmet>
@@ -62,14 +28,10 @@ export default function AICodeAssistantProPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       </>
-=======
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -98,7 +60,6 @@ export default function AICodeAssistantProPage() {
               View Demo
             </Link>
           </div>
-=======
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">AiCodeAssistantPro</h1>
@@ -110,17 +71,9 @@ export default function AICodeAssistantProPage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
         </div>
-      </div>
-    </>
+      </div></>
   );
-<<<<<<< HEAD
-};
-
-export default AICodeAssistantProPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
-=======
       </section>
       {/* Testimonials Section */}
       <section className="w-5h-5ml-2" /></section>
@@ -183,8 +136,4 @@ export default AICodeAssistantProPage;
       </section>
     </div>  );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

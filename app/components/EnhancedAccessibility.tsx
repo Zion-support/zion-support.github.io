@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 export default EnhancedAccessibility;
->>>>>>> origin/main
 'use client';
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add high contrast mode support;
-    const addHighContrastSupport = () => {
-      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-      const handleContrastChange = (e: MediaQueryListEvent) => {
-        if (e.matches) {
-          document.documentElement.classList.add('high-contrast');
-        } else {
+    addHighContrastSupport={() =}> {mediaQuery} else {
           document.documentElement.classList.remove('high-contrast');
         }
       };
@@ -26,12 +16,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     };
 
     // Add reduced motion support;
-    const addReducedMotionSupport = () => {
-      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      const handleMotionChange = (e: MediaQueryListEvent) => {
-        if (e.matches) {
-          document.documentElement.classList.add('reduce-motion');
-        } else {
+    addReducedMotionSupport={() =}> {mediaQuery} else {
           document.documentElement.classList.remove('reduce-motion');
         }
       };
@@ -43,22 +28,15 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     };
 
     // Add screen reader announcements;
-    const addScreenReaderAnnouncements = () => {
-      const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.const className = 'sr-only';
-      announcement.const id = 'announcements';
-      document.body.appendChild(announcement);
-    };
+    addScreenReaderAnnouncements={() =}> {announcement};
 
     // Initialize accessibility features;
-    const cleanupContrast = addHighContrastSupport();
+    cleanupContrast={addHighContrastSupport();
     const cleanupMotion = addReducedMotionSupport();
     addScreenReaderAnnouncements();
 
     // Cleanup;
-    return () => {
+    return () =}> {
       cleanupContrast?.();
       cleanupMotion?.();
     };
@@ -66,19 +44,13 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
 
   return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
 };
-<<<<<<< HEAD
-
-export default EnhancedAccessibility;
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function EnhancedAccessibility() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Enhanced Accessibility - Zion Tech Group</title>
         <meta name="description" content="Professional enhanced accessibility by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -94,10 +66,6 @@ export default function EnhancedAccessibility() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

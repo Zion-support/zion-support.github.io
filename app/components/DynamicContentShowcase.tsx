@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect} from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight} from 'lucide-react';
-=======
 export default DynamicContentShowcase;
 'use client';
->>>>>>> origin/main
 
 interface ContentItem {
   id: string;,
@@ -24,17 +18,7 @@ interface DynamicContentShowcaseProps {
   className?: string;
 }
 
-const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
-  const items = [
-    {
-      id: 'ai-content',
-      title: 'AI Content Generation',
-      description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
-      icon: Zap,
-      features: ['Automated content creation', 'SEO optimization', 'Multi-language support'],
-      price: 'Starting at $99/month',
-      category: 'AI Services'
-    },
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({items},
     {
       id: 'cloud-services',
       title: 'Cloud Infrastructure',
@@ -64,29 +48,29 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
   useEffect(() => {
     if (!isPlaying) return;
 
-    const interval = setInterval(() => {
+    interval={setInterval(() =}> {
       setCurrentIndex((prev) => (prev + 1) % items.length);
     }, autoPlayInterval);
 
     return () => clearInterval(interval);
   }, [isPlaying, autoPlayInterval, items.length]);
 
-  const nextItem = () => {
+  nextItem={() =}> {
     setCurrentIndex((prev) => (prev + 1) % items.length);
   };
 
-  const prevItem = () => {
+  prevItem={() =}> {
     setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
   };
 
-  const togglePlayPause = () => {
+  togglePlayPause={() =}> {
     setIsPlaying(!isPlaying);
   };
 
-  const currentItem = items[currentIndex];
-  const IconComponent = currentItem.icon;
+  currentItem={items[currentIndex];
+  IconComponent={currentItem.icon;
   return (
-    <div const className = {`relative ${className}`} /></div>
+    <div  className={{`relative ${className}`} } /}}></div>
       {/* Controls */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -165,20 +149,13 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
     </div>
   );
 };
-<<<<<<< HEAD
-
-export default DynamicContentShowcase;
-
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function DynamicContentShowcase() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Dynamic Content Showcase - Zion Tech Group</title>
         <meta name="description" content="Professional dynamic content showcase by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -194,10 +171,6 @@ export default function DynamicContentShowcase() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

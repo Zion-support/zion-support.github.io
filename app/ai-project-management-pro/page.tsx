@@ -1,86 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import React from 'react';
-<<<<<<< HEAD
-
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3 } from 'lucide-react';
-
-        {/* Hero Section */}
-    
-                AI Project Management Pro
-
-              Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs.
-    
-                Get Started
-
-                Learn More
-
-        {/* Features Section */}
-    
-                Why Choose Our AI Project Management?
-
-                Our advanced AI technology helps you manage projects more efficiently
-
-              {[
-                  icon: <Brain className="w-12h-12text-cyan-400" />,
-                  title: "AI-Powered Planning",
-                  description: "Advanced machine learning algorithms help optimize project timelines and resource allocation."
-                },
-                  icon: <Zap className="w-12h-12text-purple-400" />,
-                  title: "Real-time Tracking",
-                  description: "Get instant insights into project progress and team performance with our comprehensive dashboard."
-                },
-                  icon: <Shield className="w-12h-12text-green-400" />,
-                  title: "Secure & Reliable",
-                  description: "Enterprise-grade security ensures your project data is protected while maintaining 99.9% uptime."
- (
-
-                    {feature.icon}
-
-                  <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-
-              ))}
-
-        {/* Pricing Section */}
-    
-                Choose Your Plan
-
-                Flexible pricing options to fit your team's needs
-
- (
-    
-                    <h3 className="text-2xl font-boldtext-whitemb-2">{plan.name}</h3>
-
-                      {plan.price}
-    
-                      <span className="text-lgtext-gray-400">{plan.period}</span>
-
-                    <p className="text-gray-300">{plan.description}</p>
-
- (
-
-                        {feature}
-                    ))}
-                  
-                    Get Started
-
-              ))}
-    
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Clock, Target, BarChart3 } from 'lucide-react';
-
-=======
 import React from 'react';
->>>>>>> origin/main
 export default function AIProjectManagementPro() {
 export default Page;
 'use client';
@@ -121,55 +40,18 @@ const Page: React.FC = () => {
         'Custom workflows',
         '24/7 dedicated support',
         'Custom integrations',
-<<<<<<< HEAD
-        'Advanced security',
-        'SLA guarantee'
-      ],
-      popular: false
-  ]
-
-  const testimonials = [
-      name: 'Sarah Johnson',
-      company: 'Tech Startup',
-      content: 'AI Project Management Pro helped us increase productivity by 40% and reduce project delays by 60%.',
-      rating: 5
-    },
-      name: 'Michael Chen',
-      company: 'Consulting Firm',
-      content: 'The AI-powered insights and automated scheduling have transformed how we manage our projects.',
-      rating: 5
-    },
-      name: 'Emily Rodriguez',
-      company: 'Software Company',
-      content: 'Our team collaboration and project visibility have improved dramatically since using this platform.',
-      rating: 5
-  ]
-=======
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
         'White-label options'
       ]
     }
   ];
->>>>>>> origin/main
 
 export default function Page() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-        <title>AI Project Management Pro - Zion Tech Group</title>
-=======
->>>>>>> origin/main
 
-        <>
-      <title>AI Project Management Pro - Zion Tech Group</title>
-
-      </>
+        <><title>AI Project Management Pro - Zion Tech Group</title></>
   );
 
-=======
     <></>
       <Helmet></Helmet>
         <title>AI Project Management Pro - Zion Tech Group</title>
@@ -208,18 +90,15 @@ export default function Page() {
         <meta property="og:description" content="Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs." /></meta>
         <meta property="og:type" content="website" /></meta>
         <meta property="og:url" content="https://ziontechgroup.com/ai-project-management-pro" /></meta>
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AiProjectManagementProPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AiProjectManagementPro - Zion Tech Group</title>
         <meta name="description" content="Professional ai project management pro solutions and services." />
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -233,16 +112,9 @@ export default function AiProjectManagementProPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
-<<<<<<< HEAD
-};
-
-<<<<<<< HEAD
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title> - Zion Tech Group</title>
         <meta name="description" content="Professional  by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -258,18 +130,8 @@ export default function AiProjectManagementProPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 ;
 }
-
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

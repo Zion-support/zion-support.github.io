@@ -1,19 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 'use client'
 
 const MainPage: React.FC = () => {
->>>>>>> origin/main
   const features = [
     {
       icon: Brain,
@@ -137,14 +129,9 @@ const MainPage: React.FC = () => {
       </section>
     </div>
   )
-<<<<<<< HEAD
-};
-
-=======
 export default function MainPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Main - Zion Tech Group</title>
         <meta name="description" content="Professional main by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -160,11 +147,7 @@ export default function MainPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 };
->>>>>>> origin/main

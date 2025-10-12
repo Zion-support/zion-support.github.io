@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/main
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 export default PageFixedPage;
@@ -154,21 +149,16 @@ return (
           </div>
         </section>
       </div>
-      <Footer />    </Footer>
-</>
+      <Footer />    </Footer></>
   ),
 };
-<<<<<<< HEAD
-export default PageFixedPage;
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function PageFixedPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Fixed - Zion Tech Group</title>
         <meta name="description" content="Professional fixed by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -184,10 +174,6 @@ export default function PageFixedPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

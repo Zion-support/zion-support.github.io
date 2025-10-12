@@ -1,20 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-export default function ItServices() {
-=======
 export default ItServicesPage;
 export default ITServicesPage;
 export default ITServicesPage;
@@ -440,14 +427,9 @@ const ITServicesPage: React.FC = () => {
     { number: '24/7', label: 'Support Available', icon: Award },
   ];
 
->>>>>>> origin/main
-=======
-
 export default function ItServicesPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>ItServices - Zion Tech Group</title>
         <meta name="description" content="Professional it services solutions and services." />
       </Helmet>
@@ -463,18 +445,11 @@ export default function ItServicesPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
-<<<<<<< HEAD
-};
-
-<<<<<<< HEAD
-=======
 export default function ItServicesPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>It Services - Zion Tech Group</title>
         <meta name="description" content="Professional it services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -490,15 +465,6 @@ export default function ItServicesPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

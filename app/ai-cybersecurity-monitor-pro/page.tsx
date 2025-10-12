@@ -1,19 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 export default function AiCybersecurityMonitorProPage() {
 'use client';
->>>>>>> origin/main
-
-<<<<<<< HEAD
-export default function AiCybersecurityMonitorProPage() {
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 
   const features = [
     {
@@ -205,10 +192,10 @@ export default function AiCybersecurityMonitorProPage() {
     }
   ];
   const stats = [
-    { number: '1 M+', label: 'Threats Blocked', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-    { number: '500+', label: 'Enterprise Clients', icon: <Building2 className="w-5h-5ml-2" /&gt; },</Building2></Building2>
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Activity className="w-5h-5ml-2" /&gt; },</Activity></Activity>
-    { number: '24/7', label: 'Security Monitoring', icon: <Eye className="w-5h-5ml-2" /&gt; }</Eye></Eye>
+    { number: '1 M+', label: 'Threats Blocked', icon: <Shield className="w-5h-5ml-2" /> },</Shield></Shield>
+    { number: '500+', label: 'Enterprise Clients', icon: <Building2 className="w-5h-5ml-2" /> },</Building2></Building2>
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Activity className="w-5h-5ml-2" /> },</Activity></Activity>
+    { number: '24/7', label: 'Security Monitoring', icon: <Eye className="w-5h-5ml-2" /> }</Eye></Eye>
   ];
   const threatTypes = [
     { name: 'Malware', icon: <Bug className="w-5h-5ml-2" />, category: 'Malicious Software' },
@@ -221,25 +208,11 @@ export default function AiCybersecurityMonitorProPage() {
     { name: 'IoT Attacks', icon: <Smartphone className="w-5h-5ml-2" />, category: 'Device Vulnerabilities' }
   ];
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>AiCybersecurityMonitorPro - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AiCybersecurityMonitorPro</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional aicybersecuritymonitorpro services coming soon.</p>
-            
-              Contact Us
-
-<<<<<<< HEAD
-  );
-=======
 import { ArrowRight } from 'lucide-react';
 
 export default function AiCybersecurityMonitorProPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Ai Cybersecurity Monitor Pro - Zion Tech Group</title>
         <meta name="description" content="Professional ai cybersecurity monitor pro by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -256,14 +229,10 @@ export default function AiCybersecurityMonitorProPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       </>
-=======
     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title>Service - Zion Tech Group</title>
@@ -482,17 +451,13 @@ export default function AiCybersecurityMonitorProPage() {
         </section>
       </div>  );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AiCybersecurityMonitorProPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AiCybersecurityMonitorPro - Zion Tech Group</title>
         <meta name="description" content="Professional ai cybersecurity monitor pro solutions and services." />
       </Helmet>
@@ -508,8 +473,6 @@ export default function AiCybersecurityMonitorProPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

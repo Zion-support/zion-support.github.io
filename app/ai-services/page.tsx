@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function AiServices() {
-=======
 import React, { useState } from 'react';
 export default AiServicesPage;}
 const AiServicesPage: React.FC = () => {
@@ -142,44 +130,29 @@ const AiServicesPage: React.FC = () => {
     }
   ];
   const categories = [
-    { id: 'overview', name: 'Overview', icon: <BarChart className="w-5h-5ml-2" /&gt; },</BarChart></BarChart>
-    { id: 'analytics', name: 'Analytics', icon: <TrendingUp className="w-5h-5ml-2" /&gt; },</TrendingUp></TrendingUp>
-    { id: 'conversational', name: 'Conversational', icon: <MessageCircle className="w-5h-5ml-2" /&gt; },</MessageCircle></MessageCircle>
-    { id: 'security', name: 'Security', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-    { id: 'vision', name: 'Computer Vision', icon: <Eye className="w-5h-5ml-2" /&gt; },</Eye></Eye>
-    { id: 'voice', name: 'Voice AI', icon: <Mic className="w-5h-5ml-2" /&gt; },</Mic></Mic>
-    { id: 'content', name: 'Content', icon: <FileText className="w-5h-5ml-2" /&gt; },</FileText></FileText>
-    { id: 'customer', name: 'Customer Service', icon: <Users className="w-5h-5ml-2" /&gt; },</Users></Users>
-    { id: 'automation', name: 'Automation', icon: <Workflow className="w-5h-5ml-2" /&gt; }</Workflow></Workflow>
+    { id: 'overview', name: 'Overview', icon: <BarChart className="w-5h-5ml-2" /> },</BarChart></BarChart>
+    { id: 'analytics', name: 'Analytics', icon: <TrendingUp className="w-5h-5ml-2" /> },</TrendingUp></TrendingUp>
+    { id: 'conversational', name: 'Conversational', icon: <MessageCircle className="w-5h-5ml-2" /> },</MessageCircle></MessageCircle>
+    { id: 'security', name: 'Security', icon: <Shield className="w-5h-5ml-2" /> },</Shield></Shield>
+    { id: 'vision', name: 'Computer Vision', icon: <Eye className="w-5h-5ml-2" /> },</Eye></Eye>
+    { id: 'voice', name: 'Voice AI', icon: <Mic className="w-5h-5ml-2" /> },</Mic></Mic>
+    { id: 'content', name: 'Content', icon: <FileText className="w-5h-5ml-2" /> },</FileText></FileText>
+    { id: 'customer', name: 'Customer Service', icon: <Users className="w-5h-5ml-2" /> },</Users></Users>
+    { id: 'automation', name: 'Automation', icon: <Workflow className="w-5h-5ml-2" /> }</Workflow></Workflow>
   ];
   const stats = [
-    { number: '500+', label: 'AI Models Deployed', icon: <Brain className="w-5h-5ml-2" /&gt; },</Brain></Brain>
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-    { number: '24/7', label: 'AI Monitoring', icon: <Clock className="w-5h-5ml-2" /&gt; },</Clock></Clock>
-    { number: '150+', label: 'AI Experts', icon: <Users className="w-5h-5ml-2" /&gt; }</Users></Users>
+    { number: '500+', label: 'AI Models Deployed', icon: <Brain className="w-5h-5ml-2" /> },</Brain></Brain>
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-5h-5ml-2" /> },</Shield></Shield>
+    { number: '24/7', label: 'AI Monitoring', icon: <Clock className="w-5h-5ml-2" /> },</Clock></Clock>
+    { number: '150+', label: 'AI Experts', icon: <Users className="w-5h-5ml-2" /> }</Users></Users>
   ];
   const filteredServices = activeTab === 'overview' 
     ? aiServices;
     : aiServices.filter(service => service.category === activeTab);
->>>>>>> origin/main
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>AiServices - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AiServices</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional aiservices services coming soon.</p>
-
-      </>
-  );
-<<<<<<< HEAD
-
-=======
 export default function AiServicesPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Ai Services - Zion Tech Group</title>
         <meta name="description" content="Professional ai services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -195,13 +168,9 @@ export default function AiServicesPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-=======
     <></>
       <Helmet></Helmet>
         <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
@@ -226,14 +195,11 @@ export default function AiServicesPage() {
             }
           })}
         </script>
-=======
 export default function AiServicesPage() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>AiServices - Zion Tech Group</title>
         <meta name="description" content="Professional ai services solutions and services." />
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -247,13 +213,6 @@ export default function AiServicesPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
-<<<<<<< HEAD
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

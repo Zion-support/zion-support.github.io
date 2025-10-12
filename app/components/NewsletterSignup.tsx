@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { AlertCircle } from 'lucide-react';
-=======
 export default NewsletterSignup;
 'use client';
->>>>>>> origin/main
 
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal';
@@ -121,11 +115,6 @@ const NewsletterSignup: React.FC<NewsletterSignupProps /> = ({ const variant = '
 
   return content;
 };
-<<<<<<< HEAD
-
-export default NewsletterSignup;
-
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -133,8 +122,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function NewsletterSignup() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Newsletter Signup - Zion Tech Group</title>
         <meta name="description" content="Professional newsletter signup by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -150,10 +138,6 @@ export default function NewsletterSignup() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

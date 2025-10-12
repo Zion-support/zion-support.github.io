@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-<<<<<<< HEAD
-// Lazy load components for better performance
-
-=======
 import React, { Suspense, lazy } from 'react';
 export const ServiceCardSkeleton: React.FC = () => (
 export const HeroSkeleton: React.FC = () => (
@@ -16,7 +6,6 @@ export default LoadingOptimizer;
 'use client';
 
 // Lazy load components for better performance;
->>>>>>> origin/main
 interface LoadingOptimizerProps {
   children: React.ReactNode;
   fallback?: React.ReactNode;
@@ -24,7 +13,7 @@ interface LoadingOptimizerProps {
 
 const LoadingOptimizer: React.FC<LoadingOptimizerProps> = ({ 
   children, 
-  fallback = <DefaultLoadingSpinner /&gt; </DefaultLoadingSpinner&gt;
+  fallback = <DefaultLoadingSpinner /> </DefaultLoadingSpinner>
 }) => {
   return (
     <Suspense fallback={fallback}></Suspense>
@@ -78,14 +67,9 @@ const DefaultLoadingSpinner: React.FC = () => (
     </div>
   </nav>
 );
-<<<<<<< HEAD
-
-export default LoadingOptimizer;
-=======
 export default function LoadingOptimizer() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Loading Optimizer - Zion Tech Group</title>
         <meta name="description" content="Professional loading optimizer by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -101,10 +85,6 @@ export default function LoadingOptimizer() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

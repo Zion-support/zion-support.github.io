@@ -1,43 +1,16 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import { Helmet } from 'react-helmet-async';
-
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function Accessibility() {
-=======
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 export default function AccessibilityPage() {
->>>>>>> origin/main
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <>
-      <title>Accessibility - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">Accessibility</h1>
-            <p className="text-lg text-gray-300 mb-8">Learn about our commitment to accessibility and inclusive design.</p>
-            
-              Contact Us
-
-<<<<<<< HEAD
-  );
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Accessibility - Zion Tech Group</title>
         <meta name="description" content="Professional accessibility by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -53,24 +26,17 @@ export default function AccessibilityPage() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
       </>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title>Service - Zion Tech Group</title>
         <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
-=======
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Accessibility - Zion Tech Group</title>
         <meta name="description" content="Professional accessibility solutions and services." />
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -84,14 +50,6 @@ export default function AccessibilityPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-      </div>
-<<<<<<< HEAD
-    </div>  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-=======
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a

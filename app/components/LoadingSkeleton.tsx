@@ -1,57 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-'use client';
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
 import React from 'react';
 export default LoadingSkeleton;
 'use client';
->>>>>>> origin/main
 
-<<<<<<< HEAD
-interface LoadingSkeletonProps {
-  lines?: number;
-  className?: string;
-}
-
-const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
-const LoadingSkeleton: React.FC<LoadingSkeletonProps /> = ({ 
-  lines = 3, 
-  className = '' 
-}) => {
-  return (
-    <div className={`animate-pulse ${className}`}></div>
-      {Array.from({ length: lines }).map((_, index) => (
-        <div;
-          key={index}
-          className="h-4bg-gray-300 rounded mb-2"
-        /></div>
-      ))}
-    </div>
-  );
-};
-
-          key="{index}"
-;
-
-<<<<<<< HEAD
- (
-
-          key="{index}"
-;
-
-=======
 export default function LoadingSkeleton() {
   return (
-    <>
-      <Helmet>
+    <><Helmet>
         <title>Loading Skeleton - Zion Tech Group</title>
         <meta name="description" content="Professional loading skeleton by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -67,11 +24,7 @@ export default function LoadingSkeleton() {
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-      </div>
-    </>
+      </div></>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
 }
->>>>>>> origin/main
