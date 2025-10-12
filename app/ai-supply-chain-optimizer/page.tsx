@@ -124,6 +124,8 @@ export default function AISupplyChainOptimizerPage() {
     { number: '40%', label: 'Delivery Improvement', icon: <Clock className="w-6 h-6" /> }
   ];
 
+  const testimonials = [
+    {
       name: 'James Wilson',
       role: 'CEO',
       company: 'Manufacturing Solutions',
