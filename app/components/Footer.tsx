@@ -18,6 +18,26 @@ const Footer = () => {
     { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
   ];
 
+  const companyPages = [
+    { name: 'About Us', path: '/about' },
+    { name: 'Team', path: '/team' },
+    { name: 'Careers', path: '/careers' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Contact', path: '/contact' }
+  ];
+
+  const supportPages = [
+    { name: 'Documentation', path: '/docs' },
+    { name: 'API Docs', path: '/api-docs' },
+    { name: 'Support', path: '/support' },
+    { name: 'Status', path: '/status' },
+    { name: 'Consultation', path: '/consultation' },
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' },
+    { name: 'Cookie Policy', path: '/cookies' }
+  ];
+
   const itServices = [
     { name: 'Web Development', path: '/web-development' },
     { name: 'Mobile Development', path: '/mobile-development' },
@@ -56,7 +76,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -144,6 +164,40 @@ const Footer = () => {
                     className="text-gray-300 hover:text-green-400 transition-colors text-sm"
                   >
                     {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-yellow-400">Company</h3>
+            <ul className="space-y-2">
+              {companyPages.map((page, index) => (
+                <li key={index}>
+                  <Link 
+                    to={page.path} 
+                    className="text-gray-300 hover:text-yellow-400 transition-colors text-sm"
+                  >
+                    {page.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Support</h3>
+            <ul className="space-y-2">
+              {supportPages.map((page, index) => (
+                <li key={index}>
+                  <Link 
+                    to={page.path} 
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
+                  >
+                    {page.name}
                   </Link>
                 </li>
               ))}
