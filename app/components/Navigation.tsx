@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi } from 'lucide-react'
 =======
 import { Menu, X, ChevronDown, Cloud, Code, Smartphone, Brain, Cpu, Wifi, Zap, Database, Shield, Users, BarChart3, Settings } from 'lucide-react'
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-00bf
+=======
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Smartphone, Brain, Cpu, Wifi } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -30,6 +34,7 @@ export default function Navigation() {
 <<<<<<< HEAD
   const services = [
     {
+<<<<<<< HEAD
       title: 'AI Services',
       href: '/ai-services',
 <<<<<<< HEAD
@@ -73,19 +78,44 @@ export default function Navigation() {
 =======
       color: 'text-green-400'
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-00bf
+=======
+      name: 'AI Services',
+      icon: <Brain className="w-4 h-4" />,
+      path: '/ai-services',
+      description: 'AI-powered solutions for your business'
     },
     {
-      title: 'Micro SaaS',
-      href: '/micro-saas-services',
+      name: 'IT Services',
+      icon: <Cpu className="w-4 h-4" />,
+      path: '/it-services',
+      description: 'Complete IT infrastructure solutions'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
+    },
+    {
+      name: 'Micro SAAS',
       icon: <Smartphone className="w-4 h-4" />,
+<<<<<<< HEAD
       description: 'Specialized software solutions',
       color: 'text-purple-400'
+=======
+      path: '/micro-saas-services',
+      description: 'Affordable micro applications'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
     },
     {
-      title: '5G Implementation',
-      href: '/5g-implementation',
+      name: 'Cloud Services',
+      icon: <Cloud className="w-4 h-4" />,
+      path: '/cloud-services',
+      description: 'Professional cloud solutions'
+    },
+    {
+      name: '5G Implementation',
       icon: <Wifi className="w-4 h-4" />,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      path: '/5g-implementation',
+>>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
       description: 'Next-generation connectivity'
 >>>>>>> cursor/website-audit-and-update-with-deployment-c78e
 =======
@@ -94,6 +124,7 @@ export default function Navigation() {
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-00bf
     },
     {
+<<<<<<< HEAD
       title: 'Cloud Services',
       href: '/cloud-services',
 <<<<<<< HEAD
@@ -127,6 +158,12 @@ export default function Navigation() {
       icon: <Zap className="w-4 h-4" />,
       description: 'Transform your business',
       color: 'text-pink-400'
+=======
+      name: 'Digital Transformation',
+      icon: <Zap className="w-4 h-4" />,
+      path: '/digital-transformation',
+      description: 'Transform your business digitally'
+>>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
     }
   ]
 
@@ -196,6 +233,7 @@ export default function Navigation() {
   ]
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -356,10 +394,71 @@ export default function Navigation() {
                           >
                             <div className={`mr-2 ${service.color}`}>{service.icon}</div>
                             {service.title}
+=======
+    <nav className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 shadow-lg sticky top-0 z-50 backdrop-blur-lg border-b border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center group">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-3 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-white font-bold text-lg">Z</span>
+              </div>
+              <span className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">Zion Tech Group</span>
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              <Link
+                to="/"
+                className="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                About
+              </Link>
+              
+              {/* Services Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={() => toggleDropdown('services')}
+                  className="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                >
+                  Services
+                  <ChevronDown className="w-4 h-4 ml-1" />
+                </button>
+                
+                {activeDropdown === 'services' && (
+                  <div className="absolute left-0 mt-2 w-96 bg-white/95 backdrop-blur-lg rounded-xl shadow-lg z-50 border border-white/20">
+                    <div className="p-6">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-4">Our Services</h3>
+                      <div className="grid grid-cols-2 gap-4">
+                        {services.map((service, index) => (
+                          <Link
+                            key={index}
+                            to={service.path}
+                            className="flex items-start p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            <div className="flex-shrink-0 mr-3 text-cyan-600 group-hover:text-purple-600 transition-colors">
+                              {service.icon}
+                            </div>
+                            <div>
+                              <div className="font-medium text-gray-900 group-hover:text-purple-600 transition-colors">{service.name}</div>
+                              <div className="text-sm text-gray-500">{service.description}</div>
+                            </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
                           </Link>
                         ))}
                       </div>
                     </div>
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-00bf
                   </div>
 >>>>>>> cursor/website-audit-and-update-with-deployment-c78e
@@ -442,6 +541,26 @@ export default function Navigation() {
               to="/contact"
               className="bg-gradient-to-r from-neon-cyan to-neon-pink text-futuristic-dark px-6 py-2 rounded-lg text-sm font-semibold hover:from-neon-pink hover:to-neon-cyan transition-all duration-300 shadow-neon-cyan/50 hover:shadow-neon-pink/50 hover:scale-105 transform"
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-00bf
+=======
+                  </div>
+                )}
+              </div>
+
+              <Link
+                to="/contact"
+                className="text-gray-300 hover:text-cyan-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:block">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+>>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
             >
               Get Started
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-5508
@@ -454,6 +573,7 @@ export default function Navigation() {
               onClick={toggleMenu}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               className="text-gray-900 hover:text-purple-600 p-2 rounded-md transition-colors"
 =======
               className="text-gray-300 hover:text-white p-2 rounded-md transition-colors"
@@ -461,6 +581,9 @@ export default function Navigation() {
 =======
               className="text-white hover:text-neon-cyan p-2 rounded-md transition-all duration-300 hover:bg-neon-cyan/10"
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-00bf
+=======
+              className="text-gray-300 hover:text-cyan-400 p-2 rounded-md transition-colors"
+>>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -471,6 +594,7 @@ export default function Navigation() {
         {isOpen && (
 <<<<<<< HEAD
           <div className="md:hidden">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
               <Link to="/" className="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors">
@@ -498,6 +622,20 @@ export default function Navigation() {
                 to="/about" 
                 className="text-white hover:text-neon-cyan block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 hover:bg-neon-cyan/10"
                 onClick={() => setIsOpen(false)}
+=======
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 backdrop-blur-lg rounded-lg mt-2 border border-white/20">
+              <Link
+                to="/"
+                className="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                onClick={toggleMenu}
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                onClick={toggleMenu}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
               >
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-00bf
                 About
@@ -505,6 +643,7 @@ export default function Navigation() {
               
               {/* AI Services Mobile */}
               <div className="px-3 py-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -516,6 +655,9 @@ export default function Navigation() {
                 ))}
 =======
                 <div className="text-white font-medium mb-2">Services</div>
+=======
+                <div className="text-gray-900 font-medium mb-2">Services</div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
                 <div className="space-y-1 ml-4">
                   {services.map((service, index) => (
                     <div key={index}>
@@ -583,12 +725,21 @@ export default function Navigation() {
                   {services.map((service, index) => (
                     <Link
                       key={index}
+<<<<<<< HEAD
                       to={service.href}
                       className="flex items-center text-gray-300 hover:text-neon-cyan hover:bg-neon-cyan/10 block px-3 py-2 rounded-md text-sm transition-all duration-300"
                       onClick={() => setIsOpen(false)}
                     >
                       <div className={`mr-2 ${service.color}`}>{service.icon}</div>
                       {service.title}
+=======
+                      to={service.path}
+                      className="text-gray-600 hover:text-purple-600 block px-3 py-2 rounded-md text-sm transition-colors flex items-center"
+                      onClick={toggleMenu}
+                    >
+                      <span className="mr-2">{service.icon}</span>
+                      {service.name}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
                     </Link>
                   ))}
                 </div>
@@ -609,6 +760,7 @@ export default function Navigation() {
                 </div>
               </div>
 
+<<<<<<< HEAD
               {/* Micro SAAS Mobile */}
               <div className="px-3 py-2">
                 <div className="text-gray-300 font-medium mb-2">Micro SAAS</div>
@@ -645,6 +797,19 @@ export default function Navigation() {
                 className="bg-gradient-to-r from-neon-cyan to-neon-pink text-futuristic-dark block px-3 py-2 rounded-md text-base font-semibold hover:from-neon-pink hover:to-neon-cyan transition-all duration-300 text-center mt-4 shadow-neon-cyan/50"
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-00bf
                 onClick={() => setIsOpen(false)}
+=======
+              <Link
+                to="/contact"
+                className="text-gray-900 hover:text-purple-600 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+                onClick={toggleMenu}
+              >
+                Contact
+              </Link>
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center mt-4 transition-all duration-300"
+                onClick={toggleMenu}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d9d0
               >
                 Get Started
               </Link>
