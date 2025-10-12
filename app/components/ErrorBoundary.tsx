@@ -1,135 +1,169 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
+'use client';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Mail, Phone } from 'lucide-react';
 
 interface Props {
-  children: ReactNode
-  fallback?: ReactNode
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props)
-    this.state = { hasError: false }
+    super(props);
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null
+    };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return {
+      hasError: true,
+      error,
+      errorInfo: null
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo
-    })
+    });
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo)
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
-    // Log error to analytics service in production
-    if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
-      // Send error to analytics service
-      if (window.gtag) {
-        window.gtag('event', 'exception', {
-          description: error.message,
-          fatal: false,
-          custom_map: {
-            error_stack: error.stack,
-            component_stack: errorInfo.componentStack
-          }
-        })
-      }
+    // Log error to analytics in production
+    if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+        error_boundary: true
+      });
+    }
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
     }
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
-  }
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null
+    });
+  };
 
-  handleGoHome = () => {
-    window.location.href = '/'
-  }
+  handleReload = () => {
+    window.location.reload();
+  };
 
   render() {
     if (this.state.hasError) {
+      // Custom fallback UI
       if (this.props.fallback) {
-        return this.props.fallback
+        return this.props.fallback;
       }
 
+      // Default error UI
       return (
-        <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-gray-800 rounded-lg p-8 text-center">
-            <div className="flex justify-center mb-6">
-              <AlertTriangle className="w-16 h-16 text-red-400" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-2xl w-full bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
+            <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-10 h-10 text-red-400" />
             </div>
             
-            <h1 className="text-2xl font-bold text-white mb-4">
+            <h1 className="text-3xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-gray-700 p-4 rounded text-xs text-gray-300 overflow-auto max-h-40">
-                  <div className="font-mono">
-                    <div className="text-red-400 font-bold">Error:</div>
-                    <div className="mb-2">{this.state.error.message}</div>
-                    <div className="text-red-400 font-bold">Stack:</div>
-                    <div className="whitespace-pre-wrap">{this.state.error.stack}</div>
-                  </div>
-                </div>
-              </details>
+              <div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 mb-6 text-left">
+                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                <pre className="text-red-300 text-sm overflow-auto">
+                  {this.state.error.message}
+                </pre>
+                {this.state.errorInfo && (
+                  <details className="mt-2">
+                    <summary className="text-red-400 cursor-pointer">Stack Trace</summary>
+                    <pre className="text-red-300 text-xs mt-2 overflow-auto">
+                      {this.state.errorInfo.componentStack}
+                    </pre>
+                  </details>
+                )}
+              </div>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button
                 onClick={this.handleRetry}
-                className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                className="px-6 py-3 bg-cyan-500 text-white rounded-lg font-semibold hover:bg-cyan-600 transition-colors flex items-center justify-center"
               >
-                <RefreshCw className="w-4 h-4" />
-                <span>Try Again</span>
+                <RefreshCw className="w-5 h-5 mr-2" />
+                Try Again
               </button>
               
               <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center space-x-2 bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                onClick={this.handleReload}
+                className="px-6 py-3 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-colors flex items-center justify-center"
               >
-                <Home className="w-4 h-4" />
-                <span>Go Home</span>
+                <RefreshCw className="w-5 h-5 mr-2" />
+                Reload Page
               </button>
             </div>
 
-            <div className="mt-6 text-sm text-gray-400">
-              <p>If this problem continues, please contact our support team:</p>
-              <p className="mt-2">
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
-                  className="text-cyan-400 hover:text-cyan-300"
+            <div className="border-t border-white/10 pt-6">
+              <p className="text-gray-400 mb-4">Need immediate assistance?</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/"
+                  className="px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors flex items-center justify-center"
                 >
-                  kleber@ziontechgroup.com
+                  <Home className="w-4 h-4 mr-2" />
+                  Go Home
                 </a>
-              </p>
+                
+                <a
+                  href="tel:+13024640950"
+                  className="px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors flex items-center justify-center"
+                >
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call (302) 464-0950
+                </a>
+                
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors flex items-center justify-center"
+                >
+                  <Mail className="w-4 h-4 mr-2" />
+                  Email Support
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      )
+      );
     }
 
-    return this.props.children
+    return this.props.children;
   }
 }
 
-export default ErrorBoundary
+export default ErrorBoundary;

@@ -1,6 +1,8 @@
 'use client';
 import React, { Suspense, useEffect, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
+import SEOOptimizer from './components/SEOOptimizer';
+import ImageOptimizer from './components/ImageOptimizer';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Globe, Code, BarChart, Target, Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 // Loading skeleton component
@@ -132,11 +134,39 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, IT services, digital transformation, enterprise software, cloud computing, cybersecurity" />
-      </Helmet>
+      <SEOOptimizer
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords="AI solutions, IT services, digital transformation, enterprise software, cloud computing, cybersecurity, machine learning, artificial intelligence"
+        canonicalUrl="https://ziontechgroup.com"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "description": "Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
+          },
+          "sameAs": [
+            "https://github.com/ziontechgroup",
+            "https://linkedin.com/company/ziontechgroup",
+            "https://twitter.com/ziontechgroup"
+          ]
+        }}
+      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">

@@ -1,119 +1,149 @@
-import React, { useEffect, useState } from 'react'
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'
+'use client';
+import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  cls: number | null
-  inp: number | null
-  fcp: number | null
-  lcp: number | null
-  ttfb: number | null
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  fcp: number | null;
+  ttfb: number | null;
 }
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    inp: null,
-    fcp: null,
     lcp: null,
+    fid: null,
+    cls: null,
+    fcp: null,
     ttfb: null
-  })
+  });
 
   useEffect(() => {
-    // Measure Core Web Vitals
-    onCLS((metric) => {
-      setMetrics(prev => ({ ...prev, cls: metric.value }))
-      console.log('CLS:', metric)
-    })
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return;
 
-    onINP((metric) => {
-      setMetrics(prev => ({ ...prev, inp: metric.value }))
-      console.log('INP:', metric)
-    })
+    const measurePerformance = () => {
+      // Measure LCP (Largest Contentful Paint)
+      if ('PerformanceObserver' in window) {
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-    onFCP((metric) => {
-      setMetrics(prev => ({ ...prev, fcp: metric.value }))
-      console.log('FCP:', metric)
-    })
+        // Measure FID (First Input Delay)
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            setMetrics(prev => ({ 
+              ...prev, 
+              fid: (entry as any).processingStart - entry.startTime 
+            }));
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
 
-    onLCP((metric) => {
-      setMetrics(prev => ({ ...prev, lcp: metric.value }))
-      console.log('LCP:', metric)
-    })
-
-    onTTFB((metric) => {
-      setMetrics(prev => ({ ...prev, ttfb: metric.value }))
-      console.log('TTFB:', metric)
-    })
-
-    // Monitor resource loading
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (entry.entryType === 'navigation') {
-          console.log('Navigation timing:', entry)
-        } else if (entry.entryType === 'resource') {
-          const resource = entry as PerformanceResourceTiming
-          if (resource.duration > 1000) {
-            console.warn('Slow resource:', resource.name, resource.duration)
+        // Measure CLS (Cumulative Layout Shift)
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+            }
           }
+          setMetrics(prev => ({ ...prev, cls: clsValue }));
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+        // Measure FCP (First Contentful Paint)
+        const fcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            }
+          });
+        });
+        fcpObserver.observe({ entryTypes: ['paint'] });
+
+        // Measure TTFB (Time to First Byte)
+        const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigationEntry) {
+          setMetrics(prev => ({ 
+            ...prev, 
+            ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+          }));
         }
       }
-    })
+    };
 
-    observer.observe({ entryTypes: ['navigation', 'resource'] })
-
-    // Monitor memory usage (if available)
-    if ('memory' in performance) {
-      const memory = (performance as any).memory
-      console.log('Memory usage:', {
-        used: Math.round(memory.usedJSHeapSize / 1024 / 1024) + ' MB',
-        total: Math.round(memory.totalJSHeapSize / 1024 / 1024) + ' MB',
-        limit: Math.round(memory.jsHeapSizeLimit / 1024 / 1024) + ' MB'
-      })
+    // Wait for page to load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
     }
 
-    return () => {
-      observer.disconnect()
-    }
-  }, [])
-
-  // Send metrics to analytics in production
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
-      const allMetricsCollected = Object.values(metrics).every(value => value !== null)
-      
-      if (allMetricsCollected) {
-        // Send to analytics service
-        console.log('Sending performance metrics to analytics:', metrics)
+    // Send metrics to analytics
+    const sendMetrics = () => {
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
         
-        // Example: Google Analytics
-        if (typeof gtag !== 'undefined') {
+        if (metrics.lcp !== null) {
           gtag('event', 'web_vitals', {
             event_category: 'Performance',
-            event_label: 'Core Web Vitals',
-            value: Math.round((metrics.lcp || 0) + (metrics.inp || 0) + (metrics.cls || 0))
-          })
+            event_label: 'LCP',
+            value: Math.round(metrics.lcp)
+          });
+        }
+        
+        if (metrics.fid !== null) {
+          gtag('event', 'web_vitals', {
+            event_category: 'Performance',
+            event_label: 'FID',
+            value: Math.round(metrics.fid)
+          });
+        }
+        
+        if (metrics.cls !== null) {
+          gtag('event', 'web_vitals', {
+            event_category: 'Performance',
+            event_label: 'CLS',
+            value: Math.round(metrics.cls * 1000) / 1000
+          });
         }
       }
+    };
+
+    // Send metrics after a delay to ensure all measurements are complete
+    const timeoutId = setTimeout(sendMetrics, 5000);
+
+    return () => {
+      clearTimeout(timeoutId);
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, [metrics]);
+
+  // Log performance issues in development
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance Metrics:', metrics);
+      
+      // Warn about poor performance
+      if (metrics.lcp && metrics.lcp > 2500) {
+        console.warn('⚠️ LCP is slow:', metrics.lcp + 'ms (should be < 2.5s)');
+      }
+      if (metrics.fid && metrics.fid > 100) {
+        console.warn('⚠️ FID is slow:', metrics.fid + 'ms (should be < 100ms)');
+      }
+      if (metrics.cls && metrics.cls > 0.1) {
+        console.warn('⚠️ CLS is poor:', metrics.cls + ' (should be < 0.1)');
+      }
     }
-  }, [metrics])
+  }, [metrics]);
 
-  // Development-only performance display
-  if (process.env.NODE_ENV === 'development') {
-    return (
-      <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg text-xs font-mono z-50 max-w-xs">
-        <div className="font-bold mb-2 text-cyan-400">Performance Metrics</div>
-        <div className="space-y-1">
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-          <div>INP: {metrics.inp ? `${metrics.inp.toFixed(2)}ms` : 'Loading...'}</div>
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'Loading...'}</div>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-          <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
-        </div>
-      </div>
-    )
-  }
+  return null; // This component doesn't render anything
+};
 
-  return null
-}
-
-export default PerformanceMonitor
+export default PerformanceMonitor;

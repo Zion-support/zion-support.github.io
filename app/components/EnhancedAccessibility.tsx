@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { useAnalytics } from './EnhancedAnalytics';
+import { useAnalytics } from './AnalyticsProvider';
 
 interface AccessibilitySettings {
   highContrast: boolean;

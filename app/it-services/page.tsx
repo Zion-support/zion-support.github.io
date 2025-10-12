@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { 
   ArrowRight, Server, Cloud, Shield, Code, Database, Network, Monitor, 
-  Smartphone, Wrench, BarChart3, Zap, CheckCircle, Star, Clock, Users, 
+  Phone as Smartphone, Wrench, BarChart3, Zap, CheckCircle, Star, Clock, Users, 
   TrendingUp, Sparkles, Layers, Target, Award, Lightbulb, CircuitBoard, 
   Atom, Satellite, Globe, Mail, Phone, MapPin, DollarSign, Rocket, 
   Lock, Cpu, Brain, MessageCircle, Calendar, Timer, Battery, Wifi2, 
