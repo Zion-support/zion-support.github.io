@@ -15,13 +15,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   prefix = '',
   suffix = ''
 }) => {
-export default function AnimatedCounter({ 
-  end, 
-  duration = 2000, 
-  className = '',
-  prefix = '',
-  suffix = ''
-}: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {

@@ -1,53 +1,53 @@
 import React, { useEffect } from 'react';
 
-export default function PerformanceMonitor() {
+const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
-    const monitorCoreWebVitals = () => {
-      // This would typically use web-vitals library
-      console.log('Performance monitoring initialized');
-    };
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Monitor Largest Contentful Paint (LCP)
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+          }
+        }
+      });
+      
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
 
-    // Monitor performance metrics
-    const monitorPerformance = () => {
-      if ('performance' in window) {
-        setTimeout(() => {
-          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-          const paint = performance.getEntriesByType('paint');
-          console.log('Performance Metrics:', {
-            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-            firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-            firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
-          });
-        }, 0);
-      }
-    };
+      // Monitor First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime);
+          }
+        }
+      });
+      
+      fidObserver.observe({ entryTypes: ['first-input'] });
 
-    // Monitor memory usage
-    const monitorMemory = () => {
-      if ('memory' in performance) {
-        setInterval(() => {
-          const memory = (performance as any).memory;
-          console.log('Memory Usage:', {
-            used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
-            total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
-            limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
-          });
-        }, 30000); // Check every 30 seconds
-      }
-    };
+      // Monitor Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        console.log('CLS:', clsValue);
+      });
+      
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-    // Initialize monitoring
-    monitorCoreWebVitals();
-    monitorPerformance();
-    monitorMemory();
-
-    // Cleanup
-    return () => {
-      // Cleanup if needed
-    };
+      return () => {
+        observer.disconnect();
+        fidObserver.disconnect();
+        clsObserver.disconnect();
+      };
+    }
   }, []);
 
   return null;
-}
+};
+
+export default PerformanceMonitor;
