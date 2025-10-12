@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import Header from './app/components/Header'
 import Footer from './app/components/Footer'
 import ErrorBoundary from './app/components/ErrorBoundary'
+import SecurityHeaders from './app/components/SecurityHeaders'
 
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./app/page'))
@@ -69,17 +70,25 @@ const StatusPage = React.lazy(() => import('./app/status/page'))
 const SLAPage = React.lazy(() => import('./app/sla/page'))
 
 // Loading component for Suspense
-const PageLoader = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
-    <span className="ml-3 text-white text-lg">Loading page...</span>
-  </div>
-)
+const PageLoader = () => {
+  const EnhancedLoading = React.lazy(() => import('./app/components/EnhancedLoading'));
+  return (
+    <React.Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
+        <span className="ml-3 text-white text-lg">Loading page...</span>
+      </div>
+    }>
+      <EnhancedLoading fullScreen text="Loading page..." size="lg" />
+    </React.Suspense>
+  );
+}
 
 function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary>
+        <SecurityHeaders />
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <Header />

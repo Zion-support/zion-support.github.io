@@ -1,8 +1,10 @@
 'use client';
 
 import React, { Suspense, lazy } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import EnhancedSEOHead from './components/EnhancedSEOHead';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { 
   Brain, 
   Cloud, 
@@ -130,89 +132,57 @@ export default function HomePage() {
 
   return (
     <>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. Transform your business with cutting-edge technology from Zion Tech Group. 99.8% client satisfaction, 24/7 support." />
-        <meta name="keywords" content="AI solutions, IT services, 5G implementation, micro SAAS, cloud migration, cybersecurity, mobile development, artificial intelligence, machine learning, Zion Tech Group, enterprise technology" />
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-        <meta name="theme-color" content="#8b5cf6" />
-        <meta name="color-scheme" content="dark light" />
-        <meta name="format-detection" content="telephone=no,address=no,email=no" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://ziontechgroup.com/" />
-        
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company" />
-        <meta property="og:description" content="Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        <meta property="og:locale" content="en_US" />
-        
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta name="twitter:description" content="Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
-        <meta name="twitter:image:alt" content="Zion Tech Group - Advanced AI and IT Solutions" />
-        <meta name="twitter:site" content="@ziontechgroup" />
-        <meta name="twitter:creator" content="@ziontechgroup" />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
-            "description": "Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms.",
-            "foundingDate": "2020",
-            "founder": {
-              "@type": "Person",
-              "name": "Dr. Kleber Santos"
-            },
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "364 E Main St STE 1008",
-              "addressLocality": "Middletown",
-              "addressRegion": "DE",
-              "postalCode": "19709",
-              "addressCountry": "US"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-302-464-0950",
-              "contactType": "customer service",
-              "email": "kleber@ziontechgroup.com"
-            },
-            "sameAs": [
-              "https://linkedin.com/company/ziontechgroup",
-              "https://twitter.com/ziontechgroup",
-              "https://github.com/ziontechgroup"
-            ],
-            "offers": {
-              "@type": "AggregateOffer",
-              "offerCount": "50+",
-              "lowPrice": "99",
-              "highPrice": "2999",
-              "priceCurrency": "USD"
-            }
-          })}
-        </script>
-      </Helmet>
+      <EnhancedSEOHead
+        title="Advanced AI and IT Solutions | Leading Technology Company"
+        description="Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. Transform your business with cutting-edge technology from Zion Tech Group. 99.8% client satisfaction, 24/7 support."
+        canonicalUrl="https://ziontechgroup.com/"
+        type="website"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.png",
+          "description": "Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms.",
+          "foundingDate": "2020",
+          "founder": {
+            "@type": "Person",
+            "name": "Dr. Kleber Santos"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
+          "sameAs": [
+            "https://linkedin.com/company/ziontechgroup",
+            "https://twitter.com/ziontechgroup",
+            "https://github.com/ziontechgroup"
+          ],
+          "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": "50+",
+            "lowPrice": "99",
+            "highPrice": "2999",
+            "priceCurrency": "USD"
+          }
+        }}
+      />
+      <PerformanceMonitor />
+      <AccessibilityEnhancer />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20" role="banner" aria-labelledby="hero-title">
+        <section id="main-content" className="pt-20 px-4 py-12 sm:py-16 lg:py-20" role="banner" aria-labelledby="hero-title">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
               <h1 id="hero-title" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">

@@ -1,72 +1,106 @@
 const fs = require('fs');
 const path = require('path');
 
-// Define all the pages/routes
-const pages = [
-  {
-    url: 'https://ziontechgroup.com/',
-    changefreq: 'daily',
-    priority: '1.0',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: 'https://ziontechgroup.com/about',
-    changefreq: 'monthly',
-    priority: '0.8',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: 'https://ziontechgroup.com/contact',
-    changefreq: 'monthly',
-    priority: '0.8',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: 'https://ziontechgroup.com/ai-services',
-    changefreq: 'weekly',
-    priority: '0.9',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: 'https://ziontechgroup.com/it-services',
-    changefreq: 'weekly',
-    priority: '0.9',
-    lastmod: new Date().toISOString().split('T')[0]
-  },
-  {
-    url: 'https://ziontechgroup.com/5g-implementation',
-    changefreq: 'weekly',
-    priority: '0.9',
-    lastmod: new Date().toISOString().split('T')[0]
-  }
-];
+console.log('Generating sitemap...');
+
+// Get all page routes
+const getRoutes = () => {
+  const appPath = path.join(__dirname, '../app');
+  const routes = ['/']; // Home page
+  
+  const scanDirectory = (dir, basePath = '') => {
+    const items = fs.readdirSync(dir);
+    
+    items.forEach(item => {
+      const itemPath = path.join(dir, item);
+      const stat = fs.statSync(itemPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'components') {
+        const route = basePath + '/' + item;
+        routes.push(route);
+        
+        // Recursively scan subdirectories
+        scanDirectory(itemPath, route);
+      }
+    });
+  };
+  
+  scanDirectory(appPath);
+  return routes;
+};
 
 // Generate sitemap XML
-function generateSitemap() {
-  let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+const generateSitemap = (routes) => {
+  const baseUrl = 'https://ziontechgroup.com';
+  const currentDate = new Date().toISOString();
   
-  pages.forEach(page => {
-    sitemap += '  <url>\n';
-    sitemap += `    <loc>${page.url}</loc>\n`;
-    sitemap += `    <lastmod>${page.lastmod}</lastmod>\n`;
-    sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
-    sitemap += `    <priority>${page.priority}</priority>\n`;
-    sitemap += '  </url>\n';
+  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+
+  routes.forEach(route => {
+    const url = baseUrl + route;
+    const priority = route === '/' ? '1.0' : '0.8';
+    const changefreq = route === '/' ? 'daily' : 'weekly';
+    
+    sitemap += `
+  <url>
+    <loc>${url}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
   });
-  
-  sitemap += '</urlset>';
-  
+
+  sitemap += `
+</urlset>`;
+
   return sitemap;
-}
+};
 
-// Write sitemap to dist folder
-const distDir = path.join(__dirname, '../dist');
-if (!fs.existsSync(distDir)) {
-  fs.mkdirSync(distDir, { recursive: true });
-}
+// Generate robots.txt
+const generateRobotsTxt = () => {
+  return `User-agent: *
+Allow: /
 
-const sitemap = generateSitemap();
-fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
+Sitemap: https://ziontechgroup.com/sitemap.xml
 
-console.log('Sitemap generated successfully at:', path.join(distDir, 'sitemap.xml'));
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+`;
+};
+
+// Main function
+const generate = () => {
+  try {
+    const routes = getRoutes();
+    console.log(`Found ${routes.length} routes`);
+    
+    const sitemap = generateSitemap(routes);
+    const robotsTxt = generateRobotsTxt();
+    
+    const distPath = path.join(__dirname, '../dist');
+    
+    // Ensure dist directory exists
+    if (!fs.existsSync(distPath)) {
+      fs.mkdirSync(distPath, { recursive: true });
+    }
+    
+    // Write sitemap
+    fs.writeFileSync(path.join(distPath, 'sitemap.xml'), sitemap);
+    console.log('Sitemap generated successfully');
+    
+    // Write robots.txt
+    fs.writeFileSync(path.join(distPath, 'robots.txt'), robotsTxt);
+    console.log('Robots.txt generated successfully');
+    
+    console.log('Sitemap generated successfully at:', path.join(distPath, 'sitemap.xml'));
+  } catch (error) {
+    console.error('Error generating sitemap:', error);
+  }
+};
+
+generate();

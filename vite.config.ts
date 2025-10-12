@@ -38,6 +38,7 @@ export default defineConfig({
           router: ['react-router-dom'],
           ui: ['framer-motion', 'lucide-react'],
           helmet: ['react-helmet-async'],
+          analytics: ['web-vitals'],
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
@@ -45,7 +46,9 @@ export default defineConfig({
       },
     },
     // Optimize bundle size
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
+    // Enable tree shaking
+    treeshake: true,
   },
   server: {
     port: 3000,
