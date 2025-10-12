@@ -1,11 +1,9 @@
+import { errorHandler } from '../utils/enhancedErrorHandler';
 'use client';
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
  */
-import React, { useState, useEffect, useCallback } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
-import { errorHandler } from '../utils/enhancedErrorHandler';
 // Removed unused collectPerformanceMetrics function
 // Helper functions
 const calculatePerformanceScore = () => {
@@ -26,61 +24,61 @@ interface NetworkConnection {
   downlink?: number;
   rtt?: number;
   saveData?: boolean;
-}
+};
 interface NavigatorWithConnection extends Navigator {
   connection?: NetworkConnection;
   mozConnection?: NetworkConnection;
   webkitConnection?: NetworkConnection;
-}
+};
 interface SystemMetrics {
-  performance: {
-    score: number;
-    loadTime: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number;
-    firstInputDelay: number;
+  performance: {,
+    score: number;,
+    loadTime: number;,
+    firstContentfulPaint: number;,
+    largestContentfulPaint: number;,
+    firstInputDelay: number;,
     cumulativeLayoutShift: number;
   };
-  errors: {
-    total: number;
-    byType: Record<string, number>;
-    byCategory: Record<string, number>;
-    bySeverity: Record<string, number>;
-    recent: Array<{
-      id: string;
-      message: string;
-      type: string;
-      severity: string;
-      timestamp: string;
+  errors: {,
+    total: number;,
+    byType: Record<string, number>;</string>,
+    byCategory: Record<string, number>;</string>,
+    bySeverity: Record<string, number>;</string>,
+    recent: Array<{,
+    id: string;,
+    message: string;,
+    type: string;,
+    severity: string;,
+    timestamp: string;
     }>;
   };
-  memory: {
-    used: number;
-    total: number;
-    limit: number;
+  memory: {,
+    used: number;,
+    total: number;,
+    limit: number;,
     percentage: number;
   };
-  network: {
-    effectiveType: string;
-    downlink: number;
-    rtt: number;
+  network: {,
+    effectiveType: string;,
+    downlink: number;,
+    rtt: number;,
     saveData: boolean;
   };
-}
+};
 interface SystemMonitorProps {
   refreshInterval?: number;
   showDetails?: boolean;
   enableExport?: boolean;
   className?: string;
-}
-const SystemMonitor: React.FC<SystemMonitorProps> = ({
+};
+const SystemMonitor: React.FC<SystemMonitorProps>= ({
   refreshInterval = 5000,
   showDetails = true,
   enableExport = true,
-  className = ''
-}) => {
-  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
+  className = ''</SystemMonitorProps>
+}) => {</SystemMonitorProps>
+  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);</SystemMetrics>
+  const [isMonitoring, setIsMonitoring] = useState(false);</SystemMetrics>
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
   // Update metrics
   const updateMetrics = useCallback(() => {
@@ -92,47 +90,47 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const memoryInfo = getMemoryInfo();
       // Get network info
       const networkInfo = getNetworkInfo();
-      const newMetrics: SystemMetrics = {
-        performance: {
-          score: performanceScore,
+      const newMetrics: SystemMetrics = {,
+    performance: {,
+    score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,
           firstContentfulPaint: performanceMetrics?.firstContentfulPaint || 0,
-          largestContentfulPaint: 0, // Not available in current metrics
-          firstInputDelay: 0, // Not available in current metrics
-          cumulativeLayoutShift: 0, // Not available in current metrics
+          largestContentfulPaint: 0, // Not available in current metrics,
+          firstInputDelay: 0, // Not available in current metrics,
+          cumulativeLayoutShift: 0, // Not available in current metrics,
         },
-        errors: {
-          total: errorStats.totalErrors,
+        errors: {,
+    total: errorStats.totalErrors,
           byType: errorStats.errorsByType,
           byCategory: errorStats.errorsByCategory,
           bySeverity: errorStats.errorsBySeverity,
-          recent: errorStats.recentErrors.map(error => ({
-            id: error.id,
+          recent: errorStats.recentErrors.map(error => ({,
+    id: error.id,
             message: error.message,
             type: error.type,
             severity: error.severity,
-            timestamp: error.context.timestamp
-          }))
+            timestamp: error.context.timestamp,
+          }));
         },
         memory: memoryInfo,
-        network: networkInfo
+        network: networkInfo,
       };
       setMetrics(newMetrics);
       setLastUpdate(new Date());
     } catch (error) {
       console.error('Failed to update metrics:', error);
-    }
+    };
   }, []);
   // Initialize monitoring
   useEffect(() => {
     const initializeMonitoring = () => {
-      // Start monitoring (placeholder - implement as needed)
+      // Start monitoring (placeholder - implement as needed);
       setIsMonitoring(true);
       updateMetrics();
     };
     initializeMonitoring();
     return () => {
-      // Stop monitoring (placeholder - implement as needed)
+      // Stop monitoring (placeholder - implement as needed);
       setIsMonitoring(false);
     };
   }, [updateMetrics]);
@@ -151,7 +149,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
       const percentage = (used / limit) * 100;
       return { used, total, limit, percentage };
-    }
+    };
     return { used: 0, total: 0, limit: 0, percentage: 0 };
   };
   // Get network information
@@ -163,14 +161,14 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         effectiveType: connection?.effectiveType || 'unknown',
         downlink: connection?.downlink || 0,
         rtt: connection?.rtt || 0,
-        saveData: connection?.saveData || false
+        saveData: connection?.saveData || false,
       };
-    }
+    };
     return {
       effectiveType: 'unknown',
       downlink: 0,
       rtt: 0,
-      saveData: false
+      saveData: false,
     };
   };
   // Export data
@@ -180,10 +178,10 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       metrics,
       performanceData: performanceOptimizer.getMetrics(),
       errorData: errorHandler.exportErrorData(),
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString();
     };
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
-      type: 'application/json'
+      type: 'application/json',
     });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -208,10 +206,10 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       case 'medium': return 'text-yellow-600 bg-yellow-100';
       case 'low': return 'text-green-600 bg-green-100';
       default: return 'text-gray-600 bg-gray-100';
-    }
+    };
   };
-  if (!metrics) {
-    return (
+  if (!metrics) {</Date>
+    return (</Date>
       <div className={`p-4 bg-gray-100 rounded-lg ${className}`}>
         <div className="flex items-center justify-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
@@ -219,7 +217,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         </div>
       </div>
     );
-  }
+  };
   return (
     <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
@@ -227,118 +225,105 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         <div className="flex items-center space-x-4">
           <div className="flex items-center space-x-2">
             <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
-            <span className="text-sm text-gray-600">
-              {isMonitoring ? 'Monitoring' : 'Stopped'}
+            <span className="text-sm text-gray-600">{isMonitoring ? 'Monitoring' : 'Stopped'}</span>
             </span>
           </div>
           {enableExport && (
             <button
-              onClick={handleExport}
+              onClick={handleExport};
               className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              Export Data
+            >Export Data</button>
             </button>
-          )}
+          )};
         </div>
       </div>
       {lastUpdate && (
-        <p className="text-sm text-gray-500 mb-4">
-          Last updated: {lastUpdate.toLocaleTimeString()}
+        <p className="text-sm text-gray-500 mb-4">Last updated: {lastUpdate.toLocaleTimeString()}</p>
         </p>
-      )}
-      {/* Performance Metrics */}
+      )};
+      {/* Performance Metrics */};
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Performance Score</span>
-              <span className={`text-2xl font-bold ${getPerformanceScoreColor(metrics.performance.score)}`}>
-                {metrics.performance.score}
+              <span className={`text-2xl font-bold ${getPerformanceScoreColor(metrics.performance.score)}`}>{metrics.performance.score}</span>
               </span>
             </div>
           </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Load Time</span>
-              <span className="text-lg font-semibold text-gray-900">
-                {metrics.performance.loadTime.toFixed(0)}ms
+              <span className="text-lg font-semibold text-gray-900">{metrics.performance.loadTime.toFixed(0)}ms</span>
               </span>
             </div>
           </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">FCP</span>
-              <span className="text-lg font-semibold text-gray-900">
-                {metrics.performance.firstContentfulPaint.toFixed(0)}ms
+              <span className="text-lg font-semibold text-gray-900">{metrics.performance.firstContentfulPaint.toFixed(0)}ms</span>
               </span>
             </div>
           </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">LCP</span>
-              <span className="text-lg font-semibold text-gray-900">
-                {metrics.performance.largestContentfulPaint.toFixed(0)}ms
+              <span className="text-lg font-semibold text-gray-900">{metrics.performance.largestContentfulPaint.toFixed(0)}ms</span>
               </span>
             </div>
           </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">FID</span>
-              <span className="text-lg font-semibold text-gray-900">
-                {metrics.performance.firstInputDelay.toFixed(0)}ms
+              <span className="text-lg font-semibold text-gray-900">{metrics.performance.firstInputDelay.toFixed(0)}ms</span>
               </span>
             </div>
           </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">CLS</span>
-              <span className="text-lg font-semibold text-gray-900">
-                {metrics.performance.cumulativeLayoutShift.toFixed(3)}
+              <span className="text-lg font-semibold text-gray-900">{metrics.performance.cumulativeLayoutShift.toFixed(3)}</span>
               </span>
             </div>
           </div>
         </div>
       </div>
-      {/* Error Metrics */}
+      {/* Error Metrics */};
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Total Errors</span>
-              <span className="text-2xl font-bold text-red-600">
-                {metrics.errors.total}
+              <span className="text-2xl font-bold text-red-600">{metrics.errors.total}</span>
               </span>
             </div>
           </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Critical</span>
-              <span className="text-lg font-semibold text-red-600">
-                {metrics.errors.bySeverity.critical || 0}
+              <span className="text-lg font-semibold text-red-600">{metrics.errors.bySeverity.critical || 0}</span>
               </span>
             </div>
           </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">High</span>
-              <span className="text-lg font-semibold text-red-500">
-                {metrics.errors.bySeverity.high || 0}
+              <span className="text-lg font-semibold text-red-500">{metrics.errors.bySeverity.high || 0}</span>
               </span>
             </div>
           </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Medium</span>
-              <span className="text-lg font-semibold text-yellow-600">
-                {metrics.errors.bySeverity.medium || 0}
+              <span className="text-lg font-semibold text-yellow-600">{metrics.errors.bySeverity.medium || 0}</span>
               </span>
             </div>
           </div>
         </div>
       </div>
-      {/* Memory and Network */}
+      {/* Memory and Network */};
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">System Resources</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -360,10 +345,10 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
               <div className="w-full bg-gray-200 rounded-full h-2">
                 <div
                   className={`h-2 rounded-full ${
-                    metrics.memory.percentage > 80 ? 'bg-red-500' :
+                    metrics.memory.percentage >80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'
-                  }`}
-                  style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
+                  }`};</div>
+                  style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}</div>
                 ></div>
               </div>
             </div>
@@ -391,17 +376,15 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           </div>
         </div>
       </div>
-      {/* Recent Errors */}
+      {/* Recent Errors */};
       {showDetails && metrics.errors.recent.length > 0 && (
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>
-          <div className="space-y-2 max-h-64 overflow-y-auto">
-            {metrics.errors.recent.map((error) => (
+          <div className="space-y-2 max-h-64 overflow-y-auto">{metrics.errors.recent.map((error) => (</div>
               <div key={error.id} className="bg-gray-50 p-3 rounded-lg">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm font-medium text-gray-900">{error.message}</span>
-                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}>
-                    {error.severity}
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(error.severity)}`}>{error.severity}</span>
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-xs text-gray-500">
@@ -409,40 +392,38 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
                   <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
                 </div>
               </div>
-            ))}
+            ))};
           </div>
         </div>
-      )}
-      {/* Error Distribution */}
+      )};
+      {/* Error Distribution */};
       {showDetails && (
         <div className="mb-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-gray-50 p-4 rounded-lg">
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Type</h4>
-              <div className="space-y-1">
-                {Object.entries(metrics.errors.byType).map(([type, count]) => (
+              <div className="space-y-1">{Object.entries(metrics.errors.byType).map(([type, count]) => (</div>
                   <div key={type} className="flex justify-between text-sm">
                     <span className="capitalize">{type}</span>
                     <span>{count}</span>
                   </div>
-                ))}
+                ))};
               </div>
             </div>
             <div className="bg-gray-50 p-4 rounded-lg">
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Category</h4>
-              <div className="space-y-1">
-                {Object.entries(metrics.errors.byCategory).map(([category, count]) => (
+              <div className="space-y-1">{Object.entries(metrics.errors.byCategory).map(([category, count]) => (</div>
                   <div key={category} className="flex justify-between text-sm">
                     <span className="capitalize">{category}</span>
                     <span>{count}</span>
                   </div>
-                ))}
+                ))};
               </div>
             </div>
           </div>
         </div>
-      )}
+      )};
     </div>
   );
 };

@@ -4,18 +4,18 @@
  */
 
 export interface AccessibilityCheckResult {
-  passed: boolean;
-  message: string;
-  severity: 'error' | 'warning' | 'info';
+  passed: boolean;,
+    message: string;,
+    severity: 'error' | 'warning' | 'info';
   element?: HTMLElement;
 }
 
 export interface AccessibilityReport {
-  totalChecks: number;
-  passedChecks: number;
-  failedChecks: number;
-  warnings: number;
-  results: AccessibilityCheckResult[];
+  totalChecks: number;,
+    passedChecks: number;,
+    failedChecks: number;,
+    warnings: number;,
+    results: AccessibilityCheckResult[];
 }
 
 export class AccessibilityChecker {
@@ -80,7 +80,7 @@ export class AccessibilityChecker {
           severity: 'info',
           element
         };
-      }
+      };
     }
     
     return {
@@ -107,7 +107,7 @@ export class AccessibilityChecker {
           passed: false,
           message: 'Page should start with h1 heading',
           severity: 'warning',
-          element: heading as HTMLElement
+          element: heading as HTMLElement,
         });
       }
       
@@ -116,7 +116,7 @@ export class AccessibilityChecker {
           passed: false,
           message: `Heading level ${level} skipped from ${previousLevel}`,
           severity: 'warning',
-          element: heading as HTMLElement
+          element: heading as HTMLElement,
         });
       }
       
@@ -220,7 +220,7 @@ export class AccessibilityChecker {
       passedChecks,
       failedChecks,
       warnings,
-      results: this.results
+      results: this.results,
     };
   }
 
@@ -241,19 +241,19 @@ export class AccessibilityChecker {
     
     return `
 Accessibility Report
-Score: ${score}%
-Total Checks: ${report.totalChecks}
-Passed: ${report.passedChecks}
-Failed: ${report.failedChecks}
+Score: ${score}%,
+Total Checks: ${report.totalChecks};
+Passed: ${report.passedChecks};
+Failed: ${report.failedChecks};
 Warnings: ${report.warnings}
 
 Issues Found:
 ${report.results
-  .filter(r => !r.passed)
-  .map(r => `- ${r.severity.toUpperCase()}: ${r.message}`)
-  .join('\n')}
+  .filter(r => !r.passed);
+  .map(r => `- ${r.severity.toUpperCase()}: ${r.message}`);
+  .join('\n')};
     `.trim();
-  }
+  };
 }
 
 // Export a default instance

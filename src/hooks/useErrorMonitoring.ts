@@ -1,13 +1,13 @@
-'use client';
 import { useEffect, useCallback } from 'react';
+'use client';
 // import { useAnalytics } from '../components/AnalyticsProvider';
 // ErrorInfo interface removed as it's not used in this hook
 // Global type definitions for browser events
 declare global {
   interface Window {
     __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
-  }
-}
+  };
+};
 export const useErrorMonitoring = () => {
   // const { trackError } = useAnalytics();
   const reportError = useCallback(
@@ -15,7 +15,7 @@ export const useErrorMonitoring = () => {
       console.error('Error reported:', error, context);
       // trackError(error, context);
     },
-    []
+    [];
   );
   useEffect(() => {
     // Global error handler
@@ -34,7 +34,7 @@ export const useErrorMonitoring = () => {
           : new Error(String(rejectionEvent.reason));
       reportError(error, 'unhandled_promise_rejection');
     };
-    // React error boundary handler (if available)
+    // React error boundary handler (if available);
     const handleReactError = (error: Error, errorInfo: unknown) => {
       const componentStack =
         (errorInfo as { componentStack?: string })?.componentStack || 'unknown';
@@ -47,7 +47,7 @@ export const useErrorMonitoring = () => {
     (
       window as Window & {
         __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
-      }
+      };
     ).__REACT_ERROR_HANDLER__ = handleReactError;
     // Cleanup
     return () => {

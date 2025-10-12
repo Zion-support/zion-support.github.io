@@ -1,6 +1,6 @@
-'use client'
 import React from 'react'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Shield, Brain, Globe } from 'lucide-react'
+'use client'
 
 const EnhancedHero: React.FC = () => {
   const benefits = [
@@ -17,72 +17,61 @@ const EnhancedHero: React.FC = () => {
       icon: Phone,
       title: 'Call Us',
       details: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9AM-6PM PST'
+      description: 'Mon-Fri 9AM-6PM PST',
     },
     {
       icon: Mail,
       title: 'Email Us',
       details: 'contact@ziontechgroup.com',
-      description: 'We respond within 24 hours'
+      description: 'We respond within 24 hours',
     },
     {
       icon: MapPin,
       title: 'Visit Us',
       details: 'San Francisco, CA',
-      description: 'Schedule a meeting'
-    }
+      description: 'Schedule a meeting',
+    };
   ]
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
-      {/* Background Effects */}
+    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">{/* Background Effects */}</div>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-      
-      {/* Main Content */}
-      <div className="relative z-10 flex flex-col lg:flex-row items-center min-h-screen">
-        {/* Left Content */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />{/* Main Content */}</div>
+      <div className="relative z-10 flex flex-col lg:flex-row items-center min-h-screen">{/* Left Content */}</div>
         <div className="flex-1 px-4 sm:px-6 lg:px-8 py-20">
           <div className="max-w-2xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Transform Your Business with{' '}
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                AI & IT Solutions
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">Transform Your Business with{' '}</h1>
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI & IT Solutions</span>
               </span>
             </h1>
             
-            <p className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
-              Harness the power of cutting-edge artificial intelligence and information technology 
-              to drive innovation, efficiency, and growth in your organization.
+            <p className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">Harness the power of cutting-edge artificial intelligence and information technology </p>
+              to drive innovation, efficiency, and growth in your organization.</p>
             </p>
 
-            {/* Benefits List */}
+            {/* Benefits List */};
             <div className="mb-8">
               <h3 className="text-lg font-semibold text-white mb-4">Why Choose Us?</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {benefits.map((benefit, index) => (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">{benefits.map((benefit, index) => (</div>
                   <div key={index} className="flex items-center text-gray-300">
                     <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
                     <span className="text-sm">{benefit}</span>
                   </div>
-                ))}
+                ))};
               </div>
             </div>
 
-            {/* CTA Buttons */}
+            {/* CTA Buttons */};
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <button className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
-                Get Started
+              <button className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">Get Started</button>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                Learn More
+              <button className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Learn More</button>
               </button>
             </div>
 
-            {/* Contact Info */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {contactInfo.map((contact, index) => (
+            {/* Contact Info */};
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">{contactInfo.map((contact, index) => (</div>
                 <div key={index} className="flex items-center text-gray-300">
                   <contact.icon className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
                   <div>
@@ -90,15 +79,14 @@ const EnhancedHero: React.FC = () => {
                     <div className="text-xs text-gray-400">{contact.details}</div>
                   </div>
                 </div>
-              ))}
+              ))};
             </div>
           </div>
         </div>
 
-        {/* Right Content - Visual Elements */}
+        {/* Right Content - Visual Elements */};
         <div className="flex-1 px-4 sm:px-6 lg:px-8 py-20">
-          <div className="relative">
-            {/* Floating Cards */}
+          <div className="relative">{/* Floating Cards */}</div>
             <div className="absolute top-0 left-0 w-64 h-40 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl backdrop-blur-sm border border-cyan-500/30 animate-float">
               <div className="p-6">
                 <Brain className="h-8 w-8 text-cyan-400 mb-3" />
@@ -126,7 +114,7 @@ const EnhancedHero: React.FC = () => {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default EnhancedHero

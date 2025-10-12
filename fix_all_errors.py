@@ -1,41 +1,61 @@
 #!/usr/bin/env python3
 """
-Comprehensive script to fix all syntax errors and malformed imports
+Comprehensive script to fix all merge conflicts and syntax errors
 """
 
 import os
 import re
 import glob
+import json
 
-def fix_malformed_imports(file_path):
-    """Fix malformed imports in a file."""
+def fix_merge_conflicts(file_path):
+    """Fix merge conflicts in a single file by keeping the latest version."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        original_content = content
+        # Check if file has merge conflicts
+        if '<<<<<<< HEAD' not in content:
+            return False
         
-        # Fix malformed imports
-        content = re.sub(r"import \{ \} from \\'module\\';", '', content)
-        content = re.sub(r"import \{ \} from 'module';", '', content)
-        
-        # Remove empty lines at the beginning
+        # Split content into lines
         lines = content.split('\n')
-        while lines and not lines[0].strip():
-            lines.pop(0)
+        new_lines = []
+        skip_until_end = False
+        in_conflict = False
         
-        content = '\n'.join(lines)
+        for line in lines:
+            if line.strip().startswith('<<<<<<< HEAD'):
+                in_conflict = True
+                skip_until_end = False
+                continue
+            elif line.strip().startswith('======='):
+                skip_until_end = True
+                continue
+            elif line.strip().startswith('>>>>>>> '):
+                in_conflict = False
+                skip_until_end = False
+                continue
+            elif in_conflict and skip_until_end:
+                # Skip lines between ======= and >>>>>>> (older version)
+                continue
+            elif in_conflict and not skip_until_end:
+                # Keep lines between <<<<<<< and ======= (newer version)
+                new_lines.append(line)
+            else:
+                # Keep all other lines
+                new_lines.append(line)
         
-        # Only write if content changed
-        if content != original_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            return True
+        # Write the cleaned content back
+        cleaned_content = '\n'.join(new_lines)
         
-        return False
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(cleaned_content)
+        
+        return True
         
     except Exception as e:
-        print(f"Error fixing imports in {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def fix_syntax_errors(file_path):
@@ -48,10 +68,14 @@ def fix_syntax_errors(file_path):
         
         # Fix common syntax issues
         fixes = [
-            # Fix semicolons in arrays
-            (r'(\w+):\s*([^,}\n]+);\s*\n\s*\]', r'\1: \2\n  ]'),
+            # Fix missing semicolons after object properties
+            (r'(\w+):\s*([^,}\n]+)\n\s*(\w+):', r'\1: \2,\n    \3:'),
             # Fix missing commas in object literals
             (r'(\w+):\s*([^,}\n]+)\n\s*(\w+):', r'\1: \2,\n    \3:'),
+            # Fix malformed object properties
+            (r'(\w+):\s*([^,}\n]+)\n\s*(\w+):', r'\1: \2,\n    \3:'),
+            # Remove duplicate imports
+            (r'import\s+.*?;\s*\n\s*import\s+.*?;\s*\n', r'import { } from \'module\';\n'),
             # Fix JSX syntax issues
             (r'<(\w+)\s*>\s*</\1>', r'<\1></\1>'),
             # Fix missing closing tags
@@ -98,81 +122,41 @@ def fix_syntax_errors(file_path):
         print(f"Error fixing syntax in {file_path}: {e}")
         return False
 
-def create_missing_pages():
-    """Create missing page components."""
-    pages_to_create = [
-        'app/5g-implementation/page.tsx',
-        'app/it-services/page.tsx',
-        'app/micro-saas-services/page.tsx',
-        'app/cloud-services/page.tsx',
-        'app/digital-transformation/page.tsx',
-        'app/ai-services/page.tsx'
-    ]
-    
-    for page_path in pages_to_create:
-        if not os.path.exists(page_path):
-            # Create directory if it doesn't exist
-            os.makedirs(os.path.dirname(page_path), exist_ok=True)
-            
-            # Create a basic page component
-            page_name = os.path.basename(os.path.dirname(page_path))
-            component_name = ''.join(word.capitalize() for word in page_name.split('-')) + 'Page'
-            
-            content = f"""'use client'
-import React from 'react'
-import {{ Helmet }} from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-
-export default function {component_name}() {{
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>{page_name.replace('-', ' ').title()} - Zion Tech Group</title>
-        <meta name="description" content="Professional {page_name.replace('-', ' ')} services by Zion Tech Group." />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-16">
-        <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              {page_name.replace('-', ' ').title()}
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional {page_name.replace('-', ' ')} services to help your business succeed.
-            </p>
-          </div>
-        </section>
+def clean_duplicate_imports(file_path):
+    """Remove duplicate imports from a file."""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
         
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Coming Soon</h2>
-              <p className="text-lg text-gray-600">
-                This page is under development. Please check back soon for more information.
-              </p>
-            </div>
-          </div>
-        </section>
-      </main>
-      
-      <Footer />
-    </div>
-  )
-}}
-"""
-            
-            with open(page_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Created: {page_path}")
+        lines = content.split('\n')
+        import_lines = []
+        other_lines = []
+        seen_imports = set()
+        
+        for line in lines:
+            if line.strip().startswith('import '):
+                if line.strip() not in seen_imports:
+                    import_lines.append(line)
+                    seen_imports.add(line.strip())
+            else:
+                other_lines.append(line)
+        
+        # Combine imports and other lines
+        cleaned_content = '\n'.join(import_lines + other_lines)
+        
+        if cleaned_content != content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(cleaned_content)
+            return True
+        
+        return False
+        
+    except Exception as e:
+        print(f"Error cleaning imports in {file_path}: {e}")
+        return False
 
 def main():
     """Main function to process all files."""
-    # Create missing pages first
-    create_missing_pages()
-    
     # Get all TypeScript/JavaScript files
     patterns = [
         '**/*.tsx',
@@ -193,10 +177,15 @@ def main():
             files_processed += 1
             fixed = False
             
-            # Fix malformed imports
-            if fix_malformed_imports(file_path):
+            # Fix merge conflicts
+            if fix_merge_conflicts(file_path):
                 fixed = True
-                print(f"Fixed imports: {file_path}")
+                print(f"Fixed merge conflicts: {file_path}")
+            
+            # Clean duplicate imports
+            if clean_duplicate_imports(file_path):
+                fixed = True
+                print(f"Cleaned imports: {file_path}")
             
             # Fix syntax errors
             if fix_syntax_errors(file_path):

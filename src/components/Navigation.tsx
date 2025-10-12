@@ -1,5 +1,3 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Globe, Database, Settings, Target, MessageSquare, Eye, Cpu, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, ShoppingCart, CreditCard, Heart, Stethoscope, Briefcase, Calculator, Calendar, Smartphone } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -26,7 +24,7 @@ const Navigation: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
     if (isMenuOpen) {
       closeAllMenus();
-    }
+    };
   };
 
   const toggleServices = () => {
@@ -54,7 +52,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings },
     { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target },
     { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera }
+    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera };
   ];
 
   const aiServices = [
@@ -69,7 +67,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
     { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar }
+    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar };
   ];
 
   const itServices = [
@@ -84,7 +82,7 @@ const Navigation: React.FC = () => {
     { name: 'Compliance & Governance', href: '/compliance', icon: FileText },
     { name: 'Developer Tools', href: '/developer-tools', icon: Code },
     { name: 'Marketing Tools', href: '/marketing-tools', icon: Target },
-    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart }
+    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart };
   ];
 
   // Removed specializedServices as it was unused
@@ -94,8 +92,7 @@ const Navigation: React.FC = () => {
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+        <div className="flex items-center justify-between h-16">{/* Logo */}</div>
           <a href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
             <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
@@ -103,11 +100,11 @@ const Navigation: React.FC = () => {
             <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
           </a>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation */};
           <div className="hidden lg:flex items-center space-x-8">
             <div className="relative group">
               <button
-                onClick={toggleServices}
+                onClick={toggleServices};
                 className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors"
               >
                 <span>Services</span>
@@ -119,57 +116,51 @@ const Navigation: React.FC = () => {
                   <div className="grid grid-cols-3 gap-6">
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Zap className="w-4 h-4 mr-2" />
-                        Micro SAAS
+                        <Zap className="w-4 h-4 mr-2" />Micro SAAS</Zap>
                       </h3>
-                      <div className="space-y-2">
-                        {microSAASServices.slice(0, 6).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
+                      <div className="space-y-2">{microSAASServices.slice(0, 6).map((service) => (</div>
+                          <a key={service.name};
+                            href={service.href};
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
+                            onClick={closeAllMenus};
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
                           </a>
-                        ))}
+                        ))};
                       </div>
                     </div>
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Brain className="w-4 h-4 mr-2" />
-                        AI Services
+                        <Brain className="w-4 h-4 mr-2" />AI Services</Brain>
                       </h3>
-                      <div className="space-y-2">
-                        {aiServices.slice(0, 6).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
+                      <div className="space-y-2">{aiServices.slice(0, 6).map((service) => (</div>
+                          <a key={service.name};
+                            href={service.href};
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
+                            onClick={closeAllMenus};
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
                           </a>
-                        ))}
+                        ))};
                       </div>
                     </div>
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
-                        <Settings className="w-4 h-4 mr-2" />
-                        IT Services
+                        <Settings className="w-4 h-4 mr-2" />IT Services</Settings>
                       </h3>
-                      <div className="space-y-2">
-                        {itServices.slice(0, 6).map((service) => (
+                      <div className="space-y-2">{itServices.slice(0, 6).map((service) => (</div>
                           <Link
-                            key={service.name}
-                            to={service.href}
+                            key={service.name};
+                            to={service.href};
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
+                            onClick={closeAllMenus};
                           >
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
                           </Link>
-                        ))}
+                        ))};
                       </div>
                     </div>
                   </div>
@@ -178,7 +169,7 @@ const Navigation: React.FC = () => {
                       <Link
                         to="/services"
                         className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
-                        onClick={closeAllMenus}
+                        onClick={closeAllMenus};
                       >
                         <span>View All Services</span>
                         <ArrowRight className="w-4 h-4" />
@@ -186,7 +177,7 @@ const Navigation: React.FC = () => {
                       <Link
                         to="/specialized-services"
                         className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
-                        onClick={closeAllMenus}
+                        onClick={closeAllMenus};
                       >
                         <span>Specialized Solutions</span>
                         <ArrowRight className="w-4 h-4" />
@@ -194,23 +185,18 @@ const Navigation: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              )}
+              )};
             </div>
 
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
-              About
+            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">About</a>
             </a>
-            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
-              Blog
+            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">Blog</a>
             </a>
-            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
-              Case Studies
+            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">Case Studies</a>
             </a>
-            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
-              Pricing
+            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">Pricing</a>
             </a>
-            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
-              Contact
+            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">Contact</a>
             </a>
             
             <div className="flex items-center space-x-4">
@@ -223,28 +209,27 @@ const Navigation: React.FC = () => {
               </a>
               <a href="/contact"
                 className="cyber-button px-4 py-2 text-sm"
-              >
-                Get Started
+              >Get Started</a>
               </a>
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button */};
           <button
-            onClick={toggleMenu}
+            onClick={toggleMenu};
             className="lg:hidden text-white hover:text-cyan-400 transition-colors"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}</Menu>
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu */};
         {isMenuOpen && (
           <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
             <div className="px-4 py-6 space-y-4">
               <div>
                 <button
-                  onClick={toggleServices}
+                  onClick={toggleServices};
                   className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors"
                 >
                   <span>Services</span>
@@ -255,56 +240,46 @@ const Navigation: React.FC = () => {
                   <div className="mt-4 pl-4 space-y-3">
                     <div>
                       <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
-                      <div className="space-y-2">
-                        {microSAASServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
+                      <div className="space-y-2">{microSAASServices.slice(0, 4).map((service) => (</div>
+                          <a key={service.name};
+                            href={service.href};
                             className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            {service.name}
+                            onClick={closeAllMenus};
+                          >{service.name}</a>
                           </a>
-                        ))}
+                        ))};
                       </div>
                     </div>
                     <div>
                       <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
-                      <div className="space-y-2">
-                        {aiServices.slice(0, 4).map((service) => (
-                          <a key={service.name}
-                            href={service.href}
+                      <div className="space-y-2">{aiServices.slice(0, 4).map((service) => (</div>
+                          <a key={service.name};
+                            href={service.href};
                             className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            {service.name}
+                            onClick={closeAllMenus};
+                          >{service.name}</a>
                           </a>
-                        ))}
+                        ))};
                       </div>
                     </div>
                     <a href="/services"
                       className="block text-cyan-400 hover:text-white transition-colors"
-                      onClick={closeAllMenus}
-                    >
-                      View All Services →
+                      onClick={closeAllMenus};
+                    >View All Services →</a>
                     </a>
                   </div>
-                )}
+                )};
               </div>
 
-              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                About
+              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>About</a>
               </a>
-              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Blog
+              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>Blog</a>
               </a>
-              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Case Studies
+              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>Case Studies</a>
               </a>
-              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Pricing
+              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>Pricing</a>
               </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Contact
+              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>Contact</a>
               </a>
               
               <div className="pt-4 border-t border-gray-700">
@@ -317,14 +292,13 @@ const Navigation: React.FC = () => {
                 </a>
                 <a href="/contact"
                   className="block cyber-button px-4 py-2 text-center"
-                  onClick={closeAllMenus}
-                >
-                  Get Started
+                  onClick={closeAllMenus};
+                >Get Started</a>
                 </a>
               </div>
             </div>
           </div>
-        )}
+        )};
       </div>
     </nav>
   );

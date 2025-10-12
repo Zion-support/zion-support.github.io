@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
 
 // Function to fix common JSX syntax issues
 function fixJSXSyntax(content) {
@@ -58,12 +56,12 @@ function fixFile(filePath) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed syntax in: ${filePath}`);
       return true;
-    }
+    };
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
-  }
+  };
 }
 
 // Main execution
@@ -298,8 +296,8 @@ for (const file of criticalFiles) {
   if (fs.existsSync(file)) {
     if (fixFile(file)) {
       fixedCount++;
-    }
-  }
+    };
+  };
 }
 
 console.log(`Fixed syntax in ${fixedCount} files`);

@@ -20,17 +20,15 @@ const SmartSupportBotPage: React.FC = () => {
               AI Customer Service </h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Automation</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              AI-powered customer service automation with intelligent support bot. 
-              24/7 customer assistance and automated responses.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">AI-powered customer service automation with intelligent support bot. </p>
+              24/7 customer assistance and automated responses.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                View Demo
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">View Demo</button>
   </
             </div>
           </div>
@@ -39,15 +37,14 @@ const SmartSupportBotPage: React.FC = () => {
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're developing powerful AI support bot solutions. Stay tuned for updates!
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">We're developing powerful AI support bot solutions. Stay tuned for updates!</p>
               </p>
             </div>
           </div>
         </section>
       </div>
     </React.Fragment>
-  )}
+  )};
 export default SmartSupportBotPage
   </button>
 
@@ -68,17 +65,15 @@ const SmartSupportBotPage: React.FC = () => {return (<></>
               AI Customer Service </h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Automation</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              AI-powered customer service automation with intelligent support bot.
-              24/7 customer assistance and automated responses.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">AI-powered customer service automation with intelligent support bot.</p>
+              24/7 customer assistance and automated responses.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                View Demo
+              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">View Demo</button>
               </button>
             </div>
           </div>
@@ -87,12 +82,11 @@ const SmartSupportBotPage: React.FC = () => {return (<></>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're developing powerful AI support bot solutions. Stay tuned for updates!
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">We're developing powerful AI support bot solutions. Stay tuned for updates!</p>
               </p>
             </div>
           </div>
         </section>
       </div>
-    </>)}
+    </>)};
 };export default SmartSupportBotPage

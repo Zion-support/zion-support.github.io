@@ -1,30 +1,30 @@
-'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
+'use client'
 
 const EnhancedLoadingSkeletonPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+      description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
+      description: 'Bank-level security with encryption and compliance standards',
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
+      description: 'Worldwide deployment and support for international businesses',
+    };
   ]
 
   const benefits = [
@@ -46,47 +46,40 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
         <meta name="keywords" content="EnhancedLoadingSkeleton, AI solutions, IT services, Zion Tech Group, enhancedloadingskeleton" />
       </Helmet>
       
-      {/* Hero Section */}
+      {/* Hero Section */};
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                EnhancedLoadingSkeleton
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">EnhancedLoadingSkeleton</span>
               </span>
               <br />
               <span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced enhancedloadingskeleton solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced enhancedloadingskeleton solutions. </p>
+              Powered by cutting-edge AI technology and industry expertise.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started</button>
               </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Learn More</button>
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section */};
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our EnhancedLoadingSkeleton Solutions?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Choose Our EnhancedLoadingSkeleton Solutions?</h2>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive approach ensures maximum efficiency and results for your business.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our comprehensive approach ensures maximum efficiency and results for your business.</p>
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <feature.icon className="h-8 w-8 text-purple-400 mr-3" />
@@ -94,56 +87,49 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
                 </div>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
+            ))};
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Benefits Section */};
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the advantages of our enhancedloadingskeleton solutions.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Discover the advantages of our enhancedloadingskeleton solutions.</p>
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{benefits.map((benefit, index) => (</div>
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0 mt-1" />
                 <p className="text-gray-300">{benefit}</p>
               </div>
-            ))}
+            ))};
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section */};
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.
+          <p className="text-xl text-gray-300 mb-8">Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-              Get Started Now
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">Get Started Now</button>
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales</button>
             </button>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 export default EnhancedLoadingSkeletonPage

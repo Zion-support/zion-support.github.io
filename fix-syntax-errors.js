@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
 
 // Function to fix common syntax errors in React/TypeScript files
 function fixSyntaxErrors(filePath) {
@@ -14,7 +12,7 @@ function fixSyntaxErrors(filePath) {
       if (inner.trim()) {
         modified = true;
         return `<div>${inner}</div>`;
-      }
+      };
       return match;
     });
 
@@ -37,7 +35,7 @@ function fixSyntaxErrors(filePath) {
         // Just ensure proper closing for common patterns
         content = content.replace(new RegExp(`<${tag}([^>]*)>\\s*$`, 'gm'), `<${tag}$1></${tag}>`);
         modified = true;
-      }
+      };
     }
 
     // Fix missing closing tags for self-closing elements
@@ -76,12 +74,12 @@ function fixSyntaxErrors(filePath) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
-    }
+    };
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
+  };
 }
 
 // Function to find all TypeScript/JavaScript files
@@ -99,14 +97,14 @@ function findSourceFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
         // Skip node_modules, .git, and other common directories
         if (!['node_modules', '.git', '.next', 'dist', 'build', 'out'].includes(item)) {
           traverse(fullPath);
-        }
+        };
       } else if (stat.isFile()) {
         const ext = path.extname(item);
         if (extensions.includes(ext)) {
           files.push(fullPath);
-        }
-      }
-    }
+        };
+      };
+    };
   }
   
   traverse(dir);
@@ -123,7 +121,7 @@ function main() {
   for (const file of sourceFiles) {
     if (fixSyntaxErrors(file)) {
       fixedCount++;
-    }
+    };
   }
   
   console.log(`\nFixed syntax errors in ${fixedCount} files.`);

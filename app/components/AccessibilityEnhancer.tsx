@@ -1,6 +1,6 @@
+import React, { useEffect } from 'react';
 'use client';
 
-import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
   enableKeyboardNavigation?: boolean;
@@ -9,7 +9,7 @@ interface AccessibilityEnhancerProps {
   enableFocusManagement?: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>= ({
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = true,
@@ -25,7 +25,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           if (skipLink) {
             skipLink.focus();
             event.preventDefault();
-          }
+          };
         }
 
         // Close dropdowns with Escape key
@@ -34,7 +34,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           openDropdowns.forEach(dropdown => {
             (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
           });
-        }
+        };
       };
 
       document.addEventListener('keydown', handleKeyDown);
@@ -57,13 +57,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
             if (document.activeElement === firstFocusableElement) {
               lastFocusableElement.focus();
               e.preventDefault();
-            }
+            };
           } else {
             if (document.activeElement === lastFocusableElement) {
               firstFocusableElement.focus();
               e.preventDefault();
-            }
-          }
+            };
+          };
         };
 
         container.addEventListener('keydown', handleTabKey);
@@ -92,10 +92,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         const liveRegion = document.getElementById('live-region');
         if (liveRegion) {
           liveRegion.textContent = message;
-        }
+        };
       };
 
-      // Listen for route changes (if using React Router)
+      // Listen for route changes (if using React Router);
       const originalPushState = history.pushState;
       const originalReplaceState = history.replaceState;
 
@@ -125,7 +125,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           document.documentElement.classList.add('high-contrast');
         } else {
           document.documentElement.classList.remove('high-contrast');
-        }
+        };
       };
 
       const handleChange = (e: MediaQueryListEvent) => updateHighContrast(e);
@@ -142,5 +142,5 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
   return null;
 };
-
-export default AccessibilityEnhancer;
+</AccessibilityEnhancerProps>
+export default AccessibilityEnhancer;</AccessibilityEnhancerProps>

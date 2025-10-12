@@ -1,5 +1,5 @@
-'use client'
 import React from 'react'
+'use client'
 
 const ServiceCardSkeleton: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const ServiceCardSkeleton: React.FC = () => {
         <div className="h-8 bg-slate-700 rounded w-20"></div>
       </div>
     </div>
-  )
+  );
 }
 
 export default ServiceCardSkeleton

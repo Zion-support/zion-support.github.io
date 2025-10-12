@@ -41,9 +41,8 @@ const EnhancedFooter: React.FC = () => {
               </div>
               <div className="text-xl font-bold">Zion Tech Group</div>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Leading technology solutions provider helping businesses transform their digital
-              presence with cutting-edge AI, cloud architecture and innovative development services.
+            <p className="text-gray-300 mb-6 max-w-md">Leading technology solutions provider helping businesses transform their digital</p>
+              presence with cutting-edge AI, cloud architecture and innovative development services.</p>
             </p>
             <div className="flex space-x-4">
               <a
@@ -71,46 +70,40 @@ const EnhancedFooter: React.FC = () => {
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              {services.slice(0, 6).map(service => (
+            <ul className="space-y-2">{services.slice(0, 6).map(service => (</ul>
                 <li key={service.name}>
                   <Link to={service.href}>
-                    <span className="text-gray-300 hover:text-white transition-colors">
-                      {service.name}
+                    <span className="text-gray-300 hover:text-white transition-colors">{service.name}</span>
                     </span>
                   </Link>
                 </li>
-              ))}
+              ))};
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
-            <ul className="space-y-2">
-              {products.slice(0, 6).map(product => (
+            <ul className="space-y-2">{products.slice(0, 6).map(product => (</ul>
                 <li key={product.name}>
                   <Link to={product.href}>
-                    <span className="text-gray-300 hover:text-white transition-colors">
-                      {product.name}
+                    <span className="text-gray-300 hover:text-white transition-colors">{product.name}</span>
                     </span>
                   </Link>
                 </li>
-              ))}
+              ))};
             </ul>
           </div>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {quickLinks.map(item => (
+            <ul className="space-y-2">{quickLinks.map(item => (</ul>
                 <li key={item.name}>
                   <Link to={item.href}>
-                    <span className="text-gray-300 hover:text-white transition-colors">
-                      {item.name}
+                    <span className="text-gray-300 hover:text-white transition-colors">{item.name}</span>
                     </span>
                   </Link>
                 </li>
-              ))}
+              ))};
             </ul>
           </div>
         </div>
@@ -143,23 +136,19 @@ const EnhancedFooter: React.FC = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
-              &copy; {currentYear} Zion Tech Group. All rights reserved.
+            <p className="text-gray-300 text-sm">&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/legal/privacy">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Privacy Policy
+                <span className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</span>
                 </span>
               </Link>
               <Link to="/legal/terms">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Terms of Service
+                <span className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</span>
                 </span>
               </Link>
               <Link to="/legal/cookies">
-                <span className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Cookie Policy
+                <span className="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</span>
                 </span>
               </Link>
             </div>

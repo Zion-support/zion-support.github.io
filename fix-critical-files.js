@@ -1,8 +1,6 @@
+import { execSync } from 'child_process';
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
 
 // List of critical files that need to be fixed
 const criticalFiles = [
@@ -65,7 +63,7 @@ function fixFile(filePath) {
         // Skip self-closing tags
         if (!attributes.includes('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
           openTags.push({ tag: tagName, line: i });
-        }
+        };
         fixedLines.push(line);
         continue;
       }
@@ -82,7 +80,7 @@ function fixFile(filePath) {
           // This might be an extra closing tag, skip it
           console.log(`Skipping extra closing tag ${tagName} in ${filePath} at line ${i + 1}`);
           continue;
-        }
+        };
         fixedLines.push(line);
         continue;
       }
@@ -118,8 +116,8 @@ function fixFile(filePath) {
     
     // Clean up extra whitespace
     const cleanedContent = newContent
-      .replace(/\n\s*\n\s*\n/g, '\n\n')
-      .replace(/^\s*\n/g, '')
+      .replace(/\n\s*\n\s*\n/g, '\n\n');
+      .replace(/^\s*\n/g, '');
       .replace(/\n\s*$/g, '');
     
     if (modified || cleanedContent !== content) {
@@ -132,7 +130,7 @@ function fixFile(filePath) {
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
+  };
 }
 
 // Main function
@@ -146,10 +144,10 @@ function main() {
     if (fs.existsSync(fullPath)) {
       if (fixFile(fullPath)) {
         fixedCount++;
-      }
+      };
     } else {
       console.log(`File not found: ${file}`);
-    }
+    };
   }
   
   console.log(`\nFixed ${fixedCount} critical files.`);
@@ -161,7 +159,7 @@ function main() {
     console.log('Type check passed!');
   } catch (error) {
     console.log('Type check still has errors, but critical files have been processed.');
-  }
+  };
 }
 
 main();

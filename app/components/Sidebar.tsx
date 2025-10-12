@@ -1,8 +1,8 @@
-'use client'
 import React from 'react'
 import React, { memo, useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import {X,
+'use client'
   Menu,
   Home,
   Users,
@@ -17,53 +17,53 @@ import {X,
   Phone,
   Mail,
   MapPin,
-  Clock}
+  Clock};
 } from 'lucide-react'
 const Sidebar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']))
-  const location = useLocation()
+  const [isOpen, setIsOpen] = useState(false);
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']));
+  const location = useLocation();
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false)}
-    }
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)}, [])
-  const toggleSection = (section: string) => {const Sidebar: React.FC = () => {const [isOpen, setIsOpen] = useState(false)
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']))
+        setIsOpen(false)};
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize)}, []);</Set>
+  const toggleSection = (section: string) => {const Sidebar: React.FC = () => {const [isOpen, setIsOpen] = useState(false)</Set>
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']));
   const location = useLocation();useEffect(() => {const handleResize = (if (window.innerWidth >= 1024) {) => {
   return (
     $3
-  )}
-        setIsOpen(false)}
-      }
-    };window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)}, []);const toggleSection = (const newExpanded = new Set(expandedSections)
+  )};
+        setIsOpen(false)};
+      };
+    };window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize)}, []);const toggleSection = (const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {) => {
   return (
     $3
-  )}
-      newExpanded.delete(section)}
-    } else {newExpanded.add(section)}
-    }
-    setExpandedSections(newExpanded)}
+  )};
+      newExpanded.delete(section)};
+    } else {newExpanded.add(section)};
+    };
+    setExpandedSections(newExpanded)};
   const navigationSections = [
     {
       title: 'Main',
-      items: [
+      items: [,
         { name: 'Home', path: '/', icon: Home },
         { name: 'About', path: '/about', icon: Users },
         { name: 'Services', path: '/services', icon: Settings },
         { name: 'Contact', path: '/contact', icon: Phone },
         { name: 'Blog', path: '/blog', icon: BarChart },
         { name: 'Case Studies', path: '/case-studies', icon: BarChart },
-      ]
+      ];
     },
     {
       title: 'AI Services',
       key: 'ai-services',
-      items: [
+      items: [,
         { name: 'AI Services Overview', path: '/ai-services', icon: Brain },
         { name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart },
         { name: 'Document Processing', path: '/ai-services/document-processing', icon: Settings },
@@ -77,12 +77,12 @@ const Sidebar: React.FC = () => {
         { name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings },
         { name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield },
         { name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings },
-      ]
+      ];
     },
     {
       title: 'Micro SaaS',
       key: 'micro-saas',
-      items: [
+      items: [,
         { name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings },
         { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart },
         { name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users },
@@ -96,12 +96,12 @@ const Sidebar: React.FC = () => {
         { name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart },
         { name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart },
         { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },
-      ]
+      ];
     },
     {
       title: 'IT Services',
       key: 'it-services',
-      items: [
+      items: [,
         { name: 'IT Services Overview', path: '/it-services', icon: Code },
         { name: 'IT Consulting', path: '/it-consulting', icon: Users },
         { name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings },
@@ -111,39 +111,37 @@ const Sidebar: React.FC = () => {
         { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
         { name: 'Database Management', path: '/database-management', icon: Settings },
         { name: 'Managed IT', path: '/managed-it', icon: Settings },
-      ]
+      ];
     },
     {
       title: 'Company',
-      items: [
+      items: [,
         { name: 'Team', path: '/team', icon: Users },
         { name: 'Careers', path: '/careers', icon: Users },
         { name: 'Consultation', path: '/consultation', icon: Phone },
         { name: 'Pricing', path: '/pricing', icon: BarChart },
-      ]
+      ];
     },
     {
       title: 'Resources',
-      items: [
+      items: [,
         { name: 'Documentation', path: '/docs', icon: Settings },
         { name: 'API Docs', path: '/api-docs', icon: Code },
         { name: 'Support', path: '/support', icon: Users },
         { name: 'Status', path: '/status', icon: Settings },
-      ]
-    }
-  ]
+      ];
+    };
+  ];
   const contactInfo = {
     phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
-    hours: 'Mon-Fri 9AM-6PM EST'
-  }
-  return (
-    <React.Fragment>
-
-  const navigationSections = [
+    hours: 'Mon-Fri 9AM-6PM EST',
+  };</Set>
+  return (</Set>
+    <React.Fragment>const navigationSections = [
     {title: 'Main',
-      items: [}
+      items: [};
         { name: 'Home', path: '/', icon: Home },
         { name: 'About', path: '/about', icon: Users },
         { name: 'Services', path: '/services', icon: Settings },
@@ -153,7 +151,7 @@ const Sidebar: React.FC = () => {
       ]},
     {title: 'AI Services',
       key: 'ai-services',
-      items: [}
+      items: [};
         { name: 'AI Services Overview', path: '/ai-services', icon: Brain },
         { name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart },
         { name: 'Document Processing', path: '/ai-services/document-processing', icon: Settings },
@@ -170,7 +168,7 @@ const Sidebar: React.FC = () => {
       ]},
     {title: 'Micro SaaS',
       key: 'micro-saas',
-      items: [}
+      items: [};
         { name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings },
         { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart },
         { name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users },
@@ -187,7 +185,7 @@ const Sidebar: React.FC = () => {
       ]},
     {title: 'IT Services',
       key: 'it-services',
-      items: [}
+      items: [};
         { name: 'IT Services Overview', path: '/it-services', icon: Code },
         { name: 'IT Consulting', path: '/it-consulting', icon: Users },
         { name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings },
@@ -199,41 +197,41 @@ const Sidebar: React.FC = () => {
         { name: 'Managed IT', path: '/managed-it', icon: Settings },
       ]},
     {title: 'Company',
-      items: [}
+      items: [};
         { name: 'Team', path: '/team', icon: Users },
         { name: 'Careers', path: '/careers', icon: Users },
         { name: 'Consultation', path: '/consultation', icon: Phone },
         { name: 'Pricing', path: '/pricing', icon: BarChart },
       ]},
     {title: 'Resources',
-      items: [}
+      items: [};
         { name: 'Documentation', path: '/docs', icon: Settings },
         { name: 'API Docs', path: '/api-docs', icon: Code },
         { name: 'Support', path: '/support', icon: Users },
         { name: 'Status', path: '/status', icon: Settings },
-      ]}
+      ]};
   ];const contactInfo = {phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown, DE 19709',
-    hours: 'Mon-Fri 9AM-6PM EST'}
+    address: '364 E Main St STE 1008 Middletown, DE 19709',</React>,
+    hours: 'Mon-Fri 9AM-6PM EST'}</React>,
   };return (<></>
-      {/* Mobile Menu Button */}
+      {/* Mobile Menu Button */};
       <button
-        onClick={() => setIsOpen(true)}
+        onClick={() =>setIsOpen(true)};
         className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
-        aria-label="Open sidebar"
-      >
+        aria-label="Open sidebar"</button>
+      ></button>
         <Menu className="w-6 h-6" />
       </button>
         className="lg:hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
         aria-label="Open sidebar">
         <Menu className="w-6 h-6" />
       </button>
-      {/* Sidebar Overlay */}
+      {/* Sidebar Overlay */};
       {isOpen && (<div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"}
-          onClick={() => setIsOpen(false)}
-        />)}
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"};
+          onClick={() =>setIsOpen(false)};</div>
+        />)}</div>
       {/* Sidebar */}</div>
       <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -241,7 +239,7 @@ const Sidebar: React.FC = () => {
         <div className="flex flex-col h-full">
           {/* Header */}</div>
           <div className="flex items-center justify-between p-6 border-b border-slate-700/50">
-            <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
+            <Link to="/" className="flex items-center space-x-3" onClick={() =>setIsOpen(false)}></Link>
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
               </div>
@@ -251,21 +249,21 @@ const Sidebar: React.FC = () => {
               </div>
             </Link>
             <button
-              onClick={() => setIsOpen(false)}
+              onClick={() =>setIsOpen(false)};
               className="lg:hidden text-gray-400 hover:text-white transition-colors"
-              aria-label="Close sidebar"
-            >
+              aria-label="Close sidebar"</button>
+            ></button>
               <X className="w-6 h-6" />
             </button>
           </div>
 
       {/* Sidebar */}</div>
-      <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+      <aside className={`fixed top-0 left-0 h-full w-80 bg-slate-900/95 backdrop-blur-lg border-r border-cyan-400/20 z-50 transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'};
       } lg:translate-x-0 lg:static lg:z-auto`}>
         <div className="flex flex-col h-full"></div>
           {/* Header */}</div>
           <div className="flex items-center justify-between p-6 border-b border-slate-700/50"></div>
-            <Link to="/" className="flex items-center space-x-3" onClick={() => setIsOpen(false)}>
+            <Link to="/" className="flex items-center space-x-3" onClick={() =>setIsOpen(false)}></Link>
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></div>
                 <Brain className="w-6 h-6 text-white" />
               </div>
@@ -275,26 +273,24 @@ const Sidebar: React.FC = () => {
               </div>
             </Link>
             <button
-              onClick={() => setIsOpen(false)}
-              className="lg:hidden text-gray-400 hover:text-white transition-colors"
-              aria-label="Close sidebar">
+              onClick={() =>setIsOpen(false)};
+              className="lg:hidden text-gray-400 hover:text-white transition-colors"</button>
+              aria-label="Close sidebar"></button>
               <X className="w-6 h-6" />
             </button>
           </div>
-          {/* Navigation */}
+          {/* Navigation */};
           <div className="flex-1 overflow-y-auto py-6"></div>
-            <nav className="space-y-2 px-4">
-              {navigationSections.map((section, sectionIndex) => (}
+            <nav className="space-y-2 px-4">{navigationSections.map((section, sectionIndex) => (}</nav>
                 <div key={sectionIndex} className="space-y-1"></div>
                   <button
-                    onClick={() => section.key && toggleSection(section.key)}
-                    className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+                    onClick={() =>section.key && toggleSection(section.key)};</button>
+                    className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"></button>
                     <span>{section.title}</span>
                     {section.key && (
                       expandedSections.has(section.key) ? 
-                        <ChevronDown className="w-4 h-4" /> : 
-                        <ChevronRight className="w-4 h-4" />
-                    )}
+                        <ChevronDown className="w-4 h-4" />: </ChevronDown>
+                        <ChevronRight className="w-4 h-4" />)}</ChevronRight>
                   </button>
                   {(!section.key || expandedSections.has(section.key)) && (
                     <div className="ml-4 space-y-1">
@@ -303,29 +299,29 @@ const Sidebar: React.FC = () => {
                     className="flex items-center justify-between w-full px-3 py-2 text-sm font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
                     <span>{section.title}</span>
                     {section.key && (expandedSections.has(section.key) ?
-                        <ChevronDown className="w-4 h-4" /> :
-                        <ChevronRight className="w-4 h-4" />}
-                    )}
+                        <ChevronDown className="w-4 h-4" />:</ChevronDown>
+                        <ChevronRight className="w-4 h-4" />};</ChevronRight>
+                    )}</ChevronRight>
                   </button>
                   {(!section.key || expandedSections.has(section.key)) && (<div className="ml-4 space-y-1"></div>
                       {section.items.map((item, itemIndex) => (</div>
-                        <Link}
-                          key={itemIndex}
-                          to={item.path}
-                          onClick={() => setIsOpen(false)}
+                        <Link};
+                          key={itemIndex};
+                          to={item.path};
+                          onClick={() =>setIsOpen(false)};
                           className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all ${location.pathname === item.path
                               ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
-                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50'}
-                          }`}
-                        >
+                              : 'text-gray-300 hover:text-white hover:bg-slate-800/50'};
+                          }`};</Link>
+                        ></Link>
                           <item.icon className="w-4 h-4 flex-shrink-0" />
                           <span>{item.name}</span>
-                        </Link>))}
-                    </div>)}
-                </div>))}
+                        </Link>))};
+                    </div>)};
+                </div>))};
             </nav>
           </div>
-          {/* Contact Info */}
+          {/* Contact Info */};
           <div className="border-t border-slate-700/50 p-6">
             <h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information</h3>
             <div className="space-y-3 text-sm text-gray-300">
@@ -348,14 +344,14 @@ const Sidebar: React.FC = () => {
           </div>
       </aside>
     </React.Fragment>
-  )}
+  )};
 Sidebar.displayName = 'Sidebar'
 export default Sidebar
   </div>
   </string>
             </nav>
           </div>
-          {/* Contact Info */}
+          {/* Contact Info */};
           <div className="border-t border-slate-700/50 p-6"></div>
             <h3 className="text-sm font-semibold text-cyan-400 mb-4">Contact Information</h3>
             <div className="space-y-3 text-sm text-gray-300"></div>

@@ -1,8 +1,6 @@
+import { Users, MessageCircle, Calendar, Award, Globe, Zap } from 'lucide-react';
 'use client';
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Users, MessageCircle, Calendar, Award, Globe, Zap } from 'lucide-react';
 
 const CommunityPage: React.FC = () => {
   const events = [
@@ -13,7 +11,7 @@ const CommunityPage: React.FC = () => {
       time: '9:00 AM - 5:00 PM',
       location: 'San Francisco, CA',
       description: 'Join industry leaders for a day of AI innovation, networking, and collaboration.',
-      type: 'Conference'
+      type: 'Conference',
     },
     {
       id: '2',
@@ -22,7 +20,7 @@ const CommunityPage: React.FC = () => {
       time: '2:00 PM - 4:00 PM',
       location: 'Online',
       description: 'Learn the latest cloud computing strategies and best practices.',
-      type: 'Workshop'
+      type: 'Workshop',
     },
     {
       id: '3',
@@ -31,38 +29,38 @@ const CommunityPage: React.FC = () => {
       time: '6:00 PM - 8:00 PM',
       location: 'New York, NY',
       description: 'Discuss emerging cybersecurity threats and defense strategies.',
-      type: 'Roundtable'
-    }
+      type: 'Roundtable',
+    };
   ];
 
   const communityStats = [
     { number: '10,000+', label: 'Active Members' },
     { number: '50+', label: 'Countries' },
     { number: '200+', label: 'Events Hosted' },
-    { number: '95%', label: 'Satisfaction Rate' }
+    { number: '95%', label: 'Satisfaction Rate' };
   ];
 
   const features = [
     {
       icon: Users,
       title: 'Global Network',
-      description: 'Connect with professionals from around the world in our diverse community.'
+      description: 'Connect with professionals from around the world in our diverse community.',
     },
     {
       icon: MessageCircle,
       title: 'Knowledge Sharing',
-      description: 'Share insights, ask questions, and learn from industry experts.'
+      description: 'Share insights, ask questions, and learn from industry experts.',
     },
     {
       icon: Calendar,
       title: 'Regular Events',
-      description: 'Attend workshops, conferences, and networking events throughout the year.'
+      description: 'Attend workshops, conferences, and networking events throughout the year.',
     },
     {
       icon: Award,
       title: 'Recognition',
-      description: 'Get recognized for your contributions and achievements in the community.'
-    }
+      description: 'Get recognized for your contributions and achievements in the community.',
+    };
   ];
 
   return (
@@ -73,65 +71,54 @@ const CommunityPage: React.FC = () => {
         <meta name="keywords" content="tech community, networking, events, workshops, professional development, technology community" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  Join Our
+                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Join Our</span>
                 </span>
                 <br />
                 <span className="text-white">Community</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Connect with like-minded professionals, share knowledge, and grow together in our vibrant tech community.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Connect with like-minded professionals, share knowledge, and grow together in our vibrant tech community.</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                  Join Now
+                <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">Join Now</button>
                   <Users className="ml-2 h-5 w-5" />
                 </button>
-                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                  Learn More
+                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">Learn More</button>
                 </button>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Stats Section */}
+        {/* Stats Section */};
         <section className="py-16 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {communityStats.map((stat, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">{communityStats.map((stat, index) => (</div>
                 <div key={index} className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                    {stat.number}
+                  <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>
                   </div>
-                  <div className="text-gray-300 font-medium">
-                    {stat.label}
+                  <div className="text-gray-300 font-medium">{stat.label}</div>
                   </div>
                 </div>
-              ))}
+              ))};
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Features Section */};
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Join Our Community?
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Why Join Our Community?</h2>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Be part of a thriving ecosystem of professionals, innovators, and thought leaders.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Be part of a thriving ecosystem of professionals, innovators, and thought leaders.</p>
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
                   <div className="flex justify-center mb-4">
                     <feature.icon className="h-12 w-12 text-purple-400" />
@@ -139,28 +126,24 @@ const CommunityPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
+              ))};
             </div>
           </div>
         </section>
 
-        {/* Events Section */}
+        {/* Events Section */};
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Upcoming Events
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Upcoming Events</h2>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join us for exciting events, workshops, and networking opportunities.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Join us for exciting events, workshops, and networking opportunities.</p>
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {events.map((event) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{events.map((event) => (</div>
                 <div key={event.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      {event.type}
+                    <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">{event.type}</span>
                     </span>
                     <Calendar className="h-5 w-5 text-gray-400" />
                   </div>
@@ -180,32 +163,27 @@ const CommunityPage: React.FC = () => {
                       <span>{event.location}</span>
                     </div>
                   </div>
-                  <button className="w-full mt-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
-                    Register Now
+                  <button className="w-full mt-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">Register Now</button>
                   </button>
                 </div>
-              ))}
+              ))};
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */};
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Join Our Community?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Join Our Community?</h2>
             </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Connect with professionals, share knowledge, and grow your network in our vibrant community.
+            <p className="text-xl text-purple-100 mb-8">Connect with professionals, share knowledge, and grow your network in our vibrant community.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                <Users className="mr-2 h-5 w-5" />
-                Join Community
+                <Users className="mr-2 h-5 w-5" />Join Community</Users>
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
-                <MessageCircle className="mr-2 h-5 w-5" />
-                Contact Us
+                <MessageCircle className="mr-2 h-5 w-5" />Contact Us</MessageCircle>
               </button>
             </div>
           </div>

@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  networkLatency: number;
+  loadTime: number;,
+    renderTime: number;,
+    memoryUsage: number;,
+    networkLatency: number;
 }
 
 export const useEnhancedPerformance = () => {
@@ -12,7 +12,7 @@ export const useEnhancedPerformance = () => {
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    networkLatency: 0
+    networkLatency: 0,
   });
   
   const [isOptimized, setIsOptimized] = useState(false);
@@ -34,7 +34,7 @@ export const useEnhancedPerformance = () => {
         ...prev,
         loadTime,
         renderTime,
-        memoryUsage: memoryUsage / 1024 / 1024 // Convert to MB
+        memoryUsage: memoryUsage / 1024 / 1024 // Convert to MB,
       }));
     });
   }, []);
@@ -57,7 +57,7 @@ export const useEnhancedPerformance = () => {
         link.as = resource.endsWith('.woff2') ? 'font' : 'image';
         document.head.appendChild(link);
       });
-    }
+    };
   }, []);
 
   useEffect(() => {
@@ -73,5 +73,5 @@ export const useEnhancedPerformance = () => {
     isOptimized,
     optimizePerformance,
     measurePerformance
-  };
-};
+  };</PerformanceMetrics>
+};</PerformanceMetrics>

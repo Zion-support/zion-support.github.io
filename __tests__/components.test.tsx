@@ -5,13 +5,13 @@ import Loading from '../app/components/Loading'
 import SEOHead from '../app/components/SEOHead'
 describe('Component Tests', () => {
   test('Loading renders correctly', () => {
-    render(<Loading />)
-    expect(screen.getByText('Loading...')).toBeInTheDocument()
-  })
-  test('SEOHead renders without crashing', () => {
-    render(
+    render(<Loading />);
+    expect(screen.getByText('Loading...')).toBeInTheDocument();
+  });
+  test('SEOHead renders without crashing', () => {</Loading>
+    render(</Loading>
       <HelmetProvider>
         <SEOHead />
       </HelmetProvider>
-    )
+    );
     expect(document.head).toBeInTheDocument()})})

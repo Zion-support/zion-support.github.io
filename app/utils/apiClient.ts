@@ -9,13 +9,13 @@ interface RequestConfig {
   body?: any;
   cache?: boolean;
   cacheTTL?: number;
-}
-
-interface APIResponse<T = any> {
-  data: T;
-  status: number;
-  statusText: string;
-  headers: Record<string, string>;
+};</string>
+</string>
+interface APIResponse<T = any>{
+  data: T;,
+    status: number;,</T>,
+    statusText: string;,</T>,
+    headers: Record<string, string>;
 }
 
 class APIError extends Error {
@@ -27,15 +27,15 @@ class APIError extends Error {
     this.name = 'APIError';
     this.status = status;
     this.code = code;
-  }
+  };
 }
 
-export class APIClient {
-  private baseURL: string;
-  private defaultHeaders: Record<string, string>;
-  private cache: Map<string, { data: any; timestamp: number; ttl: number }> = new Map();
-
-  constructor(baseURL: string, defaultHeaders: Record<string, string> = {}) {
+export class APIClient {</string>
+  private baseURL: string;</string>
+  private defaultHeaders: Record<string, string>;</string>
+  private cache: Map<string, { data: any; timestamp: number; ttl: number }>= new Map();</string>
+</string>
+  constructor(baseURL: string, defaultHeaders: Record<string, string>= {}) {
     this.baseURL = baseURL;
     this.defaultHeaders = {
       'Content-Type': 'application/json',
@@ -44,11 +44,11 @@ export class APIClient {
   }
 
   /**
-   * Make an API request
-   */
+   * Make an API request</string>
+   */</string>
   async request<T = any>(
-    endpoint: string,
-    config: RequestConfig = {}
+    endpoint: string,</T>,
+    config: RequestConfig = {}</T>,
   ): Promise<APIResponse<T>> {
     const {
       method = 'GET',
@@ -66,26 +66,26 @@ export class APIClient {
       const cached = this.getFromCache(cacheKey);
       if (cached) {
         return cached;
-      }
+      };
     }
 
     try {
       const response = await fetch(url, {
         method,
-        headers: {
+        headers: {,
           ...this.defaultHeaders,
           ...headers
         },
-        body: body ? JSON.stringify(body) : undefined
+        body: body ? JSON.stringify(body) : undefined,
       });
 
-      const data = await response.json();
-
-      const apiResponse: APIResponse<T> = {
+      const data = await response.json();</APIResponse>
+</APIResponse>
+      const apiResponse: APIResponse<T>= {
         data,
         status: response.status,
         statusText: response.statusText,
-        headers: this.parseHeaders(response.headers)
+        headers: this.parseHeaders(response.headers);
       };
 
       // Cache successful GET requests
@@ -97,7 +97,7 @@ export class APIClient {
         throw new APIError({
           message: data.message || 'Request failed',
           status: response.status,
-          code: data.code
+          code: data.code,
         });
       }
 
@@ -105,46 +105,46 @@ export class APIClient {
     } catch (error) {
       if (error instanceof APIError) {
         throw error;
-      }
+      };
       throw new APIError({
         message: error instanceof Error ? error.message : 'Network error',
-        code: 'NETWORK_ERROR'
+        code: 'NETWORK_ERROR',
       });
-    }
+    };
   }
 
   /**
-   * GET request
-   */
-  async get<T = any>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+   * GET request</T>
+   */</T>
+  async get<T = any>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {</APIResponse>
     return this.request<T>(endpoint, { ...config, method: 'GET' });
   }
 
   /**
-   * POST request
-   */
-  async post<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+   * POST request</T>
+   */</T>
+  async post<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {</APIResponse>
     return this.request<T>(endpoint, { ...config, method: 'POST', body });
   }
 
   /**
-   * PUT request
-   */
-  async put<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+   * PUT request</T>
+   */</T>
+  async put<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {</APIResponse>
     return this.request<T>(endpoint, { ...config, method: 'PUT', body });
   }
 
   /**
-   * DELETE request
-   */
-  async delete<T = any>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+   * DELETE request</T>
+   */</T>
+  async delete<T = any>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {</APIResponse>
     return this.request<T>(endpoint, { ...config, method: 'DELETE' });
   }
 
   /**
-   * PATCH request
-   */
-  async patch<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {
+   * PATCH request</T>
+   */</T>
+  async patch<T = any>(endpoint: string, body?: any, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {</APIResponse>
     return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
   }
 
@@ -176,10 +176,10 @@ export class APIClient {
   }
 
   /**
-   * Parse response headers
-   */
-  private parseHeaders(headers: Headers): Record<string, string> {
-    const result: Record<string, string> = {};
+   * Parse response headers</T>
+   */</T>
+  private parseHeaders(headers: Headers): Record<string, string>{</string>
+    const result: Record<string, string>= {};
     headers.forEach((value, key) => {
       result[key] = value;
     });
@@ -201,13 +201,13 @@ export class APIClient {
     this.cache.forEach((_, key) => {
       if (key.includes(endpoint)) {
         keysToDelete.push(key);
-      }
+      };
     });
     keysToDelete.forEach(key => this.cache.delete(key));
-  }
-}
-
-// Export utility functions
+  };
+};
+</string>
+// Export utility functions</string>
 export const createAPIClient = (baseURL: string, headers?: Record<string, string>) => 
   new APIClient(baseURL, headers);
 
@@ -215,5 +215,5 @@ export const createAPIClient = (baseURL: string, headers?: Record<string, string
 export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
 
 // Export types and classes
-export type { RequestConfig, APIResponse };
-export { APIError };
+export type { RequestConfig, APIResponse };</string>
+export { APIError };</string>

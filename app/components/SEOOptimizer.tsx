@@ -1,7 +1,5 @@
 'use client';
 
-import React, { useEffect } from 'react';
-import Head from 'next/head';
 
 interface SEOOptimizerProps {
   title?: string;
@@ -10,9 +8,9 @@ interface SEOOptimizerProps {
   canonicalUrl?: string;
   ogImage?: string;
   structuredData?: Record<string, unknown>;
-}
-
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+};</string>
+</string>
+const SEOOptimizer: React.FC<SEOOptimizerProps>= ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
@@ -34,8 +32,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           "position": 1,
           "name": "Home",
           "item": "https://ziontechgroup.com"
-        }
-      ]
+        };
+      ];
     };
 
     const script = document.createElement('script');
@@ -47,31 +45,28 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     const existing = document.getElementById('breadcrumb-structured-data');
     if (existing) {
       existing.remove();
-    }
+    };
     document.head.appendChild(script);
 
     return () => {
       const scriptToRemove = document.getElementById('breadcrumb-structured-data');
       if (scriptToRemove) {
         scriptToRemove.remove();
-      }
+      };
     };
   }, []);
-
-  return (
-    <Head>
-      {/* Basic Meta Tags */}
+</SEOOptimizerProps>
+  return (</SEOOptimizerProps>
+    <Head>{/* Basic Meta Tags */}</Head>
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Open Graph Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />{/* Canonical URL */}</meta>
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />};
+      </link>
+      {/* Open Graph Meta Tags */}</link>
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
       <meta property="og:type" content="website" />
@@ -80,29 +75,23 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card Meta Tags */}
+      <meta property="og:locale" content="en_US" />{/* Twitter Card Meta Tags */}</meta>
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={fullDescription} />
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Additional SEO Meta Tags */}
+      <meta name="twitter:creator" content="@ziontechgroup" />{/* Additional SEO Meta Tags */}</meta>
       <meta name="theme-color" content="#6366f1" />
       <meta name="msapplication-TileColor" content="#6366f1" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
-      {/* Structured Data */}
-      {structuredData && (
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />{/* Structured Data */};</meta>
+      {structuredData && (</meta>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+            __html: JSON.stringify({,
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Zion Tech Group",
@@ -121,10 +110,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                 "https://github.com/ziontechgroup"
               ],
               ...structuredData
-            })
-          }}
-        />
-      )}
+            });
+          }};
+        />)}</script>
     </Head>
   );
 };

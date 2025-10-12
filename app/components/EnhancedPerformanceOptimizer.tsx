@@ -1,29 +1,29 @@
-'use client'
 import React from 'react'
 import { Brain, Zap, Shield, BarChart, ArrowRight, CheckCircle } from 'lucide-react'
+'use client'
 
 const EnhancedPerformanceOptimizer: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Optimization',
-      description: 'Advanced AI algorithms that continuously analyze and optimize your application performance in real-time.'
+      description: 'Advanced AI algorithms that continuously analyze and optimize your application performance in real-time.',
     },
     {
       icon: Zap,
       title: 'Lightning Fast',
-      description: 'Dramatically improve loading times and response rates with our cutting-edge optimization techniques.'
+      description: 'Dramatically improve loading times and response rates with our cutting-edge optimization techniques.',
     },
     {
       icon: Shield,
       title: 'Secure & Reliable',
-      description: 'Enterprise-grade security with 99.9% uptime guarantee and comprehensive monitoring.'
+      description: 'Enterprise-grade security with 99.9% uptime guarantee and comprehensive monitoring.',
     },
     {
       icon: BarChart,
       title: 'Analytics & Insights',
-      description: 'Detailed performance metrics and actionable insights to drive continuous improvement.'
-    }
+      description: 'Detailed performance metrics and actionable insights to drive continuous improvement.',
+    };
   ]
 
   const benefits = [
@@ -36,72 +36,60 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="neon-text">Enhanced Performance Optimizer</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your application's performance with our advanced AI-powered optimization solutions. 
-            Experience lightning-fast speeds and superior user experience.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Transform your application's performance with our advanced AI-powered optimization solutions. </p>
+            Experience lightning-fast speeds and superior user experience.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
-              Get Started
+            <button className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">Get Started</button>
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
-            <button className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-              Learn More
+            <button className="cyber-button-secondary px-8 py-4 text-lg font-semibold">Learn More</button>
             </button>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section */};
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Powerful Features
+          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">Powerful Features</h2>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="cyber-card p-6 text-center group hover:scale-105 transition-transform">
                 <feature.icon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">
-                  {feature.title}
+                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {feature.description}
+                <p className="text-gray-300 text-sm leading-relaxed">{feature.description}</p>
                 </p>
               </div>
-            ))}
+            ))};
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Benefits Section */};
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits</h2>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our enhanced performance optimizer solutions for your business.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our enhanced performance optimizer solutions for your business.</p>
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="cyber-card p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Performance Improvements</h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
+              <ul className="space-y-4">{benefits.map((benefit, index) => (</ul>
                   <li key={index} className="flex items-center text-gray-300">
-                    <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
-                    {benefit}
+                    <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />{benefit}</CheckCircle>
                   </li>
-                ))}
+                ))};
               </ul>
             </div>
             <div className="cyber-card p-8">
@@ -140,29 +128,25 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section */};
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="cyber-card hologram-card p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Performance?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Optimize Your Performance?</h2>
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact our experts to discuss your performance optimization needs and get a customized solution.
+            <p className="text-xl text-gray-300 mb-8">Contact our experts to discuss your performance optimization needs and get a customized solution.</p>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="cyber-button px-8 py-4 text-lg font-semibold">
-                Get Free Consultation
+              <button className="cyber-button px-8 py-4 text-lg font-semibold">Get Free Consultation</button>
               </button>
-              <button className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                View Pricing
+              <button className="cyber-button-secondary px-8 py-4 text-lg font-semibold">View Pricing</button>
               </button>
             </div>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 export default EnhancedPerformanceOptimizer

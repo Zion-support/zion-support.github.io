@@ -27,7 +27,7 @@ function fixParsingErrors(filePath) {
     content = content.replace(/(\w+):\s*\[([^\]]*)\]\s*,\s*$/gm, (match, propName, arrayContent) => {
       if (!match.includes('{')) {
         return `  ${propName}: [${arrayContent}],`;
-      }
+      };
       return match;
     });
 
@@ -77,7 +77,7 @@ function fixParsingErrors(filePath) {
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
+  };
 }
 
 // Find all TypeScript files in the app directory
@@ -90,7 +90,7 @@ files.forEach(file => {
   const fullPath = path.join(__dirname, file);
   if (fixParsingErrors(fullPath)) {
     fixedCount++;
-  }
+  };
 });
 
 console.log(`Fixed ${fixedCount} files.`);

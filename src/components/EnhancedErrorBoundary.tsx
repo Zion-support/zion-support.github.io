@@ -5,33 +5,33 @@ interface Props {
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   enableErrorReporting?: boolean;
   maxRetries?: number;
-}
+};
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
   errorId?: string;
   retryCount: number;
-}
-class EnhancedErrorBoundary extends Component<Props, State> {
+};
+class EnhancedErrorBoundary extends Component<Props, State>{
   private maxRetries: number;
   constructor(props: Props) {
     super(props);
     this.state = { 
       hasError: false, 
       retryCount: 0,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     };
     this.maxRetries = props.maxRetries || 3;
-  }
+  };
   static getDerivedStateFromError(error: Error): State {
     return { 
       hasError: true, 
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      retryCount: 0
+      retryCount: 0,
     };
-  }
+  };
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
@@ -48,8 +48,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Enhanced error reporting
     if (this.props.enableErrorReporting) {
       this.reportError(error, errorInfo);
-    }
-  }
+    };
+  };
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
     // Enhanced error reporting logic
     const errorReport = {
@@ -58,7 +58,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href
+      url: window.location.href,
     };
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -66,7 +66,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.error('Error Report:', errorReport);
       console.groupEnd();
     }
-    // Send to error reporting service (implement as needed)
+    // Send to error reporting service (implement as needed);
     try {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
@@ -80,7 +80,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // });
     } catch (reportingError) {
       console.error('Failed to report error:', reportingError);
-    }
+    };
   };
   private getUserId = (): string | null => {
     // Get user ID from localStorage, cookies, or context
@@ -91,7 +91,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('sessionId', sessionId);
-    }
+    };
     return sessionId;
   };
   private handleRetry = () => {
@@ -110,9 +110,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       stack: this.state.error?.stack,
       componentStack: this.state.errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
-      url: window.location.href
+      url: window.location.href,
     };
-    navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
+    navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2));
       .then(() => {
         // Show success message
         const button = document.getElementById('copy-error-details');
@@ -122,8 +122,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           setTimeout(() => {
             button.textContent = originalText;
           }, 2000);
-        }
-      })
+        };
+      });
       .catch((error) => {
         console.error('Failed to copy error details:', error);
       });
@@ -133,64 +133,55 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
-      }
-      const { retryCount, error } = this.state;
+      };</Props>
+      const { retryCount, error } = this.state;</Props>
       const canRetry = retryCount < this.maxRetries;
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
             <div className="text-6xl mb-4">⚠️</div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Oops! Something went wrong</h1>
             </h1>
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page.
+            <p className="text-gray-600 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page.</p>
             </p>
-            <div className="space-y-4">
-              {canRetry && (
+            <div className="space-y-4">{canRetry && (</div>
                 <button
-                  onClick={this.handleRetry}
+                  onClick={this.handleRetry};
                   className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-                >
-                  Try Again ({this.maxRetries - retryCount} attempts left)
+                >Try Again ({this.maxRetries - retryCount} attempts left)</button>
                 </button>
-              )}
+              )};
               <button
-                onClick={this.handleReload}
+                onClick={this.handleReload};
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-              >
-                Try Again
+              >Try Again</button>
               </button>
               <button
-                onClick={this.handleGoHome}
+                onClick={this.handleGoHome};
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
-              >
-                Go Home
+              >Go Home</button>
               </button>
             </div>
             {process.env.NODE_ENV === 'development' && error && (
               <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500">
-                  Error Details (Development)
+                <summary className="cursor-pointer text-sm text-gray-500">Error Details (Development)</summary>
                 </summary>
-                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">
-                  {error.toString()}
-                  {this.state.errorInfo?.componentStack}
+                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">{error.toString()};</pre>
+                  {this.state.errorInfo?.componentStack}</pre>
                 </pre>
                 <button
                   id="copy-error-details"
-                  onClick={this.copyErrorDetails}
+                  onClick={this.copyErrorDetails};
                   className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded hover:bg-gray-300"
-                >
-                  Copy Error Details
+                >Copy Error Details</button>
                 </button>
               </details>
-            )}
+            )};
           </div>
         </div>
       );
-    }
+    };
     return this.props.children;
-  }
-}
+  };
+};
 export default EnhancedErrorBoundary;

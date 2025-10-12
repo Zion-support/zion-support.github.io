@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-import { Brain, Zap, Shield, Loader2 } from 'lucide-react';
 
 export const PageLoader: React.FC = () => {
   return (
@@ -52,10 +50,8 @@ export const ContentSkeleton: React.FC = () => {
 
 export const SkeletonGrid: React.FC<{ count?: number }> = ({ count = 3 }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {Array.from({ length: count }).map((_, index) => (
-        <ServiceCardSkeleton key={index} />
-      ))}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{Array.from({ length: count }).map((_, index) => (</div>
+        <ServiceCardSkeleton key={index} />))}</ServiceCardSkeleton>
     </div>
   );
 };

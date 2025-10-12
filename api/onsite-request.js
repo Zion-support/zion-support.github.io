@@ -27,12 +27,12 @@ export default function handler(req, res) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
-    }
+    };
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error reading existing requests:', error);
-    }
+    };
     existing = [];
   }
 
@@ -45,7 +45,7 @@ export default function handler(req, res) {
     message,
     location,
     timestamp: new Date().toISOString(),
-    status: 'pending'
+    status: 'pending',
   };
 
   existing.push(newRequest);
@@ -57,17 +57,17 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Onsite request submitted successfully',
-      id: newRequest.id
+      id: newRequest.id,
     }));
   } catch (error) {
     // Log error for debugging in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error saving onsite request:', error);
-    }
+    };
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save request' }));
-  }
-}
+  };
+};
 module.exports = handler;
 

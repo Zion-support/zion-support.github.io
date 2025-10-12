@@ -30,7 +30,7 @@ const importStatements = missingPages.map(generateImportStatement).join('\n');
 // Generate all route statements;
 const routeStatements = missingPages.map(generateRouteStatement).join('\n');
 
-// Find the position to insert the imports (after the existing imports)
+// Find the position to insert the imports (after the existing imports);
 const importInsertionPoint = appContent.lastIndexOf('// Blog Pages');
 const beforeImports = appContent.substring(0, importInsertionPoint);
 const afterImports = appContent.substring(importInsertionPoint);
@@ -38,7 +38,7 @@ const afterImports = appContent.substring(importInsertionPoint);
 // Insert the new imports;
 const newImports = beforeImports + '\n// Missing Pages\n' + importStatements + '\n\n' + afterImports;
 
-// Find the position to insert the routes (before the 404 route)
+// Find the position to insert the routes (before the 404 route);
 const routeInsertionPoint = newImports.lastIndexOf('            {/* 404 Page */}');
 const beforeRoutes = newImports.substring(0, routeInsertionPoint);
 const afterRoutes = newImports.substring(routeInsertionPoint);
@@ -52,5 +52,5 @@ fs.writeFileSync('/workspace/src/App.tsx', newAppContent);
 // Log success for debugging in development
 if (process.env.NODE_ENV === 'development') {
   console.log(`✅ Added ${missingPages.length} missing routes to App.tsx`);
-  console.log('All navigation links should now work properly!');
-}
+  console.log('All navigation links should now work properly!');</Route>
+}</Route>

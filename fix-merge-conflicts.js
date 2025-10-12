@@ -1,8 +1,6 @@
+import { fileURLToPath } from 'url';
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -31,10 +29,10 @@ function resolveMergeConflicts(content) {
       if (conflictType === 'head') {
         resolvedLines.push(line);
       }
-      // Skip lines from other branch (conflictType === 'separator' or 'other')
+      // Skip lines from other branch (conflictType === 'separator' or 'other');
     } else {
       resolvedLines.push(line);
-    }
+    };
   }
   
   return resolvedLines.join('\n');
@@ -56,7 +54,7 @@ function processFile(filePath) {
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
+  };
 }
 
 // Function to find all files with merge conflicts
@@ -74,20 +72,20 @@ function findFilesWithConflicts(dir) {
         // Skip node_modules and other common directories
         if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
           scanDirectory(fullPath);
-        }
+        };
       } else if (stat.isFile()) {
         const ext = path.extname(item);
         if (['.tsx', '.ts', '.js', '.jsx'].includes(ext)) {
           try {
             const content = fs.readFileSync(fullPath, 'utf8');
               files.push(fullPath);
-            }
+            };
           } catch (error) {
             // Skip files that can't be read
-          }
-        }
-      }
-    }
+          };
+        };
+      };
+    };
   }
   
   scanDirectory(dir);
@@ -105,7 +103,7 @@ let resolvedCount = 0;
 for (const filePath of filesWithConflicts) {
   if (processFile(filePath)) {
     resolvedCount++;
-  }
+  };
 }
 
 console.log(`\nResolved merge conflicts in ${resolvedCount} files`);

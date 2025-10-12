@@ -1,7 +1,7 @@
-'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router-dom'
+'use client'
 
 interface SEOHeadProps {
   title?: string
@@ -12,7 +12,7 @@ interface SEOHeadProps {
   type?: string
 }
 
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
+const EnhancedSEOHead: React.FC<SEOHeadProps>= ({
   title = 'Zion Tech Group - AI & IT Solutions',
   description = 'Leading provider of AI and IT solutions, transforming businesses through innovative technology and expert consulting.',
   keywords = 'AI solutions, IT services, artificial intelligence, machine learning, cloud computing, cybersecurity, digital transformation',
@@ -20,7 +20,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   url,
   type = 'website'
 }) => {
-  const location = useLocation()
+  const location = useLocation();
   const currentUrl = url || `https://ziontechgroup.com${location.pathname}`
   
   const structuredData = {
@@ -44,10 +44,10 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "addressLocality": "San Francisco",
       "addressRegion": "CA",
       "addressCountry": "US"
-    }
-  }
-
-  return (
+    };
+  };
+</SEOHeadProps>
+  return (</SEOHeadProps>
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -62,11 +62,10 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={currentUrl} />
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
+      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
       </script>
     </Helmet>
-  )
+  );
 }
 
 export default EnhancedSEOHead

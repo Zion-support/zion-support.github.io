@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
 
 // Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {
@@ -22,7 +20,7 @@ function fixMergeConflicts(filePath) {
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
-  }
+  };
 }
 
 // Function to find all files with merge conflicts
@@ -43,12 +41,12 @@ function findFilesWithMergeConflicts(dir) {
           const content = fs.readFileSync(fullPath, 'utf8');
           if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             files.push(fullPath);
-          }
+          };
         } catch (error) {
           // Skip files that can't be read
-        }
-      }
-    }
+        };
+      };
+    };
   }
   
   walkDir(dir);
@@ -65,7 +63,7 @@ let fixedCount = 0;
 for (const file of filesWithConflicts) {
   if (fixMergeConflicts(file)) {
     fixedCount++;
-  }
+  };
 }
 
 console.log(`Fixed merge conflicts in ${fixedCount} files`);

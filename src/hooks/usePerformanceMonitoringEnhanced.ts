@@ -1,5 +1,5 @@
-'use client';
 import { useEffect, useCallback } from 'react';
+'use client';
 export const usePerformanceMonitoring = () => {
   const reportWebVitals = useCallback((metric: { name: string; value: number; delta: number; id: string; navigationType: string }) => {
     const body = JSON.stringify(metric);
@@ -8,7 +8,7 @@ export const usePerformanceMonitoring = () => {
       navigator.sendBeacon(url, body);
     } else {
       fetch(url, { body, method: 'POST', keepalive: true }).catch(console.error);
-    }
+    };
   }, []);
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -18,13 +18,13 @@ export const usePerformanceMonitoring = () => {
           reportWebVitals({
             name: entry.name,
             value: entry.startTime,
-            timestamp: Date.now()
+            timestamp: Date.now();
           });
-        }
+        };
       });
       observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
       return () => observer.disconnect();
-    }
+    };
   }, [reportWebVitals]);
   return { reportWebVitals };
 };

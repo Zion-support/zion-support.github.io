@@ -1,5 +1,5 @@
-'use client'
 import React, { useEffect } from 'react'
+'use client'
 
 interface AnalyticsProps {
   enableGoogleAnalytics?: boolean
@@ -8,7 +8,7 @@ interface AnalyticsProps {
   enableUserBehaviorTracking?: boolean
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({
+const Analytics: React.FC<AnalyticsProps>= ({
   enableGoogleAnalytics = true,
   enablePerformanceMonitoring = true,
   enableErrorTracking = true,
@@ -16,26 +16,26 @@ const Analytics: React.FC<AnalyticsProps> = ({
 }) => {
   useEffect(() => {
     if (enableGoogleAnalytics) {
-      initializeGoogleAnalytics()
-    }
+      initializeGoogleAnalytics();
+    };
     if (enablePerformanceMonitoring) {
-      initializePerformanceMonitoring()
-    }
+      initializePerformanceMonitoring();
+    };
     if (enableErrorTracking) {
-      initializeErrorTracking()
-    }
+      initializeErrorTracking();
+    };
     if (enableUserBehaviorTracking) {
-      initializeUserBehaviorTracking()
-    }
+      initializeUserBehaviorTracking();
+    };
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking])
 
   const initializeGoogleAnalytics = () => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'GA_MEASUREMENT_ID', {
         page_title: document.title,
-        page_location: window.location.href
-      })
-    }
+        page_location: window.location.href,
+      });
+    };
   }
 
   const initializePerformanceMonitoring = () => {
@@ -43,12 +43,12 @@ const Analytics: React.FC<AnalyticsProps> = ({
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
-            console.log('Navigation timing:', entry)
-          }
-        }
-      })
-      observer.observe({ entryTypes: ['navigation'] })
-    }
+            console.log('Navigation timing:', entry);
+          };
+        };
+      });
+      observer.observe({ entryTypes: ['navigation'] });
+    };
   }
 
   const initializeErrorTracking = () => {
@@ -61,8 +61,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
       window.addEventListener('unhandledrejection', (event) => {
         console.error('Unhandled promise rejection:', event.reason)
         // Send error to analytics service
-      })
-    }
+      });
+    };
   }
 
   const initializeUserBehaviorTracking = () => {
@@ -72,9 +72,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
         if (window.gtag) {
           window.gtag('event', 'page_view', {
             page_title: document.title,
-            page_location: window.location.href
-          })
-        }
+            page_location: window.location.href,
+          });
+        };
       }
 
       // Track clicks
@@ -84,41 +84,41 @@ const Analytics: React.FC<AnalyticsProps> = ({
           window.gtag('event', 'click', {
             event_category: 'engagement',
             event_label: target.tagName + (target.className ? '.' + target.className : ''),
-            value: 1
-          })
-        }
+            value: 1,
+          });
+        };
       }
 
       // Track scroll depth
       let maxScroll = 0
       const trackScroll = () => {
-        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
+        const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
         if (scrollPercent > maxScroll) {
           maxScroll = scrollPercent
           if (window.gtag && scrollPercent % 25 === 0) {
             window.gtag('event', 'scroll', {
               event_category: 'engagement',
               event_label: `${scrollPercent}%`,
-              value: scrollPercent
-            })
-          }
-        }
+              value: scrollPercent,
+            });
+          };
+        };
       }
 
       // Initialize tracking
-      trackPageView()
-      document.addEventListener('click', trackClick)
+      trackPageView();
+      document.addEventListener('click', trackClick);
       window.addEventListener('scroll', trackScroll)
 
       // Cleanup
       return () => {
-        document.removeEventListener('click', trackClick)
-        window.removeEventListener('scroll', trackScroll)
-      }
-    }
+        document.removeEventListener('click', trackClick);
+        window.removeEventListener('scroll', trackScroll);
+      };
+    };
   }
 
   return null
-}
-
-export default Analytics
+};
+</AnalyticsProps>
+export default Analytics</AnalyticsProps>

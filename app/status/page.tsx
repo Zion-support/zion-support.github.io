@@ -1,19 +1,19 @@
-'use client'
 import React, { useState, useEffect } from 'react'
 import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import SEOOptimizer from '../components/SEOOptimizer'
+'use client'
 export default function StatusPage() {
-  const [lastUpdated, setLastUpdated] = useState(new Date())
-  const [isRefreshing, setIsRefreshing] = useState(false)
-  const refreshStatus = async () => {export default function StatusPage() {const [lastUpdated, setLastUpdated] = useState(new Date())
+  const [lastUpdated, setLastUpdated] = useState(new Date());
+  const [isRefreshing, setIsRefreshing] = useState(false);
+  const refreshStatus = async () => {export default function StatusPage() {const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);const refreshStatus = async () => {setIsRefreshing(true)
     // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    setLastUpdated(new Date())
-    setIsRefreshing(false)}
-  }
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    setLastUpdated(new Date());
+    setIsRefreshing(false)};
+  };
   const services = [
     {
       name: 'API Services',
@@ -21,7 +21,7 @@ export default function StatusPage() {
       uptime: '99.9%',
       responseTime: '45ms',
       lastIncident: '2024-01-15',
-      description: 'Core API endpoints and authentication'
+      description: 'Core API endpoints and authentication',
     },
     {
       name: 'AI Services',
@@ -29,7 +29,7 @@ export default function StatusPage() {
       uptime: '99.8%',
       responseTime: '120ms',
       lastIncident: '2024-01-10',
-      description: 'Machine learning and AI processing'
+      description: 'Machine learning and AI processing',
     },
     {
       name: 'Cloud Infrastructure',
@@ -37,7 +37,7 @@ export default function StatusPage() {
       uptime: '99.95%',
       responseTime: '25ms',
       lastIncident: '2024-01-05',
-      description: 'Cloud hosting and storage services'
+      description: 'Cloud hosting and storage services',
     },
     {
       name: 'Database',
@@ -45,7 +45,7 @@ export default function StatusPage() {
       uptime: '99.9%',
       responseTime: '15ms',
       lastIncident: '2024-01-12',
-      description: 'Primary and backup databases'
+      description: 'Primary and backup databases',
     },
     {
       name: 'CDN',
@@ -53,7 +53,7 @@ export default function StatusPage() {
       uptime: '99.99%',
       responseTime: '8ms',
       lastIncident: '2024-01-08',
-      description: 'Content delivery network'
+      description: 'Content delivery network',
     },
     {
       name: 'Monitoring',
@@ -61,9 +61,9 @@ export default function StatusPage() {
       uptime: '100%',
       responseTime: '5ms',
       lastIncident: 'Never',
-      description: 'System monitoring and alerts'
-    }
-  ]
+      description: 'System monitoring and alerts',
+    };
+  ];
   const incidents = [
     {
       id: 1,
@@ -73,7 +73,7 @@ export default function StatusPage() {
       startTime: '2024-01-15T10:30:00Z',
       endTime: '2024-01-15T11:45:00Z',
       description: 'Some API endpoints experienced increased response times due to high traffic load.',
-      affectedServices: ['API Services', 'AI Services']
+      affectedServices: ['API Services', 'AI Services'];
     },
     {
       id: 2,
@@ -83,9 +83,9 @@ export default function StatusPage() {
       startTime: '2024-01-12T14:20:00Z',
       endTime: '2024-01-12T16:30:00Z',
       description: 'Intermittent database connection issues affecting some user operations.',
-      affectedServices: ['Database', 'API Services']
-    }
-  ]
+      affectedServices: ['Database', 'API Services'];
+    };
+  ];
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational':
@@ -96,43 +96,43 @@ export default function StatusPage() {
       uptime: '99.9%',
       responseTime: '45ms',
       lastIncident: '2024-01-15',
-      description: 'Core API endpoints and authentication'}
+      description: 'Core API endpoints and authentication'};
     },
     {name: 'AI Services',
       status: 'operational',
       uptime: '99.8%',
       responseTime: '120ms',
       lastIncident: '2024-01-10',
-      description: 'Machine learning and AI processing'}
+      description: 'Machine learning and AI processing'};
     },
     {name: 'Cloud Infrastructure',
       status: 'operational',
       uptime: '99.95%',
       responseTime: '25ms',
       lastIncident: '2024-01-05',
-      description: 'Cloud hosting and storage services'}
+      description: 'Cloud hosting and storage services'};
     },
     {name: 'Database',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '15ms',
       lastIncident: '2024-01-12',
-      description: 'Primary and backup databases'}
+      description: 'Primary and backup databases'};
     },
     {name: 'CDN',
       status: 'operational',
       uptime: '99.99%',
       responseTime: '8ms',
       lastIncident: '2024-01-08',
-      description: 'Content delivery network'}
+      description: 'Content delivery network'};
     },
     {name: 'Monitoring',
       status: 'operational',
       uptime: '100%',
       responseTime: '5ms',
       lastIncident: 'Never',
-      description: 'System monitoring and alerts'}
-    }
+      description: 'System monitoring and alerts'};
+    };
   ];const incidents = [
     {id: 1,
       title: 'API Response Time Degradation',
@@ -141,7 +141,7 @@ export default function StatusPage() {
       startTime: '2024-01-15T10:30:00Z',
       endTime: '2024-01-15T11:45:00Z',
       description: 'Some API endpoints experienced increased response times due to high traffic load.',
-      affectedServices: ['API Services', 'AI Services']}
+      affectedServices: ['API Services', 'AI Services']};
     },
     {id: 2,
       title: 'Database Connection Issues',
@@ -150,17 +150,14 @@ export default function StatusPage() {
       startTime: '2024-01-12T14:20:00Z',
       endTime: '2024-01-12T16:30:00Z',
       description: 'Intermittent database connection issues affecting some user operations.',
-      affectedServices: ['Database', 'API Services']}
-    }
+      affectedServices: ['Database', 'API Services']};
+    };
   ];const getStatusIcon = (switch (status) {case 'operational':
-        return <CheckCircle className="w-5 h-5 text-green-400" />
-      case 'degraded':
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />
-      case 'outage':
-        return <XCircle className="w-5 h-5 text-red-400" />
-      default:
-        return <Clock className="w-5 h-5 text-gray-400" />}
-  }
+        return <CheckCircle className="w-5 h-5 text-green-400" />case 'degraded':</CheckCircle>
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />case 'outage':</AlertTriangle>
+        return <XCircle className="w-5 h-5 text-red-400" />default:</XCircle>
+        return <Clock className="w-5 h-5 text-gray-400" />};
+  };
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'operational':
@@ -169,9 +166,9 @@ export default function StatusPage() {
         return 'text-yellow-400'
       case 'outage':
         return 'text-red-400'
-      default:
-        return 'text-gray-400'}
-  }
+      default:,
+        return 'text-gray-400'};
+  };
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical':
@@ -180,106 +177,97 @@ export default function StatusPage() {
         return 'bg-orange-500/20 text-orange-400 border-orange-500/50'
       case 'minor':
         return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50'
-      default:
-        return 'bg-gray-500/20 text-gray-400 border-gray-500/50'}
-  }
-  const overallStatus = services.every(service => service.status === 'operational') 
+      default:,
+        return 'bg-gray-500/20 text-gray-400 border-gray-500/50'};
+  };
+  const overallStatus = services.every(service => service.status === 'operational') ;
     ? 'operational' 
-    : services.some(service => service.status === 'outage') 
+    : services.some(service => service.status === 'outage') ;
       ? 'outage' 
-      : 'degraded'
-  return (
+      : 'degraded'</Clock>
+  return (</Clock>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Real-time status of all our services. We're committed to providing reliable, 
-            high-performance AI and IT solutions.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Real-time status of all our services. We're committed to providing reliable, </p>
+            high-performance AI and IT solutions.</p>
           </p>
           <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="flex items-center gap-2">
-      default:) => {
+            <div className="flex items-center gap-2">default:) => {
   return (
-    $3
-  )}
-        return <Clock className="w-5 h-5 text-gray-400" />}
-    }
+    $3</div>
+  )}</div>
+        return <Clock className="w-5 h-5 text-gray-400" />};
+    };
   };const getStatusColor = (switch (status) {case 'operational':
         return 'text-green-400'
       case 'degraded':
         return 'text-yellow-400'
       case 'outage':
         return 'text-red-400'
-      default:) => {
+      default:) => {,
   return (
     $3
-  )}
-        return 'text-gray-400'}
-    }
+  )};
+        return 'text-gray-400'};
+    };
   };const getSeverityColor = (switch (severity) {case 'critical':
         return 'bg-red-500/20 text-red-400 border-red-500/50'
       case 'major':
         return 'bg-orange-500/20 text-orange-400 border-orange-500/50'
       case 'minor':
         return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50'
-      default:) => {
+      default:) => {,
   return (
     $3
-  )}
-        return 'bg-gray-500/20 text-gray-400 border-gray-500/50'}
-    }
-  };const overallStatus = services.every(service => service.status === 'operational')
+  )};
+        return 'bg-gray-500/20 text-gray-400 border-gray-500/50'};
+    };
+  };const overallStatus = services.every(service => service.status === 'operational');
     ? 'operational'
-    : services.some(service => service.status === 'outage')
-      ? 'outage'
+    : services.some(service => service.status === 'outage');</Clock>
+      ? 'outage'</Clock>
       : 'degraded';return (</h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Real-time status of all our services. We're committed to providing reliable,
-            high-performance AI and IT solutions.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Real-time status of all our services. We're committed to providing reliable,</p>
+            high-performance AI and IT solutions.</p>
           </p>
           <div className="flex items-center justify-center gap-4 mb-8"></div>
             <div className="flex items-center gap-2"></div>
-              {getStatusIcon(overallStatus)}
-              <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>
-                {overallStatus === 'operational' ? 'All Systems Operational' :}
-                 overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
+              {getStatusIcon(overallStatus)};
+              <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>{overallStatus === 'operational' ? 'All Systems Operational' :};</span>
+                 overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}</span>
               </span>
             </div>
             <button
-              onClick={refreshStatus}
-              disabled={isRefreshing}
+              onClick={refreshStatus};
+              disabled={isRefreshing};
               className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50">
-              <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
-              Refresh
+              <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />Refresh</RefreshCw>
   </
           </div>
-          <p className="text-gray-400 text-sm">
-            Last updated: {lastUpdated.toLocaleString()}
+          <p className="text-gray-400 text-sm">Last updated: {lastUpdated.toLocaleString()}</p>
           </p>
         </div>
       </section>
               className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50">
-              <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
-              Refresh
+              <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />Refresh</RefreshCw>
             </button>
           </div>
-          <p className="text-gray-400 text-sm">
-            Last updated: {lastUpdated.toLocaleString()}
+          <p className="text-gray-400 text-sm">Last updated: {lastUpdated.toLocaleString()}</p>
           </p>
         </div>
       </section>
-      {/* Services Status */}
+      {/* Services Status */};
       <section className="py-16 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-            {services.map((service, index) => (}
+            {services.map((service, index) => (};
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300"></div>
                 <div className="flex items-center justify-between mb-4"></div>
                   <div className="flex items-center gap-3"></div>
-                    {getStatusIcon(service.status)}
+                    {getStatusIcon(service.status)};
                     <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                   </div>
-                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>
-                    {service.status}
+                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>{service.status}</span>
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
@@ -298,7 +286,7 @@ export default function StatusPage() {
                   </div>
                 </div>
               </div>
-            ))}
+            ))};
           </div>
         </div>
       </section>
@@ -319,16 +307,16 @@ export default function StatusPage() {
                     <span className="text-white">{service.lastIncident}</span>
                   </div>
                 </div>
-              </div>))}
+              </div>))};
           </div>
         </div>
       </section>
-      {/* Recent Incidents */}
+      {/* Recent Incidents */};
       <section className="py-16 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Recent Incidents</h2>
           <div className="space-y-6"></div>
-            {incidents.map((incident) => (}
+            {incidents.map((incident) => (};
               <div key={incident.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
                 <div className="flex items-start justify-between mb-4"></div>
                   <div></div>
@@ -339,14 +327,12 @@ export default function StatusPage() {
                     </div>
                   </div>
                   <div className="flex items-center gap-2"></div>
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>
-                      {incident.severity}
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>{incident.severity}</span>
                     </span>
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${incident.status === 'resolved'
                         ? 'bg-green-500/20 text-green-400'
-                        : 'bg-yellow-500/20 text-yellow-400'}
-                    }`}>
-                      {incident.status}
+                        : 'bg-yellow-500/20 text-yellow-400'};
+                    }`}>{incident.status}</span>
                     </span>
                   </div>
                 </div>
@@ -356,11 +342,11 @@ export default function StatusPage() {
                   <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
                 </div>
               </div>
-            ))}
+            ))};
           </div>
         </div>
       </section>
-      {/* Performance Metrics */}
+      {/* Performance Metrics */};
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>
@@ -396,28 +382,24 @@ export default function StatusPage() {
           </div>
         </div>
       </section>
-      {/* CTA Section */}
+      {/* CTA Section */};
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Need More Information?
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Need More Information?</h2>
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Subscribe to status updates or contact our support team for more details.
+          <p className="text-xl text-purple-100 mb-8">Subscribe to status updates or contact our support team for more details.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Subscribe to Updates
+            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Subscribe to Updates</button>
   </
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              Contact Support
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">Contact Support</button>
   </
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  )}
+  )};
   </button>
   </button>
   </button>
@@ -429,11 +411,11 @@ export default function StatusPage() {
                   <span className="text-gray-400 text-sm">Affected Services: </span>
                   <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
                 </div>
-              </div>))}
+              </div>))};
           </div>
         </div>
       </section>
-      {/* Performance Metrics */}
+      {/* Performance Metrics */};
       <section className="py-16 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>
@@ -469,21 +451,17 @@ export default function StatusPage() {
           </div>
         </div>
       </section>
-      {/* CTA Section */}
+      {/* CTA Section */};
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Need More Information?
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Need More Information?</h2>
           </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Subscribe to status updates or contact our support team for more details.
+          <p className="text-xl text-purple-100 mb-8">Subscribe to status updates or contact our support team for more details.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
-              Subscribe to Updates
+            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Subscribe to Updates</button>
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-              Contact Support
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">Contact Support</button>
             </button>
           </div>
         </div>

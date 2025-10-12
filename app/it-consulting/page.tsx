@@ -1,8 +1,8 @@
-'use client'
 import React from 'react'
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import {Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,
+'use client'
   Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock,
   TrendingUp, Star, Settings, Calendar, CheckSquare, FileText,
   Mail, Phone, DollarSign, Clock, Award, CheckCircle,
@@ -71,11 +71,11 @@ import {Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,
   Smartphone as SmartphoneIcon2, Laptop as LaptopIcon,
   Tablet as TabletIcon, Headphones as HeadphonesIcon2,
   Keyboard as KeyboardIcon, Mouse as MouseIcon,
-  Webcam as WebcamIcon, Speaker as SpeakerIcon}
+  Webcam as WebcamIcon, Speaker as SpeakerIcon};
 } from 'lucide-react'
 const ITConsultingPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
   const itServices = [
     // IT Infrastructure Services
     {
@@ -85,7 +85,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'infrastructure',
       icon: Server,
       price: 'Starting at $5,000',
-      features: [
+      features: [,
         'Network architecture design',
         'Server deployment and configuration',
         'Storage solutions implementation',
@@ -95,7 +95,7 @@ const ITConsultingPage: React.FC = () => {
         'Documentation and training',
         'Ongoing support and maintenance'
       ],
-      benefits: [
+      benefits: [,
         'Scalable and reliable infrastructure',
         'Improved system performance',
         'Enhanced security posture',
@@ -108,7 +108,7 @@ const ITConsultingPage: React.FC = () => {
       support: '24/7 technical support',
       certifications: ['Cisco', 'Microsoft', 'VMware', 'AWS', 'Azure'],
       link: 'https://ziontechgroup.com/it-infrastructure-design',
-      caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design'
+      caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design',
     },
     {
       id: 'cloud-migration-services',
@@ -117,7 +117,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'cloud',
       icon: Cloud,
       price: 'Starting at $3,000',
-      features: [
+      features: [,
         'Cloud readiness assessment',
         'Migration strategy development',
         'Data and application migration',
@@ -127,7 +127,7 @@ const ITConsultingPage: React.FC = () => {
         'Disaster recovery setup',
         'Training and documentation'
       ],
-      benefits: [
+      benefits: [,
         'Reduce IT costs by 30-50%',
         'Improve scalability and flexibility',
         'Enhanced security and compliance',
@@ -140,7 +140,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Migration specialist and ongoing support',
       certifications: ['AWS', 'Azure', 'Google Cloud', 'VMware'],
       link: 'https://ziontechgroup.com/cloud-migration-services',
-      caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure'
+      caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure',
     },
     {
       id: 'cybersecurity-services',
@@ -149,7 +149,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'security',
       icon: Shield,
       price: 'Starting at $2,500',
-      features: [
+      features: [,
         'Security risk assessment',
         'Penetration testing',
         'Security policy development',
@@ -159,7 +159,7 @@ const ITConsultingPage: React.FC = () => {
         'Compliance auditing',
         'Incident response planning'
       ],
-      benefits: [
+      benefits: [,
         'Protect against cyber threats',
         'Ensure regulatory compliance',
         'Reduce security risks by 90%',
@@ -172,7 +172,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Security specialist and 24/7 monitoring',
       certifications: ['CISSP', 'CISM', 'CEH', 'CompTIA Security+'],
       link: 'https://ziontechgroup.com/cybersecurity-services',
-      caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations'
+      caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations',
     },
     {
       id: 'network-design-optimization',
@@ -181,7 +181,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'networking',
       icon: Network,
       price: 'Starting at $2,000',
-      features: [
+      features: [,
         'Network architecture design',
         'Bandwidth optimization',
         'Quality of Service (QoS) setup',
@@ -191,7 +191,7 @@ const ITConsultingPage: React.FC = () => {
         'Redundancy and failover setup',
         'Performance tuning'
       ],
-      benefits: [
+      benefits: [,
         'Improve network performance by 200%',
         'Reduce network downtime',
         'Optimize bandwidth usage',
@@ -204,7 +204,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Network specialist and ongoing optimization',
       certifications: ['CCNA', 'CCNP', 'JNCIA', 'CompTIA Network+'],
       link: 'https://ziontechgroup.com/network-design-optimization',
-      caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues'
+      caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues',
     },
     {
       id: 'database-management',
@@ -213,7 +213,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'database',
       icon: Database,
       price: 'Starting at $1,500',
-      features: [
+      features: [,
         'Database design and architecture',
         'Performance optimization',
         'Backup and recovery setup',
@@ -223,7 +223,7 @@ const ITConsultingPage: React.FC = () => {
         'Capacity planning',
         'Maintenance and updates'
       ],
-      benefits: [
+      benefits: [,
         'Improve database performance by 150%',
         'Ensure data integrity and security',
         'Reduce maintenance overhead',
@@ -236,7 +236,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Database specialist and 24/7 monitoring',
       certifications: ['Oracle', 'Microsoft SQL Server', 'MySQL', 'PostgreSQL'],
       link: 'https://ziontechgroup.com/database-management',
-      caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%'
+      caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%',
     },
     {
       id: 'it-support-services',
@@ -245,7 +245,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'support',
       icon: Headphones,
       price: 'Starting at $99/user/month',
-      features: [
+      features: [,
         '24/7 technical support',
         'Remote monitoring and management',
         'Proactive maintenance',
@@ -255,7 +255,7 @@ const ITConsultingPage: React.FC = () => {
         'IT asset management',
         'Help desk services'
       ],
-      benefits: [
+      benefits: [,
         'Reduce IT downtime by 80%',
         'Lower IT support costs',
         'Improve user productivity',
@@ -268,7 +268,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Dedicated support team',
       certifications: ['Microsoft', 'CompTIA', 'Cisco', 'VMware'],
       link: 'https://ziontechgroup.com/it-support-services',
-      caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity'
+      caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity',
     },
     {
       id: 'software-development',
@@ -277,7 +277,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'development',
       icon: Code,
       price: 'Starting at $5,000',
-      features: [
+      features: [,
         'Requirements analysis',
         'Custom application development',
         'Web and mobile app development',
@@ -287,7 +287,7 @@ const ITConsultingPage: React.FC = () => {
         'Deployment and maintenance',
         'User training and documentation'
       ],
-      benefits: [
+      benefits: [,
         'Streamline business processes',
         'Improve operational efficiency',
         'Gain competitive advantage',
@@ -300,7 +300,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Development team and ongoing maintenance',
       technologies: ['React', 'Node.js', 'Python', 'Java', 'C#', 'PHP', 'Mobile'],
       link: 'https://ziontechgroup.com/software-development',
-      caseStudy: 'Logistics company automated 80% of manual processes with custom software'
+      caseStudy: 'Logistics company automated 80% of manual processes with custom software',
     },
     {
       id: 'it-consulting',
@@ -309,7 +309,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'consulting',
       icon: Briefcase,
       price: 'Starting at $200/hour',
-      features: [
+      features: [,
         'IT strategy development',
         'Technology roadmap planning',
         'Digital transformation consulting',
@@ -319,7 +319,7 @@ const ITConsultingPage: React.FC = () => {
         'Change management planning',
         'Implementation guidance'
       ],
-      benefits: [
+      benefits: [,
         'Align IT with business goals',
         'Optimize technology investments',
         'Reduce implementation risks',
@@ -332,7 +332,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Senior consultant and ongoing guidance',
       certifications: ['PMP', 'ITIL', 'COBIT', 'TOGAF'],
       link: 'https://ziontechgroup.com/it-consulting',
-      caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning'
+      caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning',
     },
     {
       id: 'disaster-recovery',
@@ -341,7 +341,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'recovery',
       icon: RefreshCw,
       price: 'Starting at $3,500',
-      features: [
+      features: [,
         'Business impact analysis',
         'Recovery time objective planning',
         'Backup strategy implementation',
@@ -351,7 +351,7 @@ const ITConsultingPage: React.FC = () => {
         'Documentation and procedures',
         'Regular testing and updates'
       ],
-      benefits: [
+      benefits: [,
         'Minimize business disruption',
         'Ensure rapid recovery',
         'Protect critical data',
@@ -364,7 +364,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Recovery specialist and ongoing testing',
       certifications: ['CBCP', 'DRII', 'ITIL', 'ISO 22301'],
       link: 'https://ziontechgroup.com/disaster-recovery',
-      caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution'
+      caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution',
     },
     {
       id: 'compliance-auditing',
@@ -373,7 +373,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'compliance',
       icon: CheckSquare,
       price: 'Starting at $2,000',
-      features: [
+      features: [,
         'Compliance gap analysis',
         'Policy and procedure development',
         'Security control implementation',
@@ -383,7 +383,7 @@ const ITConsultingPage: React.FC = () => {
         'Documentation and reporting',
         'Remediation planning'
       ],
-      benefits: [
+      benefits: [,
         'Ensure regulatory compliance',
         'Reduce audit findings',
         'Improve security posture',
@@ -396,9 +396,9 @@ const ITConsultingPage: React.FC = () => {
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'
-    }
-  ]
+      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits',
+    };
+  ];
   const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
@@ -410,9 +410,9 @@ const ITConsultingPage: React.FC = () => {
     { id: 'development', name: 'Development', icon: Code },
     { id: 'consulting', name: 'Consulting', icon: Briefcase },
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
-    { id: 'compliance', name: 'Compliance', icon: CheckSquare }
-  ]
-  const filteredServices = itServices.filter(service => {const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState('all')
+    { id: 'compliance', name: 'Compliance', icon: CheckSquare };
+  ];
+  const filteredServices = itServices.filter(service => {const ITConsultingPage: React.FC = () => {const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');const itServices = [
     // IT Infrastructure Services
     {id: 'it-infrastructure-design',
@@ -421,7 +421,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'infrastructure',
       icon: Server,
       price: 'Starting at $5,000',
-      features: [
+      features: [,
         'Network architecture design',
         'Server deployment and configuration',
         'Storage solutions implementation',
@@ -431,7 +431,7 @@ const ITConsultingPage: React.FC = () => {
         'Documentation and training',
         'Ongoing support and maintenance'
       ],
-      benefits: [
+      benefits: [,
         'Scalable and reliable infrastructure',
         'Improved system performance',
         'Enhanced security posture',
@@ -444,7 +444,7 @@ const ITConsultingPage: React.FC = () => {
       support: '24/7 technical support',
       certifications: ['Cisco', 'Microsoft', 'VMware', 'AWS', 'Azure'],
       link: 'https://ziontechgroup.com/it-infrastructure-design',
-      caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design'}
+      caseStudy: 'Manufacturing company reduced IT downtime by 95% with our infrastructure design'};
     },
     {id: 'cloud-migration-services',
       name: 'Cloud Migration & Optimization',
@@ -452,7 +452,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'cloud',
       icon: Cloud,
       price: 'Starting at $3,000',
-      features: [
+      features: [,
         'Cloud readiness assessment',
         'Migration strategy development',
         'Data and application migration',
@@ -462,7 +462,7 @@ const ITConsultingPage: React.FC = () => {
         'Disaster recovery setup',
         'Training and documentation'
       ],
-      benefits: [
+      benefits: [,
         'Reduce IT costs by 30-50%',
         'Improve scalability and flexibility',
         'Enhanced security and compliance',
@@ -475,7 +475,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Migration specialist and ongoing support',
       certifications: ['AWS', 'Azure', 'Google Cloud', 'VMware'],
       link: 'https://ziontechgroup.com/cloud-migration-services',
-      caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure'}
+      caseStudy: 'Retail chain saved $2M annually by migrating to cloud infrastructure'};
     },
     {id: 'cybersecurity-services',
       name: 'Cybersecurity Solutions',
@@ -483,7 +483,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'security',
       icon: Shield,
       price: 'Starting at $2,500',
-      features: [
+      features: [,
         'Security risk assessment',
         'Penetration testing',
         'Security policy development',
@@ -493,7 +493,7 @@ const ITConsultingPage: React.FC = () => {
         'Compliance auditing',
         'Incident response planning'
       ],
-      benefits: [
+      benefits: [,
         'Protect against cyber threats',
         'Ensure regulatory compliance',
         'Reduce security risks by 90%',
@@ -506,7 +506,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Security specialist and 24/7 monitoring',
       certifications: ['CISSP', 'CISM', 'CEH', 'CompTIA Security+'],
       link: 'https://ziontechgroup.com/cybersecurity-services',
-      caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations'}
+      caseStudy: 'Healthcare provider achieved 100% compliance with HIPAA regulations'};
     },
     {id: 'network-design-optimization',
       name: 'Network Design & Optimization',
@@ -514,7 +514,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'networking',
       icon: Network,
       price: 'Starting at $2,000',
-      features: [
+      features: [,
         'Network architecture design',
         'Bandwidth optimization',
         'Quality of Service (QoS) setup',
@@ -524,7 +524,7 @@ const ITConsultingPage: React.FC = () => {
         'Redundancy and failover setup',
         'Performance tuning'
       ],
-      benefits: [
+      benefits: [,
         'Improve network performance by 200%',
         'Reduce network downtime',
         'Optimize bandwidth usage',
@@ -537,7 +537,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Network specialist and ongoing optimization',
       certifications: ['CCNA', 'CCNP', 'JNCIA', 'CompTIA Network+'],
       link: 'https://ziontechgroup.com/network-design-optimization',
-      caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues'}
+      caseStudy: 'Law firm improved network speed by 300% and eliminated connectivity issues'};
     },
     {id: 'database-management',
       name: 'Database Management & Optimization',
@@ -545,7 +545,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'database',
       icon: Database,
       price: 'Starting at $1,500',
-      features: [
+      features: [,
         'Database design and architecture',
         'Performance optimization',
         'Backup and recovery setup',
@@ -555,7 +555,7 @@ const ITConsultingPage: React.FC = () => {
         'Capacity planning',
         'Maintenance and updates'
       ],
-      benefits: [
+      benefits: [,
         'Improve database performance by 150%',
         'Ensure data integrity and security',
         'Reduce maintenance overhead',
@@ -568,7 +568,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Database specialist and 24/7 monitoring',
       certifications: ['Oracle', 'Microsoft SQL Server', 'MySQL', 'PostgreSQL'],
       link: 'https://ziontechgroup.com/database-management',
-      caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%'}
+      caseStudy: 'E-commerce platform improved query performance by 400% and reduced costs by 60%'};
     },
     {id: 'it-support-services',
       name: 'Managed IT Support Services',
@@ -576,7 +576,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'support',
       icon: Headphones,
       price: 'Starting at $99/user/month',
-      features: [
+      features: [,
         '24/7 technical support',
         'Remote monitoring and management',
         'Proactive maintenance',
@@ -586,7 +586,7 @@ const ITConsultingPage: React.FC = () => {
         'IT asset management',
         'Help desk services'
       ],
-      benefits: [
+      benefits: [,
         'Reduce IT downtime by 80%',
         'Lower IT support costs',
         'Improve user productivity',
@@ -599,7 +599,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Dedicated support team',
       certifications: ['Microsoft', 'CompTIA', 'Cisco', 'VMware'],
       link: 'https://ziontechgroup.com/it-support-services',
-      caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity'}
+      caseStudy: 'Marketing agency reduced IT issues by 90% and improved employee productivity'};
     },
     {id: 'software-development',
       name: 'Custom Software Development',
@@ -607,7 +607,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'development',
       icon: Code,
       price: 'Starting at $5,000',
-      features: [
+      features: [,
         'Requirements analysis',
         'Custom application development',
         'Web and mobile app development',
@@ -617,7 +617,7 @@ const ITConsultingPage: React.FC = () => {
         'Deployment and maintenance',
         'User training and documentation'
       ],
-      benefits: [
+      benefits: [,
         'Streamline business processes',
         'Improve operational efficiency',
         'Gain competitive advantage',
@@ -630,7 +630,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Development team and ongoing maintenance',
       technologies: ['React', 'Node.js', 'Python', 'Java', 'C#', 'PHP', 'Mobile'],
       link: 'https://ziontechgroup.com/software-development',
-      caseStudy: 'Logistics company automated 80% of manual processes with custom software'}
+      caseStudy: 'Logistics company automated 80% of manual processes with custom software'};
     },
     {id: 'it-consulting',
       name: 'Strategic IT Consulting',
@@ -638,7 +638,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'consulting',
       icon: Briefcase,
       price: 'Starting at $200/hour',
-      features: [
+      features: [,
         'IT strategy development',
         'Technology roadmap planning',
         'Digital transformation consulting',
@@ -648,7 +648,7 @@ const ITConsultingPage: React.FC = () => {
         'Change management planning',
         'Implementation guidance'
       ],
-      benefits: [
+      benefits: [,
         'Align IT with business goals',
         'Optimize technology investments',
         'Reduce implementation risks',
@@ -661,7 +661,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Senior consultant and ongoing guidance',
       certifications: ['PMP', 'ITIL', 'COBIT', 'TOGAF'],
       link: 'https://ziontechgroup.com/it-consulting',
-      caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning'}
+      caseStudy: 'Manufacturing company achieved 40% cost reduction through strategic IT planning'};
     },
     {id: 'disaster-recovery',
       name: 'Disaster Recovery & Business Continuity',
@@ -669,7 +669,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'recovery',
       icon: RefreshCw,
       price: 'Starting at $3,500',
-      features: [
+      features: [,
         'Business impact analysis',
         'Recovery time objective planning',
         'Backup strategy implementation',
@@ -679,7 +679,7 @@ const ITConsultingPage: React.FC = () => {
         'Documentation and procedures',
         'Regular testing and updates'
       ],
-      benefits: [
+      benefits: [,
         'Minimize business disruption',
         'Ensure rapid recovery',
         'Protect critical data',
@@ -692,7 +692,7 @@ const ITConsultingPage: React.FC = () => {
       support: 'Recovery specialist and ongoing testing',
       certifications: ['CBCP', 'DRII', 'ITIL', 'ISO 22301'],
       link: 'https://ziontechgroup.com/disaster-recovery',
-      caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution'}
+      caseStudy: 'Financial services firm achieved 99.9% uptime with our disaster recovery solution'};
     },
     {id: 'compliance-auditing',
       name: 'IT Compliance & Auditing',
@@ -700,7 +700,7 @@ const ITConsultingPage: React.FC = () => {
       category: 'compliance',
       icon: CheckSquare,
       price: 'Starting at $2,000',
-      features: [
+      features: [,
         'Compliance gap analysis',
         'Policy and procedure development',
         'Security control implementation',
@@ -710,7 +710,7 @@ const ITConsultingPage: React.FC = () => {
         'Documentation and reporting',
         'Remediation planning'
       ],
-      benefits: [
+      benefits: [,
         'Ensure regulatory compliance',
         'Reduce audit findings',
         'Improve security posture',
@@ -723,8 +723,8 @@ const ITConsultingPage: React.FC = () => {
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
-      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'}
-    }
+      caseStudy: 'Healthcare provider achieved 100% HIPAA compliance and passed all audits'};
+    };
   ];const categories = [
     { id: 'all', name: 'All IT Services', icon: Grid3X3 },
     { id: 'infrastructure', name: 'Infrastructure', icon: Server },
@@ -736,12 +736,12 @@ const ITConsultingPage: React.FC = () => {
     { id: 'development', name: 'Development', icon: Code },
     { id: 'consulting', name: 'Consulting', icon: Briefcase },
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
-    { id: 'compliance', name: 'Compliance', icon: CheckSquare }
+    { id: 'compliance', name: 'Compliance', icon: CheckSquare };
   ];const filteredServices = itServices.filter(service => {const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
-    return matchesCategory && matchesSearch}
-  })
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch};
+  });
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}</div>
@@ -751,22 +751,19 @@ const ITConsultingPage: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>
             Professional <span className="holographic-text">IT Services</span>
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">
-            Comprehensive IT solutions designed to optimize your technology infrastructure, 
-            enhance security, and drive business growth. Expert consulting and implementation.
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">Comprehensive IT solutions designed to optimize your technology infrastructure, </p>
+            enhance security, and drive business growth. Expert consulting and implementation.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
             <a
               href="tel:+13024640950"
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Phone className="w-5 h-5 inline mr-2" />
-              Call (302) 464-0950
+              <Phone className="w-5 h-5 inline mr-2" />Call (302) 464-0950</Phone>
   </
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Mail className="w-5 h-5 inline mr-2" />
-              Get IT Consultation
+              <Mail className="w-5 h-5 inline mr-2" />Get IT Consultation</Mail>
   </
           </div>
         </div>
@@ -780,27 +777,24 @@ const ITConsultingPage: React.FC = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>
             Professional <span className="holographic-text">IT Services</span>
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">
-            Comprehensive IT solutions designed to optimize your technology infrastructure,
-            enhance security, and drive business growth. Expert consulting and implementation.
+          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto neon-glow">Comprehensive IT solutions designed to optimize your technology infrastructure,</p>
+            enhance security, and drive business growth. Expert consulting and implementation.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
             <a
               href="tel:+13024640950"
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Phone className="w-5 h-5 inline mr-2" />
-              Call (302) 464-0950
+              <Phone className="w-5 h-5 inline mr-2" />Call (302) 464-0950</Phone>
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Mail className="w-5 h-5 inline mr-2" />
-              Get IT Consultation
+              <Mail className="w-5 h-5 inline mr-2" />Get IT Consultation</Mail>
             </a>
           </div>
         </div>
       </section>
-      {/* Search and Filter Section */}
+      {/* Search and Filter Section */};
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>
@@ -811,52 +805,50 @@ const ITConsultingPage: React.FC = () => {
                 <input
                   type="text"
                   placeholder="Search IT services..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                />
+                  value={searchTerm};
+                  onChange={(e) =>setSearchTerm(e.target.value)};
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"</input>
+                /></input>
               </div>
             </div>
                   className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               </div>
             </div>
-            {/* Category Filter */}
+            {/* Category Filter */};
             <div className="lg:w-64"></div>
               <select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
-                {categories.map((category) => (
-                  <option key={category.id} value={category.id}>
-                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
-                {categories.map((category) => (}
-                  <option key={category.id} value={category.id}>
-                    {category.name}
-                  </option>))}
+                value={selectedCategory};
+                onChange={(e) =>setSelectedCategory(e.target.value)};
+                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"></select>
+                {categories.map((category) => (</select>
+                  <option key={category.id} value={category.id}>className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"></option>
+                {categories.map((category) => (}</option>
+                  <option key={category.id} value={category.id}>{category.name}</option>
+                  </option>))};
               </select>
             </div>
           </div>
               </select>
             </div>
           </div>
-          {/* Category Pills */}
+          {/* Category Pills */};
           <div className="flex flex-wrap gap-2 mb-8"></div>
             {categories.map((category) => (</div>
-              <button}
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
+              <button};
+                key={category.id};
+                onClick={() =>setSelectedCategory(category.id)};
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${selectedCategory === category.id
                     ? 'bg-cyan-500 text-white'
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400'}
-                }`}
-              >
-                {category.name}
-              </button>))}
+                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400'};
+                }`};
+              ></button>
+                {category.name}</button>
+              </button>))};
           </div>
         </div>
       </section>
-      {/* Services Grid */}
+      {/* Services Grid */};
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -876,24 +868,22 @@ const ITConsultingPage: React.FC = () => {
                 <div className="space-y-3 mb-6"></div>
                   <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 4).map((feature, idx) => (
+                    <ul className="space-y-1">{service.features.slice(0, 4).map((feature, idx) => (</ul>
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
-                      ))}
+                      ))};
                     </ul>
                   </div>
                   <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                    <ul className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (
+                    <ul className="space-y-1">{service.benefits.slice(0, 2).map((benefit, idx) => (</ul>
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           <span>{benefit}</span>
                         </li>
-                      ))}
+                      ))};
                     </ul>
                   </div>
                 </div>
@@ -915,55 +905,49 @@ const ITConsultingPage: React.FC = () => {
                   <div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div>
                     <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
                   </div>
-                )}
+                )};
                 <div className="space-y-3"></div>
                   <a
-                    href={service.link}
+                    href={service.link};
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                    Get Free Consultation
+                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">Get Free Consultation</a>
   </
                   <a
                     href="tel:+13024640950"
                     className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                    <Phone className="w-4 h-4 inline mr-2" />
-                    Call for Quote
+                    <Phone className="w-4 h-4 inline mr-2" />Call for Quote</Phone>
   </
                 </div>
               </div>
-            ))}
+            ))};
           </div>
         </div>
       </section>
-      {/* CTA Section */}
+      {/* CTA Section */};
       <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
         <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
-            Ready to Optimize Your IT Infrastructure?
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">Ready to Optimize Your IT Infrastructure?</h2>
           </h2>
-          <p className="text-xl text-cyan-400 mb-8 neon-glow">
-            Our certified IT professionals deliver reliable, secure, and scalable solutions. 
-            All services include free consultations and ongoing support.
+          <p className="text-xl text-cyan-400 mb-8 neon-glow">Our certified IT professionals deliver reliable, secure, and scalable solutions. </p>
+            All services include free consultations and ongoing support.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Phone className="w-5 h-5" />
-              Call (302) 464-0950
+              <Phone className="w-5 h-5" />Call (302) 464-0950</Phone>
   </
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Mail className="w-5 h-5" />
-              Get Custom IT Strategy
+              <Mail className="w-5 h-5" />Get Custom IT Strategy</Mail>
   </
           </div>
         </div>
       </section>
     </div>
-  )}
+  )};
 export default ITConsultingPage
   </a>
   </a>
@@ -974,11 +958,11 @@ export default ITConsultingPage
           </div>
         </div>
       </section>
-      {/* Services Grid */}
+      {/* Services Grid */};
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {filteredServices.map((service) => (</div>}
+            {filteredServices.map((service) => (</div>};
               <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>
                 <div className="flex items-start justify-between mb-4"></div>
                   <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>
@@ -994,22 +978,20 @@ export default ITConsultingPage
                 <div className="space-y-3 mb-6"></div>
                   <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 4).map((feature, idx) => (}
+                    <ul className="space-y-1">{service.features.slice(0, 4).map((feature, idx) => (}</ul>
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           <span>{feature}</span>
-                        </li>))}
+                        </li>))};
                     </ul>
                   </div>
                   <div></div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                    <ul className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, idx) => (}
+                    <ul className="space-y-1">{service.benefits.slice(0, 2).map((benefit, idx) => (}</ul>
                         <li key={idx} className="flex items-center text-sm text-gray-300">
                           <TrendingUp className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           <span>{benefit}</span>
-                        </li>))}
+                        </li>))};
                     </ul>
                   </div>
                 </div>
@@ -1027,51 +1009,45 @@ export default ITConsultingPage
                     <span className="text-white">{service.targetAudience}</span>
                   </div>
                 </div>
-                {service.caseStudy && (<div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div>}
+                {service.caseStudy && (<div className="mb-4 p-3 bg-green-900/20 border border-green-400/20 rounded-lg"></div>};
                     <p className="text-sm text-green-300 italic">"{service.caseStudy}"</p>
                   </div>)}
 
                 <div className="space-y-3"></div>
                   <a
-                    href={service.link}
+                    href={service.link};
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-                    Get Free Consultation
+                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">Get Free Consultation</a>
                   </a>
                   <a
                     href="tel:+13024640950"
                     className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                    <Phone className="w-4 h-4 inline mr-2" />
-                    Call for Quote
+                    <Phone className="w-4 h-4 inline mr-2" />Call for Quote</Phone>
                   </a>
                 </div>
-              </div>))}
+              </div>))};
           </div>
         </div>
       </section>
-      {/* CTA Section */}
+      {/* CTA Section */};
       <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
-            Ready to Optimize Your IT Infrastructure?
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">Ready to Optimize Your IT Infrastructure?</h2>
           </h2>
-          <p className="text-xl text-cyan-400 mb-8 neon-glow">
-            Our certified IT professionals deliver reliable, secure, and scalable solutions.
-            All services include free consultations and ongoing support.
+          <p className="text-xl text-cyan-400 mb-8 neon-glow">Our certified IT professionals deliver reliable, secure, and scalable solutions.</p>
+            All services include free consultations and ongoing support.</p>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="tel:+13024640950"
               className="cyber-button px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Phone className="w-5 h-5" />
-              Call (302) 464-0950
+              <Phone className="w-5 h-5" />Call (302) 464-0950</Phone>
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2 neon-glow focus:outline-none focus:ring-4 focus:ring-cyan-400/50">
-              <Mail className="w-5 h-5" />
-              Get Custom IT Strategy
+              <Mail className="w-5 h-5" />Get Custom IT Strategy</Mail>
             </a>
           </div>
         </div>
