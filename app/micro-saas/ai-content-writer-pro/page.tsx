@@ -169,7 +169,7 @@ const AIContentWriterProPage: React.FC = () => {
                 Watch Demo
               </Link>
             </div>
-            
+
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
@@ -203,7 +203,7 @@ const AIContentWriterProPage: React.FC = () => {
                 Everything you need to create, optimize, and manage content at scale
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -229,7 +229,7 @@ const AIContentWriterProPage: React.FC = () => {
                 Choose from our extensive library of professionally designed content templates
               </p>
             </div>
-            
+
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               {templates.map((template, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-lg p-4 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -251,7 +251,7 @@ const AIContentWriterProPage: React.FC = () => {
                 Choose the plan that fits your content creation needs
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-8 border ${
@@ -263,7 +263,7 @@ const AIContentWriterProPage: React.FC = () => {
                       <span className="text-yellow-400 text-sm font-medium">Most Popular</span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -272,7 +272,7 @@ const AIContentWriterProPage: React.FC = () => {
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
                   </div>
-                  
+
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -281,7 +281,7 @@ const AIContentWriterProPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <Link
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center block transition-all duration-300 ${
@@ -309,7 +309,7 @@ const AIContentWriterProPage: React.FC = () => {
                 Join thousands of content creators who trust AI Content Writer Pro
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">

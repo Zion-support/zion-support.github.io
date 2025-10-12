@@ -13,20 +13,20 @@ function resolveMergeConflicts(content) {
   const resolvedLines = [];
   let inConflict = false;
   let conflictType = null; // 'head', 'separator', 'other'
-  
+
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    
+
       inConflict = true;
       conflictType = 'head';
       continue;
     }
-    
+
       inConflict = false;
       conflictType = null;
       continue;
     }
-    
+
     if (inConflict) {
       if (conflictType === 'head') {
         resolvedLines.push(line);
@@ -36,7 +36,7 @@ function resolveMergeConflicts(content) {
       resolvedLines.push(line);
     }
   }
-  
+
   return resolvedLines.join('\n');
 }
 
@@ -44,14 +44,14 @@ function resolveMergeConflicts(content) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    
+
       console.log(`Processing: ${filePath}`);
       const resolvedContent = resolveMergeConflicts(content);
       fs.writeFileSync(filePath, resolvedContent, 'utf8');
       console.log(`✓ Resolved merge conflicts in: ${filePath}`);
       return true;
     }
-    
+
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -62,14 +62,14 @@ function processFile(filePath) {
 // Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {
   const files = [];
-  
+
   function scanDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
+
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         // Skip node_modules and other common directories
         if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
@@ -89,7 +89,7 @@ function findFilesWithConflicts(dir) {
       }
     }
   }
-  
+
   scanDirectory(dir);
   return files;
 }

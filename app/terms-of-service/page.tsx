@@ -35,9 +35,9 @@ const TermsOfServicePage: React.FC = () => {
         <meta name="description" content="Read our terms of service and understand the rules and regulations for using Zion Tech Group's services and website." />
         <meta name="keywords" content="terms of service, terms and conditions, user agreement, service terms" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -126,7 +126,7 @@ const TermsOfServicePage: React.FC = () => {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );

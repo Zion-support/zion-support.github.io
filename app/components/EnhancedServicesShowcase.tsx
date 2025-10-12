@@ -63,7 +63,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                   {service.title}
                 </h3>
               </div>
-              
+
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {service.description}
               </p>

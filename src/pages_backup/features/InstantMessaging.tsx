@@ -13,9 +13,9 @@ const InstantmessagingPage: React.FC = () => {
         <meta name="description" content="Professional instantmessaging services and solutions." />
         <meta name="keywords" content="instantmessaging, services, solutions, technology" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-16">
         <div className="flex items-center justify-center min-h-screen">
           <div className="text-center">
@@ -28,7 +28,7 @@ const InstantmessagingPage: React.FC = () => {
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

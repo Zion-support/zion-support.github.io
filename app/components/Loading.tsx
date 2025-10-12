@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
 
 const LoadingPage: React.FC = () => {
@@ -46,7 +45,7 @@ const LoadingPage: React.FC = () => {
         <meta name="description" content="Professional Loading services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="Loading, AI solutions, IT services, Zion Tech Group, loading" />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -143,7 +142,6 @@ const LoadingPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
 
 const LoadingPage: React.FC = () => {
   return (
@@ -152,13 +150,12 @@ const LoadingPage: React.FC = () => {
         <title>Loading - Zion Tech Group</title>
         <meta name="description" content="Loading page for Zion Tech Group" />
       </Helmet>
-      
+
       <div className="text-center">
         <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-purple-500 mx-auto mb-4"></div>
         <h2 className="text-2xl font-bold text-white mb-2">Loading...</h2>
         <p className="text-gray-300">Please wait while we load the content</p>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
     </div>
   )
 }

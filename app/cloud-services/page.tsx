@@ -64,7 +64,7 @@ export default function CloudServicesPage() {
         <title>Cloud Services - Zion Tech Group</title>
         <meta name="description" content="Professional cloud services including migration, infrastructure setup, security, and optimization." />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto">
@@ -105,7 +105,7 @@ export default function CloudServicesPage() {
               Comprehensive cloud services to modernize your infrastructure and drive business growth.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
@@ -138,7 +138,7 @@ export default function CloudServicesPage() {
               Discover the key benefits of migrating to the cloud with our expert services.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">

@@ -86,7 +86,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           style={{ width: width || '100%', height: height || '200px' }}
         />
       )}
-      
+
       <img
         src={optimizedSrc}
         alt={alt}
@@ -136,7 +136,7 @@ export const ResponsiveImage: React.FC<ImageProps & {
     const srcSet = Object.entries(breakpoints)
       .map(([breakpoint, src]) => `${src} ${breakpoint}w`)
       .join(', ')
-    
+
     return srcSet || baseSrc
   }, [breakpoints])
 

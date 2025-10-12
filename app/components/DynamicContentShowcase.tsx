@@ -1,11 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Star, Users, Shield, Cloud, BarChart3, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
 
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -82,7 +79,7 @@ const DynamicContentShowcase: React.FC = () => {
       }, 5000);
       return () => clearInterval(interval);
     }
-    
+
     return () => {
       // No cleanup needed when not playing
     };
@@ -169,7 +166,7 @@ const DynamicContentShowcase: React.FC = () => {
                 <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
                   "{currentTestimonial.content}"
                 </blockquote>
-                
+
                 <div className="flex items-center justify-center gap-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
                     <Users className="w-8 h-8 text-white" />
@@ -191,14 +188,14 @@ const DynamicContentShowcase: React.FC = () => {
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
-              
+
               <button
                 onClick={togglePlayPause}
                 className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
               >
                 {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
               </button>
-              
+
               <button
                 onClick={nextTestimonial}
                 className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"

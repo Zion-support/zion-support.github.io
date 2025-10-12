@@ -35,9 +35,9 @@ const PrivacyPolicyPage: React.FC = () => {
         <meta name="description" content="Learn how Zion Tech Group collects, uses, and protects your personal information. Our commitment to your privacy and data security." />
         <meta name="keywords" content="privacy policy, data protection, GDPR, personal information, data security" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -122,7 +122,7 @@ const PrivacyPolicyPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );

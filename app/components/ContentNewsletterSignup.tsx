@@ -34,7 +34,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email) return
-    
+
     setIsSubmitting(true)
     try {
       // Simulate API call

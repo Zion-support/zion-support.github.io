@@ -6,7 +6,6 @@ interface AccessibilitySettings {
   fontSize: 'normal' | 'large' | 'extra-large'
   focusVisible: boolean}
 
-
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -188,19 +187,19 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       .focus-visible *:focus {
         outline: 2px solid #3b82f6
         outline-offset: 2px}
-      
+
       .high-contrast {
         --tw-bg-opacity: 1
         --tw-text-opacity: 1}
-      
+
       .reduced-motion * {
         animation-duration: 0.01ms !important
         animation-iteration-count: 1 !important
         transition-duration: 0.01ms !important}
-      
+
       .font-large {
         font-size: 1.125rem}
-      
+
       .font-extra-large {
         font-size: 1.25rem}
     `
@@ -229,7 +228,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     };
     (window as { accessibilityContext: unknown }).accessibilityContext = context;
   }, [settings, updateSettings]);
-  
+
   return <>{children}</>;
 };
 

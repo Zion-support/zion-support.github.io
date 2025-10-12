@@ -26,7 +26,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     // Initialize Google Analytics if available
     if (typeof window !== 'undefined' && 'gtag' in window) {
       const gtag = (window as { gtag: (command: string, targetId: string, config?: Record<string, unknown>) => void }).gtag;
-      
+
       // Configure Google Analytics
       gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: document.title,

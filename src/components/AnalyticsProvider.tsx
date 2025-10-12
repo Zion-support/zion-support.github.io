@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
-  
+
   useEffect(() => {
     // Initialize Google Analytics
     const initAnalytics = () => {

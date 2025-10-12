@@ -13,9 +13,9 @@ const UnauthorizedPage: React.FC = () => {
         <meta name="description" content="Professional unauthorized services and solutions." />
         <meta name="keywords" content="unauthorized, services, solutions, technology" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-16">
         <div className="flex items-center justify-center min-h-screen">
           <div className="text-center">
@@ -28,7 +28,7 @@ const UnauthorizedPage: React.FC = () => {
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

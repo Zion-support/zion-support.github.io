@@ -27,7 +27,7 @@ export class AccessibilityChecker {
   checkImageAltText(element: HTMLImageElement): AccessibilityCheckResult {
     const hasAlt = element.hasAttribute('alt');
     const altText = element.getAttribute('alt') || '';
-    
+
     if (!hasAlt) {
       return {
         passed: false,
@@ -36,7 +36,7 @@ export class AccessibilityChecker {
         element
       };
     }
-    
+
     if (altText.trim() === '') {
       return {
         passed: false,
@@ -45,7 +45,7 @@ export class AccessibilityChecker {
         element
       };
     }
-    
+
     return {
       passed: true,
       message: 'Image has proper alt text',
@@ -61,7 +61,7 @@ export class AccessibilityChecker {
     const id = element.getAttribute('id');
     const ariaLabel = element.getAttribute('aria-label');
     const ariaLabelledBy = element.getAttribute('aria-labelledby');
-    
+
     if (ariaLabel || ariaLabelledBy) {
       return {
         passed: true,
@@ -70,7 +70,7 @@ export class AccessibilityChecker {
         element
       };
     }
-    
+
     if (id) {
       const label = document.querySelector(`label[for="${id}"]`);
       if (label) {
@@ -82,7 +82,7 @@ export class AccessibilityChecker {
         };
       }
     }
-    
+
     return {
       passed: false,
       message: 'Form element missing proper label',
@@ -98,10 +98,10 @@ export class AccessibilityChecker {
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     const results: AccessibilityCheckResult[] = [];
     let previousLevel = 0;
-    
+
     headings.forEach((heading, index) => {
       const level = parseInt(heading.tagName.charAt(1));
-      
+
       if (index === 0 && level !== 1) {
         results.push({
           passed: false,
@@ -110,7 +110,7 @@ export class AccessibilityChecker {
           element: heading as HTMLElement
         });
       }
-      
+
       if (level > previousLevel + 1) {
         results.push({
           passed: false,
@@ -119,10 +119,10 @@ export class AccessibilityChecker {
           element: heading as HTMLElement
         });
       }
-      
+
       previousLevel = level;
     });
-    
+
     return results;
   }
 
@@ -133,7 +133,7 @@ export class AccessibilityChecker {
     const styles = window.getComputedStyle(element);
     const color = styles.color;
     const backgroundColor = styles.backgroundColor;
-    
+
     // This is a simplified check - in a real implementation,
     // you would calculate the actual contrast ratio
     if (color === backgroundColor) {
@@ -144,7 +144,7 @@ export class AccessibilityChecker {
         element
       };
     }
-    
+
     return {
       passed: true,
       message: 'Color contrast appears adequate',
@@ -159,7 +159,7 @@ export class AccessibilityChecker {
   checkKeyboardAccessibility(element: HTMLElement): AccessibilityCheckResult {
     const tabIndex = element.getAttribute('tabindex');
     const isInteractive = ['button', 'a', 'input', 'select', 'textarea'].includes(element.tagName.toLowerCase());
-    
+
     if (isInteractive && tabIndex === '-1') {
       return {
         passed: false,
@@ -168,7 +168,7 @@ export class AccessibilityChecker {
         element
       };
     }
-    
+
     return {
       passed: true,
       message: 'Element is keyboard accessible',
@@ -182,39 +182,39 @@ export class AccessibilityChecker {
    */
   runAllChecks(): AccessibilityReport {
     this.results = [];
-    
+
     // Check images
     const images = document.querySelectorAll('img');
     images.forEach(img => {
       this.results.push(this.checkImageAltText(img));
     });
-    
+
     // Check form elements
     const formElements = document.querySelectorAll('input, select, textarea');
     formElements.forEach(element => {
       this.results.push(this.checkFormLabels(element as HTMLInputElement));
     });
-    
+
     // Check heading structure
     this.results.push(...this.checkHeadingStructure());
-    
+
     // Check color contrast for text elements
     const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
     textElements.forEach(element => {
       this.results.push(this.checkColorContrast(element as HTMLElement));
     });
-    
+
     // Check keyboard accessibility
     const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
     interactiveElements.forEach(element => {
       this.results.push(this.checkKeyboardAccessibility(element as HTMLElement));
     });
-    
+
     const totalChecks = this.results.length;
     const passedChecks = this.results.filter(r => r.passed).length;
     const failedChecks = this.results.filter(r => !r.passed).length;
     const warnings = this.results.filter(r => r.severity === 'warning').length;
-    
+
     return {
       totalChecks,
       passedChecks,
@@ -238,7 +238,7 @@ export class AccessibilityChecker {
   generateReport(): string {
     const report = this.runAllChecks();
     const score = this.getAccessibilityScore();
-    
+
     return `
 Accessibility Report
 Score: ${score}%

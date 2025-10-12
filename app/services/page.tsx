@@ -84,7 +84,7 @@ const ServicesPage: React.FC = () => {
         <meta name="description" content="Comprehensive AI, cloud, cybersecurity, and IT solutions to transform your business. Expert services from Zion Tech Group." />
         <meta name="keywords" content="AI services, cloud solutions, cybersecurity, 5G implementation, data analytics, custom development, mobile apps" />
       </Helmet>
-      
+
       <main className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
@@ -124,7 +124,7 @@ const ServicesPage: React.FC = () => {
                 A proven methodology that ensures successful project delivery and client satisfaction.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
               {processSteps.map((step, index) => (
                 <div key={index} className="text-center">

@@ -60,7 +60,7 @@ export default function AIContentGeneratorPage() {
         <title>AI Content Generator - Zion Tech Group</title>
         <meta name="description" content="Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI technology." />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto">
@@ -101,7 +101,7 @@ export default function AIContentGeneratorPage() {
               Generate various types of content with our advanced AI technology.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center">
@@ -125,7 +125,7 @@ export default function AIContentGeneratorPage() {
               Choose the plan that fits your content creation needs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {pricing.map((plan, index) => (
               <div key={index} className={`bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''}`}>

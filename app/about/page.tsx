@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Users, Target, Award, Globe, Zap, Shield, Database } from 'lucide-react';
+import { Users, Target, Award, Globe, Zap, Shield, Database } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -67,7 +67,7 @@ export default function AboutPage() {
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission to provide cutting-edge AI and IT solutions. Meet our team and discover our values." />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto">
@@ -175,7 +175,7 @@ export default function AboutPage() {
               The principles that guide everything we do and shape our company culture.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {values.map((value, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow text-center">
@@ -199,7 +199,7 @@ export default function AboutPage() {
               The talented individuals who make Zion Tech Group a leader in technology solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {team.map((member, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-6 text-center hover:shadow-lg transition-shadow">

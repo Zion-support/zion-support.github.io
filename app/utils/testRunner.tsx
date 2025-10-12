@@ -384,7 +384,7 @@ export class TestRunner {
         for (const test of suite.tests) {
           if (suite.beforeEach) {
             suite.beforeEach()}
-          
+
           const result = await this.runSingleTest(test)
           results.push(result)
           if (suite.afterEach) {

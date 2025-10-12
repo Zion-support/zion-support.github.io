@@ -111,10 +111,10 @@ export class AdvancedAnalytics {
    */
   trackPageView(page?: string): void {
     const currentPage = page || window.location.pathname;
-    
+
     this.userBehavior.pageViews++;
     this.userBehavior.userJourney.push(currentPage);
-    
+
     // Update top pages
     const existingPage = this.userBehavior.topPages.find(p => p.page === currentPage);
     if (existingPage) {
@@ -165,7 +165,7 @@ export class AdvancedAnalytics {
       setTimeout(() => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paintEntries = performance.getEntriesByType('paint');
-        
+
         this.performanceMetrics = {
           pageLoadTime: navigation.loadEventEnd - navigation.loadEventStart,
           firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,

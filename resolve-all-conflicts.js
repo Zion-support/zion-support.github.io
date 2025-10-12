@@ -34,18 +34,18 @@ function resolveConflicts(filePath) {/* TODO: Fix JSX expression */}`
       if (line.includes('')) {
         skipUntilNextMarker = true
         continue}
-      
+
       if (line.includes('')) {
         skipUntilNextMarker = false
         continue}
-      
+
       if (line.includes('>>>>>>>')) {
         continue}
-      
+
       if (!skipUntilNextMarker) {
         resolvedLines.push(line)}
     }
-    
+
     // Write the resolved content
     writeFileSync(filePath, resolvedLines.join('\n'))
     console.log(`✅ Resolved conflicts in ${filePath}`)

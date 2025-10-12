@@ -57,7 +57,7 @@ function resolveAllMergeConflicts() {
     if (conflictedFiles.length === 0) {
       console.log('✅ No merge conflicts found')
       return true}
-    
+
     console.log(`📋 Found ${conflictedFiles.length} files with merge conflicts: `)
     conflictedFiles.forEach(file => console.log(`  - ${file}`))
     // Resolve conflicts in each file
@@ -66,7 +66,7 @@ function resolveAllMergeConflicts() {
       if (resolveMergeConflicts(file)) {
         resolvedCount++}
     }
-    
+
     console.log(`✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`)
     return resolvedCount === conflictedFiles.length} catch (error) {
     console.log('❌ Error finding merge conflicts:', error.message)
@@ -99,7 +99,7 @@ async function main() {
       console.log('❌ Failed to resolve all merge conflicts')
       return}
   }
-  
+
   // Step 7: Check for other branches that need merging
   console.log('\n🔍 Checking for other branches to merge...')
   ,
@@ -131,7 +131,7 @@ async function main() {
     } catch (error) {
       console.log(`❌ Error merging ${branch}: ${error.message}`)}
   }
-  
+
   // Step 8: Final status check
   console.log('\n📊 Final Status: ')
   execGitCommand('git status', 'Final git status')

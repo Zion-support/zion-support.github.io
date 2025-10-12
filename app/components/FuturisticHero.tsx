@@ -45,7 +45,7 @@ const FuturisticHeroPage: React.FC = () => {
         <meta name="description" content="Professional futuristic hero services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="futuristic hero, AI solutions, IT services, Zion Tech Group, hero solutions" />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

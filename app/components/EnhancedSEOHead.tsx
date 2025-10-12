@@ -22,7 +22,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
 }) => {
   const location = useLocation()
   const currentUrl = url || `https://ziontechgroup.com${location.pathname}`
-  
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",

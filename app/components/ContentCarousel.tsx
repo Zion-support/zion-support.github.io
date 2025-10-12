@@ -59,7 +59,7 @@ const ContentCarousel: React.FC = () => {
       }, 5000);
       return () => clearInterval(timer);
     }
-    
+
     return () => {
       // No cleanup needed when not playing
     };
@@ -162,14 +162,14 @@ const ContentCarousel: React.FC = () => {
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
-            
+
             <button
               onClick={togglePlayPause}
               className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
             >
               {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
             </button>
-            
+
             <button
               onClick={nextSlide}
               className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"

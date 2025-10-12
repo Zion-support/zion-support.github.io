@@ -60,7 +60,7 @@ function resolveAllMergeConflicts() {
     if (conflictedFiles.length === 0) {
       console.log('✅ No merge conflicts found')
       return true}
-    
+
     console.log(`📋 Found ${conflictedFiles.length} files with merge conflicts: `)
     conflictedFiles.forEach(file => console.log(`  - ${file}`))
     // Resolve conflicts in each file
@@ -69,7 +69,7 @@ function resolveAllMergeConflicts() {
       if (resolveMergeConflicts(file)) {
         resolvedCount++}
     }
-    
+
     console.log(`✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`)
     return resolvedCount === conflictedFiles.length} catch (error) {
     console.log('❌ Error finding merge conflicts:', error.message)
@@ -145,7 +145,7 @@ async function main() {
       console.log('❌ Failed to resolve all merge conflicts')
       return}
   }
-  
+
   // Step 7: Get all remote branches and merge them
   console.log('\n🔍 Getting all remote branches...')
   const allBranches = getAllRemoteBranches()
@@ -154,7 +154,7 @@ async function main() {
   allBranches.slice(0, 10).forEach(branch => console.log(`  - ${branch}`))
   if (allBranches.length > 10) {
     console.log(`  ... and ${allBranches.length - 10} more branches`)}
-  
+
   // Priority branches to merge first
   const priorityBranches = [
     'cursor/website-audit-and-update-with-deployment-f31 a',
@@ -172,7 +172,7 @@ async function main() {
     if (allBranches.includes(branch)) {
       mergeBranch(branch)}
   }
-  
+
   // Merge other branches in batches
   const otherBranches = allBranches.filter(branch => !priorityBranches.includes(branch))
   const batchSize = 5
@@ -182,10 +182,10 @@ async function main() {
     console.log(`\n📦 Processing batch ${Math.floor(i / batchSize) + 1}/${Math.ceil(otherBranches.length / batchSize)}`)
     for (const branch of batch) {
       mergeBranch(branch)}
-    
+
     // Small delay between batches
     await new Promise(resolve => setTimeout(resolve, 1000))}
-  
+
   // Step 8: Final status check
   console.log('\n📊 Final Status: ')
   execGitCommand('git status', 'Final git status')

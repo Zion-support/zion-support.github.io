@@ -31,7 +31,7 @@ function fixSyntaxErrors(filePath) {
       // Find unclosed opening tags
       const openTagRegex = new RegExp(`<${tag}([^>]*)>(?!.*</${tag}>)`, 'gs');
       const matches = content.match(openTagRegex);
-      
+
       if (matches) {
         // This is a complex fix, let's use a simpler approach
         // Just ensure proper closing for common patterns
@@ -49,24 +49,24 @@ function fixSyntaxErrors(filePath) {
 
     // Fix JSX expressions that need wrapping
     content = content.replace(/\{([^}]*?)\s*\}\s*\{([^}]*?)\s*\}/g, '{$1}{$2}');
-    
+
     // Fix missing semicolons in JSX
     content = content.replace(/(\w+)\s*(\n\s*<)/g, '$1;$2');
-    
+
     // Fix broken JSX attributes
     content = content.replace(/className\s*=\s*"([^"]*?)\s*"/g, 'className="$1"');
     content = content.replace(/className\s*=\s*'([^']*?)\s*'/g, "className='$1'");
-    
+
     // Fix broken string literals
     content = content.replace(/"([^"]*?)\s*"/g, '"$1"');
     content = content.replace(/'([^']*?)\s*'/g, "'$1'");
-    
+
     // Fix missing commas in arrays and objects
     content = content.replace(/(\w+)\s*\n\s*(\w+)/g, '$1,\n$2');
-    
+
     // Fix broken function calls
     content = content.replace(/(\w+)\s*\(\s*\)\s*(\w+)/g, '$1();\n$2');
-    
+
     // Clean up extra whitespace
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     content = content.replace(/^\s*\n/g, '');
@@ -87,14 +87,14 @@ function fixSyntaxErrors(filePath) {
 // Function to find all TypeScript/JavaScript files
 function findSourceFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
   const files = [];
-  
+
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
+
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         // Skip node_modules, .git, and other common directories
         if (!['node_modules', '.git', '.next', 'dist', 'build', 'out'].includes(item)) {
@@ -108,7 +108,7 @@ function findSourceFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
       }
     }
   }
-  
+
   traverse(dir);
   return files;
 }
@@ -116,16 +116,16 @@ function findSourceFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
 // Main function
 function main() {
   console.log('Starting syntax error resolution...');
-  
+
   const sourceFiles = findSourceFiles(process.cwd());
   let fixedCount = 0;
-  
+
   for (const file of sourceFiles) {
     if (fixSyntaxErrors(file)) {
       fixedCount++;
     }
   }
-  
+
   console.log(`\nFixed syntax errors in ${fixedCount} files.`);
 }
 

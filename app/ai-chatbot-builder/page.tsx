@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, MessageCircle, Users, Zap, Shield } from 'lucide-react';
+import { ArrowRight, MessageCircle, Users, Zap, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -33,7 +33,7 @@ export default function AIChatbotBuilderPage() {
         <title>AI Chatbot Builder - Zion Tech Group</title>
         <meta name="description" content="Create intelligent chatbots for customer support, lead generation, and automated assistance." />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto">
@@ -74,7 +74,7 @@ export default function AIChatbotBuilderPage() {
               Build intelligent chatbots with advanced AI capabilities.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 text-center">

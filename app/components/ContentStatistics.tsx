@@ -100,15 +100,15 @@ const ContentStatistics: React.FC = () => {
           const current = prev[stat.label] || 0;
           const target = stat.value;
           const increment = (target - current) / 20;
-          
+
           if (Math.abs(target - current) < 0.1) {
             return { ...prev, [stat.label]: target };
           }
-          
+
           return { ...prev, [stat.label]: current + increment };
         });
       }, 50);
-      
+
       timers.push(timer);
     });
 

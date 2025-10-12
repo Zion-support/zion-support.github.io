@@ -62,7 +62,7 @@ const PricingPage: React.FC = () => {
         <meta name="description" content="Choose the perfect plan for your AI and IT needs. Flexible pricing options for businesses of all sizes." />
         <meta name="keywords" content="pricing, plans, AI solutions, IT services, subscription, Zion Tech Group" />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -96,7 +96,7 @@ const PricingPage: React.FC = () => {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -134,7 +134,7 @@ const PricingPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white text-center mb-12">
               Frequently Asked Questions
             </h2>
-            
+
             <div className="space-y-6">
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -144,7 +144,7 @@ const PricingPage: React.FC = () => {
                   Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately.
                 </p>
               </div>
-              
+
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Is there a free trial available?
@@ -153,7 +153,7 @@ const PricingPage: React.FC = () => {
                   Yes, we offer a 14-day free trial for all plans. No credit card required.
                 </p>
               </div>
-              
+
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700">
                 <h3 className="text-xl font-semibold text-white mb-3">
                   What payment methods do you accept?

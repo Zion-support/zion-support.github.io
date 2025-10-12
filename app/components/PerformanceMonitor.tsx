@@ -20,7 +20,7 @@ const PerformanceMonitor: React.FC = () => {
           }
         }
       });
-      
+
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // Monitor First Input Delay (FID)
@@ -36,7 +36,7 @@ const PerformanceMonitor: React.FC = () => {
           }
         }
       });
-      
+
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Monitor Cumulative Layout Shift (CLS)
@@ -56,7 +56,7 @@ const PerformanceMonitor: React.FC = () => {
           });
         }
       });
-      
+
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
       // Cleanup observers

@@ -14,7 +14,7 @@ export const useEnhancedPerformance = () => {
     memoryUsage: 0,
     networkLatency: 0
   });
-  
+
   const [isOptimized, setIsOptimized] = useState(false);
 
   const measurePerformance = useCallback(() => {
@@ -22,14 +22,14 @@ export const useEnhancedPerformance = () => {
 
     // Measure load time
     const loadTime = performance.now();
-    
+
     // Measure memory usage
     const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
-    
+
     // Measure render time
     requestAnimationFrame(() => {
       const renderTime = performance.now() - loadTime;
-      
+
       setMetrics(prev => ({
         ...prev,
         loadTime,
@@ -42,14 +42,14 @@ export const useEnhancedPerformance = () => {
   const optimizePerformance = useCallback(() => {
     // Enable performance optimizations
     setIsOptimized(true);
-    
+
     // Preload critical resources
     if (typeof window !== 'undefined') {
       const criticalResources = [
         '/fonts/inter.woff2',
         '/images/hero-bg.webp'
       ];
-      
+
       criticalResources.forEach(resource => {
         const link = document.createElement('link');
         link.rel = 'preload';

@@ -13,9 +13,9 @@ const InternationalizationPage: React.FC = () => {
         <meta name="description" content="Professional internationalization services and solutions." />
         <meta name="keywords" content="internationalization, services, solutions, technology" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-16">
         <div className="flex items-center justify-center min-h-screen">
           <div className="text-center">
@@ -28,7 +28,7 @@ const InternationalizationPage: React.FC = () => {
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

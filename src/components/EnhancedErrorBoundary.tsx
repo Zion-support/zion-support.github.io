@@ -71,7 +71,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // In a real app, you would send this to your error reporting service
       // For now, we'll just log it
       console.log('Error report prepared:', errorReport);
-       
+
       // Example: Send to error reporting service
       // await fetch('/api/errors', {
       //   method: 'POST',

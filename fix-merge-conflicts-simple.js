@@ -7,14 +7,14 @@ import path from 'path';
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Remove merge conflict markers and keep the content
     content = content.replace(/\n?/g, '');
     content = content.replace(/\n?/g, '');
     content = content.replace(/    
     // Clean up any double newlines that might have been created
     content = content.replace(/\n\n\n+/g, '\n\n');
-    
+
     // Write the cleaned content back
     fs.writeFileSync(filePath, content);
     console.log(`Fixed merge conflicts in: ${filePath}`);
@@ -28,14 +28,14 @@ function fixMergeConflicts(filePath) {
 // Function to find all files with merge conflicts
 function findFilesWithMergeConflicts(dir) {
   const files = [];
-  
+
   function walkDir(currentPath) {
     const items = fs.readdirSync(currentPath);
-    
+
     for (const item of items) {
       const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
         walkDir(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
@@ -50,7 +50,7 @@ function findFilesWithMergeConflicts(dir) {
       }
     }
   }
-  
+
   walkDir(dir);
   return files;
 }

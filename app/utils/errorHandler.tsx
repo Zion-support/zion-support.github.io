@@ -104,7 +104,7 @@ export class ErrorHandler {
 
   private determineErrorType(error: Error): ErrorType {
     const message = error.message.toLowerCase()
-    
+
     if (message.includes('network') || message.includes('fetch')) {
       return ErrorType.NETWORK
     }
@@ -123,13 +123,13 @@ export class ErrorHandler {
     if (message.includes('server') || message.includes('500')) {
       return ErrorType.SERVER
     }
-    
+
     return ErrorType.RUNTIME
   }
 
   private determineErrorSeverity(error: Error): ErrorSeverity {
     const message = error.message.toLowerCase()
-    
+
     if (message.includes('critical') || message.includes('fatal')) {
       return ErrorSeverity.CRITICAL
     }
@@ -139,7 +139,7 @@ export class ErrorHandler {
     if (message.includes('warning') || message.includes('caution')) {
       return ErrorSeverity.MEDIUM
     }
-    
+
     return ErrorSeverity.LOW
   }
 
@@ -150,12 +150,12 @@ export class ErrorHandler {
 
   private logError(error: AppError): void {
     this.errorLog.push(error)
-    
+
     // Keep only the most recent errors
     if (this.errorLog.length > this.maxLogSize) {
       this.errorLog = this.errorLog.slice(-this.maxLogSize)
     }
-    
+
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error logged:', error)
@@ -231,7 +231,7 @@ export class ErrorBoundary extends React.Component<
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     const errorHandler = ErrorHandler.getInstance()
     const appError = errorHandler.handleError(error, undefined, errorInfo)
-    
+
     if (this.props.onError) {
       this.props.onError(appError)
     }
@@ -273,11 +273,11 @@ const DefaultErrorFallback: React.FC<{
             <p className="text-sm text-gray-500">Error Type: {error.type}</p>
           </div>
         </div>
-        
+
         <div className="mb-4">
           <p className="text-sm text-gray-600">{error.message}</p>
         </div>
-        
+
         <div className="flex space-x-3">
           <button
             onClick={resetError}
@@ -300,7 +300,7 @@ const DefaultErrorFallback: React.FC<{
 // Hook for using error handler
 export const useErrorHandler = () => {
   const errorHandler = ErrorHandler.getInstance()
-  
+
   const handleError = useCallback((error: Error | AppError, context?: ErrorContext) => {
     return errorHandler.handleError(error, context)
   }, [errorHandler])

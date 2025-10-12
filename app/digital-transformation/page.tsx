@@ -87,7 +87,7 @@ export default function DigitalTransformationPage() {
         <title>Digital Transformation - Zion Tech Group</title>
         <meta name="description" content="Transform your business for the digital age with comprehensive digital transformation services." />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto">
@@ -128,7 +128,7 @@ export default function DigitalTransformationPage() {
               Comprehensive services to modernize your business and drive digital growth.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
@@ -161,7 +161,7 @@ export default function DigitalTransformationPage() {
               Discover the key benefits of transforming your business for the digital age.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -185,7 +185,7 @@ export default function DigitalTransformationPage() {
               A structured approach to successfully transforming your business for the digital age.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {process.map((step, index) => (
               <div key={index} className="text-center">

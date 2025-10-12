@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
 import {ArrowRight, CheckCircle, Shield, Brain, BarChart, Target, TrendingUp, FileText} from 'lucide-react'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
-=======
 import React from 'react';
 import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -38,11 +36,9 @@ const AIAutomatedReportingPage: React.FC = () => {
       benefits: ['Automated data collection', 'Smart formatting', 'Instant delivery', 'Zero manual work']
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
 
   const benefits = [
     {
-<<<<<<< HEAD
       icon: FileText,
       title: 'Automated Report Generation',
       description: 'Generate comprehensive reports automatically with AI-powered data analysis.',
@@ -73,14 +69,10 @@ const AIAutomatedReportingPage: React.FC = () => {
       benefits: ['KPI tracking', 'Performance monitoring', 'Trend analysis', 'Goal tracking']
     },
     {
-      icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security ensures your data remains protected and compliant.',
-      benefits: ['Data encryption', 'Access controls', 'Compliance', 'Audit trails']
-=======
       icon: <Shield className="w-6 h-6 text-green-500" />,
       title: 'Data Security',
-      description: 'Enterprise-grade security with encrypted data transmission and storage.'
+      description: 'Enterprise-grade security with encrypted data transmission and storage.',
+      benefits: ['Data encryption', 'Access controls', 'Compliance', 'Audit trails']
     },
     {
       icon: <Zap className="w-6 h-6 text-blue-500" />,
@@ -96,11 +88,9 @@ const AIAutomatedReportingPage: React.FC = () => {
       icon: <BarChart3 className="w-6 h-6 text-orange-500" />,
       title: 'Customizable',
       description: 'Tailor reports to your specific business needs and requirements.'
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5
     }
   ]
 
-<<<<<<< HEAD
   const benefits = [
     'Automated report generation saves 80% of manual effort',
     'Real-time data processing and visualization',
@@ -142,9 +132,9 @@ const AIAutomatedReportingPage: React.FC = () => {
         <meta name="description" content="Transform your data into actionable insights with our AI-powered automated reporting solutions. Generate comprehensive reports, visualizations, and analytics automatically." />
         <meta name="keywords" content="AI reporting, automated reports, data visualization, business intelligence, analytics, AI insights" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -185,7 +175,7 @@ const AIAutomatedReportingPage: React.FC = () => {
                 from data analysis to visualization and insights.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -219,7 +209,7 @@ const AIAutomatedReportingPage: React.FC = () => {
                 Experience the future of business intelligence with our cutting-edge AI technology.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
@@ -242,7 +232,7 @@ const AIAutomatedReportingPage: React.FC = () => {
                 Our AI reporting solutions work across industries and use cases.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {useCases.map((useCase, index) => (
                 <div key={index} className="text-center">
@@ -278,14 +268,13 @@ const AIAutomatedReportingPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </>
   )
 }
 
 export default AiAutomatedReportingPage
-=======
   const pricing = [
     {
       name: 'Starter',
@@ -337,7 +326,7 @@ export default AiAutomatedReportingPage
         <meta name="description" content="Transform your data into actionable insights with our AI-powered automated reporting solutions. Generate reports instantly and make data-driven decisions." />
         <meta name="keywords" content="AI reporting, automated reports, business intelligence, data analytics, AI insights" />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto">
@@ -376,7 +365,7 @@ export default AiAutomatedReportingPage
               Everything you need to automate your reporting and gain valuable insights
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
@@ -406,7 +395,7 @@ export default AiAutomatedReportingPage
               Experience the benefits of intelligent automated reporting
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -428,7 +417,7 @@ export default AiAutomatedReportingPage
               Choose the plan that fits your business needs
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {pricing.map((plan, index) => (
               <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
@@ -503,4 +492,3 @@ export default AiAutomatedReportingPage
 };
 
 export default AIAutomatedReportingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-fec5

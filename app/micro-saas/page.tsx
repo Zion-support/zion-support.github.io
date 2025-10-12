@@ -259,7 +259,7 @@ const MicroSaasPage: React.FC = () => {
                       <span className="text-yellow-400 text-sm font-medium">Most Popular</span>
                     </div>
                   )}
-                  
+
                   <div className="flex items-center mb-4">
                     <product.icon className="w-8 h-8 text-purple-400 mr-3" />
                     <div>
@@ -267,9 +267,9 @@ const MicroSaasPage: React.FC = () => {
                       <span className="text-sm text-purple-300">{product.category}</span>
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-300 mb-4">{product.description}</p>
-                  
+
                   <ul className="space-y-2 mb-6">
                     {product.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-gray-300 text-sm">
@@ -278,14 +278,14 @@ const MicroSaasPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <div className="text-2xl font-bold text-white">{product.price}</div>
                       <div className="text-sm text-gray-400">{product.users}</div>
                     </div>
                   </div>
-                  
+
                   <Link
                     to={`/micro-saas/${product.id}`}
                     className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"

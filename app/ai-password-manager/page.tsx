@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Shield, Key, Lock, Smartphone, Globe, Zap, Database, Eye } from 'lucide-react'
+import { CheckCircle, ArrowRight, Shield, Key, Lock, Smartphone, Zap, Eye } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -93,9 +93,9 @@ export default function AIPasswordManagerPage() {
         <meta name="description" content="Secure password management with AI-powered security recommendations and automated password generation." />
         <meta name="keywords" content="password manager, password security, password generation, secure storage, AI security" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-20">
         {/* Hero Section */}
         <section className="px-4 py-12 sm:py-16 lg:py-20">
@@ -138,7 +138,7 @@ export default function AIPasswordManagerPage() {
                 Everything you need to secure your digital identity
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-20">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
@@ -160,7 +160,7 @@ export default function AIPasswordManagerPage() {
                 Choose the plan that fits your needs
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-20">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
@@ -233,7 +233,7 @@ export default function AIPasswordManagerPage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   )

@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Brain, Clock, Users, BarChart, Zap, Shield, Smartphone, Globe } from 'lucide-react'
+import { CheckCircle, ArrowRight, Brain, Clock, Users, BarChart, Zap, Shield } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
@@ -94,9 +94,9 @@ export default function AITaskManagerPage() {
         <meta name="description" content="Intelligent task management with AI-powered prioritization and automated scheduling. Boost productivity with smart task organization." />
         <meta name="keywords" content="AI task manager, task management, productivity, automation, team collaboration" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-20">
         {/* Hero Section */}
         <section className="px-4 py-12 sm:py-16 lg:py-20">
@@ -139,7 +139,7 @@ export default function AITaskManagerPage() {
                 Everything you need to manage tasks intelligently and boost productivity
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-20">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
@@ -161,7 +161,7 @@ export default function AITaskManagerPage() {
                 Choose the plan that fits your needs
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-20">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
@@ -234,7 +234,7 @@ export default function AITaskManagerPage() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   )

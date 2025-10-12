@@ -55,7 +55,7 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   const toggleFeature = (feature: keyof typeof settings) => {
     const newValue = typeof settings[feature] === 'boolean' ? !settings[feature] : settings[feature];
     setSettings(prev => ({ ...prev, [feature]: newValue }));
-    
+
     // Apply the setting to the document
     if (feature === 'textScaling') {
       document.documentElement.setAttribute('data-text-scaling', newValue.toString());

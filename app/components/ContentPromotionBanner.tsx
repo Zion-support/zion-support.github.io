@@ -70,7 +70,7 @@ const ContentPromotionBanner: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
               <Zap className="w-5 h-5" />
@@ -118,7 +118,7 @@ const ContentPromotionBanner: React.FC = () => {
               We provide comprehensive AI and IT solutions that deliver real results for your business.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">

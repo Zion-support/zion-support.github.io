@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState, useCallback } from 'react';
 
-
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -152,8 +151,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
 
     if (slowResources.length > 0) {
-       
-       
+
       console.log(
         'Slow resources detected:',
         slowResources.map((r: PerformanceResourceTiming) => ({
@@ -201,7 +199,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     } catch {
       // web-vitals not available, continue without it
     }
-    
+
     return () => {
       // Cleanup function for web-vitals
     };

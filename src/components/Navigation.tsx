@@ -113,7 +113,7 @@ const Navigation: React.FC = () => {
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {isServicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-[800px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
                   <div className="grid grid-cols-3 gap-6">
@@ -212,7 +212,7 @@ const Navigation: React.FC = () => {
             <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
               Contact
             </a>
-            
+
             <div className="flex items-center space-x-4">
               <a
                 href="tel:+13024640950"
@@ -250,7 +250,7 @@ const Navigation: React.FC = () => {
                   <span>Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
-                
+
                 {isServicesOpen && (
                   <div className="mt-4 pl-4 space-y-3">
                     <div>
@@ -306,7 +306,7 @@ const Navigation: React.FC = () => {
               <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
                 Contact
               </a>
-              
+
               <div className="pt-4 border-t border-gray-700">
                 <a
                   href="tel:+13024640950"

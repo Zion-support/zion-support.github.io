@@ -44,7 +44,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     // Focus management
     if (enableFocusManagement && typeof window !== 'undefined') {
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-      
+
       const trapFocus = (container: HTMLElement) => {
         const focusableContent = container.querySelectorAll(focusableElements);
         const firstFocusableElement = focusableContent[0] as HTMLElement;
@@ -119,7 +119,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     // High contrast mode support
     if (enableHighContrast && typeof window !== 'undefined') {
       const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
-      
+
       const updateHighContrast = (e: MediaQueryListEvent | MediaQueryList) => {
         if (e.matches) {
           document.documentElement.classList.add('high-contrast');
@@ -134,7 +134,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       return () => prefersHighContrast.removeEventListener('change', handleChange);
     }
-    
+
     return () => {
       // No cleanup needed
     };

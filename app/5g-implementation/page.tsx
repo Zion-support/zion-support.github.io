@@ -83,7 +83,7 @@ export default function FiveGImplementationPage() {
         <title>5G Implementation - Zion Tech Group</title>
         <meta name="description" content="Next-generation connectivity solutions to power your digital transformation with ultra-fast speeds and low latency." />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto">
@@ -124,7 +124,7 @@ export default function FiveGImplementationPage() {
               Comprehensive 5G implementation services to transform your connectivity and enable new possibilities.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
@@ -157,7 +157,7 @@ export default function FiveGImplementationPage() {
               Discover the transformative benefits of 5G technology for your business.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -181,7 +181,7 @@ export default function FiveGImplementationPage() {
               Explore how 5G technology can transform various industries and applications.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300">

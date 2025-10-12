@@ -30,9 +30,9 @@ const LayoutPage: React.FC = () => {
         <meta name="description" content="Professional layout services and solutions." />
         <meta name="keywords" content="layout, services, solutions, technology" />
       </Helmet>
-      
+
       <Navigation />
-      
+
       <main className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -43,7 +43,7 @@ const LayoutPage: React.FC = () => {
               Professional layout services to help your business succeed and grow.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -60,7 +60,7 @@ const LayoutPage: React.FC = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
@@ -79,7 +79,7 @@ const LayoutPage: React.FC = () => {
           </div>
         </div>
       </main>
-      
+
       <Footer />
     </div>
   );

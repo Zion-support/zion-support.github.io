@@ -39,7 +39,7 @@ const AIApiManagementPage: React.FC = () => {
         <meta name="description" content="Professional AI API management solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="AI API management, AI solutions, IT services, Zion Tech Group" />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <Navigation />
 
@@ -80,7 +80,7 @@ const AIApiManagementPage: React.FC = () => {
                 Comprehensive AI API management platform designed for modern businesses.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
