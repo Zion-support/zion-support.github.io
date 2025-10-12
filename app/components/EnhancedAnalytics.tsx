@@ -1,14 +1,12 @@
 'use client';
-<<<<<<< HEAD
 import React, { createContext, useContext, useState, useEffect } from 'react';
-=======
-import React, { createContext, useContext, useEffect } from 'react';
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
 
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;
   page: (name: string, properties?: Record<string, any>) => void;
+  setUserProperties: (properties: Record<string, any>) => void;
+  setGlobalProperties: (properties: Record<string, any>) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -26,94 +24,107 @@ interface AnalyticsProviderProps {
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  const [isInitialized, setIsInitialized] = useState(false);
+  const [userProperties, setUserProperties] = useState<Record<string, any>>({});
+  const [globalProperties, setGlobalProperties] = useState<Record<string, any>>({});
+
   useEffect(() => {
     // Initialize analytics
-    if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (process.env.NODE_ENV === 'production') {
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
-        document.head.appendChild(script);
-
-        window.dataLayer = window.dataLayer || [];
-        function gtag(...args: any[]) {
-          window.dataLayer.push(args);
+    const initAnalytics = async () => {
+      try {
+        // Initialize Google Analytics
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('config', 'GA_MEASUREMENT_ID', {
+            page_title: document.title,
+            page_location: window.location.href,
+          });
         }
-        gtag('js', new Date());
-        gtag('config', process.env.REACT_APP_GA_ID);
+
+        // Initialize other analytics services
+        setIsInitialized(true);
+      } catch (error) {
+        console.error('Failed to initialize analytics:', error);
       }
-    }
+    };
+
+    initAnalytics();
   }, []);
 
   const track = (event: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined') {
+    if (!isInitialized) return;
+
+    try {
       // Google Analytics
-      if (window.gtag) {
-        window.gtag('event', event, properties);
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', event, {
+          ...properties,
+          ...globalProperties,
+        });
       }
-      
-      // Custom analytics
-      console.log('Analytics Event:', event, properties);
+
+      // Custom analytics tracking
+      console.log('Analytics Event:', event, { ...properties, ...globalProperties });
+    } catch (error) {
+      console.error('Failed to track event:', error);
     }
   };
 
-<<<<<<< HEAD
-  const trackPageView = (page: string) => {
-    if (!isInitialized) return;
-    
-    // Track page view (placeholder for actual analytics implementation)
-    console.log('Analytics Page View:', page);
-    
-    // Here you would integrate with your analytics service
-    // Example: gtag('config', 'GA_MEASUREMENT_ID', { page_path: page });
-  };
-
-  const setUser = (userId: string, properties?: Record<string, any>) => {
-    if (!isInitialized) return;
-    
-    // Set user properties (placeholder for actual analytics implementation)
-    console.log('Analytics Set User:', userId, properties);
-    
-    // Here you would integrate with your analytics service
-    // Example: gtag('config', 'GA_MEASUREMENT_ID', { user_id: userId });
-=======
   const identify = (userId: string, traits?: Record<string, any>) => {
-    if (typeof window !== 'undefined') {
+    if (!isInitialized) return;
+
+    try {
       // Google Analytics
-      if (window.gtag) {
-        window.gtag('config', process.env.REACT_APP_GA_ID, {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('config', 'GA_MEASUREMENT_ID', {
           user_id: userId,
-          custom_map: traits
         });
       }
-      
-      // Custom analytics
-      console.log('Analytics Identify:', userId, traits);
+
+      // Set user properties
+      setUserProperties({ ...userProperties, ...traits });
+
+      // Custom analytics identification
+      console.log('User Identified:', userId, traits);
+    } catch (error) {
+      console.error('Failed to identify user:', error);
     }
   };
 
   const page = (name: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined') {
+    if (!isInitialized) return;
+
+    try {
       // Google Analytics
-      if (window.gtag) {
-        window.gtag('event', 'page_view', {
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: name,
           page_location: window.location.href,
-          ...properties
+          ...properties,
+          ...globalProperties,
         });
       }
-      
-      // Custom analytics
-      console.log('Analytics Page:', name, properties);
+
+      // Custom page tracking
+      console.log('Page View:', name, { ...properties, ...globalProperties });
+    } catch (error) {
+      console.error('Failed to track page view:', error);
     }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
+  };
+
+  const setUserPropertiesHandler = (properties: Record<string, any>) => {
+    setUserProperties({ ...userProperties, ...properties });
+  };
+
+  const setGlobalPropertiesHandler = (properties: Record<string, any>) => {
+    setGlobalProperties({ ...globalProperties, ...properties });
   };
 
   const value: AnalyticsContextType = {
     track,
     identify,
-    page
+    page,
+    setUserProperties: setUserPropertiesHandler,
+    setGlobalProperties: setGlobalPropertiesHandler,
   };
 
   return (
@@ -123,14 +134,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   );
 };
 
-<<<<<<< HEAD
-export default AnalyticsProvider;
-=======
-// Extend Window interface for TypeScript
+// Declare gtag function for TypeScript
 declare global {
   interface Window {
-    dataLayer: any[];
     gtag: (...args: any[]) => void;
   }
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9

@@ -1,0 +1,574 @@
+/* Responsive Design System - Zion Tech Group */
+
+/* Mobile First Approach */
+:root {
+  --mobile-padding: 1rem;
+  --tablet-padding: 2rem;
+  --desktop-padding: 3rem;
+  
+  --mobile-font-size: 0.875rem;
+  --tablet-font-size: 1rem;
+  --desktop-font-size: 1.125rem;
+  
+  --mobile-heading-size: 1.5rem;
+  --tablet-heading-size: 2rem;
+  --desktop-heading-size: 2.5rem;
+  
+  --mobile-grid-gap: 1rem;
+  --tablet-grid-gap: 1.5rem;
+  --desktop-grid-gap: 2rem;
+}
+
+/* Base Mobile Styles */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 var(--mobile-padding);
+}
+
+/* Typography Responsive */
+.text-responsive {
+  font-size: var(--mobile-font-size);
+  line-height: 1.6;
+}
+
+.heading-responsive {
+  font-size: var(--mobile-heading-size);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+/* Grid System */
+.grid-responsive {
+  display: grid;
+  gap: var(--mobile-grid-gap);
+  grid-template-columns: 1fr;
+}
+
+/* Card Responsive */
+.card-responsive {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Button Responsive */
+.btn-responsive {
+  padding: 0.75rem 1.5rem;
+  font-size: var(--mobile-font-size);
+  border-radius: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* Navigation Responsive */
+.nav-responsive {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-item-responsive {
+  padding: 0.75rem 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+/* Hero Section Responsive */
+.hero-responsive {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.hero-title-responsive {
+  font-size: 2rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle-responsive {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+/* Service Cards Responsive */
+.service-card-responsive {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.service-icon-responsive {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.service-title-responsive {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.service-description-responsive {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Pricing Cards Responsive */
+.pricing-card-responsive {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.pricing-price-responsive {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-features-responsive {
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.pricing-feature-responsive {
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Footer Responsive */
+.footer-responsive {
+  padding: 2rem 0;
+}
+
+.footer-section-responsive {
+  margin-bottom: 2rem;
+}
+
+.footer-title-responsive {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.footer-link-responsive {
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  display: block;
+}
+
+/* Tablet Styles (768px and up) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 var(--tablet-padding);
+  }
+  
+  .text-responsive {
+    font-size: var(--tablet-font-size);
+  }
+  
+  .heading-responsive {
+    font-size: var(--tablet-heading-size);
+  }
+  
+  .grid-responsive {
+    gap: var(--tablet-grid-gap);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .card-responsive {
+    padding: 1.5rem;
+  }
+  
+  .btn-responsive {
+    padding: 1rem 2rem;
+    font-size: var(--tablet-font-size);
+    width: auto;
+  }
+  
+  .nav-responsive {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  
+  .nav-item-responsive {
+    padding: 0.5rem 1rem;
+    width: auto;
+  }
+  
+  .hero-responsive {
+    padding: 4rem 0;
+  }
+  
+  .hero-title-responsive {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle-responsive {
+    font-size: 1.25rem;
+  }
+  
+  .service-card-responsive {
+    padding: 2rem;
+  }
+  
+  .service-icon-responsive {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .service-title-responsive {
+    font-size: 1.5rem;
+  }
+  
+  .service-description-responsive {
+    font-size: 1rem;
+  }
+  
+  .pricing-card-responsive {
+    padding: 2rem;
+  }
+  
+  .pricing-price-responsive {
+    font-size: 2.5rem;
+  }
+  
+  .footer-responsive {
+    padding: 3rem 0;
+  }
+  
+  .footer-section-responsive {
+    margin-bottom: 0;
+  }
+}
+
+/* Desktop Styles (1024px and up) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding: 0 var(--desktop-padding);
+  }
+  
+  .text-responsive {
+    font-size: var(--desktop-font-size);
+  }
+  
+  .heading-responsive {
+    font-size: var(--desktop-heading-size);
+  }
+  
+  .grid-responsive {
+    gap: var(--desktop-grid-gap);
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .card-responsive {
+    padding: 2rem;
+  }
+  
+  .btn-responsive {
+    padding: 1.25rem 2.5rem;
+    font-size: var(--desktop-font-size);
+  }
+  
+  .hero-responsive {
+    padding: 6rem 0;
+  }
+  
+  .hero-title-responsive {
+    font-size: 4rem;
+  }
+  
+  .hero-subtitle-responsive {
+    font-size: 1.5rem;
+  }
+  
+  .service-card-responsive {
+    padding: 2.5rem;
+  }
+  
+  .service-icon-responsive {
+    width: 5rem;
+    height: 5rem;
+  }
+  
+  .service-title-responsive {
+    font-size: 1.75rem;
+  }
+  
+  .service-description-responsive {
+    font-size: 1.125rem;
+  }
+  
+  .pricing-card-responsive {
+    padding: 2.5rem;
+  }
+  
+  .pricing-price-responsive {
+    font-size: 3rem;
+  }
+  
+  .footer-responsive {
+    padding: 4rem 0;
+  }
+}
+
+/* Large Desktop Styles (1280px and up) */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+  
+  .grid-responsive {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .hero-title-responsive {
+    font-size: 5rem;
+  }
+  
+  .hero-subtitle-responsive {
+    font-size: 1.75rem;
+  }
+}
+
+/* Extra Large Desktop Styles (1536px and up) */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+  
+  .grid-responsive {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Ultra Wide Styles (1920px and up) */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1920px;
+  }
+  
+  .grid-responsive {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Mobile Landscape */
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero-responsive {
+    padding: 1rem 0;
+  }
+  
+  .hero-title-responsive {
+    font-size: 1.75rem;
+  }
+  
+  .hero-subtitle-responsive {
+    font-size: 0.875rem;
+  }
+  
+  .card-responsive {
+    padding: 1rem;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .service-icon-responsive,
+  .pricing-icon-responsive {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .nav-responsive,
+  .footer-responsive,
+  .btn-responsive {
+    display: none;
+  }
+  
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+  
+  .card-responsive {
+    break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+  
+  .text-responsive,
+  .heading-responsive {
+    color: black !important;
+  }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .card-responsive,
+  .btn-responsive,
+  .nav-item-responsive {
+    transition: none;
+  }
+}
+
+/* Accessibility - High Contrast */
+@media (prefers-contrast: high) {
+  .card-responsive {
+    border: 2px solid currentColor;
+  }
+  
+  .btn-responsive {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .card-responsive {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+  
+  .text-responsive {
+    color: #e5e7eb;
+  }
+}
+
+/* Focus Styles for Accessibility */
+.btn-responsive:focus,
+.nav-item-responsive:focus,
+.footer-link-responsive:focus {
+  outline: 2px solid #00ffff;
+  outline-offset: 2px;
+}
+
+/* Hover States */
+@media (hover: hover) {
+  .card-responsive:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-responsive:hover {
+    transform: translateY(-1px);
+  }
+}
+
+/* Touch Device Optimizations */
+@media (pointer: coarse) {
+  .btn-responsive {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .nav-item-responsive {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .footer-link-responsive {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Specific Component Responsive Classes */
+.hero-section {
+  @apply hero-responsive;
+}
+
+.hero-title {
+  @apply hero-title-responsive;
+}
+
+.hero-subtitle {
+  @apply hero-subtitle-responsive;
+}
+
+.service-grid {
+  @apply grid-responsive;
+}
+
+.service-card {
+  @apply service-card-responsive;
+}
+
+.service-icon {
+  @apply service-icon-responsive;
+}
+
+.service-title {
+  @apply service-title-responsive;
+}
+
+.service-description {
+  @apply service-description-responsive;
+}
+
+.pricing-grid {
+  @apply grid-responsive;
+}
+
+.pricing-card {
+  @apply pricing-card-responsive;
+}
+
+.pricing-price {
+  @apply pricing-price-responsive;
+}
+
+.pricing-features {
+  @apply pricing-features-responsive;
+}
+
+.pricing-feature {
+  @apply pricing-feature-responsive;
+}
+
+.footer-grid {
+  @apply grid-responsive;
+}
+
+.footer-section {
+  @apply footer-section-responsive;
+}
+
+.footer-title {
+  @apply footer-title-responsive;
+}
+
+.footer-link {
+  @apply footer-link-responsive;
+}
+
+.nav-menu {
+  @apply nav-responsive;
+}
+
+.nav-item {
+  @apply nav-item-responsive;
+}
+
+.btn-primary {
+  @apply btn-responsive;
+}
+
+.text-content {
+  @apply text-responsive;
+}
+
+.heading-main {
+  @apply heading-responsive;
+}

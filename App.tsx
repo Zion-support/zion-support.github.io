@@ -4,8 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
 import './app/styles/futuristic-enhanced.css';
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
+import './app/styles/futuristic-advanced.css';
+import './app/styles/responsive.css';
+import EnhancedNavigation from './app/components/EnhancedNavigation';
+import EnhancedFooter from './app/components/EnhancedFooter';
+import AdvancedFuturisticBackground from './app/components/AdvancedFuturisticBackground';
 import HomePage from './app/page';
 import { PageLoader } from './app/components/LoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
@@ -41,6 +44,11 @@ const PrivacyPage = React.lazy(() => import('./app/privacy/page'));
 const TermsPage = React.lazy(() => import('./app/terms/page'));
 const CookiesPage = React.lazy(() => import('./app/cookies/page'));
 const SitemapPage = React.lazy(() => import('./app/sitemap/page'));
+
+// New Service Pages
+const MicroSaasServicesPage = React.lazy(() => import('./app/micro-saas-services/page'));
+const ITSolutionsPage = React.lazy(() => import('./app/it-solutions/page'));
+const AISolutionsPage = React.lazy(() => import('./app/ai-solutions/page'));
 
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import('./app/ai-analytics/page'));
@@ -200,8 +208,8 @@ const App: React.FC = () => {
                   <AccessibilityEnhancer>
                     <PerformanceMonitor />
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
-                      <FuturisticBackground />
-                      <Navigation />
+                      <AdvancedFuturisticBackground />
+                      <EnhancedNavigation />
                       <Breadcrumb />
                       <main id="main-content" className="flex-1" tabIndex={-1}>
                         <Suspense fallback={<PageLoader />}>
@@ -214,9 +222,12 @@ const App: React.FC = () => {
                             <Route path="/blog" element={<BlogPage />} />
                             <Route path="/case-studies" element={<CaseStudiesPage />} />
                             <Route path="/careers" element={<CareersPage />} />
-                            <Route path="/ai-services" element={<AiServicesPage />} />
-                            <Route path="/it-services" element={<ItServicesPage />} />
-                            <Route path="/micro-saas" element={<MicroSaasPage />} />
+            <Route path="/ai-services" element={<AiServicesPage />} />
+            <Route path="/ai-solutions" element={<AISolutionsPage />} />
+            <Route path="/it-services" element={<ItServicesPage />} />
+            <Route path="/it-solutions" element={<ITSolutionsPage />} />
+            <Route path="/micro-saas" element={<MicroSaasPage />} />
+            <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
                             <Route path="/tutorials" element={<TutorialsPage />} />
                             <Route path="/consultation" element={<ConsultationPage />} />
                             <Route path="/demo" element={<DemoPage />} />
@@ -364,7 +375,7 @@ const App: React.FC = () => {
                           </Routes>
                         </Suspense>
                       </main>
-                      <Footer />
+                      <EnhancedFooter />
                     </div>
                   </AccessibilityEnhancer>
                 </EnhancedAccessibility>
