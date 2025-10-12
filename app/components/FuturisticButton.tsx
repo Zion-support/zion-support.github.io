@@ -13,6 +13,7 @@ interface FuturisticButtonProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
+const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   children,
   onClick,
   variant = 'primary',
@@ -21,7 +22,7 @@ interface FuturisticButtonProps {
   loading = false,
   className = '',
   type = 'button'
-}: FuturisticButtonProps) {
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const getVariantClasses = () => {
@@ -142,5 +143,7 @@ interface FuturisticButtonProps {
         )}
       </span>
     </motion.button>
-  </div></div>);
-}
+  );
+};
+
+export default FuturisticButton;

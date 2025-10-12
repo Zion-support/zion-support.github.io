@@ -123,7 +123,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           </div>
         </div>
       </div>
-    </div>);
+    );
   }
 
   return content;

@@ -1,6 +1,9 @@
-'use client'
+'use client';
 
-import { ArrowRight } from 'lucide-react';
+import React from 'react';
+import { ArrowRight, Brain, Zap, Shield, Globe } from 'lucide-react';
+
+const FuturisticServiceCardPage: React.FC = () => {
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -80,5 +83,10 @@ import { ArrowRight } from 'lucide-react';
               Discover the powerful features that make our futuristic service card solutions stand out.
             </p>
           </div>
-        </div></div></section>)};export default FuturisticServiceCardPage
-}
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default FuturisticServiceCardPage;
