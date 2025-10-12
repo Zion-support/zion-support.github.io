@@ -1,13 +1,12 @@
-import React, { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB };
 'use client';
+import React, { useEffect } from 'react';
 import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals';
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     const monitorCoreWebVitals = () => {
-      if ('web-vitals' in, window) {
+      if ('web-vitals' in window) {
           getCLS(console.log);
           getFID(console.log);
           getFCP(console.log);

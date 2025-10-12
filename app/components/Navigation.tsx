@@ -32,7 +32,9 @@ const Navigation: React.FC = () => {
                 Contact
               </Link>
             </div>
+          </div>
         </div>
+      </div>
     </nav>
   );
 };

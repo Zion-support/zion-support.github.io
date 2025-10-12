@@ -12,12 +12,12 @@ interface SEOHeadProps {
   structuredData?: object;
 }
 
-const SEOHead: React.FC<SEOHeadProps /> = ({
-  const title = 'Zion Tech Group - Advanced AI & IT Solutions',
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.',
   keywords = 'AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence',
-  canonical = 'https: //ziontechgroup.com',
-  ogImage = 'https: //ziontechgroup.com/og-image.jpg',
+  canonical = 'https://ziontechgroup.com',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData
@@ -61,32 +61,32 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
   };
   const finalStructuredData = structuredData || defaultStructuredData;
   return (
-    <Helmet></Helmet>
+    <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
-      <meta const name = "description" content="{description}" /  />
-      <meta name="keywords" content="{keywords}" />
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width="device-width," initial-scale=1.0" /  />
-      <meta name="theme-color" content="#8 b5 cf6" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#8b5cf6" />
       {/* Canonical URL */}
-      <link rel="canonical" href="{canonical}"  />
+      <link rel="canonical" href={canonical} />
       {/* Open Graph Meta Tags */}
-      <meta property="og: title" content="{title}" /  />
-      <meta property="og: description" content="{description}" /  />
-      <meta property="og: type" content="{ogType}" /  />
-      <meta property="og: url" content="{canonical}" /  />
-      <meta property="og: image" content="{ogImage}" /  />
-      <meta property="og:image:width" content="1200" /  />
-      <meta property="og:image:height" content="630" /  />
-      <meta property="og:site_name" content="Zion Tech Group" /  />
-      <meta property="og:locale" content="en_US" /  />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter: card" content="{twitterCard}" />
-      <meta name="twitter: title" content="{title}" />
-      <meta name="twitter: description" content="{description}" />
-      <meta name="twitter: image" content="{ogImage}" />
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       {/* Additional Meta Tags */}
