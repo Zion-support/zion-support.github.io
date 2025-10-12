@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Languages, Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
-import { Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
 import Layout from '../layout';
 
 export default function AITranslationService() {
@@ -78,7 +77,7 @@ export default function AITranslationService() {
         'Priority support',
         'API access',
         'Team collaboration',
-        'Custom terminology'
+        'Custom terminology',
         'Advanced quality checks',
         'Priority support',
         'Custom integrations',

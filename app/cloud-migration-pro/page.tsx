@@ -178,7 +178,6 @@ export default function CloudMigrationProPage() {
                   Comprehensive cloud migration solutions
                 </p>
               </div>
-            ))}
           </div>
 
           {/* Migration Process Section */}

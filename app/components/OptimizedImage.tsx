@@ -1,24 +1,35 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-  return (
-    <div>Content</div>
-  );
-    <div>Component content</div>;
-  );
+interface OptimizedImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+  width?: number;
+  height?: number;
 }
+
+export default function OptimizedImage({ src, alt, className = '', width, height }: OptimizedImageProps) {
   return (
-    <div>Content</div>
-  );
     <>
-
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
+      <div className="optimized-image-container">
+        <img
+          src={src}
+          alt={alt}
+          className={className}
+          width={width}
+          height={height}
+          loading="lazy"
+        />
+        <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+        >
+          Contact Us
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </Link>
       </div>
-    </>;
+    </>
   );
 }
-
