@@ -7,7 +7,7 @@ import {Phone,
   MapPin,
   Clock,
   Send,
-  CheckCircle}
+  CheckCircle
 } from 'lucide-react'
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -29,13 +29,19 @@ phone: '',
     service: '',
     budget: '',
     timeline: '',
-    message: ''}
-  });const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
+    message: ''
+  })
+
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
-    setFormData(prev => ({...prev,
-      [name]: value}
-    }))}, [])
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }, [])
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
@@ -55,9 +61,12 @@ phone: '',
         service: '',
         budget: '',
         timeline: '',
-        message: ''}
-      })} catch (error) {setSubmitStatus('error')}
-    } finally {setIsSubmitting(false)}
+        message: ''
+      })
+    } catch (error) {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
     }
   }
   const services = [
