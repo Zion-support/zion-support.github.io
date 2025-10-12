@@ -1,16 +1,16 @@
 export interface AddedService {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  price: string | number;
-  period?: string;
-  category: string;
-  features: string[];
-  icon?: string;
-  link?: string;
-  rating?: number;
-  customerCount?: number;
+  id: string
+  name: string
+  tagline: string
+  description: string
+  price: string | number
+  period?: string
+  category: string
+  features: string[]
+  icon?: string
+  link?: string
+  rating?: number
+  customerCount?: number
 }
 export const added2025Services: AddedService[] = [
   {
@@ -167,4 +167,4 @@ export const added2025Services: AddedService[] = [
     rating: 4.6,
     customerCount: 640
   }
-];
+]

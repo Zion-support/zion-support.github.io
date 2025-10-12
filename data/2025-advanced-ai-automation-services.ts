@@ -1,50 +1,48 @@
-import { ServiceVariant } from '../types/service-variants';
-export interface AdvancedAIAutomationService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string[];
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string
+  name: string
+  tagline: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  popular: boolean
+  icon: string
+  color: string
+  textColor: string
+  link: string
+  marketPosition: string
+  targetAudience: string[]
+  trialDays: number
+  setupTime: string
+  category: string
+  realService: boolean
+  technology: string[]
+  integrations: string[]
+  useCases: string[]
+  roi: string
+  competitors: string[]
+  marketSize: string
+  growthRate: string
+  variant: string
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+    mobile: string
+    email: string
+    address: string}
+    website: string}
+  }
+  realImplementation: boolean
+  implementationDetails: string
+  launchDate: string
+  customers: number
+  rating: number
+  reviews: number,
 }
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+}
 export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
   {
     id: 'ai-autonomous-customer-service',
@@ -395,8 +393,8 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     rating: 4.6,
     reviews: 43
   }
-];
-export default advancedAIAutomationServices2025;
+]
+export default advancedAIAutomationServices2025
     link: 'https://ziontechgroup.com/ai-customer-support-automation',
     marketPosition: 'Competes with Intercom ($39/month), Zendesk ($25/month), Freshdesk ($15/month). Our advantage: AI-powered automation, predictive analytics, and multi-language support.',
     targetAudience: 'Customer support teams, E-commerce businesses, SaaS companies, B2B services, Enterprise companies',
@@ -529,4 +527,4 @@ export default advancedAIAutomationServices2025;
     rating: 4.8,
     reviews: 38
   }
-];
+]

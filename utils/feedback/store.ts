@@ -1,86 +1,86 @@
-  id: string;
-  type: string;
-  message: string;
-  rating: number;
-  metadata: Record<string, any>;
-  createdAt: string;
-  ip: string;
+  id: string
+  type: string
+  message: string
+  rating: number
+  metadata: Record<string, any>
+  createdAt: string
+  ip: string
 }
-const feedbackData: FeedbackRecord[] = [];
+const feedbackData: FeedbackRecord[] = []
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'runtime');
-const DB_PATH = path && path.join(DATA_DIR, 'feedback && feedback.json');
+const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'runtime')
+const DB_PATH = path && path.join(DATA_DIR, 'feedback && feedback.json')
 function ensureDataFile(): void {
-  if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true });
+  if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true })
   if (!fs && fs.existsSync(DB_PATH))
-    fs && fs.writeFileSync(DB_PATH, JSON && JSON.stringify({ items: [] }, null, 2), 'utf-8');
+    fs && fs.writeFileSync(DB_PATH, JSON && JSON.stringify({ items: [] }, null, 2), 'utf-8')
 export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
-  ensureDataFile();
-  const raw = fs && fs.readFileSync(DB_PATH, 'utf-8');
-  const data = JSON && JSON.parse(raw || '{}');
-  const items: FeedbackRecord[] = Array && Array.isArray(data && data.items) ? data && data.items : [];
-  items && items.push(rec);
-  fs && fs.writeFileSync(DB_PATH, JSON && JSON.stringify({ items }, null, 2), 'utf-8');
-  return rec;
-export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {;
-  feedbackData.push(feedback);
-  console.log('Feedback saved:', feedback.id);
-}
-export function writeAll(rows: any[]): void {;
-  console.log('Writing feedback rows:', rows.length);
-  // Implementation would write to database or file
-}
-export function getAllFeedback(): FeedbackRecord[] {;
-  return [...feedbackData];
-  metadata: Record < string, any>;
-  created_at: string;
-  ip: string;
-}
-const feedbackData: FeedbackRecord[] = [];
+  ensureDataFile()
+  const raw = fs && fs.readFileSync(DB_PATH, 'utf-8')
+  const data = JSON && JSON.parse(raw || '{}')
+  const items: FeedbackRecord[] = Array && Array.isArray(data && data.items) ? data && data.items : []
+  items && items.push(rec)
+  fs && fs.writeFileSync(DB_PATH, JSON && JSON.stringify({ items }, null, 2), 'utf-8')
+  return rec
 export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
-  feedbackData.push(feedback);
-  console.log('Feedback saved:', feedback.id);
+  feedbackData.push(feedback)
+  console.log('Feedback saved:', feedback.id)
 }
-export function writeAll(rows: any[]): void {;
-  console.log('Writing feedback rows:', rows.length);
+export function writeAll(rows: any[]): void {
+  console.log('Writing feedback rows:', rows.length)
   // Implementation would write to database or file
 }
 export function getAllFeedback(): FeedbackRecord[] {
-  return [...feedbackData];
-export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {;
-  feedbackData.push(feedback);
-  console.log('Feedback saved:', feedback.id);
+  return [...feedbackData]
+  metadata: Record < string, any>
+  created_at: string
+  ip: string
 }
-export function writeAll(rows: any[]): void {;
-  console.log('Writing feedback rows:', rows.length);
+const feedbackData: FeedbackRecord[] = []
+export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
+  feedbackData.push(feedback)
+  console.log('Feedback saved:', feedback.id)
+}
+export function writeAll(rows: any[]): void {
+  console.log('Writing feedback rows:', rows.length)
   // Implementation would write to database or file
 }
-export function getAllFeedback(): FeedbackRecord[] {;
-  return [...feedbackData];
+export function getAllFeedback(): FeedbackRecord[] {
+  return [...feedbackData]
+export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
+  feedbackData.push(feedback)
+  console.log('Feedback saved:', feedback.id)
 }
-import fs from "fs";
-import path from "path";
+export function writeAll(rows: any[]): void {
+  console.log('Writing feedback rows:', rows.length)
+  // Implementation would write to database or file
+}
+export function getAllFeedback(): FeedbackRecord[] {
+  return [...feedbackData]
+}
+import fs from "fs"
+import path from "path"
 export type FeedbackRecord = {
-  id: string;
-  createdAtIso: string;
-  user: { id?: string; role?: string; talentSlug?: string };
-  rating: number;
-  comment?: string;
-  kind: "general" | "bug" | "feature";
-  context?: { actionType?: string; metadata?: any };
-};
-const DATA_DIR = path.join(process.cwd(), "data", "runtime");
-const DB_PATH = path.join(DATA_DIR, "feedback.json");
+  id: string
+  createdAtIso: string
+  user: { id?: string; role?: string; talentSlug?: string }
+  rating: number
+  comment?: string
+  kind: "general" | "bug" | "feature"
+  context?: { actionType?: string; metadata?: any }
+}
+const DATA_DIR = path.join(process.cwd(), "data", "runtime")
+const DB_PATH = path.join(DATA_DIR, "feedback.json")
 function ensureDataFile(): void {
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-  if (!fs.existsSync(DB_PATH)) fs.writeFileSync(DB_PATH, JSON.stringify({ items: [] }, null, 2), "utf-8");
+  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
+  if (!fs.existsSync(DB_PATH)) fs.writeFileSync(DB_PATH, JSON.stringify({ items: [] }, null, 2), "utf-8")
 }
 export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
-  ensureDataFile();
-  const raw = fs.readFileSync(DB_PATH, "utf-8");
-  const data = JSON.parse(raw || "{}");
-  const items: FeedbackRecord[] = Array.isArray(data.items) ? data.items : [];
-  items.push(rec);
-  fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), "utf-8");
-  return rec;
+  ensureDataFile()
+  const raw = fs.readFileSync(DB_PATH, "utf-8")
+  const data = JSON.parse(raw || "{}")
+  const items: FeedbackRecord[] = Array.isArray(data.items) ? data.items : []
+  items.push(rec)
+  fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), "utf-8")
+  return rec
 }

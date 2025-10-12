@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss'
 const config: Config = {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     &quot;./src / pages/**/*.{js, ts, jsx, tsx, mdx}&quot;,
@@ -24,8 +24,8 @@ const config: Config = {
       background_image: {
         'gradient - radial': 'radial - gradient (var (--tw - gradient - stops))gradient - conic': 'conic - gradient (from 180deg at 50% 50%, var (--tw - gradient - stops))'}}},
   plugins: []}
-;
-export default config;
+
+export default config
 import type { Config } from 'tailwindcss'
 const config: Config = {
   content: [

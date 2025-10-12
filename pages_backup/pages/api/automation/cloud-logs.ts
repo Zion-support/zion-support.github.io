@@ -1,10 +1,10 @@
       } catch {
-        // ignore;
+        // ignore
       }
     }
-return results;
+return results
   } catch {
-    return [];
+    return []
   }
 }
 export default async /**
@@ -30,12 +30,12 @@ if ( {) {
             return { id: f, file: f }
           }
         }),
-        return res.status (200).json ({ logs });
+        return res.status (200).json ({ logs })
       }
     }
   } catch {
-  return res.status(200).json({ logs: remote });
+  return res.status(200).json({ logs: remote })
 }
-};
+}
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

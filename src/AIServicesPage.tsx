@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { 
+  Search, 
+  Filter, 
+=======
+import React, { useState } from 'react'
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { 
   Brain, 
   Zap, 
@@ -13,17 +24,15 @@ import {
   Users, 
   BarChart3, 
   Network, 
-import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, ArrowRight, CheckCircle, ExternalLink, Sparkles, Rocket, TrendingUp, BarChart3, Target, Users as UsersIcon, Brain as BrainIcon, MessageSquare } from 'lucide-react';
-import { enhancedAIServices2025 } from '@/data/comprehensiveServices2025';
-import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, ArrowRight, CheckCircle, TrendingUp, BarChart3, Target, Rocket, Lock, Sparkles, Layers, Code, Database as DatabaseIcon2, Globe2, Shield as ShieldIcon2, Zap as ZapIcon2, Brain as BrainIcon, Cpu as CpuIcon, Cloud as CloudIcon, Database as DatabaseIcon3, Shield as ShieldIcon3, Zap as ZapIcon3, MessageSquare, Atom } from 'lucide-react';
-import { motion } from 'framer-motion';
-
+import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, ArrowRight, CheckCircle, ExternalLink, Sparkles, Rocket, TrendingUp, BarChart3, Target, Users as UsersIcon, Brain as BrainIcon, MessageSquare } from 'lucide-react'
+import { enhancedAIServices2025 } from '@/data/comprehensiveServices2025'
+import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, ArrowRight, CheckCircle, TrendingUp, BarChart3, Target, Rocket, Lock, Sparkles, Layers, Code, Database as DatabaseIcon2, Globe2, Shield as ShieldIcon2, Zap as ZapIcon2, Brain as BrainIcon, Cpu as CpuIcon, Cloud as CloudIcon, Database as DatabaseIcon3, Shield as ShieldIcon3, Zap as ZapIcon3, MessageSquare, Atom } from 'lucide-react'
+import { motion } from 'framer-motion'
 const AI_SERVICES = COMPREHENSIVE_SERVICES.filter(service => 
   service.category.includes('AI') || 
   service.category.includes('Machine Learning') || 
   service.category.includes('Automation')
-);
-
+)
   Smartphone,
   Globe,
   Phone,
@@ -38,19 +47,16 @@ const AI_SERVICES = COMPREHENSIVE_SERVICES.filter(service =>
   Clock,
   DollarSign,
   PieChart
-} from 'lucide-react';
-import { ENHANCED_SERVICES } from '@/data/enhancedServices';
-
+} from 'lucide-react'
+import { ENHANCED_SERVICES } from '@/data/enhancedServices'
 // Filter AI services
 const AI_SERVICES = ENHANCED_SERVICES.filter(service => 
   service.category.includes('AI') || 
   service.category.includes('Machine Learning') ||
   service.category.includes('Automation')
-);
-
+)
 export default function AIServicesPage() {
-  const [selectedTab, setSelectedTab] = useState('overview');
-
+  const [selectedTab, setSelectedTab] = useState('overview')
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
@@ -81,10 +87,9 @@ export default function AIServicesPage() {
               kleber@ziontechgroup.com
             </Button>
           </div>
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, Cpu, Shield, Zap, Cloud, Rocket, Target, Users, Award, Globe } from 'lucide-react';
-
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Brain, Cpu, Shield, Zap, Cloud, Rocket, Target, Users, Award, Globe } from 'lucide-react'
 const AIServicesPage = () => {
   const aiServices = [
     {
@@ -159,13 +164,11 @@ const AIServicesPage = () => {
       price: 2500,
       pricingModel: "monthly",
       aiScore: 95,
-import { Search, Filter, Brain, Zap, Shield, Database, Users, TrendingUp, BarChart3, MessageSquare, Camera, Video, FileText, Target, Globe, Bot, Cpu, Network, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign } from 'lucide-react';
-
+import { Search, Filter, Brain, Zap, Shield, Database, Users, TrendingUp, BarChart3, MessageSquare, Camera, Video, FileText, Target, Globe, Bot, Cpu, Network, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign } from 'lucide-react'
 const AIServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPricing, setSelectedPricing] = useState<string>('all');
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')
+  const [selectedPricing, setSelectedPricing] = useState<string>('all')
   // AI Services data
   const aiServices = [
     {
@@ -312,13 +315,12 @@ const AIServicesPage: React.FC = () => {
     },
     {
   // Use the enhanced AI services data
-  const aiServices = enhancedAIServices2025;
-
-  const categories = ['all', ...Array.from(new Set(aiServices.map(service => service.category)))];
+  const aiServices = enhancedAIServices2025
+  const categories = ['all', ...Array.from(new Set(aiServices.map(service => service.category)))]
       id: 4,
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { 
   Brain, 
   Zap, 
@@ -332,8 +334,7 @@ import {
   Target,
   Rocket,
   Globe
-} from 'lucide-react';
-
+} from 'lucide-react'
 const AIServicesPage = () => {
   const aiServices = [
     {
@@ -559,9 +560,8 @@ const AIServicesPage = () => {
         website: "https://ziontechgroup.com"
       }
     }
-  ];
-
-  const categories = ['all', 'Business Intelligence', 'Language AI', 'Visual AI', 'Predictive AI', 'Process Automation', 'Conversational AI', 'Quantum AI', 'Edge AI', 'AI Security', 'Healthcare AI', 'FinTech AI', 'Supply Chain AI'];
+  ]
+  const categories = ['all', 'Business Intelligence', 'Language AI', 'Visual AI', 'Predictive AI', 'Process Automation', 'Conversational AI', 'Quantum AI', 'Edge AI', 'AI Security', 'Healthcare AI', 'FinTech AI', 'Supply Chain AI']
       name: "AI Process Automation",
       category: "Process Automation",
       pricing: "Freemium",
@@ -626,31 +626,26 @@ const AIServicesPage = () => {
         website: "https://ziontechgroup.com"
       }
     }
-  ];
-
-  const categories = ['all', 'Content Generation', 'Customer Service', 'Sales Intelligence', 'Computer Vision', 'Data Analytics', 'Process Automation', 'Cybersecurity', 'Marketing'];
-  const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
-  const categories = ['all', 'Business Intelligence', 'Language AI', 'Visual AI', 'Predictive AI', 'Process Automation', 'Conversational AI', 'Customer Service', 'Marketing AI', 'Security AI', 'Supply Chain AI'];
-
+  ]
+  const categories = ['all', 'Content Generation', 'Customer Service', 'Sales Intelligence', 'Computer Vision', 'Data Analytics', 'Process Automation', 'Cybersecurity', 'Marketing']
+  const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time']
+  const categories = ['all', 'Business Intelligence', 'Language AI', 'Visual AI', 'Predictive AI', 'Process Automation', 'Conversational AI', 'Customer Service', 'Marketing AI', 'Security AI', 'Supply Chain AI']
   const filteredServices = aiServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
-    
-    return matchesSearch && matchesCategory && matchesPricing;
-  });
-
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing
+    return matchesSearch && matchesCategory && matchesPricing
+  })
   const formatPrice = (price: number, model: string) => {
     switch (model) {
       case 'monthly':
-        return `$${price}/month`;
+        return `$${price}/month`
       case 'yearly':
-        return `$${price * 12}/year`;
+        return `$${price * 12}/year`
       case 'one-time':
-        return `$${price.toLocaleString()}`;
+        return `$${price.toLocaleString()}`
       default:
       icon: Cloud,
       title: 'AI Cloud Infrastructure',
@@ -658,8 +653,7 @@ const AIServicesPage = () => {
       features: ['Scalable Computing', 'GPU Clusters', 'Model Deployment', 'Performance Optimization'],
       link: '/ai-cloud-infrastructure'
     }
-  ];
-
+  ]
   const benefits = [
     {
       icon: TrendingUp,
@@ -681,8 +675,7 @@ const AIServicesPage = () => {
       title: 'Improved Customer Experience',
       description: 'Deliver personalized experiences and faster, more accurate customer service.'
     }
-  ];
-
+  ]
   const industries = [
     'Healthcare & Life Sciences',
     'Financial Services',
@@ -692,52 +685,48 @@ const AIServicesPage = () => {
     'Transportation & Logistics',
     'Energy & Utilities',
     'Media & Entertainment'
-  ];
+  ]
   const getAIScoreColor = (score: number) => {
-    if (score >= 95) return 'text-emerald-400';
-    if (score >= 90) return 'text-green-400';
-    if (score >= 85) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-
+    if (score >= 95) return 'text-emerald-400'
+    if (score >= 90) return 'text-green-400'
+    if (score >= 85) return 'text-yellow-400'
+    return 'text-red-400'
+  }
   const getInnovationLevelColor = (level: string) => {
     switch (level) {
-      case 'Revolutionary': return 'text-purple-400 bg-purple-400/20';
-      case 'Cutting-edge': return 'text-blue-400 bg-blue-400/20';
-      case 'Advanced': return 'text-green-400 bg-green-400/20';
-      default: return 'text-gray-400 bg-gray-400/20';
-        return `$${price}`;
+      case 'Revolutionary': return 'text-purple-400 bg-purple-400/20'
+      case 'Cutting-edge': return 'text-blue-400 bg-blue-400/20'
+      case 'Advanced': return 'text-green-400 bg-green-400/20'
+      default: return 'text-gray-400 bg-gray-400/20'
+        return `$${price}`
     }
-  };
-
+  }
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'Content Generation': return <FileText className="w-6 h-6" />;
-      case 'Customer Service': return <MessageSquare className="w-6 h-6" />;
-      case 'Sales Intelligence': return <TrendingUp className="w-6 h-6" />;
-      case 'Computer Vision': return <Eye className="w-6 h-6" />;
-      case 'Data Analytics': return <BarChart3 className="w-6 h-6" />;
-      case 'Process Automation': return <Zap className="w-6 h-6" />;
-      case 'Cybersecurity': return <Shield className="w-6 h-6" />;
-      case 'Marketing': return <Target className="w-6 h-6" />;
-      default: return <Brain className="w-6 h-6" />;
+      case 'Content Generation': return <FileText className="w-6 h-6" />
+      case 'Customer Service': return <MessageSquare className="w-6 h-6" />
+      case 'Sales Intelligence': return <TrendingUp className="w-6 h-6" />
+      case 'Computer Vision': return <Eye className="w-6 h-6" />
+      case 'Data Analytics': return <BarChart3 className="w-6 h-6" />
+      case 'Process Automation': return <Zap className="w-6 h-6" />
+      case 'Cybersecurity': return <Shield className="w-6 h-6" />
+      case 'Marketing': return <Target className="w-6 h-6" />
+      default: return <Brain className="w-6 h-6" />
     }
-  };
-
+  }
   const getPricingColor = (pricing: string) => {
     switch (pricing) {
-      case 'Freemium': return 'text-green-400';
-      case 'Subscription': return 'text-blue-400';
-      case 'One-time': return 'text-purple-400';
-      default: return 'text-gray-400';
+      case 'Freemium': return 'text-green-400'
+      case 'Subscription': return 'text-blue-400'
+      case 'One-time': return 'text-purple-400'
+      default: return 'text-gray-400'
     }
-  };
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Brain, Zap, Cpu, Shield, Users, TrendingUp, ArrowRight, CheckCircle, Star, Globe, Lock, Rocket } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-
+  }
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { Brain, Zap, Cpu, Shield, Users, TrendingUp, ArrowRight, CheckCircle, Star, Globe, Lock, Rocket } from 'lucide-react'
+import { SEO } from '@/components/SEO'
 const aiServices = [
   {
     title: "AI-Powered Business Intelligence",
@@ -770,12 +759,12 @@ const aiServices = [
     features: ["Failure Prediction", "Maintenance Optimization", "Performance Monitoring", "Cost Reduction"],
     price: "From $2,800/month",
     color: "from-orange-500 to-red-500"
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import React from 'react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Link } from "react-router-dom"
+import { SEO } from "@/components/SEO"
 import { 
   Brain, 
 
@@ -884,13 +873,13 @@ import {
               efficiency, and competitive advantage in the digital age.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <$2 />
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
               >
                 Get Started
               </Link>
-              <Link
+              <$2 />
                 to="/request-quote"
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-xl font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
@@ -916,11 +905,11 @@ import {
         title="AI & Machine Learning Services - Zion Tech Group" 
         description="Transform your business with cutting-edge AI solutions including predictive analytics, natural language processing, and computer vision."
         keywords="AI, machine learning, predictive analytics, NLP, computer vision, business intelligence"
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { Link } from 'react-router-dom'
 import { 
   Brain, 
   Bot, 
@@ -940,8 +929,7 @@ import {
   Users,
   TrendingUp,
   CheckCircle
-} from "lucide-react";
-
+} from "lucide-react"
 const AI_SERVICES = [
   {
     id: "ai-content-generation",
@@ -1127,8 +1115,7 @@ const AI_SERVICES = [
     reviewCount: 423,
     badge: "Business Essential"
   }
-];
-
+]
 const BENEFITS = [
   {
     title: "Cost Effective",
@@ -1150,8 +1137,7 @@ const BENEFITS = [
     description: "Access to AI specialists and technical support team",
     icon: <Users className="h-6 w-6 text-cyan-500" />
   }
-];
-
+]
 export default function AIServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue">
@@ -1212,14 +1198,14 @@ export default function AIServicesPage() {
               From predictive analytics to computer vision, we deliver AI that drives real business value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 Get Started
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link
+              <$2 />
                 to="/request-quote"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
               >
@@ -1370,7 +1356,7 @@ export default function AIServicesPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {aiServices.map((service, index) => {
-            const IconComponent = service.icon;
+            const IconComponent = service.icon
             return (
               <motion.div
                 key={service.title}
@@ -1412,7 +1398,7 @@ export default function AIServicesPage() {
                 
                 <div className="flex items-center justify-between">
                   <span className="text-zion-cyan font-semibold">{service.price}</span>
-                  <Link
+                  <$2 />
                     to="/contact"
                     className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors duration-300"
                   >
@@ -1420,7 +1406,7 @@ export default function AIServicesPage() {
                   </Link>
                 </div>
               </motion.div>
-            );
+            )
           })}
         </div>
       </section>
@@ -1453,7 +1439,7 @@ export default function AIServicesPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {benefits.map((benefit, index) => {
-            const IconComponent = benefit.icon;
+            const IconComponent = benefit.icon
             return (
               <motion.div
                 key={benefit.title}
@@ -1472,7 +1458,7 @@ export default function AIServicesPage() {
                   </div>
                 </div>
               </motion.div>
-            );
+            )
           })}
         </div>
       </section>
@@ -1511,7 +1497,7 @@ export default function AIServicesPage() {
               <div className="border-t border-gray-600 pt-4">
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span>Start your free trial today</span>
-                  <a 
+                  <$2 />
                     href={service.contactInfo.website}
                     className="text-purple-400 hover:text-purple-300 transition-colors"
                     target="_blank"
@@ -1833,7 +1819,7 @@ export default function AIServicesPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
+              const IconComponent = benefit.icon
               return (
                 <motion.div
                   key={benefit.title}
@@ -1848,7 +1834,7 @@ export default function AIServicesPage() {
                   <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                   <p className="text-zion-slate-light">{benefit.description}</p>
                 </motion.div>
-              );
+              )
             })}
       {/* Enhanced Contact Section */}
       <div className="bg-slate-800 py-20 border-t border-slate-700 relative overflow-hidden">
@@ -1862,7 +1848,7 @@ export default function AIServicesPage() {
             Ready to Harness AI Power?
           </h2>
           <div className="mb-8">
-            <a 
+            <$2 />
               href="/comprehensive-services"
               className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 mb-4"
             >
@@ -1892,7 +1878,7 @@ export default function AIServicesPage() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
+            <$2 />
               href="https://ziontechgroup.com" 
               target="_blank"
               rel="noopener noreferrer"
@@ -1901,7 +1887,7 @@ export default function AIServicesPage() {
               Visit Our Website
               <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </a>
-            <a 
+            <$2 />
               href={`mailto:${aiServices[0].contactInfo.email}?subject=AI Services Inquiry`}
               className="inline-flex items-center gap-2 px-8 py-4 border border-purple-400 text-purple-400 rounded-xl font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
             >
@@ -1930,7 +1916,7 @@ export default function AIServicesPage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => {
-              const IconComponent = service.icon;
+              const IconComponent = service.icon
               return (
                 <motion.div
                   key={index}
@@ -1957,7 +1943,7 @@ export default function AIServicesPage() {
                     </ul>
                   </div>
                   
-                  <Link
+                  <$2 />
                     to={service.link}
                     className="inline-flex items-center text-zion-cyan hover:text-zion-purple transition-colors duration-300 group/link"
                   >
@@ -1965,7 +1951,7 @@ export default function AIServicesPage() {
                     <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </motion.div>
-              );
+              )
             })}
           </div>
       <div className="relative z-10 bg-slate-800/80 backdrop-blur-sm py-16 border-t border-slate-700/50">
@@ -2055,7 +2041,7 @@ export default function AIServicesPage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
+              const IconComponent = benefit.icon
               return (
                 <motion.div
                   key={index}
@@ -2070,7 +2056,7 @@ export default function AIServicesPage() {
                   <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
                   <p className="text-zion-slate-light">{benefit.description}</p>
                 </motion.div>
-              );
+              )
             })}
           ))}
         </div>
@@ -2222,8 +2208,7 @@ export default function AIServicesPage() {
     description: "AI models continuously improve and adapt to your specific business needs and data",
     icon: <Brain className="h-6 w-6" />
   }
-];
-
+]
 export default function AIServicesPage() {
   return (
     <div className="min-h-screen bg-background">
@@ -2379,7 +2364,7 @@ export default function AIServicesPage() {
                     
                     <div className="flex gap-2">
                       {service.website && (
-                        <a 
+                        <$2 />
                           href={service.website} 
                           target="_blank" 
                           rel="noopener noreferrer"
@@ -2450,13 +2435,13 @@ export default function AIServicesPage() {
               improve efficiency, and create new opportunities for growth.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <$2 />
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
               >
                 Start Your AI Journey
               </Link>
-              <Link
+              <$2 />
                 to="/request-quote"
                 className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-xl font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
@@ -2514,7 +2499,7 @@ export default function AIServicesPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 // AI Service Card Component
@@ -2554,7 +2539,7 @@ function AIServiceCard({ service }: { service: any }) {
             <span className="text-zion-cyan-light">AI Score:</span>
             <div className="flex items-center gap-2">
               <div className="w-16 bg-zion-blue-light rounded-full h-2">
-                <div 
+                <$2 />
                   className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" 
                   style={{ width: `${service.aiScore}%` }}
                 ></div>
@@ -2577,7 +2562,7 @@ function AIServiceCard({ service }: { service: any }) {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }
 
 // Use Case Card Component
@@ -2610,16 +2595,16 @@ function UseCaseCard({ icon, title, description, examples }: {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }
 
 // Pricing Card Component
 function PricingCard({ title, price, description, features, popular }: {
-  title: string;
-  price: string;
-  description: string;
-  features: string[];
-  popular: boolean;
+  title: string
+  price: string
+  description: string
+  features: string[]
+  popular: boolean
 }) {
   return (
     <Card className={`relative ${popular ? 'border-zion-cyan border-2' : 'border-zion-cyan/30'} bg-white/10 backdrop-blur-sm hover:border-zion-cyan/60 transition-all duration-300`}>
@@ -2647,7 +2632,7 @@ function PricingCard({ title, price, description, features, popular }: {
         </Button>
       </CardContent>
     </Card>
-  );
+  )
       {/* CTA Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <motion.div
@@ -2664,14 +2649,14 @@ function PricingCard({ title, price, description, features, popular }: {
               Join hundreds of companies that have already revolutionized their operations with our cutting-edge AI solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 Start Your AI Journey
                 <Rocket className="w-5 h-5" />
               </Link>
-              <Link
+              <$2 />
                 to="/request-quote"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
               >
@@ -2683,7 +2668,7 @@ function PricingCard({ title, price, description, features, popular }: {
         </motion.div>
       </section>
     </div>
-  );
+  )
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
@@ -2716,9 +2701,9 @@ function PricingCard({ title, price, description, features, popular }: {
               <h3 className="text-xl font-semibold text-zion-slate-light mb-2">No AI services found</h3>
               <p className="text-zion-slate-light mb-4">Try adjusting your search criteria or browse all AI categories</p>
               <Button onClick={() => {
-                setSearchQuery('');
-                setSelectedSubcategory('all');
-                setPriceRange('all');
+                setSearchQuery('')
+                setSelectedSubcategory('all')
+                setPriceRange('all')
               }}>
                 Clear Filters
               </Button>
@@ -2896,11 +2881,11 @@ function PricingCard({ title, price, description, features, popular }: {
                 Call AI Experts
               </Button>
             </a>
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { TrustedBySection } from '@/components/TrustedBySection';
-import { QuoteFormSection } from '@/components/QuoteFormSection';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Button } from '@/components/ui/button'
+import { TrustedBySection } from '@/components/TrustedBySection'
+import { QuoteFormSection } from '@/components/QuoteFormSection'
 import { 
   Brain, 
   Bot, 
@@ -2915,8 +2900,7 @@ import {
   Star,
   Clock,
   DollarSign
-} from 'lucide-react';
-
+} from 'lucide-react'
 const aiServices = [
   {
     id: 1,
@@ -3056,8 +3040,7 @@ const aiServices = [
       "Risk mitigation and success planning"
     ]
   }
-];
-
+]
 const aiTechnologies = [
   "Machine Learning & Deep Learning",
   "Natural Language Processing (NLP)",
@@ -3067,8 +3050,7 @@ const aiTechnologies = [
   "Recommendation Systems",
   "Sentiment Analysis",
   "Anomaly Detection"
-];
-
+]
 const industries = [
   "Healthcare & Life Sciences",
   "Financial Services & Banking",
@@ -3078,8 +3060,7 @@ const industries = [
   "Real Estate & Construction",
   "Media & Entertainment",
   "Government & Public Sector"
-];
-
+]
 export default function AIServicesPage() {
   return (
     <>
@@ -3417,15 +3398,15 @@ export default function AIServicesPage() {
       </section>
 
       <TrustedBySection />
-import React from 'react';
-import React from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import React from 'react'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
+import { SEO } from '@/components/SEO'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { Link } from 'react-router-dom'
 import { 
   Brain, 
   Database, 
@@ -3457,8 +3438,7 @@ import {
   BarChart,
   Smartphone,
 
-} from "lucide-react";
-
+} from "lucide-react"
 export default function AIServicesPage() {
   const aiServices = [
     {
@@ -3701,8 +3681,7 @@ export default function AIServicesPage() {
       link: "https://ziontechgroup.com/ai-maintenance",
       details: "Reduce downtime and maintenance costs with AI-powered predictive maintenance. Monitor equipment health in real-time and schedule maintenance only when needed."
     }
-  ];
-
+  ]
   const categories = [
     "All Services",
     "Conversational AI",
@@ -3717,19 +3696,16 @@ export default function AIServicesPage() {
     "Language AI",
     "Development AI",
     "IoT AI"
-  ];
-
-  const [selectedCategory, setSelectedCategory] = React.useState("All Services");
-  const [filteredServices, setFilteredServices] = React.useState(aiServices);
-
+  ]
+  const [selectedCategory, setSelectedCategory] = React.useState("All Services")
+  const [filteredServices, setFilteredServices] = React.useState(aiServices)
   React.useEffect(() => {
     if (selectedCategory === "All Services") {
-      setFilteredServices(aiServices);
+      setFilteredServices(aiServices)
     } else {
-      setFilteredServices(aiServices.filter(service => service.category === selectedCategory));
+      setFilteredServices(aiServices.filter(service => service.category === selectedCategory))
     }
-  }, [selectedCategory]);
-
+  }, [selectedCategory])
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
       {/* Hero Section */}
@@ -3767,19 +3743,108 @@ export default function AIServicesPage() {
             <Button asChild size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <Link to="/contact">Consult with Experts</Link>
             </Button>
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { 
   Brain, 
   Zap, 
     Circle,
   BarChart3, 
+>>>>>>> origin/main
   Star, 
   Clock, 
+  DollarSign, 
+  Users, 
+  Zap, 
+  Brain, 
+  Cloud, 
+  Database, 
+  Shield, 
+  Settings, 
+  Eye, 
+  Leaf, 
+  CreditCard, 
+  Heart, 
+  Truck, 
+  ShoppingCart, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  Bot, 
+  Cpu, 
+  Network, 
   ArrowRight, 
+<<<<<<< HEAD
+  CheckCircle, 
+  ExternalLink, 
+  Sparkles, 
+  Rocket, 
+  TrendingUp, 
+  BarChart3, 
+  Target, 
+  MessageSquare 
+} from 'lucide-react';
+import { motion } from 'framer-motion';
+
+// Mock data for AI services
+const AI_SERVICES = [
+  {
+    id: 'ai-chatbot',
+    name: 'AI Chatbot Solutions',
+    description: 'Intelligent conversational AI that understands context and provides human-like responses.',
+    price: '$299',
+    period: '/month',
+    features: ['Natural Language Processing', 'Multi-language Support', '24/7 Availability', 'Custom Training'],
+    category: 'AI & Machine Learning',
+    popular: true,
+    icon: Bot,
+    color: 'from-blue-600 to-purple-700'
+  },
+  {
+    id: 'ai-analytics',
+    name: 'AI-Powered Analytics',
+    description: 'Advanced analytics platform that uses machine learning to uncover insights from your data.',
+    price: '$499',
+    period: '/month',
+    features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Data Visualization'],
+    category: 'AI & Machine Learning',
+    popular: true,
+    icon: BarChart3,
+    color: 'from-green-600 to-teal-700'
+  },
+  {
+    id: 'ai-automation',
+    name: 'AI Process Automation',
+    description: 'Automate repetitive tasks and workflows with intelligent AI agents.',
+    price: '$399',
+    period: '/month',
+    features: ['Workflow Automation', 'Task Scheduling', 'Error Handling', 'Performance Monitoring'],
+    category: 'AI & Machine Learning',
+    popular: false,
+    icon: Zap,
+    color: 'from-orange-600 to-red-700'
+  }
+];
+
+export default function AIServicesPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
+
+  const filteredServices = AI_SERVICES.filter(service => {
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const categories = ['all', ...Array.from(new Set(AI_SERVICES.map(service => service.category)))];
+
+=======
   CheckCircle,
   Phone,
   Mail,
@@ -3796,58 +3861,40 @@ import {
   MessageSquare,
   Bot,
   Network
-} from "lucide-react";
-import { AI_SERVICES } from "@/data/expandedServices";
-
+} from "lucide-react"
+import { AI_SERVICES } from "@/data/expandedServices"
 const AIServicesPage = () => {
+>>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="mb-6">
-              <Brain className="h-20 w-20 mx-auto text-blue-200" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI & Machine Learning Solutions
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              AI-Powered Services
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">
-              Transform your business with cutting-edge artificial intelligence and machine learning technologies
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Transform your business with cutting-edge artificial intelligence solutions. 
+              From chatbots to analytics, we provide the AI tools you need to succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/request-quote">
-                <Button size="lg" className="bg-white hover:bg-gray-100 text-blue-600 font-semibold">
-                  Get AI Consultation
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  Contact AI Experts
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="py-8 bg-zion-blue-dark/50">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={selectedCategory === category ? "default" : "outline"}
-                onClick={() => setSelectedCategory(category)}
-                className={`${
-                  selectedCategory === category
-                    ? "bg-zion-purple text-white"
-                    : "border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-                }`}
-              >
-                {category}
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                Get Started
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
+<<<<<<< HEAD
+              <Button size="lg" variant="outline">
+                View Pricing
+              </Button>
+            </div>
+          </motion.div>
+=======
       {/* Categories Overview */}
       <div className="py-16 bg-zion-slate/50">
         <div className="container mx-auto px-4">
@@ -3888,360 +3935,102 @@ const AIServicesPage = () => {
               <p className="text-zion-cyan-light">AI-Powered Operations</p>
             </CardContent>
           </Card>
+>>>>>>> origin/main
         </div>
-      </div>
+      </section>
 
-      {/* Main Content Tabs */}
-      <div className="container mx-auto px-4 py-16">
-        <Tabs value={selectedTab} onValueChange={setSelectedTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-4 bg-white/10 backdrop-blur-sm border-zion-cyan/30">
-            <TabsTrigger value="overview" className="text-zion-cyan data-[state=active]:bg-zion-cyan data-[state=active]:text-white">
-              Overview
-            </TabsTrigger>
-            <TabsTrigger value="services" className="text-zion-cyan data-[state=active]:bg-zion-cyan data-[state=active]:text-white">
-              AI Services
-            </TabsTrigger>
-            <TabsTrigger value="use-cases" className="text-zion-cyan data-[state=active]:bg-zion-cyan data-[state=active]:text-white">
-              Use Cases
-            </TabsTrigger>
-            <TabsTrigger value="pricing" className="text-zion-cyan data-[state=active]:bg-zion-cyan data-[state=active]:text-white">
-              Pricing
-            </TabsTrigger>
-          </TabsList>
-
-          {/* Overview Tab */}
-          <TabsContent value="overview" className="mt-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6">
-                  Why AI is Critical for Your Business
-                </h2>
-                <p className="text-lg text-zion-cyan-light mb-6">
-                  In today's competitive landscape, artificial intelligence isn't just a luxury—it's a necessity. 
-                  Our AI solutions help businesses automate processes, gain insights from data, and create 
-                  personalized customer experiences that drive growth and efficiency.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="font-semibold text-white">Process Automation</h3>
-                      <p className="text-zion-cyan-light">Streamline operations and reduce manual tasks by up to 80%</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="font-semibold text-white">Predictive Analytics</h3>
-                      <p className="text-zion-cyan-light">Make data-driven decisions with advanced forecasting capabilities</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="font-semibold text-white">Customer Intelligence</h3>
-                      <p className="text-zion-cyan-light">Understand customer behavior and preferences in real-time</p>
-                    </div>
-                  </div>
-                </div>
-                <p className="text-zion-cyan font-medium">{category.name}</p>
-              </div>
+      {/* Search and Filters */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-4 mb-8">
+            <div className="flex-1">
               <div className="relative">
-                <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 p-8">
-                  <h3 className="text-2xl font-bold text-white mb-6 text-center">AI Capabilities</h3>
-                  <div className="space-y-6">
-                    <div className="flex items-center justify-between">
-                      <span className="text-zion-cyan-light">Machine Learning</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-24 bg-zion-blue-light rounded-full h-2">
-                          <div className="bg-zion-cyan h-2 rounded-full" style={{ width: '95%' }}></div>
-                        </div>
-                        <span className="text-zion-cyan font-semibold">95%</span>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-zion-cyan-light">Natural Language Processing</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-24 bg-zion-blue-light rounded-full h-2">
-                          <div className="bg-zion-cyan h-2 rounded-full" style={{ width: '88%' }}></div>
-                        </div>
-                        <span className="text-zion-cyan font-semibold">88%</span>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-zion-cyan-light">Computer Vision</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-24 bg-zion-blue-light rounded-full h-2">
-                          <div className="bg-zion-cyan h-2 rounded-full" style={{ width: '92%' }}></div>
-                        </div>
-                        <span className="text-zion-cyan font-semibold">92%</span>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-zion-cyan-light">Predictive Analytics</span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-24 bg-zion-blue-light rounded-full h-2">
-                          <div className="bg-zion-cyan h-2 rounded-full" style={{ width: '90%' }}></div>
-                        </div>
-                        <span className="text-zion-cyan font-semibold">90%</span>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
+                <input
+                  type="text"
+                  placeholder="Search AI services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
               </div>
             </div>
-          </TabsContent>
-
-          {/* AI Services Tab */}
-          <TabsContent value="services" className="mt-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Our AI Service Portfolio</h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-                Comprehensive AI solutions designed to transform every aspect of your business operations
-              </p>
+            <div className="flex gap-2">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              >
+                {categories.map(category => (
+                  <option key={category} value={category}>
+                    {category === 'all' ? 'All Categories' : category}
+                  </option>
+                ))}
+              </select>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="popularity">Sort by Popularity</option>
+                <option value="price">Sort by Price</option>
+                <option value="name">Sort by Name</option>
+              </select>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {AI_SERVICES.map((service) => (
-                <AIServiceCard key={service.id} service={service} />
-              ))}
-            </div>
-          </TabsContent>
-
-          {/* Use Cases Tab */}
-          <TabsContent value="use-cases" className="mt-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Real-World AI Applications</h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-                Discover how AI is transforming industries and creating new opportunities for growth
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <UseCaseCard
-                icon={<Brain className="h-8 w-8 text-zion-cyan" />}
-                title="Customer Service Automation"
-                description="AI-powered chatbots and virtual assistants that provide 24/7 customer support"
-                examples={[
-                  "Intelligent ticket routing",
-                  "Automated responses to common queries",
-                  "Sentiment analysis for customer satisfaction"
-                ]}
-              />
-              <UseCaseCard
-                icon={<BarChart3 className="h-8 w-8 text-zion-cyan" />}
-                title="Predictive Analytics"
-                description="Forecast trends and make data-driven decisions with machine learning models"
-                examples={[
-                  "Sales forecasting",
-                  "Inventory optimization",
-                  "Risk assessment and management"
-                ]}
-              />
-              <UseCaseCard
-                icon={<Shield className="h-8 w-8 text-zion-cyan" />}
-                title="Fraud Detection"
-                description="Advanced AI systems that identify and prevent fraudulent activities in real-time"
-                examples={[
-                  "Transaction monitoring",
-                  "Behavioral analysis",
-                  "Anomaly detection"
-                ]}
-              />
-              <UseCaseCard
-                icon={<Network className="h-8 w-8 text-zion-cyan" />}
-                title="Process Optimization"
-                description="Streamline operations and improve efficiency with intelligent automation"
-                examples={[
-                  "Workflow automation",
-                  "Resource allocation",
-                  "Performance monitoring"
-                ]}
-              />
-              <UseCaseCard
-                icon={<Smartphone className="h-8 w-8 text-zion-cyan" />}
-                title="Personalization"
-                description="Create tailored experiences for customers using AI-driven insights"
-                examples={[
-                  "Product recommendations",
-                  "Content personalization",
-                  "Dynamic pricing"
-                ]}
-              />
-              <UseCaseCard
-                icon={<Globe className="h-8 w-8 text-zion-cyan" />}
-                title="Market Intelligence"
-                description="Gain competitive advantages with AI-powered market analysis and insights"
-                examples={[
-                  "Competitor monitoring",
-                  "Trend analysis",
-                  "Opportunity identification"
-                ]}
-              />
-            </div>
-          </TabsContent>
-
-          {/* Pricing Tab */}
-          <TabsContent value="pricing" className="mt-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-white mb-4">AI Service Pricing Plans</h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-                Flexible pricing options designed to meet your business needs and budget
-              </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              <PricingCard
-                title="Starter AI"
-                price="$2,999"
-                description="Perfect for small businesses starting their AI journey"
-                features={[
-                  "Basic AI consultation",
-                  "Process automation setup",
-                  "Data analysis tools",
-                  "Email support",
-                  "Monthly maintenance"
-                ]}
-                popular={false}
-              />
-              <PricingCard
-                title="Professional AI"
-                price="$7,999"
-                description="Comprehensive AI solutions for growing businesses"
-                features={[
-                  "Advanced AI implementation",
-                  "Custom machine learning models",
-                  "Predictive analytics",
-                  "Priority support",
-                  "Weekly maintenance",
-                  "Performance optimization"
-                ]}
-                popular={true}
-              />
-              <PricingCard
-                title="Enterprise AI"
-                price="$19,999"
-                description="Full-scale AI transformation for large organizations"
-                features={[
-                  "End-to-end AI strategy",
-                  "Custom AI development",
-                  "24/7 monitoring",
-                  "Dedicated support team",
-                  "Continuous optimization",
-                  "Scalability planning"
-                ]}
-                popular={false}
-              />
-            </div>
-          </TabsContent>
-        </Tabs>
-      </div>
-
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Harness the Power of AI?
-          </h2>
-          <p className="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">
-            Let's discuss how our AI solutions can transform your business and drive unprecedented growth.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-cyan px-8 py-3">
-              <Phone className="mr-2 h-5 w-5" />
-              Schedule AI Consultation
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8 py-3">
-              <Mail className="mr-2 h-5 w-5" />
-              Request AI Demo
-            </Button>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* AI Services Grid */}
-      <div className="py-20 bg-zion-slate">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Comprehensive AI Solutions</h2>
-            <p className="text-xl text-zion-cyan max-w-3xl mx-auto">
-              Choose from our extensive range of AI services designed to meet your business needs
-            </p>
-          </div>
-          
+      {/* Services Grid */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {AI_SERVICES.map((service) => (
-              <Card key={service.id} className="bg-zion-blue-dark/50 border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 group">
-                <CardHeader className="pb-4">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="p-3 rounded-lg bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 text-zion-cyan group-hover:scale-110 transition-transform duration-300">
-                      {service.icon}
+            {filteredServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                  <CardHeader>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className={`p-3 rounded-lg bg-gradient-to-r ${service.color}`}>
+                        <service.icon className="h-6 w-6 text-white" />
+                      </div>
+                      {service.popular && (
+                        <Badge variant="secondary" className="bg-green-100 text-green-800">
+                          Popular
+                        </Badge>
+                      )}
                     </div>
-                    {service.badge && (
-                      <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
-                        {service.badge}
-                      </Badge>
-                    )}
-                  </div>
-                  <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-zion-slate-light text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                
-                <CardContent className="space-y-4">
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-white">Key Features:</h4>
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 4).map((feature, index) => (
-                        <li key={index} className="flex items-center text-sm text-zion-slate-light">
-                          <CheckCircle className="h-4 w-4 text-zion-cyan mr-2 flex-shrink-0" />
+                    <CardTitle className="text-xl">{service.name}</CardTitle>
+                    <CardDescription className="text-gray-600">
+                      {service.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="mb-4">
+                      <span className="text-3xl font-bold text-gray-900">{service.price}</span>
+                      <span className="text-gray-500">{service.period}</span>
+                    </div>
+                    <ul className="space-y-2 mb-6">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
                           {feature}
                         </li>
                       ))}
                     </ul>
-                  </div>
-                  
-                  <div className="flex items-center justify-between pt-2">
-                    <div className="flex items-center space-x-2">
-                      <div className="flex items-center">
-                        {[...Array(5)].map((_, i) => (
-                          <Star 
-                            key={i} 
-                            className={`h-4 w-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} 
-                          />
-                        ))}
-                      </div>
-                      <span className="text-sm text-zion-slate-light">({service.reviewCount})</span>
-                    </div>
-                    <span className="text-xs text-zion-cyan bg-zion-cyan/10 px-2 py-1 rounded">
-                      {service.category}
-                    </span>
-                  </div>
-                </CardContent>
-                
-                <div className="p-6 pt-0">
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-white mb-2">Pricing Plans:</h4>
-                    <div className="space-y-1 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-zion-slate-light">Starter:</span>
-                        <span className="text-zion-cyan font-semibold">{service.pricing.starter}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-zion-slate-light">Professional:</span>
-                        <span className="text-zion-cyan font-semibold">{service.pricing.professional}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-zion-slate-light">Enterprise:</span>
-                        <span className="text-zion-cyan font-semibold">{service.pricing.enterprise}</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div className="pt-4">
-                    <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
-                      <Link to={service.link}>Learn More</Link>
+                    <Button className="w-full" variant="outline">
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
+<<<<<<< HEAD
+                  </CardContent>
+                </Card>
+              </motion.div>
+=======
                   </div>
                 </CardContent>
       {/* Contact Information Banner */}
@@ -4264,7 +4053,7 @@ const AIServicesPage = () => {
             </div>
             <div className="flex items-center gap-2">
               <Globe className="h-4 w-4 text-blue-600" />
-              <a 
+              <$2 />
                 href="https://ziontechgroup.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -4400,11 +4189,19 @@ const AIServicesPage = () => {
                   </div>
                 </CardContent>
               </Card>
+>>>>>>> origin/main
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business with AI?
+=======
       {/* Benefits Section */}
       <section className="py-16 bg-zion-blue-dark/30">
         <div className="container mx-auto px-4">
@@ -4736,70 +4533,27 @@ const AIServicesPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Harness the Power of AI?
+>>>>>>> origin/main
           </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            Let our AI experts help you identify the best opportunities for AI integration and guide you through 
-            the implementation process. Get started with a free consultation today.
+          <p className="text-xl text-gray-300 mb-8">
+            Get started with our AI services today and see the difference artificial intelligence can make.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/request-quote">
-              <Button size="lg" className="bg-white hover:bg-gray-100 text-blue-600 font-semibold">
-                Get AI Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                Schedule Demo
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer Contact */}
-      <div className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-6 text-blue-400">ZionTech Group</h3>
-              <p className="text-gray-300 mb-6">
-                Your trusted partner for AI and machine learning solutions. We help businesses leverage 
-                artificial intelligence to drive innovation, efficiency, and competitive advantage.
-              </p>
-              <div className="flex space-x-4">
-                <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">
-                  <Globe className="h-6 w-6" />
-                </a>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-xl font-semibold mb-6 text-blue-400">Contact Information</h3>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-blue-400" />
-                  <span>+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-blue-400" />
-                  <span>kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-blue-400" />
-                  <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 ZionTech Group. All rights reserved. | <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">ziontechgroup.com</a></p>
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              Start Your Free Trial
+            </Button>
+            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900">
+              Contact Sales
+            </Button>
           </div>
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
+}
+=======
+  )
   Code, 
   BarChart3, 
   Shield, 
@@ -4818,8 +4572,7 @@ const AIServicesPage = () => {
   ArrowRight,
   CheckCircle,
   Star
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function AIServicesPage() {
   const aiServices = [
     {
@@ -4969,8 +4722,7 @@ export default function AIServicesPage() {
       reviewCount: 38,
       link: '/services/ai-iot-solutions'
     }
-  ];
-
+  ]
   const categories = [
     { name: 'All Services', count: aiServices.length, active: true },
     { name: 'Development', count: aiServices.filter(s => s.category === 'Development').length },
@@ -4978,8 +4730,7 @@ export default function AIServicesPage() {
     { name: 'Analytics', count: aiServices.filter(s => s.category === 'Analytics').length },
     { name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length },
     { name: 'Security', count: aiServices.filter(s => s.category === 'Security').length }
-  ];
-
+  ]
   return (
     <>
       <SEO 
@@ -5133,12 +4884,13 @@ export default function AIServicesPage() {
       
       <Footer />
     </>
-  );
+  )
       <QuoteFormSection />
     </>
-  );
+  )
 }
-};
-
-export default AIServicesPage;
 }
+export default AIServicesPage
+}
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></p>
+>>>>>>> origin/main

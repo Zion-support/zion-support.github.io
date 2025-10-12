@@ -1,15 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { SEO } from "@/components/SEO"
+import { GradientHeading } from "@/components/GradientHeading"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 export default function Careers() {
-  const [activeDepartment, setActiveDepartment] = useState('all');
-
+  const [activeDepartment, setActiveDepartment] = useState('all')
   const departments = [
     {
       id: 'all',
@@ -47,10 +45,10 @@ export default function Careers() {
       icon: Cloud,
       color: 'from-green-500 to-emerald-500'
     }
-import { Link } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import { 
   Briefcase, 
   Users, 
@@ -93,14 +91,12 @@ import {
   Code,
   Settings,
   Eye
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function Careers() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-  const [selectedLocation, setSelectedLocation] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedDepartment, setSelectedDepartment] = useState('all')
+  const [selectedLocation, setSelectedLocation] = useState('all')
+  const [selectedType, setSelectedType] = useState('all')
   const departments = [
     { id: 'all', name: 'All Departments', count: 24, icon: Building2 },
     { id: 'engineering', name: 'Engineering', count: 12, icon: Code },
@@ -110,21 +106,19 @@ export default function Careers() {
     { id: 'sales', name: 'Sales & Business Development', count: 5, icon: Target },
     { id: 'marketing', name: 'Marketing', count: 3, icon: Lightbulb },
     { id: 'operations', name: 'Operations', count: 2, icon: Settings }
-  ];
-
+  ]
   const locations = [
     { id: 'all', name: 'All Locations', count: 24 },
     { id: 'remote', name: 'Remote', count: 18 },
     { id: 'middletown-de', name: 'Middletown, DE', count: 4 },
     { id: 'new-york', name: 'New York, NY', count: 2 }
-  ];
-
+  ]
   const jobTypes = [
     { id: 'all', name: 'All Types', count: 24 },
     { id: 'full-time', name: 'Full-time', count: 20 },
     { id: 'part-time', name: 'Part-time', count: 2 },
     { id: 'contract', name: 'Contract', count: 2 }
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 import { 
   Briefcase, 
   Users, 
@@ -145,36 +139,31 @@ import {
   Globe,
   Heart,
   Zap
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function Careers() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-  const [selectedLocation, setSelectedLocation] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedDepartment, setSelectedDepartment] = useState('all')
+  const [selectedLocation, setSelectedLocation] = useState('all')
+  const [selectedType, setSelectedType] = useState('all')
   const departments = [
     { id: 'all', name: 'All Departments', count: 23 },
     { id: 'engineering', name: 'Engineering', count: 12 },
     { id: 'ai-research', name: 'AI Research', count: 6 },
     { id: 'sales', name: 'Sales & Business', count: 3 },
     { id: 'marketing', name: 'Marketing', count: 2 }
-  ];
-
+  ]
   const locations = [
     { id: 'all', name: 'All Locations', count: 23 },
     { id: 'middletown', name: 'Middletown, DE', count: 15 },
     { id: 'remote', name: 'Remote', count: 6 },
     { id: 'amsterdam', name: 'Amsterdam, NL', count: 2 }
-  ];
-
+  ]
   const jobTypes = [
     { id: 'all', name: 'All Types', count: 23 },
     { id: 'full-time', name: 'Full Time', count: 18 },
     { id: 'part-time', name: 'Part Time', count: 3 },
     { id: 'contract', name: 'Contract', count: 2 }
-  ];
-
+  ]
   const openPositions = [
     {
       id: 1,
@@ -233,20 +222,18 @@ export default function Careers() {
   Send,
   Star,
   TrendingUp
-} from 'lucide-react';
-import { Badge } from '../components/ui/badge';
-import { Card } from '../components/ui/card';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Textarea } from '../components/ui/textarea';
-import FuturisticNeonButton from '../components/ui/FuturisticNeonButton';
-import FuturisticAnimatedBackground from '../components/ui/FuturisticAnimatedBackground';
-import { SEO } from '../components/SEO';
-
+} from 'lucide-react'
+import { Badge } from '../components/ui/badge'
+import { Card } from '../components/ui/card'
+import { Button } from '../components/ui/button'
+import { Input } from '../components/ui/input'
+import { Textarea } from '../components/ui/textarea'
+import FuturisticNeonButton from '../components/ui/FuturisticNeonButton'
+import FuturisticAnimatedBackground from '../components/ui/FuturisticAnimatedBackground'
+import { SEO } from '../components/SEO'
 const Careers: React.FC = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState<string>('all');
-  const [isApplying, setIsApplying] = useState<string | null>(null);
-
+  const [selectedDepartment, setSelectedDepartment] = useState<string>('all')
+  const [isApplying, setIsApplying] = useState<string | null>(null)
   const departments = [
     { id: 'all', name: 'All Departments', color: 'from-zion-cyan to-zion-blue' },
     { id: 'engineering', name: 'Engineering', color: 'from-purple-500 to-pink-500' },
@@ -271,13 +258,11 @@ import {
   ExternalLink,
   Filter,
   Search
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function Careers() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedDepartment, setSelectedDepartment] = useState('All');
-  const [selectedLocation, setSelectedLocation] = useState('All');
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedDepartment, setSelectedDepartment] = useState('All')
+  const [selectedLocation, setSelectedLocation] = useState('All')
   const departments = [
     'All',
     'Engineering',
@@ -287,8 +272,7 @@ export default function Careers() {
     'Operations',
     'Customer Success',
     'Finance & Legal'
-  ];
-
+  ]
   const locations = [
     'All',
     'Remote',
@@ -297,8 +281,7 @@ export default function Careers() {
     'New York, NY',
     'Austin, TX',
     'Seattle, WA'
-  ];
-
+  ]
   const jobOpenings = [
     {
       id: 1,
@@ -530,8 +513,7 @@ export default function Careers() {
       ],
       urgent: false
     }
-  ];
-
+  ]
   const companyValues = [
     {
       title: "Innovation First",
@@ -553,7 +535,7 @@ export default function Careers() {
       description: "We foster a culture of curiosity and skill development",
       icon: BookOpen
     }
-  ];
+  ]
       id: 1,
       title: "Senior AI Research Engineer",
       department: "ai-ml",
@@ -751,8 +733,7 @@ export default function Careers() {
       urgent: false,
       postedDate: "2025-01-03"
     }
-  ];
-
+  ]
   const companyValues = [
     {
       title: "Innovation First",
@@ -777,9 +758,8 @@ export default function Careers() {
       description: "We invest in growth and development at every level",
       icon: BookOpen,
       color: "from-purple-500 to-pink-500"
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { Link } from 'react-router-dom'
 export default function Careers() {
   const openPositions = [
     {
@@ -836,8 +816,7 @@ export default function Careers() {
       description: 'Design and implement AI solutions for enterprise clients.',
       skills: ['Solution Architecture', 'AI/ML', 'Enterprise Integration', 'Consulting']
     }
-  ];
-
+  ]
   const benefits = [
     {
       salary: '$90,000 - $140,000',
@@ -905,28 +884,23 @@ export default function Careers() {
         'Performance-based bonuses'
       ]
     }
-  ];
-
+  ]
   const filteredPositions = openPositions.filter(position => {
-    const matchesDepartment = selectedDepartment === 'all' || position.department === selectedDepartment;
-    const matchesLocation = selectedLocation === 'all' || position.location === selectedLocation;
-    const matchesType = selectedType === 'all' || position.type === selectedType;
+    const matchesDepartment = selectedDepartment === 'all' || position.department === selectedDepartment
+    const matchesLocation = selectedLocation === 'all' || position.location === selectedLocation
+    const matchesType = selectedType === 'all' || position.type === selectedType
     const matchesSearch = searchQuery === '' || 
       position.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      position.description.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    return matchesDepartment && matchesLocation && matchesType && matchesSearch;
-  });
-
-  const featuredPositions = filteredPositions.filter(position => position.featured);
-  const regularPositions = filteredPositions.filter(position => !position.featured);
-
+      position.description.toLowerCase().includes(searchQuery.toLowerCase())
+    return matchesDepartment && matchesLocation && matchesType && matchesSearch
+  })
+  const featuredPositions = filteredPositions.filter(position => position.featured)
+  const regularPositions = filteredPositions.filter(position => !position.featured)
   const filteredJobs = jobOpenings.filter(job => {
-    const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment;
-    const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation;
-    return matchesDepartment && matchesLocation;
-  });
-
+    const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment
+    const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation
+    return matchesDepartment && matchesLocation
+  })
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -990,14 +964,14 @@ export default function Careers() {
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
+              <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Apply Now
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <$2 />
                 to="/about"
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
               >
@@ -1044,7 +1018,7 @@ export default function Careers() {
             {/* Departments */}
             <div className="flex flex-wrap gap-3">
               {departments.map((dept) => (
-                <button
+                <$2 />
                   key={dept.id}
                   onClick={() => setSelectedDepartment(dept.id)}
                   className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-300 ${
@@ -1064,7 +1038,7 @@ export default function Careers() {
             {/* Locations & Types */}
             <div className="flex flex-wrap gap-2">
               {locations.map((location) => (
-                <button
+                <$2 />
                   key={location.id}
                   onClick={() => setSelectedLocation(location.id)}
                   className={`px-3 py-1 rounded-full text-sm border transition-all duration-300 ${
@@ -1078,7 +1052,7 @@ export default function Careers() {
                 </button>
               ))}
               {jobTypes.map((type) => (
-                <button
+                <$2 />
                   key={type.id}
                   onClick={() => setSelectedType(type.id)}
                   className={`px-3 py-1 rounded-full text-sm border transition-all duration-300 ${
@@ -1092,7 +1066,7 @@ export default function Careers() {
                 </button>
               ))}
             </div>
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Users, 
   Zap, 
@@ -1107,12 +1081,10 @@ import {
   Send,
   CheckCircle,
   AlertCircle
-} from 'lucide-react';
-
+} from 'lucide-react'
 const Careers = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
-
+  const [selectedDepartment, setSelectedDepartment] = useState<string>('all')
+  const [searchTerm, setSearchTerm] = useState<string>('')
   const departments = [
     'all',
     'Engineering',
@@ -1122,8 +1094,7 @@ const Careers = () => {
     'Marketing',
     'Operations',
     'AI & ML'
-  ];
-
+  ]
   const jobListings = [
     {
       id: 1,
@@ -1245,16 +1216,14 @@ const Careers = () => {
         'Professional development opportunities'
       ]
     }
-  ];
-
+  ]
   const filteredJobs = jobListings.filter(job => {
-    const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment;
+    const matchesDepartment = selectedDepartment === 'all' || job.department === selectedDepartment
     const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         job.department.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesDepartment && matchesSearch;
-  });
-
+                         job.department.toLowerCase().includes(searchTerm.toLowerCase())
+    return matchesDepartment && matchesSearch
+  })
   const companyValues = [
     {
       icon: Zap,
@@ -1272,8 +1241,7 @@ const Careers = () => {
       description: 'Everything we do is driven by our commitment to customer success.'
   const filteredJobs = selectedDepartment === 'all' 
     ? jobOpenings 
-    : jobOpenings.filter(job => job.department === selectedDepartment);
-
+    : jobOpenings.filter(job => job.department === selectedDepartment)
   const companyValues = [
     {
       icon: Heart,
@@ -1521,29 +1489,25 @@ const Careers = () => {
       featured: false,
       postedDate: "2025-01-03"
     }
-  ];
-
+  ]
   const filteredJobs = jobOpenings.filter(job => {
     const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         job.department.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment;
-    const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation;
-    return matchesSearch && matchesDepartment && matchesLocation;
-  });
-
-  const featuredJobs = filteredJobs.filter(job => job.featured);
-  const regularJobs = filteredJobs.filter(job => !job.featured);
-
+                         job.department.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesDepartment = selectedDepartment === 'All' || job.department === selectedDepartment
+    const matchesLocation = selectedLocation === 'All' || job.location === selectedLocation
+    return matchesSearch && matchesDepartment && matchesLocation
+  })
+  const featuredJobs = filteredJobs.filter(job => job.featured)
+  const regularJobs = filteredJobs.filter(job => !job.featured)
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const date = new Date(dateString)
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
-    });
-  };
-
+    })
+  }
   const companyValues = [
     {
       title: "Innovation First",
@@ -1565,8 +1529,7 @@ const Careers = () => {
       description: "We maintain the highest ethical standards in all our interactions",
       icon: Shield
     }
-  ];
-
+  ]
   const benefits = [
     {
       icon: '🚀',
@@ -1597,8 +1560,8 @@ const Careers = () => {
       icon: '💰',
       title: 'Competitive Pay',
       description: 'Above-market salaries with equity options'
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 import { 
   Users, 
   Briefcase, 
@@ -1614,8 +1577,7 @@ import {
   TrendingUp,
   Award,
   Lightbulb
-} from 'lucide-react';
-
+} from 'lucide-react'
 const Careers = () => {
   const openPositions = [
     {
@@ -1672,8 +1634,7 @@ const Careers = () => {
       description: "Automate and optimize development and deployment processes.",
       skills: ["Docker", "Kubernetes", "Jenkins", "Ansible", "Monitoring"]
     }
-  ];
-
+  ]
   const benefits = [
     {
       icon: "🏠",
@@ -1705,8 +1666,7 @@ const Careers = () => {
       title: "Team Events",
       description: "Regular team building and social activities"
     }
-  ];
-
+  ]
   const values = [
     {
       icon: "🚀",
@@ -1741,8 +1701,7 @@ const Careers = () => {
       description: "Comprehensive health, dental, and vision coverage",
       icon: Shield
     }
-  ];
-
+  ]
   return (
     <>
       <SEO
@@ -1766,13 +1725,13 @@ const Careers = () => {
               problem-solvers, and visionaries transforming businesses worldwide.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a 
+              <$2 />
                 href="#open-positions"
                 className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
               >
                 View Open Positions
               </a>
-              <Link 
+              <$2 />
                 to="/contact" 
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-colors"
               >
@@ -1862,7 +1821,7 @@ const Careers = () => {
           {/* Department Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {departments.map((dept) => (
-              <button
+              <$2 />
                 key={dept.id}
                 onClick={() => setSelectedDepartment(dept.id)}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-200 ${
@@ -1940,7 +1899,7 @@ const Careers = () => {
                       </div>
                     </div>
                   </div>
-                  <Link
+                  <$2 />
                     to={`/careers/${job.id}`}
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 flex items-center justify-center space-x-2"
                   >
@@ -1975,7 +1934,7 @@ const Careers = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {companyValues.map((value, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
               >
@@ -2004,7 +1963,7 @@ const Careers = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {benefits.map((category, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="bg-gray-800/50 rounded-xl border border-gray-700 p-6"
               >
@@ -2240,8 +2199,7 @@ const Careers = () => {
     "Diversity and inclusion in all aspects",
     "Ethical AI development and deployment",
     "Collaboration and teamwork excellence"
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -2315,7 +2273,7 @@ const Careers = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
+              const Icon = benefit.icon
               return (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -2324,7 +2282,7 @@ const Careers = () => {
                   <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -2403,14 +2361,14 @@ const Careers = () => {
               learn from experts, and grow your career with us.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <$2 />
                 href="#open-positions"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 View Open Positions
                 <ArrowRight className="w-5 h-5" />
               </a>
-              <Link
+              <$2 />
                 to="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
               >
@@ -2426,8 +2384,7 @@ const Careers = () => {
       title: "Growth",
       description: "Continuous learning and personal development"
     }
-  ];
-
+  ]
   return (
     <>
       <SEO 
@@ -2478,7 +2435,7 @@ const Careers = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <a
+              <$2 />
                 href="#open-positions"
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
               >
@@ -2487,7 +2444,7 @@ const Careers = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </a>
-              <a
+              <$2 />
                 href="mailto:careers@ziontechgroup.com"
                 className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 hover:border-gray-500 transition-all duration-300 transform hover:scale-105"
               >
@@ -2646,7 +2603,7 @@ const Careers = () => {
                     <h4 className="text-sm font-semibold text-white mb-2">Required Skills:</h4>
                     <div className="flex flex-wrap gap-2">
                       {position.skills.map((skill, skillIndex) => (
-                        <span 
+                        <$2 />
                           key={skillIndex}
                           className="px-3 py-1 bg-blue-600/20 text-blue-300 text-sm rounded-full border border-blue-600/30"
                         >
@@ -2656,7 +2613,7 @@ const Careers = () => {
                     </div>
                   </div>
                   
-                  <a
+                  <$2 />
                     href={`mailto:careers@ziontechgroup.com?subject=Application for ${position.title}`}
                     className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
                   >
@@ -2699,7 +2656,7 @@ const Careers = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <a
+              <$2 />
                 href="mailto:careers@ziontechgroup.com?subject=General Application"
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
               >
@@ -2713,9 +2670,8 @@ const Careers = () => {
         </section>
       </div>
     </>
-  );
-};
-
+  )
+}
             {openPositions.map((position, index) => (
               <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
@@ -2833,7 +2789,7 @@ const Careers = () => {
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Positions</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredJobs.map((job) => (
-              <div
+              <$2 />
                 key={job.id}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
@@ -2900,7 +2856,7 @@ const Careers = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {regularJobs.map((job) => (
-            <div
+            <$2 />
               key={job.id}
               className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
             >
@@ -2934,7 +2890,7 @@ const Careers = () => {
                   <h4 className="text-xs font-semibold text-cyan-400 mb-2">Requirements</h4>
                   <div className="flex flex-wrap gap-1">
                     {job.requirements.slice(0, 2).map((req, index) => (
-                      <span
+                      <$2 />
                         key={index}
                         className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded text-center"
                       >
@@ -2960,9 +2916,9 @@ const Careers = () => {
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {companyValues.map((value, index) => {
-              const Icon = value.icon;
+              const Icon = value.icon
               return (
-                <div
+                <$2 />
                   key={index}
                   className="text-center"
                 >
@@ -2972,7 +2928,7 @@ const Careers = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                   <p className="text-gray-300">{value.description}</p>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -2983,9 +2939,9 @@ const Careers = () => {
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Work With Us</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => {
-            const Icon = benefit.icon;
+            const Icon = benefit.icon
             return (
-              <div
+              <$2 />
                 key={index}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
@@ -3007,7 +2963,7 @@ const Careers = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            );
+            )
           })}
         </div>
       </div>
@@ -3024,14 +2980,14 @@ const Careers = () => {
               let's discuss how you can contribute to our mission.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <$2 />
                 href="mailto:careers@ziontechgroup.com"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
               >
                 Send Your Resume
                 <Mail className="w-5 h-5 ml-2" />
               </a>
-              <Link
+              <$2 />
                 to="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200"
               >
@@ -3170,9 +3126,9 @@ const Careers = () => {
             </Button>
           </div>
         </div>
-export default Careers;
-export default Careers;
-export default Careers;
+export default Careers
+export default Careers
+export default Careers
             <div className="text-center">
               <div className="w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">1</span>
@@ -3232,5 +3188,6 @@ export default Careers;
     </div>
       </main>
     
-  );
+  )
 }
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></p></p></p></p></p></ul></ul></li></li></section></section></section></section></section></section></section></section>

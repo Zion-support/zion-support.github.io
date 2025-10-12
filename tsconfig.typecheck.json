@@ -1,0 +1,35 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "types/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    "**/*disabled*/**",
+    "**/*backup*/**",
+    "**/*corrupted*/**",
+    "**/*temp*/**",
+    "**/*.broken/**",
+    "cypress/**",
+    "cypress.disabled/**",
+    "data.disabled/**",
+    "hooks.disabled/**",
+    "lib.disabled/**",
+    "lint-target/**",
+    "netlify/**",
+    "contracts.disabled/**",
+    "**/NewestContent2025Banner.tsx",
+    "**/contact/page.tsx",
+    "**/ErrorBoundary.tsx",
+    "app/**/*"
+  ]
+}

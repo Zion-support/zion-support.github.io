@@ -1,99 +1,143 @@
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[,}])/g,replacement: '$1: "$2"' },{ pattern: /(\w+)=\{`([^`]+)`\}/g,replacement: '$1={`$2`}' },{ pattern: /(\w+)\s+(\d+)/g,replacement: '$1: $2' },{ pattern: /style=\{\{\s*([^}]+)\s*\}\}/g,replacement: (match,content) => { const fixed = content .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g,'$1: "$2$3"') .replace(/(\w+):\s*([^,}]+)(?=\s*[,}])/g,(m,prop,value) => { if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) { return `${prop}: "${value}"`} return m}); return `style={{ ${fixed} }}`} },{ pattern: /"([^"]*)\n/g,replacement: '"$1"' },{ pattern: /\$\{([^}]+)\}/g,replacement: '${$1}' } ]; function fixFile(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); const originalContent = content; fixes.forEach(fix => { if (typeof fix.replacement === 'function') { content = content.replace(fix.pattern,fix.replacement)} else { content = content.replace(fix.pattern,fix.replacement)} }); content = content .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g,'$1: "$2$3"') .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[,}])/g,(match,prop,value) => { if (!value.includes('"') && !value.includes("'") && !value.includes('`')) { return `${prop}: "${value}"`} return match}) .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g,'<$1 $2 />') .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g,'$1="$2$3"$4'); if (content !== originalContent) { fs.writeFileSync(filePath,content,'utf8');  return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'pages*.tsx','components*.tsx','src*.tsx','src*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } } if (import.meta.url === `file: main()} export { fixFile,fixes };
 #!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
-// Common syntax fixes
-const fixes = [// Fix numeric literals in object properties
-  {
-    "pattern": /(\w+):\s*(\d+)([a-zA-Z]+)/g,
-    "replacement": '$1: $2$3'
-  },
-  // Fix missing quotes around string values
-  {
-    "pattern": /(\w+):\s*([a-zA-Z][a-zA-Z0-9\s]+)(?=\s*[}])/g,
-    "replacement": '$1: "$2"'
-  },
-  // Fix malformed JSX attributes
-  {
-    "pattern": /(\w+)=\{"([^"]+)"\}/g,
-    "replacement": '$1={"$2"}'
-  },
-  // Fix missing colons in object properties
-  {
-    "pattern": /(\w+)\s+(\d+)/g,
-    "replacement": '$1: $2'
-  },
-  // Fix malformed style objects
-  {
-    "pattern": /style=\{\{\s*([^}]+)\s*\}\}/g,
-    "replacement": (match, content) => {
-      // Fix common style object issues
-      const fixed = content
-        .replace(/(\w+):\s*(\d+)([a-zA-Z]+)/g, '$"1": "$2$3"')
-        .replace(/(\w+):\s*([^}]+)(?=\s*[}])/g, (m, prop, value) => {
-          if (value.includes('px') || value.includes('rem') || value.includes('%') || value.includes('vh') || value.includes('vw')) {
-            return "${prop}: "${value}""}
-          return m});
-      return "style={{ ${fixed} }}`}
-  },
-  // Fix unterminated strings
-  {
-    "pattern": /"([^"]*)\n/g,
-    "replacement": '"$1"'
-  },
-  // Fix malformed template literals
-  {
-    "pattern": /\$\{([^}]+)\}/g,
-    "replacement": '${$1}'
+import fs from 'fs'
+import { glob } from 'glob'
+// Files to process
+const filePatterns = [
+  'app/**/*.{ts,tsx}',
+  'src/**/*.{ts,tsx}',
+  'components/**/*.{ts,tsx}'
+]
+// Files to exclude
+const excludePatterns = [
+  '**/node_modules/**',
+  '**/dist/**',
+  '**/.next/**',
+  '**/build/**',
+  '**/coverage/**',
+  '**/*.test.{ts,tsx}',
+  '**/*.spec.{ts,tsx}',
+  '**/scripts/**',
+  '**/automation/**',
+  '**/backup*/**',
+  '**/disabled*/**',
+  '**/corrupted*/**',
+  '**/temp*/**'
+]
+let totalFiles = 0
+let processedFiles = 0
+let fixedFiles = 0
+function fixSyntaxErrors(content) {
+  let newContent = content
+  let fixed = false
+  // Fix missing closing braces and parentheses
+  // Pattern: Missing closing brace for setState,
+  const setStatePattern = /this\.setState\(\s*\{[^}]*\s*$/gm
+  if (setStatePattern.test(newContent)) {
+    newContent = newContent.replace(setStatePattern, (match) => {
+      if (!match.includes('});')) {
+        return match + '\n    });'
+      }
+      return match
+    })
+    fixed = true
   }
-];
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    // Apply fixes
-    fixes.forEach(fix => {
-      if (typeof fix.replacement === 'function') {
-        content = content.replace(fix.pattern, fix.replacement)} else {
-        content = content.replace(fix.pattern, fix.replacement)}
-    });
-    // Additional specific fixes for common issues
-    content = content
-      // Fix numeric literals in style objects
-      .replace(/(\w+):\s*(\d+)(px|rem|%|vh|vw|em)/g, '$"1": "$2$3"')
-      // Fix missing quotes in object properties
-      .replace(/(\w+):\s*([a-zA-Z][a-zA-Z0-9\s\-_]+)(?=\s*[}])/g, (match, prop, value) => {
-        if (!value.includes('"') && !value.includes("'") && !value.includes('`')) {
-          return `${prop}: "${value}"`}
-        return match})
-      // Fix malformed JSX
-      .replace(/<(\w+)\s+([^>]+)>\s*<\/\1>/g, '<$1 $2 />')
-      // Fix unterminated strings in JSX
-      .replace(/(\w+)="([^"]*)\n([^"]*)"([^>]*>)/g, '$1="$2$3"$4');
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`"Fixed": ${filePath}`);
-      return true}
-    return false} catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false}
+
+  // Fix missing closing braces for function calls
+  const functionCallPattern = /(\w+\(\s*\{[^}]*\s*)\s*$/gm
+  if (functionCallPattern.test(newContent)) {
+    newContent = newContent.replace(functionCallPattern, (match) => {
+      if (!match.includes('});') && !match.includes('});')) {
+        return match + '\n      });'
+      }
+      return match
+    })
+    fixed = true
+  }
+
+  // Fix missing closing braces for if statements
+  const ifStatementPattern = /if\s*\([^)]*\)\s*\{[^}]*\s*$/gm
+  if (ifStatementPattern.test(newContent)) {
+    newContent = newContent.replace(ifStatementPattern, (match) => {
+      if (!match.includes('}')) {
+        return match + '\n    }'
+      }
+      return match
+    })
+    fixed = true
+  }
+
+  // Fix missing closing braces for forEach
+  const forEachPattern = /\.forEach\([^)]*\)\s*\{[^}]*\s*$/gm
+  if (forEachPattern.test(newContent)) {
+    newContent = newContent.replace(forEachPattern, (match) => {
+      if (!match.includes('});')) {
+        return match + '\n    });'
+      }
+      return match
+    })
+    fixed = true
+  }
+
+  // Fix missing closing braces for object methods
+  const objectMethodPattern = /(\w+:\s*\([^)]*\)\s*=>\s*\{[^}]*)\s*$/gm
+  if (objectMethodPattern.test(newContent)) {
+    newContent = newContent.replace(objectMethodPattern, (match) => {
+      if (!match.includes('}')) {
+        return match + '\n  }'
+      }
+      return match
+    })
+    fixed = true
+  }
+
+  // Clean up multiple empty lines
+  newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n')
+  return { content: newContent, fixed }
 }
-async function main() {
-  const patterns = ['pages/**/*.tsx',
-    'components/**/*.tsx',
-    'src/**/*.tsx',
-    'src/**/*.ts'
-  ];
-  let totalFixed = 0;
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { "cwd": process.cwd() });
-    for (const file of files) {
-      if (fixFile(file)) {
-        totalFixed++}
+
+function processFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8')
+    const result = fixSyntaxErrors(content)
+    if (result.fixed) {
+      fs.writeFileSync(filePath, result.content, 'utf8')
+      console.log(`✅ ${filePath}: Fixed syntax errors`)
+      fixedFiles++
     }
+
+    processedFiles++
+  } catch (error) {
+    console.error(`❌ Error processing ${filePath}:`, error.message)
   }
-  console.log(`\nFixed ${totalFixed} files`)}
-if (import.meta.url === `"file": //${process.argv[1]}`) {
-  main()}
-export { fixFile, fixes };
+}
+
+async function main() {
+  console.log('🚀 Starting syntax error fixes...\n')
+  // Get all files to process
+  const allFiles = []
+  for (const pattern of filePatterns) {
+    const files = await glob(pattern, {)
+      ignore: excludePatterns),
+      cwd: process.cwd()})
+    allFiles.push(...files)
+  }
+
+  // Remove duplicates
+  const uniqueFiles = [...new Set(allFiles)]
+  totalFiles = uniqueFiles.length
+  console.log(`📁 Found ${totalFiles} files to process\n`)
+  // Process each file
+  uniqueFiles.forEach(processFile)
+  console.log(`\n🎉 Syntax error fixes completed!`)
+  console.log(`📊 Statistics: `),
+  console.log(`   - Files processed: ${processedFiles}/${totalFiles}`)
+  console.log(`   - Files fixed: ${fixedFiles}`)
+}
+
+if (import.meta.url === `file://${process.argv[1]}`) {
+    main()
+  }
+
+export { processFile, fixSyntaxErrors }
+// #!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' ' // Find all TypeScript/JavaScript files' const files = await glob('src/**/*.{ts,tsx,js}jsx}') {/* TODO: Fix JSX expression */}
+  d: '/workspace' }); let totalFixed = 0; let totalErrors = 0; for (const file of files) {/* TODO: Fix JSX expression */}

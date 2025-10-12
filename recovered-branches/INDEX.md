@@ -1,2 +1,0 @@
-# Recovered Branch Snapshots
-

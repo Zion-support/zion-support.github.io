@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { cn } from '@/lib/utils';
+import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { cn } from '@/lib/utils'
 import { 
   Home, 
   Briefcase, 
@@ -17,16 +17,14 @@ import {
   Mail,
   Phone,
   MapPin
-} from 'lucide-react';
-
+} from 'lucide-react'
 interface MainSidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean
+  onClose: () => void
 }
 
 export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
-  const location = useLocation();
-
+  const location = useLocation()
   const navigationItems = [
     {
       title: 'Main',
@@ -65,26 +63,24 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
         { name: 'Mobile App', href: '/mobile', icon: Smartphone },
       ]
     }
-  ];
-
+  ]
   const contactInfo = [
     { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
     { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
     { icon: MapPin, text: 'San Francisco, CA', href: '#location' },
-  ];
-
+  ]
   return (
     <>
       {/* Overlay */}
       {isOpen && (
-        <div 
+        <$2 />
           className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}
       
       {/* Sidebar */}
-      <div className={cn(
+      < className={cn($2 />
         "fixed left-0 top-0 z-50 h-full w-64 bg-zion-blue-dark border-r border-zion-blue-light transform transition-transform duration-300 ease-in-out lg:translate-x-0",
         isOpen ? "translate-x-0" : "-translate-x-full"
       )}>
@@ -96,7 +92,7 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                 ZION
               </span>
             </div>
-            <button
+            <$2 />
               onClick={onClose}
               className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-md"
             >
@@ -115,12 +111,11 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                 </h3>
                 <ul className="space-y-1">
                   {section.items.map((item) => {
-                    const IconComponent = item.icon;
-                    const isActive = location.pathname === item.href;
-                    
+                    const IconComponent = item.icon
+                    const isActive = location.pathname === item.href
                     return (
                       <li key={item.name}>
-                        <Link
+                        <$2 />
                           to={item.href}
                           onClick={onClose}
                           className={cn(
@@ -134,7 +129,7 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                           {item.name}
                         </Link>
                       </li>
-                    );
+                    )
                   })}
                 </ul>
               </div>
@@ -148,9 +143,9 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
             </h3>
             <div className="space-y-2">
               {contactInfo.map((contact) => {
-                const IconComponent = contact.icon;
+                const IconComponent = contact.icon
                 return (
-                  <a
+                  <$2 />
                     key={contact.text}
                     href={contact.href}
                     className="flex items-center text-xs text-zion-slate-light hover:text-zion-cyan transition-colors"
@@ -158,12 +153,12 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
                     <IconComponent className="w-3 h-3 mr-2" />
                     {contact.text}
                   </a>
-                );
+                )
               })}
             </div>
           </div>
         </div>
       </div>
     </>
-  );
-}
+  )
+}</p>

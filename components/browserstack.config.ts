@@ -1,4 +1,4 @@
-    baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
+    baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'}
   projects: [
       name: Desktop Chrome',      use: {
         browserName: chromium',        channel: chrome'}
@@ -14,11 +14,11 @@
     {
       name: Mobile Chrome',      use: {
         browserName: chromium',        ...devices['Pixel 5']}
-import { define_config, devices } from @playwright / test';
+import { define_config, devices } from @playwright / test'
 default define_config ({
   test_dir: tests / e2e',  use: {
     baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on - first - retry'}
-  projects: [;
+  projects: [
       name: Desktop Chrome',      use: {
         browser_name: chromium',        channel: chrome'}
     }
@@ -38,12 +38,12 @@ default define_config ({
       name: Mobile Safari',      use: {
         browserName: webkit',        ...devices['iPhone 12']}
     }
-  ];
+  ]
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
-});
-});
-import { defineConfig, devices } from @playwright/test';;
+})
+})
+import { defineConfig, devices } from @playwright/test';
 default defineConfig({
   testDir: tests/e2e',  use: {
     baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry',  },
@@ -71,4 +71,4 @@ default defineConfig({
   ],
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }],  ]
-});
+})

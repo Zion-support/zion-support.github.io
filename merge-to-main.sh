@@ -1,68 +1,64 @@
 #!/bin/bash
 
-echo "🚀 Starting comprehensive merge process..."
+# Script to merge current branch to main
+# This script handles merge conflicts and creates a clean merge
 
-# Function to check if command succeeded
-check_status() {
-    if [ $? -eq 0 ]; then
-        echo "✅ $1 completed successfully"
-    else
-        echo "❌ $1 failed"
-        exit 1
-    fi
-}
+echo "🚀 Starting merge process to main branch..."
 
-# 1. Check current status
-echo "📋 Checking current git status..."
-git status
-check_status "Status check"
+# Check current branch
+CURRENT_BRANCH=$(git branch --show-current)
+echo "Current branch: $CURRENT_BRANCH"
 
-# 2. Ensure we're on the right branch
-echo "🌿 Current branch: $(git branch --show-current)"
+# Fetch latest changes
+echo "📥 Fetching latest changes from origin..."
+git fetch origin
 
-# 3. Add all changes
-echo "📦 Adding all changes..."
-git add .
-check_status "Add changes"
-
-# 4. Commit any remaining changes
-echo "💾 Committing changes..."
-git commit -m "Complete website audit and enhancement merge - Enhanced navigation structure - Fixed broken links - Created missing pages - Improved site organization" || echo "No new changes to commit"
-check_status "Commit changes"
-
-# 5. Push our branch
-echo "🚀 Pushing website-audit-and-enhancement-final branch..."
-git push origin website-audit-and-enhancement-final
-check_status "Push branch"
-
-# 6. Switch to main branch
+# Switch to main branch
 echo "🔄 Switching to main branch..."
 git checkout main
-check_status "Switch to main"
 
-# 7. Pull latest changes from remote
-echo "📥 Pulling latest changes from remote main..."
+# Pull latest changes
+echo "📥 Pulling latest changes from origin/main..."
 git pull origin main
-check_status "Pull from remote"
 
-# 8. Merge our branch into main
-echo "🔀 Merging website-audit-and-enhancement-final into main..."
-git merge website-audit-and-enhancement-final
-check_status "Merge branch"
+# Merge the feature branch
+echo "🔀 Merging $CURRENT_BRANCH into main..."
+git merge $CURRENT_BRANCH --no-ff -m "Merge: Add comprehensive AI and IT services with futuristic design
 
-# 9. Push to main
-echo "🚀 Pushing merged changes to main..."
-git push origin main
-check_status "Push to main"
+- Add Navigation and Footer components with futuristic design
+- Create AI Services page with detailed service offerings
+- Create IT Services page with comprehensive IT solutions
+- Create Contact page with proper contact information
+- Create About page with company information
+- Add missing components: PerformanceOptimizer, SEOOptimizer, AccessibilityEnhancer
+- Add ContentPromotionBanner and ContentCarousel components
+- Implement futuristic design with neon effects and animations
+- Add real micro SAAS services with pricing and features
+- Improve responsiveness and mobile experience"
 
-echo ""
-echo "🎉 Successfully merged into main branch!"
-echo ""
-echo "📋 Next steps:"
-echo "1. Check GitHub for any open Pull Requests"
-echo "2. Resolve any conflicts in open PRs"
-echo "3. Merge all open PRs"
-echo "4. Deploy the updated website"
-echo ""
-echo "🔍 Checking for open PRs on GitHub..."
-echo "Visit: https://github.com/Zion-Holdings/zion.app/pulls"
+# Check for merge conflicts
+if [ $? -eq 0 ]; then
+    echo "✅ Merge successful! No conflicts found."
+    
+    # Push to origin
+    echo "📤 Pushing changes to origin/main..."
+    git push origin main
+    
+    echo "🎉 Successfully merged and pushed to main branch!"
+    echo "📋 Summary of changes:"
+    echo "   - Added comprehensive AI and IT services"
+    echo "   - Implemented futuristic design with neon effects"
+    echo "   - Created detailed service pages with pricing"
+    echo "   - Added proper contact information and company details"
+    echo "   - Improved responsiveness and mobile experience"
+    
+else
+    echo "❌ Merge conflicts detected. Please resolve them manually:"
+    echo "1. Check git status for conflicted files"
+    echo "2. Resolve conflicts in each file"
+    echo "3. Add resolved files with: git add <file>"
+    echo "4. Complete merge with: git commit"
+    echo "5. Push with: git push origin main"
+fi
+
+echo "🏁 Merge process completed."

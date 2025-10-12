@@ -1,221 +1,177 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
-
+'use client'
+import React, { useState, useEffect, useCallback } from 'react'
+import { Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle } from 'lucide-react'
 interface PerformanceMetrics {
-  buildSize: string;
-  pageCount: number;
-  loadTime: number;
-  healthStatus: 'healthy' | 'warning' | 'error';
-}
-
-interface Improvement {
-  id: string;
-  title: string;
-  description: string;
-  status: 'completed' | 'in-progress' | 'planned';
-  impact: 'high' | 'medium' | 'low';
-  category: 'performance' | 'security' | 'ux' | 'build';
-}
-
-const PerformanceDashboard: React.FC = () => {
-  const [metrics] = useState<PerformanceMetrics>({
-    buildSize: '959 MB',
-    pageCount: 166,
-    loadTime: 1.2,
-    healthStatus: 'healthy'
+    loadTime: number
+  renderTime: number
+  memoryUsage: number
+  fps: number,
+  [key: string]: number
+  }
+interface PerformanceProps {
+    onMetricsUpdate?: (metrics: PerformanceMetrics) => void
+  }
+const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0
+<<<<<<< HEAD
   });
-
-  const improvements: Improvement[] = [
-    {
-      id: '1',
-      title: 'Fixed Search Bar Issues',
-      description: 'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',
-      status: 'completed',
-      impact: 'high',
-      category: 'ux'
-    },
-    {
-      id: '2', 
-      title: 'Environment Validation System',
-      description: 'Added comprehensive pre-build checks to prevent deployment with missing environment variables',
-      status: 'completed',
-      impact: 'high',
-      category: 'build'
-    },
-    {
-      id: '3',
-      title: 'NextAuth Configuration Fix',
-      description: 'Fixed Microsoft Azure AD provider configuration and resolved TypeScript compilation errors',
-      status: 'completed',
-      impact: 'medium',
-      category: 'security'
-    },
-    {
-      id: '4',
-      title: 'API Client Error Handling',
-      description: 'Improved global error handling with better retry logic and user feedback',
-      status: 'completed',
-      impact: 'medium',
-      category: 'ux'
-    },
-    {
-      id: '5',
-      title: 'Bundle Analyzer Integration',
-      description: 'Added bundle analysis tools to identify and optimize large dependencies',
-      status: 'completed',
-      impact: 'medium',
-      category: 'performance'
-    },
-    {
-      id: '6',
-      title: 'Health Check Endpoint',
-      description: 'Created production monitoring endpoint for environment and service health',
-      status: 'completed',
-      impact: 'medium',
-      category: 'security'
+<<<<<<< HEAD
+fps
+      }
+=======
+>>>>>>> main
+      setMetrics(newMetrics);
+      onMetricsUpdate?.(newMetrics);
+=======
+  })
+  const [isMonitoring, setIsMonitoring] = useState(false)
+  const [alerts, setAlerts] = useState<string[]>([])
+  useEffect(() => {
+    const updateMetrics = () => {
+      const navigation = performance.getEntriesByType(
+        'navigation'
+      )[0] as PerformanceNavigationTiming
+      const loadTime = navigation
+        ? navigation.loadEventEnd - navigation.fetchStart
+        : 0
+      // Measure render time
+      const renderStart = performance.now()
+      const renderTime = performance.now() - renderStart
+      // Measure memory usage
+      let memoryUsage = 0
+      if ('memory' in performance) {
+        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory
+        memoryUsage = memory?.usedJSHeapSize || 0
+      }
+      
+      // Measure FPS (simplified)
+      let fps = 60
+      if ('requestAnimationFrame' in window) {
+        let lastTime = performance.now()
+        let frameCount = 0
+        const measureFPS = () => {
+          const currentTime = performance.now()
+          frameCount++
+          if (currentTime - lastTime >= 1000) {
+            fps = Math.round((frameCount * 1000) / (currentTime - lastTime))
+            frameCount = 0
+            lastTime = currentTime
+          }
+          
+          if (isMonitoring) {
+            requestAnimationFrame(measureFPS)
+          }
+        }
+        requestAnimationFrame(measureFPS)
+      }
+      
+      const newMetrics: PerformanceMetrics = {
+        loadTime,
+        renderTime,
+        memoryUsage,
+        fps
+      }
+      setMetrics(newMetrics)
+      onMetricsUpdate?.(newMetrics)
+>>>>>>> origin/main
+      // Check for performance alerts
+      checkPerformanceAlerts(newMetrics)
     }
-  ];
-
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />;
-      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />;
-      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />;
-      default: return <AlertCircle className="h-4 w-4 text-gray-500" />;
-    }
-  };
-
-  const getImpactColor = (impact: string) => {
-    switch (impact) {
-      case 'high': return 'bg-red-100 text-red-800';
-      case 'medium': return 'bg-yellow-100 text-yellow-800';
-      case 'low': return 'bg-green-100 text-green-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'performance': return <Zap className="h-4 w-4" />;
-      case 'security': return <Shield className="h-4 w-4" />;
-      case 'ux': return <Search className="h-4 w-4" />;
-      case 'build': return <TrendingUp className="h-4 w-4" />;
-      default: return <CheckCircle className="h-4 w-4" />;
-    }
-  };
-
-  const completedImprovements = improvements.filter(imp => imp.status === 'completed');
-
+    if (isMonitoring) {
+    updateMetrics()
+      const interval = setInterval(updateMetrics, 1000)
+      return () => clearInterval(interval)
+  }
+  }, [isMonitoring, onMetricsUpdate])
+  const checkPerformanceAlerts = useCallback((currentMetrics: PerformanceMetrics) => {
+    const newAlerts: string[] = [],
+    if (currentMetrics.loadTime > 3000) {
+      newAlerts.push('Load time is above 3 seconds')
+  }
+    if (currentMetrics.memoryUsage > 50 * 1024 * 1024) {
+    // 50MB
+      newAlerts.push('Memory usage is high')
+  }
+    if (currentMetrics.fps < 30) {
+    newAlerts.push('FPS is below 30')
+  }
+    setAlerts(newAlerts)
+  }, [])
+  const toggleMonitoring = () => {
+    setIsMonitoring(!isMonitoring)
+  }
+  const formatBytes = (bytes: number) => {
+    if (bytes === 0) return '0 Bytes'
+    const k = 1024,
+    const sizes = ['Bytes', 'KB', 'MB', 'GB']
+    const i = Math.floor(Math.log(bytes) / Math.log(k))
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]
+  }
+  const getPerformanceColor = (value: number, thresholds: { good: number, warning: number }) => {
+    if (value <= thresholds.good) return 'text-green-400'
+    if (value <= thresholds.warning) return 'text-yellow-400'
+    return 'text-red-400'
+  }
   return (
-    <div className="space-y-6 p-6">
-      <div className="flex items-center justify-between">
-        <h1 className="text-3xl font-bold text-gray-900">Performance Dashboard</h1>
-        <Badge className="bg-green-100 text-green-800">
-          {completedImprovements.length} Improvements Completed
-        </Badge>
-      </div>
-
-      {/* Metrics Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Build Size</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{metrics.buildSize}</div>
-            <p className="text-xs text-gray-500">Total build output</p>
-          </CardContent>
-        </Card>
-        
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Page Count</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{metrics.pageCount}</div>
-            <p className="text-xs text-gray-500">Generated pages</p>
-          </CardContent>
-        </Card>
-        
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Load Time</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-2xl font-bold">{metrics.loadTime}s</div>
-            <p className="text-xs text-gray-500">Average page load</p>
-          </CardContent>
-        </Card>
-        
-        <Card>
-          <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium text-gray-600">Health Status</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="h-5 w-5 text-green-500" />
-              <span className="text-sm font-semibold text-green-600">Healthy</span>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-
-      {/* Completed Improvements */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center space-x-2">
-            <CheckCircle className="h-5 w-5 text-green-500" />
-            <span>Completed Improvements</span>
-          </CardTitle>
-          <CardDescription>
-            Recent performance and functionality improvements that have been implemented
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            {completedImprovements.map((improvement) => (
-              <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
-                <div className="flex-shrink-0 mt-1">
-                  {getCategoryIcon(improvement.category)}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-sm font-medium text-gray-900">
-                      {improvement.title}
-                    </h3>
-                    <div className="flex items-center space-x-2">
-                      <Badge className={getImpactColor(improvement.impact)}>
-                        {improvement.impact} impact
-                      </Badge>
-                      {getStatusIcon(improvement.status)}
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-1">
-                    {improvement.description}
-                  </p>
-                </div>
-              </div>
+    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+      <div className="flex items-center justify-between mb-6">
+        <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+          <Activity className="w-5 h-5" />
+          Performance Dashboard
+          {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
+      {alerts.length > 0 && (
+        <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+          <div className="flex items-center gap-2 mb-2">
+            <AlertTriangle className="w-5 h-5 text-red-400" />
+            <h4 className="text-red-400 font-semibold">Performance Alerts
+          <ul className="space-y-1">
+            {alerts.map((alert, index) => (
+              <li key={index} className="text-red-300 text-sm">• {alert}
             ))}
-          </div>
-        </CardContent>
-      </Card>
-
-      {/* Action Buttons */}
-      <div className="flex space-x-4">
-        <Button onClick={() => window.open('/api/health/environment', '_blank')} variant="outline">
-          <Shield className="h-4 w-4 mr-2" />
-          Check Health Status
-        </Button>
-        <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
-          <TrendingUp className="h-4 w-4 mr-2" />
-          Bundle Analysis
-        </Button>
+      )}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="bg-white/5 rounded-lg p-4">
+          <div className="flex items-center gap-2 mb-2">
+            <Zap className="w-4 h-4 text-blue-400" />
+            <span className="text-gray-300 text-sm">Load Time
+          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 })}`}>{metrics.loadTime.toFixed(0)}ms
+        <div className="bg-white/5 rounded-lg p-4">
+          <div className="flex items-center gap-2 mb-2">
+            <Cpu className="w-4 h-4 text-green-400" />
+            <span className="text-gray-300 text-sm">Render Time
+          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 })}`}>{metrics.renderTime.toFixed(2)}ms
+        <div className="bg-white/5 rounded-lg p-4">
+          <div className="flex items-center gap-2 mb-2">
+            <MemoryStick className="w-4 h-4 text-purple-400" />
+            <span className="text-gray-300 text-sm">Memory Usage
+          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 })}`}>
+            {formatBytes(metrics.memoryUsage)}
+        <div className="bg-white/5 rounded-lg p-4">
+          <div className="flex items-center gap-2 mb-2">
+            <TrendingUp className="w-4 h-4 text-orange-400" />
+            <span className="text-gray-300 text-sm">FPS
+          <div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 })}`}>
+            {metrics.fps}
+      <div className="mt-6 text-center">
+        <p className="text-gray-400 text-sm">
+          {isMonitoring ? 'Monitoring performance metrics...' : 'Click "Start Monitoring" to begin tracking performance'}
+        </p>
       </div>
     </div>
-  );
-};
-
-export default PerformanceDashboard; 
+  )
+}
+export default PerformanceDashboard</div>
+  </h3>
+  </div>
+  </PerformanceMetrics>
+  </PerformanceProps>
+<<<<<<< HEAD
+=======
+>>>>>>> main
+=======
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></h4></ul></li>
+>>>>>>> origin/main

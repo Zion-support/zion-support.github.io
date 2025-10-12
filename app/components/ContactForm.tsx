@@ -1,262 +1,594 @@
-'use client';
+<<<<<<< HEAD
+import React, {useState}from 'react';
+import {Mail, Phone, MapPin, Send, CheckCircle, AlertCircle}}from 'lucide-react';
 
-import { useState } from 'react';
-
+interface FormData {name: string,}
+=======
+import React, { useState } from 'react'
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
 interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
-  message: string;
+  name: string,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> origin/main
+  email: string,
+  company: string,
+  phone: string,
+  service: string,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  message: string,}interface FormStatus {type: 'idle' | 'loading' | 'success' | 'error';,}
+  message: string,}const [formData, setFormData] = useState<FormData>({name: '',
+=======
+>>>>>>> origin/main
+  message: string,
 }
 
-interface FormErrors {
-  name?: string;
-  email?: string;
-  phone?: string;
-  message?: string;
+interface FormStatus {
+<<<<<<< HEAD
+  type: 'idle' | 'loading' | 'success' | 'error';
+  message: string,
 }
 
-export default function ContactForm() {
+<<<<<<< HEAD
+const ContactForm: React.FC = () => {
+=======
+=======
+  type: 'idle' | 'loading' | 'success' | 'error'
+  message: string,
+}
+
+  const [formData, setFormData] = useState<FormData>()
+  })
+
+  const [status, setStatus] = useState</FormData><FormStatus>({
+    type: 'idle',
+    message: ''
+  })
+
+  const handleChange = (e: React.ChangeEvent</FormStatus><HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
+    setFormData()
+    }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setStatus({ type: 'loading', message: 'Sending message...' })
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      setStatus()
+      })
+
+      // Reset form
+      setFormData()
+      })
+    } catch (error) {
+      setStatus()
+      })
+    }
+  }
+
+  type: 'idle' | 'loading' | 'success' | 'error'
+  message: string,;}
+}
+>>>>>>> origin/main
+>>>>>>> origin/main
   const [formData, setFormData] = useState<FormData>({
     name: '',
+>>>>>>> origin/main
     email: '',
     company: '',
     phone: '',
     service: '',
+<<<<<<< HEAD
+    message: '',})
+
+  const [status, setStatus] = useState<FormStatus>({type: 'idle',
+    message: '',})
+
+<<<<<<< HEAD
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
+    const {name, value}}= e.target;
+    setFormData(prev => ({)
+=======
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+    const { name, value } = e.target;
+=======
     message: ''
-  });
+  })
+  const [status, setStatus] = useState<FormStatus>({
+    type: 'idle',
+    message: ''
+  })
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
+>>>>>>> origin/main
+    setFormData(prev => ({
+>>>>>>> origin/main
+      ...prev,
+<<<<<<< HEAD
+      [name]: value;}));
+  }
 
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const validateForm = (): boolean => {
-    const newErrors: FormErrors = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
-    }
-
-    if (!formData.phone.trim()) {
-      newErrors.phone = 'Phone number is required';
-    } else if (!/^[\+]?[1-9][\d]{0,15}$/.test(formData.phone.replace(/[\s\-\(\)]/g, ''))) {
-      newErrors.phone = 'Please enter a valid phone number';
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'Message must be at least 10 characters long';
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+<<<<<<< HEAD
+  const handleSubmit = async (e: React.FormEvent) => {,
+=======
+  const handleSubmit = async (e: React.FormEvent) => {;
+>>>>>>> origin/main
     e.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
+    setStatus({ type: 'loading', message: 'Sending message...' ,)})
 
-    setIsSubmitting(true);
+    try {// Simulate API call;}
+      await new Promise(resolve => setTimeout(resolve, 2000));
 
+      setStatus({)
+        type: 'success',
+        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.',})
+
+      // Reset form;
+      setFormData({)
+=======
+      [name]: value;}
+    }))
+  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setStatus({ type: 'loading', message: 'Sending message...' })
     try {
-      // In a real application, you would send this to your backend
-      // For now, we'll simulate a successful submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setIsSubmitted(true);
+      // Simulate API call
+<<<<<<< HEAD
+      await new Promise(resolve => setTimeout(resolve, 2000));
+
+      setStatus({
+        type: 'success',
+        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
+      });
+
+=======
+      await new Promise(resolve => setTimeout(resolve, 2000))
+      setStatus({
+        type: 'success',
+        message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
+      })
+>>>>>>> origin/main
+      // Reset form
       setFormData({
+>>>>>>> origin/main
         name: '',
         email: '',
         company: '',
         phone: '',
         service: '',
-        message: ''
-      });
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('There was an error submitting your form. Please try again.');
-    } finally {
-      setIsSubmitting(false);
+        message: '',})
+    } catch (error) {setStatus({)
+        type: 'error',
+<<<<<<< HEAD
+        message: 'Sorry, there was an error sending your message. Please try again.'})
+=======
+        message: 'Sorry, there was an error sending your message. Please try again.';}
+      })
+>>>>>>> origin/main
     }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-
-    // Clear error when user starts typing
-    if (errors[name as keyof FormErrors]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: undefined
-      }));
-    }
-  };
-
-  if (isSubmitted) {
-    return (
-      <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
-        <div className="text-green-600 text-6xl mb-4">✓</div>
-        <h3 className="text-2xl font-bold text-green-800 mb-2">Thank You!</h3>
-        <p className="text-green-700 mb-4">
-          Your message has been sent successfully. We'll get back to you within 24 hours.
-        </p>
-        <button
-          onClick={() => setIsSubmitted(false)}
-          className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors"
-        >
-          Send Another Message
-        </button>
-      </div>
-    );
   }
+  const services = [
+    'AI Solutions',
+    'Web Development',
+    'Mobile App Development',
+    'Cloud Services',
+    'Data Analytics',
+    'Cybersecurity',
+    'IT Consulting',
+<<<<<<< HEAD
+<<<<<<< HEAD
+    'Other'
+  ]
 
+  return(<div className="max-w-2xl mx-auto p-6">)</div>
+=======
+    'Other';
+  ];];];
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="max-w-2xl mx-auto p-6">
+>>>>>>> origin/main
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h2>
+      <form onSubmit={handleSubmit}className="space-y-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-            Full Name *
+            Full Name;
+=======
+    'Other'
+  ]
+
+<<<<<<< HEAD
+  return (
+    <div className="max-w-2xl mx-auto">
+      <div className="bg-white rounded-2xl shadow-2xl p-8">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+          <p className="text-gray-600">
+            Ready to transform your business? Let's discuss your project.
+          </p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                Full Name *
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                placeholder="Your full name"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+=======
+  return (
+    </HTMLInputElement><div className="max-w-2xl mx-auto p-6">
+      </div><h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h2>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        </form><div>
+          </div><label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+            Full Name
+>>>>>>> origin/main
           </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
-              errors.name ? 'border-red-500' : 'border-gray-300'
-            }`}
-            placeholder="Your full name"
-          />
-          {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+              <input;
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}onChange={handleChange}required;
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200",
+                placeholder="Your full name"
+              />
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-            Email Address *
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
-              errors.email ? 'border-red-500' : 'border-gray-300'
-            }`}
-            placeholder="your.email@company.com"
-          />
-          {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+              </div><label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+>>>>>>> origin/main
+                Email Address *
+<<<<<<< HEAD
+              </label>
+              <input;
+=======
+              <input
+>>>>>>> origin/main
+                type="email"
+                id="email"
+                name="email"
+<<<<<<< HEAD
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+=======
+                value={formData.email}onChange={handleChange}required;
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200",
+>>>>>>> origin/main
+                placeholder="your.email@company.com"
+              />
+            </div>
+<<<<<<< HEAD
+          </div>
+=======
+>>>>>>> origin/main
+
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+=======
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
+>>>>>>> origin/main
+            <div>
+              <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                Company;
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            </div><div>
+              </div><label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                Company
+>>>>>>> origin/main
+              </label>
+              <input;
+                type="text"
+                id="company"
+                name="company"
+<<<<<<< HEAD
+                value={formData.company}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+=======
+                value={formData.company}onChange={handleChange}className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200",
+>>>>>>> origin/main
+                placeholder="Your company name"
+              />
+            </div>
+
+            <div>
+<<<<<<< HEAD
+              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                Phone Number;
+=======
+              </div><label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                Phone Number
+>>>>>>> origin/main
+              </label>
+              <input;
+                type="tel"
+                id="phone"
+                name="phone"
+<<<<<<< HEAD
+                value={formData.phone}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+=======
+                value={formData.phone}onChange={handleChange}className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200",
+>>>>>>> origin/main
+                placeholder="+1 (555) 123-4567"
+              /></input>
+            </div>
+          </div>
+
+          <div>
+<<<<<<< HEAD
+            <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+              Service Interest;
+            </label>
+            <select;
+              id="service"
+=======
+            </div><label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+              Service Interest
+            </label>
+            <select id="service"
+>>>>>>> origin/main
+              name="service"
+<<<<<<< HEAD
+              value={formData.service}
+              onChange={handleChange}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+            >
+<<<<<<< HEAD
+              <option value="">Select a service</option>
+              {services.map((service) => (
+                <option key={service} value={service}>
+                  {service}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              Message *
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              rows={5}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+              placeholder="Tell us about your project and how we can help..."
+            />
+          </div>
+
+          {status.message && (
+            <div className={`p-4 rounded-lg flex items-center space-x-3 ${
+              status.type === 'success' 
+                ? 'bg-green-50 text-green-800 border border-green-200' 
+                : status.type === 'error'
+                ? 'bg-red-50 text-red-800 border border-red-200'
+                : 'bg-blue-50 text-blue-800 border border-blue-200'
+            }`}>
+              {status.type === 'success' ? (
+                <CheckCircle className="h-5 w-5 text-green-500" />
+              ) : status.type === 'error' ? (
+                <AlertCircle className="h-5 w-5 text-red-500" />
+=======
+>>>>>>> origin/main
+              ) : (
+                <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+              </div>
+              <span className="text-sm font-medium">{status.message}</span>
+            </div>
+          </div>
+          <button
+            type="submit"
+            disabled={status.type === 'loading'}
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+          >
+            {status.type === 'loading' ? (
+              <>
+                <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                <span>Sending...</span>
+
+            ) : (
+              <>
+  </>
+                <Send className="h-5 w-5" />
+                <span>Send Message</span>
+
+            </div>
+=======
+              value={formData.service}onChange={handleChange}className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200",
+            >
+              ) : (
+                </select><div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+              )}
+              <span className="text-sm font-medium">{status.message</span>}</span>
+            </div>
+          )}
+
+<<<<<<< HEAD
+          <button;
+            type="submit"
+            disabled={status.type === 'loading'}className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover: from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2",
+          >{status.type === 'loading' ? (</button>
+              <>
+                <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                <span>Sending...</span>
+              </>
+            ) : (
+              <>
+                <Send className="h-5 w-5" />
+                <span>Send Message</span>
+              </>
+            )} </button>
+        </form>
+
+        <div className="mt-8 pt-8 border-t border-gray-200">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-6 text-center">,</div>
+            <div className="flex flex-col items-center space-y-2">
+              <div className="p-3 bg-blue-100 rounded-full">
+                <Phone className="h-6 w-6 text-blue-600" />
+=======
+          < type="submit"$2 />
+            disabled={status.type === 'loading'}
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2" /></button>
+            {status.type === 'loading' ? ()
+            ) : ()
+            )}
+>>>>>>> origin/main
+          </button>
+        </form>
+
+        <div className="mt-8 pt-8 border-t border-gray-200">
+<<<<<<< HEAD
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="flex flex-col items-center space-y-2">
+              <div className="p-3 bg-blue-100 rounded-full">
+                <Phone className="h-6 w-6 text-blue-600" />
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900">Phone</p>
+=======
+          </div><div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            </div><div className="flex flex-col items-center space-y-2">
+              </div><div className="p-3 bg-blue-100 rounded-full">
+                </div><Phone className="h-6 w-6 text-blue-600" />
+>>>>>>> origin/main
+              </div>
+              <div>
+                </div><p className="font-semibold text-gray-900">Phone</p>
+>>>>>>> origin/main
+                <p className="text-sm text-gray-600">+1 (555) 123-4567</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-2">
+<<<<<<< HEAD
+              <div className="p-3 bg-green-100 rounded-full">
+                <Mail className="h-6 w-6 text-green-600" />
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900">Email</p>
+=======
+              </div><div className="p-3 bg-green-100 rounded-full">
+                </div><Mail className="h-6 w-6 text-green-600" />
+              </div>
+              <div>
+                </div><p className="font-semibold text-gray-900">Email</p>
+>>>>>>> origin/main
+                <p className="text-sm text-gray-600">hello@ziontechgroup.com</p>
+              </div>
+            </div>
+
+            <div className="flex flex-col items-center space-y-2">
+<<<<<<< HEAD
+              <div className="p-3 bg-purple-100 rounded-full">
+                <MapPin className="h-6 w-6 text-purple-600" />
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900">Office</p>
+=======
+              </div><div className="p-3 bg-purple-100 rounded-full">
+                </div><MapPin className="h-6 w-6 text-purple-600" />
+              </div>
+              <div>
+                </div><p className="font-semibold text-gray-900">Office</p>
+>>>>>>> origin/main
+                <p className="text-sm text-gray-600">New York, NY</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-            Company
-          </label>
-          <input
-            type="text"
-            id="company"
-            name="company"
-            value={formData.company}
-            onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            placeholder="Your company name"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-            Phone Number *
-          </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
-              errors.phone ? 'border-red-500' : 'border-gray-300'
-            }`}
-            placeholder="+1 (555) 123-4567"
-          />
-          {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
-        </div>
-      </div>
-
-      <div>
-        <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-          Service Interest
-        </label>
-        <select
-          id="service"
-          name="service"
-          value={formData.service}
-          onChange={handleChange}
-          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        >
-          <option value="">Select a service</option>
-          <option value="micro-saas">Micro SaaS Development</option>
-          <option value="ai-services">AI Services</option>
-          <option value="it-services">IT Services</option>
-          <option value="blockchain">Blockchain Solutions</option>
-          <option value="mobile">Mobile Development</option>
-          <option value="emerging-tech">Emerging Technologies</option>
-          <option value="consulting">Consulting</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
-
-      <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-          Message *
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          rows={6}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${
-            errors.message ? 'border-red-500' : 'border-gray-300'
-          }`}
-          placeholder="Tell us about your project, requirements, or any questions you have..."
-        />
-        {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
-      </div>
-
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-          isSubmitting
-            ? 'bg-gray-400 text-gray-200 cursor-not-allowed'
-            : 'bg-blue-600 text-white hover:bg-blue-700'
-        }`}
-      >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
-      </button>
-
-      <p className="text-sm text-gray-500 text-center">
-        By submitting this form, you agree to our privacy policy and terms of service.
-      </p>
-    </form>
+    </div>
+<<<<<<< HEAD
   );
+};
+
+export default ContactForm;
+=======
+  )
 }
+export default ContactForm
+                placeholder="+1 (555) 123-4567"
+              />
+          <div>
+            <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+              Service Interest
+            <select
+              id="service"
+              name="service"
+              value={formData.service}
+              onChange={handleChange}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200">
+              ) : (
+                <div className="h-5 w-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+              )}
+              <span className="text-sm font-medium">{status.message}
+          )}
+          <$2 />
+            type="submit"
+            disabled={status.type === 'loading'}
+            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2">
+            {status.type === 'loading' ? (
+              <React.Fragment>
+                <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                <span>Sending...
+            ) : (
+              <React.Fragment>
+                <Send className="h-5 w-5" />
+                <span>Send Message
+            )}
+        <div className="mt-8 pt-8 border-t border-gray-200">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="flex flex-col items-center space-y-2">
+              <div className="p-3 bg-blue-100 rounded-full">
+                <Phone className="h-6 w-6 text-blue-600" />
+              <div>
+                <p className="font-semibold text-gray-900">Phone
+                <p className="text-sm text-gray-600">+1 (555) 123-4567
+            <div className="flex flex-col items-center space-y-2">
+              <div className="p-3 bg-green-100 rounded-full">
+                <Mail className="h-6 w-6 text-green-600" />
+              <div>
+                <p className="font-semibold text-gray-900">Email
+                <p className="text-sm text-gray-600">hello@ziontechgroup.com
+            <div className="flex flex-col items-center space-y-2">
+              <div className="p-3 bg-purple-100 rounded-full">
+                <MapPin className="h-6 w-6 text-purple-600" />
+              <div>
+                <p className="font-semibold text-gray-900">Office
+                <p className="text-sm text-gray-600">New York, NY
+  )
+}
+export default ContactForm</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></p></p></p></p></p></p>
+>>>>>>> origin/main

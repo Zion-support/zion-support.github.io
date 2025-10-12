@@ -1,4 +1,4 @@
-import { ProfileData } from "@/types/profile";
+import { ProfileData } from "@/types/profile"
 export const MOCK_PROFILES: Record<string, ProfileData> = {
   "service-provider-1": {
     id: "service-provider-1",
@@ -165,4 +165,4 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       ]
     }
   }
-};
+}

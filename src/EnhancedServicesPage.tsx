@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import React, { useState } from 'react';
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS } from '@/data/enhancedServices';
-import React, { useState } from 'react';
-import { ENHANCED_SERVICES, SERVICE_CATEGORIES, EnhancedService } from '@/data/enhancedServices';
-import React, { useState } from 'react';
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS } from '@/data/enhancedServices';
-import { ProductListing } from '@/types/listings';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import React, { useState } from 'react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Input } from "@/components/ui/input"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import React, { useState } from 'react'
+import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS } from '@/data/enhancedServices'
+import React, { useState } from 'react'
+import { ENHANCED_SERVICES, SERVICE_CATEGORIES, EnhancedService } from '@/data/enhancedServices'
+import React, { useState } from 'react'
+import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS } from '@/data/enhancedServices'
+import { ProductListing } from '@/types/listings'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Input } from '@/components/ui/input'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { 
   ENHANCED_SERVICES, 
   getServicesByCategory, 
@@ -25,13 +25,13 @@ import {
   getNewServices, 
   getPremiumServices,
   type EnhancedService 
-} from "@/data/enhancedServices";
+} from "@/data/enhancedServices"
 import { 
   Search, 
   Filter, 
   Star, 
   Clock, 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import { 
   Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, 
   Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, 
@@ -42,38 +42,31 @@ import {
   PieChart, Activity, Package, Wifi, ArrowRight, CheckCircle, 
   Award, Rocket, Lightbulb, Shield as ShieldIcon, Zap as ZapIcon,
   Brain as BrainIcon, Cloud as CloudIcon, Database as DatabaseIcon
-} from 'lucide-react';
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from '../data/comprehensiveServices';
-
+} from 'lucide-react'
+import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from '../data/comprehensiveServices'
 const EnhancedServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPricing, setSelectedPricing] = useState<string>('all');
-  const [selectedSupport, setSelectedSupport] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')
+  const [selectedPricing, setSelectedPricing] = useState<string>('all')
+  const [selectedSupport, setSelectedSupport] = useState<string>('all')
+  const [sortBy, setSortBy] = useState<string>('name')
   // Filter services based on search and filters
   const filteredServices = COMPREHENSIVE_SERVICES.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
     const matchesCategory = selectedCategory === 'all' || 
-                           service.category.toLowerCase().includes(selectedCategory.toLowerCase());
-    
+                           service.category.toLowerCase().includes(selectedCategory.toLowerCase())
     const matchesPricing = selectedPricingTier === 'all' || 
                            (selectedPricingTier === 'startup' && (service.price || 0) <= 299) ||
                            (selectedPricingTier === 'smb' && (service.price || 0) > 299 && (service.price || 0) <= 799) ||
                            (selectedPricingTier === 'enterprise' && (service.price || 0) > 799 && (service.price || 0) <= 1999) ||
-                           (selectedPricingTier === 'custom' && (service.price || 0) > 1999);
-
-    return matchesSearch && matchesCategory && matchesPricing;
-  });
-
+                           (selectedPricingTier === 'custom' && (service.price || 0) > 1999)
+    return matchesSearch && matchesCategory && matchesPricing
+  })
   const handleContact = (service: ProductListing) => {
-    setContactService(service);
-  };
-
+    setContactService(service)
+  }
   return (
     <div className="min-h-screen bg-zion-blue">
       <SEO 
@@ -115,55 +108,51 @@ const EnhancedServicesPage: React.FC = () => {
                 </div>
               </div>
             </div>
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesPricing = selectedPricingModel === 'all' || service.pricingModel === selectedPricingModel;
-    const matchesSupport = selectedSupportLevel === 'all' || service.supportLevel === selectedSupportLevel;
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    const matchesPricing = selectedPricingModel === 'all' || service.pricingModel === selectedPricingModel
+    const matchesSupport = selectedSupportLevel === 'all' || service.supportLevel === selectedSupportLevel
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
     const matchesPricing = selectedPricing === 'all' || 
                           (selectedPricing === 'budget' && service.price < 1000) ||
                           (selectedPricing === 'mid-range' && service.price >= 1000 && service.price < 3000) ||
-                          (selectedPricing === 'enterprise' && service.price >= 3000);
-    const matchesSupport = selectedSupport === 'all' || service.supportLevel === selectedSupport;
-
-    return matchesSearch && matchesCategory && matchesPricing && matchesSupport;
-  });
-
+                          (selectedPricing === 'enterprise' && service.price >= 3000)
+    const matchesSupport = selectedSupport === 'all' || service.supportLevel === selectedSupport
+    return matchesSearch && matchesCategory && matchesPricing && matchesSupport
+  })
   const getCategoryIcon = (category: string) => {
     switch (category.toLowerCase()) {
       case 'ai automation':
       case 'ai analytics':
       case 'ai marketing':
-        return <TrendingUp className="w-5 h-5" />;
+        return <TrendingUp className="w-5 h-5" />
       case 'cybersecurity':
-        return <Shield className="w-5 h-5" />;
+        return <Shield className="w-5 h-5" />
       case 'cloud services':
       case 'devops':
-        return <Cloud className="w-5 h-5" />;
+        return <Cloud className="w-5 h-5" />
       case 'data analytics':
       case 'data management':
       case 'iot & analytics':
-        return <Database className="w-5 h-5" />;
+        return <Database className="w-5 h-5" />
       case 'blockchain':
-        return <Network className="w-5 h-5" />;
+        return <Network className="w-5 h-5" />
       case 'edge computing':
-        return <Monitor className="w-5 h-5" />;
+        return <Monitor className="w-5 h-5" />
       case 'quantum computing':
-        return <Monitor className="w-5 h-5" />;
+        return <Monitor className="w-5 h-5" />
       case 'ar/vr':
-        return <Eye className="w-5 h-5" />;
+        return <Eye className="w-5 h-5" />
       case 'fintech':
-        return <DollarSign className="w-5 h-5" />;
+        return <DollarSign className="w-5 h-5" />
       default:
-        return <TrendingUp className="w-5 h-5" />;
+        return <TrendingUp className="w-5 h-5" />
     }
-  };
-
+  }
   const getPriceColor = (price: number) => {
-    if (price <= 4999) return 'text-green-500';
-    if (price <= 14999) return 'text-blue-500';
-    return 'text-purple-500';
-  };
-
+    if (price <= 4999) return 'text-green-500'
+    if (price <= 14999) return 'text-blue-500'
+    return 'text-purple-500'
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO 
@@ -229,9 +218,9 @@ const EnhancedServicesPage: React.FC = () => {
               <select
                 value={`${sortBy}-${sortOrder}`}
                 onChange={(e) => {
-                  const [newSortBy, newSortOrder] = e.target.value.split('-');
-                  setSortBy(newSortBy as any);
-                  setSortOrder(newSortOrder as any);
+                  const [newSortBy, newSortOrder] = e.target.value.split('-')
+                  setSortBy(newSortBy as any)
+                  setSortOrder(newSortOrder as any)
                 }}
                 className="w-full px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20"
               >
@@ -309,7 +298,7 @@ const EnhancedServicesPage: React.FC = () => {
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {service.tags.slice(0, 4).map((tag, index) => (
-                  <span
+                  <$2 />
                     key={index}
                     className="px-2 py-1 bg-gray-800/50 text-xs text-cyan-400 rounded-full border border-cyan-400/30"
                   >
@@ -413,10 +402,9 @@ const EnhancedServicesPage: React.FC = () => {
       'Healthcare AI': <Users className="w-5 h-5" />,
       'FinTech': <TrendingUp className="w-5 h-5" />,
       'Retail AI': <Building className="w-5 h-5" />
-    };
-    return iconMap[category] || <Zap className="w-5 h-5" />;
-  };
-
+    }
+    return iconMap[category] || <Zap className="w-5 h-5" />
+  }
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -483,55 +471,52 @@ const EnhancedServicesPage: React.FC = () => {
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
-        return a.price - b.price;
+        return a.price - b.price
       case 'price-high':
-        return b.price - a.price;
+        return b.price - a.price
       case 'name':
-        return a.title.localeCompare(b.title);
+        return a.title.localeCompare(b.title)
       case 'category':
-        return a.category.localeCompare(b.category);
+        return a.category.localeCompare(b.category)
       default:
-        return 0;
+        return 0
     }
-  });
-
+  })
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Machine Learning':
-        return <BrainIcon className="w-6 h-6 text-blue-500" />;
+        return <BrainIcon className="w-6 h-6 text-blue-500" />
       case 'Cybersecurity':
-        return <ShieldIcon className="w-6 h-6 text-red-500" />;
+        return <ShieldIcon className="w-6 h-6 text-red-500" />
       case 'Blockchain & Web3':
-        return <ZapIcon className="w-6 h-6 text-yellow-500" />;
+        return <ZapIcon className="w-6 h-6 text-yellow-500" />
       case 'Quantum Computing':
-        return <Cpu className="w-6 h-6 text-purple-500" />;
+        return <Cpu className="w-6 h-6 text-purple-500" />
       case 'Internet of Things':
-        return <Wifi className="w-6 h-6 text-green-500" />;
+        return <Wifi className="w-6 h-6 text-green-500" />
       case 'Cloud & Infrastructure':
-        return <CloudIcon className="w-6 h-6 text-gray-500" />;
+        return <CloudIcon className="w-6 h-6 text-gray-500" />
       case 'Data & Analytics':
-        return <DatabaseIcon className="w-6 h-6 text-indigo-500" />;
+        return <DatabaseIcon className="w-6 h-6 text-indigo-500" />
       default:
-        return <Settings className="w-6 h-6 text-gray-400" />;
+        return <Settings className="w-6 h-6 text-gray-400" />
     }
-  };
-
+  }
   const getPricingBadge = (price: number) => {
-    if (price < 1000) return { text: 'Budget', color: 'bg-green-100 text-green-800' };
-    if (price < 3000) return { text: 'Mid-Range', color: 'bg-yellow-100 text-yellow-800' };
-    return { text: 'Enterprise', color: 'bg-purple-100 text-purple-800' };
-  };
-
+    if (price < 1000) return { text: 'Budget', color: 'bg-green-100 text-green-800' }
+    if (price < 3000) return { text: 'Mid-Range', color: 'bg-yellow-100 text-yellow-800' }
+    return { text: 'Enterprise', color: 'bg-purple-100 text-purple-800' }
+  }
   const getSupportBadge = (support: string) => {
     switch (support) {
       case 'basic':
-        return { text: 'Basic', color: 'bg-gray-100 text-gray-800' };
+        return { text: 'Basic', color: 'bg-gray-100 text-gray-800' }
       case 'premium':
-        return { text: 'Premium', color: 'bg-blue-100 text-blue-800' };
+        return { text: 'Premium', color: 'bg-blue-100 text-blue-800' }
       case 'enterprise':
-        return { text: 'Enterprise', color: 'bg-purple-100 text-purple-800' };
+        return { text: 'Enterprise', color: 'bg-purple-100 text-purple-800' }
       default:
-        return { text: 'Standard', color: 'bg-gray-100 text-gray-800' };
+        return { text: 'Standard', color: 'bg-gray-100 text-gray-800' }
   Users, 
   Zap, 
   TrendingUp, 
@@ -550,19 +535,16 @@ const EnhancedServicesPage: React.FC = () => {
   CheckCircle,
   DollarSign,
   Calendar
-} from "lucide-react";
-import { SimpleFuturisticBackground } from "@/components/ui/FuturisticBackground";
-
+} from "lucide-react"
+import { SimpleFuturisticBackground } from "@/components/ui/FuturisticBackground"
 export default function EnhancedServicesPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPricing, setSelectedPricing] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('popularity');
-
-  const popularServices = getPopularServices();
-  const newServices = getNewServices();
-  const premiumServices = getPremiumServices();
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')
+  const [selectedPricing, setSelectedPricing] = useState<string>('all')
+  const [sortBy, setSortBy] = useState<string>('popularity')
+  const popularServices = getPopularServices()
+  const newServices = getNewServices()
+  const premiumServices = getPremiumServices()
   const categories = [
     { id: 'all', label: 'All Services', icon: <Zap className="h-4 w-4" /> },
     { id: 'AI', label: 'AI Services', icon: <Brain className="h-4 w-4" /> },
@@ -572,95 +554,87 @@ export default function EnhancedServicesPage() {
     { id: 'Consulting', label: 'Consulting', icon: <Users className="h-4 w-4" /> },
     { id: 'Automation', label: 'Automation', icon: <TrendingUp className="h-4 w-4" /> },
     { id: 'Integration', label: 'Integration', icon: <BarChart3 className="h-4 w-4" /> }
-  ];
-
+  ]
   const pricingModels = [
     { id: 'all', label: 'All Pricing' },
     { id: 'hourly', label: 'Hourly' },
     { id: 'monthly', label: 'Monthly' },
     { id: 'project', label: 'Project-based' },
     { id: 'subscription', label: 'Subscription' }
-  ];
-
+  ]
   const sortOptions = [
     { id: 'popularity', label: 'Most Popular' },
     { id: 'rating', label: 'Highest Rated' },
     { id: 'price-low', label: 'Price: Low to High' },
     { id: 'price-high', label: 'Price: High to Low' },
     { id: 'newest', label: 'Newest First' }
-  ];
-
+  ]
   const getFilteredServices = () => {
-    let filtered = ENHANCED_SERVICES;
-
+    let filtered = ENHANCED_SERVICES
     // Category filter
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
+      filtered = filtered.filter(service => service.category === selectedCategory)
     }
 
     // Pricing filter
     if (selectedPricing !== 'all') {
-      filtered = filtered.filter(service => service.price.pricingModel === selectedPricing);
+      filtered = filtered.filter(service => service.price.pricingModel === selectedPricing)
     }
 
     // Search filter
     if (searchQuery) {
-      const query = searchQuery.toLowerCase();
+      const query = searchQuery.toLowerCase()
       filtered = filtered.filter(service => 
         service.title.toLowerCase().includes(query) ||
         service.description.toLowerCase().includes(query) ||
         service.tags.some(tag => tag.toLowerCase().includes(query))
-      );
+      )
     }
 
     // Sorting
     switch (sortBy) {
       case 'rating':
-        filtered.sort((a, b) => b.rating - a.rating);
-        break;
+        filtered.sort((a, b) => b.rating - a.rating)
+        break
       case 'price-low':
-        filtered.sort((a, b) => a.price.min - b.price.min);
-        break;
+        filtered.sort((a, b) => a.price.min - b.price.min)
+        break
       case 'price-high':
-        filtered.sort((a, b) => b.price.max - a.price.max);
-        break;
+        filtered.sort((a, b) => b.price.max - a.price.max)
+        break
       case 'newest':
-        filtered.sort((a, b) => new Date(b.createdAt || Date.now()).getTime() - new Date(a.createdAt || Date.now()).getTime());
-        break;
+        filtered.sort((a, b) => new Date(b.createdAt || Date.now()).getTime() - new Date(a.createdAt || Date.now()).getTime())
+        break
       default: // popularity
-        filtered.sort((a, b) => (b.reviewCount || 0) - (a.reviewCount || 0));
+        filtered.sort((a, b) => (b.reviewCount || 0) - (a.reviewCount || 0))
     }
 
-    return filtered;
-  };
-
+    return filtered
+  }
   const formatPrice = (service: EnhancedService) => {
-    const { min, max, currency, pricingModel } = service.price;
+    const { min, max, currency, pricingModel } = service.price
     if (pricingModel === 'hourly') {
-      return `${currency}${min}-${max}/hour`;
+      return `${currency}${min}-${max}/hour`
     } else if (pricingModel === 'monthly') {
-      return `${currency}${min}-${max}/month`;
+      return `${currency}${min}-${max}/month`
     } else if (pricingModel === 'project') {
-      return `${currency}${min.toLocaleString()}-${max.toLocaleString()}`;
+      return `${currency}${min.toLocaleString()}-${max.toLocaleString()}`
     }
-    return `${currency}${min}-${max}`;
-  };
-
+    return `${currency}${min}-${max}`
+  }
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'AI': return <Brain className="h-5 w-5 text-purple-400" />;
-      case 'IT': return <Settings className="h-5 w-5 text-blue-400" />;
-      case 'SAAS': return <Cloud className="h-5 w-5 text-cyan-400" />;
-      case 'Development': return <Code className="h-5 w-5 text-green-400" />;
-      case 'Consulting': return <Users className="h-5 w-5 text-orange-400" />;
-      case 'Automation': return <TrendingUp className="h-5 w-5 text-pink-400" />;
-      case 'Integration': return <BarChart3 className="h-5 w-5 text-yellow-400" />;
-      default: return <Zap className="h-5 w-5 text-gray-400" />;
+      case 'AI': return <Brain className="h-5 w-5 text-purple-400" />
+      case 'IT': return <Settings className="h-5 w-5 text-blue-400" />
+      case 'SAAS': return <Cloud className="h-5 w-5 text-cyan-400" />
+      case 'Development': return <Code className="h-5 w-5 text-green-400" />
+      case 'Consulting': return <Users className="h-5 w-5 text-orange-400" />
+      case 'Automation': return <TrendingUp className="h-5 w-5 text-pink-400" />
+      case 'Integration': return <BarChart3 className="h-5 w-5 text-yellow-400" />
+      default: return <Zap className="h-5 w-5 text-gray-400" />
     }
-  };
-
-  const filteredServices = getFilteredServices();
-
+  }
+  const filteredServices = getFilteredServices()
   return (
     <SimpleFuturisticBackground>
       <div className="min-h-screen py-20">
@@ -847,10 +821,10 @@ export default function EnhancedServicesPage() {
                   <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>
                   <Button 
                     onClick={() => {
-                      setSearchQuery('');
-                      setSelectedCategory('all');
-                      setSelectedPricing('all');
-                      setSortBy('popularity');
+                      setSearchQuery('')
+                      setSelectedCategory('all')
+                      setSelectedPricing('all')
+                      setSortBy('popularity')
                     }}
                     variant="outline"
                     className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50"
@@ -896,39 +870,37 @@ export default function EnhancedServicesPage() {
         </div>
       </div>
     </SimpleFuturisticBackground>
-  );
+  )
 }
 
 interface ServiceCardProps {
-  service: EnhancedService;
+  service: EnhancedService
 }
 
 function ServiceCard({ service }: ServiceCardProps) {
   const formatPrice = (service: EnhancedService) => {
-    const { min, max, currency, pricingModel } = service.price;
+    const { min, max, currency, pricingModel } = service.price
     if (pricingModel === 'hourly') {
-      return `${currency}${min}-${max}/hour`;
+      return `${currency}${min}-${max}/hour`
     } else if (pricingModel === 'monthly') {
-      return `${currency}${min}-${max}/month`;
+      return `${currency}${min}-${max}/month`
     } else if (pricingModel === 'project') {
-      return `${currency}${min.toLocaleString()}-${max.toLocaleString()}`;
+      return `${currency}${min.toLocaleString()}-${max.toLocaleString()}`
     }
-    return `${currency}${min}-${max}`;
-  };
-
+    return `${currency}${min}-${max}`
+  }
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'AI': return <Brain className="h-5 w-5 text-purple-400" />;
-      case 'IT': return <Settings className="h-5 w-5 text-blue-400" />;
-      case 'SAAS': return <Cloud className="h-5 w-5 text-cyan-400" />;
-      case 'Development': return <Code className="h-5 w-5 text-green-400" />;
-      case 'Consulting': return <Users className="h-5 w-5 text-orange-400" />;
-      case 'Automation': return <TrendingUp className="h-5 w-5 text-pink-400" />;
-      case 'Integration': return <BarChart3 className="h-5 w-5 text-yellow-400" />;
-      default: return <Zap className="h-5 w-5 text-gray-400" />;
+      case 'AI': return <Brain className="h-5 w-5 text-purple-400" />
+      case 'IT': return <Settings className="h-5 w-5 text-blue-400" />
+      case 'SAAS': return <Cloud className="h-5 w-5 text-cyan-400" />
+      case 'Development': return <Code className="h-5 w-5 text-green-400" />
+      case 'Consulting': return <Users className="h-5 w-5 text-orange-400" />
+      case 'Automation': return <TrendingUp className="h-5 w-5 text-pink-400" />
+      case 'Integration': return <BarChart3 className="h-5 w-5 text-yellow-400" />
+      default: return <Zap className="h-5 w-5 text-gray-400" />
     }
-  };
-
+  }
   return (
       <div className="bg-zion-blue py-8">
         <div className="container mx-auto px-4">
@@ -1009,9 +981,9 @@ function ServiceCard({ service }: ServiceCardProps) {
             <div className="text-center py-16">
               <div className="text-zion-slate-light text-xl mb-4">No services found matching your criteria</div>
               <Button onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-                setPriceRange('all');
+                setSearchTerm('')
+                setSelectedCategory('all')
+                setPriceRange('all')
               }}>
                 Clear Filters
               </Button>
@@ -1025,10 +997,10 @@ function ServiceCard({ service }: ServiceCardProps) {
           <div className="text-center py-12">
             <div className="text-gray-500 text-lg mb-4">No services found matching your criteria</div>
             <Button onClick={() => {
-              setSearchTerm('');
-              setSelectedCategory('all');
-              setSelectedPricingModel('all');
-              setSelectedSupportLevel('all');
+              setSearchTerm('')
+              setSelectedCategory('all')
+              setSelectedPricingModel('all')
+              setSelectedSupportLevel('all')
             }}>
               Clear Filters
             </Button>
@@ -1106,9 +1078,8 @@ function ServiceCard({ service }: ServiceCardProps) {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {sortedServices.map((service) => {
-            const pricingBadge = getPricingBadge(service.price);
-            const supportBadge = getSupportBadge(service.supportLevel);
-            
+            const pricingBadge = getPricingBadge(service.price)
+            const supportBadge = getSupportBadge(service.supportLevel)
             return (
               <div key={service.id} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
                 {/* Service Header */}
@@ -1220,14 +1191,14 @@ function ServiceCard({ service }: ServiceCardProps) {
                     </div>
                     
                     <div className="flex gap-3">
-                      <a
+                      <$2 />
                         href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
                         className="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2"
                       >
                         <Mail className="w-4 h-4" />
                         Get Quote
                       </a>
-                      <a
+                      <$2 />
                         href={service.contactInfo.website}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -1240,7 +1211,7 @@ function ServiceCard({ service }: ServiceCardProps) {
                   </div>
                 </div>
               </div>
-            );
+            )
           })}
         </div>
 
@@ -1307,7 +1278,7 @@ function ServiceCard({ service }: ServiceCardProps) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <$2 />
                 href="https://ziontechgroup.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -1316,7 +1287,7 @@ function ServiceCard({ service }: ServiceCardProps) {
                 <Globe className="w-5 h-5" />
                 Visit Our Website
               </a>
-              <a
+              <$2 />
                 href="mailto:kleber@ziontechgroup.com?subject=Business Consultation Request"
                 className="bg-gray-700 text-white px-8 py-3 rounded-lg hover:bg-gray-600 transition-colors flex items-center justify-center gap-2"
               >
@@ -1328,13 +1299,12 @@ function ServiceCard({ service }: ServiceCardProps) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 }
 }
-};
-
-export default EnhancedServicesPage;
+}
+export default EnhancedServicesPage
     <Card className="group overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-zion-purple/20 hover:border-zion-purple/50 bg-zion-blue-dark/30 border border-zion-blue-light/20 backdrop-blur-sm">
       <div className="relative">
         <img 
@@ -1439,5 +1409,6 @@ export default EnhancedServicesPage;
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></main></section>

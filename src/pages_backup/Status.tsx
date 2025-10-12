@@ -10,26 +10,8 @@ interface ServiceStatus {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-
-
-
-
-
-
-;
-
-
-
-
-;
-
-
-
-;
-
-
+    super(props)
+    this.state = { hasError: false }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -61,26 +43,25 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
   }
   
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true }
   }
   
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo)
   }
   
   render() {
     if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+      return <div>Something went wrong.</div>
     }
     
-    return this.props.children;
+    return this.props.children
   }
 }
 
   )
 }
 
-;
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
     name: "Marketplace API",
@@ -119,71 +100,71 @@ export default function Status() {
     const timeout = setTimeout(() => {
       if (!externalStatusLoaded) {
         setShowFallback(true)
-import { SEO } from "@/components/SEO",;
-import { useState, useEffect } from "react",;
-import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react';
-import { Button } from "@/components/ui/button",;
-import Link from "next/link",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { logWarn } from '@/utils/productionLogger',;
-interface ServiceStatus {;
-  name: string,;
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance',;
-  description: string,;
-  lastChecked: string;
+import { SEO } from "@/components/SEO",
+import { useState, useEffect } from "react",
+import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+import Link from "next/link",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { logWarn } from '@/utils/productionLogger',
+interface ServiceStatus {
+  name: string,
+  status: 'operational' | 'degraded' | 'outage' | 'maintenance',
+  description: string,
+  lastChecked: string
 }
-;
-const FALLBACK_SERVICES: ServiceStatus[] = [;
-  {;
-    name: "Marketplace API",;
-    status: "operational",;
-    description: "Product listings and search functionality",;
-    lastChecked: new Date().toISOString();
-  },;
-  {;
-    name: "Authentication Service",;
-    status: "operational",;
-    description: "User login and registration",;
-    lastChecked: new Date().toISOString();
-  },;
-  {;
-    name: "Payment Processing",;
-    status: "operational",;
-    description: "Checkout and payment handling",;
-    lastChecked: new Date().toISOString();
-  },;
-  {;
-    name: "Talent Directory",;
-    status: "operational",;
-    description: "AI talent profiles and matching",;
-    lastChecked: new Date().toISOString();
+
+const FALLBACK_SERVICES: ServiceStatus[] = [
+  {
+    name: "Marketplace API",
+    status: "operational",
+    description: "Product listings and search functionality",
+    lastChecked: new Date().toISOString()
+  },
+  {
+    name: "Authentication Service",
+    status: "operational",
+    description: "User login and registration",
+    lastChecked: new Date().toISOString()
+  },
+  {
+    name: "Payment Processing",
+    status: "operational",
+    description: "Checkout and payment handling",
+    lastChecked: new Date().toISOString()
+  },
+  {
+    name: "Talent Directory",
+    status: "operational",
+    description: "AI talent profiles and matching",
+    lastChecked: new Date().toISOString()
   }
-],;
-export default function Status() {;
-  const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),;
-  const [showFallback, setShowFallback] = useState(false),;
-  const [uptime, setUptime] = useState<number | null>(null),;
-  const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https: //status.ziontechgroup.com",;
-  useEffect(() => {;
-    // Try to load external status page, fallback after timeout;
-    const timeout = setTimeout(() => {;
-      if (!externalStatusLoaded) {;
-        setShowFallback(true);
+],
+export default function Status() {
+  const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),
+  const [showFallback, setShowFallback] = useState(false),
+  const [uptime, setUptime] = useState<number | null>(null),
+  const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https: //status.ziontechgroup.com",
+  useEffect(() => {
+    // Try to load external status page, fallback after timeout
+    const timeout = setTimeout(() => {
+      if (!externalStatusLoaded) {
+        setShowFallback(true)
       }
-    }, 5000), // 5 second timeout;
-    return () => clearTimeout(timeout);
-  }, [externalStatusLoaded]),;
-  useEffect(() => {;
-    async function fetchUptime() {;
-      try {;
-        const res = await fetch('/api/health'),;
-        if (!res.ok) return,;
-        const data = await res.json(),;
-        if (typeof data.uptime === 'number') {;
-          setUptime(data.uptime);
+    }, 5000), // 5 second timeout
+    return () => clearTimeout(timeout)
+  }, [externalStatusLoaded]),
+  useEffect(() => {
+    async function fetchUptime() {
+      try {
+        const res = await fetch('/api/health'),
+        if (!res.ok) return,
+        const data = await res.json(),
+        if (typeof data.uptime === 'number') {
+          setUptime(data.uptime)
         }
-      } catch (err) {;
-        logWarn('Failed to fetch uptime', { data: err });
+      } catch (err) {
+        logWarn('Failed to fetch uptime', { data: err })
       }
     }
     fetchUptime()
@@ -201,19 +182,19 @@ export default function Status() {;
         return <Clock className="h-5 w-5 text-blue-500" />,
       default:
         return <AlertCircle className="h-5 w-5 text-gray-500" />
-    fetchUptime();
-  }, []),;
-  const getStatusIcon = (status: ServiceStatus['status']) => {;
-    switch (status) {;
-      case 'operational':;
-        return <CheckCircle className="h-5 w-5 text-green-500" />,;
-      case 'degraded':;
-        return <Clock className="h-5 w-5 text-yellow-500" />,;
-      case 'outage':;
-        return <AlertCircle className="h-5 w-5 text-red-500" />,;
-      case 'maintenance':;
-        return <Clock className="h-5 w-5 text-blue-500" />,;
-      default:;
+    fetchUptime()
+  }, []),
+  const getStatusIcon = (status: ServiceStatus['status']) => {
+    switch (status) {
+      case 'operational':
+        return <CheckCircle className="h-5 w-5 text-green-500" />,
+      case 'degraded':
+        return <Clock className="h-5 w-5 text-yellow-500" />,
+      case 'outage':
+        return <AlertCircle className="h-5 w-5 text-red-500" />,
+      case 'maintenance':
+        return <Clock className="h-5 w-5 text-blue-500" />,
+      default:
         return <AlertCircle className="h-5 w-5 text-gray-500" />}
 import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
 }
@@ -309,9 +290,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
                           </div>
                           <div className="text-xs text-zion-slate-light">
                             Updated: {new Date(service.lastChecked).toLocaleTimeString()}
-                          </div>;
-                        </div>;
-                      </div>;
+                          </div></$1></$1>
                     ))}
                   </CardContent>
                 </Card>
@@ -326,7 +305,7 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
                   asChild
                   className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
                 >
-                  <a 
+                  <$2 />
                     href={statusUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
@@ -376,25 +355,26 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
   )
 }
 
-import { log_warn } from '@/utils / production_logger';
+import { log_warn } from '@/utils / production_logger'
 interface ServiceStatus {
   name: string,
   status: 'operational' | 'degraded' | 'outage' | 'maintenance',
   description: string,
-  last_checked: string;
+  last_checked: string
 }
-        return <CheckCircle className="h - 5 w - 5 text - green - 500" />;
-        return <Clock className="h - 5 w - 5 text - blue - 500" />;
-      default:;
+        return <CheckCircle className="h - 5 w - 5 text - green - 500" />
+        return <Clock className="h - 5 w - 5 text - blue - 500" />
+      default:
         return <AlertCircle className="h - 5 w - 5 text - gray - 500" />}
 import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components / SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default /**
  * Status - Function description
  */
-function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false);
+function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false)
 }
-  );
+  )
 }
 
 
 
 
+</a>

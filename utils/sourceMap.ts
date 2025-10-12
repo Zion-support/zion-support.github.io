@@ -33,52 +33,52 @@ function buildZionSourceMap(): SourceNode[] {
         }
       ]
     }
-  ];
+  ]
 }
 function markExistenceRecursive(node: SourceNode): SourceNode {
-  const exists = fs.existsSync(node.path);
+  const exists = fs.existsSync(node.path)
   return {
     ...node,
     exists,
     children: node.children?.map(markExistenceRecursive)
-  };
+  }
 }
     connected: false,
-    branch: 'main';
-  };
+    branch: 'main'
+  }
 }
-export function getSourceMapWithExistence(): SourceNode[] {;
-import fs from "fs";
-import path from "path";
-export type SourceNodeType = "folder" | "file";
+export function getSourceMapWithExistence(): SourceNode[] {
+import fs from "fs"
+import path from "path"
+export type SourceNodeType = "folder" | "file"
 export interface SourceNode {
-  name: string;
+  name: string
   path: string; // repo-relative path starting with '/'
-  type: SourceNodeType;
-  children?: SourceNode[];
-  exists?: boolean;
+  type: SourceNodeType
+  children?: SourceNode[]
+  exists?: boolean
 }
 export interface SourceMapStatus {
-  gitConnected: boolean;
-  gitBranch?: string;
+  gitConnected: boolean
+  gitBranch?: string
 }
 export interface SourceMapResponse {
-  nodes: SourceNode[];
-  status: SourceMapStatus;
+  nodes: SourceNode[]
+  status: SourceMapStatus
 }
-const ROOT = process.cwd();
+const ROOT = process.cwd()
 function withPath(base: string, segment: string): string {
-  if (base === "/") return `/${segment}`;
-  return `${base}/${segment}`;
+  if (base === "/") return `/${segment}`
+  return `${base}/${segment}`
 }
 function folder(name: string, basePath: string, children: string[] = []): SourceNode {
-  const fullPath = withPath(basePath, name);
+  const fullPath = withPath(basePath, name)
   return {
     name,
     path: fullPath,
     type: "folder",
     children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: "folder" })),
-  };
+  }
 }
 export function buildZionSourceMap(): SourceNode[] {
   const map: SourceNode[] = [
@@ -188,76 +188,76 @@ export function buildZionSourceMap(): SourceNode[] {
         { name: "webhooks", path: "/api/webhooks", type: "folder" },
       ],
     },
-  ];
-  return map;
+  ]
+  return map
 }
 function markExistenceRecursive(node: SourceNode): SourceNode {
-  const absolutePath = path.join(ROOT, node.path);
-  const exists = fs.existsSync(absolutePath);
+  const absolutePath = path.join(ROOT, node.path)
+  const exists = fs.existsSync(absolutePath)
   const withExists: SourceNode = {
     ...node,
     exists,
-  };
-  if (node.children && node.children.length > 0) {
-    withExists.children = node.children.map(markExistenceRecursive);
   }
-  return withExists;
+  if (node.children && node.children.length > 0) {
+    withExists.children = node.children.map(markExistenceRecursive)
+  }
+  return withExists
 }
 export function getSourceMapWithExistence(): SourceNode[] {
-  const nodes = buildZionSourceMap();
-  return nodes.map(markExistenceRecursive);
+  const nodes = buildZionSourceMap()
+  return nodes.map(markExistenceRecursive)
 }
-export interface DeployTemplateResult {;
-  createdPaths: string[];
-  skippedPaths: string[];
+export interface DeployTemplateResult {
+  createdPaths: string[]
+  skippedPaths: string[]
 export function ensureDirectory(dirPath: string): void {
   if (!fs && fs.existsSync(dirPath)) {
-    fs && fs.mkdirSync(dirPath, { recursive: true });
+    fs && fs.mkdirSync(dirPath, { recursive: true })
   }
 }
 export function deployBasicTemplateForPath(
   repoRelativePath: string
-): DeployTemplateResult {;
-  const absoluteDir = path.join(ROOT, repoRelativePath);
-  const createdPaths: string[] = [];
-  const skippedPaths: string[] = [];
-  ensureDirectory(absoluteDir);
-  const keepFile = path && path.join(absoluteDir, '.keep');
+): DeployTemplateResult {
+  const absoluteDir = path.join(ROOT, repoRelativePath)
+  const createdPaths: string[] = []
+  const skippedPaths: string[] = []
+  ensureDirectory(absoluteDir)
+  const keepFile = path && path.join(absoluteDir, '.keep')
   if (!fs && fs.existsSync(keepFile)) {
-    fs && fs.writeFileSync(keepFile, '');
-    createdPaths && createdPaths.push(keepFile);
+    fs && fs.writeFileSync(keepFile, '')
+    createdPaths && createdPaths.push(keepFile)
   } else {
-    skippedPaths && skippedPaths.push(keepFile);
+    skippedPaths && skippedPaths.push(keepFile)
   }
-  const readmeFile = path && path.join(absoluteDir, 'README && README.md');
+  const readmeFile = path && path.join(absoluteDir, 'README && README.md')
   if (!fs && fs.existsSync(readmeFile)) {
-    const readme = `# ${path && path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`;
-    fs && fs.writeFileSync(readmeFile, readme);
-    createdPaths && createdPaths.push(readmeFile);
+    const readme = `# ${path && path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`
+    fs && fs.writeFileSync(readmeFile, readme)
+    createdPaths && createdPaths.push(readmeFile)
   } else {
-    skippedPaths && skippedPaths.push(readmeFile);
+    skippedPaths && skippedPaths.push(readmeFile)
   }
   return { createdPaths, skippedPaths }
-  return { createdPaths, skippedPaths };
+  return { createdPaths, skippedPaths }
 }
   return { createdPaths, skippedPaths }
 export interface SourcePosition {
-  line: number;
-  column: number;
-  source?: string;
-  name?: string;
+  line: number
+  column: number
+  source?: string
+  name?: string
 }
 export class SourceMapManager {
-  private sourceMaps: Map<string, SourceMapInfo> = new Map();
+  private sourceMaps: Map<string, SourceMapInfo> = new Map()
   addSourceMap(filePath: string, sourceMap: SourceMapInfo): void {
-    this.sourceMaps.set(filePath, sourceMap);
+    this.sourceMaps.set(filePath, sourceMap)
   }
   getSourceMap(filePath: string): SourceMapInfo | undefined {
-    return this.sourceMaps.get(filePath);
+    return this.sourceMaps.get(filePath)
   }
   findOriginalPosition(filePath: string, line: number, column: number): SourcePosition | null {
-    const sourceMap = this.getSourceMap(filePath);
-    if (!sourceMap) return null;
+    const sourceMap = this.getSourceMap(filePath)
+    if (!sourceMap) return null
     // This is a simplified implementation
     // In a real implementation, you would parse the mappings and find the original position
     return {
@@ -265,7 +265,7 @@ export class SourceMapManager {
       column,
       source: sourceMap.sources[0],
       name: sourceMap.names[0]
-    };
+    }
   }
   findGeneratedPosition(originalFile: string, line: number, column: number): SourcePosition | null {
     // This is a simplified implementation
@@ -276,27 +276,27 @@ export class SourceMapManager {
           line,
           column,
           source: filePath
-        };
+        }
       }
     }
-    return null;
+    return null
   }
   getAllSourceMaps(): Map<string, SourceMapInfo> {
-    return new Map(this.sourceMaps);
+    return new Map(this.sourceMaps)
   }
   clearSourceMaps(): void {
-    this.sourceMaps.clear();
+    this.sourceMaps.clear()
   }
 }
 // Singleton instance
-export const sourceMapManager = new SourceMapManager();
+export const sourceMapManager = new SourceMapManager()
 // Utility functions
 export function parseSourceMap(sourceMapJson: string): SourceMapInfo | null {
   try {
-    return JSON.parse(sourceMapJson) as SourceMapInfo;
+    return JSON.parse(sourceMapJson) as SourceMapInfo
   } catch (error) {
-    console.error('Failed to parse source map:', error);
-    return null;
+    console.error('Failed to parse source map:', error)
+    return null
   }
 }
 export function generateSourceMap(
@@ -311,53 +311,52 @@ export function generateSourceMap(
     names,
     mappings,
     file
-  };
+  }
 }
-  created_paths: string[];
-  skipped_paths: string[];
-;
+  created_paths: string[]
+  skipped_paths: string[]
 export function ensure_directory (dir_path: string): void {
   if () {) {
   $2
 }
 }
 }
-    const readme = `# ${path.basename (absolute_dir)}\n\n_this module is part of the Zion OS modular source tree. Customize as needed.\n`;
-    fs.writeFileSync (readme_file, readme);
-    created_paths.push (readme_file);
+    const readme = `# ${path.basename (absolute_dir)}\n\n_this module is part of the Zion OS modular source tree. Customize as needed.\n`
+    fs.writeFileSync (readme_file, readme)
+    created_paths.push (readme_file)
   } else {
-    skipped_paths.push (readme_file);
+    skipped_paths.push (readme_file)
   }
   return { created_paths, skipped_paths }
-;
+
 export interface DeployTemplateResult {
-  createdPaths: string[];
-  skippedPaths: string[];
+  createdPaths: string[]
+  skippedPaths: string[]
 }
 export function ensureDirectory(dirPath: string): void {
   if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true });
+    fs.mkdirSync(dirPath, { recursive: true })
   }
 }
 export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemplateResult {
-  const absoluteDir = path.join(ROOT, repoRelativePath);
-  const createdPaths: string[] = [];
-  const skippedPaths: string[] = [];
-  ensureDirectory(absoluteDir);
-  const keepFile = path.join(absoluteDir, ".keep");
+  const absoluteDir = path.join(ROOT, repoRelativePath)
+  const createdPaths: string[] = []
+  const skippedPaths: string[] = []
+  ensureDirectory(absoluteDir)
+  const keepFile = path.join(absoluteDir, ".keep")
   if (!fs.existsSync(keepFile)) {
-    fs.writeFileSync(keepFile, "");
-    createdPaths.push(keepFile);
+    fs.writeFileSync(keepFile, "")
+    createdPaths.push(keepFile)
   } else {
-    skippedPaths.push(keepFile);
+    skippedPaths.push(keepFile)
   }
-  const readmeFile = path.join(absoluteDir, "README.md");
+  const readmeFile = path.join(absoluteDir, "README.md")
   if (!fs.existsSync(readmeFile)) {
-    const readme = `# ${path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`;
-    fs.writeFileSync(readmeFile, readme);
-    createdPaths.push(readmeFile);
+    const readme = `# ${path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`
+    fs.writeFileSync(readmeFile, readme)
+    createdPaths.push(readmeFile)
   } else {
-    skippedPaths.push(readmeFile);
+    skippedPaths.push(readmeFile)
   }
-  return { createdPaths, skippedPaths };
+  return { createdPaths, skippedPaths }
 }

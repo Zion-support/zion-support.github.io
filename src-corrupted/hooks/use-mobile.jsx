@@ -1,2 +1,0 @@
-import {useState, useEffect} from 'react' export function useIsMobile(props: any) { const [isMobile, setIsMobile] = useState(false) useEffect(() => { const checkIsMobile = (props: any) => { setIsMobile(window.innerWidth < 768)} checkIsMobile() window.addEventListener('resize', checkIsMobile) return () => window.removeEventListener('resize', checkIsMobile)}, []) return isMobile}',;',';';
-    ';';"';';';';

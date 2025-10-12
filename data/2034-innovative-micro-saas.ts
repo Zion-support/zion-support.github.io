@@ -1,29 +1,29 @@
 export interface MicroSaasService2034 {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  price: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  technology: string[];
-  marketSize: string;
-  competitors: string[];
-  competitiveAdvantage: string;
-  implementationTime: string;
-  roi: string;
-  support: string;
-  documentation: string;
-  api: boolean;
-  sdk: boolean;
-  integrations: string[];
-  compliance: string[];
-  security: string[];
-  scalability: string;
-  uptime: string;
-  contact: string;
-  website: string;
+  id: string
+  name: string
+  description: string
+  category: string
+  price: string
+  features: string[]
+  benefits: string[]
+  useCases: string[]
+  technology: string[]
+  marketSize: string
+  competitors: string[]
+  competitiveAdvantage: string
+  implementationTime: string
+  roi: string
+  support: string
+  documentation: string
+  api: boolean
+  sdk: boolean
+  integrations: string[]
+  compliance: string[]
+  security: string[]
+  scalability: string
+  uptime: string
+  contact: string
+  website: string
 }
 export const innovativeMicroSaas2034Services: MicroSaasService2034[] = [
   {
@@ -368,4 +368,4 @@ export const innovativeMicroSaas2034Services: MicroSaasService2034[] = [
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup.com/quantum-iot-edge-orchestration'
   }
-];
+]

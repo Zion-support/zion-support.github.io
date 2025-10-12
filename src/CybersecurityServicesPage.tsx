@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { TrustedBySection } from '@/components/TrustedBySection';
-import { QuoteFormSection } from '@/components/QuoteFormSection';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import React, { useState } from 'react'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
+import { SEO } from '@/components/SEO'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+import React from 'react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { Link } from "react-router-dom"
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Button } from '@/components/ui/button'
+import { TrustedBySection } from '@/components/TrustedBySection'
+import { QuoteFormSection } from '@/components/QuoteFormSection'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { 
   Shield, 
   Lock, 
@@ -55,16 +55,14 @@ import {
   AlertCircle,
   TrendingUp,
   DollarSign
-} from 'lucide-react';
-import { ENHANCED_SERVICES } from '@/data/enhancedServices';
-
+} from 'lucide-react'
+import { ENHANCED_SERVICES } from '@/data/enhancedServices'
 // Filter cybersecurity services
 const CYBERSECURITY_SERVICES = ENHANCED_SERVICES.filter(service => 
   service.category.includes('Cybersecurity') || 
   service.category.includes('Security') ||
   service.category.includes('Zero Trust')
-);
-
+)
 const SECURITY_SERVICE_CATEGORIES = [
   {
     id: 'threat-detection',
@@ -80,26 +78,22 @@ const SECURITY_SERVICE_CATEGORIES = [
     icon: Lock,
     services: CYBERSECURITY_SERVICES.filter(s => s.title.includes('Zero Trust'))
   }
-];
-
+]
 export default function CybersecurityServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const getCategoryIcon = (category: string) => {
-    const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category);
-    return categoryData?.icon || Shield;
-  };
-
+    const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category)
+    return categoryData?.icon || Shield
+  }
   const getPricingModelLabel = (model: string) => {
     switch (model) {
-      case 'one-time': return 'One-time';
-      case 'monthly': return 'Monthly';
-      case 'hourly': return 'Hourly';
-      case 'project-based': return 'Project-based';
-      default: return model;
+      case 'one-time': return 'One-time'
+      case 'monthly': return 'Monthly'
+      case 'hourly': return 'Hourly'
+      case 'project-based': return 'Project-based'
+      default: return model
     }
-  };
-
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
       {/* Hero Section */}
@@ -632,7 +626,7 @@ export default function CybersecurityServicesPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 // Security Service Card Component
@@ -672,7 +666,7 @@ function SecurityServiceCard({ service }: { service: any }) {
             <span className="text-zion-cyan-light">Security Score:</span>
             <div className="flex items-center gap-2">
               <div className="w-16 bg-zion-blue-light rounded-full h-2">
-                <div 
+                <$2 />
                   className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" 
                   style={{ width: `${service.aiScore}%` }}
                 ></div>
@@ -695,16 +689,16 @@ function SecurityServiceCard({ service }: { service: any }) {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }
 
 // Compliance Card Component
 function ComplianceCard({ icon, title, description, requirements, industries }: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  requirements: string[];
-  industries: string[];
+  icon: React.ReactNode
+  title: string
+  description: string
+  requirements: string[]
+  industries: string[]
 }) {
   return (
     <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
@@ -743,17 +737,17 @@ function ComplianceCard({ icon, title, description, requirements, industries }: 
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }
 
 // Threat Card Component
 function ThreatCard({ icon, title, description, impact, prevention, trend }: {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  impact: string;
-  prevention: string[];
-  trend: string;
+  icon: React.ReactNode
+  title: string
+  description: string
+  impact: string
+  prevention: string[]
+  trend: string
 }) {
   return (
     <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300">
@@ -790,16 +784,16 @@ function ThreatCard({ icon, title, description, impact, prevention, trend }: {
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }
 
 // Pricing Card Component
 function PricingCard({ title, price, description, features, popular }: {
-  title: string;
-  price: string;
-  description: string;
-  features: string[];
-  popular: boolean;
+  title: string
+  price: string
+  description: string
+  features: string[]
+  popular: boolean
 }) {
   return (
     <Card className={`relative ${popular ? 'border-zion-cyan border-2' : 'border-zion-cyan/30'} bg-white/10 backdrop-blur-sm hover:border-zion-cyan/60 transition-all duration-300`}>
@@ -827,7 +821,7 @@ function PricingCard({ title, price, description, features, popular }: {
         </Button>
       </CardContent>
     </Card>
-  );
+  )
   Zap, 
   AlertTriangle,
   Globe,
@@ -839,9 +833,8 @@ function PricingCard({ title, price, description, features, popular }: {
   Smartphone,
   TrendingUp as Activity,
   Users
-} from "lucide-react";
-import { TrustedBySection } from "@/components/TrustedBySection";
-
+} from "lucide-react"
+import { TrustedBySection } from "@/components/TrustedBySection"
 const cybersecurityServices = [
   {
     id: "threat-detection",
@@ -969,8 +962,7 @@ const cybersecurityServices = [
     link: "/services",
     image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"
   }
-];
-
+]
 const securityBenefits = [
   {
     title: "Proactive Protection",
@@ -992,8 +984,7 @@ const securityBenefits = [
     description: "Prevent costly security breaches and minimize financial impact",
     icon: <TrendingUp className="h-6 w-6" />
   }
-];
-
+]
 const securityThreats = [
   {
     title: "Ransomware Attacks",
@@ -1015,8 +1006,7 @@ const securityThreats = [
     description: "Monitor and control access to prevent malicious or accidental insider incidents",
     icon: <Network className="h-6 w-6" />
   }
-];
-
+]
 export default function CybersecurityServicesPage() {
   return (
     <div className="min-h-screen bg-background">
@@ -1045,13 +1035,13 @@ export default function CybersecurityServicesPage() {
                   Security Assessment
                 </Button>
               </Link>
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Input } from '@/components/ui/input'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { 
   Search, 
   Star, 
@@ -1076,54 +1066,45 @@ import {
   Network,
   Key,
   ShieldCheck
-} from 'lucide-react';
-import { EXPANDED_SERVICES, type ExpandedService } from '@/data/expandedServices';
-import { TrustedBySection } from '@/components/TrustedBySection';
-
+} from 'lucide-react'
+import { EXPANDED_SERVICES, type ExpandedService } from '@/data/expandedServices'
+import { TrustedBySection } from '@/components/TrustedBySection'
 export default function CybersecurityServicesPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
-  const [priceRange, setPriceRange] = useState<string>('all');
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all')
+  const [priceRange, setPriceRange] = useState<string>('all')
   // Filter only security services
   const securityServices = EXPANDED_SERVICES.filter(service => 
     service.category === 'Security Services'
-  );
-
+  )
   const filteredServices = securityServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-    
-    let matchesPrice = true;
-    if (priceRange === 'low') matchesPrice = service.price < 500;
-    else if (priceRange === 'medium') matchesPrice = service.price >= 500 && service.price < 1000;
-    else if (priceRange === 'high') matchesPrice = service.price >= 1000;
-    
-    return matchesSearch && matchesSubcategory && matchesPrice;
-  });
-
+                         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+    const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory
+    let matchesPrice = true
+    if (priceRange === 'low') matchesPrice = service.price < 500
+    else if (priceRange === 'medium') matchesPrice = service.price >= 500 && service.price < 1000
+    else if (priceRange === 'high') matchesPrice = service.price >= 1000
+    return matchesSearch && matchesSubcategory && matchesPrice
+  })
   const getPricingModelIcon = (model: string) => {
     switch (model) {
-      case 'monthly': return <Clock className="w-4 h-4" />;
-      case 'hourly': return <Zap className="w-4 h-4" />;
-      case 'project-based': return <Zap className="w-4 h-4" />;
-      default: return <DollarSign className="w-4 h-4" />;
+      case 'monthly': return <Clock className="w-4 h-4" />
+      case 'hourly': return <Zap className="w-4 h-4" />
+      case 'project-based': return <Zap className="w-4 h-4" />
+      default: return <DollarSign className="w-4 h-4" />
     }
-  };
-
+  }
   const getPricingModelText = (model: string) => {
     switch (model) {
-      case 'one-time': return 'One-time';
-      case 'monthly': return 'Monthly';
-      case 'hourly': return 'Hourly';
-      case 'project-based': return 'Project-based';
-      default: return model;
+      case 'one-time': return 'One-time'
+      case 'monthly': return 'Monthly'
+      case 'hourly': return 'Hourly'
+      case 'project-based': return 'Project-based'
+      default: return model
     }
-  };
-
+  }
   return (
     <Card className="hover:shadow-lg transition-shadow border-red-500/20">
       <div className="relative">
@@ -1392,7 +1373,7 @@ export default function CybersecurityServicesPage() {
                     
                     <div className="flex gap-2">
                       {service.website && (
-                        <a 
+                        <$2 />
                           href={service.website} 
                           target="_blank" 
                           rel="noopener noreferrer"
@@ -1464,9 +1445,8 @@ export default function CybersecurityServicesPage() {
   Key,
   Database,
   Monitor
-} from "lucide-react";
-import { CYBERSECURITY_SERVICES } from "@/data/expandedServices";
-
+} from "lucide-react"
+import { CYBERSECURITY_SERVICES } from "@/data/expandedServices"
 const CybersecurityServicesPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-red-50">
@@ -1520,7 +1500,7 @@ const CybersecurityServicesPage = () => {
             </div>
             <div className="flex items-center gap-2">
               <Globe className="h-4 w-4 text-red-600" />
-              <a 
+              <$2 />
                 href="https://ziontechgroup.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -1664,9 +1644,9 @@ const CybersecurityServicesPage = () => {
               <h3 className="text-xl font-semibold text-zion-slate-light mb-2">No security services found</h3>
               <p className="text-zion-slate-light mb-4">Try adjusting your search criteria or browse all security categories</p>
               <Button onClick={() => {
-                setSearchQuery('');
-                setSelectedSubcategory('all');
-                setPriceRange('all');
+                setSearchQuery('')
+                setSelectedSubcategory('all')
+                setPriceRange('all')
               }}>
                 Clear Filters
               </Button>
@@ -2040,7 +2020,7 @@ const CybersecurityServicesPage = () => {
       <TrustedBySection />
       <QuoteFormSection />
     </>
-  );
+  )
 }
         </div>
       </div>
@@ -2375,8 +2355,8 @@ const CybersecurityServicesPage = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default CybersecurityServicesPage;
+  )
 }
+export default CybersecurityServicesPage
+}
+</div></div></div></div></div></div></div></div></div></div>

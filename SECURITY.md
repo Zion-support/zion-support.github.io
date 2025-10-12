@@ -1,195 +1,53 @@
-# SECURITY
+# Security Policy
 
-undefined
+## Supported Versions
 
-## Table of Contents
-- [Overview](#overview)
-- [Security Model](#security-model)
-- [Authentication](#authentication)
-- [Authorization](#authorization)
-- [Data Protection](#data-protection)
-- [Vulnerability Management](#vulnerability-management)
- 
+We release security updates for the following versions:
 
-## Overview
+| Version | Supported          |
+| ------- | ------------------ |
+| 1.x.x   | :white_check_mark: |
+| < 1.0   | :x:                |
 
-Security is a top priority for Zion App. This document outlines our security practices and considerations.
+## Reporting a Vulnerability
 
-## Security Model
+We take security vulnerabilities seriously. If you discover a security issue, please follow these steps:
 
-We follow the principle of defense in depth:
-- **Input Validation**: All user inputs are validated and sanitized
-- **Authentication**: Secure user authentication and session management
-- **Authorization**: Role-based access control for all features
-- **Data Protection**: Encryption for sensitive data at rest and in transit
- 
+1. **Do NOT** open a public issue
+2. Email security@zion.holdings with details:
+   - Description of the vulnerability
+   - Steps to reproduce
+   - Potential impact
+   - Suggested fix (if any)
 
-## Getting Started
+3. Allow us 48-72 hours to respond
+4. We will work with you to understand and address the issue
 
-## Prerequisites
-- Node.js 18+ installed
-- npm or yarn package manager
-- Git for version control
-- Basic knowledge of React and TypeScript
+## Security Best Practices
 
-## Installation
+When contributing to this project:
 
-1. Clone the repository:
- ```bash
- git clone https://github.com/your-org/zion-app.git
- cd zion-app
- ```
+- Never commit sensitive information (API keys, passwords, tokens)
+- Use environment variables for configuration
+- Follow secure coding practices
+- Keep dependencies up to date
+- Run security audits regularly: `npm audit`
 
-2. Install dependencies:
- ```bash
- npm install
- ```
+## Security Features
 
-3. Set up environment variables:
- ```bash
- cp .env.example .env.local
- # Edit .env.local with your configuration
- ```
+This project implements:
 
-4. Start the development server:
- ```bash
- npm run dev
- ```
+- Content Security Policy (CSP)
+- HTTPS enforcement
+- Input validation and sanitization
+- Rate limiting on API endpoints
+- Secure authentication mechanisms
+- Regular security audits
 
-## First Steps
+## Disclosure Policy
 
-1. Open your browser and navigate to `https://bolt.new.zion.app`
-2. Explore the application features
-3. Check the documentation for more details
-4. Start contributing to the project
- 
+- Security issues will be disclosed after a fix is available
+- We will credit reporters who follow responsible disclosure
+- Critical vulnerabilities will be patched within 7 days
 
-## Examples
-
-## Basic Example
-
-Here's a simple example of how to use SECURITY:
-
-```typescript
-// Example code here
-import { SECURITY } from './SECURITY';
-
-const example = new SECURITY();
-example.doSomething();
-```
-
-## Advanced Example
-
-For more complex use cases:
-
-```typescript
-// Advanced example code
-const advancedExample = {
- feature1: 'value1',
- feature2: 'value2',
- feature3: 'value3'
-};
-```
-
-## Real-world Usage
-
-In a real application:
-
-```typescript
-// Real-world usage example
-const app = new Application();
-app.configure(SECURITY);
-app.start();
-```
- 
-
-## API Reference
-
-## Methods
-
-### `methodName()`
-
-Description of what this method does.
-
-**Parameters:**
-- `param1` (string): Description of the first parameter
-- `param2` (number): Description of the second parameter
-
-**Returns:**
-- `Promise<Result>`: Description of the return value
-
-**Example:**
-```typescript
-const result = await instance.methodName('value', 42);
-```
-
-## Properties
-
-### `propertyName`
-
-Description of this property.
-
-**Type:** `string`
-
-**Example:**
-```typescript
-console.log(instance.propertyName);
-```
- 
-
-## Contributing
-
-## How to Contribute
-
-1. **Fork the repository**
-2. **Create a feature branch**: `git checkout -b feature/amazing-feature`
-3. **Make your changes**: Write code, add tests, update documentation
-4. **Test your changes**: Run the test suite and ensure everything works
-5. **Commit your changes**: Use clear, descriptive commit messages
-6. **Push to your branch**: `git push origin feature/amazing-feature`
-7. **Open a Pull Request**: Describe your changes and link any related issues
-
-## Code Standards
-- Follow the existing code style and conventions
-- Write clear, readable code with meaningful variable names
-- Add comments for complex logic
-- Include tests for new functionality
-- Update documentation as needed
-
-## Getting Help
-
-If you need help or have questions:
-- Check existing documentation
-- Search through existing issues
-- Create a new issue with a clear description
-- Join our community discussions
- 
-
-## License
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Copyright
-
-Copyright (c) 2024 Zion App Contributors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
- 
+Thank you for helping keep Zion.app secure!

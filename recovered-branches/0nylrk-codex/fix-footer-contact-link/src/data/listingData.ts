@@ -1,5 +1,5 @@
-import { ProductListing } from "@/types/listings";
-import { SearchSuggestion } from "@/types/search";
+import { ProductListing } from "@/types/listings"
+import { SearchSuggestion } from "@/types/search"
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -135,7 +135,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     availability: "Immediate",
     aiScore: 94
   }
-];
+]
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
@@ -149,18 +149,18 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     "Code assistant",
     "Virtual assistant",
     "Enterprise AI solutions"
-  ];
+  ]
   return suggestions.map(text => ({
     text,
     type: 'product' // Use a valid type from the SearchSuggestion interface
-  }));
-};
+  }))
+}
 // Generate filter options for sidebar
 export const generateFilterOptions = () => {
   // Extract unique categories, locations, and availability options from listings
-  const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort();
-  const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort();
-  const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort();
+  const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort()
+  const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort()
+  const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort()
   return {
     productTypes: productTypes.map(type => ({
       label: type,
@@ -175,7 +175,7 @@ export const generateFilterOptions = () => {
       value: item
     })),
     ratingOptions: [1, 2, 3, 4, 5]
-  };
-};
-export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+  }
+}
+export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0))
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0))

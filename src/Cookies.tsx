@@ -1,7 +1,6 @@
-import { SEO } from '@/components/SEO';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
+import { SEO } from '@/components/SEO'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 export default function Cookies() {
   return (
     <>
@@ -353,13 +352,12 @@ export default function Cookies() {
               </div>
             </div>
           </div>
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Cookie, Shield, Settings, Eye, Database, Globe } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, CheckCircle } from 'lucide-react';
-
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { Cookie, Shield, Settings, Eye, Database, Globe } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { Shield, Lock, Eye, CheckCircle } from 'lucide-react'
 export default function Cookies() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -552,7 +550,7 @@ export default function Cookies() {
               If you have any questions about our cookie policy or how we use cookies, 
               please don't hesitate to contact us.
             </p>
-            <Link
+            <$2 />
               to="/contact"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-purple-700 transition-all duration-200"
             >
@@ -622,10 +620,9 @@ export default function Cookies() {
       </main>
       <Footer />
     </>
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { SEO } from '@/components/SEO'
+import { Link } from 'react-router-dom'
 export default function Cookies() {
   return (
     <div className="min-h-screen bg-background">
@@ -887,7 +884,7 @@ export default function Cookies() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <a
+              <$2 />
                 href="mailto:privacy@ziontechgroup.com"
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
               >
@@ -901,12 +898,11 @@ export default function Cookies() {
         </section>
       </div>
     </div>
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Shield, CircleDot, Settings, Eye, Lock } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { SEO } from '@/components/SEO'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Shield, CircleDot, Settings, Eye, Lock } from 'lucide-react'
+import { Link } from 'react-router-dom'
 export default function Cookies() {
   const cookieTypes = [
     {
@@ -937,8 +933,7 @@ export default function Cookies() {
       examples: ['Advertising cookies', 'Social media cookies', 'Tracking cookies'],
       necessary: false
     }
-  ];
-
+  ]
   const cookieTable = [
     {
       name: 'session_id',
@@ -970,8 +965,7 @@ export default function Cookies() {
       duration: '1 year',
       type: 'Functional'
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-background">
       <SEO 
@@ -1022,7 +1016,7 @@ export default function Cookies() {
           <h2 className="text-2xl font-bold text-white mb-6 text-center">Types of Cookies We Use</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {cookieTypes.map((type) => {
-              const IconComponent = type.icon;
+              const IconComponent = type.icon
               return (
                 <Card key={type.title} className="border-zion-blue-light">
                   <CardHeader>
@@ -1050,7 +1044,7 @@ export default function Cookies() {
                     </ul>
                   </CardContent>
                 </Card>
-              );
+              )
             })}
           </div>
         </div>
@@ -1081,7 +1075,7 @@ export default function Cookies() {
                       <td className="py-3 px-4 text-zion-slate-light">{cookie.purpose}</td>
                       <td className="py-3 px-4 text-zion-slate-light">{cookie.duration}</td>
                       <td className="py-3 px-4">
-                        <span className={`px-2 py-1 rounded-full text-xs ${
+                        < className={`px-2 py-1 rounded-full text-xs ${$2 />
                           cookie.type === 'Essential' 
                             ? 'bg-zion-purple text-white' 
                             : 'bg-zion-blue-light text-zion-slate-light'
@@ -1159,13 +1153,13 @@ export default function Cookies() {
           </CardHeader>
           <CardContent>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple/90 transition-colors"
               >
                 Contact Us
               </Link>
-              <a
+              <$2 />
                 href="mailto:privacy@ziontechgroup.com"
                 className="inline-flex items-center justify-center px-6 py-3 border border-zion-blue-light text-white font-medium rounded-lg hover:bg-zion-blue-light/20 transition-colors"
               >
@@ -1179,7 +1173,6 @@ export default function Cookies() {
         </Card>
       </div>
     </div>
-  );
-};
-
-export default Cookies;
+  )
+}
+export default Cookies</$1></div></div></div></div></div></div></p></p></p></p></p></p></p></p></p></p></section>

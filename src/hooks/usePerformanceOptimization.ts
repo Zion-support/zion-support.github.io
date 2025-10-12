@@ -1,247 +1,162 @@
-import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
 
-interface PerformanceMetrics {
 
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  fps: number;
-
+'use client'
+interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+  O: Add content,}
 }
 
-interface UsePerformanceOptimizationOptions {
-
-  enableLazyLoading?: boolean;
-  enableIntersectionObserver?: boolean;
-  enableMemoryManagement?: boolean;
-  enableFPSMonitoring?: boolean;
-  threshold?: number;
+  loadTime: number,,
+    firstContentfulPaint: number,,
+    largestContentfulPaint: number,,
+    cumulativeLayoutShift: number,,
+    firstInputDelay: number
+}
+export const _usePerformanceOptimization = () => {
+    // TODO: Add content
+  }
 
 }
-
-export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {
-  const {
-    enableLazyLoading = true,
-    enableIntersectionObserver = true,
-    enableMemoryManagement = true,
-    enableFPSMonitoring = true,
-    threshold = 0.1
-  } = options;
-
-  const metricsRef = useRef<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    fps: 0
-  });
-
-  const observerRef = useRef<IntersectionObserver | null>(null);
-  const frameCountRef = useRef(0);
-  const lastTimeRef = useRef(performance.now());
-
-  // Measure initial load time
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const loadTime = performance.now();
-      metricsRef.current.loadTime = loadTime;
-      
-      // Report to analytics if available
-      if (window.gtag) {
-        window.gtag('event', 'performance_metric', {
-          event_category: any'performance',
-          event_label: 'load_time',
-          value: Math.round(loadTime)
-        });
-      }
-    }
-  }, []);
-
-  // FPS monitoring
-  useEffect(()  => {
-    if (!enableFPSMonitoring) return;
-
-    let animationFrameId: number;
-
-    const measureFPS = () => {
-      const currentTime = performance.now();
-      frameCountRef.current++;
-
-      if (currentTime - lastTimeRef.current >= 1000) {
-        const fps = Math.round((frameCountRef.current * 1000) / (currentTime - lastTimeRef.current));
-        metricsRef.current.fps = fps;
-        
-        frameCountRef.current = 0;
-        lastTimeRef.current = currentTime;
-
-        // Log low FPS for debugging
-        if (fps < 30) {
-          console.warn(`Low FPS detected: ${fps}`);
-        }
-      }
-
-      animationFrameId = requestAnimationFrame(measureFPS);
-    };
-
-    animationFrameId = requestAnimationFrame(measureFPS);
-
-    return () => {
-      if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId);
-      }
-    };
-  }, [enableFPSMonitoring]);
-
-  // Memory management
-  useEffect(() => {
-    if (!enableMemoryManagement) return;
-
-    const checkMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
-
-        // Warn if memory usage is high
-        if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-          console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
-        }
-      }
-    };
-
-    const intervalId = setInterval(checkMemoryUsage, 5000);
-    return () => clearInterval(intervalId);
-  }, [enableMemoryManagement]);
-
-  // Intersection Observer for lazy loading
-  const createIntersectionObserver = useCallback((callback: anyIntersectionObserverCallback)  => {
-    if (!enableIntersectionObserver) return null;
-
-    return new IntersectionObserver(callback, {
-      threshold,
-      rootMargin: '50px'
-    });
-  }, [enableIntersectionObserver, threshold]);
-
-  // Lazy loading utility
-  const lazyLoad = useCallback((element: anyHTMLElement, callback: ()  => void) => {
-    if (!enableLazyLoading) {
-      callback();
-      return;
-    }
-
-    if (observerRef.current) {
-      observerRef.current.disconnect();
-    }
-
-    observerRef.current = createIntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          callback();
-          if (observerRef.current) {
-            observerRef.current.unobserve(entry.target);
-          }
-        }
-      });
-    });
-
-    if (observerRef.current) {
-      observerRef.current.observe(element);
-    }
-  }, [enableLazyLoading, createIntersectionObserver]);
-
-  // Performance monitoring
-  const measureRenderTime = useCallback((componentName: anystring)  => {
-    const startTime = performance.now();
-    
-    return () => {
-      const endTime = performance.now();
-      const renderTime = endTime - startTime;
-      metricsRef.current.renderTime = renderTime;
-
-      // Log slow renders
-      if (renderTime > 16) { // 60fps threshold
-        console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
-      }
-
-      // Report to analytics if available
-      if (window.gtag) {
-        window.gtag('event', 'performance_metric', {
-          event_category: 'performance',
-          event_label: 'render_time',
-          value: Math.round(renderTime)
-        });
-      }
-    };
-  }, []);
-
-  // Debounced function utility
-  const debounce = useCallback(<T extends (...args: anyany[])  => any>(
-    func: anyT,
-    delay: number
-  ): ((...args: Parameters<T>)  => void) => {
-    let timeoutId: anyNodeJS.Timeout;
-    
-    return (...args: Parameters<T>)  => {
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => func(...args), delay);
-    };
-  }, []);
-
-  // Throttled function utility
-  const throttle = useCallback(<T extends (...args: anyany[])  => any>(
-    func: anyT,
-    delay: number
-  ): ((...args: Parameters<T>)  => void) => {
-    let lastCall = 0;
-    
-    return (...args: anyParameters<T>)  => {
-      const now = Date.now();
-      if (now - lastCall >= delay) {
-        lastCall = now;
-        func(...args);
-      }
-    };
-  }, []);
-
-  // Cleanup function
-  const cleanup = useCallback(() => {
-    if (observerRef.current) {
-      observerRef.current.disconnect();
-    }
-  }, []);
-
-  // Get current metrics
-  const getMetrics = useCallback(() => ({ ...metricsRef.current }), []);
-
-  // Memoized performance data
-  const performanceData = useMemo(() => ({
-    metrics: anygetMetrics(),
-    isLowFPS: metricsRef.current.fps < 30,
-    isHighMemory: metricsRef.current.memoryUsage > 100,
-    isSlowRender: metricsRef.current.renderTime > 16
-  }), [getMetrics]);
-
-  // Cleanup on unmount
-  useEffect(()  => {
-    return cleanup;
-  }, [cleanup]);
-
-  return {
-    lazyLoad,
-    measureRenderTime,
-    debounce,
-    throttle,
-    createIntersectionObserver,
-    getMetrics,
-    performanceData,
-    cleanup
-  };
-};
-
-// Type declaration for gtag
-declare global {
-  interface Window {
-
-    gtag?: (...args: anyany[])  => void;
-  
+  const measurePerformance = useCallback(() => {/* TODO: Fix JSX expression */}
+  O: Add content,}
 }
+    if (typeof window === 'undefined' || !('performance' in window)) {/* TODO: Fix JSX expression */}
+  O: Add content,}
 }
+      return null
+    const navigation = performance.getEntriesByType()
+//       'navigation'
+    )[0] as PerformanceNavigationTiming
+    const paintEntries = performance.getEntriesByType('paint')
+    const,
+  metrics: PerformanceMetrics = {
+    const _paintEntries = performance.getEntriesByType('paint')
+  }
+    const,
+  _metrics: PerformanceMetrics = {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+  loadTim,
+  e: navigation
+//         ? navigation.loadEventEnd - navigation.loadEventStart,
+        : 0,
+      firstContentfulPain,
+  t:
+        paintEntries.find(entry => entry.name === 'first-contentful-paint')
+//           ?.startTime || 0,
+
+      largestContentfulPaint: 0,
+      cumulativeLayoutShift: 0,
+      firstInputDelay: 0,
+
+    }
+    // Measure LCP
+const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+  O: Add content,}
+})
+      const entries = list.getEntries()
+      const lastEntry = entries[entries.length - 1]
+      if (lastEntry) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+        metrics.largestContentfulPaint = lastEntry.startTime
+    })
+    lcpObserver.observe({/* TODO: Fix JSX expression */})
+  s: ['largest-contentful-paint'] })
+// Measure CLS
+    const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
+  O: Add content,}
+})
+      for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+        const layoutShiftEntry = entry as PerformanceEntry & {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+          hadRecentInput?: boolean
+          value?: number
+        if (!layoutShiftEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+          clsValue += layoutShiftEntry.value || 0
+      metrics.cumulativeLayoutShift = clsValue
+    clsObserver.observe({/* TODO: Fix JSX expression */})
+  s: ['layout-shift'] })
+// Measure FID
+    const fidObserver = new PerformanceObserver(list => {const fidEntry = entry as PerformanceEntry & {}
+  // TOD,
+  O: Add content,
+}
+          processingStart?: number
+        metrics.firstInputDelay =)
+          (fidEntry.processingStart || 0) - entry.startTime
+    fidObserver.observe({/* TODO: Fix JSX expression */})
+  s: ['first-input'] })
+    // Cleanup observers after a delay
+    setTimeout(() => {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+      lcpObserver.disconnect()
+      clsObserver.disconnect()
+      fidObserver.disconnect()
+    }, 10000)
+    return metrics
+  }, [])
+  const optimizeImages = useCallback(() => {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+    const images = document.querySelectorAll('img[data-src]')
+    const imageObserver = new IntersectionObserver(entries => {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+      entries.forEach(entry => {/* TODO: Fix JSX expression */}
+  O: Add content,}
+})
+        if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+          const img = entry.target as HTMLImageElement
+          img.src = img.dataset.src || ''
+          img.classList.remove('lazy')
+          imageObserver.unobserve(img)
+    images.forEach(img => imageObserver.observe(img))
+  const preloadCriticalResources = useCallback(() => {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+    const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css']
+    criticalResources.forEach(resource => {/* TODO: Fix JSX expression */}
+  O: Add content,}
+})
+      const link = document.createElement('link')
+      link.rel = 'preload'
+      link.href = resource
+      link.as = resource.endsWith('.woff2') ? 'font' : 'style'
+      if (resource.endsWith('.woff2')) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+        link.crossOrigin = 'anonymous'
+      document.head.appendChild(link)
+  useEffect(() => {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+    // Measure performance after page load
+const timer = setTimeout(() => {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+      const metrics = measurePerformance()
+      if (metrics) {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+        // Send metrics to analytics in production
+        if (process.env['NODE_ENV'] === 'production') {/* TODO: Fix JSX expression */}
+  O: Add content,}
+}
+          // Track metrics in production
+if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}
+    }, 1000)
+    // Optimize images
+    // Preload critical resources
+    return () => clearTimeout(timer)
+  }, [measurePerformance, optimizeImages, preloadCriticalResources])
+  return {measurePerformance}
+    optimizeImages,
+    preloadCriticalResources

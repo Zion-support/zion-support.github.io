@@ -1,0 +1,8 @@
+{
+  "ariaLabels": true,
+  "focusManagement": true,
+  "keyboardNavigation": true,
+  "screenReaderOptimization": true,
+  "colorContrastRatio": 4.5,
+  "minimumTouchTarget": 44
+}

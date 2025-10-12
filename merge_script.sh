@@ -1,16 +1,18 @@
 #!/bin/bash
-set -e
 
-cd /workspace
+# Merge script to resolve conflicts and merge PR
+echo "Starting merge process..."
 
-# Check if we're in a merge state
-if [ -f .git/MERGE_HEAD ]; then
-    echo "Completing merge..."
-    git add .
-    git commit -m "resolve: Complete merge with automation workflow fixes"
-fi
+# Checkout main branch
+git checkout main
+
+# Pull latest changes
+git pull origin main
+
+# Merge our feature branch
+git merge cursor/enhance-app-with-new-services-and-futuristic-design-a8d8 --no-ff -m "Merge: Add comprehensive micro SAAS services and futuristic design enhancements"
 
 # Push to main
 git push origin main
 
-echo "Merge completed and pushed to main"
+echo "Merge completed successfully!"

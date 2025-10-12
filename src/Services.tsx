@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { useState, useMemo } from 'react';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from '../data/comprehensiveServices';
-import React, { useState, useEffect } from 'react';
-import { SEO } from "@/components/SEO";
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { useState, useMemo } from 'react'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES, SERVICE_SUBCATEGORIES } from '../data/comprehensiveServices'
+import React, { useState, useEffect } from 'react'
+import { SEO } from "@/components/SEO"
+import React from 'react'
+import { motion } from 'framer-motion'
+import { SEO } from '@/components/SEO'
+import { Link } from 'react-router-dom'
 import { 
   Brain, 
   Cpu, 
@@ -26,12 +26,10 @@ import {
   Settings,
   Database,
   Network
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function Services() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const serviceCategories = [
     {
       id: 'ai-ml',
@@ -215,19 +213,16 @@ export default function Services() {
         }
       ]
     }
-  ];
-
+  ]
   const filteredCategories = selectedCategory === 'all' 
     ? serviceCategories 
-    : serviceCategories.filter(cat => cat.id === selectedCategory);
-
+    : serviceCategories.filter(cat => cat.id === selectedCategory)
   const filteredServices = filteredCategories.flatMap(cat => 
     cat.services.filter(service =>
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  );
-
+  )
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       {/* Hero Section */}
@@ -252,13 +247,13 @@ export default function Services() {
               and drive sustainable growth in the digital age.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link 
+              <$2 />
                 to="/contact" 
                 className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
               >
                 Get Started
               </Link>
-              <Link 
+              <$2 />
                 to="/request-quote" 
                 className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-blue-dark transition-colors"
               >
@@ -275,10 +270,10 @@ export default function Services() {
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
           </p>
-import React from 'react';
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { 
   Brain, 
   Cloud, 
@@ -294,7 +289,7 @@ import {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-wrap justify-center gap-3 mb-8"
           >
-            <button
+            <$2 />
               onClick={() => handleCategorySelect('all')}
               className={`px-6 py-3 rounded-full font-medium transition-all ${
                 selectedCategory === 'all'
@@ -304,7 +299,7 @@ import {
             >
               Get Started
             </Link>
-            <Link 
+            <$2 />
               to="/pricing" 
               className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
@@ -402,7 +397,7 @@ import {
               >
                 {category.name}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
-            <button
+            <$2 />
               onClick={() => setSelectedCategory('all')}
               className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                 selectedCategory === 'all'
@@ -413,7 +408,7 @@ import {
               All Services
             </button>
             {serviceCategories.map((category) => (
-              <button
+              <$2 />
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
@@ -540,7 +535,7 @@ import {
                       {service.category}
                     </span>
                     {service.badge && (
-                      <span className={`px-3 py-1 text-xs font-medium rounded-full border ${
+                      < className={`px-3 py-1 text-xs font-medium rounded-full border ${$2 />
                         service.badge === 'Popular' ? 'bg-zion-purple/20 text-zion-purple border-zion-purple/30' :
                         service.badge === 'New' ? 'bg-green-500/20 text-green-400 border-green-500/30' :
                         service.badge === 'Featured' ? 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30' :
@@ -647,7 +642,7 @@ import {
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
                     {service.tags.slice(0, 4).map((tag, idx) => (
-                      <span
+                      <$2 />
                         key={idx}
                         className="px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light text-xs rounded border border-zion-blue-light/30"
                       >
@@ -660,7 +655,7 @@ import {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredServices.map((service, index) => {
-            const IconComponent = service.icon;
+            const IconComponent = service.icon
             return (
               <motion.div
                 key={service.id}
@@ -686,7 +681,7 @@ import {
                     </li>
                   ))}
                 </ul>
-                <Link
+                <$2 />
                   to={service.link}
                   className="inline-flex items-center gap-2 text-blue-400 hover:text-white transition-colors group-hover:translate-x-1 transition-transform duration-300"
                 >
@@ -694,12 +689,12 @@ import {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
-            );
+            )
           })}
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service, idx) => (
-            <div
+            <$2 />
               key={idx}
               className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
             >
@@ -740,7 +735,7 @@ import {
               </div>
 
               {/* CTA Button */}
-              <Link
+              <$2 />
                 to={service.path}
                 className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 group-hover:scale-105"
               >
@@ -775,19 +770,19 @@ import {
                 Let our AI experts help you implement the right technology solutions to drive growth and innovation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                <$2 />
                   to="/contact"
                   className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
                 >
                   Get Started Today
                 </Link>
-                <Link
+                <$2 />
                   to="/innovative-services-showcase"
                   className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
                 >
                   View All Innovative Services
                 </Link>
-                <Link
+                <$2 />
                   to="/request-quote"
                   className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
                 >
@@ -806,7 +801,7 @@ import {
               Discover our comprehensive portfolio of innovative micro SAAS and specialized IT solutions.
             </p>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-8">
-              <Link
+              <$2 />
                 to="/services/comprehensive"
                 className="bg-zion-blue-light/20 rounded-lg p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -819,7 +814,7 @@ import {
                 </div>
               </Link>
               
-              <Link
+              <$2 />
                 to="/services/innovative-showcase"
                 className="bg-zion-blue-light/20 rounded-lg p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -846,13 +841,13 @@ import {
               give you a competitive edge in the market.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
                 Get Started Today
               </Link>
-              <Link
+              <$2 />
                 to="/comprehensive-services-showcase"
                 className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
     { name: "Healthcare", icon: "🏥", description: "HIPAA compliant solutions for healthcare providers" },
@@ -861,22 +856,18 @@ import {
     { name: "Manufacturing", icon: "🏭", description: "Industry 4.0 and smart manufacturing" },
     { name: "Education", icon: "🎓", description: "EdTech solutions for modern learning" },
     { name: "Government", icon: "🏛️", description: "Secure government technology solutions" }
-  ];
-
-  const categories = ['all', 'AI/ML', 'Security', 'Cloud', 'Transformation', 'Consulting', 'Global'];
-
+  ]
+  const categories = ['all', 'AI/ML', 'Security', 'Cloud', 'Transformation', 'Consulting', 'Global']
   useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
+    setIsVisible(true)
+  }, [])
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
   const getCategoryColor = (category: string) => {
     const colors = {
       'AI/ML': 'from-purple-500 to-pink-500',
@@ -885,10 +876,9 @@ import {
       'Transformation': 'from-green-500 to-teal-500',
       'Consulting': 'from-indigo-500 to-purple-500',
       'Global': 'from-yellow-500 to-orange-500'
-    };
-    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600';
-  };
-
+    }
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'
+  }
   return (
     <div className="min-h-screen relative">
       <SEO 
@@ -937,7 +927,7 @@ import {
               {/* Category Filter */}
               <div className="flex flex-wrap justify-center gap-2 mt-4">
                 {categories.map((category) => (
-                  <button
+                  <$2 />
                     key={category}
                     onClick={() => setSelectedCategory(category)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -969,7 +959,7 @@ import {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
-              <div 
+              <$2 />
                 key={index} 
                 className={`group bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 animate-fade-in-up`}
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -978,7 +968,7 @@ import {
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-3xl">{getCategoryIcon(service.category)}</div>
                   <div className="text-right">
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                    < className={`px-3 py-1 rounded-full text-xs font-medium ${$2 />
                       service.serviceType === 'Micro SAAS' && (service as any).pricing === 'Freemium' ? 'bg-green-500/20 text-green-400' :
                       service.serviceType === 'Micro SAAS' && (service as any).pricing === 'Professional' ? 'bg-blue-500/20 text-blue-400' :
                       'bg-purple-500/20 text-purple-400'
@@ -1106,7 +1096,7 @@ import {
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {service.tags.map((tag, idx) => (
-                    <span 
+                    <$2 />
                       key={idx} 
                       className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600/50"
                     >
@@ -1116,7 +1106,7 @@ import {
                 </div>
                 
                 {/* CTA */}
-                <Link 
+                <$2 />
                   to={`/services/${service.category.toLowerCase()}`}
                   className="inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                 >
@@ -1141,7 +1131,7 @@ import {
             className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8"
           >
             <div className="flex items-center gap-4">
-              <button
+              <$2 />
                 onClick={() => setShowFilters(!showFilters)}
                 className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 text-zion-slate-light rounded-lg transition-colors"
               >
@@ -1150,7 +1140,7 @@ import {
               </button>
               
               {Object.keys(filters).length > 0 && (
-                <button
+                <$2 />
                   onClick={clearFilters}
                   className="px-3 py-1 bg-red-500/20 text-red-400 rounded-full text-sm hover:bg-red-500/30 transition-colors"
                 >
@@ -1161,7 +1151,7 @@ import {
 
             <div className="flex items-center gap-2">
               <span className="text-zion-slate-light text-sm">Sort by:</span>
-              <button
+              <$2 />
                 onClick={() => handleSort('title')}
                 className={`flex items-center gap-1 px-3 py-2 rounded-lg transition-colors ${
                   sortBy === 'title' ? 'bg-zion-cyan/20 text-zion-cyan' : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
@@ -1172,7 +1162,7 @@ import {
                   sortOrder === 'asc' ? <SortAsc className="w-4 h-4" /> : <SortDesc className="w-4 h-4" />
                 )}
               </button>
-              <button
+              <$2 />
                 onClick={() => handleSort('price')}
                 className={`flex items-center gap-1 px-3 py-2 rounded-lg transition-colors ${
                   sortBy === 'price' ? 'bg-zion-cyan/20 text-zion-cyan' : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
@@ -1304,8 +1294,7 @@ const Services = () => {
       color: "from-yellow-500 to-orange-500",
       link: "/emerging-tech"
     }
-  ];
-
+  ]
   const benefits = [
     {
       icon: Target,
@@ -1333,8 +1322,7 @@ const Services = () => {
   Users,
   Clock,
   Award
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function Services() {
   const services = [
     {
@@ -1439,8 +1427,7 @@ export default function Services() {
       bgColor: 'bg-red-500/10',
       borderColor: 'border-red-500/30'
     }
-  ];
-
+  ]
   const stats = [
         {/* No Results */}
         {sortedServices.length === 0 && (
@@ -1452,11 +1439,11 @@ export default function Services() {
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
             <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters</p>
-            <button
+            <$2 />
               onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-                setSelectedSubcategory('all');
+                setSearchTerm('')
+                setSelectedCategory('all')
+                setSelectedSubcategory('all')
               }}
               className="futuristic-btn neon-glow neon-cyan"
             >
@@ -1535,13 +1522,13 @@ export default function Services() {
 
                 {/* Action Buttons */}
                 <div className="flex space-x-3">
-                  <Link
+                  <$2 />
                     to={service.link}
                     className="flex-1 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
                   >
                     Learn More
                   </Link>
-                  <Link
+                  <$2 />
                     to="/contact"
                     className="px-6 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
                   >
@@ -1564,10 +1551,10 @@ export default function Services() {
               <p className="text-zion-slate-light mb-6">
                 Try adjusting your search terms or category filter
               </p>
-              <button
+              <$2 />
                 onClick={() => {
-                  setSearchTerm('');
-                  setSelectedCategory('all');
+                  setSearchTerm('')
+                  setSelectedCategory('all')
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
                 {/* Technology Stack */}
@@ -1586,7 +1573,7 @@ export default function Services() {
                 </div>
 
                 {/* CTA Button */}
-                <a
+                <$2 />
                   href={service.link}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -1606,11 +1593,11 @@ export default function Services() {
               className="text-center py-16"
             >
               <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>
-              <button
+              <$2 />
                 onClick={() => {
-                  setSelectedCategory('All');
-                  setSearchTerm('');
-                  setPriceRange('all');
+                  setSelectedCategory('All')
+                  setSearchTerm('')
+                  setPriceRange('all')
                 }}
                 className="bg-zion-cyan text-white px-6 py-3 rounded-lg hover:bg-zion-cyan-dark transition-colors"
               >
@@ -1631,8 +1618,7 @@ export default function Services() {
     { value: '99.99%', label: 'Uptime Guarantee', icon: Shield, color: 'text-blue-400' },
     { value: '24/7', label: 'Support Available', icon: Clock, color: 'text-purple-400' },
     { value: '15+', label: 'Years Experience', icon: Award, color: 'text-yellow-400' }
-  ];
-
+  ]
   const process = [
     {
       step: '01',
@@ -1658,8 +1644,7 @@ export default function Services() {
       description: 'Smooth deployment followed by ongoing support and maintenance.',
       icon: Cloud
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       {/* Hero Section */}
@@ -1778,7 +1763,7 @@ export default function Services() {
                   ))}
                 </ul>
                 <div className="text-center">
-                  <Link 
+                  <$2 />
                     to={service.link}
                     className="inline-flex items-center px-6 py-2 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
                   >
@@ -1792,7 +1777,7 @@ export default function Services() {
           {/* Pagination */}
           {paginatedResults.totalPages > 1 && (
             <div className="flex justify-center items-center gap-2">
-              <button
+              <$2 />
                 onClick={() => setCurrentPage(currentPage - 1)}
                 disabled={!paginatedResults.hasPrevPage}
                 className="px-4 py-2 bg-white/10 text-zion-slate-light rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
@@ -1804,7 +1789,7 @@ export default function Services() {
                 Page {currentPage} of {paginatedResults.totalPages}
               </span>
               
-              <button
+              <$2 />
                 onClick={() => setCurrentPage(currentPage + 1)}
                 disabled={!paginatedResults.hasNextPage}
                 className="px-4 py-2 bg-white/10 text-zion-slate-light rounded-lg disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
@@ -1816,10 +1801,9 @@ export default function Services() {
         </div>
       </section>
     </div>
-  );
-};
-
-export default Services;
+  )
+}
+export default Services
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-20"
         >
@@ -1831,14 +1815,14 @@ export default Services;
               Let's discuss how our services can transform your business and drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg text-lg font-semibold hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center gap-2 justify-center"
               >
                 Get Free Consultation
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link
+              <$2 />
                 to="/request-quote"
                 className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
               >
@@ -1849,17 +1833,16 @@ export default Services;
         </div>
       </section>
     </div>
-  );
-};
-
-export default Services;
+  )
+}
+export default Services
                     <li key={serviceIndex} className="flex items-center gap-2 text-sm text-zion-slate-light">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                       {service}
                     </li>
                   ))}
                 </ul>
-                <Link 
+                <$2 />
                   to={category.link}
                   className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light font-semibold text-sm transition-colors"
                 >
@@ -1945,13 +1928,13 @@ export default Services;
                 Let's discuss your project requirements and create a custom solution that drives results.
               </p>
               <div className="space-y-4">
-                <Link 
+                <$2 />
                   to="/contact"
                   className="w-full bg-zion-cyan hover:bg-zion-cyan-light text-white py-3 px-6 rounded-lg font-semibold transition-colors text-center block"
                 >
                   Schedule a Consultation
                 </Link>
-                <Link 
+                <$2 />
                   to="/request-quote"
                   className="w-full border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white py-3 px-6 rounded-lg font-semibold transition-colors text-center block"
                 >
@@ -1971,13 +1954,13 @@ export default Services;
             Join hundreds of companies already leveraging our technology solutions to achieve unprecedented growth.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
+            <$2 />
               to="/contact" 
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Start Your Project
             </Link>
-            <Link 
+            <$2 />
               to="/about" 
               className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
@@ -1985,7 +1968,7 @@ export default Services;
             </a>
           </div>
           <div className="mb-6">
-            <Link
+            <$2 />
               to="/enhanced-services"
               className="inline-flex items-center px-6 py-2 text-blue-400 hover:text-blue-300 border border-blue-400 rounded-lg transition-all duration-300"
             >
@@ -1995,13 +1978,13 @@ export default Services;
         </div>
       </section>
     </div>
-  );
+  )
       {/* Stats Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
-              const IconComponent = stat.icon;
+              const IconComponent = stat.icon
               return (
                 <motion.div
                   key={stat.label}
@@ -2016,7 +1999,7 @@ export default Services;
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-zion-slate-light">{stat.label}</div>
                 </motion.div>
-              );
+              )
             })}
           </div>
         </div>
@@ -2041,7 +2024,7 @@ export default Services;
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => {
-              const IconComponent = service.icon;
+              const IconComponent = service.icon
               return (
                 <motion.div
                   key={service.title}
@@ -2070,7 +2053,7 @@ export default Services;
                   
                   <div className="text-center">
                     <div className="text-2xl font-bold text-zion-cyan mb-4">{service.price}</div>
-                    <Link
+                    <$2 />
                       to={service.link}
                       className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
                     >
@@ -2079,7 +2062,7 @@ export default Services;
                     </Link>
                   </div>
                 </motion.div>
-              );
+              )
             })}
           </div>
         </div>
@@ -2139,7 +2122,7 @@ export default Services;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
+              const IconComponent = benefit.icon
               return (
                 <motion.div
                   key={benefit.title}
@@ -2156,7 +2139,7 @@ export default Services;
                     <p className="text-zion-slate-light">{benefit.description}</p>
                   </div>
                 </motion.div>
-              );
+              )
             })}
           </div>
         </div>
@@ -2177,14 +2160,14 @@ export default Services;
               Let's discuss how our technology services can drive innovation and growth for your organization
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-zion-blue-dark font-semibold rounded-xl hover:shadow-lg transition-all duration-300"
               >
                 Schedule Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <$2 />
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white hover:text-zion-blue-dark transition-all duration-300"
               >
@@ -2214,14 +2197,14 @@ export default Services;
               Our team of experts is ready to guide you through the digital transformation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <$2 />
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-white text-zion-purple font-semibold py-4 px-8 rounded-lg hover:bg-zion-slate-light transition-all duration-300 flex items-center justify-center space-x-2 group"
               >
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a
+              <$2 />
                 href="tel:+13024640950"
                 className="bg-transparent text-white font-semibold py-4 px-8 rounded-lg border-2 border-white hover:bg-white hover:text-zion-purple transition-all duration-300 flex items-center justify-center space-x-2 group"
               >
@@ -2233,7 +2216,7 @@ export default Services;
         </div>
       </section>
     </div>
-  );
+  )
               <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-zion-cyan rounded-lg flex items-center justify-center mb-4 text-white">
                   {category.icon}
@@ -2248,7 +2231,7 @@ export default Services;
                     </li>
                   ))}
                 </ul>
-                <Link 
+                <$2 />
                   to={category.link}
                   className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
                 >
@@ -2419,13 +2402,13 @@ export default Services;
             solutions can drive your success.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
+            <$2 />
               to="/contact" 
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Start Your Project
             </Link>
-            <Link 
+            <$2 />
               to="/request-quote" 
               className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
@@ -2435,10 +2418,9 @@ export default Services;
         </div>
       </section>
     </div>
-  );
-};
-
-export default Services;
+  )
+}
+export default Services
 }
 }
               {/* Results Count */}
@@ -2531,7 +2513,7 @@ export default Services;
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {service.tags.slice(0, 3).map((tag, idx) => (
-                  <span
+                  <$2 />
                     key={idx}
                     className="px-2 py-1 bg-zion-purple/20 border border-zion-purple/30 rounded-full text-xs text-zion-cyan"
                   >
@@ -2595,6 +2577,7 @@ export default Services;
         </motion.div>
       </div>
     </div>
-  );
+  )
 }
 }
+</div></div></div></div></div></div></div></p></p></p></p></section></section></section></section></section>

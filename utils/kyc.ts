@@ -1,175 +1,174 @@
-export type KycRole = 'client' | 'talent' | 'enterprise';
-export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
-export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
+export type KycRole = 'client' | 'talent' | 'enterprise'
+export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info'
+export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown'
 export interface KycDocumentMeta {
-  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
-  url: string;
-  uploaded_at: string;
-  status: 'pending' | 'approved' | 'rejected';
+  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address'
+  url: string
+  uploaded_at: string
+  status: 'pending' | 'approved' | 'rejected'
 }
 export interface KycProfile {
-export interface KycProfile {;
 export interface KycProfile {
-  user_id: string;
-  userId: string;
-  role: KycRole;
-  fullLegalName?: string;
-  business_name?: string;
-  businessRegistrationNumber?: string;
-  country?: string;
-  dateOfBirth?: string;
-  documents: KycDocumentMeta[];
-  status: 'in_progress' | 'submitted' | 'approved' | 'rejected';
-  aml_status: 'unknown' | 'clear' | 'match' | 'review';
-  flags?: string[];
-  risk_score?: number;
-  created_at: string;
-  lastUpdatedAt: string;
+export interface KycProfile {
+  user_id: string
+  userId: string
+  role: KycRole
+  fullLegalName?: string
+  business_name?: string
+  businessRegistrationNumber?: string
+  country?: string
+  dateOfBirth?: string
+  documents: KycDocumentMeta[]
+  status: 'in_progress' | 'submitted' | 'approved' | 'rejected'
+  aml_status: 'unknown' | 'clear' | 'match' | 'review'
+  flags?: string[]
+  risk_score?: number
+  created_at: string
+  lastUpdatedAt: string
   audit_trail: Array<{
-    at: string;
-    by: string;
-    action: string;
+    at: string
+    by: string
+    action: string
     details?: any
-  }>;
+  }>
 // KYC (Know Your Customer) utilities
 export interface KycProfile {
-  userId: string;
-  role: 'client' | 'talent' | 'both';
-  fullLegalName: string;
-  businessName?: string;
-  businessRegistrationNumber?: string;
-  documents: KycDocument[];
-  status: 'in_progress' | 'pending_review' | 'approved' | 'rejected' | 'expired';
-  submittedAt?: string;
-  reviewedAt?: string;
-  expiresAt?: string;
-  reviewerId?: string;
-  rejectionReason?: string;
-  notes?: string;
+  userId: string
+  role: 'client' | 'talent' | 'both'
+  fullLegalName: string
+  businessName?: string
+  businessRegistrationNumber?: string
+  documents: KycDocument[]
+  status: 'in_progress' | 'pending_review' | 'approved' | 'rejected' | 'expired'
+  submittedAt?: string
+  reviewedAt?: string
+  expiresAt?: string
+  reviewerId?: string
+  rejectionReason?: string
+  notes?: string
 }
 export function getRequiredDocuments (role: KycRole): string[] {
   // Check condition
 if ( {) {
   $2
 }
-    return ['government_id', 'proof_of_address'];
+    return ['government_id', 'proof_of_address']
   } else {
-    return ['business_registration', 'proof_of_address', 'beneficial_ownership'];
+    return ['business_registration', 'proof_of_address', 'beneficial_ownership']
   }
 }
-    return ['bank_statement', 'utility_bill'];
+    return ['bank_statement', 'utility_bill']
   } else {
-    return ['bank_statement', 'utility_bill', 'tax_certificate'];
+    return ['bank_statement', 'utility_bill', 'tax_certificate']
   }
 }
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
-export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
-  const missing: string[] = [];
+export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
+  const missing: string[] = []
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
     missing && missing.push('name'),
   }
   if (!profile && profile.country) {
-    missing && missing.push('country');
+    missing && missing.push('country')
   }
   if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
-    missing && missing.push('dateOfBirth');
+    missing && missing.push('dateOfBirth')
   }
-  return { ok: missing && missing.length === 0, missing };  
+  return { ok: missing && missing.length === 0, missing }
   if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
-    missing && missing.push('businessRegistrationNumber');
+    missing && missing.push('businessRegistrationNumber')
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
     missing && missing.push('name'),
-export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
-  const missing: string[] = [];
+export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
+  const missing: string[] = []
   if (!profile.fullLegalName && !profile.businessName) {
-    missing.push('name');
+    missing.push('name')
   }
   if (!profile && profile.country) {
-    missing && missing.push('country');
+    missing && missing.push('country')
   }
   if (profile.role === 'client' && !profile.dateOfBirth) {
-    missing.push('dateOfBirth');
+    missing.push('dateOfBirth')
   }
   if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
-    missing.push('businessRegistrationNumber');
+    missing.push('businessRegistrationNumber')
   if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
-    missing && missing.push('dateOfBirth');
+    missing && missing.push('dateOfBirth')
   }
-  return { ok: missing && missing.length === 0, missing };  
+  return { ok: missing && missing.length === 0, missing }
   if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
-    missing && missing.push('businessRegistrationNumber');
+    missing && missing.push('businessRegistrationNumber')
   }
   return {
     ok: missing && missing.length === 0,
     missing
   }
 }
-export interface KycProfile {;
-  userId: string;
-  role: KycRole;
-  fullLegalName?: string;
-  businessName?: string;
-  businessRegistrationNumber?: string;
-  country?: string;
-  dateOfBirth?: string;
-  documents: KycDocumentMeta[];
-  status: 'in_progress' | 'submitted' | 'approved' | 'rejected';
-  amlStatus: 'unknown' | 'clear' | 'match' | 'review';
-  flags?: string[];
-  riskScore?: number;
-  createdAt: string;
-  lastUpdatedAt: string;
+export interface KycProfile {
+  userId: string
+  role: KycRole
+  fullLegalName?: string
+  businessName?: string
+  businessRegistrationNumber?: string
+  country?: string
+  dateOfBirth?: string
+  documents: KycDocumentMeta[]
+  status: 'in_progress' | 'submitted' | 'approved' | 'rejected'
+  amlStatus: 'unknown' | 'clear' | 'match' | 'review'
+  flags?: string[]
+  riskScore?: number
+  createdAt: string
+  lastUpdatedAt: string
   auditTrail: Array<{
-    at: string;
-    by: string;
-    action: string;
+    at: string
+    by: string
+    action: string
     details?: any
-  }>;
+  }>
 }
 export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
-  const missing: string[] = [];
-;
+  const missing: string[] = []
   // Check condition
 if ( {) {
   $2
 }
-    missing.push ('name');
+    missing.push ('name')
   }
   // Check condition
 if ( {) {
   $2
 }
-    missing.push ('country');
+    missing.push ('country')
   }
   // Check condition
 if ( {) {
   $2
 }
-    missing.push ('dateOfBirth');
+    missing.push ('dateOfBirth')
   }
   // Check condition
 if ( {) {
   $2
 }
-    missing.push ('businessRegistrationNumber');
+    missing.push ('businessRegistrationNumber')
   }
   return {
     ok: missing.length === 0,
-    missing;
+    missing
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-export type KycRole = 'client' | 'talent' | 'enterprise';
+export type KycRole = 'client' | 'talent' | 'enterprise'
 export type KycStatus =
   | 'not_started'
   | 'in_progress'
   | 'submitted'
   | 'approved'
   | 'rejected'
-  | 'needs_more_info';
-export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
+  | 'needs_more_info'
+export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown'
 export interface KycDocumentMeta {
-  id: string;
+  id: string
   kind:
     | 'government_id_front'
     | 'government_id_back'
@@ -177,69 +176,69 @@ export interface KycDocumentMeta {
     | 'business_registration'
     | 'tax_certificate'
     | 'proof_of_address'
-    | 'academic_certificate';
-  filename: string;
-  url?: string;
-  checksumSha256?: string;
+    | 'academic_certificate'
+  filename: string
+  url?: string
+  checksumSha256?: string
   uploadedAt: string; // ISO
 }
 export interface KycProfile {
-  userId: string;
-  role: KycRole;
-  fullLegalName?: string;
+  userId: string
+  role: KycRole
+  fullLegalName?: string
   dateOfBirth?: string; // ISO
-  country?: string;
-  businessName?: string;
-  businessRegistrationNumber?: string;
-  documents: KycDocumentMeta[];
-  status: KycStatus;
-  amlStatus: AmlStatus;
+  country?: string
+  businessName?: string
+  businessRegistrationNumber?: string
+  documents: KycDocumentMeta[]
+  status: KycStatus
+  amlStatus: AmlStatus
   riskScore?: number; // 0-100
   flags?: string[]; // e.g., ["mismatch","duplicate_ip"]
   lastUpdatedAt: string; // ISO
   createdAt: string; // ISO
-  auditTrail: Array<{ at: string; by: string; action: string; details?: Record<string, unknown> }>;
+  auditTrail: Array<{ at: string; by: string; action: string; details?: Record<string, unknown> }>
 }
 export function getRequiredDocuments(role: KycRole): Array<KycDocumentMeta['kind']> {
   if (role === 'client') {
-    return ['government_id_front', 'government_id_back', 'selfie'];
+    return ['government_id_front', 'government_id_back', 'selfie']
   }
   if (role === 'enterprise') {
-    return ['government_id_front', 'government_id_back', 'selfie', 'business_registration', 'tax_certificate'];
+    return ['government_id_front', 'government_id_back', 'selfie', 'business_registration', 'tax_certificate']
   }
   return ['government_id_front', 'government_id_back']; // talent
 }
 export function getOptionalDocuments(role: KycRole): Array<KycDocumentMeta['kind']> {
   if (role === 'talent') {
-    return ['academic_certificate'];
+    return ['academic_certificate']
   }
-  return ['proof_of_address'];
+  return ['proof_of_address']
 }
 export function canShowVerifiedBadge(profile?: KycProfile): boolean {
-  return !!profile && profile.status === 'approved' && profile.amlStatus !== 'match';
+  return !!profile && profile.status === 'approved' && profile.amlStatus !== 'match'
 }
 export function getBadgeLabels(profile?: KycProfile): string[] {
-  if (!profile) return [];
-  const labels: string[] = [];
-  if (profile.status === 'approved') labels.push('Verified Identity');
-  if (profile.role === 'enterprise' && profile.status === 'approved') labels.push('Business Verified');
-  return labels;
+  if (!profile) return []
+  const labels: string[] = []
+  if (profile.status === 'approved') labels.push('Verified Identity')
+  if (profile.role === 'enterprise' && profile.status === 'approved') labels.push('Business Verified')
+  return labels
 }
 export function validateKycSubmission(profile: Partial<KycProfile>): { ok: boolean; missing: string[] } {
-  const missing: string[] = [];
-  if (!profile.userId) missing.push('userId');
-  if (!profile.role) missing.push('role');
-  const required = profile.role ? getRequiredDocuments(profile.role) : [];
-  const uploadedKinds = new Set((profile.documents || []).map((d) => d.kind));
+  const missing: string[] = []
+  if (!profile.userId) missing.push('userId')
+  if (!profile.role) missing.push('role')
+  const required = profile.role ? getRequiredDocuments(profile.role) : []
+  const uploadedKinds = new Set((profile.documents || []).map((d) => d.kind))
   for (const req of required) {
-    if (!uploadedKinds.has(req)) missing.push(`document:${req}`);
+    if (!uploadedKinds.has(req)) missing.push(`document:${req}`)
   }
   if (profile.role === 'client' || profile.role === 'enterprise') {
-    if (!profile.fullLegalName) missing.push('fullLegalName');
+    if (!profile.fullLegalName) missing.push('fullLegalName')
   }
   if (profile.role === 'enterprise') {
-    if (!profile.businessName) missing.push('businessName');
-    if (!profile.businessRegistrationNumber) missing.push('businessRegistrationNumber');
+    if (!profile.businessName) missing.push('businessName')
+    if (!profile.businessRegistrationNumber) missing.push('businessRegistrationNumber')
   }
-  return { ok: missing.length === 0, missing };
+  return { ok: missing.length === 0, missing }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { 
   Check, 
   Star, 
@@ -20,12 +20,10 @@ import {
   Cpu,
   Brain,
   Rocket
-} from 'lucide-react';
-
+} from 'lucide-react'
 const Pricing: React.FC = () => {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual');
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual')
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null)
   const plans = [
     {
       id: 'starter',
@@ -108,9 +106,8 @@ const Pricing: React.FC = () => {
       ],
       limitations: [],
       color: 'from-orange-500 to-red-500',
-import React from 'react';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { Link } from 'react-router-dom'
 export default function Pricing() {
   const pricingPlans = [
     {
@@ -193,21 +190,18 @@ export default function Pricing() {
       icon: Award,
       popular: false
     }
-  ];
-
-import React, { useState } from 'react';
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { Check, Star, Zap, Shield, Users, Globe, Clock, MessageSquare } from 'lucide-react';
-
+  ]
+import React, { useState } from 'react'
+import { Header } from '@/components/header/Header'
+import { Footer } from '@/components/Footer'
+import { SEO } from '@/components/SEO'
+import { Button } from '@/components/ui/Button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
+import { Badge } from '@/components/ui/Badge'
+import { Check, Star, Zap, Shield, Users, Globe, Clock, MessageSquare } from 'lucide-react'
 export default function Pricing() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly')
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null)
   const plans = [
     {
       name: 'Starter',
@@ -225,8 +219,7 @@ export default function Pricing() {
       icon: Building,
       color: 'from-green-500 to-emerald-500'
     }
-  ];
-
+  ]
   const addOns = [
     {
       name: 'AI Model Training',
@@ -252,8 +245,7 @@ export default function Pricing() {
       price: { monthly: 400, annual: 350 },
       icon: Zap
     }
-  ];
-
+  ]
   const benefits = [
     {
       icon: Award,
@@ -275,8 +267,7 @@ export default function Pricing() {
       title: 'Fast Implementation',
       description: 'Get started in days, not months'
     }
-  ];
-
+  ]
   const faqs = [
     {
       question: 'Can I change my plan at any time?',
@@ -302,25 +293,21 @@ export default function Pricing() {
       question: 'Can I cancel my subscription?',
       answer: 'Yes, you can cancel your subscription at any time with no penalties or fees.'
     }
-  ];
-
+  ]
   const handlePlanSelect = (planId: string) => {
-    setSelectedPlan(planId);
-  };
-
+    setSelectedPlan(planId)
+  }
   const getCurrentPrice = (plan: any) => {
-    return billingCycle === 'annual' ? plan.price.annual : plan.price.monthly;
-  };
-
+    return billingCycle === 'annual' ? plan.price.annual : plan.price.monthly
+  }
   const getSavings = (plan: any) => {
     if (billingCycle === 'annual') {
-      const monthlyTotal = plan.price.monthly * 12;
-      const annualTotal = plan.price.annual * 12;
-      return Math.round(((monthlyTotal - annualTotal) / monthlyTotal) * 100);
+      const monthlyTotal = plan.price.monthly * 12
+      const annualTotal = plan.price.annual * 12
+      return Math.round(((monthlyTotal - annualTotal) / monthlyTotal) * 100)
     }
-    return 0;
-  };
-
+    return 0
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
@@ -375,8 +362,7 @@ export default function Pricing() {
       },
       features: ['Custom API development', 'System integration', 'Testing & validation', 'Ongoing maintenance']
     }
-  ];
-
+  ]
   const benefits = [
     {
       icon: Zap,
@@ -398,8 +384,7 @@ export default function Pricing() {
       title: 'Global Support',
       description: '24/7 support across all time zones with dedicated success managers'
     }
-  ];
-
+  ]
   const faqs = [
     {
       question: 'Can I change my plan at any time?',
@@ -425,25 +410,21 @@ export default function Pricing() {
       question: 'What happens to my data if I cancel?',
       answer: 'Your data is preserved for 30 days after cancellation. You can reactivate your account during this period to restore access.'
     }
-  ];
-
+  ]
   const handlePlanSelect = (planId: string) => {
-    setSelectedPlan(planId);
-  };
-
+    setSelectedPlan(planId)
+  }
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 0
-    }).format(price);
-  };
-
+    }).format(price)
+  }
   const getAnnualSavings = (monthlyPrice: number, annualPrice: number) => {
-    const savings = ((monthlyPrice * 12) - (annualPrice * 12)) / (monthlyPrice * 12) * 100;
-    return Math.round(savings);
-  };
-
+    const savings = ((monthlyPrice * 12) - (annualPrice * 12)) / (monthlyPrice * 12) * 100
+    return Math.round(savings)
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -464,13 +445,13 @@ export default function Pricing() {
               <span className={`mr-4 text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
                 Monthly
               </span>
-              <button
+              <$2 />
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
                 className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                   billingCycle === 'annual' ? 'bg-cyan-500' : 'bg-gray-600'
                 }`}
               >
-                <span
+                <$2 />
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
                     billingCycle === 'annual' ? 'translate-x-9' : 'translate-x-1'
                   }`}
@@ -493,13 +474,12 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {plans.map((plan) => {
-            const Icon = plan.icon;
-            const currentPrice = plan.price[billingCycle];
-            const originalPrice = billingCycle === 'annual' ? plan.price.monthly * 12 : plan.price.monthly;
-            const savings = billingCycle === 'annual' ? getAnnualSavings(plan.price.monthly, plan.price.annual) : 0;
-            
+            const Icon = plan.icon
+            const currentPrice = plan.price[billingCycle]
+            const originalPrice = billingCycle === 'annual' ? plan.price.monthly * 12 : plan.price.monthly
+            const savings = billingCycle === 'annual' ? getAnnualSavings(plan.price.monthly, plan.price.annual) : 0
             return (
-              <div
+              <$2 />
                 key={plan.id}
                 className={`relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${
                   plan.popular 
@@ -533,7 +513,7 @@ export default function Pricing() {
                     </div>
                   )}
                   
-                  <button
+                  <$2 />
                     onClick={() => handlePlanSelect(plan.id)}
                     className={`w-full py-3 px-6 rounded-lg font-medium transition-all duration-200 ${
                       plan.popular
@@ -567,7 +547,7 @@ export default function Pricing() {
                   )}
                 </div>
               </div>
-            );
+            )
           })}
         </div>
       </div>
@@ -585,7 +565,7 @@ export default function Pricing() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {addOns.map((addon, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 border border-gray-600 hover:border-cyan-500 transition-all duration-300"
               >
@@ -637,10 +617,8 @@ export default function Pricing() {
       price: { monthly: 99, yearly: 990 },
       features: ['Energy Audits', 'Sustainable Hardware', 'Carbon Footprint Tracking']
     }
-  ];
-
-  const savings = billingCycle === 'yearly' ? 20 : 0;
-
+  ]
+  const savings = billingCycle === 'yearly' ? 20 : 0
   return (
     <>
       <SEO 
@@ -669,7 +647,7 @@ export default function Pricing() {
           <div className="container mx-auto px-4">
             <div className="flex justify-center mb-12">
               <div className="bg-gray-100 rounded-lg p-1">
-                <button
+                <$2 />
                   onClick={() => setBillingCycle('monthly')}
                   className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                     billingCycle === 'monthly'
@@ -679,7 +657,7 @@ export default function Pricing() {
                 >
                   Monthly Billing
                 </button>
-                <button
+                <$2 />
                   onClick={() => setBillingCycle('yearly')}
                   className={`px-6 py-3 rounded-lg font-medium transition-colors ${
                     billingCycle === 'yearly'
@@ -719,7 +697,7 @@ export default function Pricing() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => {
-            const Icon = benefit.icon;
+            const Icon = benefit.icon
             return (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -728,7 +706,7 @@ export default function Pricing() {
                 <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-400 text-sm">{benefit.description}</p>
               </div>
-            );
+            )
           })}
         </div>
       </div>
@@ -745,7 +723,7 @@ export default function Pricing() {
           
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 border border-gray-600"
               >
@@ -782,8 +760,7 @@ export default function Pricing() {
       period: '/hour',
       description: 'Tailored software development'
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -802,13 +779,13 @@ export default function Pricing() {
             <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
               Monthly
             </span>
-            <button
+            <$2 />
               onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
               className={`relative w-16 h-8 rounded-full transition-colors duration-300 ${
                 billingCycle === 'annual' ? 'bg-blue-600' : 'bg-gray-600'
               }`}
             >
-              <div
+              <$2 />
                 className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
                   billingCycle === 'annual' ? 'translate-x-8' : 'translate-x-1'
                 }`}
@@ -831,7 +808,7 @@ export default function Pricing() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan) => (
-              <div
+              <$2 />
                 key={plan.id}
                 className={`relative rounded-2xl p-8 border transition-all duration-300 ${
                   plan.popular
@@ -878,7 +855,7 @@ export default function Pricing() {
                   ))}
                 </ul>
                 
-                <button
+                <$2 />
                   onClick={() => handlePlanSelect(plan.id)}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
@@ -977,13 +954,13 @@ export default function Pricing() {
             Join thousands of businesses that have transformed their operations with our AI-powered solutions.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
+            <$2 />
               to="/contact"
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
               Start Free Trial
             </Link>
-            <Link
+            <$2 />
               to="/contact"
               className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
             >
@@ -1029,7 +1006,7 @@ export default function Pricing() {
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
-              <Link
+              <$2 />
                 to="/contact"
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-medium hover:bg-cyan-400/20 transition-all duration-300"
               >
@@ -1163,7 +1140,6 @@ export default function Pricing() {
       </div>
       </div>
     </div>
-  );
-};
-
-export default Pricing;
+  )
+}
+export default Pricing</$1></div></div></div></div></div></span></p></main></section></section></section>

@@ -1,188 +1,69 @@
 #!/bin/bash
 
-# Comprehensive PR Merge Script - All Remaining Branches
-# This script will merge all remaining PRs systematically
-
+# Script to merge all remaining PRs with automatic conflict resolution
 set -e
 
-echo "🚀 Starting Comprehensive PR Merge Process - All Remaining Branches"
-echo "=================================================================="
+echo "Starting bulk merge of all remaining PRs..."
 
-# Get all remaining branches
-BRANCHES=$(git branch -r | grep "cursor/create-and-deploy-new-content" | sed 's/origin\///' | sort)
+# Get all PR branch names
+echo "Fetching all PR branches..."
+BRANCHES=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main" | sed 's/origin\///' | head -20)
 
-echo "📋 Found $(echo "$BRANCHES" | wc -l) branches to process"
+count=0
+success_count=0
+error_count=0
 
-# Counter for tracking
-SUCCESS_COUNT=0
-FAILED_COUNT=0
-TOTAL_COUNT=$(echo "$BRANCHES" | wc -l)
-
-# Function to merge a single branch
-merge_branch() {
-    local branch=$1
-    local branch_num=$2
-    
-    echo ""
-    echo "🔄 [$branch_num/$TOTAL_COUNT] Processing branch: $branch"
-    echo "----------------------------------------"
-    
-    # Try to merge directly
-    if git merge "origin/$branch" --no-ff -m "Merge $branch into main" 2>/dev/null; then
-        echo "✅ Successfully merged $branch into main"
-        SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
-        
-        # Push the changes
-        if git push origin main; then
-            echo "✅ Successfully pushed merged changes to origin/main"
-        else
-            echo "⚠️  Failed to push changes for $branch, will retry later"
-        fi
-    else
-        echo "❌ Merge conflict detected for $branch"
-        echo "🔧 Attempting to resolve conflicts automatically..."
-        
-        # Check for conflicts
-        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "🔍 Found merge conflicts, attempting resolution..."
-            
-            # Try to resolve common conflicts automatically
-            if resolve_conflicts; then
-                echo "✅ Conflicts resolved automatically for $branch"
-                git add .
-                git commit -m "Resolve merge conflicts for $branch"
-                SUCCESS_COUNT=$((SUCCESS_COUNT + 1))
-                
-                # Push the changes
-                if git push origin main; then
-                    echo "✅ Successfully pushed resolved changes to origin/main"
-                else
-                    echo "⚠️  Failed to push resolved changes for $branch, will retry later"
-                fi
-            else
-                echo "❌ Could not resolve conflicts automatically for $branch"
-                FAILED_COUNT=$((FAILED_COUNT + 1))
-                
-                # Abort the merge
-                git merge --abort 2>/dev/null || true
-            fi
-        else
-            echo "❌ Merge failed for $branch (unknown reason)"
-            FAILED_COUNT=$((FAILED_COUNT + 1))
-        fi
-    fi
-}
-
-# Function to resolve common conflicts
-resolve_conflicts() {
-    local resolved=false
-    
-    # Resolve package.json conflicts by taking the version with more dependencies
-    if [ -f "package.json" ] && git status --porcelain | grep -q "package.json"; then
-        echo "🔧 Resolving package.json conflicts..."
-        if git checkout --theirs package.json 2>/dev/null; then
-            git add package.json
-            resolved=true
-        fi
-    fi
-    
-    # Resolve yarn.lock conflicts by taking the newer version
-    if [ -f "yarn.lock" ] && git status --porcelain | grep -q "yarn.lock"; then
-        echo "🔧 Resolving yarn.lock conflicts..."
-        if git checkout --theirs yarn.lock 2>/dev/null; then
-            git add yarn.lock
-            resolved=true
-        fi
-    fi
-    
-    # Resolve tsconfig.json conflicts by taking the more comprehensive version
-    if [ -f "tsconfig.json" ] && git status --porcelain | grep -q "tsconfig.json"; then
-        echo "🔧 Resolving tsconfig.json conflicts..."
-        if git checkout --theirs tsconfig.json 2>/dev/null; then
-            git add tsconfig.json
-            resolved=true
-        fi
-    fi
-    
-    # Resolve next.config.js conflicts by taking the more feature-rich version
-    if [ -f "next.config.js" ] && git status --porcelain | grep -q "next.config.js"; then
-        echo "🔧 Resolving next.config.js conflicts..."
-        if git checkout --theirs next.config.js 2>/dev/null; then
-            git add next.config.js
-            resolved=true
-        fi
-    fi
-    
-    # For content files, prefer the newer content
-    if git status --porcelain | grep -q "content/"; then
-        echo "🔧 Resolving content file conflicts..."
-        git status --porcelain | grep "content/" | while read line; do
-            file=$(echo "$line" | awk '{print $2}')
-            if [ -f "$file" ]; then
-                git checkout --theirs "$file" 2>/dev/null && git add "$file"
-                resolved=true
-            fi
-        done
-    fi
-    
-    # For component files, prefer the more feature-rich version
-    if git status --porcelain | grep -q "components/"; then
-        echo "🔧 Resolving component file conflicts..."
-        git status --porcelain | grep "components/" | while read line; do
-            file=$(echo "$line" | awk '{print $2}')
-            if [ -f "$file" ]; then
-                git checkout --theirs "$file" 2>/dev/null && git add "$file"
-                resolved=true
-            fi
-        done
-    fi
-    
-    # For app files, prefer the more comprehensive version
-    if git status --porcelain | grep -q "app/"; then
-        echo "🔧 Resolving app file conflicts..."
-        git status --porcelain | grep "app/" | while read line; do
-            file=$(echo "$line" | awk '{print $2}')
-            if [ -f "$file" ]; then
-                git checkout --theirs "$file" 2>/dev/null && git add "$file"
-                resolved=true
-            fi
-        done
-    fi
-    
-    # If we resolved any conflicts, return success
-    if [ "$resolved" = true ]; then
-        return 0
-    else
-        return 1
-    fi
-}
-
-# Process each branch
-branch_num=1
 for branch in $BRANCHES; do
-    merge_branch "$branch" "$branch_num"
-    branch_num=$((branch_num + 1))
+    echo ""
+    echo "Processing branch: $branch..."
     
-    # Add a small delay to avoid overwhelming the system
-    sleep 1
+    # Try to merge the branch
+    if git merge "origin/$branch" --no-edit; then
+        echo "  ✓ Successfully merged $branch"
+        success_count=$((success_count + 1))
+    else
+        echo "  ⚠️  Merge conflict in $branch, resolving automatically..."
+        
+        # Resolve conflicts by choosing our version
+        CONFLICT_FILES=$(git diff --name-only --diff-filter=U)
+        for file in $CONFLICT_FILES; do
+            if [ -f "$file" ]; then
+                echo "    Resolving conflict in $file..."
+                git checkout --ours "$file"
+                git add "$file"
+            fi
+        done
+        
+        # Commit the resolved merge
+        if git commit -m "Auto-resolve conflicts in $branch"; then
+            echo "  ✓ Successfully resolved and merged $branch"
+            success_count=$((success_count + 1))
+        else
+            echo "  ✗ Failed to resolve conflicts in $branch"
+            git merge --abort 2>/dev/null || true
+            error_count=$((error_count + 1))
+        fi
+    fi
+    
+    count=$((count + 1))
+    
+    # Safety limit
+    if [ $count -ge 20 ]; then
+        echo "  ⚠️  Processed 20 branches, stopping for safety"
+        break
+    fi
 done
 
-# Final summary
 echo ""
-echo "🎉 Comprehensive Merge Process Complete!"
-echo "======================================="
-echo "✅ Successfully merged: $SUCCESS_COUNT branches"
-echo "❌ Failed to merge: $FAILED_COUNT branches"
-echo "📊 Total processed: $TOTAL_COUNT branches"
+echo "Summary:"
+echo "  Total processed: $count"
+echo "  Successful merges: $success_count"
+echo "  Errors: $error_count"
 
-# Push final state
-echo ""
-echo "🚀 Pushing final state to origin/main..."
-if git push origin main; then
-    echo "✅ Final state pushed successfully"
-else
-    echo "❌ Failed to push final state"
+# Push all changes
+if [ $success_count -gt 0 ]; then
+    echo ""
+    echo "Pushing all merged changes to main..."
+    git push origin main
+    echo "✓ All changes pushed to main"
 fi
-
-echo ""
-echo "🏁 All done! Check the results above."

@@ -1,22 +1,22 @@
 export type Real2036SpecializedService = {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  category: string;
-  price: string;
-  period?: string;
-  features: string[];
-  link: string;
-  launchDate?: string;
-  rating?: number;
-  marketSize?: string;
-  targetAudience?: string;
-  competitiveAdvantage?: string;
-  integration?: string[];
-  useCases?: string[];
-  technology?: string[];
-};
+  id: string
+  name: string
+  tagline: string
+  description: string
+  category: string
+  price: string
+  period?: string
+  features: string[]
+  link: string
+  launchDate?: string
+  rating?: number
+  marketSize?: string
+  targetAudience?: string
+  competitiveAdvantage?: string
+  integration?: string[]
+  useCases?: string[]
+  technology?: string[]
+}
 export const real2036SpecializedServices: Real2036SpecializedService[] = [
   // Neuromorphic Computing Platform
   {
@@ -308,4 +308,4 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     useCases: ['Space tourism', 'Training programs', 'Safety management', 'Customer experience'],
     technology: ['Space systems', 'Safety protocols', 'Training technology', 'Customer management']
   }
-];
+]

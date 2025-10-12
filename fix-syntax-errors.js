@@ -1,92 +1,222 @@
+#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-// Function to fix common syntax errors
-function fixSyntaxErrors(content, filePath) {
-  let fixed = content;
-  
-  // Fix import statements without quotes
-  fixed = fixed.replace(/import\s+(\w+)\s+from\s+(\w+);/g, "import $1 from $2';");
-  fixed = fixed.replace(/import\s+(\w+)\s+from\s+(\w+);/g, "import $1 from $2';");
-  
-  // Fix export statements
-  fixed = fixed.replace(/export\s*;/g, );
-  fixed = fixed.replace(/export\s+default\s+function\s+(\w+)/g, export default function $1');
-  
-  // Fix React imports specifically
-  fixed = fixed.replace(/import\s+React\s+from\s+react;/g, "import React from react';");
-  
-  // Fix any remaining unquoted imports
-  fixed = fixed.replace(/from\s+([a-zA-Z][a-zA-Z0-9]*);/g, "from $1';");
-  
-  // Remove any trailing semicolons after export
-  fixed = fixed.replace(/export\s*;\s*\n/g, \n');
-  
-  return fixed;
-}
-
-// Function to process a file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content, filePath);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed);
-      console.log(`Fixed: ${filePath}`);
-      return true;
+import fs from 'fs'
+import path from 'path'
+import { execSync } from 'child_process'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+// Function to find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
+  let files = []
+  const items = fs.readdirSync(dir)
+  for (const item of items) {
+    const fullPath = path.join(dir, item)
+    const stat = fs.statSync(fullPath)
+    if (stat.isDirectory()) {
+      // Skip certain directories
+      if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
+        files = files.concat(findFiles(fullPath, extensions))
+      }
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath)
     }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
   }
+  
+  return files
 }
 
-// Function to find and process all JS/TS/TSX files
-function processDirectory(dir) {
-  const extensions = ['.js', .ts', .tsx', .jsx'];
-  let fixedCount = 0;
-  
-  function walkDir(currentDir) {
-    const items = fs.readdirSync(currentDir);
+// Function to fix specific syntax errors
+function fixSyntaxErrors(filePath) {
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8')
+    let modified = false
+    // Fix missing commas in object literals
+    const commaFixes = [
+      // Fix missing comma after array in object
+      {
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:/g,
+        replacement: '$1: [$2],\n    $3:'
+      },
+      // Fix missing comma after object property
+      {
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
+        replacement: '$1: [$2],\n    $3: ['
+      },
+      // Fix missing comma after string array
+      {
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
+        replacement: '$1: [$2],\n    $3: ['
+      }
+    ]
+    for (const fix of commaFixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement)
+      if (newContent !== content) {
+        content = newContent
+        modified = true
+      }
+    }
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other build directories
-        if (!['node_modules', .next', dist', build', coverage'].includes(item)) {
-          walkDir(fullPath);
+    // Fix missing semicolons in array declarations
+    const semicolonFixes = [
+      // Fix missing semicolon after array declaration
+      {
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
+        replacement: '$1: [$2];\n  const $3 = ['
+      },
+      // Fix missing semicolon after const declaration
+      {
+        pattern: /const\s+(\w+)\s*=\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
+        replacement: 'const $1 = [$2];\n  const $3 = ['
+      }
+    ]
+    for (const fix of semicolonFixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement)
+      if (newContent !== content) {
+        content = newContent
+        modified = true
+      }
+    }
+    
+    // Fix JSX closing tag issues
+    const jsxFixes = [
+      // Fix unclosed JSX elements
+      {
+        pattern: /<(\w+)([^>]*?)(?<!\/)>([^<]*?)(?=<\w+|\s*$)/g,
+        replacement: (match, tagName, attributes, content) => {
+          // Skip self-closing tags
+          if (match.endsWith('/>') || ['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
+            return match
+          }
+          // Add closing tag if missing
+          if (!content.includes(`</${tagName}>`)) {
+            return `<${tagName}${attributes}>${content}</${tagName}>`
+          }
+          return match
         }
-      } else if (extensions.some(ext => item.endsWith(ext))) {
-        if (processFile(fullPath)) {
-          fixedCount++;
+      },
+      // Fix meta tags
+      {
+        pattern: /<meta\s+([^>]*?)(?<!\/)>/g,
+        replacement: (match, attributes) => {
+          if (!match.includes('/>') && !match.includes('</meta>')) {
+            return `<meta ${attributes} />`
+          }
+          return match
+        }
+      }
+    ]
+    for (const fix of jsxFixes) {
+      if (typeof fix.replacement === 'function') {
+        const newContent = content.replace(fix.pattern, fix.replacement)
+        if (newContent !== content) {
+          content = newContent
+          modified = true
+        }
+      } else {
+        const newContent = content.replace(fix.pattern, fix.replacement)
+        if (newContent !== content) {
+          content = newContent
+          modified = true
         }
       }
     }
+    
+    // Fix specific parsing errors
+    const specificFixes = [
+      // Fix missing closing bracket in features array
+      {
+        pattern: /const\s+features\s*=\s*\[([^\]]+)\]\s*const\s+benefits/g,
+        replacement: 'const features = [$1];\n  const benefits'
+      },
+      // Fix missing semicolon after features array
+      {
+        pattern: /const\s+features\s*=\s*\[([^\]]+)\]\s*const\s+benefits/g,
+        replacement: 'const features = [$1];\n  const benefits'
+      },
+      // Fix missing comma in object properties
+      {
+        pattern: /(\w+)\s*:\s*\[([^\]]+)\]\s*(\w+)\s*:\s*\[/g,
+        replacement: '$1: [$2],\n    $3: ['
+      }
+    ]
+    for (const fix of specificFixes) {
+      const newContent = content.replace(fix.pattern, fix.replacement)
+      if (newContent !== content) {
+        content = newContent
+        modified = true
+      }
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8')
+      console.log(`Fixed syntax errors in: ${filePath}`)
+      return true
+    }
+    
+    return false
+  } catch (error) {
+    console.error(`Error fixing syntax errors in ${filePath}:`, error.message)
+    return false
   }
-  
-  walkDir(dir);
-  return fixedCount;
 }
 
 // Main execution
-console.log('🔧 Starting syntax error fixes...');
+console.log('Starting syntax error fixes...')
+const appDir = path.join(__dirname, 'app')
+const files = findFiles(appDir)
+let fixedCount = 0
+let errorCount = 0
+for (const file of files) {
+  try {
+    if (fixSyntaxErrors(file)) {
+      fixedCount++
+    }
+  } catch (error) {
+    console.error(`Failed to process ${file}:`, error.message)
+    errorCount++
+  }
+}
 
-const startTime = Date.now();
-const fixedCount = processDirectory('.');
-
-console.log(`✅ Fixed ${fixedCount} files in ${Date.now() - startTime}ms`);
-
-// Run ESLint to check if issues are resolved
-console.log('🔍 Running ESLint to verify fixes...');
+console.log(`\nFixed ${fixedCount} files`)
+console.log(`Errors: ${errorCount} files`)
+// Run linting to check remaining issues
+console.log('\nRunning linting to check remaining issues...')
 try {
-  execSync('npx eslint . --ext .js,.ts,.tsx --max-warnings 100', { stdio: 'inherit' });
-  console.log('✅ ESLint passed!');
+  execSync('pnpm run lint', { stdio: 'inherit' })
 } catch (error) {
-  console.log('⚠️  Some ESLint issues remain, but syntax errors should be fixed.');
-} 
+  console.log('Linting completed with some remaining issues to fix manually')
+}
+    let content = fs.readFileSync(filePath, 'utf8')
+    // Fix common syntax issues
+    content = content.replace(/\s+return\s*\(\s*<>/g, '\n    }\n  ];\n\n  return (\n    <>')
+    // Fix missing closing brackets for features array
+    content = content.replace(/(benefits:\s*\[[^\]]+\])\s+return\s*\(/g, '$1\n    }\n  ];\n\n  return (')
+    // Fix malformed JSX structure
+    content = content.replace(/(benefits:\s*\[[^\]]+\])\s*}\s*return\s*\(/g, '$1\n    }\n  ];\n\n  return (')
+    // Fix missing closing tags
+    content = content.replace(/<Helmet>\s*<title>[^<]+<\/title>\s*<meta[^>]+>\s*<meta[^>]+>\s*<meta[^>]+>\s*<\/Helmet>/g, 
+      '<Helmet>\n        <title>AI Analytics - Zion Tech Group</title>\n        <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />\n        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />\n      </Helmet>')
+    // Ensure proper JSX structure
+    if (!content.includes('export default')) {
+      content = content.replace(/(const\s+\w+Page:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?)(\s*};?\s*)$/m, '$1\n};\n\nexport default $1Page;')
+    }
+    
+    fs.writeFileSync(filePath, content, 'utf8')
+    console.log(`✅ Fixed syntax errors in ${filePath}`)
+  } catch (error) {
+    console.error(`❌ Error processing ${filePath}:`, error.message)
+  }
+}
+
+// Process all files
+console.log('🔧 Fixing syntax errors...\n')
+filesToFix.forEach(filePath => {
+  if (fs.existsSync(filePath)) {
+    fixFile(filePath)
+  } else {
+    console.log(`⚠️  File not found: ${filePath}`)
+  }
+})
+console.log('\n✨ Syntax error fixes complete!')

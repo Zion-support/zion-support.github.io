@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Link } from "react-router-dom"
 import { 
   Bot, 
   Shield, 
@@ -16,58 +16,54 @@ import {
   Star,
   Users,
   Globe
-} from "lucide-react";
-import { getFeaturedServices } from "@/data/microSaasServices";
-
+} from "lucide-react"
+import { getFeaturedServices } from "@/data/microSaasServices"
 export function MicroSaasShowcase() {
-  const featuredServices = getFeaturedServices().slice(0, 6);
-
+  const featuredServices = getFeaturedServices().slice(0, 6)
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case "AI Services":
-        return <Bot className="w-8 h-8" />;
+        return <Bot className="w-8 h-8" />
       case "IT Services":
-        return <Shield className="w-8 h-8" />;
+        return <Shield className="w-8 h-8" />
       case "Micro SAAS":
-        return <TrendingUp className="w-8 h-8" />;
+        return <TrendingUp className="w-8 h-8" />
       case "Development":
-        return <Code className="w-8 h-8" />;
+        return <Code className="w-8 h-8" />
       case "Analytics":
-        return <Database className="w-8 h-8" />;
+        return <Database className="w-8 h-8" />
       case "Security":
-        return <Shield className="w-8 h-8" />;
+        return <Shield className="w-8 h-8" />
       case "Cloud":
-        return <Cloud className="w-8 h-8" />;
+        return <Cloud className="w-8 h-8" />
       case "Automation":
-        return <Zap className="w-8 h-8" />;
+        return <Zap className="w-8 h-8" />
       default:
-        return <TrendingUp className="w-8 h-8" />;
+        return <TrendingUp className="w-8 h-8" />
     }
-  };
-
+  }
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "AI Services":
-        return "from-purple-500 to-indigo-600";
+        return "from-purple-500 to-indigo-600"
       case "IT Services":
-        return "from-blue-500 to-cyan-600";
+        return "from-blue-500 to-cyan-600"
       case "Micro SAAS":
-        return "from-green-500 to-emerald-600";
+        return "from-green-500 to-emerald-600"
       case "Development":
-        return "from-orange-500 to-red-600";
+        return "from-orange-500 to-red-600"
       case "Analytics":
-        return "from-cyan-500 to-blue-600";
+        return "from-cyan-500 to-blue-600"
       case "Security":
-        return "from-red-500 to-pink-600";
+        return "from-red-500 to-pink-600"
       case "Cloud":
-        return "from-blue-500 to-purple-600";
+        return "from-blue-500 to-purple-600"
       case "Automation":
-        return "from-yellow-500 to-orange-600";
+        return "from-yellow-500 to-orange-600"
       default:
-        return "from-gray-500 to-slate-600";
+        return "from-gray-500 to-slate-600"
     }
-  };
-
+  }
   return (
     <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light relative overflow-hidden">
       {/* Background effects */}
@@ -349,12 +345,12 @@ export function MicroSaasShowcase() {
       <style>{`
         @keyframes fadeInUp {
           from {
-            opacity: 0;
-            transform: translateY(30px);
+            opacity: 0
+            transform: translateY(30px)
           }
           to {
-            opacity: 1;
-            transform: translateY(0);
+            opacity: 1
+            transform: translateY(0)
           }
         }
       `}</style>
@@ -464,5 +460,5 @@ export function MicroSaasShowcase() {
         </motion.div>
       </div>
     </section>
-  );
+  )
 }

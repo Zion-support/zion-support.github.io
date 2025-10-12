@@ -1,6 +1,6 @@
-import React from 'react';
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react'
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import { 
   Users, 
   Award, 
@@ -12,7 +12,7 @@ import {
   Rocket,
   Star,
   CheckCircle
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Linkedin, 
   Twitter, 
@@ -26,33 +26,28 @@ import {
   Rocket,
   Building,
   Zap
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function Team() {
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-  const [selectedLocation, setSelectedLocation] = useState('all');
-
+  const [selectedDepartment, setSelectedDepartment] = useState('all')
+  const [selectedLocation, setSelectedLocation] = useState('all')
   const departments = [
     { id: 'all', name: 'All Departments', count: 45 },
     { id: 'leadership', name: 'Leadership', count: 8 },
     { id: 'engineering', name: 'Engineering', count: 18 },
     { id: 'ai-research', name: 'AI Research', count: 12 },
     { id: 'sales', name: 'Sales & Business', count: 7 }
-  ];
-
+  ]
   const locations = [
     { id: 'all', name: 'All Locations', count: 45 },
     { id: 'middletown', name: 'Middletown, DE', count: 25 },
     { id: 'remote', name: 'Remote', count: 15 },
     { id: 'amsterdam', name: 'Amsterdam, NL', count: 5 }
-  ];
-
+  ]
   const teamMembers = [
     {
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
-
+import React from 'react'
+import { SEO } from '@/components/SEO'
+import { Link } from 'react-router-dom'
 export default function Team() {
   const leadership = [
     {
@@ -99,8 +94,7 @@ export default function Team() {
       linkedin: '#',
       achievements: ['MBA Business', '10+ Years Operations', 'Process Optimization']
     }
-  ];
-
+  ]
   const departmentHeads = [
     {
       name: 'Alex Thompson',
@@ -130,8 +124,7 @@ export default function Team() {
       bio: 'Digital transformation consultant helping businesses navigate technological change.',
       avatar: 'MG'
     }
-  ];
-
+  ]
   const companyStats = [
     {
       number: '50+',
@@ -276,8 +269,7 @@ export default function Team() {
       achievements: ["Customer Success Excellence", "Client Satisfaction Award", "Team Leadership"],
       featured: false
     }
-  ];
-
+  ]
   const departments = [
     {
   const advisors = [
@@ -295,8 +287,7 @@ export default function Team() {
       image: '/images/team/elena-petrova.jpg',
       linkedin: 'https://linkedin.com/in/elena-petrova'
     }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO 
@@ -318,13 +309,13 @@ export default function Team() {
             cybersecurity, quantum computing, and digital transformation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
+            <$2 />
               href="#team"
               className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
             >
               View Team
             </a>
-            <a
+            <$2 />
               href="/careers"
               className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
@@ -414,11 +405,9 @@ export default function Team() {
       description: "Customer success and satisfaction",
       memberCount: 1
     }
-  ];
-
-  const featuredMembers = teamMembers.filter(member => member.featured);
-  const regularMembers = teamMembers.filter(member => !member.featured);
-
+  ]
+  const featuredMembers = teamMembers.filter(member => member.featured)
+  const regularMembers = teamMembers.filter(member => !member.featured)
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -457,9 +446,9 @@ export default function Team() {
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Departments</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {departments.map((dept, index) => {
-            const Icon = dept.icon;
+            const Icon = dept.icon
             return (
-              <div
+              <$2 />
                 key={index}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 text-center hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
@@ -470,7 +459,7 @@ export default function Team() {
                 <p className="text-gray-400 text-sm mb-3">{dept.description}</p>
                 <span className="text-cyan-400 text-sm font-medium">{dept.memberCount} member</span>
               </div>
-            );
+            )
           })}
         </div>
       </div>
@@ -481,7 +470,7 @@ export default function Team() {
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Leadership Team</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {featuredMembers.map((member) => (
-              <div
+              <$2 />
                 key={member.id}
                 className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
@@ -507,7 +496,7 @@ export default function Team() {
                     <h4 className="text-sm font-semibold text-cyan-400 mb-3">Expertise</h4>
                     <div className="flex flex-wrap gap-2">
                       {member.expertise.slice(0, 3).map((skill, index) => (
-                        <span
+                        <$2 />
                           key={index}
                           className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
                         >
@@ -532,7 +521,7 @@ export default function Team() {
                   {/* Social Links */}
                   <div className="flex justify-center space-x-4">
                     {member.linkedin && (
-                      <a
+                      <$2 />
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -542,7 +531,7 @@ export default function Team() {
                       </a>
                     )}
                     {member.twitter && (
-                      <a
+                      <$2 />
                         href={member.twitter}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -552,7 +541,7 @@ export default function Team() {
                       </a>
                     )}
                     {member.email && (
-                      <a
+                      <$2 />
                         href={`mailto:${member.email}`}
                         className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                       >
@@ -572,7 +561,7 @@ export default function Team() {
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {regularMembers.map((member) => (
-            <div
+            <$2 />
               key={member.id}
               className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
             >
@@ -598,7 +587,7 @@ export default function Team() {
                   <h4 className="text-xs font-semibold text-cyan-400 mb-2">Expertise</h4>
                   <div className="flex flex-wrap gap-1">
                     {member.expertise.slice(0, 2).map((skill, index) => (
-                      <span
+                      <$2 />
                         key={index}
                         className="px-1 py-1 bg-gray-700 text-gray-300 text-xs rounded text-center"
                       >
@@ -791,17 +780,14 @@ export default function Team() {
         "Former IBM Quantum researcher"
       ]
     }
-  ];
-
+  ]
   const filteredTeam = teamMembers.filter(member => {
-    const matchesDepartment = selectedDepartment === 'all' || member.department === selectedDepartment;
-    const matchesLocation = selectedLocation === 'all' || member.location === selectedLocation;
-    return matchesDepartment && matchesLocation;
-  });
-
-  const featuredMembers = filteredTeam.filter(member => member.featured);
-  const regularMembers = filteredTeam.filter(member => !member.featured);
-
+    const matchesDepartment = selectedDepartment === 'all' || member.department === selectedDepartment
+    const matchesLocation = selectedLocation === 'all' || member.location === selectedLocation
+    return matchesDepartment && matchesLocation
+  })
+  const featuredMembers = filteredTeam.filter(member => member.featured)
+  const regularMembers = filteredTeam.filter(member => !member.featured)
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -915,14 +901,14 @@ export default function Team() {
                 {/* Social Links */}
                 <div className="flex justify-center space-x-3">
                   {member.linkedin && (
-                    <a
+                    <$2 />
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {departments.map((dept, index) => (
-              <div
+              <$2 />
                 key={index}
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 group"
               >
@@ -940,7 +926,7 @@ export default function Team() {
                     </a>
                   )}
                   {member.email && (
-                    <a
+                    <$2 />
                       href={`mailto:${member.email}`}
                       className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                     >
@@ -969,13 +955,13 @@ export default function Team() {
               of AI and quantum computing solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <$2 />
                 to="/careers"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium text-lg"
               >
                 View Open Positions
               </Link>
-              <Link 
+              <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 font-medium text-lg"
       {/* Join Our Team CTA */}
@@ -991,13 +977,13 @@ export default function Team() {
               our mission to transform businesses through cutting-edge solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/careers"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
               >
                 View Open Positions
               </Link>
-              <Link
+              <$2 />
                 to="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200"
               >
@@ -1008,7 +994,6 @@ export default function Team() {
         </div>
       </div>
     </div>
-  );
-};
-
-export default Team;
+  )
+}
+export default Team</$1></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></p></p></section></section>

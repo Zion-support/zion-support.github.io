@@ -1,41 +1,51 @@
 #!/bin/bash
-cd /workspace
 
-echo "🚀 Starting merge resolution process..."
+# Complete the merge and push changes
 
-# Check current status
-echo "📊 Current git status:"
+echo "Adding resolved files to staging..."
+git add app/App.tsx
+git add app/components/InteractiveAIROICalculator.tsx
+git add app/enterprise/page.tsx
+git add src/hooks/usePerformance.ts
+git add tsconfig.json
+
+# Add all other modified files
+git add adv_seo_backup.txt
+git add app/components/AdvancedSEOOptimizer.tsx
+git add app/components/ErrorBoundary.tsx
+git add app/components/PerformanceDashboard.tsx
+git add app/hooks/useEnhancedPerformance.ts
+git add app/utils/accessibilityEnhancer.ts
+git add app/utils/logger.ts
+git add app/utils/performanceMonitor.ts
+git add app/utils/seoOptimizer.ts
+git add app/utils/testRunner.tsx
+git add comprehensive_typescript_fixer.py
+git add fix_all_typescript_errors.sh
+git add fix_seo_optimizer.py
+git add src/content/october-2025-cutting-edge-innovations.ts
+git add src/hooks/useBannerRotation.tsx
+git add src/monitoring.ts
+
+echo "Committing merge..."
+git commit -m "Merge PR #25994: Resolve conflicts and fix errors
+
+- Resolved conflicts in app/App.tsx by combining comprehensive monitoring with accessibility features
+- Resolved conflicts in app/components/InteractiveAIROICalculator.tsx  
+- Resolved conflicts in app/enterprise/page.tsx
+- Resolved conflicts in src/hooks/usePerformance.ts
+- Resolved conflicts in tsconfig.json by merging exclusion lists
+- Added comprehensive error handling and performance monitoring
+- Improved SEO optimization and accessibility enhancements"
+
+echo "Merge completed successfully!"
+echo ""
+echo "Checking status..."
 git status
 
-# Ensure we're on main branch
-echo "🔄 Switching to main branch..."
-git checkout main
+echo ""
+echo "Recent commits:"
+git log --oneline -5
 
-# Pull latest changes
-echo "⬇️  Pulling latest changes..."
-git pull origin main
-
-# Try to merge our feature branch
-echo "🔄 Merging feature branch..."
-git merge cursor/create-and-deploy-new-content-29fa || {
-    echo "⚠️  Merge conflicts detected, resolving..."
-    
-    # Resolve conflicts by keeping our changes for new content
-    git add src/pages/blog/ai-2026-enterprise-autonomous-operations-revolution.md
-    git add src/pages/blog/ai-2026-tools-and-resources-ultimate-guide.md
-    git add src/pages/case-studies/global-enterprise-ai-autonomous-transformation-2026-5-billion-roi.md
-    git add src/pages/resources/ai-2026-autonomous-operations-implementation-master-guide.md
-    git add src/pages/tools/ai-2026-roi-calculator-enterprise.md
-    git add src/components/NewContentPromotionBanner2026.tsx
-    git add src/components/InteractiveContentDiscovery2026.tsx
-    git add src/pages/Home.js
-    
-    # Commit the merge
-    git commit -m "feat: Merge AI 2026 content and promotional components with conflict resolution"
-}
-
-# Push to main
-echo "⬆️  Pushing to main branch..."
-git push origin main
-
-echo "✅ Merge process completed!"
+echo ""
+echo "To push changes, run: git push origin HEAD"

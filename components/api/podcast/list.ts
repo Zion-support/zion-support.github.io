@@ -1,30 +1,30 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
+import type { NextApiRequest, NextApiResponse } from 'next'
+import fs from 'fs'
+import path from 'path'
 const EPISODES_PATH = path.join(
   process.cwd()
   'data'
   'podcast'
   'episodes.json'
-);
+)
 function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  const dir = path.dirname(EPISODES_PATH)
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
   if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  ensureStorage();
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
+    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  ensureStorage()
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json')
 function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  const dir = path.dirname(EPISODES_PATH)
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage()
-  ensureStorage(),;
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+  ensureStorage(),
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
   const simplified = episodes.map(e => ({
     id: e.id
     title: e.title
@@ -32,12 +32,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     createdAt: e.createdAt
     summary: e.bestQuote |''
     audio: e.audio |{}
-  }));
+  }))
   return res.status (200).json ({ episodes: simplified });  const simplified = episodes.map ((e) => ({
-    id: e.id;
-    title: e.title;
+    id: e.id
+    title: e.title
   ensureStorage(),
-  const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+  const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
   const simplified = episodes && episodes.map(e => ({
     id: e && e.id,
     title: e && e.title,
@@ -45,49 +45,49 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     createdAt: e && e.createdAt,
     summary: e && e.bestQuote || '',
     audio: e && e.audio || {},
-  }));
+  }))
   return res && res.status(200).json({ episodes: simplified });  const simplified = episodes && episodes.map((e) => ({
-    id: e && e.id;
-    title: e && e.title;
-    inviteeName: e && e.invitee?.name || 'Guest';
-    createdAt: e && e.createdAt;
+    id: e && e.id
+    title: e && e.title
+    inviteeName: e && e.invitee?.name || 'Guest'
+    createdAt: e && e.createdAt
     summary: e && e.bestQuote || '',
-    audio: e && e.audio || {}}));
+    audio: e && e.audio || {}}))
   return res && res.status(200).json({ episodes: simplified })
-const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
+const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json')
 function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  const dir = path.dirname(EPISODES_PATH)
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  ensureStorage(),;
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+  ensureStorage(),
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
   const simplified = episodes.map((e) => ({
     id: e.id, title: e.title,
     inviteeName: e.invitee?.name || 'Guest', createdAt: e.createdAt,
     summary: e.bestQuote || '',
-    audio: e.audio || {}}));
+    audio: e.audio || {}}))
   return res.status(200).json({ episodes: simplified })
 }
-    invitee_name: e.invitee?.name || 'Guest';
-    created_at: e.created_at;
+    invitee_name: e.invitee?.name || 'Guest'
+    created_at: e.created_at
     summary: e.best_quote || '',
-    audio: e.audio || {}}));
-  return res.status (200).json ({ episodes: simplified });
+    audio: e.audio || {}}))
+  return res.status (200).json ({ episodes: simplified })
 }
 }
-  ensureStorage();
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
-const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json');
+  ensureStorage()
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
+const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json')
 function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
+  const dir = path.dirname(EPISODES_PATH)
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  ensureStorage();
-  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+  ensureStorage()
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[]
   const simplified = episodes.map((e) => ({
     id: e.id,
     title: e.title,
@@ -95,6 +95,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     createdAt: e.createdAt,
     summary: e.bestQuote || '',
     audio: e.audio || {},
-  }));
-  return res.status(200).json({ episodes: simplified });
+  }))
+  return res.status(200).json({ episodes: simplified })
 }

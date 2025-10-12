@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Play, Star, Users, Award, TrendingUp } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { ContentShowcase } from '../components/ContentShowcase';
-import { NewContentShowcase } from '../components/NewContentShowcase';
+import NewContentShowcase from '../components/NewContentShowcase';
 import RevolutionaryContent2026Showcase from '../components/RevolutionaryContent2026Showcase';
-import { InteractiveTechDemo } from '../components/InteractiveTechDemo';
+import InteractiveTechDemo from '../components/InteractiveTechDemo';
 import { ServicesHighlight } from '../components/ServicesHighlight';
 
 const EnhancedHome: React.FC = () => {

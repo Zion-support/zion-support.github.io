@@ -1,14 +1,47 @@
+<<<<<<< HEAD
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { SEO } from '../../components/SEO';
-import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+=======
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { SEO } from '../../components/SEO'
+import { Link } from 'react-router-dom'
+>>>>>>> origin/main
 import { 
   Scale, 
   FileText, 
   Search, 
-import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+  Shield, 
+  CheckCircle, 
+  ArrowRight, 
+  Brain, 
+  Clock 
+} from 'lucide-react';
+import SEOHead from '../components/SEOHead';
+
+export default function AILegalTech() {
+  return (
+    <>
+      <SEOHead
+        title="AI Legal Tech - Zion Tech Group"
+        description="Revolutionary AI-powered legal technology platform that automates legal processes, document analysis, and case management."
+        keywords="AI legal tech, legal automation, document analysis, case management, legal AI"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
+        {/* Hero Section */}
+        <section className="pt-32 pb-20 px-4 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-800/20 to-indigo-800/20"></div>
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-purple-500/20 rounded-full px-6 py-3 mb-6">
+                <Scale className="w-5 h-5 text-purple-400" />
+                <span className="text-purple-300 font-medium">AI Legal Tech</span>
+=======
+import { Link } from 'react-router-dom'
 import { 
   Shield, 
   FileText, 
@@ -51,8 +84,7 @@ import {
   TrendingUp,
   UserCheck,
   Zap
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function AILegalTech() {
   const features = [
     {
@@ -84,7 +116,7 @@ export default function AILegalTech() {
       icon: Clock,
       title: "Compliance Monitoring",
       description: "Real-time compliance monitoring and automated regulatory updates."
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Shield, 
   Brain, 
@@ -108,8 +140,7 @@ import {
   Calendar,
   DollarSign,
   Target
-} from 'lucide-react';
-
+} from 'lucide-react'
 const AILegalTech: React.FC = () => {
   const features = [
     {
@@ -128,8 +159,7 @@ const AILegalTech: React.FC = () => {
   TrendingUp,
   Lock,
   Gavel
-} from 'lucide-react';
-
+} from 'lucide-react'
 const AILegalTech = () => {
   const features = [
     {
@@ -156,8 +186,7 @@ const AILegalTech = () => {
   DollarSign,
   Heart,
   Home
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function AILegalTech() {
   const services = [
     {
@@ -216,8 +245,7 @@ export default function AILegalTech() {
       ],
       price: 'Starting at $2,499/month'
     }
-  ];
-
+  ]
   const legalTechFeatures = [
     {
       title: 'Contract Intelligence',
@@ -282,8 +310,7 @@ export default function AILegalTech() {
       title: "Secure Document Management",
       description: "Enterprise-grade security with encryption, access controls, and audit trails for sensitive legal documents."
     }
-  ];
-
+  ]
   const useCases = [
     {
       title: "Contract Management",
@@ -305,8 +332,7 @@ export default function AILegalTech() {
       description: "Monitor regulatory changes and identify compliance risks with automated AI systems.",
       icon: Shield
     }
-  ];
-
+  ]
   const benefits = [
     "Reduce legal document review time by 80%",
     "Improve contract accuracy by 95%",
@@ -314,8 +340,7 @@ export default function AILegalTech() {
     "Enhance compliance monitoring",
     "Faster legal research and analysis",
     "Better risk management and mitigation"
-  ];
-
+  ]
   const solutions = [
     {
       title: "Contract Management",
@@ -346,8 +371,7 @@ export default function AILegalTech() {
   Building,
   Home,
   Lightbulb
-} from 'lucide-react';
-
+} from 'lucide-react'
 export default function AILegalTech() {
   const features = [
     {
@@ -386,8 +410,7 @@ export default function AILegalTech() {
       icon: Users,
       benefits: ["Secure messaging", "Document sharing", "Progress tracking", "Client collaboration"]
     }
-  ];
-
+  ]
   const practiceAreas = [
     {
       title: 'Time Savings',
@@ -409,8 +432,7 @@ export default function AILegalTech() {
       description: 'Enhance accuracy and consistency in legal work',
       icon: CheckCircle
     }
-  ];
-
+  ]
   const industries = [
     {
       title: 'Corporate Law',
@@ -438,8 +460,7 @@ export default function AILegalTech() {
     "Reduce legal research costs by 50-80%",
     "Enhance compliance monitoring and reporting",
     "Improve client service and response times"
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -449,8 +470,7 @@ export default function AILegalTech() {
     "Increase productivity by 300%",
     "Automate 80% of repetitive legal tasks",
     "Enhance risk assessment and compliance"
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: "Starter",
@@ -503,8 +523,7 @@ export default function AILegalTech() {
     "Accelerate case preparation by 50-70% with smart insights",
     "Enhance compliance monitoring with 24/7 automated tracking",
     "Achieve 99%+ accuracy in legal document processing"
-  ];
-
+  ]
   const useCases = [
     {
       industry: "Corporate Law",
@@ -526,8 +545,7 @@ export default function AILegalTech() {
       description: "Regulatory compliance, patient consent, and medical malpractice defense",
       metrics: ["Compliance Rate", "Risk Assessment", "Document Accuracy"]
     }
-  ];
-
+  ]
   const pricing = [
     {
       name: "Starter",
@@ -579,8 +597,7 @@ export default function AILegalTech() {
       icon: Lightbulb,
       tools: ["Patent search", "Trademark analysis", "IP monitoring", "Infringement detection"]
     }
-  ];
-
+  ]
   const pricingPlans = [
     {
       name: "Solo Practitioner",
@@ -628,8 +645,7 @@ export default function AILegalTech() {
         "API access"
       ]
     }
-  ];
-
+  ]
       description: "Comprehensive solution for large legal organizations",
       features: [
         "Custom AI models",
@@ -657,8 +673,7 @@ export default function AILegalTech() {
       cta: "Contact Sales",
       popular: false
     }
-  ];
-
+  ]
   const successMetrics = [
     {
       metric: "90%",
@@ -680,8 +695,7 @@ export default function AILegalTech() {
       description: "Compliance accuracy",
       detail: "AI-powered compliance monitoring"
     }
-  ];
-
+  ]
   const useCases = [
     {
       scenario: "Contract Review",
@@ -703,8 +717,7 @@ export default function AILegalTech() {
       description: "Automated legal document creation with customizable templates",
       benefits: ["Consistent quality", "Time savings", "Template library", "Customization options"]
     }
-  ];
-
+  ]
   return (
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -732,14 +745,14 @@ export default function AILegalTech() {
               and intelligent compliance management. Work smarter, not harder.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-200 transform hover:scale-105"
               >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <$2 />
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 transition-all duration-200"
               >
@@ -840,23 +853,74 @@ export default function AILegalTech() {
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center mr-4">
                 <Scale className="w-8 h-8 text-white" />
+>>>>>>> origin/main
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-transparent">
-                AI Legal Tech
+              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
+                Intelligent
+                <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent block">
+                  Legal Solutions
+                </span>
               </h1>
-            </div>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform legal practice with AI-powered tools that streamline processes and enhance decision-making
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg hover:from-amber-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="px-8 py-4 border border-amber-400/50 text-amber-400 font-semibold rounded-lg hover:bg-amber-400/20 transition-all duration-300">
-                Watch Demo
-              </button>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Revolutionary AI-powered legal technology platform that automates legal processes, 
+                document analysis, and case management with unprecedented efficiency.
+              </p>
             </div>
           </div>
+<<<<<<< HEAD
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Legal Tech Features</h2>
+              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                Advanced AI capabilities that transform legal practice and case management
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {[
+                {
+                  icon: FileText,
+                  title: 'Document Analysis',
+                  description: 'AI-powered analysis of legal documents with 99.5% accuracy'
+                },
+                {
+                  icon: Search,
+                  title: 'Case Research',
+                  description: 'Intelligent case research and precedent identification'
+                },
+                {
+                  icon: Brain,
+                  title: 'Legal AI Assistant',
+                  description: 'AI assistant for legal research and case preparation'
+                },
+                {
+                  icon: Shield,
+                  title: 'Compliance Monitoring',
+                  description: 'Automated compliance monitoring and risk assessment'
+                },
+                {
+                  icon: Clock,
+                  title: 'Time Tracking',
+                  description: 'Automated time tracking and billing management'
+                },
+                {
+                  icon: CheckCircle,
+                  title: 'Quality Control',
+                  description: 'Ensure accuracy and consistency in legal work'
+                }
+              ].map((feature, index) => (
+                <div key={index} className="bg-white/80 backdrop-blur-lg rounded-2xl p-8 border border-gray-200 hover:border-purple-500/50 transition-colors">
+                  <feature.icon className="w-12 h-12 text-purple-500 mb-6" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+=======
         </div>
         
         {/* Background Elements */}
@@ -932,7 +996,7 @@ export default function AILegalTech() {
               >
                 Schedule a Demo
               </Link>
-              <Link
+              <$2 />
                 to="/case-studies"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               >
@@ -1020,7 +1084,7 @@ export default function AILegalTech() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
-              const Icon = feature.icon;
+              const Icon = feature.icon
               return (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-amber-400/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -1029,7 +1093,7 @@ export default function AILegalTech() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -1050,7 +1114,7 @@ export default function AILegalTech() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => {
-              const Icon = useCase.icon;
+              const Icon = useCase.icon
               return (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
                   <div className="flex items-start space-x-4">
@@ -1063,7 +1127,7 @@ export default function AILegalTech() {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -1098,10 +1162,16 @@ export default function AILegalTech() {
                 </div>
               ))}
             </div>
+>>>>>>> origin/main
           </div>
-        </div>
-      </section>
+        </section>
 
+<<<<<<< HEAD
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gray-900">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+=======
       {/* Practice Areas Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1252,7 +1322,7 @@ export default function AILegalTech() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-              <div key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${
+              < key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${$2 />
                 plan.popular 
                   ? 'border-green-500/50 scale-105' 
                   : 'border-gray-700 hover:border-gray-600'
@@ -1273,7 +1343,7 @@ export default function AILegalTech() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+              < key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${$2 />
                 plan.popular 
                   ? 'border-indigo-500/50 shadow-2xl shadow-indigo-500/25' 
                   : 'border-gray-700/50 hover:border-indigo-500/50'
@@ -1315,7 +1385,7 @@ export default function AILegalTech() {
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </div>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                < className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${$2 />
                   plan.popular
                     ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:scale-105'
                     : 'bg-gray-700 text-white hover:bg-gray-600'
@@ -1338,20 +1408,23 @@ export default function AILegalTech() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
+>>>>>>> origin/main
               Ready to Transform Your Legal Practice?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the future of legal technology and start seeing results today.
+              Get started with our AI Legal Tech platform and streamline your legal operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2">
-                <span>Get Started Today</span>
+              <button className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all flex items-center gap-2 justify-center">
+                Start Free Trial
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
-                Contact Sales
+              <button className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all">
+                Schedule Demo
               </button>
             </div>
+<<<<<<< HEAD
+=======
           </motion.div>
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -1369,7 +1442,7 @@ export default function AILegalTech() {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             {services.map((service, index) => {
-              const Icon = service.icon;
+              const Icon = service.icon
               return (
                 <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="flex items-center mb-6">
@@ -1393,18 +1466,24 @@ export default function AILegalTech() {
                     ))}
                   </ul>
                   
-                  <Link
+                  <$2 />
                     to="/contact"
                     className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
                   >
                     Learn More
                   </Link>
                 </div>
-              );
+              )
             })}
+>>>>>>> origin/main
           </div>
-        </div>
+        </section>
       </div>
+<<<<<<< HEAD
+    </>
+  );
+}
+=======
 
       {/* Legal Tech Features Section */}
       <div className="py-20">
@@ -1418,7 +1497,7 @@ export default function AILegalTech() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {legalTechFeatures.map((feature, index) => {
-              const Icon = feature.icon;
+              const Icon = feature.icon
               return (
                 <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
                   <div className="flex items-center mb-6">
@@ -1440,7 +1519,7 @@ export default function AILegalTech() {
                     ))}
                   </ul>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -1458,7 +1537,7 @@ export default function AILegalTech() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {industries.map((industry, index) => {
-              const Icon = industry.icon;
+              const Icon = industry.icon
               return (
                 <div key={index} className="text-center group">
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
@@ -1467,7 +1546,7 @@ export default function AILegalTech() {
                   <h3 className="text-xl font-bold mb-3 text-white">{industry.title}</h3>
                   <p className="text-gray-300">{industry.description}</p>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -1485,7 +1564,7 @@ export default function AILegalTech() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
+              const Icon = benefit.icon
               return (
                 <div key={index} className="text-center group">
                   <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
@@ -1494,7 +1573,7 @@ export default function AILegalTech() {
                   <h3 className="text-xl font-bold mb-3 text-white">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -1524,14 +1603,14 @@ export default function AILegalTech() {
             conducts research, and provides insights to enhance efficiency and accuracy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <$2 />
               to="/contact"
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-200 transform hover:scale-105"
             >
               Get Started
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link
+            <$2 />
               to="/demo"
               className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 transition-all duration-200"
             >
@@ -1623,15 +1702,14 @@ export default function AILegalTech() {
         </div>
       </section>
     </div>
-  );
-};
-
-export default AILegalTech;
+  )
+}
+export default AILegalTech
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
               Get Started Today
             </Link>
-            <Link
+            <$2 />
               to="/pricing"
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
@@ -1641,7 +1719,7 @@ export default AILegalTech;
             >
               Start Free Trial
             </Link>
-            <Link
+            <$2 />
               to="/request-quote"
               className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
@@ -1657,7 +1735,7 @@ export default AILegalTech;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
-              const Icon = feature.icon;
+              const Icon = feature.icon
               return (
                 <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
@@ -1666,7 +1744,7 @@ export default AILegalTech;
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-zion-slate-light">{feature.description}</p>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -1719,7 +1797,7 @@ export default AILegalTech;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-              <div key={index} className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-2xl p-6 ${
+              < key={index} className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-2xl p-6 ${$2 />
                 plan.popular ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' : 'border-zion-cyan/20'
               }`}>
                 {plan.popular && (
@@ -1745,7 +1823,7 @@ export default AILegalTech;
                     </li>
                   ))}
                 </ul>
-                <Link
+                <$2 />
                   to="/contact"
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
@@ -1771,13 +1849,13 @@ export default AILegalTech;
               to enhance efficiency, accuracy, and client service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <$2 />
                 to="/contact"
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
               </Link>
-              <Link
+              <$2 />
                 to="/request-quote"
                 className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
               >
@@ -1788,10 +1866,11 @@ export default AILegalTech;
         </div>
       </div>
     </div>
-  );
+  )
 }
 }
-};
-
-export default AILegalTech;
 }
+export default AILegalTech
+}
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></a></p></p></p></p></p></p></li></section></section></section></section></section></section></section></section></section></section></section>
+>>>>>>> origin/main

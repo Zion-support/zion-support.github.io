@@ -1,23 +1,13 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { visualizer } from 'rollup-plugin-visualizer';
-import { VitePWA } from 'vite-plugin-pwa';
-
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { visualizer } from 'rollup-plugin-visualizer'
 export default defineConfig({
-  resolve: {
-    alias: {
-      '@': '/workspace/src'
-    }
-  },
   plugins: [
     react({
-      babel: {
-        plugins: [
-          ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }],
-          ['@babel/plugin-proposal-decorators', { legacy: true }],
-          ['@babel/plugin-transform-class-properties', { loose: true }]
-        ]
-      }
+      // Enable React Fast Refresh
+      fastRefresh: true,
+      // Optimize JSX runtime
+      jsxRuntime: 'automatic',
     }),
     visualizer({
       filename: 'dist/stats.html',
@@ -25,88 +15,101 @@ export default defineConfig({
       gzipSize: true,
       brotliSize: true,
     }),
-    VitePWA({
-      registerType: 'autoUpdate',
-      workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,avif}'],
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB
-        runtimeCaching: [
-          {
-            urlPattern: /^https:\/\/api\./,
-            handler: 'NetworkFirst',
-            options: {
-              cacheName: 'api-cache',
-              expiration: {
-                maxEntries: 100,
-                maxAgeSeconds: 60 * 60 * 24 // 24 hours
-              }
-            }
-          }
-        ]
-      },
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
-      manifest: {
-        name: 'Zion Tech Group',
-        short_name: 'Zion Tech',
-        description: 'AI & Technology Solutions',
-        theme_color: '#2563eb',
-        background_color: '#ffffff',
-        display: 'standalone',
-        icons: [
-          {
-            src: 'pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: 'pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          }
-        ]
-      }
-    })
   ],
+  root: '.',
   build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
-          utils: ['axios', 'framer-motion', 'clsx', 'tailwind-merge'],
-          charts: ['recharts'],
-          forms: ['react-hook-form', '@hookform/resolvers']
-        },
-      },
-    },
-    chunkSizeWarningLimit: 1000,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info'],
-        passes: 2
-      },
-      mangle: {
-        safari10: true
-      }
-    },
+    outDir: 'dist',
     sourcemap: false,
-    reportCompressedSize: true
+    chunkSizeWarningLimit: 1000,
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
+    reportCompressedSize: true,
+    minify: 'esbuild',
+    target: 'es2015',
+    // Optimize build performance
+    emptyOutDir: true,
+    copyPublicDir: true,
+    rollupOptions: {
+      maxParallelFileOps: 2,
+      treeshake: {
+        moduleSideEffects: false,
+      },
+      output: {
+        manualChunks: (id) => {
+          // React and React DOM
+          if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
+            return 'react'
+          }
+          // Router library
+          if (id.includes('node_modules/react-router-dom')) {
+            return 'router'
+          }
+          // UI libraries
+          if (
+            id.includes('node_modules/framer-motion') ||
+            id.includes('node_modules/lucide-react')
+          ) {
+            return 'ui'
+          }
+          // Utilities and web vitals
+          if (id.includes('node_modules/web-vitals')) {
+            return 'vitals'
+          }
+          // Split other node_modules into separate chunks
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
+        },
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+      },
+    },
   },
   server: {
-    hmr: true,
     port: 3000,
     host: true,
-    open: true
+    open: true,
+    // Enable HMR
+    hmr: {
+      overlay: true,
+    },
   },
   preview: {
-    port: 3000,
-    host: true
+    port: 4173,
+    open: true,
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion'],
-    exclude: ['@vite/client', '@vite/env']
-  }
-});
+    include: [
+      'react',
+      'react-dom', 
+      'react-router-dom', 
+      'framer-motion', 
+      'lucide-react',
+      'react-helmet-async',
+      'web-vitals'
+    ],
+    // Exclude problematic dependencies
+    exclude: ['@vite/client', '@vite/env'],
+  },
+  css: {
+    devSourcemap: true,
+  },
+  esbuild: {
+    drop: ['console', 'debugger'],
+    target: 'es2015',
+  },
+  // Define global constants
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+    __VERSION__: JSON.stringify(process.env.npm_package_version),
+  },
+  // Resolve configuration
+  resolve: {
+    alias: {
+      '@': '/src',
+      '@app': '/app',
+      '@components': '/app/components',
+    },
+  },
+})
