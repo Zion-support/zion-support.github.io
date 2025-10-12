@@ -240,10 +240,10 @@ const CookiePolicyPage: React.FC = () => {
                   You can set your browser to refuse cookies or delete certain cookies.
                 </p>
                 <div className="space-y-2">
-                  <p className="text-gray-300 text-sm">• Chrome: Settings > Privacy and security > Cookies</p>
-                  <p className="text-gray-300 text-sm">• Firefox: Options > Privacy & Security > Cookies</p>
-                  <p className="text-gray-300 text-sm">• Safari: Preferences > Privacy > Cookies</p>
-                  <p className="text-gray-300 text-sm">• Edge: Settings > Cookies and site permissions</p>
+                    <p className="text-gray-300 text-sm">• Chrome: Settings &gt; Privacy and security &gt; Cookies</p>
+                    <p className="text-gray-300 text-sm">• Firefox: Options &gt; Privacy & Security &gt; Cookies</p>
+                    <p className="text-gray-300 text-sm">• Safari: Preferences &gt; Privacy &gt; Cookies</p>
+                    <p className="text-gray-300 text-sm">• Edge: Settings &gt; Cookies and site permissions</p>
                 </div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">

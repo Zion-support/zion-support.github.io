@@ -7,26 +7,54 @@ import { Link } from 'react-router-dom'
 const SmartCityInfrastructurePage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      icon: <Brain className="w-8 h-8 text-blue-500" />,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your city infrastructure and improve efficiency'
     },
     {
-      icon: Zap,
+      icon: <Zap className="w-8 h-8 text-green-500" />,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal city management'
     },
     {
-      icon: Shield,
+      icon: <Shield className="w-8 h-8 text-red-500" />,
       title: 'Enterprise Security',
       description: 'Bank-level security with advanced encryption and compliance standards'
     },
     {
-      icon: Globe,
+      icon: <Globe className="w-8 h-8 text-purple-500" />,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+      description: 'Worldwide deployment and support for international smart city projects'
     }
   ]
+
+  const smartCityServices = [
+    {
+      icon: <Building className="w-8 h-8 text-blue-500" />,
+      title: 'Smart Buildings',
+      description: 'Intelligent building management systems with IoT integration',
+      features: ['Energy optimization', 'Automated controls', 'Predictive maintenance', 'Occupant comfort']
+    },
+    {
+      icon: <Wifi className="w-8 h-8 text-green-500" />,
+      title: 'IoT Networks',
+      description: 'Comprehensive IoT infrastructure for city-wide connectivity',
+      features: ['Sensor networks', 'Data collection', 'Real-time monitoring', 'Edge computing']
+    },
+    {
+      icon: <Cpu className="w-8 h-8 text-purple-500" />,
+      title: 'Data Analytics',
+      description: 'Advanced analytics platform for city data processing',
+      features: ['Real-time insights', 'Predictive modeling', 'Traffic optimization', 'Resource management']
+    },
+    {
+      icon: <Database className="w-8 h-8 text-orange-500" />,
+      title: 'Digital Infrastructure',
+      description: 'Robust digital infrastructure for smart city operations',
+      features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']
+    }
+  ]
+
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -37,260 +65,50 @@ const SmartCityInfrastructurePage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-  return (
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page
-  </
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-  </
-            </div>
-          </div>
-        </div>
-      </section>
 
-    {icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'}
-    },
-    {icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'}
-    },
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'}
-    },
-    {icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'}
-      description: 'Worldwide deployment and support for international smart city projects'
-    }
-  ]
-  const smartCityServices = [
-    {
-      icon: Building,
-      title: 'Smart Buildings',
-      description: 'Intelligent building management systems with IoT integration',
-      features: ['Energy optimization', 'Automated controls', 'Predictive maintenance', 'Occupant comfort']
-    },
-    {
-      icon: Wifi,
-      title: 'IoT Networks',
-      description: 'Comprehensive IoT infrastructure for city-wide connectivity',
-      features: ['Sensor networks', 'Data collection', 'Real-time monitoring', 'Edge computing']
-    },
-    {
-      icon: Cpu,
-      title: 'Data Analytics',
-      description: 'Advanced analytics platform for city data processing',
-      features: ['Real-time insights', 'Predictive modeling', 'Traffic optimization', 'Resource management']
-    },
-    {
-      icon: Database,
-      title: 'Digital Infrastructure',
-      description: 'Robust digital infrastructure for smart city operations',
-      features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']
-    }
-  ];return ({/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-          </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-  </
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-  </
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )}
-export default PagePage
-  </button>
-  </button>
-  </h2>
-  </button>
-  </span>
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-          </div>
-              </div>))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>)};export default PagePage
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
   return (
-    <>
-      <Helmet>
-        <title>Smart City Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Advanced smart city infrastructure solutions including IoT networks, data analytics, and digital transformation for modern cities." />
-        <meta name="keywords" content="smart city, infrastructure, IoT, data analytics, digital transformation, urban planning" />
-      </Helmet>
-      <Navigation />
+    <Layout
+      title="Smart City Infrastructure - Zion Tech Group"
+      description="Advanced smart city infrastructure solutions including IoT networks, data analytics, and digital transformation for modern cities."
+      keywords="smart city, infrastructure, IoT, data analytics, digital transformation, urban planning"
+    >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                  Smart City
-                </span>
-                <br />
-                <span className="text-white">Infrastructure</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your city with our advanced smart infrastructure solutions.
-                Powered by cutting-edge AI technology and industry expertise.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                  Get Started
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </button>
-                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Smart City
+              <br />
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Infrastructure
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Transform your city with our advanced smart infrastructure solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link 
+                to="/pricing" 
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                Learn More
+              </Link>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -304,7 +122,7 @@ export default PagePage
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                    <feature.icon className="h-6 w-6 text-white" />
+                    {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -315,32 +133,28 @@ export default PagePage
         </section>
 
         {/* Services Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Smart City Services
+                Smart City Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive solutions for modern smart city infrastructure.
+                Comprehensive smart city solutions designed to transform urban infrastructure.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {smartCityServices.map((service, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-                      <service.icon className="h-8 w-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
-                      <p className="text-gray-300">{service.description}</p>
-                    </div>
+                    {service.icon}
+                    <h3 className="text-2xl font-semibold text-white ml-4">{service.title}</h3>
                   </div>
-                  <div className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <div className="grid grid-cols-2 gap-2">
+                    {service.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {feature}
                       </div>
                     ))}
@@ -352,46 +166,68 @@ export default PagePage
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Key Benefits
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the power of our smart city solutions for your community.
+                Experience the power of our smart city solutions for your urban infrastructure.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-start">
+                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 mt-1 flex-shrink-0" />
+                    <span className="text-gray-300 text-lg">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-6">Ready to Get Started?</h3>
+                <p className="text-gray-300 mb-6">
+                  Let our smart city experts help you implement comprehensive infrastructure 
+                  solutions that will transform your urban environment.
+                </p>
+                <Link 
+                  to="/contact" 
+                  className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 inline-flex items-center"
+                >
+                  Contact Our Experts
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Build Your Smart City?
-              </h2>
-              <p className="text-xl text-purple-100 mb-8">
-                Contact our experts to discuss your smart city infrastructure needs and get a customized solution.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Call Now
-                </button>
-                <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                  <Mail className="mr-2 h-5 w-5" />
-                  Email Us
-                </button>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+                  Ready to Transform Your City?
+                </h2>
+                <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                  Let's discuss how our smart city solutions can improve your urban infrastructure and citizen experience.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link 
+                    to="/contact" 
+                    className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  >
+                    Get Started Today
+                  </Link>
+                  <Link 
+                    to="/pricing" 
+                    className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                  >
+                    View Pricing
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
