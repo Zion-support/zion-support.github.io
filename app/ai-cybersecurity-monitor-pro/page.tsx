@@ -3,36 +3,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Shield, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  AlertTriangle, 
-  Eye, 
-  Lock, 
-  Target,
-  Activity,
-  Globe,
-  Smartphone,
-  Monitor,
-  AlertCircle,
-  Sparkles,
-  FileText,
-  Database,
-  Clock,
-  Users,
-  Building2,
-  CreditCard,
-  Network,
-  Bug,
-  Search,
-  BarChart3,
-  PieChart,
-  TrendingUp
-} from 'lucide-react';
+import { Brain, Shield, Zap, CheckCircle, ArrowRight, Star, AlertTriangle, Eye, Lock, Target, Activity, Globe, Smartphone, Monitor, AlertCircle, Sparkles, Database, Users, Building2, Network, Bug, Search, BarChart3 } from 'lucide-react';
 
 export default function AiCybersecurityMonitorProPage() {
   const [selectedPlan, setSelectedPlan] = useState('pro');

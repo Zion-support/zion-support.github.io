@@ -1,21 +1,11 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
-  BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
-  Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
-  TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
-  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock, Play
-} from 'lucide-react';
+import { ArrowRight, CheckCircle, Users, Zap, Shield, Brain, BarChart, MessageCircle, Target, ShoppingCart, Globe, Clock } from 'lucide-react';
 
 const AiChatbotBuilderPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+  // const [isVisible] = useState(true);
 
   const features = [
     {

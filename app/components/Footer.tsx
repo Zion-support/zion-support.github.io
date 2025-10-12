@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight, Brain, Cloud, Shield, Globe, Database, Zap, Star } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

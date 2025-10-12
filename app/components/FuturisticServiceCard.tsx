@@ -1,7 +1,7 @@
 'use client'
 import { Helmet } from 'react-helmet-async';
 
-import { ArrowRight, Mail, Brain } from 'lucide-react';
+import { ArrowRight, Brain } from 'lucide-react';
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',

@@ -1,15 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { 
-  ArrowRight, Code, BarChart3, Zap, CheckCircle, 
-  Clock, Target, TrendingUp, PieChart, Smartphone, Shield, 
-  Lock, RefreshCw, Settings, Bot, FileText, AlertTriangle,
-  CheckSquare, Star, Globe, Monitor, Smartphone as Mobile,
-  Send, Eye, MousePointer, Calendar, Hash, AtSign, Headphones,
-  Phone, Mail, HelpCircle, ThumbsUp, ThumbsDown, Cpu, Database,
-  GitBranch, Terminal, Layers, Wrench, Search, Filter
-} from 'lucide-react'
+import { ArrowRight, Code, CheckCircle, Clock, Target, TrendingUp, Shield, Bot, Star, Database, GitBranch, Search } from 'lucide-react'
 
 export default function AICodeAssistantProPage() {
   const features = [

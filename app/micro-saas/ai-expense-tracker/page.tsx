@@ -1,12 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { 
-  ArrowRight, DollarSign, BarChart3, Receipt, CreditCard, 
-  CheckCircle, Clock, Target, TrendingUp, PieChart, 
-  Smartphone, Shield, Lock, RefreshCw, Settings, Zap,
-  Calendar, FileText, Image, Bot, AlertTriangle, CheckSquare
-} from 'lucide-react'
+import { ArrowRight, DollarSign, BarChart3, Receipt, CheckCircle, Clock, Target, TrendingUp, Shield, Zap, Bot, CheckSquare } from 'lucide-react'
 
 export default function AIExpenseTrackerPage() {
   const features = [

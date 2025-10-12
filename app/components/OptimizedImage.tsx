@@ -4,7 +4,7 @@ ursor/analyze-improve-and-deploy-application-edcb
 'use client'
 import { Helmet } from 'react-helmet-async';
 
-import { ArrowRight, Mail, Brain } from 'lucide-react';
+import { ArrowRight, Mail } from 'lucide-react';
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

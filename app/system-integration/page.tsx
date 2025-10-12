@@ -2,17 +2,35 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
+import { ArrowRight, Zap, Shield, Cloud } from 'lucide-react';
 
 const Page: React.FC = () => {
+  const features = [
+    {
+      icon: <Cloud className="w-12 h-12 text-cyan-400" />,
+      title: "Cloud Integration",
+      description: "Seamlessly integrate with all major cloud platforms and services."
+    },
+    {
+      icon: <Zap className="w-12 h-12 text-purple-400" />,
+      title: "Real-time Sync",
+      description: "Keep all your systems synchronized with real-time data updates."
+    },
+    {
+      icon: <Shield className="w-12 h-12 text-green-400" />,
+      title: "Secure & Reliable",
+      description: "Enterprise-grade security ensures your data is protected during integration."
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
-        <meta property="og:title" content=" - Zion Tech Group" />
-        <meta property="og:description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <title>System Integration - Zion Tech Group</title>
+        <meta name="description" content="Professional system integration services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta name="keywords" content="system integration, IT services, Zion Tech Group" />
+        <meta property="og:title" content="System Integration - Zion Tech Group" />
+        <meta property="og:description" content="Professional system integration services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/system-integration" />
       </Helmet>
@@ -23,11 +41,11 @@ const Page: React.FC = () => {
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                
+                System Integration
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
+              Professional system integration services by Zion Tech Group. Expert solutions tailored to your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link 
@@ -43,6 +61,32 @@ const Page: React.FC = () => {
               >
                 Learn More
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Why Choose Our System Integration Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our expert team helps you connect and optimize all your business systems
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50 transition-all duration-300">
+                  <div className="flex justify-center mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -76,8 +120,6 @@ const Page: React.FC = () => {
         </section>
       </div>
     </>
-    </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
   );
 };
 

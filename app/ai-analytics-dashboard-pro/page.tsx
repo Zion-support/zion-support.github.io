@@ -1,7 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { BarChart3, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Shield, Database, Star, Sparkles, TrendingUp, Users, Target } from 'lucide-react'
+import { BarChart3, ArrowRight, CheckCircle, Brain, Globe, Star, Target } from 'lucide-react'
 import Layout from '../layout'
 
 export default function AIAnalyticsDashboardPro() {
