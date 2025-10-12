@@ -1,221 +1,289 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Layout from '../layout'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Mail, Target, BarChart3, Users, CheckCircle, Star, Zap, Globe, TrendingUp } from 'lucide-react'
+'use client';
 
-const AIEmailMarketingAutomationPage: React.FC = () => {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Mail, Brain, BarChart3, Target, Users, Zap, CheckCircle, Star, ArrowRight, Send, TrendingUp, MousePointer } from 'lucide-react';
+import FuturisticBackground from '../components/FuturisticBackground';
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
+
+export default function AIEmailMarketingAutomationPage() {
   const features = [
     {
-      icon: <Mail className="w-6 h-6 text-cyan-400" />,
-      title: "Smart Email Creation",
-      description: "AI-powered email content generation with personalized subject lines and compelling copy"
+      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+      title: 'AI Content Generation',
+      description: 'Generate compelling email content, subject lines, and CTAs using advanced AI that understands your brand voice.'
     },
     {
       icon: <Target className="w-6 h-6 text-green-400" />,
-      title: "Advanced Segmentation",
-      description: "Intelligent audience segmentation and targeting based on behavior and preferences"
+      title: 'Smart Segmentation',
+      description: 'AI automatically segments your audience based on behavior, preferences, and engagement patterns for maximum relevance.'
     },
     {
       icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
-      title: "Performance Analytics",
-      description: "Comprehensive analytics and insights to optimize your email marketing campaigns"
+      title: 'Advanced Analytics',
+      description: 'Comprehensive insights into open rates, click-through rates, conversions, and revenue attribution with AI-powered recommendations.'
     },
     {
-      icon: <Users className="w-6 h-6 text-yellow-400" />,
-      title: "Automated Workflows",
-      description: "Create sophisticated email sequences and automated nurture campaigns"
+      icon: <Zap className="w-6 h-6 text-blue-400" />,
+      title: 'Automated Workflows',
+      description: 'Create complex email sequences that trigger based on user behavior, purchase history, and engagement levels.'
+    },
+    {
+      icon: <MousePointer className="w-6 h-6 text-yellow-400" />,
+      title: 'A/B Testing',
+      description: 'AI-powered A/B testing that automatically optimizes subject lines, content, and send times for maximum performance.'
+    },
+    {
+      icon: <Users className="w-6 h-6 text-red-400" />,
+      title: 'Personalization Engine',
+      description: 'Dynamic content personalization that adapts emails to each recipient based on their preferences and behavior history.'
     }
-  ]
+  ];
+
+  const automationTypes = [
+    { name: 'Welcome Series', icon: '👋', color: 'text-green-400' },
+    { name: 'Abandoned Cart', icon: '🛒', color: 'text-red-400' },
+    { name: 'Birthday Emails', icon: '🎂', color: 'text-purple-400' },
+    { name: 'Re-engagement', icon: '🔄', color: 'text-blue-400' },
+    { name: 'Post-Purchase', icon: '✅', color: 'text-yellow-400' },
+    { name: 'Win-Back', icon: '💪', color: 'text-cyan-400' },
+    { name: 'Upsell/Cross-sell', icon: '📈', color: 'text-orange-400' },
+    { name: 'Event Reminders', icon: '📅', color: 'text-pink-400' }
+  ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$39",
-      period: "/month",
+      name: 'Starter',
+      price: '$39.99',
+      period: '/month',
+      description: 'Perfect for small businesses and startups',
       features: [
-        "Up to 5,000 contacts",
-        "Basic email templates",
-        "Simple automation",
-        "Email analytics",
-        "Email support"
+        'Up to 5,000 subscribers',
+        '10,000 emails/month',
+        'Basic AI content generation',
+        'Email templates',
+        'Basic analytics',
+        'Email support'
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$99",
-      period: "/month",
+      name: 'Professional',
+      price: '$99.99',
+      period: '/month',
+      description: 'Ideal for growing businesses',
       features: [
-        "Up to 25,000 contacts",
-        "Advanced AI features",
-        "Complex automation",
-        "A/B testing",
-        "Priority support",
-        "API access"
+        'Up to 25,000 subscribers',
+        'Unlimited emails',
+        'Advanced AI automation',
+        'A/B testing',
+        'Advanced analytics',
+        'Priority support',
+        'Custom integrations',
+        'API access'
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$299",
-      period: "/month",
+      name: 'Enterprise',
+      price: '$249.99',
+      period: '/month',
+      description: 'For large organizations',
       features: [
-        "Unlimited contacts",
-        "Custom AI training",
-        "Advanced reporting",
-        "White-label solution",
-        "Dedicated support",
-        "Custom integrations"
+        'Unlimited subscribers',
+        'Unlimited emails',
+        'Custom AI models',
+        'White-label solution',
+        'Dedicated support',
+        'Custom integrations',
+        'Advanced security',
+        'SLA guarantee'
       ],
       popular: false
     }
-  ]
+  ];
+
+  const testimonials = [
+    {
+      name: 'Rachel Thompson',
+      role: 'Marketing Director',
+      company: 'E-commerce Brand',
+      content: 'Our email open rates increased by 65% with AI-generated subject lines. The automation workflows are incredibly powerful!',
+      rating: 5,
+      avatar: 'RT'
+    },
+    {
+      name: 'Mark Davis',
+      role: 'Founder',
+      company: 'SaaS Company',
+      content: 'The AI segmentation is game-changing. We\'re now sending highly targeted emails that actually convert.',
+      rating: 5,
+      avatar: 'MD'
+    },
+    {
+      name: 'Lisa Chen',
+      role: 'Email Marketing Manager',
+      company: 'Retail Chain',
+      content: 'The automated workflows save us 20+ hours per week. Our revenue from email marketing has tripled.',
+      rating: 5,
+      avatar: 'LC'
+    }
+  ];
 
   return (
-    <Layout
-      title="AI Email Marketing Automation - Zion Tech Group"
-      description="Transform your email marketing with AI-powered automation, personalization, and analytics. Increase open rates, click-through rates, and conversions."
-      keywords="AI email marketing, email automation, email personalization, email analytics, marketing automation, email campaigns"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Email Marketing Automation
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your email marketing with AI-powered automation, personalization, 
-              and intelligent analytics. Boost engagement and drive more conversions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                Watch Demo
-              </Link>
+    <>
+      <Helmet>
+        <title>AI Email Marketing Automation - Smart Email Campaigns | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered email marketing platform with smart automation, content generation, and advanced analytics. Increase open rates by 65%." />
+        <meta name="keywords" content="AI email marketing, email automation, email campaigns, marketing automation, email analytics, AI content generation" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-email-marketing-automation" />
+      </Helmet>
+
+      <FuturisticBackground variant="hero">
+        {/* Hero Section */}
+        <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
+                <Brain className="w-4 h-4 mr-2" />
+                AI-Powered Email Marketing
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
+                AI Email Marketing Automation
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
+                Transform your email marketing with AI-powered automation, content generation, and smart segmentation. 
+                Join 20,000+ marketers who've increased open rates by 65%.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <FuturisticButton
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </FuturisticButton>
+                <FuturisticButton
+                  variant="ghost"
+                  size="lg"
+                  onClick={() => window.open('#demo', '_blank')}
+                >
+                  Watch Demo
+                </FuturisticButton>
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-cyan-400 mb-2">20,000+</div>
+                <div className="text-gray-300">Active Marketers</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-400 mb-2">65%</div>
+                <div className="text-gray-300">Open Rate Increase</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-400 mb-2">300%</div>
+                <div className="text-gray-300">Revenue Growth</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-yellow-400 mb-2">4.8/5</div>
+                <div className="text-gray-300">User Rating</div>
+              </div>
             </div>
           </div>
+        </section>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">45%</div>
-              <div className="text-gray-300">Higher Open Rates</div>
+        {/* Automation Types */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">
+                Powerful Automation Types
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+                Pre-built automation workflows for every stage of the customer journey
+              </p>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">60%</div>
-              <div className="text-gray-300">More Clicks</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">2M+</div>
-              <div className="text-gray-300">Emails Sent</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">85%</div>
-              <div className="text-gray-300">Time Saved</div>
-            </div>
-          </div>
-
-          {/* Features */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Email Marketing Features</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
-                  <div className="mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
-                </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {automationTypes.map((type, index) => (
+                <FuturisticCard
+                  key={index}
+                  variant="feature"
+                  className="text-center"
+                >
+                  <div className="text-4xl mb-4">{type.icon}</div>
+                  <h3 className={`text-lg font-semibold ${type.color}`}>{type.name}</h3>
+                </FuturisticCard>
               ))}
             </div>
           </div>
+        </section>
 
-          {/* Automation Workflows */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Automation Workflows</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white/5 rounded-xl p-8">
-                <h3 className="text-2xl font-semibold text-white mb-4">Welcome Series</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Automated onboarding emails
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Personalized content delivery
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Behavioral triggers
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-white/5 rounded-xl p-8">
-                <h3 className="text-2xl font-semibold text-white mb-4">Nurture Campaigns</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Lead nurturing sequences
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Educational content delivery
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Progressive profiling
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-white/5 rounded-xl p-8">
-                <h3 className="text-2xl font-semibold text-white mb-4">Re-engagement</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Win-back campaigns
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Cart abandonment recovery
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Reactivation strategies
-                  </li>
-                </ul>
-              </div>
+        {/* Features Section */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">
+                Powerful Features
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+                Everything you need to create high-converting email campaigns with AI
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {features.map((feature, index) => (
+                <FuturisticCard
+                  key={index}
+                  variant="feature"
+                  className="h-full"
+                >
+                  <div className="mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </FuturisticCard>
+              ))}
             </div>
           </div>
+        </section>
 
-          {/* Pricing */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Pricing Section */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">
+                Simple, Transparent Pricing
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+                Choose the plan that fits your email marketing needs. All plans include 14-day free trial.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-emerald-500' : 'border-white/20'} relative`}>
+                <FuturisticCard
+                  key={index}
+                  variant={plan.popular ? "service" : "feature"}
+                  className={`h-full relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}
+                >
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">
                         Most Popular
                       </span>
                     </div>
                   )}
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-300 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-emerald-400">{plan.price}</span>
-                      <span className="text-gray-300 ml-1">{plan.period}</span>
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
                   </div>
                   <ul className="space-y-3 mb-8">
@@ -226,69 +294,95 @@ const AIEmailMarketingAutomationPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-600 hover:to-teal-700'
-                        : 'border-2 border-white text-white hover:bg-white/10'
-                    }`}
+                  <FuturisticButton
+                    variant={plan.popular ? "primary" : "secondary"}
+                    size="lg"
+                    className="w-full"
+                    onClick={() => window.open('/contact', '_blank')}
                   >
                     Get Started
-                  </Link>
-                </div>
+                  </FuturisticButton>
+                </FuturisticCard>
               ))}
             </div>
           </div>
+        </section>
 
-          {/* Benefits */}
-          <div className="bg-white/5 rounded-2xl p-8 mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Our AI Email Marketing?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <Zap className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Boost Performance</h3>
-                <p className="text-gray-300">Increase open rates by 45% and click-through rates by 60% with AI-optimized content and timing.</p>
-              </div>
-              <div className="text-center">
-                <TrendingUp className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Save Time</h3>
-                <p className="text-gray-300">Reduce email marketing management time by 85% with intelligent automation and AI assistance.</p>
-              </div>
-              <div className="text-center">
-                <Globe className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Scale Efficiently</h3>
-                <p className="text-gray-300">Handle millions of contacts and complex campaigns with ease using our AI-powered platform.</p>
-              </div>
+        {/* Testimonials Section */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">
+                What Our Users Say
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
+                Join thousands of marketers who've transformed their email campaigns
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+              {testimonials.map((testimonial, index) => (
+                <FuturisticCard
+                  key={index}
+                  variant="testimonial"
+                  className="h-full"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                      <p className="text-gray-400 text-sm">{testimonial.role} at {testimonial.company}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <blockquote className="text-gray-300 italic">
+                    "{testimonial.content}"
+                  </blockquote>
+                </FuturisticCard>
+              ))}
             </div>
           </div>
+        </section>
 
-          {/* CTA */}
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Email Marketing?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses who have revolutionized their email marketing with our AI-powered automation platform.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/pricing"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                View All Plans
-              </Link>
-            </div>
+        {/* CTA Section */}
+        <section className="py-12 sm:py-16 lg:py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <FuturisticCard variant="feature" className="text-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">
+                Ready to Transform Your Email Marketing?
+              </h2>
+              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                Start your 14-day free trial today. No credit card required. Join 20,000+ marketers already using AI Email Marketing Automation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <FuturisticButton
+                  variant="primary"
+                  size="lg"
+                  onClick={() => window.open('/contact', '_blank')}
+                >
+                  Start Free Trial
+                </FuturisticButton>
+                <FuturisticButton
+                  variant="secondary"
+                  size="lg"
+                  onClick={() => window.open('tel:+13024640950', '_blank')}
+                >
+                  Call +1 (302) 464-0950
+                </FuturisticButton>
+              </div>
+              <div className="mt-8 text-white/80 text-sm">
+                <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
+              </div>
+            </FuturisticCard>
           </div>
-        </div>
-      </div>
-    </Layout>
-  )
+        </section>
+      </FuturisticBackground>
+    </>
+  );
 }
-
-export default AIEmailMarketingAutomationPage
