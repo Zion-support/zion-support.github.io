@@ -10,7 +10,6 @@ const Header: React.FC = () => {
     </React.Fragment>
   )
 
-  const Header: React.FC = () => {
     return (
       <>
         <Navigation />

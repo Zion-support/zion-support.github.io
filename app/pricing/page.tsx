@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { CheckCircle } from 'lucide-react';;
+import { CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const PricingPage: React.FC = () => {
@@ -86,7 +86,9 @@ const PricingPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
               {plans.map((plan, index) => (
-                <div key={index} className={`bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+                {features.map((feature, index) => (
+
+                  <div key={index} className={`bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular ? 'border-blue-500 ring-2 ring-blue-500/20' : 'border-gray-700'
                 } hover:border-blue-500 transition-all duration-300 relative`}>
                   {plan.popular && (

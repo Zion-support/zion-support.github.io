@@ -120,7 +120,6 @@ const EnterprisePage: React.FC = () => {
         </div>
       </section>
 
-const EnterprisePage: React.FC = () => {const features = [
     {icon: Shield,
       title: 'Enterprise Security',
       description: 'Comprehensive security solutions designed for large-scale enterprise environments.',

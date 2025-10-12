@@ -28,7 +28,6 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefin
     if (typeof window === 'undefined') return;
 
     // Google Analytics
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
       });
     }
 
@@ -40,7 +39,6 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefin
     if (typeof window === 'undefined') return;
 
     // Google Analytics
-      const gtag = (window as { gtag: (command: string, targetId: string, config: Record<string, unknown>) => void }).gtag;
       });
     }
 

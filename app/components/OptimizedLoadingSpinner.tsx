@@ -55,7 +55,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
               {[0, 1, 2].map(i => (</div>
                 <div
 
-const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({size = 'md',
     variant = 'spinner',
     text = 'Loading...',
     className = '',
@@ -150,7 +149,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(({s
       <div className={containerClasses}></div>
         <div className='text-center'>
 
-    const containerClasses = useMemo(() => {return `${baseClasses} ${fullScreenClasses} ${className}`}, [fullScreen, className]);return (</div>
       <div className={containerClasses}></div>
         <div className='text-center'></div>
           {renderSpinner}

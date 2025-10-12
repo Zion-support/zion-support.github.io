@@ -175,7 +175,7 @@ const Navigation = () => {
       icon: Globe,
       description: 'Transform your digital presence'
     }
-  ]
+  ];
 
   const additionalServices = [
     {
