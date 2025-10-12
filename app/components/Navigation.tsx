@@ -2,11 +2,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
-=======
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, Users, BarChart3, Settings, Mail, MessageSquare, FileText, Receipt, Video, Mic } from 'lucide-react'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +73,6 @@ const Navigation: React.FC = () => {
 
   // Service data
   const aiServices = [
-<<<<<<< HEAD
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
@@ -206,55 +200,6 @@ const Navigation: React.FC = () => {
     { name: 'IoT Integration', href: '/iot-integration', icon: Wifi, description: 'Internet of Things' },
     { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' }
   ];
-=======
-    { name: 'AI Social Media Manager', path: '/ai-social-media-manager', icon: <Globe className="w-4 h-4" /> },
-    { name: 'AI Email Marketing Automation', path: '/ai-email-marketing-automation', icon: <Mail className="w-4 h-4" /> },
-    { name: 'AI Project Management Pro', path: '/ai-project-management-pro', icon: <Settings className="w-4 h-4" /> },
-    { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot', icon: <MessageSquare className="w-4 h-4" /> },
-    { name: 'AI Video Editor', path: '/ai-video-editor', icon: <Video className="w-4 h-4" /> },
-    { name: 'AI Translation Service', path: '/ai-translation-service', icon: <Globe className="w-4 h-4" /> },
-    { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Mic className="w-4 h-4" /> },
-    { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Brain className="w-4 h-4" /> },
-    { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'AI Smart Scheduler', path: '/ai-smart-scheduler', icon: <Settings className="w-4 h-4" /> }
-  ]
-
-  const itServices = [
-    { name: 'Cloud Infrastructure Management', path: '/cloud-infrastructure-management', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity Consulting', path: '/cybersecurity-consulting', icon: <Shield className="w-4 h-4" /> },
-    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Mobile Development', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'Cloud Migration Pro', path: '/cloud-migration-pro', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'DevOps', path: '/devops', icon: <Server className="w-4 h-4" /> },
-    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> }
-  ]
-
-  const fiveGServices = [
-    { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions', icon: <Wifi className="w-4 h-4" /> },
-    { name: '5G Implementation', path: '/5g-implementation', icon: <Wifi className="w-4 h-4" /> },
-    { name: '5G Network Infrastructure', path: '/5g-network-infrastructure', icon: <Server className="w-4 h-4" /> },
-    { name: '5G IoT Solutions', path: '/5g-iot-solutions', icon: <Smartphone className="w-4 h-4" /> },
-    { name: '5G Edge Computing', path: '/5g-edge-computing', icon: <Cpu className="w-4 h-4" /> },
-    { name: '5G Private Networks', path: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> }
-  ]
-
-  const microSaasServices = [
-    { name: 'AI E-commerce Optimizer Pro', path: '/ai-ecommerce-optimizer-pro', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'AI Social Media Manager', path: '/ai-social-media-manager', icon: <Globe className="w-4 h-4" /> },
-    { name: 'AI Email Marketing Automation', path: '/ai-email-marketing-automation', icon: <Mail className="w-4 h-4" /> },
-    { name: 'AI Project Management Pro', path: '/ai-project-management-pro', icon: <Settings className="w-4 h-4" /> },
-    { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot', icon: <MessageSquare className="w-4 h-4" /> },
-    { name: 'AI Invoice Generator', path: '/ai-invoice-generator', icon: <FileText className="w-4 h-4" /> },
-    { name: 'AI Expense Tracker', path: '/ai-expense-tracker', icon: <Receipt className="w-4 h-4" /> },
-    { name: 'AI Video Editor', path: '/ai-video-editor', icon: <Video className="w-4 h-4" /> },
-    { name: 'Advanced Security Suite', path: '/advanced-security-suite', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Smart Scheduler', path: '/ai-smart-scheduler', icon: <Settings className="w-4 h-4" /> },
-    { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'Cloud Migration Pro', path: '/cloud-migration-pro', icon: <Cloud className="w-4 h-4" /> }
-  ]
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -290,8 +235,6 @@ const Navigation: React.FC = () => {
                 <span>AI Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-<<<<<<< HEAD
-              
               {aiServicesOpen && (
                 <div className="absolute top-full left-0 mt-3 w-[500px] bg-slate-900/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-cyan-500/30 p-6 cyber-card-enhanced holographic-card-enhanced">
                   <div className="mb-4">
@@ -318,23 +261,13 @@ const Navigation: React.FC = () => {
                     ))}
                   </div>
                   <div className="mt-4 pt-4 border-t border-cyan-500/20">
-=======
-              {activeDropdown === 'ai' && (
-                <div className="absolute top-full left-0 mt-2 w-64 sm:w-72 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2 z-50">
-                  {aiServices.map((service, index) => (
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                     <Link
                       to="/ai-services"
                       className="flex items-center justify-center w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
                       onClick={closeAllMenus}
                     >
-<<<<<<< HEAD
                       View All AI Services
                       <ArrowRight className="w-4 h-4 ml-2" />
-=======
-                      {service.icon}
-                      <span className="ml-3">{service.name}</span>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
                     </Link>
                   </div>
                 </div>
