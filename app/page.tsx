@@ -2,10 +2,14 @@
 import React from 'react';
 <<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
+<<<<<<< HEAD
 =======
 import { CheckCircle, ArrowRight, Zap, Shield, Cloud, Database } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> cursor/analyze-improve-and-deploy-application-edcb
+=======
+import SEOHead from './components/SEOHead';
+>>>>>>> cursor/analyze-improve-and-deploy-application-c354
 import { Link } from 'react-router-dom';
 =======
 import React from 'react'
@@ -356,6 +360,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Helmet>
 <<<<<<< HEAD
         <title>Zion Tech Group - AI & IT Solutions</title>
@@ -377,6 +382,13 @@ export default function HomePage() {
         <meta name="keywords" content="AI solutions, IT services, 5G implementation, cloud services, digital transformation, Zion Tech Group, micro SaaS, cybersecurity, data analytics" />
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-00bf
       </Helmet>
+=======
+      <SEOHead 
+        title="Zion Tech Group - AI & IT Solutions"
+        description="Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords="AI solutions, IT services, cybersecurity, cloud computing, data analytics, digital transformation"
+      />
+>>>>>>> cursor/analyze-improve-and-deploy-application-c354
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

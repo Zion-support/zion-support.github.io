@@ -13,6 +13,7 @@ import ErrorBoundary from './app/components/ErrorBoundary'
 import LoadingSpinner from './app/components/LoadingSpinner'
 import SEOHead from './app/components/SEOHead'
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import ErrorBoundary from './app/components/ErrorBoundary'
 import LoadingSpinner from './app/components/LoadingSpinner'
@@ -21,6 +22,10 @@ import LoadingSpinner from './app/components/LoadingSpinner'
 import PerformanceMonitor from './app/components/PerformanceMonitor'
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
 >>>>>>> cursor/analyze-improve-and-deploy-application-edcb
+=======
+import PerformanceMonitor from './app/components/PerformanceMonitor'
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
+>>>>>>> cursor/analyze-improve-and-deploy-application-c354
 
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./app/page'))
