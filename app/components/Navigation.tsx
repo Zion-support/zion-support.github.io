@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Users } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -50,6 +50,18 @@ export default function Navigation() {
       href: '/digital-transformation',
       icon: <Code className="w-4 h-4" />,
       description: 'Transform your digital presence'
+    },
+    {
+      title: 'Careers',
+      href: '/careers',
+      icon: <Users className="w-4 h-4" />,
+      description: 'Join our team'
+    },
+    {
+      title: 'Blog',
+      href: '/blog',
+      icon: <Globe className="w-4 h-4" />,
+      description: 'Technology insights'
     }
   ]
 
