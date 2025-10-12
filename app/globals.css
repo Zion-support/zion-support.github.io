@@ -6,13 +6,14 @@
 @layer base {
   /* High contrast mode */
   @media (prefers-contrast: high) {
-  .high-contrast {
-    --tw-bg-opacity: 1;
-    --tw-text-opacity: 1;
-  }
-  
-  .high-contrast * {
-    border-color: currentColor !important;
+    .high-contrast {
+      --tw-bg-opacity: 1;
+      --tw-text-opacity: 1;
+    }
+    
+    .high-contrast * {
+      border-color: currentColor !important;
+    }
   }
 }
 
@@ -247,8 +248,6 @@ select:focus {
   border-color: #10b981;
   box-shadow: 0 0 0 1px #10b981;
 }
-<<<<<<< HEAD
-=======
 
 /* Large text mode */
 .large-text {
@@ -259,22 +258,6 @@ select:focus {
 .large-text h2 { font-size: 2em; }
 .large-text h3 { font-size: 1.75em; }
 .large-text p { font-size: 1.2em; }
-
-/* Skip links for screen readers */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  text-decoration: none;
-  z-index: 1000;
-}
-
-.skip-link:focus {
-  top: 6px;
-}
 
 /* High contrast improvements */
 .high-contrast {
@@ -291,5 +274,4 @@ select:focus {
   animation-iteration-count: 1 !important;
   transition-duration: 0.01ms !important;
   scroll-behavior: auto !important;
->>>>>>> cursor/analyze-improve-and-deploy-application-4ebe
 }
