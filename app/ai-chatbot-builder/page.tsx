@@ -96,8 +96,9 @@ import {
     { number: '50+', label: 'Languages Supported', icon: <Globe className="w-6 h-6 text-blue-400" /> },
     { number: '10,000+', label: 'Chatbots Deployed', icon: <Bot className="w-6 h-6 text-green-400" /> },
     { number: '24/7', label: 'Support Available', icon: <Monitor className="w-6 h-6 text-purple-400" /> }
-  ]
+  ];
 
+const AiChatbotBuilderPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -296,5 +297,7 @@ import {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
+
+export default AiChatbotBuilderPage;

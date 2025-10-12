@@ -1,6 +1,5 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { useAnalytics } from './EnhancedAnalytics';
 
 interface AccessibilitySettings {
   highContrast: boolean;
@@ -33,7 +32,6 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     keyboardNavigation: true
   });
 
-  const analytics = useAnalytics();
 
   useEffect(() => {
     // Detect user preferences

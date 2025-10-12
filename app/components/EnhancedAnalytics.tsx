@@ -2,7 +2,11 @@ import React from 'react';
 'use client'
 import { Helmet } from 'react-helmet-async';
 
-import { ArrowRight, Mail, Brain } from 'lucide-react';
+import { ArrowRight, Mail, Brain, Zap, Shield, Globe, CheckCircle, Phone } from 'lucide-react';
+
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <>{children}</>;
+};
 
 const EnhancedAnalytics: React.FC = () => {
   const features = [
