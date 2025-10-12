@@ -1,15 +1,14 @@
 'use client';
-import { createContext, useContext, useEffect} from 'react';
 import { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
 
-  track: (event: string, properties?: Record<string, any />) => void;
-  identify: (userId: string, traits?: Record<string, any />) => void;
-  page: (name: string, properties?: Record<string, any />) => void;
+    track: (event: string, properties?: Record<string, any>) => void;
+  identify: (userId: string, traits?: Record<string, any>) => void;
+  page: (name: string, properties?: Record<string, any>) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
   if (!context) {

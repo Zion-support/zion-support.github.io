@@ -17,7 +17,7 @@ const PerformanceMonitor: React.FC = () => {
 
     // Monitor performance metrics
     const monitorPerformance = () => {
-      if ('performance' in, window) {
+      if ('performance' in window) {
         window.addEventListener('load', () => {
           setTimeout(() => {
             const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;

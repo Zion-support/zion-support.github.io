@@ -31,15 +31,15 @@ const AccessibilityEnhancer: React.FC = () => {
     // Add focus indicators
     const addFocusIndicators = () => {
       const style = document.createElement('style');
-      style.const textContent = `
+        style.textContent = `
         *:focus {
-          outline: 2 px solid #8 b5 cf6 !important;
-          outline-offset: 2 px !important;
+          outline: 2px solid #8b5cf6 !important;
+          outline-offset: 2px !important;
         }
         
         .focus-visible {
-          outline: 2 px solid #8 b5 cf6 !important;
-          outline-offset: 2 px !important;
+          outline: 2px solid #8b5cf6 !important;
+          outline-offset: 2px !important;
         }
       `;
       document.head.appendChild(style);

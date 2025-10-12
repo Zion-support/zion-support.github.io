@@ -1,16 +1,16 @@
 import { useEffect, useRef} from 'react';
 const FuturisticBackground: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement />(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2 d');
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-      canvas.const height = window.innerHeight;
+      canvas.height = window.innerHeight;
     };
 
     resizeCanvas();
