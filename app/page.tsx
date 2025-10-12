@@ -83,7 +83,7 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen relative">
       <Helmet>
         <title>Zion Tech Group - AI & IT Solutions</title>
         <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology." />
@@ -95,7 +95,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
             Transform Your Business with
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="gradient-text">
               {' '}AI & IT Solutions
             </span>
           </h1>
@@ -106,14 +106,15 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+              className="bg-gradient-to-r from-cyan-400 to-purple-400 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 flex items-center justify-center hover-glow relative overflow-hidden group"
             >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <span className="relative z-10">Get Started</span>
+              <ArrowRight className="w-5 h-5 ml-2 relative z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-300 to-purple-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
             <Link
               to="/about"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 hover:text-cyan-300 transition-all duration-300 neon-border"
             >
               Learn More
             </Link>
@@ -140,10 +141,10 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 glass-morphism-dark">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 neon-text">
               Our Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -153,18 +154,20 @@ export default function HomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+              <div key={index} className="glass-morphism rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-cyan-400/20 hover-glow group">
                 <div className="flex items-center mb-4">
-                  {service.icon}
+                  <div className="group-hover:animate-pulse">
+                    {service.icon}
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <Link 
                   to={service.link}
-                  className="text-purple-400 hover:text-purple-300 transition-colors flex items-center"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center group/link"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-1" />
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
                 </Link>
               </div>
             ))}

@@ -6,22 +6,22 @@ import ContactForm from '../components/ContactForm';
 const ContactPage: React.FC = () => {
   const contactInfo = [
     {
-      icon: <Mail className="w-6 h-6 text-blue-500" />,
+      icon: <Mail className="w-6 h-6 text-cyan-400" />,
       title: 'Email Us',
-      details: 'contact@ziontech.com',
+      details: 'kleber@ziontechgroup.com',
       description: 'Send us an email anytime'
     },
     {
-      icon: <Phone className="w-6 h-6 text-green-500" />,
+      icon: <Phone className="w-6 h-6 text-purple-400" />,
       title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 8am to 6pm'
+      details: '+1 302 464 0950',
+      description: 'Mon-Fri from 8am to 6pm EST'
     },
     {
-      icon: <MapPin className="w-6 h-6 text-red-500" />,
+      icon: <MapPin className="w-6 h-6 text-pink-400" />,
       title: 'Visit Us',
-      details: 'San Francisco, CA',
-      description: 'Come say hello at our office'
+      details: '364 E Main St STE 1008',
+      description: 'Middletown, DE 19709'
     }
   ];
 
@@ -45,7 +45,7 @@ const ContactPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen relative">
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. We're here to help your business succeed." />
@@ -55,7 +55,7 @@ const ContactPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">
             Get In Touch
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -70,13 +70,13 @@ const ContactPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {contactInfo.map((info, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4">
+              <div key={index} className="glass-morphism rounded-xl p-6 text-center border border-cyan-400/20 hover-glow group">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mb-4 group-hover:animate-pulse">
                   {info.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{info.title}</h3>
-                <p className="text-lg text-gray-300 mb-2">{info.details}</p>
-                <p className="text-gray-400 text-sm">{info.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">{info.title}</h3>
+                <p className="text-lg text-gray-300 mb-2 group-hover:text-white transition-colors">{info.details}</p>
+                <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">{info.description}</p>
               </div>
             ))}
           </div>
@@ -118,15 +118,16 @@ const ContactPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="mailto:contact@ziontech.com"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-gradient-to-r from-cyan-400 to-purple-400 text-black px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 flex items-center justify-center hover-glow relative overflow-hidden group"
             >
-              Email Us Now
-              <Send className="w-5 h-5 ml-2" />
+              <span className="relative z-10">Email Us Now</span>
+              <Send className="w-5 h-5 ml-2 relative z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-300 to-purple-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </a>
             <a 
-              href="tel:+15551234567"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              href="tel:+13024640950"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 hover:text-cyan-300 transition-all duration-300 neon-border"
             >
               Call Us
             </a>
