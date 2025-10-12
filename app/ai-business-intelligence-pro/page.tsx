@@ -1,47 +1,47 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Shield, DollarSign, Star, Clock, Zap, Target, Users, AlertTriangle } from 'lucide-react';
+import { CheckCircle, ArrowRight, BarChart3, DollarSign, Star, Clock, Zap, Target, Users, TrendingUp } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const CybersecuritySolutionsPage: React.FC = () => {
+const AIBusinessIntelligenceProPage: React.FC = () => {
   const features = [
     {
-      title: 'Security Audit & Assessment',
-      description: 'Comprehensive security assessment to identify vulnerabilities and compliance gaps.',
-      benefits: ['Vulnerability scanning', 'Penetration testing', 'Compliance audit', 'Risk assessment']
+      title: 'AI-Powered Analytics',
+      description: 'Advanced analytics with machine learning algorithms to uncover hidden insights and patterns in your data.',
+      benefits: ['Predictive analytics', 'Pattern recognition', 'Anomaly detection', 'Automated insights']
     },
     {
-      title: '24/7 Security Monitoring',
-      description: 'Round-the-clock monitoring and threat detection with immediate response capabilities.',
-      benefits: ['Real-time monitoring', 'Threat detection', 'Incident response', 'Security alerts']
+      title: 'Real-Time Dashboards',
+      description: 'Interactive dashboards with real-time data visualization and customizable reporting.',
+      benefits: ['Live data updates', 'Interactive charts', 'Custom dashboards', 'Mobile responsive']
     },
     {
-      title: 'Compliance Management',
-      description: 'Ensure compliance with industry standards including GDPR, HIPAA, and SOC 2.',
-      benefits: ['GDPR compliance', 'HIPAA compliance', 'SOC 2 certification', 'Audit support']
+      title: 'Natural Language Queries',
+      description: 'Ask questions about your data in plain English and get instant, intelligent answers.',
+      benefits: ['Voice queries', 'Text queries', 'Smart suggestions', 'Contextual answers']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Basic Security',
-      price: '$1,500',
+      name: 'Starter',
+      price: '$99',
       period: '/month',
-      features: ['Security audit', 'Basic monitoring', 'Email support', 'Monthly reports'],
+      features: ['Up to 5 data sources', 'Basic analytics', 'Standard dashboards', 'Email support'],
       popular: false
     },
     {
-      name: 'Advanced Security',
-      price: '$3,500',
+      name: 'Professional',
+      price: '$299',
       period: '/month',
-      features: ['Comprehensive audit', '24/7 monitoring', 'Priority support', 'Compliance management', 'Incident response'],
+      features: ['Up to 25 data sources', 'Advanced analytics', 'Custom dashboards', 'Priority support', 'API access'],
       popular: true
     },
     {
-      name: 'Enterprise Security',
-      price: '$7,500',
+      name: 'Enterprise',
+      price: '$799',
       period: '/month',
-      features: ['Full security suite', 'Dedicated team', 'Custom solutions', 'White-label options', 'API access'],
+      features: ['Unlimited data sources', 'Custom AI models', 'Dedicated support', 'White-label options', 'On-premise deployment'],
       popular: false
     }
   ];
@@ -49,52 +49,52 @@ const CybersecuritySolutionsPage: React.FC = () => {
   const testimonials = [
     {
       name: 'Sarah Johnson',
-      company: 'Healthcare Provider',
-      content: 'Their cybersecurity solutions helped us achieve HIPAA compliance and secure our patient data. Excellent service!',
+      company: 'CFO, TechCorp',
+      content: 'The AI analytics have transformed how we make business decisions. We can now predict trends months in advance.',
       rating: 5
     },
     {
       name: 'Mike Chen',
-      company: 'Financial Services',
-      content: 'The 24/7 monitoring gives us peace of mind. We caught several threats before they could cause damage.',
+      company: 'Data Director, Analytics Pro',
+      content: 'The natural language queries are incredible. Our team can get insights without needing technical expertise.',
       rating: 5
     },
     {
       name: 'Emily Rodriguez',
-      company: 'E-commerce Platform',
-      content: 'The compliance management features saved us months of work. We passed our SOC 2 audit on the first try.',
+      company: 'CEO, GrowthTech',
+      content: 'The real-time dashboards give us visibility into our business like never before. Game-changing technology.',
       rating: 5
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <Helmet>
-        <title>Cybersecurity Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cybersecurity solutions including security audits, 24/7 monitoring, and compliance management. Protect your business with enterprise-grade security." />
-        <meta name="keywords" content="cybersecurity, security audit, threat monitoring, compliance management, data protection" />
+        <title>AI Business Intelligence Pro - Zion Tech Group</title>
+        <meta name="description" content="AI-powered business intelligence platform with advanced analytics, real-time dashboards, and natural language queries. Transform your data into actionable insights." />
+        <meta name="keywords" content="AI business intelligence, data analytics, business intelligence, data visualization, predictive analytics" />
       </Helmet>
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Cybersecurity
-            <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent"> Solutions</span>
+            AI Business Intelligence
+            <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent"> Pro</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Protect your business with comprehensive cybersecurity solutions including security audits, 
-            24/7 monitoring, and compliance management. Stay secure with enterprise-grade protection.
+            Transform your data into actionable insights with AI-powered analytics, real-time dashboards, 
+            and natural language queries. Make data-driven decisions with confidence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
-              Get Security Assessment
+              Start Free Trial
             </Link>
             <Link
-              to="/cybersecurity-solutions#pricing"
+              to="/ai-business-intelligence-pro#pricing"
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
               View Pricing
@@ -108,10 +108,10 @@ const CybersecuritySolutionsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Security Solutions
+              Powerful Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Protect your business with our comprehensive cybersecurity services
+              Everything you need to transform your data into business intelligence
             </p>
           </div>
           
@@ -139,10 +139,10 @@ const CybersecuritySolutionsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Security Packages
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the security package that fits your business needs
+              Choose the plan that fits your business intelligence needs
             </p>
           </div>
 
@@ -151,12 +151,12 @@ const CybersecuritySolutionsPage: React.FC = () => {
               <div
                 key={index}
                 className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                  plan.popular ? 'border-red-500 ring-2 ring-red-500' : 'border-white/20'
+                  plan.popular ? 'border-indigo-500 ring-2 ring-indigo-500' : 'border-white/20'
                 }`}
               >
                 {plan.popular && (
                   <div className="text-center mb-4">
-                    <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -178,7 +178,7 @@ const CybersecuritySolutionsPage: React.FC = () => {
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold text-center block transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700'
+                      ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
                       : 'bg-white/20 text-white hover:bg-white/30'
                   }`}
                 >
@@ -195,10 +195,10 @@ const CybersecuritySolutionsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What Our Clients Say
+              What Our Users Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Don't just take our word for it - hear from businesses that trust us with their security
+              Join thousands of businesses already using our AI business intelligence platform
             </p>
           </div>
 
@@ -224,25 +224,25 @@ const CybersecuritySolutionsPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-red-500 to-orange-600 rounded-2xl p-12">
+          <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Secure Your Business?
+              Ready to Transform Your Data into Insights?
             </h2>
-            <p className="text-xl text-red-100 mb-8">
-              Get a free security assessment and discover how we can protect your business
+            <p className="text-xl text-indigo-100 mb-8">
+              Start your free trial today and experience the power of AI business intelligence
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
-                Get Free Assessment
+                Start Free Trial
               </Link>
               <Link
-                to="/cybersecurity-solutions#pricing"
-                className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
+                to="/ai-business-intelligence-pro#pricing"
+                className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
               >
-                View All Packages
+                View All Plans
               </Link>
             </div>
           </div>
@@ -252,4 +252,4 @@ const CybersecuritySolutionsPage: React.FC = () => {
   );
 };
 
-export default CybersecuritySolutionsPage;
+export default AIBusinessIntelligenceProPage;

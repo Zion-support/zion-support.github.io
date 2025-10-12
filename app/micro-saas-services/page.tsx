@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings, Share2, Calendar, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -25,6 +25,50 @@ const MicroSAASServicesPage: React.FC = () => {
       link: '/ai-expense-tracker',
       popular: true,
       users: '850+',
+      rating: '4.8'
+    },
+    {
+      icon: <Share2 className="w-8 h-8 text-purple-500" />,
+      title: 'AI Social Media Manager',
+      description: 'AI-powered social media management with content generation, smart scheduling, and analytics.',
+      features: ['Content generation', 'Smart scheduling', 'Analytics dashboard', 'Multi-platform support'],
+      pricing: '$29/month',
+      link: '/ai-social-media-manager',
+      popular: true,
+      users: '2,100+',
+      rating: '4.9'
+    },
+    {
+      icon: <Calendar className="w-8 h-8 text-blue-500" />,
+      title: 'AI Project Manager',
+      description: 'Streamline projects with AI-powered task prioritization, team collaboration, and progress tracking.',
+      features: ['AI prioritization', 'Team collaboration', 'Progress analytics', 'Resource optimization'],
+      pricing: '$49/month',
+      link: '/ai-project-manager',
+      popular: true,
+      users: '1,800+',
+      rating: '4.8'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-green-500" />,
+      title: 'AI CRM System',
+      description: 'AI-powered CRM with intelligent lead scoring, smart automation, and advanced analytics.',
+      features: ['AI lead scoring', 'Smart automation', 'Sales analytics', 'Pipeline management'],
+      pricing: '$79/month',
+      link: '/ai-crm-system',
+      popular: true,
+      users: '1,500+',
+      rating: '4.9'
+    },
+    {
+      icon: <Mail className="w-8 h-8 text-orange-500" />,
+      title: 'AI Email Marketing Pro',
+      description: 'AI-powered email marketing with content generation, smart segmentation, and advanced analytics.',
+      features: ['Content generation', 'Smart segmentation', 'Advanced analytics', 'A/B testing'],
+      pricing: '$79/month',
+      link: '/ai-email-marketing-pro',
+      popular: true,
+      users: '1,900+',
       rating: '4.8'
     },
     {

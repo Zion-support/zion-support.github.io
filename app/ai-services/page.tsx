@@ -15,6 +15,24 @@ const AIServicesPage: React.FC = () => {
       popular: true
     },
     {
+      icon: <BarChart3 className="w-8 h-8 text-indigo-500" />,
+      title: 'AI Business Intelligence Pro',
+      description: 'Transform your data into actionable insights with AI-powered analytics and natural language queries.',
+      features: ['Predictive analytics', 'Real-time dashboards', 'Natural language queries', 'Custom AI models'],
+      pricing: 'Starting at $99/month',
+      link: '/ai-business-intelligence-pro',
+      popular: true
+    },
+    {
+      icon: <MessageSquare className="w-8 h-8 text-teal-500" />,
+      title: 'AI Customer Support Pro',
+      description: 'AI-powered customer support with intelligent chatbots, sentiment analysis, and knowledge base AI.',
+      features: ['Intelligent chatbots', 'Sentiment analysis', 'Knowledge base AI', '24/7 availability'],
+      pricing: 'Starting at $49/month',
+      link: '/ai-customer-support-pro',
+      popular: true
+    },
+    {
       icon: <Zap className="w-8 h-8 text-purple-500" />,
       title: 'AI Chatbot Builder',
       description: 'Create intelligent chatbots for customer support, lead generation, and sales automation.',

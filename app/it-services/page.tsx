@@ -64,6 +64,26 @@ const ItServicesPage: React.FC = () => {
       link: '/infrastructure-management',
       popular: false,
       duration: 'Ongoing'
+    },
+    {
+      icon: <Network className="w-8 h-8 text-cyan-500" />,
+      title: 'Network Security',
+      description: 'Advanced network security solutions including firewall management and intrusion detection.',
+      features: ['Firewall configuration', 'Intrusion detection', 'VPN setup', 'Network monitoring'],
+      pricing: 'Starting at $1,200/month',
+      link: '/network-security',
+      popular: false,
+      duration: 'Ongoing'
+    },
+    {
+      icon: <Settings className="w-8 h-8 text-yellow-500" />,
+      title: 'IT Consulting',
+      description: 'Strategic IT consulting to help you make informed technology decisions and optimize your infrastructure.',
+      features: ['Technology assessment', 'Strategic planning', 'Vendor evaluation', 'Cost optimization'],
+      pricing: 'Starting at $150/hour',
+      link: '/it-consulting',
+      popular: false,
+      duration: 'As needed'
     }
   ];
 

@@ -1,47 +1,47 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Shield, DollarSign, Star, Clock, Zap, Target, Users, AlertTriangle } from 'lucide-react';
+import { CheckCircle, ArrowRight, Users, BarChart3, DollarSign, Star, Clock, Zap, Target, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const CybersecuritySolutionsPage: React.FC = () => {
+const AICRMSystemPage: React.FC = () => {
   const features = [
     {
-      title: 'Security Audit & Assessment',
-      description: 'Comprehensive security assessment to identify vulnerabilities and compliance gaps.',
-      benefits: ['Vulnerability scanning', 'Penetration testing', 'Compliance audit', 'Risk assessment']
+      title: 'AI Lead Scoring',
+      description: 'Intelligent lead scoring based on behavior patterns, engagement history, and conversion probability.',
+      benefits: ['Behavioral analysis', 'Predictive scoring', 'Lead prioritization', 'Conversion tracking']
     },
     {
-      title: '24/7 Security Monitoring',
-      description: 'Round-the-clock monitoring and threat detection with immediate response capabilities.',
-      benefits: ['Real-time monitoring', 'Threat detection', 'Incident response', 'Security alerts']
+      title: 'Smart Automation',
+      description: 'Automate follow-ups, email sequences, and task assignments based on customer interactions.',
+      benefits: ['Email automation', 'Task automation', 'Follow-up sequences', 'Workflow triggers']
     },
     {
-      title: 'Compliance Management',
-      description: 'Ensure compliance with industry standards including GDPR, HIPAA, and SOC 2.',
-      benefits: ['GDPR compliance', 'HIPAA compliance', 'SOC 2 certification', 'Audit support']
+      title: 'Sales Analytics',
+      description: 'Comprehensive analytics and insights to track sales performance and identify opportunities.',
+      benefits: ['Sales forecasting', 'Pipeline analysis', 'Performance metrics', 'Custom dashboards']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Basic Security',
-      price: '$1,500',
+      name: 'Starter',
+      price: '$39',
       period: '/month',
-      features: ['Security audit', 'Basic monitoring', 'Email support', 'Monthly reports'],
+      features: ['Up to 1,000 contacts', 'Basic AI features', 'Email integration', 'Standard support'],
       popular: false
     },
     {
-      name: 'Advanced Security',
-      price: '$3,500',
+      name: 'Professional',
+      price: '$79',
       period: '/month',
-      features: ['Comprehensive audit', '24/7 monitoring', 'Priority support', 'Compliance management', 'Incident response'],
+      features: ['Up to 10,000 contacts', 'Advanced AI features', 'Full integrations', 'Priority support', 'Custom fields'],
       popular: true
     },
     {
-      name: 'Enterprise Security',
-      price: '$7,500',
+      name: 'Enterprise',
+      price: '$149',
       period: '/month',
-      features: ['Full security suite', 'Dedicated team', 'Custom solutions', 'White-label options', 'API access'],
+      features: ['Unlimited contacts', 'Custom AI training', 'Dedicated support', 'API access', 'White-label options'],
       popular: false
     }
   ];
@@ -49,52 +49,52 @@ const CybersecuritySolutionsPage: React.FC = () => {
   const testimonials = [
     {
       name: 'Sarah Johnson',
-      company: 'Healthcare Provider',
-      content: 'Their cybersecurity solutions helped us achieve HIPAA compliance and secure our patient data. Excellent service!',
+      company: 'Sales Director',
+      content: 'The AI lead scoring has increased our conversion rate by 45%. We can now focus on the most promising leads.',
       rating: 5
     },
     {
       name: 'Mike Chen',
-      company: 'Financial Services',
-      content: 'The 24/7 monitoring gives us peace of mind. We caught several threats before they could cause damage.',
+      company: 'Marketing Manager',
+      content: 'The automation features save us hours every day. Our follow-up process is now completely automated.',
       rating: 5
     },
     {
       name: 'Emily Rodriguez',
-      company: 'E-commerce Platform',
-      content: 'The compliance management features saved us months of work. We passed our SOC 2 audit on the first try.',
+      company: 'CEO',
+      content: 'The analytics dashboard gives us insights we never had before. Our sales team is more productive than ever.',
       rating: 5
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <Helmet>
-        <title>Cybersecurity Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cybersecurity solutions including security audits, 24/7 monitoring, and compliance management. Protect your business with enterprise-grade security." />
-        <meta name="keywords" content="cybersecurity, security audit, threat monitoring, compliance management, data protection" />
+        <title>AI CRM System - Zion Tech Group</title>
+        <meta name="description" content="AI-powered CRM system with intelligent lead scoring, smart automation, and advanced analytics. Transform your sales process with cutting-edge AI technology." />
+        <meta name="keywords" content="AI CRM, customer relationship management, lead scoring, sales automation, CRM analytics" />
       </Helmet>
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Cybersecurity
-            <span className="bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent"> Solutions</span>
+            AI CRM
+            <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"> System</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Protect your business with comprehensive cybersecurity solutions including security audits, 
-            24/7 monitoring, and compliance management. Stay secure with enterprise-grade protection.
+            Transform your sales process with AI-powered lead scoring, smart automation, 
+            and comprehensive analytics. Close more deals with intelligent CRM technology.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105"
             >
-              Get Security Assessment
+              Start Free Trial
             </Link>
             <Link
-              to="/cybersecurity-solutions#pricing"
+              to="/ai-crm-system#pricing"
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
               View Pricing
@@ -108,10 +108,10 @@ const CybersecuritySolutionsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Security Solutions
+              Powerful Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Protect your business with our comprehensive cybersecurity services
+              Everything you need to manage customer relationships with AI intelligence
             </p>
           </div>
           
@@ -139,10 +139,10 @@ const CybersecuritySolutionsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Security Packages
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the security package that fits your business needs
+              Choose the plan that fits your CRM needs
             </p>
           </div>
 
@@ -151,12 +151,12 @@ const CybersecuritySolutionsPage: React.FC = () => {
               <div
                 key={index}
                 className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
-                  plan.popular ? 'border-red-500 ring-2 ring-red-500' : 'border-white/20'
+                  plan.popular ? 'border-green-500 ring-2 ring-green-500' : 'border-white/20'
                 }`}
               >
                 {plan.popular && (
                   <div className="text-center mb-4">
-                    <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -164,7 +164,7 @@ const CybersecuritySolutionsPage: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                 <div className="mb-6">
                   <span className="text-4xl font-bold text-white">{plan.price}</span>
-                  <span className="text-gray-400 ml-2">{plan.period}</span>
+                  <span className="text-gray-400">{plan.period}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
@@ -178,7 +178,7 @@ const CybersecuritySolutionsPage: React.FC = () => {
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold text-center block transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700'
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
                       : 'bg-white/20 text-white hover:bg-white/30'
                   }`}
                 >
@@ -195,10 +195,10 @@ const CybersecuritySolutionsPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What Our Clients Say
+              What Our Users Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Don't just take our word for it - hear from businesses that trust us with their security
+              Join thousands of sales teams already using our AI CRM system
             </p>
           </div>
 
@@ -224,25 +224,25 @@ const CybersecuritySolutionsPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-red-500 to-orange-600 rounded-2xl p-12">
+          <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Secure Your Business?
+              Ready to Transform Your Sales Process?
             </h2>
-            <p className="text-xl text-red-100 mb-8">
-              Get a free security assessment and discover how we can protect your business
+            <p className="text-xl text-green-100 mb-8">
+              Start your free trial today and experience the power of AI CRM
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
-                Get Free Assessment
+                Start Free Trial
               </Link>
               <Link
-                to="/cybersecurity-solutions#pricing"
-                className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
+                to="/ai-crm-system#pricing"
+                className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300"
               >
-                View All Packages
+                View All Plans
               </Link>
             </div>
           </div>
@@ -252,4 +252,4 @@ const CybersecuritySolutionsPage: React.FC = () => {
   );
 };
 
-export default CybersecuritySolutionsPage;
+export default AICRMSystemPage;

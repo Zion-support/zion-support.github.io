@@ -34,22 +34,22 @@ export default function Navigation() {
       description: 'Powerful micro SaaS tools'
     },
     {
-      title: 'Cloud Services',
-      href: '/cloud-services',
+      title: 'Cloud Migration',
+      href: '/cloud-migration',
       icon: <Cloud className="w-4 h-4" />,
-      description: 'Cloud migration and management'
+      description: 'Seamless cloud migration services'
+    },
+    {
+      title: 'Cybersecurity',
+      href: '/cybersecurity-solutions',
+      icon: <Shield className="w-4 h-4" />,
+      description: 'Enterprise-grade security solutions'
     },
     {
       title: '5G Implementation',
       href: '/5g-implementation',
       icon: <Globe className="w-4 h-4" />,
       description: 'Next-generation 5G solutions'
-    },
-    {
-      title: 'Digital Transformation',
-      href: '/digital-transformation',
-      icon: <Code className="w-4 h-4" />,
-      description: 'Transform your digital presence'
     }
   ]
 
