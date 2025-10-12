@@ -10,10 +10,10 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   children,
   className = ''
 }) => {
-
-    rating: number
-    comment: string
-    submitted: boolean
+  const [feedback, setFeedback] = useState<{
+    rating: number;
+    comment: string;
+    submitted: boolean;
   }>({
     rating: 0,
     comment: '',
@@ -128,6 +128,4 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
   );
 };
 
-interface UserExperienceEnhancerProps {
-  children: React.ReactNode;
-}
+export default UserExperienceEnhancer;
