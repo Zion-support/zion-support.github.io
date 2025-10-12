@@ -27,14 +27,8 @@
 }
 
   private baseURL: string;
-<<<<<<< HEAD
   private defaultHeaders: Record<string, string>;
   private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
-=======
-    <>
-  private defaultHeaders: Record<string, string />;
-  private cache: Map<string, { data: unknown; timestamp: number; ttl: number } /> = new Map();
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 
     this.baseURL = baseURL;
       ...defaultHeaders
@@ -48,8 +42,8 @@
       cacheTTL = 300000 // 5 minutes default
     } = config;
 
-    const url = `${this.baseURL}${endpoint}`;
-    const cacheKey = `${method}:${url}:${JSON.stringify(body || {})}`;
+    const url={`${this.baseURL}${endpoint}`};
+    const cacheKey={`${method}:${url}:${JSON.stringify(body || {})}`};
 
     // Check cache first
       const cached = this.getFromCache(cacheKey);
@@ -166,4 +160,3 @@ export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api'
 // Export types and classes
 export type { RequestConfig, APIResponse };
 export { APIError };
-    </>

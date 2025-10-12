@@ -4,7 +4,7 @@
     
       const script = document.createElement('script');
       script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+      script.src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`};
       document.head.appendChild(script);
       // Initialize gtag
       (window as { dataLayer: unknown[] }).dataLayer = (window as { dataLayer: unknown[] }).dataLayer || [];

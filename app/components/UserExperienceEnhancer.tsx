@@ -67,7 +67,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
   };
 
   return (
-    <>
       {children}
       {/* Feedback Modal */}
       {!feedback.submitted && (
@@ -125,7 +124,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
           </div>
         </div>
       )}
-    </>
+
   );
 };
 

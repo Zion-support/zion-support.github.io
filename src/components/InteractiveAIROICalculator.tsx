@@ -8,7 +8,7 @@
     return Math.max(0, roi);
   };
   const roi = calculateROI();
-    <section className='bg-white py-16 rounded-2xl shadow-lg'>
+    <section className='bg-white py-16 rounded-2xll shadow-lg'>
       <div className='container mx-auto px-4'>
         <h2 className='text-4xl font-bold text-center text-gray-900 mb-8'>
           AI ROI Calculator
@@ -50,7 +50,7 @@
                   <option value={24}>24 months</option>
                 </select>
               </div>
-            <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl'>
+            <div className='bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xll'>
               <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>
                 Your ROI Projection
               </h3>

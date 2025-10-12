@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 import { useEffect, useState} from 'react';
-=======
-'use client';
-import { useEffect, useState} from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface AnimatedTextProps {
   text: string;
   className?: string;

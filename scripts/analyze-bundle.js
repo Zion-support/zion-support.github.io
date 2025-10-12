@@ -150,7 +150,7 @@ function generateRecommendations(analysis) {
 }
 
 function generateHTMLReport(analysis) {
-  const html = `
+  const html={`
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -266,7 +266,7 @@ function generateHTMLReport(analysis) {
                     </tr>
                 </thead>
                 <tbody>
-                    ${analysis.files.map(file => `
+                    ${analysis.files.map(file => `}
                         <tr>
                             <td>${file.path}</td>
                             <td class="size">${file.sizeFormatted}</td>

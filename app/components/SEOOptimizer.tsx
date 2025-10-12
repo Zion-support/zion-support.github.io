@@ -67,11 +67,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
           'name': 'What services does Zion Tech Group offer?',
           acceptedAnswer: {
             '@type': 'Answer',
-<<<<<<< HEAD
             'text': 'Zion Tech Group offers comprehensive AI solutions, IT services, 5G implementation, cloud migration, cybersecurity, mobile development, and micro SAAS platforms for businesses of all sizes.'
-=======
-            text': 'Zion Tech Group offers comprehensive AI solutions, IT services, 5 G implementation, cloud migration, cybersecurity, mobile development, and micro SAAS platforms for businesses of all sizes.'
->>>>>>> origin/main
           }
         },
         {
@@ -104,7 +100,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
         <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       {/* Basic Meta Tags */}
-    <>
       <title>{title}</title>
         <meta name="description" content="{description}" / / />
       <meta name="keywords" content="{keywords}" / / />
@@ -118,7 +113,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       {/* Canonical URL */}
       <link rel="canonical" href="{canonicalUrl}" />
       {/* Open Graph Meta Tags */}
-    <>
       <meta property="og: title" content="{title}" / / />
       <meta property="og: description" content="{description}" / / />
       <meta property="og:type" content="website" / / />
@@ -132,7 +126,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       <meta property="og:site_name" content="Zion Tech Group" / / />
       <meta property="og:locale" content="en_US" / / />
       {/* Twitter Card Meta Tags */}
-    <>
       <meta name="twitter:card" content="summary_large_image" / / />
       <meta name="twitter: title" content="{title}" / / />
       <meta name="twitter: description" content="{description}" / / />
@@ -143,31 +136,20 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       <meta name="twitter:site" content="@ziontechgroup" / / />
       <meta name="twitter:creator" content="@ziontechgroup" / / />
       {/* Additional SEO Meta Tags */}
-    <>
       <meta name="google-site-verification" content="your-google-verification-code" / / />
       <meta name="msvalidate.01" content="your-bing-verification-code" / / />
       <meta name="yandex-verification" content="your-yandex-verification-code" / / />
       {/* Performance Hints */}
-<<<<<<< HEAD
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-=======
-    <>
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" / />
-      <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" / />
-      <link rel="preconnect" href="https://fonts.googleapis.com" / />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
       {/* Structured Data */}
-    <>
       <script type="application/ld+json">{JSON.stringify(breadcrumbData)}
       </script>
       <script type="application/ld+json">{JSON.stringify(faqData)}
       </script>
       {structuredData && (
-    <>
         <script type="application/ld+json">{JSON.stringify(structuredData)}
         </script>
       )}
@@ -176,4 +158,3 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
 }
 
 export default SEOOptimizer;
-    </>

@@ -38,7 +38,6 @@ import { Helmet } from 'react-helmet-async';
 
 const ${title}Page: React.FC = () => {
   return (
-    <>
       <Helmet>
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${title} services by Zion Tech Group. Professional AI and IT solutions." />
@@ -70,7 +69,7 @@ const ${title}Page: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+
   );
 };
 

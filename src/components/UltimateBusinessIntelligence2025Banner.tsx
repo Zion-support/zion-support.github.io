@@ -51,8 +51,8 @@
           </div>
           {/* Key Benefits Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xll p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xll flex items-center justify-center mb-6 mx-auto">
                 
                 >
                   

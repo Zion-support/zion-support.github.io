@@ -55,7 +55,7 @@ export default function Ai3dGenerationPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -67,7 +67,7 @@ export default function Ai3dGenerationPage() {
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 lg:p-12 border border-white/20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Perfect For
@@ -163,7 +163,7 @@ export default function Ai3dGenerationPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
                 <div className="mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -175,7 +175,7 @@ export default function Ai3dGenerationPage() {
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 lg:p-12 border border-white/20">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 lg:p-12 border border-white/20">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Perfect For

@@ -156,7 +156,7 @@ const pageConfigs = {
 
 // Fix pages
 for (const page of pagesToFix) {
-  const pagePath = `/workspace/app/${page}/page.tsx`;
+  const pagePath={`/workspace/app/${page}/page.tsx`};
   const config = pageConfigs[page];
   const componentName = page.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)

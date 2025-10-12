@@ -62,7 +62,7 @@ class AdvancedErrorBoundary extends Component
   };
     // Generate or retrieve session ID
       let sessionId = sessionStorage.getItem('sessionId');
-        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        sessionId={`session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
         sessionStorage.setItem('sessionId', sessionId);
       }
       return sessionId;

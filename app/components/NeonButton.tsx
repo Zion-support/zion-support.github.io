@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 import React  from 'react';
 import { ArrowRight } from 'lucide-react';
-=======
-'use client';
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface NeonButtonProps {
   children: React.ReactNode;
   href?: string;
@@ -36,21 +28,18 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
     lg: 'px-8 py-4 text-lg'
   };
   const variantClasses = {
-    primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-blue-500/25 hover:shadow-2 xl',
-    secondary: 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg hover:shadow-purple-500/25 hover:shadow-2 xl',
-    accent: 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2 xl'
+    primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-blue-500/25 hover:shadow-2xll',
+    secondary: 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg hover:shadow-purple-500/25 hover:shadow-2xll',
+    accent: 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg hover:shadow-cyan-500/25 hover:shadow-2xll'
   };
   const neonEffect = 'before:absolute before:inset-0 before:rounded-lg before:bg-gradient-to-r before:from-blue-400 before:to-purple-400 before:opacity-0 before:blur-sm before:transition-opacity before:duration-300 hover:before:opacity-70 before:-z-10';
-  const buttonClasses = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`;
+  const buttonClasses={`${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${neonEffect} ${className}`};
   const content = (
-    <>
-    <>
       {icon && <span className="mr-2">{icon}</span>}
-    </>
+
       {children}
-    <>
       {!icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1transition-transform" />}
-    </>
+
   );
   if (href) {
     return (
@@ -78,4 +67,3 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
 };
 
 export default NeonButton;
-    </>

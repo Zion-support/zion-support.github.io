@@ -196,7 +196,7 @@ import Footer from '../components/Footer';
 
         {/* CTA Section */}
         <section className="text-center">
-          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xll p-8">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your IT Infrastructure?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.

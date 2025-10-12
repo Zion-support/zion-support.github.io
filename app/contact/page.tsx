@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, Star, Shield, Cloud, MessageCircle } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
-<<<<<<< HEAD
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -16,7 +15,6 @@ const ContactPage: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-<<<<<<< HEAD
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
@@ -87,14 +85,14 @@ const ContactPage: React.FC = () => {
   ];
 
   if (isSubmitted) {
-    return (
-      <>
-        <Helmet>
-          <title>Thank You - Zion Tech Group | Message Received</title>
-          <meta name="description" content="Thank you for contacting Zion Tech Group. We have received your message and will get back to you within 2 hours." />
-        </Helmet>
+  return (
+    <>
+      <Helmet>
+        <title>Thank You - Zion Tech Group | Message Received</title>
+        <meta name="description" content="Thank you for contacting Zion Tech Group. We have received your message and will get back to you within 2 hours." />
+      </Helmet>
 
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-8">
               <CheckCircle className="w-12 h-12 text-white" />
@@ -119,16 +117,6 @@ const ContactPage: React.FC = () => {
               >
                 Call Us Now
               </a>
-=======
-=======
-  return (
-    <>
-      <Helmet>
-        <title>Contact - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations and support." />
-      </Helmet>
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7-xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
           <div className="text-center">
@@ -138,7 +126,6 @@ const ContactPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3-xl mx-auto">
               Ready to transform your business? Get in touch with our team of experts.
             </p>
-<<<<<<< HEAD
             <div className="max-w-md mx-auto">
               <form className="space-y-4">
                 <input
@@ -163,16 +150,15 @@ const ContactPage: React.FC = () => {
                   Send Message
                 </button>
               </form>
->>>>>>> cursor/fix-errors-and-merge-to-main-bff1
             </div>
           </div>
         </div>
-      </>
-    );
+      </div>
+    </>
+  );
   }
 
   return (
-    <>
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch for AI & IT Solutions</title>
         <meta name="description" content="Contact Zion Tech Group for AI solutions, cloud infrastructure, cybersecurity, and custom software development. Call +1 302 464 0950 or email kleber@ziontechgroup.com" />
@@ -212,7 +198,7 @@ const ContactPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
-                <div key={index} className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div key={index} className="text-center bg-white/5 backdrop-blur-sm rounded-2xll p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
                   <div className="flex justify-center mb-4">
                     {stat.icon}
                   </div>
@@ -221,23 +207,6 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div className="text-gray-300 text-sm">
                     {stat.label}
-=======
-            <div className="max-w-2xl mx-auto">
-              <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">Get In Touch</h2>
-                <p className="text-gray-300 mb-6">
-                  Contact us for consultations, support, or to learn more about our services.
-                </p>
-                <div className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-3 py-2 bg-slate-700 border border-slate-600 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                    />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -261,7 +230,6 @@ const ContactPage: React.FC = () => {
                     Send Message
                   </button>
                 </div>
-<<<<<<< HEAD
               ))}
             </div>
           </div>
@@ -272,7 +240,7 @@ const ContactPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xll p-8 border border-white/20">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -447,8 +415,6 @@ const ContactPage: React.FC = () => {
                     </li>
                   </ul>
                 </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
               </div>
             </div>
           </div>

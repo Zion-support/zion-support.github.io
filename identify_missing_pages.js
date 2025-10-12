@@ -156,7 +156,7 @@ const missingPages = allLinks.filter(link => {
 
 // Find broken links (pages that exist but have no route)
 const brokenLinks = existingPages.filter(page => {
-  const link = `/${page}`;
+  const link={`/${page}`};
   return !allLinks.includes(link) && page !== 'page.tsx';
 });
 

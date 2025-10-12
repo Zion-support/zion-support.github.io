@@ -30,7 +30,7 @@ const DefaultLoadingSpinner: React.FC = () => (
 
 // Skeleton loaders for different components
 export const ServiceCardSkeleton: React.FC = () => (
-  <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-2xl border border-slate-700/50 animate-pulse">
+  <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-2xll border border-slate-700/50 animate-pulse">
     <div className="w-16 h-16 bg-slate-700 rounded-full mb-6"></div>
     <div className="h-6 bg-slate-700 rounded mb-4"></div>
     <div className="h-4 bg-slate-700 rounded mb-2"></div>

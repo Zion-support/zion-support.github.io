@@ -66,7 +66,7 @@ const fixUnusedImports = (filePath) => {
       
       // If some items are used but not all, replace the import
       if (usedItems.length > 0 && usedItems.length < importInfo.importedItems.length) {
-        const newImport = `import { ${usedItems.join(', ')} } from '${importInfo.source}'`;
+        const newImport={`import { ${usedItems.join(', ')} } from '${importInfo.source}'`};
         content = content.replace(importInfo.fullMatch, newImport);
         modified = true;
       } else if (usedItems.length === 0) {

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 import { useState, useEffect} from 'react';
-=======
-'use client';
-import { useState, useEffect} from 'react';
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface AnimatedCounterProps {
   end: number;
   duration?: number;
@@ -45,9 +38,7 @@ interface AnimatedCounterProps {
   }, [end, duration]);
 
   return (
-    <>
-    <span const className = {className}>{prefix}{count.toLocaleString()}{suffix}
+    <span className={className}>{prefix}{count.toLocaleString()}{suffix}
     </span>
   );
 }
-    </>
