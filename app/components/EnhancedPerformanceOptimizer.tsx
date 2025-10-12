@@ -1,73 +1,64 @@
 'use client';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-}
-
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
-  children, 
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true
-}) => {
+const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
-    // Performance optimization setup
-    if (typeof window !== 'undefined') {
-      // Enable resource hints
-      if (enablePreloading) {
-        const preloadLink = document.createElement('link');
-        preloadLink.rel = 'preload';
-        preloadLink.href = '/fonts/inter.woff2';
-        preloadLink.as = 'font';
-        preloadLink.type = 'font/woff2';
-        preloadLink.crossOrigin = 'anonymous';
-        document.head.appendChild(preloadLink);
-      }
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      const criticalImages = [
+        '/images/hero-bg.jpg',
+        '/images/logo.png'
+      ];
 
-      // Enable intersection observer for lazy loading
-      if (enableLazyLoading && 'IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              const img = entry.target as HTMLImageElement;
-              if (img.dataset.src) {
-                img.src = img.dataset.src;
-                img.classList.remove('lazy');
-                imageObserver.unobserve(img);
-              }
-            }
-          });
+      criticalImages.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
+        document.head.appendChild(link);
+      });
+    };
+
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            observer.unobserve(img);
+          }
         });
+      });
 
-        // Observe all lazy images
-        document.querySelectorAll('img[data-src]').forEach((img) => {
-          imageObserver.observe(img);
-        });
-      }
+      images.forEach(img => imageObserver.observe(img));
+    };
 
-      // Performance monitoring
-      if ('performance' in window) {
-        window.addEventListener('load', () => {
-          const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-          const paint = performance.getEntriesByType('paint');
-          
-          // Log performance metrics
-          console.log('Performance Metrics:', {
-            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-            firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-            firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
-          });
-        });
-      }
-    }
-  }, [enableImageOptimization, enableLazyLoading, enablePreloading]);
+    // Defer non-critical scripts
+    const deferNonCriticalScripts = () => {
+      const scripts = document.querySelectorAll('script[data-defer]');
+      scripts.forEach(script => {
+        const newScript = document.createElement('script');
+        newScript.src = script.getAttribute('src') || '';
+        newScript.async = true;
+        script.parentNode?.replaceChild(newScript, script);
+      });
+    };
 
-  return <>{children}</>;
+    // Initialize optimizations
+    preloadCriticalResources();
+    optimizeImages();
+    deferNonCriticalScripts();
+
+    // Cleanup
+    return () => {
+      // Cleanup if needed
+    };
+  }, []);
+
+  return null;
 };
 
 export default PerformanceOptimizer;

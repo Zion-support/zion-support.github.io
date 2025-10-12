@@ -1,94 +1,37 @@
+'use client'
 import React from 'react'
-interface AdvertisingBannerProps {/* TODO: Fix JSX expression */}
-}
-const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,
-  title
-  description,
-  ctaText,
-  ctaUrl,
-  imageUrl,
-  backgroundColor = '#3 b82 f6',
-  textColor = '#ffffff'}) => {
-  return(<$2 />
-      className="advertising-banner"
-      style={{
-        backgroundColor,
-        color: textColor,
-        padding: '2rem'
-        borderRadius: '0.5rem')
-        margin: '1rem 0')
-        display: 'flex')
-        alignItems: 'center')}
-        gap: '2rem'}
-      }}
-    >
-      {imageUrl && (
-        <div className="banner-image">
-          <img
-      {imageUrl && (
-        <div className="banner-image">
-          <img
-            src={imageUrl}
-            alt={title}
-            style={{
-              width: '200px',
-              height: 'auto')}
-              borderRadius: '0.25rem')}
-const,
-  AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-      }}
-    >
-      {/* TODO: Fix JSX expression */}
-            src={imageUrl}
-            alt={title}
-            style={/* TODO: Fix JSX expression */}
-            }}
-          />
-      )}
-      <div className="banner-content" style={{ flex: 1 }}>
-        <h2 style={{ margin: '0 0 1rem 0', fontSize: '1.5rem' }}>{title}
-        <p style={{ margin: '0 0 1.5rem 0', fontSize: '1rem', opacity: 0.9 }}>{description}
-        <$2 />
-          href={ctaUrl}
-          style={{
-            display: 'inline-block',
-            padding: '0.75 rem 1.5 rem',
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
-            color: textColor,
-            textDecoration: 'none',
-            borderRadius: '0.25rem',
-            fontWeight: 'bold'}
-            transition: 'background-color 0.2s'}
-          }}
-          onMouseOver={e => {}
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';}
-          }}
-          onMouseOut={e => {}
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';}
-      < className="banner-content" style={/* TODO: Fix JSX expression */}$2 />
-  x: 1 }}>
-        < style={/* TODO: Fix JSX expression */}$2 />
-  e: '1.5rem' }}>{title}
-        < style={/* TODO: Fix JSX expression */}$2 />
-  y: 0.9 }}>{description}
-        <a>
-          href={ctaUrl}
-          style={/* TODO: Fix JSX expression */}
-          }}
-          onMouseOver={/* TODO: Fix JSX expression */}
-          }}
-          onMouseOut={/* TODO: Fix JSX expression */}
-          }}
-        >
-          {ctaText}
-        </a>
-      </div>
+import {Helmet} from 'react-helmet-async'
+import {ArrowRight} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+
+const AdvertisingbannerPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Advertisingbanner - Zion Tech Group</title>
+        <meta name="description" content="Professional advertisingbanner services and solutions." />
+        <meta name="keywords" content="advertisingbanner, services, solutions, technology" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="pt-16">
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">Advertisingbanner</h1>
+            <p className="text-gray-300 mb-8">This page is under construction.</p>
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
+              Learn More
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+          </div>
+        </div>
+      </main>
+      
+      <Footer />
     </div>
-  )
-}
-export default AdvertisingBanner
-"
-  </AdvertisingBannerProps>
-  </AdvertisingBannerProps>
-</div></p></h2>
+  );
+};
+
+export default AdvertisingbannerPage;

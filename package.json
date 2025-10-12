@@ -97,7 +97,10 @@
     "deploy:production": "npm run optimize:enhanced && npm run build:check && echo 'Ready for production deployment'",
     "generate:sitemap": "node scripts/generate-sitemap.cjs",
     "optimize:performance": "node scripts/performance-optimizer.cjs",
-    "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\""
+    "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
+    "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\"",
+    "analyze:full": "npm run build && npm run analyze:bundle",
+    "debug:performance": "localStorage.setItem('debug-performance', 'true') && npm run dev"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",
@@ -130,6 +133,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.37.0",
     "@jest/globals": "^30.2.0",
+    "@prisma/client": "^6.17.1",
     "@rollup/rollup-linux-x64-gnu": "4.52.3",
     "@tailwindcss/postcss": "^4.1.14",
     "@testing-library/dom": "^10.4.1",
@@ -163,6 +167,7 @@
     "jest-esbuild": "^0.4.0",
     "lighthouse": "^12.8.2",
     "netlify-plugin-cloudinary": "1.17.0",
+    "node-mocks-http": "^1.17.2",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "rollup-plugin-visualizer": "^6.0.4",
@@ -172,7 +177,8 @@
     "ts-jest": "^29.4.4",
     "typescript": "^5.9.3",
     "typescript-eslint": "8.44.1",
-    "vite": "^7.1.9"
+    "vite": "^7.1.9",
+    "vitest": "^3.2.4"
   },
   "packageManager": "pnpm@10.17.1",
   "engines": {

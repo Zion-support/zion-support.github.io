@@ -1,59 +1,73 @@
-#!/usr/bin/env node
-import fs from 'fs'
-function fixJSXErrors(filePath) {
-  try {
-    //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>
-    const patterns = [
-      {
-        //Fix CheckCircleIcon and similar patterns
-        pattern: /(<CheckCircleIcon[^>]*>)\s*</g,$2 />
-        replacement: '$1 />\n                  <'},$2 />
-      {
-        //Fix other icon patterns
-        pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<[^/]/g,
-        replacement: '$1 />\n                <'},
-      {
-        //Fix closing tag issues
-        pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<\/[^>]*>/g,
-        replacement: '$1 />\n              </'},
-      {
-        //Fix ArrowRightIcon patterns
-        pattern: /(<ArrowRightIcon[^>]*>)\s*<\/Link>/g,
-        replacement: '$1 />\n            </Link>'},
-      {
-        //Fix TruckIcon patterns
-        pattern: /(<TruckIcon[^>]*>)\s*<\/div>/g,
-        replacement: '$1 />\n          </div>'}]
-    patterns.forEach(fix => {
-    )
-      //       const newContent = content.replace(fix.pattern, fix.replacement)
-      if (newContent !== content) {
-        content = newContent
-        modified = true
-  }
-function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
-      },
-      {/* TODO: Fix JSX expression */}
-      },
-      {/* TODO: Fix JSX expression */}
-      },
-      {/* TODO: Fix JSX expression */}
-      },
-      {/* TODO: Fix JSX expression */}
-      }]
-    patterns.forEach(fix => {/* TODO: Fix JSX expression */}
-      })
-    })
-    if (modified) {/* TODO: Fix JSX expression */}
+import fs from 'fs';
+import path from 'path';
+
+// Find all page.tsx files
+function findPageFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...findPageFiles(fullPath));
+    } else if (item === 'page.tsx') {
+      files.push(fullPath);
     }
-    return false
-  } catch (error) {/* TODO: Fix JSX expression */}
+  }
+  
+  return files;
+}
+
+// Fix JSX errors in a file
+function fixJSXErrors(filePath) {
+  let content = fs.readFileSync(filePath, 'utf8');
+  let modified = false;
+  
+  // Fix malformed JSX tags like "Page\n  </\n  <br />"
+  const malformedTagRegex = /(\s+Page\s*\n\s*<\/\s*\n\s*<br \/>)/g;
+  if (malformedTagRegex.test(content)) {
+    content = content.replace(malformedTagRegex, (match) => {
+      // Extract the page name from the file path
+      const pageName = path.basename(path.dirname(filePath)).split('-').map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join(' ');
+      
+      return `\n              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">\n                ${pageName}\n              </span>\n              <br />`;
+    });
+    modified = true;
+  }
+  
+  // Fix generic "page solutions" text
+  const pageSolutionsRegex = /Transform your business with our advanced page solutions\./g;
+  if (pageSolutionsRegex.test(content)) {
+    const pageName = path.basename(path.dirname(filePath)).split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+    
+    content = content.replace(pageSolutionsRegex, `Transform your business with our advanced ${pageName.toLowerCase()} solutions.`);
+    modified = true;
+  }
+  
+  if (modified) {
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed JSX errors in: ${filePath}`);
   }
 }
 
-// Fix the specific file
-// const filePath = process.argv[2]
-if (filePath) {/* TODO: Fix JSX expression */}
-} else {/* TODO: Fix JSX expression */}
-  //   }
-</span></span>
+// Find and fix all page files
+const pageFiles = findPageFiles('/workspace/app');
+console.log(`Found ${pageFiles.length} page files`);
+
+let fixedCount = 0;
+for (const file of pageFiles) {
+  try {
+    fixJSXErrors(file);
+    fixedCount++;
+  } catch (error) {
+    console.error(`Error fixing ${file}:`, error.message);
+  }
+}
+
+console.log(`Fixed ${fixedCount} files`);

@@ -1,68 +1,186 @@
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const glob = require('glob');
 
-// Get all TypeScript/JavaScript files in src directory
-function getAllFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      getAllFiles(filePath, fileList);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      fileList.push(filePath);
-    }
-  });
-  
-  return fileList;
-}
+// Common unused imports that appear frequently
+const commonUnusedImports = [
+  'Helmet',
+  'Star',
+  'Users',
+  'Globe',
+  'Smartphone',
+  'FileText',
+  'Clock',
+  'Search',
+  'Filter',
+  'Download',
+  'Upload',
+  'Monitor',
+  'Cpu',
+  'Shield',
+  'Lock',
+  'Network',
+  'AlertTriangle',
+  'TrendingUp',
+  'Video',
+  'Music',
+  'DollarSign',
+  'CreditCard',
+  'Calendar',
+  'Bell',
+  'Plus',
+  'Edit3',
+  'Trash2',
+  'Eye',
+  'Zap',
+  'Target',
+  'Play',
+  'Pause',
+  'RefreshCw',
+  'Settings',
+  'Edit',
+  'Share2',
+  'Activity',
+  'PieChart',
+  'Server',
+  'Wifi',
+  'Cloud',
+  'Terminal',
+  'GitBranch',
+  'Layers',
+  'Workflow',
+  'Bot',
+  'Sparkles',
+  'Wand2',
+  'Lightbulb',
+  'Rocket',
+  'Award',
+  'Trophy',
+  'Medal',
+  'Crown',
+  'Diamond',
+  'Gem',
+  'Heart',
+  'ThumbsUp',
+  'ThumbsDown',
+  'MessageCircle',
+  'Phone',
+  'MapPin',
+  'Github',
+  'Linkedin',
+  'Twitter',
+  'Instagram',
+  'Facebook',
+  'Youtube',
+  'Twitch',
+  'Discord',
+  'Slack',
+  'Figma',
+  'Notion',
+  'Trello',
+  'Asana',
+  'Monday',
+  'Jira',
+  'Confluence',
+  'Airtable',
+  'Miro',
+  'Loom',
+  'Zoom',
+  'Teams',
+  'Google',
+  'Microsoft',
+  'Apple',
+  'Amazon',
+  'Netflix',
+  'Spotify',
+  'Adobe',
+  'Salesforce',
+  'Hubspot',
+  'Shopify',
+  'WooCommerce',
+  'Stripe',
+  'Paypal',
+  'Square',
+  'QuickBooks',
+  'Xero',
+  'FreshBooks',
+  'Wave',
+  'Mint',
+  'YNAB',
+  'Link',
+  'BarChart3',
+  'CheckCircle'
+];
 
-// Remove unused imports from a file
-function removeUnusedImports(filePath) {
+function fixUnusedImports(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    let newContent = content;
-    
-    // Common unused imports to remove
-    const unusedImports = [
-      'Navigation', 'Footer', 'Link', 'Phone', 'Mail', 'MapPin', 'Clock', 'Users', 'Star', 'Zap', 'Cloud', 'Database', 'Code', 'BarChart', 'Team', 'Achievement', 'Goal', 'World', 'PhoneIcon', 'MailIcon', 'Location', 'ArrowRight', 'CheckCircle', 'TrendingUp', 'Settings', 'Cpu', 'MessageSquare', 'Eye', 'Sparkles', 'Award', 'Lock', 'FileText', 'Search', 'Bot', 'Palette', 'Camera', 'Music', 'Video', 'Gamepad2', 'ShoppingCart', 'CreditCard', 'Building', 'Factory', 'Car', 'Plane', 'Ship', 'Train', 'Home', 'Heart', 'Stethoscope', 'GraduationCap', 'Briefcase', 'Wrench', 'Hammer', 'Paintbrush', 'Scissors', 'BookOpen', 'Calculator', 'Calendar', 'Clock3', 'Compass', 'Globe2', 'Map', 'Navigation', 'PieChart', 'TrendingDown', 'Activity', 'Lightning', 'Crosshair', 'Security', 'People', 'StarIcon', 'Check', 'Arrow', 'PhoneIcon', 'MailIcon', 'Location'
-    ];
-    
-    // Remove unused imports from import statements
-    const importRegex = /import\s*{([^}]+)}\s*from\s*['"][^'"]+['"];?/g;
-    newContent = newContent.replace(importRegex, (match, imports) => {
-      const importList = imports.split(',').map(imp => imp.trim());
-      const usedImports = importList.filter(imp => {
-        const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
-        return !unusedImports.includes(cleanImp) && isImportUsed(cleanImp, newContent);
+
+    // Find all import statements
+    const importRegex = /import\s+{([^}]+)}\s+from\s+['"][^'"]+['"];?/g;
+    const imports = content.match(importRegex);
+
+    if (imports) {
+      imports.forEach(importStatement => {
+        // Extract the import source
+        const sourceMatch = importStatement.match(/from\s+['"]([^'"]+)['"]/);
+        if (!sourceMatch) return;
+
+        const source = sourceMatch[1];
+        
+        // Extract the imported items
+        const itemsMatch = importStatement.match(/{\s*([^}]+)\s*}/);
+        if (!itemsMatch) return;
+
+        const items = itemsMatch[1]
+          .split(',')
+          .map(item => item.trim())
+          .filter(item => item);
+
+        // Check which items are actually used in the file
+        const usedItems = items.filter(item => {
+          // Remove any type annotations or aliases
+          const cleanItem = item.split(' as ')[0].split(':')[0].trim();
+          return content.includes(cleanItem) && !commonUnusedImports.includes(cleanItem);
+        });
+
+        // If some items are unused, create a new import statement
+        if (usedItems.length !== items.length) {
+          const newImportStatement = usedItems.length > 0 
+            ? `import { ${usedItems.join(', ')} } from '${source}';`
+            : '';
+          
+          content = content.replace(importStatement, newImportStatement);
+          modified = true;
+        }
       });
+    }
+
+    // Also fix unused variables
+    const lines = content.split('\n');
+    const newLines = lines.map(line => {
+      // Remove unused variable declarations
+      if (line.includes('const [') && line.includes('] = useState') && line.includes('// eslint-disable')) {
+        return line.replace(/const\s+\[[^]]+\]\s*=\s*useState[^;]+;/, '');
+      }
       
-      if (usedImports.length === 0) {
-        modified = true;
-        return ''; // Remove entire import statement
-      } else if (usedImports.length !== importList.length) {
-        modified = true;
-        return match.replace(imports, usedImports.join(', '));
+      // Remove unused variable declarations that are clearly unused
+      if (line.includes('const [') && line.includes('] = useState') && !line.includes('useState(')) {
+        const match = line.match(/const\s+\[([^,]+),\s*set[A-Z][^\]]+\]\s*=\s*useState/);
+        if (match) {
+          const varName = match[1];
+          if (!content.includes(varName) || content.split(varName).length < 3) {
+            return '';
+          }
+        }
       }
-      return match;
+      
+      return line;
     });
-    
-    // Remove unused variable declarations
-    const variableRegex = /const\s+(\w+)\s*=\s*[^;]+;/g;
-    newContent = newContent.replace(variableRegex, (match, varName) => {
-      if (unusedImports.includes(varName) && !isVariableUsed(varName, newContent)) {
-        modified = true;
-        return ''; // Remove unused variable
-      }
-      return match;
-    });
-    
-    if (modified) {
-      fs.writeFileSync(filePath, newContent);
+
+    if (modified || newLines.some((line, index) => line !== lines[index])) {
+      fs.writeFileSync(filePath, newLines.join('\n'));
       console.log(`Fixed unused imports in: ${filePath}`);
     }
   } catch (error) {
@@ -70,68 +188,14 @@ function removeUnusedImports(filePath) {
   }
 }
 
-// Check if an import is used in the file
-function isImportUsed(importName, content) {
-  // Skip checking for certain patterns that might be false positives
-  if (importName === 'React' || importName === 'useState' || importName === 'useEffect') {
-    return true;
-  }
-  
-  // Look for usage in JSX, function calls, etc.
-  const usagePatterns = [
-    new RegExp(`<${importName}\\b`, 'g'),
-    new RegExp(`\\b${importName}\\s*\\(`, 'g'),
-    new RegExp(`\\b${importName}\\s*[=:]`, 'g'),
-    new RegExp(`\\b${importName}\\s*[\\[\\{]`, 'g'),
-    new RegExp(`\\b${importName}\\s*\\?`, 'g'),
-    new RegExp(`\\b${importName}\\s*\\|`, 'g'),
-    new RegExp(`\\b${importName}\\s*&`, 'g'),
-    new RegExp(`\\b${importName}\\s*\\+`, 'g'),
-    new RegExp(`\\b${importName}\\s*-`, 'g'),
-    new RegExp(`\\b${importName}\\s*\\*`, 'g'),
-    new RegExp(`\\b${importName}\\s*\\/`, 'g'),
-    new RegExp(`\\b${importName}\\s*%`, 'g'),
-    new RegExp(`\\b${importName}\\s*<`, 'g'),
-    new RegExp(`\\b${importName}\\s*>`, 'g'),
-    new RegExp(`\\b${importName}\\s*===`, 'g'),
-    new RegExp(`\\b${importName}\\s*!==`, 'g'),
-    new RegExp(`\\b${importName}\\s*==`, 'g'),
-    new RegExp(`\\b${importName}\\s*!=`, 'g'),
-    new RegExp(`\\b${importName}\\s*<=`, 'g'),
-    new RegExp(`\\b${importName}\\s*>=`, 'g'),
-    new RegExp(`\\b${importName}\\s*&&`, 'g'),
-    new RegExp(`\\b${importName}\\s*\\|\\|`, 'g'),
-    new RegExp(`\\b${importName}\\s*\\?`, 'g'),
-    new RegExp(`\\b${importName}\\s*:`, 'g'),
-    new RegExp(`\\b${importName}\\s*;`, 'g'),
-    new RegExp(`\\b${importName}\\s*,`, 'g'),
-    new RegExp(`\\b${importName}\\s*\\)`, 'g'),
-    new RegExp(`\\b${importName}\\s*\\]`, 'g'),
-    new RegExp(`\\b${importName}\\s*\\}`, 'g'),
-    new RegExp(`\\b${importName}\\s*$`, 'g')
-  ];
-  
-  return usagePatterns.some(pattern => pattern.test(content));
-}
+// Find all TypeScript and JavaScript files
+const files = glob.sync('app/**/*.{ts,tsx,js,jsx}', { cwd: __dirname });
 
-// Check if a variable is used in the file
-function isVariableUsed(varName, content) {
-  const usagePatterns = [
-    new RegExp(`\\b${varName}\\b`, 'g')
-  ];
-  
-  const matches = content.match(usagePatterns[0]);
-  return matches && matches.length > 1; // More than just the declaration
-}
-
-// Main execution
-const srcDir = path.join(__dirname, 'src');
-const files = getAllFiles(srcDir);
-
-console.log(`Processing ${files.length} files...`);
+console.log(`Found ${files.length} files to process...`);
 
 files.forEach(file => {
-  removeUnusedImports(file);
+  const fullPath = path.join(__dirname, file);
+  fixUnusedImports(fullPath);
 });
 
-console.log('Done fixing unused imports!');
+console.log('Unused imports cleanup completed!');

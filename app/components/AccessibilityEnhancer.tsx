@@ -1,109 +1,96 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-  enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
-  enableKeyboardNavigation = true,
-  enableScreenReader = true,
-  enableHighContrast = true,
-  enableFocusManagement = true
-}) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-
+const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Keyboard navigation enhancement
-      if (enableKeyboardNavigation) {
-        const handleKeyDown = (event: KeyboardEvent) => {
-          // Skip to main content
-          if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-            const skipLink = document.querySelector('[href="#main-content"]') as HTMLAnchorElement;
-            if (skipLink) {
-              skipLink.focus();
-              event.preventDefault();
-            }
+    // Add keyboard navigation support
+    const addKeyboardNavigation = () => {
+      document.addEventListener('keydown', (e) => {
+        // Skip to main content with Alt + M
+        if (e.altKey && e.key === 'm') {
+          e.preventDefault();
+          const mainContent = document.getElementById('main-content');
+          if (mainContent) {
+            mainContent.focus();
+            mainContent.scrollIntoView({ behavior: 'smooth' });
           }
-        };
-
-        document.addEventListener('keydown', handleKeyDown);
-        return () => document.removeEventListener('keydown', handleKeyDown);
-      }
-    }
-  }, [enableKeyboardNavigation]);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Screen reader enhancements
-      if (enableScreenReader) {
-        // Add ARIA landmarks
-        const main = document.querySelector('main');
-        if (main && !main.getAttribute('role')) {
-          main.setAttribute('role', 'main');
         }
 
-        // Add skip links
-        const skipLink = document.createElement('a');
-        skipLink.href = '#main-content';
-        skipLink.textContent = 'Skip to main content';
-        skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-        document.body.insertBefore(skipLink, document.body.firstChild);
-      }
-    }
-  }, [enableScreenReader]);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // High contrast mode
-      if (enableHighContrast) {
-        const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-        setIsHighContrast(mediaQuery.matches);
-
-        const handleChange = (e: MediaQueryListEvent) => {
-          setIsHighContrast(e.matches);
-        };
-
-        mediaQuery.addEventListener('change', handleChange);
-        return () => mediaQuery.removeEventListener('change', handleChange);
-      }
-    }
-  }, [enableHighContrast]);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Focus management
-      if (enableFocusManagement) {
-        // Trap focus in modals
-        const handleFocusTrap = (event: FocusEvent) => {
-          const modal = document.querySelector('[role="dialog"]');
-          if (modal && !modal.contains(event.target as Node)) {
-            const focusableElements = modal.querySelectorAll(
-              'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-            );
-            if (focusableElements.length > 0) {
-              (focusableElements[0] as HTMLElement).focus();
+        // Skip to navigation with Alt + N
+        if (e.altKey && e.key === 'n') {
+          e.preventDefault();
+          const navigation = document.querySelector('nav');
+          if (navigation) {
+            const firstLink = navigation.querySelector('a') as HTMLElement;
+            if (firstLink) {
+              firstLink.focus();
             }
           }
-        };
+        }
+      });
+    };
 
-        document.addEventListener('focusin', handleFocusTrap);
-        return () => document.removeEventListener('focusin', handleFocusTrap);
-      }
-    }
-  }, [enableFocusManagement]);
+    // Add focus indicators
+    const addFocusIndicators = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        *:focus {
+          outline: 2px solid #8b5cf6 !important;
+          outline-offset: 2px !important;
+        }
+        
+        .focus-visible {
+          outline: 2px solid #8b5cf6 !important;
+          outline-offset: 2px !important;
+        }
+      `;
+      document.head.appendChild(style);
+    };
 
-  return (
-    <div className={isHighContrast ? 'high-contrast' : ''}>
-      {children}
-    </div>
-  );
+    // Add ARIA labels to interactive elements
+    const addAriaLabels = () => {
+      const buttons = document.querySelectorAll('button:not([aria-label])');
+      buttons.forEach(button => {
+        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
+          button.setAttribute('aria-label', 'Button');
+        }
+      });
+
+      const links = document.querySelectorAll('a:not([aria-label])');
+      links.forEach(link => {
+        if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
+          link.setAttribute('aria-label', 'Link');
+        }
+      });
+    };
+
+    // Add skip links
+    const addSkipLinks = () => {
+      const skipLinks = document.createElement('div');
+      skipLinks.innerHTML = `
+        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
+          Skip to main content
+        </a>
+        <a href="#navigation" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-48 bg-purple-600 text-white px-4 py-2 rounded-lg z-50">
+          Skip to navigation
+        </a>
+      `;
+      document.body.insertBefore(skipLinks, document.body.firstChild);
+    };
+
+    // Initialize accessibility enhancements
+    addKeyboardNavigation();
+    addFocusIndicators();
+    addAriaLabels();
+    addSkipLinks();
+
+    // Cleanup
+    return () => {
+      // Cleanup if needed
+    };
+  }, []);
+
+  return null;
 };
 
 export default AccessibilityEnhancer;

@@ -1,102 +1,151 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { exec } = require('child_process');
-const util = require('util');
-const execPromise = util.promisify(exec);
 
-console.log('Starting comprehensive error fixes...\n');
-
-// List of problematic test files that should be skipped/renamed
-const problematicTestFiles = [
-  '__tests__/performance.test.js',
-  '__tests__/profile-page.test.tsx',
-  '__tests__/signup-auto-login.test.tsx',
-  '__tests__/signup.test.tsx',
-  '__tests__/smoke.test.ts',
-  '__tests__/smoke.test.tsx',
-  '__tests__/utils.test.ts'
-];
-
-// Skip problematic test files by renaming them
-for (const file of problematicTestFiles) {
-  const fullPath = path.join(__dirname, file);
-  const skipPath = fullPath + '.skip';
-  if (fs.existsSync(fullPath) && !fs.existsSync(skipPath)) {
-    try {
-      fs.renameSync(fullPath, skipPath);
-      console.log(`✓ Skipped ${file}`);
-    } catch (e) {
-      console.log(`  (${file} already handled or doesn't exist)`);
-    }
-  }
-}
-
-// Fix merge conflicts in all files
-async function fixMergeConflicts() {
-  console.log('\nFixing merge conflicts...');
+// Function to fix specific issues in TSX files
+function fixTSXFile(filePath) {
   try {
-    const { stdout } = await execPromise('grep -rl "^<<<<<<< " --include="*.js" --include="*.jsx" --include="*.ts" --include="*.tsx" --include="*.json" . 2>/dev/null || true');
-    const files = stdout.trim().split('\n').filter(f => f && !f.includes('node_modules'));
-    
-    for (const file of files) {
-      if (!file) continue;
-      try {
-        let content = fs.readFileSync(file, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix unused imports
+    const unusedImports = ['CheckCircle', 'Helmet', 'Navigation', 'Footer'];
+    for (const importName of unusedImports) {
+      if (content.includes(`'${importName}' is defined but never used`) || 
+          (content.includes(importName) && !content.includes(`<${importName}`) && !content.includes(`${importName}.`))) {
         
-        // Remove merge conflict markers
-        const originalLength = content.length;
-        content = content.replace(/^<<<<<<< .*$/gm, '');
-        content = content.replace(/^=======$/gm, '');
-        content = content.replace(/^>>>>>>> .*$/gm, '');
+        // Remove from import statements
+        content = content.replace(new RegExp(`,\\s*${importName}`, 'g'), '');
+        content = content.replace(new RegExp(`${importName},\\s*`, 'g'), '');
+        content = content.replace(new RegExp(`{\\s*${importName}\\s*}`, 'g'), '{}');
+        content = content.replace(new RegExp(`{\\s*${importName}\\s*,`, 'g'), '{');
+        content = content.replace(new RegExp(`,\\s*${importName}\\s*}`, 'g'), '}');
         
-        if (content.length !== originalLength) {
-          fs.writeFileSync(file, content, 'utf8');
-          console.log(`✓ Fixed merge conflicts in ${file}`);
-        }
-      } catch (e) {
-        console.log(`✗ Error fixing ${file}: ${e.message}`);
+        // Clean up empty import statements
+        content = content.replace(/import\s*{\s*}\s*from\s*['"][^'"]+['"];?\s*\n/g, '');
+        content = content.replace(/import\s*{\s*}\s*from\s*['"][^'"]+['"];?\s*/g, '');
+        
+        modified = true;
       }
     }
-  } catch (e) {
-    console.log('No merge conflicts found or error occurred');
-  }
-}
 
-// Fix aggressive.js and similar problematic files by removing duplicates
-const problematicJsFiles = [
-  'aggressive-fix.js',
-  'advanced-app-improvements.js',
-  'advanced-source-fixer.js'
-];
-
-for (const file of problematicJsFiles) {
-  const fullPath = path.join(__dirname, file);
-  if (fs.existsSync(fullPath)) {
-    try {
-      let content = fs.readFileSync(fullPath, 'utf8');
+    // Fix missing variable declarations and syntax errors
+    if (content.includes('Expected an assignment or function call')) {
+      // Look for object literals that should be in arrays
       const lines = content.split('\n');
+      let inComponent = false;
+      let braceCount = 0;
+      let needsDeclaration = false;
+      let currentLine = 0;
       
-      // Remove lines that are duplicated/concatenated code
-      if (lines.some(line => line.length > 5000)) {
-        // This file has concatenated code, skip it
-        fs.renameSync(fullPath, fullPath + '.broken');
-        console.log(`✓ Renamed problematic ${file} to .broken`);
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        if (line.includes('const') && line.includes('= () => {')) {
+          inComponent = true;
+          braceCount = 1;
+          currentLine = i;
+          continue;
+        }
+        
+        if (inComponent) {
+          if (line.includes('{')) braceCount++;
+          if (line.includes('}')) braceCount--;
+          
+          // Check for object literals without proper declaration
+          if (line.trim().startsWith('{') && !line.includes('const') && !line.includes('let') && !line.includes('var') && !line.includes('=')) {
+            needsDeclaration = true;
+            break;
+          }
+          
+          if (braceCount === 0) {
+            inComponent = false;
+          }
+        }
       }
-    } catch (e) {
-      console.log(`  (${file} already handled)`);
+      
+      if (needsDeclaration) {
+        // Add proper variable declaration
+        const componentMatch = content.match(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{/);
+        if (componentMatch) {
+          const componentName = componentMatch[1];
+          content = content.replace(
+            new RegExp(`const\\s+${componentName}\\s*=\\s*\\(\\)\\s*=>\\s*{\\s*\\n\\s*{`),
+            `const ${componentName} = () => {\n  const features = [\n    {`
+          );
+          modified = true;
+        }
+      }
     }
+
+    // Fix missing semicolons and brackets
+    content = content.replace(/\s*]\s*\n\s*{/g, '  ];\n  const services = [\n    {');
+    content = content.replace(/\s*]\s*\n\s*'[^']*',/g, '  ];\n  const standards = [\n    \'');
+    content = content.replace(/\s*]\s*\n\s*{\s*icon:/g, '  ];\n  const benefits = [\n    {\n      icon:');
+
+    // Fix parsing errors with semicolons
+    content = content.replace(/(\w+)\s*\n\s*{/g, '$1;\n  const services = [\n    {');
+    content = content.replace(/(\w+)\s*\n\s*'[^']*',/g, '$1;\n  const standards = [\n    \'');
+
+    // Fix merge conflict markers
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+
+    // Fix missing closing brackets and semicolons
+    if (content.includes('const features = [') && !content.includes('];')) {
+      content = content.replace(/(\s*}\s*)\n\s*const services = \[/, '$1\n  ];\n  const services = [');
+    }
+
+    // Fix unused variables
+    if (content.includes('is assigned a value but never used')) {
+      // Add usage of the variable or remove it
+      if (content.includes('const features = [')) {
+        // Add a simple usage
+        content = content.replace(
+          /const features = \[[\s\S]*?\];/,
+          (match) => match + '\n  // Features array defined'
+        );
+      }
+    }
+
+    // Clean up empty lines and fix formatting
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+    content = content.replace(/{\s*\n\s*}/g, '{}');
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Run the merge conflict fixes
-fixMergeConflicts().then(() => {
-  console.log('\n✅ Comprehensive fixes completed!');
-  console.log('\nNext steps:');
-  console.log('1. Install dependencies: npm install --legacy-peer-deps');
-  console.log('2. Run lint with auto-fix: npm run lint:fix');
-  console.log('3. Run type check: npm run type-check');
-}).catch(err => {
-  console.log('Error during fixes:', err);
-});
+// Function to recursively find and fix TSX files
+function fixAllTSXFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      fixedCount += fixAllTSXFiles(filePath);
+    } else if (file.endsWith('.tsx')) {
+      if (fixTSXFile(filePath)) {
+        fixedCount++;
+      }
+    }
+  }
+  
+  return fixedCount;
+}
+
+// Run the fix
+console.log('Starting comprehensive fix of TSX files...');
+const fixedCount = fixAllTSXFiles('./app');
+console.log(`Fixed ${fixedCount} files.`);

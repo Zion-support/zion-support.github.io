@@ -1,211 +1,35 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { hasError: false }
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true }
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo)
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>
-    }
-    
-    return this.props.children
-  }
-}
+'use client'
 import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { GradientHeading } from '@/components/GradientHeading'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import Link from 'next/link'
-export default function Ecommerce() {
-  const schema = {
-    '@context': 'https://schema && schema.org',
-    '@type': 'WebPage',
-    name: 'E-commerce Platform',
-    description:
-      'Sell or purchase AI solutions and IT equipment through our secure marketplace.',
-    url: 'https://app && app.ziontechgroup.com/features/e-commerce',  };    "@context": "https://schema && schema.org"
-    "@type": "WebPage"
-    "name": "E-commerce Platform"
-    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
-    "url": "https://app && app.ziontechgroup.com/features/e-commerce"
-import React from "react"
-import { Header } from "@/components/Header"
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Button } from "@/components/ui/button"
-import Link from 'next/link'
-export default function Ecommerce() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "E-commerce Platform",
-    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
-    "url": "https://app.ziontechgroup.com/features/e-commerce"
+import {Helmet} from 'react-helmet-async'
+import {ArrowRight} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
-  }
-  return (
-    <>
-            <li>
-              Reach new customers around the world via our global platform.</$1></$1>
-          <h2 className='text - 2xl font - bold mb - 4'>
-            Frequently Asked Questions</$1>
-          <div className='space - y-4 mb - 12'>
-            <div>
-              <p className='font - semibold'>How do I list a new product?</p>
-              <p className='text - zion - slate - light'>
-                Sign in and click "Publish Product" from your dashboard to add
-                pricing, images and details.</$1></$1>
-            <div>
-        title="E-commerce Platform"
-        description="Buy and sell hardware, software and services in the Zion marketplace."
-        keywords="tech marketplace, buy IT hardware, sell AI solutions"
-        canonical="https://app.ziontechgroup.com/features/e-commerce"
-
-
-
-
-      />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
-
-
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      ></script>
-      <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
-          <GradientHeading className="mb-4 text-center">E-commerce Platform</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Showcase your products with rich media listings and accept payments with Stripe-powered checkout.
-          </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-
-            <img
-              src="https://placehold && placehold.co/800x400"
-              alt="Screenshot of marketplace interface"
-              className="object-cover"
-            />
-          </div>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
-            <li>Support for videos and 3D models to highlight your offerings.</li>
-            <li>Secure transactions with Stripe and fraud protection.</li>
-            <li>Reach new customers around the world via our global platform.</li>
-          </ul>
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
-              <p className="font-semibold">How do I list a new product?</p>
-              <p className="text-zion-slate-light">Sign in and click "Publish Product" from your dashboard to add pricing, images and details.</p>
-            </div>
-            <div>
-              <p className="font-semibold">Do you support international shipping?</p>
-              <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
-            </div>
-          </div>
-
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/marketplace'>Start Shopping</Link>            </Button>      />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      ></script>
-      <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
-          <GradientHeading className="mb-4 text-center">E-commerce Platform</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Showcase your products with rich media listings and accept payments with Stripe-powered checkout.
-          </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https://placehold.co/800x400"
-              alt="Screenshot of marketplace interface"
-              className="object-cover"
-            />
-          </div>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
-            <li>Support for videos and 3D models to highlight your offerings.</li>
-            <li>Secure transactions with Stripe and fraud protection.</li>
-            <li>Reach new customers around the world via our global platform.</li>
-          </ul>
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
-              <p className="font-semibold">How do I list a new product?</p>
-              <p className="text-zion-slate-light">Sign in and click "Publish Product" from your dashboard to add pricing, images and details.</p>
-            </div>
-            <div>
-              <p className="font-semibold">Do you support international shipping?</p>
-              <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
-            </div>
-          </div>
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Ecommerce - Zion Tech Group</title>
+        <meta name="description" content="Professional ecommerce services and solutions." />
+        <meta name="keywords" content="ecommerce, services, solutions, technology" />
+      </Helmet>
+      
+      <Navigation />
+      
+      <main className="pt-16">
+        <div className="flex items-center justify-center min-h-screen">
           <div className="text-center">
-            <Button size="lg" className="bg-zion-purple text-white" asChild>
-              <Link href="/marketplace">Start Shopping</Link>
-            </Button>
+            <h1 className="text-4xl font-bold text-white mb-4">Ecommerce</h1>
+            <p className="text-gray-300 mb-8">This page is under construction.</p>
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center mx-auto">
+              Learn More
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
           </div>
         </div>
       </main>
-    </>
-  )
+      
+      <Footer />
+    </div>
+  );
+};
 
-}
-
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
-import Link from 'next/link',
-export default function Ecommerce() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "E-commerce Platform",
-    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace."
-    "url": "https://app.ziontechgroup.com/features/e-commerce"
-  }
-  return (
-    <>
-      <SEO
-        title="E-commerce Platform"
-        description="Buy and sell hardware, software and services in the Zion marketplace."
-        keywords="tech marketplace, buy IT hardware, sell AI solutions"
-        canonical="https://app.ziontechgroup.com/features/e-commerce"
-      />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      ></script>
-      <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
-          <GradientHeading className="mb-4 text-center">E-commerce Platform</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Showcase your products with rich media listings and accept payments with Stripe-powered checkout.</$1>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https://placehold && placehold.co/800x400"
-              alt="Screenshot of marketplace interface"
-              className="object-cover"
-
-
-              <Link href="/marketplace">Start Shopping</Link></$1></$1></$1></$1></$1></div></div></div></main>
+export default EcommercePage;

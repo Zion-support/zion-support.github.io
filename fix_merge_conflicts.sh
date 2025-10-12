@@ -1,44 +1,46 @@
 #!/bin/bash
 
-# Script to fix merge conflicts in the codebase
-echo "Starting merge conflict resolution..."
-
 # Find all files with merge conflicts
-files_with_conflicts=$(grep -r "<<<<<<< HEAD" app/ --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" -l)
+<<<<<<< HEAD
+files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | xargs grep -l "<<<<<<< HEAD")
 
-echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
-
-# Function to fix merge conflicts in a file
-fix_merge_conflicts() {
-    local file="$1"
+for file in $files; do
     echo "Fixing merge conflicts in: $file"
     
     # Create a backup
     cp "$file" "$file.backup"
-    
-    # Use git to resolve conflicts by taking the HEAD version
-    # This is a simple approach - in a real scenario you'd want more sophisticated conflict resolution
-    sed -i '/<<<<<<< HEAD/,/>>>>>>> origin\/main/d' "$file"
-    sed -i '/<<<<<<< HEAD/,/>>>>>>> main/d' "$file"
-    sed -i '/=======/d' "$file"
-    
-    # Clean up any remaining conflict markers
-    sed -i '/^<<<<<<< /d' "$file"
-    sed -i '/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
-    
-    # Remove any syntax errors that might have been introduced
-    sed -i 's/,,/,/g' "$file"
-    sed -i 's/return(\([^)]*\))/return (\1)/g' "$file"
-    sed -i 's/return(<\([^>]*\)>)/return <\1>/g' "$file"
-}
+=======
+files_with_conflicts=$(find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
-# Fix each file
+echo "Found files with merge conflicts:"
+echo "$files_with_conflicts"
+
+# Process each file
 for file in $files_with_conflicts; do
-    if [ -f "$file" ]; then
-        fix_merge_conflicts "$file"
-    fi
+    echo "Processing: $file"
+    
+    # Create a backup
+    cp "$file" "$file.backup"
+    
+    # Remove merge conflict markers and keep HEAD version
+    # This is a simple approach - remove everything between ======= and >>>>>>> markers
+    # and remove the <<<<<<< HEAD line
+    sed -i '/^<<<<<<< HEAD/d' "$file"
+    sed -i '/^=======/,/^>>>>>>>/d' "$file"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460
+    
+    # Remove merge conflict markers and keep HEAD version
+    awk '
+    /^<<<<<<< HEAD/ { in_head = 1; next }
+    /^=======/ { in_head = 0; in_other = 1; next }
+    /^>>>>>>> / { in_other = 0; next }
+    in_head { print }
+    !in_head && !in_other { print }
+    ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
 done
 
-echo "Merge conflict resolution completed!"
-echo "Please review the changes and test the application."
+<<<<<<< HEAD
+echo "Merge conflicts fixed in all files"
+=======
+echo "Merge conflicts fixed!"
+>>>>>>> cursor/fix-errors-and-merge-to-main-2460

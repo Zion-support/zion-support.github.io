@@ -1,91 +1,120 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Users, CheckCircle, Award, TrendingUp } from 'lucide-react';
 
-const ContentStatistics: React.FC = () => {
-  const [counters, setCounters] = useState({
-    clients: 0,
-    projects: 0,
-    years: 0,
-    satisfaction: 0
-  });
+import { useState, useEffect } from 'react';
 
-  const stats = [
+interface StatItem {
+  id: string;
+  value: number;
+  label: string;
+  icon: React.ComponentType<{ className?: string }>;
+  suffix?: string;
+  prefix?: string;
+}
+
+interface ContentStatisticsProps {
+  stats?: StatItem[];
+  animationDuration?: number;
+  className?: string;
+}
+
+const ContentStatistics: React.FC<ContentStatisticsProps> = ({
+  stats = [
     {
+      id: 'users',
+      value: 1200,
+      label: 'Active Users',
       icon: Users,
-      label: 'Happy Clients',
-      value: 200,
       suffix: '+'
     },
     {
-      icon: CheckCircle,
-      label: 'Projects Completed',
-      value: 500,
-      suffix: '+'
-    },
-    {
+      id: 'projects',
+      value: 99.8,
+      label: 'Success Rate',
       icon: Award,
-      label: 'Years Experience',
-      value: 10,
-      suffix: '+'
+      suffix: '%'
     },
     {
-      icon: TrendingUp,
-      label: 'Client Satisfaction',
-      value: 99,
+      id: 'uptime',
+      value: 99.9,
+      label: 'Uptime',
+      icon: CheckCircle,
+      suffix: '%'
+    },
+    {
+      id: 'performance',
+      value: 300,
+      label: 'Performance Boost',
+      icon: Zap,
       suffix: '%'
     }
-  ];
+  ],
+  animationDuration = 2000,
+  className = ''
+}) => {
+  const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
 
   useEffect(() => {
-    const animateCounters = () => {
-      stats.forEach((stat, index) => {
-        let current = 0;
-        const increment = stat.value / 50;
-        const timer = setInterval(() => {
-          current += increment;
-          if (current >= stat.value) {
-            current = stat.value;
-            clearInterval(timer);
-          }
-          setCounters(prev => ({
-            ...prev,
-            [Object.keys(prev)[index]]: Math.floor(current)
-          }));
-        }, 20);
-      });
+    const animateValue = (start: number, end: number, duration: number, key: string) => {
+      const startTime = performance.now();
+
+      const animate = (currentTime: number) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Easing function
+        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+        const currentValue = start + (end - start) * easeOutCubic;
+
+        setAnimatedValues(prev => ({
+          ...prev,
+          [key]: currentValue
+        }));
+
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        }
+      };
+
+      requestAnimationFrame(animate);
     };
 
-    const timer = setTimeout(animateCounters, 500);
-    return () => clearTimeout(timer);
-  }, []);
+    stats.forEach(stat => {
+      animateValue(0, stat.value, animationDuration, stat.id);
+    });
+  }, [stats, animationDuration]);
 
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Our Impact
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Numbers that speak to our commitment to excellence and client success.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto mb-4">
-                <stat.icon className="text-white" size={32} />
+    <div className={`grid grid-cols-2 lg:grid-cols-4 gap-6 ${className}`}>
+      {stats.map((stat) => {
+        const animatedValue = animatedValues[stat.id] || 0;
+        const IconComponent = stat.icon;
+
+        return (
+    <div
+            key={stat.id}
+            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
+          >
+            <div className="flex justify-center mb-4">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
+                <IconComponent className="w-6 h-6 text-white" />
               </div>
-              <div className="text-4xl font-bold text-white mb-2">
-                {counters[Object.keys(counters)[index] as keyof typeof counters]}{stat.suffix}
-              </div>
-              <div className="text-gray-300 font-medium">{stat.label}</div>
             </div>
-          ))}
-        </div>
-      </div>
+
+            <div className="text-3xl font-bold text-white mb-2">
+              {stat.prefix}
+              {stat.suffix === '%'
+                ? animatedValue.toFixed(1)
+                : Math.floor(animatedValue).toLocaleString()
+              }
+              {stat.suffix}
+            </div>
+
+            <div className="text-gray-300 text-sm">
+              {stat.label}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 };

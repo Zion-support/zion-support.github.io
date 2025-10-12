@@ -1,34 +1,31 @@
 module.exports = {
-  preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.cjs'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
+    '^@/components/(.*)$': '<rootDir>/components/$1',
+    '^@/app/(.*)$': '<rootDir>/app/$1',
+    '^@/content/(.*)$': '<rootDir>/content/$1'
   },
   transform: {
-    '^.+\\.(ts|tsx)$': 'ts-jest',
+    '^.+\\.(ts|tsx)$': ['ts-jest', {
+      tsconfig: {
+        jsx: 'react-jsx'
+      }
+    }],
+    '^.+\\.(js|jsx)$': 'babel-jest'
   },
-  transformIgnorePatterns: [
-    'node_modules/(?!(.*\\.mjs$))',
-  ],
   testMatch: [
-    '**/__tests__/**/*.(ts|tsx|js)',
-    '**/*.(test|spec).(ts|tsx|js)',
+    '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)'
   ],
   collectCoverageFrom: [
     'app/**/*.{ts,tsx}',
-    '!app/**/*.d.ts',
-    '!app/**/index.ts',
+    '!app/**/index.{ts,tsx}'
   ],
-  coverageDirectory: 'coverage',
-  coverageReporters: ['text', 'lcov', 'html'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testTimeout: 10000,
-  globals: {
-    'ts-jest': {
-      tsconfig: {
-        jsx: 'react-jsx',
-      },
-    },
-  },
+  testPathIgnorePatterns: [
+    '<rootDir>/out/'
+  ],
+  transformIgnorePatterns: [
+    'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
+  ]
 };

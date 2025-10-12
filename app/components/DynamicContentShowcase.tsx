@@ -1,116 +1,177 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
 
-const DynamicContentShowcase: React.FC = () => {
-  const [currentFeature, setCurrentFeature] = useState(0);
+import { useState, useEffect } from 'react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
-  const features = [
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  features: string[];
+  price?: string;
+  category: string;
+}
+
+interface DynamicContentShowcaseProps {
+  items?: ContentItem[];
+  autoPlay?: boolean;
+  autoPlayInterval?: number;
+  className?: string;
+}
+
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
+  items = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced machine learning algorithms that adapt and learn from your data',
-      benefits: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Deep Learning']
+      id: 'ai-content',
+      title: 'AI Content Generation',
+      description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
+      icon: Zap,
+      features: ['Automated content creation', 'SEO optimization', 'Multi-language support'],
+      price: 'Starting at $99/month',
+      category: 'AI Services'
     },
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment with local support and compliance',
-      benefits: ['Multi-region Deployment', 'Local Support', 'Compliance Ready', 'Scalable Infrastructure']
+      id: 'cloud-services',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable, secure, and reliable cloud infrastructure solutions for your business.',
+      icon: Cloud,
+      features: ['Scalable infrastructure', '99.9% uptime', 'Global CDN'],
+      price: 'Starting at $199/month',
+      category: 'IT Services'
     },
     {
-      icon: Star,
-      title: 'Premium Quality',
-      description: 'Enterprise-grade solutions with 99.9% uptime guarantee',
-      benefits: ['High Availability', 'Enterprise Security', '24/7 Support', 'SLA Guarantee']
+      id: 'cybersecurity',
+      title: 'Cybersecurity Solutions',
+      description: 'Protect your business with our comprehensive cybersecurity services and monitoring.',
+      icon: Shield,
+      features: ['Threat detection', 'Security audits', 'Compliance management'],
+      price: 'Starting at $499/month',
+      category: 'Security'
     }
-  ];
+  ],
+  autoPlay = true,
+  autoPlayInterval = 5000,
+  className = ''
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(autoPlay);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, [features.length]);
+    if (!isPlaying) return;
+
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % items.length);
+    }, autoPlayInterval);
+
+    return () => clearInterval(interval);
+  }, [isPlaying, autoPlayInterval, items.length]);
+
+  const nextItem = () => {
+    setCurrentIndex((prev) => (prev + 1) % items.length);
+  };
+
+  const prevItem = () => {
+    setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
+  };
+
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const currentItem = items[currentIndex];
+  const IconComponent = currentItem.icon;
 
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Dynamic Content Showcase
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience our cutting-edge solutions through interactive demonstrations and real-world examples.
-          </p>
+    <div className={`relative ${className}`}>
+      {/* Controls */}
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center gap-4">
+          <button
+            onClick={prevItem}
+            className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+            aria-label="Previous item"
+          >
+            <ChevronLeft className="w-5 h-5 text-white" />
+          </button>
+
+          <button
+            onClick={togglePlayPause}
+            className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+            aria-label={isPlaying ? 'Pause' : 'Play'}
+          >
+            {isPlaying ? (
+              <Pause className="w-5 h-5 text-white" />
+            ) : (
+              <Play className="w-5 h-5 text-white" />
+            )}
+          </button>
+
+          <button
+            onClick={nextItem}
+            className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+            aria-label="Next item"
+          >
+            <ChevronRight className="w-5 h-5 text-white" />
+          </button>
         </div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className={`p-6 rounded-xl transition-all duration-500 ${
-                  index === currentFeature
-                    ? 'bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-400/50'
-                    : 'bg-white/5 border border-white/10'
-                }`}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className={`flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center ${
-                    index === currentFeature
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600'
-                      : 'bg-white/10'
-                  }`}>
-                    <feature.icon className={`${index === currentFeature ? 'text-white' : 'text-gray-400'}`} size={24} />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className={`text-xl font-semibold mb-2 ${
-                      index === currentFeature ? 'text-white' : 'text-gray-300'
-                    }`}>
-                      {feature.title}
-                    </h3>
-                    <p className={`mb-4 ${
-                      index === currentFeature ? 'text-gray-200' : 'text-gray-400'
-                    }`}>
-                      {feature.description}
-                    </p>
-                    <div className="grid grid-cols-2 gap-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex items-center text-sm">
-                          <CheckCircle className={`mr-2 flex-shrink-0 ${
-                            index === currentFeature ? 'text-green-400' : 'text-gray-500'
-                          }`} size={16} />
-                          <span className={index === currentFeature ? 'text-gray-300' : 'text-gray-500'}>
-                            {benefit}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+
+        <div className="flex items-center gap-2">
+          {items.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                index === currentIndex ? 'bg-cyan-400' : 'bg-white/30'
+              }`}
+              aria-label={`Go to item ${index + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Content Card */}
+      <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/30 transition-all duration-300">
+        <div className="flex items-start gap-6">
+          <div className="flex-shrink-0">
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
+              <IconComponent className="w-8 h-8 text-white" />
+            </div>
           </div>
-          
-          <div className="relative">
-            <div className="bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 text-center">
-              <div className="w-32 h-32 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <Brain className="text-white" size={64} />
+
+          <div className="flex-1">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-sm text-cyan-400 font-medium">{currentItem.category}</span>
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                ))}
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">
-                {features[currentFeature].title}
-              </h3>
-              <p className="text-gray-200 mb-6">
-                {features[currentFeature].description}
-              </p>
-              <a
-                href="/contact"
-                className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
-              >
+            </div>
+
+            <h3 className="text-2xl font-bold text-white mb-3">{currentItem.title}</h3>
+            <p className="text-gray-300 mb-4">{currentItem.description}</p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6">
+              {currentItem.features.map((feature, index) => (
+                <div key={index} className="flex items-center text-sm text-gray-300">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                  <span>{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex items-center justify-between">
+              {currentItem.price && (
+                <div className="text-cyan-400 font-semibold text-lg">
+                  {currentItem.price}
+                </div>
+              )}
+
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center gap-2">
                 Learn More
-                <ArrowRight className="ml-2" size={20} />
-              </a>
+                <ArrowRight className="w-4 h-4" />
+              </button>
             </div>
           </div>
         </div>

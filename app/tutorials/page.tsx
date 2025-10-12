@@ -1,162 +1,131 @@
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Play, Clock, User, ArrowRight, BookOpen } from 'lucide-react';
 
 const TutorialsPage: React.FC = () => {
-  const tutorials = [
-    {
-      id: 1,
-      title: 'Getting Started with AI',
-      description: 'Learn the fundamentals of artificial intelligence and machine learning',
-      duration: '45 min',
-      level: 'Beginner',
-      category: 'AI & ML',
-      thumbnail: '/api/placeholder/400/225'
-    },
-    {
-      id: 2,
-      title: 'Cloud Migration Best Practices',
-      description: 'Step-by-step guide to migrating your infrastructure to the cloud',
-      duration: '60 min',
-      level: 'Intermediate',
-      category: 'Cloud Computing',
-      thumbnail: '/api/placeholder/400/225'
-    },
-    {
-      id: 3,
-      title: 'Cybersecurity Fundamentals',
-      description: 'Essential security practices to protect your digital assets',
-      duration: '30 min',
-      level: 'Beginner',
-      category: 'Security',
-      thumbnail: '/api/placeholder/400/225'
-    },
-    {
-      id: 4,
-      title: 'Advanced Data Analytics',
-      description: 'Deep dive into data analysis techniques and visualization',
-      duration: '90 min',
-      level: 'Advanced',
-      category: 'Data Science',
-      thumbnail: '/api/placeholder/400/225'
-    }
-  ];
-
-  const categories = ['All', 'AI & ML', 'Cloud Computing', 'Security', 'Data Science'];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+    <>
+      <Helmet>
+        <title>Tutorials - Zion Tech Group</title>
+        <meta name="description" content="Learn AI and IT solutions with our comprehensive tutorials and guides." />
+        <meta name="keywords" content="tutorials, AI tutorials, IT tutorials, learning, guides, education" />
+      </Helmet>
       
-      <main className="pt-20">
-        {/* Hero Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
-              Tutorials & Learning
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Tutorials & Learning Center
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Master the latest technologies with our comprehensive tutorials and learning resources.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Master AI and IT technologies with our comprehensive tutorials, guides, and hands-on learning resources.
             </p>
           </div>
-        </section>
 
-        {/* Category Filter */}
-        <section className="py-10 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category}
-                  className="px-6 py-2 rounded-full font-semibold transition-all duration-300 bg-white/10 text-gray-300 hover:bg-white/20"
-                >
-                  {category}
-                </button>
-              ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* AI Tutorials */}
+            <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-white mb-4">AI Tutorials</h3>
+              <p className="text-gray-300 mb-4">
+                Learn artificial intelligence from basics to advanced implementations.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>• Machine Learning Fundamentals</li>
+                <li>• Deep Learning with TensorFlow</li>
+                <li>• Natural Language Processing</li>
+                <li>• Computer Vision Applications</li>
+              </ul>
+            </div>
+
+            {/* IT Infrastructure */}
+            <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-white mb-4">IT Infrastructure</h3>
+              <p className="text-gray-300 mb-4">
+                Master cloud computing, DevOps, and system administration.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>• Cloud Architecture Design</li>
+                <li>• Container Orchestration</li>
+                <li>• CI/CD Pipeline Setup</li>
+                <li>• Security Best Practices</li>
+              </ul>
+            </div>
+
+            {/* Web Development */}
+            <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 backdrop-blur-sm border border-green-500/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-white mb-4">Web Development</h3>
+              <p className="text-gray-300 mb-4">
+                Build modern, scalable web applications with cutting-edge technologies.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>• React & Next.js Mastery</li>
+                <li>• Full-Stack Development</li>
+                <li>• API Design & Integration</li>
+                <li>• Performance Optimization</li>
+              </ul>
+            </div>
+
+            {/* Data Science */}
+            <div className="bg-gradient-to-br from-orange-900/50 to-red-900/50 backdrop-blur-sm border border-orange-500/20 rounded-xl p-6 hover:border-orange-400/40 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-white mb-4">Data Science</h3>
+              <p className="text-gray-300 mb-4">
+                Extract insights from data using advanced analytics and visualization.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>• Data Analysis with Python</li>
+                <li>• Statistical Modeling</li>
+                <li>• Data Visualization</li>
+                <li>• Big Data Processing</li>
+              </ul>
+            </div>
+
+            {/* Cybersecurity */}
+            <div className="bg-gradient-to-br from-red-900/50 to-pink-900/50 backdrop-blur-sm border border-red-500/20 rounded-xl p-6 hover:border-red-400/40 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
+              <p className="text-gray-300 mb-4">
+                Protect systems and data with comprehensive security strategies.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>• Threat Detection & Response</li>
+                <li>• Penetration Testing</li>
+                <li>• Security Architecture</li>
+                <li>• Compliance & Governance</li>
+              </ul>
+            </div>
+
+            {/* Mobile Development */}
+            <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 hover:border-indigo-400/40 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-white mb-4">Mobile Development</h3>
+              <p className="text-gray-300 mb-4">
+                Create cross-platform mobile applications with modern frameworks.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-400">
+                <li>• React Native Development</li>
+                <li>• Flutter Applications</li>
+                <li>• Native iOS & Android</li>
+                <li>• Mobile UI/UX Design</li>
+              </ul>
             </div>
           </div>
-        </section>
 
-        {/* Tutorials Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {tutorials.map((tutorial) => (
-                <div
-                  key={tutorial.id}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all duration-300 group"
-                >
-                  <div className="relative">
-                    <div className="w-full h-48 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">
-                      <Play className="text-white w-16 h-16" />
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <span className="bg-black/50 text-white text-xs px-2 py-1 rounded">
-                        {tutorial.level}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center text-sm text-gray-400 mb-2">
-                      <BookOpen className="w-4 h-4 mr-1" />
-                      {tutorial.category}
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{tutorial.title}</h3>
-                    <p className="text-gray-300 mb-4">{tutorial.description}</p>
-                    <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
-                        {tutorial.duration}
-                      </div>
-                      <div className="flex items-center">
-                        <User className="w-4 h-4 mr-1" />
-                        {tutorial.level}
-                      </div>
-                    </div>
-                    <a
-                      href={`/tutorials/${tutorial.id}`}
-                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:translate-y-1"
-                    >
-                      Start Learning
-                      <ArrowRight className="ml-2" size={16} />
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Learn More?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join our community of learners and stay updated with the latest tutorials and resources.
+          <div className="text-center mt-16">
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to Start Learning?</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of developers and IT professionals who are advancing their careers with our tutorials.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Join Community
-                <ArrowRight className="ml-2" size={20} />
-              </a>
-              <a
-                href="/services"
-                className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
-                View Our Services
-              </a>
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+                Browse All Tutorials
+              </button>
+              <button className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                Get Personalized Recommendations
+              </button>
             </div>
           </div>
-        </section>
-      </main>
-      
-      <Footer />
-    </div>
+        </div>
+      </div>
+    </>
   );
 };
 

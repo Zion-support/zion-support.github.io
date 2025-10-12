@@ -1,4 +1,6 @@
-'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+}) => {
+  return (
+    <div className={`animate-pulse ${className}`}>
+      {Array.from({ length: lines }).map((_, index) => (
+        <div
+          key={index}

@@ -1,140 +1,82 @@
 #!/usr/bin/env node
 
-import fs from 'fs'
-import path from 'path'
-import { glob } from 'glob'
-// Function to fix emoji characters in JSX
-function fixEmojis(content) {
-  const emojiMap = {
-    '🎧': 'headphones',
-    '📈': 'trending-up',
-    '💰': 'dollar-sign',
-    '👥': 'users',
-    '📧': 'Email:',
-    '📍': 'Address:',
-    '🚀': 'rocket',
-    '⚡': 'zap',
-    '🔒': 'lock',
-    '💡': 'lightbulb',
-    '🎯': 'target',
-    '📊': 'bar-chart',
-    '🔧': 'settings',
-    '🌟': 'star',
-    '💼': 'briefcase',
-    '🎨': 'palette',
-    '📱': 'smartphone',
-    '💻': 'laptop',
-    '🌐': 'globe',
-    '🔍': 'search',
-    '📝': 'edit',
-    '✅': 'check',
-    '❌': 'x',
-    '⚠️': 'alert-triangle',
-    'ℹ️': 'info',
-    '🎉': 'party-popper',
-    '🔥': 'flame',
-    '💪': 'muscle',
-    '🎪': 'circus-tent',
-    '🎭': 'theater-masks',
-    '🎨': 'art-palette',
-    '🎵': 'music',
-    '🎬': 'film',
-    '🎮': 'gamepad',
-    '🎲': 'dice',
-    '🎯': 'bullseye',
-    '🎪': 'circus-tent',
-    '🎨': 'palette',
-    '🎵': 'music',
-    '🎬': 'film',
-    '🎮': 'gamepad',
-    '🎲': 'dice',
-    '🎯': 'target',
-    '🎪': 'circus-tent',
-    '🎨': 'palette',
-    '🎵': 'music',
-    '🎬': 'film',
-    '🎮': 'gamepad',
-    '🎲': 'dice',
-    '🎯': 'target'
-  }
-  let fixed = content
-  for (const [emoji, replacement] of Object.entries(emojiMap)) {
-    fixed = fixed.replace(new RegExp(emoji, 'g'), replacement)
-  }
-  return fixed
-}
+const fs = require('fs');
+const path = require('path');
+const glob = require('glob');
 
-// Function to fix common JSX parsing issues
-function fixJSXIssues(content) {
-  let fixed = content
-  // Fix unclosed JSX elements by checking for common patterns
-  // This is a basic fix - more sophisticated parsing would be needed for complex cases
-  
-  // Fix common emoji issues in JSX
-  fixed = fixEmojis(fixed)
-  // Fix common syntax issues
-  fixed = fixed.replace(/\{\s*'([^']*)'\s*\}/g, '"$1"'); // Fix single quotes in JSX expressions
-  fixed = fixed.replace(/\{\s*"([^"]*)"\s*\}/g, '"$1"'); // Normalize quotes
-  
-  return fixed
-}
+// Function to fix common parsing errors in TypeScript files
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-// Function to check and fix JSX structure
-function fixJSXStructure(content) {
-  const lines = content.split('\n')
-  let fixed = content
-  // Count opening and closing div tags
-  const openDivs = (content.match(/</g) || []).length$2 />
-  const closeDivs = (content.match(/<\/div>/g) || []).length
-  if (openDivs > closeDivs) {
-    console.log(`Warning: Found ${openDivs - closeDivs} unclosed div tags`)
-    // This is a basic check - more sophisticated parsing would be needed
-  }
-  
-  return fixed
-}
-
-// Main function to process files
-async function processFiles() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'App.tsx'
-  ]
-  let processedCount = 0
-  let errorCount = 0
-  for (const pattern of patterns) {
-    const files = await glob(pattern, { 
-      ignore: [
-        'node_modules/**',
-        'dist/**',
-        'build/**',
-        '**/*.d.ts',
-        '**/node_modules/**'
-      ]
-    })
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, 'utf8')
-        let fixed = content
-        // Apply fixes
-        fixed = fixJSXIssues(fixed)
-        fixed = fixJSXStructure(fixed)
-        // Only write if content changed
-        if (fixed !== content) {
-          fs.writeFileSync(file, fixed, 'utf8')
-          console.log(`Fixed: ${file}`)
-          processedCount++
-        }
-      } catch (error) {
-        console.error(`Error processing ${file}:`, error.message)
-        errorCount++
-      }
+    // Fix 1: Add missing opening brace for function definitions
+      content = content.replace(/(const \w+Page: React\.FC = \(\) =>)\s*$/, '$1 {');
+      modified = true;
     }
+
+    // Fix 2: Fix malformed object literals that start with just a property
+    const malformedObjectPattern = /(\s+)(\w+):\s*\[([^\]]*)\]\s*,\s*$/gm;
+      // This is a complex fix that needs to be handled more carefully
+      return match;
+    });
+
+    // Fix 3: Fix missing opening braces for object literals
+        return `  ${propName}: [${arrayContent}],`;
+      }
+      return match;
+    });
+
+    // Fix 4: Fix malformed array declarations
+      return `${indent}${propName}: [`;
+    });
+
+    // Fix 5: Fix missing closing braces and brackets
+    const openBraces = (content.match(/\{/g) || []).length;
+    const closeBraces = (content.match(/\}/g) || []).length;
+    const openBrackets = (content.match(/\[/g) || []).length;
+    const closeBrackets = (content.match(/\]/g) || []).length;
+
+      const missingBraces = openBraces - closeBraces;
+      content += '\n' + '}'.repeat(missingBraces);
+      modified = true;
+    }
+
+      const missingBrackets = openBrackets - closeBrackets;
+      content += '\n' + ']'.repeat(missingBrackets);
+      modified = true;
+    }
+
+    // Fix 6: Fix malformed function calls and object destructuring
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*$/gm, 'const $1 = () => {');
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*(\w+):\s*\[/gm, 'const $1 = () => {\n  $2: [');
+
+    // Fix 7: Fix missing semicolons and commas in imports
+    content = content.replace(/import\s+([^;]+);\s*,/g, 'import $1,');
+    content = content.replace(/import\s+([^,]+),\s*\{([^}]+)\}\s*from/g, 'import $1, {$2} from');
+
+    // Fix 8: Fix malformed JSX return statements
+      content = content.replace(/return\s*\(/g, 'return (');
+    }
+
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+
+    return false;
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
-  
-  console.log(`\nProcessed ${processedCount} files with ${errorCount} errors`)
 }
 
-// Run the script
-processFiles().catch(console.error)
+// Find all TypeScript files in the app directory
+const files = glob.sync('app/**/*.tsx', { cwd: __dirname });
+
+console.log(`Found ${files.length} TypeScript files to check...`);
+
+let fixedCount = 0;
+  const fullPath = path.join(__dirname, file);
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed ${fixedCount} files.`);

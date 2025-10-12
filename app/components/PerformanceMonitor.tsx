@@ -1,38 +1,15 @@
 'use client';
 import React, { useEffect } from 'react';
+=======
+import { useEffect } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-1443
 
-interface PerformanceMonitorProps {
-  children: React.ReactNode;
-  enableMonitoring?: boolean;
-  enableReporting?: boolean;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  children,
-  enableMonitoring = true,
-  enableReporting = true
-}) => {
+const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    if (typeof window !== 'undefined' && enableMonitoring) {
-      // Performance monitoring
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'navigation') {
-            const navEntry = entry as PerformanceNavigationTiming;
-            console.log('Navigation Performance:', {
-              domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-              loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-              firstByte: navEntry.responseStart - navEntry.requestStart
-            });
-          }
-        });
-      });
-
-      observer.observe({ entryTypes: ['navigation', 'paint'] });
-
-      // Web Vitals monitoring
-      if (enableReporting) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+    // Monitor Core Web Vitals
+    const monitorCoreWebVitals = () => {
+      if ('web-vitals' in window) {
+import { getCLS, getFID, getFCP, getLCP, getTTFB } 
           getCLS(console.log);
           getFID(console.log);
           getFCP(console.log);
@@ -40,12 +17,53 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           getTTFB(console.log);
         });
       }
+    };
 
-      return () => observer.disconnect();
-    }
-  }, [enableMonitoring, enableReporting]);
+    // Monitor performance metrics
+    const monitorPerformance = () => {
+      if ('performance' in window) {
+        window.addEventListener('load', () => {
+          setTimeout(() => {
+            const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+            const paint = performance.getEntriesByType('paint');
+            
+            console.log('Performance Metrics:', {
+              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+              firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
+              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
+            });
+          }, 0);
+        });
+      }
+    };
 
-  return <>{children}</>;
+    // Monitor memory usage
+    const monitorMemory = () => {
+      if ('memory' in performance) {
+        setInterval(() => {
+          const memory = (performance as any).memory;
+          console.log('Memory Usage:', {
+            used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
+            total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
+            limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
+          });
+        }, 30000); // Check every 30 seconds
+      }
+    };
+
+    // Initialize monitoring
+    monitorCoreWebVitals();
+    monitorPerformance();
+    monitorMemory();
+
+    // Cleanup
+    return () => {
+      // Cleanup if needed
+    };
+  }, []);
+
+  return null;
 };
 
 export default PerformanceMonitor;

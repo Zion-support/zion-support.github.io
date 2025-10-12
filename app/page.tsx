@@ -1,335 +1,124 @@
-'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart } from 'lucide-react';
-
-// Dynamically import heavy components for better performance
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-
-// Preload critical components
-const preloadComponents = () => {
-  if (typeof window !== 'undefined') {
-    // Preload critical components after initial render
-    setTimeout(() => {
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
-  }
-}
-
-// Loading skeleton component
-const ServiceCardSkeleton: React.FC = memo(() => (
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
-    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-  </div>
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
+import React from 'react';
 
 const HomePage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  
-  useEffect(() => {
-    preloadComponents();
-    setIsLoaded(true);
-    // Trigger visibility animation
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    return () => clearTimeout(timer);
-  }, []);
-
-  // Analytics tracking for phone clicks - optimized
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
-      gtag('event', 'phone_click', {
-        event_category: 'engagement',
-        event_label: 'main_phone_number'
-      });
-    }
-  }, []);
-
-  const services = [
-    {
-      icon: Brain,
-      title: 'AI Solutions',
-      description: 'Advanced artificial intelligence solutions to transform your business operations and drive innovation.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      href: '/ai-solutions'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and services to support your business growth and digital transformation.',
-      features: ['Cloud Migration', 'Infrastructure as Code', 'DevOps Automation', 'Multi-Cloud Strategy'],
-      href: '/cloud-services'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and ensure business continuity.',
-      features: ['Threat Detection', 'Security Audits', 'Compliance Management', 'Incident Response'],
-      href: '/cybersecurity'
-    },
-    {
-      icon: Code,
-      title: 'Software Development',
-      description: 'Custom software solutions tailored to your business needs and built with modern technologies.',
-      features: ['Web Applications', 'Mobile Apps', 'API Development', 'Legacy Modernization'],
-      href: '/software-development'
-    },
-    {
-      icon: BarChart,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics and visualization solutions.',
-      features: ['Business Intelligence', 'Data Warehousing', 'Real-time Analytics', 'Custom Dashboards'],
-      href: '/data-analytics'
-    },
-    {
-      icon: Users,
-      title: 'IT Consulting',
-      description: 'Strategic IT consulting services to help you make informed technology decisions and optimize operations.',
-      features: ['Technology Assessment', 'Digital Strategy', 'Process Optimization', 'Change Management'],
-      href: '/it-consulting'
-    }
-  ];
-
-  const stats = [
-    { label: 'Projects Completed', value: '500+', icon: CheckSquare },
-    { label: 'Happy Clients', value: '200+', icon: Users },
-    { label: 'Years Experience', value: '10+', icon: Calendar },
-    { label: 'Team Members', value: '50+', icon: Heart }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO, TechCorp',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%.',
-      rating: 5,
-      avatar: 'SJ'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'CEO, InnovateLabs',
-      content: 'Outstanding cloud migration services. They made the complex process seamless and cost-effective.',
-      rating: 5,
-      avatar: 'MC'
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Director, DataFlow Inc',
-      content: 'Their data analytics platform gave us insights we never had before. Game-changing technology.',
-      rating: 5,
-      avatar: 'ER'
-    }
-  ];
-
-  const handleServiceClick = useCallback((service: any) => {
-    // Track service click for analytics
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'service_click', {
-        service_name: service.title,
-        service_category: 'homepage'
-      });
-    }
-  }, []);
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="pt-20">
+    <>
+      <Helmet>
+        <title>Zion Tech Group - Advanced AI & IT Solutions</title>
+        <meta name="description" content="Zion Tech Group provides cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development." />
+      </Helmet>
+
+      <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
-          <div className="relative max-w-7xl mx-auto">
+        <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
             <div className="text-center">
-              <h1 className={`text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                Welcome to <span className="text-cyan-400">Zion Tech Group</span>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Transform Your Business with
+                <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Advanced AI & IT Solutions
+                </span>
               </h1>
-              <p className={`text-xl text-gray-300 mb-8 max-w-3xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                Leading provider of AI and IT solutions for modern businesses. 
-                Transform your operations with cutting-edge technology and expert guidance.
-              </p>
-              <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-                </a>
-                <a
-                  href="/services"
-                  className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
-                >
-                  Our Services
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Stats Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto mb-4">
-                    <stat.icon className="text-white" size={32} />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Services
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive AI and IT solutions designed to accelerate your business growth and digital transformation.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group cursor-pointer"
-                  onClick={() => handleServiceClick(service)}
-                >
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4 group-hover:scale-110 transition-transform">
-                    <service.icon className="text-white" size={24} />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="text-green-400 mr-2 flex-shrink-0" size={16} />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href={service.href}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mt-4 group-hover:translate-x-1 transition-transform"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-1" size={16} />
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                What Our Clients Say
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't just take our word for it. Here's what our satisfied clients have to say about our services.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="text-yellow-400 fill-current" size={20} />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                      {testimonial.avatar}
-                    </div>
-                    <div>
-                      <div className="text-white font-semibold">{testimonial.name}</div>
-                      <div className="text-gray-400 text-sm">{testimonial.role}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8 md:p-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our AI and IT solutions can accelerate your digital transformation and drive growth.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Leading technology company providing cutting-edge artificial intelligence, cloud infrastructure, 
+                cybersecurity, and custom software development services to businesses worldwide.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  <Phone className="mr-2" size={20} />
-                  Get Free Consultation
+                  Get Started Today
                 </a>
                 <a
-                  href="tel:+13024640950"
-                  className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
-                  onClick={handlePhoneClick}
+                  href="/about"
+                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
                 >
-                  <Phone className="mr-2" size={20} />
-                  Call Now: (302) 464-0950
+                  Learn More
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Lazy-loaded components */}
-        <Suspense fallback={<div className="h-32 bg-white/5 animate-pulse rounded-lg mx-4"></div>}>
-          <ContentPromotionBanner />
-        </Suspense>
-        
-        <Suspense fallback={<div className="h-64 bg-white/5 animate-pulse rounded-lg mx-4"></div>}>
-          <ContentCarousel />
-        </Suspense>
-        
-        <Suspense fallback={<div className="h-48 bg-white/5 animate-pulse rounded-lg mx-4"></div>}>
-          <DynamicContentShowcase />
-        </Suspense>
-        
-        <Suspense fallback={<div className="h-32 bg-white/5 animate-pulse rounded-lg mx-4"></div>}>
-          <ContentStatistics />
-        </Suspense>
-        
-        <Suspense fallback={<div className="h-24 bg-white/5 animate-pulse rounded-lg mx-4"></div>}>
-          <ContentNewsletterSignup />
-        </Suspense>
-      </main>
-      
-      <Footer />
-    </div>
+        {/* Features Section */}
+        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mb-4">
+                  <div className="h-6 w-6 text-white">🧠</div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">AI-Powered Solutions</h3>
+                <p className="text-gray-300">Cutting-edge artificial intelligence to transform your business operations</p>
+              </div>
+              <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg mb-4">
+                  <div className="h-6 w-6 text-white">☁️</div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Cloud Infrastructure</h3>
+                <p className="text-gray-300">Scalable cloud solutions with AWS, Azure, and Google Cloud expertise</p>
+              </div>
+              <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg mb-4">
+                  <div className="h-6 w-6 text-white">🛡️</div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
+                <p className="text-gray-300">Comprehensive security solutions to protect your digital assets</p>
+              </div>
+              <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg mb-4">
+                  <div className="h-6 w-6 text-white">💻</div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Custom Development</h3>
+                <p className="text-gray-300">Tailored software solutions built with modern technologies</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Contact us today to discuss your project and discover how our AI and IT solutions can drive your success.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  Contact Us Now
+                </a>
+                <a
+                  href="tel:+13024640950"
+                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
+                >
+                  Call +1 302 464 0950
+                </a>
+              </div>
+              <div className="mt-8 text-gray-400">
+                <p className="mb-2">📧 Email: kleber@ziontechgroup.com</p>
+                <p className="mb-2">📱 Mobile: +1 302 464 0950</p>
+                <p>📍 Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 
