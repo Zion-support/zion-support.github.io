@@ -78,11 +78,8 @@ export default function AITranslationService() {
         'Priority support',
         'API access',
         'Team collaboration',
-        'Custom terminology'
         'Advanced quality checks',
-        'Priority support',
-        'Custom integrations',
-        'Team collaboration'
+        'Custom integrations'
       ],
       popular: true
     },

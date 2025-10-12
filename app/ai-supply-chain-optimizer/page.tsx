@@ -283,18 +283,6 @@ export default function AISupplyChainOptimizerPage() {
               <div className="grid md:grid-cols-3 gap-8">
                 {testimonials.map((testimonial, index) => (
                   <FuturisticCard key={index} className="p-6">
-
-            {/* Testimonials Section */}
-            <div className="mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center">
-                What Our Clients Say
-              </h2>
-              <p className="text-gray-300 text-center mb-12">
-                Join hundreds of companies optimizing their supply chains
-              </p>
-              <div className="grid md:grid-cols-3 gap-8">
-                {testimonials.map((testimonial, index) => (
-                  <FuturisticCard key={index}>
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <span key={i} className="text-yellow-400">★</span>
@@ -307,7 +295,6 @@ export default function AISupplyChainOptimizerPage() {
                   </FuturisticCard>
                 ))}
               </div>
-            </div>
           </section>
 
           {/* CTA Section */}

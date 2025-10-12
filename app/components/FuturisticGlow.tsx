@@ -1,17 +1,19 @@
-
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
-
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>;
-  );
+interface FuturisticGlowProps {
+  children: React.ReactNode;
+  className?: string;
 }
 
+const FuturisticGlow: React.FC<FuturisticGlowProps> = ({ children, className = '' }) => {
+  return (
+    <div className={`relative ${className}`}>
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-lg blur-xl"></div>
+      <div className="relative z-10">
+        {children}
+      </div>
+    </div>
+  );
+};
+
+export default FuturisticGlow;
