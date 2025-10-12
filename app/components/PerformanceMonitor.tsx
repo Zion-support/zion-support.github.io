@@ -1,131 +1,120 @@
-ursor/analyze-improve-and-deploy-application-c354
+'use client';
 
-      // Measure Time to First Byte (TTFB)
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'navigation') {
-              setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }))
-            }
-          }
-        })
-        observer.observe({ entryTypes: ['navigation'] })
-      }
-    }
-
-    // Start measuring after a short delay to ensure page is loaded
-    const timeoutId = setTimeout(measurePerformance, 1000)
-
-    return () => {
-      clearTimeout(timeoutId)
-    }
-  }, [])
-
-  // Send metrics to analytics (if available)
-  useEffect(() => {
-    if (Object.keys(metrics).length > 0 && typeof window !== 'undefined') {
-      // Send to Google Analytics or other analytics service
-      if (typeof window.gtag !== 'undefined') {
-        window.gtag('event', 'performance_metrics', {
-          event_category: 'Performance',
-          event_label: 'Core Web Vitals',
-          value: Math.round(metrics.lcp || 0),
-          custom_map: {
-            fcp: metrics.fcp,
-            lcp: metrics.lcp,
-            fid: metrics.fid,
-            cls: metrics.cls,
-            ttfb: metrics.ttfb
-          }
-        })
-      }
-    }
-  }, [metrics])
-
-  // Don't render anything visible
-  return null
-}
-
-export default PerformanceMonitor
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  lcp?: number
-  fid?: number
-  cls?: number
-  ttfb?: number
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  fcp: number | null;
+  ttfb: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
-  useEffect(() => {
-    // Monitor Core Web Vitals
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Largest Contentful Paint (LCP)
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-            // Send to analytics
-            if (typeof gtag !== 'undefined') {
-              gtag('event', 'web_vitals', {
-                name: 'LCP',
-                value: Math.round(entry.startTime),
-                event_category: 'Web Vitals'
-              });
-            }
-          }
-        }
-      });
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+export default function PerformanceMonitor() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    lcp: null,
+    fid: null,
+    cls: null,
+    fcp: null,
+    ttfb: null
+  });
 
-      // Monitor First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          console.log('FID:', entry.processingStart - entry.startTime);
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'web_vitals', {
-              name: 'FID',
-              value: Math.round(entry.processingStart - entry.startTime),
-              event_category: 'Web Vitals'
+  useEffect(() => {
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return;
+
+    const measurePerformance = async () => {
+      try {
+        // Dynamic import to reduce bundle size
+        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
+
+        getCLS((metric) => {
+          setMetrics(prev => ({ ...prev, cls: metric.value }));
+          // Send to analytics
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              metric_name: 'CLS',
+              metric_value: Math.round(metric.value * 1000) / 1000,
+              metric_delta: Math.round(metric.delta * 1000) / 1000
             });
           }
-        }
-      });
-      
-      fidObserver.observe({ entryTypes: ['first-input'] });
+        });
 
-      // Monitor Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
-            clsValue += (entry as any).value;
+        getFID((metric) => {
+          setMetrics(prev => ({ ...prev, fid: metric.value }));
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              metric_name: 'FID',
+              metric_value: Math.round(metric.value * 1000) / 1000,
+              metric_delta: Math.round(metric.delta * 1000) / 1000
+            });
           }
-        }
-        console.log('CLS:', clsValue);
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'web_vitals', {
-            name: 'CLS',
-            value: Math.round(clsValue * 1000),
-            event_category: 'Web Vitals'
-          });
-        }
-      });
-      
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+        });
 
-      // Cleanup observers
-      return () => {
-        observer.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
-    }
+        getFCP((metric) => {
+          setMetrics(prev => ({ ...prev, fcp: metric.value }));
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              metric_name: 'FCP',
+              metric_value: Math.round(metric.value * 1000) / 1000,
+              metric_delta: Math.round(metric.delta * 1000) / 1000
+            });
+          }
+        });
+
+        getLCP((metric) => {
+          setMetrics(prev => ({ ...prev, lcp: metric.value }));
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              metric_name: 'LCP',
+              metric_value: Math.round(metric.value * 1000) / 1000,
+              metric_delta: Math.round(metric.delta * 1000) / 1000
+            });
+          }
+        });
+
+        getTTFB((metric) => {
+          setMetrics(prev => ({ ...prev, ttfb: metric.value }));
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              metric_name: 'TTFB',
+              metric_value: Math.round(metric.value * 1000) / 1000,
+              metric_delta: Math.round(metric.delta * 1000) / 1000
+            });
+          }
+        });
+      } catch (error) {
+        // Silently handle errors
+        console.warn('Performance monitoring failed:', error);
+      }
+    };
+
+    measurePerformance();
   }, []);
 
-  return null;
-};
+  // Don't render anything in production
+  if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
 
-export default PerformanceMonitor;
+  // Development mode - show metrics
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-3 text-xs text-white z-50">
+      <div className="font-semibold mb-2 text-cyan-400">Performance Metrics</div>
+      <div className="space-y-1">
+        <div>LCP: {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'Loading...'}</div>
+        <div>FID: {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'Loading...'}</div>
+        <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Loading...'}</div>
+        <div>FCP: {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Loading...'}</div>
+        <div>TTFB: {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Loading...'}</div>
+      </div>
+    </div>
+  );
+}
+
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}

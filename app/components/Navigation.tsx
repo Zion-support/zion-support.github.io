@@ -133,13 +133,20 @@ export default function Navigation() {
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('ai')}
-                className="flex items-center text-white hover:text-cyan-400 transition-colors"
+                className="flex items-center text-white hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50 rounded-lg px-2 py-1"
+                aria-expanded={activeDropdown === 'ai'}
+                aria-haspopup="true"
+                aria-label="AI Services menu"
               >
                 AI Services
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {activeDropdown === 'ai' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                <div 
+                  className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2"
+                  role="menu"
+                  aria-label="AI Services submenu"
+                >
                   {aiServices.map((service, index) => (
                     <Link
                       key={index}

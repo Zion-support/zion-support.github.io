@@ -45,11 +45,53 @@ export default function PerformanceOptimizer() {
     const monitorWebVitals = () => {
       if ('web-vitals' in window) {
         import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
+          // Monitor Core Web Vitals silently
+          getCLS((metric) => {
+            // Send to analytics service
+            if (typeof window !== 'undefined' && window.gtag) {
+              window.gtag('event', 'web_vitals', {
+                metric_name: 'CLS',
+                metric_value: metric.value,
+                metric_delta: metric.delta
+              });
+            }
+          });
+          getFID((metric) => {
+            if (typeof window !== 'undefined' && window.gtag) {
+              window.gtag('event', 'web_vitals', {
+                metric_name: 'FID',
+                metric_value: metric.value,
+                metric_delta: metric.delta
+              });
+            }
+          });
+          getFCP((metric) => {
+            if (typeof window !== 'undefined' && window.gtag) {
+              window.gtag('event', 'web_vitals', {
+                metric_name: 'FCP',
+                metric_value: metric.value,
+                metric_delta: metric.delta
+              });
+            }
+          });
+          getLCP((metric) => {
+            if (typeof window !== 'undefined' && window.gtag) {
+              window.gtag('event', 'web_vitals', {
+                metric_name: 'LCP',
+                metric_value: metric.value,
+                metric_delta: metric.delta
+              });
+            }
+          });
+          getTTFB((metric) => {
+            if (typeof window !== 'undefined' && window.gtag) {
+              window.gtag('event', 'web_vitals', {
+                metric_name: 'TTFB',
+                metric_value: metric.value,
+                metric_delta: metric.delta
+              });
+            }
+          });
         });
       }
     };
