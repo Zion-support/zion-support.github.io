@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { X, Cookie, Shield, BarChart3, Settings } from 'lucide-react';
+import { X, Cookie } from 'lucide-react';
 
 const CookieConsent: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -50,7 +50,7 @@ const CookieConsent: React.FC = () => {
                     We use cookies
                   </h3>
                   <p className="text-gray-300 mb-4">
-                    We use cookies to enhance your browsing experience, serve personalized content, 
+                    We use cookies to enhance your browsing experience, serve personalized content,
                     and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3">

@@ -22,5 +22,5 @@ export default function TeamPage() {
         </Link>
       </div>
     </div>
-  )
+  );
 }

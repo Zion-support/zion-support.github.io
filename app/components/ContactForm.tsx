@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Mail, Phone, MessageSquare, Send, CheckCircle } from 'lucide-react';
+import { Mail, MessageSquare, Send } from 'lucide-react';
 
 interface FormData {
   name: string;
@@ -12,7 +12,6 @@ interface FormData {
   service: string;
 }
 
-export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -35,13 +34,13 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     setIsSubmitting(false);
     setIsSubmitted(true);
-    
+
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
@@ -58,7 +57,7 @@ export default function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
         <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
         <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
         <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>

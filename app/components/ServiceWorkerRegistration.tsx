@@ -1,6 +1,5 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { Download, CheckCircle, AlertTriangle, RefreshCw } from 'lucide-react'
 
     {icon: Brain,
       title: 'AI-Powered Solutions',

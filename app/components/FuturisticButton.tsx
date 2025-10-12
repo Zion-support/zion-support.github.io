@@ -13,7 +13,6 @@ interface FuturisticButtonProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
-export default function FuturisticButton({
   children,
   onClick,
   variant = 'primary',
@@ -73,7 +72,7 @@ export default function FuturisticButton({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      {/* Animated background */}
+      {/* Animated background sweep */}
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"
         initial={{ x: '-100%' }}
@@ -81,24 +80,51 @@ export default function FuturisticButton({
         transition={{ duration: 0.6 }}
       />
 
-      {/* Glow effect */}
+      {/* Pulsing glow effect */}
+      <motion.div
+        className="absolute inset-0 rounded-lg"
+        style={{
+          boxShadow: variant === 'primary'
+            ? '0 0 20px rgba(6, 182, 212, 0.4)'
+            : variant === 'secondary'
+            ? '0 0 20px rgba(168, 85, 247, 0.4)'
+            : variant === 'accent'
+            ? '0 0 20px rgba(34, 197, 94, 0.4)'
+            : '0 0 20px rgba(255, 255, 255, 0.2)'
+        }}
+        animate={{
+          opacity: isHovered ? [0.4, 0.8, 0.4] : 0,
+          scale: isHovered ? [1, 1.05, 1] : 1,
+        }}
+        transition={{
+          duration: 1.5,
+          repeat: isHovered ? Infinity : 0,
+          ease: 'easeInOut'
+        }}
+      />
+
+      {/* Scanning line effect */}
       {isHovered && (
         <motion.div
           className="absolute inset-0 rounded-lg"
           style={{
-            boxShadow: variant === 'primary' 
-              ? '0 0 20px rgba(6, 182, 212, 0.4)'
-              : variant === 'secondary'
-              ? '0 0 20px rgba(168, 85, 247, 0.4)'
-              : variant === 'accent'
-              ? '0 0 20px rgba(34, 197, 94, 0.4)'
-              : '0 0 20px rgba(255, 255, 255, 0.2)'
+            background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)',
+            backgroundSize: '200% 100%',
           }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
+          animate={{
+            backgroundPosition: ['200% 0', '-200% 0'],
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: 'linear',
+          }}
         />
       )}
+
+      {/* Corner accents */}
+      <div className="absolute top-1 left-1 w-2 h-2 bg-white/30 rounded-full" />
+      <div className="absolute bottom-1 right-1 w-2 h-2 bg-white/30 rounded-full" />
 
       {/* Content */}
       <span className="relative z-10 flex items-center justify-center">
@@ -116,5 +142,5 @@ export default function FuturisticButton({
         )}
       </span>
     </motion.button>
-  );
+  </div></div>);
 }
