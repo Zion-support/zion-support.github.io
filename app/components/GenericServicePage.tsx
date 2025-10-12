@@ -10,7 +10,6 @@ interface GenericServicePageProps {
   benefits: string[];
   pricing?: string;
   category: 'AI' | 'IT' | 'MicroSAAS' | 'Emerging';
-  color: string;
 }
 
 const GenericServicePage: React.FC<GenericServicePageProps> = ({
@@ -21,7 +20,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
   benefits,
   pricing,
   category,
-  color,
 }) => {
   const categoryColors = {
     AI: 'from-purple-500 to-pink-600',

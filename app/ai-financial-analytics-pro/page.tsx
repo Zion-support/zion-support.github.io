@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import { Brain, Shield, CheckCircle, Star, Target, BarChart3, Monitor } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 

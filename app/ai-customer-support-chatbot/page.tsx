@@ -1,10 +1,25 @@
 'use client';
-import React from 'react';
+import { Brain, Clock, Target, BarChart3 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-
 export default function AICustomerSupportChatbot() {
+  const chatbotFeatures = [
+    { category: 'Core Features', items: ['Natural Language Processing', 'Multi-language Support', 'Context Awareness', 'Real-time Responses'] },
+    { category: 'Integration', items: ['API Integration', 'CRM Integration', 'Database Connectivity', 'Third-party Tools'] },
+    { category: 'Analytics', items: ['Conversation Analytics', 'Performance Metrics', 'User Insights', 'Custom Reports'] }
+  ];
+
+  const pricingPlans = [
+    { name: 'Starter', price: '$299', features: ['Basic chatbot', 'Email support', 'Standard templates'] },
+    { name: 'Professional', price: '$799', features: ['Advanced AI', 'Priority support', 'Custom integrations'] },
+    { name: 'Enterprise', price: '$1999', features: ['Full customization', '24/7 support', 'Dedicated manager'] }
+  ];
+
+  const testimonials = [
+    { name: 'Sarah Johnson', company: 'TechCorp', text: 'Amazing chatbot solution!' },
+    { name: 'Mike Chen', company: 'StartupXYZ', text: 'Increased customer satisfaction by 40%.' }
+  ];
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Zap, Shield, Globe, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
+import { CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 interface FuturisticServiceCardProps {
@@ -10,7 +10,6 @@ interface FuturisticServiceCardProps {
   benefits: string[];
   pricing?: string;
   category: 'AI' | 'IT' | 'MicroSAAS' | 'Emerging';
-  color: string;
 }
 
 const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
@@ -21,7 +20,6 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
   benefits,
   pricing,
   category,
-  color,
 }) => {
   const categoryColors = {
     AI: 'from-purple-500 to-pink-600',

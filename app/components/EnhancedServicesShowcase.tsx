@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Cloud, Shield, BarChart, Zap, Globe, CheckCircle, ArrowRight } from 'lucide-react';
+import { Brain, Shield, Zap, Globe, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const EnhancedServicesShowcase: React.FC = () => {
@@ -59,29 +59,6 @@ const EnhancedServicesShowcase: React.FC = () => {
                   ))}
                 </ul>
               </div>
-interface EnhancedServicesShowcaseProps {
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
-}
-
-const EnhancedServicesShowcase: React.FC<EnhancedServicesShowcaseProps> = ({
-  children,
-  className = '',
-  title,
-  description
-}) => {
-  return (
-    <div className={`enhanced-component ${className}`}>
-      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}
-      {description && <p className="text-gray-600 mb-4">{description}</p>}
-      {children}
-    </div>
-  );
-};
-
-export default EnhancedServicesShowcase;
               <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Learn More
                 <ArrowRight className="w-4 h-4 ml-2" />

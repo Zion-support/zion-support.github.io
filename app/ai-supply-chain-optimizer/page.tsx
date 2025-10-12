@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, Globe, Star, ArrowRight, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';

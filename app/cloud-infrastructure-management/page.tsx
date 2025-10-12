@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cloud, Shield, TrendingUp, Server, Zap, BarChart3, ArrowRight } from 'lucide-react';
 import Layout from '../layout';

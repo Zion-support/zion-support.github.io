@@ -1,4 +1,4 @@
-import React from 'react';
+import { ArrowRight, Database } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 import { Link } from 'react-router-dom';
