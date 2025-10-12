@@ -2,84 +2,189 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-// Get all TypeScript/TSX files
-const getFiles = (dir, extensions = ['.ts', '.tsx']) => {
-  let files = [];
-  const items = fs.readdirSync(dir);
-  
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files = files.concat(getFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {
-      files.push(fullPath);
-    }
-  }
-  
-  return files;
-};
-
-// Fix unused imports in a file
-const fixUnusedImports = (filePath) => {
+// Get list of files with linting errors
+function getFilesWithErrors() {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    const output = execSync('pnpm run lint 2>&1', { encoding: 'utf8' });
+    const lines = output.split('\n');
+    const files = new Set();
     
-    // Remove unused Helmet imports
-    if (content.includes("import { Helmet } from 'react-helmet-async'") && !content.includes('<Helmet>')) {
-      content = content.replace(/import { Helmet } from 'react-helmet-async'\n?/g, '');
-      modified = true;
-    }
+    lines.forEach(line => {
+      if (line.includes('error') && line.includes('is defined but never used')) {
+        const match = line.match(/^\/workspace\/([^:]+):/);
+        if (match) {
+          files.add(match[1]);
+        }
+      }
+    });
     
-    // Remove unused icon imports (this is a simplified approach)
-    // We'll focus on the most common unused imports
-    const commonUnusedIcons = [
-      'Star', 'Satellite', 'Wifi', 'Zap', 'Smartphone', 'Globe', 'BarChart3', 
-      'Sparkles', 'AlertTriangle', 'Users', 'Target', 'Shield', 'Database',
-      'TrendingUp', 'Clock', 'DollarSign', 'MessageCircle', 'Eye', 'Filter',
-      'Download', 'Share', 'Bell', 'RefreshCw', 'Pause', 'SkipForward', 'SkipBack',
-      'Repeat', 'Shuffle', 'Heart', 'ThumbsUp', 'ThumbsDown', 'Bookmark', 'Flag',
-      'Info', 'HelpCircle', 'Plus', 'Minus', 'Edit', 'Trash2', 'Save', 'Copy',
-      'Paste', 'Cut', 'Undo', 'Redo', 'Move', 'Maximize', 'Minimize', 'Square',
-      'Circle', 'Triangle', 'Hexagon', 'Octagon', 'Pentagon', 'Star2', 'Heart2',
-      'Smile', 'Frown', 'Meh', 'Laugh', 'Angry', 'Surprised', 'Confused', 'Wink',
-      'Kiss', 'Tongue', 'FileText', 'Package', 'Calendar', 'Timer', 'Battery',
-      'Wifi2', 'Signal', 'Bluetooth', 'Camera', 'Mic', 'Headphones', 'Speaker',
-      'Volume2', 'VolumeX', 'Search', 'Upload', 'Brain', 'Cpu', 'Rocket', 'Network',
-      'Monitor', 'Server', 'CircuitBoard', 'Atom', 'Wrench', 'BarChart', 'PieChart',
-      'LineChart', 'Activity', 'Settings', 'Award', 'Cloud', 'Code', 'CheckSquare',
-      'Box', 'Workflow', 'LinkIcon', 'Lock', 'Mail', 'Phone', 'MapPin', 'Play',
-      'Send', 'MousePointer', 'Hash', 'AtSign', 'Terminal', 'Layers', 'Lightbulb'
-    ];
-    
-    // This is a simplified approach - in practice, you'd want to parse the AST
-    // For now, we'll just remove the most obvious unused imports
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed unused imports in: ${filePath}`);
-    }
-    
+    return Array.from(files);
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-  }
-};
-
-// Main execution
-const appDir = path.join(process.cwd(), 'app');
-const files = getFiles(appDir);
-
-console.log(`Found ${files.length} TypeScript files to process`);
-
-let fixedCount = 0;
-for (const file of files) {
-  try {
-    fixUnusedImports(file);
-    fixedCount++;
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+    console.log('Error getting files with errors:', error.message);
+    return [];
   }
 }
 
-console.log(`Processed ${fixedCount} files`);
+// Fix unused imports in a file
+function fixUnusedImports(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const lines = content.split('\n');
+    const newLines = [];
+    const usedImports = new Set();
+    
+    // First pass: collect all used imports by scanning the file
+    const fileContent = content.toLowerCase();
+    
+    // Check for common icon usage patterns
+    const iconPatterns = [
+      'w-6 h-6', 'w-5 h-5', 'w-4 h-4', 'w-8 h-8', 'w-10 h-10',
+      'className="', 'text-', 'bg-', 'hover:', 'focus:'
+    ];
+    
+    // Check for JSX usage patterns
+    const jsxPatterns = [
+      '<ArrowRight', '<CheckCircle', '<Star', '<Users', '<Award', '<Zap', '<Shield', '<Brain', '<Cloud', '<Code',
+      '<Target', '<Globe', '<Database', '<Smartphone', '<Lock', '<TrendingUp', '<Settings', '<Calendar',
+      '<CheckSquare', '<FileText', '<MessageCircle', '<Heart', '<DollarSign', '<Box', '<Monitor', '<LinkIcon',
+      '<Server', '<Package', '<Mic', '<Workflow', '<Eye', '<Wifi', '<MessageSquare', '<ShoppingCart',
+      '<Phone', '<Mail', '<MapPin', '<BarChart3', '<Sparkles', '<Cpu', '<Satellite', '<Helmet'
+    ];
+    
+    lines.forEach((line, index) => {
+      // Skip import lines for now
+      if (line.trim().startsWith('import ')) {
+        newLines.push(line);
+        return;
+      }
+      
+      // Check if this line uses any imports
+      const lineLower = line.toLowerCase();
+      let hasUsedImport = false;
+      
+      // Check for icon usage
+      iconPatterns.forEach(pattern => {
+        if (lineLower.includes(pattern)) {
+          hasUsedImport = true;
+        }
+      });
+      
+      // Check for JSX usage
+      jsxPatterns.forEach(pattern => {
+        if (line.includes(pattern)) {
+          hasUsedImport = true;
+        }
+      });
+      
+      // Check for direct variable usage
+      if (line.includes('Helmet') || line.includes('Link') || line.includes('ArrowRight')) {
+        hasUsedImport = true;
+      }
+      
+      if (hasUsedImport) {
+        newLines.push(line);
+      } else {
+        newLines.push(line);
+      }
+    });
+    
+    // Now process import lines and remove unused ones
+    const finalLines = [];
+    let inImportBlock = false;
+    let importLines = [];
+    
+    newLines.forEach((line, index) => {
+      if (line.trim().startsWith('import ')) {
+        if (!inImportBlock) {
+          inImportBlock = true;
+          importLines = [];
+        }
+        importLines.push(line);
+      } else {
+        if (inImportBlock) {
+          // Process accumulated import lines
+          const processedImports = processImportLines(importLines, newLines.join('\n'));
+          finalLines.push(...processedImports);
+          inImportBlock = false;
+          importLines = [];
+        }
+        finalLines.push(line);
+      }
+    });
+    
+    // Handle any remaining import lines
+    if (inImportBlock) {
+      const processedImports = processImportLines(importLines, newLines.join('\n'));
+      finalLines.push(...processedImports);
+    }
+    
+    const newContent = finalLines.join('\n');
+    if (newContent !== content) {
+      fs.writeFileSync(filePath, newContent);
+      console.log(`Fixed unused imports in ${filePath}`);
+    }
+    
+  } catch (error) {
+    console.log(`Error fixing ${filePath}:`, error.message);
+  }
+}
+
+function processImportLines(importLines, fullContent) {
+  const result = [];
+  
+  importLines.forEach(line => {
+    // Extract imported names
+    const importMatch = line.match(/import\s+.*?\s+from\s+['"]([^'"]+)['"]/);
+    if (!importMatch) {
+      result.push(line);
+      return;
+    }
+    
+    const moduleName = importMatch[1];
+    const isDefaultImport = line.includes('import React') || line.includes('import { Helmet }') || line.includes('import { Link }');
+    
+    if (isDefaultImport) {
+      // For default imports, check if they're used
+      const isUsed = fullContent.includes('React') || fullContent.includes('Helmet') || fullContent.includes('Link');
+      if (isUsed) {
+        result.push(line);
+      }
+    } else {
+      // For named imports, extract the names and check usage
+      const namedImportsMatch = line.match(/import\s*{\s*([^}]+)\s*}/);
+      if (namedImportsMatch) {
+        const imports = namedImportsMatch[1].split(',').map(imp => imp.trim());
+        const usedImports = imports.filter(imp => {
+          const cleanName = imp.replace(/\s+as\s+\w+/, '').trim();
+          return fullContent.includes(cleanName);
+        });
+        
+        if (usedImports.length > 0) {
+          if (usedImports.length === imports.length) {
+            result.push(line);
+          } else {
+            const newLine = line.replace(/\{[^}]+\}/, `{ ${usedImports.join(', ')} }`);
+            result.push(newLine);
+          }
+        }
+      } else {
+        result.push(line);
+      }
+    }
+  });
+  
+  return result;
+}
+
+// Main execution
+const files = getFilesWithErrors();
+console.log(`Found ${files.length} files with unused import errors`);
+
+files.forEach(file => {
+  const fullPath = path.join('/workspace', file);
+  if (fs.existsSync(fullPath)) {
+    fixUnusedImports(fullPath);
+  }
+});
+
+console.log('Finished fixing unused imports');
