@@ -4,9 +4,9 @@ import { HelmetProvider } from 'react-helmet-async'
 import Header from './app/components/Header'
 import Footer from './app/components/Footer'
 import ErrorBoundary from './app/components/EnhancedErrorBoundary'
+import PerformanceMonitor from './app/components/PerformanceMonitor'
 import Breadcrumb from './app/components/Breadcrumb'
 import CookieConsent from './app/components/CookieConsent'
-import PerformanceMonitor from './app/components/PerformanceMonitor'
 
 // Main Pages
 import HomePage from './app/page'
