@@ -1,7 +1,7 @@
 import React from 'react';
-
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shield, Database, Workflow, Link as LinkIcon, Linkedin, Twitter, Github } from 'lucide-react';
 
+const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
@@ -27,33 +27,7 @@ import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shiel
     { name: 'API Development', url: '/api', description: 'API solutions' },
     { name: 'Mobile App Development', url: '/mobile-development', description: 'Mobile apps' },
     { name: 'Web Development', url: '/web-development', description: 'Web solutions' },
-    { name: 'IT Consulting', url: '/it-consulting', description: 'IT advisory' },
-    { name: 'System Integration', url: '/system-integration', description: 'System solutions' },
-    { name: 'Data Management', url: '/data-management', description: 'Data solutions' },
-    { name: 'Network Security', url: '/network-security', description: 'Network protection' },
-    { name: 'IT Support', url: '/it-support', description: 'Technical support' }
-  ];
-
-  const company = [
-    { name: 'About Us', url: '/about' },
-    { name: 'Our Team', url: '/team' },
-    { name: 'Careers', url: '/careers' },
-    { name: 'News & Blog', url: '/news' },
-    { name: 'Case Studies', url: '/case-studies' },
-    { name: 'Partners', url: '/partners' },
-    { name: 'Investors', url: '/investors' },
-    { name: 'Contact', url: '/contact' }
-  ];
-
-  const resources = [
-    { name: 'Documentation', url: '/docs' },
-    { name: 'API Reference', url: '/api-docs' },
-    { name: 'Tutorials', url: '/tutorials' },
-    { name: 'White Papers', url: '/white-papers' },
-    { name: 'Webinars', url: '/webinars' },
-    { name: 'Support Center', url: '/support' },
-    { name: 'Community', url: '/community' },
-    { name: 'Status Page', url: '/status' }
+    { name: 'IT Consulting', url: '/it-consulting', description: 'IT advisory' }
   ];
 
   const socialLinks = [
@@ -63,17 +37,87 @@ import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shiel
   ];
 
   return (
-          <h3 className="text-2-xl font-bold mb-4">Zion Tech Group</h3>
-
-  const currentYear = new Date().getFullYear();
-
-  return (
-
-          <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-
-            Advanced AI & IT Solutions
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-4">
+              Advanced AI & IT Solutions
+            </p>
+            <div className="flex space-x-4">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">AI Services</h4>
+            <ul className="space-y-2">
+              {aiServices.slice(0, 6).map((service, index) => (
+                <li key={index}>
+                  <a
+                    href={service.url}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {service.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">IT Services</h4>
+            <ul className="space-y-2">
+              {itServices.map((service, index) => (
+                <li key={index}>
+                  <a
+                    href={service.url}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {service.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-2">
+              <div className="flex items-center">
+                <Mail className="w-4 h-4 mr-2" />
+                <span className="text-gray-300">contact@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center">
+                <Phone className="w-4 h-4 mr-2" />
+                <span className="text-gray-300">+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-4 h-4 mr-2" />
+                <span className="text-gray-300">New York, NY</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
             © {currentYear} Zion Tech Group. All rights reserved.
-
+          </p>
+        </div>
+      </div>
+    </footer>
   );
 };
 
