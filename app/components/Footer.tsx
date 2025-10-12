@@ -1,49 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Zap, Brain, Cpu, Rocket, Shield, Network, BarChart3, Bot } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Brain, Cpu, Rocket, Shield, Network, BarChart3, Bot, Globe } from 'lucide-react'
 
 const Footer: React.FC = () => {
   const services = [
     { name: 'AI Services', href: '/ai-services', icon: <Brain className="w-4 h-4" /> },
     { name: 'IT Services', href: '/it-services', icon: <Cpu className="w-4 h-4" /> },
-    { name: 'Micro SaaS', href: '/micro-saas', icon: <Rocket className="w-4 h-4" /> },
+    { name: 'Micro SaaS', href: '/micro-saas-services', icon: <Rocket className="w-4 h-4" /> },
     { name: 'Cloud Services', href: '/cloud-services', icon: <Globe className="w-4 h-4" /> },
     { name: '5G Implementation', href: '/5g-implementation', icon: <Network className="w-4 h-4" /> },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
     { name: 'Analytics', href: '/analytics', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'Automation', href: '/automation', icon: <Bot className="w-4 h-4" /> }
-  ]
-
-  return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight } from 'lucide-react'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react'
-
-export default function Footer() {
-  const aiServices = [
-    { name: 'AI Content Generator', path: '/ai-content-generation' },
-    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
-    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-    { name: 'AI Email Assistant', path: '/ai-email-assistant' },
-    { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Automation Suite', path: '/ai-automation' }
-    { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant' },
-    { name: 'AI Project Manager', path: '/ai-project-manager' }
-  ]
-    { name: 'AI Automation Suite', path: '/ai-automation' },
-    { name: 'AI 3D Generation', path: '/ai-3d-generation' },
-    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
-  ];
-
-  const itServices = [
-    { name: 'Cloud Migration', path: '/cloud-migration' },
-    { name: 'DevOps Solutions', path: '/devops-solutions' },
-    { name: 'Cybersecurity', path: '/cybersecurity' },
-    { name: 'Data Analytics', path: '/data-analytics' },
-    { name: 'API Development', path: '/api-development' },
-    { name: 'System Integration', path: '/system-integration' }
   ]
 
   const companyLinks = [
@@ -56,32 +24,20 @@ export default function Footer() {
   ]
 
   const supportLinks = [
-    { name: 'Help Center', path: '/help' },
+    { name: 'Help Center', path: '/support' },
     { name: 'Documentation', path: '/docs' },
     { name: 'API Reference', path: '/api-docs' },
     { name: 'Status Page', path: '/status' },
     { name: 'Contact Support', path: '/contact' },
     { name: 'Community', path: '/community' }
-
-  const quickLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'AI Services', path: '/ai-services' },
-    { name: 'IT Services', path: '/it-services' },
-    { name: 'Micro SAAS', path: '/micro-saas-services' },
-    { name: '5G Solutions', path: '/5g-implementation' },
-    { name: 'Cloud Services', path: '/cloud-services' },
-    { name: 'Digital Transformation', path: '/digital-transformation' },
-    { name: 'Contact', path: '/contact' }
   ]
 
-  const companyInfo = [
+  const legalLinks = [
     { name: 'Privacy Policy', path: '/privacy' },
     { name: 'Terms of Service', path: '/terms' },
     { name: 'Cookie Policy', path: '/cookies' },
     { name: 'GDPR Compliance', path: '/gdpr' },
-    { name: 'Security', path: '/security' },
-    { name: 'Careers', path: '/careers' }
+    { name: 'Security', path: '/security' }
   ]
 
   return (
@@ -93,9 +49,6 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
             <p className="text-gray-400 mb-4">
               Leading provider of AI-powered solutions, cybersecurity, and digital transformation services.
-            </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -111,6 +64,7 @@ export default function Footer() {
             </div>
           </div>
           
+          {/* Services */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
@@ -128,92 +82,70 @@ export default function Footer() {
             </ul>
           </div>
           
+          {/* Company */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/careers" className="text-gray-400 hover:text-white transition-colors">Careers</Link></li>
-              <li><Link to="/investors" className="text-gray-400 hover:text-white transition-colors">Investors</Link></li>
-              <li><Link to="/news" className="text-gray-400 hover:text-white transition-colors">News</Link></li>
+              {companyLinks.map((link, index) => (
+                <li key={index}>
+                  <Link to={link.path} className="text-gray-400 hover:text-white transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           
+          {/* Support */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Support</h4>
             <ul className="space-y-2">
-              <li><Link to="/support" className="text-gray-400 hover:text-white transition-colors">Help Center</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</Link></li>
-              <li><Link to="/status" className="text-gray-400 hover:text-white transition-colors">System Status</Link></li>
-              <li><Link to="/pricing" className="text-gray-400 hover:text-white transition-colors">Pricing</Link></li>
+              {supportLinks.map((link, index) => (
+                <li key={index}>
+                  <Link to={link.path} className="text-gray-400 hover:text-white transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           
+          {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-2">
               <div className="flex items-center text-gray-400">
                 <Mail className="w-4 h-4 mr-2" />
-                <span>info@ziontechgroup.com</span>
+                <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center text-gray-400">
                 <Phone className="w-4 h-4 mr-2" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (302) 464-0950</span>
               </div>
               <div className="flex items-center text-gray-400">
                 <MapPin className="w-4 h-4 mr-2" />
-                <span>San Francisco, CA</span>
+                <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-          </div>
-        </div>
-
         {/* Bottom Footer */}
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
               <p className="text-gray-400 text-sm">
                 © 2024 Zion Tech Group. All rights reserved.
               </p>
               <div className="flex space-x-6">
-                {legal.map((item, index) => (
+                {legalLinks.map((item, index) => (
                   <Link key={index} to={item.path} className="text-gray-400 hover:text-white transition-colors text-sm">
                     {item.name}
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Contact Info */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex items-center">
-              <Mail className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center">
-              <Phone className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">+1 (302) 464-0950</span>
-            </div>
-            <div className="flex items-center">
-              <MapPin className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">San Francisco, CA</span>
-              <span className="text-gray-400">364 E Main St STE 1008, Middletown, DE 19709</span>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* Copyright */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © 2024 Zion Tech Group. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>

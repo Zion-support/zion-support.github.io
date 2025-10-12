@@ -1,81 +1,95 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react';
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, AlertCircle, XCircle, Clock, RefreshCw, ExternalLink } from 'lucide-react'
+import Layout from '../layout'
 
 const StatusPage: React.FC = () => {
   const [lastUpdated, setLastUpdated] = useState(new Date())
   const [isRefreshing, setIsRefreshing] = useState(false)
 
-  const refreshStatus = async () => {
-    setIsRefreshing(true)
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    setLastUpdated(new Date())
-    setIsRefreshing(false)
-  }
-
   const services = [
     {
-      name: 'API Services',
+      name: 'AI Services API',
+      status: 'operational',
+      uptime: '99.9%',
+      responseTime: '120ms',
+      description: 'Core AI services including content generation, chatbots, and analytics'
+    },
+    {
+      name: 'IT Services Platform',
+      status: 'operational',
+      uptime: '99.8%',
+      responseTime: '95ms',
+      description: 'IT infrastructure management and cloud services'
+    },
+    {
+      name: 'Micro SaaS Applications',
+      status: 'operational',
+      uptime: '99.7%',
+      description: 'Ready-to-use SaaS applications and productivity tools'
+    },
+    {
+      name: 'Authentication Service',
       status: 'operational',
       uptime: '99.9%',
       responseTime: '45ms',
-      description: 'Core API endpoints and services'
+      description: 'User authentication and authorization services'
     },
     {
-      name: 'Database',
+      name: 'Database Services',
+      status: 'operational',
+      uptime: '99.9%',
+      responseTime: '25ms',
+      description: 'Primary and backup database systems'
+    },
+    {
+      name: 'CDN & Content Delivery',
       status: 'operational',
       uptime: '99.8%',
-      responseTime: '12ms',
-      description: 'Primary database cluster'
+      responseTime: '15ms',
+      description: 'Global content delivery network'
     },
     {
-      name: 'CDN',
-      status: 'operational',
-      uptime: '99.9%',
-      responseTime: '8ms',
-      description: 'Content delivery network'
-    },
-    {
-      name: 'Authentication',
-      status: 'operational',
-      uptime: '99.7%',
-      responseTime: '23ms',
-      description: 'User authentication services'
-    },
-    {
-      name: 'Email Service',
+      name: 'Email Services',
       status: 'degraded',
       uptime: '98.5%',
-      responseTime: '120ms',
-      description: 'Email delivery and notifications'
+      responseTime: '2.1s',
+      description: 'Email delivery and notification services',
+      incident: 'Experiencing delays in email delivery due to high volume'
     },
     {
-      name: 'File Storage',
+      name: 'Monitoring Systems',
       status: 'operational',
       uptime: '99.9%',
-      responseTime: '15ms',
-      description: 'File upload and storage'
+      responseTime: '30ms',
+      description: 'System monitoring and alerting services'
     }
   ]
 
   const incidents = [
     {
-      id: 1,
-      title: 'Email Service Degradation',
+      id: 'INC-2024-001',
+      title: 'Email Delivery Delays',
       status: 'investigating',
-      description: 'We are currently investigating reports of delayed email delivery.',
-      time: '2 hours ago',
+      severity: 'minor',
+      description: 'Some users are experiencing delays in email delivery. We are investigating the root cause.',
+      started: '2024-01-20T10:30:00Z',
       updates: [
         {
-          time: '2 hours ago',
-          message: 'Issue identified with email service provider'
+          time: '2024-01-20T10:30:00Z',
+          message: 'We are investigating reports of email delivery delays affecting some users.',
+          status: 'investigating'
         },
         {
-          time: '1 hour ago',
-          message: 'Working with provider to resolve the issue'
+          time: '2024-01-20T11:15:00Z',
+          message: 'We have identified the issue as high email volume causing processing delays.',
+          status: 'investigating'
+        },
+        {
+          time: '2024-01-20T12:00:00Z',
+          message: 'We are implementing additional email processing capacity to resolve the delays.',
+          status: 'monitoring'
         }
       ]
     }
@@ -86,11 +100,13 @@ const StatusPage: React.FC = () => {
       case 'operational':
         return <CheckCircle className="w-5 h-5 text-green-500" />
       case 'degraded':
-        return <AlertTriangle className="w-5 h-5 text-yellow-500" />
+        return <AlertCircle className="w-5 h-5 text-yellow-500" />
       case 'outage':
         return <XCircle className="w-5 h-5 text-red-500" />
+      case 'maintenance':
+        return <Clock className="w-5 h-5 text-blue-500" />
       default:
-        return <Clock className="w-5 h-5 text-gray-500" />
+        return <AlertCircle className="w-5 h-5 text-gray-500" />
     }
   }
 
@@ -102,80 +118,142 @@ const StatusPage: React.FC = () => {
         return 'text-yellow-400'
       case 'outage':
         return 'text-red-400'
+      case 'maintenance':
+        return 'text-blue-400'
       default:
         return 'text-gray-400'
     }
   }
 
+  const getSeverityColor = (severity: string) => {
+    switch (severity) {
+      case 'critical':
+        return 'bg-red-500'
+      case 'major':
+        return 'bg-orange-500'
+      case 'minor':
+        return 'bg-yellow-500'
+      default:
+        return 'bg-gray-500'
+    }
+  }
+
+  const refreshStatus = async () => {
+    setIsRefreshing(true)
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    setLastUpdated(new Date())
+    setIsRefreshing(false)
+  }
+
+  const overallStatus = services.every(service => service.status === 'operational') ? 'operational' : 'degraded'
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
+    <Layout 
+      title="System Status - Zion Tech Group"
+      description="Real-time status of all Zion Tech Group services and systems. Monitor uptime, performance, and incidents."
+      keywords="status, uptime, system status, service status, incidents, monitoring"
+    >
       {/* Hero Section */}
-      <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-              System Status
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <div className="flex items-center justify-center mb-6">
+            {getStatusIcon(overallStatus)}
+            <h1 className="text-5xl md:text-7xl font-bold text-white ml-4 leading-tight">
+              System <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Status</span>
             </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
-              Real-time status of all our services and systems. We're committed to providing reliable service.
-            </p>
-            <div className="flex items-center justify-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                <span className="text-green-400 font-medium">All Systems Operational</span>
-              </div>
-              <div className="text-gray-400">•</div>
-              <div className="flex items-center space-x-2">
-                <Clock className="w-4 h-4 text-gray-400" />
-                <span className="text-gray-400">Last updated: {lastUpdated.toLocaleTimeString()}</span>
-              </div>
-              <button
-                onClick={refreshStatus}
-                disabled={isRefreshing}
-                className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors disabled:opacity-50"
-              >
-                <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
-                <span>Refresh</span>
-              </button>
+          </div>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Real-time monitoring of all our services and systems. 
+            We're committed to providing reliable and high-performance solutions.
+          </p>
+          <div className="flex items-center justify-center gap-4">
+            <button
+              onClick={refreshStatus}
+              disabled={isRefreshing}
+              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center disabled:opacity-50"
+            >
+              <RefreshCw className={`w-5 h-5 mr-2 ${isRefreshing ? 'animate-spin' : ''}`} />
+              {isRefreshing ? 'Refreshing...' : 'Refresh Status'}
+            </button>
+            <div className="text-sm text-gray-400">
+              Last updated: {lastUpdated.toLocaleTimeString()}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Status */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
+      {/* Overall Status */}
+      <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Service Status</h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
-              Current status of all our services and infrastructure
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
+            <div className="flex items-center justify-center mb-4">
+              {getStatusIcon(overallStatus)}
+              <h2 className={`text-3xl font-bold ml-4 ${getStatusColor(overallStatus)}`}>
+                All Systems {overallStatus === 'operational' ? 'Operational' : 'Experiencing Issues'}
+              </h2>
+            </div>
+            <p className="text-xl text-gray-300 mb-6">
+              {overallStatus === 'operational' 
+                ? 'All services are running normally with no known issues.'
+                : 'Some services are experiencing issues. Please check individual service status below.'
+              }
             </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white mb-2">99.8%</div>
+                <div className="text-gray-300">Overall Uptime</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white mb-2">0</div>
+                <div className="text-gray-300">Active Incidents</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white mb-2">8</div>
+                <div className="text-gray-300">Services Monitored</div>
+              </div>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        </div>
+      </section>
+
+      {/* Service Status */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Service Status</h2>
+          <div className="space-y-4">
             {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300">
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-semibold text-white">{service.name}</h3>
-                  {getStatusIcon(service.status)}
-                </div>
-                <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Status:</span>
-                    <span className={getStatusColor(service.status)}>{service.status}</span>
+                  <div className="flex items-center">
+                    {getStatusIcon(service.status)}
+                    <h3 className="text-xl font-semibold text-white ml-3">{service.name}</h3>
                   </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Uptime:</span>
-                    <span className="text-white">{service.uptime}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Response Time:</span>
-                    <span className="text-white">{service.responseTime}</span>
+                  <div className="flex items-center gap-4">
+                    <span className={`font-medium ${getStatusColor(service.status)}`}>
+                      {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
+                    </span>
+                    <span className="text-gray-400 text-sm">{service.uptime} uptime</span>
                   </div>
                 </div>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="flex items-center gap-6 text-sm text-gray-400">
+                  {service.responseTime && (
+                    <div>Response time: {service.responseTime}</div>
+                  )}
+                  <div>Last checked: {new Date().toLocaleTimeString()}</div>
+                </div>
+                {service.incident && (
+                  <div className="mt-4 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg">
+                    <div className="flex items-center mb-2">
+                      <AlertCircle className="w-5 h-5 text-yellow-500 mr-2" />
+                      <span className="text-yellow-400 font-medium">Incident Notice</span>
+                    </div>
+                    <p className="text-yellow-300 text-sm">{service.incident}</p>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -184,42 +262,50 @@ const StatusPage: React.FC = () => {
 
       {/* Incidents */}
       {incidents.length > 0 && (
-        <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Active Incidents</h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
-                Current issues and their resolution status
-              </p>
-            </div>
-            
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Active Incidents</h2>
             <div className="space-y-6">
               {incidents.map((incident) => (
-                <div key={incident.id} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>
-                      <p className="text-gray-300">{incident.description}</p>
+                <div key={incident.id} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center">
+                      <span className={`px-3 py-1 rounded-full text-sm font-medium text-white mr-4 ${getSeverityColor(incident.severity)}`}>
+                        {incident.severity.toUpperCase()}
+                      </span>
+                      <h3 className="text-xl font-semibold text-white">{incident.title}</h3>
                     </div>
-                    <div className="flex items-center space-x-2">
-                      {getStatusIcon(incident.status)}
-                      <span className={getStatusColor(incident.status)}>{incident.status}</span>
-                    </div>
+                    <span className="text-gray-400 text-sm">#{incident.id}</span>
+                  </div>
+                  <p className="text-gray-300 mb-4">{incident.description}</p>
+                  <div className="text-sm text-gray-400 mb-4">
+                    Started: {new Date(incident.started).toLocaleString()}
                   </div>
                   
-                  <div className="text-sm text-gray-400 mb-4">Started {incident.time}</div>
-                  
-                  <div className="space-y-3">
-                    <h4 className="text-lg font-medium text-white">Updates:</h4>
-                    {incident.updates.map((update, index) => (
-                      <div key={index} className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
-                        <div>
-                          <div className="text-sm text-gray-400">{update.time}</div>
-                          <div className="text-gray-300">{update.message}</div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-4">Updates</h4>
+                    <div className="space-y-3">
+                      {incident.updates.map((update, idx) => (
+                        <div key={idx} className="flex items-start">
+                          <div className="w-3 h-3 bg-purple-500 rounded-full mr-4 mt-2 flex-shrink-0" />
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-1">
+                              <span className="text-sm text-gray-400">
+                                {new Date(update.time).toLocaleString()}
+                              </span>
+                              <span className={`px-2 py-1 rounded text-xs font-medium ${
+                                update.status === 'investigating' ? 'bg-yellow-500/20 text-yellow-400' :
+                                update.status === 'monitoring' ? 'bg-blue-500/20 text-blue-400' :
+                                'bg-green-500/20 text-green-400'
+                              }`}>
+                                {update.status}
+                              </span>
+                            </div>
+                            <p className="text-gray-300 text-sm">{update.message}</p>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -228,8 +314,37 @@ const StatusPage: React.FC = () => {
         </section>
       )}
 
-      <Footer />
-    </div>
+      {/* Subscribe to Updates */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Stay Informed
+            </h2>
+            <p className="text-xl text-white/90 mb-6">
+              Subscribe to status updates and get notified immediately when incidents occur or are resolved.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50"
+              />
+              <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Subscribe
+              </button>
+            </div>
+            <div className="mt-4 text-sm text-white/70">
+              You can also follow us on{' '}
+              <a href="#" className="underline hover:text-white">
+                Twitter
+              </a>{' '}
+              for real-time updates
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout>
   )
 }
 

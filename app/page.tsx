@@ -1,21 +1,9 @@
 'use client'
 import React from 'react'
-import SEOHead from './components/SEOHead'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock } from 'lucide-react'
-import { Link } from 'react-router-dom'
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
-import SEOHead from './components/SEOHead';
-import { Link } from 'react-router-dom';
-import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Smartphone, Cpu, Database, BarChart3, Users, Settings, Globe, Lock, Code2, MessageSquare, Target, TrendingUp, Star } from 'lucide-react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import { ArrowRight, CheckCircle, Zap, Shield, Cloud, Database, Smartphone, Star, Sparkles, Rocket, Cpu, Globe } from 'lucide-react'
+import { ArrowRight, CheckCircle, Brain, Zap, Shield, Cloud, Database, Smartphone, Cpu, BarChart3, Users, Star } from 'lucide-react'
+import Layout from './layout'
 
 const HomePage: React.FC = () => {
   const features = [
@@ -43,12 +31,12 @@ const HomePage: React.FC = () => {
 
   const services = [
     {
-      icon: <Code className="w-6 h-6 text-blue-500" />,
+      icon: <Cpu className="w-6 h-6 text-blue-500" />,
       title: 'Software Development',
       description: 'Custom software solutions tailored to your business requirements.'
     },
     {
-      icon: <Network className="w-6 h-6 text-green-500" />,
+      icon: <Cloud className="w-6 h-6 text-green-500" />,
       title: 'IT Infrastructure',
       description: 'Robust and scalable IT infrastructure solutions for your organization.'
     },
@@ -58,9 +46,9 @@ const HomePage: React.FC = () => {
       description: 'Data-driven insights to help you make informed business decisions.'
     },
     {
-      icon: <Bot className="w-6 h-6 text-orange-500" />,
-      title: 'AI Automation',
-      description: 'Intelligent automation solutions to streamline your business processes.'
+      icon: <Smartphone className="w-6 h-6 text-orange-500" />,
+      title: 'Mobile Development',
+      description: 'Native and cross-platform mobile applications for iOS and Android.'
     }
   ]
 
@@ -71,16 +59,33 @@ const HomePage: React.FC = () => {
     { number: '99.9%', label: 'Uptime Guarantee' }
   ]
 
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      company: 'TechCorp Inc.',
+      content: 'Zion Tech Group transformed our business with their AI solutions. The results exceeded our expectations.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      company: 'InnovateLabs',
+      content: 'Outstanding IT services and support. They helped us migrate to the cloud seamlessly.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      company: 'DataFlow Systems',
+      content: 'Their cybersecurity solutions gave us peace of mind. Highly recommend their services.',
+      rating: 5
+    }
+  ]
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOHead 
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI-powered IT solutions, cloud infrastructure, cybersecurity, and digital transformation services."
-        keywords="AI solutions, IT services, cloud computing, cybersecurity, digital transformation"
-      />
-      
-      <Navigation />
-      
+    <Layout 
+      title="Zion Tech Group - AI & IT Solutions"
+      description="Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology."
+      keywords="AI solutions, IT services, cybersecurity, cloud computing, data analytics, digital transformation"
+    >
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -91,24 +96,6 @@ const HomePage: React.FC = () => {
             <br />
             <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               Zion Tech Group
-      <Helmet>
-        <title>Zion Tech Group - AI & IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, IT services, cybersecurity, cloud computing, data analytics, digital transformation" />
-      </Helmet>
-      <SEOHead 
-        title="Zion Tech Group - AI & IT Solutions"
-        description="Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology."
-        keywords="AI solutions, IT services, cybersecurity, cloud computing, data analytics, digital transformation"
-      />
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Transform Your Business with
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              {' '}AI & IT Solutions
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -191,8 +178,7 @@ const HomePage: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white ml-3">{service.title}</h3>
                 </div>
                 <p className="text-gray-300 text-sm">{service.description}</p>
-                </div>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -258,9 +244,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
-    </div>
+    </Layout>
   )
 }
 
