@@ -126,9 +126,6 @@ export default function AISocialMediaManager() {
     }
   ]
 
-<<<<<<< HEAD
-export default function AisocialmediamanagerPage() {
-=======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   return (
     <Layout
@@ -343,8 +340,5 @@ export default function AisocialmediamanagerPage() {
 <<<<<<< HEAD
     </div>
   );
-=======
     </Layout>
-  )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
-}
+  )}

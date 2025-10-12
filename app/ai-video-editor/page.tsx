@@ -118,9 +118,6 @@ export default function AIVideoEditor() {
     }
   ]
 
-<<<<<<< HEAD
-export default function AivideoeditorPage() {
-=======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   return (
     <Layout
@@ -335,8 +332,5 @@ export default function AivideoeditorPage() {
 <<<<<<< HEAD
     </div>
   );
-=======
     </Layout>
-  )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
-}
+  )}

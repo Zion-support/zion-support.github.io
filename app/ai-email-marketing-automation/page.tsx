@@ -118,9 +118,6 @@ export default function AIEmailMarketingAutomation() {
     }
   ]
 
-<<<<<<< HEAD
-export default function AiemailmarketingautomationPage() {
-=======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   return (
     <Layout
@@ -335,8 +332,5 @@ export default function AiemailmarketingautomationPage() {
 <<<<<<< HEAD
     </div>
   );
-=======
     </Layout>
-  )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
-}
+  )}
