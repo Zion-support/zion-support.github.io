@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 'use client';
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -10,19 +7,6 @@ interface SEOHeadProps {
   title?: string;
   description?: string;
   keywords?: string;
-<<<<<<< HEAD
-  canonical?: string;
-  ogImage?: string;
-}
-
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, artificial intelligence, and innovative digital solutions.',
-  keywords = 'AI, artificial intelligence, IT solutions, technology, digital transformation, machine learning, automation',
-  canonical,
-  ogImage = '/og-image.jpg'
-}) => {
-=======
   image?: string;
   url?: string;
   type?: string;
@@ -91,25 +75,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       }
     ]
   };
-
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-<<<<<<< HEAD
-      <link rel="canonical" href={canonical || window.location.href} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonical || window.location.href} />
-      
-      {/* Twitter */}
-=======
       
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={title} />
@@ -120,23 +90,12 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:site_name" content="Zion Tech Group" />
       
       {/* Twitter Card Meta Tags */}
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@ziontechgroup" />
       
-<<<<<<< HEAD
-      {/* Additional SEO */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-=======
       {/* Additional SEO Meta Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
@@ -159,7 +118,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
       </script>
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
     </Helmet>
   );
 };
