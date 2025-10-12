@@ -60,76 +60,39 @@ export default function HomePage() {
   ]
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, cloud migration, and digital transformation services. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, cybersecurity, cloud migration, digital transformation, IT services, Zion Tech Group" />
-      </Helmet>
-=======
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative">
       <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your business with cutting-edge technology."
         keywords="AI solutions, IT services, digital transformation, cloud computing, 5G implementation, micro SAAS, artificial intelligence, business automation"
       />
-      
-      <Navigation />
-      
-      <main>
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Advanced <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">AI & IT Solutions</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with cutting-edge artificial intelligence, cloud computing, and digital transformation services.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
-                >
-                  Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </a>
-                <a
-                  href="/services"
-                  className="border border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-                >
-                  Our Services
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Transform Your Business with
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Advanced AI</span>
-            <br />
-            and IT Solutions
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <div className="relative">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
+              Transform Your Business with
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent animate-pulse"> Advanced AI</span>
+              <br />
+              and IT Solutions
+            </h1>
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 blur-3xl opacity-50"></div>
+          </div>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto relative z-10">
             We deliver cutting-edge technology solutions that drive growth, enhance security, 
             and streamline operations for businesses worldwide.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
             >
               Get Started Today
             </Link>
             <Link
               to="/about"
-              className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-500/25"
             >
               Learn More
             </Link>
@@ -138,11 +101,12 @@ export default function HomePage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 relative">
               Our Core Services
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive technology solutions designed to meet your business needs
@@ -153,20 +117,23 @@ export default function HomePage() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group relative overflow-hidden"
               >
-                <div className="mb-6">
-                  {feature.icon}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10">
+                  <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">{feature.title}</h3>
+                  <p className="text-gray-300 mb-6 group-hover:text-gray-200 transition-colors duration-300">{feature.description}</p>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 font-semibold"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group-hover:translate-x-1"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
               </div>
             ))}
           </div>
@@ -174,11 +141,12 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 relative">
               What Our Clients Say
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Don't just take our word for it - hear from businesses that have transformed with our solutions
@@ -187,16 +155,19 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-400 text-xl">★</span>
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                <div>
-                  <p className="font-semibold text-white">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.company}</p>
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:border-cyan-500/30 transition-all duration-300 group relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10">
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <span key={i} className="text-yellow-400 text-xl group-hover:text-yellow-300 transition-colors duration-300">★</span>
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-6 italic group-hover:text-gray-200 transition-colors duration-300">"{testimonial.content}"</p>
+                  <div>
+                    <p className="font-semibold text-white group-hover:text-cyan-300 transition-colors duration-300">{testimonial.name}</p>
+                    <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300">{testimonial.company}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -205,28 +176,31 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Join hundreds of businesses already using our solutions to drive growth and efficiency
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              >
-                Start Your Journey
-              </Link>
-              <Link
-                to="/about"
-                className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
-              >
-                Learn More
-              </Link>
+          <div className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl p-12 relative overflow-hidden shadow-2xl shadow-cyan-500/25">
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 animate-pulse"></div>
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-cyan-100 mb-8">
+                Join hundreds of businesses already using our solutions to drive growth and efficiency
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-white/20"
+                >
+                  Start Your Journey
+                </Link>
+                <Link
+                  to="/about"
+                  className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300 shadow-lg shadow-white/10"
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
           </div>
         </div>

@@ -1,44 +1,12 @@
 import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
-import Navigation from './app/components/Navigation'
+import FuturisticNavigation from './app/components/FuturisticNavigation'
 import Footer from './app/components/Footer'
-<<<<<<< HEAD
-import HomePage from './app/page'
-import AboutPage from './app/about/page'
-import ContactPage from './app/contact/page'
-import AIServicesPage from './app/ai-services/page'
-import ITServicesPage from './app/it-services/page'
-import MicroSAASServicesPage from './app/micro-saas-services/page'
-import FiveGImplementationPage from './app/5g-implementation/page'
-import CloudServicesPage from './app/cloud-services/page'
-import DigitalTransformationPage from './app/digital-transformation/page'
-
-function App() {
-  return (
-    <Router>
-      <div className="min-h-screen bg-gray-900">
-        <Navigation />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/ai-services" element={<AIServicesPage />} />
-            <Route path="/it-services" element={<ITServicesPage />} />
-            <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
-            <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-            <Route path="/cloud-services" element={<CloudServicesPage />} />
-            <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-=======
 import ErrorBoundary from './app/components/ErrorBoundary'
 import LoadingSpinner from './app/components/LoadingSpinner'
 import SEOHead from './app/components/SEOHead'
+import FuturisticBackground from './app/components/FuturisticBackground'
 
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./app/page'))
@@ -63,9 +31,10 @@ function App() {
     <HelmetProvider>
       <ErrorBoundary>
         <Router>
-          <div className="min-h-screen bg-gray-50">
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+            <FuturisticBackground />
             <SEOHead />
-            <Navigation />
+            <FuturisticNavigation />
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
@@ -79,7 +48,7 @@ function App() {
                 <Route path="/contact" element={<ContactPage />} />
                 {/* 404 Route */}
                 <Route path="*" element={
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center relative z-10">
                     <div className="text-center">
                       <h1 className="text-6xl font-bold text-white mb-4">404</h1>
                       <p className="text-xl text-gray-300 mb-8">Page not found</p>
@@ -99,7 +68,6 @@ function App() {
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
   )
 }
 
