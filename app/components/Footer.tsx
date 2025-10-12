@@ -7,33 +7,33 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
+    { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
+    { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
     { name: 'AI Content Generation', url: '/ai-content-generation', description: 'Automated content' },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Business intelligence' },
+    { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security' },
+    { name: 'AI CRM', url: '/ai-crm', description: 'Smart CRM' },
+    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Data insights' },
+    { name: 'AI Healthcare', url: '/ai-healthcare', description: 'Medical AI' },
     { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Image analysis' },
     { name: 'AI Voice Solutions', url: '/ai-voice-solutions', description: 'Speech recognition' },
-    { name: 'AI Workflow Automation', url: '/ai-automation', description: 'Process automation' },
-    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI' },
     { name: 'AI Financial Services', url: '/ai-financial-services', description: 'Fintech AI' },
-    { name: 'AI Document Processing', url: '/ai-document-processing', description: 'Document analysis' },
-    { name: 'AI Predictive Analytics', url: '/ai-predictive-analytics', description: 'Business forecasting' },
-    { name: 'AI HR Solutions', url: '/ai-hr-solutions', description: 'Human resources AI' },
-    { name: 'AI Edge Computing', url: '/ai-edge-computing', description: 'Distributed AI processing' }
+    { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce AI' }
   ];
 
   const itServices = [
     { name: 'Cloud Infrastructure', url: '/cloud-infrastructure', description: 'AWS, Azure, GCP' },
-    { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
     { name: 'Cybersecurity Solutions', url: '/cybersecurity-solutions', description: 'Security solutions' },
     { name: 'Web Development', url: '/web-development', description: 'Modern web apps' },
     { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android' },
     { name: 'API Development', url: '/api-development', description: 'API solutions' },
+    { name: 'DevOps & CI/CD', url: '/devops-cicd', description: 'Automation pipelines' },
     { name: 'IT Support', url: '/it-support', description: '24/7 technical support' },
     { name: 'Data Analytics & BI', url: '/data-analytics-bi', description: 'Business intelligence' },
     { name: 'Custom Software', url: '/custom-software', description: 'Tailored solutions' },
-    { name: 'Database Management', url: '/database-management', description: 'Database optimization' },
-    { name: 'Network Infrastructure', url: '/network-infrastructure', description: 'Network setup' },
-    { name: 'IT Asset Management', url: '/it-asset-management', description: 'Asset lifecycle' }
+    { name: 'Blockchain Development', url: '/blockchain-development', description: 'Blockchain solutions' },
+    { name: 'IoT Development', url: '/iot-development', description: 'IoT solutions' },
+    { name: 'E-commerce Development', url: '/e-commerce-development', description: 'E-commerce platforms' }
   ];
 
   const microSaasServices = [
@@ -43,12 +43,12 @@ const Footer: React.FC = memo(() => {
     { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', description: 'Cloud backup & recovery' },
     { name: 'Zion Content Studio', url: '/zion-content-studio', description: 'Content creation platform' },
     { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', description: 'Smart CRM solution' },
-    { name: 'Zion Data Sync', url: '/zion-data-sync', description: 'Data synchronization' },
-    { name: 'Zion Lead Magnet', url: '/zion-lead-magnet', description: 'Lead generation tool' },
-    { name: 'Zion Project Master', url: '/zion-project-master', description: 'Project management' },
-    { name: 'Zion Email Automation', url: '/zion-email-automation', description: 'Email marketing' },
-    { name: 'Zion Inventory Smart', url: '/zion-inventory-smart', description: 'Inventory management' },
-    { name: 'Zion Invoice Genius', url: '/zion-invoice-genius', description: 'Invoice automation' }
+    { name: 'Zion AI Video Editor', url: '/zion-ai-video-editor', description: 'AI video editing' },
+    { name: 'Zion AI Translator Pro', url: '/zion-ai-translator-pro', description: 'AI translation' },
+    { name: 'Zion AI Code Reviewer', url: '/zion-ai-code-reviewer', description: 'AI code review' },
+    { name: 'Zion Customer Insights', url: '/zion-customer-insights', description: 'Customer analytics' },
+    { name: 'Zion AI Email Assistant', url: '/zion-ai-email-assistant', description: 'AI email management' },
+    { name: 'Zion AI SEO Optimizer', url: '/zion-ai-seo-optimizer', description: 'AI SEO optimization' }
   ];
 
   const companyLinks = [
