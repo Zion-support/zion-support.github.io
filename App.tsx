@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -184,10 +183,6 @@ const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({
   usePerformanceMonitor();
   return <React.Fragment>{children}</React.Fragment>
 };
-=======
-import React, { Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import ErrorBoundary from "./app/components/ErrorBoundary";
@@ -236,7 +231,6 @@ const App: React.FC = () => {
       <HelmetProvider>
         <SEOHead />
         <Router>
-<<<<<<< HEAD
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
               <PerformanceOptimizer>
@@ -409,10 +403,6 @@ const App: React.FC = () => {
                         </Suspense>
                       </main>
                       <Footer />
-=======
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <Navigation />
-            <main className="pt-20">
               <Suspense fallback={<PageLoader />}>
                 <Routes>
                   <Route path="/" element={<HomePage />} />
@@ -472,8 +462,4 @@ const App: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App;
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
