@@ -83,20 +83,29 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
   const IconComponent = currentItem.icon;
 
   return (
-    <div className={`relative ${className}`}>
+    <div>
+      </DynamicContentShowcaseProps>
+      </ChevronLeft>
+      </Pause>
+      </Play>
+      </ChevronRight>
+      </IconComponent>
+      </Star>
+      </CheckCircle>
+      </ArrowRight>
       {/* Controls */}
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center gap-4">
-          <button
-            onClick={prevItem}
+      <div>
+        <div>
+          <button;
+onClick={prevItem}
             className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
             aria-label="Previous item"
           >
             <ChevronLeft className="w-5 h-5 text-white" />
           </button>
 
-          <button
-            onClick={togglePlayPause}
+          <button;
+onClick={togglePlayPause}
             className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
             aria-label={isPlaying ? 'Pause' : 'Play'}
           >
@@ -107,8 +116,8 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
             )}
           </button>
 
-          <button
-            onClick={nextItem}
+          <button;
+onClick={nextItem}
             className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
             aria-label="Next item"
           >
@@ -116,10 +125,10 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
           </button>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div>
           {items.map((_, index) => (
-            <button
-              key={index}
+            <button;
+key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-2 h-2 rounded-full transition-colors ${
                 index === currentIndex ? 'bg-cyan-400' : 'bg-white/30'
@@ -131,18 +140,18 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
       </div>
 
       {/* Content Card */}
-      <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/30 transition-all duration-300">
-        <div className="flex items-start gap-6">
-          <div className="flex-shrink-0">
-            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
+      <div>
+        <div>
+          <div>
+            <div>
               <IconComponent className="w-8 h-8 text-white" />
             </div>
           </div>
 
-          <div className="flex-1">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-sm text-cyan-400 font-medium">{currentItem.category}</span>
-              <div className="flex items-center gap-1">
+          <div>
+            <div>
+              <span>{currentItem.category}</span>
+              <div>
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                 ))}
@@ -152,18 +161,18 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
             <h3 className="text-2xl font-bold text-white mb-3">{currentItem.title}</h3>
             <p className="text-gray-300 mb-4">{currentItem.description}</p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 mb-6">
+            <div>
               {currentItem.features.map((feature, index) => (
-                <div key={index} className="flex items-center text-sm text-gray-300">
+                <div>
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                   <span>{feature}</span>
                 </div>
               ))}
             </div>
 
-            <div className="flex items-center justify-between">
+            <div>
               {currentItem.price && (
-                <div className="text-cyan-400 font-semibold text-lg">
+                <div>
                   {currentItem.price}
                 </div>
               )}

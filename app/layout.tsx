@@ -76,7 +76,7 @@ const Layout: React.FC<LayoutProps> = ({
 
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div>
         <Helmet>
           <title>{title}</title>
           <meta name="description" content={description} />
@@ -109,17 +109,17 @@ const Layout: React.FC<LayoutProps> = ({
           </script>
         </Helmet>
 
-        <Navigation />
+        <Navigation></Navigation>
 
         <main className="pt-20">
           {children}
         </main>
 
-        <Footer />
+        <Footer></Footer>
 
         {/* Theme Toggle - Fixed Position */}
-        <div className="fixed bottom-6 right-6 z-50">
-          <ThemeToggle />
+        <div>
+          <ThemeToggle></ThemeToggle>
         </div>
       </div>
     </ErrorBoundary>

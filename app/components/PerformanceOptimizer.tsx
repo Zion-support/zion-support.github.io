@@ -12,8 +12,8 @@ const PerformanceOptimizer: React.FC = () => {
   })
 
   useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
+    // Preload critical resources;
+const preloadCriticalResources = () => {
       const criticalResources = [
         '/fonts/inter.woff2',
         '/images/hero-bg.jpg',
@@ -23,8 +23,8 @@ const PerformanceOptimizer: React.FC = () => {
       criticalResources.forEach(resource => {
         const link = document.createElement('link')
         link.rel = 'preload'
-        link.href = resource
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image'
+        link.href = resource;
+link.as = resource.endsWith('.woff2') ? 'font' : 'image'
         if (resource.endsWith('.woff2')) {
           link.crossOrigin = 'anonymous'
         }
@@ -32,26 +32,26 @@ const PerformanceOptimizer: React.FC = () => {
       })
     }
 
-    // Optimize images
-    const optimizeImages = () => {
+    // Optimize images;
+const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]')
       images.forEach(img => {
-        const imageElement = img as HTMLImageElement
-        if (imageElement.dataset.src) {
-          imageElement.src = imageElement.dataset.src
-          imageElement.removeAttribute('data-src')
+        const imageElement = img as HTMLImageElement;
+if (imageElement.dataset.src) {
+          imageElement.src = imageElement.dataset.src;
+imageElement.removeAttribute('data-src')
         }
       })
     }
 
-    // Lazy load non-critical components
-    const lazyLoadComponents = () => {
+    // Lazy load non-critical components;
+const lazyLoadComponents = () => {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
-              const element = entry.target as HTMLElement
-              element.classList.add('loaded')
+              const element = entry.target as HTMLElement;
+element.classList.add('loaded')
               observer.unobserve(element)
             }
           })
@@ -63,8 +63,8 @@ const PerformanceOptimizer: React.FC = () => {
       lazyElements.forEach(el => observer.observe(el))
     }
 
-    // Monitor Core Web Vitals
-    const monitorWebVitals = () => {
+    // Monitor Core Web Vitals;
+const monitorWebVitals = () => {
 import { onCLS, onFID, onFCP, onLCP, onTTFB } 
         onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
         onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
@@ -83,27 +83,28 @@ import { onCLS, onFID, onFCP, onLCP, onTTFB }
       return () => window.removeEventListener('scroll', updateScrollPosition)
     }
 
-    // Initialize optimizations
-    preloadCriticalResources()
+    // Initialize optimizations;
+preloadCriticalResources()
     optimizeImages()
     lazyLoadComponents()
     monitorWebVitals()
     const cleanupScroll = optimizeScroll()
 
-    // Cleanup
-    return () => {
+    // Cleanup;
+return () => {
       cleanupScroll()
     }
   }, [])
 
-  // Log performance metrics in development
-  useEffect(() => {
+  // Log performance metrics in development;
+useEffect(() => {
     if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(val => val !== null)) {
       console.log('Performance Metrics:', metrics)
     }
   }, [metrics])
 
   return null
+</PerformanceMetrics>
 }
 
 export default PerformanceOptimizer

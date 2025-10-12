@@ -31,14 +31,14 @@ export default function FuturisticLoader({
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <div className="relative">
+    <div>
+      <div>
         {/* Outer rotating ring */}
-        <motion.div
-          className={`
+        <motion.div;
+className={`
             ${getSizeClasses()} 
-            border-4 border-transparent 
-            border-t-4 ${getColorClasses().split(' ')[1]}
+            border-4 border-transparent;
+border-t-4 ${getColorClasses().split(' ')[1]}
             rounded-full
           `}
           animate={{ rotate: 360 }}
@@ -46,11 +46,11 @@ export default function FuturisticLoader({
         />
         
         {/* Inner pulsing ring */}
-        <motion.div
-          className={`
-            absolute inset-2 
-            border-2 border-transparent 
-            border-r-2 ${getColorClasses().split(' ')[1]}
+        <motion.div;
+className={`
+            absolute inset-2;
+border-2 border-transparent;
+border-r-2 ${getColorClasses().split(' ')[1]}
             rounded-full
           `}
           animate={{ rotate: -360 }}
@@ -58,12 +58,12 @@ export default function FuturisticLoader({
         />
         
         {/* Center pulsing dot */}
-        <motion.div
-          className={`
+        <motion.div;
+className={`
             absolute top-1/2 left-1/2 w-2 h-2 
             ${getColorClasses().split(' ')[1]} 
-            rounded-full
-            transform -translate-x-1/2 -translate-y-1/2
+            rounded-full;
+transform -translate-x-1/2 -translate-y-1/2
           `}
           animate={{ 
             scale: [1, 1.5, 1],
@@ -77,13 +77,13 @@ export default function FuturisticLoader({
         />
         
         {/* Glow effect */}
-        <motion.div
-          className={`
+        <motion.div;
+className={`
             absolute inset-0 
             ${getColorClasses().split(' ')[1]} 
-            rounded-full
-            blur-md
-            opacity-30
+            rounded-full;
+blur-md;
+opacity-30
           `}
           animate={{ 
             scale: [1, 1.2, 1],
@@ -98,8 +98,8 @@ export default function FuturisticLoader({
       </div>
       
       {text && (
-        <motion.p
-          className={`text-sm ${getColorClasses().split(' ')[1]} font-medium`}
+        <motion.p;
+className={`text-sm ${getColorClasses().split(' ')[1]} font-medium`}
           animate={{ opacity: [0.5, 1, 0.5] }}
           transition={{ 
             duration: 1.5, 

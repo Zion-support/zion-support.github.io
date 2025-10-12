@@ -22,16 +22,16 @@ const EnhancedSkipLink: React.FC = () => {
   };
 
   return (
-    <div className="skip-links">
-      <button
-        onClick={handleSkipToMain}
+    <div>
+      <button;
+onClick={handleSkipToMain}
         className="skip-link"
         aria-label="Skip to main content"
       >
         Skip to main content
       </button>
-      <button
-        onClick={handleSkipToNavigation}
+      <button;
+onClick={handleSkipToNavigation}
         className="skip-link"
         aria-label="Skip to navigation"
       >

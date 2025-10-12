@@ -7,10 +7,10 @@ interface AnalyticsProps {
 }
 
   useEffect(() => {
-    // Initialize analytics tracking
-    const initAnalytics = () => {
-      // Google Analytics initialization
-      if (typeof window !== 'undefined' && window.gtag) {
+    // Initialize analytics tracking;
+const initAnalytics = () => {
+      // Google Analytics initialization;
+if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
           page_location: window.location.href,
@@ -24,7 +24,7 @@ interface AnalyticsProps {
   return <>{children}</>;
 }
 
-// Extend Window interface for gtag
+// Extend Window interface for gtag;
 declare global {
   interface Window {
     gtag: (...args: unknown[]) => void;

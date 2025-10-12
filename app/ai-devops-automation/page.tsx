@@ -1,12 +1,7 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
-=======
-import { Helmet } from 'react-helmet-async';
-import { Server, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Star, Users, TrendingUp } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -127,10 +122,25 @@ export default function AIDevOpsAutomationPage() {
       </Helmet>
 
       <FuturisticBackground variant="services">
+        </Zap>
+        </BarChart3>
+        </Shield>
+        </Server>
+        </Zap>
+        </Shield>
+        </Users>
+        </TrendingUp>
+        </meta>
+        </meta>
+        </link>
+        </ArrowRight>
+        </CheckCircle>
+        </CheckCircle>
+        </Star>
         {/* Hero Section */}
-        <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+        <section>
+          <div>
+            <div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 AI DevOps Automation
               </h1>
@@ -138,17 +148,17 @@ export default function AIDevOpsAutomationPage() {
                 Revolutionize your DevOps with AI-powered CI/CD pipelines, predictive monitoring, 
                 and intelligent resource management. Deploy 80% faster with 95% fewer issues.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton
-                  variant="primary"
+              <div>
+                <FuturisticButton;
+variant="primary"
                   size="lg"
                   onClick={() => window.open('/contact', '_blank')}
                 >
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </FuturisticButton>
-                <FuturisticButton
-                  variant="ghost"
+                <FuturisticButton;
+variant="ghost"
                   size="lg"
                   onClick={() => window.open('#demo', '_blank')}
                 >
@@ -158,14 +168,14 @@ export default function AIDevOpsAutomationPage() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            <div>
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex items-center justify-center mb-2">
+                <div>
+                  <div>
                     {stat.icon}
                   </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                  <div>{stat.number}</div>
+                  <div>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -173,9 +183,9 @@ export default function AIDevOpsAutomationPage() {
         </section>
 
         {/* Features Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+        <section>
+          <div>
+            <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
                 Advanced AI Features
               </h2>
@@ -184,10 +194,10 @@ export default function AIDevOpsAutomationPage() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div>
               {features.map((feature, index) => (
                 <FuturisticCard key={index} variant="service" className="h-full">
-                  <div className="flex items-start mb-4">
+                  <div>
                     {feature.icon}
                     <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
                   </div>
@@ -207,9 +217,9 @@ export default function AIDevOpsAutomationPage() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+        <section>
+          <div>
+            <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
                 Choose Your Plan
               </h2>
@@ -218,26 +228,26 @@ export default function AIDevOpsAutomationPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
               {pricingPlans.map((plan, index) => (
-                <FuturisticCard 
-                  key={index} 
+                <FuturisticCard;
+key={index} 
                   variant={plan.popular ? "feature" : "service"} 
                   className={`h-full ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <div>
+                      <span>
                         Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className="text-center mb-6">
+                  <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <div className="flex items-baseline justify-center mb-2">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                    <div>
+                      <span>{plan.price}</span>
+                      <span>{plan.period}</span>
                     </div>
                     <p className="text-gray-300 text-sm">{plan.description}</p>
                   </div>
@@ -251,8 +261,8 @@ export default function AIDevOpsAutomationPage() {
                     ))}
                   </ul>
 
-                  <FuturisticButton
-                    variant={plan.popular ? "primary" : "ghost"}
+                  <FuturisticButton;
+variant={plan.popular ? "primary" : "ghost"}
                     className="w-full"
                     onClick={() => window.open('/contact', '_blank')}
                   >
@@ -265,9 +275,9 @@ export default function AIDevOpsAutomationPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+        <section>
+          <div>
+            <div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
                 What Our Clients Say
               </h2>
@@ -276,10 +286,10 @@ export default function AIDevOpsAutomationPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
               {testimonials.map((testimonial, index) => (
                 <FuturisticCard key={index} variant="testimonial" className="h-full">
-                  <div className="flex items-center mb-4">
+                  <div>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
@@ -299,8 +309,8 @@ export default function AIDevOpsAutomationPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4">
-          <div className="max-w-7xl mx-auto">
+        <section>
+          <div>
             <FuturisticCard variant="feature" className="text-center">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Automate Your DevOps?
@@ -308,23 +318,23 @@ export default function AIDevOpsAutomationPage() {
               <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
                 Start your free 14-day trial today. No credit card required. Join 300+ companies automating their DevOps.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton
-                  variant="primary"
+              <div>
+                <FuturisticButton;
+variant="primary"
                   size="lg"
                   onClick={() => window.open('/contact', '_blank')}
                 >
                   Start Free Trial
                 </FuturisticButton>
-                <FuturisticButton
-                  variant="secondary"
+                <FuturisticButton;
+variant="secondary"
                   size="lg"
                   onClick={() => window.open('/contact', '_blank')}
                 >
                   Schedule Demo
                 </FuturisticButton>
               </div>
-              <div className="mt-8 text-white/80 text-sm">
+              <div>
                 <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
               </div>
             </FuturisticCard>

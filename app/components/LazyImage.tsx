@@ -2,12 +2,12 @@ import { useState, useRef, useEffect } from 'react'
 import { Loader2 } from 'lucide-react'
 
 interface LazyImageProps {
-  src: string
-  alt: string
-  className?: string
-  placeholder?: string
-  onLoad?: () => void
-  onError?: () => void
+  src: string;
+alt: string;
+className?: string;
+placeholder?: string;
+onLoad?: () => void;
+onError?: () => void
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({
@@ -52,22 +52,26 @@ const LazyImage: React.FC<LazyImageProps> = ({
   }
 
   return (
-    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
+    <div>
       {!isInView && (
-        <div className="absolute inset-0 bg-gray-800 animate-pulse flex items-center justify-center">
+        <div>
           <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />
         </div>
+      </LazyImageProps>
+      </HTMLImageElement>
+      </Loader2>
+      </Loader2>
       )}
       
       {isInView && !isLoaded && !hasError && (
-        <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
+        <div>
           <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />
         </div>
       )}
       
       {isInView && (
-        <img
-          src={src}
+        <img;
+src={src}
           alt={alt}
           onLoad={handleLoad}
           onError={handleError}
@@ -79,9 +83,9 @@ const LazyImage: React.FC<LazyImageProps> = ({
       )}
       
       {hasError && (
-        <div className="absolute inset-0 bg-gray-800 flex items-center justify-center">
-          <div className="text-center text-gray-400">
-            <div className="w-8 h-8 mx-auto mb-2">📷</div>
+        <div>
+          <div>
+            <div>📷</div>
             <p className="text-sm">Image failed to load</p>
           </div>
         </div>

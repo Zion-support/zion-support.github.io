@@ -42,9 +42,9 @@ const EnhancedServicesShowcase: React.FC = () => {
     }
   ];
   return (
-    <div className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+    <div>
+      <div>
+        <div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our Core Services
           </h2>
@@ -53,13 +53,16 @@ const EnhancedServicesShowcase: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div>
           {services.map((service, index) => (
 
-              <div key={index} className="cyber-card p-8 group hover:scale-105 transition-transform">
-              <div className="flex items-center mb-6">
+              <div>
+              <div>
                 <service.icon className="h-12 w-12 text-cyan-400 mr-4" />
                 <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                  </service>
+                  </CheckCircle>
+                  </ArrowRight>
                   {service.title}
                 </h3>
               </div>
@@ -68,7 +71,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                 {service.description}
               </p>
 
-              <div className="mb-6">
+              <div>
                 <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Features</h4>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (

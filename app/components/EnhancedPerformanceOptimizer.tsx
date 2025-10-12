@@ -3,8 +3,8 @@ import { useEffect } from 'react';
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
+    // Preload critical resources;
+const preloadCriticalResources = () => {
       const criticalImages = [
         '/images/hero-bg.jpg',
         '/images/logo.png'
@@ -19,8 +19,8 @@ const PerformanceOptimizer: React.FC = () => {
       });
     };
 
-    // Optimize images
-    const optimizeImages = () => {
+    // Optimize images;
+const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -36,8 +36,8 @@ const PerformanceOptimizer: React.FC = () => {
       images.forEach(img => imageObserver.observe(img));
     };
 
-    // Defer non-critical scripts
-    const deferNonCriticalScripts = () => {
+    // Defer non-critical scripts;
+const deferNonCriticalScripts = () => {
       const scripts = document.querySelectorAll('script[data-defer]');
       scripts.forEach(script => {
         const newScript = document.createElement('script');
@@ -47,13 +47,13 @@ const PerformanceOptimizer: React.FC = () => {
       });
     };
 
-    // Initialize optimizations
-    preloadCriticalResources();
+    // Initialize optimizations;
+preloadCriticalResources();
     optimizeImages();
     deferNonCriticalScripts();
 
-    // Cleanup
-    return () => {
+    // Cleanup;
+return () => {
       // Cleanup if needed
     };
   }, []);

@@ -1,16 +1,16 @@
 import React from 'react'
 
 interface SEOProps {
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object
-  noindex?: boolean
-  nofollow?: boolean
+  title?: string;
+description?: string;
+keywords?: string;
+canonical?: string;
+ogImage?: string;
+ogType?: string;
+twitterCard?: string;
+structuredData?: object;
+noindex?: boolean;
+nofollow?: boolean
 }
 
 const EnhancedSEO: React.FC<SEOProps> = ({
@@ -65,8 +65,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     }
   }
 
-  const finalStructuredData = structuredData || defaultStructuredData
-  const canonicalUrl = canonical || `https://ziontechgroup.com${window.location.pathname}`
+  const finalStructuredData = structuredData || defaultStructuredData;
+const canonicalUrl = canonical || `https://ziontechgroup.com${window.location.pathname}`
 
   return (
     <Helmet>

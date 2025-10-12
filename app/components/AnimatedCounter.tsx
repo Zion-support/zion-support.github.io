@@ -44,7 +44,7 @@ interface AnimatedCounterProps {
   }, [end, duration]);
 
   return (
-    <span className={className}>
+    <span>
       {prefix}{count.toLocaleString()}{suffix}
     </span>
   );

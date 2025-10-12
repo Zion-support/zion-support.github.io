@@ -3,9 +3,9 @@ import { Loader2 } from 'lucide-react';
 
 interface OptimizedLoadingProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'
-  text?: string
-  fullScreen?: boolean
-  className?: string
+  text?: string;
+fullScreen?: boolean;
+className?: string
 }
 
 const OptimizedLoading: React.FC<OptimizedLoadingProps> = ({
@@ -26,8 +26,8 @@ const OptimizedLoading: React.FC<OptimizedLoadingProps> = ({
     : 'flex items-center justify-center p-4'
 
   return (
-    <div className={`${containerClasses} ${className}`}>
-      <div className="flex flex-col items-center space-y-4">
+    <div>
+      <div>
         <Loader2 className={`${sizeClasses[size]} text-cyan-500 animate-spin`} />
         {text && (
           <p className="text-gray-300 text-sm font-medium animate-pulse">

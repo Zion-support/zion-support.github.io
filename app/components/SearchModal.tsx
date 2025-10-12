@@ -22,8 +22,8 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
   const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Mock search data - in a real app, this would come from an API
-  const searchData: SearchResult[] = [
+  // Mock search data - in a real app, this would come from an API;
+const searchData: SearchResult[] = [
     // AI Services
     { title: 'AI Content Generator', description: 'Create high-quality content with AI', path: '/ai-content-generator', category: 'AI Services', icon: <Brain className="w-4 h-4" /> },
     { title: 'AI Chatbot Builder', description: 'Build intelligent chatbots for your business', path: '/ai-chatbot-builder', category: 'AI Services', icon: <Brain className="w-4 h-4" /> },
@@ -70,8 +70,8 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (query.length > 0) {
       setIsLoading(true);
-      // Simulate search delay
-      const timer = setTimeout(() => {
+      // Simulate search delay;
+const timer = setTimeout(() => {
         const filteredResults = searchData.filter(item =>
           item.title.toLowerCase().includes(query.toLowerCase()) ||
           item.description.toLowerCase().includes(query.toLowerCase()) ||
@@ -96,24 +96,21 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto">
-      <div className="flex min-h-screen items-start justify-center px-4 pt-16 pb-20 text-center sm:block sm:p-0">
+    <div>
+      <div>
         {/* Backdrop */}
-        <div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
-          onClick={onClose}
-        />
+        <div>
 
         {/* Modal */}
-        <div className="relative inline-block w-full max-w-2xl transform overflow-hidden rounded-2xl bg-slate-800 text-left align-bottom shadow-xl transition-all sm:my-8 sm:align-middle">
+        <div>
           {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-slate-700">
-            <div className="flex items-center space-x-3">
+          <div>
+            <div>
               <Search className="w-6 h-6 text-cyan-400" />
               <h3 className="text-lg font-semibold text-white">Search Services</h3>
             </div>
-            <button
-              onClick={onClose}
+            <button;
+onClick={onClose}
               className="text-gray-400 hover:text-white transition-colors p-1"
               aria-label="Close search"
             >
@@ -122,10 +119,10 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Search Input */}
-          <div className="p-6">
-            <div className="relative">
-              <input
-                ref={inputRef}
+          <div>
+            <div>
+              <input;
+ref={inputRef}
                 type="text"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
@@ -138,45 +135,45 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Results */}
-          <div className="max-h-96 overflow-y-auto">
+          <div>
             {isLoading ? (
-              <div className="flex items-center justify-center py-8">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div>
-                <span className="ml-3 text-gray-400">Searching...</span>
+              <div>
+                <div></div>
+                <span>Searching...</span>
               </div>
             ) : query.length === 0 ? (
-              <div className="px-6 py-8 text-center">
+              <div>
                 <Search className="w-12 h-12 text-gray-600 mx-auto mb-4" />
                 <p className="text-gray-400">Start typing to search for services</p>
               </div>
             ) : results.length === 0 ? (
-              <div className="px-6 py-8 text-center">
+              <div>
                 <p className="text-gray-400">No results found for "{query}"</p>
               </div>
             ) : (
-              <div className="px-6 pb-6">
+              <div>
                 <p className="text-sm text-gray-400 mb-4">
                   {results.length} result{results.length !== 1 ? 's' : ''} found
                 </p>
-                <div className="space-y-2">
+                <div>
                   {results.map((result, index) => (
-                    <Link
-                      key={index}
+                    <Link;
+key={index}
                       to={result.path}
                       onClick={onClose}
                       className="flex items-center p-4 bg-slate-700/50 hover:bg-slate-700 rounded-lg transition-colors group"
                     >
-                      <div className="flex-shrink-0 mr-4 text-cyan-400 group-hover:text-cyan-300">
+                      <div>
                         {result.icon}
                       </div>
-                      <div className="flex-1 min-w-0">
+                      <div>
                         <h4 className="text-white font-medium group-hover:text-cyan-300 transition-colors">
                           {result.title}
                         </h4>
                         <p className="text-sm text-gray-400 mt-1">
                           {result.description}
                         </p>
-                        <span className="inline-block mt-2 px-2 py-1 text-xs bg-slate-600 text-gray-300 rounded">
+                        <span>
                           {result.category}
                         </span>
                       </div>

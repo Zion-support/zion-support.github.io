@@ -1,17 +1,17 @@
-ursor/website-audit-and-update-with-deployment-a178
+ursor/website-audit-and-update-with-deployment-a178;
 ursor/
-                Enhanced Accessibility
-                EnhancedAccessibilityEnhancer
+                Enhanced Accessibility;
+EnhancedAccessibilityEnhancer
               </span>
-              <br />
-              <span className="text-white">Enhancer</span>
+              <br></br>
+              <span>Enhancer</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced enhanced accessibility enhancer solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             return (
-    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -25,11 +25,11 @@ ursor/
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section>
         return (
-    <div className="max-w-7xl mx-auto">
+    <div>
           return (
-    <div className="text-center mb-16">
+    <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our EnhancedAccessibilityEnhancer?
             </h2>
@@ -43,11 +43,11 @@ ursor/
           </div>
           
           return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div>
             {features.map((feature, index) => (
-              <div key={index} className="text-center">
+              <div>
                 return (
-    <div className="bg-gradient-to-r from-purple-500 to-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+    <div>
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
@@ -59,11 +59,11 @@ ursor/
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section>
         return (
-    <div className="max-w-7xl mx-auto">
+    <div>
           return (
-    <div className="text-center mb-16">
+    <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Solutions?
             </h2>
@@ -73,11 +73,11 @@ ursor/
           </div>
           
           return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-4">
+              <div>
                 return (
-    <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+    <div>
                   <CheckCircle className="w-5 h-5 text-white" />
                 </div>
                 <p className="text-gray-300 text-lg">
@@ -90,7 +90,7 @@ ursor/
       </section>
 
           return (
-    <div className="bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl p-12">
+    <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
@@ -98,7 +98,7 @@ ursor/
               Transform your business with our enhancedaccessibilityenhancer solutions today.
             </p>
             return (
-    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <div>
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
                 Contact Us Now
               </button>
@@ -107,11 +107,11 @@ ursor/
               </button>
             </div>
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section>
         return (
-    <div className="max-w-7xl mx-auto">
+    <div>
           return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
+    <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
@@ -119,7 +119,7 @@ ursor/
               Contact us today to learn more about our accessibility enhancement solutions and how they can benefit your business.
             </p>
             return (
-    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
                 Contact Us
               </button>
@@ -135,3 +135,4 @@ ursor/
 }
 
 export default EnhancedAccessibilityEnhancerPage
+)))))))))))))

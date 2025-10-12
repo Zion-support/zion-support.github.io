@@ -2,12 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight, AlertCircle, Building2, Bug } from 'lucide-react';
-=======
-import { Brain, Shield, Zap, CheckCircle, ArrowRight, Star, AlertTriangle, Eye, Lock, Target, Activity, Globe, Smartphone, Monitor, AlertCircle, Sparkles, Database, Users, Building2, Network, Bug, Search, BarChart3 } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
-
 export default function AiCybersecurityMonitorProPage() {
 
   const features = [
@@ -222,7 +217,7 @@ export default function AiCybersecurityMonitorProPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <div>
       <Helmet>
         <title>AI Cybersecurity Monitor Pro - Zion Tech Group | Advanced Security Intelligence Platform</title>
         <meta name="description" content="Protect your business with AI Cybersecurity Monitor Pro. Advanced threat detection, 24/7 monitoring, and automated response for enterprise-grade security. Start your free trial today." />
@@ -232,6 +227,56 @@ export default function AiCybersecurityMonitorProPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#8b5cf6" />
         
+        </Brain>
+        </Shield>
+        </Eye>
+        </Lock>
+        </Zap>
+        </Globe>
+        </AlertTriangle>
+        </Network>
+        </Monitor>
+        </Database>
+        </AlertCircle>
+        </BarChart3>
+        </Shield>
+        </Building2>
+        </Activity>
+        </Eye>
+        </Bug>
+        </Target>
+        </Lock>
+        </Network>
+        </Users>
+        </AlertCircle>
+        </Search>
+        </Smartphone>
+        </meta>
+        </meta>
+        </meta>
+        </meta>
+        </meta>
+        </meta>
+        </meta>
+        </meta>
+        </meta>
+        </meta>
+        </meta>
+        </meta>
+        </meta>
+        </meta>
+        </meta>
+        </meta>
+        </meta>
+        </ArrowRight>
+        </stat>
+        </CheckCircle>
+        </CheckCircle>
+        </CheckCircle>
+        </ArrowRight>
+        </Star>
+        </Sparkles>
+        </Shield>
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="AI Cybersecurity Monitor Pro - Advanced Security Intelligence Platform" />
         <meta property="og:description" content="Protect your business with AI-powered threat detection, 24/7 monitoring, and automated response for enterprise-grade security." />
@@ -277,12 +322,12 @@ export default function AiCybersecurityMonitorProPage() {
         </script>
       </Helmet>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div>
         {/* Hero Section */}
-        <div className="text-center mb-16">
+        <div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             AI Cybersecurity Monitor{' '}
-            <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+            <span>
               Pro
             </span>
           </h1>
@@ -290,37 +335,37 @@ export default function AiCybersecurityMonitorProPage() {
             Protect your business with AI-powered threat detection, 24/7 monitoring, 
             and automated response. Enterprise-grade security powered by artificial intelligence.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              to="/contact" 
+          <div>
+            <Link;
+to="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
-              to="/ai-services" 
+            <Link;
+to="/ai-services" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center"
             >
               View All AI Services
             </Link>
           </div>
-          <div className="text-sm text-gray-400">
+          <div>
             ✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 security monitoring
           </div>
         </div>
 
         {/* Stats Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xl mb-16">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <section>
+          <div>
+            <div>
               {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
+                <div>
+                  <div>
                     <stat.icon className="h-8 w-8 text-white" />
                   </div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                  <div>{stat.number}</div>
+                  <div>{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -328,20 +373,20 @@ export default function AiCybersecurityMonitorProPage() {
         </section>
 
         {/* Features Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
+        <section>
+          <div>
             <h2 className="text-3xl font-bold text-white mb-4">Advanced Security Features</h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Our AI Cybersecurity Monitor Pro leverages cutting-edge artificial intelligence 
-              to provide comprehensive protection against evolving cyber threats.
+              Our AI Cybersecurity Monitor Pro leverages cutting-edge artificial intelligence;
+to provide comprehensive protection against evolving cyber threats.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
-                <div className="mb-6">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl mx-auto mb-4 group-hover:scale-110 transition-transform">
+              <div>
+                <div>
+                  <div>
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 text-center">{feature.title}</h3>
@@ -361,18 +406,18 @@ export default function AiCybersecurityMonitorProPage() {
         </section>
 
         {/* Security Capabilities Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
+        <section>
+          <div>
             <h2 className="text-3xl font-bold text-white mb-4">Comprehensive Security Coverage</h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Protect every aspect of your digital infrastructure with our comprehensive security capabilities.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div>
             {securityCapabilities.map((capability, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300">
-                <div className="flex items-center mb-4">
+              <div>
+                <div>
                   {capability.icon}
                   <h3 className="text-lg font-semibold text-white ml-3">{capability.category}</h3>
                 </div>
@@ -390,18 +435,18 @@ export default function AiCybersecurityMonitorProPage() {
         </section>
 
         {/* Threat Types Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
+        <section>
+          <div>
             <h2 className="text-3xl font-bold text-white mb-4">Threat Protection</h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Advanced AI detection and prevention for all types of cyber threats and attacks.
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div>
             {threatTypes.map((threat, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 text-center group">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mx-auto mb-3 group-hover:scale-110 transition-transform">
+              <div>
+                <div>
                   {threat.icon}
                 </div>
                 <h3 className="text-white font-semibold mb-1">{threat.name}</h3>
@@ -412,32 +457,30 @@ export default function AiCybersecurityMonitorProPage() {
         </section>
 
         {/* Pricing Section */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
+        <section>
+          <div>
             <h2 className="text-3xl font-bold text-white mb-4">Choose Your Security Plan</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Flexible pricing plans designed to protect businesses of all sizes.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 relative ${
-                plan.popular ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' : 'border-slate-700 hover:border-cyan-500/30'
-              }`}>
+              <div>
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <div>
+                    <span>
                       Most Popular
                     </span>
                   </div>
                 )}
                 
-                <div className="text-center mb-6">
+                <div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  <div>
+                    <span>{plan.price}</span>
+                    <span>{plan.period}</span>
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
@@ -451,8 +494,8 @@ export default function AiCybersecurityMonitorProPage() {
                   ))}
                 </ul>
                 
-                <Link
-                  to="/contact"
+                <Link;
+to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
@@ -468,20 +511,20 @@ export default function AiCybersecurityMonitorProPage() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xl mb-16">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+        <section>
+          <div>
+            <div>
               <h2 className="text-3xl font-bold text-white mb-4">What Our Customers Say</h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                 Join hundreds of security professionals who trust AI Cybersecurity Monitor Pro.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                <div>
+                  <div>
+                    <div>
                       {testimonial.avatar}
                     </div>
                     <div>
@@ -490,13 +533,13 @@ export default function AiCybersecurityMonitorProPage() {
                       <p className="text-cyan-400 text-sm font-semibold">{testimonial.company}</p>
                     </div>
                   </div>
-                  <div className="flex items-center mb-3">
+                  <div>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
                   <p className="text-gray-300 italic mb-3">"{testimonial.content}"</p>
-                  <div className="text-cyan-400 font-semibold text-sm">
+                  <div>
                     Result: {testimonial.results}
                   </div>
                 </div>
@@ -506,8 +549,8 @@ export default function AiCybersecurityMonitorProPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="text-center">
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 border border-cyan-500/30">
+        <section>
+          <div>
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Secure Your Business?
             </h2>
@@ -515,23 +558,23 @@ export default function AiCybersecurityMonitorProPage() {
               Start your free trial today and experience enterprise-grade security powered by AI. 
               Join hundreds of organizations already protected by our advanced threat detection.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+            <div>
+              <Link;
+to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"
               >
                 Start Free Trial
                 <Sparkles className="w-5 h-5 ml-2" />
               </Link>
-              <Link
-                to="/about"
+              <Link;
+to="/about"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center"
               >
                 Learn More
                 <Shield className="w-5 h-5 ml-2" />
               </Link>
             </div>
-            <div className="mt-8 text-white/80 text-sm">
+            <div>
               <p>✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 monitoring • ✓ Cancel anytime</p>
             </div>
           </div>

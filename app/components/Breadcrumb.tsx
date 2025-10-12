@@ -13,11 +13,11 @@ const Breadcrumb: React.FC = () => {
 
   return (
     <nav className="bg-gray-900/50 border-b border-gray-700 py-3" aria-label="Breadcrumb">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div>
         <ol className="flex items-center space-x-2 text-sm">
           <li>
-            <Link
-              to="/"
+            <Link;
+to="/"
               className="text-gray-400 hover:text-white transition-colors flex items-center"
             >
               <Home className="h-4 w-4 mr-1" />
@@ -33,13 +33,15 @@ const Breadcrumb: React.FC = () => {
               .join(' ');
 
             return (
+              </Home>
+              </ChevronRight>
               <li key={name} className="flex items-center">
                 <ChevronRight className="h-4 w-4 text-gray-500 mx-2" />
                 {isLast ? (
-                  <span className="text-white font-medium">{displayName}</span>
+                  <span>{displayName}</span>
                 ) : (
-                  <Link
-                    to={routeTo}
+                  <Link;
+to={routeTo}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {displayName}

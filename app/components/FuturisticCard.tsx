@@ -29,6 +29,10 @@ interface FuturisticCardProps {
 
   return (
     <motion.div
+      </div>
+      </div>
+      </div>
+      </div>
       className={`relative rounded-2xl p-8 transition-all duration-500 cursor-pointer group overflow-hidden ${getVariantStyles()} ${className}`}
       onClick={onClick}
       whileHover={{ 
@@ -41,21 +45,21 @@ interface FuturisticCardProps {
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div>
       
       {/* Animated border glow */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
+      <div>
       
       {/* Content */}
-      <div className="relative z-10">
+      <div>
         {children}
       </div>
       
       {/* Corner accent */}
-      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-bl-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div>
       
       {/* Bottom accent */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div>
     </motion.div>
   );
 }

@@ -60,31 +60,45 @@ const AIAutomationPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+    <div>
       <Helmet>
         <title>AI Automation Services - Zion Tech Group</title>
         <meta name="description" content="Transform your business with AI-powered automation solutions. Reduce costs, increase efficiency, and eliminate manual processes." />
         <meta name="keywords" content="AI automation, business process automation, workflow automation, intelligent automation, RPA" />
       </Helmet>
 
+      </Zap>
+      </Brain>
+      </Settings>
+      </Globe>
+      </Users>
+      </Star>
+      </Award>
+      </CheckCircle>
+      </meta>
+      </meta>
+      </ArrowRight>
+      </CheckCircle>
+      </ArrowRight>
+      </ArrowRight>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section>
+        <div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Automation</span> Services
+            AI <span>Automation</span> Services
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business operations with intelligent automation solutions that reduce costs, increase efficiency, and eliminate repetitive tasks.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
+          <div>
+            <Link;
+to="/contact"
               className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center gap-2"
             >
               Get Started <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link
-              to="/ai-services"
+            <Link;
+to="/ai-services"
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
               View All AI Services
@@ -94,18 +108,18 @@ const AIAutomationPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section>
+        <div>
+          <div>
             <h2 className="text-3xl font-bold text-white mb-4">Why Choose Our AI Automation?</h2>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
               Our AI automation solutions are designed to streamline your operations and drive measurable results.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="mb-4">{feature.icon}</div>
+              <div>
+                <div>{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
@@ -115,18 +129,18 @@ const AIAutomationPage: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section>
+        <div>
+          <div>
             <h2 className="text-3xl font-bold text-white mb-4">Automation Use Cases</h2>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
               Discover how AI automation can transform different aspects of your business.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-4">
+              <div>
+                <div>
                   {useCase.icon}
                   <h3 className="text-lg font-semibold text-white">{useCase.title}</h3>
                 </div>
@@ -138,68 +152,54 @@ const AIAutomationPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section>
+        <div>
+          <div>
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Key Benefits</h2>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                    <span className="text-gray-300">{benefit}</span>
+                    <span>{benefit}</span>
                   </li>
                 ))}
               </ul>
             </div>
-<<<<<<< HEAD
-            <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-2xl p-8 border border-cyan-500/30">
+            <div>
               <h3 className="text-2xl font-bold text-white mb-4">Ready to Automate?</h3>
               <p className="text-gray-300 mb-6">
                 Let our AI experts help you identify automation opportunities and implement solutions that deliver immediate value.
               </p>
-              <Link
-                to="/contact"
+              <Link;
+to="/contact"
                 className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 inline-flex items-center gap-2"
               >
                 Start Your Automation Journey <ArrowRight className="w-5 h-5" />
               </Link>
-=======
-            <div className="relative">
-              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2xl p-8 backdrop-blur-sm border border-white/10">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-white mb-2">70%</div>
-                  <div className="text-gray-300 mb-6">Average Cost Reduction</div>
-                  <div className="text-4xl font-bold text-white mb-2">3-6</div>
-                  <div className="text-gray-300 mb-6">Months to ROI</div>
-                  <div className="text-4xl font-bold text-white mb-2">24/7</div>
-                  <div className="text-gray-300">Automated Operations</div>
-                </div>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
-            </div>
+</div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <section>
+        <div>
           <h2 className="text-3xl font-bold text-white mb-6">
             Transform Your Business with AI Automation
           </h2>
           <p className="text-gray-300 text-lg mb-8">
             Join hundreds of companies that have already revolutionized their operations with our AI automation solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
+          <div>
+            <Link;
+to="/contact"
               className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
             >
               Get Started Today <ArrowRight className="w-5 h-5" />
             </Link>
-            <Link
-              to="/about"
+            <Link;
+to="/about"
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
               Learn More About Us

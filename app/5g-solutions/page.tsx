@@ -1,10 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react'
-=======
-import { Helmet } from 'react-helmet-async'
-import { Network, Zap, Shield, Globe, BarChart3, CheckCircle, ArrowRight, Cpu, Smartphone } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import { Link } from 'react-router-dom'
 
 const FiveGSolutionsPage: React.FC = () => {
@@ -92,35 +87,63 @@ const FiveGSolutionsPage: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com/5g-solutions" />
       </Helmet>
 
-      <div className="min-h-screen bg-gray-900 text-white">
+      <div>
+        </Network>
+        </Zap>
+        </Cpu>
+        </Shield>
+        </Smartphone>
+        </BarChart3>
+        </Zap>
+        </Globe>
+        </Cpu>
+        </Shield>
+        </Zap>
+        </Cpu>
+        </Network>
+        </Shield>
+        </meta>
+        </meta>
+        </link>
+        </Network>
+        </ArrowRight>
+        </ArrowRight>
+        </CheckCircle>
+        </ArrowRight>
+        </div>
+        </div>
+        </div>
+        </div>
+        </ArrowRight>
+        </ArrowRight>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10" />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
+        <section>
+          <div>
+          <div>
+            <div>
               <Network className="w-4 h-4" />
               <span>5G Technology Solutions</span>
             </div>
             
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              Next-Generation <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">5G Solutions</span>
+              Next-Generation <span>5G Solutions</span>
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with cutting-edge 5G technology. From network infrastructure 
-              to IoT solutions, we deliver the future of connectivity today.
+              Transform your business with cutting-edge 5G technology. From network infrastructure;
+to IoT solutions, we deliver the future of connectivity today.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-              <Link 
-                to="/contact" 
+            <div>
+              <Link;
+to="/contact" 
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transform hover:scale-105"
               >
                 <span>Get Started</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link 
-                to="/demo" 
+              <Link;
+to="/demo" 
                 className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
               >
                 <span>View Demo</span>
@@ -131,28 +154,28 @@ const FiveGSolutionsPage: React.FC = () => {
         </section>
 
         {/* Stats Section */}
-        <section className="py-20 px-4 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5" />
-          <div className="relative max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section>
+          <div>
+          <div>
+            <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">5G Technology?</span>
+                Why Choose <span>5G Technology?</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the power of next-generation connectivity with our comprehensive 5G solutions.
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
               {stats.map((stat, index) => (
-                <div key={index} className="group text-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300 hover:scale-105">
-                  <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div>
+                  <div>
                     {stat.icon}
                   </div>
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                  <div>
                     {stat.number}
                   </div>
-                  <div className="text-gray-300 text-sm group-hover:text-white transition-colors">
+                  <div>
                     {stat.label}
                   </div>
                 </div>
@@ -162,23 +185,23 @@ const FiveGSolutionsPage: React.FC = () => {
         </section>
 
         {/* Solutions Section */}
-        <section className="py-20 px-4 relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-cyan-500/5 to-pink-500/5" />
-          <div className="relative max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section>
+          <div>
+          <div>
+            <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">5G Solutions</span>
+                Comprehensive <span>5G Solutions</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                From network infrastructure to mobile applications, we provide end-to-end 5G solutions 
-                that transform your business operations.
+                From network infrastructure to mobile applications, we provide end-to-end 5G solutions;
+that transform your business operations.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div>
               {solutions.map((solution, index) => (
-                <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div>
+                  <div>
                     {solution.icon}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
@@ -187,19 +210,19 @@ const FiveGSolutionsPage: React.FC = () => {
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {solution.description}
                   </p>
-                  <div className="space-y-2 mb-6">
+                  <div>
                     {solution.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-2 text-gray-400 text-sm">
+                      <div>
                         <CheckCircle className="w-4 h-4 text-green-400" />
                         <span>{feature}</span>
                       </div>
                     ))}
                   </div>
-                  <Link 
-                    to={solution.link}
+                  <Link;
+to={solution.link}
                     className="group/link flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
-                    <span className="text-sm font-medium">Learn More</span>
+                    <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -209,21 +232,21 @@ const FiveGSolutionsPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-purple-900/50 relative">
-          <div className="relative max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section>
+          <div>
+            <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Benefits</span>
+                Key <span>Benefits</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 Discover how 5G technology can revolutionize your business operations and customer experience.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="group text-center bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div>
+                  <div>
                     {benefit.icon}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
@@ -239,29 +262,29 @@ const FiveGSolutionsPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-8 sm:p-12 lg:p-16">
+        <section>
+          <div>
+          <div>
+            <div>
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                Ready to Embrace the <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">5G Future?</span>
+                Ready to Embrace the <span>5G Future?</span>
               </h2>
               
               <p className="text-xl sm:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
-                Transform your business with our comprehensive 5G solutions. From infrastructure 
-                to applications, we deliver the future of connectivity today.
+                Transform your business with our comprehensive 5G solutions. From infrastructure;
+to applications, we deliver the future of connectivity today.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Link 
-                  to="/contact" 
+              <div>
+                <Link;
+to="/contact" 
                   className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
                 >
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link 
-                  to="/pricing" 
+                <Link;
+to="/pricing" 
                   className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
                 >
                   <span>View Pricing</span>

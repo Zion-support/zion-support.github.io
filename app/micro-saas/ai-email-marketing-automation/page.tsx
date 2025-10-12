@@ -1,11 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 import { ArrowRight, Bot, MessageSquare } from 'lucide-react'
-=======
-import { ArrowRight, Mail, BarChart3, Users, Zap, CheckCircle, Clock, Target, TrendingUp, Shield, Bot, Star, Eye } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
-
 export default function AIEmailMarketingAutomationPage() {
   const features = [
     {

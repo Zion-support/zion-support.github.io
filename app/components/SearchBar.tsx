@@ -38,12 +38,16 @@ const SearchBar: React.FC<SearchBarProps> = ({
   };
 
   return (
-    <div className={`relative ${className}`}>
+    <div>
+      </SearchBarProps>
+      </HTMLInputElement>
+      </Search>
+      </X>
       <form onSubmit={handleSearch} className="relative">
-        <div className="relative">
+        <div>
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-          <input
-            ref={inputRef}
+          <input;
+ref={inputRef}
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -52,8 +56,8 @@ const SearchBar: React.FC<SearchBarProps> = ({
             className="w-full pl-10 pr-10 py-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
           />
           {query && (
-            <button
-              type="button"
+            <button;
+type="button"
               onClick={handleClear}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
             >
@@ -65,13 +69,13 @@ const SearchBar: React.FC<SearchBarProps> = ({
 
       {/* Search suggestions dropdown */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg border border-white/20 z-50">
-          <div className="p-4">
+        <div>
+          <div>
             <p className="text-sm text-gray-600 mb-2">Popular searches:</p>
-            <div className="space-y-1">
+            <div>
               {['AI Services', 'Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'].map((suggestion) => (
-                <button
-                  key={suggestion}
+                <button;
+key={suggestion}
                   onClick={() => {
                     setQuery(suggestion);
                     if (onSearch) onSearch(suggestion);

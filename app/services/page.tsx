@@ -100,13 +100,20 @@ const ServicesPage: React.FC = () => {
         <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, custom development, data analytics, mobile development" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+      <div>
+        </meta>
+        </meta>
+        </service>
+        </CheckCircle>
+        </ArrowRight>
+        </service>
+        </step>
         {/* Hero Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
+        <section>
+          <div>
+            <div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Services</span>
+                Our <span>Services</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 Comprehensive AI and IT solutions designed to transform your business and drive growth. 
@@ -117,22 +124,19 @@ const ServicesPage: React.FC = () => {
         </section>
 
         {/* Main Services Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+        <section>
+          <div>
+            <div>
               <h2 className="text-4xl font-bold text-white mb-6">Core Services</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Our flagship services that have helped hundreds of businesses transform and grow
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
               {mainServices.map((service, index) => (
-                <div 
-                  key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div>
+                  <div>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   
@@ -148,13 +152,13 @@ const ServicesPage: React.FC = () => {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
+                        <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                   
-                  <Link 
-                    to={service.href}
+                  <Link;
+to={service.href}
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold group-hover:translate-x-1"
                   >
                     Learn More
@@ -167,23 +171,23 @@ const ServicesPage: React.FC = () => {
         </section>
 
         {/* Additional Services Section */}
-        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+        <section>
+          <div>
+            <div>
               <h2 className="text-4xl font-bold text-white mb-6">Additional Services</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Specialized services to complement your core technology needs
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div>
               {additionalServices.map((service, index) => (
-                <Link
-                  key={index}
+                <Link;
+key={index}
                   to={service.href}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105 text-center"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div>
                     <service.icon className="w-6 h-6 text-cyan-400" />
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
@@ -199,26 +203,23 @@ const ServicesPage: React.FC = () => {
         </section>
 
         {/* Process Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
+        <section>
+          <div>
+            <div>
               <h2 className="text-4xl font-bold text-white mb-6">Our Process</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 How we work with you to deliver exceptional results
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
               {processSteps.map((step, index) => (
-                <div 
-                  key={index}
-                  className="text-center group"
-                >
-                  <div className="relative mb-6">
-                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 border border-cyan-500/30">
+                <div>
+                  <div>
+                    <div>
                       <step.icon className="w-8 h-8 text-cyan-400" />
                     </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                    <div>
                       {step.step}
                     </div>
                   </div>
@@ -235,24 +236,24 @@ const ServicesPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
+        <section>
+          <div>
+            <div>
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Let's discuss your project and how our services can help you achieve your business goals.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact"
+              <div>
+                <Link;
+to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get a Free Consultation
                 </Link>
-                <Link 
-                  to="/about"
+                <Link;
+to="/about"
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                 >
                   Learn More About Us

@@ -9,6 +9,23 @@ const SEOHead: React.FC = () => {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#8b5cf6" />
       
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
       <meta property="og:description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />

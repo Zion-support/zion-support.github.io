@@ -10,11 +10,11 @@ const TutorialsPage: React.FC = () => {
         <meta name="keywords" content="tutorials, AI tutorials, IT tutorials, learning, guides, education" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
+      <div>
+        <div>
+          <div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <span>
                 Tutorials & Learning Center
               </span>
             </h1>
@@ -23,9 +23,11 @@ const TutorialsPage: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div>
+            </meta>
+            </meta>
             {/* AI Tutorials */}
-            <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
+            <div>
               <h3 className="text-2xl font-bold text-white mb-4">AI Tutorials</h3>
               <p className="text-gray-300 mb-4">
                 Learn artificial intelligence from basics to advanced implementations.
@@ -39,7 +41,7 @@ const TutorialsPage: React.FC = () => {
             </div>
 
             {/* IT Infrastructure */}
-            <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
+            <div>
               <h3 className="text-2xl font-bold text-white mb-4">IT Infrastructure</h3>
               <p className="text-gray-300 mb-4">
                 Master cloud computing, DevOps, and system administration.
@@ -53,7 +55,7 @@ const TutorialsPage: React.FC = () => {
             </div>
 
             {/* Web Development */}
-            <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 backdrop-blur-sm border border-green-500/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
+            <div>
               <h3 className="text-2xl font-bold text-white mb-4">Web Development</h3>
               <p className="text-gray-300 mb-4">
                 Build modern, scalable web applications with cutting-edge technologies.
@@ -67,7 +69,7 @@ const TutorialsPage: React.FC = () => {
             </div>
 
             {/* Data Science */}
-            <div className="bg-gradient-to-br from-orange-900/50 to-red-900/50 backdrop-blur-sm border border-orange-500/20 rounded-xl p-6 hover:border-orange-400/40 transition-all duration-300">
+            <div>
               <h3 className="text-2xl font-bold text-white mb-4">Data Science</h3>
               <p className="text-gray-300 mb-4">
                 Extract insights from data using advanced analytics and visualization.
@@ -81,7 +83,7 @@ const TutorialsPage: React.FC = () => {
             </div>
 
             {/* Cybersecurity */}
-            <div className="bg-gradient-to-br from-red-900/50 to-pink-900/50 backdrop-blur-sm border border-red-500/20 rounded-xl p-6 hover:border-red-400/40 transition-all duration-300">
+            <div>
               <h3 className="text-2xl font-bold text-white mb-4">Cybersecurity</h3>
               <p className="text-gray-300 mb-4">
                 Protect systems and data with comprehensive security strategies.
@@ -95,7 +97,7 @@ const TutorialsPage: React.FC = () => {
             </div>
 
             {/* Mobile Development */}
-            <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 hover:border-indigo-400/40 transition-all duration-300">
+            <div>
               <h3 className="text-2xl font-bold text-white mb-4">Mobile Development</h3>
               <p className="text-gray-300 mb-4">
                 Create cross-platform mobile applications with modern frameworks.
@@ -109,12 +111,12 @@ const TutorialsPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="text-center mt-16">
+          <div>
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Start Learning?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of developers and IT professionals who are advancing their careers with our tutorials.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div>
               <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
                 Browse All Tutorials
               </button>

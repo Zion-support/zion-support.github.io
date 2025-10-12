@@ -1,10 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import { createContext, useContext, useEffect } from 'react';
-=======
-import React, { createContext, useContext, useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
-
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;
@@ -27,10 +22,10 @@ interface AnalyticsProviderProps {
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
-    // Initialize analytics
-    if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (process.env.NODE_ENV === 'production') {
+    // Initialize analytics;
+if (typeof window !== 'undefined') {
+      // Google Analytics;
+if (process.env.NODE_ENV === 'production') {
         const script = document.createElement('script');
         script.async = true;
         script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_ID}`;
@@ -48,35 +43,35 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
   const track = (event: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (window.gtag) {
+      // Google Analytics;
+if (window.gtag) {
         window.gtag('event', event, properties);
       }
       
-      // Custom analytics
-      console.log('Analytics Event:', event, properties);
+      // Custom analytics;
+console.log('Analytics Event:', event, properties);
     }
   };
 
   const identify = (userId: string, traits?: Record<string, any>) => {
     if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (window.gtag) {
+      // Google Analytics;
+if (window.gtag) {
         window.gtag('config', process.env.REACT_APP_GA_ID, {
           user_id: userId,
           custom_map: traits
         });
       }
       
-      // Custom analytics
-      console.log('Analytics Identify:', userId, traits);
+      // Custom analytics;
+console.log('Analytics Identify:', userId, traits);
     }
   };
 
   const page = (name: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (window.gtag) {
+      // Google Analytics;
+if (window.gtag) {
         window.gtag('event', 'page_view', {
           page_title: name,
           page_location: window.location.href,
@@ -84,8 +79,8 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         });
       }
       
-      // Custom analytics
-      console.log('Analytics Page:', name, properties);
+      // Custom analytics;
+console.log('Analytics Page:', name, properties);
     }
   };
 
@@ -96,13 +91,22 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   };
 
   return (
+    </string>
+    </string>
+    </string>
+    </AnalyticsContextType>
+    </AnalyticsProviderProps>
+    </string>
+    </string>
+    </string>
+    </AnalyticsContext>
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
 };
 
-// Extend Window interface for TypeScript
+// Extend Window interface for TypeScript;
 declare global {
   interface Window {
     dataLayer: any[];

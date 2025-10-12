@@ -74,17 +74,20 @@ const defaultSlides: Slide[] = [
   };
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto">
+    <div>
+      </CheckCircle>
+      </Cloud>
+      </ChevronLeft>
+      </ChevronRight>
+      </Pause>
+      </Play>
       {/* Main Carousel */}
-      <div className="relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20">
-        <div 
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-        >
+      <div>
+        <div>
           {slides.map((slide) => (
-            <div key={slide.id} className="w-full flex-shrink-0">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
-                <div className="space-y-6">
+            <div>
+              <div>
+                <div>
                   <h3 className="text-3xl font-bold text-white">{slide.title}</h3>
                   <p className="text-lg text-gray-300">{slide.description}</p>
                   <ul className="space-y-3">
@@ -96,8 +99,8 @@ const defaultSlides: Slide[] = [
                     ))}
                   </ul>
                 </div>
-                <div className="flex items-center justify-center">
-                  <div className="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                <div>
+                  <div>
                     <Cloud className="w-24 h-24 text-white opacity-50" />
                   </div>
                 </div>
@@ -107,15 +110,15 @@ const defaultSlides: Slide[] = [
         </div>
 
         {/* Navigation Arrows */}
-        <button
-          onClick={prevSlide}
+        <button;
+onClick={prevSlide}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
-        <button
-          onClick={nextSlide}
+        <button;
+onClick={nextSlide}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
           aria-label="Next slide"
         >
@@ -124,9 +127,9 @@ const defaultSlides: Slide[] = [
       </div>
 
       {/* Controls */}
-      <div className="flex items-center justify-center mt-6 space-x-4">
-        <button
-          onClick={togglePlayPause}
+      <div>
+        <button;
+onClick={togglePlayPause}
           className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
           aria-label={isPlaying ? 'Pause' : 'Play'}
         >
@@ -134,10 +137,10 @@ const defaultSlides: Slide[] = [
         </button>
 
         {/* Slide Indicators */}
-        <div className="flex space-x-2">
+        <div>
           {slides.map((_, index) => (
-            <button
-              key={index}
+            <button;
+key={index}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors ${
                 index === currentSlide ? 'bg-white' : 'bg-white/30'

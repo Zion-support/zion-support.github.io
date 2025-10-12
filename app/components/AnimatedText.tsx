@@ -60,10 +60,11 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
   };
 
   return (
-    <span className={`${getAnimationClasses()} ${className}`}>
+    <span>
+      </AnimatedTextProps>
       {type === 'typing' ? displayText : text}
       {type === 'typing' && currentIndex < text.length && (
-        <span className="animate-pulse">|</span>
+        <span>|</span>
       )}
     </span>
   );

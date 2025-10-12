@@ -1,11 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 import { ArrowRight, HardDrive, Laptop, Tablet, Router } from 'lucide-react'
-=======
-import { ArrowRight, Zap, Cloud, CheckCircle, Star, Clock, BarChart3, Sparkles, Target, Shield, MessageCircle, Mail, Phone, MapPin, Play, Settings, Database, Search, Server, Network, Database as DatabaseIcon } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
-
 export default function CloudMigrationPage() {
 
   const features = [
@@ -215,39 +210,88 @@ export default function CloudMigrationPage() {
         <link rel="canonical" href="https://ziontechgroup.com/cloud-migration" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div>
+        </Cloud>
+        </Shield>
+        </BarChart3>
+        </Zap>
+        </Database>
+        </Network>
+        </Search>
+        </Target>
+        </Settings>
+        </Database>
+        </Server>
+        </CheckCircle>
+        </Cloud>
+        </Cloud>
+        </Cloud>
+        </Network>
+        </meta>
+        </meta>
+        </meta>
+        </link>
+        </Sparkles>
+        </br>
+        </br>
+        </ArrowRight>
+        </Play>
+        </CheckCircle>
+        </Star>
+        </Shield>
+        </Clock>
+        </CheckCircle>
+        </CheckCircle>
+        </Star>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </ArrowRight>
+        </MessageCircle>
+        </div>
+        </div>
+        </Phone>
+        </div>
+        </Mail>
+        </div>
+        </MapPin>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
+        <section>
           {/* Animated Background */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div>
+          <div>
           
           {/* Floating Elements */}
-          <div className="absolute top-20 left-10 w-16 h-16 bg-cyan-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '0.5s' }} />
-          <div className="absolute top-40 right-20 w-12 h-12 bg-purple-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '1.5s' }} />
-          <div className="absolute bottom-20 left-1/4 w-8 h-8 bg-pink-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '2.5s' }} />
+          <div>
+          <div>
+          <div>
           
-          <div className="relative max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
+          <div>
+            <div>
               <Sparkles className="w-4 h-4" />
               <span>Expert Cloud Transformation</span>
             </div>
             
             <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Cloud
-              <br />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <br></br>
+              <span>
                 Migration
               </span>
             </h1>
             
             <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
               Transform your business with expert cloud migration services. 
-              <br />
-              <span className="text-cyan-400 font-semibold">Zero downtime • 40% cost reduction • 99.9% uptime • Enterprise security</span>
+              <br></br>
+              <span>Zero downtime • 40% cost reduction • 99.9% uptime • Enterprise security</span>
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            <div>
               <button className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transform hover:scale-105">
                 <span>Get Free Assessment</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -259,20 +303,20 @@ export default function CloudMigrationPage() {
             </div>
             
             {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-8 text-gray-400 text-sm">
-              <div className="flex items-center space-x-2">
+            <div>
+              <div>
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 <span>500+ Migrations</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div>
                 <Star className="w-4 h-4 text-yellow-400" />
                 <span>4.9/5 Rating</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div>
                 <Shield className="w-4 h-4 text-blue-400" />
                 <span>Zero Data Loss</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div>
                 <Clock className="w-4 h-4 text-purple-400" />
                 <span>24/7 Support</span>
               </div>
@@ -281,22 +325,22 @@ export default function CloudMigrationPage() {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5" />
-          <div className="relative max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section>
+          <div>
+          <div>
+            <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Comprehensive <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Migration Services</span>
+                Comprehensive <span>Migration Services</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 From assessment to optimization, we handle every aspect of your cloud migration journey.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div>
               {features.map((feature, index) => (
-                <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div>
+                  <div>
                     {feature.icon}
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
@@ -305,9 +349,9 @@ export default function CloudMigrationPage() {
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {feature.description}
                   </p>
-                  <div className="space-y-2">
+                  <div>
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <div key={benefitIndex} className="flex items-center space-x-2 text-gray-400 text-sm">
+                      <div>
                         <CheckCircle className="w-4 h-4 text-green-400" />
                         <span>{benefit}</span>
                       </div>
@@ -320,26 +364,26 @@ export default function CloudMigrationPage() {
         </section>
 
         {/* Migration Process Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-purple-900/50 relative">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
-          <div className="relative max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section>
+          <div>
+          <div>
+            <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our Proven <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Migration Process</span>
+                Our Proven <span>Migration Process</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 A systematic approach that ensures successful cloud migration with minimal risk and maximum value.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div>
               {migrationSteps.map((step, index) => (
-                <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl group-hover:scale-110 transition-transform duration-300">
+                <div>
+                  <div>
+                    <div>
                       {step.icon}
                     </div>
-                    <div className="text-3xl font-bold text-cyan-400">{step.step}</div>
+                    <div>{step.step}</div>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                     {step.title}
@@ -347,7 +391,7 @@ export default function CloudMigrationPage() {
                   <p className="text-gray-300 mb-4 leading-relaxed">
                     {step.description}
                   </p>
-                  <div className="text-cyan-400 text-sm font-semibold">
+                  <div>
                     Duration: {step.duration}
                   </div>
                 </div>
@@ -357,22 +401,22 @@ export default function CloudMigrationPage() {
         </section>
 
         {/* Cloud Providers Section */}
-        <section className="py-20 px-4 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5" />
-          <div className="relative max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section>
+          <div>
+          <div>
+            <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Multi-Cloud <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Expertise</span>
+                Multi-Cloud <span>Expertise</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 Certified experts in all major cloud platforms with deep experience in complex migrations.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
               {cloudProviders.map((provider, index) => (
-                <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div>
+                  <div>
                     {provider.icon}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
@@ -381,9 +425,9 @@ export default function CloudMigrationPage() {
                   <p className="text-gray-300 mb-4 leading-relaxed">
                     {provider.description}
                   </p>
-                  <div className="space-y-1">
+                  <div>
                     {provider.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="text-cyan-400 text-sm">
+                      <div>
                         • {feature}
                       </div>
                     ))}
@@ -395,47 +439,43 @@ export default function CloudMigrationPage() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5" />
-          <div className="relative max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section>
+          <div>
+          <div>
+            <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
+                Transparent <span>Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 Choose the migration package that fits your needs. All packages include our core migration services.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`group relative bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
-                  plan.popular 
-                    ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20' 
-                    : 'border-white/20 hover:border-cyan-400/30'
-                }`}>
+                <div>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                    <div>
+                      <div>
                         Most Popular
                       </div>
                     </div>
                   )}
                   
-                  <div className="text-center mb-8">
+                  <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-6">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-5xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400 ml-2">{plan.period}</span>
+                    <div>
+                      <span>{plan.price}</span>
+                      <span>{plan.period}</span>
                     </div>
                   </div>
                   
-                  <div className="space-y-4 mb-8">
+                  <div>
                     {plan.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center space-x-3">
+                      <div>
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                        <span>{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -454,34 +494,34 @@ export default function CloudMigrationPage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-purple-900/50 to-pink-900/50 relative">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(236,72,153,0.1)_0%,transparent_50%)]" />
-          <div className="relative max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+        <section>
+          <div>
+          <div>
+            <div>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Trusted by <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">500+ Companies</span>
+                Trusted by <span>500+ Companies</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">
                 See what our clients say about their cloud migration experience with Zion Tech Group.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="flex items-center mb-4">
+                <div>
+                  <div>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
                   <p className="text-gray-300 mb-6 leading-relaxed">"{testimonial.content}"</p>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <div>
+                    <div>
                       {testimonial.avatar}
                     </div>
                     <div>
-                      <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</div>
+                      <div>{testimonial.name}</div>
+                      <div>{testimonial.role}, {testimonial.company}</div>
                     </div>
                   </div>
                 </div>
@@ -491,16 +531,16 @@ export default function CloudMigrationPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
-          <div className="relative max-w-7xl mx-auto">
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
+        <section>
+          <div>
+          <div>
+            <div>
+              <div>
+                <div>
                 
-                <div className="relative z-10">
+                <div>
                   <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                    Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">Infrastructure?</span>
+                    Ready to Transform Your <span>Infrastructure?</span>
                   </h2>
                   
                   <p className="text-xl sm:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -508,13 +548,13 @@ export default function CloudMigrationPage() {
                     Get your free cloud readiness assessment today.
                   </p>
                   
-                  <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+                  <div>
                     <button className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105">
                       <span>Get Free Assessment</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
-                    <Link 
-                      to="/contact" 
+                    <Link;
+to="/contact" 
                       className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
                     >
                       <span>Contact Expert</span>
@@ -523,18 +563,18 @@ export default function CloudMigrationPage() {
                   </div>
                   
                   {/* Contact Information */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-white/80">
-                    <div className="flex items-center justify-center space-x-3">
+                  <div>
+                    <div>
                       <Phone className="w-5 h-5 text-cyan-300" />
-                      <span className="text-sm">+1 302 464 0950</span>
+                      <span>+1 302 464 0950</span>
                     </div>
-                    <div className="flex items-center justify-center space-x-3">
+                    <div>
                       <Mail className="w-5 h-5 text-purple-300" />
-                      <span className="text-sm">kleber@ziontechgroup.com</span>
+                      <span>kleber@ziontechgroup.com</span>
                     </div>
-                    <div className="flex items-center justify-center space-x-3">
+                    <div>
                       <MapPin className="w-5 h-5 text-pink-300" />
-                      <span className="text-sm">Middletown DE 19709</span>
+                      <span>Middletown DE 19709</span>
                     </div>
                   </div>
                 </div>

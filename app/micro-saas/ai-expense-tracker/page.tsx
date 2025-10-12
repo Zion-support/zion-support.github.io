@@ -1,11 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 import { ArrowRight, Receipt, Bot } from 'lucide-react'
-=======
-import { ArrowRight, DollarSign, BarChart3, Receipt, CheckCircle, Clock, Target, TrendingUp, Shield, Zap, Bot, CheckSquare } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
-
 export default function AIExpenseTrackerPage() {
   const features = [
     {

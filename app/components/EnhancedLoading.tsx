@@ -2,9 +2,9 @@ import React from 'react'
 
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg'
-  text?: string
-  fullScreen?: boolean
-  color?: string
+  text?: string;
+fullScreen?: boolean;
+color?: string
 }
 
 const EnhancedLoading: React.FC<LoadingProps> = ({
@@ -28,10 +28,10 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
   }
 
   const spinner = (
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <div className={`${sizeClasses[size]} ${colorClasses[color as keyof typeof colorClasses]} border-2 border-t-transparent rounded-full animate-spin`} />
+    <div>
+      <div>
       {text && (
-        <div className="text-sm text-gray-300 animate-pulse">
+        <div>
           {text}
         </div>
       )}
@@ -40,7 +40,7 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
 
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-center z-50">
+      <div>
         {spinner}
       </div>
     )

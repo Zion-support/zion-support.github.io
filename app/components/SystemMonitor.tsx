@@ -4,14 +4,14 @@ import React from 'react'
 import { ArrowRight } from 'lucide-react';
   ];
               </span>
-              <br />
-              <span className="text-white">Solutions</span>
+              <br></br>
+              <span>Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced systemmonitor solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -28,8 +28,8 @@ export default SystemMonitorPage
 }
 
 interface SystemMonitorProps {
-  onAlert?: (alert: string) => void
-  className?: string
+  onAlert?: (alert: string) => void;
+className?: string
 }
 
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
@@ -47,8 +47,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
   const [isMonitoring, setIsMonitoring] = useState(false)
 
   const updateMetrics = useCallback(() => {
-    // Simulate system metrics
-    const newMetrics = {
+    // Simulate system metrics;
+const newMetrics = {
       cpu: Math.random() * 100,
       memory: Math.random() * 100,
       disk: Math.random() * 100,
@@ -59,8 +59,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
 
     setMetrics(newMetrics)
 
-    // Check for alerts
-    if (newMetrics.cpu > 90) {
+    // Check for alerts;
+if (newMetrics.cpu > 90) {
       onAlert?.('High CPU usage detected')
     }
     if (newMetrics.memory > 90) {
@@ -75,6 +75,10 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
     if (isMonitoring) {
       const interval = setInterval(updateMetrics, 1000)
       return () => clearInterval(interval)
+    </br>
+    </ArrowRight>
+    </SystemMonitorProps>
+    </SystemMetrics>
     }
   }, [isMonitoring, updateMetrics])
 

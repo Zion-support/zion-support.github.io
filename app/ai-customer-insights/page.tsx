@@ -1,10 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react'
-=======
-import { Helmet } from 'react-helmet-async'
-import { Brain, BarChart3, Users, TrendingUp, Target, Zap, CheckCircle, ArrowRight, Star, Shield, Play, Heart, Calendar, Mail, Phone, MapPin } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
 import { Link } from 'react-router-dom'
 
 const AICustomerInsightsPage: React.FC = () => {
@@ -169,21 +164,58 @@ const AICustomerInsightsPage: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com/ai-customer-insights" />
       </Helmet>
 
+      </Brain>
+      </BarChart3>
+      </Users>
+      </TrendingUp>
+      </Target>
+      </Zap>
+      </ShoppingCart>
+      </Monitor>
+      </Shield>
+      </Heart>
+      </meta>
+      </meta>
+      </meta>
+      </link>
+      </Brain>
+      </br>
+      </br>
+      </ArrowRight>
+      </Play>
+      </CheckCircle>
+      </ArrowRight>
+      </Target>
+      </TrendingUp>
+      </CheckCircle>
+      </Star>
+      </div>
+      </div>
+      </div>
+      </ArrowRight>
+      </Calendar>
+      </div>
+      </div>
+      </Phone>
+      </div>
+      </Mail>
+      </div>
+      </MapPin>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(6,182,212,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+      <section>
+        <div>
+        <div>
         
-        <div className="relative max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
+        <div>
+          <div>
             <Brain className="w-4 h-4" />
             <span>AI-Powered Customer Intelligence</span>
           </div>
           
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
             AI Customer
-            <br />
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+            <br></br>
+            <span>
               Insights
             </span>
           </h1>
@@ -191,20 +223,20 @@ const AICustomerInsightsPage: React.FC = () => {
           <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
             Transform customer data into actionable insights with advanced AI analytics, 
             churn prediction, and hyper-personalization. 
-            <br />
-            <span className="text-cyan-400 font-semibold">Increase retention by 40% and boost revenue with intelligent customer insights.</span>
+            <br></br>
+            <span>Increase retention by 40% and boost revenue with intelligent customer insights.</span>
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Link 
-              to="/contact" 
+          <div>
+            <Link;
+to="/contact" 
               className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transform hover:scale-105"
             >
               <span>Start Free Trial</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link 
-              to="/demo" 
+            <Link;
+to="/demo" 
               className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
             >
               <span>Watch Demo</span>
@@ -215,23 +247,23 @@ const AICustomerInsightsPage: React.FC = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-cyan-500/5 to-pink-500/5" />
-        <div className="relative max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section>
+        <div>
+        <div>
+          <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Features</span>
+              Powerful <span>AI Features</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Advanced AI-powered customer insights that help you understand, predict, and optimize customer behavior 
-              for maximum business growth and retention.
+              Advanced AI-powered customer insights that help you understand, predict, and optimize customer behavior;
+for maximum business growth and retention.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div>
             {features.map((feature, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div>
+                <div>
                   {feature.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
@@ -240,23 +272,23 @@ const AICustomerInsightsPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {feature.description}
                 </p>
-                <div className="space-y-2 mb-6">
+                <div>
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="flex items-center space-x-2 text-gray-400 text-sm">
+                    <div>
                       <CheckCircle className="w-4 h-4 text-green-400" />
                       <span>{benefit}</span>
                     </div>
                   ))}
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-cyan-400 font-semibold text-lg">
+                <div>
+                  <span>
                     {feature.price}
                   </span>
-                  <Link 
-                    to="/contact"
+                  <Link;
+to="/contact"
                     className="group/link flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                   >
-                    <span className="text-sm font-medium">Learn More</span>
+                    <span>Learn More</span>
                     <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -267,16 +299,16 @@ const AICustomerInsightsPage: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-slate-800/50 to-purple-900/50 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(6,182,212,0.1)_0%,transparent_50%)]" />
-        <div className="relative max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-6 border border-cyan-400/30">
+      <section>
+        <div>
+        <div>
+          <div>
+            <div>
               <Target className="w-4 h-4" />
               <span>Real-World Applications</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Proven <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Use Cases</span>
+              Proven <span>Use Cases</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               See how leading companies use AI Customer Insights to drive growth, 
@@ -284,11 +316,11 @@ const AICustomerInsightsPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
             {useCases.map((useCase, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="p-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl group-hover:scale-110 transition-transform duration-300">
+              <div>
+                <div>
+                  <div>
                     {useCase.icon}
                   </div>
                   <h3 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
@@ -298,9 +330,9 @@ const AICustomerInsightsPage: React.FC = () => {
                 <p className="text-gray-300 mb-6 leading-relaxed">
                   {useCase.description}
                 </p>
-                <div className="space-y-2">
+                <div>
                   {useCase.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} className="flex items-center space-x-2 text-cyan-400 font-semibold">
+                    <div>
                       <TrendingUp className="w-4 h-4" />
                       <span>{metric}</span>
                     </div>
@@ -313,54 +345,50 @@ const AICustomerInsightsPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5" />
-        <div className="relative max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section>
+        <div>
+        <div>
+          <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
+              Simple <span>Pricing</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Choose the perfect plan for your business needs. All plans include our core AI features 
-              with no hidden fees or setup costs.
+              Choose the perfect plan for your business needs. All plans include our core AI features;
+with no hidden fees or setup costs.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
             {pricing.map((plan, index) => (
-              <div key={index} className={`relative group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
-                plan.popular 
-                  ? 'border-cyan-400/50 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
-                  : 'border-white/20 hover:bg-white/20'
-              }`}>
+              <div>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                  <div>
+                    <div>
                       Most Popular
                     </div>
                   </div>
                 )}
                 
-                <div className="text-center mb-8">
+                <div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
+                  <div>
+                    <span>{plan.price}</span>
+                    <span>{plan.period}</span>
                   </div>
                 </div>
                 
-                <div className="space-y-4 mb-8">
+                <div>
                   {plan.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-3">
+                    <div>
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                      <span>{feature}</span>
                     </div>
                   ))}
                 </div>
                 
-                <Link 
-                  to="/contact"
+                <Link;
+to="/contact"
                   className={`block w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg shadow-cyan-500/25'
@@ -376,23 +404,23 @@ const AICustomerInsightsPage: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-purple-900/50 to-pink-900/50 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(236,72,153,0.1)_0%,transparent_50%)]" />
-        <div className="relative max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section>
+        <div>
+        <div>
+          <div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              What Our <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Customers Say</span>
+              What Our <span>Customers Say</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
               Join thousands of businesses that trust AI Customer Insights to drive growth and customer success.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold">
+              <div>
+                <div>
+                  <div>
                     {testimonial.avatar}
                   </div>
                   <div>
@@ -402,7 +430,7 @@ const AICustomerInsightsPage: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-1 mb-4">
+                <div>
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
@@ -418,31 +446,31 @@ const AICustomerInsightsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 relative">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
-        <div className="relative max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden">
-              <div className="relative z-10">
+      <section>
+        <div>
+        <div>
+          <div>
+            <div>
+              <div>
                 <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Ready to Transform Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300 bg-clip-text text-transparent">Customer Experience?</span>
+                  Ready to Transform Your <span>Customer Experience?</span>
                 </h2>
                 
                 <p className="text-xl sm:text-2xl text-white/90 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
-                  Start your free trial today and see how AI Customer Insights can help you 
-                  understand, predict, and optimize customer behavior for maximum growth.
+                  Start your free trial today and see how AI Customer Insights can help you;
+understand, predict, and optimize customer behavior for maximum growth.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-                  <Link 
-                    to="/contact" 
+                <div>
+                  <Link;
+to="/contact" 
                     className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transform hover:scale-105"
                   >
                     <span>Start Free Trial</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                  <Link 
-                    to="/demo" 
+                  <Link;
+to="/demo" 
                     className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
                   >
                     <span>Schedule Demo</span>
@@ -450,18 +478,18 @@ const AICustomerInsightsPage: React.FC = () => {
                   </Link>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-white/80">
-                  <div className="flex items-center justify-center space-x-3">
+                <div>
+                  <div>
                     <Phone className="w-5 h-5 text-cyan-300" />
-                    <span className="text-sm">+1 302 464 0950</span>
+                    <span>+1 302 464 0950</span>
                   </div>
-                  <div className="flex items-center justify-center space-x-3">
+                  <div>
                     <Mail className="w-5 h-5 text-purple-300" />
-                    <span className="text-sm">kleber@ziontechgroup.com</span>
+                    <span>kleber@ziontechgroup.com</span>
                   </div>
-                  <div className="flex items-center justify-center space-x-3">
+                  <div>
                     <MapPin className="w-5 h-5 text-pink-300" />
-                    <span className="text-sm">Middletown DE 19709</span>
+                    <span>Middletown DE 19709</span>
                   </div>
                 </div>
               </div>

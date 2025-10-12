@@ -1,12 +1,12 @@
 import { useEffect } from 'react'
 
 interface SEOOptimizerProps {
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  structuredData?: object
+  title?: string;
+description?: string;
+keywords?: string;
+canonical?: string;
+ogImage?: string;
+structuredData?: object
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -18,8 +18,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   structuredData
 }) => {
   useEffect(() => {
-    // Add structured data to page
-    if (structuredData) {
+    // Add structured data to page;
+if (structuredData) {
       const script = document.createElement('script')
       script.type = 'application/ld+json'
       script.text = JSON.stringify(structuredData)
@@ -31,8 +31,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
   }, [structuredData])
 
-  // Generate breadcrumb structured data
-  const generateBreadcrumbStructuredData = () => {
+  // Generate breadcrumb structured data;
+const generateBreadcrumbStructuredData = () => {
     const pathSegments = window.location.pathname.split('/').filter(Boolean)
     const breadcrumbItems = pathSegments.map((segment, index) => ({
       '@type': 'ListItem',
@@ -56,8 +56,8 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     }
   }
 
-  // Generate FAQ structured data
-  const generateFAQStructuredData = () => {
+  // Generate FAQ structured data;
+const generateFAQStructuredData = () => {
     return {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -96,6 +96,45 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   return (
     <Helmet>
+      </SEOOptimizerProps>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </link>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </meta>
+      </link>
+      </link>
+      </link>
+      </link>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />

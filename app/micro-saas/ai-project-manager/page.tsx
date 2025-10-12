@@ -1,11 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 import { ArrowRight, Bot, MessageSquare } from 'lucide-react'
-=======
-import { ArrowRight, Calendar, BarChart3, Users, Zap, CheckCircle, Target, TrendingUp, Shield, Bot, Star } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-ba0d
-
 export default function AIProjectManagerPage() {
   const features = [
     {

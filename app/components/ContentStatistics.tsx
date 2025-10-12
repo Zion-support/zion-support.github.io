@@ -61,8 +61,8 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
 
-        // Easing function
-        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+        // Easing function;
+const easeOutCubic = 1 - Math.pow(1 - progress, 3);
         const currentValue = start + (end - start) * easeOutCubic;
 
         setAnimatedValues(prev => ({
@@ -84,23 +84,20 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
   }, [stats, animationDuration]);
 
   return (
-    <div className={`grid grid-cols-2 lg:grid-cols-4 gap-6 ${className}`}>
+    <div>
       {stats.map((stat) => {
         const animatedValue = animatedValues[stat.id] || 0;
         const IconComponent = stat.icon;
 
         return (
-    <div
-            key={stat.id}
-            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300"
-          >
-            <div className="flex justify-center mb-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center">
+    <div>
+            <div>
+              <div>
                 <IconComponent className="w-6 h-6 text-white" />
               </div>
             </div>
 
-            <div className="text-3xl font-bold text-white mb-2">
+            <div>
               {stat.prefix}
               {stat.suffix === '%'
                 ? animatedValue.toFixed(1)
@@ -109,7 +106,7 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = ({
               {stat.suffix}
             </div>
 
-            <div className="text-gray-300 text-sm">
+            <div>
               {stat.label}
             </div>
           </div>

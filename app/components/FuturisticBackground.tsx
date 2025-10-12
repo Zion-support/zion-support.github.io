@@ -19,8 +19,8 @@ const FuturisticBackground: React.FC = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Particle system
-    const particles: Array<{
+    // Particle system;
+const particles: Array<{
       x: number;
       y: number;
       vx: number;
@@ -32,8 +32,8 @@ const FuturisticBackground: React.FC = () => {
 
     const colors = ['#00d4ff', '#ff0080', '#00ff88', '#a855f7', '#ff6b35'];
 
-    // Create particles
-    for (let i = 0; i < 100; i++) {
+    // Create particles;
+for (let i = 0; i < 100; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -48,25 +48,25 @@ const FuturisticBackground: React.FC = () => {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Update and draw particles
-      particles.forEach((particle, index) => {
+      // Update and draw particles;
+particles.forEach((particle, index) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
 
-        // Wrap around screen
-        if (particle.x < 0) particle.x = canvas.width;
+        // Wrap around screen;
+if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
 
-        // Draw particle
-        ctx.beginPath();
+        // Draw particle;
+ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
         ctx.fill();
 
-        // Draw connections
-        particles.forEach((otherParticle, otherIndex) => {
+        // Draw connections;
+particles.forEach((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
             const dx = particle.x - otherParticle.x;
             const dy = particle.y - otherParticle.y;
@@ -95,24 +95,29 @@ const FuturisticBackground: React.FC = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0">
+    <div>
       <canvas
+        </HTMLCanvasElement>
+        </div>
+        </div>
+        </div>
+        </div>
         ref={canvasRef}
         className="w-full h-full opacity-30"
         style={{ background: 'transparent' }}
       />
       
       {/* Additional background effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 opacity-90" />
+      <div>
       
       {/* Animated grid overlay */}
-      <div className="absolute inset-0 holographic-grid opacity-20" />
+      <div>
       
       {/* Quantum field effect */}
-      <div className="absolute inset-0 quantum-field opacity-30" />
+      <div>
       
       {/* Plasma effect */}
-      <div className="absolute inset-0 plasma-effect opacity-20" />
+      <div>
     </div>
   );
 };

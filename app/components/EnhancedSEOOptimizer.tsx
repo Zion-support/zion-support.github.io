@@ -31,7 +31,7 @@ ursor/
     'Proven track record of success'
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div>
       <Helmet>
         <title>Enhanced SEO Optimizer | Zion Tech Group</title>
         <meta name="description" content="Professional SEO optimization services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -41,16 +41,16 @@ ursor/
       </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
+      <section>
+        <div>
+          <div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Enhanced SEO
-                Enhanced SEO Optimizer
+              <span>
+                Enhanced SEO;
+Enhanced SEO Optimizer
               </span>
-              <br />
-              <span className="text-white">Optimizer</span>
+              <br></br>
+              <span>Optimizer</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced SEO optimization solutions.
@@ -58,7 +58,7 @@ ursor/
               Optimize your website for search engines with our advanced AI-powered SEO optimization solutions.
               Improve rankings and drive more organic traffic.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -72,9 +72,9 @@ ursor/
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section>
+        <div>
+          <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Features
             </h2>
@@ -83,10 +83,10 @@ ursor/
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+              <div>
+                <div>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">
@@ -102,9 +102,9 @@ ursor/
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section>
+        <div>
+          <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Solutions?
             </h2>
@@ -113,10 +113,10 @@ ursor/
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+              <div>
+                <div>
                   <CheckCircle className="w-5 h-5 text-white" />
                 </div>
                 <p className="text-gray-300 text-lg">
@@ -129,16 +129,16 @@ ursor/
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
+      <section>
+        <div>
+          <div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Contact us today to learn more about our SEO optimization solutions and how they can benefit your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
                 Contact Us
               </button>

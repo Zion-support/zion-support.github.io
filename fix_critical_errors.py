@@ -1,104 +1,73 @@
 #!/usr/bin/env python3
 """
-Script to fix common syntax errors in TypeScript/React files
+Script to fix critical syntax errors in TypeScript/React files
 """
 import os
 import re
 import glob
 from pathlib import Path
 
-def fix_syntax_errors(file_path):
-    """Fix common syntax errors in a file"""
+def fix_critical_errors(file_path):
+    """Fix critical syntax errors in a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix common issues
+        # Fix common critical errors
         
-        # 1. Fix unclosed JSX tags - add closing tags for common elements
-        jsx_fixes = [
-            (r'<Router[^>]*>', r'<Router>'),
-            (r'<header[^>]*>', r'<header>'),
-            (r'<div[^>]*>', r'<div>'),
-            (r'<section[^>]*>', r'<section>'),
-            (r'<span[^>]*>', r'<span>'),
-            (r'<a[^>]*>', r'<a>'),
-        ]
-        
-        for pattern, replacement in jsx_fixes:
-            content = re.sub(pattern, replacement, content)
-        
-        # 2. Fix missing closing tags by adding them at the end of components
-        if 'export default function' in content or 'const ' in content and '= () =>' in content:
-            # Find the last opening tag and add closing tag
-            lines = content.split('\n')
-            open_tags = []
-            for i, line in enumerate(lines):
-                # Count opening tags
-                open_tags.extend(re.findall(r'<([a-zA-Z][a-zA-Z0-9]*)[^>]*>', line))
-                # Count closing tags
-                close_tags = re.findall(r'</([a-zA-Z][a-zA-Z0-9]*)>', line)
-                for close_tag in close_tags:
-                    if close_tag in open_tags:
-                        open_tags.remove(close_tag)
-            
-            # Add missing closing tags
-            if open_tags:
-                # Find the last return statement and add closing tags before it
-                for i in range(len(lines) - 1, -1, -1):
-                    if 'return (' in lines[i] or 'return' in lines[i]:
-                        # Add closing tags before the closing of return
-                        for j in range(i, len(lines)):
-                            if ');' in lines[j] or '}' in lines[j]:
-                                indent = len(lines[j]) - len(lines[j].lstrip())
-                                for tag in reversed(open_tags):
-                                    lines.insert(j, ' ' * indent + f'</{tag}>')
-                                break
-                        break
-                content = '\n'.join(lines)
-        
-        # 3. Fix missing semicolons and commas
-        content = re.sub(r'(\w+)\s*\n\s*(\w+)', r'\1;\n\2', content)
-        content = re.sub(r'(\w+)\s*\n\s*(\w+)', r'\1,\n\2', content)
-        
-        # 4. Fix missing closing braces
+        # 1. Fix missing closing braces
         open_braces = content.count('{')
         close_braces = content.count('}')
         if open_braces > close_braces:
             missing_braces = open_braces - close_braces
             content += '\n' + '}' * missing_braces
         
-        # 5. Fix missing closing parentheses
+        # 2. Fix missing closing parentheses
         open_parens = content.count('(')
         close_parens = content.count(')')
         if open_parens > close_parens:
             missing_parens = open_parens - close_parens
             content += ')' * missing_parens
         
-        # 6. Fix common parsing errors
+        # 3. Fix missing semicolons after statements
+        content = re.sub(r'(\w+)\s*\n\s*(\w+)', r'\1;\n\2', content)
+        
+        # 4. Fix missing closing tags for JSX
+        if '<div>' in content and '</div>' not in content:
+            content = content.replace('</section>', '</div></section>')
+        if '<section>' in content and '</section>' not in content:
+            content = content.replace('</div>', '</div></section>')
+        
+        # 5. Fix common parsing errors
         content = re.sub(r'(\w+)\s*=\s*\(\s*\)\s*=>\s*{', r'\1 = () => {', content)
         content = re.sub(r'(\w+)\s*:\s*any\s*;', r'\1: any;', content)
         
-        # 7. Fix missing imports
+        # 6. Fix missing imports
         if 'useState' in content and 'import' not in content:
             content = "import React, { useState } from 'react';\n" + content
         if 'useEffect' in content and 'import' not in content:
             content = "import React, { useEffect } from 'react';\n" + content
         
-        # 8. Fix JSX syntax issues
+        # 7. Fix JSX syntax issues
         content = re.sub(r'<(\w+)\s*/>', r'<\1></\1>', content)
         
-        # 9. Fix missing closing tags for specific elements
+        # 8. Fix missing closing tags for specific elements
         if '<Router>' in content and '</Router>' not in content:
             content = content.replace('</div>', '</div></Router>')
         if '<header>' in content and '</header>' not in content:
             content = content.replace('</div>', '</div></header>')
         
-        # 10. Fix specific parsing errors
+        # 9. Fix specific parsing errors
         content = re.sub(r'(\w+)\s*=\s*\(\s*\)\s*=>\s*{', r'\1 = () => {', content)
         content = re.sub(r'(\w+)\s*:\s*any\s*;', r'\1: any;', content)
+        
+        # 10. Fix missing closing tags for specific elements
+        if '<div>' in content and '</div>' not in content:
+            content = content.replace('</section>', '</div></section>')
+        if '<section>' in content and '</section>' not in content:
+            content = content.replace('</div>', '</div></section>')
         
         # Only write if content changed
         if content != original_content:
@@ -128,7 +97,7 @@ def main():
     page_files = glob.glob('app/*/page.tsx')
     critical_files.extend(page_files)
     
-    print(f"Fixing syntax errors in {len(critical_files)} critical files...")
+    print(f"Fixing critical errors in {len(critical_files)} files...")
     
     fixed_count = 0
     failed_count = 0
@@ -136,7 +105,7 @@ def main():
     for file_path in critical_files:
         if os.path.exists(file_path):
             print(f"Fixing {file_path}...")
-            if fix_syntax_errors(file_path):
+            if fix_critical_errors(file_path):
                 fixed_count += 1
             else:
                 failed_count += 1
