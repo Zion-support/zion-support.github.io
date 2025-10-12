@@ -19,37 +19,73 @@ export default function Navigation() {
       title: 'AI Services',
       href: '/ai-services',
       icon: <Zap className="w-4 h-4" />,
-      description: 'AI-powered solutions for your business'
+      description: 'AI-powered solutions for your business',
+      subServices: [
+        { name: 'AI Content Generation', href: '/ai-content-generation' },
+        { name: 'AI Analytics', href: '/ai-analytics' },
+        { name: 'AI Automation', href: '/ai-automation' },
+        { name: 'AI Cybersecurity', href: '/ai-cybersecurity' }
+      ]
     },
     {
       title: 'IT Services',
       href: '/it-services',
       icon: <Database className="w-4 h-4" />,
-      description: 'Comprehensive IT infrastructure services'
+      description: 'Comprehensive IT infrastructure services',
+      subServices: [
+        { name: 'Cloud Migration', href: '/cloud-migration' },
+        { name: 'Cybersecurity', href: '/cybersecurity-solutions' },
+        { name: 'DevOps & CI/CD', href: '/devops-cicd' },
+        { name: 'Infrastructure Management', href: '/infrastructure-management' }
+      ]
     },
     {
       title: 'Micro SaaS',
       href: '/micro-saas-services',
       icon: <Smartphone className="w-4 h-4" />,
-      description: 'Powerful micro SaaS tools'
+      description: 'Powerful micro SaaS tools',
+      subServices: [
+        { name: 'AI Task Manager', href: '/ai-task-manager' },
+        { name: 'Smart Expense Tracker', href: '/ai-expense-tracker' },
+        { name: 'AI Content Studio', href: '/ai-content-writer' },
+        { name: 'AI Invoice Studio', href: '/ai-invoice-generator' }
+      ]
     },
     {
       title: 'Cloud Services',
       href: '/cloud-services',
       icon: <Cloud className="w-4 h-4" />,
-      description: 'Cloud migration and management'
+      description: 'Cloud migration and management',
+      subServices: [
+        { name: 'AWS Migration', href: '/aws-migration' },
+        { name: 'Azure Migration', href: '/azure-migration' },
+        { name: 'Cloud Security', href: '/cloud-security' },
+        { name: 'Cloud Optimization', href: '/cloud-optimization' }
+      ]
     },
     {
       title: '5G Implementation',
       href: '/5g-implementation',
       icon: <Globe className="w-4 h-4" />,
-      description: 'Next-generation 5G solutions'
+      description: 'Next-generation 5G solutions',
+      subServices: [
+        { name: '5G Network Design', href: '/5g-network-design' },
+        { name: '5G Testing', href: '/5g-testing' },
+        { name: '5G Security', href: '/5g-security' },
+        { name: '5G Integration', href: '/5g-integration' }
+      ]
     },
     {
       title: 'Digital Transformation',
       href: '/digital-transformation',
       icon: <Code className="w-4 h-4" />,
-      description: 'Transform your digital presence'
+      description: 'Transform your digital presence',
+      subServices: [
+        { name: 'Process Automation', href: '/process-automation' },
+        { name: 'Data Analytics', href: '/data-analytics' },
+        { name: 'API Development', href: '/api-development' },
+        { name: 'Legacy Modernization', href: '/legacy-modernization' }
+      ]
     }
   ]
 
@@ -89,24 +125,37 @@ export default function Navigation() {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg z-50">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-lg z-50">
                   <div className="p-4">
-                    <div className="grid grid-cols-1 gap-2">
+                    <div className="grid grid-cols-2 gap-4">
                       {services.map((service, index) => (
-                        <Link
-                          key={index}
-                          to={service.href}
-                          className="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"
-                          onClick={() => setIsServicesOpen(false)}
-                        >
-                          <div className="flex-shrink-0 text-blue-600">
-                            {service.icon}
+                        <div key={index} className="space-y-2">
+                          <Link
+                            to={service.href}
+                            className="flex items-center p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                            onClick={() => setIsServicesOpen(false)}
+                          >
+                            <div className="flex-shrink-0 text-blue-600">
+                              {service.icon}
+                            </div>
+                            <div className="ml-2">
+                              <p className="text-sm font-medium text-gray-900">{service.title}</p>
+                              <p className="text-xs text-gray-500">{service.description}</p>
+                            </div>
+                          </Link>
+                          <div className="ml-6 space-y-1">
+                            {service.subServices?.slice(0, 3).map((subService, subIndex) => (
+                              <Link
+                                key={subIndex}
+                                to={subService.href}
+                                className="block text-xs text-gray-600 hover:text-blue-600 transition-colors"
+                                onClick={() => setIsServicesOpen(false)}
+                              >
+                                {subService.name}
+                              </Link>
+                            ))}
                           </div>
-                          <div className="ml-3">
-                            <p className="text-sm font-medium text-gray-900">{service.title}</p>
-                            <p className="text-xs text-gray-500">{service.description}</p>
-                          </div>
-                        </Link>
+                        </div>
                       ))}
                     </div>
                   </div>

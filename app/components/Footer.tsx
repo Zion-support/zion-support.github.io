@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           <div>
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
             <p className="text-gray-400 mb-4">
@@ -56,6 +56,47 @@ export default function Footer() {
                   5G Implementation
                 </Link>
               </li>
+              <li>
+                <Link to="/digital-transformation" className="text-gray-400 hover:text-white transition-colors">
+                  Digital Transformation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Solutions</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/ai-content-generation" className="text-gray-400 hover:text-white transition-colors">
+                  AI Content Generation
+                </Link>
+              </li>
+              <li>
+                <Link to="/ai-analytics" className="text-gray-400 hover:text-white transition-colors">
+                  AI Analytics
+                </Link>
+              </li>
+              <li>
+                <Link to="/cybersecurity-solutions" className="text-gray-400 hover:text-white transition-colors">
+                  Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link to="/cloud-migration" className="text-gray-400 hover:text-white transition-colors">
+                  Cloud Migration
+                </Link>
+              </li>
+              <li>
+                <Link to="/devops-cicd" className="text-gray-400 hover:text-white transition-colors">
+                  DevOps & CI/CD
+                </Link>
+              </li>
+              <li>
+                <Link to="/data-analytics" className="text-gray-400 hover:text-white transition-colors">
+                  Data Analytics
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -90,15 +131,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center">
                 <Mail className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">info@ziontechgroup.com</span>
+                <span className="text-gray-400">kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+1 302 464 0950</span>
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 text-gray-400 mr-3" />
-                <span className="text-gray-400">San Francisco, CA</span>
+                <span className="text-gray-400">364 E Main St STE 1008 Middletown DE 19709</span>
               </div>
             </div>
           </div>
