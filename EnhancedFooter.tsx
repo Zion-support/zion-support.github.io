@@ -1,12 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
-=======
 export default EnhancedFooter;
 
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
 
 const EnhancedFooter: React.FC = () => {
   return (
@@ -27,7 +24,6 @@ const EnhancedFooter: React.FC = () => {
             </Link>
           </div>
 
-<<<<<<< HEAD
           <div>
             <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
             <ul className="space-y-2">
@@ -69,7 +65,6 @@ const EnhancedFooter: React.FC = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-=======
                 Get Started;
             <h4 className="text-lg font-semibold text-whitemb-4">Services</h4>
               <li /><Link to="/ai-solutions" className="text-gray-300 hover:text-cyan-400transition-colors">AI Solutions</Link></li>
@@ -80,7 +75,6 @@ const EnhancedFooter: React.FC = () => {
                 <span>contact@ziontechgroup.com</span>
                 <span>+1 (555) 123-4567</span>
                 <span>New York, NY</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
             © 2024 Zion Tech Group. All rights reserved.
           </p>
         </div>
@@ -89,7 +83,4 @@ const EnhancedFooter: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedFooter;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

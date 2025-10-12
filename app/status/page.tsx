@@ -1,34 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function Status() {
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function StatusPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-  return (
-    
-        <title>Status - Zion Tech Group</title>
-<<<<<<< HEAD
-=======
-export default StatusPage;
-'use client';
-
-const StatusPage: React.FC = () => {
-  return (
-<<<<<<< HEAD
-
-        <>
-      <title>Status - Zion Tech Group</title>
->>>>>>> origin/main
 
             <h1 className="text-4xl font-bold text-white mb-6">Status</h1>
             <p className="text-lg text-gray-300 mb-8">Professional status services coming soon.</p>
@@ -39,8 +15,6 @@ const StatusPage: React.FC = () => {
   );
 }
 
-=======
-<<<<<<< HEAD
         <meta name="description" content="Professional status by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -59,35 +33,3 @@ const StatusPage: React.FC = () => {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-    <></>
-      <Helmet></Helmet>
-        <title>Status - Zion Tech Group</title>
-        <meta name="description" content="Status services by Zion Tech Group. Professional AI and IT solutions." /></meta>
-        <meta name="keywords" content="status, AI solutions, IT services" /></meta>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
-              <span className="w-5h-5ml-2" />Status;
-              </span>
-            </h1>
-            <p className="w-5h-5ml-2">Professional status services by Zion Tech Group.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
-            <p className="w-5h-5ml-2">We're working on bringing you comprehensive status solutions. 
-              Contact us to learn more about our services.
-            </p>
-            <button className="w-5h-5ml-2">Contact Us;
-            </button>
-          </div>
-      </div>
-    </>
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

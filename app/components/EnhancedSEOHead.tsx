@@ -4,16 +4,11 @@ export default SEOHead;
 
 'use client';
 
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
-'use client';
->>>>>>> origin/main
 
-<<<<<<< HEAD
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -115,7 +110,6 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
 };
 
 
-=======
 export default function SEOHead() {
   return (
     <>
@@ -139,4 +133,3 @@ export default function SEOHead() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918

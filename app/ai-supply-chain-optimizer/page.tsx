@@ -1,166 +1,17 @@
 import React from 'react';
-<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target } from 'lucide-react';
 
-=======
->>>>>>> origin/main
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 export default function AISupplyChainOptimizerPage() {
 'use client';
 
-<<<<<<< HEAD
 export default function AISupplyChainOptimizerPage() {
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
-  const features = [
-    {
-      title: 'Predictive Demand Forecasting',
-      description: 'AI algorithms analyze historical data, market trends, and external factors to predict demand with 92% accuracy.',
-      icon: <TrendingUp className="w-5h-5ml-2" />,
-      benefits: ['Demand prediction', 'Seasonal analysis', 'Market trend insights', 'Inventory optimization']
-    },
-    {
-      title: 'Smart Route Optimization',
-      description: 'Advanced logistics algorithms optimize delivery routes, reduce fuel costs, and improve delivery times.',
-      icon: <Truck className="w-5h-5ml-2" />,
-      benefits: ['Route optimization', 'Fuel cost reduction', 'Delivery time improvement', 'Real-time tracking']
-    },
-    {
-      title: 'Automated Inventory Management',
-      description: 'Intelligent inventory control with automated reordering, stock level monitoring, and waste reduction.',
-      icon: <Package className="w-5h-5ml-2" />,
-      benefits: ['Auto reordering', 'Stock monitoring', 'Waste reduction', 'Cost optimization']
-    },
-    {
-      title: 'Risk Management & Compliance',
-      description: 'Comprehensive risk assessment and compliance monitoring to ensure supply chain resilience.',
-      icon: <Shield className="w-5h-5ml-2" />,
-      benefits: ['Risk assessment', 'Compliance monitoring', 'Disruption alerts', 'Mitigation strategies']
-    }
-  ];
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$199',
-      period: '/month',
-      description: 'Perfect for small to medium businesses',
-      features: [
-        'Up to 5 warehouses',
-        'Basic demand forecasting',
-        'Route optimization',
-        'Email support',
-        'Standard integrations'
-      ],
-      popular: false;
-    },
-    {
-      name: 'Professional',
-      price: '$599',
-      period: '/month',
-      description: 'Advanced features for growing companies',
-      features: [
-        'Up to 25 warehouses',
-        'Advanced AI forecasting',
-        'Multi-modal optimization',
-        'Priority support',
-        'Custom integrations',
-        'Real-time analytics'
-      ],
-      popular: true;
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,999',
-      period: '/month',
-      description: 'Complete solution for large organizations',
-      features: [
-        'Unlimited warehouses',
-        'Custom AI models',
-        'White-label options',
-        'Dedicated account manager',
-        'API access',
-        'Advanced security'
-      ],
-      popular: false;
-    }
-  ];
-  const testimonials = [
-    {
-      name: 'Robert Chen',
-      role: 'Supply Chain Director',
-      company: 'Global Logistics Inc.',
-      content: 'AI Supply Chain Optimizer reduced our logistics costs by 35% and improved delivery times by 40%. The predictive analytics are game-changing.',
-      rating: 5;
-    },
-    {
-      name: 'Maria Rodriguez',
-      role: 'Operations Manager',
-      company: 'RetailMax Corp',
-      content: 'The automated inventory management saved us from stockouts and overstocking. Our inventory turnover improved by 50%.',
-      rating: 5;
-    },
-    {
-      name: 'James Wilson',
-      role: 'CEO',
-      company: 'Manufacturing Solutions',
-      content: 'This AI tool transformed our entire supply chain. We can now predict disruptions before they happen and optimize accordingly.',
-      rating: 5;
-    }
-  ];
-  const stats = [
-    { number: '35%', label: 'Cost Reduction', icon: <TrendingUp className="w-5h-5ml-2" /&gt; },</TrendingUp></TrendingUp>
-    { number: '92%', label: 'Forecast Accuracy', icon: <Target className="w-5h-5ml-2" /&gt; },</Target></Target>
-    { number: '500+', label: 'Companies Using', icon: <Globe className="w-5h-5ml-2" /&gt; },</Globe></Globe>
-    { number: '40%', label: 'Delivery Improvement', icon: <Clock className="w-5h-5ml-2" /&gt; }</Clock></Clock>
-  ];
-  return (
-<<<<<<< HEAD
-
-        <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-
-                <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
-
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function AISupplyChainOptimizerPage() {
-  return (
-    <>
-      <Helmet>
-        <title>A I Supply Chain Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional a i supply chain optimizer services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">AI Supply Chain Optimizer</h1>
-          <p className="text-lg text-gray-300 mb-8">Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
-                and intelligent inventory management. Reduce costs by 35% and improve efficiency by 40%.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-      </>
->>>>>>> origin/main
   );
 
-=======
     <></>
       <Helmet>        <title>AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
         <meta const name = "description" content="Optimize your supply chain with AI-powered demand forecasting, route optimization, and inventory management. Reduce costs by 35% and improve delivery times by 40%." /  /></meta>
@@ -345,4 +196,3 @@ export default function AISupplyChainOptimizerPage() {
 </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

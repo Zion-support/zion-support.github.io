@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 // Get list of files with linting errors;
@@ -155,7 +154,6 @@ console.log(`Found ${files.length} files with unused import errors`);
 });
 
 console.log('Finished fixing unused imports');
-=======
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -190,8 +188,7 @@ function removeUnusedImports(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Skip if file has merge conflicts
-    if (content.includes('<<<<<<< HEAD') || content.includes('>>>>>>>')) {
-      console.log(`Skipping file with merge conflicts: ${filePath}`);
+    if (content.includes('      console.log(`Skipping file with merge conflicts: ${filePath}`);
       return;
     }
     
@@ -254,4 +251,3 @@ for (const file of files) {
 }
 
 console.log('Finished fixing unused imports!');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-15c3

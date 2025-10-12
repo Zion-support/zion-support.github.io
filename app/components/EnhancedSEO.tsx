@@ -1,15 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
-export default EnhancedSEO;
 
-
->>>>>>> origin/main
-
-<<<<<<< HEAD
 interface SEOProps {
   title?: string;
   description?: string;
@@ -95,7 +88,6 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
   )
 
 
-=======
 export default function EnhancedSEO() {
   return (
     <>
@@ -119,4 +111,3 @@ export default function EnhancedSEO() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918

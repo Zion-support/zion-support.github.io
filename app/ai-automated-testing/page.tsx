@@ -1,38 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function AiAutomatedTesting() {
-  return (
-<<<<<<< HEAD
-    
-        <title>AiAutomatedTesting - Zion Tech Group</title>
-=======
-export default AiAutomatedTestingPage;
-const AiAutomatedTestingPage: React.FC = () => {
-  return (
-<<<<<<< HEAD
-
-        <>
-      <title>AiAutomatedTesting - Zion Tech Group</title>
->>>>>>> origin/main
       
             <h1 className="text-4xl font-bold text-white mb-6">AiAutomatedTesting</h1>
             <p className="text-lg text-gray-300 mb-8">Professional aiautomatedtesting services coming soon.</p>
             
               Contact Us
 
-<<<<<<< HEAD
-=======
     <>
       <Helmet>
         <title>AI Automated Testing - Zion Tech Group</title>
@@ -53,14 +25,9 @@ const AiAutomatedTestingPage: React.FC = () => {
         </div>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-      </>
->>>>>>> origin/main
   );
 }
 
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title>AI Automated Testing - Zion Tech Group</title>
@@ -80,4 +47,3 @@ const AiAutomatedTestingPage: React.FC = () => {
     </div>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

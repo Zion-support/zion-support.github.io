@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
-=======
->>>>>>> origin/main
 import React, { useState, useEffect } from 'react';
 'use client';
 
@@ -38,7 +34,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
 
 interface UserExperienceEnhancerProps {children: React.ReactNode}
 
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -67,4 +62,3 @@ export default function UserExperienceEnhancer() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918

@@ -1,21 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
-export const PageLoader: React.FC = () => {
-export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ const size = 'md' }) => {
-export const QuantumLoader: React.FC = () => {
-export const CyberLoader: React.FC = () => {
-export const HolographicLoader: React.FC = () => {
-export const NeuralLoader: React.FC = () => {
-export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ const lines = 3 }) => {
-export const CardSkeleton: React.FC = () => {
-'use client';
->>>>>>> origin/main
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -111,34 +98,5 @@ export const CardSkeleton: React.FC = () => {
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
     </div>
   );
-<<<<<<< HEAD
 };
 
-=======
-export default function PageLoader() {
-  return (
-    <>
-      <Helmet>
-        <title>Loader - Zion Tech Group</title>
-        <meta name="description" content="Professional loader by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Loader</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional loader coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-};
->>>>>>> origin/main

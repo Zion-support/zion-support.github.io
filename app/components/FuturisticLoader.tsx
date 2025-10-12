@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
-=======
-export default function FuturisticLoader({ 
->>>>>>> origin/main
 'use client';
 
 interface FuturisticLoaderProps {
@@ -33,21 +28,13 @@ interface FuturisticLoaderProps {
       default: return 'border-cyan-500 text-cyan-400';
     }
   };
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
 export default function FuturisticLoader() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
->>>>>>> origin/main
         {/* Outer rotating ring */}
         <motion.div;
           className="{`"
@@ -120,8 +107,6 @@ export default function FuturisticLoader() {
           {text}
         </motion.p>
       )}
-<<<<<<< HEAD
-=======
     <>
       <Helmet>
         <title>Futuristic Loader - Zion Tech Group</title>
@@ -141,9 +126,5 @@ export default function FuturisticLoader() {
         </div>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-    </div>
->>>>>>> origin/main
   );
 }

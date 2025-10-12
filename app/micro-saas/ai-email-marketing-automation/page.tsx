@@ -1,23 +1,9 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 
 import React from 'react';
 
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-import { ArrowRight, Mail, BarChart3, Users, Zap, CheckCircle, Clock, Target, TrendingUp, Smartphone, Shield, Bot, Star, Smartphone as Mobile, Eye } from 'lucide-react';
-
-=======
->>>>>>> origin/main
 export default function AIEmailMarketingAutomationPage() {
-<<<<<<< HEAD
   const features = [
     {
       icon: <Bot className="w-5h-5ml-2" />,
@@ -160,7 +146,6 @@ export default function AIEmailMarketingAutomationPage() {
   ]
 
   return (
-<<<<<<< HEAD
 
         <>
       <title>5G Data Analytics - Zion Tech Group</title>
@@ -171,36 +156,8 @@ export default function AIEmailMarketingAutomationPage() {
 
                   <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
 
-<<<<<<< HEAD
-=======
-  return (
-    <>
-      <Helmet>
-        <title>A I Email Marketing Automation - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered email marketing automation with smart segmentation, content generation, and predictive analytics. Increase open rates by 150%. Starting at $29/month." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">A I Email Marketing Automation</h1>
-          <p className="text-lg text-gray-300 mb-8">Transform your email marketing with AI-powered automation, smart segmentation, and personalized content. 
-            Increase open rates by 150% and revenue by 40% with intelligent campaigns.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-      </>
->>>>>>> origin/main
   );
 
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title />AI Email Marketing Automation - Zion Tech Group | Smart Email Campaigns</title>
@@ -437,4 +394,3 @@ export default function AIEmailMarketingAutomationPage() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0

@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect } from 'react';
 
-=======
-export default SEOOptimizer;
->>>>>>> origin/main
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
@@ -77,16 +72,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
   const breadcrumbData = generateBreadcrumbStructuredData()
   const faqData = generateFAQStructuredData()
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
 export default function SEOOptimizer() {
   return (
-<<<<<<< HEAD
 
         <title>5G Data Analytics - Zion Tech Group</title>
       {/* Basic Meta Tags */}
@@ -113,7 +105,6 @@ export default function SEOOptimizer() {
   )
 
 
-=======
     <>
       <Helmet>
         <title>S E O Optimizer - Zion Tech Group</title>
@@ -135,4 +126,3 @@ export default function SEOOptimizer() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918

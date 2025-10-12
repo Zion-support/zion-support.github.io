@@ -1,17 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export default SEOHead;
-
-
->>>>>>> origin/main
 
   return (
 
         <title>5G Data Analytics - Zion Tech Group</title>
       <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-=======
 const SEOHead: React.FC = () => {
   return (
     <>
@@ -21,7 +13,6 @@ const SEOHead: React.FC = () => {
       <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5 G implementation" />
       <meta name="viewport" content="width="device-width," initial-scale=1.0" /  />
       <meta name="theme-color" content="#8 b5 cf6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
       {/* Open Graph Meta Tags */}
     
       {/* Twitter Card Meta Tags */}
@@ -56,17 +47,4 @@ const SEOHead: React.FC = () => {
             "https://twitter.com/ziontechgroup"
           ]
         })}
-<<<<<<< HEAD
 
-=======
-      </script>
-    </Helmet>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-  );
-};
-<<<<<<< HEAD
-export default SEOHead;
-=======
-
->>>>>>> origin/main
