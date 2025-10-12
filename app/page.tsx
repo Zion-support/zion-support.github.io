@@ -1,7 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 // Removed unused imports
+=======
+// import {MessageCircle, ShoppingCart} from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-01e6
 
 const HomePage = () => {
   const features = [
