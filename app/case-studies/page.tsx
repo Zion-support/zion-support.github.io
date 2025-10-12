@@ -1,33 +1,71 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import Layout from '../layout'
 
-export default function CaseStudiesPage() {
+const CaseStudiesPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Professional case studies services and solutions." />
-        <meta name="keywords" content="case studies, services, solutions, technology" />
-      </Helmet>
-      
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
+    <Layout
+      title="Case Studies - Zion Tech Group"
+      description="Professional case studies services and solutions by Zion Tech Group."
+      keywords="case studies, services, solutions, technology, Zion Tech Group"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              Case Studies
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Case Studies
+              </span>
             </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional case studies services and solutions for your business.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional case studies services and solutions by Zion Tech Group.
             </p>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
+              <p className="text-gray-300 mb-4">
+                Description of the first key feature or service.
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Benefit 1</li>
+                <li>• Benefit 2</li>
+                <li>• Benefit 3</li>
+                <li>• Benefit 4</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
+              <p className="text-gray-300 mb-4">
+                Description of the second key feature or service.
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Benefit 1</li>
+                <li>• Benefit 2</li>
+                <li>• Benefit 3</li>
+                <li>• Benefit 4</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
+              <p className="text-gray-300 mb-4">
+                Description of the third key feature or service.
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Benefit 1</li>
+                <li>• Benefit 2</li>
+                <li>• Benefit 3</li>
+                <li>• Benefit 4</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </main>
-      
-      <Footer />
-    </div>
-  );
+      </div>
+    </Layout>
+  )
 }
+
+export default CaseStudiesPage

@@ -42,7 +42,7 @@ const Navigation: React.FC = () => {
     },
     {
       name: 'Micro SAAS',
-      path: '/micro-saas-services',
+      path: '/micro-saas',
       icon: Code,
       dropdown: [
         { name: 'AI-Powered CRM', path: '/ai-crm' },
@@ -75,7 +75,9 @@ const Navigation: React.FC = () => {
   const simpleLinks = [
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
-    { name: 'Pricing', path: '/pricing' }
+    { name: 'Pricing', path: '/pricing' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Support', path: '/support' }
   ];
 
   const toggleDropdown = (dropdown: string) => {

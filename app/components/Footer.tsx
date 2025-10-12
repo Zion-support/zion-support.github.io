@@ -42,7 +42,8 @@ const Footer: React.FC = () => {
     { name: 'Careers', path: '/careers' },
     { name: 'Blog', path: '/blog' },
     { name: 'Case Studies', path: '/case-studies' },
-    { name: 'Press Kit', path: '/press' }
+    { name: 'Press Kit', path: '/press' },
+    { name: 'Partners', path: '/partners' }
   ];
 
   const supportLinks = [

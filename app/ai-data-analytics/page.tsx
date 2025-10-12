@@ -1,87 +1,71 @@
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-export default function AiDataAnalyticsPage() {
-  const features = [
-    {
-      icon: <CheckCircle className="w-6 h-6 text-blue-500" />,
-      title: 'Advanced AI Technology',
-      description: 'Cutting-edge artificial intelligence solutions tailored to your specific needs.',
-      benefits: ['High accuracy', 'Real-time processing', 'Scalable solutions', 'Custom integration']
-    },
-    {
-      icon: <Brain className="w-6 h-6 text-green-500" />,
-      title: 'Intelligent Automation',
-      description: 'Automate complex processes with intelligent decision-making capabilities.',
-      benefits: ['Reduced manual work', 'Improved efficiency', 'Error reduction', 'Cost savings']
-    },
-    {
-      icon: <Target className="w-6 h-6 text-purple-500" />,
-      title: 'Custom Solutions',
-      description: 'Tailored solutions designed specifically for your business requirements.',
-      benefits: ['Personalized approach', 'Industry expertise', 'Flexible implementation', 'Ongoing support']
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import Layout from '../layout'
 
-export default function AiDataAnalyticsPage() {
+const AiDataAnalyticsPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>Ai-data-analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional ai-data-analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Data Analytics
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional ai data analytics services and solutions powered by advanced AI technology.
-          </p>
-        </div>
+    <Layout
+      title="AI Data Analytics - Zion Tech Group"
+      description="Advanced AI-powered data analytics solutions for business intelligence, predictive insights, and data-driven decision making."
+      keywords="AI data analytics, business intelligence, predictive analytics, data insights, machine learning"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                AI Data Analytics
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your data into actionable insights with our advanced AI-powered analytics solutions.
+            </p>
+          </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              {feature.icon}
-              <h3 className="text-xl font-semibold text-white mb-3 mt-4">{feature.title}</h3>
-              <p className="text-gray-300 mb-4">{feature.description}</p>
-              <ul className="space-y-2">
-                {feature.benefits.map((benefit, benefitIndex) => (
-                  <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    {benefit}
-                  </li>
-                ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Predictive Analytics</h3>
+              <p className="text-gray-300 mb-4">
+                Leverage AI to predict future trends and make data-driven business decisions.
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Machine learning models</li>
+                <li>• Trend forecasting</li>
+                <li>• Risk assessment</li>
+                <li>• Performance optimization</li>
               </ul>
             </div>
-          ))}
-        </div>
 
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let our AI solutions transform your business operations and drive growth.
-          </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
-            Get Started Today
-          </button>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Real-time Insights</h3>
+              <p className="text-gray-300 mb-4">
+                Get instant insights from your data with real-time analytics and monitoring.
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Live dashboards</li>
+                <li>• Real-time alerts</li>
+                <li>• Interactive visualizations</li>
+                <li>• Custom reporting</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Data Intelligence</h3>
+              <p className="text-gray-300 mb-4">
+                Uncover hidden patterns and insights in your data with advanced AI algorithms.
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Pattern recognition</li>
+                <li>• Anomaly detection</li>
+                <li>• Clustering analysis</li>
+                <li>• Natural language processing</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default PagePage;
+    </Layout>
+  )
 }
+
+export default AiDataAnalyticsPage

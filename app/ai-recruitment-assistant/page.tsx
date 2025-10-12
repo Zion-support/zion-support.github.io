@@ -1,76 +1,71 @@
-'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, Brain, Target } from 'lucide-react'
+import Layout from '../layout'
 
-export default function AiRecruitmentAssistantPage() {
-  const features = [
-    {
-      icon: <CheckCircle className="w-6 h-6 text-blue-500" />,
-      title: 'Advanced AI Technology',
-      description: 'Cutting-edge artificial intelligence solutions tailored to your specific needs.',
-      benefits: ['High accuracy', 'Real-time processing', 'Scalable solutions', 'Custom integration']
-    },
-    {
-      icon: <Brain className="w-6 h-6 text-green-500" />,
-      title: 'Intelligent Automation',
-      description: 'Automate complex processes with intelligent decision-making capabilities.',
-      benefits: ['Reduced manual work', 'Improved efficiency', 'Error reduction', 'Cost savings']
-    },
-    {
-      icon: <Target className="w-6 h-6 text-purple-500" />,
-      title: 'Custom Solutions',
-      description: 'Tailored solutions designed specifically for your business requirements.',
-      benefits: ['Personalized approach', 'Industry expertise', 'Flexible implementation', 'Ongoing support']
-    }
-  ];
-
+const AiRecruitmentAssistantPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Ai Recruitment Assistant - Zion Tech Group | AI Solutions</title>
-        <meta name="description" content="Professional ai recruitment assistant services and solutions powered by advanced AI technology." />
-        <meta name="keywords" content="AI solutions, technology, automation, Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Recruitment Assistant
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional ai recruitment assistant services and solutions powered by advanced AI technology.
-          </p>
-        </div>
+    <Layout
+      title="Ai Recruitment Assistant - Zion Tech Group"
+      description="Professional ai recruitment assistant services and solutions by Zion Tech Group."
+      keywords="ai recruitment assistant, services, solutions, technology, Zion Tech Group"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Ai Recruitment Assistant
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional ai recruitment assistant services and solutions by Zion Tech Group.
+            </p>
+          </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              {feature.icon}
-              <h3 className="text-xl font-semibold text-white mb-3 mt-4">{feature.title}</h3>
-              <p className="text-gray-300 mb-4">{feature.description}</p>
-              <ul className="space-y-2">
-                {feature.benefits.map((benefit, benefitIndex) => (
-                  <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    {benefit}
-                  </li>
-                ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
+              <p className="text-gray-300 mb-4">
+                Description of the first key feature or service.
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Benefit 1</li>
+                <li>• Benefit 2</li>
+                <li>• Benefit 3</li>
+                <li>• Benefit 4</li>
               </ul>
             </div>
-          ))}
-        </div>
 
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Ready to Get Started?</h2>
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let our AI solutions transform your business operations and drive growth.
-          </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
-            Get Started Today
-          </button>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
+              <p className="text-gray-300 mb-4">
+                Description of the second key feature or service.
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Benefit 1</li>
+                <li>• Benefit 2</li>
+                <li>• Benefit 3</li>
+                <li>• Benefit 4</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
+              <p className="text-gray-300 mb-4">
+                Description of the third key feature or service.
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Benefit 1</li>
+                <li>• Benefit 2</li>
+                <li>• Benefit 3</li>
+                <li>• Benefit 4</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    </Layout>
+  )
 }
+
+export default AiRecruitmentAssistantPage

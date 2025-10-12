@@ -1,61 +1,71 @@
-'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-  ]
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
+import Layout from '../layout'
 
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
-      {/* Hero Section */}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>))}
+const TrainingPage: React.FC = () => {
+  return (
+    <Layout
+      title="Training Services - Zion Tech Group"
+      description="Comprehensive training programs for AI, IT, and technology skills development."
+      keywords="training, education, skills development, technology training"
+    >
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Training Services
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive training programs for AI, IT, and technology skills development.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
+              <p className="text-gray-300 mb-4">
+                Description of the first key feature or service.
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Benefit 1</li>
+                <li>• Benefit 2</li>
+                <li>• Benefit 3</li>
+                <li>• Benefit 4</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
+              <p className="text-gray-300 mb-4">
+                Description of the second key feature or service.
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Benefit 1</li>
+                <li>• Benefit 2</li>
+                <li>• Benefit 3</li>
+                <li>• Benefit 4</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
+              <p className="text-gray-300 mb-4">
+                Description of the third key feature or service.
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Benefit 1</li>
+                <li>• Benefit 2</li>
+                <li>• Benefit 3</li>
+                <li>• Benefit 4</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-          </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
-    </div>
-  )}
-export default PagePage
-  </h2>
-          </div>
-        </div>
-      </section>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-          </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
-    </div>)};export default PagePage
+      </div>
+    </Layout>
+  )
+}
+
+export default TrainingPage
