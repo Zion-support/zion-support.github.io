@@ -1,120 +1,146 @@
 import React from 'react';
-export default ServicesPage;
-const ServicesPage: React.FC = () => {
-  const mainServices = [
+import { Helmet } from 'react-helmet-async';
+import { Users, Brain, Code, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+
+export default function ServicesPage() {
+  const services = [
     {
-      icon: Brain,
       title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      color: 'from-purple-500 to-pink-500',
-      href: '/ai-services'
+      description: 'Cutting-edge artificial intelligence solutions to transform your business operations.',
+      features: [
+        'Machine Learning Models',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'AI Chatbots',
+        'Automated Decision Making'
+      ],
+      icon: Brain
     },
     {
-      icon: Cloud,
-      title: 'Cloud Computing',
-      description: 'Scalable and secure cloud infrastructure solutions for modern businesses.',
-      features: ['AWS Migration', 'Azure Solutions', 'Google Cloud', 'Hybrid Cloud'],
-      color: 'from-cyan-500 to-blue-500',
-      href: '/cloud-services'
+      title: 'IT Services',
+      description: 'Comprehensive IT services to keep your technology infrastructure running smoothly.',
+      features: [
+        'Cloud Migration',
+        'Cybersecurity',
+        'Network Infrastructure',
+        'Database Management',
+        'System Integration',
+        'IT Support & Maintenance'
+      ],
+      icon: Code
     },
     {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Protect your digital assets with comprehensive security solutions and best practices.',
-      features: ['Security Audits', 'Penetration Testing', 'Compliance', 'Incident Response'],
-      color: 'from-red-500 to-orange-500',
-      href: '/cybersecurity'
-    },
-    {
-      icon: Code,
-      title: 'Custom Development',
-      description: 'Tailored software solutions built with modern technologies and best practices.',
-      features: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration'],
-      color: 'from-green-500 to-emerald-500',
-      href: '/custom-development'
+      title: '5G Solutions',
+      description: 'Next-generation 5G technology solutions for ultra-fast connectivity and IoT.',
+      features: [
+        '5G Network Design',
+        'Edge Computing',
+        'IoT Integration',
+        'Mobile Applications',
+        'Data Analytics',
+        'Smart City Solutions'
+      ],
+      icon: Zap
     }
   ];
-  const additionalServices = [
-    {
-      icon: Database,
-      title: 'Data Analytics',
-      description: 'Unlock insights from your data with advanced analytics and visualization tools.',
-      href: '/data-analytics'
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android.',
-      href: '/mobile-development'
-    },
-    {
-      icon: Globe,
-      title: 'Web Development',
-      description: 'Modern, responsive websites and web applications that drive engagement.',
-      href: '/web-development'
-    },
-    {
-      icon: Lock,
-      title: 'IT Support',
-      description: 'Comprehensive IT support and maintenance services for your business.',
-      href: '/it-support'
-    }
-  ];
+
   const processSteps = [
     {
       step: '01',
       title: 'Discovery',
       description: 'We analyze your business needs and technical requirements to understand your goals.',
-      icon: Users;
+      icon: Users
     },
     {
       step: '02',
       title: 'Strategy',
       description: 'We develop a comprehensive strategy and roadmap tailored to your specific needs.',
-      icon: Brain;
+      icon: Brain
     },
     {
       step: '03',
       title: 'Implementation',
       description: 'Our expert team implements the solution with precision and attention to detail.',
-      icon: Code;
+      icon: Code
     },
     {
       step: '04',
       title: 'Support',
       description: 'We provide ongoing support and maintenance to ensure optimal performance.',
-      icon: Zap;
+      icon: Zap
     }
   ];
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Our Services - Zion Tech Group</title>
-        <meta const name = "description" content="Explore our comprehensive range of AI and IT services. From AI solutions to cloud computing, cybersecurity, and custom development - we have you covered." /  /></meta>
-        <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, custom development, data analytics, mobile development" /></meta>
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
-export default function ServicesPage() {
   return (
-    <><Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Professional services solutions and services." />
+    <>
+      <Helmet>
+        <title>Our Services - Zion Tech Group</title>
+        <meta name="description" content="Explore our comprehensive range of AI and IT services. From AI solutions to 5G technology, we help businesses transform with cutting-edge technology." />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Services</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional services solutions coming soon.</p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          {/* Hero Section */}
+          <div className="text-center mb-20">
+            <h1 className="text-4xl font-bold text-white mb-6">Our Services</h1>
+            <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+              We provide comprehensive AI and IT solutions to help businesses transform and thrive in the digital age.
+            </p>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            {services.map((service, index) => (
+              <div key={index} className="bg-gray-800/50 rounded-2xl p-8 hover:bg-gray-800/70 transition-all duration-300">
+                <div className="flex items-center mb-6">
+                  <div className="bg-cyan-500/20 p-3 rounded-lg mr-4">
+                    <service.icon className="w-8 h-8 text-cyan-500" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <ul className="space-y-3">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Process Section */}
+          <div className="mb-20">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">Our Process</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {processSteps.map((step, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-cyan-500/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <step.icon className="w-8 h-8 text-cyan-500" />
+                  </div>
+                  <div className="text-cyan-500 font-bold text-sm mb-2">{step.step}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{step.title}</h3>
+                  <p className="text-gray-300">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center bg-gray-800/50 rounded-2xl p-12">
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let's discuss how our services can help transform your business. Contact us today for a free consultation.
+            </p>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center">
+              Get Free Consultation
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+          </div>
         </div>
-      </div></>
+      </div>
+    </>
   );
 }

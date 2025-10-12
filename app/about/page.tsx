@@ -5,50 +5,54 @@ import { ArrowRight } from 'lucide-react';
 
 export default function AboutPage() {
   return (
-    <><Helmet>
-export default AboutPage;
-const AboutPage: React.FC = () => {  return (
-    <></>
-      <Helmet></Helmet>
+    <>
+      <Helmet>
         <title>About - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions." />
+        <meta name="description" content="Learn about Zion Tech Group - Advanced AI and IT Solutions. Our mission to transform businesses with cutting-edge technology." />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We are a leading technology company dedicated to transforming businesses through innovative AI and IT solutions.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold text-white mb-6">About Zion Tech Group</h1>
+            <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+              We are a leading technology company specializing in AI and IT solutions that transform businesses and drive innovation.
             </p>
           </div>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge AI and IT solutions." /></meta>
-      </Helmet>
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="max-w-7xlmx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xlmd:text-6xl font-bold text-white mb-6"></h1>
-              About Zion Tech Group;
-            </h1>
-            <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto"></p>
-              We are a leading technology company dedicated to transforming businesses through innovative AI and IT solutions.
-            </p>          </div>
-        <title>About - Zion Tech Group</title>
-        <meta name="description" content="Professional about solutions and services." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">About</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional about solutions coming soon.</p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-gray-800/50 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Our Mission</h3>
+              <p className="text-gray-300">
+                To empower businesses with cutting-edge AI and IT solutions that drive growth and innovation.
+              </p>
+            </div>
+            
+            <div className="bg-gray-800/50 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Our Vision</h3>
+              <p className="text-gray-300">
+                To be the global leader in AI and IT solutions, transforming industries worldwide.
+              </p>
+            </div>
+            
+            <div className="bg-gray-800/50 rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">Our Values</h3>
+              <p className="text-gray-300">
+                Innovation, excellence, integrity, and customer success are at the core of everything we do.
+              </p>
+            </div>
+          </div>
+          
+          <div className="text-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
+            >
+              Get in Touch
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
         </div>
-      </div></>
+      </div>
+    </>
   );
 }
