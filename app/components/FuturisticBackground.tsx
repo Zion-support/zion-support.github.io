@@ -33,7 +33,6 @@ const FuturisticBackgroundPage: React.FC = () => {
     }
   ]
 
-<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -45,23 +44,17 @@ const FuturisticBackgroundPage: React.FC = () => {
     'Proven track record of success'
   ]
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Futuristic Background | Zion Tech Group</title>
         <meta name="description" content="Professional Futuristic Background services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="futuristic background, AI solutions, IT services, Zion Tech Group, advanced technology" />
-=======
         <title>Futuristic Background Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced futuristic background solutions powered by AI technology." />
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
       </Helmet>
       
       <Navigation />
-<<<<<<< HEAD
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -77,7 +70,6 @@ const FuturisticBackgroundPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Experience the future of technology with our cutting-edge futuristic background solutions. 
               Powered by advanced AI and innovative design.
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -94,7 +86,6 @@ const FuturisticBackgroundPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your digital presence with cutting-edge futuristic background technology. 
               Powered by advanced AI and modern design principles.
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
@@ -106,7 +97,6 @@ const FuturisticBackgroundPage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -137,7 +127,6 @@ const FuturisticBackgroundPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-=======
         </section>
 
         {/* Features Section */}
@@ -190,11 +179,9 @@ const FuturisticBackgroundPage: React.FC = () => {
                 <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                   Schedule Demo
                 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -243,12 +230,10 @@ const FuturisticBackgroundPage: React.FC = () => {
 
       <Footer />
     </div>
-=======
         </section>
       </div>
       <Footer />
     </React.Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
   )
 }
 

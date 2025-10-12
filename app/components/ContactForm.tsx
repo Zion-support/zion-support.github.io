@@ -29,16 +29,7 @@ const ContactForm: React.FC = () => {
     type: 'idle',
     message: ''
   })
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9603
-
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
@@ -46,16 +37,7 @@ const ContactForm: React.FC = () => {
       [name]: value
     }))
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9603
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus({ type: 'loading', message: 'Sending message...' })

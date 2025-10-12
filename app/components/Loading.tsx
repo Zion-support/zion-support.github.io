@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
 
 const LoadingPage: React.FC = () => {
@@ -143,7 +142,6 @@ const LoadingPage: React.FC = () => {
           </div>
         </div>
       </section>
-=======
 
 const LoadingPage: React.FC = () => {
   return (
@@ -158,7 +156,6 @@ const LoadingPage: React.FC = () => {
         <h2 className="text-2xl font-bold text-white mb-2">Loading...</h2>
         <p className="text-gray-300">Please wait while we load the content</p>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
     </div>
   )
 }
