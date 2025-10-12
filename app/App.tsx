@@ -24,6 +24,7 @@ const TermsPage = lazy(() => import('./terms/page'));
 const CookiesPage = lazy(() => import('./cookies/page'));
 
 // AI Services
+<<<<<<< HEAD
 const AiServicesPage = lazy(() => import('./ai-services/page'));
 const AiMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AiAutomationPage = lazy(() => import('./ai-automation/page'));
@@ -62,12 +63,53 @@ const AiVoiceAssistantPage = lazy(() => import('./ai-voice-assistant/page'));
 const AiContentGenerationProPage = lazy(() => import('./ai-content-generation-pro/page'));
 const AiAccountingAssistantPage = lazy(() => import('./ai-accounting-assistant/page'));
 const AiCybersecurityMonitorProPage = lazy(() => import('./ai-cybersecurity-monitor-pro/page'));
+=======
+const AIServicesPage = lazy(() => import('./ai-services/page'));
+const AIMarketingPage = lazy(() => import('./ai-marketing/page'));
+const AIAutomationPage = lazy(() => import('./ai-automation/page'));
+const AIHealthcarePage = lazy(() => import('./ai-healthcare/page'));
+const AIFintechPage = lazy(() => import('./ai-fintech/page'));
+const AIContentGenerationPage = lazy(() => import('./ai-content-generation/page'));
+const AIDataAnalyticsPage = lazy(() => import('./ai-data-analytics/page'));
+const AICybersecurityPage = lazy(() => import('./ai-cybersecurity/page'));
+const AICRMPage = lazy(() => import('./ai-crm/page'));
+const AIVoiceSolutionsPage = lazy(() => import('./ai-voice-solutions/page'));
+const AIEcommerceSolutionsPage = lazy(() => import('./ai-ecommerce-solutions/page'));
+const AIHRSolutionsPage = lazy(() => import('./ai-hr-solutions/page'));
+const AIWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
+const AIDocumentProcessingPage = lazy(() => import('./ai-document-processing/page'));
+const AIPredictiveAnalyticsPage = lazy(() => import('./ai-predictive-analytics/page'));
+const AIEdgeComputingPage = lazy(() => import('./ai-edge-computing/page'));
+const AIVideoAnalysisPage = lazy(() => import('./ai-video-analysis/page'));
+const AISpeechSynthesisPage = lazy(() => import('./ai-speech-synthesis/page'));
+const AIRecommendationEnginePage = lazy(() => import('./ai-recommendation-engine/page'));
+const AISentimentAnalysisPage = lazy(() => import('./ai-sentiment-analysis/page'));
+const AIChatbotEnterprisePage = lazy(() => import('./ai-chatbot-enterprise/page'));
+const AIContentModerationPage = lazy(() => import('./ai-content-moderation/page'));
+const AIPredictiveModelingPage = lazy(() => import('./ai-predictive-modeling/page'));
+const AIDocumentIntelligencePage = lazy(() => import('./ai-document-intelligence/page'));
+const AIConversationAnalyticsPage = lazy(() => import('./ai-conversation-analytics/page'));
+const AISupplyChainAIPage = lazy(() => import('./ai-supply-chain-ai/page'));
+const AIHealthcareDiagnosticsPage = lazy(() => import('./ai-healthcare-diagnostics/page'));
+const AIFinancialForecastingPage = lazy(() => import('./ai-financial-forecasting/page'));
+const AIIoTAnalyticsPage = lazy(() => import('./ai-iot-analytics/page'));
+const AIConversationalAIPage = lazy(() => import('./ai-conversational-ai/page'));
+const AIAutomatedTestingPage = lazy(() => import('./ai-automated-testing/page'));
+const AIKnowledgeManagementPage = lazy(() => import('./ai-knowledge-management/page'));
+const AICustomerChurnPage = lazy(() => import('./ai-customer-churn/page'));
+const AIAutomatedReportingPage = lazy(() => import('./ai-automated-reporting/page'));
+const AIVoiceAssistantPage = lazy(() => import('./ai-voice-assistant/page'));
+const AIContentGenerationProPage = lazy(() => import('./ai-content-generation-pro/page'));
+const AIAccountingAssistantPage = lazy(() => import('./ai-accounting-assistant/page'));
+const AICybersecurityMonitorProPage = lazy(() => import('./ai-cybersecurity-monitor-pro/page'));
+>>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
 
 // IT Services
 const CloudInfrastructurePage = lazy(() => import('./cloud-infrastructure/page'));
 const CybersecuritySolutionsPage = lazy(() => import('./cybersecurity-solutions/page'));
 const WebDevelopmentPage = lazy(() => import('./web-development/page'));
 const MobileDevelopmentPage = lazy(() => import('./mobile-development/page'));
+<<<<<<< HEAD
 const ApiDevelopmentPage = lazy(() => import('./api-development/page'));
 const DatabaseManagementPage = lazy(() => import('./database-management/page'));
 const DevopsCicdPage = lazy(() => import('./devops-cicd/page'));
@@ -88,6 +130,28 @@ const DataEngineeringPage = lazy(() => import('./data-engineering/page'));
 const CybersecurityAdvancedPage = lazy(() => import('./cybersecurity-advanced/page'));
 const CloudMigrationAdvancedPage = lazy(() => import('./cloud-migration-advanced/page'));
 const DevopsAdvancedPage = lazy(() => import('./devops-advanced/page'));
+=======
+const APIDevelopmentPage = lazy(() => import('./api-development/page'));
+const DatabaseManagementPage = lazy(() => import('./database-management/page'));
+const DevOpsCICDPage = lazy(() => import('./devops-cicd/page'));
+const ITSupportPage = lazy(() => import('./it-support/page'));
+const DataAnalyticsBIPage = lazy(() => import('./data-analytics-bi/page'));
+const CustomSoftwarePage = lazy(() => import('./custom-software/page'));
+const NetworkInfrastructurePage = lazy(() => import('./network-infrastructure/page'));
+const ITAssetManagementPage = lazy(() => import('./it-asset-management/page'));
+const ITSecurityServicesPage = lazy(() => import('./it-security-services/page'));
+const ITProjectManagementPage = lazy(() => import('./it-project-management/page'));
+const CloudNativeDevelopmentPage = lazy(() => import('./cloud-native-development/page'));
+const AIIntegrationServicesPage = lazy(() => import('./ai-integration-services/page'));
+const BlockchainDevelopmentPage = lazy(() => import('./blockchain-development/page'));
+const IoTDevelopmentPage = lazy(() => import('./iot-development/page'));
+const ECommerceDevelopmentPage = lazy(() => import('./e-commerce-development/page'));
+const APIDevelopmentAdvancedPage = lazy(() => import('./api-development-advanced/page'));
+const DataEngineeringPage = lazy(() => import('./data-engineering/page'));
+const CybersecurityAdvancedPage = lazy(() => import('./cybersecurity-advanced/page'));
+const CloudMigrationAdvancedPage = lazy(() => import('./cloud-migration-advanced/page'));
+const DevOpsAdvancedPage = lazy(() => import('./devops-advanced/page'));
+>>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
 const MachineLearningOpsPage = lazy(() => import('./machine-learning-ops/page'));
 const EnterpriseIntegrationPage = lazy(() => import('./enterprise-integration/page'));
 const PerformanceOptimizationPage = lazy(() => import('./performance-optimization/page'));
@@ -101,17 +165,26 @@ const CloudNativeSecurityPage = lazy(() => import('./cloud-native-security/page'
 
 // Micro SAAS Pages
 const ZionAnalyticsProPage = lazy(() => import('./zion-analytics-pro/page'));
+<<<<<<< HEAD
 const ZionChatAiPage = lazy(() => import('./zion-chat-ai/page'));
 const ZionSecurityShieldPage = lazy(() => import('./zion-security-shield/page'));
 const ZionCloudVaultPage = lazy(() => import('./zion-cloud-vault/page'));
 const ZionContentStudioPage = lazy(() => import('./zion-content-studio/page'));
 const ZionCrmIntelligencePage = lazy(() => import('./zion-crm-intelligence/page'));
+=======
+const ZionChatAIPage = lazy(() => import('./zion-chat-ai/page'));
+const ZionSecurityShieldPage = lazy(() => import('./zion-security-shield/page'));
+const ZionCloudVaultPage = lazy(() => import('./zion-cloud-vault/page'));
+const ZionContentStudioPage = lazy(() => import('./zion-content-studio/page'));
+const ZionCRMIntelligencePage = lazy(() => import('./zion-crm-intelligence/page'));
+>>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
 const ZionDataSyncPage = lazy(() => import('./zion-data-sync/page'));
 const ZionLeadMagnetPage = lazy(() => import('./zion-lead-magnet/page'));
 const ZionProjectMasterPage = lazy(() => import('./zion-project-master/page'));
 const ZionEmailAutomationPage = lazy(() => import('./zion-email-automation/page'));
 const ZionSocialSchedulerPage = lazy(() => import('./zion-social-scheduler/page'));
 const ZionWorkflowAutomationPage = lazy(() => import('./zion-workflow-automation/page'));
+<<<<<<< HEAD
 const ZionAiContentModerationPage = lazy(() => import('./zion-ai-content-moderation/page'));
 const ZionAiPredictiveMaintenancePage = lazy(() => import('./zion-ai-predictive-maintenance/page'));
 const ZionAiFraudDetectorPage = lazy(() => import('./zion-ai-fraud-detector/page'));
@@ -120,23 +193,46 @@ const ZionAiDocumentAiPage = lazy(() => import('./zion-ai-document-ai/page'));
 const ZionAiCustomerServiceProPage = lazy(() => import('./zion-ai-customer-service-pro/page'));
 const ZionAiContractAnalyzerPage = lazy(() => import('./zion-ai-contract-analyzer/page'));
 const ZionAiTranslatorProPage = lazy(() => import('./zion-ai-translator-pro/page'));
+=======
+const ZionAIContentModerationPage = lazy(() => import('./zion-ai-content-moderation/page'));
+const ZionAIPredictiveMaintenancePage = lazy(() => import('./zion-ai-predictive-maintenance/page'));
+const ZionAIFraudDetectorPage = lazy(() => import('./zion-ai-fraud-detector/page'));
+const ZionAISupplyChainOptimizerPage = lazy(() => import('./zion-ai-supply-chain-optimizer/page'));
+const ZionAIDocumentAIPage = lazy(() => import('./zion-ai-document-ai/page'));
+const ZionAICustomerServiceProPage = lazy(() => import('./zion-ai-customer-service-pro/page'));
+const ZionAIContractAnalyzerPage = lazy(() => import('./zion-ai-contract-analyzer/page'));
+const ZionAITranslatorProPage = lazy(() => import('./zion-ai-translator-pro/page'));
+>>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
 const ZionInvoiceGeniusPage = lazy(() => import('./zion-invoice-genius/page'));
 const ZionInventorySmartPage = lazy(() => import('./zion-inventory-smart/page'));
 const ZionComplianceManagerPage = lazy(() => import('./zion-compliance-manager/page'));
 const ZionPerformanceMonitorPage = lazy(() => import('./zion-performance-monitor/page'));
+<<<<<<< HEAD
 const ZionAiCodeReviewerPage = lazy(() => import('./zion-ai-code-reviewer/page'));
 const ZionAiSurveyBuilderPage = lazy(() => import('./zion-ai-survey-builder/page'));
 const ZionAiMarketingAutomationPage = lazy(() => import('./zion-ai-marketing-automation/page'));
 const ZionAiAccountingAssistantPage = lazy(() => import('./zion-ai-accounting-assistant/page'));
 const ZionAiSeoOptimizerPage = lazy(() => import('./zion-ai-seo-optimizer/page'));
 const ZionAiDataCleanerPage = lazy(() => import('./zion-ai-data-cleaner/page'));
+=======
+const ZionAICodeReviewerPage = lazy(() => import('./zion-ai-code-reviewer/page'));
+const ZionAISurveyBuilderPage = lazy(() => import('./zion-ai-survey-builder/page'));
+const ZionAIMarketingAutomationPage = lazy(() => import('./zion-ai-marketing-automation/page'));
+const ZionAIAccountingAssistantPage = lazy(() => import('./zion-ai-accounting-assistant/page'));
+const ZionAISEOOptimizerPage = lazy(() => import('./zion-ai-seo-optimizer/page'));
+const ZionAIDataCleanerPage = lazy(() => import('./zion-ai-data-cleaner/page'));
+>>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
 const ZionCustomerInsightsPage = lazy(() => import('./zion-customer-insights/page'));
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = lazy(() => import('./5g-data-analytics/page'));
 const FiveGEdgeComputingPage = lazy(() => import('./5g-edge-computing/page'));
 const FiveGImplementationPage = lazy(() => import('./5g-implementation/page'));
+<<<<<<< HEAD
 const FiveGIotSolutionsPage = lazy(() => import('./5g-iot-solutions/page'));
+=======
+const FiveGIoTSolutionsPage = lazy(() => import('./5g-iot-solutions/page'));
+>>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
 const FiveGMobileApplicationsPage = lazy(() => import('./5g-mobile-applications/page'));
 const FiveGNetworkInfrastructurePage = lazy(() => import('./5g-network-infrastructure/page'));
 const FiveGPrivateNetworksPage = lazy(() => import('./5g-private-networks/page'));
@@ -154,7 +250,11 @@ function App() {
           <AccessibilityEnhancer />
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
+<<<<<<< HEAD
                 <Route path="/" element={<HomePage />} />
+=======
+              <Route path="/" element={<HomePage />} />
+>>>>>>> cursor/fix-errors-and-merge-to-main-7dfe
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/services" element={<ServicesPage />} />
