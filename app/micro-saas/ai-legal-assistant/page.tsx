@@ -2,75 +2,75 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Smartphone, Code, Zap, Users, BarChart3, Shield, CheckCircle, Star, Award, Clock, DollarSign, Phone, Mail, MapPin, Globe, Monitor, Wifi } from 'lucide-react';
+import { CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, FileText, Scale, Gavel, Clock, DollarSign, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
-const MobileDevelopmentPage: React.FC = () => {
+const AILegalAssistantPage: React.FC = () => {
   const features = [
     {
-      icon: Smartphone,
-      title: 'Native iOS & Android',
-      description: 'High-performance native apps for both iOS and Android platforms',
-      price: '$8,000/app'
+      icon: FileText,
+      title: 'Contract Analysis',
+      description: 'AI-powered contract review and analysis with risk assessment',
+      price: '$299/month'
     },
     {
-      icon: Code,
-      title: 'Cross-Platform',
-      description: 'React Native and Flutter apps for faster development and deployment',
-      price: '$5,000/app'
+      icon: Gavel,
+      title: 'Legal Research',
+      description: 'Automated legal research with case law and statute analysis',
+      price: '$199/month'
     },
     {
-      icon: Zap,
-      title: 'Performance Optimization',
-      description: 'Optimized apps with lightning-fast loading and smooth animations',
-      price: '$2,000/optimization'
+      icon: Scale,
+      title: 'Compliance Monitoring',
+      description: 'Real-time compliance tracking and regulatory updates',
+      price: '$399/month'
     },
     {
-      icon: BarChart3,
-      title: 'Analytics Integration',
-      description: 'Built-in analytics and user behavior tracking for insights',
-      price: '$1,500/integration'
+      icon: Clock,
+      title: 'Document Automation',
+      description: 'Generate legal documents and forms automatically',
+      price: '$149/month'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Basic App',
-      price: '$5,000',
-      period: '/app',
-      description: 'Simple mobile application',
+      name: 'Starter',
+      price: '$299',
+      period: '/month',
+      description: 'Perfect for small law firms',
       features: [
-        'Basic UI/UX design',
-        'Core functionality',
-        'iOS or Android',
-        '3 months support'
+        'Up to 50 contracts/month',
+        'Basic legal research',
+        'Document templates',
+        'Email support'
       ],
       popular: false
     },
     {
-      name: 'Professional App',
-      price: '$15,000',
-      period: '/app',
-      description: 'Feature-rich mobile application',
+      name: 'Professional',
+      price: '$599',
+      period: '/month',
+      description: 'Ideal for growing practices',
       features: [
-        'Custom UI/UX design',
-        'Advanced features',
-        'iOS & Android',
-        'Backend integration',
-        '6 months support'
+        'Up to 200 contracts/month',
+        'Advanced legal research',
+        'Compliance monitoring',
+        'Priority support',
+        'API access'
       ],
       popular: true
     },
     {
-      name: 'Enterprise App',
-      price: '$50,000',
-      period: '/app',
-      description: 'Complex enterprise solution',
+      name: 'Enterprise',
+      price: '$999',
+      period: '/month',
+      description: 'For large law firms',
       features: [
-        'Custom design system',
-        'Advanced features',
-        'Multiple platforms',
-        'Custom backend',
-        '12 months support'
+        'Unlimited contracts',
+        'Custom AI training',
+        'White-label solution',
+        '24/7 support',
+        'Custom integrations'
       ],
       popular: false
     }
@@ -79,9 +79,9 @@ const MobileDevelopmentPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Mobile Development - Zion Tech Group</title>
-        <meta name="description" content="Professional mobile app development for iOS and Android. Native and cross-platform solutions with modern technologies. Starting at $5,000/app." />
-        <meta name="keywords" content="mobile development, iOS app, Android app, React Native, Flutter, mobile app development" />
+        <title>AI Legal Assistant - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered legal assistant for contract analysis, legal research, and compliance monitoring. Starting at $299/month." />
+        <meta name="keywords" content="AI legal assistant, contract analysis, legal research, compliance monitoring, law firm software" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -91,25 +91,25 @@ const MobileDevelopmentPage: React.FC = () => {
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Mobile Development
+                  AI Legal Assistant
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Create stunning mobile applications that engage users and drive business growth
+                Revolutionize your legal practice with AI-powered contract analysis, legal research, and compliance monitoring
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link 
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
                 >
-                  Start Your Project
+                  Start Free Trial
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
                   to="/demo"
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                 >
-                  View Portfolio
+                  Watch Demo
                 </Link>
               </div>
             </div>
@@ -121,10 +121,10 @@ const MobileDevelopmentPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Mobile Services</span>
+                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">AI Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Complete mobile development solutions for all platforms and requirements
+                Advanced AI technology designed specifically for legal professionals
               </p>
             </div>
 
@@ -160,7 +160,7 @@ const MobileDevelopmentPage: React.FC = () => {
                 Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your mobile app needs
+                Choose the perfect plan for your legal practice
               </p>
             </div>
 
@@ -221,7 +221,7 @@ const MobileDevelopmentPage: React.FC = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Our Mobile Development</span>?
+                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Our AI Legal Assistant</span>?
               </h2>
             </div>
 
@@ -230,9 +230,9 @@ const MobileDevelopmentPage: React.FC = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-10 h-10 text-cyan-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Fast Development</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">10x Faster Analysis</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Rapid development cycles with modern frameworks and agile methodologies.
+                  Process contracts and legal documents 10x faster than traditional methods, saving hours of manual work.
                 </p>
               </div>
 
@@ -240,19 +240,19 @@ const MobileDevelopmentPage: React.FC = () => {
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Shield className="w-10 h-10 text-purple-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Secure & Reliable</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">99.9% Accuracy</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Bank-level security and 99.9% uptime guarantee for your mobile applications.
+                  Advanced AI models trained on millions of legal documents ensure exceptional accuracy and reliability.
                 </p>
               </div>
 
               <div className="text-center group">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-10 h-10 text-green-400" />
+                  <DollarSign className="w-10 h-10 text-green-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">User-Centric Design</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">ROI Guaranteed</h3>
                 <p className="text-gray-300 leading-relaxed">
-                  Intuitive user experience design that engages and retains your users.
+                  Our clients see an average ROI of 300% within the first 6 months of implementation.
                 </p>
               </div>
             </div>
@@ -266,23 +266,23 @@ const MobileDevelopmentPage: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
               <div className="relative z-10">
                 <h2 className="text-4xl font-bold text-white mb-6">
-                  Ready to Build Your Mobile App?
+                  Ready to Transform Your Legal Practice?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                  Let's discuss your mobile app requirements and create something amazing together.
+                  Join thousands of law firms already using our AI Legal Assistant to streamline their operations.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     to="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
                   >
-                    Start Your Project
+                    Start Free Trial
                   </Link>
                   <Link 
-                    to="/about"
+                    to="/demo"
                     className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                   >
-                    Learn More About Us
+                    Schedule Demo
                   </Link>
                 </div>
               </div>
@@ -296,7 +296,7 @@ const MobileDevelopmentPage: React.FC = () => {
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Get in Touch</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Ready to build your mobile app? Contact us today for a personalized consultation.
+                Ready to revolutionize your legal practice? Contact us today for a personalized demo.
               </p>
             </div>
 
@@ -332,4 +332,4 @@ const MobileDevelopmentPage: React.FC = () => {
   );
 };
 
-export default MobileDevelopmentPage;
+export default AILegalAssistantPage;
