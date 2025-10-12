@@ -3,59 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import Navigation from './app/components/Navigation'
 import Footer from './app/components/Footer'
-<<<<<<< HEAD
-import HomePage from './app/page'
-import AboutPage from './app/about/page'
-import ContactPage from './app/contact/page'
-import AIServicesPage from './app/ai-services/page'
-<<<<<<< HEAD
-import ITServicesPage from './app/it-services/page'
-import MicroSAASServicesPage from './app/micro-saas-services/page'
-import FiveGImplementationPage from './app/5g-implementation/page'
-=======
-import FiveGImplementationPage from './app/5g-implementation/page'
-import ITServicesPage from './app/it-services/page'
-import MicroSaasServicesPage from './app/micro-saas-services/page'
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
-import CloudServicesPage from './app/cloud-services/page'
-import DigitalTransformationPage from './app/digital-transformation/page'
-
-function App() {
-  return (
-    <Router>
-      <div className="min-h-screen bg-gray-900">
-        <Navigation />
-<<<<<<< HEAD
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/ai-services" element={<AIServicesPage />} />
-            <Route path="/it-services" element={<ITServicesPage />} />
-            <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
-            <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-            <Route path="/cloud-services" element={<CloudServicesPage />} />
-            <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-          </Routes>
-        </main>
-=======
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/ai-services" element={<AIServicesPage />} />
-          <Route path="/it-services" element={<ITServicesPage />} />
-          <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-          <Route path="/cloud-services" element={<CloudServicesPage />} />
-          <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-          <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
-        <Footer />
-      </div>
-    </Router>
-=======
 import ErrorBoundary from './app/components/ErrorBoundary'
 import LoadingSpinner from './app/components/LoadingSpinner'
 import SEOHead from './app/components/SEOHead'
@@ -70,6 +17,16 @@ const ITServicesPage = React.lazy(() => import('./app/it-services/page'))
 const MicroSAASServicesPage = React.lazy(() => import('./app/micro-saas-services/page'))
 const CloudServicesPage = React.lazy(() => import('./app/cloud-services/page'))
 const DigitalTransformationPage = React.lazy(() => import('./app/digital-transformation/page'))
+
+// New AI Services
+const AI3DGenerationPage = React.lazy(() => import('./app/ai-3d-generation/page'))
+const AIDrugDiscoveryProPage = React.lazy(() => import('./app/ai-drug-discovery-pro/page'))
+
+// New IT Services
+const QuantumComputingSolutionsPage = React.lazy(() => import('./app/quantum-computing-solutions/page'))
+
+// New Micro SAAS Services
+const AIClimateSolutionsProPage = React.lazy(() => import('./app/ai-climate-solutions-pro/page'))
 
 // Loading component for Suspense
 const PageLoader = () => (
@@ -97,6 +54,16 @@ function App() {
                 <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                 <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                
+                {/* New AI Services */}
+                <Route path="/ai-3d-generation" element={<AI3DGenerationPage />} />
+                <Route path="/ai-drug-discovery-pro" element={<AIDrugDiscoveryProPage />} />
+                
+                {/* New IT Services */}
+                <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
+                
+                {/* New Micro SAAS Services */}
+                <Route path="/ai-climate-solutions-pro" element={<AIClimateSolutionsProPage />} />
                 {/* 404 Route */}
                 <Route path="*" element={
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -119,7 +86,6 @@ function App() {
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
->>>>>>> cursor/analyze-improve-and-deploy-application-da90
   )
 }
 
