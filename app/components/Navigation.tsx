@@ -1,7 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, BarChart3, Settings } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, BarChart3, Settings, Sparkles, Rocket, Target, Layers } from 'lucide-react'
+import NeonButton from './NeonButton'
+import AnimatedText from './AnimatedText'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -84,8 +86,10 @@ export default function Navigation() {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled 
+          ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/10' 
+          : 'bg-transparent'
       }`}
       role="navigation"
       aria-label="Main navigation"
@@ -95,44 +99,65 @@ export default function Navigation() {
           {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 rounded-lg"
+            className="flex items-center space-x-3 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 rounded-lg group"
             aria-label="Zion Tech Group - Go to homepage"
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" aria-hidden="true" />
+            <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/30">
+              <Zap className="w-6 h-6 text-white" aria-hidden="true" />
             </div>
-            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+            <div className="flex flex-col">
+              <AnimatedText 
+                text="Zion Tech Group" 
+                variant="fade" 
+                color="white" 
+                as="span" 
+                className="text-xl font-bold group-hover:text-cyan-300 transition-colors duration-300"
+              />
+              <span className="text-xs text-cyan-400 font-medium">AI & IT Solutions</span>
+            </div>
           </Link>
 
             {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
+            <Link to="/" className="text-white hover:text-cyan-400 transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10 group">
+              <span className="flex items-center">
+                <Target className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                Home
+              </span>
             </Link>
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              About
+            <Link to="/about" className="text-white hover:text-cyan-400 transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10 group">
+              <span className="flex items-center">
+                <Layers className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                About
+              </span>
             </Link>
             
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('ai')}
-                className="flex items-center text-white hover:text-cyan-400 transition-colors"
+                className="flex items-center text-white hover:text-cyan-400 transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10 group"
               >
+                <Brain className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
                 AI Services
-                <ChevronDown className="w-4 h-4 ml-1" />
+                <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-300 ${activeDropdown === 'ai' ? 'rotate-180' : ''}`} />
               </button>
               {activeDropdown === 'ai' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                <div className="absolute top-full left-0 mt-2 w-72 bg-slate-900/95 backdrop-blur-lg rounded-xl shadow-2xl shadow-cyan-500/20 border border-cyan-500/30 py-3 animate-in slide-in-from-top-2 duration-300">
+                  <div className="px-3 py-2 border-b border-cyan-500/20 mb-2">
+                    <span className="text-cyan-400 text-sm font-semibold">AI Services</span>
+                  </div>
                   {aiServices.map((service, index) => (
                     <Link
                       key={index}
                       to={service.path}
                       onClick={closeDropdown}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                      className="flex items-center px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-all duration-300 group"
                     >
-                      <Brain className="w-4 h-4 mr-3" />
-                      <span>{service.name}</span>
+                      <div className="w-8 h-8 rounded-lg bg-cyan-500/20 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                        <Brain className="w-4 h-4 text-cyan-400" />
+                      </div>
+                      <span className="group-hover:translate-x-1 transition-transform">{service.name}</span>
                     </Link>
                   ))}
                 </div>
@@ -143,22 +168,28 @@ export default function Navigation() {
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('it')}
-                className="flex items-center text-white hover:text-cyan-400 transition-colors"
+                className="flex items-center text-white hover:text-cyan-400 transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10 group"
               >
+                <Shield className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
                 IT Services
-                <ChevronDown className="w-4 h-4 ml-1" />
+                <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-300 ${activeDropdown === 'it' ? 'rotate-180' : ''}`} />
               </button>
               {activeDropdown === 'it' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                <div className="absolute top-full left-0 mt-2 w-72 bg-slate-900/95 backdrop-blur-lg rounded-xl shadow-2xl shadow-green-500/20 border border-green-500/30 py-3 animate-in slide-in-from-top-2 duration-300">
+                  <div className="px-3 py-2 border-b border-green-500/20 mb-2">
+                    <span className="text-green-400 text-sm font-semibold">IT Services</span>
+                  </div>
                   {itServices.map((service, index) => (
                     <Link
                       key={index}
                       to={service.path}
                       onClick={closeDropdown}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                      className="flex items-center px-4 py-3 text-gray-300 hover:text-green-400 hover:bg-green-500/10 transition-all duration-300 group"
                     >
-                      {service.icon}
-                      <span className="ml-3">{service.name}</span>
+                      <div className="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                        {service.icon}
+                      </div>
+                      <span className="group-hover:translate-x-1 transition-transform">{service.name}</span>
                     </Link>
                   ))}
                 </div>
@@ -169,22 +200,28 @@ export default function Navigation() {
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('saas')}
-                className="flex items-center text-white hover:text-cyan-400 transition-colors"
+                className="flex items-center text-white hover:text-cyan-400 transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10 group"
               >
+                <Cpu className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
                 Micro SAAS
-                <ChevronDown className="w-4 h-4 ml-1" />
+                <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-300 ${activeDropdown === 'saas' ? 'rotate-180' : ''}`} />
               </button>
               {activeDropdown === 'saas' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                <div className="absolute top-full left-0 mt-2 w-72 bg-slate-900/95 backdrop-blur-lg rounded-xl shadow-2xl shadow-purple-500/20 border border-purple-500/30 py-3 animate-in slide-in-from-top-2 duration-300">
+                  <div className="px-3 py-2 border-b border-purple-500/20 mb-2">
+                    <span className="text-purple-400 text-sm font-semibold">Micro SAAS</span>
+                  </div>
                   {microSaasServices.map((service, index) => (
                     <Link
                       key={index}
                       to={service.path}
                       onClick={closeDropdown}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                      className="flex items-center px-4 py-3 text-gray-300 hover:text-purple-400 hover:bg-purple-500/10 transition-all duration-300 group"
                     >
-                      <Cpu className="w-4 h-4 mr-3" />
-                      <span>{service.name}</span>
+                      <div className="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                        <Cpu className="w-4 h-4 text-purple-400" />
+                      </div>
+                      <span className="group-hover:translate-x-1 transition-transform">{service.name}</span>
                     </Link>
                   ))}
                 </div>
@@ -195,30 +232,39 @@ export default function Navigation() {
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('5g')}
-                className="flex items-center text-white hover:text-cyan-400 transition-colors"
+                className="flex items-center text-white hover:text-cyan-400 transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10 group"
               >
+                <Wifi className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
                 5G Solutions
-                <ChevronDown className="w-4 h-4 ml-1" />
+                <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-300 ${activeDropdown === '5g' ? 'rotate-180' : ''}`} />
               </button>
               {activeDropdown === '5g' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                <div className="absolute top-full left-0 mt-2 w-72 bg-slate-900/95 backdrop-blur-lg rounded-xl shadow-2xl shadow-yellow-500/20 border border-yellow-500/30 py-3 animate-in slide-in-from-top-2 duration-300">
+                  <div className="px-3 py-2 border-b border-yellow-500/20 mb-2">
+                    <span className="text-yellow-400 text-sm font-semibold">5G Solutions</span>
+                  </div>
                   {fiveGServices.map((service, index) => (
                     <Link
                       key={index}
                       to={service.path}
                       onClick={closeDropdown}
-                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                      className="flex items-center px-4 py-3 text-gray-300 hover:text-yellow-400 hover:bg-yellow-500/10 transition-all duration-300 group"
                     >
-                      {service.icon}
-                      <span className="ml-3">{service.name}</span>
+                      <div className="w-8 h-8 rounded-lg bg-yellow-500/20 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                        {service.icon}
+                      </div>
+                      <span className="group-hover:translate-x-1 transition-transform">{service.name}</span>
                     </Link>
                   ))}
                 </div>
               )}
             </div>
 
-            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Contact
+            <Link to="/contact" className="text-white hover:text-cyan-400 transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-cyan-500/10 group">
+              <span className="flex items-center">
+                <Rocket className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform" />
+                Contact
+              </span>
             </Link>
           </div>
 
@@ -239,12 +285,18 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white p-2 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 rounded-lg"
+              className="text-gray-300 hover:text-white p-3 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 transition-all duration-300 group"
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isOpen}
               aria-controls="mobile-menu"
             >
-              {isOpen ? <X className="w-6 h-6" aria-hidden="true" /> : <Menu className="w-6 h-6" aria-hidden="true" />}
+              <div className="relative">
+                {isOpen ? (
+                  <X className="w-6 h-6 group-hover:scale-110 transition-transform" aria-hidden="true" />
+                ) : (
+                  <Menu className="w-6 h-6 group-hover:scale-110 transition-transform" aria-hidden="true" />
+                )}
+              </div>
             </button>
           </div>
         </div>
@@ -252,12 +304,18 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden" id="mobile-menu">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-md rounded-lg mt-2 border border-cyan-500/20" role="menu" aria-label="Mobile navigation menu">
-              <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
-                Home
+            <div className="px-4 pt-4 pb-6 space-y-2 sm:px-6 bg-slate-900/95 backdrop-blur-lg rounded-2xl mt-4 border border-cyan-500/30 shadow-2xl shadow-cyan-500/20 animate-in slide-in-from-top-2 duration-300" role="menu" aria-label="Mobile navigation menu">
+              <Link to="/" className="text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 block px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 group" onClick={() => setIsOpen(false)}>
+                <span className="flex items-center">
+                  <Target className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
+                  Home
+                </span>
               </Link>
-              <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
-                About
+              <Link to="/about" className="text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 block px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 group" onClick={() => setIsOpen(false)}>
+                <span className="flex items-center">
+                  <Layers className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform" />
+                  About
+                </span>
               </Link>
               
               {/* AI Services Mobile */}
@@ -392,13 +450,18 @@ export default function Navigation() {
                 Contact
               </Link>
               
-              <Link 
-                to="/contact" 
-                className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 rounded-lg text-base font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center mt-4"
-                onClick={() => setIsOpen(false)}
-              >
-                Get Started
-              </Link>
+              <div className="pt-4 border-t border-cyan-500/20 mt-6">
+                <NeonButton
+                  variant="primary"
+                  size="md"
+                  href="/contact"
+                  className="w-full flex items-center justify-center"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Sparkles className="w-5 h-5 mr-2" />
+                  Get Started
+                </NeonButton>
+              </div>
             </div>
           </div>
         )}
