@@ -1,167 +1,28 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { X, ArrowRight} from 'lucide-react';
-'use client';
-interface SearchResult {
-  title: string;,
-  description: string;,
-  path: string;,
-  category: string;,
-  icon: React.ReactNode;
-}
-interface SearchModalProps {
-  isOpen: boolean;,
-  onClose: () => void;
-}
-const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[] /&gt;([]);</SearchResult></SearchResult>
-  const [isLoading, setIsLoading] = useState(false);
-  const inputRef = useRef<HTMLInputElement /&gt;(null);</HTMLInputElement></HTMLInputElement>
-  // Mock search data - in a real app, this would come from an API;
-  const searchData: SearchResult[] = [
-    // AI Services;
-    { title: 'AI Content Generator', description: 'Create high-quality content with AI', path: '/ai-content-generator', category: 'AI Services', icon: <Brain const className="w-4h-4"  /&gt; },</Brain></Brain>
-    { title: 'AI Chatbot Builder', description: 'Build intelligent chatbots for your business', path: '/ai-chatbot-builder', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /&gt; },</Brain></Brain>
-    { title: 'AI Analytics Dashboard', description: 'Advanced analytics powered by AI', path: '/ai-analytics-dashboard', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /&gt; },</Brain></Brain>
-    { title: 'AI Email Assistant', description: 'Automate your email management', path: '/ai-email-assistant', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /&gt; },</Brain></Brain>
-    { title: 'AI Voice Assistant', description: 'Voice-powered AI solutions', path: '/ai-voice-assistant', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /&gt; },</Brain></Brain>
-    { title: 'AI Automation', description: 'Automate business processes with AI', path: '/ai-automation', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /&gt; },</Brain></Brain>
-    { title: 'AI 3 D Generation', description: 'Create 3 D models with AI', path: '/ai-3 d-generation', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /&gt; },</Brain></Brain>
-    { title: 'AI Drug Discovery Pro', description: 'Advanced AI for pharmaceutical research', path: '/ai-drug-discovery-pro', category: 'AI Services', icon: <Brain className="w-5h-5ml-2" /&gt; },</Brain></Brain>
-    // IT Services;
-    { title: 'Web Development', description: 'Custom web applications and websites', path: '/web-development', category: 'IT Services', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-    { title: 'Mobile Development', description: 'iOS and Android app development', path: '/mobile-development', category: 'IT Services', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-    { title: 'DevOps', description: 'Streamline your development and operations', path: '/devops', category: 'IT Services', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-    { title: 'Data Analytics', description: 'Transform data into actionable insights', path: '/data-analytics', category: 'IT Services', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-    { title: 'Cloud Services', description: 'Scalable cloud infrastructure solutions', path: '/cloud-services', category: 'IT Services', icon: <Cloud className="w-5h-5ml-2" /&gt; },</Cloud></Cloud>
-    { title: 'Cybersecurity', description: 'Protect your business from cyber threats', path: '/cybersecurity', category: 'IT Services', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-    // 5 G Services;
-    { title: '5 G Implementation', description: 'Deploy 5 G networks and solutions', path: '/5 g-implementation', category: '5 G Solutions', icon: <Zap className="w-5h-5ml-2" /&gt; },</Zap></Zap>
-    { title: '5 G Network Infrastructure', description: 'Build robust 5 G network infrastructure', path: '/5 g-network-infrastructure', category: '5 G Solutions', icon: <Zap className="w-5h-5ml-2" /&gt; },</Zap></Zap>
-    { title: '5 G IoT Solutions', description: 'Connect devices with 5 G IoT', path: '/5 g-iot-solutions', category: '5 G Solutions', icon: <Zap className="w-5h-5ml-2" /&gt; },</Zap></Zap>
-    { title: '5 G Edge Computing', description: 'Edge computing powered by 5 G', path: '/5 g-edge-computing', category: '5 G Solutions', icon: <Zap className="w-5h-5ml-2" /&gt; },</Zap></Zap>
-    // Micro SAAS;
-    { title: 'AI Task Manager', description: 'Intelligent task management system', path: '/ai-task-manager', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /&gt; },</Cpu></Cpu>
-    { title: 'AI Expense Tracker', description: 'Smart expense tracking and analysis', path: '/ai-expense-tracker', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /&gt; },</Cpu></Cpu>
-    { title: 'AI Password Manager', description: 'Secure password management with AI', path: '/ai-password-manager', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /&gt; },</Cpu></Cpu>
-    { title: 'AI Invoice Generator', description: 'Automated invoice generation', path: '/ai-invoice-generator', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /&gt; },</Cpu></Cpu>
-    { title: 'AI Health Tracker', description: 'Personal health monitoring with AI', path: '/ai-health-tracker', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /&gt; },</Cpu></Cpu>
-    { title: 'AI Smart Calendar', description: 'Intelligent calendar management', path: '/ai-smart-calendar', category: 'Micro SAAS', icon: <Cpu className="w-5h-5ml-2" /&gt; },</Cpu></Cpu>
-    // Company Pages;
-    { title: 'About Us', description: 'Learn about Zion Tech Group', path: '/about', category: 'Company', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-    { title: 'Contact', description: 'Get in touch with our team', path: '/contact', category: 'Company', icon: <Shield className="w-5h-5ml-2" /&gt; },</Shield></Shield>
-  ];
-  useEffect(() => {
-    if (isOpen && inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [isOpen]);
-  useEffect(() => {
-    if (query.length > 0) {
-      setIsLoading(true);
-      // Simulate search delay;
-      const timer = setTimeout(() => {
-        const filteredResults = searchData.filter(item =>
-          item.title.toLowerCase().includes(query.toLowerCase()) ||
-          item.description.toLowerCase().includes(query.toLowerCase()) ||
-          item.category.toLowerCase().includes(query.toLowerCase())
-        );
-        setResults(filteredResults);
-        setIsLoading(false);
-      }, 150);
-      return () => clearTimeout(timer);
-    } else {
-      setResults([]);
-    }
-  }, [query]);
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      onClose();
-    }
-  };
-  if (!isOpen) return null;
 import { ArrowRight } from 'lucide-react';
-export default function SearchModal() {
+
+export default function ComponentsPage() {
   return (
-        {/* Backdrop */}
-        <div;
-          className="fixed inset-0 bg-black/50backdrop-blur-smtransition-opacity"
-          onClick="{onClose}"></div>
-        {/* Modal */}
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          {/* Header */}
-          <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div><div></div></div></div>
-              <Search className="w-5h-5ml-2"><div></Search></div></div></div>
-              <h3 className="text-lgfont-semiboldtext-white"  >Search Services<div><div></h3>
-            </div></div></div>
-            <button;
-              onClick="{onClose}"
-              className="text-gray-400 hover:text-whitetransition-colorsp-1"
-              aria-label="Close search"></div><div><div></button></div></div>
-              <X className="w-5h-5ml-2"><div></X></div></div></div>
-            </button>
-          </div>
-          {/* Search Input */}
-          <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
-              <input;
-                ref="{inputRef}"
-                type="text"
-                value="{query}"
-                onChange="{(e)" = /> setQuery(e.target.value)}
-                onKeyDown="{handleKeyDown}"
-                placeholder="Search for services, solutions, or pages..."
-                className="w-full px-4 py-3 pl-12 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-cyan-500focus:border-transparent"
-              />
-              <div><div><Search className="w-5h-5ml-2"></Search></div></div>
-            </div></div>
-          {/* Results */}
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {isLoading ? (
-              <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
-                <span className="ml-3text-gray-400"  >Searching...</span>
-              </div>
-            ) : query.length === 0 ? (
-              <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-                <Search className="w-5h-5ml-2"><div></div></Search></div></div>
-                <p className="text-gray-400">Start typing to search for services</p>
-              </div>
-            ) : results.length === 0 ? (
-              <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-                <p className="text-gray-400"></div>No results found for "{query}"</p>
-              </div>
-            ) : (
-              <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-                <p className="w-5h-5ml-2"></div>{results.length} result{results.length !== 1 ? 's' : ''} found;
-                <div></p>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
-                  {results.map((result, index) => (
-                    <Link;</Link></Link>
-                      key="{index}"
-                      to="{result.path}"
-                      onClick="{onClose}"
-                      className="flex items-center p-4 bg-slate-700/50 hover:bg-slate-700 rounded-lgtransition-colorsgroup" /></Link>
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{result.icon}
-                      <div></div>
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
-                        <h4 className="w-5h-5ml-2" />{result.title}
-                        </h4>
-                        <p className="w-5h-5ml-2">{result.description}
-                        </p>
-                        <span className="w-5h-5ml-2" />{result.category}
-                        <div><div></span>
-                      </div></div></div>
-                      <ArrowRight className="w-5h-5ml-2"><div></div></ArrowRight></div></div>
-                    </Link>
-                  ))}
-                </div>
-            )}
-          <div><div></div>
-      </div></div></div>
-  </div></div>);
-};
-export default SearchModal;
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+      </div>
+    </>
+  );
+}

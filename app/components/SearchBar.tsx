@@ -1,83 +1,28 @@
-import { useState, useRef, useEffect} from 'react';
-import { X } from 'lucide-react';
-interface SearchBarProps {
-  onSearch?: (query: string) => void;
-  placeholder?: string;
-  className?: string;
-}
-const SearchBar: React.FC<SearchBarProps /> = ({
-  onSearch,
-  const placeholder = "Search services...",
-  className = ""
-}) => {
-  const [query, setQuery] = useState('');
-  const [isOpen, setIsOpen] = useState(false);
-  const inputRef = useRef<HTMLInputElement />(null);
-  useEffect(() => {
-    if (isOpen && inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [isOpen]);
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (query.trim() && onSearch) {
-      onSearch(query.trim());
-    }
-  };
-  const handleClear = () => {
-    setQuery('');
-    setIsOpen(false);
-    if (inputRef.current) {
-      inputRef.current.blur();
-    }
-  };
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-export default function SearchBar() {
+
+export default function ComponentsPage() {
   return (
-            ref="{inputRef}"
-            type="text"
-            value="{query}"
-            onChange="{(e)" = /> setQuery(e.target.value)}
-            onFocus="{()" => setIsOpen(true)}
-            placeholder="{placeholder}"
-            className="w-full pl-10 pr-10 py-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparenttransition-all duration-300"
-          />
-          {query && (
-            <div><div><button;
-              type="button"
-              onClick="{handleClear}"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400hover:text-white transition-colors"></button></div></div>
-              <X className="w-5h-5ml-2"><div></div></X></div></div>
-            </button>
-          )}
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
-      </form>
-      {/* Search suggestions dropdown */}
-      {isOpen && (
-        <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
-            <p className="text-smtext-gray-600mb-2">Popular searches:<div></p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"><div></div></div></div></div>
-              {['AI Services', 'Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'].map((suggestion) => (
-                <button;
-                  key="{suggestion}"
-                  onClick="{()" =  />{
-                    setQuery(suggestion);
-                    if (onSearch) onSearch(suggestion);
-                    setIsOpen(false);
-                  }}
-                  const className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-purple-50rounded-md transition-colors"
-                >
-                  {suggestion}
-                </button>
-              ))}
-            </div>
-        </div>
-      )}
-    </div>
+      </div>
+    </>
   );
-};
-export default SearchBar;
+}

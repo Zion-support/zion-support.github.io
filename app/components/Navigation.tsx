@@ -1,48 +1,28 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Database, Smartphone, Settings, CheckSquare, FileText, MessageCircle, Link as LinkIcon, Mic, Eye } from 'lucide-react';
+
+export default function ComponentsPage() {
   return (
-              Zion Tech Group
-                Home
-                About
-                Contact
-        )}
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+      </div>
+    </>
   );
 }
-export default Navigation;
-const Navigation: React.FC = () => {
-  return (
-    <div><div><nav className="bg-gray-900  text-white"></nav></div></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div><div><div></div></div></div>
-        <div className="flex justify-between items-center py-4"><div></div></div></div></div>
-          <div><div><div className="flex  items-center"></div></div></div>
-            <Link to="/" className="text-2xl font-bold"><div></div></Link></div></div>
-              Zion Tech Group;
-            <div><div></Link>
-          </div></div></div>
-          <div className="hidden md:block"></div><div><div></div></div></div>
-            <div className="ml-10fl ex items-baseline  space-x-4"><div></div></div></div></div>
-              <Link;</Link></Link>
-                to="/"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              ></Link>
-                Home;
-              <div></Link>
-              <Link;</Link><div></Link></div></div></div>
-                to="/about"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              ></Link>
-                About;
-              <div></Link>
-              <Link;</Link><div></Link></div></div></div>
-                to="/contact"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              ></Link>
-                Contact;
-              <div><div></Link>
-            </div></div></div>
-        </div><div></div>
-    </nav></div></div>
-  );
-};

@@ -1,47 +1,28 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, BarChart, Shield, Zap } from 'lucide-react';
-export default function AIServicesPage() {
-  const services = [
-    {
-      title: 'AI Analytics',
-      description: 'Advanced data analytics powered by AI',
-      icon: <BarChart className="w-8 h-8" />
-    },
-    {
-      title: 'AI Security',
-      description: 'AI-powered cybersecurity solutions',
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      title: 'AI Automation',
-      description: 'Intelligent process automation',
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function AiServicesPage() {
   return (
     <>
       <Helmet>
-        <title>AI Services - Zion Tech Group<div><div></title>
-        <meta name="description" content="Comprehensive AI solutions for modern businesses." /></div></div>
-      </Helmet></div>
-      <div><div><div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 py-20"></div></div></div>
-        <div className="max-w-7xl mx-auto px-4"></div><div><div></div></div></div>
-          <div className="text-center mb-16"><div></div></div></div></div>
-            <h1 className="text-4xl font-bold text-white mb-6">AI Services</h1>
-            <p className="text-lg text-gray-300">Comprehensive artificial intelligence solutions<div><div></p>
-          </div></div></div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"><div></div></div></div></div>
-            {services.map((service, index) => (
-              <div><div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"></div></div></div>
-                <div className="text-cyan-400 mb-4"></div>{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
-              </div>
-            ))}
-          <div><div></div>
-        </div></div></div>
-      </div><div></div>
-    </></div></div>
+        <title>Ai Services - Zion Tech Group</title>
+        <meta name="description" content="Professional ai services services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Ai Services</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ai services services coming soon.</p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+        </div>
+      </div>
+    </>
   );
 }
