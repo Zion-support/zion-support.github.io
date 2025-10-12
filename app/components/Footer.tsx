@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, Cpu, ArrowRight } from 'lucide-react';
-=======
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react'
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
