@@ -1,32 +1,29 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { useLocation } from 'react-router-dom'
 
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: any;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({
+const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - AI & IT Solutions',
-  description = 'Leading provider of AI and IT solutions, empowering businesses with cutting-edge technology and innovative digital transformation services.',
-  keywords = ['AI', 'artificial intelligence', 'IT services', 'cloud computing', 'cybersecurity', 'data analytics', 'digital transformation'],
-  canonical,
-  ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  structuredData
+  description = 'Leading provider of AI and IT solutions, transforming businesses through innovative technology and expert consulting.',
+  keywords = 'AI solutions, IT services, artificial intelligence, machine learning, cloud computing, cybersecurity, digital transformation',
+  image = '/og-image.jpg',
+  url,
+  type = 'website'
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com');
-
-  const defaultStructuredData = {
+  const location = useLocation()
+  const currentUrl = url || `https://ziontechgroup.com${location.pathname}`
+  
+  const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -35,66 +32,41 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
+      "contactType": "sales",
+      "email": "contact@ziontechgroup.com"
     },
     "sameAs": [
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup"
-    ]
-  };
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "San Francisco",
+      "addressRegion": "CA",
+      "addressCountry": "US"
+    }
+  }
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="theme-color" content="#0f172a" />
-      
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
+      <meta name="keywords" content={keywords} />
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={fullTitle} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={currentUrl} />
+      <meta property="og:type" content={type} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional SEO */}
-      <meta name="google-site-verification" content="your-google-verification-code" />
-      <meta name="msvalidate.01" content="your-bing-verification-code" />
-      
-      {/* Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData)
-        }}
-      />
+      <meta name="twitter:image" content={image} />
+      <link rel="canonical" href={currentUrl} />
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
     </Helmet>
-  );
-};
+  )
+}
 
-export default SEOHead;
+export default EnhancedSEOHead

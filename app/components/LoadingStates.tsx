@@ -1,27 +1,27 @@
 'use client';
 import React from 'react';
-import { Loader2 } from 'lucide-react';
+import { Brain, Zap, Shield, Loader2 } from 'lucide-react';
 
 export const PageLoader: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
-        <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-          <Loader2 className="w-8 h-8 text-slate-900 animate-spin" />
+        <div className="grid grid-cols-3 gap-4 mb-8">
+          <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center animate-pulse">
+            <Brain className="w-6 h-6 text-white" />
+          </div>
+          <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center animate-pulse" style={{ animationDelay: '0.2s' }}>
+            <Zap className="w-6 h-6 text-white" />
+          </div>
+          <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-lg flex items-center justify-center animate-pulse" style={{ animationDelay: '0.4s' }}>
+            <Shield className="w-6 h-6 text-white" />
+          </div>
         </div>
-        <h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
-        <p className="text-gray-300">Please wait while we load the page</p>
-      </div>
-    </div>
-  );
-};
-
-export const ComponentLoader: React.FC = () => {
-  return (
-    <div className="flex items-center justify-center p-8">
-      <div className="flex items-center space-x-2 text-cyan-400">
-        <Loader2 className="w-5 h-5 animate-spin" />
-        <span>Loading component...</span>
+        <h2 className="text-2xl font-bold text-white mb-4">Loading AI Solutions</h2>
+        <p className="text-gray-400 mb-6">Preparing advanced features for your experience</p>
+        <div className="w-64 h-2 bg-gray-700 rounded-full overflow-hidden">
+          <div className="h-full bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full animate-pulse"></div>
+        </div>
       </div>
     </div>
   );
@@ -50,49 +50,52 @@ export const ContentSkeleton: React.FC = () => {
   );
 };
 
-export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' | 'xl'; text?: string; fullScreen?: boolean }> = ({ 
-  size = 'md', 
-  text = 'Loading...', 
-  fullScreen = false 
-}) => {
-  const sizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-8 w-8',
-    lg: 'h-12 w-12',
-    xl: 'h-16 w-16'
-  };
-
-  const spinner = (
-    <div className="flex flex-col items-center justify-center space-y-4">
-      <div className={`animate-spin rounded-full border-b-2 border-cyan-400 ${sizeClasses[size]}`}></div>
-      {text && <p className="text-cyan-400 font-medium">{text}</p>}
+export const SkeletonGrid: React.FC<{ count?: number }> = ({ count = 3 }) => {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {Array.from({ length: count }).map((_, index) => (
+        <ServiceCardSkeleton key={index} />
+      ))}
     </div>
   );
-
-  if (fullScreen) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {spinner}
-      </div>
-    );
-  }
-
-  return spinner;
 };
 
-export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (
-  <div className="animate-pulse space-y-4">
-    {Array.from({ length: lines }).map((_, index) => (
-      <div key={index} className="h-4 bg-gray-200 rounded w-full"></div>
-    ))}
+export const FeatureLoader: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center">
+        <div className="grid grid-cols-3 gap-4 mb-8">
+          <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center animate-pulse">
+            <Brain className="w-6 h-6 text-white" />
+          </div>
+          <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center animate-pulse" style={{ animationDelay: '0.2s' }}>
+            <Zap className="w-6 h-6 text-white" />
+          </div>
+          <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-lg flex items-center justify-center animate-pulse" style={{ animationDelay: '0.4s' }}>
+            <Shield className="w-6 h-6 text-white" />
+          </div>
+        </div>
+        <h2 className="text-2xl font-bold text-white mb-4">Initializing AI Solutions</h2>
+        <p className="text-gray-400 mb-6">Preparing advanced features for your experience</p>
+        <div className="w-64 h-2 bg-gray-700 rounded-full overflow-hidden">
+          <div className="h-full bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full animate-pulse"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const LoadingSpinner: React.FC = () => (
+  <div className="flex items-center justify-center p-8">
+    <div className="w-8 h-8 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
   </div>
 );
 
-export default {
-  PageLoader,
-  LoadingSpinner,
-  LoadingSkeleton,
-  ServiceCardSkeleton,
-  ComponentLoader,
-  ContentSkeleton
+export const InlineLoader: React.FC<{ text?: string }> = ({ text = 'Loading...' }) => {
+  return (
+    <div className="flex items-center justify-center space-x-2 text-gray-400">
+      <Loader2 className="w-4 h-4 animate-spin" />
+      <span>{text}</span>
+    </div>
+  );
 };

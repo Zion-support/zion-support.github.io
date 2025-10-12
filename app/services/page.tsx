@@ -1,150 +1,169 @@
-'use client';
 import React from 'react';
+import { CheckCircle, Zap, Shield, Globe, Cloud, Database, Code, Smartphone } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const ServicesPage: React.FC = () => {
+  const services = [
+    {
+      icon: <Zap className="w-8 h-8 text-blue-500" />,
+      title: 'AI & Machine Learning',
+      description: 'Transform your business with cutting-edge AI solutions and machine learning algorithms.',
+      features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Automated Decision Making']
+    },
+    {
+      icon: <Cloud className="w-8 h-8 text-green-500" />,
+      title: 'Cloud Solutions',
+      description: 'Scalable and secure cloud infrastructure to power your digital transformation.',
+      features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery']
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets and data.',
+      features: ['Threat Detection', 'Security Audits', 'Compliance Management', 'Incident Response']
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-purple-500" />,
+      title: '5G Implementation',
+      description: 'Next-generation connectivity solutions for ultra-fast and reliable networks.',
+      features: ['Network Design', 'IoT Integration', 'Edge Computing', 'Performance Optimization']
+    },
+    {
+      icon: <Database className="w-8 h-8 text-yellow-500" />,
+      title: 'Data Analytics',
+      description: 'Turn your data into actionable insights with advanced analytics and visualization.',
+      features: ['Data Warehousing', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization']
+    },
+    {
+      icon: <Code className="w-8 h-8 text-indigo-500" />,
+      title: 'Custom Development',
+      description: 'Tailored software solutions designed to meet your specific business requirements.',
+      features: ['Web Applications', 'API Development', 'Microservices', 'Legacy Modernization']
+    },
+    {
+      icon: <Smartphone className="w-8 h-8 text-pink-500" />,
+      title: 'Mobile Solutions',
+      description: 'Native and cross-platform mobile applications for iOS and Android.',
+      features: ['Native Development', 'Cross-platform Apps', 'UI/UX Design', 'App Store Optimization']
+    }
+  ];
+
+  const processSteps = [
+    {
+      step: '01',
+      title: 'Discovery & Analysis',
+      description: 'We analyze your business needs and technical requirements to create a tailored solution.'
+    },
+    {
+      step: '02',
+      title: 'Strategy & Planning',
+      description: 'Our team develops a comprehensive strategy and project roadmap for implementation.'
+    },
+    {
+      step: '03',
+      title: 'Development & Implementation',
+      description: 'We build and deploy your solution using industry best practices and cutting-edge technology.'
+    },
+    {
+      step: '04',
+      title: 'Testing & Optimization',
+      description: 'Rigorous testing ensures quality and performance optimization for maximum efficiency.'
+    },
+    {
+      step: '05',
+      title: 'Launch & Support',
+      description: 'We launch your solution and provide ongoing support and maintenance services.'
+    }
+  ];
+
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Our Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI and IT services including AI solutions, cloud computing, cybersecurity, and more." />
-        <meta name="keywords" content="AI services, IT services, cloud computing, cybersecurity, web development" />
+        <meta name="description" content="Comprehensive AI, cloud, cybersecurity, and IT solutions to transform your business. Expert services from Zion Tech Group." />
+        <meta name="keywords" content="AI services, cloud solutions, cybersecurity, 5G implementation, data analytics, custom development, mobile apps" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
+      <main className="pt-20 px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          {/* Hero Section */}
+          <div className="text-center mb-20">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Our Services
-              </span>
+              Our Services
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive AI and IT solutions to transform your business and drive innovation.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* AI Services */}
-            <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">🤖</span>
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+                <div className="mb-6">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">AI Solutions</h3>
-              <p className="text-gray-300 mb-4">
-                Advanced artificial intelligence solutions including machine learning, natural language processing, and computer vision.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• Machine Learning Models</li>
-                <li>• Natural Language Processing</li>
-                <li>• Computer Vision</li>
-                <li>• Predictive Analytics</li>
-              </ul>
-            </div>
+            ))}
+          </div>
 
-            {/* Cloud Computing */}
-            <div className="bg-gradient-to-br from-cyan-900/50 to-blue-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">☁️</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Cloud Infrastructure</h3>
-              <p className="text-gray-300 mb-4">
-                Scalable cloud solutions for modern businesses with AWS, Azure, and Google Cloud expertise.
+          {/* Process Section */}
+          <div className="mb-20">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Process</h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                A proven methodology that ensures successful project delivery and client satisfaction.
               </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• Cloud Migration</li>
-                <li>• Infrastructure as Code</li>
-                <li>• Auto-scaling Solutions</li>
-                <li>• Cost Optimization</li>
-              </ul>
             </div>
-
-            {/* Cybersecurity */}
-            <div className="bg-gradient-to-br from-red-900/50 to-pink-900/50 backdrop-blur-sm border border-red-500/20 rounded-xl p-6 hover:border-red-400/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">🔒</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Cybersecurity</h3>
-              <p className="text-gray-300 mb-4">
-                Comprehensive security solutions to protect your digital assets and ensure compliance.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• Security Audits</li>
-                <li>• Threat Detection</li>
-                <li>• Compliance Management</li>
-                <li>• Incident Response</li>
-              </ul>
-            </div>
-
-            {/* Web Development */}
-            <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 backdrop-blur-sm border border-green-500/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">💻</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Web Development</h3>
-              <p className="text-gray-300 mb-4">
-                Modern, responsive web applications built with cutting-edge technologies and best practices.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• React & Next.js</li>
-                <li>• Full-Stack Development</li>
-                <li>• API Integration</li>
-                <li>• Performance Optimization</li>
-              </ul>
-            </div>
-
-            {/* Data Analytics */}
-            <div className="bg-gradient-to-br from-orange-900/50 to-red-900/50 backdrop-blur-sm border border-orange-500/20 rounded-xl p-6 hover:border-orange-400/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">📊</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Data Analytics</h3>
-              <p className="text-gray-300 mb-4">
-                Transform your data into actionable insights with advanced analytics and visualization tools.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• Business Intelligence</li>
-                <li>• Data Visualization</li>
-                <li>• Real-time Analytics</li>
-                <li>• Custom Dashboards</li>
-              </ul>
-            </div>
-
-            {/* DevOps */}
-            <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 backdrop-blur-sm border border-indigo-500/20 rounded-xl p-6 hover:border-indigo-400/40 transition-all duration-300">
-              <div className="w-12 h-12 bg-indigo-500/20 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">⚙️</span>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">DevOps & CI/CD</h3>
-              <p className="text-gray-300 mb-4">
-                Streamline your development process with automated deployment and infrastructure management.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>• CI/CD Pipelines</li>
-                <li>• Container Orchestration</li>
-                <li>• Infrastructure Automation</li>
-                <li>• Monitoring & Logging</li>
-              </ul>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+              {processSteps.map((step, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-lg">{step.step}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
+                  <p className="text-gray-300 text-sm">{step.description}</p>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="text-center mt-16">
-            <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how our services can help transform your business and drive innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-                Get Free Consultation
-              </button>
-              <button className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300">
-                View Our Portfolio
-              </button>
+          {/* CTA Section */}
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our services can help you achieve your goals and drive innovation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact" 
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Get Started Today
+                </Link>
+                <Link 
+                  to="/ai-services" 
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                >
+                  Explore AI Services
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </main>
+    </div>
   );
 };
 

@@ -1,61 +1,69 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Play, Pause, Zap, Shield, Cloud, BarChart3, Users, Target, CheckCircle } from 'lucide-react';
 
-interface Slide {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  features: string[];
-}
-
-interface ContentCarouselProps {
-  slides?: Slide[];
-  autoPlay?: boolean;
-  interval?: number;
-}
-
-const defaultSlides: Slide[] = [
-  {
-    id: 1,
-    title: 'AI-Powered Solutions',
-    description: 'Transform your business with cutting-edge artificial intelligence technologies.',
-    image: '/api/placeholder/600/400',
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision']
-  },
-  {
-    id: 2,
-    title: 'Cloud Infrastructure',
-    description: 'Scalable and secure cloud solutions for modern businesses.',
-    image: '/api/placeholder/600/400',
-    features: ['Scalable Architecture', '99.9% Uptime', 'Global CDN']
-  },
-  {
-    id: 3,
-    title: 'Cybersecurity',
-    description: 'Protect your business with comprehensive security solutions.',
-    image: '/api/placeholder/600/400',
-    features: ['Threat Detection', 'Security Audits', 'Compliance Management']
-  }
-];
-
-  slides = defaultSlides, 
-  autoPlay = true, 
-  interval = 5000 
-}: ContentCarouselProps) {
+const ContentCarousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(autoPlay);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const slides = [
+    {
+      icon: Zap,
+      title: 'AI-Powered Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence that automates processes and drives innovation.',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+      color: 'from-yellow-400 to-orange-500'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable, secure, and reliable cloud solutions that grow with your business needs.',
+      features: ['Auto-scaling', 'High Availability', 'Disaster Recovery', 'Global CDN'],
+      color: 'from-blue-400 to-cyan-500'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with advanced encryption, compliance, and threat protection.',
+      features: ['End-to-End Encryption', 'Multi-Factor Authentication', 'Compliance Standards', 'Threat Detection'],
+      color: 'from-green-400 to-emerald-500'
+    },
+    {
+      icon: BarChart3,
+      title: 'Analytics & Insights',
+      description: 'Make data-driven decisions with comprehensive analytics and business intelligence.',
+      features: ['Real-time Dashboards', 'Custom Reports', 'Data Visualization', 'Predictive Modeling'],
+      color: 'from-purple-400 to-pink-500'
+    },
+    {
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Enhance productivity with tools that connect your team and streamline workflows.',
+      features: ['Project Management', 'Communication Tools', 'File Sharing', 'Task Automation'],
+      color: 'from-indigo-400 to-blue-500'
+    },
+    {
+      icon: Target,
+      title: 'Custom Development',
+      description: 'Tailored solutions designed specifically for your unique business requirements.',
+      features: ['Custom Applications', 'API Integration', 'Legacy Modernization', 'Mobile Development'],
+      color: 'from-red-400 to-pink-500'
+    }
+  ];
 
   useEffect(() => {
     if (isPlaying) {
       const timer = setInterval(() => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-      }, interval);
+      }, 5000);
       return () => clearInterval(timer);
     }
-  }, [isPlaying, slides.length, interval]);
+    
+    return () => {
+      // No cleanup needed when not playing
+    };
+  }, [isPlaying, slides.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
@@ -73,80 +81,119 @@ const defaultSlides: Slide[] = [
     setCurrentSlide(index);
   };
 
+  const currentSlideData = slides[currentSlide];
+
   return (
-    <div className="relative w-full max-w-4xl mx-auto">
-      {/* Main Carousel */}
-      <div className="relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20">
-        <div 
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-        >
-          {slides.map((slide) => (
-            <div key={slide.id} className="w-full flex-shrink-0">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
-                <div className="space-y-6">
-                  <h3 className="text-3xl font-bold text-white">{slide.title}</h3>
-                  <p className="text-lg text-gray-300">{slide.description}</p>
-                  <ul className="space-y-3">
-                    {slide.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Discover Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore our comprehensive suite of AI and IT solutions designed to transform your business.
+          </p>
+        </div>
+
+        {/* Carousel Container */}
+        <div className="relative">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-white/20 overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Content */}
+              <div className="space-y-6">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${currentSlideData.color} rounded-xl flex items-center justify-center`}>
+                    <currentSlideData.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {currentSlideData.title}
+                    </h3>
+                    <p className="text-gray-300">
+                      {currentSlideData.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="flex items-center justify-center">
-                  <div className="w-full h-64 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                    <Cloud className="w-24 h-24 text-white opacity-50" />
+
+                <div className="space-y-3">
+                  {currentSlideData.features.map((feature, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex gap-4">
+                  <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
+                    Learn More
+                  </button>
+                  <button className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                    Get Started
+                  </button>
+                </div>
+              </div>
+
+              {/* Visual Element */}
+              <div className="relative">
+                <div className="aspect-square bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center">
+                  <div className="text-center">
+                    <div className={`w-32 h-32 bg-gradient-to-r ${currentSlideData.color} rounded-full mx-auto mb-6 flex items-center justify-center`}>
+                      <currentSlideData.icon className="w-16 h-16 text-white" />
+                    </div>
+                    <div className="text-4xl font-bold text-white mb-2">
+                      {currentSlideData.title}
+                    </div>
+                    <div className="text-gray-300">
+                      Slide {currentSlide + 1} of {slides.length}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
 
-        {/* Navigation Arrows */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
-      </div>
-
-      {/* Controls */}
-      <div className="flex items-center justify-center mt-6 space-x-4">
-        <button
-          onClick={togglePlayPause}
-          className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
-          aria-label={isPlaying ? 'Pause' : 'Play'}
-        >
-          {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
-        </button>
-
-        {/* Slide Indicators */}
-        <div className="flex space-x-2">
-          {slides.map((_, index) => (
+          {/* Navigation Controls */}
+          <div className="flex items-center justify-center gap-4 mt-8">
             <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+              onClick={prevSlide}
+              className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            
+            <button
+              onClick={togglePlayPause}
+              className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
+            >
+              {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
+            </button>
+            
+            <button
+              onClick={nextSlide}
+              className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-6 space-x-2">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                  index === currentSlide ? 'bg-purple-400' : 'bg-white/30'
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default ContentCarousel;

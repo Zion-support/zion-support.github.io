@@ -1,100 +1,31 @@
-<<<<<<< HEAD
-import React from 'react';
 'use client'
-import { Helmet } from 'react-helmet-async';
-=======
-'use client';
-import React, { createContext, useContext, useState, useEffect } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-interface AnalyticsContextType {
-  trackEvent: (event: string, properties?: Record<string, any>) => void;
-  trackPageView: (page: string) => void;
-  setUser: (userId: string, properties?: Record<string, any>) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-
-export const useAnalytics = (): AnalyticsContextType => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
-
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const [isInitialized, setIsInitialized] = useState(false);
-
-  useEffect(() => {
-    // Initialize analytics
-    setIsInitialized(true);
-  }, []);
-
-  const trackEvent = (event: string, properties?: Record<string, any>) => {
-    if (!isInitialized) return;
-    
-    // Track event (placeholder for actual analytics implementation)
-    console.log('Analytics Event:', event, properties);
-    
-    // Here you would integrate with your analytics service
-    // Example: gtag('event', event, properties);
-  };
-
-  const trackPageView = (page: string) => {
-    if (!isInitialized) return;
-    
-    // Track page view (placeholder for actual analytics implementation)
-    console.log('Page View:', page);
-    
-    // Here you would integrate with your analytics service
-    // Example: gtag('config', 'GA_MEASUREMENT_ID', { page_path: page });
-  };
-
-  const setUser = (userId: string, properties?: Record<string, any>) => {
-    if (!isInitialized) return;
-    
-    // Set user properties (placeholder for actual analytics implementation)
-    console.log('User Set:', userId, properties);
-    
-    // Here you would integrate with your analytics service
-    // Example: gtag('config', 'GA_MEASUREMENT_ID', { user_id: userId });
-  };
-
-  const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-    setUser,
-  };
-
-<<<<<<< HEAD
 const EnhancedAnalytics: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards',
+      description: 'Bank-level security with encryption and compliance standards'
     },
     {
       icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses',
+      description: 'Worldwide deployment and support for international businesses'
     }
-  ];
+  ]
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -104,7 +35,7 @@ const EnhancedAnalytics: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -124,7 +55,7 @@ const EnhancedAnalytics: React.FC = () => {
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced enhancedanalytics solutions.
+              Transform your business with our advanced enhancedanalytics solutions. 
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -210,13 +141,5 @@ const EnhancedAnalytics: React.FC = () => {
     </div>
   )
 }
-=======
-  return (
-    <AnalyticsContext.Provider value={value}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
-};
 
-export default AnalyticsProvider;
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
+export default EnhancedAnalytics

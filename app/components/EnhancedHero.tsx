@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { ArrowRight, Mail, Brain } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Shield, Brain, Globe } from 'lucide-react';
 
 const EnhancedHero: React.FC = () => {
   const benefits = [
@@ -10,7 +10,8 @@ const EnhancedHero: React.FC = () => {
     'Scalable and flexible solutions',
     '24/7 technical support',
     'Custom implementation and training'
-  ];
+  ]
+
   const contactInfo = [
     {
       icon: Phone,
@@ -30,7 +31,8 @@ const EnhancedHero: React.FC = () => {
       details: 'San Francisco, CA',
       description: 'Schedule a meeting'
     }
-  ];
+  ]
+
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Background Effects */}
@@ -126,3 +128,5 @@ const EnhancedHero: React.FC = () => {
     </div>
   )
 }
+
+export default EnhancedHero

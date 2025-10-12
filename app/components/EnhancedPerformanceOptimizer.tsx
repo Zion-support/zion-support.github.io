@@ -1,30 +1,31 @@
 'use client'
 import React from 'react'
-import { Brain, BarChart, ArrowRight } from 'lucide-react';
+import { Brain, Zap, Shield, BarChart, ArrowRight, CheckCircle } from 'lucide-react';
 
 const EnhancedPerformanceOptimizer: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Optimization',
-      description: 'Advanced AI algorithms that continuously analyze and optimize your application performance in real-time.',
+      description: 'Advanced AI algorithms that continuously analyze and optimize your application performance in real-time.'
     },
     {
       icon: Zap,
       title: 'Lightning Fast',
-      description: 'Dramatically improve loading times and response rates with our cutting-edge optimization techniques.',
+      description: 'Dramatically improve loading times and response rates with our cutting-edge optimization techniques.'
     },
     {
       icon: Shield,
       title: 'Secure & Reliable',
-      description: 'Enterprise-grade security with 99.9% uptime guarantee and comprehensive monitoring.',
+      description: 'Enterprise-grade security with 99.9% uptime guarantee and comprehensive monitoring.'
     },
     {
       icon: BarChart,
       title: 'Analytics & Insights',
-      description: 'Detailed performance metrics and actionable insights to drive continuous improvement.',
+      description: 'Detailed performance metrics and actionable insights to drive continuous improvement.'
     }
-  ];
+  ]
+
   const benefits = [
     'Up to 80% faster page load times',
     'Reduced server costs by 40%',
@@ -32,7 +33,8 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     'Enhanced user experience',
     'Real-time performance monitoring',
     'Automatic optimization updates'
-  ];
+  ]
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -42,7 +44,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
             <span className="neon-text">Enhanced Performance Optimizer</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your application's performance with our advanced AI-powered optimization solutions.
+            Transform your application's performance with our advanced AI-powered optimization solutions. 
             Experience lightning-fast speeds and superior user experience.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -163,4 +165,4 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
   )
 }
 
-export default EnhancedPerformanceOptimizer;
+export default EnhancedPerformanceOptimizer

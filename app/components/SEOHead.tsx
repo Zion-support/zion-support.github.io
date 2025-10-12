@@ -1,84 +1,35 @@
-import React from 'react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-  noIndex?: boolean;
-  noFollow?: boolean;  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, artificial intelligence, and innovative digital solutions.',
-  keywords = 'AI, artificial intelligence, IT solutions, technology, digital transformation, machine learning, automation',
-  canonical,
-  ogImage = '/og-image.jpg'
-}) => {
+  title?: string
+  description?: string
+  keywords?: string
+  canonical?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: object
+}
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-  keywords = "AI solutions, IT services, cloud computing, digital transformation, 5G implementation, cybersecurity",
-  image = "https://ziontechgroup.com/og-image.jpg",
-  url = "https://ziontechgroup.com",
-  type = "website"
+  title = 'Zion Tech Group - Advanced AI & IT Solutions',
+  description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
+  keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
+  canonical,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData
 }) => {
-  const structuredData = {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
+
+  const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "description": description,
-    "url": url,
-    "logo": "https://ziontechgroup.com/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "sameAs": [
-      "https://github.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup"
-    ],
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "AI Services",
-        "description": "Comprehensive AI solutions including content generation, chatbots, and automation",
-        "price": "29",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "29",
-          "priceCurrency": "USD",
-          "unitText": "MONTH"
-        }
-      },
-      {
-        "@type": "Offer",
-        "name": "IT Services",
-        "description": "Complete IT infrastructure services including cloud migration, cybersecurity, and mobile development",
-        "price": "2500",
-        "priceCurrency": "USD",
-        "priceSpecification": {
-          "@type": "PriceSpecification",
-          "price": "2500",
-          "priceCurrency": "USD",
-          "unitText": "PROJECT"
-        }
-      }
-    ];
-  };
     "url": canonicalUrl,
     "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
@@ -90,43 +41,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     "sameAs": [
       "https://www.linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup"
-    ];
-  }  };
+    ]
+  }
 
-  const finalStructuredData = structuredData || defaultStructuredData;      <link rel="canonical" href={canonical || window.location.href} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonical || window.location.href} />
-      
-      {/* Twitter */}      
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonical} />      <meta name="twitter:site" content="@ziontechgroup" />
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="theme-color" content="#8b5cf6" />
-      
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  return (
+    <Helmet>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -157,6 +80,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}export default SEOHead;
+        {JSON.stringify(structuredData || defaultStructuredData)}
+      </script>
+    </Helmet>
+  )
+}
+
+export default SEOHead

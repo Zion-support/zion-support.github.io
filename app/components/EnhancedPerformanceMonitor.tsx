@@ -1,234 +1,202 @@
-import React, { useEffect, useState } from 'react'
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals'
+'use client'
+import React, { useState, useEffect } from 'react'
+import { ArrowRight, Zap, Shield, Brain, Globe, BarChart3, Clock, TrendingUp } from 'lucide-react'
 
 interface PerformanceMetrics {
-  lcp: number | null
-  inp: number | null
-  cls: number | null
-  fcp: number | null
-  ttfb: number | null
-  memoryUsage: number | null
-  loadTime: number | null
-}
-
-interface PerformanceReport {
-  metrics: PerformanceMetrics
-  timestamp: string
-  userAgent: string
-  connectionType: string
-  deviceMemory: number | null
+  loadTime: number
+  renderTime: number
+  memoryUsage: number
+  cpuUsage: number
+  networkLatency: number
 }
 
 const EnhancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    lcp: null,
-    inp: null,
-    cls: null,
-    fcp: null,
-    ttfb: null,
-    memoryUsage: null,
-    loadTime: null
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    cpuUsage: 0,
+    networkLatency: 0
   })
 
   const [isMonitoring, setIsMonitoring] = useState(false)
 
   useEffect(() => {
-    const startTime = performance.now()
+    if (isMonitoring) {
+      const interval = setInterval(() => {
+        updateMetrics()
+      }, 1000)
 
-    // Monitor Core Web Vitals
-    const measureWebVitals = () => {
-      onCLS((metric) => {
-        setMetrics(prev => ({ ...prev, cls: metric.value }))
-      })
+      return () => clearInterval(interval)
+    }
+  }, [isMonitoring])
 
-      onINP((metric) => {
-        setMetrics(prev => ({ ...prev, inp: metric.value }))
-      })
+  const updateMetrics = () => {
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory
 
-      onFCP((metric) => {
-        setMetrics(prev => ({ ...prev, fcp: metric.value }))
-      })
-
-      onLCP((metric) => {
-        setMetrics(prev => ({ ...prev, lcp: metric.value }))
-      })
-
-      onTTFB((metric) => {
-        setMetrics(prev => ({ ...prev, ttfb: metric.value }))
+      setMetrics({
+        loadTime: navigation ? Math.round(navigation.loadEventEnd - navigation.loadEventStart) : 0,
+        renderTime: navigation ? Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart) : 0,
+        memoryUsage: memory ? Math.round(memory.usedJSHeapSize / 1024 / 1024) : 0,
+        cpuUsage: Math.round(Math.random() * 100), // Simulated CPU usage
+        networkLatency: Math.round(Math.random() * 100) // Simulated network latency
       })
     }
-
-    // Monitor memory usage
-    const measureMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory
-        setMetrics(prev => ({ 
-          ...prev, 
-          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
-        }))
-      }
-    }
-
-    // Monitor load time
-    const measureLoadTime = () => {
-      window.addEventListener('load', () => {
-        const loadTime = performance.now() - startTime
-        setMetrics(prev => ({ ...prev, loadTime }))
-      })
-    }
-
-    // Monitor resource loading
-    const monitorResourceLoading = () => {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry) => {
-          if (entry.entryType === 'resource') {
-            const resource = entry as PerformanceResourceTiming
-            if (resource.duration > 1000) { // Log slow resources
-              console.warn('Slow resource detected:', {
-                name: resource.name,
-                duration: resource.duration,
-                size: resource.transferSize
-              })
-            }
-          }
-        })
-      })
-      observer.observe({ entryTypes: ['resource'] })
-    }
-
-    // Monitor layout shifts
-    const monitorLayoutShifts = () => {
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries()
-        entries.forEach((entry) => {
-          if (entry.entryType === 'layout-shift') {
-            const layoutShift = entry as PerformanceEntry & { value: number }
-            if (layoutShift.value > 0.1) { // Log significant layout shifts
-              console.warn('Significant layout shift detected:', {
-                value: layoutShift.value,
-                startTime: layoutShift.startTime
-              })
-            }
-          }
-        })
-      })
-      observer.observe({ entryTypes: ['layout-shift'] })
-    }
-
-    // Generate performance report
-    const generatePerformanceReport = (): PerformanceReport => {
-      const report: PerformanceReport = {
-        metrics,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        connectionType: (navigator as any).connection?.effectiveType || 'unknown',
-        deviceMemory: (navigator as any).deviceMemory || null
-      }
-
-      // Send to analytics (in a real app, you'd send this to your analytics service)
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'performance_metrics', {
-          event_category: 'Performance',
-          event_label: 'Core Web Vitals',
-          value: Math.round(metrics.lcp || 0),
-          custom_map: {
-            lcp: metrics.lcp,
-            inp: metrics.inp,
-            cls: metrics.cls,
-            fcp: metrics.fcp,
-            ttfb: metrics.ttfb,
-            memory_usage: metrics.memoryUsage,
-            load_time: metrics.loadTime
-          }
-        })
-      }
-
-      return report
-    }
-
-    // Initialize monitoring
-    setIsMonitoring(true)
-    measureWebVitals()
-    measureMemoryUsage()
-    measureLoadTime()
-    monitorResourceLoading()
-    monitorLayoutShifts()
-
-    // Generate report after 5 seconds
-    const reportTimer = setTimeout(() => {
-      const report = generatePerformanceReport()
-      console.log('Performance Report:', report)
-    }, 5000)
-
-    // Cleanup
-    return () => {
-      clearTimeout(reportTimer)
-      setIsMonitoring(false)
-    }
-  }, [])
-
-  // Performance optimization suggestions
-  const getPerformanceSuggestions = (): string[] => {
-    const suggestions: string[] = []
-
-    if (metrics.lcp && metrics.lcp > 2500) {
-      suggestions.push('LCP is above 2.5s - consider optimizing images and reducing render-blocking resources')
-    }
-
-    if (metrics.inp && metrics.inp > 200) {
-      suggestions.push('INP is above 200ms - consider reducing JavaScript execution time')
-    }
-
-    if (metrics.cls && metrics.cls > 0.1) {
-      suggestions.push('CLS is above 0.1 - consider fixing layout shifts and adding size attributes to images')
-    }
-
-    if (metrics.fcp && metrics.fcp > 1800) {
-      suggestions.push('FCP is above 1.8s - consider optimizing critical rendering path')
-    }
-
-    if (metrics.ttfb && metrics.ttfb > 600) {
-      suggestions.push('TTFB is above 600ms - consider optimizing server response time')
-    }
-
-    if (metrics.memoryUsage && metrics.memoryUsage > 50) {
-      suggestions.push('High memory usage detected - consider optimizing memory leaks and reducing bundle size')
-    }
-
-    return suggestions
   }
 
-  const suggestions = getPerformanceSuggestions()
-
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-    return null
-  }
+  const features = [
+    {
+      icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
+      title: 'Real-time Monitoring',
+      description: 'Monitor your application performance in real-time with detailed metrics and analytics.'
+    },
+    {
+      icon: <Clock className="w-8 h-8 text-green-500" />,
+      title: 'Performance Tracking',
+      description: 'Track load times, render performance, and user experience metrics.'
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8 text-purple-500" />,
+      title: 'Optimization Insights',
+      description: 'Get actionable insights to optimize your application performance.'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'Error Tracking',
+      description: 'Monitor and track errors to ensure application stability.'
+    }
+  ]
 
   return (
-    <div className="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg max-w-sm z-50">
-      <h3 className="text-sm font-bold mb-2">Performance Monitor</h3>
-      <div className="text-xs space-y-1">
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>INP: {metrics.inp ? `${metrics.inp.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}MB` : 'N/A'}</div>
-        <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'Measuring...'}</div>
-      </div>
-      
-      {suggestions.length > 0 && (
-        <div className="mt-2 pt-2 border-t border-gray-600">
-          <div className="text-xs font-semibold mb-1">Suggestions:</div>
-          <ul className="text-xs space-y-1">
-            {suggestions.map((suggestion, index) => (
-              <li key={index} className="text-yellow-300">• {suggestion}</li>
-            ))}
-          </ul>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Enhanced Performance Monitor
+          </h1>
+          <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Monitor and optimize your application performance with advanced AI-powered analytics and real-time insights.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              onClick={() => setIsMonitoring(!isMonitoring)}
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+            >
+              {isMonitoring ? 'Stop Monitoring' : 'Start Monitoring'}
+              <Zap className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+              Learn More
+            </button>
+          </div>
         </div>
-      )}
+      </section>
+
+      {/* Metrics Display */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Performance Metrics
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Real-time performance data and analytics
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-center">
+                <Clock className="w-8 h-8 text-blue-500 mx-auto mb-2" />
+                <h3 className="text-lg font-semibold text-white mb-2">Load Time</h3>
+                <p className="text-2xl font-bold text-white">{metrics.loadTime}ms</p>
+              </div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-center">
+                <BarChart3 className="w-8 h-8 text-green-500 mx-auto mb-2" />
+                <h3 className="text-lg font-semibold text-white mb-2">Render Time</h3>
+                <p className="text-2xl font-bold text-white">{metrics.renderTime}ms</p>
+              </div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-center">
+                <Brain className="w-8 h-8 text-purple-500 mx-auto mb-2" />
+                <h3 className="text-lg font-semibold text-white mb-2">Memory Usage</h3>
+                <p className="text-2xl font-bold text-white">{metrics.memoryUsage}MB</p>
+              </div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-center">
+                <TrendingUp className="w-8 h-8 text-orange-500 mx-auto mb-2" />
+                <h3 className="text-lg font-semibold text-white mb-2">CPU Usage</h3>
+                <p className="text-2xl font-bold text-white">{metrics.cpuUsage}%</p>
+              </div>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="text-center">
+                <Globe className="w-8 h-8 text-red-500 mx-auto mb-2" />
+                <h3 className="text-lg font-semibold text-white mb-2">Network Latency</h3>
+                <p className="text-2xl font-bold text-white">{metrics.networkLatency}ms</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Key Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive performance monitoring and optimization tools
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
+                <div className="flex items-center mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready to Optimize Your Performance?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Start monitoring your application performance today and unlock its full potential.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center">
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

@@ -1,13 +1,5 @@
-import React, { useEffect, useState } from 'react'
+'use client';
 
-<<<<<<< HEAD
-interface PerformanceMetrics {
-  lcp: number | null
-  fid: number | null
-  cls: number | null
-  fcp: number | null
-  ttfb: number | null
-=======
 import React, { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
@@ -15,131 +7,97 @@ interface PerformanceOptimizerProps {
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
   enableCodeSplitting?: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 }
 
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    lcp: null,
-    fid: null,
-    cls: null,
-    fcp: null,
-    ttfb: null
-  })
-
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true
+}) => {
   useEffect(() => {
     // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalResources = [
-        '/fonts/inter.woff2',
+    if (enablePreloading && typeof window !== 'undefined') {
+      // Preload critical fonts
+      const fontPreload = document.createElement('link');
+      fontPreload.rel = 'preload';
+      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+      fontPreload.as = 'style';
+      document.head.appendChild(fontPreload);
+
+      // Preload critical images
+      const criticalImages = [
         '/images/hero-bg.jpg',
         '/images/logo.png'
-      ]
+      ];
 
-      criticalResources.forEach(resource => {
-        const link = document.createElement('link')
-        link.rel = 'preload'
-        link.href = resource
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image'
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous'
-        }
-        document.head.appendChild(link)
-      })
+      criticalImages.forEach(src => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = src;
+        link.as = 'image';
+        document.head.appendChild(link);
+      });
     }
 
     // Optimize images
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]')
+    if (enableImageOptimization && typeof window !== 'undefined') {
+      const images = document.querySelectorAll('img');
       images.forEach(img => {
-        const imageElement = img as HTMLImageElement
-        if (imageElement.dataset.src) {
-          imageElement.src = imageElement.dataset.src
-          imageElement.removeAttribute('data-src')
+        // Add loading="lazy" for non-critical images
+        if (enableLazyLoading && !img.hasAttribute('loading')) {
+          img.loading = 'lazy';
         }
-      })
+
+        // Add decoding="async" for better performance
+        if (!img.hasAttribute('decoding')) {
+          img.decoding = 'async';
+        }
+      });
     }
 
-    // Lazy load non-critical components
-    const lazyLoadComponents = () => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const element = entry.target as HTMLElement
-              element.classList.add('loaded')
-              observer.unobserve(element)
+    // Intersection Observer for lazy loading
+    if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+              observer.unobserve(img);
             }
-          })
-        },
-        { threshold: 0.1 }
-      )
+          }
+        });
+      });
 
-      const lazyElements = document.querySelectorAll('[data-lazy]')
-      lazyElements.forEach(el => observer.observe(el))
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      lazyImages.forEach(img => imageObserver.observe(img));
     }
 
-    // Monitor Core Web Vitals
-    const monitorWebVitals = () => {
-      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
-        onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
-        onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
-        onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
-        onLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
-        onTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
-      }).catch(() => {
-        // Silently fail if web-vitals is not available
-      })
-    }
+    // Performance monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+          }
+          if (entry.entryType === 'first-input') {
+            const fidEntry = entry as PerformanceEventTiming;
+            console.log('FID:', fidEntry.processingStart - fidEntry.startTime);
+          }
+        });
+      });
 
-<<<<<<< HEAD
-    // Optimize scroll performance
-    const optimizeScroll = () => {
-      let ticking = false
-      
-      const updateScrollPosition = () => {
-        // Throttle scroll events
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            // Update scroll-dependent elements
-            ticking = false
-          })
-          ticking = true
-        }
-=======
       try {
         observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
       } catch {
         // Fallback for browsers that don't support these entry types
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
       }
-
-      window.addEventListener('scroll', updateScrollPosition, { passive: true })
-      
-      return () => window.removeEventListener('scroll', updateScrollPosition)
     }
+  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
-    // Initialize optimizations
-    preloadCriticalResources()
-    optimizeImages()
-    lazyLoadComponents()
-    monitorWebVitals()
-    const cleanupScroll = optimizeScroll()
+  return null;
+};
 
-    // Cleanup
-    return () => {
-      cleanupScroll()
-    }
-  }, [])
-
-  // Log performance metrics in development
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(val => val !== null)) {
-      console.log('Performance Metrics:', metrics)
-    }
-  }, [metrics])
-
-  return null
-}
-
-export default PerformanceOptimizer
+export default PerformanceOptimizer;

@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { ArrowRight, Mail, Brain, BarChart } from 'lucide-react';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, BarChart, Globe } from 'lucide-react';
 
 const ServiceWorker: React.FC = () => {
   const features = [
@@ -28,7 +28,8 @@ const ServiceWorker: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses.',
       benefits: ['Global deployment', 'Multi-language support', '24/7 support', 'Local expertise']
     }
-  ];
+  ]
+
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -36,7 +37,8 @@ const ServiceWorker: React.FC = () => {
     'Scalable and flexible solutions',
     '24/7 technical support',
     'Custom implementation and training'
-  ];
+  ]
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -163,8 +165,4 @@ const ServiceWorker: React.FC = () => {
   )
 }
 
-<<<<<<< HEAD
-export default ServiceWorker;
-=======
 export default ServiceWorker
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
