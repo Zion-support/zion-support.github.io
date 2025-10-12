@@ -1,26 +1,21 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+'use client';
+import React from 'react';
+import GenericServicePage from '../components/GenericServicePage';
+import { Users } from 'lucide-react';
 
-export default function AicustomerchurnPage() {
+const AiCustomerChurnPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      <Helmet>
-        <title>Ai Customer Churn - Zion Tech Group</title>
-        <meta name="description" content="Professional ai customer churn services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">Ai Customer Churn</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional ai customer churn services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </div>
+    <GenericServicePage
+      title="AI Customer Churn Prediction"
+      description="Predict and prevent customer churn using AI-powered analytics and proactive retention strategies."
+      icon={Users}
+      features={["Churn Prediction","Risk Scoring","Retention Strategies","Customer Segmentation","Behavioral Analysis","Automated Alerts"]}
+      benefits={["Reduce Churn by 40%","Increase Retention","Better Customer Insights","Proactive Actions"]}
+      pricing="$499/month"
+      category="AI"
+      color="from-red-500 to-orange-600"
+    />
   );
-}
+};
+
+export default AiCustomerChurnPage;
