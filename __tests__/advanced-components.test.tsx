@@ -252,16 +252,9 @@ describe('AdvancedPerformanceMonitor', () => {
         <MemoryRouter>
           <ThrowError shouldThrow={true} />
         </MemoryRouter>
-<<<<<<< HEAD
-      );
-    }).not.toThrow();
-    consoleSpy.mockRestore();
-  });
-});
-=======
       )
-    }).not.toThrow()
+    }).toThrow()
+    
     consoleSpy.mockRestore()
   })
 })
->>>>>>> cursor/fix-errors-and-merge-to-main-9603

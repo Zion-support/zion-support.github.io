@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { CheckCircle, Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
-=======
 import { CheckCircle, ArrowRight, Mail, Phone, MapPin, Clock, Send, MessageCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -54,7 +53,6 @@ export default function ContactPage() {
     // Handle form submission here
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you within 24 hours.');
-=======
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -63,7 +61,6 @@ export default function ContactPage() {
       ...formData,
       [e.target.name]: e.target.value
     });
-=======
       });
     }, 3000);
   };
@@ -107,10 +104,8 @@ export default function ContactPage() {
       description: 'Chat with us in real-time for immediate assistance',
       contact: 'Available 24/7',
       action: '#'
-=======
       icon: <Mail className="w-6 h-6 text-blue-500" />,
       title: 'Email',
-=======
       icon: <Mail className="w-6 h-6 text-blue-500" />,
       title: 'Email Us',
       details: 'contact@ziontechgroup.com',
@@ -138,7 +133,6 @@ export default function ContactPage() {
 
   const services = [
     'AI & Machine Learning',
-=======
     'AI Services',
     'IT Services',
     'Cloud Solutions',
@@ -532,7 +526,6 @@ export default function ContactPage() {
                     </div>
                   ))}
                 </div>
-=======
         <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. Contact us for a free consultation." />
         <meta name="keywords" content="contact, consultation, AI services, IT services, digital transformation" />
       </Helmet>
@@ -723,7 +716,6 @@ export default function ContactPage() {
                 >
                   Try Micro SAAS
                 </Link>
-=======
               <div className="mb-8">
                 <label htmlFor="message" className="block text-sm font-medium text-white mb-2">Message *</label>
                 <textarea
@@ -758,7 +750,6 @@ export default function ContactPage() {
             </form>
           )}
         </div>
-=======
       </section>
     </div>
   );
