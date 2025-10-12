@@ -9,11 +9,11 @@ describe('Components', () => {
     render(<Loading />)
     expect(screen.getByText('Loading...')).toBeInTheDocument()
   })
-
-  test('SEOHead component renders', () => {
-    render(
-      <HelmetProvider>
-        <SEOHead title="Test Title" description="Test Description" />
+</Loading>
+  test('SEOHead component renders', () => {</Loading>
+    render(</Loading>
+      <HelmetProvider></HelmetProvider>
+        <SEOHead title="Test Title" description="Test Description" /></SEOHead>
       </HelmetProvider>
     )
     expect(document.head).toBeInTheDocument()

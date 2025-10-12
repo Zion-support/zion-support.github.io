@@ -1,5 +1,5 @@
-export function debounce<T extends (...args: any[]) => any>(
-export function throttle<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: any[]) =>any>(</T>
+export function throttle<T extends (...args: any[]) =>any>(
 export function createIntersectionObserver(
 export function getMemoryUsage(): any {
 export function preloadCriticalResources(): void {
@@ -11,21 +11,21 @@ export function addResourceHints(): void {
  * Performance optimization utilities for the Zion Tech Group application;
  */
 
-// Debounce function for performance optimization;
-  func: T,
-  wait: number;
-): (...args: Parameters<T>) => void {
-  let timeout: NodeJS.Timeout;
+// Debounce function for performance optimization;</T>
+  func: T,</T>
+  wait: number;</T>
+): (...args: Parameters<T>) => void {</T>
+  let timeout: NodeJS.Timeout;</T>
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
  func(...args), wait);
   };
 
-// Throttle function for performance optimization;
-  func: T,
-  limit: number;
-): (...args: Parameters<T>) => void {
-  let inThrottle: boolean;
+// Throttle function for performance optimization;</T>
+  func: T,</T>
+  limit: number;</T>
+): (...args: Parameters<T>) => void {</T>
+  let inThrottle: boolean;</T>
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);
@@ -52,9 +52,7 @@ export function addResourceHints(): void {
     fn();
     return;
 
-  const start = performance.now();
   fn();
-  const end = performance.now();
   
   if (process.env.NODE_ENV === 'development') {
     console.log(`${name} took ${end - start} milliseconds`);
@@ -67,14 +65,7 @@ export function addResourceHints(): void {
 
 // Bundle size optimization - preload critical resources;
   if (typeof window === 'undefined') return;
-  
-  const criticalResources = [
-    '/fonts/inter.woff2',
-    '/images/logo.png',
-    '/images/og-image.jpg'
-  ];
-  
-    const link = document.createElement('link');
+
     link.rel = 'preload';
     link.href = resource;
     link.as = resource.endsWith('.woff2') ? 'font' : 'image';
@@ -85,7 +76,7 @@ export function addResourceHints(): void {
 
 // Image optimization utility;
   // Add image optimization parameters if needed;
-  const url = new URL(src, window.location.origin);
+  
   if (width) url.searchParams.set('w', width.toString());
   if (height) url.searchParams.set('h', height.toString());
   url.searchParams.set('q', '80'); // Quality;
@@ -94,8 +85,7 @@ export function addResourceHints(): void {
 
 // Lazy loading utility for images;
       if (entry.isIntersecting) {
-        const img = entry.target as HTMLImageElement;
-        const src = img.dataset.src;
+
         if (src) {
           img.src = src;
           img.classList.remove('lazy');
@@ -105,26 +95,17 @@ export function addResourceHints(): void {
 
 // Performance budget monitoring;
   if (typeof window === 'undefined') return;
-  
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+
   if (!navigation) return;
-  
-  const loadTime = navigation.loadEventEnd - navigation.fetchStart;
+
   const budget = 3000; // 3 seconds;
  budget) {
  ${budget}ms`);
 
 // Resource hints for better performance;
   if (typeof window === 'undefined') return;
-  
-  const hints = [
-    { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
-    { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
-  ];
-  
-    const link = document.createElement('link');
+
     Object.assign(link, hint);
-    document.head.appendChild(link);
-  });
+    document.head.appendChild(link);</T>
+  });</T>
+}}}}}}}}}}}}}}}</T>

@@ -10,9 +10,9 @@
   sessionId?: string;
 
   pageViews: number;
-  sessionDuration: number;
-  bounceRate: number;
-  conversionRate: number;
+  sessionDuration: number;</string>
+  bounceRate: number;</string>
+  conversionRate: number;</string>
   topPages: Array<{ page: string; views: number }>;
   userJourney: string[];
 
@@ -77,8 +77,7 @@
   /**
    * Track page view;
    */
-    const currentPage = page || window.location.pathname;
-
+    
     this.userBehavior.pageViews++;
     this.userBehavior.userJourney.push(currentPage);
 
@@ -107,9 +106,6 @@
    */
     if (typeof window === 'undefined') return;
 
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paintEntries = performance.getEntriesByType('paint');
-
           largestContentfulPaint: 0, // Would need to be calculated with LCP API;
           firstInputDelay: 0, // Would need to be calculated with FID API;
           cumulativeLayoutShift: 0, // Would need to be calculated with CLS API;
@@ -126,13 +122,13 @@
     if (typeof window === 'undefined') return;
 
     // Track clicks;
-      const target = event.target as HTMLElement;
+      
       this.trackClick(target);
     });
 
     // Track scroll depth;
     let maxScrollDepth = 0;
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      
         maxScrollDepth = scrollDepth;
         this.trackEvent('scroll_depth', { depth: scrollDepth });
     });
@@ -144,7 +140,6 @@
 
     let maxScrollDepth = 0;
 
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
         maxScrollDepth = scrollDepth;
         this.trackEvent('scroll_depth', { depth: scrollDepth });
     };
@@ -156,7 +151,6 @@
    */
     if (typeof window === 'undefined') return;
 
-      const form = event.target as HTMLFormElement;
       this.trackFormSubmission(form);
     });
 
@@ -212,5 +206,6 @@
   console.log('Track event:', eventName, properties);
 };
 
-  console.log('Track page view:', page);
-};
+  console.log('Track page view:', page);</string>
+};</string>
+</string>

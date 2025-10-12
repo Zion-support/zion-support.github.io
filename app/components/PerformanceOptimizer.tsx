@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 'use client';
-=======
->>>>>>> origin/main
 import React, { useEffect, useState } from 'react';
 export default PerformanceOptimizer;
 export default PerformanceOptimizer;
@@ -28,19 +24,13 @@ const PerformanceOptimizer: React.FC = () => {
 
   useEffect(() => {
     // Preload critical resources;
-    const preloadCriticalResources = () => {
-      const criticalResources = [
-        '/fonts/inter.woff2',
-        '/images/hero-bg.jpg',
-        '/images/logo.png',
-      ];
-
+    
       criticalResources.forEach((resource) => {
         '/images/logo.png'
       ];
 
       criticalResources.forEach(resource => {
-        const link = document.createElement('link');
+        
         link.rel = 'preload';
         link.href = resource;
         link.as = resource.endsWith('.woff2') ? 'font' : 'image';
@@ -52,12 +42,7 @@ const PerformanceOptimizer: React.FC = () => {
     };
 
     // Optimize images;
-    const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
+
             img.src = img.dataset.src || '';
             img.classList.remove('lazy');
             imageObserver.unobserve(img);
@@ -69,25 +54,18 @@ const PerformanceOptimizer: React.FC = () => {
     };
 
     // Lazy load components;
-    const lazyLoadComponents = () => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const element = entry.target as HTMLElement;
+    
             element.classList.add('loaded');
             observer.unobserve(element);
           }
         });
       });
 
-      const lazyElements = document.querySelectorAll('[data-lazy]');
       lazyElements.forEach((el) => observer.observe(el));
     };
 
     // Monitor Core Web Vitals;
-    const monitorWebVitals = () => {
-      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
-        onCLS((metric) => setMetrics((prev) => ({ ...prev, cls: metric.value })));
+    
         onFID((metric) => setMetrics((prev) => ({ ...prev, fid: metric.value })));
         onFCP((metric) => setMetrics((prev) => ({ ...prev, fcp: metric.value })));
         onLCP((metric) => setMetrics((prev) => ({ ...prev, lcp: metric.value })));
@@ -98,13 +76,7 @@ const PerformanceOptimizer: React.FC = () => {
     };
 
     // Optimize scroll performance;
-    const optimizeScroll = () => {
-      let ticking = false;
 
-      const updateScrollPosition = () => {
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            // Update scroll position;
             ticking = false;
           });
           ticking = true;
@@ -114,7 +86,7 @@ const PerformanceOptimizer: React.FC = () => {
       window.addEventListener('scroll', updateScrollPosition, { passive: true });
 
       return () => window.removeEventListener('scroll', updateScrollPosition);
-      const images = document.querySelectorAll('img');
+      
       images.forEach(img => {
         if (!img.loading) {
           img.loading = 'lazy';
@@ -130,8 +102,7 @@ const PerformanceOptimizer: React.FC = () => {
     optimizeImages();
     lazyLoadComponents();
     monitorWebVitals();
-    const cleanupScroll = optimizeScroll();
-
+    
     // Cleanup;
     return () => {
       cleanupScroll();
@@ -139,40 +110,9 @@ const PerformanceOptimizer: React.FC = () => {
   }, []);
   }, []);
 
-  const features = [
-    {
-      title: "Image Optimization",
-      description: "Automatic image compression and lazy loading"
-    },
-    {
-      title: "Resource Preloading",
-      description: "Critical resource preloading for faster initial load"
-    },
-    {
-      title: "Code Splitting",
-      description: "Automatic code splitting for optimal bundle sizes"
-    },
-    {
-      title: "Caching Strategy",
-      description: "Intelligent caching for improved performance"
-    }
-  ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-
 export default function PerformanceOptimizer() {
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> origin/main
-      {/* Hero Section */}
-      <section className="relativepy-20 px-4 sm:px-6 lg:px-8"></section>
+  return (</PerformanceMetrics>
+    <div></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1 className="text-4xlmd:text-6xl font-bold text-white mb-6"></h1>
@@ -234,34 +174,6 @@ export default function PerformanceOptimizer() {
     }
   }, [metrics]);
 
-<<<<<<< HEAD
   return null
 
 export default PerformanceOptimizer;
-=======
-    <>
-      <Helmet>
-        <title>Performance Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional performance optimizer by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Performance Optimizer</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional performance optimizer coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-  return null;
-};
->>>>>>> origin/main

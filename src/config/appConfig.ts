@@ -36,7 +36,7 @@ export default config;
  * Get configuration value by key path;
  'Zion Tech Group'
  */
-  const keys = keyPath.split('.');
+  
   let value: unknown = config;
       value = (value as Record<string, unknown>)[key];
       throw new Error(`Configuration key "${keyPath}" not found`);
@@ -55,5 +55,6 @@ export default config;
   return config.app.environment === 'production';
 /**
  * Check if running in development;
- */
-  return config.app.environment === 'development';
+ */</string>
+  return config.app.environment === 'development';</string>
+</string>

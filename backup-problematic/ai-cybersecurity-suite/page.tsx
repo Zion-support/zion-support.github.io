@@ -1,4 +1,3 @@
-import React from 'react';
 export default function AICybersecuritySuitePage() {
   return (
         <title>AI Cybersecurity Suite - Zion Tech Group</title>
@@ -33,3 +32,4 @@ export default function AICybersecuritySuitePage() {
               Get Started;
               View Pricing;
   );
+}

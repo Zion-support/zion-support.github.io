@@ -1,12 +1,6 @@
-import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { X, ArrowRight} from 'lucide-react';
-=======
-export default SearchModal;
->>>>>>> origin/main
+import { X from 'lucide-react';
 'use client';
 
 interface SearchResult {
@@ -22,8 +16,8 @@ interface SearchModalProps {
   onClose: () => void;
 }
 
-const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
-  const [query, setQuery] = useState('');
+const SearchModal: React.FC<SearchModalProps />= ({ isOpen, onClose }) => {</SearchModalProps>
+  const [query, setQuery] = useState('');</SearchModalProps>
   const [results, setResults] = useState<SearchResult[] /&gt;([]);</SearchResult></SearchResult>
   const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef<HTMLInputElement /&gt;(null);</HTMLInputElement></HTMLInputElement>
@@ -71,12 +65,7 @@ const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
     if (query.length > 0) {
       setIsLoading(true);
       // Simulate search delay;
-      const timer = setTimeout(() => {
-        const filteredResults = searchData.filter(item =>
-          item.title.toLowerCase().includes(query.toLowerCase()) ||
-          item.description.toLowerCase().includes(query.toLowerCase()) ||
-          item.category.toLowerCase().includes(query.toLowerCase())
-        );
+      
         setResults(filteredResults);
         setIsLoading(false);
       }, 150);
@@ -87,26 +76,14 @@ const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
     }
   }, [query]);
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Escape') {
-      onClose();
     }
   };
 
   if (!isOpen) return null;
-=======
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
 export default function SearchModal() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
->>>>>>> origin/main
         {/* Backdrop */}
         <div;
           className="fixed inset-0 bg-black/50backdrop-blur-smtransition-opacity"
@@ -134,11 +111,11 @@ export default function SearchModal() {
                 ref="{inputRef}"
                 type="text"
                 value="{query}"
-                onChange="{(e)" = /> setQuery(e.target.value)}
+                onChange="{(e)" = />setQuery(e.target.value)}
                 onKeyDown="{handleKeyDown}"
-                placeholder="Search for services, solutions, or pages..."
-                className="w-full px-4 py-3 pl-12 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-cyan-500focus:border-transparent"
-              />
+                placeholder="Search for services, solutions, or pages..."</input>
+                className="w-full px-4 py-3 pl-12 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-cyan-500focus:border-transparent"</input>
+              /></input>
               <Search className="w-5h-5ml-2" /></Search>
             </div>
           {/* Results */}
@@ -159,7 +136,7 @@ export default function SearchModal() {
               </div>
             ) : (
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <p className="w-5h-5ml-2">{results.length} result{results.length !== 1 ? 's' : ''} found;
+                <p className="w-5h-5ml-2">{results.length} result{results.length !== 1 ? 's' : ''} found;</p>
                 </p>
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                   {results.map((result, index) => (
@@ -168,14 +145,14 @@ export default function SearchModal() {
                       to="{result.path}"
                       onClick="{onClose}"
                       className="flex items-center p-4 bg-slate-700/50 hover:bg-slate-700 rounded-lgtransition-colorsgroup" /></Link>
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{result.icon}
+                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{result.icon}</div>
                       </div>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                        <h4 className="w-5h-5ml-2" />{result.title}
+                        <h4 className="w-5h-5ml-2" />{result.title}</h4>
                         </h4>
-                        <p className="w-5h-5ml-2">{result.description}
+                        <p className="w-5h-5ml-2">{result.description}</p>
                         </p>
-                        <span className="w-5h-5ml-2" />{result.category}
+                        <span className="w-5h-5ml-2" />{result.category}</span>
                         </span>
                       </div>
                       <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
@@ -187,32 +164,7 @@ export default function SearchModal() {
       </div>
   </div>);
 };
-<<<<<<< HEAD
 
 export default SearchModal;
 
-=======
-    <>
-      <Helmet>
-        <title>Search Modal - Zion Tech Group</title>
-        <meta name="description" content="Professional search modal by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Search Modal</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional search modal coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

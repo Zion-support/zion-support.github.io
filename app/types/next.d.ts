@@ -26,5 +26,6 @@ export {};
 
   const content: string;
 
-  const content: string;
-
+  const content: string;</React>
+</React>
+</React>

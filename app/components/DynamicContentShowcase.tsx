@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect} from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight} from 'lucide-react';
-=======
-export default DynamicContentShowcase;
-'use client';
->>>>>>> origin/main
+import { useState, useEffect} from 'react', { ArrowRight, ChevronLeft, ChevronRight} from 'lucide-react';
 
 interface ContentItem {
   id: string;,
@@ -24,77 +17,26 @@ interface DynamicContentShowcaseProps {
   className?: string;
 }
 
-const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
-  const items = [
-    {
-      id: 'ai-content',
-      title: 'AI Content Generation',
-      description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
-      icon: Zap,
-      features: ['Automated content creation', 'SEO optimization', 'Multi-language support'],
-      price: 'Starting at $99/month',
-      category: 'AI Services'
-    },
-    {
-      id: 'cloud-services',
-      title: 'Cloud Infrastructure',
-      description: 'Scalable, secure, and reliable cloud infrastructure solutions for your business.',
-      icon: Cloud,
-      features: ['Scalable infrastructure', '99.9% uptime', 'Global CDN'],
-      price: 'Starting at $199/month',
-      category: 'IT Services'
-    },
-    {
-      id: 'cybersecurity',
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with our comprehensive cybersecurity services and monitoring.',
-      icon: Shield,
-      features: ['Threat detection', 'Security audits', 'Compliance management'],
-      price: 'Starting at $499/month',
-      category: 'Security'
-    }
-  ],
-  autoPlay = true,
-  autoPlayInterval = 5000,
-  className = ''
-}) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps />= ({
+  
   const [isPlaying, setIsPlaying] = useState(autoPlay);
 
   useEffect(() => {
     if (!isPlaying) return;
 
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % items.length);
     }, autoPlayInterval);
 
     return () => clearInterval(interval);
   }, [isPlaying, autoPlayInterval, items.length]);
 
-  const nextItem = () => {
-    setCurrentIndex((prev) => (prev + 1) % items.length);
   };
 
-  const prevItem = () => {
-    setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
   };
 
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
   };
 
-  const currentItem = items[currentIndex];
-  const IconComponent = currentItem.icon;
-  return (
-    <div const className = {`relative ${className}`} /></div>
-      {/* Controls */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <button;
-            onClick="{prevItem}"
-            className="p-2rou nded-full bg-white/10hover:bg-white/20 transition-colors"
-            aria-label="Previous item" /></button>
-            <ChevronLeft className="w-5h-5ml-2" /></ChevronLeft>
+  return (</DynamicContentShowcaseProps>
+    <div></ChevronLeft>
           </button>
           <button;
             onClick="{togglePlayPause}"
@@ -117,13 +59,13 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
           {items.map((_, index) => (
             <button;
               key="{index}"
-              onClick="{()" = /> setCurrentIndex(index)}
+              onClick="{()" = />setCurrentIndex(index)}
               className="{`w-2" h-2 rounded-full transition-colors ${
                 index === currentIndex ? 'bg-cyan-400' : 'bg-white/30'
               }`}
-              aria-label="{`Go" to item ${index + 1}`}
-            />
-          ))}
+              aria-label="{`Go" to item ${index + 1}`}</button>
+            /></button>
+          ))}</button>
         </div>
       {/* Content Card */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -152,7 +94,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
             </div>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {currentItem.price && (
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{currentItem.price}
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{currentItem.price}</div>
                 </div>
               )}
 
@@ -165,39 +107,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
     </div>
   );
 };
-<<<<<<< HEAD
 
 export default DynamicContentShowcase;
 
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function DynamicContentShowcase() {
-  return (
-    <>
-      <Helmet>
-        <title>Dynamic Content Showcase - Zion Tech Group</title>
-        <meta name="description" content="Professional dynamic content showcase by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Dynamic Content Showcase</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional dynamic content showcase coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> origin/main

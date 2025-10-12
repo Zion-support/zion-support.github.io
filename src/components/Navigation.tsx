@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 export default Navigation;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);

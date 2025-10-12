@@ -58,8 +58,7 @@ export default EnhancedErrorBoundary;
     };
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
         // Show success message;
-        const button = document.getElementById('copy-error-details');
-          const originalText = button.textContent;
+
           button.textContent = 'Copied!';
             button.textContent = originalText;
           }, 2000);

@@ -6,12 +6,6 @@ import path from 'path';
  * Analyzes the built bundle and provides optimization recommendations;
  */
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const DIST_DIR = path.join(__dirname, '..', 'dist');
-const ANALYSIS_DIR = path.join(__dirname, '..', 'analysis');
-
 // Ensure analysis directory exists;
 if (!fs.existsSync(ANALYSIS_DIR)) {
   fs.mkdirSync(ANALYSIS_DIR, { recursive: true });
@@ -25,11 +19,9 @@ function analyzeBundle() {
     process.exit(1);
 
   // Get all JS files in dist;
-  const jsFiles = [];
+  
   function findJSFiles(dir) {
-    const files = fs.readdirSync(dir);
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
+
       if (stat.isDirectory()) {
         findJSFiles(filePath);
       } else if (file.endsWith('.js')) {
@@ -39,17 +31,7 @@ function analyzeBundle() {
   findJSFiles(DIST_DIR);
 
   // Analyze each JS file;
-  const analysis = {
-    totalFiles: jsFiles.length,
-    totalSize: 0,
-    files: [],
-    recommendations: []
-  };
 
-    const stats = fs.statSync(filePath);
-    const size = stats.size;
-    const relativePath = path.relative(DIST_DIR, filePath);
-    
     analysis.totalSize += size;
     analysis.files.push({
       path: relativePath,
@@ -65,7 +47,7 @@ function analyzeBundle() {
   generateRecommendations(analysis);
 
   // Write analysis report;
-  const reportPath = path.join(ANALYSIS_DIR, 'bundle-analysis.json');
+  
   fs.writeFileSync(reportPath, JSON.stringify(analysis, null, 2));
 
   // Generate HTML report;
@@ -88,14 +70,11 @@ function analyzeBundle() {
 
 function formatBytes(bytes) {
   if (bytes === 0) return '0 Bytes';
-  const k = 1024;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
+
   return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
 
 function generateRecommendations(analysis) {
-  const recommendations = [];
-
+  
   // Check total bundle size;
  2 * 1024 * 1024) { // 2MB;
 2MB). Consider code splitting and lazy loading.');
@@ -129,10 +108,7 @@ function generateRecommendations(analysis) {
   analysis.recommendations = recommendations;
 
 function generateHTMLReport(analysis) {
-  const html = `
-    <title>Bundle Analysis Report - Zion Tech Group</title>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
             margin: 0;
             padding: 20px;
             background: #0f172a;
@@ -195,11 +171,14 @@ function generateHTMLReport(analysis) {
             color: #e2e8f0;
         <h1>📊 Bundle Analysis Report</h1>
                 <div class="stat-value">${analysis.totalFiles}</div>
-                <div class="stat-label">Total Files</div>
+                <div class="stat-label"><div>Total Files</div>
+</div>
                 <div class="stat-value">${formatBytes(analysis.totalSize)}</div>
-                <div class="stat-label">Total Size</div>
+                <div class="stat-label"><div>Total Size</div>
+</div>
                 <div class="stat-value">${analysis.files.length > 0 ? formatBytes(analysis.files[0].size) : '0'}</div>
-                <div class="stat-label">Largest File</div>
+                <div class="stat-label"><div>Largest File</div>
+</div>
                         <th>File Path</th>
                         <th>Size</th>
  `
@@ -211,8 +190,8 @@ function generateHTMLReport(analysis) {
                 ${analysis.recommendations.map(rec => `<li>${rec}</li>`).join('')}
   `;
 
-  const htmlPath = path.join(ANALYSIS_DIR, 'bundle-report.html');
   fs.writeFileSync(htmlPath, html);
 
 // Run analysis;
 analyzeBundle();
+}}}}}}}}}}}}}}}}}}}}}}}}

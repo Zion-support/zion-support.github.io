@@ -1,5 +1,4 @@
 import fs from 'fs'
-import path from 'path'
 import { execSync } from 'child_process'
 import { readFileSync, writeFileSync } from 'fs'
 #!/usr/bin/env node;

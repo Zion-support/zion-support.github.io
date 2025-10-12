@@ -1,62 +1,11 @@
-<<<<<<< HEAD
-import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 
-import { Calendar, Users, Zap, CheckCircle, ArrowRight, Brain, Globe, Star, Sparkles } from 'lucide-react';
-
-import Layout from '../layout'
+import { Calendar, Users, Zap, CheckCircle, ArrowRight, Brain, Globe, Star, Sparkles } from 'lucide-react', Layout from '../layout'
 
 import React from 'react';
 
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-=======
->>>>>>> origin/main
 export default function AISmartScheduler() {
-<<<<<<< HEAD
-  const features = [
-    {
-      icon: <Brain className="w-5h-5ml-2" />,
-      title: 'AI-Powered Scheduling',
-      description: 'Intelligent scheduling that learns from your patterns and preferences'
-    },
-    {
-      icon: <Users className="w-5h-5ml-2" />,
-      title: 'Team Coordination',
-      description: 'Seamlessly coordinate meetings across multiple time zones and schedules'
-    },
-    {
-      icon: <Zap className="w-5h-5ml-2" />,
-      title: 'Auto-Optimization',
-      description: 'Automatically finds the best meeting times for maximum productivity'
-    },
-    {
-      icon: <Globe className="w-5h-5ml-2" />,
-      title: 'Global Integration',
-      description: 'Works with all major calendar platforms and time zones'
-    }
-  ]
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for individuals and small teams',
-      features: [
-        'Up to 5 team members',
-        'Basic AI scheduling',
-        'Calendar integration',
-        'Email notifications',
-        'Mobile app access'
-      ],
-      popular: false;
+  
     },
     {
       name: 'Professional',
@@ -90,12 +39,6 @@ export default function AISmartScheduler() {
     }
   ]
 
-  const testimonials = [
-    {
-      name: 'Sarah Chen',
-      company: 'TechStart Inc.',
-      content: 'This AI scheduler saved us 10+ hours per week. The intelligent optimization is incredible.',
-      rating: 5;
     },
     {
       name: 'Michael Rodriguez',
@@ -111,24 +54,16 @@ export default function AISmartScheduler() {
     }
   ]
 
-  return (
-    <Layout;</Layout></Layout>
-      title="AI Smart Scheduler - Intelligent Meeting Optimization | Zion Tech Group"
-      description="Revolutionary AI-powered scheduling tool that optimizes meetings, coordinates teams, and maximizes productivity. Start your free trial today."
-      keywords="AI scheduler, meeting optimization, team coordination, calendar management, productivity tools" /></Layout>
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        {/* Hero Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+  return (</Globe>
+    <div></div>
               <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <Sparkles className="w-5h-5ml-2" /></Sparkles>
                 AI-Powered Scheduling;
               </div>
-              <h1 className="w-5h-5ml-2">AI Smart Scheduler;
+              <h1 className="w-5h-5ml-2">AI Smart Scheduler;</h1>
               </h1>
-              <p className="w-5h-5ml-2">Transform your scheduling chaos into organized efficiency with our intelligent AI-powered scheduler. 
-                Optimize meetings, coordinate teams, and maximize productivity automatically.
+              <p className="w-5h-5ml-2">Transform your scheduling chaos into organized efficiency with our intelligent AI-powered scheduler. </p>
+                Optimize meetings, coordinate teams, and maximize productivity automatically.</p>
               </p>
               <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <Link;</Link></Link>
@@ -138,7 +73,7 @@ export default function AISmartScheduler() {
           Start Free Trial;
           <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
         </Link>
-                <Link to="#demo" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Watch Demo;
+                <Link to="#demo" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Watch Demo;</Link>
                 </Link>
               </div>
           </div>
@@ -147,9 +82,9 @@ export default function AISmartScheduler() {
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" />Intelligent Scheduling Features;
+              <h2 className="w-5h-5ml-2" />Intelligent Scheduling Features;</h2>
               </h2>
-              <p className="w-5h-5ml-2">Powered by advanced AI to make scheduling effortless and efficient;
+              <p className="w-5h-5ml-2">Powered by advanced AI to make scheduling effortless and efficient;</p>
               </p>
             </div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -168,14 +103,14 @@ export default function AISmartScheduler() {
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" />Simple, Transparent Pricing;
+              <h2 className="w-5h-5ml-2" />Simple, Transparent Pricing;</h2>
               </h2>
-              <p className="w-5h-5ml-2">Choose the plan that fits your team size and needs;
+              <p className="w-5h-5ml-2">Choose the plan that fits your team size and needs;</p>
               </p>
             </div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
+                <div key={index} className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular;
                     ? 'border-cyan-400/40 scale-105 shadow-2 xl shadow-cyan-500/20' 
                     : 'border-cyan-500/20 hover: border-cyan-400/40'
@@ -202,7 +137,7 @@ export default function AISmartScheduler() {
                   </ul>
                   <Link;</Link></Link>
                     to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400/10'
@@ -217,9 +152,9 @@ export default function AISmartScheduler() {
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" />Trusted by Teams Worldwide;
+              <h2 className="w-5h-5ml-2" />Trusted by Teams Worldwide;</h2>
               </h2>
-              <p className="w-5h-5ml-2">See what our customers say about AI Smart Scheduler;
+              <p className="w-5h-5ml-2">See what our customers say about AI Smart Scheduler;</p>
               </p>
             </div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -242,14 +177,14 @@ export default function AISmartScheduler() {
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" />Ready to Transform Your Scheduling?
+              <h2 className="w-5h-5ml-2" />Ready to Transform Your Scheduling?</h2>
               </h2>
-              <p className="w-5h-5ml-2">Join thousands of teams already using AI Smart Scheduler to optimize their productivity;
+              <p className="w-5h-5ml-2">Join thousands of teams already using AI Smart Scheduler to optimize their productivity;</p>
               </p>
               <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-all duration-300">Start Your Free Trial;
+                <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-all duration-300">Start Your Free Trial;</Link>
                 </Link>
-                <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More;
+                <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More;</Link>
                 </Link>
               </div>
           </div>
@@ -257,33 +192,5 @@ export default function AISmartScheduler() {
       </div>
     </Layout>
   )
-<<<<<<< HEAD
 };
 
-=======
-  return (
-    <>
-      <Helmet>
-        <title>A I Smart Scheduler - Zion Tech Group</title>
-        <meta name="description" content="Professional a i smart scheduler by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">A I Smart Scheduler</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional a i smart scheduler coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-};
->>>>>>> origin/main

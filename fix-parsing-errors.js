@@ -1,5 +1,4 @@
 import fs from 'fs';
-import path from 'path';
 export { fixFileContent, processFile };
 #!/usr/bin/env node;
 // Function to fix common parsing errors;
@@ -35,19 +34,19 @@ function fixFileContent(content) {
   fixed = fixed.replace(/col-span-1md:col-span-2/g, 'col-span-1 md:col-span-2');
   
   // Fix malformed JSX - add missing opening tags;
-  fixed = fixed.replace(/<div className="[^"]*" \/>/g, (match) => {
-    const className = match.match(/className="([^"]*)"/)[1];
+  fixed = fixed.replace(/<div className="[^"]*" \/>/g, (match) => {</div>
+    const className = match.match(/className="([^"]*)"/)[1];</div>
     return `<div className="${className}">`;
-  });
-  
-  // Fix self-closing divs that should be opening tags;
+  });</div>
+  </div>
+  // Fix self-closing divs that should be opening tags;</div>
   fixed = fixed.replace(/<div className="([^"]*)" \/>\s*<([^>]+)>/g, '<div className="$1">\n        <$2>');
   
   // Remove invalid 'use client' directive (this is a Vite project, not Next.js)
   fixed = fixed.replace(/'use client';\s*\n/g, '');
   
   // Fix JSX expressions that need parent elements;
-  fixed = fixed.replace(/<Helmet \/>\s*<title>/g, '<Helmet>\n        <title>');
+  fixed = fixed.replace(/<Helmet \/>\s*<title>/g, '<Helmet>\n        <title>');</title>
   fixed = fixed.replace(/<\/title>\s*<meta/g, '</title>\n        <meta');
   fixed = fixed.replace(/<\/meta>\s*<\/Helmet>/g, '</meta>\n      </Helmet>');
   
@@ -56,9 +55,7 @@ function fixFileContent(content) {
 // Function to process a single file;
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixFileContent(content);
-    
+
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
@@ -73,9 +70,6 @@ async function main() {
   console.log('Starting to fix parsing errors...');
   
   // Get all TypeScript/TSX files;
-  const files = await glob('**/*.{ts,tsx}', {
-    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
-  });
   
   let fixedCount = 0;
   
@@ -86,3 +80,5 @@ async function main() {
   console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`);
 
 main().catch(console.error);
+
+}}}}}

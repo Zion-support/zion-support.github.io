@@ -1,4 +1,3 @@
-import fs from 'fs';
 import path from 'path';
 #!/usr/bin/env node;
 
@@ -16,16 +15,14 @@ import path from 'path';
     ];
 
       // Find unclosed opening tags;
-      const openTagRegex = new RegExp(`<${tag}([^>]*)>(?!.*</${tag}>)`, 'gs');
-      const matches = content.match(openTagRegex);
-      
+
         // This is a complex fix, let's use a simpler approach;
         // Just ensure proper closing for common patterns;
         content = content.replace(new RegExp(`<${tag}([^>]*)>\\s*$`, 'gm'), `<${tag}$1></${tag}>`);
         modified = true;
 
     // Fix missing closing tags for self-closing elements;
-    const selfClosingElements = ['img', 'br', 'hr', 'input', 'meta', 'link'];
+    
       content = content.replace(new RegExp(`<${element}([^>]*?)(?<!/)>`, 'g'), `<${element}$1 />`);
       modified = true;
 

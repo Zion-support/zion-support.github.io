@@ -31,9 +31,9 @@ export default getErrorBoundaryConfig;
    * Custom error messages by error type;
    */
   customMessages: Record<string, string>;
-  /**
-   * Fallback UI components;
-   */
+  /**</string>
+   * Fallback UI components;</string>
+   */</string>
     default: React.ComponentType<{ error: Error; resetError: () => void }>;
     network: React.ComponentType<{ error: Error; resetError: () => void }>;
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
@@ -46,7 +46,7 @@ export default getErrorBoundaryConfig;
 /**
  * Get error boundary configuration based on environment;
  */
-  const isDevelopment = process.env['NODE_ENV'] === 'development';
+  
       notFound: NotFoundFallback;
   };
 /**

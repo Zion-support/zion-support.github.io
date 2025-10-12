@@ -1,11 +1,10 @@
-import fs from 'fs';
 import path from 'path';
 #!/usr/bin/env node;
 
 // Function to fix all remaining comprehensive issues;
 function fixRemainingComprehensive(content) {
   // Fix malformed meta tags with spaces;
-  content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/  \/>/g, '<meta name="$1" content="$2" />');
+  content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/  \/>/g, '<meta name="$1" content="$2" />');</meta>
   content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/>/g, '<meta name="$1" content="$2" />');
   
   // Fix malformed className attributes with spaces;
@@ -35,21 +34,21 @@ function fixRemainingComprehensive(content) {
   content = content.replace(/className="space-y-3"/g, 'className="space-y-3"');
   content = content.replace(/className="gap-8"/g, 'className="gap-8"');
   content = content.replace(/className="transition-colors"/g, 'className="transition-colors"');
-  content = content.replace(/className="hover:text-cyan-400"/g, 'className="hover:text-cyan-400"');
-  
-  // Fix malformed JSX structure - fix self-closing divs that should be opening tags;
-  content = content.replace(/<div className="([^"]*)"\s*\/>/g, '<div className="$1">');
-  
-  // Fix malformed JSX structure - fix self-closing Helmet that should be opening tag;
-  content = content.replace(/<Helmet\s*\/>/g, '<Helmet>');
-  
-  // Fix malformed JSX structure - fix self-closing Link elements that should contain text;
+  content = content.replace(/className="hover:text-cyan-400"/g, 'className="hover:text-cyan-400"');</meta>
+  </meta>
+  // Fix malformed JSX structure - fix self-closing divs that should be opening tags;</meta>
+  content = content.replace(/<div className="([^"]*)"\s*\/>/g, '<div className="$1">');</div>
+  </div>
+  // Fix malformed JSX structure - fix self-closing Helmet that should be opening tag;</div>
+  content = content.replace(/<Helmet\s*\/>/g, '<Helmet>');</Helmet>
+  </Helmet>
+  // Fix malformed JSX structure - fix self-closing Link elements that should contain text;</Helmet>
   content = content.replace(/<Link\s+to="([^"]*)"\s+className="([^"]*)"\s*\/>\s*([^<]+)\s*<ArrowRight[^>]*\/>/g, '<Link\n          to="$1"\n          className="$2"\n        >\n          $3\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
   
   // Fix any remaining malformed JSX structure;
-  content = content.replace(/<div className="([^"]*)"\s*\/>/g, '<div className="$1">');
-  
-  // Fix any remaining self-closing elements that should contain text;
+  content = content.replace(/<div className="([^"]*)"\s*\/>/g, '<div className="$1">');</div>
+  </div>
+  // Fix any remaining self-closing elements that should contain text;</div>
   content = content.replace(/<h1 className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/h1>/g, '<h1 className="$1">$2</h1>');
   content = content.replace(/<p className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/p>/g, '<p className="$1">$2</p>');
   content = content.replace(/<button className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/button>/g, '<button className="$1">$2</button>');
@@ -59,9 +58,7 @@ function fixRemainingComprehensive(content) {
 // Function to process a single file;
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixRemainingComprehensive(content);
-    
+
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed comprehensive issues: ${filePath}`);
@@ -76,12 +73,9 @@ function processDirectory(dirPath) {
   let processedCount = 0;
   
   function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
     
     for (const item, of, items) {
-      const fullPath = path.join(currentPath, item);
-      const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         walkDir(fullPath);
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
@@ -93,5 +87,6 @@ function processDirectory(dirPath) {
 
 // Main execution;
 console.log('Starting comprehensive remaining fixes...');
-const processedCount = processDirectory('./app');
+
 console.log(`Processed ${processedCount} files.`);
+}}}}}}}}

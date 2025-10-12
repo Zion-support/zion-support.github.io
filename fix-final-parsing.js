@@ -22,14 +22,14 @@ function fixFinalParsing(content) {
   fixed = fixed.replace(/function Ai3 dGenerationPage/g, 'function Ai3dGenerationPage');
   
   // Fix malformed meta tags;
-  fixed = fixed.replace(/<meta name="description" content="([^"]*)" \/ \/>/g, '<meta name="description" content="$1" />');
-  fixed = fixed.replace(/<meta name="keywords" content="([^"]*)" \/ \/>/g, '<meta name="keywords" content="$1" />');
-  
-  // Fix malformed title tags;
-  fixed = fixed.replace(/<title>Ai 3 d Generation/g, '<title>AI 3D Generation');
-  
-  // Fix malformed Helmet tags;
-  fixed = fixed.replace(/<Helmet>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/ \/>/g, 
+  fixed = fixed.replace(/<meta name="description" content="([^"]*)" \/ \/>/g, '<meta name="description" content="$1" />');</meta>
+  fixed = fixed.replace(/<meta name="keywords" content="([^"]*)" \/ \/>/g, '<meta name="keywords" content="$1" />');</meta>
+  </meta>
+  // Fix malformed title tags;</meta>
+  fixed = fixed.replace(/<title>Ai 3 d Generation/g, '<title>AI 3D Generation');</title>
+  </title>
+  // Fix malformed Helmet tags;</title>
+  fixed = fixed.replace(/<Helmet>\s*<title>([^<]*)<\/title>\s*<meta name="description" content="([^"]*)" \/ \/>/g, </meta>
     '<Helmet>\n        <title>$1</title>\n        <meta name="description" content="$2" />');
   
   return fixed;
@@ -37,9 +37,7 @@ function fixFinalParsing(content) {
 // Function to process a single file;
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixFinalParsing(content);
-    
+
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed final parsing: ${filePath}`);
@@ -54,9 +52,6 @@ async function main() {
   console.log('Starting to fix final parsing issues...');
   
   // Get all TypeScript/TSX files;
-  const files = await glob('**/*.{ts,tsx}', {
-    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
-  });
   
   let fixedCount = 0;
   
@@ -65,5 +60,6 @@ async function main() {
   });
   
   console.log(`\nFixed final parsing issues in ${fixedCount} files out of ${files.length} total files.`);
-
-main().catch(console.error);
+</meta>
+main().catch(console.error);</meta>
+}}}}}</meta>

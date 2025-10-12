@@ -9,14 +9,14 @@ export default useEnhancedPerformance;
   trackAnalytics?: boolean;
     trackAnalytics = true;
   } = _options;
-  const mountTimeRef = useRef<number>(0);
-  const renderCountRef = useRef<number>(0);
+  const mountTimeRef = useRef<number>(0);</number>
+  
     mountTimeRef.current = performance.now();
     renderCountRef.current = 0;
     // Track component mount;
       analytics.trackCustomEvent('Component', 'Mounted', component);
       // Track component unmount duration;
-        const duration = performance.now() - mountTimeRef.current;
+        
           // Long-lived component;
             Math.round(duration)
           );
@@ -38,14 +38,13 @@ export default useEnhancedPerformance;
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
     [component, trackAnalytics]
   );
-  
-      const startTime = performance.now();
-          const duration = performance.now() - startTime;
+
  1000 ? 'slow' : 'fast'
             );
           return duration;
       };
     [component, trackPerformance]
   );
-    measureOperation;
-  };
+    measureOperation;</number>
+  };</number>
+</number>

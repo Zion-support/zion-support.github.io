@@ -35,7 +35,7 @@ function fixRemainingJSX(content) {
     '<Link to="$1" className="$2">\n          $3\n          <$4 />\n        </Link>');
   
   // Fix specific patterns for 5G pages;
-  fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="([^"]+)"\s*\/>\s*Contact Us\s*<ArrowRight[^>]*\/>/g,
+  fixed = fixed.replace(/<Link\s+to="\/contact"\s+className="([^"]+)"\s*\/>\s*Contact Us\s*<ArrowRight[^>]*\/>/g,</ArrowRight>
     '<Link to="/contact" className="$1">\n          Contact Us\n          <ArrowRight className="w-5 h-5 ml-2" />\n        </Link>');
   
   // Fix malformed p tags;
@@ -53,9 +53,7 @@ function fixRemainingJSX(content) {
 // Function to process a single file;
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixRemainingJSX(content);
-    
+
     if (content !== fixed) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed remaining JSX: ${filePath}`);
@@ -70,9 +68,6 @@ async function main() {
   console.log('Starting to fix remaining JSX issues...');
   
   // Get all TypeScript/TSX files;
-  const files = await glob('**/*.{ts,tsx}', {
-    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**']
-  });
   
   let fixedCount = 0;
   
@@ -83,3 +78,4 @@ async function main() {
   console.log(`\nFixed remaining JSX issues in ${fixedCount} files out of ${files.length} total files.`);
 
 main().catch(console.error);
+}}}}}

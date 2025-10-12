@@ -1,8 +1,6 @@
     // Monitor page load performance;
       if ('performance' in window) {
-            const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-            const paint = performance.getEntriesByType('paint');
-            
+
             // Log performance metrics;
             console.log('Page Load Performance:', {
               domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -32,8 +30,7 @@
 
     // Initialize monitoring;
     monitorPageLoad();
-    const cleanup = monitorResourceLoading();
-
+    
     // Cleanup;
       cleanup?.();
     };

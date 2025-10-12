@@ -1,64 +1,13 @@
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-'use client'
-
-const EnhancedHero: React.FC = () => {
->>>>>>> origin/main
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Custom implementation and training'
-  ];
-  const contactInfo = [
-    {
-      icon: Phone,
-      title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9 AM-6 PM PST'
-    },
-    {
-      icon: Mail,
-      title: 'Email Us',
-      details: 'contact@ziontechgroup.com',
-      description: 'We respond within 24 hours'
-    },
-    {
-      icon: MapPin,
-      title: 'Visit Us',
-      details: 'San Francisco, CA',
-      description: 'Schedule a meeting'
-    }
-  ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      {/* Background Effects */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  /></div>
-      {/* Main Content */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        {/* Left Content */}
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
+    <div></h1>
               Transform Your Business with{' '}
-              <span className="w-5h-5ml-2" />AI & IT Solutions;
+              <span className="w-5h-5ml-2" />AI & IT Solutions;</span>
               </span>
             </h1>
-            <p className="w-5h-5ml-2">Harness the power of cutting-edge artificial intelligence and information technology;
-              to drive innovation, efficiency, and growth in your organization.
+            <p className="w-5h-5ml-2">Harness the power of cutting-edge artificial intelligence and information technology;</p>
+              to drive innovation, efficiency, and growth in your organization.</p>
             </p>
             {/* Benefits List */}
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -77,7 +26,7 @@ const EnhancedHero: React.FC = () => {
                 Get Started;
                 <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
               </button>
-              <button className="w-5h-5ml-2">Learn More;
+              <button className="w-5h-5ml-2">Learn More;</button>
               </button>
             </div>
             {/* Contact Info */}
@@ -117,34 +66,5 @@ const EnhancedHero: React.FC = () => {
           </div>
       </div>
   )
-<<<<<<< HEAD
 };
 
-=======
-export default function EnhancedHero() {
-  return (
-    <>
-      <Helmet>
-        <title>Enhanced Hero - Zion Tech Group</title>
-        <meta name="description" content="Professional enhanced hero by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Enhanced Hero</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional enhanced hero coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-};
->>>>>>> origin/main

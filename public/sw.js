@@ -1,19 +1,5 @@
 // Service Worker for Zion Tech Group;
-const CACHE_NAME = 'zion-tech-group-v1'
-const STATIC_CACHE = 'zion-static-v1'
-const DYNAMIC_CACHE = 'zion-dynamic-v1'
 
-// Assets to cache immediately;
-const STATIC_ASSETS = [
-  '/',
-  '/about',
-  '/contact',
-  '/pricing',
-  '/manifest.json',
-  '/robots.txt'
-]
-
-// Install event - cache static assets;
   console.log('Service Worker installing...')
   
   event.waitUntil(
@@ -49,9 +35,7 @@ const STATIC_ASSETS = [
 
 // Fetch event - serve from cache, fallback to network;
   const { request } = event;
-  const url = new URL(request.url)
   
-  // Skip non-GET requests;
   if (request.method !== 'GET') {
     return;
   // Skip chrome-extension and other non-http requests;
@@ -69,9 +53,7 @@ const STATIC_ASSETS = [
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             // Clone the response;
-            const responseToCache = response.clone()
             
-            // Cache dynamic content;
             caches.open(DYNAMIC_CACHE)
                 cache.put(request, responseToCache)
               })
@@ -102,16 +84,7 @@ const STATIC_ASSETS = [
 
 // Push notifications;
   if (event.data) {
-    const data = event.data.json()
     
-    const options = {
-      body: data.body,
-      icon: '/icon-192x192.png',
-      badge: '/badge-72x72.png',
-      vibrate: [100, 50, 100],
-      data: {
-        dateOfArrival: Date.now(),
-        primaryKey: data.primaryKey;
       },
       actions: [
           action: 'explore',

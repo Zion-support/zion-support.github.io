@@ -9,7 +9,6 @@
     if (typeof window === 'undefined' || !('performance' in window)) return;
     
       )[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
       
  entry.name === 'first-contentful-paint')?.startTime || 0;
       
@@ -50,5 +49,6 @@
       window.removeEventListener('load', measurePerformance);
     };
   }, []);
-  return { metrics, isMonitoring };
-};
+  return { metrics, isMonitoring };</PerformanceMetrics>
+};</PerformanceMetrics>
+</PerformanceMetrics>

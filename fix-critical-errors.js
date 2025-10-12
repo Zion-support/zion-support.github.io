@@ -1,5 +1,4 @@
 import fs from 'fs'
-import path from 'path'
 import { fileURLToPath } from 'url'
 #!/usr/bin/env node;
 
@@ -17,9 +16,9 @@ import { fileURLToPath } from 'url'
     content = content.replace(/}\s*;\s*$/gm, '}')
     content = content.replace(/}\s*;\s*export/g, '}\nexport')
     // Fix malformed JSX;
-    content = content.replace(/<div[^>]*>\s*$/gm, '<div>')
-      for (let i = 0; i;
-        } else if (line.startsWith(']*>\s*$/gm, '<div>')
+    content = content.replace(/<div[^>]*>\s*$/gm, '<div>')</div>
+      for (let i = 0; i;</div>
+        } else if (line.startsWith(']*>\s*$/gm, '<div>')</div>
     content = content.replace(/<\/div>\s*$/gm, '</div>')
     // Fix function declarations;
  {};')

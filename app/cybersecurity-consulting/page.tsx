@@ -1,82 +1,11 @@
-<<<<<<< HEAD
-import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 
-import { Shield, ArrowRight, CheckCircle, Brain, Star, Lock, Eye } from 'lucide-react';
-
-import Layout from '../layout'
+import { Shield, ArrowRight, CheckCircle, Brain, Star, Lock, Eye } from 'lucide-react', Layout from '../layout'
 
 import React from 'react';
 
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-=======
->>>>>>> origin/main
 export default function CybersecurityConsulting() {
-<<<<<<< HEAD
-  const features = [
-    {
-      icon: <Shield className="w-5h-5ml-2" />,
-      title: 'Security Assessment',
-      description: 'Comprehensive security audits to identify vulnerabilities and assess your current security posture'
-    },
-    {
-      icon: <Lock className="w-5h-5ml-2" />,
-      title: 'Compliance Management',
-      description: 'Ensure compliance with GDPR, HIPAA, SOX, PCI-DSS, and other regulatory requirements'
-    },
-    {
-      icon: <Eye className="w-5h-5ml-2" />,
-      title: 'Threat Intelligence',
-      description: 'Advanced threat detection and response with 24/7 monitoring and incident management'
-    },
-    {
-      icon: <Brain className="w-5h-5ml-2" />,
-      title: 'Security Training',
-      description: 'Comprehensive security awareness training for your team to prevent human error attacks'
-    }
-  ]
-
-  const consultingFeatures = [
-    {
-      category: 'Security Assessment',
-      items: ['Vulnerability Scanning', 'Penetration Testing', 'Risk Assessment', 'Security Audits', 'Compliance Reviews', 'Gap Analysis']
-    },
-    {
-      category: 'Implementation',
-      items: ['Security Architecture', 'Policy Development', 'Tool Implementation', 'Process Design', 'Training Programs', 'Change Management']
-    },
-    {
-      category: 'Monitoring & Response',
-      items: ['24/7 SOC Services', 'Incident Response', 'Threat Hunting', 'Forensic Analysis', 'Security Monitoring', 'Alert Management']
-    },
-    {
-      category: 'Compliance',
-      items: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'PCI-DSS Compliance', 'ISO 27001', 'NIST Framework']
-    }
-  ]
-
-  const pricingPlans = [
-    {
-      name: 'Assessment',
-      price: '$2,999',
-      period: '/project',
-      description: 'Comprehensive security assessment',
-      features: [
-        'Security audit',
-        'Vulnerability assessment',
-        'Risk analysis',
-        'Compliance review',
-        'Detailed report',
-        'Recommendations'
-      ],
-      popular: false;
+  
     },
     {
       name: 'Implementation',
@@ -110,12 +39,6 @@ export default function CybersecurityConsulting() {
     }
   ]
 
-  const testimonials = [
-    {
-      name: 'Jennifer Lee',
-      company: 'Healthcare Provider',
-      content: 'Cybersecurity Consulting helped us achieve HIPAA compliance and significantly improve our security posture.',
-      rating: 5;
     },
     {
       name: 'Michael Rodriguez',
@@ -131,24 +54,16 @@ export default function CybersecurityConsulting() {
     }
   ]
 
-  return (
-    <Layout;</Layout></Layout>
-      title="Cybersecurity Consulting - Expert Security Solutions | Zion Tech Group"
-      description="Protect your business with expert cybersecurity consulting. Security assessments, compliance management, threat intelligence, and 24/7 monitoring. Get your free security audit today."
-      keywords="cybersecurity consulting, security assessment, compliance management, threat intelligence, security training, penetration testing" /></Layout>
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        {/* Hero Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+  return (</Brain>
+    <div></div>
               <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <Shield className="w-5h-5ml-2" /></Shield>
                 Expert Cybersecurity Consulting;
               </div>
-              <h1 className="w-5h-5ml-2">Cybersecurity Consulting;
+              <h1 className="w-5h-5ml-2">Cybersecurity Consulting;</h1>
               </h1>
-              <p className="w-5h-5ml-2">Protect your business with expert cybersecurity consulting. Security assessments, compliance management, 
-                threat intelligence, and 24/7 monitoring to keep your data secure.
+              <p className="w-5h-5ml-2">Protect your business with expert cybersecurity consulting. Security assessments, compliance management, </p>
+                threat intelligence, and 24/7 monitoring to keep your data secure.</p>
               </p>
               <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <Link;</Link></Link>
@@ -158,7 +73,7 @@ export default function CybersecurityConsulting() {
           Get Free Security Audit;
           <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
         </Link>
-                <Link to="#demo" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">View Case Studies;
+                <Link to="#demo" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">View Case Studies;</Link>
                 </Link>
               </div>
           </div>
@@ -167,9 +82,9 @@ export default function CybersecurityConsulting() {
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" />Comprehensive Security Solutions;
+              <h2 className="w-5h-5ml-2" />Comprehensive Security Solutions;</h2>
               </h2>
-              <p className="w-5h-5ml-2">Expert cybersecurity services that protect your business from evolving threats;
+              <p className="w-5h-5ml-2">Expert cybersecurity services that protect your business from evolving threats;</p>
               </p>
             </div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -188,9 +103,9 @@ export default function CybersecurityConsulting() {
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" />Complete Security Consulting;
+              <h2 className="w-5h-5ml-2" />Complete Security Consulting;</h2>
               </h2>
-              <p className="w-5h-5ml-2">End-to-end cybersecurity services to protect your organization;
+              <p className="w-5h-5ml-2">End-to-end cybersecurity services to protect your organization;</p>
               </p>
             </div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -213,14 +128,14 @@ export default function CybersecurityConsulting() {
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" />Flexible Consulting Packages;
+              <h2 className="w-5h-5ml-2" />Flexible Consulting Packages;</h2>
               </h2>
-              <p className="w-5h-5ml-2">Choose the security consulting package that fits your needs;
+              <p className="w-5h-5ml-2">Choose the security consulting package that fits your needs;</p>
               </p>
             </div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
+                <div key={index} className="{`bg-gradient-to-br" from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular;
                     ? 'border-red-400/40 scale-105 shadow-2 xl shadow-red-500/20' 
                     : 'border-red-500/20 hover: border-red-400/40'
@@ -247,7 +162,7 @@ export default function CybersecurityConsulting() {
                   </ul>
                   <Link;</Link></Link>
                     to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    className="{`w-full" block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-r from-red-500 to-purple-600 text-white hover:from-red-600 hover:to-purple-700'
                         : 'border-2 border-red-400 text-red-400 hover: bg-red-400/10'
@@ -262,9 +177,9 @@ export default function CybersecurityConsulting() {
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" />Trusted by Industry Leaders;
+              <h2 className="w-5h-5ml-2" />Trusted by Industry Leaders;</h2>
               </h2>
-              <p className="w-5h-5ml-2">See how our Cybersecurity Consulting protects organizations worldwide;
+              <p className="w-5h-5ml-2">See how our Cybersecurity Consulting protects organizations worldwide;</p>
               </p>
             </div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -287,14 +202,14 @@ export default function CybersecurityConsulting() {
         <section className="w-5h-5ml-2" /></section>
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" />Secure Your Business Today;
+              <h2 className="w-5h-5ml-2" />Secure Your Business Today;</h2>
               </h2>
-              <p className="w-5h-5ml-2">Don't wait for a security breach. Get expert cybersecurity consulting to protect your organization;
+              <p className="w-5h-5ml-2">Don't wait for a security breach. Get expert cybersecurity consulting to protect your organization;</p>
               </p>
               <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Link to="/contact" className="bg-gradient-to-rfrom-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700transition-all duration-300">Get Your Free Security Audit;
+                <Link to="/contact" className="bg-gradient-to-rfrom-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700transition-all duration-300">Get Your Free Security Audit;</Link>
                 </Link>
-                <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More;
+                <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More;</Link>
                 </Link>
               </div>
           </div>
@@ -302,33 +217,5 @@ export default function CybersecurityConsulting() {
       </div>
     </Layout>
   )
-<<<<<<< HEAD
 };
 
-=======
-  return (
-    <>
-      <Helmet>
-        <title>Cybersecurity Consulting - Zion Tech Group</title>
-        <meta name="description" content="Professional cybersecurity consulting by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Cybersecurity Consulting</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional cybersecurity consulting coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-};
->>>>>>> origin/main

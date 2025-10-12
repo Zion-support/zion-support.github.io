@@ -3,8 +3,7 @@ export default UltimateBusinessIntelligence2025Banner;
   const [isVisible] = useState(true);
   
   ];
-  const currentContent = content[currentSlide];
-    
+  
  (prev + 1) % content.length);
     }, 5000);
  clearInterval(timer);
@@ -18,7 +17,7 @@ export default UltimateBusinessIntelligence2025Banner;
         {/* Header */}
             <span className="text-2xl">🚀</span>
               BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025;
-            <span className='text-2xl'>⚡</span>
+            <span className="'text-2xl'">⚡</span>
             {currentContent.title}
             {currentContent.description}
               Get Started Today;

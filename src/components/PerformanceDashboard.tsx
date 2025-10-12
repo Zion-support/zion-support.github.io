@@ -16,11 +16,10 @@ export default PerformanceDashboard;
       
         : 0;
       // Measure render time;
-      const renderStart = performance.now();
-      const renderTime = performance.now() - renderStart;
+
       // Measure memory usage;
       let memoryUsage = 0;
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+        
         memoryUsage = memory?.usedJSHeapSize || 0;
       // Measure FPS (simplified)
       let fps = 0;
@@ -39,7 +38,7 @@ export default PerformanceDashboard;
     };
     updateMetrics();
     // Update metrics every 5 seconds;
-    const interval = setInterval(updateMetrics, 5000);
+    
  clearInterval(interval);
   }, []);
       

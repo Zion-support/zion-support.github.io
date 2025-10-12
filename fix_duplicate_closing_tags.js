@@ -1,4 +1,3 @@
-import fs from 'fs';
 import path from 'path';
 #!/usr/bin/env node;
 
@@ -23,9 +22,7 @@ function fixDuplicateClosingTags(content) {
 // Function to process a single file;
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixDuplicateClosingTags(content);
-    
+
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed duplicate closing tags: ${filePath}`);
@@ -40,12 +37,9 @@ function processDirectory(dirPath) {
   let processedCount = 0;
   
   function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
     
     for (const item, of, items) {
-      const fullPath = path.join(currentPath, item);
-      const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         walkDir(fullPath);
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
@@ -57,5 +51,6 @@ function processDirectory(dirPath) {
 
 // Main execution;
 console.log('Starting duplicate closing tag fixes...');
-const processedCount = processDirectory('./app');
+
 console.log(`Processed ${processedCount} files.`);
+}}}}}}}}}

@@ -1,4 +1,3 @@
-import fs from 'fs';
 import path from 'path';
 #!/usr/bin/env node;
 
@@ -20,15 +19,9 @@ import path from 'path';
     return false;
 
 // Function to find all files with merge conflicts;
-  const files = [];
-  
-    const items = fs.readdirSync(currentPath);
-    
-      const fullPath = path.join(currentPath, item);
-      const stat = fs.statSync(fullPath);
-      
+
         walkDir(fullPath);
-          const content = fs.readFileSync(fullPath, 'utf8');
+          
             files.push(fullPath);
           // Skip files that can't be read;
   walkDir(dir);
@@ -37,7 +30,6 @@ import path from 'path';
 // Main execution;
 console.log('Starting merge conflict resolution...');
 
-const filesWithConflicts = findFilesWithMergeConflicts('/workspace');
 console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
 
 let fixedCount = 0;
