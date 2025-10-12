@@ -13,20 +13,6 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Real-time Analytics',
-<<<<<<< HEAD
-      description: 'Get instant insights into your system performance with comprehensive analytics'
-    },
-    {
-      icon: Shield,
-      title: 'Security Monitoring',
-      description: 'Monitor security threats and vulnerabilities with advanced detection systems'
-    },
-    {
-      icon: Globe,
-      title: 'Global Coverage',
-      description: 'Monitor performance across multiple locations and data centers worldwide'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
     }
   ]
 
@@ -45,10 +31,6 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Enhanced Performance Monitor | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Professional Enhanced Performance Monitor services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
         <meta name="keywords" content="performance monitoring, AI solutions, IT services, Zion Tech Group, system monitoring" />
       </Helmet>
       
@@ -58,17 +40,6 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
-                Enhanced Performance Monitor
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Monitor and optimize your system performance with our advanced AI-powered monitoring solutions. 
-              Get real-time insights and proactive alerts.
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
@@ -88,10 +59,6 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
-              Why Choose Our Performance Monitor?
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our performance monitoring solutions deliver unmatched insights, security, and scalability.
@@ -133,27 +100,6 @@ const EnhancedPerformanceMonitorPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Contact us today to learn more about our performance monitoring solutions and how they can benefit your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
-                Contact Us
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Schedule Demo
-              </button>
-            </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
           </div>
         </div>
       </section>

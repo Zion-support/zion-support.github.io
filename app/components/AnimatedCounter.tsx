@@ -31,10 +31,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       const currentCount = Math.floor(easeOutQuart * end)
       
       setCount(currentCount)
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate)
       }
