@@ -27,52 +27,151 @@ export default function AIServicesPage() {
   const aiServices = [
     {
       name: 'AI Content Generator Pro',
-      description: 'Advanced AI-powered content creation with natural language processing',
+      description: 'Advanced AI-powered content creation with natural language processing and brand voice customization',
       price: '$299/month',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice training', 'Content analytics'],
+      features: ['Multi-language support', 'SEO optimization', 'Brand voice training', 'Content analytics', 'Plagiarism detection', 'Tone adjustment'],
       icon: FileText,
       path: '/ai-content-generator',
-      popular: true
+      popular: true,
+      category: 'Content Creation',
+      rating: 4.8,
+      reviews: 342,
+      duration: '1-2 weeks'
     },
     {
       name: 'AI Chatbot Enterprise',
-      description: 'Intelligent conversational AI for customer service and support',
+      description: 'Intelligent conversational AI for customer service, support automation, and lead generation',
       price: '$499/month',
-      features: ['24/7 availability', 'Multi-channel integration', 'Sentiment analysis', 'Custom training'],
+      features: ['24/7 availability', 'Multi-channel integration', 'Sentiment analysis', 'Custom training', 'Voice integration', 'Analytics dashboard'],
       icon: MessageSquare,
-      path: '/ai-chatbot-enterprise'
+      path: '/ai-chatbot-enterprise',
+      category: 'Customer Service',
+      rating: 4.7,
+      reviews: 289,
+      duration: '2-3 weeks'
     },
     {
       name: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence with predictive analytics',
+      description: 'Real-time business intelligence with predictive analytics and automated insights generation',
       price: '$399/month',
-      features: ['Real-time insights', 'Predictive modeling', 'Custom reports', 'API integration'],
+      features: ['Real-time insights', 'Predictive modeling', 'Custom reports', 'API integration', 'Data visualization', 'Automated alerts'],
       icon: BarChart3,
-      path: '/ai-analytics-dashboard'
+      path: '/ai-analytics-dashboard',
+      popular: true,
+      category: 'Analytics',
+      rating: 4.9,
+      reviews: 456,
+      duration: '1-2 weeks'
     },
     {
       name: 'AI 3D Generation Studio',
-      description: 'Create stunning 3D models and animations with AI assistance',
+      description: 'Create stunning 3D models, animations, and virtual environments with AI assistance',
       price: '$799/month',
-      features: ['3D model generation', 'Animation creation', 'Texture mapping', 'VR/AR support'],
+      features: ['3D model generation', 'Animation creation', 'Texture mapping', 'VR/AR support', 'Rendering optimization', 'Asset library'],
       icon: Camera,
-      path: '/ai-3d-generation'
+      path: '/ai-3d-generation',
+      category: '3D Graphics',
+      rating: 4.6,
+      reviews: 198,
+      duration: '3-4 weeks'
     },
     {
       name: 'AI Drug Discovery Pro',
-      description: 'Accelerate pharmaceutical research with AI-powered molecular analysis',
+      description: 'Accelerate pharmaceutical research with AI-powered molecular analysis and drug design',
       price: '$2,999/month',
-      features: ['Molecular modeling', 'Drug interaction analysis', 'Clinical trial optimization', 'Regulatory compliance'],
+      features: ['Molecular modeling', 'Drug interaction analysis', 'Clinical trial optimization', 'Regulatory compliance', 'Toxicity prediction', 'Patent analysis'],
       icon: Brain,
-      path: '/ai-drug-discovery-pro'
+      path: '/ai-drug-discovery-pro',
+      popular: true,
+      category: 'Healthcare',
+      rating: 4.8,
+      reviews: 87,
+      duration: '6-8 weeks'
     },
     {
       name: 'AI Cybersecurity Suite',
-      description: 'Advanced threat detection and prevention using machine learning',
+      description: 'Advanced threat detection, prevention, and response using machine learning and behavioral analysis',
       price: '$1,299/month',
-      features: ['Real-time monitoring', 'Threat intelligence', 'Automated response', 'Compliance reporting'],
+      features: ['Real-time monitoring', 'Threat intelligence', 'Automated response', 'Compliance reporting', 'Incident forensics', 'Risk assessment'],
       icon: Shield,
-      path: '/ai-cybersecurity-suite'
+      path: '/ai-cybersecurity-suite',
+      category: 'Security',
+      rating: 4.7,
+      reviews: 234,
+      duration: '2-4 weeks'
+    },
+    {
+      name: 'AI Voice Synthesis Studio',
+      description: 'High-quality voice generation and cloning with emotional expression and multiple languages',
+      price: '$599/month',
+      features: ['Voice cloning', 'Emotional expression', 'Multi-language support', 'Real-time synthesis', 'Voice training', 'API integration'],
+      icon: MessageSquare,
+      path: '/ai-voice-synthesis',
+      category: 'Audio',
+      rating: 4.5,
+      reviews: 156,
+      duration: '2-3 weeks'
+    },
+    {
+      name: 'AI Computer Vision Platform',
+      description: 'Advanced image and video analysis with object detection, recognition, and processing capabilities',
+      price: '$699/month',
+      features: ['Object detection', 'Facial recognition', 'Image classification', 'Video analysis', 'Real-time processing', 'Custom model training'],
+      icon: Camera,
+      path: '/ai-computer-vision',
+      category: 'Computer Vision',
+      rating: 4.6,
+      reviews: 203,
+      duration: '3-5 weeks'
+    },
+    {
+      name: 'AI Predictive Maintenance',
+      description: 'Intelligent equipment monitoring and predictive maintenance for industrial applications',
+      price: '$899/month',
+      features: ['Equipment monitoring', 'Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'IoT integration', 'Performance analytics'],
+      icon: Cpu,
+      path: '/ai-predictive-maintenance',
+      popular: true,
+      category: 'Industrial AI',
+      rating: 4.8,
+      reviews: 178,
+      duration: '4-6 weeks'
+    },
+    {
+      name: 'AI Financial Advisor',
+      description: 'Intelligent financial planning, investment analysis, and risk assessment powered by AI',
+      price: '$1,199/month',
+      features: ['Portfolio optimization', 'Risk assessment', 'Market analysis', 'Investment recommendations', 'Tax optimization', 'Compliance monitoring'],
+      icon: BarChart3,
+      path: '/ai-financial-advisor',
+      category: 'Finance',
+      rating: 4.7,
+      reviews: 145,
+      duration: '3-4 weeks'
+    },
+    {
+      name: 'AI Supply Chain Optimizer',
+      description: 'Intelligent supply chain management with demand forecasting and logistics optimization',
+      price: '$1,499/month',
+      features: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier analysis', 'Risk management', 'Cost reduction'],
+      icon: Globe,
+      path: '/ai-supply-chain',
+      category: 'Supply Chain',
+      rating: 4.6,
+      reviews: 167,
+      duration: '4-6 weeks'
+    },
+    {
+      name: 'AI Climate Prediction Engine',
+      description: 'Advanced climate modeling and environmental impact analysis using machine learning',
+      price: '$1,799/month',
+      features: ['Climate modeling', 'Weather prediction', 'Environmental impact', 'Carbon tracking', 'Sustainability metrics', 'Policy analysis'],
+      icon: Globe,
+      path: '/ai-climate-prediction',
+      category: 'Environmental',
+      rating: 4.8,
+      reviews: 98,
+      duration: '5-7 weeks'
     }
   ];
 
@@ -202,7 +301,7 @@ export default function AIServicesPage() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white">{service.name}</h3>
-                      <p className="text-2xl font-bold text-cyan-400">{service.price}</p>
+                      <p className="text-sm text-gray-400">{service.category}</p>
                     </div>
                   </div>
                   <p className="text-gray-300 mb-6">{service.description}</p>
@@ -215,6 +314,19 @@ export default function AIServicesPage() {
                       </li>
                     ))}
                   </ul>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                    <div className="flex items-center">
+                      <div className="flex items-center mr-2">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} />
+                        ))}
+                      </div>
+                      <span className="text-sm text-gray-400">({service.reviews})</span>
+                    </div>
+                  </div>
+                  <div className="text-sm text-gray-400 mb-4">Duration: {service.duration}</div>
                 </div>
                 
                 <Link

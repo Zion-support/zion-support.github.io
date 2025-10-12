@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, BarChart3 } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, BarChart3, FileText, Users, Globe } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -29,6 +29,7 @@ export default function Navigation() {
   }
 
   const aiServices = [
+    { name: 'AI Services Overview', path: '/ai-services', icon: <Brain className="w-4 h-4" /> },
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
     { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', icon: <Brain className="w-4 h-4" /> },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', icon: <BarChart3 className="w-4 h-4" /> },
@@ -40,6 +41,7 @@ export default function Navigation() {
   ]
 
   const itServices = [
+    { name: 'IT Services Overview', path: '/it-services', icon: <Cpu className="w-4 h-4" /> },
     { name: 'Cloud Computing', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
     { name: 'Database Services', path: '/database-services', icon: <Database className="w-4 h-4" /> },
@@ -48,6 +50,17 @@ export default function Navigation() {
     { name: 'IT Consulting', path: '/it-consulting', icon: <Cpu className="w-4 h-4" /> },
     { name: 'Data Center', path: '/data-center', icon: <Server className="w-4 h-4" /> },
     { name: '5G Implementation', path: '/5g-implementation', icon: <Wifi className="w-4 h-4" /> }
+  ]
+
+  const microSaasServices = [
+    { name: 'Micro SAAS Overview', path: '/micro-saas-services', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI Task Manager', path: '/ai-task-manager', icon: <Brain className="w-4 h-4" /> },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Password Manager', path: '/ai-password-manager', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI Invoice Generator', path: '/ai-invoice-generator', icon: <FileText className="w-4 h-4" /> },
+    { name: 'AI Lead Scoring', path: '/ai-lead-scoring', icon: <Users className="w-4 h-4" /> },
+    { name: 'AI Social Media Manager', path: '/ai-social-media-manager', icon: <Globe className="w-4 h-4" /> },
+    { name: 'AI Code Assistant', path: '/ai-code-assistant', icon: <Code className="w-4 h-4" /> }
   ]
 
   return (
@@ -126,6 +139,32 @@ export default function Navigation() {
               )}
             </div>
 
+            {/* Micro SAAS Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('micro')}
+                className="flex items-center text-white hover:text-purple-300 transition-colors"
+              >
+                Micro SAAS
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {activeDropdown === 'micro' && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-xl border border-white/10 py-2">
+                  {microSaasServices.map((service) => (
+                    <Link
+                      key={service.path}
+                      to={service.path}
+                      className="flex items-center px-4 py-2 text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+                      onClick={closeDropdown}
+                    >
+                      {service.icon}
+                      <span className="ml-3">{service.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <Link to="/pricing" className="text-white hover:text-purple-300 transition-colors">
               Pricing
             </Link>
@@ -171,6 +210,58 @@ export default function Navigation() {
               >
                 About
               </Link>
+              
+              {/* AI Services Mobile */}
+              <div className="px-3 py-2">
+                <div className="text-purple-300 font-semibold mb-2">AI Services</div>
+                <div className="pl-4 space-y-1">
+                  {aiServices.slice(0, 4).map((service) => (
+                    <Link
+                      key={service.path}
+                      to={service.path}
+                      className="block text-gray-300 hover:text-white transition-colors text-sm"
+                      onClick={closeDropdown}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              
+              {/* IT Services Mobile */}
+              <div className="px-3 py-2">
+                <div className="text-purple-300 font-semibold mb-2">IT Services</div>
+                <div className="pl-4 space-y-1">
+                  {itServices.slice(0, 4).map((service) => (
+                    <Link
+                      key={service.path}
+                      to={service.path}
+                      className="block text-gray-300 hover:text-white transition-colors text-sm"
+                      onClick={closeDropdown}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Micro SAAS Mobile */}
+              <div className="px-3 py-2">
+                <div className="text-purple-300 font-semibold mb-2">Micro SAAS</div>
+                <div className="pl-4 space-y-1">
+                  {microSaasServices.slice(0, 4).map((service) => (
+                    <Link
+                      key={service.path}
+                      to={service.path}
+                      className="block text-gray-300 hover:text-white transition-colors text-sm"
+                      onClick={closeDropdown}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              
               <Link
                 to="/pricing"
                 className="block px-3 py-2 text-white hover:text-purple-300 transition-colors"
