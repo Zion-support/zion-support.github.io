@@ -1,64 +1,12 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-=======
 'use client';
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, Zap } from 'lucide-react';
->>>>>>> origin/main
-
-interface PerformanceMetrics {
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  fcp: number | null;
-  ttfb: number | null;
-}
-
-const PerformanceOptimizer: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    lcp: null,
-    fid: null,
-    cls: null,
-    fcp: null,
-<<<<<<< HEAD
-    ttfb: null,
-=======
-    ttfb: null
->>>>>>> origin/main
-  });
-
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalResources = [
-        '/fonts/inter.woff2',
-        '/images/hero-bg.jpg',
-<<<<<<< HEAD
-        '/images/logo.png',
+import { ArrowRight, Zap } from 'lucide-react';    ttfb: null,    ttfb: null        '/images/logo.png',
       ];
 
-      criticalResources.forEach((resource) => {
-=======
-        '/images/logo.png'
+      criticalResources.forEach((resource) => {        '/images/logo.png'
       ];
 
-      criticalResources.forEach(resource => {
->>>>>>> origin/main
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-        if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
-        }
-        document.head.appendChild(link);
-      });
-    };
-
-    // Optimize images
-    const optimizeImages = () => {
-<<<<<<< HEAD
-      const images = document.querySelectorAll('img[data-src]');
+      criticalResources.forEach(resource => {      const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -118,9 +66,7 @@ const PerformanceOptimizer: React.FC = () => {
 
       window.addEventListener('scroll', updateScrollPosition, { passive: true });
 
-      return () => window.removeEventListener('scroll', updateScrollPosition);
-=======
-      const images = document.querySelectorAll('img');
+      return () => window.removeEventListener('scroll', updateScrollPosition);      const images = document.querySelectorAll('img');
       images.forEach(img => {
         if (!img.loading) {
           img.loading = 'lazy';
@@ -128,15 +74,7 @@ const PerformanceOptimizer: React.FC = () => {
         if (!img.decoding) {
           img.decoding = 'async';
         }
-      });
->>>>>>> origin/main
-    };
-
-    // Initialize optimizations
-    preloadCriticalResources();
-    optimizeImages();
-<<<<<<< HEAD
-    lazyLoadComponents();
+      });    lazyLoadComponents();
     monitorWebVitals();
     const cleanupScroll = optimizeScroll();
 
@@ -144,9 +82,7 @@ const PerformanceOptimizer: React.FC = () => {
     return () => {
       cleanupScroll();
     };
-  }, []);
-=======
-  }, []);
+  }, []);  }, []);
 
   const features = [
     {
@@ -227,16 +163,3 @@ export default PerformanceOptimizer;
       cleanupScroll()
     }
   }, [])
->>>>>>> origin/main
-
-  // Log performance metrics in development
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some((val) => val !== null)) {
-      console.log('Performance Metrics:', metrics);
-    }
-  }, [metrics]);
-
-  return null;
-};
-
-export default PerformanceOptimizer;
