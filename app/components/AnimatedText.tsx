@@ -1,14 +1,37 @@
+import React, { useState, useEffect } from 'react';
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+interface AnimatedTextProps {
+  text: string;
+  className?: string;
+  delay?: number;
+  speed?: number;
+}
 
+const AnimatedText: React.FC<AnimatedTextProps> = ({
+  text,
+  className = '',
+  delay = 0,
+  speed = 100
+}) => {
+  const [displayedText, setDisplayedText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
+  useEffect(() => {
+    if (currentIndex < text.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText(prev => prev + text[currentIndex]);
+        setCurrentIndex(prev => prev + 1);
+      }, delay + speed);
 
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, text, delay, speed]);
+
+  return (
+    <span className={className}>
+      {displayedText}
+    </span>
+  );
+};
+
+export default AnimatedText;

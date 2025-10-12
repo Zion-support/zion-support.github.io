@@ -164,6 +164,91 @@ export default function AICustomerSupportChatbot() {
             ))}
           </div>
 
+          {/* Chatbot Features Grid */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-8">Comprehensive Chatbot Features</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {chatbotFeatures.map((category, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
+                  <ul className="space-y-2">
+                    {category.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-center text-gray-300">
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Pricing Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-8">Simple, Transparent Pricing</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-300 mb-6">{plan.description}</p>
+                  
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400">{plan.period}</span>
+                  </div>
+                  
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Link
+                    to="/contact"
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'
+                    }`}
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Testimonials */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-8">Trusted by Businesses Worldwide</h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <span key={i} className="text-yellow-400">★</span>
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="text-sm text-gray-400">{testimonial.company}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* CTA Section */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
