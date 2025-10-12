@@ -1,13 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, Brain, Users, Zap, Globe } from 'lucide-react';
-import Layout from '../layout';
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Brain, Users, Zap, Globe, Calendar } from 'lucide-react'
-import Layout from '../layout'
-import React from 'react';
-import { Link } from 'react-router-dom';
 import { Brain, Users, Zap, Globe, Clock, CheckCircle } from 'lucide-react';
 import Layout from '../layout';
 
@@ -33,8 +25,6 @@ export default function AISmartScheduler() {
       title: 'Global Integration',
       description: 'Works with all major calendar platforms and time zones'
     }
-  ];
-  ]
   ];
 
   const pricingPlans = [
@@ -83,8 +73,6 @@ export default function AISmartScheduler() {
       popular: false
     }
   ];
-  ]
-  ];
 
   const testimonials = [
     {
@@ -105,8 +93,6 @@ export default function AISmartScheduler() {
       content: 'The time zone handling is flawless. Our international team coordination has never been smoother.',
       rating: 5
     }
-  ];
-  ]
   ];
 
   return (
@@ -182,26 +168,15 @@ export default function AISmartScheduler() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-500 transition-colors">
-      </div>
-
-      {/* Features Section */}
-      <div className="py-20 bg-gray-900">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
-            Intelligent Scheduling Features
-          </h2>
-          <p className="text-gray-300 text-center mb-12">
-            Powered by advanced AI to make scheduling effortless and efficient
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-400 transition-colors">
-              <div key={index} className="bg-gray-800 p-6 rounded-lg">
                 <div className="flex items-center mb-4">
-                  {feature.icon}
-                  <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
+                  <div className="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center mr-4">
+                    {feature.icon}
+                  </div>
+                  <div>
+                    <h4 className="text-white font-semibold">{feature.title}</h4>
+                    <p className="text-gray-400 text-sm">{feature.description}</p>
+                  </div>
                 </div>
-                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -225,23 +200,77 @@ export default function AISmartScheduler() {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium">
-      </div>
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-cyan-400 mb-1">
+                    {plan.price}
+                    <span className="text-lg text-gray-400">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-400">{plan.description}</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="text-gray-300 flex items-center">
+                      <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  to="/contact"
+                  className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
+                    plan.popular
+                      ? 'bg-cyan-500 hover:bg-cyan-600 text-white'
+                      : 'border border-cyan-500 text-cyan-300 hover:bg-cyan-500/10'
+                  }`}
+                >
+                  Get Started
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      {/* Pricing Section */}
-      <div className="py-20 bg-slate-900">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
-            Simple, Transparent Pricing
-          </h2>
-          <p className="text-gray-300 text-center mb-12">
-            Choose the plan that fits your team size and needs
-          </p>
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              What Our Customers Say
+            </h2>
+            <p className="text-gray-300 text-lg">
+              Hear from teams who have transformed their scheduling with our AI solution
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-gray-800 p-8 rounded-lg border-2 relative ${plan.popular ? 'border-cyan-400' : 'border-gray-700'}`}>
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-gray-800 p-8 rounded-lg border border-gray-700">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold text-lg">
+                      {testimonial.name.charAt(0)}
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold text-lg">{testimonial.name}</h4>
+                  <p className="text-gray-400 text-sm mb-4">{testimonial.company}</p>
+                  <p className="text-gray-300 italic">"{testimonial.content}"</p>
+                  <div className="flex text-yellow-400 mt-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <span key={i}>★</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Pricing Section */}
