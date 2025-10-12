@@ -2,147 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Accessibility Enhancements */
-@layer base {
-  /* High contrast mode */
-  @media (prefers-contrast: high) {
-  .high-contrast {
-    --tw-bg-opacity: 1;
-    --tw-text-opacity: 1;
-  }
-  
-  .high-contrast * {
-    border-color: currentColor !important;
-  }
-}
-
-/* Reduced motion support */
-@layer components {
-  /* Button focus states */
-  .btn-focus:focus {
-    @apply ring-2 ring-blue-500 ring-offset-2;
-  }
-  
-  /* Card hover states with better contrast */
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:scale-105;
-  }
-  
-  .card-hover:focus {
-    @apply ring-2 ring-blue-500 ring-offset-2;
-  }
-  
-  /* Form input focus states */
-  .input-focus:focus {
-    @apply ring-2 ring-blue-500 border-blue-500;
-  }
-  
-  /* Link focus states */
-  .link-focus:focus {
-    @apply underline ring-2 ring-blue-500 ring-offset-2;
-  }
-}
-
-@layer utilities {
-  /* Custom utilities for accessibility */
-  .focus-visible {
-    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
-  }
-  
-  .text-balance {
-    text-wrap: balance;
-  }
-  
-  .text-pretty {
-    text-wrap: pretty;
-  }
-}
-
-/* Performance optimizations */
-@layer base {
-  /* Optimize font loading */
-  @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 300 800;
-    font-display: swap;
-    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-  }
-  
-  /* Optimize image loading */
-  img {
-    content-visibility: auto;
-  }
-  
-  /* Optimize layout shifts */
-  .aspect-ratio {
-    aspect-ratio: 16 / 9;
-  }
-  
-  /* Optimize animations for performance */
-  .animate-optimized {
-    will-change: transform, opacity;
-  }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .dark-mode-auto {
-    @apply dark:bg-gray-900 dark:text-white;
-  }
-  .high-contrast .bg-white\/10 {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-  
-  .high-contrast .text-gray-300 {
-    color: rgb(255, 255, 255);
-  }
-  
-  .high-contrast .text-gray-400 {
-    color: rgb(200, 200, 200);
-  }
-}
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/* Focus management */
-.focus-trap {
-  position: relative;
-}
-
-.focus-trap:focus-within {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-/* Skip links */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  text-decoration: none;
-  z-index: 1000;
-  border-radius: 4px;
-}
-
-.skip-link:focus {
-  top: 6px;
-}
-
-/* Screen reader only content */
+/* Accessibility improvements */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -155,6 +15,96 @@
   border: 0;
 }
 
+.sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+/* High contrast mode support */
+.high-contrast {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+}
+
+.high-contrast .bg-slate-900 {
+  background-color: #000000 !important;
+}
+
+.high-contrast .text-white {
+  color: #ffffff !important;
+}
+
+.high-contrast .text-gray-300 {
+  color: #ffffff !important;
+}
+
+.high-contrast .text-gray-400 {
+  color: #cccccc !important;
+}
+
+/* Focus styles */
+.focus\:ring-2:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Loading states */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Animation performance */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -165,86 +115,31 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8b5cf6;
+  background: #475569;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7c3aed;
+  background: #64748b;
 }
 
-/* Print styles */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-  
-  .print-only {
-    display: block !important;
-  }
-  
-  * {
-    background: white !important;
-    color: black !important;
-  }
-  body {
-    background: white !important;
-    color: black !important;
-  }
-  
-  .bg-gradient-to-br {
-    background: white !important;
-  }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --tw-bg-opacity: 1;
-  }
-}
-
-/* Performance optimizations */
-.gpu-accelerated {
-  transform: translateZ(0);
-  will-change: transform;
-}
-
-/* Text selection */
-::selection {
-  background-color: #8b5cf6;
-  color: white;
-}
-
-::-moz-selection {
-  background-color: #8b5cf6;
-  color: white;
-}
-
-/* Focus visible for better keyboard navigation */
-.focus-visible:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-/* Improved form styles */
+/* Form improvements */
 input:focus,
 textarea:focus,
 select:focus {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
-  border-color: #3b82f6;
 }
 
-/* Error states */
-.error {
-  border-color: #ef4444;
-  box-shadow: 0 0 0 1px #ef4444;
+/* Button improvements */
+button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }
 
-/* Success states */
-.success {
-  border-color: #10b981;
-  box-shadow: 0 0 0 1px #10b981;
-}
+/* Link improvements */
+a:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 2px;
 }

@@ -1,111 +1,67 @@
-ursor/analyze-improve-and-deploy-application-c354
-'use client'
-import React, { useEffect, useState } from 'react'
+import { useEffect } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
-  const [isHighContrast, setIsHighContrast] = useState(false)
-  const [fontSize, setFontSize] = useState(16)
-
+const AccessibilityEnhancer = () => {
   useEffect(() => {
-    // Check for user's preferred color scheme
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches
-    
-    if (prefersHighContrast) {
-      setIsHighContrast(true)
-      document.documentElement.classList.add('high-contrast')
+    // Add skip to main content link
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+
+    // Add main content ID
+    const mainContent = document.querySelector('main');
+    if (mainContent && !mainContent.id) {
+      mainContent.id = 'main-content';
     }
 
-    // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReducedMotion) {
-      document.documentElement.classList.add('reduce-motion')
+    // Add ARIA landmarks
+    const nav = document.querySelector('nav');
+    if (nav && !nav.getAttribute('role')) {
+      nav.setAttribute('role', 'navigation');
+      nav.setAttribute('aria-label', 'Main navigation');
     }
 
-    // Add keyboard navigation support
+    const footer = document.querySelector('footer');
+    if (footer && !footer.getAttribute('role')) {
+      footer.setAttribute('role', 'contentinfo');
+    }
+
+    // Add focus management for modals and dropdowns
     const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content with Tab key
-      if (event.key === 'Tab' && !event.shiftKey) {
-        const skipLink = document.querySelector('.skip-to-main')
-        if (skipLink && document.activeElement === document.body) {
-          (skipLink as HTMLElement).focus()
+      if (event.key === 'Escape') {
+        // Close any open modals or dropdowns
+        const activeElement = document.activeElement as HTMLElement;
+        if (activeElement && activeElement.blur) {
+          activeElement.blur();
         }
       }
-    }
+    };
 
-    document.addEventListener('keydown', handleKeyDown)
+    document.addEventListener('keydown', handleKeyDown);
+
+    // Add high contrast mode support
+    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
+    const handleContrastChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        document.body.classList.add('high-contrast');
+      } else {
+        document.body.classList.remove('high-contrast');
+      }
+    };
+
+    prefersHighContrast.addEventListener('change', handleContrastChange);
+    if (prefersHighContrast.matches) {
+      document.body.classList.add('high-contrast');
+    }
 
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)
-    }
-  }, [])
+      document.removeEventListener('keydown', handleKeyDown);
+      prefersHighContrast.removeEventListener('change', handleContrastChange);
+    };
+  }, []);
 
-  const toggleHighContrast = () => {
-    setIsHighContrast(!isHighContrast)
-    if (isHighContrast) {
-      document.documentElement.classList.remove('high-contrast')
-    } else {
-      document.documentElement.classList.add('high-contrast')
-    }
-  }
+  return null;
+};
 
-  const increaseFontSize = () => {
-    const newSize = Math.min(fontSize + 2, 24)
-    setFontSize(newSize)
-    document.documentElement.style.fontSize = `${newSize}px`
-  }
-
-  const decreaseFontSize = () => {
-    const newSize = Math.max(fontSize - 2, 12)
-    setFontSize(newSize)
-    document.documentElement.style.fontSize = `${newSize}px`
-  }
-
-  const resetFontSize = () => {
-    setFontSize(16)
-    document.documentElement.style.fontSize = '16px'
-  }
-
-  return (
-    <div className="accessibility-controls fixed bottom-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 border">
-      <h3 className="text-sm font-semibold mb-2 text-gray-700">Accessibility</h3>
-      
-      <div className="space-y-2">
-        <button
-          onClick={toggleHighContrast}
-          className="block w-full text-left px-3 py-1 text-sm text-gray-600 hover:bg-gray-100 rounded"
-          aria-label="Toggle high contrast mode"
-        >
-          {isHighContrast ? 'Disable' : 'Enable'} High Contrast
-        </button>
-        
-        <div className="flex items-center space-x-2">
-          <button
-            onClick={decreaseFontSize}
-            className="px-2 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded"
-            aria-label="Decrease font size"
-          >
-            A-
-          </button>
-          <span className="text-xs text-gray-500">{fontSize}px</span>
-          <button
-            onClick={increaseFontSize}
-            className="px-2 py-1 text-sm bg-gray-200 hover:bg-gray-300 rounded"
-            aria-label="Increase font size"
-          >
-            A+
-          </button>
-          <button
-            onClick={resetFontSize}
-            className="px-2 py-1 text-xs bg-gray-200 hover:bg-gray-300 rounded"
-            aria-label="Reset font size"
-          >
-            Reset
-          </button>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-export default AccessibilityEnhancer
+export default AccessibilityEnhancer;
