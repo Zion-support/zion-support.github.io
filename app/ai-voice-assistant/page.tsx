@@ -1,387 +1,252 @@
-<<<<<<< HEAD
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Brain, Cloud, Shield, Code, BarChart, Settings, Target, TrendingUp, Lightbulb, Rocket, Award, Globe, Database, Smartphone, Cpu, Lock, Settings, Target, TrendingUp, Lightbulb, Rocket, Award, CheckCircle, ExternalLink, Mic, Volume2, Headphones, MessageCircle } from 'lucide-react';
 
-const AiVoiceAssistantPage: React.FC = () => {
+const AIVoiceAssistantPage: React.FC = () => {
+  const features = [
+    {
+      icon: Mic,
+      title: 'Natural Speech Recognition',
+      description: 'Advanced AI understands natural language with 99% accuracy'
+    },
+    {
+      icon: Volume2,
+      title: 'Human-like Voice Synthesis',
+      description: 'Generate natural-sounding speech in multiple languages'
+    },
+    {
+      icon: Headphones,
+      title: 'Real-time Processing',
+      description: 'Instant response and processing for seamless conversations'
+    },
+    {
+      icon: MessageCircle,
+      title: 'Context Awareness',
+      description: 'Maintains conversation context for intelligent interactions'
+    }
+  ];
+
+  const useCases = [
+    {
+      title: 'Customer Support',
+      description: '24/7 automated customer service with natural conversations',
+      icon: Users
+    },
+    {
+      title: 'Voice Commands',
+      description: 'Control applications and devices through voice commands',
+      icon: Settings
+    },
+    {
+      title: 'Accessibility',
+      description: 'Help users with disabilities interact with technology',
+      icon: Shield
+    },
+    {
+      title: 'Content Creation',
+      description: 'Generate audio content and voiceovers automatically',
+      icon: Lightbulb
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>Ai Voice Assistant - Zion Tech Group</title>
-        <meta name="description" content="Ai Voice Assistant services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="ai-voice-assistant, AI solutions, IT services" />
+        <title>AI Voice Assistant Solutions - Zion Tech Group</title>
+        <meta name="description" content="Transform your business with AI voice assistant technology. Natural language processing, speech recognition, and voice synthesis solutions." />
+        <meta name="keywords" content="AI voice assistant, speech recognition, voice synthesis, natural language processing, voice AI, conversational AI" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Ai Voice Assistant
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional ai voice assistant services by Zion Tech Group.
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300 mb-6">
-              We're working on bringing you comprehensive ai voice assistant solutions. 
-              Contact us to learn more about our services.
-            </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-              Contact Us
-            </button>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};
-
-<<<<<<< HEAD
-export default AiVoiceAssistantPage;
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-import { Mic, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Clock, Volume2 } from 'lucide-react'
-import Layout from '../layout'
-=======
-import { ArrowRight, Mic, Brain, Zap, Users, BarChart3, Shield } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
-
-export default function AIVoiceAssistant() {
-  const features = [
-    {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'Natural Language Understanding',
-      description: 'Advanced AI processes complex voice commands and maintains context across conversations'
-    },
-    {
-      icon: <Volume2 className="w-6 h-6 text-purple-400" />,
-      title: 'Human-like Voice Synthesis',
-      description: 'Generate natural, expressive speech with customizable voices and emotional tones'
-    },
-    {
-      icon: <Clock className="w-6 h-6 text-yellow-400" />,
-      title: '24/7 Availability',
-      description: 'Always-on voice assistant that can handle tasks, answer questions, and provide support'
-    },
-    {
-      icon: <Target className="w-6 h-6 text-green-400" />,
-      title: 'Multi-platform Integration',
-      description: 'Seamlessly integrate with mobile apps, websites, smart devices, and IoT systems'
-    }
-  ]
-
-  const assistantFeatures = [
-    {
-      category: 'Voice Capabilities',
-      items: ['Speech Recognition', 'Natural Language Processing', 'Voice Synthesis', 'Emotion Detection', 'Multi-language Support', 'Noise Cancellation']
-    },
-    {
-      category: 'Task Management',
-      items: ['Calendar Management', 'Email Handling', 'Reminder Setting', 'Task Creation', 'Meeting Scheduling', 'Note Taking']
-    },
-    {
-      category: 'Integration',
-      items: ['Mobile Apps', 'Web Applications', 'Smart Home Devices', 'CRM Systems', 'ERP Integration', 'API Access']
-    },
-    {
-      category: 'Customization',
-      items: ['Custom Voice Training', 'Personality Settings', 'Command Customization', 'Brand Voice', 'Response Templates', 'Workflow Automation']
-    }
-  ]
-
-  const pricingPlans = [
-    {
-      name: 'Personal',
-      price: '$19',
-      period: '/month',
-      description: 'Perfect for individuals and small teams',
-      features: [
-        'Up to 1,000 interactions/month',
-        'Basic voice features',
-        'Standard voices',
-        'Email support',
-        'Mobile app access',
-        'Basic integrations'
-      ],
-      popular: false
-    },
-    {
-      name: 'Business',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Up to 10,000 interactions/month',
-        'Advanced voice features',
-        'Custom voice training',
-        'Priority support',
-        'Advanced integrations',
-        'Analytics dashboard',
-        'API access'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$199',
-      period: '/month',
-      description: 'For large organizations',
-      features: [
-        'Unlimited interactions',
-        'Custom AI training',
-        'White-label solution',
-        'Dedicated support',
-        'Custom integrations',
-        'Advanced analytics',
-        'SLA guarantee'
-      ],
-      popular: false
-    }
-  ]
-
-  const testimonials = [
-    {
-      name: 'David Park',
-      company: 'Smart Home Solutions',
-      content: 'AI Voice Assistant transformed our customer experience. The natural conversation flow is incredible.',
-      rating: 5
-    },
-    {
-      name: 'Sarah Johnson',
-      company: 'Healthcare Provider',
-      content: 'Our patients love the voice assistant for appointment scheduling. It handles complex requests perfectly.',
-      rating: 5
-    },
-    {
-      name: 'Mike Chen',
-      company: 'E-commerce Platform',
-      content: 'Voice shopping has increased our sales by 40%. The voice recognition accuracy is outstanding.',
-      rating: 5
-    }
-  ]
-
-  return (
-    <Layout
-      title="AI Voice Assistant - Intelligent Voice Solutions | Zion Tech Group"
-      description="Transform user interaction with AI-powered voice assistants. Natural language processing, human-like voice synthesis, and seamless integration. Start your free trial today."
-      keywords="AI voice assistant, voice AI, speech recognition, voice synthesis, conversational AI, voice automation"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-rose-500/20 rounded-full text-rose-400 text-sm font-medium mb-6">
-                <Mic className="w-4 h-4 mr-2" />
-                AI-Powered Voice Assistant
-              </div>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Voice Assistant
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                AI <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Voice Assistant</span> Solutions
               </h1>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform user interaction with AI-powered voice assistants. Natural language processing, 
-                human-like voice synthesis, and seamless integration across all platforms.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Transform your business with intelligent voice assistants that understand, respond, and interact naturally with your customers.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-rose-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-rose-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                <a 
+                  href="#features"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
-                  Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <Link
-                  to="#demo"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                  Explore Features
+                </a>
+                <a 
+                  href="/contact"
+                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300"
                 >
-                  Try Demo
-                </Link>
+                  Get Free Demo
+                </a>
               </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section id="features" className="py-20">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Intelligent Voice Solutions
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Voice AI</span> Features
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                AI-powered features that enable natural, human-like voice interactions
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Advanced technology that makes voice interactions natural and intelligent
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-rose-500/20 hover:border-rose-400/40 transition-all duration-300">
-                  <div className="flex items-center mb-4">
-                    {feature.icon}
-                    <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
+                <div key={index} className="text-center group">
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <feature.icon className="w-10 h-10 text-cyan-400" />
                   </div>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {feature.description}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Assistant Features */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-purple-900/30">
-          <div className="max-w-7xl mx-auto">
+        {/* Use Cases Section */}
+        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
+          <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Complete Voice Platform
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Real-World <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Applications</span>
               </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Everything you need to build intelligent voice experiences
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                See how AI voice assistants can transform your business operations
               </p>
             </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {assistantFeatures.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.category}</h3>
-                  <ul className="space-y-2">
-                    {feature.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-rose-400 mr-2" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
-              </h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Choose the plan that fits your voice assistant needs
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
-                  plan.popular 
-                    ? 'border-rose-400/40 scale-105 shadow-2xl shadow-rose-500/20' 
-                    : 'border-rose-500/20 hover:border-rose-400/40'
-                }`}>
-                  {plan.popular && (
-                    <div className="inline-flex items-center px-3 py-1 bg-rose-500/20 rounded-full text-rose-400 text-sm font-medium mb-4">
-                      <Star className="w-4 h-4 mr-1" />
-                      Most Popular
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {useCases.map((useCase, index) => (
+                <div 
+                  key={index}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <useCase.icon className="w-6 h-6 text-cyan-400" />
                     </div>
-                  )}
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-6">{plan.description}</p>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
+                    <div>
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                        {useCase.title}
+                      </h3>
+                      <p className="text-gray-300 leading-relaxed">
+                        {useCase.description}
+                      </p>
+                    </div>
                   </div>
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-rose-400 mr-3" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-rose-500 to-purple-600 text-white hover:from-rose-600 hover:to-purple-700'
-                        : 'border-2 border-rose-400 text-rose-400 hover:bg-rose-400/10'
-                    }`}
-                  >
-                    Get Started
-                  </Link>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-purple-900/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Success Stories
-              </h2>
-              <p className="text-gray-300">
-                See how our AI Voice Assistant transforms user experiences
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Why Choose Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Voice AI</span>?
+                </h2>
+                <div className="space-y-6">
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1" />
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">99% Accuracy</h3>
+                      <p className="text-gray-300">Advanced speech recognition with industry-leading accuracy rates</p>
+                    </div>
                   </div>
-                  <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.company}</div>
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1" />
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">Multi-language Support</h3>
+                      <p className="text-gray-300">Support for 50+ languages and dialects worldwide</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1" />
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">Custom Training</h3>
+                      <p className="text-gray-300">Train the AI on your specific domain and terminology</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <CheckCircle className="w-6 h-6 text-green-400 mt-1" />
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-2">Scalable Infrastructure</h3>
+                      <p className="text-gray-300">Handle thousands of concurrent voice interactions</p>
+                    </div>
                   </div>
                 </div>
-              ))}
+              </div>
+              <div className="bg-gradient-to-br from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-6">Ready to Get Started?</h3>
+                <p className="text-gray-300 mb-6">
+                  Transform your customer experience with intelligent voice assistants. Get a free consultation and see how we can help your business.
+                </p>
+                <div className="space-y-4">
+                  <a 
+                    href="/contact"
+                    className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 block"
+                  >
+                    Get Free Consultation
+                  </a>
+                  <a 
+                    href="/ai-services"
+                    className="w-full border border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-semibold text-center hover:bg-cyan-500/10 transition-all duration-300 block"
+                  >
+                    View All AI Services
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-rose-500/20 to-purple-500/20 rounded-2xl p-8 border border-rose-500/30">
-              <h2 className="text-3xl font-bold text-white mb-4">
-                Build Your Voice Assistant Today
-              </h2>
-              <p className="text-lg text-gray-300 mb-8">
-                Join thousands of businesses using AI Voice Assistant to enhance user experiences
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-rose-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-rose-600 hover:to-purple-700 transition-all duration-300"
-                >
-                  Start Your Free Trial
-                </Link>
-                <Link
-                  to="/about"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                >
-                  Learn More
-                </Link>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
+              <div className="relative z-10">
+                <h2 className="text-4xl font-bold text-white mb-6">
+                  Ready to Transform Your Voice Experience?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                  Let's build an AI voice assistant that understands your customers and delivers exceptional experiences.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a 
+                    href="/contact"
+                    className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                  >
+                    Start Your Project
+                  </a>
+                  <a 
+                    href="/about"
+                    className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+                  >
+                    Learn More About Us
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </section>
       </div>
-    </Layout>
-  )
-}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
-=======
-export default AiVoiceAssistantPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-9d9d
+    </>
+  );
+};
+
+export default AIVoiceAssistantPage;
