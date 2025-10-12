@@ -8,32 +8,22 @@ export default OptimizedLoadingSpinner;
     fullScreen = false;
     // Note: fullScreen parameter is used in containerClasses calculation below;
     );
-    
     );
-    
     );
-    
     );
-
     );
-
           );
         case 'pulse':
-
           );
         case 'skeleton':
-
   );
         case 'bars':
-
               ))}
   );
         case 'spinner':
         default:
-
           );
     }, [size, variant, color, sizeClasses, colorClasses, baseClasses]);
-    
       return `${baseClasses} ${fullScreen ? fullScreenClasses : ''} ${className}`;
     }, [baseClasses, fullScreen, fullScreenClasses, className]);
           {renderSpinner}

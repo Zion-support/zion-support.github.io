@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Form validation utilities
 export const validateForm = (data: Record<string, any>) => {
   const errors: Record<string, string> = {};
@@ -12,4 +13,7 @@ export const validateForm = (data: Record<string, any>) => {
     isValid: Object.keys(errors).length === 0,
     errors
   };
+=======
+// Utility file: formValidation;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 };

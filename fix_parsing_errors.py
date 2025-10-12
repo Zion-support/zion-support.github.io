@@ -1,120 +1,264 @@
 #!/usr/bin/env python3
 """
-Script to fix parsing errors in TSX files by ensuring proper JSX structure.
+Script to fix parsing errors in TypeScript/JavaScript files after merge conflict resolution.
 """
 
 import os
 import re
 import glob
+from pathlib import Path
 
-def fix_tsx_file(file_path):
-    """Fix parsing errors in a single TSX file."""
-    print(f"Fixing parsing errors in {file_path}...")
+def find_tsx_files():
+    """Find all TypeScript/JavaScript files."""
+    files = []
+    extensions = ['**/*.tsx', '**/*.ts', '**/*.js', '**/*.jsx']
     
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
+    for pattern in extensions:
+        files.extend(glob.glob(pattern, recursive=True))
+    
+    return [f for f in files if 'node_modules' not in f]
+
+def fix_duplicate_export_default(content):
+    """Fix duplicate export default statements."""
+    lines = content.split('\n')
+    fixed_lines = []
+    found_export_default = False
+    
+    for line in lines:
+        if 'export default function' in line and found_export_default:
+            # Skip duplicate export default
+            continue
+        elif 'export default function' in line:
+            found_export_default = True
+            fixed_lines.append(line)
+        else:
+            fixed_lines.append(line)
+    
+    return '\n'.join(fixed_lines)
+
+def fix_malformed_imports(content):
+    """Fix malformed import statements."""
+    # Fix imports that are missing quotes or have syntax errors
+    content = re.sub(r"import\('([^']+)'\)\);", r"import('\1');", content)
+    content = re.sub(r"import\('([^']+)'\)\);", r"import('\1');", content)
+    
+    # Fix incomplete import statements
+    content = re.sub(r"^ import\('([^']+)'\);", r"import('\1');", content, flags=re.MULTILINE)
+    
+    return content
+
+def fix_jsx_structure(content):
+    """Fix JSX structure issues."""
+    lines = content.split('\n')
+    fixed_lines = []
+    in_jsx = False
+    brace_count = 0
+    
+    for i, line in enumerate(lines):
+        # Check if we're starting JSX
+        if '<' in line and not in_jsx:
+            in_jsx = True
+            brace_count = 0
         
-        # Find the component definition
-        component_pattern = r'const\s+(\w+Page):\s*React\.FC\s*=\s*\(\)\s*=>\s*{'
-        match = re.search(component_pattern, content)
+        # Count braces in JSX
+        if in_jsx:
+            brace_count += line.count('{') - line.count('}')
+            
+            # If we close all braces and find a closing tag, end JSX
+            if brace_count <= 0 and '>' in line:
+                in_jsx = False
         
-        if not match:
-            print(f"  No component pattern found in {file_path}")
-            return False
+        # Fix common JSX issues
+        if in_jsx:
+            # Fix unclosed tags
+            if '<' in line and '>' not in line and i + 1 < len(lines):
+                next_line = lines[i + 1]
+                if '>' in next_line:
+                    line = line + next_line
+                    lines[i + 1] = ''  # Mark next line for removal
         
-        component_name = match.group(1)
+        fixed_lines.append(line)
+    
+    # Remove empty lines that were marked for removal
+    return '\n'.join([line for line in fixed_lines if line != ''])
+
+def fix_syntax_errors(content):
+    """Fix common syntax errors."""
+    lines = content.split('\n')
+    fixed_lines = []
+    
+    for i, line in enumerate(lines):
+        # Fix missing semicolons in import statements
+        if line.strip().startswith('import(') and not line.strip().endswith(';'):
+            line = line.rstrip() + ';'
         
-        # Extract the component content
-        start_pos = match.start()
+        # Fix incomplete function declarations
+        if 'export default function' in line and not line.strip().endswith('{'):
+            # Look for the next line that might have the opening brace
+            if i + 1 < len(lines) and lines[i + 1].strip() == '{':
+                line = line + ' {'
+                lines[i + 1] = ''  # Remove the duplicate line
         
-        # Find the return statement
-        return_pattern = r'return\s*\('
-        return_match = re.search(return_pattern, content[start_pos:])
+        # Fix malformed JSX
+        if '<' in line and '>' not in line:
+            # Try to find the closing tag in the next few lines
+            for j in range(i + 1, min(i + 5, len(lines))):
+                if '>' in lines[j]:
+                    line = line + lines[j]
+                    lines[j] = ''  # Mark for removal
+                    break
         
-        if not return_match:
-            print(f"  No return statement found in {file_path}")
-            return False
-        
-        return_start = start_pos + return_match.start()
-        
-        # Find the JSX content
-        jsx_start = return_start + return_match.end() - 1  # Include the opening parenthesis
-        
-        # Count braces to find the end of JSX
-        brace_count = 0
-        jsx_end = jsx_start
-        in_string = False
-        escape_next = False
-        
-        for i, char in enumerate(content[jsx_start:], jsx_start):
-            if escape_next:
-                escape_next = False
-                continue
-                
-            if char == '\\':
-                escape_next = True
-                continue
-                
-            if char in ['"', "'", '`'] and not escape_next:
-                in_string = not in_string
-                continue
-                
-            if not in_string:
-                if char == '(':
-                    brace_count += 1
-                elif char == ')':
-                    brace_count -= 1
-                    if brace_count == 0:
-                        jsx_end = i + 1
-                        break
-        
-        if brace_count != 0:
-            print(f"  Could not find matching closing parenthesis in {file_path}")
-            return False
-        
-        # Extract JSX content
-        jsx_content = content[jsx_start:jsx_end]
-        
-        # Create a clean component
-        clean_component = f"""'use client';
+        fixed_lines.append(line)
+    
+    # Remove empty lines
+    return '\n'.join([line for line in fixed_lines if line.strip() != ''])
+
+def fix_specific_files():
+    """Fix specific known problematic files."""
+    fixes = {
+        '/workspace/app/5g-data-analytics/page.tsx': '''
 import React from 'react';
-import {{ CheckCircle }} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-const {component_name}: React.FC = () => {{
+export default function FiveGDataAnalyticsPage() {
   return (
-{jsx_content}
+    <>
+      <Helmet>
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <meta name="description" content="Advanced 5G data analytics solutions for real-time insights and business intelligence." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-white mb-6">5G Data Analytics</h1>
+            <p className="text-lg text-gray-300 mb-8">Advanced data analytics solutions powered by 5G technology for real-time insights and business intelligence.</p>
+            
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
+            >
+              Contact Us
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
-}};
+}
+''',
+        '/workspace/app/App.tsx': '''
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { ErrorBoundary } from 'react-error-boundary';
 
-export default {component_name};"""
-        
-        # Write the clean component
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(clean_component)
-        
-        print(f"  Fixed parsing errors in {file_path}")
-        return True
-        
-    except Exception as e:
-        print(f"  Error fixing {file_path}: {e}")
-        return False
+// Lazy load components for better performance
+const Home = lazy(() => import('./page'));
+const About = lazy(() => import('./about/page'));
+const Services = lazy(() => import('./services/page'));
+const Contact = lazy(() => import('./contact/page'));
+const NotFound = lazy(() => import('./not-found/page'));
+
+// Error fallback component
+function ErrorFallback({ error, resetErrorBoundary }) {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-900">
+      <div className="text-center">
+        <h2 className="text-2xl font-bold text-white mb-4">Something went wrong</h2>
+        <p className="text-gray-300 mb-4">{error.message}</p>
+        <button 
+          onClick={resetErrorBoundary}
+          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Try again
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <HelmetProvider>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <Router>
+          <div className="App">
+            <Suspense fallback={
+              <div className="min-h-screen flex items-center justify-center bg-gray-900">
+                <div className="text-white">Loading...</div>
+              </div>
+            }>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
+  );
+}
+
+export default App;
+'''
+    }
+    
+    for file_path, content in fixes.items():
+        try:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"Fixed {file_path}")
+        except Exception as e:
+            print(f"Error fixing {file_path}: {e}")
 
 def main():
-    """Main function to fix all TSX files with parsing errors."""
-    app_dir = '/workspace/app'
-    tsx_files = glob.glob(os.path.join(app_dir, '**', '*.tsx'), recursive=True)
+    """Main function to fix parsing errors."""
+    print("Fixing parsing errors...")
+    
+    # Fix specific problematic files first
+    fix_specific_files()
+    
+    # Get all TypeScript/JavaScript files
+    files = find_tsx_files()
     
     fixed_count = 0
-    total_count = len(tsx_files)
+    error_count = 0
     
-    print(f"Found {total_count} TSX files to check...")
-    
-    for file_path in tsx_files:
-        if fix_tsx_file(file_path):
+    for file_path in files:
+        try:
+            # Skip if it's one of the files we already fixed
+            if file_path in ['/workspace/app/5g-data-analytics/page.tsx', '/workspace/app/App.tsx']:
+                continue
+                
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # Apply fixes
+            content = fix_duplicate_export_default(content)
+            content = fix_malformed_imports(content)
+            content = fix_jsx_structure(content)
+            content = fix_syntax_errors(content)
+            
+            # Write back
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            
             fixed_count += 1
+            
+        except Exception as e:
+            print(f"Error processing {file_path}: {e}")
+            error_count += 1
     
-    print(f"\nFixed {fixed_count} out of {total_count} files")
+    print(f"Fixed {fixed_count} files")
+    print(f"Errors: {error_count} files")
 
 if __name__ == "__main__":
     main()

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Logging utilities
 export const logger = {
   info: (message: string, data?: any) => {
@@ -9,4 +10,7 @@ export const logger = {
   warn: (message: string, data?: any) => {
     console.warn(`[WARN] ${message}`, data);
   }
+=======
+// Utility file: logger;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 };

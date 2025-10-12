@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
 import './app/styles/futuristic.css';
 import './app/styles/futuristic-enhanced.css';
@@ -36,24 +37,39 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 >>>>>>> cursor/fix-errors-and-merge-to-main-d941
+=======
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { ErrorBoundary } from 'react-error-boundary';
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./app/page'));
-const AboutPage = lazy(() => import('./app/about/page'));
-const ContactPage = lazy(() => import('./app/contact/page'));
-const ServicesPage = lazy(() => import('./app/services/page'));
-const PricingPage = lazy(() => import('./app/pricing/page'));
-const CaseStudiesPage = lazy(() => import('./app/case-studies/page'));
-const BlogPage = lazy(() => import('./app/blog/page'));
-const TeamPage = lazy(() => import('./app/team/page'));
-const CareersPage = lazy(() => import('./app/careers/page'));
-const PrivacyPage = lazy(() => import('./app/privacy/page'));
-const TermsPage = lazy(() => import('./app/terms/page'));
-const CookiesPage = lazy(() => import('./app/cookies/page'));
+// Lazy load components for better performance
+const Home = lazy(() => import('./app/page'));
+const About = lazy(() => import('./app/about/page'));
+const Services = lazy(() => import('./app/services/page'));
+const Contact = lazy(() => import('./app/contact/page'));
+const NotFound = lazy(() => import('./app/not-found/page'));
 
-// AI Services
-const AIServicesPage = lazy(() => import('./app/ai-services/page'));
+// Error fallback component
+function ErrorFallback({ error, resetErrorBoundary }) {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-900">
+      <div className="text-center">
+        <h2 className="text-2xl font-bold text-white mb-4">Something went wrong</h2>
+        <p className="text-gray-300 mb-4">{error.message}</p>
+        <button 
+          onClick={resetErrorBoundary}
+          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Try again
+        </button>
+      </div>
+    </div>
+  );
+}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Micro SAAS Pages;
 const ZionAnalyticsProPage = React.lazy(() => import('./app/zion-analytics-pro/page'));
@@ -294,6 +310,31 @@ function App() {
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
+=======
+function App() {
+  return (
+    <HelmetProvider>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <Router>
+          <div className="App">
+            <Suspense fallback={
+              <div className="min-h-screen flex items-center justify-center bg-gray-900">
+                <div className="text-white">Loading...</div>
+              </div>
+            }>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
   );
 }
 

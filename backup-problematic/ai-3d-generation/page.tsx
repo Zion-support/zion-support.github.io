@@ -1,5 +1,13 @@
 export default function Ai3dGenerationPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
         <title>AI 3D Generation - Zion Tech Group</title>
       {/* Hero Section */}
               AI 3D Generation;
@@ -10,23 +18,20 @@ export default function Ai3dGenerationPage() {
       {/* Features Section */}
               Powerful 3D Generation Features;
               Everything you need to create professional 3D models with AI assistance.
-
  (
-                <div className="mb-4">{feature.icon}</div>
+                <div className = "mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
             ))}
-
-      {/* Use Cases Section */}
+      {/* Use Cases Section */};
                 Perfect For;
                 Our AI 3D generation technology excels in various industries and applications;
  (
-                  <span className="text-sm">{useCase}</span>
+                  <span className = "text-sm">{useCase}</span>
               ))}
-
       {/* CTA Section */}
               Ready to Create Amazing 3D Models?
-              Start generating professional 3D models with our AI-powered technology today.
+              Start generating professional 3D models with our AI-powered technology today.;
                 Get Started Today;
                 View All AI Services;
       </section>    <div></div>
@@ -40,23 +45,20 @@ export default function Ai3dGenerationPage() {
       {/* Features Section */}
               Powerful 3D Generation Features;
               Everything you need to create professional 3D models with AI assistance.
-
  (
-                <div className="mb-4">{feature.icon}</div>
+                <div className = "mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
             ))}
-
-      {/* Use Cases Section */}
+      {/* Use Cases Section */};
                 Perfect For;
                 Our AI 3D generation technology excels in various industries and applications;
  (
-                  <span className="text-sm">{useCase}</span>
+                  <span className = "text-sm">{useCase}</span>
               ))}
-
       {/* CTA Section */}
               Ready to Create Amazing 3D Models?
-              Start generating professional 3D models with our AI-powered technology today.
+              Start generating professional 3D models with our AI-powered technology today.;
                 Get Started Today;
                 View All AI Services;
   );

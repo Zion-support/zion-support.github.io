@@ -2,7 +2,7 @@
  * Security Configuration;
  * Defines security headers and policies for the application;
  */
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
+    'Permissions-Policy': 'camera = (), microphone=(), geolocation=(), interest-cohort=()';
 };
 /**
  * Rate limiting configuration;

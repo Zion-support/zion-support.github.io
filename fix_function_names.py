@@ -1,69 +1,49 @@
 #!/usr/bin/env python3
 """
-Script to fix function names with hyphens
+Script to fix function names that start with numbers.
 """
+
 import os
-import re
 import glob
+import re
 
-def fix_function_names(content):
-    """Fix function names with hyphens"""
-    # Fix function names like "5G-Data-AnalyticsPage" -> "FiveGDataAnalyticsPage"
-    content = re.sub(r'export default function (\d+[Gg])-([A-Za-z-]+)Page\(\)', 
-                     lambda m: f'export default function {m.group(1).replace("5G", "FiveG").replace("5g", "FiveG")}{"".join(word.capitalize() for word in m.group(2).split("-"))}Page()', 
-                     content)
-    
-    # Fix other function names with hyphens
-    content = re.sub(r'export default function ([A-Za-z0-9]+)-([A-Za-z-]+)Page\(\)', 
-                     lambda m: f'export default function {m.group(1)}{"".join(word.capitalize() for word in m.group(2).split("-"))}Page()', 
-                     content)
-    
-    return content
-
-def process_file(file_path):
-    """Process a single file"""
+def fix_function_names(file_path):
+    """Fix function names that start with numbers."""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        original_content = content
-        content = fix_function_names(content)
+        # Fix function names that start with numbers
+        content = re.sub(r'export default function 5G(\w+)Page\(\)', r'export default function FiveG\1Page()', content)
+        content = re.sub(r'export default function 5g(\w+)Page\(\)', r'export default function FiveG\1Page()', content)
         
-        # Only write if content changed
-        if content != original_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Fixed function names: {file_path}")
-            return True
-        else:
-            return False
-            
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        print(f"Fixed {file_path}")
+        
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
-        return False
+        print(f"Error fixing {file_path}: {e}")
 
 def main():
-    """Main function"""
-    # Find all TypeScript/React files
-    patterns = [
-        '/workspace/app/**/*.tsx',
-        '/workspace/app/**/*.ts',
-        '/workspace/*.tsx',
-        '/workspace/*.ts'
-    ]
+    """Fix all files with problematic function names."""
+    # Find all TypeScript/JavaScript files
+    files = glob.glob('**/*.tsx', recursive=True) + glob.glob('**/*.ts', recursive=True) + glob.glob('**/*.js', recursive=True) + glob.glob('**/*.jsx', recursive=True)
     
-    files_to_process = []
-    for pattern in patterns:
-        files_to_process.extend(glob.glob(pattern, recursive=True))
+    # Filter out node_modules
+    files = [f for f in files if 'node_modules' not in f]
     
-    print(f"Found {len(files_to_process)} files to process")
-    
-    fixed_count = 0
-    for file_path in files_to_process:
-        if process_file(file_path):
-            fixed_count += 1
-    
-    print(f"Fixed {fixed_count} files")
+    for file_path in files:
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # Check if file has function names starting with numbers
+            if re.search(r'export default function 5[Gg]', content):
+                fix_function_names(file_path)
+                
+        except Exception as e:
+            print(f"Error processing {file_path}: {e}")
 
 if __name__ == "__main__":
     main()

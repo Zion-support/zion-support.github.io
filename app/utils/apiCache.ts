@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // API caching utilities
 export const apiCache = {
   set: (key: string, value: any) => {
@@ -7,4 +8,7 @@ export const apiCache = {
     const item = sessionStorage.getItem(key);
     return item ? JSON.parse(item) : null;
   }
+=======
+// Utility file: apiCache;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 };

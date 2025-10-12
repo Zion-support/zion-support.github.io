@@ -1,15 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 export default function PrivacyPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
+<<<<<<< HEAD
       <Helmet>
 <<<<<<< HEAD
         <title>Privacy Policy - Zion Tech Group</title>
         <meta name="description" content="How we collect, use, and protect your data." />
+=======
+      <Helmet >
+        <title>Privacy Policy - Zion Tech Group</title>
+        <meta name = "description" content="Our privacy policy and data protection practices." />
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -36,6 +53,6 @@ export default function PrivacyPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }

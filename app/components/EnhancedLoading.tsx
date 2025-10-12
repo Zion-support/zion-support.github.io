@@ -2,15 +2,17 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg'
   text?: string;
   fullScreen?: boolean;
   color?: string;
 }
-
 const EnhancedLoading: React.FC<LoadingProps /> = ({
   const size = 'md',
   text = 'Loading...',
@@ -22,7 +24,6 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
   }
-
   const colorClasses = {
     cyan: 'border-cyan-400',
     purple: 'border-purple-400',
@@ -30,7 +31,6 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
     blue: 'border-blue-400',
     green: 'border-green-400'
   }
-
   const spinner = (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`}  /></div>
@@ -40,13 +40,15 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
       )}
     </div>
   )
-
   if (fullScreen) {
     return (
+    <div>Content</div>
+  );
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{spinner}
       </div>
     )
   }
+<<<<<<< HEAD
 
 
 =======
@@ -74,3 +76,9 @@ export default function ComponentsPage() {
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-d941
+=======
+  return spinner;
+export default EnhancedLoading;
+  return spinner;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b

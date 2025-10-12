@@ -1,6 +1,5 @@
 export default AnalyticsProvider;
   const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
-  
     // Initialize Google Analytics;
       const script = document.createElement('script');
       script.async = true;
@@ -17,13 +16,12 @@ export default AnalyticsProvider;
     // Track page views;
         });
     };
-
     // Handle route changes;
         });
     };
     // Track user interactions;
         const target = e.target as HTMLElement;
-          const text = target.textContent?.trim() || '';
+const text = target.textContent?.trim() || '';
           const href = target.getAttribute('href') || '';
               value: href;
             });

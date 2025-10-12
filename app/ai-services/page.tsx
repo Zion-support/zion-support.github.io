@@ -1,11 +1,42 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AiServicesPage() {
+=======
+import { Brain, BarChart, Shield, Zap } from 'lucide-react';
+export default function AIServicesPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  const services = [
+    {
+      title: 'AI Analytics',
+      description: 'Advanced data analytics powered by AI',
+      icon: <BarChart className="w-8 h-8" />
+    },
+    {
+      title: 'AI Security',
+      description: 'AI-powered cybersecurity solutions',
+      icon: <Shield className="w-8 h-8" />
+    },
+    {
+      title: 'AI Automation',
+      description: 'Intelligent process automation',
+      icon: <Zap className="w-8 h-8" />
+    };
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+  return (
+    <div>Content</div>
+  );
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>Ai Services - Zion Tech Group</title>
 <<<<<<< HEAD
@@ -13,6 +44,11 @@ export default function AiServicesPage() {
 =======
         <meta name="description" content="Professional ai services services by Zion Tech Group. Transform your business with our expert solutions." />
 >>>>>>> cursor/fix-errors-and-merge-to-main-d941
+=======
+      <Helmet >
+        <title>AI Services - Zion Tech Group</title>
+        <meta name = "description" content="Comprehensive AI solutions for modern businesses." />
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -34,6 +70,6 @@ export default function AiServicesPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }

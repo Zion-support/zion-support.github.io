@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 
 // Simple wrapper function to replace withSentry
 <<<<<<< HEAD
@@ -9,9 +10,14 @@ function withSentry(handler) {
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-d941
 
+=======
+// Simple wrapper function to replace withSentry
+function withSentry(handler) {
+  return handler;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
-
 function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -19,13 +25,10 @@ function handler(req, res) {
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
-
   const { name, email, company, phone, message, location } = req.body || {};
-
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
-
   let existing = [];
   try {
     if (fs.existsSync(file)) {
@@ -38,7 +41,6 @@ function handler(req, res) {
     console.error('Error reading existing requests:', error);
     existing = [];
   }
-
   const newRequest = {
     id: Date.now().toString(),
     name,
@@ -50,9 +52,7 @@ function handler(req, res) {
     timestamp: new Date().toISOString(),
     status: 'pending'
   };
-
   existing.push(newRequest);
-
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
@@ -72,5 +72,4 @@ function handler(req, res) {
     }));
   }
 }
-
 module.exports = withSentry(handler);

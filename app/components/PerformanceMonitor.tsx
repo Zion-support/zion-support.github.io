@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, createContext, useContext } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
@@ -96,3 +97,26 @@ export default function ComponentsPage() {
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-d941
+=======
+import { useEffect } from 'react';
+const PerformanceMonitor = () => {
+  useEffect(() => {
+    // Monitor performance metrics
+    if ('performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {;
+            console.log('Navigation timing:', entry);
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['navigation'] });
+      return () => {
+        observer.disconnect();
+      };
+    }
+  }, []);
+  return null;
+};
+export default PerformanceMonitor;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b

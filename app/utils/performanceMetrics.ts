@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performance metrics utilities
 export const getPerformanceMetrics = () => {
   if (typeof window !== 'undefined' && window.performance) {
@@ -7,4 +8,7 @@ export const getPerformanceMetrics = () => {
     };
   }
   return null;
+=======
+// Utility file: performanceMetrics;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 };

@@ -15,15 +15,32 @@ import React from 'react';
 
 =======
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 export default function TeamPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>Team - Zion Tech Group</title>
         <meta name="description" content="Professional team services by Zion Tech Group. Transform your business with our expert solutions." />
+=======
+      <Helmet >
+        <title>Our Team - Zion Tech Group</title>
+        <meta name = "description" content="Meet the experts behind our AI and IT solutions." />
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
@@ -38,7 +55,7 @@ export default function TeamPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-d941

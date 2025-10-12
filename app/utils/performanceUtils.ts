@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performance utility functions
 export const debounce = <T extends (...args: unknown[]) => void>(func: T, wait: number) => {
   let timeout: NodeJS.Timeout;
@@ -9,4 +10,7 @@ export const debounce = <T extends (...args: unknown[]) => void>(func: T, wait: 
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
   };
+=======
+// Utility file: performanceUtils;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 };

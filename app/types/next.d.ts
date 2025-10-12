@@ -24,6 +24,7 @@ export interface User {
 // SVG component type
 declare module '*.svg' {
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
+<<<<<<< HEAD
   export default content;
 }
 
@@ -64,3 +65,13 @@ declare module '*.svg' {
 }
 
 export {};
+=======
+  const content: string;
+  const content: string;
+  const content: string;
+  const content: string;
+  const content: string;
+  const content: string;
+  const content: string;
+  const content: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b

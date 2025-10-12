@@ -5,21 +5,35 @@ import { ArrowRight } from 'lucide-react';
 
 export default function FiveGEdgeComputingPage() {
   return (
+<<<<<<< HEAD
+=======
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
     <>
-      <Helmet>
+      <Helmet >
         <title>5G Edge Computing - Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        <meta name = "description" content="Advanced 5G edge computing solutions for real-time processing and low-latency applications." />
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">5G Edge Computing</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional 5G edge computing services coming soon.</p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
+          <p className="text-lg text-gray-300 mb-8">Advanced 5G edge computing solutions for real-time processing and low-latency applications.</p>
+          <Link to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
+<<<<<<< HEAD
 =======
         <meta name="description" content="Professional 5g edge computing services by Zion Tech Group. Transform your business with our expert solutions." />
       </Helmet>
@@ -38,5 +52,11 @@ export default function FiveGEdgeComputingPage() {
         </div>
       </div>
     </>
+=======
+          </Link>
+        </div>
+      </div>
+    </>;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
   );
 }

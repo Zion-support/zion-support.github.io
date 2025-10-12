@@ -2,8 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 interface SEOProps {
   title?: string;
   description?: string;
@@ -24,9 +27,9 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
-  noindex = false,
+  noindex = false,;
   nofollow = false;
-  const defaultStructuredData = {
+const defaultStructuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -62,29 +65,23 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       "offerCount": "50+",
       "lowPrice": "99",
       "highPrice": "2999",
-      "priceCurrency": "USD"
-
+      "priceCurrency": "USD";
   const finalStructuredData = structuredData || defaultStructuredData;
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
-
   return (
-
+    <div>Content</div>
+  );
         <title>5G Data Analytics - Zion Tech Group</title>
       {/* Basic Meta Tags */}
-    
       <title>{title}</title>
       {/* Canonical URL */}
       {/* Open Graph Meta Tags */}
-    
       {/* Twitter Card Meta Tags */}
-    
       {/* Additional SEO Meta Tags */}
-    
       {/* Performance Hints */}
-
       {/* Structured Data */}
-    
       <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
+<<<<<<< HEAD
 
   )
 
@@ -114,3 +111,6 @@ export default function ComponentsPage() {
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-d941
+=======
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b

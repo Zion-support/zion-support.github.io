@@ -1,8 +1,7 @@
 // Service Worker for Zion Tech Group;
 const CACHE_NAME = 'zion-tech-group-v1'
 const STATIC_CACHE = 'zion-static-v1'
-const DYNAMIC_CACHE = 'zion-dynamic-v1'
-
+const DYNAMIC_CACHE = 'zion-dynamic-v1';
 // Assets to cache immediately;
 const STATIC_ASSETS = [
   '/',
@@ -11,11 +10,9 @@ const STATIC_ASSETS = [
   '/pricing',
   '/manifest.json',
   '/robots.txt'
-]
-
+];
 // Install event - cache static assets;
   console.log('Service Worker installing...')
-  
   event.waitUntil(
     caches.open(STATIC_CACHE)
         console.log('Caching static assets')
@@ -28,10 +25,8 @@ const STATIC_ASSETS = [
       })
   )
 })
-
 // Activate event - clean up old caches;
   console.log('Service Worker activating...')
-  
   event.waitUntil(
     caches.keys()
         return Promise.all(
@@ -46,11 +41,9 @@ const STATIC_ASSETS = [
       })
   )
 })
-
 // Fetch event - serve from cache, fallback to network;
   const { request } = event;
-  const url = new URL(request.url)
-  
+  const url = new URL(request.url);
   // Skip non-GET requests;
   if (request.method !== 'GET') {
     return;
@@ -69,48 +62,41 @@ const STATIC_ASSETS = [
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             // Clone the response;
-            const responseToCache = response.clone()
-            
+            const responseToCache = response.clone();
             // Cache dynamic content;
             caches.open(DYNAMIC_CACHE)
                 cache.put(request, responseToCache)
               })
                 console.error('Failed to cache dynamic content:', error)
               })
-            
             return response;
           })
             console.error('Fetch failed:', error)
-            
             // Return offline page for navigation requests;
-            if (request.destination === 'document') {
-              return caches.match('/offline.html')
-            
+            if (request.destination = == 'document') {
+              return caches.match('/offline.html');
             throw error;
           })
       })
   )
 })
-
 // Background sync for form submissions;
-  if (event.tag === 'contact-form') {
-    event.waitUntil(
+  if (event.tag = == 'contact-form') {
+    event.waitUntil(;
       // Handle form submission sync;
       console.log('Syncing contact form submission')
     )
 })
-
 // Push notifications;
   if (event.data) {
     const data = event.data.json()
-    
     const options = {
       body: data.body,
       icon: '/icon-192x192.png',
       badge: '/badge-72x72.png',
       vibrate: [100, 50, 100],
       data: {
-        dateOfArrival: Date.now(),
+        dateOfArrival: Date.now(),;
         primaryKey: data.primaryKey;
       },
       actions: [
@@ -122,17 +108,14 @@ const STATIC_ASSETS = [
           title: 'Close',
           icon: '/icon-192x192.png'
       ]
-    
     event.waitUntil(
       self.registration.showNotification(data.title, options)
     )
 })
-
 // Notification click;
   event.notification.close()
-  
-  if (event.action === 'explore') {
+  if (event.action = == 'explore') {
     event.waitUntil(
       clients.openWindow('/')
     )
-})
+});

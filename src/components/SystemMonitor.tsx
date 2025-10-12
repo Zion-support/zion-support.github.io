@@ -53,13 +53,13 @@ export default SystemMonitor;
   showDetails?: boolean;
   enableExport?: boolean;
   className?: string;
-  className = ''
+  className = '';
   const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
   // Update metrics;
       const performanceMetrics = performanceOptimizer.getMetrics();
-      const performanceScore = calculatePerformanceScore();
+const performanceScore = calculatePerformanceScore();
       const errorStats = errorHandler.getErrorStatistics();
       // Get memory info;
       const memoryInfo = getMemoryInfo();
@@ -101,7 +101,7 @@ export default SystemMonitor;
   };
   // Get network information;
       const nav = navigator as NavigatorWithConnection;
-      const connection = nav.connection;
+const connection = nav.connection;
         saveData: connection?.saveData || false;
       };
       saveData: false;
@@ -109,12 +109,10 @@ export default SystemMonitor;
   };
   // Export data;
     if (!metrics) return;
-    
     };
-    
     });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+const a = document.createElement('a');
     a.href = url;
     a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
     document.body.appendChild(a);
@@ -134,30 +132,29 @@ export default SystemMonitor;
       case 'low': return 'text-green-600 bg-green-100';
       default: return 'text-gray-600 bg-gray-100';
   };
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-          <span className="ml-2 text-gray-600">Loading system metrics...</span>
+          <div className = "animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+          <span className="ml-2 text-gray-600">Loading system metrics...</span>;
   );
-        <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>
+        <h2 className = "text-2xl font-bold text-gray-900">System Monitor</h2>
             <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
-              {isMonitoring ? 'Monitoring' : 'Stopped'}
-            
+              {isMonitoring ? 'Monitoring' : 'Stopped'};
               Export Data;
           )}
           Last updated: {lastUpdate.toLocaleTimeString()}
       )}
       {/* Performance Metrics */}
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance</h3>
+        <h3 className = "text-lg font-semibold text-gray-900 mb-4">Performance</h3>
               <span className="text-sm font-medium text-gray-600">Performance Score</span>
                 {metrics.performance.score}
-              <span className="text-sm font-medium text-gray-600">Load Time</span>
+              <span className="text-sm font-medium text-gray-600">Load Time</span>;
                 {metrics.performance.loadTime.toFixed(0)}ms;
-              <span className="text-sm font-medium text-gray-600">FCP</span>
+              <span className = "text-sm font-medium text-gray-600">FCP</span>;
                 {metrics.performance.firstContentfulPaint.toFixed(0)}ms;
-              <span className="text-sm font-medium text-gray-600">LCP</span>
+              <span className = "text-sm font-medium text-gray-600">LCP</span>;
                 {metrics.performance.largestContentfulPaint.toFixed(0)}ms;
-              <span className="text-sm font-medium text-gray-600">FID</span>
+              <span className = "text-sm font-medium text-gray-600">FID</span>;
                 {metrics.performance.firstInputDelay.toFixed(0)}ms;
-              <span className="text-sm font-medium text-gray-600">CLS</span>
+              <span className = "text-sm font-medium text-gray-600">CLS</span>
                 {metrics.performance.cumulativeLayoutShift.toFixed(3)}
       {/* Error Metrics */}
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>
@@ -210,6 +207,6 @@ export default SystemMonitor;
                     <span className="capitalize">{category}</span>
                     <span>{count}</span>
                 ))}
-      )}
+      )};
   );
 };

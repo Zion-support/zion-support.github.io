@@ -1,12 +1,28 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  return (
+    <div>Content</div>
+  );
+        <title>5G Data Analytics - Zion Tech Group</title>
+      <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+const SEOHead: React.FC = () => {
+  return (
+    <div>Content</div>
+  );
+    <>
+      <Helmet >
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+      <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
+      <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, 5 G implementation" />
+      <meta name="viewport" content="width="device-width," initial-scale=1.0" /  />
+      <meta name="theme-color" content="#8 b5 cf6" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
       {/* Open Graph Meta Tags */}
-    
       {/* Twitter Card Meta Tags */}
-    
       {/* Additional SEO Meta Tags */}
-
       {/* Structured Data */}
       <script type="application/ld+json"  />{JSON.stringify({
           "@context": "https: //schema.org",
@@ -35,6 +51,7 @@ import React from 'react';
             "https://twitter.com/ziontechgroup"
           ]
         })}
+<<<<<<< HEAD
 
   );
 };
@@ -68,3 +85,11 @@ export default function ComponentsPage() {
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-d941
+=======
+      </script>
+    </Helmet>
+    </>;
+  );
+};
+export default SEOHead;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b

@@ -1,6 +1,14 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+'use client'
+const EnhancedServicesShowcase: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
   const services = [
     {
       icon: Brain,
@@ -37,20 +45,21 @@ import React from 'react';
       title: 'Digital Transformation',
       description: 'Complete digital transformation services to modernize your business and stay competitive.',
       features: ['Strategy Development', 'Technology Integration', 'Change Management', 'Training & Support']
-    }
+    };
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div>Content</div>
+  );
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
           <h2 className="w-5h-5ml-2" />Our Core Services;
           </h2>
           <p className="w-5h-5ml-2">Comprehensive AI and IT solutions designed to transform your business and drive innovation;
           </p>
         </div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           {services.map((service, index) => (
-
               <div key={index} className="cyber-card p-8 grouphover:scale-105transition-transform" /></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
                 <service.icon className="h-12w-12tex t-cyan-400mr-4"  /></service>
@@ -70,15 +79,16 @@ import React from 'react';
                   ))}
                 </ul>
               </div>
-              <button className="w-5h-5ml-2" /></button>
+              <button className="w-5h-5ml-2" /></button>;
                 Learn More;
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+                <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
               </button>
             </div>
           ))}
         </div>
     </div>
   )
+<<<<<<< HEAD
 
 =======
 import { Helmet } from 'react-helmet-async';
@@ -86,8 +96,20 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function ComponentsPage() {
+=======
+export default function EnhancedServicesShowcase() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>;
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>Components - Zion Tech Group</title>
         <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
@@ -97,15 +119,29 @@ export default function ComponentsPage() {
           <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
           <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
           <Link
+=======
+      <Helmet >
+        <title>Enhanced Services Showcase - Zion Tech Group</title>
+        <meta name = "description" content="Professional enhanced services showcase by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Enhanced Services Showcase</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional enhanced services showcase coming soon.</p>
+          <Link >
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-d941
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b

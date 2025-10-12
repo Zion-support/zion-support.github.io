@@ -1,11 +1,25 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function Ai3dGenerationPage() {
+=======
+
+export default function AI3DGeneration() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
+  return (
+    <div>Content</div>
+  );
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>Ai 3d Generation - Zion Tech Group</title>
 <<<<<<< HEAD
@@ -33,8 +47,18 @@ export default function Ai3dGenerationPage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
+=======
+      <Helmet >
+        <title>AI 3D Generation - Zion Tech Group</title>
+        <meta name = "description" content="AI-powered 3D content generation and modeling solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">AI 3D Generation</h1>
+          <p className="text-lg text-gray-300">AI 3D generation services coming soon.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
         </div>
       </div>
-    </>
+    </>;
   );
 }

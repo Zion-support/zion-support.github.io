@@ -34,7 +34,6 @@ export default EnhancedErrorBoundary;
       // In a real app, you would send this to your error reporting service;
       // For now, we'll just log it;
       console.log('Error report prepared:', errorReport);
-       
       // Example: Send to error reporting service;
       //   body: JSON.stringify(errorReport)
       // });
@@ -54,12 +53,11 @@ export default EnhancedErrorBoundary;
   };
     window.location.href = '/';
   };
-    
     };
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
         // Show success message;
         const button = document.getElementById('copy-error-details');
-          const originalText = button.textContent;
+const originalText = button.textContent;
           button.textContent = 'Copied!';
             button.textContent = originalText;
           }, 2000);
@@ -70,6 +68,5 @@ export default EnhancedErrorBoundary;
       // Custom fallback UI;
         return this.props.fallback;
       const { retryCount, error } = this.state;
-      
       );
     return this.props.children;

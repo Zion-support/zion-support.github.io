@@ -1,18 +1,33 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 export default function CaseStudiesPage() {
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
-      <Helmet>
+      <Helmet >
         <title>Case Studies - Zion Tech Group</title>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <meta name="description" content="Success stories from our clients." />
 =======
         <meta name="description" content="Professional case studies services by Zion Tech Group. Transform your business with our expert solutions." />
 >>>>>>> cursor/fix-errors-and-merge-to-main-d941
+=======
+        <meta name = "description" content="Explore our successful AI and IT implementations." />
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
         <div className="text-center">
@@ -34,6 +49,6 @@ export default function CaseStudiesPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }

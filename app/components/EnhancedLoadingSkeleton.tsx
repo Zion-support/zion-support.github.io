@@ -1,6 +1,14 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+'use client'
+const EnhancedLoadingSkeletonPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
   const features = [
     {
       icon: Brain,
@@ -21,9 +29,9 @@ import React from 'react';
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
-    }
+    };
   ];
-  const benefits = [
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -31,10 +39,12 @@ import React from 'react';
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
-    'Proven track record of success'
+    'Proven track record of success';
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div>Content</div>
+  );
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <Helmet></Helmet>
         <title>EnhancedLoadingSkeleton | Zion Tech Group</title>
         <meta name="description" content="Professional EnhancedLoadingSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
@@ -44,16 +54,16 @@ import React from 'react';
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
+            <h1 className="w-5h-5ml-2" /></h1>;
               <span className="w-5h-5ml-2" />EnhancedLoadingSkeleton;
               </span>
               <br /></br>
-              <span className="text-white"  >Solutions</span>
+              <span className = "text-white"  >Solutions</span>
             </h1>
             <p className="w-5h-5ml-2">Transform your business with our advanced enhancedloadingskeleton solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
               <button className="w-5h-5ml-2">Get Started;
               </button>
               <button className="w-5h-5ml-2">Learn More;
@@ -62,7 +72,7 @@ import React from 'react';
         </div>
       </section>
       {/* Features Section */}
-      <section className="w-5h-5ml-2" /></section>
+      <section className = "w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             <h2 className="w-5h-5ml-2" />Why Choose Our EnhancedLoadingSkeleton Solutions?
@@ -85,10 +95,10 @@ import React from 'react';
       {/* Benefits Section */}
       <section className="w-5h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>;
             <h2 className="w-5h-5ml-2" />Key Benefits;
             </h2>
-            <p className="w-5h-5ml-2">Discover the advantages of our enhancedloadingskeleton solutions.
+            <p className = "w-5h-5ml-2">Discover the advantages of our enhancedloadingskeleton solutions.
             </p>
           </div>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -108,16 +118,17 @@ import React from 'react';
           <p className="w-5h-5ml-2">Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.
           </p>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <button className="w-5h-5ml-2" /></button>
+            <button className="w-5h-5ml-2" /></button>;
               Get Started Now;
-              <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-            </button>
+              <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
+            </button>;
             <button className="w-5h-5ml-2">Contact Sales;
             </button>
           </div>
       </section>
     </div>
   )
+<<<<<<< HEAD
 
 =======
 import { Helmet } from 'react-helmet-async';
@@ -125,8 +136,20 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function ComponentsPage() {
+=======
+export default function EnhancedLoadingSkeletonPage() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
   return (
+    <div>Content</div>
+  );
+    <div>Component content</div>
+  );
+}
+  return (
+    <div>Content</div>
+  );
     <>
+<<<<<<< HEAD
       <Helmet>
         <title>Components - Zion Tech Group</title>
         <meta name="description" content="Professional components services by Zion Tech Group. Transform your business with our expert solutions." />
@@ -136,15 +159,29 @@ export default function ComponentsPage() {
           <h1 className="text-4xl font-bold text-white mb-6">Components</h1>
           <p className="text-lg text-gray-300 mb-8">Professional components services coming soon.</p>
           <Link
+=======
+      <Helmet >
+        <title>Enhanced Loading Skeleton - Zion Tech Group</title>
+        <meta name = "description" content="Professional enhanced loading skeleton by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Enhanced Loading Skeleton</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional enhanced loading skeleton coming soon.</p>
+          <Link >
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-d941
+=======
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b

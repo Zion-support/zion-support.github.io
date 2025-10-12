@@ -30,7 +30,7 @@
   // Validate a single field;
       if (!validationSchema[field]) return;
       const fieldValue = values[field];
-      const rules = validationSchema[field];
+const rules = validationSchema[field];
       const result = validateField(fieldValue, rules);
         [field]: result.errors;
       }));
@@ -39,7 +39,7 @@
   // Validate all fields;
     if (Object.keys(validationSchema).length === 0) return true;
     const validationResults = validateForm(values, validationSchema as Record<keyof T, ValidationRule[]>);
-    const formErrors = getFormErrors(validationResults);
+const formErrors = getFormErrors(validationResults);
     setErrors(formErrors);
     return isFormValid(validationResults);
   }, [values, validationSchema]);

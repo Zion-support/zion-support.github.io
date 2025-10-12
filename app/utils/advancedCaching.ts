@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Advanced caching utilities
 export const cache = {
   set: (key: string, value: any) => {
@@ -10,4 +11,7 @@ export const cache = {
   clear: () => {
     localStorage.clear();
   }
+=======
+// Utility file: advancedCaching;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 };
