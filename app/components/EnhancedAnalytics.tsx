@@ -1,9 +1,5 @@
 'use client';
-<<<<<<< HEAD
 import React, { createContext, useContext, useState, useEffect } from 'react';
-=======
-import React, { createContext, useContext, useEffect } from 'react';
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
 
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
@@ -58,26 +54,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-<<<<<<< HEAD
-  const trackPageView = (page: string) => {
-    if (!isInitialized) return;
-    
-    // Track page view (placeholder for actual analytics implementation)
-    console.log('Analytics Page View:', page);
-    
-    // Here you would integrate with your analytics service
-    // Example: gtag('config', 'GA_MEASUREMENT_ID', { page_path: page });
-  };
-
-  const setUser = (userId: string, properties?: Record<string, any>) => {
-    if (!isInitialized) return;
-    
-    // Set user properties (placeholder for actual analytics implementation)
-    console.log('Analytics Set User:', userId, properties);
-    
-    // Here you would integrate with your analytics service
-    // Example: gtag('config', 'GA_MEASUREMENT_ID', { user_id: userId });
-=======
   const identify = (userId: string, traits?: Record<string, any>) => {
     if (typeof window !== 'undefined') {
       // Google Analytics
@@ -107,7 +83,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
       // Custom analytics
       console.log('Analytics Page:', name, properties);
     }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
   };
 
   const value: AnalyticsContextType = {
@@ -123,9 +98,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   );
 };
 
-<<<<<<< HEAD
-export default AnalyticsProvider;
-=======
 // Extend Window interface for TypeScript
 declare global {
   interface Window {
@@ -133,4 +105,5 @@ declare global {
     gtag: (...args: any[]) => void;
   }
 }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
+
+export default AnalyticsProvider;
