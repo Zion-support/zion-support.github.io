@@ -138,15 +138,15 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center">
               <Mail className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">contact@ziontech.com</span>
+              <span className="text-gray-400">kleber@ziontechgroup.com</span>
             </div>
             <div className="flex items-center">
               <Phone className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">+1 (555) 123-4567</span>
+              <span className="text-gray-400">+1 (302) 464-0950</span>
             </div>
             <div className="flex items-center">
               <MapPin className="w-5 h-5 text-gray-400 mr-3" />
-              <span className="text-gray-400">San Francisco, CA</span>
+              <span className="text-gray-400">364 E Main St STE 1008, Middletown, DE 19709</span>
             </div>
           </div>
         </div>

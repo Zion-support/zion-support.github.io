@@ -8,20 +8,20 @@ const ContactPage: React.FC = () => {
     {
       icon: <Mail className="w-6 h-6 text-blue-500" />,
       title: 'Email Us',
-      details: 'contact@ziontech.com',
+      details: 'kleber@ziontechgroup.com',
       description: 'Send us an email anytime'
     },
     {
       icon: <Phone className="w-6 h-6 text-green-500" />,
       title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 8am to 6pm'
+      details: '+1 (302) 464-0950',
+      description: 'Mon-Fri from 8am to 6pm EST'
     },
     {
       icon: <MapPin className="w-6 h-6 text-red-500" />,
       title: 'Visit Us',
-      details: 'San Francisco, CA',
-      description: 'Come say hello at our office'
+      details: 'Middletown, DE',
+      description: '364 E Main St STE 1008, Middletown, DE 19709'
     }
   ];
 
@@ -118,14 +118,14 @@ const ContactPage: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="mailto:contact@ziontech.com"
+              href="mailto:kleber@ziontechgroup.com"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
             >
               Email Us Now
               <Send className="w-5 h-5 ml-2" />
             </a>
             <a 
-              href="tel:+15551234567"
+              href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               Call Us

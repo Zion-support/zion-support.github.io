@@ -35,8 +35,16 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send the error to a service like Sentry
+      // Send to error reporting service
       console.error('ErrorBoundary caught an error:', error, errorInfo);
+      
+      // Example: Send to analytics or error reporting service
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'exception', {
+          description: error.toString(),
+          fatal: false,
+        });
+      }
     }
   }
 

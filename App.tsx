@@ -6,6 +6,8 @@ import Footer from './app/components/Footer'
 import ErrorBoundary from './app/components/ErrorBoundary'
 import LoadingSpinner from './app/components/LoadingSpinner'
 import SEOHead from './app/components/SEOHead'
+import PerformanceMonitor from './app/components/PerformanceMonitor'
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
 
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./app/page'))
@@ -32,6 +34,8 @@ function App() {
         <Router>
           <div className="min-h-screen bg-gray-50">
             <SEOHead />
+            <PerformanceMonitor />
+            <AccessibilityEnhancer />
             <Navigation />
             <Suspense fallback={<PageLoader />}>
               <Routes>
