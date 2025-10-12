@@ -3,13 +3,6 @@ import React from 'react'
 import SEOHead from './components/SEOHead'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Cpu, Rocket, Network, BarChart3, Bot, Lock, Star, CheckCircle, DollarSign, Users, Clock } from 'lucide-react'
-import { Link } from 'react-router-dom'
-
-const HomePage: React.FC = () => {
-  const features = [
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Cloud, 
@@ -37,7 +30,8 @@ import {
   Github,
   Linkedin,
   Twitter
-} from 'lucide-react';
+} from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export default function HomePage() {
   const aiServices = [
@@ -62,31 +56,13 @@ export default function HomePage() {
       description: 'Transform your data into actionable insights with our advanced analytics platform.'
     }
   ]
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Home</h1>
-          <p className="text-xl text-gray-300 mb-8">Welcome to Zion Tech Group - Advanced AI and IT Solutions</p>
-          <a
-            href="/"
-            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-          >
-            Go Home
-          </a>
-        </div>
-import { Link } from 'react-router-dom';
-import SEOHead from './components/SEOHead';
-import FuturisticBackground from './components/FuturisticBackground';
-import FuturisticCard from './components/FuturisticCard';
-import NeonButton from './components/NeonButton';
-import AnimatedText from './components/AnimatedText';
 
-export default function HomePage() {
   const stats = [
     { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99%', label: 'Success Rate' },
-    { number: '24/7', label: 'Support' }
-  ];
+    { number: '100+', label: 'Happy Clients' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '99.9%', label: 'Uptime Guarantee' }
+  ]
 
   const services = [
     {
@@ -95,7 +71,7 @@ export default function HomePage() {
       description: 'Custom software solutions tailored to your business requirements.'
     },
     {
-      icon: <Network className="w-6 h-6 text-green-500" />,
+      icon: <Wifi className="w-6 h-6 text-green-500" />,
       title: 'IT Infrastructure',
       description: 'Robust and scalable IT infrastructure solutions for your organization.'
     },
@@ -105,17 +81,10 @@ export default function HomePage() {
       description: 'Data-driven insights to help you make informed business decisions.'
     },
     {
-      icon: <Bot className="w-6 h-6 text-orange-500" />,
+      icon: <Cpu className="w-6 h-6 text-orange-500" />,
       title: 'AI Automation',
       description: 'Intelligent automation solutions to streamline your business processes.'
     }
-  ]
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '100+', label: 'Happy Clients' },
-    { number: '24/7', label: 'Support Available' },
-    { number: '99.9%', label: 'Uptime Guarantee' }
   ]
 
   return (
@@ -188,13 +157,13 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+            {aiServices.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  {feature.icon}
+                  {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300">{service.description}</p>
               </div>
             ))}
           </div>
@@ -250,21 +219,13 @@ export default function HomePage() {
                 >
                   Explore AI Services
                 </Link>
-                </NeonButton>
               </div>
             </div>
           </div>
         </div>
       </section>
-        </section>
 
       <Footer />
     </div>
   )
-}
-
-export default HomePage
-      </div>
-    </>
-  );
 }
