@@ -95,11 +95,11 @@
     "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild",
     "optimize:enhanced": "npm run optimize:performance && npm run build:optimized",
     "deploy:production": "npm run optimize:enhanced && npm run build:check && echo 'Ready for production deployment'",
-    "generate:sitemap": "node scripts/generate-sitemap.js",
+    "generate:sitemap": "node scripts/generate-sitemap.cjs",
     "optimize:performance": "node scripts/performance-optimizer.cjs",
     "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
     "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\"",
-    "analyze:bundle": "node scripts/analyze-bundle.js",
+    "analyze:bundle-script": "node scripts/analyze-bundle.js",
     "analyze:full": "npm run build && npm run analyze:bundle",
     "debug:performance": "localStorage.setItem('debug-performance', 'true') && npm run dev"
   },

@@ -2,7 +2,7 @@ import React from 'react';
 'use client'
 import { Helmet } from 'react-helmet-async';
 
-import { ArrowRight, Mail, Brain } from 'lucide-react';
+import { ArrowRight, Mail, Brain, Zap, Shield, Phone } from 'lucide-react';
 
 const EnhancedAnalytics: React.FC = () => {
   const features = [
@@ -142,3 +142,22 @@ const EnhancedAnalytics: React.FC = () => {
     </div>
   )
 }
+
+// Analytics hook
+export const useAnalytics = () => {
+  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag;
+      gtag('event', eventName, properties);
+    }
+  };
+
+  return { trackEvent };
+};
+
+// Analytics Provider
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <>{children}</>;
+};
+
+export default EnhancedAnalytics;

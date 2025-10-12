@@ -98,6 +98,7 @@ import {
     { number: '24/7', label: 'Support Available', icon: <Monitor className="w-6 h-6 text-purple-400" /> }
   ]
 
+const AiChatbotBuilderPage: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -296,5 +297,7 @@ import {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
+
+export default AiChatbotBuilderPage;
