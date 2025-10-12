@@ -1,7 +1,10 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { CheckCircle, Phone, Mail, Zap, Shield, Brain, Globe } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-55ae
 
 const BusinessIntelligencePage: React.FC = () => {
   const features = [

@@ -33,6 +33,7 @@ const FuturisticBackgroundPage: React.FC = () => {
     }
   ]
 
+<<<<<<< HEAD
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -69,6 +70,14 @@ const FuturisticBackgroundPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your digital presence with cutting-edge futuristic background technology. 
               Powered by advanced AI and modern design principles.
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+      </Helmet>
+      
+      <Navigation />
+>>>>>>> cursor/fix-errors-and-merge-to-main-55ae
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
@@ -80,6 +89,7 @@ const FuturisticBackgroundPage: React.FC = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 
         {/* Features Section */}
@@ -183,6 +193,11 @@ const FuturisticBackgroundPage: React.FC = () => {
 
       <Footer />
     </div>
+=======
+              </div>
+            ))}
+          </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-55ae
   )
 }
 

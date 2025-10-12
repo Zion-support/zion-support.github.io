@@ -1,19 +1,15 @@
+<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, ArrowRight, BarChart3, FileText, TrendingUp, Clock, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-55ae
 
-const AIAutomatedReportingPage: React.FC = () => {
-  const features = [
+  const benefits = [
     {
-      icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
-      title: 'Real-time Analytics',
-      description: 'Get instant insights from your data with automated reporting and real-time dashboards.',
-      benefits: ['Live data updates', 'Interactive charts', 'Custom metrics', 'Performance tracking']
-    },
-    {
-      icon: <FileText className="w-8 h-8 text-green-500" />,
       title: 'Automated Reports',
+<<<<<<< HEAD
       description: 'Generate comprehensive reports automatically without manual intervention.',
       benefits: ['Scheduled reports', 'Multiple formats', 'Custom templates', 'Email delivery']
     },
@@ -287,3 +283,9 @@ const AIAutomatedReportingPage: React.FC = () => {
 };
 
 export default AIAutomatedReportingPage;
+=======
+      description: 'Generate reports automatically without manual intervention'
+    }
+  ]
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-55ae
