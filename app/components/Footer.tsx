@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star, Rocket } from 'lucide-react'
 
 export default function Footer() {
   const aiServices = [
@@ -10,6 +10,15 @@ export default function Footer() {
     { name: 'AI Automation', path: '/ai-automation' },
     { name: 'AI Computer Vision', path: '/ai-computer-vision' },
     { name: 'AI Data Analytics', path: '/ai-data-analytics' }
+  ]
+
+  const microSaasServices = [
+    { name: 'All Micro-SaaS', path: '/micro-saas' },
+    { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard' },
+    { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler' },
+    { name: 'Content Generator', path: '/micro-saas/content-generator' },
+    { name: 'Email Marketing', path: '/micro-saas/email-marketing' },
+    { name: 'Expense Tracker', path: '/micro-saas/expense-tracker' }
   ]
 
   const itServices = [
@@ -42,7 +51,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
@@ -82,6 +91,27 @@ export default function Footer() {
                   <Link
                     to={service.path}
                     className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Micro-SaaS Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-6 flex items-center">
+              <Rocket className="w-5 h-5 mr-2 text-green-400" />
+              Micro-SaaS
+            </h3>
+            <ul className="space-y-3">
+              {microSaasServices.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-green-400 transition-colors flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
@@ -158,21 +188,21 @@ export default function Footer() {
               <Mail className="w-5 h-5 text-cyan-400 mr-3" />
               <div>
                 <p className="text-sm text-gray-400">Email</p>
-                <p className="text-white">contact@ziontechgroup.com</p>
+                <p className="text-white">kleber@ziontechgroup.com</p>
               </div>
             </div>
             <div className="flex items-center">
               <Phone className="w-5 h-5 text-purple-400 mr-3" />
               <div>
                 <p className="text-sm text-gray-400">Phone</p>
-                <p className="text-white">+1 (555) 123-4567</p>
+                <p className="text-white">+1 302 464 0950</p>
               </div>
             </div>
             <div className="flex items-center">
               <MapPin className="w-5 h-5 text-green-400 mr-3" />
               <div>
                 <p className="text-sm text-gray-400">Location</p>
-                <p className="text-white">San Francisco, CA</p>
+                <p className="text-white">364 E Main St STE 1008 Middletown DE 19709</p>
               </div>
             </div>
           </div>

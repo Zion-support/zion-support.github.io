@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, Users, BarChart3, Settings } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, Users, BarChart3, Settings, Rocket, Calendar, Mail, CreditCard, Search, Headphones, FileText } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -29,7 +29,20 @@ export default function Navigation() {
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'AI Automation', path: '/ai-automation', icon: <Settings className="w-4 h-4" /> },
     { name: 'AI Computer Vision', path: '/ai-computer-vision', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Cybersecurity', path: '/ai-cybersecurity', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI Document Processing', path: '/ai-document-processing', icon: <FileText className="w-4 h-4" /> }
+  ]
+
+  const microSaasServices = [
+    { name: 'All Micro-SaaS', path: '/micro-saas', icon: <Rocket className="w-4 h-4" /> },
+    { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: <Calendar className="w-4 h-4" /> },
+    { name: 'Content Generator', path: '/micro-saas/content-generator', icon: <Brain className="w-4 h-4" /> },
+    { name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: <Mail className="w-4 h-4" /> },
+    { name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: <CreditCard className="w-4 h-4" /> },
+    { name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: <Search className="w-4 h-4" /> },
+    { name: 'Support Bot', path: '/micro-saas/support-bot', icon: <Headphones className="w-4 h-4" /> }
   ]
 
   const itServices = [
@@ -111,6 +124,32 @@ export default function Navigation() {
               {activeDropdown === 'it' && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
                   {itServices.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={service.path}
+                      onClick={closeDropdown}
+                      className="flex items-center px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
+                    >
+                      {service.icon}
+                      <span className="ml-3">{service.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Micro-SaaS Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('micro-saas')}
+                className="flex items-center text-white hover:text-cyan-400 transition-colors"
+              >
+                Micro-SaaS
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {activeDropdown === 'micro-saas' && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                  {microSaasServices.map((service, index) => (
                     <Link
                       key={index}
                       to={service.path}
@@ -208,6 +247,23 @@ export default function Navigation() {
                 <div className="text-cyan-400 font-medium mb-2">IT Services</div>
                 <div className="pl-4 space-y-1">
                   {itServices.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={service.path}
+                      onClick={() => setIsOpen(false)}
+                      className="block text-gray-300 hover:text-cyan-400 transition-colors"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile Micro-SaaS Services */}
+              <div className="px-3 py-2">
+                <div className="text-cyan-400 font-medium mb-2">Micro-SaaS</div>
+                <div className="pl-4 space-y-1">
+                  {microSaasServices.map((service, index) => (
                     <Link
                       key={index}
                       to={service.path}
