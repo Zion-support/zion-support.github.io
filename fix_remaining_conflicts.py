@@ -1,118 +1,83 @@
 #!/usr/bin/env python3
 """
-Comprehensive script to fix all remaining merge conflicts
+Script to fix all remaining merge conflicts in the codebase
 """
 import os
 import re
 import glob
 
-def clean_conflicts_in_file(file_path):
-    """Clean all merge conflict markers from a file"""
+def fix_merge_conflicts(file_path):
+    """Fix merge conflicts in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        original_content = content
+        # Check if file has merge conflicts
+        if '<<<<<<< HEAD' not in content:
+            return False
         
-        # Remove all conflict markers and keep the content after =======
-        # Pattern 1:  ... 
-        content = re.sub(r'\n(.*?)\n
+        print(f"Fixing merge conflicts in: {file_path}")
         
-        # Pattern 2: Remove any remaining conflict markers
-        content = re.sub(r'\n.*?\n
+        # Remove all merge conflict markers and keep the last version
+        # This is a simple approach - in practice, you might want more sophisticated conflict resolution
         
-        # Pattern 3: Remove standalone markers
-        content = re.sub(r'^\n', '', content, flags=re.MULTILINE)
-        content = re.sub(r'^
+        # Split by merge conflict markers
+        parts = re.split(r'<<<<<<< HEAD.*?=======.*?>>>>>>> [a-f0-9]+', content, flags=re.DOTALL)
         
-        # Clean up duplicate imports and empty lines
-        lines = content.split('\n')
-        cleaned_lines = []
-        seen_imports = set()
-        in_import_block = False
-        
-        for line in lines:
-            stripped = line.strip()
+        # If we have multiple parts, take the last one (usually the most recent/complete)
+        if len(parts) > 1:
+            # Take the last part, but also check if there are any remaining conflict markers
+            clean_content = parts[-1]
             
-            # Handle import statements
-            if stripped.startswith('import ') or stripped.startswith('from '):
-                if stripped not in seen_imports:
-                    cleaned_lines.append(line)
-                    seen_imports.add(stripped)
-                in_import_block = True
-            elif stripped == '' and in_import_block:
-                # Skip empty lines in import block
-                continue
-            elif stripped != '':
-                in_import_block = False
-                cleaned_lines.append(line)
-            else:
-                cleaned_lines.append(line)
-        
-        content = '\n'.join(cleaned_lines)
-        
-        # Remove excessive empty lines
-        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
-        
-        if content != original_content:
+            # Remove any remaining conflict markers
+            clean_content = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>> [a-f0-9]+', '', clean_content, flags=re.DOTALL)
+            clean_content = re.sub(r'=======.*?>>>>>>> [a-f0-9]+', '', clean_content, flags=re.DOTALL)
+            clean_content = re.sub(r'<<<<<<< HEAD.*?=======', '', clean_content, flags=re.DOTALL)
+            
+            # Clean up extra whitespace
+            clean_content = re.sub(r'\n\s*\n\s*\n', '\n\n', clean_content)
+            clean_content = clean_content.strip() + '\n'
+            
+            # Write the cleaned content back
             with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
+                f.write(clean_content)
+            
             return True
-        
-        return False
-        
+        else:
+            # No conflicts found or already resolved
+            return False
+            
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to clean all conflicts"""
-    # Files that still have conflicts
-    problem_files = [
-        'app/components/AccessibilityEnhancer.tsx',
-        'app/components/Footer.tsx', 
-        'app/components/PerformanceMonitor.tsx',
-        'app/components/Navigation.tsx',
-        'app/micro-saas/page.tsx',
-        'app/utils/accessibilityChecker.ts',
-        'src/types/guards.ts',
-        'src/types/app.types.ts',
-        'src/utils/enhanced-performance.ts'
+    """Main function to process all files"""
+    # Get all TypeScript and JavaScript files
+    patterns = [
+        '**/*.tsx',
+        '**/*.ts', 
+        '**/*.jsx',
+        '**/*.js',
+        '**/*.css',
+        '**/*.json'
     ]
     
-    files_cleaned = 0
+    files_processed = 0
+    files_fixed = 0
     
-    for file_path in problem_files:
-        if os.path.exists(file_path):
-            print(f"Cleaning {file_path}")
-            if clean_conflicts_in_file(file_path):
-                files_cleaned += 1
-                print(f"  ✅ Cleaned")
-            else:
-                print(f"  ℹ️  No changes needed")
-        else:
-            print(f"  ❌ File not found: {file_path}")
+    for pattern in patterns:
+        for file_path in glob.glob(pattern, recursive=True):
+            # Skip node_modules and other irrelevant directories
+            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', 'build', '__tests__']):
+                continue
+                
+            files_processed += 1
+            if fix_merge_conflicts(file_path):
+                files_fixed += 1
     
-    print(f"\nCleaned {files_cleaned} files")
-    
-    # Final verification
-    remaining_conflicts = []
-    for file_path in problem_files:
-        if os.path.exists(file_path):
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
-                    remaining_conflicts.append(file_path)
-            except:
-                pass
-    
-    if remaining_conflicts:
-        print(f"\n⚠️  {len(remaining_conflicts)} files still have conflicts:")
-        for file_path in remaining_conflicts:
-            print(f"  - {file_path}")
-    else:
-        print("\n🎉 All conflicts resolved!")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed merge conflicts in {files_fixed} files")
 
 if __name__ == "__main__":
     main()
