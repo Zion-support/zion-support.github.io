@@ -368,10 +368,14 @@ const App: React.FC = () => {
                             <Route path="/community" element={<CommunityPage />} />
                             <Route path="/compliance" element={<CompliancePage />} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
                             
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
                             {/* 404 Route */}
                             <Route path="*" element={
                               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -404,8 +408,12 @@ const App: React.FC = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default App;
 =======
 App.displayName = 'App';
 export default App;
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
+=======
+export default App;
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b

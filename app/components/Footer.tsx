@@ -2,17 +2,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, Cpu, ArrowRight, BarChart, Shield, Globe, Database, Smartphone, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, TrendingUp, Calendar, CheckCircle, ShoppingCart, Star, Award, Sparkles } from 'lucide-react';
 =======
 import React from 'react';
 import { Link } from 'react-router-dom';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -92,54 +95,67 @@ const Footer: React.FC = () => {
     { name: 'Zion AI Email Assistant', url: '/zion-ai-email-assistant', description: 'AI email management' },
     { name: 'Zion AI SEO Optimizer', url: '/zion-ai-seo-optimizer', description: 'AI SEO optimization' }
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
+=======
+    { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder' },
+    { name: 'AI Content Generation', url: '/ai-content-generation' },
+    { name: 'AI Data Analytics', url: '/ai-data-analytics' },
+    { name: 'AI Computer Vision', url: '/ai-computer-vision' },
+    { name: 'AI Automation', url: '/ai-automation' },
+    { name: 'AI Voice Solutions', url: '/ai-voice-solutions' }
   ];
 
-  const companyLinks = [
+  const itServices = [
+    { name: 'Cloud Infrastructure', url: '/cloud-infrastructure' },
+    { name: 'Cybersecurity', url: '/cybersecurity-solutions' },
+    { name: 'Web Development', url: '/web-development' },
+    { name: 'Mobile Development', url: '/mobile-development' },
+    { name: 'API Development', url: '/api-development' },
+    { name: 'DevOps & CI/CD', url: '/devops-cicd' }
+  ];
+
+  const microSaas = [
+    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro' },
+    { name: 'Zion Chat AI', url: '/zion-chat-ai' },
+    { name: 'Zion Security Shield', url: '/zion-security-shield' },
+    { name: 'Zion Cloud Vault', url: '/zion-cloud-vault' },
+    { name: 'Zion Content Studio', url: '/zion-content-studio' },
+    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence' }
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
+  ];
+
+  const company = [
     { name: 'About Us', url: '/about' },
-<<<<<<< HEAD
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
-    { name: 'Case Studies', url: '/case-studies' },
-    { name: 'Partners', url: '/partners' },
-    { name: 'Press', url: '/press' },
-    { name: 'Status', url: '/status' }
-  ];
-
-  const resourceLinks = [
-    { name: 'Documentation', url: '/docs' },
-    { name: 'API Reference', url: '/api-docs' },
-    { name: 'Tutorials', url: '/tutorials' },
+    { name: 'Contact', url: '/contact' },
     { name: 'Blog', url: '/blog' },
-    { name: 'FAQ', url: '/faq' },
-    { name: 'Support', url: '/support' },
-    { name: 'Community', url: '/community' },
-    { name: 'Demo', url: '/demo' }
+    { name: 'Case Studies', url: '/case-studies' }
   ];
 
-  const legalLinks = [
+  const legal = [
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' },
     { name: 'Cookie Policy', url: '/cookies' },
-    { name: 'Compliance', url: '/compliance' },
-    { name: 'GDPR', url: '/gdpr' }
+    { name: 'Compliance', url: '/compliance' }
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                <Brain className="h-5 w-5 text-white" />
+          <div className="lg:col-span-2">
+            <div className="flex items-center mb-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mr-3">
+                <Zap className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
+              <span className="text-2xl font-bold text-white">Zion Tech Group</span>
             </div>
-            <p className="text-gray-300 mb-6 max-w-sm">
+            <p className="text-gray-400 mb-6 max-w-md">
               Leading technology company providing cutting-edge AI solutions, cloud infrastructure, 
               cybersecurity, and custom software development services.
             </p>
+<<<<<<< HEAD
             <div className="space-y-2">
               <div className="flex items-center text-gray-300">
                 <Phone className="h-4 w-4 mr-2" />
@@ -220,214 +236,88 @@ const Footer: React.FC = () => {
                 <span>364 E Main St STE 1008, Middletown, DE 19709</span>
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
               </div>
+=======
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
             </div>
           </div>
 
           {/* AI Services */}
           <div>
-<<<<<<< HEAD
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Brain className="h-5 w-5 mr-2 text-purple-400" />
-              AI Services
-            </h3>
+            <h3 className="text-white font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
-              {aiServices.slice(0, 6).map((service, index) => (
-=======
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Brain className="w-5 h-5 mr-2 text-cyan-400" />
-              AI Services
-            </h3>
-            <ul className="space-y-3">
               {aiServices.map((service, index) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
                 <li key={index}>
-                  <Link
-                    to={service.url}
-<<<<<<< HEAD
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  <Link 
+                    to={service.url} 
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {service.name}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  to="/ai-services"
-                  className="text-purple-400 hover:text-purple-300 transition-colors text-sm font-medium flex items-center"
-                >
-                  View All AI Services
-                  <ArrowRight className="h-3 w-3 ml-1" />
-                </Link>
-              </li>
-=======
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center group"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div>
-                      <div className="font-medium">{service.name}</div>
-                      <div className="text-sm text-gray-400">{service.description}</div>
-                    </div>
-                  </Link>
-                </li>
-              ))}
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
             </ul>
           </div>
 
           {/* IT Services */}
           <div>
-<<<<<<< HEAD
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Code className="h-5 w-5 mr-2 text-cyan-400" />
-              IT Services
-            </h3>
+            <h3 className="text-white font-semibold mb-4">IT Services</h3>
             <ul className="space-y-2">
-              {itServices.slice(0, 6).map((service, index) => (
+              {itServices.map((service, index) => (
                 <li key={index}>
-                  <Link
-                    to={service.url}
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  <Link 
+                    to={service.url} 
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {service.name}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  to="/it-services"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium flex items-center"
-                >
-                  View All IT Services
-                  <ArrowRight className="h-3 w-3 ml-1" />
-                </Link>
-              </li>
             </ul>
           </div>
 
           {/* Micro SAAS */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Zap className="h-5 w-5 mr-2 text-green-400" />
-              Micro SAAS
-            </h3>
+            <h3 className="text-white font-semibold mb-4">Micro SAAS</h3>
             <ul className="space-y-2">
-              {microSaasServices.slice(0, 6).map((service, index) => (
-=======
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Cloud className="w-5 h-5 mr-2 text-purple-400" />
-              IT Services
-            </h3>
-            <ul className="space-y-3">
-              {itServices.map((service, index) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
+              {microSaas.map((service, index) => (
                 <li key={index}>
-                  <Link
-                    to={service.url}
-<<<<<<< HEAD
-                    className="text-gray-300 hover:text-white transition-colors text-sm"
+                  <Link 
+                    to={service.url} 
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
                     {service.name}
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  to="/micro-saas"
-                  className="text-green-400 hover:text-green-300 transition-colors text-sm font-medium flex items-center"
-                >
-                  View All Products
-                  <ArrowRight className="h-3 w-3 ml-1" />
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Additional Links */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Company */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Company</h4>
-              <ul className="space-y-2">
-                {companyLinks.map((link, index) => (
-                  <li key={index}>
-                    <Link
-                      to={link.url}
-                      className="text-gray-300 hover:text-white transition-colors text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Resources */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Resources</h4>
-              <ul className="space-y-2">
-                {resourceLinks.map((link, index) => (
-                  <li key={index}>
-                    <Link
-                      to={link.url}
-                      className="text-gray-300 hover:text-white transition-colors text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Legal */}
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2">
-                {legalLinks.map((link, index) => (
-                  <li key={index}>
-                    <Link
-                      to={link.url}
-                      className="text-gray-300 hover:text-white transition-colors text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-=======
-                    className="text-gray-300 hover:text-purple-400 transition-colors duration-200 flex items-center group"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div>
-                      <div className="font-medium">{service.name}</div>
-                      <div className="text-sm text-gray-400">{service.description}</div>
-                    </div>
-                  </Link>
-                </li>
-              ))}
             </ul>
           </div>
 
-          {/* Company Links */}
+          {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-green-400" />
-              Company
-            </h3>
-            <ul className="space-y-3">
-              {companyLinks.map((link, index) => (
+            <h3 className="text-white font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              {company.map((item, index) => (
                 <li key={index}>
                   <Link 
-                    to={link.url}
-                    className="text-gray-300 hover:text-green-400 transition-colors duration-200 flex items-center group"
+                    to={item.url} 
+                    className="text-gray-400 hover:text-white transition-colors text-sm"
                   >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {link.name}
+                    {item.name}
                   </Link>
                 </li>
               ))}
             </ul>
+<<<<<<< HEAD
             
             {/* Social Links */}
             <div className="mt-8">
@@ -505,10 +395,18 @@ const Footer: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
         <div className="border-t border-gray-800 mt-8 pt-8">
+=======
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
+<<<<<<< HEAD
             <div className="flex items-center space-x-6">
               <div className="flex items-center text-gray-400 text-sm">
                 <Clock className="h-4 w-4 mr-2" />
@@ -544,6 +442,18 @@ const Footer: React.FC = () => {
                 Terms of Service
               </Link>
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
+=======
+            <div className="flex space-x-6">
+              {legal.map((item, index) => (
+                <Link 
+                  key={index}
+                  to={item.url} 
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  {item.name}
+                </Link>
+              ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
             </div>
           </div>
         </div>
@@ -553,6 +463,7 @@ const Footer: React.FC = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default Footer;
 <<<<<<< HEAD
 =======
@@ -560,3 +471,6 @@ export default Footer;
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f66c
+=======
+export default memo(Footer);
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
