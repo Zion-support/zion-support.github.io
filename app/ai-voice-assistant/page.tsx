@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 export default function AIVoiceAssistant() {
   const features = [
@@ -121,7 +119,6 @@ export default function AIVoiceAssistant() {
       description="Transform user interaction with AI-powered voice assistants. Natural language processing, human-like voice synthesis, and seamless integration. Start your free trial today."
       keywords="AI voice assistant, voice AI, speech recognition, voice synthesis, conversational AI, voice automation"
     >
->>>>>>> cursor/fix-errors-and-merge-to-main-2460
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-32 pb-20">
@@ -352,15 +349,6 @@ export default function AIVoiceAssistant() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </>
-  );
-};
-
-export default AIVoiceAssistantPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
-=======
     </Layout>
   )
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-2460
