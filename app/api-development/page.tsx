@@ -1,18 +1,34 @@
 import React from 'react';
-
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function ApiDevelopment() {
+export default function ApiDevelopmentPage() {
   return (
-    
-        <title>ApiDevelopment - Zion Tech Group</title>
+    <>
+      <Helmet>
+        <title>Api Development - Zion Tech Group</title>
+        <meta name="description" content="Professional api development services by Zion Tech Group." />
+      </Helmet>
       
-            <h1 className="text-4xl font-bold text-white mb-6">ApiDevelopment</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional apidevelopment services coming soon.</p>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">Api Development</h1>
+            <p className="text-lg text-gray-300 mb-8">
+              Professional api development services coming soon.
+            </p>
             
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+            >
               Contact Us
-
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
-
+}

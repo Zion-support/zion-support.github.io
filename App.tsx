@@ -27,7 +27,7 @@ const PricingPage = React.lazy(() => import('./app/pricing/page'));
 const BlogPage = React.lazy(() => import('./app/blog/page'));
 const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
 const CareersPage = React.lazy(() => import('./app/careers/page'));
-const AIServicesPage = React.lazy(() =>const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
+const AIServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const TutorialsPage = React.lazy(() => import('./app/tutorials/page'));
@@ -150,22 +150,31 @@ const ZionAiDataCleanerPage = React.lazy(() => import('./app/zion-ai-data-cleane
 const ZionCustomerInsightsPage = React.lazy(() => import('./app/zion-customer-insights/page'));
 
 // 5G Solutions Pages
-const 5GDataAnalyticsPage = React.lazy(() => import('./app/5g-data-analytics/page'));
-const 5GEdgeComputingPage = React.lazy(() => import('./app/5g-edge-computing/page'));
-const 5GImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
-const 5GIotSolutionsPage = React.lazy(() => import('./app/5g-iot-solutions/page'));
-const 5GMobileApplicationsPage = React.lazy(() => import('./app/5g-mobile-applications/page'));
-const 5GNetworkInfrastructurePage = React.lazy(() => import('./app/5g-network-infrastructure/page'));
-const 5GPrivateNetworksPage = React.lazy(() => import('./app/5g-private-networks/page'));
-const 5GSmartCitySolutionsPage = React.lazy(() => import('./app/5g-smart-city-solutions/page'));
-const 5GSolutionsPage = React.lazy(() => import('./app/5g-solutions/page'));
+const FiveGDataAnalyticsPage = React.lazy(() => import('./app/5g-data-analytics/page'));
+const FiveGEdgeComputingPage = React.lazy(() => import('./app/5g-edge-computing/page'));
+const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
+const FiveGIotSolutionsPage = React.lazy(() => import('./app/5g-iot-solutions/page'));
+const FiveGMobileApplicationsPage = React.lazy(() => import('./app/5g-mobile-applications/page'));
+const FiveGNetworkInfrastructurePage = React.lazy(() => import('./app/5g-network-infrastructure/page'));
+const FiveGPrivateNetworksPage = React.lazy(() => import('./app/5g-private-networks/page'));
+const FiveGSmartCitySolutionsPage = React.lazy(() => import('./app/5g-smart-city-solutions/page'));
+const FiveGSolutionsPage = React.lazy(() => import('./app/5g-solutions/page'));
 
 // Main App Component
 function App() {
   const { performanceData } = usePerformanceMonitor();
 
   return (
+    <Router>
+      <HelmetProvider>
+        <ErrorBoundary>
+          <PerformanceOptimizer />
+          <AccessibilityEnhancer />
+          <EnhancedAccessibility />
+          <AnalyticsProvider>
+            <FuturisticBackground />
             <Suspense fallback={<PageLoader />}>
+              <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
@@ -300,12 +309,19 @@ function App() {
                 <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
                 <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
                 <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
+                <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
                 <Route path="/5g-mobile-applications" element={<FiveGMobileApplicationsPage />} />
                 <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
                 <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                 <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+              </Routes>
+            </Suspense>
+          </AnalyticsProvider>
+        </ErrorBoundary>
+      </HelmetProvider>
+    </Router>
   );
+}
 
 export default App;
