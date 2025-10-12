@@ -20,6 +20,10 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   placeholder = "Enter your email address",
   buttonText = "Subscribe",
   features = [
+    { icon: Star, text: "Exclusive content" },
+    { icon: Users, text: "Industry insights" },
+    { icon: Globe, text: "Global updates" },
+    { icon: Zap, text: "Early access" }
   ],
   onSubscribe
 }) => {

@@ -12,26 +12,31 @@ const AISocialSchedulerPage: React.FC = () => {
       benefits: ['Brand voice training', 'Audience analysis', 'Content optimization', 'Multi-platform adaptation']
     },
     {
+      icon: <Calendar className="w-8 h-8 text-emerald-400" />,
       title: 'Smart Scheduling',
       description: 'AI determines optimal posting times based on your audience activity patterns and engagement data.',
       benefits: ['Optimal timing', 'Audience insights', 'Engagement prediction', 'Cross-platform sync']
     },
     {
+      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
       title: 'Performance Analytics',
       description: 'Comprehensive analytics with AI-powered insights to improve your social media strategy.',
       benefits: ['Engagement metrics', 'ROI tracking', 'Trend analysis', 'Competitor insights']
     },
     {
+      icon: <Share2 className="w-8 h-8 text-red-400" />,
       title: 'Multi-Platform Management',
       description: 'Manage all your social media accounts from one dashboard with platform-specific optimization.',
       benefits: ['Unified dashboard', 'Platform optimization', 'Bulk posting', 'Content adaptation']
     },
     {
+      icon: <Zap className="w-8 h-8 text-orange-400" />,
       title: 'Automated Engagement',
       description: 'AI-powered auto-responses and engagement tools to maintain active social media presence.',
       benefits: ['Auto-responses', 'Comment management', 'Hashtag optimization', 'Community building']
     },
     {
+      icon: <BarChart3 className="w-8 h-8 text-pink-400" />,
       title: 'Campaign Management',
       description: 'Plan, execute, and track social media campaigns with AI-driven recommendations.',
       benefits: ['Campaign planning', 'A/B testing', 'Performance tracking', 'Budget optimization']
@@ -110,6 +115,10 @@ const AISocialSchedulerPage: React.FC = () => {
   ]
 
   const stats = [
+    { number: '150%', label: 'Engagement Increase', icon: <TrendingUp className="w-6 h-6 text-cyan-400" /> },
+    { number: '200%', label: 'Reach Improvement', icon: <Globe className="w-6 h-6 text-emerald-400" /> },
+    { number: '10hrs', label: 'Time Saved/Week', icon: <Clock className="w-6 h-6 text-purple-400" /> },
+    { number: '50K+', label: 'Posts Scheduled', icon: <Calendar className="w-6 h-6 text-orange-400" /> }
   ]
 
   return (

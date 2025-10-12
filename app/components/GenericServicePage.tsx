@@ -17,6 +17,7 @@ interface GenericServicePageProps {
 const GenericServicePage: React.FC<GenericServicePageProps> = ({
   title,
   description,
+  icon: Icon,
   features,
   benefits,
   pricing,

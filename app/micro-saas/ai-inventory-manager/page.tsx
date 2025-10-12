@@ -17,22 +17,27 @@ export default function AIInventoryManagerPage() {
       description: 'Predict inventory needs with 95% accuracy using machine learning algorithms'
     },
     {
+      icon: <Package className="w-6 h-6 text-emerald-400" />,
       title: 'Smart Reorder Points',
       description: 'Automatically trigger reorders based on sales velocity and lead times'
     },
     {
+      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
       title: 'Real-time Analytics',
       description: 'Comprehensive inventory insights with predictive analytics and trend analysis'
     },
     {
+      icon: <Zap className="w-6 h-6 text-orange-400" />,
       title: 'Automated Workflows',
       description: 'Streamline inventory processes with intelligent automation and alerts'
     },
     {
+      icon: <Target className="w-6 h-6 text-pink-400" />,
       title: 'Multi-location Sync',
       description: 'Seamlessly manage inventory across multiple warehouses and stores'
     },
     {
+      icon: <Shield className="w-6 h-6 text-red-400" />,
       title: 'Loss Prevention',
       description: 'AI-powered theft detection and shrinkage analysis with real-time alerts'
     }
@@ -116,24 +121,38 @@ export default function AIInventoryManagerPage() {
 
   const benefits = [
     {
+      icon: <DollarSign className="w-8 h-8 text-cyan-400" />,
       title: '25% Cost Reduction',
       description: 'Optimize inventory levels and reduce carrying costs'
     },
     {
+      icon: <Target className="w-8 h-8 text-emerald-400" />,
       title: '95% Accuracy',
       description: 'AI forecasting with industry-leading accuracy rates'
     },
     {
+      icon: <Activity className="w-8 h-8 text-purple-400" />,
       title: 'Zero Stockouts',
       description: 'Smart reorder points prevent stockouts completely'
     },
     {
+      icon: <Zap className="w-8 h-8 text-orange-400" />,
       title: 'Real-time Sync',
       description: 'Instant updates across all locations and devices'
     }
   ]
 
   const integrations = [
+    { name: 'Shopify', icon: '🛍️' },
+    { name: 'WooCommerce', icon: '🛒' },
+    { name: 'Amazon', icon: '📦' },
+    { name: 'eBay', icon: '🏪' },
+    { name: 'QuickBooks', icon: '📊' },
+    { name: 'Xero', icon: '💰' },
+    { name: 'Sage', icon: '📈' },
+    { name: 'NetSuite', icon: '☁️' },
+    { name: 'Salesforce', icon: '⚡' },
+    { name: 'Zapier', icon: '🔗' }
   ]
 
   return (

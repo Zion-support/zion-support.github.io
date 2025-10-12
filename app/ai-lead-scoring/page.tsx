@@ -12,26 +12,31 @@ const AILeadScoringPage: React.FC = () => {
       benefits: ['Behavioral analysis', 'Demographic scoring', 'Engagement tracking', 'Predictive modeling']
     },
     {
+      icon: <Target className="w-8 h-8 text-emerald-400" />,
       title: 'Intent Detection',
       description: 'AI identifies buying intent signals and purchase readiness to prioritize high-value prospects.',
       benefits: ['Intent signals', 'Purchase readiness', 'Priority scoring', 'Conversion prediction']
     },
     {
+      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
       title: 'Conversion Analytics',
       description: 'Comprehensive analytics with AI insights to optimize lead qualification and improve conversion rates.',
       benefits: ['Conversion tracking', 'ROI analysis', 'Funnel optimization', 'Performance metrics']
     },
     {
+      icon: <Zap className="w-8 h-8 text-red-400" />,
       title: 'Automated Workflows',
       description: 'AI-powered lead nurturing workflows that automatically engage prospects based on their score and behavior.',
       benefits: ['Auto-nurturing', 'Behavioral triggers', 'Personalized content', 'Multi-channel engagement']
     },
     {
+      icon: <BarChart3 className="w-8 h-8 text-orange-400" />,
       title: 'Sales Intelligence',
       description: 'AI provides sales teams with actionable insights and recommendations for each lead.',
       benefits: ['Sales insights', 'Action recommendations', 'Lead context', 'Next best actions']
     },
     {
+      icon: <Shield className="w-8 h-8 text-pink-400" />,
       title: 'CRM Integration',
       description: 'Seamlessly integrate with popular CRMs and marketing automation platforms for unified lead management.',
       benefits: ['CRM sync', 'Data consistency', 'Workflow automation', 'Real-time updates']
@@ -110,6 +115,10 @@ const AILeadScoringPage: React.FC = () => {
   ]
 
   const stats = [
+    { number: '180%', label: 'Conversion Increase', icon: <TrendingUp className="w-6 h-6 text-cyan-400" /> },
+    { number: '250%', label: 'ROI Improvement', icon: <DollarSign className="w-6 h-6 text-emerald-400" /> },
+    { number: '3x', label: 'Faster Lead Identification', icon: <Target className="w-6 h-6 text-purple-400" /> },
+    { number: '95%', label: 'Scoring Accuracy', icon: <Award className="w-6 h-6 text-orange-400" /> }
   ]
 
   return (

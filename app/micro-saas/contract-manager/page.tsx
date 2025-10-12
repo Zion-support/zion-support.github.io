@@ -11,22 +11,27 @@ const ContractManagerPage: React.FC = () => {
       description: 'Pre-built contract templates for common business agreements with AI-powered customization.'
     },
     {
+      icon: <Clock className="w-6 h-6 text-emerald-400" />,
       title: 'Automated Renewals',
       description: 'Never miss a contract renewal with intelligent tracking and automated notifications.'
     },
     {
+      icon: <Shield className="w-6 h-6 text-purple-400" />,
       title: 'Compliance Monitoring',
       description: 'Ensure all contracts meet legal requirements with built-in compliance checks.'
     },
     {
+      icon: <Users className="w-6 h-6 text-orange-400" />,
       title: 'Team Collaboration',
       description: 'Collaborate on contract reviews with real-time editing and commenting features.'
     },
     {
+      icon: <BarChart3 className="w-6 h-6 text-pink-400" />,
       title: 'Analytics Dashboard',
       description: 'Track contract performance, renewal rates, and key metrics in real-time.'
     },
     {
+      icon: <Calendar className="w-6 h-6 text-blue-400" />,
       title: 'Deadline Management',
       description: 'Never miss important contract deadlines with smart calendar integration.'
     }

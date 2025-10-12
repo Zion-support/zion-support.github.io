@@ -12,14 +12,17 @@ export default function AIAnalyticsDashboardPro() {
       description: 'Advanced machine learning algorithms provide actionable business insights'
     },
     {
+      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
       title: 'Real-time Analytics',
       description: 'Live data visualization with instant updates and interactive dashboards'
     },
     {
+      icon: <Target className="w-6 h-6 text-yellow-400" />,
       title: 'Predictive Analytics',
       description: 'Forecast trends and make data-driven decisions with confidence'
     },
     {
+      icon: <Globe className="w-6 h-6 text-green-400" />,
       title: 'Multi-Platform Integration',
       description: 'Connect all your data sources in one unified dashboard'
     }

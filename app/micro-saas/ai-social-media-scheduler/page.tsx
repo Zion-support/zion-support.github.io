@@ -16,22 +16,27 @@ export default function AISocialMediaSchedulerPage() {
       description: 'AI-powered optimal posting times based on audience engagement patterns'
     },
     {
+      icon: <BarChart3 className="w-6 h-6 text-emerald-400" />,
       title: 'Analytics Dashboard',
       description: 'Comprehensive performance metrics and ROI tracking across all platforms'
     },
     {
+      icon: <Users className="w-6 h-6 text-purple-400" />,
       title: 'Audience Insights',
       description: 'AI-driven audience analysis and content personalization recommendations'
     },
     {
+      icon: <Zap className="w-6 h-6 text-orange-400" />,
       title: 'Auto-Posting',
       description: 'Seamless cross-platform content distribution with smart formatting'
     },
     {
+      icon: <Target className="w-6 h-6 text-pink-400" />,
       title: 'Content Optimization',
       description: 'AI suggestions for hashtags, captions, and optimal posting times'
     },
     {
+      icon: <Shield className="w-6 h-6 text-red-400" />,
       title: 'Brand Safety',
       description: 'Automated content moderation and brand compliance checking'
     }

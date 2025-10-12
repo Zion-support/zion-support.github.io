@@ -45,26 +45,31 @@ export default function AiCybersecurityMonitorProPage() {
       benefits: ['Behavioral analysis', 'Anomaly detection', 'Threat prediction', 'Zero-day protection']
     },
     {
+      icon: <Shield className="w-8 h-8 text-green-400" />,
       title: '24/7 Monitoring',
       description: 'Continuous security monitoring with instant threat response and automated remediation',
       benefits: ['Real-time alerts', 'Automated response', 'Incident management', 'Threat hunting']
     },
     {
+      icon: <Eye className="w-8 h-8 text-purple-400" />,
       title: 'Network Visibility',
       description: 'Complete visibility into your network infrastructure with advanced traffic analysis',
       benefits: ['Network mapping', 'Traffic analysis', 'Device discovery', 'Vulnerability scanning']
     },
     {
+      icon: <Lock className="w-8 h-8 text-orange-400" />,
       title: 'Compliance Management',
       description: 'Automated compliance monitoring for GDPR, HIPAA, SOX, and other regulatory standards',
       benefits: ['Regulatory compliance', 'Audit trails', 'Policy enforcement', 'Risk assessment']
     },
     {
+      icon: <Zap className="w-8 h-8 text-red-400" />,
       title: 'Automated Response',
       description: 'Intelligent incident response with automated threat containment and remediation',
       benefits: ['Auto-quarantine', 'Threat isolation', 'System restoration', 'Forensic analysis']
     },
     {
+      icon: <Globe className="w-8 h-8 text-blue-400" />,
       title: 'Global Threat Intelligence',
       description: 'Access to global threat intelligence feeds and security research databases',
       benefits: ['Threat intelligence', 'IOC feeds', 'Malware analysis', 'Attack patterns']
@@ -74,6 +79,7 @@ export default function AiCybersecurityMonitorProPage() {
   const securityCapabilities = [
     {
       category: 'Threat Detection',
+      icon: <AlertTriangle className="w-6 h-6 text-red-400" />,
       items: [
         'Malware detection',
         'Phishing prevention',
@@ -84,6 +90,7 @@ export default function AiCybersecurityMonitorProPage() {
     },
     {
       category: 'Network Security',
+      icon: <Network className="w-6 h-6 text-blue-400" />,
       items: [
         'Firewall management',
         'Intrusion detection',
@@ -94,6 +101,7 @@ export default function AiCybersecurityMonitorProPage() {
     },
     {
       category: 'Endpoint Protection',
+      icon: <Monitor className="w-6 h-6 text-green-400" />,
       items: [
         'Device monitoring',
         'Application control',
@@ -104,6 +112,7 @@ export default function AiCybersecurityMonitorProPage() {
     },
     {
       category: 'Data Protection',
+      icon: <Database className="w-6 h-6 text-purple-400" />,
       items: [
         'Data encryption',
         'Access controls',
@@ -114,6 +123,7 @@ export default function AiCybersecurityMonitorProPage() {
     },
     {
       category: 'Incident Response',
+      icon: <AlertCircle className="w-6 h-6 text-orange-400" />,
       items: [
         'Automated response',
         'Incident tracking',
@@ -124,6 +134,7 @@ export default function AiCybersecurityMonitorProPage() {
     },
     {
       category: 'Security Analytics',
+      icon: <BarChart3 className="w-6 h-6 text-cyan-400" />,
       items: [
         'Security dashboards',
         'Risk assessment',
@@ -220,9 +231,21 @@ export default function AiCybersecurityMonitorProPage() {
   ];
 
   const stats = [
+    { number: '1M+', label: 'Threats Blocked', icon: <Shield className="w-6 h-6" /> },
+    { number: '500+', label: 'Enterprise Clients', icon: <Building2 className="w-6 h-6" /> },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Activity className="w-6 h-6" /> },
+    { number: '24/7', label: 'Security Monitoring', icon: <Eye className="w-6 h-6" /> }
   ];
 
   const threatTypes = [
+    { name: 'Malware', icon: <Bug className="w-6 h-6" />, category: 'Malicious Software' },
+    { name: 'Phishing', icon: <Target className="w-6 h-6" />, category: 'Social Engineering' },
+    { name: 'Ransomware', icon: <Lock className="w-6 h-6" />, category: 'Data Encryption' },
+    { name: 'DDoS', icon: <Network className="w-6 h-6" />, category: 'Network Attacks' },
+    { name: 'Insider Threats', icon: <Users className="w-6 h-6" />, category: 'Internal Risks' },
+    { name: 'Zero-Day', icon: <AlertCircle className="w-6 h-6" />, category: 'Unknown Vulnerabilities' },
+    { name: 'APTs', icon: <Search className="w-6 h-6" />, category: 'Advanced Persistent Threats' },
+    { name: 'IoT Attacks', icon: <Smartphone className="w-6 h-6" />, category: 'Device Vulnerabilities' }
   ];
 
   return (

@@ -12,26 +12,31 @@ const AIInventoryManagerPage: React.FC = () => {
       benefits: ['95% accuracy rate', 'Seasonal predictions', 'Market trend analysis', 'Automated reorder points']
     },
     {
+      icon: <Package className="w-8 h-8 text-emerald-400" />,
       title: 'Smart Stock Optimization',
       description: 'AI automatically optimizes stock levels to minimize carrying costs while preventing stockouts and overstock situations.',
       benefits: ['Cost optimization', 'Stockout prevention', 'Overstock reduction', 'Dynamic reordering']
     },
     {
+      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
       title: 'Real-time Analytics',
       description: 'Comprehensive dashboards with real-time inventory insights, performance metrics, and predictive analytics.',
       benefits: ['Live dashboards', 'Performance metrics', 'Trend analysis', 'Custom reports']
     },
     {
+      icon: <AlertTriangle className="w-8 h-8 text-red-400" />,
       title: 'Intelligent Alerts',
       description: 'Smart notifications for low stock, expiring items, unusual demand patterns, and supply chain disruptions.',
       benefits: ['Low stock alerts', 'Expiry warnings', 'Anomaly detection', 'Supply chain monitoring']
     },
     {
+      icon: <Zap className="w-8 h-8 text-orange-400" />,
       title: 'Automated Reordering',
       description: 'AI-powered automatic purchase orders based on demand forecasts, supplier performance, and cost optimization.',
       benefits: ['Auto purchase orders', 'Supplier optimization', 'Cost analysis', 'Lead time tracking']
     },
     {
+      icon: <Shield className="w-8 h-8 text-pink-400" />,
       title: 'Multi-location Sync',
       description: 'Seamlessly manage inventory across multiple warehouses, stores, and distribution centers with real-time synchronization.',
       benefits: ['Multi-warehouse support', 'Real-time sync', 'Location tracking', 'Transfer management']
@@ -110,6 +115,10 @@ const AIInventoryManagerPage: React.FC = () => {
   ]
 
   const stats = [
+    { number: '95%', label: 'Forecast Accuracy', icon: <TrendingUp className="w-6 h-6 text-cyan-400" /> },
+    { number: '35%', label: 'Cost Reduction', icon: <DollarSign className="w-6 h-6 text-emerald-400" /> },
+    { number: '80%', label: 'Stockout Reduction', icon: <Package className="w-6 h-6 text-purple-400" /> },
+    { number: '50K+', label: 'SKUs Managed', icon: <Database className="w-6 h-6 text-orange-400" /> }
   ]
 
   return (

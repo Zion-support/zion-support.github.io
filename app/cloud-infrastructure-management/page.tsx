@@ -12,14 +12,17 @@ export default function CloudInfrastructureManagement() {
       description: 'Seamlessly manage infrastructure across AWS, Azure, Google Cloud, and private clouds'
     },
     {
+      icon: <Shield className="w-6 h-6 text-purple-400" />,
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection'
     },
     {
+      icon: <TrendingUp className="w-6 h-6 text-yellow-400" />,
       title: 'Cost Optimization',
       description: 'Reduce cloud costs by up to 40% with intelligent resource optimization and right-sizing'
     },
     {
+      icon: <Server className="w-6 h-6 text-green-400" />,
       title: '24/7 Monitoring',
       description: 'Proactive monitoring with automated scaling, performance optimization, and incident response'
     }

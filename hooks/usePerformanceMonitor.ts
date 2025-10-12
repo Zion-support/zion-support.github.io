@@ -1,55 +1,67 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-export const usePerformanceMonitor = () => {
+interface PerformanceMetrics {
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  fcp: number | null;
+  ttfb: number | null;
+}
+
+export function usePerformanceMonitor() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    lcp: null,
+    fid: null,
+    cls: null,
+    fcp: null,
+    ttfb: null
+  });
+
   useEffect(() => {
-    // Monitor page load performance
-    const monitorPageLoad = () => {
-      if ('performance' in window) {
-        window.addEventListener('load', () => {
-          setTimeout(() => {
-            const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-            const paint = performance.getEntriesByType('paint');
-            
-            // Log performance metrics
-            console.log('Page Load Performance:', {
-              domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-              loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-              firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-              firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime,
-            });
-          }, 0);
-        });
-      }
-    };
+    // Only run in browser environment
+    if (typeof window === 'undefined') return;
 
-    // Monitor resource loading
-    const monitorResourceLoading = () => {
-      if ('performance' in window) {
-        const observer = new PerformanceObserver((list) => {
-          list.getEntries().forEach((entry) => {
-            if (entry.entryType === 'resource') {
-              console.log('Resource loaded:', {
-                name: entry.name,
-                duration: entry.duration,
-                size: (entry as any).transferSize,
-              });
+    // Monitor Core Web Vitals
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        switch (entry.entryType) {
+          case 'largest-contentful-paint':
+            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+            break;
+          case 'first-input':
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+            break;
+          case 'layout-shift':
+            if (!(entry as any).hadRecentInput) {
+              setMetrics(prev => ({ 
+                ...prev, 
+                cls: (prev.cls || 0) + (entry as any).value 
+              }));
             }
-          });
-        });
-        
-        observer.observe({ entryTypes: ['resource'] });
-        
-        return () => observer.disconnect();
+            break;
+          case 'paint':
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            }
+            break;
+          case 'navigation':
+            setMetrics(prev => ({ 
+              ...prev, 
+              ttfb: (entry as any).responseStart - (entry as any).requestStart 
+            }));
+            break;
+        }
       }
-    };
+    });
 
-    // Initialize monitoring
-    monitorPageLoad();
-    const cleanup = monitorResourceLoading();
+    try {
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
+    } catch (e) {
+      console.warn('Performance Observer not supported:', e);
+    }
 
-    // Cleanup
-    return () => {
-      cleanup?.();
-    };
+    return () => observer.disconnect();
   }, []);
-};
+
+  return metrics;
+}

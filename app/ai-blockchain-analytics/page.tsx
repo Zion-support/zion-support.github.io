@@ -13,30 +13,35 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
       benefits: ['Vulnerability detection', 'Security scoring', 'Code optimization', 'Gas analysis']
     },
     {
+      icon: <BarChart3 className="w-8 h-8 text-emerald-400" />,
       title: 'DeFi Analytics',
       description: 'Comprehensive DeFi protocol analysis with yield farming optimization and risk assessment.',
       price: '$299/month',
       benefits: ['Yield optimization', 'Risk assessment', 'Protocol analysis', 'APY tracking']
     },
     {
+      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
       title: 'Trading Intelligence',
       description: 'Advanced trading signals and market analysis powered by machine learning algorithms.',
       price: '$199/month',
       benefits: ['Trading signals', 'Market analysis', 'Price prediction', 'Portfolio optimization']
     },
     {
+      icon: <Target className="w-8 h-8 text-orange-400" />,
       title: 'NFT Analytics',
       description: 'Comprehensive NFT market analysis with rarity scoring and valuation models.',
       price: '$149/month',
       benefits: ['Rarity scoring', 'Valuation models', 'Market trends', 'Collection analysis']
     },
     {
+      icon: <Zap className="w-8 h-8 text-pink-400" />,
       title: 'Real-time Monitoring',
       description: 'Live blockchain monitoring with instant alerts and anomaly detection.',
       price: '$179/month',
       benefits: ['Live monitoring', 'Instant alerts', 'Anomaly detection', 'Real-time data']
     },
     {
+      icon: <Globe className="w-8 h-8 text-yellow-400" />,
       title: 'Cross-Chain Analysis',
       description: 'Multi-blockchain analysis supporting Ethereum, BSC, Polygon, and other major chains.',
       price: '$249/month',
@@ -48,24 +53,28 @@ const AIBlockchainAnalyticsPage: React.FC = () => {
     {
       title: 'DeFi Protocol Analysis',
       description: 'Comprehensive analysis of DeFi protocols including TVL, yield rates, and risk metrics.',
+      icon: <BarChart3 className="w-6 h-6 text-cyan-400" />,
       metrics: ['95% accuracy', 'Real-time data', '50+ protocols'],
       features: ['TVL tracking', 'Yield analysis', 'Risk scoring', 'Liquidity analysis']
     },
     {
       title: 'Smart Contract Security',
       description: 'Advanced security analysis with vulnerability detection and code optimization recommendations.',
+      icon: <Shield className="w-6 h-6 text-emerald-400" />,
       metrics: ['99% detection rate', 'Zero false positives', '24/7 monitoring'],
       features: ['Vulnerability scanning', 'Code review', 'Security scoring', 'Audit reports']
     },
     {
       title: 'Trading & Investment',
       description: 'AI-powered trading signals and portfolio optimization for crypto investments.',
+      icon: <TrendingUp className="w-6 h-6 text-purple-400" />,
       metrics: ['40% better returns', 'Risk reduction', 'Automated trading'],
       features: ['Trading signals', 'Portfolio optimization', 'Risk management', 'Backtesting']
     },
     {
       title: 'NFT Market Intelligence',
       description: 'Comprehensive NFT analysis with rarity scoring and market trend predictions.',
+      icon: <Target className="w-6 h-6 text-orange-400" />,
       metrics: ['85% accuracy', 'Real-time pricing', 'Trend prediction'],
       features: ['Rarity analysis', 'Price prediction', 'Market trends', 'Collection insights']
     }

@@ -1,79 +1,145 @@
-'use client';
+import React, { useEffect, useState } from 'react'
+
+<<<<<<< HEAD
+interface PerformanceMetrics {
+  lcp: number | null
+  fid: number | null
+  cls: number | null
+  fcp: number | null
+  ttfb: number | null
+=======
 import React, { useEffect } from 'react';
 
+interface PerformanceOptimizerProps {
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
+  enablePreloading?: boolean;
+  enableCodeSplitting?: boolean;
+>>>>>>> cursor/fix-errors-and-merge-to-main-33db
+}
+
 const PerformanceOptimizer: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    lcp: null,
+    fid: null,
+    cls: null,
+    fcp: null,
+    ttfb: null
+  })
+
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalResources = [
         '/fonts/inter.woff2',
-        '/images/hero-bg.webp',
-        '/images/logo.svg'
-      ];
+        '/images/hero-bg.jpg',
+        '/images/logo.png'
+      ]
 
       criticalResources.forEach(resource => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = resource;
-        link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+        const link = document.createElement('link')
+        link.rel = 'preload'
+        link.href = resource
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image'
         if (resource.endsWith('.woff2')) {
-          link.crossOrigin = 'anonymous';
+          link.crossOrigin = 'anonymous'
         }
-        document.head.appendChild(link);
-      });
-    };
+        document.head.appendChild(link)
+      })
+    }
 
     // Optimize images
     const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.src = img.dataset.src || '';
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        });
-      });
+      const images = document.querySelectorAll('img[data-src]')
+      images.forEach(img => {
+        const imageElement = img as HTMLImageElement
+        if (imageElement.dataset.src) {
+          imageElement.src = imageElement.dataset.src
+          imageElement.removeAttribute('data-src')
+        }
+      })
+    }
 
-      images.forEach(img => imageObserver.observe(img));
-    };
+    // Lazy load non-critical components
+    const lazyLoadComponents = () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const element = entry.target as HTMLElement
+              element.classList.add('loaded')
+              observer.unobserve(element)
+            }
+          })
+        },
+        { threshold: 0.1 }
+      )
 
-    // Defer non-critical JavaScript
-    const deferNonCriticalJS = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(script => {
-        const newScript = document.createElement('script');
-        newScript.src = script.getAttribute('src') || '';
-        newScript.async = true;
-        document.head.appendChild(newScript);
-      });
-    };
+      const lazyElements = document.querySelectorAll('[data-lazy]')
+      lazyElements.forEach(el => observer.observe(el))
+    }
+
+    // Monitor Core Web Vitals
+    const monitorWebVitals = () => {
+      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+        onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
+        onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
+        onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
+        onLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
+        onTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
+      }).catch(() => {
+        // Silently fail if web-vitals is not available
+      })
+    }
+
+<<<<<<< HEAD
+    // Optimize scroll performance
+    const optimizeScroll = () => {
+      let ticking = false
+      
+      const updateScrollPosition = () => {
+        // Throttle scroll events
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            // Update scroll-dependent elements
+            ticking = false
+          })
+          ticking = true
+        }
+=======
+      try {
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+      } catch {
+        // Fallback for browsers that don't support these entry types
+>>>>>>> cursor/fix-errors-and-merge-to-main-33db
+      }
+
+      window.addEventListener('scroll', updateScrollPosition, { passive: true })
+      
+      return () => window.removeEventListener('scroll', updateScrollPosition)
+    }
 
     // Initialize optimizations
-    preloadCriticalResources();
-    optimizeImages();
-    deferNonCriticalJS();
+    preloadCriticalResources()
+    optimizeImages()
+    lazyLoadComponents()
+    monitorWebVitals()
+    const cleanupScroll = optimizeScroll()
 
-    // Performance monitoring
-    if ('performance' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
-          }
-          if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
-          }
-        });
-      });
-
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+    // Cleanup
+    return () => {
+      cleanupScroll()
     }
-  }, []);
+  }, [])
 
-  return null;
-};
+  // Log performance metrics in development
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(val => val !== null)) {
+      console.log('Performance Metrics:', metrics)
+    }
+  }, [metrics])
 
-export default PerformanceOptimizer;
+  return null
+}
+
+export default PerformanceOptimizer

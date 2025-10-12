@@ -1,34 +1,35 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Target, Lightbulb, Rocket, Globe, Heart, TrendingUp, BarChart, Cpu, Server, Database, Wifi, Smartphone, Monitor, Lock, Settings, Wrench, Activity, Eye, Search, Filter, Download, Upload, Share, Timer, Battery, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Package, DollarSign } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
+    { number: '50+', label: 'Happy Clients', icon: Users },
+    { number: '99%', label: 'Client Satisfaction', icon: Star },
+    { number: '24/7', label: 'Support Available', icon: Award },
   ];
 
   const values = [
     {
+      icon: Brain,
       title: 'Innovation First',
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions to deliver cutting-edge results.'
     },
     {
+      icon: Shield,
       title: 'Security & Trust',
-      description: 'Your data security is our top priority. We implement enterprise-grade security measures to protect your business.'
+      description: 'Your data and systems are protected with enterprise-grade security measures and compliance standards.'
     },
     {
+      icon: Users,
       title: 'Client-Centric',
       description: 'Every solution is tailored to your specific needs, ensuring maximum value and business impact.'
     },
     {
+      icon: Zap,
       title: 'Excellence',
       description: 'We maintain the highest standards of quality in every project, delivering exceptional results consistently.'
     }
@@ -73,23 +74,19 @@ const AboutPage: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/about" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         {/* Hero Section */}
-        <section className="relative overflow-hidden pt-20 pb-16">
-          <div className="absolute inset-0 opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className={`text-4xl md:text-6xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                About
-                <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Zion Tech Group
-                </span>
-              </h1>
-              <p className={`text-xl text-gray-300 mb-8 max-w-3xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                We are a leading technology company dedicated to transforming businesses through 
-                innovative AI solutions, cloud infrastructure, and cybersecurity services.
-              </p>
-            </div>
+        <section className="py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                About Zion Tech Group
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Pioneering the future of AI and IT solutions with cutting-edge technology, 
+              expert consulting, and unwavering commitment to your success.
+            </p>
           </div>
         </section>
 
@@ -103,7 +100,7 @@ const AboutPage: React.FC = () => {
                     <stat.icon className="w-8 h-8 text-cyan-400" />
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-400">{stat.label}</div>
+                  <div className="text-gray-400 text-sm">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -114,27 +111,27 @@ const AboutPage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-white mb-8">
-                Our Mission
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Mission</span>
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                To empower businesses with cutting-edge AI and IT solutions that drive innovation, 
-                enhance security, and accelerate digital transformation. We believe technology should 
-                be accessible, reliable, and transformative.
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                To empower businesses with transformative AI and IT solutions that drive innovation, 
+                efficiency, and growth. We believe technology should be accessible, secure, and 
+                purpose-built to solve real-world challenges.
               </p>
-              <div className="grid md:grid-cols-2 gap-8 mt-12">
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-2xl border border-slate-700/50">
-                  <h3 className="text-2xl font-bold text-white mb-4">Vision</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6">
+                  <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
                   <p className="text-gray-300">
-                    To be the global leader in AI-powered business solutions, setting the standard 
-                    for innovation, security, and customer success in the technology industry.
+                    To be the global leader in AI and IT solutions, recognized for our innovation, 
+                    reliability, and commitment to client success.
                   </p>
                 </div>
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-2xl border border-slate-700/50">
-                  <h3 className="text-2xl font-bold text-white mb-4">Values</h3>
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6">
+                  <h3 className="text-2xl font-bold text-white mb-4">Our Values</h3>
                   <p className="text-gray-300">
-                    Integrity, innovation, and excellence guide everything we do. We're committed 
-                    to delivering exceptional value while maintaining the highest ethical standards.
+                    Integrity, innovation, excellence, and client success drive everything we do. 
+                    We build lasting partnerships based on trust and mutual growth.
                   </p>
                 </div>
               </div>
@@ -146,19 +143,24 @@ const AboutPage: React.FC = () => {
         <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Values</span>
+              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                These principles guide our work and define our commitment to excellence
+                The principles that guide our work and define our culture
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <div key={index} className="text-center group">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <value.icon className="w-8 h-8 text-purple-400" />
+                  <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <value.icon className="w-10 h-10 text-cyan-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{value.title}</h3>
-                  <p className="text-gray-400">{value.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4">{value.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {value.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -169,20 +171,25 @@ const AboutPage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Meet Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Team</span>
+              </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The experts behind our innovative solutions
+                Expert professionals dedicated to delivering exceptional AI and IT solutions
               </p>
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {team.map((member, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-2xl border border-slate-700/50 text-center group hover:scale-105 transition-transform duration-300">
-                  <div className="w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Users className="w-12 h-12 text-cyan-400" />
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center group hover:border-cyan-400/40 transition-all duration-300">
+                  <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                    {member.name.split(' ').map(n => n[0]).join('')}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
-                  <p className="text-purple-400 mb-4">{member.role}</p>
-                  <p className="text-gray-400 text-sm">{member.bio}</p>
+                  <p className="text-cyan-400 font-medium mb-4">{member.role}</p>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {member.bio}
+                  </p>
                 </div>
               ))}
             </div>
@@ -190,28 +197,29 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our AI and IT solutions can drive your success
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
-                View Services
-              </Link>
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Work With Us?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our AI and IT solutions can transform your business and drive innovation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                >
+                  Get In Touch
+                </Link>
+                <Link
+                  to="/services"
+                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+                >
+                  Explore Our Services
+                </Link>
+              </div>
             </div>
           </div>
         </section>

@@ -19,11 +19,13 @@ const EnhancedHero: React.FC = () => {
       description: 'Mon-Fri 9AM-6PM PST'
     },
     {
+      icon: Mail,
       title: 'Email Us',
       details: 'contact@ziontechgroup.com',
       description: 'We respond within 24 hours'
     },
     {
+      icon: MapPin,
       title: 'Visit Us',
       details: 'San Francisco, CA',
       description: 'Schedule a meeting'

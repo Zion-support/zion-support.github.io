@@ -13,30 +13,35 @@ const FiveGSolutionsPage: React.FC = () => {
       link: '/5g-network-infrastructure'
     },
     {
+      icon: <Zap className="w-8 h-8 text-emerald-400" />,
       title: '5G IoT Solutions',
       description: 'Connect millions of devices with 5G-powered IoT infrastructure and management.',
       features: ['Device connectivity', 'Data management', 'Real-time monitoring', 'Edge computing'],
       link: '/5g-iot-solutions'
     },
     {
+      icon: <Cpu className="w-8 h-8 text-purple-400" />,
       title: '5G Edge Computing',
       description: 'Deploy edge computing solutions that leverage 5G for ultra-low latency applications.',
       features: ['Edge servers', 'Latency optimization', 'Local processing', 'Real-time analytics'],
       link: '/5g-edge-computing'
     },
     {
+      icon: <Shield className="w-8 h-8 text-red-400" />,
       title: '5G Private Networks',
       description: 'Secure, dedicated 5G networks for enterprise and industrial applications.',
       features: ['Private infrastructure', 'Enhanced security', 'Custom configuration', 'Dedicated resources'],
       link: '/5g-private-networks'
     },
     {
+      icon: <Smartphone className="w-8 h-8 text-orange-400" />,
       title: '5G Mobile Applications',
       description: 'Develop next-generation mobile apps that harness the power of 5G connectivity.',
       features: ['AR/VR apps', 'Real-time streaming', 'Cloud gaming', 'Instant sync'],
       link: '/5g-mobile-applications'
     },
     {
+      icon: <BarChart3 className="w-8 h-8 text-pink-400" />,
       title: '5G Data Analytics',
       description: 'Advanced analytics platform for 5G network performance and user behavior insights.',
       features: ['Network analytics', 'User insights', 'Performance metrics', 'Predictive analysis'],
@@ -46,24 +51,32 @@ const FiveGSolutionsPage: React.FC = () => {
 
   const benefits = [
     {
+      icon: <Zap className="w-6 h-6 text-cyan-400" />,
       title: 'Ultra-Fast Speeds',
       description: 'Up to 100x faster than 4G with speeds reaching 10 Gbps'
     },
     {
+      icon: <Globe className="w-6 h-6 text-emerald-400" />,
       title: 'Massive Connectivity',
       description: 'Support for up to 1 million devices per square kilometer'
     },
     {
+      icon: <Cpu className="w-6 h-6 text-purple-400" />,
       title: 'Ultra-Low Latency',
       description: 'Latency as low as 1ms for real-time applications'
     },
     {
+      icon: <Shield className="w-6 h-6 text-red-400" />,
       title: 'Enhanced Security',
       description: 'Advanced encryption and security protocols built-in'
     }
   ]
 
   const stats = [
+    { number: '10 Gbps', label: 'Peak Speed', icon: <Zap className="w-6 h-6 text-cyan-400" /> },
+    { number: '1ms', label: 'Latency', icon: <Cpu className="w-6 h-6 text-emerald-400" /> },
+    { number: '1M+', label: 'Devices per km²', icon: <Network className="w-6 h-6 text-purple-400" /> },
+    { number: '99.9%', label: 'Reliability', icon: <Shield className="w-6 h-6 text-orange-400" /> }
   ]
 
   return (

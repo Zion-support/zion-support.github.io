@@ -12,26 +12,31 @@ const AITimeTrackerPage: React.FC = () => {
       benefits: ['Auto-detection', 'Smart categorization', 'Context awareness', 'Learning algorithms']
     },
     {
+      icon: <Timer className="w-8 h-8 text-emerald-400" />,
       title: 'Smart Time Tracking',
       description: 'AI-powered time tracking that learns your work patterns and suggests optimal time allocation.',
       benefits: ['Pattern learning', 'Optimal suggestions', 'Focus time detection', 'Break reminders']
     },
     {
+      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
       title: 'Productivity Analytics',
       description: 'Comprehensive analytics with AI insights to improve productivity and work-life balance.',
       benefits: ['Productivity metrics', 'Efficiency analysis', 'Distraction tracking', 'Goal setting']
     },
     {
+      icon: <Zap className="w-8 h-8 text-red-400" />,
       title: 'Automated Reporting',
       description: 'Generate detailed time reports automatically with AI-powered insights and recommendations.',
       benefits: ['Auto reports', 'Client billing', 'Project insights', 'Team analytics']
     },
     {
+      icon: <BarChart3 className="w-8 h-8 text-orange-400" />,
       title: 'Project Management',
       description: 'AI-driven project time estimation and resource allocation for better project planning.',
       benefits: ['Time estimation', 'Resource planning', 'Deadline tracking', 'Budget monitoring']
     },
     {
+      icon: <Shield className="w-8 h-8 text-pink-400" />,
       title: 'Privacy Protection',
       description: 'Advanced privacy controls with local processing to protect sensitive work data.',
       benefits: ['Local processing', 'Data encryption', 'Privacy controls', 'GDPR compliance']
@@ -110,6 +115,10 @@ const AITimeTrackerPage: React.FC = () => {
   ]
 
   const stats = [
+    { number: '40%', label: 'Productivity Increase', icon: <TrendingUp className="w-6 h-6 text-cyan-400" /> },
+    { number: '20%', label: 'Faster Delivery', icon: <Timer className="w-6 h-6 text-emerald-400" /> },
+    { number: '95%', label: 'Accuracy Rate', icon: <Target className="w-6 h-6 text-purple-400" /> },
+    { number: '50K+', label: 'Hours Tracked', icon: <Clock className="w-6 h-6 text-orange-400" /> }
   ]
 
   return (

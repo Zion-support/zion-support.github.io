@@ -16,22 +16,27 @@ export default function AIProjectManagerPage() {
       description: 'Intelligent task ranking based on deadlines, dependencies, and team capacity'
     },
     {
+      icon: <BarChart3 className="w-6 h-6 text-emerald-400" />,
       title: 'Predictive Analytics',
       description: 'AI-powered project forecasting and risk assessment with 95% accuracy'
     },
     {
+      icon: <Users className="w-6 h-6 text-purple-400" />,
       title: 'Smart Team Matching',
       description: 'AI algorithms match tasks to team members based on skills and availability'
     },
     {
+      icon: <Zap className="w-6 h-6 text-orange-400" />,
       title: 'Automated Workflows',
       description: 'Set up intelligent workflows that adapt and optimize based on project patterns'
     },
     {
+      icon: <Target className="w-6 h-6 text-pink-400" />,
       title: 'Resource Optimization',
       description: 'AI-driven resource allocation and capacity planning for maximum efficiency'
     },
     {
+      icon: <Shield className="w-6 h-6 text-red-400" />,
       title: 'Risk Management',
       description: 'Proactive risk identification and mitigation strategies powered by machine learning'
     }
@@ -115,24 +120,38 @@ export default function AIProjectManagerPage() {
 
   const benefits = [
     {
+      icon: <TrendingUp className="w-8 h-8 text-cyan-400" />,
       title: '40% Faster Delivery',
       description: 'AI optimization reduces project completion time significantly'
     },
     {
+      icon: <Target className="w-8 h-8 text-emerald-400" />,
       title: '95% Accuracy',
       description: 'Predictive analytics with industry-leading accuracy rates'
     },
     {
+      icon: <Users className="w-8 h-8 text-purple-400" />,
       title: 'Team Productivity +60%',
       description: 'Smart task allocation maximizes team efficiency'
     },
     {
+      icon: <Shield className="w-8 h-8 text-orange-400" />,
       title: 'Risk Reduction 80%',
       description: 'Proactive risk management prevents project failures'
     }
   ]
 
   const integrations = [
+    { name: 'Slack', icon: '💬' },
+    { name: 'Microsoft Teams', icon: '👥' },
+    { name: 'Jira', icon: '🎯' },
+    { name: 'Asana', icon: '📋' },
+    { name: 'Trello', icon: '📌' },
+    { name: 'GitHub', icon: '🐙' },
+    { name: 'Google Workspace', icon: '📧' },
+    { name: 'Zoom', icon: '📹' },
+    { name: 'Figma', icon: '🎨' },
+    { name: 'Notion', icon: '📝' }
   ]
 
   return (

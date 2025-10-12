@@ -76,7 +76,6 @@ const Page: React.FC = () => {
         </section>
       </div>
     </>
-    </div>
   );
 };
 

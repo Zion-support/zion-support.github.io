@@ -12,14 +12,17 @@ export default function AIContentModerationPro() {
       description: 'Advanced machine learning models detect harmful content with 99.7% accuracy'
     },
     {
+      icon: <Shield className="w-6 h-6 text-purple-400" />,
       title: 'Real-time Protection',
       description: 'Instant content analysis and moderation to keep your platform safe'
     },
     {
+      icon: <Eye className="w-6 h-6 text-yellow-400" />,
       title: 'Multi-format Support',
       description: 'Text, images, videos, and audio content moderation in one platform'
     },
     {
+      icon: <Globe className="w-6 h-6 text-green-400" />,
       title: 'Global Compliance',
       description: 'Meets international content standards and regulatory requirements'
     }

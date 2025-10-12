@@ -1,89 +1,109 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Layout from '../layout';
+import { Globe, CheckCircle, ArrowRight, Code, Smartphone, Zap, Settings, BarChart, Target, Users } from 'lucide-react';
 
 const WebDevelopmentPage: React.FC = () => {
   const services = [
     {
+      icon: Globe,
+      title: 'Custom Web Applications',
+      description: 'Tailored web solutions built with modern technologies',
+      features: ['React/Next.js', 'Node.js', 'TypeScript', 'Responsive design']
+    },
+    {
+      icon: Smartphone,
+      title: 'Mobile-First Design',
+      description: 'Responsive websites optimized for all devices',
+      features: ['Mobile optimization', 'Touch-friendly UI', 'Fast loading', 'Cross-browser support']
+    },
+    {
       icon: Code,
-      title: 'Frontend Development',
-      description: 'Modern, responsive web applications built with React, Next.js, and cutting-edge technologies.',
-      features: ['React/Next.js', 'TypeScript', 'Tailwind CSS', 'Responsive Design'],
-      price: 'Starting at $3,000',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Backend Development',
-      description: 'Robust server-side applications with Node.js, Python, and scalable architectures.',
-      features: ['Node.js/Python', 'RESTful APIs', 'Database Design', 'Cloud Integration'],
-      price: 'Starting at $4,000',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Full-Stack Development',
-      description: 'Complete web solutions from frontend to backend with seamless integration.',
-      features: ['End-to-End Development', 'Database Integration', 'API Development', 'Deployment'],
-      price: 'Starting at $6,000',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
       title: 'E-commerce Solutions',
-      description: 'Custom e-commerce platforms with payment integration and inventory management.',
-      features: ['Payment Integration', 'Inventory Management', 'Order Processing', 'Admin Dashboard'],
-      price: 'Starting at $8,000',
-      color: 'from-orange-500 to-red-500'
+      description: 'Complete online store development and integration',
+      features: ['Payment integration', 'Inventory management', 'Order tracking', 'Admin dashboard']
+    },
+    {
+      icon: Zap,
+      title: 'Performance Optimization',
+      description: 'Fast, SEO-optimized websites that rank well',
+      features: ['SEO optimization', 'Speed optimization', 'Analytics integration', 'Security hardening']
     }
   ];
 
-  const technologies = [
+  const pricingTiers = [
     {
-      title: 'Frontend',
-      items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion']
+      name: 'Basic Website',
+      price: '$2,999',
+      description: 'Perfect for small businesses',
+      features: [
+        'Up to 5 pages',
+        'Responsive design',
+        'Contact form',
+        'Basic SEO',
+        '3 months support'
+      ],
+      popular: false
     },
     {
-      title: 'Backend',
-      items: ['Node.js', 'Python', 'Express.js', 'FastAPI', 'PostgreSQL']
+      name: 'Professional Website',
+      price: '$7,999',
+      description: 'Ideal for growing companies',
+      features: [
+        'Up to 15 pages',
+        'Custom design',
+        'CMS integration',
+        'Advanced SEO',
+        'E-commerce features',
+        '6 months support'
+      ],
+      popular: true
     },
     {
-      title: 'Cloud',
-      items: ['AWS', 'Azure', 'Google Cloud', 'Vercel', 'Netlify']
-    },
-    {
-      title: 'Tools',
-      items: ['Git', 'Docker', 'CI/CD', 'Testing', 'Monitoring']
+      name: 'Enterprise Solution',
+      price: '$19,999',
+      description: 'For large organizations',
+      features: [
+        'Unlimited pages',
+        'Custom development',
+        'Advanced integrations',
+        'Performance optimization',
+        'Security features',
+        '12 months support'
+      ],
+      popular: false
     }
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>Web Development - Zion Tech Group</title>
-        <meta name="description" content="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern, responsive, and scalable web applications." />
-        <meta name="keywords" content="web development, frontend development, backend development, full-stack development, e-commerce, React, Node.js" />
-      </Helmet>
-
+    <Layout
+      title="Web Development - Custom Web Solutions"
+      description="Professional web development services. We create fast, responsive, and SEO-optimized websites that drive business growth."
+      keywords="web development, custom websites, responsive design, e-commerce, web applications, frontend development"
+    >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-32 pb-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                Web <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Development</span>
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Web Development
+                </span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Create powerful, modern web applications that engage users and drive business growth. 
-                From simple websites to complex web platforms, we deliver exceptional digital experiences.
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+                Professional web development services that create fast, responsive, 
+                and SEO-optimized websites that drive business growth.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Your Project
-                </Link>
-                <Link 
-                  to="/it-services"
-                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-                >
-                  View All IT Services
-                </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group">
+                  Get Free Quote
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </button>
+                <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105">
+                  View Portfolio
+                </button>
               </div>
             </div>
           </div>
@@ -93,11 +113,11 @@ const WebDevelopmentPage: React.FC = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Web Solutions</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Web Development Services</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive web development services for all your digital needs
+                Comprehensive web solutions tailored to your business needs
               </p>
             </div>
 
@@ -105,116 +125,87 @@ const WebDevelopmentPage: React.FC = () => {
               {services.map((service, index) => (
                 <div 
                   key={index}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className="w-8 h-8 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                     {service.title}
                   </h3>
-                  
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                     {service.description}
                   </p>
-
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
-
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                    <Link 
-                      to="/contact"
-                      className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-flex items-center"
-                    >
-                      Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
-                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Technologies Section */}
+        {/* Pricing Section */}
         <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Technologies <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">We Use</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Transparent <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Modern, proven technologies for building exceptional web applications
+                Choose the web development package that fits your needs
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {technologies.map((tech, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-4 text-center">{tech.title}</h3>
-                  <ul className="space-y-2">
-                    {tech.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {item}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricingTiers.map((tier, index) => (
+                <div 
+                  key={index}
+                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-xl p-8 hover:transform hover:scale-105 transition-all duration-300 ${
+                    tier.popular 
+                      ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/25' 
+                      : 'border-gray-700/50'
+                  }`}
+                >
+                  {tier.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </div>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                    <p className="text-gray-400 text-sm mb-4">{tier.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-white">{tier.price}</span>
+                    </div>
+                  </div>
+
+                  <ul className="space-y-4 mb-8">
+                    {tier.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
+
+                  <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    tier.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
+                      : 'border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10'
+                  }`}>
+                    {tier.popular ? 'Get Started' : 'Choose Plan'}
+                  </button>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Us */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Zion Tech Group</span>?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We deliver exceptional web solutions through expertise, innovation, and commitment to quality
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-10 h-10 text-cyan-400" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Fast Development</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Rapid development cycles with modern tools and agile methodologies for faster time-to-market.
-                </p>
-              </div>
-
-              <div className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-10 h-10 text-purple-400" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Expert Team</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Certified developers with years of experience in modern web technologies and best practices.
-                </p>
-              </div>
-
-              <div className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Award className="w-10 h-10 text-green-400" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Quality Assurance</h3>
-                <p className="text-gray-300 leading-relaxed">
-                  Comprehensive testing and quality assurance to ensure your web application works flawlessly.
-                </p>
-              </div>
             </div>
           </div>
         </section>
@@ -222,32 +213,29 @@ const WebDevelopmentPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Build Your Web Application?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Let's discuss your web project and create a solution that engages your users and drives business growth.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Your Project
-                </Link>
-                <Link 
-                  to="/about"
-                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
-                >
-                  Learn More About Us
-                </Link>
+            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>
+              <div className="relative z-10">
+                <h2 className="text-4xl font-bold text-white mb-6">
+                  Ready to Build Your Website?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                  Let's discuss your project and create a website that drives results for your business.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
+                    Get Free Quote
+                  </button>
+                  <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105">
+                    View Portfolio
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </section>
       </div>
-    </>
+    </Layout>
   );
 };
 
