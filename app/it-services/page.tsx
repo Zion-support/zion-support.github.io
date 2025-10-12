@@ -9,99 +9,243 @@ export default function ITServicesPage() {
   const itServices = [
     {
       icon: <Cloud className="w-12 h-12 text-blue-500" />,
-      title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud with our expert cloud migration services.',
+      title: 'Cloud Migration & Management',
+      description: 'Comprehensive cloud migration services with zero-downtime deployment, cost optimization, and ongoing management across AWS, Azure, and GCP.',
       features: [
-        'AWS, Azure, GCP expertise',
-        'Zero-downtime migration',
-        'Cost optimization',
-        'Security compliance',
-        '24/7 monitoring',
-        'Disaster recovery'
+        'Multi-cloud expertise (AWS, Azure, GCP)',
+        'Zero-downtime migration strategy',
+        'Cost optimization & monitoring',
+        'Security compliance & governance',
+        '24/7 cloud monitoring & support',
+        'Disaster recovery & backup solutions',
+        'Performance optimization',
+        'Cloud security assessment'
       ],
-      pricing: 'Starting at $2,500/month',
+      pricing: '$3,500/month',
+      marketPrice: '$5,000-8,000/month',
       popular: true,
-      link: '/cloud-migration'
+      link: '/cloud-migration',
+      benefits: ['Reduce cloud costs by 35%', 'Improve performance by 50%', 'Ensure 99.9% uptime']
     },
     {
       icon: <Shield className="w-12 h-12 text-green-500" />,
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with comprehensive cybersecurity solutions and threat monitoring.',
+      title: 'Cybersecurity Solutions Suite',
+      description: 'Enterprise-grade cybersecurity solutions with threat detection, incident response, compliance management, and continuous security monitoring.',
       features: [
-        'Security assessment',
-        'Threat detection',
-        'Incident response',
-        'Compliance management',
-        'Security training',
-        'Penetration testing'
+        'Comprehensive security assessment',
+        'Advanced threat detection & prevention',
+        'Incident response & forensics',
+        'Compliance management (SOC2, GDPR, HIPAA)',
+        'Security awareness training',
+        'Penetration testing & vulnerability assessment',
+        'Security operations center (SOC)',
+        'Managed security services'
       ],
-      pricing: 'Starting at $1,800/month',
+      pricing: '$2,800/month',
+      marketPrice: '$4,500-7,500/month',
       popular: false,
-      link: '/cybersecurity-solutions'
+      link: '/cybersecurity-solutions',
+      benefits: ['Prevent 99.9% of cyber attacks', 'Reduce security incidents by 90%', 'Ensure compliance with regulations']
     },
     {
       icon: <Code className="w-12 h-12 text-purple-500" />,
-      title: 'DevOps & CI/CD',
-      description: 'Streamline your development process with automated DevOps and continuous integration.',
+      title: 'DevOps & CI/CD Platform',
+      description: 'Complete DevOps transformation with automated CI/CD pipelines, container orchestration, and infrastructure as code for scalable development.',
       features: [
-        'CI/CD pipeline setup',
-        'Container orchestration',
-        'Infrastructure as Code',
-        'Automated testing',
-        'Deployment automation',
-        'Performance monitoring'
+        'CI/CD pipeline automation',
+        'Container orchestration (Kubernetes, Docker)',
+        'Infrastructure as Code (Terraform, CloudFormation)',
+        'Automated testing & quality assurance',
+        'Deployment automation & rollback',
+        'Performance monitoring & alerting',
+        'GitOps workflow implementation',
+        'DevSecOps security integration'
       ],
-      pricing: 'Starting at $2,200/month',
+      pricing: '$3,200/month',
+      marketPrice: '$5,000-9,000/month',
       popular: true,
-      link: '/devops-cicd'
+      link: '/devops-cicd',
+      benefits: ['Deploy 10x faster', 'Reduce deployment failures by 80%', 'Improve development efficiency by 60%']
     },
     {
       icon: <Database className="w-12 h-12 text-orange-500" />,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics solutions.',
+      title: 'Data Analytics & Business Intelligence',
+      description: 'Advanced data analytics platform with real-time insights, predictive analytics, and comprehensive business intelligence solutions.',
       features: [
-        'Data warehousing',
-        'Business intelligence',
-        'Predictive analytics',
-        'Real-time dashboards',
-        'Data visualization',
-        'Machine learning integration'
+        'Data warehousing & lake solutions',
+        'Real-time analytics & dashboards',
+        'Predictive analytics & machine learning',
+        'Data visualization & reporting',
+        'Data integration & ETL processes',
+        'Self-service analytics platform',
+        'Data governance & quality management',
+        'Mobile analytics applications'
       ],
-      pricing: 'Starting at $1,500/month',
+      pricing: '$2,500/month',
+      marketPrice: '$4,000-7,000/month',
       popular: false,
-      link: '/data-analytics'
+      link: '/data-analytics',
+      benefits: ['Make data-driven decisions 3x faster', 'Identify trends 2 weeks earlier', 'Reduce reporting time by 75%']
     },
     {
       icon: <Smartphone className="w-12 h-12 text-red-500" />,
-      title: 'Mobile Development',
-      description: 'Build powerful mobile applications for iOS and Android with our expert development team.',
+      title: 'Mobile & Web Development',
+      description: 'Full-stack mobile and web development services with native, cross-platform, and progressive web application solutions.',
       features: [
-        'Native app development',
-        'Cross-platform solutions',
-        'UI/UX design',
-        'App store optimization',
-        'Performance optimization',
-        'Maintenance & support'
+        'Native iOS & Android development',
+        'Cross-platform solutions (React Native, Flutter)',
+        'Progressive Web Applications (PWA)',
+        'Custom UI/UX design',
+        'App store optimization & deployment',
+        'Performance optimization & testing',
+        'Backend API development',
+        'Ongoing maintenance & support'
       ],
-      pricing: 'Starting at $3,000/month',
+      pricing: '$4,500/month',
+      marketPrice: '$7,000-12,000/month',
       popular: false,
-      link: '/mobile-development'
+      link: '/mobile-development',
+      benefits: ['Reduce development time by 40%', 'Improve app performance by 60%', 'Increase user engagement by 35%']
     },
     {
       icon: <Server className="w-12 h-12 text-yellow-500" />,
-      title: 'Infrastructure Management',
-      description: 'Comprehensive infrastructure management and optimization for your IT environment.',
+      title: 'Infrastructure Management & Support',
+      description: 'Comprehensive IT infrastructure management with 24/7 monitoring, proactive maintenance, and optimization for maximum uptime.',
       features: [
-        'Server management',
-        'Network optimization',
-        'Backup solutions',
-        'Disaster recovery',
-        'Performance tuning',
-        '24/7 support'
+        'Server & network management',
+        'Infrastructure monitoring & alerting',
+        'Backup & disaster recovery solutions',
+        'Performance tuning & optimization',
+        '24/7 technical support',
+        'Patch management & updates',
+        'Capacity planning & scaling',
+        'IT asset management'
       ],
-      pricing: 'Starting at $1,200/month',
+      pricing: '$2,200/month',
+      marketPrice: '$3,500-6,000/month',
       popular: true,
-      link: '/infrastructure-management'
+      link: '/infrastructure-management',
+      benefits: ['Ensure 99.9% uptime', 'Reduce IT costs by 30%', 'Prevent 90% of infrastructure issues']
+    },
+    {
+      icon: <Wifi className="w-12 h-12 text-cyan-500" />,
+      title: 'Network Security & Monitoring',
+      description: 'Advanced network security solutions with real-time monitoring, threat detection, and automated response capabilities.',
+      features: [
+        'Network security assessment',
+        'Firewall management & configuration',
+        'Intrusion detection & prevention',
+        'Network monitoring & analytics',
+        'VPN & remote access solutions',
+        'Network segmentation & micro-segmentation',
+        'Bandwidth optimization',
+        'Network performance tuning'
+      ],
+      pricing: '$1,800/month',
+      marketPrice: '$3,000-5,500/month',
+      popular: false,
+      link: '/network-security',
+      benefits: ['Prevent 95% of network attacks', 'Improve network performance by 45%', 'Reduce security incidents by 85%']
+    },
+    {
+      icon: <Cpu className="w-12 h-12 text-indigo-500" />,
+      title: 'IT Consulting & Strategy',
+      description: 'Strategic IT consulting services to align technology with business goals, digital transformation, and technology roadmap planning.',
+      features: [
+        'IT strategy & roadmap development',
+        'Digital transformation consulting',
+        'Technology assessment & planning',
+        'Vendor evaluation & selection',
+        'IT governance & best practices',
+        'Change management & training',
+        'ROI analysis & cost optimization',
+        'Technology innovation advisory'
+      ],
+      pricing: '$2,000/month',
+      marketPrice: '$3,500-6,500/month',
+      popular: true,
+      link: '/it-consulting',
+      benefits: ['Align IT with business goals', 'Reduce technology costs by 25%', 'Accelerate digital transformation']
+    },
+    {
+      icon: <Database className="w-12 h-12 text-pink-500" />,
+      title: 'Database Management & Optimization',
+      description: 'Comprehensive database services including design, optimization, migration, and ongoing management for maximum performance.',
+      features: [
+        'Database design & architecture',
+        'Performance tuning & optimization',
+        'Database migration & upgrades',
+        'Backup & recovery solutions',
+        'Database security & compliance',
+        'Monitoring & alerting',
+        'Query optimization',
+        'Database as a Service (DBaaS)'
+      ],
+      pricing: '$1,600/month',
+      marketPrice: '$2,800-5,000/month',
+      popular: false,
+      link: '/database-management',
+      benefits: ['Improve database performance by 70%', 'Reduce downtime by 90%', 'Optimize storage costs by 40%']
+    },
+    {
+      icon: <Cloud className="w-12 h-12 text-teal-500" />,
+      title: 'Hybrid Cloud Solutions',
+      description: 'Hybrid cloud architecture design and implementation for seamless integration between on-premises and cloud environments.',
+      features: [
+        'Hybrid cloud architecture design',
+        'Cloud integration & connectivity',
+        'Data synchronization & replication',
+        'Workload migration & optimization',
+        'Security & compliance management',
+        'Cost optimization across environments',
+        'Disaster recovery planning',
+        'Multi-cloud management'
+      ],
+      pricing: '$3,800/month',
+      marketPrice: '$6,000-10,000/month',
+      popular: true,
+      link: '/hybrid-cloud',
+      benefits: ['Optimize costs across environments', 'Improve flexibility and scalability', 'Ensure seamless data flow']
+    },
+    {
+      icon: <Shield className="w-12 h-12 text-violet-500" />,
+      title: 'Compliance & Governance',
+      description: 'Comprehensive compliance management services for SOC2, GDPR, HIPAA, and other regulatory requirements with ongoing monitoring.',
+      features: [
+        'Compliance assessment & gap analysis',
+        'Policy development & implementation',
+        'Audit preparation & support',
+        'Risk assessment & management',
+        'Training & awareness programs',
+        'Ongoing compliance monitoring',
+        'Documentation & reporting',
+        'Remediation planning & execution'
+      ],
+      pricing: '$2,400/month',
+      marketPrice: '$4,000-7,000/month',
+      popular: false,
+      link: '/compliance-governance',
+      benefits: ['Ensure regulatory compliance', 'Reduce audit preparation time by 60%', 'Minimize compliance risks']
+    },
+    {
+      icon: <Smartphone className="w-12 h-12 text-amber-500" />,
+      title: 'IT Support & Help Desk',
+      description: '24/7 IT support services with remote assistance, ticketing system, and proactive issue resolution for maximum productivity.',
+      features: [
+        '24/7 technical support',
+        'Remote desktop assistance',
+        'Ticketing & issue tracking',
+        'Proactive monitoring & maintenance',
+        'Software installation & updates',
+        'Hardware troubleshooting',
+        'User training & onboarding',
+        'Knowledge base & documentation'
+      ],
+      pricing: '$1,200/month',
+      marketPrice: '$2,000-3,500/month',
+      popular: true,
+      link: '/it-support',
+      benefits: ['Resolve issues 3x faster', 'Reduce downtime by 80%', 'Improve user satisfaction by 90%']
     }
   ]
 
@@ -236,10 +380,28 @@ export default function ITServicesPage() {
                   ))}
                 </ul>
                 
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-2xl font-bold text-white">
-                    {service.pricing}
-                  </span>
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl font-bold text-white">
+                      {service.pricing}
+                    </span>
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    Market Price: <span className="line-through">{service.marketPrice}</span>
+                    <span className="text-green-400 ml-2 font-semibold">Save up to 45%</span>
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-2">Key Benefits:</h4>
+                  <ul className="space-y-1">
+                    {service.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="text-xs text-gray-300 flex items-center">
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 
                 <Link

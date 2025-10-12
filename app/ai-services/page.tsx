@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Brain, Database, Code, Smartphone, Cpu, Eye, MessageSquare, BarChart3 } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Brain, Database, Code, Smartphone, Cpu, Eye, MessageSquare, BarChart3, Shield, Cloud, Wifi } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -10,98 +10,242 @@ const AIServicesPage: React.FC = () => {
     {
       icon: <Brain className="w-12 h-12 text-blue-500" />,
       title: 'AI Content Generator Pro',
-      description: 'Advanced AI-powered content creation tool that generates high-quality articles, blogs, social media posts, and marketing copy.',
+      description: 'Advanced AI-powered content creation tool that generates high-quality articles, blogs, social media posts, and marketing copy with human-like quality.',
       features: [
-        'Generate 10,000+ words daily',
-        '50+ content templates',
-        'SEO optimization',
-        'Multi-language support',
+        'Generate 50,000+ words daily',
+        '100+ content templates',
+        'SEO optimization with keyword research',
+        'Multi-language support (50+ languages)',
         'Brand voice customization',
-        'Plagiarism detection'
+        'Plagiarism detection & originality scoring',
+        'Content performance analytics',
+        'Team collaboration tools'
       ],
-      pricing: '$29/month',
+      pricing: '$49/month',
+      marketPrice: '$75-120/month',
       popular: true,
-      link: '/ai-content-generator'
+      link: '/ai-content-generator',
+      benefits: ['Increase content output by 500%', 'Reduce content costs by 70%', 'Improve SEO rankings by 40%']
     },
     {
       icon: <Zap className="w-12 h-12 text-green-500" />,
       title: 'AI Chatbot Builder Enterprise',
-      description: 'Create intelligent chatbots for customer service, sales, and support with advanced NLP and machine learning capabilities.',
+      description: 'Create intelligent chatbots for customer service, sales, and support with advanced NLP, machine learning, and conversational AI capabilities.',
       features: [
-        'Visual chatbot builder',
-        'Multi-channel deployment',
-        'Advanced analytics',
-        'Custom integrations',
-        '24/7 monitoring',
-        'A/B testing tools'
+        'Visual no-code chatbot builder',
+        'Multi-channel deployment (web, mobile, social)',
+        'Advanced NLP & sentiment analysis',
+        'Custom integrations (CRM, ERP, APIs)',
+        '24/7 monitoring & analytics',
+        'A/B testing & optimization',
+        'Voice & text capabilities',
+        'Multi-language support'
       ],
-      pricing: '$49/month',
+      pricing: '$79/month',
+      marketPrice: '$120-200/month',
       popular: false,
-      link: '/ai-chatbot-builder'
+      link: '/ai-chatbot-builder',
+      benefits: ['Reduce support costs by 60%', 'Improve response time by 90%', 'Increase customer satisfaction by 35%']
     },
     {
       icon: <Database className="w-12 h-12 text-purple-500" />,
-      title: 'AI Analytics Dashboard',
-      description: 'Comprehensive business intelligence platform with AI-powered insights, predictive analytics, and automated reporting.',
+      title: 'AI Analytics Dashboard Pro',
+      description: 'Comprehensive business intelligence platform with AI-powered insights, predictive analytics, automated reporting, and real-time decision making.',
       features: [
         'Real-time data visualization',
-        'Predictive analytics',
-        'Automated reports',
-        'Custom dashboards',
-        'Data integration',
-        'Mobile app included'
+        'Predictive analytics & forecasting',
+        'Automated report generation',
+        'Custom interactive dashboards',
+        'Data integration from 200+ sources',
+        'Mobile & desktop apps',
+        'Natural language queries',
+        'Anomaly detection & alerts'
       ],
-      pricing: '$79/month',
+      pricing: '$99/month',
+      marketPrice: '$150-300/month',
       popular: true,
-      link: '/ai-analytics-dashboard'
+      link: '/ai-analytics-dashboard',
+      benefits: ['Make data-driven decisions 3x faster', 'Identify trends 2 weeks earlier', 'Reduce reporting time by 80%']
     },
     {
       icon: <Code className="w-12 h-12 text-orange-500" />,
-      title: 'AI Email Assistant',
-      description: 'Smart email management tool that drafts, schedules, and optimizes emails using AI to improve open rates and engagement.',
+      title: 'AI Email Marketing Suite',
+      description: 'Comprehensive email marketing platform with AI-powered personalization, automation, and optimization to maximize engagement and conversions.',
       features: [
-        'Smart email drafting',
+        'AI-powered email personalization',
         'Send time optimization',
-        'Subject line testing',
-        'Email templates',
-        'Performance analytics',
-        'CRM integration'
+        'Subject line & content testing',
+        'Advanced segmentation',
+        'Performance analytics & insights',
+        'CRM & e-commerce integration',
+        'A/B testing automation',
+        'Deliverability optimization'
       ],
-      pricing: '$39/month',
+      pricing: '$59/month',
+      marketPrice: '$90-150/month',
       popular: false,
-      link: '/ai-email-assistant'
+      link: '/ai-email-assistant',
+      benefits: ['Increase open rates by 45%', 'Boost click-through rates by 60%', 'Reduce unsubscribe rates by 30%']
     },
     {
       icon: <Smartphone className="w-12 h-12 text-red-500" />,
-      title: 'AI Voice Assistant',
-      description: 'Custom voice assistant for businesses with natural language processing, voice commands, and integration capabilities.',
+      title: 'AI Voice Assistant Pro',
+      description: 'Enterprise-grade voice assistant with natural language processing, custom voice training, and seamless integration across all business systems.',
       features: [
-        'Natural voice recognition',
-        'Custom voice training',
-        'Multi-language support',
-        'API integrations',
-        'Voice analytics',
-        'Custom wake words'
+        'Natural voice recognition (99% accuracy)',
+        'Custom voice training & branding',
+        'Multi-language support (30+ languages)',
+        'API integrations (100+ services)',
+        'Voice analytics & insights',
+        'Custom wake words & commands',
+        'Offline capability',
+        'Team collaboration features'
       ],
-      pricing: '$59/month',
+      pricing: '$89/month',
+      marketPrice: '$140-250/month',
       popular: false,
-      link: '/ai-voice-assistant'
+      link: '/ai-voice-assistant',
+      benefits: ['Improve accessibility by 80%', 'Reduce manual tasks by 50%', 'Enhance user experience significantly']
     },
     {
       icon: <Cpu className="w-12 h-12 text-yellow-500" />,
-      title: 'AI Automation Suite',
-      description: 'Complete workflow automation platform that uses AI to streamline business processes and reduce manual work.',
+      title: 'AI Automation Suite Enterprise',
+      description: 'Complete workflow automation platform that uses AI to streamline business processes, reduce manual work, and optimize operations across departments.',
       features: [
-        'Workflow automation',
-        'Process optimization',
-        'Task scheduling',
-        'Integration hub',
-        'Performance monitoring',
-        'Custom triggers'
+        'Visual workflow automation',
+        'AI-powered process optimization',
+        'Smart task scheduling & routing',
+        'Integration hub (500+ apps)',
+        'Performance monitoring & analytics',
+        'Custom triggers & conditions',
+        'Error handling & recovery',
+        'Scalable cloud infrastructure'
       ],
-      pricing: '$99/month',
+      pricing: '$149/month',
+      marketPrice: '$250-400/month',
       popular: true,
-      link: '/ai-automation'
+      link: '/ai-automation',
+      benefits: ['Reduce manual work by 70%', 'Improve process efficiency by 85%', 'Save 20+ hours per week']
+    },
+    {
+      icon: <Eye className="w-12 h-12 text-cyan-500" />,
+      title: 'AI Computer Vision Platform',
+      description: 'Advanced computer vision platform for image recognition, object detection, facial recognition, and automated visual content analysis.',
+      features: [
+        'Object detection & classification',
+        'Facial recognition & analysis',
+        'OCR & text extraction',
+        'Image quality assessment',
+        'Real-time video processing',
+        'Custom model training',
+        'API & SDK integration',
+        'Batch processing capabilities'
+      ],
+      pricing: '$119/month',
+      marketPrice: '$180-300/month',
+      popular: true,
+      link: '/ai-computer-vision',
+      benefits: ['Automate visual tasks 10x faster', 'Improve accuracy by 95%', 'Reduce manual inspection costs by 80%']
+    },
+    {
+      icon: <Shield className="w-12 h-12 text-indigo-500" />,
+      title: 'AI Cybersecurity Suite',
+      description: 'Comprehensive AI-powered cybersecurity platform with threat detection, automated response, and continuous security monitoring.',
+      features: [
+        'Real-time threat detection',
+        'Automated incident response',
+        'Behavioral analysis & anomaly detection',
+        'Vulnerability assessment',
+        'Security compliance monitoring',
+        'Threat intelligence integration',
+        'Automated patching & updates',
+        '24/7 security operations center'
+      ],
+      pricing: '$199/month',
+      marketPrice: '$350-600/month',
+      popular: true,
+      link: '/ai-cybersecurity',
+      benefits: ['Prevent 99.9% of cyber attacks', 'Reduce response time by 90%', 'Ensure compliance with regulations']
+    },
+    {
+      icon: <BarChart3 className="w-12 h-12 text-pink-500" />,
+      title: 'AI Predictive Analytics Engine',
+      description: 'Advanced predictive analytics platform that uses machine learning to forecast trends, customer behavior, and business outcomes.',
+      features: [
+        'Customer behavior prediction',
+        'Sales forecasting & planning',
+        'Risk assessment & management',
+        'Demand forecasting',
+        'Churn prediction & prevention',
+        'Market trend analysis',
+        'Custom model development',
+        'Real-time predictions'
+      ],
+      pricing: '$129/month',
+      marketPrice: '$200-350/month',
+      popular: false,
+      link: '/ai-predictive-analytics',
+      benefits: ['Improve forecast accuracy by 60%', 'Reduce business risks by 40%', 'Increase revenue by 25%']
+    },
+    {
+      icon: <MessageSquare className="w-12 h-12 text-teal-500" />,
+      title: 'AI Customer Intelligence',
+      description: 'AI-powered customer intelligence platform that analyzes customer interactions, sentiment, and behavior to improve customer experience.',
+      features: [
+        'Sentiment analysis & monitoring',
+        'Customer journey mapping',
+        'Churn prediction & prevention',
+        'Personalization recommendations',
+        'Customer lifetime value prediction',
+        'Multi-channel interaction analysis',
+        'Real-time customer insights',
+        'Automated customer segmentation'
+      ],
+      pricing: '$89/month',
+      marketPrice: '$140-250/month',
+      popular: true,
+      link: '/ai-customer-intelligence',
+      benefits: ['Increase customer satisfaction by 50%', 'Reduce churn by 35%', 'Improve customer lifetime value by 40%']
+    },
+    {
+      icon: <Cloud className="w-12 h-12 text-violet-500" />,
+      title: 'AI Cloud Optimization',
+      description: 'Intelligent cloud resource optimization platform that automatically manages and optimizes cloud infrastructure for cost and performance.',
+      features: [
+        'Automated resource scaling',
+        'Cost optimization recommendations',
+        'Performance monitoring & tuning',
+        'Security compliance checking',
+        'Multi-cloud management',
+        'Predictive scaling',
+        'Cost forecasting',
+        'Automated backup & recovery'
+      ],
+      pricing: '$159/month',
+      marketPrice: '$250-450/month',
+      popular: false,
+      link: '/ai-cloud-optimization',
+      benefits: ['Reduce cloud costs by 40%', 'Improve performance by 60%', 'Ensure 99.9% uptime']
+    },
+    {
+      icon: <Wifi className="w-12 h-12 text-amber-500" />,
+      title: 'AI IoT Management Platform',
+      description: 'Comprehensive IoT management platform with AI-powered device monitoring, predictive maintenance, and automated optimization.',
+      features: [
+        'Device monitoring & management',
+        'Predictive maintenance alerts',
+        'Data collection & analysis',
+        'Remote device control',
+        'Security monitoring',
+        'Performance optimization',
+        'Fleet management',
+        'Custom dashboard creation'
+      ],
+      pricing: '$179/month',
+      marketPrice: '$300-500/month',
+      popular: true,
+      link: '/ai-iot-management',
+      benefits: ['Reduce maintenance costs by 50%', 'Prevent 90% of device failures', 'Improve operational efficiency by 70%']
     }
   ];
 
@@ -240,10 +384,28 @@ const AIServicesPage: React.FC = () => {
                   ))}
                 </ul>
                 
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-2xl font-bold text-white">
-                    {service.pricing}
-                  </span>
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-2xl font-bold text-white">
+                      {service.pricing}
+                    </span>
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    Market Price: <span className="line-through">{service.marketPrice}</span>
+                    <span className="text-green-400 ml-2 font-semibold">Save up to 40%</span>
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-2">Key Benefits:</h4>
+                  <ul className="space-y-1">
+                    {service.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="text-xs text-gray-300 flex items-center">
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 
                 <Link
