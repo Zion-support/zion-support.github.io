@@ -1,15 +1,13 @@
-import { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {;
-'use client';
+import { 
   ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
   BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
   Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
   TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
   Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock
 } from 'lucide-react';
-import { ArrowRight, ShoppingCart } from 'lucide-react';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Link as LinkIcon, Package, TrendingUp, Calendar, Globe, Database, Monitor, Mail } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
 
@@ -764,8 +762,8 @@ const MicroSaasPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title />Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
-        <meta const name = "description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." /  />
+        <title>Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
+        <meta name="description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." />
         <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" />
       </Helmet>
 
@@ -775,12 +773,11 @@ const MicroSaasPage: React.FC = () => {
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Micro SAAS
-                <span className="w-5 h-5ml-2" />Business Solutions
-                </span>
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Business Solutions</span>
               </h1>
-              <p className="{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Powerful, ready-to-use software solutions designed to solve specific business challenges. 
                 No complex setup, no lengthy implementations - just instant value.
               </p>

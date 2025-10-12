@@ -12,13 +12,13 @@ const ContactPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
           <div className="text-center">
-            <h1 className="text-4xlmd:text-6xlfont-bold text-white  mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Contact Us
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl  mx-auto">
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Ready to transform your business? Get in touch with our team of experts.
             </p>
-            <div className="max-w-md  mx-auto">
+            <div className="max-w-md mx-auto">
               <form className="space-y-4">
                 <input
                   type="text"
@@ -43,7 +43,9 @@ const ContactPage: React.FC = () => {
                 </button>
               </form>
             </div>
+          </div>
         </div>
+      </div>
     </>
   );
 };
