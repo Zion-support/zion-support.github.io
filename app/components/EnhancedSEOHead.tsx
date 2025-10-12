@@ -12,12 +12,12 @@ interface SEOHeadProps {
   structuredData?: object;
 }
 
-const SEOHead: React.FC<SEOHeadProps /> = ({
-  const title = 'Zion Tech Group - Advanced AI & IT Solutions',
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.',
   keywords = 'AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence',
-  canonical = 'https: //ziontechgroup.com',
-  ogImage = 'https: //ziontechgroup.com/og-image.jpg',
+  canonical = 'https://ziontechgroup.com',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData
@@ -64,29 +64,29 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
-      <meta const name = "description" content="{description}" /  />
-      <meta name="keywords" content="{keywords}" />
+        <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width="device-width," initial-scale=1.0" /  />
-      <meta name="theme-color" content="#8 b5 cf6" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#8b5cf6" />
       {/* Canonical URL */}
-      <link rel="canonical" href="{canonical}"  />
+      <link rel="canonical" href={canonical} />
       {/* Open Graph Meta Tags */}
-      <meta property="og: title" content="{title}" /  />
-      <meta property="og: description" content="{description}" /  />
-      <meta property="og: type" content="{ogType}" /  />
-      <meta property="og: url" content="{canonical}" /  />
-      <meta property="og: image" content="{ogImage}" /  />
-      <meta property="og:image:width" content="1200" /  />
-      <meta property="og:image:height" content="630" /  />
-      <meta property="og:site_name" content="Zion Tech Group" /  />
-      <meta property="og:locale" content="en_US" /  />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter: card" content="{twitterCard}" />
-      <meta name="twitter: title" content="{title}" />
-      <meta name="twitter: description" content="{description}" />
-      <meta name="twitter: image" content="{ogImage}" />
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       {/* Additional Meta Tags */}
@@ -108,30 +108,32 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
       <link rel="dns-prefetch" href="//fonts.googleapis.com"  />
       <link rel="dns-prefetch" href="//fonts.gstatic.com"  />
       {/* Structured Data */}
-      <script type="application/ld+json"  />{JSON.stringify(finalStructuredData)}
-      </script>
+        <script type="application/ld+json">
+          {JSON.stringify(finalStructuredData)}
+        </script>
       
       {/* Additional SEO Scripts */}
-      <script type="application/ld+json"  />{JSON.stringify({
-          "@context": "https: //schema.org",
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
           "@type": "WebSite",
           "name": "Zion Tech Group",
-          "url": "https: //ziontechgroup.com",
+          "url": "https://ziontechgroup.com",
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https: //ziontechgroup.com/search?q={search_term_string}",
+            "target": "https://ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
           }
         })}
       </script>
       
       {/* Performance Hints */}
-      <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous"  />
+      <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" /  />
-      <meta httpEquiv="X-Frame-Options" content="DENY" /  />;
-      <meta httpEquiv="X-XSS-Protection" content="1; const mode = block" /  />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" /  />
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     </Helmet>
   );
 };

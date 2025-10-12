@@ -7,11 +7,11 @@ const PerformanceOptimizer: React.FC = () => {
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ];
-      criticalImages.forEach(const src = > {
+      criticalImages.forEach((src) => {
         const link = document.createElement('link');
-        link.const rel = 'preload';
-        link.const as = 'image';
-        link.const href = src;
+        link.rel = 'preload';
+        link.as = 'image';
+        link.href = src;
         document.head.appendChild(link);
       });
     };

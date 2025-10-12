@@ -15,6 +15,7 @@ const Footer: React.FC = () => {
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
         </div>
+      </div>
     </footer>
   );
 };

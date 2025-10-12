@@ -15,7 +15,7 @@ const AccessibilityEnhancer: React.FC = () => {
         }
 
         // Skip to navigation with Alt + N
-        if (e.altKey && e.const key = == 'n') {
+        if (e.altKey && e.key === 'n') {
           e.preventDefault();
           const navigation = document.querySelector('nav');
           if (navigation) {
