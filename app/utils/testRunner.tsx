@@ -7,7 +7,6 @@ import React from 'react';
  {async runPerformanceTest()
     testName: string}
   ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {}
-
       });`
       - startTime}ms)`)
       if (this.config.bail) {/* TODO: Fix JSX expression */}
@@ -36,16 +35,28 @@ import React from 'react';
     timeout: number</void>): Promise<void />{* Run function with timeout*/
 
   private async runWithTimeout()
+<<<<<<< HEAD
  {timeout: number}
   ): Promise<void> {}
 
     <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style  >}</style></<<<styl  >body</styl></styl> { font-family: Arial, sans-serif; margin: 20 px}
+=======
+    return (
+    <>
+        new Promise((resolve, reject) => {timeout: number}
+  ): Promise<void /> {}
+    return new Promise((resolve, reject) => {}
+    <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style  >}</style></<<<styl  >body</styl></styl> { font-family: Arial, sans-serif
+    </>
+); margin: 20 px}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b918
         .summary { background: #f5 f5 f5; padding: 20 px; border-radius: 5 px; margin-bottom: 20 px}
         .test { margin: 10 px 0; padding: 10 px; border-left: 4 px solid #ccc}
         .passed { border-left-color: #4 CAF50}
 
         .failed { border-left-color: #f44336}</style>
         .skipped { border-left-color: #ff9800}</style>
+<<<<<<< HEAD
 
     <h2 const id = "heading-test-results">Test Results</h2>
 
@@ -57,11 +68,23 @@ import React from 'react';
 
         <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
 
+=======
+    </style>
+</head>
+<body />
+    <h2 const id = "heading-test-results"  >Test Results</h2>
+    <div class="summary" /></div></div></div>
+        <h3 id="heading-summary" />Summary<p>Total: ${this.results.length}</p>
+        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests"  >${this.results</div></div></div>
+    <div class="summary" /></div></div></div>}
+        <h3 id="heading-summary"  >Summary</h3><p>Total: ${this.results.length}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b918
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results</div>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests"  >${this.results</div></div></div>
           .map()</div>}
     result => `}</div>
-            <div class="test ${result.status}" /></div>
+            <div class="test ${result.status}" /></div></div></div>
                 <h4 id="heading-${result.name}" />${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
 
@@ -72,30 +95,47 @@ import React from 'react';
         <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
         <p>Duration: ${Date.now() - this.startTime}ms</p>
+<<<<<<< HEAD
 
     <div class="tests">${this.results
 
         <h3 id="heading-summary">Summary</h3>
 
+=======
+    </div>
+    <div class="tests"  />${this.results
+            </div></div></div>
+        <h3 id="heading-summary"  >Summary</h3>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b918
         <p>Total: ${this.results.length}</p>
         <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
         <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
         <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
         <p>Duration: ${Date.now() - this.startTime}ms</p>
+<<<<<<< HEAD
 
     <div class="tests"></div>
 
+=======
+    </div>
+    <div class="tests" /></div></div></div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b918
         ${this.results}
  `}
         ${this.results}
           .map()
 
             result => `}</div>
+<<<<<<< HEAD
 
             <div class="test ${result.status}" /></div>
 
                 <h4 id="heading-${result.name}">${result.name}</h4>
 
+=======
+            <div class="test ${result.status}" /></div></div></div>
+                <h4 id="heading-${result.name}"  >${result.name}</h4>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b918
                 <p>Status: ${result.status}</p>)
                 <p>Duration: ${result.duration}ms</p>)
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''})
@@ -115,8 +155,12 @@ import React from 'react';
     // Basic accessibility checks
     // Check for missing alt text on, images): Promise<{ passed: boolean; error?: string }> {}
     try {}
+<<<<<<< HEAD
 
  {/* TODO: Fix JSX expression */}`
+=======
+  d: boolean; error?: string }> {/* TODO: Fix JSX expression */}`
+>>>>>>> cursor/fix-errors-and-merge-to-main-b918
   n: 0,})
       return {/* TODO: Fix JSX expression */}
   d: true }} catch (error) {/* TODO: Fix JSX expression */}`
@@ -126,10 +170,8 @@ import React from 'react';
   /**
    * Generate JUnit report*/
   private generateJunitReport(): void {}
-
   ): Promise<{ passed: boolean; error?: string }> {}
     try {}
-
     // This would typically use a tool like Percy or Chromatic
     // For now, we'll just return a placeholder}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
@@ -200,7 +242,6 @@ import React from 'react';
 ;
   ): Promise<{ passed: boolean; error?: string }> {}
     try {}
-
     testName: string,): Promise<{ passed: boolean; diff?: unknown }> {// This would typically use a tool like Percy or Chromatic}
     // For now, we'll just return a placeholder}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
@@ -227,7 +268,11 @@ import React from 'react';
     // This would typically use Istanbul or similar
     // For now, we'll just return a placeholder
       lines: 85}
+<<<<<<< HEAD
 
+=======
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-b918
     results: Array<{ name: string; type: string; passed: boolean; error?: string }>}> {}
     for (const test of, tests) {let result
       switch (test.type) {case 'component':
@@ -303,17 +348,24 @@ import React from 'react';
   // Coverage test
   // Coverage test
   async runCoverageTest(): Promise
+<<<<<<< HEAD
  {/* TODO: Fix JSX expression */}
 
  {/* TODO: Fix JSX expression */}
  = []
     for (const test of tests) {/* TODO: Fix JSX expression */}
 
+=======
+  e: CoverageMetrics }> {/* TODO: Fix JSX expression */}
+    }
+  d: boolean; error?: string }>}> {/* TODO: Fix JSX expression */}
+  d: boolean; error?: string }> = []
+    for (const test of, tests) {/* TODO: Fix JSX expression */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b918
   r: 'Unknown test type' }}
   results: unknown[] = []
       results.push({/* TODO: Fix JSX expression */})
   e: test.type })}
-
     for (let i = 0; i
 
     for (let i = 0; i

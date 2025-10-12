@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 import { useState, useEffect, useCallback } from 'react';
+=======
+import { useState, useEffect } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
 interface PerformanceMetrics {
   loadTime: number;

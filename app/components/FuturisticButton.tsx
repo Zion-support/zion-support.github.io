@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 
+=======
+'use client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b918
 interface FuturisticButtonProps {
   children: React.ReactNode;
  void;
@@ -10,7 +14,11 @@ interface FuturisticButtonProps {
   loading?: boolean;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
+<<<<<<< HEAD
 
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b918
   children,
   onClick,
   const variant = 'primary',
@@ -32,7 +40,11 @@ interface FuturisticButtonProps {
         return 'bg-white/10 backdrop-blur-lg text-white border border-white/20 hover: bg-white/20';,
   default: return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
   };
+<<<<<<< HEAD
 
+=======
+  const getSizeClasses = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b918
     switch (size) {
       case 'sm':
         return 'px-4 py-2 text-sm';
@@ -42,7 +54,6 @@ interface FuturisticButtonProps {
         return 'px-8 py-4 text-lg';
       default: return 'px-6 py-3 text-base';
   };
-
   return (
     
       const type = {type}
@@ -68,12 +79,25 @@ interface FuturisticButtonProps {
       {/* Scanning line effect */}
       {isHovered && (
       )}
-
       {/* Corner accents */}
+<<<<<<< HEAD
 
       {/* Content */}
         {loading ? (
 
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      {/* Content */}
+      </div></div><span className="w-5 h-5 ml-2" />
+        {loading ? (
+          <>
+            </><motion.div
+              className="w-4h-4b o rder-2 border-white/30 border-t-white rounded-full mr-2"
+              animate="{{" rotate: 360 }}
+              transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
+             />
+>>>>>>> cursor/fix-errors-and-merge-to-main-b918
             Loading...
 
         ) : (
