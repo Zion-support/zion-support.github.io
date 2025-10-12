@@ -1,17 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 'use client';
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
 export default function ApiDevelopment() {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Api Development - Zion Tech Group</title>
         <meta name="description" content="Api Development services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="api-development, AI solutions, IT services" />
@@ -42,28 +35,3 @@ export default function ApiDevelopment() {
 };
 
 export default ApiDevelopmentPage;
-=======
-        <title>ApiDevelopment - Zion Tech Group</title>
-        <meta name="description" content="Professional apidevelopment services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-6">ApiDevelopment</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional apidevelopment services coming soon.</p>
-            
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Contact Us
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

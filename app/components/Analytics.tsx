@@ -17,12 +17,8 @@ interface AnalyticsProps {
     initAnalytics();
   }, []);
 
-<<<<<<< HEAD
   return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
 }
-=======
-  return <React.Fragment />{children}</React.Fragment>;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
 // Extend Window interface for gtag
 declare global {

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -73,7 +67,6 @@ const Layout: React.FC<LayoutProps /> = ({
   };
 
   return (
-<<<<<<< HEAD
     <ErrorBoundary />
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         <Helmet>
@@ -117,26 +110,3 @@ const Layout: React.FC<LayoutProps /> = ({
 };
 
 export default Layout;
-=======
-    
-        <title>5G Data Analytics - Zion Tech Group</title>
-          <title>{title}</title>
-          {/* Open Graph Meta Tags */}
-    
-          {/* Twitter Card Meta Tags */}
-    
-          {/* Additional SEO Meta Tags */}
-    
-          {/* Structured Data */}
-    
-          <script type="application/ld+json">{JSON.stringify(structuredData)}
-
-        <main className=" pt-20">{children}
-
-        {/* Theme Toggle - Fixed Position */}
-
-  );
-};
-
-export default Layout;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

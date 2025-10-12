@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import { useEffect, useRef} from 'react';
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 'use client';
 
-<<<<<<< HEAD
 const FuturisticBackground: React.FC = () => {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
   const canvasRef = useRef<HTMLCanvasElement />(null);
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -88,7 +81,6 @@ const FuturisticBackground: React.FC = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <canvas
         ref="{canvasRef}"
@@ -101,12 +93,6 @@ const FuturisticBackground: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       {/* Quantum field effect */}
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
-=======
-
-      {/* Additional background effects */}
-      {/* Animated grid overlay */}
-      {/* Quantum field effect */}
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
       {/* Plasma effect */}
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
   );

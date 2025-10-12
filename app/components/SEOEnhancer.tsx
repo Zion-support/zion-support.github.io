@@ -3,20 +3,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain, Zap, Shield, Globe, CheckCircle } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
-=======
-import { Brain } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33de
->>>>>>> origin/main
 const SEOEnhancer: React.FC = () => {
-=======
 import { Brain } from 'lucide-react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
   const features = [
       icon: Brain,
       title: 'AI-Powered SEO',
@@ -31,14 +21,9 @@ import { Brain } from 'lucide-react';
       description: 'Ethical SEO practices with long-term sustainable results and compliance',
     },
       icon: Globe,
-<<<<<<< HEAD
       title: 'Global Optimization',
       description: 'Worldwide SEO optimization and support for international businesses',
     },
-=======
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
   ];
 
   const benefits = [

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -158,7 +154,6 @@ const AIEmailAssistantPage: React.FC = () => {
 };
 
 export default AIEmailAssistantPage;
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -191,4 +186,3 @@ export default function AiEmailAssistant() {
     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

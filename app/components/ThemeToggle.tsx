@@ -1,12 +1,8 @@
 import { useState, useEffect} from 'react';
 import { Sun, Moon} from 'lucide-react';
-<<<<<<< HEAD
 'use client';
 
 const ThemeToggle: React.FC = () => {
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
   const [isDark, setIsDark] = useState(true);
     // Check for saved theme preference or default to dark
     const savedTheme = localStorage.getItem('theme');
@@ -31,7 +27,6 @@ const ThemeToggle: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
     <button
       const onClick = {toggleTheme}
       className="p-2ro unded-lg bg-slate-700/50 hover:bg-slate-700 text-gray-300 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
@@ -41,10 +36,6 @@ const ThemeToggle: React.FC = () => {
         <Sun className="w-5 h-5ml-2" />
       ) : (
         <Moon className="w-5 h-5ml-2" />
-=======
-      {isDark ? (
-      ) : (
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
       )}
   );
 };

@@ -1,24 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 import Layout from '../layout'
 import React from 'react';
-=======
-
-import { Languages, ArrowRight, CheckCircle, Brain, Star, Target, Clock, FileText } from 'lucide-react';
-
-import Layout from '../layout'
-
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import { Link } from 'react-router-dom';
 import { Languages, ArrowRight} from 'lucide-react';
 import Layout from '../layout';
 
 export default function AITranslationService() {
   const features = [
-<<<<<<< HEAD
     {
       icon: <Brain className="w-5 h-5ml-2" />,
       title: 'Neural Machine Translation',
@@ -36,21 +25,6 @@ export default function AITranslationService() {
     },
     {
       icon: <Target className="w-5 h-5ml-2" />,
-=======
-      icon: <Brain className="w-6h-6text-cyan-400" />,
-      title: 'Neural Machine Translation',
-      description: 'Advanced AI models provide contextually accurate translations in 100+ languages'
-    },
-      icon: <FileText className="w-6h-6text-purple-400" />,
-      title: 'Document Translation',
-      description: 'Translate entire documents while preserving formatting, layout, and structure'
-    },
-      icon: <Clock className="w-6h-6text-yellow-400" />,
-      title: 'Real-time Translation',
-      description: 'Instant translation for live conversations, meetings, and customer support'
-    },
-      icon: <Target className="w-6h-6text-green-400" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
       title: 'Industry-Specific Translation',
       description: 'Specialized translation models for legal, medical, technical, and business content'
   ]
@@ -133,7 +107,6 @@ export default function AITranslationService() {
   ]
 
   return (
-<<<<<<< HEAD
     <Layout
       title="AI Translation Service - Professional Translation Solutions | Zion Tech Group"
       description="Transform your global communication with AI-powered translation in 100+ languages. Professional quality, real-time translation, and industry-specific solutions. Start your free trial today."
@@ -208,50 +181,8 @@ export default function AITranslationService() {
                     {feature.items.map((item, itemIndex) => (
                       <li key="{itemIndex}" className="flex items-center text-gray-300" />
                         <CheckCircle className="w-5 h-5ml-2" />
-=======
-
-        {/* Hero Section */}
-    
-                AI-Powered Translation
-
-              <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6">AI Translation Service
-
-              Transform your global communication with AI-powered translation in 100+ languages. 
-                Professional quality, real-time translation, and industry-specific solutions.
-    
-                  Start Free Trial
-
-                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Try Demo
-
-        {/* Features Section */}
-    
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Intelligent Translation Solutions
-                AI-powered features that break down language barriers and enable global communication
-
- (
-
-                    {feature.icon}
-    
-                    <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
-
-                  <p className="text-gray-300">{feature.description}</p>
-
-              ))}
-
-        {/* Translation Features */}
-    
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Complete Translation Platform
-                Everything you need to translate content across languages and cultures
-
- (
-    
-                  <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.category}</h3>
- (
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                         {item}
                     ))}
-<<<<<<< HEAD
                   </ul>
                 </div>
               ))}
@@ -278,22 +209,8 @@ export default function AITranslationService() {
                   {plan.popular && (
                     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                       <Star className="w-5 h-5ml-2" />
-=======
-    
-              ))}
-
-        {/* Pricing Section */}
-    
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Flexible Pricing Plans
-                Choose the plan that fits your translation needs
-
- (
-                  {plan.popular && (
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                       Most Popular
                   )}
-<<<<<<< HEAD
                   <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
                   <p className="w-5 h-5ml-2">{plan.description}</p>
                   <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -304,15 +221,6 @@ export default function AITranslationService() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key="{featureIndex}" className="flex items-center text-gray-300" />
                         <CheckCircle className="w-5 h-5ml-2" />
-=======
-    
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300mb-6">{plan.description}</p>
-                    <span className="text-4 xlfont-boldtext-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
- (
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                         {feature}
                     ))}
                   
@@ -322,7 +230,6 @@ export default function AITranslationService() {
                         ? 'bg-gradient-to-r from-amber-500 to-purple-600 text-white hover:from-amber-600 hover:to-purple-700'
                         : 'border-2 border-amber-400 text-amber-400 hover: bg-amber-400/10'
                     }`}
-<<<<<<< HEAD
                     />Get Started
                   </Link>
                 </div>
@@ -376,34 +283,3 @@ export default function AITranslationService() {
     </Layout>
   )
 };
-=======
-Get Started
-    
-              ))}
-
-        {/* Testimonials */}
-    
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Trusted by Global Businesses
-                See how our AI Translation Service enables global communication
-
- (
-
- (
-                    ))}
-
-                  <p className="text-gray-300mb-4">"{testimonial.content}"</p>
-                    <div className="font-semiboldtext-white">{testimonial.name}</div>
-                    <div className="text-smtext-gray-400">{testimonial.company}</div>
-
-              ))}
-
-        {/* CTA Section */}
-    
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Break Down Language Barriers Today
-                Join thousands of businesses using AI Translation Service to reach global audiences
-
-                <Link to="/contact" className="bg-gradient-to-r from-amber-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
-                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
-  )
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

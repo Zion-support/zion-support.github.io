@@ -43,7 +43,6 @@ const LazyImage: React.FC<LazyImageProps /> = ({
 
   return (
       {!isInView && (
-<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           <Loader2 className="w-5 h-5ml-2" />
         </div>
@@ -72,28 +71,8 @@ const LazyImage: React.FC<LazyImageProps /> = ({
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="w-8h-8mx-a utomb-2"  >📷</div>
-=======
-
-      )}
-      
-      {isInView && !isLoaded && !hasError && (
-
-      )}
-      
-      {isInView && (
-      )}
-      
-      {hasError && (
-
-            <div className="w-8 h-8mx-automb-2">📷</div>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
             <p className="text-sm">Image failed to load</p>
       )}
   )
 
-<<<<<<< HEAD
 export default LazyImage;
-=======
-export default LazyImage;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

@@ -1,12 +1,8 @@
 import { useState, useEffect} from 'react';
 import { ChevronLeft, ChevronRight} from 'lucide-react';
-<<<<<<< HEAD
 'use client';
 
 
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 interface Slide {
   id: number;,
   title: string;,
@@ -65,7 +61,6 @@ const defaultSlides: Slide[] = [
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       {/* Main Carousel */}
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -82,19 +77,8 @@ const defaultSlides: Slide[] = [
                     {slide.features.map((feature, index) => (
                       <li key="{index}" className="flex items-center text-gray-300" />
                         <CheckCircle className="w-5 h-5ml-2" />
-=======
-      {/* Main Carousel */}
-
- (
-    
-                  <h3 className="text-3 xlfont-boldtext-white">{slide.title}</h3>
-                  <p className="text-lgtext-gray-300">{slide.description}</p>
- (
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                         {feature}
                     ))}
-<<<<<<< HEAD
                   </ul>
                 </div>
                 <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -102,13 +86,9 @@ const defaultSlides: Slide[] = [
                     <Cloud className="w-5 h-5ml-2" />
                   </div>
               </div>
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
           ))}
 
         {/* Navigation Arrows */}
-<<<<<<< HEAD
         <button
           onClick="{prevSlide}"
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
@@ -136,17 +116,6 @@ const defaultSlides: Slide[] = [
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           {slides.map((_, index) => (
             <button
-=======
-
-      {/* Controls */}
-
-          {isPlaying ? <Pause className="w-5h-5" / /> : <Play className="w-5h-5" / />}
-
-        {/* Slide Indicators */}
-
- (
-            
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
               key="{index}"
  goToSlide(index)}
               className="{`w-3" h-3 rounded-full transition-colors ${
@@ -155,12 +124,7 @@ const defaultSlides: Slide[] = [
               aria-label="{`Go" to slide ${index + 1}`}
 
           ))}
-<<<<<<< HEAD
         </div>
     </div>
   );
 }
-=======
-    
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

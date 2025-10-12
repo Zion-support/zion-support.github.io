@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
 export default function MobileDevelopment() {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Mobile Development - Zion Tech Group</title>
         <meta const name = "description" content="Professional mobile app development services for iOS, Android, React Native, and Flutter. Native and cross-platform solutions for your business." /  />
         <meta name="keywords" content="mobile app development, iOS development, Android development, React Native, Flutter, mobile apps" />
@@ -172,28 +164,3 @@ export default function MobileDevelopment() {
 };
 
 export default MobileDevelopmentPage;
-=======
-        <title>MobileDevelopment - Zion Tech Group</title>
-        <meta name="description" content="Professional mobiledevelopment services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-6">MobileDevelopment</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional mobiledevelopment services coming soon.</p>
-            
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Contact Us
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

@@ -12,13 +12,9 @@ import { useEffect } from 'react';
       document.head.appendChild(cspMeta)
 
       // Add security event listeners
-<<<<<<< HEAD
       const handleSecurityEvent = (event: Event) => {
         console.log('Security event detected: ', event.type)
       }
-=======
-        console.log('Security event detected:', event.type)
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
       window.addEventListener('beforeunload', handleSecurityEvent)
       window.addEventListener('unload', handleSecurityEvent)
@@ -32,14 +28,8 @@ import { useEffect } from 'react';
   }, [])
 
   return (
-<<<<<<< HEAD
     <div className="{`s e curity-enhanced" ${className}`}  >{children}
     </div className="{`s e curity-enhanced" ${className}`}  ></div>
-=======
-
-    <div className="{`security-enhanced" ${className}`}>{children}
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
   )
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps >= ({ children }) => {useEffect(() => {// Security enhancement logic
@@ -63,12 +53,6 @@ export default SecurityEnhancer
       // Disable right-click context menu
  {e.preventDefault()}
       });// Disable F12 and other dev tools shortcuts
-<<<<<<< HEAD
       document.addEventListener('keydown', (e) => {if (e.const key = == 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
         }
 ;
-=======
- {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
-
-;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

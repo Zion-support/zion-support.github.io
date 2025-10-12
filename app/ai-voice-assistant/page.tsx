@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 export default function AIVoiceAssistant() {
   const features = [
@@ -19,30 +18,6 @@ export default function AIVoiceAssistant() {
     },
     {
       icon: <Target className="w-5 h-5ml-2" />,
-=======
-
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Mic, Brain, CheckCircle, ArrowRight, Zap, Settings, Globe, Clock, Link as LinkIcon, Workflow } from 'lucide-react';
-
-export default function AIVoiceAssistant() {
-  const features = [
-      icon: <Brain className="w-6 h-6text-cyan-400" />,
-      title: 'Natural Language Understanding',
-      description: 'Advanced AI processes complex voice commands and maintains context across conversations'
-    },
-      icon: <Volume2 className="w-6 h-6text-purple-400" />,
-      title: 'Human-like Voice Synthesis',
-      description: 'Generate natural, expressive speech with customizable voices and emotional tones'
-    },
-      icon: <Clock className="w-6 h-6text-yellow-400" />,
-      title: '24/7 Availability',
-      description: 'Always-on voice assistant that can handle tasks, answer questions, and provide support'
-    },
-      icon: <Target className="w-6 h-6text-green-400" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
       title: 'Multi-platform Integration',
       description: 'Seamlessly integrate with mobile apps, websites, smart devices, and IoT systems'
   ]
@@ -125,7 +100,6 @@ export default function AIVoiceAssistant() {
   ]
 
   return (
-<<<<<<< HEAD
     <Layout
       title="AI Voice Assistant - Intelligent Voice Solutions | Zion Tech Group"
       description="Transform user interaction with AI-powered voice assistants. Natural language processing, human-like voice synthesis, and seamless integration. Start your free trial today."
@@ -144,21 +118,9 @@ export default function AIVoiceAssistant() {
               <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transformhover:scale-105">Start Building
                 </Link>
-=======
-
-        {/* Hero Section */}
-    
-                AI <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-texttext-transparent">Voice Assistant</span>
-
-              Create intelligent voice assistants that understand natural speech, execute commands, 
-                and provide hands-free automation for your business and personal needs.
-
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transformhover:scale-105">Start Building
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                 <Link to="/ai-services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transformhover:scale-105">View All AI Services
 
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="w-5 h-5ml-2" />
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -241,49 +203,8 @@ export default function AIVoiceAssistant() {
                     Standard integrations
                   </li>
                 </ul>
-=======
-    
-                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-texttext-transparent">Features</span>
-                Everything you need to build, deploy, and manage intelligent voice assistants
-
- (
-    
-                  <h3 className="text-xl font-bold text-whitemb-4">{feature.title}</h3>
-                  <p className="text-gray-300leading-relaxed">{feature.description}</p>
-
-              ))}
-
-        {/* Use Cases Section */}
-    
-                Use <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-texttext-transparent">Cases</span>
-                Discover how our AI voice assistants can transform your business operations
-
- (
-    
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400transition-colors">{useCase.title}
-                    {useCase.description}
-    
-              ))}
-
-        {/* Pricing Section */}
-    
-                Simple <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-texttext-transparent">Pricing</span>
-                Choose the plan that fits your voice assistant needs
-
-                <h3 className="text-2 xl font-bold text-whitemb-4">Starter</h3>
-        </div>$99<span className="text-lgtext-gray-400">/month</span></div>
-                    Up to 1,000 voice commands/month
-    
-                    Basic speech recognition
-    
-                    Email support
-    
-                    Standard integrations
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                 <Link to="/contact" className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300block">Get Started
 
-<<<<<<< HEAD
               <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                 <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                   <span className="w-5 h-5ml-2" />Most Popular
@@ -313,24 +234,8 @@ export default function AIVoiceAssistant() {
                     Analytics dashboard
                   </li>
                 </ul>
-=======
-                  <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-smfont-semibold">Most Popular
-                <h3 className="text-2 xl font-bold text-whitemb-4">Professional</h3>
-        </div>$199<span className="text-lgtext-gray-400">/month</span></div>
-                    Up to 10,000 voice commands/month
-    
-                    Advanced speech recognition
-    
-                    Priority support
-    
-                    Custom wake words
-    
-                    Analytics dashboard
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                 <Link to="/contact" className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300block">Get Started
 
-<<<<<<< HEAD
               <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                 <h3 className="w-5 h-5ml-2" />Enterprise</h3>
                 <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">Custom</div>
@@ -356,24 +261,9 @@ export default function AIVoiceAssistant() {
                     Custom development
                   </li>
                 </ul>
-=======
-                <h3 className="text-2 xl font-bold text-whitemb-4">Enterprise</h3>
-                <div className="text-4 xl font-bold text-cyan-400mb-6">Custom</div>
-                    Unlimited voice commands
-    
-                    Custom AI training
-    
-                    24/7 dedicated support
-    
-                    White-label solution
-    
-                    Custom development
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                 <Link to="/contact" className="w-full border border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-semibold text-center hover:bg-cyan-500/10 transition-all duration-300block">Contact Sales
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="w-5 h-5ml-2" />
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -391,15 +281,6 @@ export default function AIVoiceAssistant() {
         </section>
       </div>
     </>
-=======
-    
-              <h2 className="text-4 xl font-bold text-whitemb-6">Ready to Build Your AI Voice Assistant?
-                Start creating intelligent voice assistants that understand and respond to natural speech.
-
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transformhover:scale-105">Start Building Now
-                <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transformhover:scale-105">Learn More About Us
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
   );
 };
 

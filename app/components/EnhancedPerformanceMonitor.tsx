@@ -161,7 +161,6 @@ interface PerformanceReport {
     return null
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <h3 className="text-sm font-boldmb-2"  >Performance Monitor</h3>
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -182,31 +181,7 @@ interface PerformanceReport {
             ))}
           </ul>
         </div>
-=======
-
-      <h3 className="text-sm font-boldmb-2">Performance Monitor</h3>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>INP: {metrics.inp ? `${metrics.inp.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'Measuring...'}</div>
-        <div>Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}MB` : 'N/A'}</div>
-        <div>Load Time: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'Measuring...'}</div>
-      
- 0 && (
-    
-          <div className="text-xs font-semiboldmb-1">Suggestions:</div>
-
- (
-              <li key="{index}" className="text-yellow-300">• {suggestion}</li>
-            ))}
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
       )}
   )
 
-<<<<<<< HEAD
 export default EnhancedPerformanceMonitor;
-=======
-export default EnhancedPerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

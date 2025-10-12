@@ -1,24 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 import Layout from '../layout'
 import React from 'react';
-=======
-
-import { Shield, ArrowRight, CheckCircle, Brain, Star, Lock, Eye } from 'lucide-react';
-
-import Layout from '../layout'
-
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Layout from '../layout';
 
 export default function CybersecurityConsulting() {
   const features = [
-<<<<<<< HEAD
     {
       icon: <Shield className="w-5 h-5ml-2" />,
       title: 'Security Assessment',
@@ -36,21 +25,6 @@ export default function CybersecurityConsulting() {
     },
     {
       icon: <Brain className="w-5 h-5ml-2" />,
-=======
-      icon: <Shield className="w-6h-6text-cyan-400" />,
-      title: 'Security Assessment',
-      description: 'Comprehensive security audits to identify vulnerabilities and assess your current security posture'
-    },
-      icon: <Lock className="w-6h-6text-purple-400" />,
-      title: 'Compliance Management',
-      description: 'Ensure compliance with GDPR, HIPAA, SOX, PCI-DSS, and other regulatory requirements'
-    },
-      icon: <Eye className="w-6h-6text-yellow-400" />,
-      title: 'Threat Intelligence',
-      description: 'Advanced threat detection and response with 24/7 monitoring and incident management'
-    },
-      icon: <Brain className="w-6h-6text-green-400" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
       title: 'Security Training',
       description: 'Comprehensive security awareness training for your team to prevent human error attacks'
   ]
@@ -131,7 +105,6 @@ export default function CybersecurityConsulting() {
   ]
 
   return (
-<<<<<<< HEAD
     <Layout
       title="Cybersecurity Consulting - Expert Security Solutions | Zion Tech Group"
       description="Protect your business with expert cybersecurity consulting. Security assessments, compliance management, threat intelligence, and 24/7 monitoring. Get your free security audit today."
@@ -206,50 +179,8 @@ export default function CybersecurityConsulting() {
                     {feature.items.map((item, itemIndex) => (
                       <li key="{itemIndex}" className="flex items-center text-gray-300" />
                         <CheckCircle className="w-5 h-5ml-2" />
-=======
-
-        {/* Hero Section */}
-    
-                Expert Cybersecurity Consulting
-
-              <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6">Cybersecurity Consulting
-
-              Protect your business with expert cybersecurity consulting. Security assessments, compliance management, 
-                threat intelligence, and 24/7 monitoring to keep your data secure.
-    
-                  Get Free Security Audit
-
-                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">View Case Studies
-
-        {/* Features Section */}
-    
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Comprehensive Security Solutions
-                Expert cybersecurity services that protect your business from evolving threats
-
- (
-
-                    {feature.icon}
-    
-                    <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
-
-                  <p className="text-gray-300">{feature.description}</p>
-
-              ))}
-
-        {/* Consulting Features */}
-    
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Complete Security Consulting
-                End-to-end cybersecurity services to protect your organization
-
- (
-    
-                  <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.category}</h3>
- (
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                         {item}
                     ))}
-<<<<<<< HEAD
                   </ul>
                 </div>
               ))}
@@ -276,22 +207,8 @@ export default function CybersecurityConsulting() {
                   {plan.popular && (
                     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                       <Star className="w-5 h-5ml-2" />
-=======
-    
-              ))}
-
-        {/* Pricing Section */}
-    
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Flexible Consulting Packages
-                Choose the security consulting package that fits your needs
-
- (
-                  {plan.popular && (
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                       Most Popular
                   )}
-<<<<<<< HEAD
                   <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
                   <p className="w-5 h-5ml-2">{plan.description}</p>
                   <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -302,15 +219,6 @@ export default function CybersecurityConsulting() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key="{featureIndex}" className="flex items-center text-gray-300" />
                         <CheckCircle className="w-5 h-5ml-2" />
-=======
-    
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300mb-6">{plan.description}</p>
-                    <span className="text-4 xlfont-boldtext-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
- (
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                         {feature}
                     ))}
                   
@@ -320,7 +228,6 @@ export default function CybersecurityConsulting() {
                         ? 'bg-gradient-to-r from-red-500 to-purple-600 text-white hover:from-red-600 hover:to-purple-700'
                         : 'border-2 border-red-400 text-red-400 hover: bg-red-400/10'
                     }`}
-<<<<<<< HEAD
                     />Get Started
                   </Link>
                 </div>
@@ -374,34 +281,3 @@ export default function CybersecurityConsulting() {
     </Layout>
   )
 };
-=======
-Get Started
-    
-              ))}
-
-        {/* Testimonials */}
-    
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Trusted by Industry Leaders
-                See how our Cybersecurity Consulting protects organizations worldwide
-
- (
-
- (
-                    ))}
-
-                  <p className="text-gray-300mb-4">"{testimonial.content}"</p>
-                    <div className="font-semiboldtext-white">{testimonial.name}</div>
-                    <div className="text-smtext-gray-400">{testimonial.company}</div>
-
-              ))}
-
-        {/* CTA Section */}
-    
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Secure Your Business Today
-                Don't wait for a security breach. Get expert cybersecurity consulting to protect your organization
-
-                <Link to="/contact" className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700transition-allduration-300">Get Your Free Security Audit
-                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
-  )
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

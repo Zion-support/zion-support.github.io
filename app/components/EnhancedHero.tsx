@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import { ArrowRight } from 'lucide-react';
 'use client'
 
@@ -33,7 +27,6 @@ import { ArrowRight } from 'lucide-react';
       description: 'Schedule a meeting'
   ];
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       {/* Background Effects */}
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -50,22 +43,9 @@ import { ArrowRight } from 'lucide-react';
             </h1>
             
             <p className="w-5 h-5ml-2">Harness the power of cutting-edge artificial intelligence and information technology 
-=======
-      {/* Background Effects */}
-    
-      {/* Main Content */}
-        {/* Left Content */}
-    
-              Transform Your Business with{' '}
-    
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent">AI & IT Solutions
-
-              Harness the power of cutting-edge artificial intelligence and information technology 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
               to drive innovation, efficiency, and growth in your organization.
 
             {/* Benefits List */}
-<<<<<<< HEAD
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               <h3 className="text-lgfont-semiboldtext-whitemb-4"  >Why Choose Us?</h3>
               <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -128,44 +108,3 @@ import { ArrowRight } from 'lucide-react';
       </div>
   )
 };
-=======
-
-              <h3 className="text-lg font-semiboldtext-whitemb-4">Why Choose Us?</h3>
- (
-    
-                    <span className="text-sm">{benefit}</span>
-
-                ))}
-
-            {/* CTA Buttons */}
-
-                Get Started
-    
-              <button className="cyber-button-secondary px-8 py-4text-lgfont-semibold">Learn More
-
-            {/* Contact Info */}
- (
-    
-                    <div className="text-smfont-mediumtext-white">{contact.title}</div>
-                    <div className="text-xstext-gray-400">{contact.details}</div>
-
-              ))}
-
-        {/* Right Content - Visual Elements */}
-
-            {/* Floating Cards */}
-    
-                <h3 className="text-lg font-boldtext-whitemb-2">AI Solutions</h3>
-
-                <p className="text-smtext-gray-300">Machine Learning & Analytics</p>
-
-                <h3 className="text-lg font-boldtext-whitemb-2">Security</h3>
-
-                <p className="text-smtext-gray-300">Cybersecurity & Compliance</p>
-
-                <h3 className="text-lg font-boldtext-whitemb-2">Cloud Services</h3>
-
-                <p className="text-smtext-gray-300">Infrastructure & Migration</p>
-  )
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

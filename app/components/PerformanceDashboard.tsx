@@ -1,12 +1,9 @@
 import { useState, useEffect} from 'react';
 import { HardDrive } from 'lucide-react';
-<<<<<<< HEAD
 'use client';
 
 import { useState, useEffect } from 'react';
 import { HardDrive } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
 interface PerformanceMetrics {
   lcp: number;,
@@ -129,7 +126,6 @@ interface PerformanceMetrics {
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         <h3 className="w-5 h-5ml-2" />
@@ -204,48 +200,3 @@ interface PerformanceMetrics {
 };
 
 export default PerformanceDashboard;
-=======
-
-          Performance
-        
-setIsVisible(false)}
-          className="text-gray-400hover:text-white"
-          ×
-
-          <span>LCP:</span>
-          <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}>{metrics.lcp.toFixed(0)}ms
-
-          <span>FID:</span>
-          <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}>{metrics.fid.toFixed(0)}ms
-
-          <span>CLS:</span>
-          <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}>{metrics.cls.toFixed(3)}
-
-          <span>FCP:</span>
-          <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}>{metrics.fcp.toFixed(0)}ms
-
-          <span>TTFB:</span>
-          <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}>{metrics.ttfb.toFixed(0)}ms
-
-        {metrics.memory && (
-
-              <span className="text-gray-300">Memory</span>
-              <div>Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
-              <div>Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
-
-        )}
-
-        {metrics.connection && (
-
-              <span className="text-gray-300">Connection</span>
-              <div>Type: {metrics.connection.effectiveType}</div>
-              <div>Speed: {metrics.connection.downlink}Mbps</div>
-              <div>RTT: {metrics.connection.rtt}ms</div>
-
-        )}
-    
-  );
-};
-
-export default PerformanceDashboard;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

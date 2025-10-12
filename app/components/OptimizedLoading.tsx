@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import { Loader2 } from 'lucide-react';
 
 interface OptimizedLoadingProps {
@@ -29,7 +23,6 @@ const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
     : 'flex items-center justify-center p-4'
 
   return (
-<<<<<<< HEAD
     <div className="{`${containerClasses}" ${className}`} />
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`}  />
@@ -38,18 +31,6 @@ const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
           </p>
         )}
       </div>
-=======
-    
-        {text && (
-            {text}
-
-        )}
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
   )
 
-<<<<<<< HEAD
 export default OptimizedLoading;
-=======
-export default OptimizedLoading;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

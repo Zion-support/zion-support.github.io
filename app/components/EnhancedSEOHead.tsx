@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import React from 'react';
 'use client';
 
@@ -64,7 +59,6 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
   };
   const finalStructuredData = structuredData || defaultStructuredData;
   return (
-<<<<<<< HEAD
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -114,28 +108,6 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
       {/* Structured Data */}
       <script type="application/ld+json"  />{JSON.stringify(finalStructuredData)}
       </script>
-=======
-        <title>5G Data Analytics - Zion Tech Group</title>
-      {/* Basic Meta Tags */}
-    
-      <title>{title}</title>
-      {/* Canonical URL */}
-      {/* Open Graph Meta Tags */}
-    
-      {/* Twitter Card Meta Tags */}
-    
-      {/* Additional Meta Tags */}
-    
-      {/* Favicon and Icons */}
-
-      {/* Preconnect to external domains */}
-    
-      {/* DNS Prefetch */}
-    
-      {/* Structured Data */}
-    
-      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
       
       {/* Additional SEO Scripts */}
       <script type="application/ld+json"  />{JSON.stringify({
@@ -150,7 +122,6 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
         })}
       
       {/* Performance Hints */}
-<<<<<<< HEAD
       <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossOrigin="anonymous"  />
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" /  />
@@ -162,12 +133,3 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
 };
 
 export default SEOHead;
-=======
-      {/* Security Headers */}
-    
-      <meta httpEquiv="X-Frame-Options" content="DENY" / / />;
-  );
-};
-
-export default SEOHead;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

@@ -1,12 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 'use client'
 
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
-=======
-import { ArrowRight, Brain } from 'lucide-react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -35,7 +30,6 @@ import { ArrowRight, Brain } from 'lucide-react';
       description: 'Worldwide deployment and support for international businesses',
   ];
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title />Futuristic Service Card | Zion Tech Group</title>
@@ -78,29 +72,3 @@ import { ArrowRight, Brain } from 'lucide-react';
           </div>;
         </div></section>)};export default FuturisticServiceCardPage
 }
-=======
-
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <title>Futuristic Service Card | Zion Tech Group</title>
-
-      {/* Hero Section */}
-    
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent">FuturisticServiceCard
-
-              <span className="text-white">Solutions</span>
-              Transform your business with our advanced futuristic service card solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-    
-                Get Started
-    
-              <button className="border border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300">Learn More
-
-      {/* Features Section */}
-    
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">Our Features
-
-              Discover the powerful features that make our futuristic service card solutions stand out.
-    
-          </div>;
-        </div></section>)};export default FuturisticServiceCardPage
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

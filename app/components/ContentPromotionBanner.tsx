@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-=======
-
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 'use client';
 
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 interface ContentPromotionBannerProps {
   title?: string;
   subtitle?: string;
@@ -41,7 +33,6 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
 
   return (
       {/* Background Pattern */}
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
 
@@ -73,23 +64,3 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
 };
 
 export default ContentPromotionBanner;
-=======
-
-        </div></div>
-
-            <h3 className="text-2 xl lg: text-3 xlfont-boldmb-2">{title}</h3>
-            <p className="text-lgtext-white/90mb-4">{subtitle}</p>
-
- (
-    
-                  <span>{feature}</span>
-
-              ))}
-
-              {buttonText}
-
-  );
-};
-
-export default ContentPromotionBanner;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

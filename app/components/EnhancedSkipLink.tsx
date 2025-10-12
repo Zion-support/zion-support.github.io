@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-=======
-
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import React from 'react';
 'use client';
 
-<<<<<<< HEAD
 const EnhancedSkipLink: React.FC = () => {
   const handleSkipToMain = () => {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
     const mainContent = document.getElementById('main-content');
     if (mainContent) {
       mainContent.focus();
@@ -26,7 +18,6 @@ const EnhancedSkipLink: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <button
         onClick="{handleSkipToMain}"
@@ -40,18 +31,6 @@ const EnhancedSkipLink: React.FC = () => {
         aria-label="Skip to navigation"
         />Skip to navigation
       </button>
-=======
-      
-        onClick="{handleSkipToMain}"
-        className="skip-link"
-Skip to main content
-      
-        onClick="{handleSkipToNavigation}"
-        className="skip-link"
-        aria-label="Skip to navigation"
-Skip to navigation
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
       <style jsx  />{`
         .skip-links {;
           position: absolute;,
@@ -80,17 +59,9 @@ Skip to navigation
         .skip-link: hover {,
   background: #00 ffff;,
   color: #000;
-<<<<<<< HEAD
         }
-=======
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
       `}</style>
   );
 };
 
-<<<<<<< HEAD
 export default EnhancedSkipLink;
-=======
-export default EnhancedSkipLink;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

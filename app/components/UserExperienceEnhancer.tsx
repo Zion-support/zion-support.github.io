@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 
 interface UserExperienceEnhancerProps {
-<<<<<<< HEAD
   children: React.ReactNode;
 }
 
@@ -12,19 +11,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
     comment: string;
     submitted: boolean;
   }>({
-=======
-  children: React.ReactNode
-  className?: string
-
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
-  children,
-  className = ''
-
-    rating: number
-    comment: string
-    submitted: boolean
-({
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
     rating: 0,
     comment: '',
     submitted: false,
@@ -45,7 +31,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
         });
       });
 
-<<<<<<< HEAD
       // Add focus indicators
       const focusableElements = document.querySelectorAll('button, input, textarea, select, a[href]');
       focusableElements.forEach((element) => {
@@ -143,6 +128,3 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
 };
 
 export default UserExperienceEnhancer;
-=======
-interface UserExperienceEnhancerProps {children: React.ReactNode}
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

@@ -1,10 +1,7 @@
 import { Component, ErrorInfo, ReactNode} from 'react';
 import { Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
 interface Props {
   children: ReactNode;
@@ -41,7 +38,6 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
         return this.props.fallback;
 
       return (
-<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -62,25 +58,9 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
                 {this.state.errorInfo && (
                   <pre className="w-5 h-5ml-2" />{this.state.errorInfo.componentStack}
                   </pre>
-=======
-
-            <h1 className="text-2 xl font-boldtext-whitemb-4">Oops! Something went wrong
-            
-              We encountered an unexpected error. Don't worry, our team has been notified and we're working to fix it.
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-
-                <h3 className="text-red-400font-semiboldmb-2">Error Details:</h3>
-                <pre className="text-xstext-gray-300overflow-auto">{this.state.error.toString()}
-
-                {this.state.errorInfo && (
-    
-                  <pre className="text-xs text-gray-400mt-2overflow-auto">{this.state.errorInfo.componentStack}
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                 )}
             )}
 
-<<<<<<< HEAD
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               <button
                 onClick="{this.handleRetry}"
@@ -115,25 +95,7 @@ class EnhancedErrorBoundary extends Component<Props, State /> {
           </div>
       );
     }
-=======
-                Try Again
-
-                Go Home
-
-                Still having issues? Contact our support team:
-
-                  kleber@ziontechgroup.com
-    
-                <span className="hiddensm:inlinetext-gray-500">•</span>
-                  <span>+1 302 464 0950</span>
-
-      );
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
     return this.props.children;
 
-<<<<<<< HEAD
 export default EnhancedErrorBoundary;
-=======
-export default EnhancedErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

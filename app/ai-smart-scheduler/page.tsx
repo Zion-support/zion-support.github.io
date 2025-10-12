@@ -1,24 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 import Layout from '../layout'
 import React from 'react';
-=======
-
-import { Calendar, Users, Zap, CheckCircle, ArrowRight, Brain, Globe, Star, Sparkles } from 'lucide-react';
-
-import Layout from '../layout'
-
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Layout from '../layout';
 
 export default function AISmartScheduler() {
   const features = [
-<<<<<<< HEAD
     {
       icon: <Brain className="w-5 h-5ml-2" />,
       title: 'AI-Powered Scheduling',
@@ -36,21 +25,6 @@ export default function AISmartScheduler() {
     },
     {
       icon: <Globe className="w-5 h-5ml-2" />,
-=======
-      icon: <Brain className="w-6h-6text-cyan-400" />,
-      title: 'AI-Powered Scheduling',
-      description: 'Intelligent scheduling that learns from your patterns and preferences'
-    },
-      icon: <Users className="w-6h-6text-purple-400" />,
-      title: 'Team Coordination',
-      description: 'Seamlessly coordinate meetings across multiple time zones and schedules'
-    },
-      icon: <Zap className="w-6h-6text-yellow-400" />,
-      title: 'Auto-Optimization',
-      description: 'Automatically finds the best meeting times for maximum productivity'
-    },
-      icon: <Globe className="w-6h-6text-green-400" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
       title: 'Global Integration',
       description: 'Works with all major calendar platforms and time zones'
   ]
@@ -116,7 +90,6 @@ export default function AISmartScheduler() {
   ]
 
   return (
-<<<<<<< HEAD
     <Layout
       title="AI Smart Scheduler - Intelligent Meeting Optimization | Zion Tech Group"
       description="Revolutionary AI-powered scheduling tool that optimizes meetings, coordinates teams, and maximizes productivity. Start your free trial today."
@@ -193,48 +166,8 @@ export default function AISmartScheduler() {
                   {plan.popular && (
                     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                       <Star className="w-5 h-5ml-2" />
-=======
-
-        {/* Hero Section */}
-    
-                AI-Powered Scheduling
-
-              <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6">AI Smart Scheduler
-
-              Transform your scheduling chaos into organized efficiency with our intelligent AI-powered scheduler. 
-                Optimize meetings, coordinate teams, and maximize productivity automatically.
-    
-                  Start Free Trial
-
-                <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Watch Demo
-
-        {/* Features Section */}
-    
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Intelligent Scheduling Features
-                Powered by advanced AI to make scheduling effortless and efficient
-
- (
-
-                    {feature.icon}
-    
-                    <h3 className="text-xl font-semiboldtext-whiteml-3">{feature.title}</h3>
-
-                  <p className="text-gray-300">{feature.description}</p>
-
-              ))}
-
-        {/* Pricing Section */}
-    
-              <h2 className="text-3 xl sm:text-4 xl font-boldtext-whitemb-4">Simple, Transparent Pricing
-                Choose the plan that fits your team size and needs
-
- (
-                  {plan.popular && (
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                       Most Popular
                   )}
-<<<<<<< HEAD
                   <h3 className="w-5 h-5ml-2" />{plan.name}</h3>
                   <p className="w-5 h-5ml-2">{plan.description}</p>
                   <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -245,15 +178,6 @@ export default function AISmartScheduler() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key="{featureIndex}" className="flex items-center text-gray-300" />
                         <CheckCircle className="w-5 h-5ml-2" />
-=======
-    
-                  <h3 className="text-2 xl font-boldtext-whitemb-2">{plan.name}</h3>
-                  <p className="text-gray-300mb-6">{plan.description}</p>
-                    <span className="text-4 xlfont-boldtext-white">{plan.price}</span>
-                    <span className="text-gray-400">{plan.period}</span>
- (
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                         {feature}
                     ))}
                   
@@ -263,7 +187,6 @@ export default function AISmartScheduler() {
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400/10'
                     }`}
-<<<<<<< HEAD
                     />Get Started
                   </Link>
                 </div>
@@ -317,34 +240,3 @@ export default function AISmartScheduler() {
     </Layout>
   )
 };
-=======
-Get Started
-    
-              ))}
-
-        {/* Testimonials */}
-    
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Trusted by Teams Worldwide
-                See what our customers say about AI Smart Scheduler
-
- (
-
- (
-                    ))}
-
-                  <p className="text-gray-300mb-4">"{testimonial.content}"</p>
-                    <div className="font-semiboldtext-white">{testimonial.name}</div>
-                    <div className="text-smtext-gray-400">{testimonial.company}</div>
-
-              ))}
-
-        {/* CTA Section */}
-    
-              <h2 className="text-3 xl font-boldtext-whitemb-4">Ready to Transform Your Scheduling?
-                Join thousands of teams already using AI Smart Scheduler to optimize their productivity
-
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Start Your Free Trial
-                <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
-  )
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

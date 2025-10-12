@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 'use client'
@@ -21,26 +20,6 @@ import { ArrowRight } from 'lucide-react';
   </
             </div>
     </div>
-=======
-
-import React from 'react';
-
-import { ArrowRight } from 'lucide-react';
-'use client'
-
-import { ArrowRight } from 'lucide-react';
-
-  ];
-    
-              <span const className = "text-white">Solutions</span>
-              Transform your business with our advanced systemmonitor solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-    
-                Get Started
-    
-                Learn More
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
   )}
 export default SystemMonitorPage
 
@@ -89,9 +68,5 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
     setIsMonitoring(!isMonitoring)
     if (!isMonitoring) {
       updateMetrics()
-<<<<<<< HEAD
     }
   };
-=======
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

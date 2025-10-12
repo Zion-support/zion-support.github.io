@@ -46,7 +46,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
 
   if (isSubscribed) {
     return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -65,20 +64,9 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
             </button>
           </div>
       </div>
-=======
-
-            <h2 className="text-3 xl font-boldtext-whitemb-4">Thank You for Subscribing!
-              You'll receive our latest insights and updates soon.
-            
-setIsSubscribed(false)}
-              className="text-blue-400hover:text-blue-300transition-colors"
-              Subscribe another email
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
     )
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -93,20 +81,12 @@ setIsSubscribed(false)}
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
               <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                 <input
-=======
-
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">{title}
-
-              {subtitle}
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                   type="email"
                   value="{email}"
  setEmail(e.target.value)}
                   placeholder="{placeholder}"
                   required
                   className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
-<<<<<<< HEAD
                 />
               </div>
               <button
@@ -135,33 +115,10 @@ setIsSubscribed(false)}
                 <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
                   <feature.icon className="h-6w-6text-white"  />
                 </div>
-=======
-
-                {isSubmitting ? (
-
-        </div></div>
-                    <span>Subscribing...</span>
-
-                ) : (
-
-                    <span>{buttonText}</span>
-                )}
-
- (
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                 <p className="text-gray-300text-sm">{feature.text}</p>
             ))}
-<<<<<<< HEAD
           </div>
       </div>
-=======
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
   )
 
-<<<<<<< HEAD
 export default ContentNewsletterSignup;
-=======
-export default ContentNewsletterSignup;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

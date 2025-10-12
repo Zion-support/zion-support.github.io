@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import React from 'react';
 import { motion } from 'framer-motion';
 'use client';
@@ -31,7 +26,6 @@ export default function FuturisticLoader({
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Outer rotating ring */}
@@ -94,19 +88,9 @@ export default function FuturisticLoader({
           }}
          />
       </div>
-=======
-
-        {/* Outer rotating ring */}
-        {/* Inner pulsing ring */}
-        {/* Center pulsing dot */}
-        {/* Glow effect */}
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
       
       {text && (
           {text}
       )}
   );
-<<<<<<< HEAD
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

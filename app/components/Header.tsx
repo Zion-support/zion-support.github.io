@@ -1,11 +1,12 @@
 import React from 'react';
 import Navigation from './Navigation';
 
+const Header: React.FC = () => {
   return (
-<<<<<<< HEAD
-    <header />
+    <header>
       <Navigation />
-=======
+    </header>
+  );
+};
 
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
+export default Header;

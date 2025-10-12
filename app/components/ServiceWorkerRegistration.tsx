@@ -59,7 +59,6 @@
 
   return (
       {updateAvailable && (
-<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -112,46 +111,9 @@
                   <feature.icon className="h-6w-6te xt-white"  />
                 </div>
                 <h3 className="text-xl font-semibold text-whitemb-3"  >{feature.title}</h3>
-=======
-
-                <h3 className="text-whitefont-semibold">Update Available</h3>
-                <p className="text-gray-300text-sm">A new version of the app is available</p>
-
-                {isUpdating ? (
-
-                    <span>Updating...</span>
-
-                ) : (
-
-                    <span>Update</span>
-
-                )}
-                <span>Reload</span>
-
-      {/* Features Section */}
-    
-      <section className="py-20 px-4 sm:px-6lg:px-8" /></section>
-
-        </div></div>
-        </div></div>
-            <h2 className="text-3 xl md:text-4 xl font-bold text-whitemb-4">Why Choose Our ServiceWorkerRegistration?
-
-              Our serviceworkerregistration solutions deliver unmatched performance, security, and scalability.
-
-        </div></div>
-
- (}
-    
-              <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-allduration-300" /></div>
-
-        </div></div>
-                <h3 className="text-xl font-semibold text-whitemb-3">{feature.title}</h3>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                 <p className="text-gray-300">{feature.description}</p>
               </div>))}
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="w-5 h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -164,26 +126,9 @@
             {benefits.map((benefit, index) => (}
               <div key="{index}" className="flex items-startspace-x-3" /></div>
                 <CheckCircle className="w-5 h-5ml-2" />
-=======
-    
-      <section className="py-20 px-4 sm:px-6 lg:px-8bg-white/5" /></section>
-
-        </div></div>
-        </div></div>
-            <h2 className="text-3 xl md:text-4 xl font-bold text-whitemb-4">Key Benefits
-
-              Experience the power of our serviceworkerregistration solutions for your business.
-
-        </div></div>
-
- (}
-    
-              <div key="{index}" className="flex items-startspace-x-3" /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                 <p className="text-gray-300text-lg">{benefit}</p>
               </div>))}
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="w-5 h-5ml-2" /></section>
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -205,22 +150,3 @@
       </section>;
     </div>)};export default ServiceWorkerRegistrationPage
 }
-=======
-    
-      <section className="py-20 px-4 sm:px-6lg:px-8" /></section>
-
-        </div></div>
-        </div></div>
-            <h2 className="text-3 xl md:text-4 xl font-bold text-whitemb-4">Ready to Get Started?
-
-              Contact our experts to discuss your serviceworkerregistration needs and get a customized solution.
-
-        </div></div>
-
-                Call Now
-    
-                Email Us
-    
-      </section>;
-    </div>)};export default ServiceWorkerRegistrationPage
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight, AlertCircle, Building2, Bug } from 'lucide-react';
 import { ArrowRight, AlertCircle, Building2, Bug} from 'lucide-react';
 'use client';
@@ -446,33 +445,6 @@ export default function AiCybersecurityMonitorProPage() {
               <p />✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 monitoring • ✓ Cancel anytime</p>
             </div>
         </section>
-=======
-import { ArrowRight } from 'lucide-react';
-
-export default function AiCybersecurityMonitorPro() {
-  return (
-    <>
-      <Helmet>
-        <title>AiCybersecurityMonitorPro - Zion Tech Group</title>
-        <meta name="description" content="Professional aicybersecuritymonitorpro services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-white mb-6">AiCybersecurityMonitorPro</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional aicybersecuritymonitorpro services coming soon.</p>
-            
-            <Link 
-              to="/contact" 
-              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Contact Us
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
       </div>
     </>
   );

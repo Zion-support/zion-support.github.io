@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
-=======
-import { useState, useEffect, useCallback } from 'react';
->>>>>>> origin/main
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -36,11 +32,7 @@ export const useEnhancedPerformance = () => {
         const renderTime = performance.now() - renderStart;
         setMetrics(prev => ({ ...prev, renderTime }));
       });
-<<<<<<< HEAD
     };
-=======
-  }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
     // Measure memory usage
     const measureMemoryUsage = () => {
@@ -65,16 +57,11 @@ export const useEnhancedPerformance = () => {
         });
     };
 
-<<<<<<< HEAD
     // Run measurements
     measureLoadTime();
     measureRenderTime();
     measureMemoryUsage();
     measureNetworkLatency();
-=======
- clearInterval(interval);
-  }, [measurePerformance]);
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
     // Check if performance is optimized
     const checkOptimization = () => {

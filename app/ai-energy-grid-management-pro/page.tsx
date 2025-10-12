@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-
-import React from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function AienergygridmanagementproPage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>Service - Zion Tech Group</title>
@@ -30,13 +23,3 @@ export default function AienergygridmanagementproPage() {
     </div>
   );
 }
-=======
-
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <title>Ai Energy Grid Management Pro - Zion Tech Group</title>
-        <h1 className="text-4 xl font-boldtext-whitemb-6">Ai Energy Grid Management Pro</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional ai energy grid management pro services coming soon.</p>
-          Contact Us
-    
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

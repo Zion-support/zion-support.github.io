@@ -1,12 +1,8 @@
 import { useState, useEffect} from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight} from 'lucide-react';
-<<<<<<< HEAD
 'use client';
 
 
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 interface ContentItem {
   id: string;,
   title: string;,
@@ -75,7 +71,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
   const IconComponent = currentItem.icon;
   return (
       {/* Controls */}
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           <button
@@ -93,14 +88,8 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
               <Pause className="w-5 h-5ml-2" />
             ) : (
               <Play className="w-5 h-5ml-2" />
-=======
-
-            {isPlaying ? (
-            ) : (
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
             )}
 
-<<<<<<< HEAD
           <button
             onClick="{nextItem}"
             className="p-2ro unded-full bg-white/10hover:bg-white/20 transition-colors"
@@ -112,10 +101,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           {items.map((_, index) => (
             <button
-=======
- (
-            
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
               key="{index}"
  setCurrentIndex(index)}
               className="{`w-2" h-2 rounded-full transition-colors ${
@@ -124,7 +109,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
               aria-label="{`Go" to item ${index + 1}`}
 
           ))}
-<<<<<<< HEAD
         </div>
 
       {/* Content Card */}
@@ -173,33 +157,3 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
 };
 
 export default DynamicContentShowcase;
-=======
-
-      {/* Content Card */}
-
-              <span className="text-smtext-cyan-400font-medium">{currentItem.category}</span>
-
- (
-                ))}
-
-            <h3 className="text-2 xl font-boldtext-whitemb-3">{currentItem.title}</h3>
-            <p className="text-gray-300mb-4">{currentItem.description}</p>
-
- (
-    
-                  <span>{feature}</span>
-
-              ))}
-
-              {currentItem.price && (
-    
-                <div className="text-cyan-400font-semiboldtext-lg">{currentItem.price}
-              )}
-
-                Learn More
-    
-  );
-};
-
-export default DynamicContentShowcase;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

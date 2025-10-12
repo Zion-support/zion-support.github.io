@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -101,37 +99,6 @@ const Page: React.FC = () => {
               <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
                 Learn More
                 />View All Services
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3 } from 'lucide-react';
-=======
-
-
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
-
-      {/* Hero Section */}
-    
-              AI E-commerce <span className="text-blue-600">Optimizer Pro</span>
-
-              Transform your e-commerce business with advanced AI optimization solutions that boost sales, 
-              improve conversion rates, and maximize your online store performance.
-    
-                Get Started
-    
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
-
-import { ArrowRight, CheckCircle, Star, Brain, BarChart3, Target, TrendingUp } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
 export default function AIEcommerceOptimizerPro() {
   const features = [
@@ -139,7 +106,6 @@ export default function AIEcommerceOptimizerPro() {
       title: 'AI-Powered Optimization',
       description: 'Advanced machine learning algorithms analyze customer behavior and optimize your e-commerce platform in real-time'
     },
-<<<<<<< HEAD
     {
       icon: <Zap className="w-6 h-6 text-purple-400" />,
       title: 'Performance Enhancement',
@@ -156,102 +122,10 @@ export default function AIEcommerceOptimizerPro() {
       description: 'Comprehensive insights into customer behavior, sales performance, and optimization opportunities'
     }
   ];
-=======
-      icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
-      title: 'Real-time Insights',
-      description: 'Get instant insights into customer behavior, conversion rates, and sales performance'
-    },
-      icon: <Target className="w-6 h-6 text-yellow-400" />,
-      title: 'Conversion Optimization',
-      description: 'Automatically optimize product pages, checkout flows, and marketing campaigns for maximum conversions'
-    },
-      icon: <TrendingUp className="w-6 h-6 text-green-400" />,
-      title: 'Revenue Growth',
-      description: 'Increase your e-commerce revenue by up to 40% with our proven optimization strategies'
-  ]
-
-  const optimizationFeatures = [
-      category: 'Product Optimization',
-      items: ['AI Product Recommendations', 'Dynamic Pricing', 'Inventory Management', 'Product Image Optimization', 'SEO Enhancement', 'Review Management']
-    },
-      category: 'Customer Experience',
-      items: ['Personalized Shopping', 'Smart Search', 'Chatbot Integration', 'Mobile Optimization', 'Fast Loading', 'User Journey Analysis']
-    },
-      category: 'Marketing Automation',
-      items: ['Email Campaigns', 'Social Media Integration', 'Retargeting Ads', 'A/B Testing', 'Customer Segmentation', 'Analytics Dashboard']
-    },
-      category: 'Performance Monitoring',
-      items: ['Real-time Analytics', 'Conversion Tracking', 'Revenue Reports', 'Customer Insights', 'Performance Alerts', 'ROI Analysis']
-  ]
-
-  const pricingPlans = [
-      name: 'Starter',
-      price: '$99',
-      period: '/month',
-      description: 'Perfect for small e-commerce stores',
-      features: [
-        'Up to 1,000 products',
-        'Basic AI optimization',
-        'Standard analytics',
-        'Email support',
-        'Basic integrations',
-        'Monthly reports'
-      ],
-      popular: false
-    },
-      name: 'Professional',
-      price: '$299',
-      period: '/month',
-      description: 'Ideal for growing businesses',
-      features: [
-        'Up to 10,000 products',
-        'Advanced AI features',
-        'Real-time analytics',
-        'Priority support',
-        'Custom integrations',
-        'Weekly reports',
-        'A/B testing tools'
-      ],
-      popular: true
-    },
-      name: 'Enterprise',
-      price: '$799',
-      period: '/month',
-      description: 'For large e-commerce platforms',
-      features: [
-        'Unlimited products',
-        'Custom AI training',
-        'White-label solution',
-        'Dedicated support',
-        'Advanced integrations',
-        'Real-time reports',
-        'Custom development'
-      ],
-      popular: false
-  ]
-
-  const testimonials = [
-      name: 'Michael Rodriguez',
-      company: 'Fashion Store',
-      content: 'AI E-commerce Optimizer Pro increased our conversion rate by 35% and boosted revenue by 50% in just 3 months.',
-      rating: 5
-    },
-      name: 'Emily Chen',
-      company: 'Electronics Retailer',
-      content: 'The AI recommendations and automated optimization features have transformed our online store performance.',
-      rating: 5
-    },
-      name: 'David Thompson',
-      company: 'Home & Garden',
-      content: 'Our sales have grown consistently since implementing the AI optimization tools. Highly recommended!',
-      rating: 5
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
   return (
     
         <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta name="keywords" content="AI e-commerce, optimization, machine learning, Zion Tech Group" />
         <meta property="og:title" content="AI E-commerce Optimizer Pro - Zion Tech Group" />
@@ -261,23 +135,8 @@ export default function AIEcommerceOptimizerPro() {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
-=======
-
-        {/* Hero Section */}
-    
-                AI E-commerce Optimizer Pro
-    
-              Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs.
-    
-                Get Started
-    
-                Learn More
-View All Services
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
         {/* Hero Section */}
                 AI E-commerce Optimizer Pro
-<<<<<<< HEAD
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -297,14 +156,12 @@ View All Services
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
               >
                 View All Services
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
               </Link>
             </div>
         </div>
       </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="w-5 h-5ml-2" />
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -339,25 +196,6 @@ View All Services
                   </div>
                   <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
                   <p className="w-5 h-5ml-2">{feature.description}</p>
-=======
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
-              Powerful Features
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                  <div className="mb-4">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {feature.description}
-                  </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
                 </div>
               ))}
             </div>
@@ -390,7 +228,6 @@ View All Services
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300" />
                         <CheckCircle className="w-5 h-5ml-2" />
-=======
               Professional AI e-commerce optimization services by Zion Tech Group. Expert solutions tailored to your business needs.
                 Get Started
                 Learn More
@@ -486,12 +323,10 @@ View All Services
 
  (
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
                         {feature}
                     ))}
                   
                     Get Started
-<<<<<<< HEAD
                   </Link>
                 </div>
               ))}
@@ -500,7 +335,6 @@ View All Services
       </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="w-5 h-5ml-2" />
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -517,36 +351,14 @@ View All Services
                   View Services
                 </Link>
               </div>
-=======
-        <section className="py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your E-commerce?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our AI-powered solutions to boost their online sales.
-            </p>
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
-            >
-              Contact Us Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
           </div>
         </section>
       </div>
     </>
   );
-<<<<<<< HEAD
 };
 
 export default Page;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
-=======
     
               ))}
 
@@ -562,4 +374,3 @@ export default Page;
 
   );
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

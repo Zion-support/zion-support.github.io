@@ -1,12 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
 const AiAccountingAssistantPage: React.FC = () => {
   const features = [
     {
@@ -85,7 +80,6 @@ const AiAccountingAssistantPage: React.FC = () => {
     { number: '20+', label: 'Hours Saved Weekly', icon: <Clock className="w-6 h-6 text-purple-400" /> },
     { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6 text-red-400" /> }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-0a63
 
 export default function AiaccountingassistantPage() {
   return (
@@ -106,7 +100,6 @@ export default function AiaccountingassistantPage() {
         </Link>
       </div>
     </div>
-=======
 export default function AIAccountingAssistant() {
   return (
     <>
@@ -132,6 +125,5 @@ export default function AIAccountingAssistant() {
         </div>
       </div>
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
   );
 }

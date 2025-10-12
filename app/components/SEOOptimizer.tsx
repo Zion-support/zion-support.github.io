@@ -75,7 +75,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
   const faqData = generateFAQStructuredData()
 
   return (
-<<<<<<< HEAD
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -130,33 +129,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       {structuredData && (
         <script type="application/ld+json"  />{JSON.stringify(structuredData)}
         </script>
-=======
-        <title>5G Data Analytics - Zion Tech Group</title>
-      {/* Basic Meta Tags */}
-    
-      <title>{title}</title>
-      {/* Canonical URL */}
-      {/* Open Graph Meta Tags */}
-    
-      {/* Twitter Card Meta Tags */}
-    
-      {/* Additional SEO Meta Tags */}
-    
-      {/* Performance Hints */}
-
-      {/* Structured Data */}
-    
-      <script type="application/ld+json">{JSON.stringify(breadcrumbData)}
-      <script type="application/ld+json">{JSON.stringify(faqData)}
-      {structuredData && (
-    
-        <script type="application/ld+json">{JSON.stringify(structuredData)}
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
       )}
   )
 
-<<<<<<< HEAD
 export default SEOOptimizer;
-=======
-export default SEOOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882

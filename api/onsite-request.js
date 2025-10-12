@@ -25,7 +25,7 @@ function handler(req, res) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
-  } catch (error) {
+  } } catch (error) {
     // Log error for debugging in development
     console.error('Error reading existing requests:', error);
     existing = [];

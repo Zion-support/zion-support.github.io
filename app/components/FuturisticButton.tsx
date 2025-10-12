@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 'use client';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
 interface FuturisticButtonProps {
   children: React.ReactNode;
@@ -67,7 +64,6 @@ interface FuturisticButtonProps {
       animate="{{" opacity: 1, y: 0 }}
       transition="{{" duration: 0.3 }}
       {/* Animated background sweep */}
-<<<<<<< HEAD
       <motion.div
         className="absolute inset-0 bg-gradient-to-r from-white/20to-transparent"
         initial="{{" x: '-100%' }}
@@ -127,33 +123,12 @@ interface FuturisticButtonProps {
               animate="{{" rotate: 360 }}
               transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
              />
-=======
-      {/* Pulsing glow effect */}
-      {/* Scanning line effect */}
-      {isHovered && (
-      )}
-
-      {/* Corner accents */}
-
-      {/* Content */}
-        {loading ? (
-          
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
             Loading...
           </>
         ) : (
           children
         )}
-<<<<<<< HEAD
       </span>
     </motion.button>
   </div>);
 }
-=======
-    
-  );
-
-};
-
-export default FuturisticButton;
->>>>>>> cursor/fix-errors-and-merge-to-main-b882
