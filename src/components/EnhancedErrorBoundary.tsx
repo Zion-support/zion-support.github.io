@@ -89,4 +89,3 @@
     return this.props.children;
   }
 }
-export default EnhancedErrorBoundary;

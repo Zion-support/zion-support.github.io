@@ -1,23 +1,6 @@
 'use client';
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
 import './app/styles/futuristic-enhanced.css';
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import HomePage from './app/page';
-import { PageLoader } from './app/components/LoadingStates';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import SEOHead from './app/components/EnhancedSEOHead';
-import Breadcrumb from './app/components/Breadcrumb';
-import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import { usePerformanceMonitor } from './hooks/usePerformanceMonitor';
-import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import FuturisticBackground from './app/components/FuturisticBackground';
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -179,10 +162,8 @@ const CompliancePage = React.lazy(() => import('./app/compliance/page'));
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
   return <React.Fragment>{children}</React.Fragment>
-};
 
 // Main App Component
-const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <HelmetProvider>
@@ -386,6 +367,4 @@ const App: React.FC = () => {
       </HelmetProvider>
     </ErrorBoundary>
   );
-};
 
-export default App;

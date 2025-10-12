@@ -1,8 +1,4 @@
 #!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-
 // Function to fix merge conflicts in a file
     let content = fs.readFileSync(filePath, 'utf8');
     

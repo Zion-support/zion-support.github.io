@@ -61,5 +61,3 @@
     };
   }, [GA_TRACKING_ID]);
   return <>{children}</>;
-};
-export default AnalyticsProvider;

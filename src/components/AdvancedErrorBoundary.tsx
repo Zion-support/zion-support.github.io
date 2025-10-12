@@ -5,7 +5,6 @@
       console.error(message, context);
     }
   }
-};
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
@@ -174,4 +173,3 @@ class AdvancedErrorBoundary extends Component
     return this.props.children;
   }
 }
-export default AdvancedErrorBoundary;

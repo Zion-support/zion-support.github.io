@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 
 // List of pages that need to be completely rewritten
 const pagesToRewrite = [
@@ -11,10 +9,7 @@ const pagesToRewrite = [
 
 // Template for a basic page
 const pageTemplate = (pageName, title, description, keywords) => `import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Layout from '../../layout'
 
-const ${pageName}Page: React.FC = () => {
   return (
     <Layout
       title="${title} - Zion Tech Group"
@@ -79,9 +74,6 @@ const ${pageName}Page: React.FC = () => {
     </Layout>
   )
 }
-
-export default ${pageName}Page`;
-
 // Page configurations
 const pageConfigs = {
   'enterprise-security': {
@@ -104,7 +96,6 @@ const pageConfigs = {
     description: 'Professional task management solution with advanced features for project planning and team collaboration.',
     keywords: 'task management, project planning, team collaboration, productivity tools'
   }
-};
 
 // Rewrite pages
 for (const page of pagesToRewrite) {

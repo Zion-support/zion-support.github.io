@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 
 // List of pages that need to be created based on App.tsx imports
 const missingPages = [
@@ -33,10 +31,7 @@ const missingPages = [
 
 // Template for page components
 const pageTemplate = (pageName, title) => `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-const ${title}Page: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -72,10 +67,6 @@ const ${title}Page: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default ${title}Page;`;
-
 // Create missing pages
 missingPages.forEach(pageName => {
   const title = pageName.split('-').map(word => 

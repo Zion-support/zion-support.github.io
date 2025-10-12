@@ -1,4 +1,3 @@
-import fs from 'fs';
 // import path from 'path';
 // import { fileURLToPath } from 'url';
 
@@ -16,13 +15,11 @@ const missingPages = analysisData.missingPagesList;
 const generateImportStatement = (route) => {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
   return `const ${componentName} = lazy(() => import('.${route}/page'));`;
-};
 
 // Generate route statements;
 const generateRouteStatement = (route) => {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
   return `            <Route path="${route}" element={<${componentName} />} />`;
-};
 
 // Generate all import statements;
 const importStatements = missingPages.map(generateImportStatement).join('\n');

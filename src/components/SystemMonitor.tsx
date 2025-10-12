@@ -3,9 +3,6 @@
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
  */
-import React, { useState, useEffect, useCallback } from 'react';
-import { performanceOptimizer } from '../utils/performanceOptimizer';
-import { errorHandler } from '../utils/enhancedErrorHandler';
 // Removed unused collectPerformanceMetrics function
 // Helper functions
 
@@ -19,7 +16,6 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
   if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
   return Math.max(0, score);
-};
 // Network connection interface
   effectiveType?: string;
   downlink?: number;
@@ -374,5 +370,3 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
       )}
     </div>
   );
-};
-export default SystemMonitor;

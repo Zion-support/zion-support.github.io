@@ -1,8 +1,4 @@
 #!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-
 // Function to fix common JSX syntax issues
 function fixJSXSyntax(content) {
   // Remove any remaining merge conflict artifacts

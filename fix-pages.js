@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 
 // List of pages that need to be fixed
 const pagesToFix = [
@@ -8,10 +6,7 @@ const pagesToFix = [
 ];
 
 const pageTemplate = (pageName, title, componentName) => `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-const ${componentName}: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -47,10 +42,6 @@ const ${componentName}: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default ${componentName};`;
-
 // Fix pages
 pagesToFix.forEach(pageName => {
   const title = pageName.split('-').map(word => 

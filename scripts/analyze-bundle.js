@@ -4,12 +4,6 @@
  * Bundle analysis script for Zion Tech Group application
  * Analyzes the built bundle and provides optimization recommendations
  */
-
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 

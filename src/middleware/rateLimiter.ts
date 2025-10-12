@@ -51,7 +51,6 @@
 /**
  * Pre-configured rate limiters for common use cases
  */
-};
 /**
  * Get client identifier from request
  * @param request - Request object
@@ -85,4 +84,3 @@
     return null;
   };
 }
-export default RateLimiter;

@@ -43,7 +43,6 @@
  * Default error messages
  */
 
-};
 /**
  * Get error boundary configuration based on environment
  */
@@ -163,4 +162,3 @@
     url: typeof window !== 'undefined' ? window.location.href : 'unknown'
   };
 }
-export default getErrorBoundaryConfig;

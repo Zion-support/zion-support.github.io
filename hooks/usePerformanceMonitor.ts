@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 
 export const usePerformanceMonitor = () => {
   useEffect(() => {
@@ -52,4 +51,3 @@ export const usePerformanceMonitor = () => {
       cleanup?.();
     };
   }, []);
-};

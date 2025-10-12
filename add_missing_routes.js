@@ -1,4 +1,3 @@
-import fs from 'fs';
 
 // Read the broken links (pages that exist but have no routes)
 const brokenLinks = fs.readFileSync('/workspace/broken_links.txt', 'utf8').split('\n').filter(Boolean);

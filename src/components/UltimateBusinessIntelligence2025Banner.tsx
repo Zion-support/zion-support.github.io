@@ -118,5 +118,3 @@
         </div>
     </section>
   );
-};
-export default UltimateBusinessIntelligence2025Banner;

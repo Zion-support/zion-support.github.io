@@ -1,5 +1,4 @@
 'use client';
-import { useEffect, useCallback } from 'react';
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
@@ -94,4 +93,3 @@ import { useEffect, useCallback } from 'react';
   }, [measurePerformance, optimizeImages, preloadCriticalResources]);
     preloadCriticalResources
   };
-};

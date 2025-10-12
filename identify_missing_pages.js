@@ -1,4 +1,3 @@
-import fs from 'fs';
 
 // Read existing pages
 const existingPages = fs.readFileSync('/workspace/existing_pages.txt', 'utf8').split('\n').filter(Boolean);

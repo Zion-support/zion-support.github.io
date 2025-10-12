@@ -1,5 +1,4 @@
 'use client';
-import { useEffect, useCallback } from 'react';
     const body = JSON.stringify(metric);
     const url = '/api/analytics';
       navigator.sendBeacon(url, body);
@@ -16,4 +15,3 @@ import { useEffect, useCallback } from 'react';
     }
   }, [reportWebVitals]);
   return { reportWebVitals };
-};

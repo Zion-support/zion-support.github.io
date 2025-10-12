@@ -32,7 +32,6 @@
     cacheMaxAge: 3600000, // 1 hour in milliseconds
     enableXSSProtection: true
   }
-};
 /**
  * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'
@@ -65,4 +64,3 @@
  */
   return config.app.environment === 'development';
 }
-export default config;

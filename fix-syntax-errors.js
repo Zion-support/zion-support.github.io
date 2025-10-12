@@ -1,8 +1,4 @@
 #!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-
 // Function to fix common syntax errors in React/TypeScript files
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;

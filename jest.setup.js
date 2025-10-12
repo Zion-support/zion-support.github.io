@@ -13,14 +13,12 @@ global.TextDecoder = TextDecoder;
   disconnect() {}
   observe() {}
   unobserve() {}
-};
 
 // Mock ResizeObserver
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
-};
 
 // Mock window.gtag
 });

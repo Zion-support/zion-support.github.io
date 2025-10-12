@@ -3,9 +3,6 @@
  * Enhanced Performance Hook
  * Combines performance monitoring, error tracking, and analytics
  */
-import { useEffect, useCallback, useRef } from 'react';
-import { errorTracker } from '../utils/enhancedErrorTracking';
-import { analytics } from '../utils/enhancedAnalytics';
   component?: string;
   trackErrors?: boolean;
   trackPerformance?: boolean;
@@ -63,4 +60,3 @@ import { analytics } from '../utils/enhancedAnalytics';
     measureOperation
   };
 }
-export default useEnhancedPerformance;

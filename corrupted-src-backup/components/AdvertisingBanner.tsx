@@ -1,11 +1,5 @@
 'use client'
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import {ArrowRight} from 'lucide-react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
 
-const AdvertisingbannerPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -32,6 +26,4 @@ const AdvertisingbannerPage: React.FC = () => {
       <Footer />
     </div>
   );
-};
 
-export default AdvertisingbannerPage;

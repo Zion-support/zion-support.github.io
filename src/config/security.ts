@@ -4,23 +4,18 @@
  */
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
   }
-};
 /**
  * Rate limiting configuration
  */
-};
 /**
  * CORS configuration
  */
-};
 /**
  * Session configuration
  */
-};
 /**
  * Input validation patterns
  */
-};
 /**
  * Sanitize user input
  */
@@ -50,4 +45,3 @@
   return Array.from(array, (byte: number) => byte.toString(16).padStart(2, '0')).join('');
 }
   generateSecureToken
-};

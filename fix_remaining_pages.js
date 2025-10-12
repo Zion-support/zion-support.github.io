@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 
 // List of all pages that need to be completely rewritten
 const pagesToFix = [
@@ -19,10 +17,7 @@ const pagesToFix = [
 
 // Template for a basic page
 const pageTemplate = (pageName, title, description, keywords) => `import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Layout from '../../layout'
 
-const ${pageName}Page: React.FC = () => {
   return (
     <Layout
       title="${title} - Zion Tech Group"
@@ -87,9 +82,6 @@ const ${pageName}Page: React.FC = () => {
     </Layout>
   )
 }
-
-export default ${pageName}Page`;
-
 // Page configurations
 const pageConfigs = {
   'ai-website-builder': {
@@ -152,7 +144,6 @@ const pageConfigs = {
     description: 'The page you are looking for could not be found. Please check the URL or return to the homepage.',
     keywords: '404, not found, error, page not found'
   }
-};
 
 // Fix pages
 for (const page of pagesToFix) {

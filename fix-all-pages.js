@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 
 // Get all AI service pages from App.tsx
 const aiServicePages = [
@@ -70,10 +68,7 @@ const allPages = [
 ];
 
 const pageTemplate = (pageName, title, componentName) => `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-const ${componentName}: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -109,10 +104,6 @@ const ${componentName}: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default ${componentName};`;
-
 // Fix all pages
 allPages.forEach(pageName => {
   const title = pageName.split('-').map(word => 

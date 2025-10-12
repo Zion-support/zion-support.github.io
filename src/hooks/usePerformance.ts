@@ -1,6 +1,4 @@
 'use client';
-import { useEffect, useState } from 'react';
-import { analytics } from '../utils/analytics';
   loadTime: number;
   domContentLoaded: number;
   firstContentfulPaint: number;
@@ -62,4 +60,3 @@ import { analytics } from '../utils/analytics';
     };
   }, []);
   return { metrics, isMonitoring };
-};

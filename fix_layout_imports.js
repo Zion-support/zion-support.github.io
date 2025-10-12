@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 
 // Find all page.tsx files
 function findPageFiles(dir) {

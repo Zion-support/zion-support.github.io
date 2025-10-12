@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 
 // List of components that need to be fixed
 const componentsToFix = [
@@ -8,18 +6,12 @@ const componentsToFix = [
 ];
 
 const componentTemplate = (componentName) => `'use client';
-import React from 'react';
 
-const ${componentName}: React.FC = () => {
   return (
     <div className="${componentName.toLowerCase()}">
       {/* ${componentName} component placeholder */}
     </div>
   );
-};
-
-export default ${componentName};`;
-
 // Fix components
 componentsToFix.forEach(componentName => {
   const componentFile = path.join('/workspace/app/components', `${componentName}.tsx`);

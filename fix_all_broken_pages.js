@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 
 // Find all page.tsx files that might be broken
 function findPageFiles(dir) {
@@ -47,10 +45,7 @@ function isBrokenPage(filePath) {
 
 // Template for a basic page
 const pageTemplate = (pageName, title, description, keywords) => `import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import Layout from '../layout'
 
-const ${pageName}Page: React.FC = () => {
   return (
     <Layout
       title="${title} - Zion Tech Group"
@@ -115,9 +110,6 @@ const ${pageName}Page: React.FC = () => {
     </Layout>
   )
 }
-
-export default ${pageName}Page`;
-
 // Generate page configuration from file path
 function generatePageConfig(filePath) {
   const relativePath = filePath.replace('/workspace/app/', '').replace('/page.tsx', '');

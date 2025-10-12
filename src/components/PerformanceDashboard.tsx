@@ -96,5 +96,3 @@
       </div>
     </div>
   );
-};
-export default PerformanceDashboard;
