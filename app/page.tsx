@@ -65,14 +65,38 @@ const HomePage: React.FC = () => {
   const microSaasServices = [
     {
       icon: <BarChart3 className="w-6 h-6 text-cyan-400" />,
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time business intelligence with AI-powered insights and predictive analytics.',
-      price: '$149/month',
-      features: ['Real-time dashboards', 'AI predictions', 'Custom reports', 'API integration'],
-      link: '/micro-saas/analytics-dashboard'
+      title: 'AI Customer Insights',
+      description: 'Transform customer data into actionable insights with AI-powered analytics and churn prediction.',
+      price: '$299/month',
+      features: ['Real-time insights', 'Churn prediction', 'Customer segmentation', 'Personalization engine'],
+      link: '/ai-customer-insights'
     },
     {
-      icon: <Calendar className="w-6 h-6 text-emerald-400" />,
+      icon: <Zap className="w-6 h-6 text-emerald-400" />,
+      title: 'AI Workflow Automation',
+      description: 'Automate complex business processes with intelligent AI that learns and adapts to your workflow.',
+      price: '$299/month',
+      features: ['Smart automation', 'Visual workflow builder', 'AI decision engine', '500+ integrations'],
+      link: '/ai-workflow-automation'
+    },
+    {
+      icon: <Mic className="w-6 h-6 text-blue-400" />,
+      title: 'AI Voice Assistant',
+      description: 'Create intelligent voice assistants with natural language processing and human-like speech synthesis.',
+      price: '$299/month',
+      features: ['98% accuracy', 'Natural conversations', 'Multi-channel support', 'Custom integration'],
+      link: '/ai-voice-assistant'
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-purple-400" />,
+      title: 'AI Blockchain Analytics',
+      description: 'Advanced AI-powered analytics for DeFi, smart contracts, and crypto trading with 95% accuracy.',
+      price: '$499/month',
+      features: ['DeFi analytics', 'Smart contract analysis', 'Trading intelligence', 'Cross-chain support'],
+      link: '/ai-blockchain-analytics'
+    },
+    {
+      icon: <Calendar className="w-6 h-6 text-orange-400" />,
       title: 'Smart Appointment Scheduler',
       description: 'Intelligent scheduling system with automated reminders and calendar integration.',
       price: '$79/month',
@@ -80,7 +104,7 @@ const HomePage: React.FC = () => {
       link: '/micro-saas/appointment-scheduler'
     },
     {
-      icon: <MessageCircle className="w-6 h-6 text-blue-400" />,
+      icon: <MessageCircle className="w-6 h-6 text-pink-400" />,
       title: 'AI Chat Analytics',
       description: 'Advanced chat analytics with sentiment analysis and customer insights.',
       price: '$129/month',
@@ -88,7 +112,7 @@ const HomePage: React.FC = () => {
       link: '/micro-saas/chat-analytics'
     },
     {
-      icon: <Edit className="w-6 h-6 text-purple-400" />,
+      icon: <Edit className="w-6 h-6 text-green-400" />,
       title: 'AI Content Generator',
       description: 'Generate high-quality content for blogs, social media, and marketing campaigns.',
       price: '$99/month',
@@ -96,36 +120,12 @@ const HomePage: React.FC = () => {
       link: '/micro-saas/content-generator'
     },
     {
-      icon: <FileText className="w-6 h-6 text-orange-400" />,
+      icon: <FileText className="w-6 h-6 text-indigo-400" />,
       title: 'Document Processor',
       description: 'Automated document processing with OCR and intelligent data extraction.',
       price: '$179/month',
       features: ['OCR technology', 'Data extraction', 'Format conversion', 'Batch processing'],
       link: '/micro-saas/document-processor'
-    },
-    {
-      icon: <Mail className="w-6 h-6 text-pink-400" />,
-      title: 'Email Marketing Suite',
-      description: 'Complete email marketing solution with AI-powered personalization.',
-      price: '$119/month',
-      features: ['AI personalization', 'A/B testing', 'Automation workflows', 'Analytics dashboard'],
-      link: '/micro-saas/email-marketing'
-    },
-    {
-      icon: <DollarSign className="w-6 h-6 text-green-400" />,
-      title: 'Expense Tracker Pro',
-      description: 'Smart expense tracking with receipt scanning and automated categorization.',
-      price: '$69/month',
-      features: ['Receipt scanning', 'Auto-categorization', 'Tax preparation', 'Multi-currency'],
-      link: '/micro-saas/expense-tracker'
-    },
-    {
-      icon: <Package className="w-6 h-6 text-indigo-400" />,
-      title: 'Inventory Management',
-      description: 'Advanced inventory management with predictive analytics and automation.',
-      price: '$199/month',
-      features: ['Real-time tracking', 'Predictive analytics', 'Automated reordering', 'Multi-location'],
-      link: '/micro-saas/inventory-management'
     }
   ]
 
@@ -302,13 +302,28 @@ const HomePage: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.4)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.3)_0%,transparent_60%)] animate-pulse" style={{ animationDelay: '2s' }} />
         
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-cyan-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '0.5s' }} />
-        <div className="absolute top-40 right-20 w-16 h-16 bg-purple-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '1.5s' }} />
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-pink-400/20 rounded-full blur-xl animate-bounce" style={{ animationDelay: '2.5s' }} />
+        {/* Enhanced Floating Elements with Neon Effects */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-cyan-400/20 rounded-full blur-xl animate-bounce shadow-lg shadow-cyan-400/30" style={{ animationDelay: '0.5s' }} />
+        <div className="absolute top-40 right-20 w-16 h-16 bg-purple-400/20 rounded-full blur-xl animate-bounce shadow-lg shadow-purple-400/30" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-pink-400/20 rounded-full blur-xl animate-bounce shadow-lg shadow-pink-400/30" style={{ animationDelay: '2.5s' }} />
+        <div className="absolute top-60 right-1/3 w-8 h-8 bg-emerald-400/20 rounded-full blur-xl animate-bounce shadow-lg shadow-emerald-400/30" style={{ animationDelay: '3s' }} />
+        <div className="absolute bottom-40 right-10 w-14 h-14 bg-orange-400/20 rounded-full blur-xl animate-bounce shadow-lg shadow-orange-400/30" style={{ animationDelay: '1s' }} />
         
-        {/* Grid Pattern Overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse" />
+        {/* Animated Grid Pattern with Neon Glow */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse" />
+        
+        {/* Futuristic Circuit Pattern */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-cyan-400/30 rounded-full animate-spin" style={{ animationDuration: '20s' }} />
+          <div className="absolute top-3/4 right-1/4 w-24 h-24 border border-purple-400/30 rounded-full animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 border border-pink-400/30 rounded-full animate-spin" style={{ animationDuration: '10s' }} />
+        </div>
+        
+        {/* Neon Lines */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-transparent via-pink-400 to-transparent animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-0 right-0 w-1 h-full bg-gradient-to-b from-transparent via-emerald-400 to-transparent animate-pulse" style={{ animationDelay: '3s' }} />
         
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 px-6 py-3 rounded-full text-sm font-medium mb-8 border border-cyan-400/30">
@@ -316,7 +331,7 @@ const HomePage: React.FC = () => {
             <span>Next-Generation Technology Solutions</span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-white mb-8 leading-tight">
             Welcome to
             <br />
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
@@ -324,7 +339,7 @@ const HomePage: React.FC = () => {
             </span>
           </h1>
           
-          <p className="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed px-4">
             Leading the future of technology with cutting-edge AI solutions, 
             robust IT infrastructure, and innovative digital transformation services.
             <br />

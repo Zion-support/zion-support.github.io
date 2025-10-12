@@ -33,6 +33,9 @@ import AICRMAssistantPage from './app/ai-crm-assistant/page'
 import AIEmailMarketingPage from './app/ai-email-marketing/page'
 import AIDocumentProcessingPage from './app/ai-document-processing/page'
 import AIVoiceAssistantPage from './app/ai-voice-assistant/page'
+import AICustomerInsightsPage from './app/ai-customer-insights/page'
+import AIWorkflowAutomationPage from './app/ai-workflow-automation/page'
+import AIBlockchainAnalyticsPage from './app/ai-blockchain-analytics/page'
 
 // Additional IT Services
 import CloudMigrationPage from './app/cloud-migration/page'
@@ -103,6 +106,9 @@ const App: React.FC = () => {
                 <Route path="/ai-email-marketing" element={<AIEmailMarketingPage />} />
                 <Route path="/ai-document-processing" element={<AIDocumentProcessingPage />} />
                 <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                <Route path="/ai-customer-insights" element={<AICustomerInsightsPage />} />
+                <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
+                <Route path="/ai-blockchain-analytics" element={<AIBlockchainAnalyticsPage />} />
                 
                 {/* IT Services */}
                 <Route path="/cloud-migration" element={<CloudMigrationPage />} />
