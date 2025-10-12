@@ -11,8 +11,7 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
-
+  ];
   const features = [
     {
       icon: Brain,
@@ -34,8 +33,7 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ]
-
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
