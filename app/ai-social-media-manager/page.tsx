@@ -129,7 +129,10 @@ export default function AISocialMediaManager() {
     }
   ]
 
+<<<<<<< HEAD
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-6024
   return (
     <>
       <Helmet>
@@ -201,6 +204,7 @@ export default function AISocialMediaManager() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>
   );
 };
@@ -209,3 +213,6 @@ export default Page;
 =======
 }
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
+=======
+}
+>>>>>>> cursor/website-audit-and-update-with-deployment-6024

@@ -111,5 +111,9 @@ import { Link } from 'react-router-dom'
 
   const testimonials = [
     {
+<<<<<<< HEAD
 }
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
+=======
+}
+>>>>>>> cursor/website-audit-and-update-with-deployment-6024

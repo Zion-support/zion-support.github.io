@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -45,6 +46,8 @@ const Page: React.FC = () => {
                 Learn More
               </Link>
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-6024
 
   const pricingPlans = [
     {
@@ -82,6 +85,7 @@ const Page: React.FC = () => {
 
         {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
@@ -107,10 +111,13 @@ const Page: React.FC = () => {
               </div>
 =======
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-6024
             </div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>
   );
@@ -120,3 +127,6 @@ export default Page;
 =======
 }
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
+=======
+}
+>>>>>>> cursor/website-audit-and-update-with-deployment-6024
