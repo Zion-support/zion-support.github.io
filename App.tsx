@@ -19,10 +19,17 @@ import CareersPage from './app/careers/page'
 import NewsPage from './app/news/page'
 import PartnersPage from './app/partners/page'
 import InvestorsPage from './app/investors/page'
+
+// Main Service Pages
+import AIServicesPage from './app/ai-services/page'
+import ITServicesPage from './app/it-services/page'
+import MicroSaasServicesPage from './app/micro-saas-services/page'
+import FiveGSolutionsPage from './app/5g-solutions/page'
 // import PageLoader from './app/components/PageLoader'
 import NotFoundPage from './app/not-found/page'
 
 // Additional AI Services
+import AIChatbotBuilderPage from './app/ai-chatbot-builder/page'
 import AIContentGeneratorPage from './app/ai-content-generator/page'
 import AIChatbotEnterprisePage from './app/ai-chatbot-enterprise/page'
 import AIAnalyticsDashboardPage from './app/ai-analytics-dashboard/page'
@@ -38,6 +45,7 @@ import AIWorkflowAutomationPage from './app/ai-workflow-automation/page'
 import AIBlockchainAnalyticsPage from './app/ai-blockchain-analytics/page'
 
 // Additional IT Services
+import WebDevelopmentPage from './app/web-development/page'
 import CloudMigrationPage from './app/cloud-migration/page'
 import MobileDevelopmentPage from './app/mobile-development/page'
 import APIDevelopmentPage from './app/api-development/page'
@@ -70,6 +78,10 @@ import CookiePolicyPage from './app/cookie-policy/page'
 import GDPRCompliancePage from './app/gdpr-compliance/page'
 import ResourcesPage from './app/resources/page'
 
+// Legal Pages
+import PrivacyPage from './app/privacy/page'
+import TermsPage from './app/terms/page'
+
 const App: React.FC = () => {
   return (
     <HelmetProvider>
@@ -95,7 +107,14 @@ const App: React.FC = () => {
                 <Route path="/community" element={<CommunityPage />} />
                 <Route path="/case-studies" element={<CaseStudiesPage />} />
                 
+                {/* Main Service Pages */}
+                <Route path="/ai-services" element={<AIServicesPage />} />
+                <Route path="/it-services" element={<ITServicesPage />} />
+                <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
+                <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                
                 {/* AI Services */}
+                <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
                 <Route path="/ai-content-generator" element={<AIContentGeneratorPage />} />
                 <Route path="/ai-chatbot-enterprise" element={<AIChatbotEnterprisePage />} />
                 <Route path="/ai-analytics-dashboard" element={<AIAnalyticsDashboardPage />} />
@@ -111,6 +130,7 @@ const App: React.FC = () => {
                 <Route path="/ai-blockchain-analytics" element={<AIBlockchainAnalyticsPage />} />
                 
                 {/* IT Services */}
+                <Route path="/web-development" element={<WebDevelopmentPage />} />
                 <Route path="/cloud-migration" element={<CloudMigrationPage />} />
                 <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                 <Route path="/api-development" element={<APIDevelopmentPage />} />
@@ -142,6 +162,10 @@ const App: React.FC = () => {
                 <Route path="/cookie-policy" element={<CookiePolicyPage />} />
                 <Route path="/gdpr-compliance" element={<GDPRCompliancePage />} />
                 <Route path="/resources" element={<ResourcesPage />} />
+                
+                {/* Legal Pages */}
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
                 
                 {/* 404 Page */}
                 <Route path="*" element={<NotFoundPage />} />
