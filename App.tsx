@@ -50,6 +50,10 @@ const AIClimateSolutionsProPage = React.lazy(() => import('./app/ai-climate-solu
 // Additional AI Services Pages
 const AIMeetingAssistantPage = React.lazy(() => import('./app/ai-meeting-assistant/page'))
 const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'))
+const AICustomerSupportChatbotPage = React.lazy(() => import('./app/ai-customer-support-chatbot/page'))
+const AIBusinessIntelligencePage = React.lazy(() => import('./app/ai-business-intelligence/page'))
+const AICybersecuritySuitePage = React.lazy(() => import('./app/ai-cybersecurity-suite/page'))
+const AISocialMediaManagerPage = React.lazy(() => import('./app/ai-social-media-manager/page'))
 
 // Additional IT Services Pages
 const BlockchainPage = React.lazy(() => import('./app/blockchain/page'))
@@ -129,6 +133,10 @@ function App() {
                 {/* Additional AI Services Routes */}
                 <Route path="/ai-meeting-assistant" element={<AIMeetingAssistantPage />} />
                 <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
+                <Route path="/ai-customer-support-chatbot" element={<AICustomerSupportChatbotPage />} />
+                <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
+                <Route path="/ai-cybersecurity-suite" element={<AICybersecuritySuitePage />} />
+                <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
                 
                 {/* Additional IT Services Routes */}
                 <Route path="/blockchain" element={<BlockchainPage />} />
