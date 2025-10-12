@@ -128,8 +128,4 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
-<<<<<<< HEAD
 export default ErrorBoundary;
-=======
-export default ErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-d9d0

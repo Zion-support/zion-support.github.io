@@ -1,96 +1,119 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { CheckCircle, ArrowRight, Microscope, Brain, Target, Zap, Shield, Users, Clock, DollarSign, Star, TrendingUp, BarChart3, FileText, Headphones, Mail, Phone, MapPin } from 'lucide-react'
+import { CheckCircle, ArrowRight, Target, Brain, Zap, Shield, Users, Clock, DollarSign, Star, TrendingUp, BarChart3, FileText, Headphones, Mail, Phone, MapPin, Calendar, Settings, Smartphone, Globe } from 'lucide-react'
 
-export default function AIDrugDiscoveryProPage() {
+export default function AITaskManagerProPage() {
   const features = [
     {
-      icon: <Microscope className="w-8 h-8 text-blue-500" />,
-      title: 'Molecular Analysis',
-      description: 'Advanced AI algorithms analyze molecular structures and predict drug-target interactions with 95% accuracy.',
-      benefits: ['Protein folding prediction', 'Drug-target binding affinity', 'Molecular property analysis', 'Chemical similarity assessment']
+      icon: <Brain className="w-8 h-8 text-blue-500" />,
+      title: 'AI-Powered Prioritization',
+      description: 'Intelligent task prioritization based on deadlines, importance, and your work patterns.',
+      benefits: ['Smart scheduling', 'Deadline management', 'Priority optimization', 'Workload balancing']
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-500" />,
-      title: 'Predictive Modeling',
-      description: 'Machine learning models predict drug efficacy, toxicity, and side effects before clinical trials.',
-      benefits: ['ADMET prediction', 'Drug-drug interactions', 'Toxicity assessment', 'Efficacy forecasting']
+      icon: <Zap className="w-8 h-8 text-yellow-500" />,
+      title: 'Automated Workflows',
+      description: 'Create custom automation rules to streamline repetitive tasks and boost productivity.',
+      benefits: ['Rule-based automation', 'Custom triggers', 'Action sequences', 'Integration workflows']
     },
     {
-      icon: <Target className="w-8 h-8 text-purple-500" />,
-      title: 'Target Identification',
-      description: 'AI identifies novel drug targets and validates existing ones using multi-omics data integration.',
-      benefits: ['Genomic analysis', 'Proteomic profiling', 'Pathway analysis', 'Biomarker discovery']
+      icon: <Users className="w-8 h-8 text-green-500" />,
+      title: 'Team Collaboration',
+      description: 'Seamless team collaboration with real-time updates, shared workspaces, and communication tools.',
+      benefits: ['Real-time sync', 'Team workspaces', 'Comment system', 'File sharing']
     },
     {
-      icon: <Zap className="w-8 h-8 text-orange-500" />,
-      title: 'Drug Design',
-      description: 'Automated drug design using generative AI to create novel compounds with desired properties.',
-      benefits: ['De novo drug design', 'Lead optimization', 'Structure-activity relationships', 'Chemical synthesis planning']
+      icon: <BarChart3 className="w-8 h-8 text-purple-500" />,
+      title: 'Analytics & Insights',
+      description: 'Comprehensive analytics to track productivity, identify bottlenecks, and optimize workflows.',
+      benefits: ['Productivity metrics', 'Time tracking', 'Performance insights', 'Trend analysis']
     }
   ]
 
-  const useCases = [
+  const pricingPlans = [
     {
-      title: 'Cancer Research',
-      description: 'Accelerate cancer drug discovery with AI-powered target identification and drug design.',
-      impact: 'Reduce discovery time by 60%',
-      price: 'Starting at $50,000/month'
+      name: 'Starter',
+      price: '$19',
+      period: '/month',
+      description: 'Perfect for individuals and small teams',
+      features: [
+        'Up to 5 team members',
+        'Unlimited tasks',
+        'Basic AI prioritization',
+        'Mobile app access',
+        'Email support',
+        '5GB storage'
+      ],
+      popular: false
     },
     {
-      title: 'Rare Diseases',
-      description: 'Develop treatments for rare diseases using AI to identify repurposing opportunities.',
-      impact: 'Cut costs by 70%',
-      price: 'Starting at $30,000/month'
+      name: 'Professional',
+      price: '$49',
+      period: '/month',
+      description: 'Ideal for growing businesses',
+      features: [
+        'Up to 25 team members',
+        'Advanced AI features',
+        'Custom workflows',
+        'Priority support',
+        'Analytics dashboard',
+        '50GB storage',
+        'API access'
+      ],
+      popular: true
     },
     {
-      title: 'Infectious Diseases',
-      description: 'Rapidly develop treatments for emerging infectious diseases and pandemics.',
-      impact: '10x faster response time',
-      price: 'Starting at $40,000/month'
-    },
-    {
-      title: 'Neurodegenerative',
-      description: 'Advance treatments for Alzheimer\'s, Parkinson\'s, and other neurodegenerative diseases.',
-      impact: 'Improve success rate by 40%',
-      price: 'Starting at $45,000/month'
+      name: 'Enterprise',
+      price: '$99',
+      period: '/month',
+      description: 'Complete solution for large organizations',
+      features: [
+        'Unlimited team members',
+        'Full AI capabilities',
+        'Custom integrations',
+        '24/7 phone support',
+        'Advanced analytics',
+        'Unlimited storage',
+        'White-label options'
+      ],
+      popular: false
     }
   ]
 
   const benefits = [
-    'Reduce drug discovery time from 10-15 years to 3-5 years',
-    'Cut R&D costs by up to 70%',
-    'Increase success rate from 10% to 40%',
-    'Enable personalized medicine approaches',
-    'Accelerate rare disease research',
-    'Improve drug safety profiles'
+    'Increase productivity by up to 40%',
+    'Reduce time spent on task management by 60%',
+    'Improve team collaboration and communication',
+    'Gain valuable insights into work patterns',
+    'Automate repetitive tasks and workflows',
+    'Access from anywhere with mobile apps'
   ]
 
   const stats = [
-    { number: '95%', label: 'Prediction Accuracy', icon: <Target className="w-6 h-6" /> },
-    { number: '70%', label: 'Cost Reduction', icon: <DollarSign className="w-6 h-6" /> },
-    { number: '60%', label: 'Time Savings', icon: <Clock className="w-6 h-6" /> },
-    { number: '500+', label: 'Drug Candidates', icon: <Microscope className="w-6 h-6" /> }
+    { number: '40%', label: 'Productivity Boost', icon: <TrendingUp className="w-6 h-6" /> },
+    { number: '60%', label: 'Time Saved', icon: <Clock className="w-6 h-6" /> },
+    { number: '95%', label: 'User Satisfaction', icon: <Star className="w-6 h-6" /> },
+    { number: '10K+', label: 'Active Users', icon: <Users className="w-6 h-6" /> }
   ]
 
   const testimonials = [
     {
-      name: 'Dr. Sarah Chen',
-      company: 'PharmaTech Inc.',
-      content: 'AI Drug Discovery Pro revolutionized our research pipeline. We identified 3 promising drug candidates in just 6 months.',
+      name: 'Sarah Johnson',
+      company: 'TechStart Inc.',
+      content: 'AI Task Manager Pro transformed how our team works. We\'re 40% more productive and never miss deadlines.',
       rating: 5
     },
     {
-      name: 'Prof. Michael Rodriguez',
-      company: 'University Medical Center',
-      content: 'The predictive accuracy is remarkable. We\'ve reduced our failure rate significantly and accelerated our research.',
+      name: 'Michael Chen',
+      company: 'Digital Agency Co.',
+      content: 'The AI prioritization is incredible. It knows exactly what I need to work on next.',
       rating: 5
     },
     {
-      name: 'Dr. Emily Watson',
-      company: 'Biotech Innovations',
-      content: 'This platform enabled us to tackle rare diseases that were previously impossible to research cost-effectively.',
+      name: 'Emily Rodriguez',
+      company: 'Marketing Solutions',
+      content: 'Our team collaboration improved dramatically. The real-time updates keep everyone aligned.',
       rating: 5
     }
   ]
@@ -98,9 +121,9 @@ export default function AIDrugDiscoveryProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Drug Discovery Pro - Zion Tech Group | Revolutionary Pharmaceutical AI</title>
-        <meta name="description" content="Revolutionary AI-powered drug discovery platform that accelerates pharmaceutical research, reduces costs, and increases success rates. Transform your drug development pipeline." />
-        <meta name="keywords" content="AI drug discovery, pharmaceutical AI, drug development, molecular analysis, predictive modeling, Zion Tech Group" />
+        <title>AI Task Manager Pro - Zion Tech Group | Intelligent Task Management</title>
+        <meta name="description" content="Revolutionary AI-powered task management that boosts productivity by 40%. Smart prioritization, automated workflows, and team collaboration in one powerful platform." />
+        <meta name="keywords" content="AI task manager, productivity software, task management, team collaboration, workflow automation, Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
@@ -112,11 +135,11 @@ export default function AIDrugDiscoveryProPage() {
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              AI <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Drug Discovery Pro</span>
+              AI <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Task Manager Pro</span>
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Revolutionize pharmaceutical research with our advanced AI platform that accelerates drug discovery, 
-              reduces costs, and increases success rates by up to 400%.
+              Revolutionize your productivity with AI-powered task management that learns your work patterns, 
+              prioritizes intelligently, and automates workflows to boost efficiency by 40%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Link 
@@ -127,10 +150,10 @@ export default function AIDrugDiscoveryProPage() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                to="/ai-services"
+                to="/micro-saas-services"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                View All AI Services
+                View All Micro SAAS
               </Link>
             </div>
           </div>
@@ -159,10 +182,10 @@ export default function AIDrugDiscoveryProPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Advanced AI Capabilities
+              Powerful AI Features
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Cutting-edge artificial intelligence technologies that transform drug discovery
+              Intelligent task management powered by cutting-edge artificial intelligence
             </p>
           </div>
           
@@ -197,31 +220,61 @@ export default function AIDrugDiscoveryProPage() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Simple, Transparent Pricing
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Transform research across multiple therapeutic areas
+              Choose the plan that fits your team size and needs
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
-                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                  {useCase.title}
-                </h3>
-                <p className="text-gray-300 mb-4 group-hover:text-white transition-colors">
-                  {useCase.description}
-                </p>
-                <div className="space-y-2">
-                  <div className="text-cyan-400 font-medium text-sm">{useCase.impact}</div>
-                  <div className="text-white font-semibold">{useCase.price}</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-2xl p-8 border transition-all duration-300 ${
+                plan.popular 
+                  ? 'border-cyan-400/50 scale-105' 
+                  : 'border-white/20 hover:border-cyan-400/50'
+              }`}>
+                {plan.popular && (
+                  <div className="text-center mb-4">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300 text-sm">{plan.description}</p>
                 </div>
+                
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <Link
+                  to="/contact"
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                      : 'border-2 border-white text-white hover:bg-white/10'
+                  }`}
+                >
+                  Get Started
+                </Link>
               </div>
             ))}
           </div>
@@ -233,10 +286,10 @@ export default function AIDrugDiscoveryProPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Why Choose AI Drug Discovery Pro?</h2>
+              <h2 className="text-3xl font-bold text-white mb-6">Why Choose AI Task Manager Pro?</h2>
               <p className="text-lg text-gray-300 mb-8">
-                Our platform combines cutting-edge AI with deep pharmaceutical expertise to deliver 
-                unprecedented results in drug discovery and development.
+                Our AI-powered platform learns from your work patterns and continuously optimizes 
+                your productivity, making task management effortless and efficient.
               </p>
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -252,26 +305,26 @@ export default function AIDrugDiscoveryProPage() {
               <div className="space-y-4">
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mr-3" />
-                  <span>Free 30-day trial</span>
+                  <span>14-day free trial</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mr-3" />
-                  <span>No setup fees</span>
+                  <span>No credit card required</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mr-3" />
-                  <span>24/7 expert support</span>
+                  <span>Setup in 5 minutes</span>
                 </div>
                 <div className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-emerald-400 mr-3" />
-                  <span>Custom integration</span>
+                  <span>Cancel anytime</span>
                 </div>
               </div>
               <Link
                 to="/contact"
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mt-6"
               >
-                Contact Our Experts
+                Start Free Trial
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
@@ -284,10 +337,10 @@ export default function AIDrugDiscoveryProPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              What Our Clients Say
+              What Our Users Say
             </h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Real results from leading pharmaceutical companies and research institutions
+              Real feedback from teams who transformed their productivity
             </p>
           </div>
           
@@ -317,11 +370,11 @@ export default function AIDrugDiscoveryProPage() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent_50%)]"></div>
             <div className="relative">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Ready to Revolutionize Drug Discovery?
+                Ready to Boost Your Productivity?
               </h2>
               <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-                Join leading pharmaceutical companies using AI Drug Discovery Pro to accelerate 
-                research and bring life-saving treatments to market faster.
+                Join thousands of teams using AI Task Manager Pro to streamline workflows, 
+                improve collaboration, and achieve more in less time.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -331,10 +384,10 @@ export default function AIDrugDiscoveryProPage() {
                   Start Free Trial
                 </Link>
                 <Link
-                  to="/ai-services"
+                  to="/micro-saas-services"
                   className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
                 >
-                  View All AI Services
+                  View All Micro SAAS
                 </Link>
               </div>
             </div>
