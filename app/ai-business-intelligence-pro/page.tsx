@@ -3,141 +3,142 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Shield, 
-  Eye, 
-  Lock, 
-  AlertTriangle, 
+  BarChart3, 
+  TrendingUp, 
+  PieChart, 
+  Target, 
   CheckCircle, 
   ArrowRight,
   Star,
   Users,
   Globe,
   Smartphone,
-  BarChart3,
-  Zap,
   Brain,
-  Cpu,
+  Zap,
   Database,
-  Network,
   FileText,
   Clock,
-  TrendingUp,
-  Target,
   Search,
   Filter,
   Download,
   Upload,
   Settings,
-  Monitor
+  Monitor,
+  Cpu,
+  Eye,
+  Shield,
+  Lock,
+  Network,
+  AlertTriangle
 } from 'lucide-react';
 
-export default function AICybersecuritySuitePage() {
+export default function AIBusinessIntelligenceProPage() {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-blue-500" />,
-      title: 'AI Threat Detection',
-      description: 'Advanced machine learning algorithms detect and prevent cyber threats in real-time'
+      title: 'AI-Powered Analytics',
+      description: 'Advanced machine learning algorithms provide deep insights and predictive analytics'
     },
     {
-      icon: <Shield className="w-6 h-6 text-green-500" />,
-      title: 'Zero Trust Architecture',
-      description: 'Implement zero trust security model with continuous verification and monitoring'
+      icon: <BarChart3 className="w-6 h-6 text-green-500" />,
+      title: 'Real-time Dashboards',
+      description: 'Interactive dashboards with live data updates and customizable visualizations'
     },
     {
-      icon: <Eye className="w-6 h-6 text-purple-500" />,
-      title: 'Behavioral Analytics',
-      description: 'Monitor user and system behavior to identify anomalies and potential threats'
+      icon: <Target className="w-6 h-6 text-purple-500" />,
+      title: 'Predictive Modeling',
+      description: 'Forecast trends, customer behavior, and business outcomes with high accuracy'
     },
     {
-      icon: <Lock className="w-6 h-6 text-red-500" />,
-      title: 'Advanced Encryption',
-      description: 'End-to-end encryption with quantum-resistant algorithms for maximum security'
+      icon: <Database className="w-6 h-6 text-red-500" />,
+      title: 'Data Integration',
+      description: 'Connect and analyze data from multiple sources with automated ETL processes'
     },
     {
-      icon: <Network className="w-6 h-6 text-cyan-500" />,
-      title: 'Network Security',
-      description: 'Comprehensive network monitoring and protection against DDoS and intrusions'
+      icon: <Eye className="w-6 h-6 text-cyan-500" />,
+      title: 'Natural Language Query',
+      description: 'Ask questions in plain English and get instant insights from your data'
     },
     {
-      icon: <Database className="w-6 h-6 text-orange-500" />,
-      title: 'Data Protection',
-      description: 'Safeguard sensitive data with automated classification and access controls'
+      icon: <Zap className="w-6 h-6 text-orange-500" />,
+      title: 'Automated Reporting',
+      description: 'Generate comprehensive reports automatically with AI-driven insights'
     }
   ];
 
-  const securityModules = [
+  const analyticsModules = [
     {
-      title: 'Threat Intelligence',
-      description: 'Real-time threat intelligence feeds and automated response systems',
-      icon: <Target className="w-8 h-8 text-blue-500" />,
-      features: ['Global threat monitoring', 'Automated threat hunting', 'IOC management', 'Threat attribution']
+      title: 'Financial Analytics',
+      description: 'Comprehensive financial analysis and forecasting capabilities',
+      icon: <TrendingUp className="w-8 h-8 text-green-500" />,
+      features: ['Revenue forecasting', 'Cost analysis', 'Profit margin tracking', 'Budget optimization', 'Cash flow prediction']
     },
     {
-      title: 'Endpoint Protection',
-      description: 'Advanced endpoint detection and response (EDR) capabilities',
-      icon: <Monitor className="w-8 h-8 text-green-500" />,
-      features: ['Real-time monitoring', 'Malware detection', 'Process analysis', 'File integrity monitoring']
+      title: 'Customer Intelligence',
+      description: 'Deep customer insights and behavioral analysis',
+      icon: <Users className="w-8 h-8 text-blue-500" />,
+      features: ['Customer segmentation', 'Churn prediction', 'Lifetime value analysis', 'Purchase patterns', 'Satisfaction tracking']
     },
     {
-      title: 'Identity & Access',
-      description: 'Comprehensive identity and access management (IAM) solutions',
-      icon: <Users className="w-8 h-8 text-purple-500" />,
-      features: ['Multi-factor authentication', 'Privileged access management', 'Single sign-on', 'Identity governance']
+      title: 'Operational Analytics',
+      description: 'Optimize business operations with data-driven insights',
+      icon: <Settings className="w-8 h-8 text-purple-500" />,
+      features: ['Process optimization', 'Resource allocation', 'Performance monitoring', 'Efficiency metrics', 'Quality control']
     },
     {
-      title: 'Security Operations',
-      description: 'Centralized security operations center (SOC) management',
-      icon: <Settings className="w-8 h-8 text-red-500" />,
-      features: ['Incident response', 'Security orchestration', 'Compliance reporting', 'Forensic analysis']
+      title: 'Market Intelligence',
+      description: 'Competitive analysis and market trend monitoring',
+      icon: <Globe className="w-8 h-8 text-red-500" />,
+      features: ['Competitor analysis', 'Market trends', 'Price optimization', 'Demand forecasting', 'Brand monitoring']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Essential',
-      price: '$299',
+      name: 'Starter',
+      price: '$199',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Basic threat detection',
-        'Email security',
-        'Firewall management',
-        '24/7 monitoring',
-        'Standard support',
-        'Up to 50 users'
+        'Basic analytics dashboard',
+        'Up to 5 data sources',
+        'Standard reports',
+        'Email support',
+        'Up to 10 users',
+        '1GB data storage'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$799',
+      price: '$599',
       period: '/month',
-      description: 'Ideal for growing organizations',
+      description: 'Ideal for growing companies',
       features: [
-        'Advanced AI threat detection',
-        'Full endpoint protection',
-        'Network security suite',
-        'Identity management',
+        'Advanced AI analytics',
+        'Up to 25 data sources',
+        'Custom dashboards',
+        'Predictive modeling',
         'Priority support',
-        'Up to 500 users',
-        'Compliance reporting',
-        'Custom integrations'
+        'Up to 50 users',
+        '10GB data storage',
+        'API access'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,999',
+      price: '$1,499',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Complete security suite',
+        'Complete BI suite',
+        'Unlimited data sources',
         'Custom AI models',
-        'Dedicated SOC team',
         'White-label solution',
-        '24/7 phone support',
+        'Dedicated support',
         'Unlimited users',
-        'Advanced analytics',
+        'Unlimited storage',
         'On-premise deployment'
       ],
       popular: false
@@ -146,36 +147,36 @@ export default function AICybersecuritySuitePage() {
 
   const testimonials = [
     {
-      name: 'Sarah Chen',
-      company: 'TechCorp Security',
-      content: 'The AI cybersecurity suite has transformed our security posture. We\'ve prevented 99.9% of threats automatically.',
+      name: 'David Kim',
+      company: 'Retail Analytics Corp',
+      content: 'The AI business intelligence platform has revolutionized our decision-making process. We\'ve increased revenue by 35% using their insights.',
       rating: 5,
-      avatar: 'SC'
+      avatar: 'DK'
     },
     {
-      name: 'Michael Rodriguez',
-      company: 'Financial Services Inc.',
-      content: 'Compliance has never been easier. The automated reporting saves us hours every week.',
+      name: 'Lisa Martinez',
+      company: 'Financial Services Group',
+      content: 'The predictive modeling capabilities are outstanding. We can now forecast market trends with 95% accuracy.',
       rating: 5,
-      avatar: 'MR'
+      avatar: 'LM'
     },
     {
-      name: 'Emily Johnson',
-      company: 'Healthcare Systems',
-      content: 'The behavioral analytics caught a sophisticated attack that traditional tools missed. Highly recommended.',
+      name: 'James Wilson',
+      company: 'Manufacturing Solutions',
+      content: 'The operational analytics helped us optimize our supply chain and reduce costs by 25%. Highly recommended.',
       rating: 5,
-      avatar: 'EJ'
+      avatar: 'JW'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Cybersecurity Suite - Advanced Threat Protection | Zion Tech Group</title>
-        <meta name="description" content="Protect your organization with our AI-powered cybersecurity suite. Advanced threat detection, zero trust architecture, and comprehensive security management. Get started today!" />
-        <meta name="keywords" content="AI cybersecurity, threat detection, zero trust security, endpoint protection, security operations, Zion Tech Group" />
+        <title>AI Business Intelligence Pro - Advanced Analytics Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform your business with AI-powered business intelligence. Advanced analytics, predictive modeling, and real-time insights. Start your free trial today!" />
+        <meta name="keywords" content="AI business intelligence, data analytics, predictive modeling, business insights, data visualization, Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-cybersecurity-suite" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-business-intelligence-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -183,48 +184,48 @@ export default function AICybersecuritySuitePage() {
         <section className="pt-20 px-4 py-16 lg:py-24">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center bg-red-500/10 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                <Shield className="w-4 h-4 mr-2" />
-                AI-Powered Cybersecurity
+              <div className="inline-flex items-center bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <BarChart3 className="w-4 h-4 mr-2" />
+                AI-Powered Business Intelligence
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Cybersecurity Suite
+                AI Business Intelligence Pro
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Protect your organization with the most advanced AI-powered cybersecurity platform. 
-                Detect, prevent, and respond to threats with unprecedented speed and accuracy.
+                Transform your data into actionable insights with our advanced AI-powered business intelligence platform. 
+                Make smarter decisions with predictive analytics and real-time dashboards.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-red-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Schedule Demo
+                  View Demo
                 </button>
               </div>
               <p className="text-gray-400 text-sm mt-4">
-                ✓ 30-day free trial • ✓ No setup fees • ✓ 24/7 support
+                ✓ 30-day free trial • ✓ No credit card required • ✓ Cancel anytime
               </p>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-                <div className="text-gray-400">Threat Detection Rate</div>
+                <div className="text-3xl font-bold text-white mb-2">95%</div>
+                <div className="text-gray-400">Prediction Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">2.3s</div>
-                <div className="text-gray-400">Average Response Time</div>
+                <div className="text-3xl font-bold text-white mb-2">35%</div>
+                <div className="text-gray-400">Average Revenue Increase</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-white mb-2">10K+</div>
-                <div className="text-gray-400">Organizations Protected</div>
+                <div className="text-gray-400">Data Points Analyzed</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                <div className="text-gray-400">Security Monitoring</div>
+                <div className="text-gray-400">Real-time Monitoring</div>
               </div>
             </div>
           </div>
@@ -235,10 +236,10 @@ export default function AICybersecuritySuitePage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Security Features
+                Powerful Analytics Features
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive protection powered by artificial intelligence and machine learning
+                Everything you need to transform your data into business intelligence
               </p>
             </div>
 
@@ -254,20 +255,20 @@ export default function AICybersecuritySuitePage() {
           </div>
         </section>
 
-        {/* Security Modules Section */}
+        {/* Analytics Modules Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Security Modules
+                Comprehensive Analytics Modules
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive security coverage across all attack vectors
+                Specialized analytics solutions for every aspect of your business
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {securityModules.map((module, index) => (
+              {analyticsModules.map((module, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className="mr-4">{module.icon}</div>
@@ -295,21 +296,21 @@ export default function AICybersecuritySuitePage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Enterprise Security Pricing
+                Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Choose the security level that matches your organization's needs
+                Choose the plan that scales with your business needs
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`relative bg-white/10 backdrop-blur-lg rounded-xl p-8 border ${
-                  plan.popular ? 'border-red-500/50 ring-2 ring-red-500/20' : 'border-white/20'
+                  plan.popular ? 'border-blue-500/50 ring-2 ring-blue-500/20' : 'border-white/20'
                 } hover:bg-white/15 transition-all duration-300`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-red-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                         Most Popular
                       </div>
                     </div>
@@ -335,7 +336,7 @@ export default function AICybersecuritySuitePage() {
 
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular 
-                      ? 'bg-gradient-to-r from-red-600 to-purple-600 text-white hover:from-red-700 hover:to-purple-700' 
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700' 
                       : 'border-2 border-white text-white hover:bg-white/10'
                   }`}>
                     {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
@@ -351,10 +352,10 @@ export default function AICybersecuritySuitePage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Security Leaders
+                Trusted by Data-Driven Companies
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                See what security professionals say about our AI cybersecurity suite
+                See how businesses are transforming with AI business intelligence
               </p>
             </div>
 
@@ -362,7 +363,7 @@ export default function AICybersecuritySuitePage() {
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
                       {testimonial.avatar}
                     </div>
                     <div>
@@ -385,23 +386,23 @@ export default function AICybersecuritySuitePage() {
         {/* CTA Section */}
         <section className="py-16 px-4 bg-white/5">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-red-600 to-purple-600 rounded-2xl p-8 lg:p-12">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 lg:p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Secure Your Organization Today
+                Transform Your Business with AI Intelligence
               </h2>
               <p className="text-xl text-white/90 mb-8">
-                Join thousands of organizations protected by our AI-powered cybersecurity suite.
+                Join thousands of companies making data-driven decisions with our AI platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                   Start Free Trial
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Schedule Security Audit
+                  Schedule Demo
                 </button>
               </div>
               <p className="text-white/80 text-sm mt-6">
-                ✓ 30-day free trial • ✓ No setup fees • ✓ 24/7 security support
+                ✓ 30-day free trial • ✓ No setup fees • ✓ 24/7 support
               </p>
             </div>
           </div>

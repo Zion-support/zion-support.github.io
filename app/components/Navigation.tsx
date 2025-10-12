@@ -46,6 +46,8 @@ export default function Navigation() {
     { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
     { name: 'AI Email Marketing', path: '/ai-email-marketing-automation' },
+    { name: 'AI Business Intelligence Pro', path: '/ai-business-intelligence-pro' },
+    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
     { name: 'AI Automation', path: '/ai-automation' },
     { name: 'AI 3D Generation', path: '/ai-3d-generation' },
     { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
@@ -72,8 +74,10 @@ export default function Navigation() {
   const microSaasServices = [
     { name: 'AI Task Manager', path: '/ai-task-manager' },
     { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
+    { name: 'AI Expense Tracker Pro', path: '/ai-expense-tracker-pro' },
     { name: 'AI Password Manager', path: '/ai-password-manager' },
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
+    { name: 'AI Smart Invoice', path: '/ai-smart-invoice' },
     { name: 'AI Health Tracker', path: '/ai-health-tracker' },
     { name: 'AI Meeting Transcriber', path: '/ai-meeting-transcriber' },
     { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
