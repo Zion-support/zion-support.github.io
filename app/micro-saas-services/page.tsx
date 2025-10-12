@@ -109,8 +109,13 @@ const MicroSAASServicesPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Micro SaaS Services - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Discover our collection of powerful micro SaaS applications designed to streamline your business operations and boost productivity." />
         <meta name="keywords" content="micro SaaS, SaaS applications, business tools, productivity software, AI tools" />
+=======
+        <meta name="description" content="Discover our collection of AI-powered micro SaaS tools designed to boost productivity and streamline business operations. Affordable, powerful, and easy to use." />
+        <meta name="keywords" content="micro SaaS, AI tools, productivity, business automation, Zion Tech Group" />
+>>>>>>> cursor/website-audit-and-update-with-deployment-d11d
       </Helmet>
 
       {/* Hero Section */}
@@ -145,6 +150,7 @@ const MicroSAASServicesPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+<<<<<<< HEAD
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Our Micro SaaS Applications
             </h2>
@@ -153,6 +159,16 @@ const MicroSAASServicesPage: React.FC = () => {
             </p>
           </div>
           
+=======
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Micro SaaS Tools
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose from our carefully crafted collection of AI-powered tools designed for modern professionals
+            </p>
+          </div>
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-d11d
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSAAS.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
@@ -208,7 +224,11 @@ const MicroSAASServicesPage: React.FC = () => {
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4">
                   {benefit.icon}
                 </div>
+<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+=======
+                <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
+>>>>>>> cursor/website-audit-and-update-with-deployment-d11d
                 <p className="text-gray-300">{benefit.description}</p>
               </div>
             ))}
@@ -250,6 +270,7 @@ const MicroSAASServicesPage: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
+<<<<<<< HEAD
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
             Ready to Boost Your Productivity?
           </h2>
@@ -270,6 +291,29 @@ const MicroSAASServicesPage: React.FC = () => {
             >
               Explore IT Services
             </Link>
+=======
+          <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Boost Your Productivity?
+            </h2>
+            <p className="text-xl text-green-100 mb-8">
+              Join thousands of professionals already using our micro SaaS tools to work smarter
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                Start Your Journey
+              </Link>
+              <Link
+                to="/micro-saas-services#tools"
+                className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-300"
+              >
+                Browse All Tools
+              </Link>
+            </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-d11d
           </div>
         </div>
       </section>

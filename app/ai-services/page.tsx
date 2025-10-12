@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, MessageSquare, BarChart3, Clock, TrendingUp } from 'lucide-react';
+=======
+import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, Eye, MessageSquare, BarChart3 } from 'lucide-react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-d11d
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -103,6 +107,7 @@ export default function AIServicesPage() {
       content: 'Outstanding support and implementation. Our automation workflows are now running flawlessly.',
       rating: 5
     }
+<<<<<<< HEAD
   ];
 
   const processSteps = [
@@ -126,13 +131,19 @@ export default function AIServicesPage() {
       title: 'Optimization',
       description: 'Continuous monitoring and optimization for maximum performance.'
     }
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-d11d
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Transform your business with our comprehensive AI services including content generation, chatbots, analytics, and automation solutions." />
+=======
+        <meta name="description" content="Discover our comprehensive AI services including content generation, chatbots, analytics, and more. Transform your business with cutting-edge artificial intelligence solutions." />
+>>>>>>> cursor/website-audit-and-update-with-deployment-d11d
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, chatbot, analytics, automation" />
       </Helmet>
 
@@ -269,6 +280,7 @@ export default function AIServicesPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Process Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -318,9 +330,41 @@ export default function AIServicesPage() {
             >
               Explore IT Services
             </Link>
+=======
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Business with AI?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Join thousands of businesses already using our AI services to drive growth and efficiency
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                Start Your AI Journey
+              </Link>
+              <Link
+                to="/ai-services#services"
+                className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-d11d
           </div>
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default AIServicesPage;
+>>>>>>> cursor/website-audit-and-update-with-deployment-d11d
