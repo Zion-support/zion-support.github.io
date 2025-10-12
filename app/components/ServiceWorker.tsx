@@ -162,7 +162,7 @@ const ServiceWorker: React.FC = () => {
         </div>
       </section>
     </div>
-  )
+  </div></div>)
 }
 
 export default ServiceWorker

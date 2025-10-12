@@ -3,18 +3,18 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Building2, 
-  Wifi, 
-  BarChart3, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Brain, 
-  Target, 
-  TrendingUp, 
-  Clock, 
+import {
+  Building2,
+  Wifi,
+  BarChart3,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Brain,
+  Target,
+  TrendingUp,
+  Clock,
   Shield,
   Globe,
   Smartphone,
@@ -217,19 +217,19 @@ export default function AISmartCitySolutionsPage() {
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your city with our AI-powered Smart City Solutions. Reduce traffic by 40%, 
+            Transform your city with our AI-powered Smart City Solutions. Reduce traffic by 40%,
             save 25% energy, and improve citizen satisfaction with intelligent urban infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
               Get City Assessment
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
-              to="/5g-implementation" 
+            <Link
+              to="/5g-implementation"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               View 5G Services
@@ -259,11 +259,11 @@ export default function AISmartCitySolutionsPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Advanced Smart City Features</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our AI Smart City Solutions provide comprehensive urban infrastructure management 
+              Our AI Smart City Solutions provide comprehensive urban infrastructure management
               with cutting-edge artificial intelligence and IoT technologies.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
@@ -295,7 +295,7 @@ export default function AISmartCitySolutionsPage() {
               Comprehensive modules to transform every aspect of urban life.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {smartCityModules.map((module, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
@@ -324,7 +324,7 @@ export default function AISmartCitySolutionsPage() {
               Flexible implementation options designed for cities of all sizes.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 relative ${
@@ -337,7 +337,7 @@ export default function AISmartCitySolutionsPage() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -346,7 +346,7 @@ export default function AISmartCitySolutionsPage() {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -355,7 +355,7 @@ export default function AISmartCitySolutionsPage() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
@@ -381,7 +381,7 @@ export default function AISmartCitySolutionsPage() {
                 Join cities worldwide that have transformed their urban infrastructure.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -413,7 +413,7 @@ export default function AISmartCitySolutionsPage() {
               Ready to Transform Your City?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get a free city assessment and see how our AI Smart City Solutions 
+              Get a free city assessment and see how our AI Smart City Solutions
               can revolutionize your urban infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

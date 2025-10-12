@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react'
-
-import { Menu, X, ChevronDown, Database, Code, Brain } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Menu, X, ChevronDown, Database, Code, Brain, Cloud, Shield, Globe, Smartphone, Server, BarChart3, Cpu, Wifi, Search, Zap } from 'lucide-react';
 import SearchModal from './SearchModal'
 import ThemeToggle from './ThemeToggle'
 
@@ -11,12 +11,11 @@ export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
-<<<<<<< HEAD
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
-    
+
     // Throttle scroll events for better performance
     let ticking = false
     const throttledHandleScroll = () => {
@@ -28,99 +27,10 @@ export default function Navigation() {
         ticking = true
       }
     }
-    
+
     window.addEventListener('scroll', throttledHandleScroll, { passive: true })
     return () => window.removeEventListener('scroll', throttledHandleScroll)
   }, [])
-=======
-  const navigationItems = [
-    {
-      name: 'AI Services',
-      path: '/ai-services',
-      icon: Brain,
-      dropdown: [
-        { name: 'AI Content Generator', path: '/ai-content-generator' },
-        { name: 'AI Chatbot Enterprise', path: '/ai-chatbot-enterprise' },
-        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-        { name: 'AI 3D Generation', path: '/ai-3d-generation' },
-        { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' },
-        { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
-        { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing' },
-        { name: 'AI Document Processing', path: '/ai-document-processing' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' }
-      ]
-    },
-    {
-      name: 'IT Services',
-      path: '/it-services',
-      icon: Cloud,
-      dropdown: [
-        { name: 'Cloud Migration', path: '/cloud-migration' },
-        { name: 'DevOps Solutions', path: '/devops' },
-        { name: 'Cybersecurity', path: '/cybersecurity' },
-        { name: 'Mobile Development', path: '/mobile-development' },
-        { name: 'Database Services', path: '/database-services' },
-        { name: 'IT Consulting', path: '/it-consulting' },
-        { name: 'Network Infrastructure', path: '/network-infrastructure' },
-        { name: 'Data Center', path: '/data-center' },
-        { name: 'Enterprise Security', path: '/enterprise-security' }
-      ]
-    },
-    {
-      name: 'Micro SAAS',
-      path: '/micro-saas',
-      icon: Code,
-      dropdown: [
-        { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard' },
-        { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler' },
-        { name: 'Chat Analytics', path: '/micro-saas/chat-analytics' },
-        { name: 'Content Generator', path: '/micro-saas/content-generator' },
-        { name: 'Document Processor', path: '/micro-saas/document-processor' },
-        { name: 'Email Marketing', path: '/micro-saas/email-marketing' },
-        { name: 'Expense Tracker', path: '/micro-saas/expense-tracker' },
-        { name: 'Inventory Management', path: '/micro-saas/inventory-management' },
-        { name: 'Lead Scoring', path: '/micro-saas/lead-scoring' },
-        { name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer' }
-      ]
-    },
-    {
-      name: '5G Solutions',
-      path: '/5g-implementation',
-      icon: Wifi,
-      dropdown: [
-        { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
-        { name: '5G Edge Computing', path: '/5g-edge-computing' },
-        { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
-        { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
-        { name: '5G Private Networks', path: '/5g-private-networks' },
-        { name: '5G Data Analytics', path: '/5g-data-analytics' }
-      ]
-    },
-    {
-      name: 'Resources',
-      path: '/resources',
-      icon: Globe,
-      dropdown: [
-        { name: 'Documentation', path: '/docs' },
-        { name: 'API Reference', path: '/api-docs' },
-        { name: 'Help Center', path: '/help' },
-        { name: 'Community', path: '/community' },
-        { name: 'Status Page', path: '/status' },
-        { name: 'Press Kit', path: '/press' }
-      ]
-    }
-  ];
-
-  const simpleLinks = [
-    { name: 'About', path: '/about' },
-    { name: 'Team', path: '/team' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Case Studies', path: '/case-studies' },
-    { name: 'Pricing', path: '/pricing' },
-    { name: 'Contact', path: '/contact' }
-  ];
->>>>>>> cursor/website-audit-and-update-with-deployment-713e
 
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
@@ -182,7 +92,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20' : 'bg-transparent'
       }`}
@@ -192,8 +102,8 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 rounded-lg"
             aria-label="Zion Tech Group - Go to homepage"
           >
@@ -220,7 +130,7 @@ export default function Navigation() {
             <Link to="/it-services" className="text-white hover:text-cyan-400 transition-colors font-medium">
               IT Services
             </Link>
-            
+
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
@@ -234,7 +144,7 @@ export default function Navigation() {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {activeDropdown === 'ai' && (
-                <div 
+                <div
                   className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2"
                   role="menu"
                   aria-label="AI Services submenu"
@@ -335,7 +245,7 @@ export default function Navigation() {
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Contact
             </Link>
-            
+
             {/* Search Button */}
             <button
               onClick={() => setIsSearchOpen(true)}
@@ -344,7 +254,7 @@ export default function Navigation() {
             >
               <Search className="w-5 h-5" />
             </button>
-            
+
             {/* Theme Toggle */}
             <ThemeToggle />
           </div>
@@ -395,7 +305,7 @@ export default function Navigation() {
               <Link to="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
                 IT Services
               </Link>
-              
+
               {/* AI Services Mobile */}
               <div>
                 <button
@@ -408,7 +318,7 @@ export default function Navigation() {
                   </div>
                   <ChevronDown className="w-4 h-4" />
                 </button>
-                
+
                 {activeDropdown === 'ai-mobile' && (
                   <div className="pl-6 space-y-1">
                     {aiServices.map((service) => (
@@ -440,7 +350,7 @@ export default function Navigation() {
                   </div>
                   <ChevronDown className="w-4 h-4" />
                 </button>
-                
+
                 {activeDropdown === 'it-mobile' && (
                   <div className="pl-6 space-y-1">
                     {itServices.map((service) => (
@@ -472,7 +382,7 @@ export default function Navigation() {
                   </div>
                   <ChevronDown className="w-4 h-4" />
                 </button>
-                
+
                 {activeDropdown === 'saas-mobile' && (
                   <div className="pl-6 space-y-1">
                     {microSaasServices.map((service) => (
@@ -504,7 +414,7 @@ export default function Navigation() {
                   </div>
                   <ChevronDown className="w-4 h-4" />
                 </button>
-                
+
                 {activeDropdown === '5g-mobile' && (
                   <div className="pl-6 space-y-1">
                     {fiveGServices.map((service) => (
@@ -527,9 +437,9 @@ export default function Navigation() {
               <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
                 Contact
               </Link>
-              
-              <Link 
-                to="/contact" 
+
+              <Link
+                to="/contact"
                 className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 rounded-lg text-base font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center mt-4"
                 onClick={() => setIsOpen(false)}
               >
@@ -539,7 +449,7 @@ export default function Navigation() {
           </div>
         )}
       </div>
-      
+
       {/* Search Modal */}
       <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </nav>

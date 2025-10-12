@@ -7,10 +7,10 @@ interface SearchBarProps {
   className?: string;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ 
-  onSearch, 
-  placeholder = "Search services...", 
-  className = "" 
+const SearchBar: React.FC<SearchBarProps> = ({
+  onSearch,
+  placeholder = "Search services...",
+  className = ""
 }) => {
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);

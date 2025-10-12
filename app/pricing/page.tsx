@@ -1,6 +1,4 @@
-import React from 'react'
-
-
+import { Helmet } from 'react-helmet-async';
 
 export default function PricingPage() {
   const plans = [
@@ -64,22 +62,22 @@ export default function PricingPage() {
     {
       name: '5G Implementation',
       price: '$5,000',
-      description: 'Complete 5G network setup and optimization'
+      description: 'Complete 5G network setup and optimization',
     },
     {
       name: 'Cybersecurity Audit',
       price: '$2,500',
-      description: 'Comprehensive security assessment and recommendations'
+      description: 'Comprehensive security assessment and recommendations',
     },
     {
       name: 'Custom AI Training',
       price: '$10,000',
-      description: 'Train AI models on your specific data and requirements'
+      description: 'Train AI models on your specific data and requirements',
     },
     {
       name: 'Cloud Migration',
       price: '$7,500',
-      description: 'Migrate your infrastructure to our cloud platform'
+      description: 'Migrate your infrastructure to our cloud platform',
     }
   ]
 
@@ -102,7 +100,7 @@ export default function PricingPage() {
             Pricing
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-            Choose the perfect plan for your business. All plans include our core AI and IT services 
+            Choose the perfect plan for your business. All plans include our core AI and IT services
             with no hidden fees or surprises.
           </p>
         </div>
@@ -125,7 +123,7 @@ export default function PricingPage() {
                   </span>
                 </div>
               )}
-              
+
               <div className="text-center mb-6">
                 <div className="flex justify-center mb-4">
                   {plan.icon}
@@ -168,7 +166,7 @@ export default function PricingPage() {
               Enhance your plan with these premium add-on services
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {addOns.map((addon, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300">
@@ -188,23 +186,23 @@ export default function PricingPage() {
               Common questions about our pricing and services
             </p>
           </div>
-          
+
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
               <h3 className="text-lg font-semibold text-white mb-2">Can I change my plan anytime?</h3>
               <p className="text-gray-300">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing differences.</p>
             </div>
-            
+
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
               <h3 className="text-lg font-semibold text-white mb-2">Is there a free trial available?</h3>
               <p className="text-gray-300">We offer a 14-day free trial for all plans. No credit card required to get started.</p>
             </div>
-            
+
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
               <h3 className="text-lg font-semibold text-white mb-2">What payment methods do you accept?</h3>
               <p className="text-gray-300">We accept all major credit cards, PayPal, and bank transfers for enterprise customers.</p>
             </div>
-            
+
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
               <h3 className="text-lg font-semibold text-white mb-2">Do you offer custom pricing for large organizations?</h3>
               <p className="text-gray-300">Yes, our Enterprise plan is fully customizable. Contact our sales team to discuss your specific requirements and get a tailored quote.</p>

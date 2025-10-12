@@ -109,7 +109,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className = '' }) => {
         {seoFeatures.map((feature, index) => {
           const IconComponent = feature.icon;
           return (
-            <div
+    <div
               key={index}
               className="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-white/20 transition-colors"
             >
@@ -117,7 +117,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className = '' }) => {
                 <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
                   <IconComponent className="w-4 h-4 text-white" />
                 </div>
-                
+
                 <div className="flex-1">
                   <div className="flex items-center justify-between mb-2">
                     <h4 className="text-white font-medium">{feature.title}</h4>
@@ -125,7 +125,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className = '' }) => {
                       {getStatusText(feature.status)}
                     </span>
                   </div>
-                  
+
                   <p className="text-gray-400 text-sm">{feature.description}</p>
                 </div>
               </div>

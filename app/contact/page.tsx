@@ -1,5 +1,8 @@
+import React from 'react';
 'use client';
-import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { useState } from 'react';
 
 import { Mail, MessageSquare, Send, ArrowRight, Brain, Database, Code, HardDrive, EyeOff, Mail as MailIcon } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
@@ -29,13 +32,13 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     setIsSubmitting(false);
     setIsSubmitted(true);
-    
+
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
@@ -84,25 +87,25 @@ export default function ContactPage() {
       icon: <Phone className="w-6 h-6 text-cyan-400" />,
       title: 'Phone',
       details: '+1 (302) 464-0950',
-      description: 'Call us for immediate assistance'
+      description: 'Call us for immediate assistance',
     },
     {
       icon: <Mail className="w-6 h-6 text-purple-400" />,
       title: 'Email',
       details: 'kleber@ziontechgroup.com',
-      description: 'Send us an email anytime'
+      description: 'Send us an email anytime',
     },
     {
       icon: <MapPin className="w-6 h-6 text-green-400" />,
       title: 'Address',
       details: '364 E Main St STE 1008',
-      description: 'Middletown, DE 19709, USA'
+      description: 'Middletown, DE 19709, USA',
     },
     {
       icon: <Clock className="w-6 h-6 text-orange-400" />,
       title: 'Business Hours',
       details: '24/7 Support Available',
-      description: 'Monday - Friday: 9AM - 6PM EST'
+      description: 'Monday - Friday: 9AM - 6PM EST',
     }
   ];
 
@@ -153,7 +156,7 @@ export default function ContactPage() {
               {/* Contact Form */}
               <FuturisticCard variant="service" className="h-fit">
                 <h2 className="text-2xl font-bold text-white mb-6">Get a Free Consultation</h2>
-                
+
                 {isSubmitted ? (
                   <div className="text-center py-8">
                     <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Link } from 'react'
 
 import Layout from '../layout'
 
@@ -86,7 +86,7 @@ const AIExpenseTrackerPage: React.FC = () => {
               AI Expense Tracker
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Simplify your financial management with AI-powered expense tracking, smart receipt scanning, 
+              Simplify your financial management with AI-powered expense tracking, smart receipt scanning,
               and intelligent insights. Take control of your money like never before.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

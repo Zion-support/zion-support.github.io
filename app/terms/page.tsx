@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
-
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import { Mail } from 'lucide-react';
 
@@ -98,7 +98,7 @@ export default function TermsPage() {
             Last updated: {lastUpdated}
           </p>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            These Terms of Service ("Terms") govern your use of our website and services. 
+            These Terms of Service ("Terms") govern your use of our website and services.
             Please read these terms carefully before using our services.
           </p>
         </div>
@@ -110,7 +110,7 @@ export default function TermsPage() {
             <div>
               <h2 className="text-xl font-bold text-white mb-2">Important Notice</h2>
               <p className="text-gray-300">
-                By accessing or using our website and services, you agree to be bound by these Terms of Service. 
+                By accessing or using our website and services, you agree to be bound by these Terms of Service.
                 If you do not agree to these terms, please do not use our services.
               </p>
             </div>
@@ -158,7 +158,7 @@ export default function TermsPage() {
                 </li>
               </ul>
             </div>
-            
+
             <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
               <div className="flex items-center mb-4">
                 <Users className="w-6 h-6 text-blue-400 mr-3" />
@@ -221,7 +221,7 @@ export default function TermsPage() {
           <h2 className="text-3xl font-bold text-white mb-8">Dispute Resolution</h2>
           <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
             <p className="text-gray-300 mb-6">
-              If you have any concerns or disputes regarding our services, we encourage you to contact us first. 
+              If you have any concerns or disputes regarding our services, we encourage you to contact us first.
               We are committed to resolving issues through good faith negotiations.
             </p>
             <div className="space-y-4">
@@ -271,7 +271,7 @@ export default function TermsPage() {
         {/* Acknowledgment */}
         <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 text-center">
           <p className="text-gray-300 mb-4">
-            By using our services, you acknowledge that you have read and understood these Terms of Service 
+            By using our services, you acknowledge that you have read and understood these Terms of Service
             and agree to be bound by them.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

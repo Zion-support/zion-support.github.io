@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Link } from 'react'
 
 import Layout from '../layout'
 
@@ -86,7 +86,7 @@ const QuantumComputingSolutionsPage: React.FC = () => {
               Quantum Computing Solutions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Unlock the power of quantum computing for complex problem solving, optimization, 
+              Unlock the power of quantum computing for complex problem solving, optimization,
               and advanced security. Experience the next generation of computational technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
-
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import { Database, Mail } from 'lucide-react';
 
@@ -30,22 +30,22 @@ export default function PrivacyPage() {
     {
       title: 'Access Your Data',
       description: 'Request a copy of all personal data we hold about you',
-      icon: <Eye className="w-6 h-6 text-cyan-400" />
+      icon: <Eye className="w-6 h-6 text-cyan-400" />,
     },
     {
       title: 'Correct Information',
       description: 'Update or correct any inaccurate personal information',
-      icon: <Database className="w-6 h-6 text-green-400" />
+      icon: <Database className="w-6 h-6 text-green-400" />,
     },
     {
       title: 'Delete Data',
       description: 'Request deletion of your personal data under certain circumstances',
-      icon: <Lock className="w-6 h-6 text-red-400" />
+      icon: <Lock className="w-6 h-6 text-red-400" />,
     },
     {
       title: 'Data Portability',
       description: 'Receive your data in a structured, machine-readable format',
-      icon: <Users className="w-6 h-6 text-purple-400" />
+      icon: <Users className="w-6 h-6 text-purple-400" />,
     }
   ];
 
@@ -70,7 +70,7 @@ export default function PrivacyPage() {
             Last updated: {lastUpdated}
           </p>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information. 
+            At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information.
             This policy explains how we collect, use, and safeguard your data.
           </p>
         </div>
@@ -83,12 +83,12 @@ export default function PrivacyPage() {
               Our Commitment to Privacy
             </h2>
             <p className="text-gray-300 mb-4">
-              Zion Tech Group ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. 
-              This privacy policy will inform you about how we look after your personal data when you visit our website 
+              Zion Tech Group ("we," "our," or "us") respects your privacy and is committed to protecting your personal data.
+              This privacy policy will inform you about how we look after your personal data when you visit our website
               (https://ziontechgroup.com) and tell you about your privacy rights and how the law protects you.
             </p>
             <p className="text-gray-300">
-              We are committed to complying with applicable data protection laws, including the General Data Protection Regulation (GDPR) 
+              We are committed to complying with applicable data protection laws, including the General Data Protection Regulation (GDPR)
               and the California Consumer Privacy Act (CCPA).
             </p>
           </div>
@@ -150,7 +150,7 @@ export default function PrivacyPage() {
           <h2 className="text-3xl font-bold text-white mb-8">Data Sharing and Disclosure</h2>
           <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
             <p className="text-gray-300 mb-6">
-              We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, 
+              We do not sell, trade, or otherwise transfer your personal information to third parties without your consent,
               except in the following circumstances:
             </p>
             <div className="space-y-4">
@@ -197,7 +197,7 @@ export default function PrivacyPage() {
           <h2 className="text-3xl font-bold text-white mb-8">Data Security</h2>
           <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
             <p className="text-gray-300 mb-6">
-              We implement appropriate technical and organizational security measures to protect your personal data against 
+              We implement appropriate technical and organizational security measures to protect your personal data against
               unauthorized access, alteration, disclosure, or destruction. These measures include:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -228,7 +228,7 @@ export default function PrivacyPage() {
           <h2 className="text-3xl font-bold text-white mb-8">Cookies and Tracking</h2>
           <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
             <p className="text-gray-300 mb-6">
-              Our website uses cookies and similar tracking technologies to enhance your browsing experience and analyze website traffic. 
+              Our website uses cookies and similar tracking technologies to enhance your browsing experience and analyze website traffic.
               You can control cookie settings through your browser preferences.
             </p>
             <div className="space-y-4">
@@ -253,7 +253,7 @@ export default function PrivacyPage() {
           <h2 className="text-3xl font-bold text-white mb-8">Contact Us</h2>
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-8 border border-cyan-500/30">
             <p className="text-gray-300 mb-6">
-              If you have any questions about this privacy policy or wish to exercise your privacy rights, 
+              If you have any questions about this privacy policy or wish to exercise your privacy rights,
               please contact us using the information below:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -287,8 +287,8 @@ export default function PrivacyPage() {
           <h2 className="text-3xl font-bold text-white mb-8">Changes to This Policy</h2>
           <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
             <p className="text-gray-300">
-              We may update this privacy policy from time to time to reflect changes in our practices or applicable laws. 
-              We will notify you of any material changes by posting the new privacy policy on this page and updating the 
+              We may update this privacy policy from time to time to reflect changes in our practices or applicable laws.
+              We will notify you of any material changes by posting the new privacy policy on this page and updating the
               "Last updated" date. We encourage you to review this privacy policy periodically for any changes.
             </p>
           </div>

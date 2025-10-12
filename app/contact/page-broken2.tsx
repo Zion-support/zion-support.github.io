@@ -1,7 +1,7 @@
 'use client'
-import React from 'react'
-'use client';import React, { useState, useCallback } from 'react'
-
+import { Helmet } from 'react-helmet-async';
+'use client';import React
+import { Helmet } from 'react-helmet-async', { useState, useCallback } from 'react'
 
   CheckCircle}
 } from 'lucide-react'
@@ -9,7 +9,7 @@ import React from 'react'
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-  
+
   });const [isSubmitting, setIsSubmitting] = useState(false)
     setSubmitStatus('idle');try {// Simulate form submission
       await new Promise(resolve => setTimeout(resolve, 1000))
@@ -19,7 +19,7 @@ import React from 'react'
     } finally {setIsSubmitting(false)}
     }
   }
-  
+
   ];
   ];return (<></>
       <Helmet>
@@ -66,7 +66,7 @@ import React from 'react'
                     </label>
                     <div className="relative"></div>
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                      
+
                       />
                     </div>
                   </div>
@@ -76,7 +76,7 @@ import React from 'react'
                     </label>
                     <div className="relative"></div>
                       <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                      
+
                       />
                     </div>
                   </div>
@@ -88,7 +88,7 @@ import React from 'react'
                     </label>
                     <div className="relative"></div>
                       <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                      
+
                       />
                     </div>
                   </div>
@@ -98,7 +98,7 @@ import React from 'react'
                     </label>
                     <div className="relative"></div>
                       <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                      
+
                       />
                     </div>
                   </div>
@@ -109,7 +109,7 @@ import React from 'react'
                   </label>
                   <div className="relative"></div>
                     <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                    
+
                       className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500">
                       <option value="">Select a service</option>
                       {services.map((service) => (}
@@ -125,7 +125,7 @@ import React from 'react'
                   </label>
                   <div className="relative">
                     <MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
-                    
+
                     </select>
                   </div>
                 </div>
@@ -135,11 +135,11 @@ import React from 'react'
                   </label>
                   <div className="relative"></div>
                     <MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
-                    
+
                     />
                   </div>
                 </div>
-                
+
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2">
                     <React.Fragment>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -158,7 +158,7 @@ import React from 'react'
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
                 <p className="text-lg text-gray-300 mb-8">
-                  We're here to help! Reach out to us through any of these channels 
+                  We're here to help! Reach out to us through any of these channels
                   and we'll get back to you as soon as possible.
                 </p>
               </div>
@@ -182,7 +182,7 @@ import React from 'react'
                     />
                   </div>
                 </div>
-                
+
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2">
                   {isSubmitting ? (<></>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>

@@ -29,7 +29,7 @@ export default function PerformanceOptimizer() {
         if (!img.hasAttribute('loading')) {
           img.setAttribute('loading', 'lazy');
         }
-        
+
         // Add decoding="async" for better performance
         if (!img.hasAttribute('decoding')) {
           img.setAttribute('decoding', 'async');

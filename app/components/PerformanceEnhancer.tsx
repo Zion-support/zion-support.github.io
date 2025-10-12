@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, Mail, Brain } from 'lucide-react';
 
@@ -102,7 +102,6 @@ export default function PerformanceEnhancer() {
         </div>
       </section>
 }
-export default PerformanceEnhancerPage
   </h2>
   </button>
   </span>

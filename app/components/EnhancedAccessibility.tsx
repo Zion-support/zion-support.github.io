@@ -1,6 +1,7 @@
+import React from 'react';
 'use client';
 
-import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 interface EnhancedAccessibilityProps {
   children: React.ReactNode;

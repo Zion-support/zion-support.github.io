@@ -20,7 +20,7 @@ const Breadcrumb: React.FC = () => {
     let currentPath = '';
     pathnames.forEach((pathname, index) => {
       currentPath += `/${pathname}`;
-      
+
       // Convert pathname to readable name
       const name = pathname
         .split('-')

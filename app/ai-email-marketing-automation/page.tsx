@@ -1,21 +1,20 @@
-<<<<<<< HEAD
 'use client';
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Mail, 
-  MessageSquare, 
-  BarChart3, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Brain, 
-  Target, 
-  TrendingUp, 
-  Clock, 
+import {
+  Mail,
+  MessageSquare,
+  BarChart3,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Brain,
+  Target,
+  TrendingUp,
+  Clock,
   Shield,
   Globe,
   Smartphone,
@@ -35,13 +34,6 @@ import {
 
 export default function AIEmailMarketingAutomationPage() {
   const [selectedPlan, setSelectedPlan] = useState('pro');
-=======
-import React from 'react'
-
-import Layout from '../layout'
-
-import { ArrowRight, Mail } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-b5ac
 
   const features = [
     {
@@ -220,19 +212,19 @@ import { ArrowRight, Mail } from 'lucide-react';
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your email marketing with our AI-powered Email Marketing Automation. 
+            Transform your email marketing with our AI-powered Email Marketing Automation.
             Increase revenue by 180% with intelligent campaigns, segmentation, and automation workflows.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
-              to="/ai-services" 
+            <Link
+              to="/ai-services"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               View All AI Services
@@ -262,11 +254,11 @@ import { ArrowRight, Mail } from 'lucide-react';
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Powerful Email Marketing Features</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our AI Email Marketing Automation comes packed with advanced features to automate and optimize 
+              Our AI Email Marketing Automation comes packed with advanced features to automate and optimize
               your email campaigns for maximum engagement and revenue.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
@@ -298,7 +290,7 @@ import { ArrowRight, Mail } from 'lucide-react';
               Create powerful automated email sequences that nurture leads and drive conversions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {automationTypes.map((type, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
@@ -327,7 +319,7 @@ import { ArrowRight, Mail } from 'lucide-react';
               Flexible pricing plans designed to scale with your email marketing needs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 relative ${
@@ -340,7 +332,7 @@ import { ArrowRight, Mail } from 'lucide-react';
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -349,7 +341,7 @@ import { ArrowRight, Mail } from 'lucide-react';
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -358,7 +350,7 @@ import { ArrowRight, Mail } from 'lucide-react';
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
@@ -384,7 +376,7 @@ import { ArrowRight, Mail } from 'lucide-react';
                 Join thousands of satisfied customers who have transformed their email marketing.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -416,7 +408,7 @@ import { ArrowRight, Mail } from 'lucide-react';
               Ready to Transform Your Email Marketing?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Start using our AI Email Marketing Automation today and see how intelligent automation 
+              Start using our AI Email Marketing Automation today and see how intelligent automation
               can increase your revenue by 180%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

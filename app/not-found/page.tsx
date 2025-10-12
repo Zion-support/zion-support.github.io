@@ -25,8 +25,8 @@ const NotFoundPage: React.FC = () => {
           </div>
 
           <div className="text-center">
-            <a 
-              href="/" 
+            <a
+              href="/"
               className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 inline-flex items-center"
             >
               Return to Homepage

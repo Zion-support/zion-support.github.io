@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { useState } from 'react';
 
 import { Brain, ArrowRight, MessageSquare, Image, Code, BookOpen, PenTool } from 'lucide-react';
 
@@ -184,19 +185,19 @@ export default function AiContentGeneratorPage() {
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your content strategy with our advanced AI-powered writing tool. 
+            Transform your content strategy with our advanced AI-powered writing tool.
             Generate high-quality, SEO-optimized content in 50+ languages with just a few clicks.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
-              to="/ai-services" 
+            <Link
+              to="/ai-services"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               View All AI Services
@@ -226,11 +227,11 @@ export default function AiContentGeneratorPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Powerful AI Features</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our AI Content Generator comes packed with advanced features to create 
+              Our AI Content Generator comes packed with advanced features to create
               professional-quality content that engages and converts.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
@@ -259,11 +260,11 @@ export default function AiContentGeneratorPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Content Types We Support</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Generate any type of content you need for your business, 
+              Generate any type of content you need for your business,
               from blog posts to social media content.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {contentTypes.map((type, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
@@ -292,7 +293,7 @@ export default function AiContentGeneratorPage() {
               Flexible pricing plans designed to scale with your content needs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 relative ${
@@ -305,7 +306,7 @@ export default function AiContentGeneratorPage() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -314,7 +315,7 @@ export default function AiContentGeneratorPage() {
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -323,7 +324,7 @@ export default function AiContentGeneratorPage() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
@@ -349,7 +350,7 @@ export default function AiContentGeneratorPage() {
                 Join thousands of satisfied customers who have transformed their content strategy.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -381,7 +382,7 @@ export default function AiContentGeneratorPage() {
               Ready to Transform Your Content Strategy?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Start generating high-quality content with our AI Content Generator. 
+              Start generating high-quality content with our AI Content Generator.
               Join thousands of businesses already using our platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,5 +1,5 @@
-import React from 'react';
-
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, Brain } from 'lucide-react';
 
@@ -8,32 +8,32 @@ export default function AIChatbotBuilderPage() {
     {
       icon: <MessageCircle className="w-8 h-8 text-blue-500" />,
       title: 'Natural Conversations',
-      description: 'Create chatbots that understand context and engage in natural, human-like conversations.'
+      description: 'Create chatbots that understand context and engage in natural, human-like conversations.',
     },
     {
       icon: <Brain className="w-8 h-8 text-purple-500" />,
       title: 'AI-Powered Intelligence',
-      description: 'Advanced machine learning algorithms provide intelligent responses and learn from interactions.'
+      description: 'Advanced machine learning algorithms provide intelligent responses and learn from interactions.',
     },
     {
       icon: <Zap className="w-8 h-8 text-yellow-500" />,
       title: 'Quick Deployment',
-      description: 'Build and deploy your chatbot in minutes with our intuitive drag-and-drop interface.'
+      description: 'Build and deploy your chatbot in minutes with our intuitive drag-and-drop interface.',
     },
     {
       icon: <Users className="w-8 h-8 text-green-500" />,
       title: 'Multi-Channel Support',
-      description: 'Deploy across websites, mobile apps, social media, and messaging platforms.'
+      description: 'Deploy across websites, mobile apps, social media, and messaging platforms.',
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-red-500" />,
       title: 'Analytics & Insights',
-      description: 'Track performance, user satisfaction, and conversation analytics to optimize your bot.'
+      description: 'Track performance, user satisfaction, and conversation analytics to optimize your bot.',
     },
     {
       icon: <Shield className="w-8 h-8 text-indigo-500" />,
       title: 'Secure & Compliant',
-      description: 'Enterprise-grade security with GDPR compliance and data protection features.'
+      description: 'Enterprise-grade security with GDPR compliance and data protection features.',
     }
   ];
 
@@ -41,22 +41,22 @@ export default function AIChatbotBuilderPage() {
     {
       title: 'E-commerce Support',
       description: 'Help customers with product questions, order tracking, and returns.',
-      icon: <Target className="w-6 h-6 text-blue-500" />
+      icon: <Target className="w-6 h-6 text-blue-500" />,
     },
     {
       title: 'Lead Generation',
       description: 'Capture and qualify leads automatically with smart conversation flows.',
-      icon: <Users className="w-6 h-6 text-green-500" />
+      icon: <Users className="w-6 h-6 text-green-500" />,
     },
     {
       title: 'Technical Support',
       description: 'Provide instant technical assistance and troubleshooting guidance.',
-      icon: <Zap className="w-6 h-6 text-purple-500" />
+      icon: <Zap className="w-6 h-6 text-purple-500" />,
     },
     {
       title: 'Appointment Booking',
       description: 'Automate appointment scheduling and calendar management.',
-      icon: <Clock className="w-6 h-6 text-orange-500" />
+      icon: <Clock className="w-6 h-6 text-orange-500" />,
     }
   ];
 
@@ -124,7 +124,7 @@ export default function AIChatbotBuilderPage() {
               AI Chatbot Builder
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Create intelligent, conversational chatbots that engage your customers and automate support. 
+              Create intelligent, conversational chatbots that engage your customers and automate support.
               No coding required - just drag, drop, and deploy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -157,7 +157,7 @@ export default function AIChatbotBuilderPage() {
               Everything you need to build and deploy intelligent chatbots.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300">
@@ -181,7 +181,7 @@ export default function AIChatbotBuilderPage() {
               Discover how our AI chatbots can transform your business operations.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500/30 transition-all duration-300">
@@ -205,7 +205,7 @@ export default function AIChatbotBuilderPage() {
               Experience the benefits of intelligent automation for your business.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
@@ -228,7 +228,7 @@ export default function AIChatbotBuilderPage() {
               Choose the plan that fits your business needs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-xl p-8 border ${plan.popular ? 'border-purple-500' : 'border-slate-700'} hover:border-cyan-500/30 transition-all duration-300 relative`}>

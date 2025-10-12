@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { useState } from 'react';
 
 import { HelpCircle, MessageSquare, Mail, BookOpen, ArrowRight, ChevronDown, ChevronUp, Brain, Code } from 'lucide-react';
 
@@ -159,7 +160,7 @@ export default function HelpPage() {
             </span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
-            Find answers to your questions, access documentation, and get the support you need 
+            Find answers to your questions, access documentation, and get the support you need
             for our AI and IT solutions.
           </p>
         </div>
@@ -264,7 +265,7 @@ export default function HelpPage() {
               <h3 className="text-lg font-semibold text-white mb-2">API Documentation</h3>
               <p className="text-gray-300 text-sm">Complete API reference and integration guides</p>
             </Link>
-            
+
             <Link
               to="/docs"
               className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group text-center"
@@ -273,7 +274,7 @@ export default function HelpPage() {
               <h3 className="text-lg font-semibold text-white mb-2">Video Tutorials</h3>
               <p className="text-gray-300 text-sm">Step-by-step video guides for all features</p>
             </Link>
-            
+
             <Link
               to="/docs"
               className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group text-center"
@@ -282,7 +283,7 @@ export default function HelpPage() {
               <h3 className="text-lg font-semibold text-white mb-2">User Guides</h3>
               <p className="text-gray-300 text-sm">Comprehensive user manuals and guides</p>
             </Link>
-            
+
             <Link
               to="/status"
               className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group text-center"

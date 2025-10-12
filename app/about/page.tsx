@@ -1,7 +1,8 @@
+import React from 'react';
 'use client';
 
-import React from 'react';
-
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import { Brain, ArrowRight } from 'lucide-react';
 
@@ -17,22 +18,22 @@ export default function AboutPage() {
     {
       icon: <Brain className="w-8 h-8 text-blue-500" />,
       title: 'Innovation',
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.'
+      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.',
     },
     {
       icon: <Shield className="w-8 h-8 text-green-500" />,
       title: 'Security',
-      description: 'Enterprise-grade security is at the core of everything we do, ensuring your data and systems are always protected.'
+      description: 'Enterprise-grade security is at the core of everything we do, ensuring your data and systems are always protected.',
     },
     {
       icon: <Users className="w-8 h-8 text-purple-500" />,
       title: 'Collaboration',
-      description: 'We work closely with our clients as partners, understanding their unique needs and delivering tailored solutions.'
+      description: 'We work closely with our clients as partners, understanding their unique needs and delivering tailored solutions.',
     },
     {
       icon: <Award className="w-8 h-8 text-orange-500" />,
       title: 'Excellence',
-      description: 'We strive for excellence in every project, delivering high-quality solutions that exceed expectations.'
+      description: 'We strive for excellence in every project, delivering high-quality solutions that exceed expectations.',
     }
   ];
 
@@ -67,22 +68,22 @@ export default function AboutPage() {
     {
       year: '2024',
       title: 'AI Innovation Award',
-      description: 'Recognized for breakthrough AI solutions in healthcare and finance sectors'
+      description: 'Recognized for breakthrough AI solutions in healthcare and finance sectors',
     },
     {
       year: '2023',
       title: 'Best IT Services Provider',
-      description: 'Awarded by TechCrunch for exceptional cloud migration and cybersecurity services'
+      description: 'Awarded by TechCrunch for exceptional cloud migration and cybersecurity services',
     },
     {
       year: '2022',
       title: 'ISO 27001 Certification',
-      description: 'Achieved international standard for information security management systems'
+      description: 'Achieved international standard for information security management systems',
     },
     {
       year: '2021',
       title: 'Fastest Growing Tech Company',
-      description: 'Recognized by Inc. 5000 for exceptional growth and innovation'
+      description: 'Recognized by Inc. 5000 for exceptional growth and innovation',
     }
   ];
 
@@ -113,7 +114,7 @@ export default function AboutPage() {
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-            We are a leading technology company specializing in AI, cloud services, cybersecurity, and 5G solutions. 
+            We are a leading technology company specializing in AI, cloud services, cybersecurity, and 5G solutions.
             Our mission is to transform businesses through innovative technology.
           </p>
         </div>
@@ -124,12 +125,12 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
               <p className="text-lg text-gray-300 mb-6">
-                To empower businesses with cutting-edge AI and IT solutions that drive growth, 
+                To empower businesses with cutting-edge AI and IT solutions that drive growth,
                 enhance security, and create sustainable competitive advantages in the digital age.
               </p>
               <p className="text-lg text-gray-300 mb-8">
-                We believe technology should be accessible, secure, and transformative. 
-                Our solutions are designed to help businesses of all sizes leverage the power 
+                We believe technology should be accessible, secure, and transformative.
+                Our solutions are designed to help businesses of all sizes leverage the power
                 of artificial intelligence and modern IT infrastructure.
               </p>
               <Link
@@ -144,7 +145,7 @@ export default function AboutPage() {
               <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
                 <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
                 <p className="text-lg text-gray-300">
-                  To be the world's leading provider of AI-powered solutions and IT services, 
+                  To be the world's leading provider of AI-powered solutions and IT services,
                   recognized for our innovation, reliability, and commitment to client success.
                 </p>
               </div>
@@ -193,7 +194,7 @@ export default function AboutPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Meet Our Team</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our diverse team of experts brings together decades of experience in AI, 
+              Our diverse team of experts brings together decades of experience in AI,
               cloud computing, cybersecurity, and emerging technologies.
             </p>
           </div>

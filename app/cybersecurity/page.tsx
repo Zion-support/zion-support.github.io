@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 import { ArrowRight, Database } from 'lucide-react';
 import ServicePageTemplate from '../service-template'
 

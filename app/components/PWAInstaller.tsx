@@ -1,9 +1,9 @@
 'use client'
-import React from 'react'
+import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, Mail, Brain } from 'lucide-react';
 
-export default function PWAInstaller() {
+export default function PWAInstaller(</div>) {
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',

@@ -1,7 +1,6 @@
 'use client';
 
-import React from 'react';
-
+import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, Mail } from 'lucide-react';
 
@@ -10,32 +9,32 @@ export default function AISmartInvoicePage() {
     {
       icon: <Zap className="w-6 h-6 text-blue-500" />,
       title: 'AI-Powered Invoice Generation',
-      description: 'Automatically generate professional invoices using AI templates and smart data extraction'
+      description: 'Automatically generate professional invoices using AI templates and smart data extraction',
     },
     {
       icon: <Clock className="w-6 h-6 text-green-500" />,
       title: 'Automated Recurring Billing',
-      description: 'Set up recurring invoices with smart scheduling and automatic client notifications'
+      description: 'Set up recurring invoices with smart scheduling and automatic client notifications',
     },
     {
       icon: <Shield className="w-6 h-6 text-purple-500" />,
       title: 'Secure Payment Processing',
-      description: 'Integrated payment gateway with 256-bit encryption and PCI compliance'
+      description: 'Integrated payment gateway with 256-bit encryption and PCI compliance',
     },
     {
       icon: <BarChart3 className="w-6 h-6 text-orange-500" />,
       title: 'Real-time Analytics',
-      description: 'Track payment status, overdue invoices, and revenue analytics in real-time'
+      description: 'Track payment status, overdue invoices, and revenue analytics in real-time',
     },
     {
       icon: <Mail className="w-6 h-6 text-cyan-500" />,
       title: 'Smart Email Automation',
-      description: 'Automated follow-ups, payment reminders, and thank you messages'
+      description: 'Automated follow-ups, payment reminders, and thank you messages',
     },
     {
       icon: <Globe className="w-6 h-6 text-red-500" />,
       title: 'Multi-Currency Support',
-      description: 'Support for 150+ currencies with real-time exchange rate updates'
+      description: 'Support for 150+ currencies with real-time exchange rate updates',
     }
   ];
 
@@ -138,7 +137,7 @@ export default function AISmartInvoicePage() {
                 AI Smart Invoice
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your invoicing process with intelligent automation. Generate professional invoices, 
+                Transform your invoicing process with intelligent automation. Generate professional invoices,
                 track payments, and boost your cash flow with AI-powered insights.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -225,7 +224,7 @@ export default function AISmartInvoicePage() {
                       </div>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -245,8 +244,8 @@ export default function AISmartInvoicePage() {
                   </ul>
 
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular 
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700' 
+                    plan.popular
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
                       : 'border-2 border-white text-white hover:bg-white/10'
                   }`}>
                     {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}

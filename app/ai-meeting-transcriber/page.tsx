@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Link } from 'react'
 
 import Layout from '../layout'
 
@@ -86,7 +86,7 @@ const AIMeetingTranscriberPage: React.FC = () => {
               AI Meeting Transcriber
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your meetings with AI-powered transcription, real-time summarization, and intelligent insights. 
+              Transform your meetings with AI-powered transcription, real-time summarization, and intelligent insights.
               Never miss important details again.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -12,14 +12,14 @@ interface FuturisticCardProps {
   onClick?: () => void;
 }
 
-export default function FuturisticCard({ 
-  children, 
-  className = '', 
-  hover = true, 
-  glow = true, 
+export default function FuturisticCard({
+  children,
+  className = '',
+  hover = true,
+  glow = true,
   neon = true,
   variant = 'default',
-  onClick 
+  onClick
 }: FuturisticCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -27,7 +27,7 @@ export default function FuturisticCard({
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
-    
+
     const rect = cardRef.current.getBoundingClientRect();
     setMousePosition({
       x: e.clientX - rect.left,
@@ -50,7 +50,7 @@ export default function FuturisticCard({
 
   const getGlowEffect = () => {
     if (!glow) return '';
-    
+
     const baseGlow = 'shadow-2xl';
     if (isHovered) {
       switch (variant) {
@@ -69,7 +69,7 @@ export default function FuturisticCard({
 
   const getNeonEffect = () => {
     if (!neon) return '';
-    
+
     if (isHovered) {
       switch (variant) {
         case 'service':
@@ -100,7 +100,7 @@ export default function FuturisticCard({
       onMouseLeave={() => setIsHovered(false)}
       onMouseMove={handleMouseMove}
       onClick={onClick}
-      whileHover={{ 
+      whileHover={{
         y: -8,
         scale: 1.02,
         rotateY: 5,
@@ -112,19 +112,19 @@ export default function FuturisticCard({
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       {/* Animated border */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20"
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 1 : 0 }}
         transition={{ duration: 0.3 }}
       />
-      
+
       {/* Animated background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-purple-500/10 animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]" />
       </div>
-      
+
       {/* Mouse follow effect */}
       {isHovered && (
         <motion.div
@@ -171,5 +171,5 @@ export default function FuturisticCard({
       <div className="absolute top-2 right-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60" />
       <div className="absolute bottom-2 left-2 w-2 h-2 bg-purple-400 rounded-full opacity-60" />
     </motion.div>
-  );
+  </div></div></div></div>);
 }

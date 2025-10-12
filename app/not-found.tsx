@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Link } from 'react'
 
 import { Home, ArrowLeft } from 'lucide-react';
 

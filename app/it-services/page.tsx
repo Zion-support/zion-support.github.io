@@ -1,6 +1,6 @@
+import React from 'react';
 'use client';
-import React, { useState } from 'react';
-
+import { Helmet } from 'react-helmet-async';
 
 import { Database, Code, HardDrive, ArrowRight, EyeOff, Mail, Mail as MailIcon } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
@@ -223,7 +223,7 @@ export default function ItServicesPage() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Comprehensive technology solutions to power your business growth. From cloud migration to cybersecurity, we've got you covered.
               </p>
-              
+
               {/* Search Bar */}
               <div className="max-w-md mx-auto relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -269,8 +269,8 @@ export default function ItServicesPage() {
                         <h3 className="text-xl font-semibold text-white">{service.name}</h3>
                         <div className="flex items-center space-x-2">
                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                            service.status === 'live' 
-                              ? 'bg-green-500/20 text-green-400' 
+                            service.status === 'live'
+                              ? 'bg-green-500/20 text-green-400'
                               : 'bg-yellow-500/20 text-yellow-400'
                           }`}>
                             {service.status === 'live' ? 'Live' : 'Beta'}

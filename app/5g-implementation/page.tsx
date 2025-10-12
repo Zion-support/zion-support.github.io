@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
-
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, Database } from 'lucide-react';
 
@@ -62,22 +62,22 @@ export default function FiveGImplementationPage() {
     {
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
       title: 'Ultra-Fast Speeds',
-      description: 'Up to 10x faster than 4G with speeds up to 10 Gbps'
+      description: 'Up to 10x faster than 4G with speeds up to 10 Gbps',
     },
     {
       icon: <Cpu className="w-8 h-8 text-blue-400" />,
       title: 'Low Latency',
-      description: 'Ultra-low latency of 1ms for real-time applications'
+      description: 'Ultra-low latency of 1ms for real-time applications',
     },
     {
       icon: <Globe className="w-8 h-8 text-green-400" />,
       title: 'Massive Connectivity',
-      description: 'Support for millions of connected devices per square kilometer'
+      description: 'Support for millions of connected devices per square kilometer',
     },
     {
       icon: <Shield className="w-8 h-8 text-red-400" />,
       title: 'Enhanced Security',
-      description: 'Advanced encryption and security protocols for 5G networks'
+      description: 'Advanced encryption and security protocols for 5G networks',
     }
   ];
 
@@ -92,32 +92,32 @@ export default function FiveGImplementationPage() {
     {
       title: 'Smart Manufacturing',
       description: 'Real-time monitoring and control of industrial processes',
-      icon: <Server className="w-6 h-6 text-blue-400" />
+      icon: <Server className="w-6 h-6 text-blue-400" />,
     },
     {
       title: 'Autonomous Vehicles',
       description: 'Ultra-low latency communication for self-driving cars',
-      icon: <Smartphone className="w-6 h-6 text-green-400" />
+      icon: <Smartphone className="w-6 h-6 text-green-400" />,
     },
     {
       title: 'Remote Surgery',
       description: 'High-precision medical procedures performed remotely',
-      icon: <Users className="w-6 h-6 text-red-400" />
+      icon: <Users className="w-6 h-6 text-red-400" />,
     },
     {
       title: 'Smart Cities',
       description: 'Connected infrastructure for efficient urban management',
-      icon: <Globe className="w-6 h-6 text-purple-400" />
+      icon: <Globe className="w-6 h-6 text-purple-400" />,
     },
     {
       title: 'AR/VR Applications',
       description: 'Immersive experiences with ultra-low latency',
-      icon: <Database className="w-6 h-6 text-cyan-400" />
+      icon: <Database className="w-6 h-6 text-cyan-400" />,
     },
     {
       title: 'IoT Networks',
       description: 'Massive scale connectivity for smart devices',
-      icon: <Cloud className="w-6 h-6 text-orange-400" />
+      icon: <Cloud className="w-6 h-6 text-orange-400" />,
     }
   ];
 
@@ -139,19 +139,19 @@ export default function FiveGImplementationPage() {
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Unlock the power of 5G technology with our comprehensive implementation services. 
+            Unlock the power of 5G technology with our comprehensive implementation services.
             From network infrastructure to edge computing, we deliver the future of connectivity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               Learn More
@@ -184,7 +184,7 @@ export default function FiveGImplementationPage() {
               Experience the transformative power of 5G technology with these key advantages.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 text-center border border-slate-700 hover:border-cyan-500/30 transition-all duration-300">
@@ -206,7 +206,7 @@ export default function FiveGImplementationPage() {
               Comprehensive 5G solutions tailored to your business needs and industry requirements.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {fiveGServices.map((service, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 hover:bg-slate-700/50 group relative ${
@@ -219,7 +219,7 @@ export default function FiveGImplementationPage() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="mb-6">
                   <div className="flex items-center mb-4">
                     <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mr-4 group-hover:scale-110 transition-transform">
@@ -231,7 +231,7 @@ export default function FiveGImplementationPage() {
                     </div>
                   </div>
                   <p className="text-gray-300 mb-6">{service.description}</p>
-                  
+
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -241,7 +241,7 @@ export default function FiveGImplementationPage() {
                     ))}
                   </ul>
                 </div>
-                
+
                 <Link
                   to={service.path}
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
@@ -263,7 +263,7 @@ export default function FiveGImplementationPage() {
                 Discover how 5G technology can transform various industries and applications.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {useCases.map((useCase, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 group hover:bg-white/20 transition-all duration-300">
@@ -289,7 +289,7 @@ export default function FiveGImplementationPage() {
                 A systematic approach to ensure successful 5G deployment and optimization.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mx-auto mb-4">
@@ -298,7 +298,7 @@ export default function FiveGImplementationPage() {
                 <h3 className="text-xl font-semibold text-white mb-3">Assessment</h3>
                 <p className="text-gray-300">Comprehensive analysis of your current infrastructure and 5G requirements.</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">2</span>
@@ -306,7 +306,7 @@ export default function FiveGImplementationPage() {
                 <h3 className="text-xl font-semibold text-white mb-3">Planning</h3>
                 <p className="text-gray-300">Detailed network design and implementation strategy tailored to your needs.</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-green-600 rounded-full mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">3</span>
@@ -314,7 +314,7 @@ export default function FiveGImplementationPage() {
                 <h3 className="text-xl font-semibold text-white mb-3">Deployment</h3>
                 <p className="text-gray-300">Professional installation and configuration of 5G infrastructure and equipment.</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500 to-yellow-600 rounded-full mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">4</span>

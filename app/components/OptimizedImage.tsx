@@ -1,7 +1,8 @@
+import React from 'react';
 ursor/analyze-improve-and-deploy-application-edcb
 ursor/analyze-improve-and-deploy-application-edcb
 'use client'
-import React from 'react'
+import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, Mail, Brain } from 'lucide-react';
   return (
@@ -23,7 +24,7 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced optimizedimage solutions. 
+              Transform your business with our advanced optimizedimage solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

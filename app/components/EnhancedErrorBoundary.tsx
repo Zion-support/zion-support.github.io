@@ -21,15 +21,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   constructor(props: Props) {
     super(props);
-    this.state = { 
-      hasError: false, 
-      retryCount: 0 
+    this.state = {
+      hasError: false,
+      retryCount: 0
     };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
-    return { 
-      hasError: true, 
+    return {
+      hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
@@ -92,23 +92,23 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
           <div className="max-w-lg w-full bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-red-500/30 text-center">
             <div className="flex items-center justify-center w-16 h-16 bg-red-500/20 rounded-full mb-6 mx-auto">
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-            
+
             <h1 className="text-2xl font-bold text-white mb-4">
               {this.state.retryCount > 0 ? 'Retry Failed' : 'Something went wrong'}
             </h1>
-            
+
             <p className="text-gray-300 mb-6">
-              {this.state.retryCount > 0 
+              {this.state.retryCount > 0
                 ? `We've tried ${this.state.retryCount} times but couldn't recover. Please try refreshing the page.`
                 : "We're sorry, but something unexpected happened. Please try refreshing the page."
               }
             </p>
-            
+
             {this.state.errorId && (
               <div className="mb-6 p-3 bg-slate-700/50 rounded-lg">
                 <p className="text-sm text-gray-400">Error ID: {this.state.errorId}</p>
@@ -117,7 +117,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 )}
               </div>
             )}
-            
+
             <div className="space-y-3">
               {this.state.retryCount < this.maxRetries && (
                 <button
@@ -129,7 +129,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                   Try Again ({this.maxRetries - this.state.retryCount} attempts left)
                 </button>
               )}
-              
+
               <button
                 onClick={() => window.location.reload()}
                 className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-blue-500/50"
@@ -138,7 +138,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-5 h-5 mr-2" />
                 Refresh Page
               </button>
-              
+
               <button
                 onClick={this.handleGoBack}
                 className="w-full border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-white/50"
@@ -147,7 +147,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <ArrowLeft className="w-5 h-5 mr-2" />
                 Go Back
               </button>
-              
+
               <button
                 onClick={() => window.location.href = '/'}
                 className="w-full border-2 border-gray-500 text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-700/50 transition-colors flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-gray-500/50"
@@ -156,7 +156,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <Home className="w-5 h-5 mr-2" />
                 Go Home
               </button>
-              
+
               <a
                 href={`mailto:kleber@ziontechgroup.com?subject=Error Report&body=Error ID: ${this.state.errorId}%0A%0APlease describe what you were doing when this error occurred:`}
                 className="w-full border-2 border-cyan-500 text-cyan-300 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700/50 transition-colors flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
@@ -166,7 +166,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 Report Error
               </a>
             </div>
-            
+
             {this.props.showDetails && this.state.error && (
               <details className="mt-6 text-left">
                 <summary className="text-red-400 cursor-pointer font-medium flex items-center">

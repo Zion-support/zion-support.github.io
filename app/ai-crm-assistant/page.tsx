@@ -1,21 +1,20 @@
-<<<<<<< HEAD
 'use client';
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  MessageSquare, 
-  BarChart3, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Brain, 
-  Target, 
-  TrendingUp, 
-  Clock, 
+import {
+  Users,
+  MessageSquare,
+  BarChart3,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Brain,
+  Target,
+  TrendingUp,
+  Clock,
   Shield,
   Globe,
   Smartphone,
@@ -74,32 +73,32 @@ export default function AICRMAssistantPage() {
     {
       name: 'Salesforce',
       icon: <Cloud className="w-6 h-6 text-blue-400" />,
-      description: 'Seamless integration with Salesforce CRM'
+      description: 'Seamless integration with Salesforce CRM',
     },
     {
       name: 'HubSpot',
       icon: <Target className="w-6 h-6 text-orange-400" />,
-      description: 'Connect with HubSpot for enhanced marketing automation'
+      description: 'Connect with HubSpot for enhanced marketing automation',
     },
     {
       name: 'Slack',
       icon: <MessageSquare className="w-6 h-6 text-purple-400" />,
-      description: 'Get notifications and updates directly in Slack'
+      description: 'Get notifications and updates directly in Slack',
     },
     {
       name: 'Zapier',
       icon: <Zap className="w-6 h-6 text-yellow-400" />,
-      description: 'Connect with 3000+ apps through Zapier'
+      description: 'Connect with 3000+ apps through Zapier',
     },
     {
       name: 'Google Workspace',
       icon: <Mail className="w-6 h-6 text-green-400" />,
-      description: 'Sync with Gmail, Calendar, and Drive'
+      description: 'Sync with Gmail, Calendar, and Drive',
     },
     {
       name: 'Microsoft 365',
       icon: <FileText className="w-6 h-6 text-blue-500" />,
-      description: 'Integrate with Outlook, Teams, and Office 365'
+      description: 'Integrate with Outlook, Teams, and Office 365',
     }
   ];
 
@@ -183,12 +182,6 @@ export default function AICRMAssistantPage() {
     { number: '90%', label: 'Forecast Accuracy', icon: <Target className="w-6 h-6" /> },
     { number: '30%', label: 'Reduced Sales Cycle', icon: <Clock className="w-6 h-6" /> }
   ];
-=======
-import React from 'react'
-
-
-import { ArrowRight } from 'lucide-react'
->>>>>>> cursor/analyze-improve-and-deploy-application-b5ac
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -208,19 +201,19 @@ import { ArrowRight } from 'lucide-react'
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your customer relationships with our AI-powered CRM Assistant. 
+            Transform your customer relationships with our AI-powered CRM Assistant.
             Automate lead scoring, email marketing, and predictive analytics to boost sales by 45%.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
-              to="/ai-services" 
+            <Link
+              to="/ai-services"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
               View All AI Services
@@ -250,11 +243,11 @@ import { ArrowRight } from 'lucide-react'
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Intelligent CRM Features</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our AI CRM Assistant comes packed with advanced features to automate and optimize 
+              Our AI CRM Assistant comes packed with advanced features to automate and optimize
               your customer relationship management.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group">
@@ -286,7 +279,7 @@ import { ArrowRight } from 'lucide-react'
               Connect with your favorite tools and platforms to create a unified workflow.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {integrations.map((integration, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group text-center">
@@ -308,7 +301,7 @@ import { ArrowRight } from 'lucide-react'
               Flexible pricing plans designed to scale with your business needs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div key={index} className={`bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 relative ${
@@ -321,7 +314,7 @@ import { ArrowRight } from 'lucide-react'
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -330,7 +323,7 @@ import { ArrowRight } from 'lucide-react'
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -339,7 +332,7 @@ import { ArrowRight } from 'lucide-react'
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
@@ -365,7 +358,7 @@ import { ArrowRight } from 'lucide-react'
                 Join thousands of satisfied customers who have transformed their sales process.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
@@ -397,7 +390,7 @@ import { ArrowRight } from 'lucide-react'
               Ready to Transform Your Sales Process?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Start using our AI CRM Assistant today and see how intelligent automation 
+              Start using our AI CRM Assistant today and see how intelligent automation
               can boost your sales performance by 45%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Link } from 'react'
 
 import Layout from '../layout'
 
@@ -86,7 +86,7 @@ const AIInvoiceGeneratorPage: React.FC = () => {
               AI Invoice Generator
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Streamline your invoicing process with AI-powered invoice generation, automated payment tracking, 
+              Streamline your invoicing process with AI-powered invoice generation, automated payment tracking,
               and professional templates. Get paid faster and reduce administrative overhead.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

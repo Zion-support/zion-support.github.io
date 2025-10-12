@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 import { Receipt, ArrowRight, Camera } from 'lucide-react';
 
@@ -9,32 +9,32 @@ export default function AIExpenseTrackerProPage() {
     {
       icon: <Camera className="w-6 h-6 text-blue-500" />,
       title: 'AI Receipt Scanning',
-      description: 'Instantly scan and extract data from receipts using advanced OCR and AI technology'
+      description: 'Instantly scan and extract data from receipts using advanced OCR and AI technology',
     },
     {
       icon: <PieChart className="w-6 h-6 text-green-500" />,
       title: 'Smart Categorization',
-      description: 'Automatically categorize expenses using machine learning and smart rules'
+      description: 'Automatically categorize expenses using machine learning and smart rules',
     },
     {
       icon: <BarChart3 className="w-6 h-6 text-purple-500" />,
       title: 'Real-time Analytics',
-      description: 'Get instant insights into your spending patterns with interactive dashboards'
+      description: 'Get instant insights into your spending patterns with interactive dashboards',
     },
     {
       icon: <Shield className="w-6 h-6 text-red-500" />,
       title: 'Bank-level Security',
-      description: 'Your financial data is protected with 256-bit encryption and secure cloud storage'
+      description: 'Your financial data is protected with 256-bit encryption and secure cloud storage',
     },
     {
       icon: <Smartphone className="w-6 h-6 text-cyan-500" />,
       title: 'Mobile-First Design',
-      description: 'Track expenses on-the-go with our intuitive mobile app for iOS and Android'
+      description: 'Track expenses on-the-go with our intuitive mobile app for iOS and Android',
     },
     {
       icon: <Zap className="w-6 h-6 text-orange-500" />,
       title: 'Automated Workflows',
-      description: 'Set up smart rules for expense approval, reimbursement, and reporting'
+      description: 'Set up smart rules for expense approval, reimbursement, and reporting',
     }
   ];
 
@@ -137,7 +137,7 @@ export default function AIExpenseTrackerProPage() {
                 AI Expense Tracker Pro
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your expense management with intelligent automation. Scan receipts, 
+                Transform your expense management with intelligent automation. Scan receipts,
                 categorize expenses, and gain insights that help you save money and time.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -262,7 +262,7 @@ export default function AIExpenseTrackerProPage() {
                       </div>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -282,8 +282,8 @@ export default function AIExpenseTrackerProPage() {
                   </ul>
 
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular 
-                      ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700' 
+                    plan.popular
+                      ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'
                       : 'border-2 border-white text-white hover:bg-white/10'
                   }`}>
                     {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}

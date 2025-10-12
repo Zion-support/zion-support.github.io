@@ -41,10 +41,10 @@ const defaultSlides: Slide[] = [
   }
 ];
 
-export default function ContentCarousel({ 
-  slides = defaultSlides, 
-  autoPlay = true, 
-  interval = 5000 
+export default function ContentCarousel({
+  slides = defaultSlides,
+  autoPlay = true,
+  interval = 5000
 }: ContentCarouselProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
@@ -78,7 +78,7 @@ export default function ContentCarousel({
     <div className="relative w-full max-w-4xl mx-auto">
       {/* Main Carousel */}
       <div className="relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20">
-        <div 
+        <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >

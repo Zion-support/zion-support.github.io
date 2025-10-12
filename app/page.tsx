@@ -1,7 +1,7 @@
 'use client';
 
 import React, { Suspense } from 'react';
-
+import { Helmet } from 'react-helmet-async';
 
 import { Brain, ArrowRight, MessageSquare } from 'lucide-react';
 import FuturisticBackground from './components/FuturisticBackground';
@@ -73,7 +73,6 @@ export default function HomePage() {
     }
   ];
 
-
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -108,10 +107,10 @@ export default function HomePage() {
         <meta name="color-scheme" content="dark light" />
         <meta name="format-detection" content="telephone=no,address=no,email=no" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        
+
         {/* Canonical URL */}
         <link rel="canonical" href="https://ziontechgroup.com/" />
-        
+
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company" />
         <meta property="og:description" content="Leading provider of AI-powered solutions, IT services, 5G implementation, and micro SAAS platforms. 99.8% client satisfaction, 24/7 support." />
@@ -125,7 +124,7 @@ export default function HomePage() {
         <meta property="og:image:secure_url" content="https://ziontechgroup.com/og-image.jpg" />
         <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
-        
+
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
@@ -136,7 +135,7 @@ export default function HomePage() {
         <meta name="twitter:image:height" content="630" />
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
-        
+
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -180,7 +179,7 @@ export default function HomePage() {
           })}
         </script>
       </Helmet>
-      
+
       <FuturisticBackground variant="hero">
         {/* Hero Section */}
         <section id="main-content" className="pt-20 px-4 py-12 sm:py-16 lg:py-20" role="banner" aria-labelledby="hero-title">
@@ -190,7 +189,7 @@ export default function HomePage() {
                 Advanced AI & IT Solutions
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
-                Transform your business with cutting-edge artificial intelligence, 5G implementation, and enterprise-grade IT solutions. 
+                Transform your business with cutting-edge artificial intelligence, 5G implementation, and enterprise-grade IT solutions.
                 Join 1,200+ satisfied clients with 99.8% satisfaction rate.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -249,7 +248,7 @@ export default function HomePage() {
                 Comprehensive technology solutions designed to accelerate your digital transformation
               </p>
             </div>
-            
+
             <Suspense fallback={
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
                 {[...Array(6)].map((_, index) => (

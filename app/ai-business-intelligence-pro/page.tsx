@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, Brain, Database } from 'lucide-react';
 
@@ -9,32 +9,32 @@ export default function AIBusinessIntelligenceProPage() {
     {
       icon: <Brain className="w-6 h-6 text-blue-500" />,
       title: 'AI-Powered Analytics',
-      description: 'Advanced machine learning algorithms provide deep insights and predictive analytics'
+      description: 'Advanced machine learning algorithms provide deep insights and predictive analytics',
     },
     {
       icon: <BarChart3 className="w-6 h-6 text-green-500" />,
       title: 'Real-time Dashboards',
-      description: 'Interactive dashboards with live data updates and customizable visualizations'
+      description: 'Interactive dashboards with live data updates and customizable visualizations',
     },
     {
       icon: <Target className="w-6 h-6 text-purple-500" />,
       title: 'Predictive Modeling',
-      description: 'Forecast trends, customer behavior, and business outcomes with high accuracy'
+      description: 'Forecast trends, customer behavior, and business outcomes with high accuracy',
     },
     {
       icon: <Database className="w-6 h-6 text-red-500" />,
       title: 'Data Integration',
-      description: 'Connect and analyze data from multiple sources with automated ETL processes'
+      description: 'Connect and analyze data from multiple sources with automated ETL processes',
     },
     {
       icon: <Eye className="w-6 h-6 text-cyan-500" />,
       title: 'Natural Language Query',
-      description: 'Ask questions in plain English and get instant insights from your data'
+      description: 'Ask questions in plain English and get instant insights from your data',
     },
     {
       icon: <Zap className="w-6 h-6 text-orange-500" />,
       title: 'Automated Reporting',
-      description: 'Generate comprehensive reports automatically with AI-driven insights'
+      description: 'Generate comprehensive reports automatically with AI-driven insights',
     }
   ];
 
@@ -164,7 +164,7 @@ export default function AIBusinessIntelligenceProPage() {
                 AI Business Intelligence Pro
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your data into actionable insights with our advanced AI-powered business intelligence platform. 
+                Transform your data into actionable insights with our advanced AI-powered business intelligence platform.
                 Make smarter decisions with predictive analytics and real-time dashboards.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -287,7 +287,7 @@ export default function AIBusinessIntelligenceProPage() {
                       </div>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -307,8 +307,8 @@ export default function AIBusinessIntelligenceProPage() {
                   </ul>
 
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular 
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700' 
+                    plan.popular
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
                       : 'border-2 border-white text-white hover:bg-white/10'
                   }`}>
                     {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}

@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 
-
     {icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'}

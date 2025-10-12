@@ -1,8 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import { Helmet } from 'react-helmet-async';
 import Layout from '../layout'
-import { BookOpen, Code, HelpCircle, Users, Activity, Newspaper, ArrowRight, ExternalLink, FileText, Video, Download, Search } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { BookOpen, Code, HelpCircle, Users, Activity, Newspaper, ArrowRight, ExternalLink, FileText, Video, Download, Search } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ResourcesPage: React.FC = () => {
   const resourceCategories = [
@@ -107,19 +107,19 @@ const ResourcesPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Everything you need to get started with our services. From comprehensive documentation 
+              Everything you need to get started with our services. From comprehensive documentation
               to community support, we've got you covered.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/docs" 
+              <Link
+                to="/docs"
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
               >
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link 
-                to="/help" 
+              <Link
+                to="/help"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
                 Need Help?
@@ -251,14 +251,14 @@ const ResourcesPage: React.FC = () => {
                   Our support team is here to help you succeed. Contact us for personalized assistance.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
-                    to="/contact" 
+                  <Link
+                    to="/contact"
                     className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                   >
                     Contact Support
                   </Link>
-                  <Link 
-                    to="/help" 
+                  <Link
+                    to="/help"
                     className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                   >
                     Browse Help Center
@@ -270,7 +270,7 @@ const ResourcesPage: React.FC = () => {
         </section>
       </div>
     </Layout>
-  )
+  </div></div>)
 }
 
 export default ResourcesPage

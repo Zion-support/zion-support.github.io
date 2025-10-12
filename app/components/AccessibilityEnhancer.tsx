@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 'use client';
 
 import { useEffect } from 'react';
@@ -22,7 +23,7 @@ export default function AccessibilityEnhancer() {
           outline: 2px solid #3b82f6;
           outline-offset: 2px;
         }
-        
+
         .sr-only {
           position: absolute;
           width: 1px;
@@ -34,7 +35,7 @@ export default function AccessibilityEnhancer() {
           white-space: nowrap;
           border: 0;
         }
-        
+
         .sr-only:focus {
           position: static;
           width: auto;

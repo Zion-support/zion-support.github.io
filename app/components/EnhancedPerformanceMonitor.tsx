@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 
-
 interface PerformanceMetric {
   name: string;
   value: number;
@@ -103,12 +102,12 @@ const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
             <p className="text-gray-400 text-sm">Real-time metrics tracking</p>
           </div>
         </div>
-        
+
         <button
           onClick={() => setIsMonitoring(!isMonitoring)}
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-            isMonitoring 
-              ? 'bg-green-600 text-white hover:bg-green-700' 
+            isMonitoring
+              ? 'bg-green-600 text-white hover:bg-green-700'
               : 'bg-gray-600 text-white hover:bg-gray-700'
           }`}
         >
@@ -128,22 +127,22 @@ const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
                 {getStatusIcon(metric.status)}
               </div>
             </div>
-            
+
             <div className="text-2xl font-bold text-white mb-1">
               {metric.value.toFixed(metric.unit === '' ? 2 : 0)}{metric.unit}
             </div>
-            
+
             <div className="flex items-center gap-1">
               <span className={`text-xs ${
-                metric.trend === 'up' ? 'text-red-400' : 
-                metric.trend === 'down' ? 'text-green-400' : 
+                metric.trend === 'up' ? 'text-red-400' :
+                metric.trend === 'down' ? 'text-green-400' :
                 'text-gray-400'
               }`}>
                 {metric.trend === 'up' ? '↗' : metric.trend === 'down' ? '↘' : '→'}
               </span>
               <span className="text-xs text-gray-400">
-                {metric.trend === 'up' ? 'Increasing' : 
-                 metric.trend === 'down' ? 'Decreasing' : 
+                {metric.trend === 'up' ? 'Increasing' :
+                 metric.trend === 'down' ? 'Decreasing' :
                  'Stable'}
               </span>
             </div>

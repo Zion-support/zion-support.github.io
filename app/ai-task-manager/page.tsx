@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Link } from 'react'
 
 import Layout from '../layout'
 
@@ -86,7 +86,7 @@ const AITaskManagerPage: React.FC = () => {
               AI Task Manager
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Supercharge your productivity with AI-powered task management, smart scheduling, 
+              Supercharge your productivity with AI-powered task management, smart scheduling,
               and intelligent insights. Organize your work and achieve your goals faster than ever.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -147,7 +147,7 @@ const AITaskManagerPage: React.FC = () => {
               <div className="bg-white/5 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Smart Task Prioritization</h3>
                 <p className="text-gray-300 mb-6">
-                  Our AI analyzes your tasks, deadlines, and work patterns to automatically prioritize 
+                  Our AI analyzes your tasks, deadlines, and work patterns to automatically prioritize
                   your to-do list for maximum productivity and goal achievement.
                 </p>
                 <ul className="space-y-2 text-gray-300">
@@ -168,7 +168,7 @@ const AITaskManagerPage: React.FC = () => {
               <div className="bg-white/5 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Intelligent Scheduling</h3>
                 <p className="text-gray-300 mb-6">
-                  AI-powered scheduling that considers your energy levels, meeting patterns, 
+                  AI-powered scheduling that considers your energy levels, meeting patterns,
                   and personal preferences to create the optimal daily schedule.
                 </p>
                 <ul className="space-y-2 text-gray-300">

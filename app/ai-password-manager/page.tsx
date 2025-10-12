@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Link } from 'react'
 
 import Layout from '../layout'
 
@@ -86,7 +86,7 @@ const AIPasswordManagerPage: React.FC = () => {
               AI Password Manager
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Secure your digital life with AI-powered password management. Generate strong passwords, 
+              Secure your digital life with AI-powered password management. Generate strong passwords,
               monitor breaches, and protect your accounts with enterprise-grade security.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -147,7 +147,7 @@ const AIPasswordManagerPage: React.FC = () => {
               <div className="bg-white/5 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Zero-Knowledge Architecture</h3>
                 <p className="text-gray-300 mb-6">
-                  Your master password and encrypted data never leave your device. We can't see your passwords, 
+                  Your master password and encrypted data never leave your device. We can't see your passwords,
                   even if we wanted to. Only you have the key to decrypt your data.
                 </p>
                 <ul className="space-y-2 text-gray-300">
@@ -168,7 +168,7 @@ const AIPasswordManagerPage: React.FC = () => {
               <div className="bg-white/5 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">AI-Powered Security</h3>
                 <p className="text-gray-300 mb-6">
-                  Our AI continuously monitors for security threats, generates context-aware passwords, 
+                  Our AI continuously monitors for security threats, generates context-aware passwords,
                   and provides intelligent security recommendations.
                 </p>
                 <ul className="space-y-2 text-gray-300">

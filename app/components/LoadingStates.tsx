@@ -8,10 +8,10 @@ interface LoadingStatesProps {
   className?: string;
 }
 
-const LoadingStates: React.FC<LoadingStatesProps> = ({ 
-  type = 'spinner', 
+const LoadingStates: React.FC<LoadingStatesProps> = ({
+  type = 'spinner',
   size = 'md',
-  className = '' 
+  className = ''
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
