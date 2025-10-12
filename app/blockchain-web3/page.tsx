@@ -1,6 +1,3 @@
 
 
-import React from 'react';
-
-import { Link } from 'react-router-dom';
-import { ArrowRight 
+// This file appears to be incomplete or corrupted 
