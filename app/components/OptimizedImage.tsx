@@ -1,54 +1,67 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
 
 interface OptimizedImageProps {
-<<<<<<< HEAD
-  children?: React.ReactNode;
-  className?: string;
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  children,
-  className = ''
-}) => {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
-};
-
-export default OptimizedImage;
-=======
   src: string;
   alt: string;
   className?: string;
   width?: number;
   height?: number;
+  quality?: number;
+  priority?: boolean;
 }
 
-export default function OptimizedImage({ src, alt, className = '', width, height }: OptimizedImageProps) {
-  return (
-    <>
-      <div className="optimized-image-container">
-        <img
-          src={src}
-          alt={alt}
-          className={className}
-          width={width}
-          height={height}
-          loading="lazy"
-        />
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  className = '',
+  width,
+  height,
+  quality = 75,
+  priority = false
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
+
+  const handleLoad = () => {
+    setIsLoaded(true);
+  };
+
+  const handleError = () => {
+    setHasError(true);
+  };
+
+  if (hasError) {
+    return (
+      <div 
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={{ width, height }}
+      >
+        <span className="text-gray-500 text-sm">Image failed to load</span>
       </div>
-    </>
+    );
+  }
+
+  return (
+    <div className={`relative overflow-hidden ${className}`}>
+      {!isLoaded && (
+        <div 
+          className="absolute inset-0 bg-gray-200 animate-pulse"
+          style={{ width, height }}
+        />
+      )}
+      <img
+        src={src}
+        alt={alt}
+        className={`w-full h-full object-cover transition-opacity duration-300 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+        onLoad={handleLoad}
+        onError={handleError}
+        style={{ width, height }}
+        loading={priority ? 'eager' : 'lazy'}
+      />
+    </div>
   );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-2d8f
+};
+
+export default OptimizedImage;

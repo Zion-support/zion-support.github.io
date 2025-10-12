@@ -13,7 +13,6 @@ import Breadcrumb from './app/components/Breadcrumb';
 import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import { usePerformanceMonitor } from './hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import FuturisticBackground from './app/components/FuturisticBackground';
@@ -91,29 +90,28 @@ const FiveGSolutionsPage = React.lazy(() => import('./app/5g-solutions/page'));
 
 // Main App Component
 function App() {
-  const { performanceData } = usePerformanceMonitor();
 
   return (
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <FuturisticBackground />
-            <Navigation />
-            <Breadcrumb />
-            <Suspense fallback={<LoadingPage />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/pricing" element={<PricingPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/case-studies" element={<CaseStudiesPage />} />
-                <Route path="/careers" element={<CareersPage />} />
-                <Route path="/ai-services" element={<AIServicesPage />} />
-                <Route path="/it-services" element={<ITServicesPage />} />
-                <Route path="/micro-saas" element={<MicroSAASPage />} />
+            <FuturisticBackground>
+              <Navigation />
+              <Breadcrumb />
+              <Suspense fallback={<LoadingPage />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/pricing" element={<PricingPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/it-services" element={<ServicesPage />} />
+                  <Route path="/micro-saas" element={<ServicesPage />} />
                 <Route path="/tutorials" element={<TutorialsPage />} />
                 <Route path="/consultation" element={<ConsultationPage />} />
                 <Route path="/demo" element={<DemoPage />} />
@@ -177,12 +175,18 @@ function App() {
                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
               </Routes>
             </Suspense>
-            <Footer />
-            <PerformanceOptimizer />
-            <AccessibilityEnhancer />
-            <EnhancedAccessibility />
-            <AnalyticsProvider />
-            <PerformanceMonitor performanceData={performanceData} />
+              <Footer />
+              <PerformanceOptimizer />
+              <AccessibilityEnhancer />
+              <EnhancedAccessibility>
+                <div></div>
+              </EnhancedAccessibility>
+            </FuturisticBackground>
+            <AnalyticsProvider>
+              <div>
+                <PerformanceMonitor />
+              </div>
+            </AnalyticsProvider>
           </div>
         </Router>
       </HelmetProvider>

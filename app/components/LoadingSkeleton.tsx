@@ -1,49 +1,29 @@
 import React from 'react';
-<<<<<<< HEAD
 
 interface LoadingSkeletonProps {
   children?: React.ReactNode;
   className?: string;
+  lines?: number;
+  height?: string;
 }
 
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
   children,
-  className = ''
+  className = '',
+  lines = 3,
+  height = 'h-4'
 }) => {
   return (
-    <div className={className}>
-      {children}
+    <div className={`animate-pulse ${className}`}>
+      {children || (
+        <div className="space-y-3">
+          {Array.from({ length: lines }).map((_, index) => (
+            <div key={index} className={`bg-gray-300 rounded ${height} ${index === lines - 1 ? 'w-3/4' : 'w-full'}`}></div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
 
 export default LoadingSkeleton;
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function LoadingSkeleton() {
-  return (
-    <>
-      <Helmet>
-        <title>Loading Skeleton - Zion Tech Group</title>
-      </Helmet>
-      <div className="loading-skeleton-container">
-        <div className="skeleton">
-          <div className="skeleton-line"></div>
-          <div className="skeleton-line"></div>
-          <div className="skeleton-line"></div>
-        </div>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-2d8f
