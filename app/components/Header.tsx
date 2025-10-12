@@ -1,12 +1,10 @@
 import React from 'react';
 import Navigation from './Navigation';
-  return (
-<<<<<<< HEAD
 
-=======
-    <>
-      <header />
+export default function Header() {
+  return (
+    <header className="bg-slate-900/90 backdrop-blur-sm border-b border-purple-500/20">
       <Navigation />
-    </>
-);
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
+    </header>
+  );
+}

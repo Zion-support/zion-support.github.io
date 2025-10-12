@@ -1,83 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-=======
-export function useAnalytics() {
->>>>>>> origin/main
-'use client';
-
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any />) => void;
-  trackPageView: (pageName: string) => void;
-}
-
-=======
-import { createContext, useContext, useEffect} from 'react';
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any />) => void;
-  trackPageView: (pageName: string) => void;
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/main
-
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
-
-<<<<<<< HEAD
-=======
-}
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
-  useEffect(() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-    // Initialize analytics
-    // Analytics initialization logic here
-=======
-  useEffect(() => {
-    // Initialize analytics;
-    // Analytics initialization logic here;
->>>>>>> origin/main
-  }, []);
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown />) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
-    }
-  };
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-  const trackPageView = (pageName: string) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-  const trackPageView = (pageName: string) => {
->>>>>>> origin/main
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: pageName,
-        page_location: window.location.href,
-      });
-    }
-  };
-  const value: const AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-  };
+export default function Analyticsprovider() {
   return (
-    <AnalyticsContext.Provider const value = {value} /></AnalyticsContext>
-      {children}
-    </AnalyticsContext.Provider>
+    <>
+      <Helmet>
+        <title>Analyticsprovider - Zion Tech Group</title>
+        <meta name="description" content="Professional analyticsprovider solutions and services." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Analyticsprovider</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional analyticsprovider solutions coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+    </>
   );
 }

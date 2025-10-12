@@ -1,66 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-=======
->>>>>>> origin/main
-'use client';
-
-interface AnalyticsProps {
-  children: React.ReactNode;
-}
-
-<<<<<<< HEAD
-=======
-import { useEffect } from 'react';
-interface AnalyticsProps {
-  children: React.ReactNode;
-}
-  useEffect(() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-    // Initialize analytics tracking
-      // Google Analytics initialization
-=======
-  useEffect(() => {
-    // Initialize analytics tracking;
-    const initAnalytics = () => {
-      // Google Analytics initialization;
->>>>>>> origin/main
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('config', 'GA_MEASUREMENT_ID', {
-          page_title: document.title,
-          page_location: window.location.href,
-        });
-      }
-    };
-    initAnalytics();
-  }, []);
+export default function Analytics() {
   return (
     <>
-      }
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return <React.Fragment />{children}</React.Fragment>;
-=======
-  return <React.Fragment >{children}</React.Fragment ></React.Fragment>;
+      <Helmet>
+        <title>Analytics - Zion Tech Group</title>
+        <meta name="description" content="Professional analytics solutions and services." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Analytics</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional analytics solutions coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </div>
+    </>
+  );
 }
->>>>>>> origin/main
-
-// Extend Window interface for gtag;
-declare global {
-  interface Window {
-<<<<<<< HEAD
- void;
-=======
-      // Extend Window interface for gtag
-      declare global {
-      interface Window {
-      gtag: (...args: unknown[]) => void;
-      }
-      }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-    gtag: (...args: unknown[]) => void;
-  }
-}
->>>>>>> origin/main
