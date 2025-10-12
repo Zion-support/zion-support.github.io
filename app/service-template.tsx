@@ -1,5 +1,6 @@
-import React from 'react'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight } from 'lucide-react';
 
@@ -15,7 +16,6 @@ interface ServicePageProps {
   seoKeywords: string
 }
 
-export default function ServicePageTemplate({
   title,
   description,
   icon,

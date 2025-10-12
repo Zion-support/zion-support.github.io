@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react'
   children: React.ReactNode}
     // Security enhancement logic
-    
+
         'Referrer-Policy': 'strict-origin-when-cross-origin'
       }
 
@@ -39,12 +39,12 @@ import React, { useEffect } from 'react'
 }
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {useEffect(() => {// Security enhancement logic
-    
+
     $3
   )}
         'Referrer-Policy': 'strict-origin-when-cross-origin'}
       };// Add CSP meta tag
-      
+
       cspMeta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
       document.head.appendChild(cspMeta)
       // Disable right-click context menu
@@ -62,4 +62,3 @@ export default SecurityEnhancer
       });// Disable F12 and other dev tools shortcuts
       document.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
         }
-      })};enhanceSecurity()}, []);return <>{children}</>};export default SecurityEnhancer

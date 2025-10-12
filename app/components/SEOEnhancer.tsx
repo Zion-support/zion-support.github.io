@@ -24,7 +24,7 @@ const SEOEnhancer: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-  ]
+  ];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -34,7 +34,7 @@ const SEOEnhancer: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-  ]
+  ];
   return (
     <div className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 ${className}`}>
       <div className="flex items-center justify-between mb-6">
@@ -123,5 +123,3 @@ const SEOEnhancer: React.FC = () => {
     </div>
   )
 }
-
-export default SEOEnhancer

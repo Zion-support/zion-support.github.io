@@ -7,9 +7,9 @@ interface LoadingSkeletonProps {
   lines?: number;
 }
 
-const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
-  className = '', 
-  lines = 3 
+const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
+  className = '',
+  lines = 3
 }) => {
   return (
     <div className={`animate-pulse ${className}`}>
@@ -22,7 +22,7 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
         />
       ))}
     </div>
-  );
+  </div>);
 };
 
 export default LoadingSkeleton;

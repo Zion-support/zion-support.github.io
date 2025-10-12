@@ -21,7 +21,6 @@ interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
 
-export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   useEffect(() => {
     // Initialize analytics
     // Analytics initialization logic here
@@ -52,11 +51,4 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
       {children}
     </AnalyticsContext.Provider>
   );
-}
-
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag: (...args: unknown[]) => void;
-  }
 }
