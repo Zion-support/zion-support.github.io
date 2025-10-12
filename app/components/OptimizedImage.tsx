@@ -1,4 +1,5 @@
 ursor/analyze-improve-and-deploy-application-edcb
+ursor/analyze-improve-and-deploy-application-edcb
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'

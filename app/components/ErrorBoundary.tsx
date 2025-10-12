@@ -74,4 +74,8 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
+<<<<<<< HEAD
 export default ErrorBoundary
+=======
+export default ErrorBoundary;
+>>>>>>> cursor/analyze-improve-and-deploy-application-e212

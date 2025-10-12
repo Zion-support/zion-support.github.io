@@ -1,3 +1,8 @@
+ursor/website-audit-and-update-with-deployment-a178
+
+const AIAutomatedReportingPage: React.FC = () => {
+  const features = [
+    {
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'

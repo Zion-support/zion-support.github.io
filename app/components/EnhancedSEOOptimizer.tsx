@@ -3,6 +3,8 @@ ursor/
       description: 'Advanced AI technology to optimize your website for search engines and improve rankings'
     },
     {
+      icon: Brain,
+      title: 'AI-Powered SEO Optimization',
       icon: Zap,
       title: 'Real-time Analysis',
       description: 'Lightning-fast SEO analysis and optimization with instant recommendations'
