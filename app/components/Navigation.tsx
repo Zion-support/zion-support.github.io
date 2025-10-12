@@ -1,84 +1,112 @@
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
-<<<<<<< HEAD
-import { ChevronDown, Phone, Mail, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Database, Smartphone, Settings, CheckSquare, FileText, MessageCircle, Link as LinkIcon, Mic, Eye } from 'lucide-react';
-
-  return (
-              Zion Tech Group
-                Home
-                About
-                Contact
-
-        )}
-
-=======
-export default function Navigation() {
-  return (
-    <>
-      <Helmet>
-        <title>Navigation - Zion Tech Group</title>
-        <meta name="description" content="Professional navigation by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Navigation</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional navigation coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-  );
-}
-=======
-export default Navigation;
 const Navigation: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
   return (
-    <nav className="bg-gray-900  text-white"></nav>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-        <div className="flex justify-between items-center py-4"></div>
-          <div className="flex  items-center"></div>
-            <Link to="/" className="text-2xl font-bold"></Link>
-              Zion Tech Group;
+    <nav className="bg-gray-900/90 backdrop-blur-md border-b border-gray-700 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">Z</span>
+            </div>
+            <span className="text-white font-bold text-xl">Zion Tech Group</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+              Home
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+              About
+            </Link>
+            
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                className="text-gray-300 hover:text-white transition-colors flex items-center space-x-1"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                <span>Services</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              
+              {isServicesOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-64 bg-gray-800 rounded-lg shadow-lg py-2 z-50"
+                  onMouseEnter={() => setIsServicesOpen(true)}
+                  onMouseLeave={() => setIsServicesOpen(false)}
+                >
+                  <Link to="/ai-services" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700">
+                    AI Services
+                  </Link>
+                  <Link to="/it-services" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700">
+                    IT Services
+                  </Link>
+                  <Link to="/micro-saas" className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-700">
+                    Micro SAAS
+                  </Link>
+                </div>
+              )}
+            </div>
+            
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+              Contact
+            </Link>
+            <Link 
+              to="/demo" 
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Demo
             </Link>
           </div>
-          <div className="hidden md:block"></div>
-            <div className="ml-10fl ex items-baseline  space-x-4"></div>
-              <Link;</Link></Link>
-                to="/"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              ></Link>
-                Home;
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-300 hover:text-white"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-lg mt-2">
+              <Link to="/" className="block px-3 py-2 text-gray-300 hover:text-white">
+                Home
               </Link>
-              <Link;</Link></Link>
-                to="/about"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              ></Link>
-                About;
+              <Link to="/about" className="block px-3 py-2 text-gray-300 hover:text-white">
+                About
               </Link>
-              <Link;</Link></Link>
-                to="/contact"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              ></Link>
-                Contact;
+              <Link to="/ai-services" className="block px-3 py-2 text-gray-300 hover:text-white">
+                AI Services
+              </Link>
+              <Link to="/it-services" className="block px-3 py-2 text-gray-300 hover:text-white">
+                IT Services
+              </Link>
+              <Link to="/contact" className="block px-3 py-2 text-gray-300 hover:text-white">
+                Contact
+              </Link>
+              <Link to="/demo" className="block px-3 py-2 bg-blue-600 text-white rounded-lg">
+                Get Demo
               </Link>
             </div>
-        </div>
+          </div>
+        )}
+      </div>
     </nav>
   );
 };
->>>>>>> origin/main
+
+export default Navigation;
