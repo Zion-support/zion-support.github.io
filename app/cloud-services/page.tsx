@@ -1,58 +1,44 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Cloud, Shield, Database, Smartphone, Cpu, BarChart3 } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 export default function CloudServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Cloud Services - Zion Tech Group</title>
-        <meta name="description" content="Professional cloud services solutions by Zion Tech Group." />
-        <meta name="keywords" content="cloud services, Zion Tech Group" />
+        <title>Cloud Services - Zion Tech Group | Professional Cloud Solutions</title>
+        <meta name="description" content="Professional cloud services including migration, infrastructure setup, security, and optimization. Transform your business with our cloud expertise." />
+        <meta name="keywords" content="cloud services, cloud migration, AWS, Azure, GCP, cloud infrastructure, cloud security" />
       </Helmet>
-      
-      <div className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              Cloud Services <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Solutions</span>
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto">
-              Professional cloud services solutions to help your business succeed.
-            </p>
-          </div>
 
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-600 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden">
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(236,72,153,0.3),transparent_50%)]"></div>
-              
-              <div className="relative">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-                  Ready to Get Started?
-                </h2>
-                <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-                  Let's discuss how our cloud services can help you achieve your business goals.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="/contact"
-                    className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
-                  >
-                    Get Free Consultation
-                  </a>
-                  <a
-                    href="/contact"
-                    className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
-                  >
-                    Contact Us
-                  </a>
-                </div>
-              </div>
+      <Navigation />
+
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="relative max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              Cloud <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto mb-8 px-4 leading-relaxed">
+              Professional cloud services including migration, infrastructure setup, security, and optimization.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
-  )
+  );
 }
