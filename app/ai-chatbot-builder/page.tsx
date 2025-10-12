@@ -1,6 +1,7 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { 
   Bot, MessageCircle, Zap, CheckCircle, ArrowRight, 
   Sparkles, Target, Award, Lightbulb, Monitor, 
@@ -9,8 +10,9 @@ import {
   BarChart3, PieChart, LineChart, Activity, 
   Search, Filter, Download, Upload, Share, 
   Shield, Brain, Cpu, Rocket, Network
-} from 'lucide-react'
+} from 'lucide-react';
 
+const AiChatbotBuilderPage: React.FC = () => {
   const features = [
     {
       icon: <Zap className="w-6 h-6 text-cyan-400" />,
@@ -296,5 +298,7 @@ import {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
+
+export default AiChatbotBuilderPage;

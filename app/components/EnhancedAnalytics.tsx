@@ -140,5 +140,11 @@ const EnhancedAnalytics: React.FC = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
+
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return <>{children}</>;
+};
+
+export default EnhancedAnalytics;

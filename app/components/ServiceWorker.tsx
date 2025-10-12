@@ -160,5 +160,7 @@ const ServiceWorker: React.FC = () => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
+
+export default ServiceWorker;
