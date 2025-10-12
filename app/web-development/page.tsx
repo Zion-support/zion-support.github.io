@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 
 import { ArrowRight } from 'lucide-react'
 
-export default function WebDevelopmentPage() {
+const WebDevelopmentPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
@@ -23,4 +25,5 @@ export default function WebDevelopmentPage() {
       </div>
     </div>
   )
+}
 }

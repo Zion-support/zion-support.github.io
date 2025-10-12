@@ -1,11 +1,13 @@
+import React, { useState } from 'react';
+import { Brain, ArrowRight, MessageSquare, Image, Code, BookOpen, PenTool } from 'lucide-react';
 'use client';
 
-import React, { useState } from 'react';
 
 
-import { Brain, ArrowRight, MessageSquare, Image, Code, BookOpen, PenTool } from 'lucide-react';
 
-export default function AiContentGeneratorPage() {
+
+
+const AiContentGeneratorPage: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState('pro');
 
   const features = [
@@ -99,7 +101,7 @@ export default function AiContentGeneratorPage() {
         'Email support',
         'Standard templates'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Pro',
@@ -115,7 +117,7 @@ export default function AiContentGeneratorPage() {
         'Analytics dashboard',
         'Team collaboration'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -131,7 +133,7 @@ export default function AiContentGeneratorPage() {
         'White-label options',
         'Custom integrations'
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -180,7 +182,7 @@ export default function AiContentGeneratorPage() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             AI Content{' '}
             <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Generator
+              Generator;
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -188,18 +190,18 @@ export default function AiContentGeneratorPage() {
             Generate high-quality, SEO-optimized content in 50+ languages with just a few clicks.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link;
               to="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
-              Start Free Trial
+              Start Free Trial;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
+            <Link;
               to="/ai-services" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
-              View All AI Services
+              View All AI Services;
             </Link>
           </div>
         </div>
@@ -226,7 +228,7 @@ export default function AiContentGeneratorPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Powerful AI Features</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our AI Content Generator comes packed with advanced features to create 
+              Our AI Content Generator comes packed with advanced features to create;
               professional-quality content that engages and converts.
             </p>
           </div>
@@ -301,7 +303,7 @@ export default function AiContentGeneratorPage() {
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -324,15 +326,15 @@ export default function AiContentGeneratorPage() {
                   ))}
                 </ul>
                 
-                <Link
+                <Link;
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
-                    plan.popular
+                    plan.popular;
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                       : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
                   }`}
                 >
-                  Get Started
+                  Get Started;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -385,18 +387,18 @@ export default function AiContentGeneratorPage() {
               Join thousands of businesses already using our platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"
               >
-                Start Free Trial
+                Start Free Trial;
                 <Sparkles className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/about"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center"
               >
-                Learn More
+                Learn More;
                 <Wand2 className="w-5 h-5 ml-2" />
               </Link>
             </div>
@@ -404,5 +406,6 @@ export default function AiContentGeneratorPage() {
         </section>
       </div>
     </div>
-  );
+  )
+}
 }

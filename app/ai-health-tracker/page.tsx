@@ -1,9 +1,11 @@
+
+
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Layout from '../layout'
 
 import { ArrowRight } from 'lucide-react';
-
 const AIHealthTrackerPage: React.FC = () => {
   const features = [
     {
@@ -40,7 +42,7 @@ const AIHealthTrackerPage: React.FC = () => {
         "Mobile app access",
         "Email support"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Premium",
@@ -54,7 +56,7 @@ const AIHealthTrackerPage: React.FC = () => {
         "Priority support",
         "Wearable sync"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Family",
@@ -68,12 +70,12 @@ const AIHealthTrackerPage: React.FC = () => {
         "Dedicated support",
         "Custom health plans"
       ],
-      popular: false
+      popular: false;
     }
   ]
 
   return (
-    <Layout
+    <Layout;
       title="AI Health Tracker - Zion Tech Group"
       description="Comprehensive health and fitness tracking with AI-powered insights, personalized recommendations, and HIPAA-compliant data protection."
       keywords="AI health tracker, fitness tracking, health monitoring, wellness app, health analytics, personal health"
@@ -83,25 +85,25 @@ const AIHealthTrackerPage: React.FC = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Health Tracker
+              AI Health Tracker;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Take control of your health with AI-powered tracking, personalized insights, and comprehensive 
+              Take control of your health with AI-powered tracking, personalized insights, and comprehensive;
               wellness monitoring. Achieve your health goals with intelligent recommendations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/demo"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                Watch Demo
+                Watch Demo;
               </Link>
             </div>
           </div>
@@ -149,19 +151,19 @@ const AIHealthTrackerPage: React.FC = () => {
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Heart rate monitoring
+                    Heart rate monitoring;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Blood pressure tracking
+                    Blood pressure tracking;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Sleep quality analysis
+                    Sleep quality analysis;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Stress level monitoring
+                    Stress level monitoring;
                   </li>
                 </ul>
               </div>
@@ -170,19 +172,19 @@ const AIHealthTrackerPage: React.FC = () => {
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Step counting
+                    Step counting;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Calorie tracking
+                    Calorie tracking;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Workout logging
+                    Workout logging;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Goal setting
+                    Goal setting;
                   </li>
                 </ul>
               </div>
@@ -191,19 +193,19 @@ const AIHealthTrackerPage: React.FC = () => {
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Meal tracking
+                    Meal tracking;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Water intake monitoring
+                    Water intake monitoring;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Supplement tracking
+                    Supplement tracking;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Mood tracking
+                    Mood tracking;
                   </li>
                 </ul>
               </div>
@@ -219,7 +221,7 @@ const AIHealthTrackerPage: React.FC = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -238,15 +240,15 @@ const AIHealthTrackerPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link
+                  <Link;
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
+                      plan.popular;
                         ? 'bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700'
                         : 'border-2 border-white text-white hover:bg-white/10'
                     }`}
                   >
-                    Get Started
+                    Get Started;
                   </Link>
                 </div>
               ))}
@@ -282,18 +284,18 @@ const AIHealthTrackerPage: React.FC = () => {
               Join over 500,000 users who have improved their health and wellness with our AI-powered tracking platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Your Free Trial
+                Start Your Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/pricing"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                View All Plans
+                View All Plans;
               </Link>
             </div>
           </div>
@@ -303,4 +305,4 @@ const AIHealthTrackerPage: React.FC = () => {
   )
 }
 
-export default AIHealthTrackerPage
+export default AIHealthTrackerPage;

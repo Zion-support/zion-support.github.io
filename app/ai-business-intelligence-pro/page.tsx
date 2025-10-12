@@ -1,10 +1,13 @@
+import React from 'react'
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, Database } from 'lucide-react';
 'use client';
 
-import React from 'react';
 
-import { ArrowRight, Brain, Database } from 'lucide-react';
 
-export default function AIBusinessIntelligenceProPage() {
+
+
+const AIBusinessIntelligenceProPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-blue-500" />,
@@ -79,7 +82,7 @@ export default function AIBusinessIntelligenceProPage() {
         'Up to 10 users',
         '1GB data storage'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -96,7 +99,7 @@ export default function AIBusinessIntelligenceProPage() {
         '10GB data storage',
         'API access'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -113,7 +116,7 @@ export default function AIBusinessIntelligenceProPage() {
         'Unlimited storage',
         'On-premise deployment'
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -158,10 +161,10 @@ export default function AIBusinessIntelligenceProPage() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <BarChart3 className="w-4 h-4 mr-2" />
-                AI-Powered Business Intelligence
+                AI-Powered Business Intelligence;
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Business Intelligence Pro
+                AI Business Intelligence Pro;
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your data into actionable insights with our advanced AI-powered business intelligence platform. 
@@ -169,15 +172,15 @@ export default function AIBusinessIntelligenceProPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                  Start Free Trial
+                  Start Free Trial;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  View Demo
+                  View Demo;
                 </button>
               </div>
               <p className="text-gray-400 text-sm mt-4">
-                ✓ 30-day free trial • ✓ No credit card required • ✓ Cancel anytime
+                ✓ 30-day free trial • ✓ No credit card required • ✓ Cancel anytime;
               </p>
             </div>
 
@@ -208,10 +211,10 @@ export default function AIBusinessIntelligenceProPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Analytics Features
+                Powerful Analytics Features;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Everything you need to transform your data into business intelligence
+                Everything you need to transform your data into business intelligence;
               </p>
             </div>
 
@@ -232,10 +235,10 @@ export default function AIBusinessIntelligenceProPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Analytics Modules
+                Comprehensive Analytics Modules;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Specialized analytics solutions for every aspect of your business
+                Specialized analytics solutions for every aspect of your business;
               </p>
             </div>
 
@@ -268,10 +271,10 @@ export default function AIBusinessIntelligenceProPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
+                Flexible Pricing Plans;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Choose the plan that scales with your business needs
+                Choose the plan that scales with your business needs;
               </p>
             </div>
 
@@ -283,7 +286,7 @@ export default function AIBusinessIntelligenceProPage() {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                        Most Popular
+                        Most Popular;
                       </div>
                     </div>
                   )}
@@ -307,7 +310,7 @@ export default function AIBusinessIntelligenceProPage() {
                   </ul>
 
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular 
+                    plan.popular;
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700' 
                       : 'border-2 border-white text-white hover:bg-white/10'
                   }`}>
@@ -324,10 +327,10 @@ export default function AIBusinessIntelligenceProPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Data-Driven Companies
+                Trusted by Data-Driven Companies;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                See how businesses are transforming with AI business intelligence
+                See how businesses are transforming with AI business intelligence;
               </p>
             </div>
 
@@ -360,21 +363,21 @@ export default function AIBusinessIntelligenceProPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 lg:p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Transform Your Business with AI Intelligence
+                Transform Your Business with AI Intelligence;
               </h2>
               <p className="text-xl text-white/90 mb-8">
                 Join thousands of companies making data-driven decisions with our AI platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Start Free Trial
+                  Start Free Trial;
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Schedule Demo
+                  Schedule Demo;
                 </button>
               </div>
               <p className="text-white/80 text-sm mt-6">
-                ✓ 30-day free trial • ✓ No setup fees • ✓ 24/7 support
+                ✓ 30-day free trial • ✓ No setup fees • ✓ 24/7 support;
               </p>
             </div>
           </div>

@@ -1,7 +1,9 @@
-'use client'
 import React, { memo, useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom';
 import { X, Menu, Home, Brain, Code, BarChart, ChevronDown, ChevronRight, Mail, Database } from 'lucide-react';
+'use client'
+
+
 
 const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -33,7 +35,7 @@ const Sidebar: React.FC = () => {
   }
 
   const isActive = (path: string) => {
-    return location.pathname === path
+    return location.pathname === path;
   }
 
   const menuSections = [
@@ -127,7 +129,7 @@ const Sidebar: React.FC = () => {
   return (
     <>
       {/* Mobile Menu Button */}
-      <button
+      <button;
         onClick={toggleSidebar}
         className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 text-white hover:bg-white/20 transition-colors duration-200"
       >
@@ -145,7 +147,7 @@ const Sidebar: React.FC = () => {
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </div>
-          <button
+          <button;
             onClick={toggleSidebar}
             className="lg:hidden text-gray-400 hover:text-white transition-colors duration-200"
           >
@@ -161,7 +163,7 @@ const Sidebar: React.FC = () => {
               </h3>
               <div className="space-y-1">
                 {section.items.map((item) => (
-                  <Link
+                  <Link;
                     key={item.path}
                     to={item.path}
                     onClick={() => setIsOpen(false)}
@@ -206,7 +208,7 @@ const Sidebar: React.FC = () => {
 
       {/* Overlay for mobile */}
       {isOpen && (
-        <div
+        <div;
           className="fixed inset-0 bg-black/50 z-30 lg:hidden"
           onClick={toggleSidebar}
         />
@@ -216,4 +218,4 @@ const Sidebar: React.FC = () => {
 }
 
 Sidebar.displayName = 'Sidebar'
-export default Sidebar
+export default Sidebar;

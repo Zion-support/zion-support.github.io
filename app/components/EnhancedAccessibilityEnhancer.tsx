@@ -1,7 +1,8 @@
-ursor/website-audit-and-update-with-deployment-a178
+import React from 'react'
+ursor/website-audit-and-update-with-deployment-a178;
 ursor/
-                Enhanced Accessibility
-                EnhancedAccessibilityEnhancer
+                Enhanced Accessibility;
+                EnhancedAccessibilityEnhancer;
               </span>
               <br />
               <span className="text-white">Enhancer</span>
@@ -13,10 +14,10 @@ ursor/
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
+                Get Started;
               </button>
               <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
+                Learn More;
               </button>
             </div>
           </div>
@@ -89,10 +90,10 @@ ursor/
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
-                Contact Us Now
+                Contact Us Now;
               </button>
               <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Learn More
+                Learn More;
               </button>
             </div>
       {/* Contact Section */}
@@ -107,10 +108,10 @@ ursor/
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
-                Contact Us
+                Contact Us;
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </div>
@@ -119,5 +120,6 @@ ursor/
     </div>
   )
 }
+}
 
-export default EnhancedAccessibilityEnhancerPage
+export default EnhancedAccessibilityEnhancerPage;

@@ -1,16 +1,17 @@
 'use client'
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 
 interface SEOHeadProps {
-  title?: string
-  description?: string
-  keywords?: string
-  canonicalUrl?: string
-  ogImage?: string
-  ogType?: string
-  twitterCard?: string
-  structuredData?: object
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: object;
 }
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
@@ -21,7 +22,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData
+  structuredData;
 }) => {
   const defaultStructuredData = {
     '@context': 'https://schema.org',
@@ -107,4 +108,4 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   )
 }
 
-export default EnhancedSEOHead
+export default EnhancedSEOHead;

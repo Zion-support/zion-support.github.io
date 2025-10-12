@@ -1,7 +1,8 @@
-'use client'
 import React from 'react'
 
 import { ArrowRight, Brain } from 'lucide-react';
+'use client'
+
 const SEOEnhancer: React.FC = () => {
   const features = [
     {
@@ -47,7 +48,7 @@ const SEOEnhancer: React.FC = () => {
             <p className="text-gray-300 text-sm">Analyze and optimize your SEO performance</p>
           </div>
         </div>
-        <button
+        <button;
           onClick={analyzeSEO}
           disabled={isAnalyzing}
           className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
@@ -70,7 +71,7 @@ const SEOEnhancer: React.FC = () => {
       <div className="text-center mb-6">
         <div className="relative w-32 h-32 mx-auto mb-4">
           <svg className="w-32 h-32 transform -rotate-90" viewBox="0 0 100 100">
-            <circle
+            <circle;
               cx="50"
               cy="50"
               r="40"
@@ -79,7 +80,7 @@ const SEOEnhancer: React.FC = () => {
               fill="none"
               className="text-gray-700"
             />
-            <circle
+            <circle;
               cx="50"
               cy="50"
               r="40"
@@ -108,7 +109,7 @@ const SEOEnhancer: React.FC = () => {
         <div>
           <h4 className="text-white font-semibold mb-3 flex items-center">
             <Target className="w-5 h-5 text-blue-500 mr-2" />
-            Recommendations
+            Recommendations;
           </h4>
           <div className="space-y-2">
             {recommendations.map((recommendation, index) => (
@@ -123,5 +124,6 @@ const SEOEnhancer: React.FC = () => {
     </div>
   )
 }
+}
 
-export default SEOEnhancer
+export default SEOEnhancer;

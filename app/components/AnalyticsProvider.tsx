@@ -1,6 +1,7 @@
+import React, { createContext, useContext, useEffect, useState } from 'react';
 'use client';
 
-import React, { createContext, useContext, useEffect, useState } from 'react';
+
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
@@ -23,8 +24,8 @@ interface AnalyticsProviderProps {
 
 export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   useEffect(() => {
-    // Initialize analytics
-    // Analytics initialization logic here
+    // Initialize analytics;
+    // Analytics initialization logic here;
   }, []);
 
   const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
@@ -54,7 +55,7 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
   );
 }
 
-// Extend Window interface for gtag
+// Extend Window interface for gtag;
 declare global {
   interface Window {
     gtag: (...args: unknown[]) => void;

@@ -1,6 +1,7 @@
-'use client'
 import React from 'react'
 import { ArrowRight, Brain, BarChart } from 'lucide-react';
+'use client'
+
 
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
@@ -47,10 +48,10 @@ const EnhancedServicesShowcase: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our Core Services
+            Our Core Services;
           </h2>
           <p className="text-xl text-cyan-400 max-w-3xl mx-auto">
-            Comprehensive AI and IT solutions designed to transform your business and drive innovation
+            Comprehensive AI and IT solutions designed to transform your business and drive innovation;
           </p>
         </div>
 
@@ -82,7 +83,7 @@ const EnhancedServicesShowcase: React.FC = () => {
               </div>
 
               <button className="cyber-button w-full py-3 text-center inline-flex items-center justify-center group-hover:scale-105 transition-transform">
-                Learn More
+                Learn More;
                 <ArrowRight className="ml-2 h-4 w-4" />
               </button>
             </div>
@@ -92,5 +93,6 @@ const EnhancedServicesShowcase: React.FC = () => {
     </div>
   )
 }
+}
 
-export default EnhancedServicesShowcase
+export default EnhancedServicesShowcase;

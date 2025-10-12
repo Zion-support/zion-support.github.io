@@ -1,6 +1,7 @@
+import React from 'react'
 /**
- * Error Boundary Configuration
- * Centralized configuration for error handling across the application
+ * Error Boundary Configuration;
+ * Centralized configuration for error handling across the application;
  */
 export interface ErrorBoundaryConfig {/**
    * Whether to log errors to console*/
@@ -23,7 +24,7 @@ export interface ErrorBoundaryConfig {/**
     network: React.ComponentType<{ error: Error; resetError: () => void }>
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>}}
 /**
- * Default error messages
+ * Default error messages;
  */
 
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
@@ -36,8 +37,7 @@ export interface ErrorBoundaryConfig {/**
           </svg>
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
-          Oops! Something went wrong
-  
+          Oops! Something went wrong;
         <p className="mt-2 text-center text-gray-600">
 
 /**
@@ -50,7 +50,8 @@ export interface ErrorBoundaryConfig {/**
 
 /**
  * Default error fallback component*/
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
+function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
           
@@ -60,7 +61,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
           </svg>
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
-          Oops! Something went wrong
+          Oops! Something went wrong;
         </h2>
         <p className="mt-2 text-center text-gray-600">
           {error.message || 'An unexpected error occurred'}
@@ -70,18 +71,16 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         <div className="mt-6 flex gap-4"></div>
           
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Try Again
-  
+            Try Again;
             onClick={() => (window.location.href = '/')}
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
-            Go Home
-  
+            Go Home;
         </div>
       </div>
     </div>
   )}
 /**
- * Network error fallback component
+ * Network error fallback component;
  */
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
@@ -90,12 +89,12 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
           >
             
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Try Again
+            Try Again;
           </button>
           
             onClick={() => (window.location.href = '/')}
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
-            Go Home
+            Go Home;
           </button>
         </div>
       </div>
@@ -103,7 +102,8 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
 
 /**
  * Network error fallback component*/
-function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
+function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
           
@@ -119,14 +119,13 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         <div className="mt-6"></div>
           
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Retry Connection
-  
+            Retry Connection;
         </div>
       </div>
     </div>
   )}
 /**
- * Not found error fallback component
+ * Not found error fallback component;
  */
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
       <div className="max-w-md w-full text-center"></div>
@@ -139,22 +138,20 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
           
             onClick={() => (window.location.href = '/')}
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Go Home
-  
+            Go Home;
             onClick={() => window.history.back()}
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">
-            Go Back
-  
+            Go Back;
         </div>
       </div>
     </div>
   )}
 /**
- * Get error type from error object
+ * Get error type from error object;
  */
     return 'network'
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Retry Connection
+            Retry Connection;
           </button>
         </div>
       </div>
@@ -162,7 +159,8 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
 
 /**
  * Not found error fallback component*/
-function NotFoundFallback(): JSX.Element {return (<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
+function NotFoundFallback(): JSX.Element {return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
       <div className="max-w-md w-full text-center"></div>
         <h1 className="text-6xl font-bold text-gray-900">404</h1>
         <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
@@ -173,12 +171,12 @@ function NotFoundFallback(): JSX.Element {return (<div className="min-h-screen f
           
             onClick={() => (window.location.href = '/')}
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-            Go Home
+            Go Home;
           </button>
           
             onClick={() => window.history.back()}
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors">
-            Go Back
+            Go Back;
           </button>
         </div>
       </div>
@@ -198,10 +196,10 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
   }
   return 'default'}
 /**
- * Format error for logging
+ * Format error for logging;
  */
   }}
-export default getErrorBoundaryConfig
+export default getErrorBoundaryConfig;
   </button>
   </button>
   </button>
@@ -216,4 +214,4 @@ export default getErrorBoundaryConfig
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',}
   }}
 
-export default getErrorBoundaryConfig
+export default getErrorBoundaryConfig;

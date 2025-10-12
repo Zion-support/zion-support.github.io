@@ -1,6 +1,8 @@
+
+
+
 import React, { useState, useRef, useEffect } from 'react';
 import { X } from 'lucide-react';
-
 interface SearchBarProps {
   onSearch?: (query: string) => void;
   placeholder?: string;
@@ -42,7 +44,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
       <form onSubmit={handleSearch} className="relative">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-          <input
+          <input;
             ref={inputRef}
             type="text"
             value={query}
@@ -52,7 +54,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
             className="w-full pl-10 pr-10 py-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
           />
           {query && (
-            <button
+            <button;
               type="button"
               onClick={handleClear}
               className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
@@ -70,7 +72,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
             <p className="text-sm text-gray-600 mb-2">Popular searches:</p>
             <div className="space-y-1">
               {['AI Services', 'Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'].map((suggestion) => (
-                <button
+                <button;
                   key={suggestion}
                   onClick={() => {
                     setQuery(suggestion);
@@ -87,7 +89,8 @@ const SearchBar: React.FC<SearchBarProps> = ({
         </div>
       )}
     </div>
-  );
+  )
+}
 };
 
 export default SearchBar;

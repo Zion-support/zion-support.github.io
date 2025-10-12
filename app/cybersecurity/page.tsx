@@ -1,12 +1,13 @@
+
 import React from 'react'
 
 
 import { ArrowRight, Database } from 'lucide-react';
 import ServicePageTemplate from '../service-template'
 
-export default function CybersecurityPage() {
+const CybersecurityPage: React.FC = () => {
   return (
-    <ServicePageTemplate
+    <ServicePageTemplate;
       title="Cybersecurity Solutions"
       description="Protect your business with our comprehensive cybersecurity services. Advanced threat detection, data protection, and 24/7 monitoring to keep your systems secure."
       icon={<Shield className="w-10 h-10 text-red-400" />}

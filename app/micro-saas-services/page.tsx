@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -29,9 +28,16 @@ import {
   Github,
   Linkedin,
   Twitter,
-  Calendar
+  Calendar;
 } from 'lucide-react';
 import { Code, ArrowRight, Mail, MessageSquare } from 'lucide-react';
+import { ArrowRight, Brain } from 'lucide-react';
+'use client';
+
+
+
+
+
 const MicroSaasServicesPage: React.FC = () => {
   const services = [
     {
@@ -184,21 +190,21 @@ const MicroSaasServicesPage: React.FC = () => {
       price: '$49/month',
       description: 'Perfect for small businesses getting started',
       features: ['Up to 5 users', 'Basic features', 'Email support', '5GB storage', 'Standard integrations'],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
       price: '$149/month',
       description: 'Ideal for growing businesses with advanced needs',
       features: ['Up to 25 users', 'Advanced features', 'Priority support', '50GB storage', 'Premium integrations', 'Custom reports'],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
       price: '$299/month',
       description: 'Complete solution for large organizations',
       features: ['Unlimited users', 'All features', '24/7 phone support', 'Unlimited storage', 'Custom integrations', 'Dedicated account manager'],
-      popular: false
+      popular: false;
     }
   ];
   return (
@@ -217,7 +223,7 @@ const MicroSaasServicesPage: React.FC = () => {
             <div className="text-center">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                  Micro SAAS Solutions
+                  Micro SAAS Solutions;
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -225,15 +231,15 @@ const MicroSaasServicesPage: React.FC = () => {
                 enhance productivity, and drive growth across all departments.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                <Link;
                   to="/contact"
                   className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center group"
                 >
-                  Start Free Trial
+                  Start Free Trial;
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <button className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300">
-                  View Demo
+                  View Demo;
                 </button>
               </div>
             </div>
@@ -268,7 +274,7 @@ const MicroSaasServicesPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Flexible Pricing Plans
+                Flexible Pricing Plans;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the perfect plan for your business needs. All plans include free trials and no setup fees.
@@ -277,14 +283,14 @@ const MicroSaasServicesPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 border-2 transition-all duration-300 ${
-                  tier.popular 
+                  tier.popular;
                     ? 'border-green-500/50 bg-green-500/10' 
                     : 'border-white/20 hover:border-white/40'
                 }`}>
                   {tier.popular && (
                     <div className="text-center mb-4">
                       <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -302,7 +308,7 @@ const MicroSaasServicesPage: React.FC = () => {
                     ))}
                   </ul>
                   <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    tier.popular
+                    tier.popular;
                       ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700'
                       : 'border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50'
                   }`}>
@@ -318,10 +324,10 @@ const MicroSaasServicesPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
               {categories.map((category, index) => (
-                <button
+                <button;
                   key={index}
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                    category.active
+                    category.active;
                       ? 'bg-gradient-to-r from-green-600 to-emerald-600 text-white'
                       : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                   }`}
@@ -369,11 +375,11 @@ const MicroSaasServicesPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link
+                  <Link;
                     to={service.path}
                     className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center group"
                   >
-                    Start Free Trial
+                    Start Free Trial;
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -392,18 +398,18 @@ const MicroSaasServicesPage: React.FC = () => {
                 Start your free trial today and discover how our micro SAAS solutions can transform your business operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                <Link;
                   to="/contact"
                   className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-300"
                 >
-                  Start Free Trial
+                  Start Free Trial;
                 </Link>
-                <a
+                <a;
                   href="tel:+13024640950"
                   className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300 flex items-center justify-center"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call +1 302 464 0950
+                  Call +1 302 464 0950;
                 </a>
               </div>
             </div>
@@ -413,7 +419,7 @@ const MicroSaasServicesPage: React.FC = () => {
     </>
   );
 }
-import { ArrowRight, Brain } from 'lucide-react';
+
 const MicroSAASServicesPage: React.FC = () => {
   const microSAAS = [
     {
@@ -423,7 +429,7 @@ const MicroSAASServicesPage: React.FC = () => {
       features: ['Automated content creation', 'SEO optimization', 'Multi-language support', 'Content templates'],
       pricing: 'Starting at $29/month',
       link: '/ai-content-generator',
-      popular: true
+      popular: true;
     },
     {
       icon: <MessageSquare className="w-8 h-8 text-green-500" />,
@@ -432,7 +438,7 @@ const MicroSAASServicesPage: React.FC = () => {
       features: ['Custom chatbot creation', 'Multi-channel support', 'Analytics dashboard', 'Easy integration'],
       pricing: 'Starting at $49/month',
       link: '/ai-chatbot-builder',
-      popular: true
+      popular: true;
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
@@ -441,7 +447,7 @@ const MicroSAASServicesPage: React.FC = () => {
       features: ['Real-time analytics', 'Custom dashboards', 'Data visualization', 'Export reports'],
       pricing: 'Starting at $39/month',
       link: '/ai-analytics-dashboard',
-      popular: false
+      popular: false;
     },
     {
       icon: <Mail className="w-8 h-8 text-purple-500" />,
@@ -450,7 +456,7 @@ const MicroSAASServicesPage: React.FC = () => {
       features: ['Email automation', 'A/B testing', 'Personalization', 'Performance tracking'],
       pricing: 'Starting at $25/month',
       link: '/ai-email-assistant',
-      popular: true
+      popular: true;
     },
     {
       icon: <Users className="w-8 h-8 text-orange-500" />,
@@ -459,7 +465,7 @@ const MicroSAASServicesPage: React.FC = () => {
       features: ['Lead scoring', 'Contact discovery', 'Email outreach', 'CRM integration'],
       pricing: 'Starting at $59/month',
       link: '/ai-lead-generation',
-      popular: false
+      popular: false;
     },
     {
       icon: <FileText className="w-8 h-8 text-pink-500" />,
@@ -468,7 +474,7 @@ const MicroSAASServicesPage: React.FC = () => {
       features: ['OCR technology', 'Data extraction', 'Document classification', 'Batch processing'],
       pricing: 'Starting at $35/month',
       link: '/ai-document-processor',
-      popular: false
+      popular: false;
     },
     {
       icon: <Cpu className="w-8 h-8 text-indigo-500" />,
@@ -477,7 +483,7 @@ const MicroSAASServicesPage: React.FC = () => {
       features: ['Smart scheduling', 'Priority management', 'Team collaboration', 'Progress tracking'],
       pricing: 'Starting at $19/month',
       link: '/ai-task-manager',
-      popular: true
+      popular: true;
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-yellow-500" />,
@@ -486,7 +492,7 @@ const MicroSAASServicesPage: React.FC = () => {
       features: ['Receipt scanning', 'Expense categorization', 'Budget tracking', 'Financial reports'],
       pricing: 'Starting at $15/month',
       link: '/ai-expense-tracker',
-      popular: false
+      popular: false;
     },
     {
       icon: <Calendar className="w-8 h-8 text-teal-500" />,
@@ -503,7 +509,7 @@ const MicroSAASServicesPage: React.FC = () => {
       features: ['Carbon tracking', 'Sustainability goals', 'Impact reporting', 'Green recommendations'],
       pricing: 'Starting at $35/month',
       link: '/ai-climate-solutions-pro',
-      popular: true
+      popular: true;
     },
     {
       icon: <Shield className="w-8 h-8 text-purple-500" />,
@@ -512,7 +518,7 @@ const MicroSAASServicesPage: React.FC = () => {
       features: ['Password generation', 'Security monitoring', 'Breach alerts', 'Multi-device sync'],
       pricing: 'Starting at $12/month',
       link: '/ai-password-manager',
-      popular: false
+      popular: false;
     },
     {
       icon: <Code className="w-8 h-8 text-orange-500" />,
@@ -521,7 +527,7 @@ const MicroSAASServicesPage: React.FC = () => {
       features: ['Template library', 'Automated calculations', 'Payment tracking', 'Tax compliance'],
       pricing: 'Starting at $22/month',
       link: '/ai-invoice-generator',
-      popular: true
+      popular: true;
     }
   ];
   const stats = [
@@ -541,24 +547,24 @@ const MicroSAASServicesPage: React.FC = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Micro SaaS Services
+            Micro SaaS Services;
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Discover our comprehensive collection of AI-powered micro SaaS applications designed to solve specific business challenges and boost productivity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link;
               to="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
-              Get Started
+              Get Started;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
+            <Link;
               to="/pricing" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
-              View Pricing
+              View Pricing;
             </Link>
           </div>
         </div>
@@ -568,10 +574,10 @@ const MicroSAASServicesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Our Micro SaaS Applications
+              Our Micro SaaS Applications;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Focused solutions for specific business needs
+              Focused solutions for specific business needs;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -581,7 +587,7 @@ const MicroSAASServicesPage: React.FC = () => {
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold flex items-center">
                       <Star className="w-3 h-3 mr-1" />
-                      Popular
+                      Popular;
                     </span>
                   </div>
                 )}
@@ -599,11 +605,11 @@ const MicroSAASServicesPage: React.FC = () => {
                 <div className="text-cyan-400 font-semibold mb-4 text-sm">
                   {service.pricing}
                 </div>
-                <Link 
+                <Link;
                   to={service.link}
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
-                  Get Started
+                  Get Started;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -615,7 +621,7 @@ const MicroSAASServicesPage: React.FC = () => {
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Trusted by Thousands of Users
+            Trusted by Thousands of Users;
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -637,23 +643,24 @@ const MicroSAASServicesPage: React.FC = () => {
             Join thousands of businesses already using our AI-powered micro SaaS solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link;
               to="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
-              Get Started Today
+              Get Started Today;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
+            <Link;
               to="/pricing" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
-              View Pricing
+              View Pricing;
             </Link>
           </div>
         </div>
       </section>
     </div>
-  );
+  )
+}
 };
 export default MicroSaasServicesPage;

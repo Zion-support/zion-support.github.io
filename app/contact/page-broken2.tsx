@@ -1,6 +1,7 @@
-'use client'
 import React from 'react'
-'use client';import React, { useState, useCallback } from 'react'
+import { Helmet } from 'react-helmet-async'
+'use client';
+import React, { useState, useCallback } from 'react'
 
 
   CheckCircle}
@@ -10,8 +11,10 @@ import React from 'react'
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   
-  });const [isSubmitting, setIsSubmitting] = useState(false)
-    setSubmitStatus('idle');try {// Simulate form submission
+  });
+'use client'
+const [isSubmitting, setIsSubmitting] = useState(false)
+    setSubmitStatus('idle');try {// Simulate form submission;
       await new Promise(resolve => setTimeout(resolve, 1000))
       setSubmitStatus('success')
         message: ''}
@@ -32,13 +35,13 @@ import React from 'react'
           {/* Header */}
           <div className="text-center mb-16"></div>
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-              Get in
+              Get in;
               <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                {' '}Touch
+                {' '}Touch;
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready to transform your business? Let's discuss your project and explore
+              Ready to transform your business? Let's discuss your project and explore;
               how our AI and IT solutions can help you achieve your goals.
             </p>
           </div>
@@ -84,7 +87,7 @@ import React from 'react'
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
                   <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Company
+                      Company;
                     </label>
                     <div className="relative"></div>
                       <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -94,7 +97,7 @@ import React from 'react'
                   </div>
                   <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Phone Number
+                      Phone Number;
                     </label>
                     <div className="relative"></div>
                       <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -105,7 +108,7 @@ import React from 'react'
                 </div>
                 <div></div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Service Interest
+                    Service Interest;
                   </label>
                   <div className="relative"></div>
                     <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -158,7 +161,7 @@ import React from 'react'
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
                 <p className="text-lg text-gray-300 mb-8">
-                  We're here to help! Reach out to us through any of these channels 
+                  We're here to help! Reach out to us through any of these channels;
                   and we'll get back to you as soon as possible.
                 </p>
               </div>
@@ -200,7 +203,7 @@ import React from 'react'
               <div></div>
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
                 <p className="text-lg text-gray-300 mb-8">
-                  We're here to help! Reach out to us through any of these channels
+                  We're here to help! Reach out to us through any of these channels;
                   and we'll get back to you as soon as possible.
                 </p>
               </div>
@@ -264,7 +267,7 @@ import React from 'react'
       </div>
 </div>
   )}
-export default ContactPage
+export default ContactPage;
   </textarea>
   </label>
   </label>
@@ -307,4 +310,4 @@ export default ContactPage
           </div>
         </section>
       </div>
-</div>)};export default ContactPage
+</div>)};export default ContactPage;

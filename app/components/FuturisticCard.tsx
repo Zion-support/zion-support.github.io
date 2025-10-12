@@ -1,6 +1,8 @@
-'use client';
 import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
+'use client';
+
+
 
 interface FuturisticCardProps {
   children: React.ReactNode;
@@ -19,7 +21,7 @@ export default function FuturisticCard({
   glow = true, 
   neon = true,
   variant = 'default',
-  onClick 
+  onClick;
 }: FuturisticCardProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -31,7 +33,7 @@ export default function FuturisticCard({
     const rect = cardRef.current.getBoundingClientRect();
     setMousePosition({
       x: e.clientX - rect.left,
-      y: e.clientY - rect.top
+      y: e.clientY - rect.top;
     });
   };
 
@@ -86,10 +88,10 @@ export default function FuturisticCard({
   };
 
   return (
-    <motion.div
+    <motion.div;
       ref={cardRef}
       className={`
-        relative rounded-2xl p-6 transition-all duration-500 cursor-pointer overflow-hidden
+        relative rounded-2xl p-6 transition-all duration-500 cursor-pointer overflow-hidden;
         ${getVariantClasses()}
         ${getGlowEffect()}
         ${getNeonEffect()}
@@ -112,7 +114,7 @@ export default function FuturisticCard({
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       {/* Animated border */}
-      <motion.div 
+      <motion.div;
         className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20"
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 1 : 0 }}
@@ -127,7 +129,7 @@ export default function FuturisticCard({
       
       {/* Mouse follow effect */}
       {isHovered && (
-        <motion.div
+        <motion.div;
           className="absolute pointer-events-none rounded-full bg-gradient-to-r from-cyan-400/30 to-purple-400/30 blur-xl"
           style={{
             left: mousePosition.x - 50,
@@ -145,7 +147,7 @@ export default function FuturisticCard({
 
       {/* Scanning line effect */}
       {isHovered && (
-        <motion.div
+        <motion.div;
           className="absolute inset-0 rounded-2xl"
           style={{
             background: 'linear-gradient(90deg, transparent, rgba(6,182,212,0.3), transparent)',

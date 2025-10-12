@@ -1,6 +1,8 @@
-'use client';
 import React, { useState, useEffect } from 'react';
 import { X, Cookie } from 'lucide-react';
+'use client';
+
+
 
 const CookieConsent: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,7 +41,7 @@ const CookieConsent: React.FC = () => {
       <div className="max-w-4xl mx-auto">
         <div className="bg-slate-800 border border-slate-700 rounded-xl shadow-2xl backdrop-blur-sm">
           {!showDetails ? (
-            // Simple view
+            // Simple view;
             <div className="p-6">
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
@@ -47,7 +49,7 @@ const CookieConsent: React.FC = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold text-white mb-2">
-                    We use cookies
+                    We use cookies;
                   </h3>
                   <p className="text-gray-300 mb-4">
                     We use cookies to enhance your browsing experience, serve personalized content, 
@@ -172,7 +174,8 @@ const CookieConsent: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
+}
 };
 
 export default CookieConsent;

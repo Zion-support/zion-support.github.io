@@ -1,10 +1,13 @@
+import React from 'react'
+import { Helmet } from 'react-helmet-async';
+import { Receipt, ArrowRight, Camera } from 'lucide-react';
 'use client';
 
-import React from 'react';
 
-import { Receipt, ArrowRight, Camera } from 'lucide-react';
 
-export default function AIExpenseTrackerProPage() {
+
+
+const AIExpenseTrackerProPage: React.FC = () => {
   const features = [
     {
       icon: <Camera className="w-6 h-6 text-blue-500" />,
@@ -52,7 +55,7 @@ export default function AIExpenseTrackerProPage() {
         'Email support',
         'Cloud backup'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Business',
@@ -69,7 +72,7 @@ export default function AIExpenseTrackerProPage() {
         'Priority support',
         'Advanced reporting'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -86,7 +89,7 @@ export default function AIExpenseTrackerProPage() {
         'On-premise option',
         'White-label solution'
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -131,10 +134,10 @@ export default function AIExpenseTrackerProPage() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center bg-green-500/10 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Receipt className="w-4 h-4 mr-2" />
-                AI-Powered Expense Management
+                AI-Powered Expense Management;
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Expense Tracker Pro
+                AI Expense Tracker Pro;
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your expense management with intelligent automation. Scan receipts, 
@@ -142,15 +145,15 @@ export default function AIExpenseTrackerProPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                  Start Free Trial
+                  Start Free Trial;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Watch Demo
+                  Watch Demo;
                 </button>
               </div>
               <p className="text-gray-400 text-sm mt-4">
-                ✓ 30-day free trial • ✓ No credit card required • ✓ Cancel anytime
+                ✓ 30-day free trial • ✓ No credit card required • ✓ Cancel anytime;
               </p>
             </div>
 
@@ -181,10 +184,10 @@ export default function AIExpenseTrackerProPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features for Smart Expense Management
+                Powerful Features for Smart Expense Management;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Everything you need to take control of your expenses and boost your financial health
+                Everything you need to take control of your expenses and boost your financial health;
               </p>
             </div>
 
@@ -205,10 +208,10 @@ export default function AIExpenseTrackerProPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                How It Works
+                How It Works;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Get started in minutes with our simple 3-step process
+                Get started in minutes with our simple 3-step process;
               </p>
             </div>
 
@@ -243,7 +246,7 @@ export default function AIExpenseTrackerProPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your Plan
+                Choose Your Plan;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Start free and upgrade as you grow. All plans include our core AI features.
@@ -258,7 +261,7 @@ export default function AIExpenseTrackerProPage() {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                        Most Popular
+                        Most Popular;
                       </div>
                     </div>
                   )}
@@ -282,7 +285,7 @@ export default function AIExpenseTrackerProPage() {
                   </ul>
 
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular 
+                    plan.popular;
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700' 
                       : 'border-2 border-white text-white hover:bg-white/10'
                   }`}>
@@ -299,10 +302,10 @@ export default function AIExpenseTrackerProPage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Thousands of Users
+                Trusted by Thousands of Users;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                See what our customers say about AI Expense Tracker Pro
+                See what our customers say about AI Expense Tracker Pro;
               </p>
             </div>
 
@@ -342,14 +345,14 @@ export default function AIExpenseTrackerProPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Start Free Trial
+                  Start Free Trial;
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Schedule Demo
+                  Schedule Demo;
                 </button>
               </div>
               <p className="text-white/80 text-sm mt-6">
-                ✓ 30-day free trial • ✓ No setup fees • ✓ 24/7 support
+                ✓ 30-day free trial • ✓ No setup fees • ✓ 24/7 support;
               </p>
             </div>
           </div>

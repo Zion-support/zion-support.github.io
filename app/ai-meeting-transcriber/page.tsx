@@ -1,9 +1,11 @@
+
+
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Layout from '../layout'
 
 import { ArrowRight, Mic } from 'lucide-react';
-
 const AIMeetingTranscriberPage: React.FC = () => {
   const features = [
     {
@@ -40,7 +42,7 @@ const AIMeetingTranscriberPage: React.FC = () => {
         "Export to PDF/Word",
         "Email support"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -54,7 +56,7 @@ const AIMeetingTranscriberPage: React.FC = () => {
         "Priority support",
         "API access"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -68,12 +70,12 @@ const AIMeetingTranscriberPage: React.FC = () => {
         "Dedicated support",
         "SSO integration"
       ],
-      popular: false
+      popular: false;
     }
   ]
 
   return (
-    <Layout
+    <Layout;
       title="AI Meeting Transcriber - Zion Tech Group"
       description="Transform your meetings with AI-powered transcription, summarization, and insights. 99.5% accuracy, real-time processing, and smart analytics."
       keywords="AI meeting transcriber, meeting transcription, voice to text, meeting notes, AI summarization, business productivity"
@@ -83,25 +85,25 @@ const AIMeetingTranscriberPage: React.FC = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Meeting Transcriber
+              AI Meeting Transcriber;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your meetings with AI-powered transcription, real-time summarization, and intelligent insights. 
               Never miss important details again.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/demo"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                Watch Demo
+                Watch Demo;
               </Link>
             </div>
           </div>
@@ -149,7 +151,7 @@ const AIMeetingTranscriberPage: React.FC = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -168,15 +170,15 @@ const AIMeetingTranscriberPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link
+                  <Link;
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
+                      plan.popular;
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border-2 border-white text-white hover:bg-white/10'
                     }`}
                   >
-                    Get Started
+                    Get Started;
                   </Link>
                 </div>
               ))}
@@ -212,18 +214,18 @@ const AIMeetingTranscriberPage: React.FC = () => {
               Join thousands of teams already using our AI Meeting Transcriber to boost productivity and never miss important details.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Your Free Trial
+                Start Your Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/pricing"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                View All Plans
+                View All Plans;
               </Link>
             </div>
           </div>
@@ -233,4 +235,4 @@ const AIMeetingTranscriberPage: React.FC = () => {
   )
 }
 
-export default AIMeetingTranscriberPage
+export default AIMeetingTranscriberPage;

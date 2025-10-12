@@ -1,3 +1,5 @@
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 ursor/
       description: 'Advanced AI technology to automatically optimize your website for search engines'
       description: 'Advanced AI technology to optimize your website for search engines and improve rankings'
@@ -48,8 +50,8 @@ ursor/
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Enhanced SEO
-                Enhanced SEO Optimizer
+                Enhanced SEO;
+                Enhanced SEO Optimizer;
               </span>
               <br />
               <span className="text-white">Optimizer</span>
@@ -62,11 +64,11 @@ ursor/
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+                Learn More;
               </button>
             </div>
           </div>
@@ -78,7 +80,7 @@ ursor/
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Features
+              Our Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover the powerful features that make our enhanced SEO optimizer solutions stand out.
@@ -142,10 +144,10 @@ ursor/
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
-                Contact Us
+                Contact Us;
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Schedule Demo
+                Schedule Demo;
               </button>
             </div>
           </div>
@@ -154,5 +156,6 @@ ursor/
     </div>
   )
 }
+}
 
-export default EnhancedSEOOptimizerPage
+export default EnhancedSEOOptimizerPage;

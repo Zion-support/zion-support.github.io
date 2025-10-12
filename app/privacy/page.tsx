@@ -1,11 +1,15 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async';
+import { Database, Mail } from 'lucide-react';
 'use client';
 
-import React from 'react';
 
 
-import { Database, Mail } from 'lucide-react';
 
-export default function PrivacyPage() {
+
+
+const PrivacyPage: React.FC = () => {
   const lastUpdated = 'October 8, 2024';
 
   const dataTypes = [
@@ -63,7 +67,7 @@ export default function PrivacyPage() {
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Privacy{' '}
             <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Policy
+              Policy;
             </span>
           </h1>
           <p className="text-lg text-gray-300 mb-4">
@@ -80,11 +84,11 @@ export default function PrivacyPage() {
           <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
               <Shield className="w-6 h-6 text-cyan-400 mr-3" />
-              Our Commitment to Privacy
+              Our Commitment to Privacy;
             </h2>
             <p className="text-gray-300 mb-4">
               Zion Tech Group ("we," "our," or "us") respects your privacy and is committed to protecting your personal data. 
-              This privacy policy will inform you about how we look after your personal data when you visit our website 
+              This privacy policy will inform you about how we look after your personal data when you visit our website;
               (https://ziontechgroup.com) and tell you about your privacy rights and how the law protects you.
             </p>
             <p className="text-gray-300">
@@ -197,7 +201,7 @@ export default function PrivacyPage() {
           <h2 className="text-3xl font-bold text-white mb-8">Data Security</h2>
           <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
             <p className="text-gray-300 mb-6">
-              We implement appropriate technical and organizational security measures to protect your personal data against 
+              We implement appropriate technical and organizational security measures to protect your personal data against;
               unauthorized access, alteration, disclosure, or destruction. These measures include:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -288,7 +292,7 @@ export default function PrivacyPage() {
           <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
             <p className="text-gray-300">
               We may update this privacy policy from time to time to reflect changes in our practices or applicable laws. 
-              We will notify you of any material changes by posting the new privacy policy on this page and updating the 
+              We will notify you of any material changes by posting the new privacy policy on this page and updating the;
               "Last updated" date. We encourage you to review this privacy policy periodically for any changes.
             </p>
           </div>
@@ -296,15 +300,16 @@ export default function PrivacyPage() {
 
         {/* CTA */}
         <div className="text-center">
-          <Link
+          <Link;
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
           >
-            Contact Us About Privacy
+            Contact Us About Privacy;
             <Mail className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
     </div>
-  );
+  )
+}
 }

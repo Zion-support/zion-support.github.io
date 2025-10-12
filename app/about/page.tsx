@@ -1,11 +1,15 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async';
+import { Brain, ArrowRight } from 'lucide-react';
 'use client';
 
-import React from 'react';
 
 
-import { Brain, ArrowRight } from 'lucide-react';
 
-export default function AboutPage() {
+
+
+const AboutPage: React.FC = () => {
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: Target },
     { number: '50+', label: 'Enterprise Clients', icon: Users },
@@ -109,7 +113,7 @@ export default function AboutPage() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             About{' '}
             <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Zion Tech Group
+              Zion Tech Group;
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
@@ -129,14 +133,14 @@ export default function AboutPage() {
               </p>
               <p className="text-lg text-gray-300 mb-8">
                 We believe technology should be accessible, secure, and transformative. 
-                Our solutions are designed to help businesses of all sizes leverage the power 
+                Our solutions are designed to help businesses of all sizes leverage the power;
                 of artificial intelligence and modern IT infrastructure.
               </p>
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
               >
-                Get in Touch
+                Get in Touch;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
@@ -273,19 +277,19 @@ export default function AboutPage() {
                 Let's discuss how we can help transform your business with our innovative AI and IT solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                <Link;
                   to="/contact"
                   className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group"
                 >
-                  Get In Touch
+                  Get In Touch;
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <a
+                <a;
                   href="tel:+13024640950"
                   className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300 flex items-center justify-center"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Call +1 302 464 0950
+                  Call +1 302 464 0950;
                 </a>
               </div>
               <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -307,5 +311,6 @@ export default function AboutPage() {
         </section>
       </div>
     </div>
-  );
+  )
+}
 }

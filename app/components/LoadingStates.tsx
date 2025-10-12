@@ -1,6 +1,7 @@
+import React from 'react';
 'use client';
 
-import React from 'react';
+
 
 interface LoadingStatesProps {
   type?: 'spinner' | 'skeleton' | 'dots' | 'pulse';
@@ -21,8 +22,8 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
 
   const renderSpinner = () => (
     <div className={`animate-spin rounded-full border-b-2 border-white ${sizeClasses[size]} ${className}`}></div>
-  );
-
+  )
+}
   const renderSkeleton = () => (
     <div className={`animate-pulse ${className}`}>
       <div className="space-y-3">
@@ -31,24 +32,24 @@ const LoadingStates: React.FC<LoadingStatesProps> = ({
         <div className="h-4 bg-gray-700 rounded w-5/6"></div>
       </div>
     </div>
-  );
-
+  )
+}
   const renderDots = () => (
     <div className={`flex space-x-1 ${className}`}>
       {[0, 1, 2].map((i) => (
-        <div
+        <div;
           key={i}
           className={`bg-white rounded-full animate-bounce ${sizeClasses[size]}`}
           style={{ animationDelay: `${i * 0.1}s` }}
         ></div>
       ))}
     </div>
-  );
-
+  )
+}
   const renderPulse = () => (
     <div className={`bg-gray-700 rounded animate-pulse ${sizeClasses[size]} ${className}`}></div>
-  );
-
+  )
+}
   switch (type) {
     case 'skeleton':
       return renderSkeleton();

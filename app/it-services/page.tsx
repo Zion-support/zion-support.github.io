@@ -1,13 +1,18 @@
-'use client';
 import React, { useState } from 'react';
-
-
 import { Database, Code, HardDrive, ArrowRight, EyeOff, Mail, Mail as MailIcon } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
+'use client';
 
-export default function ItServicesPage() {
+
+
+
+
+
+
+
+const ItServicesPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -218,7 +223,7 @@ export default function ItServicesPage() {
             {/* Header */}
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                IT Services
+                IT Services;
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Comprehensive technology solutions to power your business growth. From cloud migration to cybersecurity, we've got you covered.
@@ -227,7 +232,7 @@ export default function ItServicesPage() {
               {/* Search Bar */}
               <div className="max-w-md mx-auto relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search IT services..."
                   value={searchTerm}
@@ -240,11 +245,11 @@ export default function ItServicesPage() {
             {/* Category Tabs */}
             <div className="flex flex-wrap justify-center gap-2 mb-12">
               {categories.map((category) => (
-                <button
+                <button;
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                    activeTab === category.id
+                    activeTab === category.id;
                       ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
                       : 'bg-white/10 text-gray-300 hover:bg-white/20'
                   }`}
@@ -257,7 +262,7 @@ export default function ItServicesPage() {
             {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               {filteredServices.map((service) => (
-                <FuturisticCard
+                <FuturisticCard;
                   key={service.id}
                   variant="service"
                   className="h-full"
@@ -312,15 +317,15 @@ export default function ItServicesPage() {
                   </div>
 
                   <div className="flex space-x-2">
-                    <FuturisticButton
+                    <FuturisticButton;
                       variant="primary"
                       size="sm"
                       className="flex-1"
                       onClick={() => window.open(service.link, '_blank')}
                     >
-                      Get Quote
+                      Get Quote;
                     </FuturisticButton>
-                    <FuturisticButton
+                    <FuturisticButton;
                       variant="ghost"
                       size="sm"
                       onClick={() => window.open(service.link, '_blank')}
@@ -341,20 +346,20 @@ export default function ItServicesPage() {
                 Join 1000+ businesses that trust us with their technology needs. Let's discuss how we can help your business grow.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton
+                <FuturisticButton;
                   variant="primary"
                   size="lg"
                   onClick={() => window.open('/contact', '_blank')}
                 >
-                  Get Free Consultation
+                  Get Free Consultation;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </FuturisticButton>
-                <FuturisticButton
+                <FuturisticButton;
                   variant="secondary"
                   size="lg"
                   onClick={() => window.open('/contact', '_blank')}
                 >
-                  View Portfolio
+                  View Portfolio;
                 </FuturisticButton>
               </div>
             </FuturisticCard>

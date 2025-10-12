@@ -1,6 +1,8 @@
+
+
+
 import React from 'react';
 import { Loader2 } from 'lucide-react';
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
@@ -25,5 +27,6 @@ export default function LoadingSpinner({
         <span className="ml-2 text-gray-300 text-sm">{text}</span>
       )}
     </div>
-  );
+  )
+}
 }

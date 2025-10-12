@@ -1,11 +1,15 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async';
+import { Mail } from 'lucide-react';
 'use client';
 
-import React from 'react';
 
 
-import { Mail } from 'lucide-react';
 
-export default function TermsPage() {
+
+
+const TermsPage: React.FC = () => {
   const lastUpdated = 'October 8, 2024';
 
   const sections = [
@@ -91,7 +95,7 @@ export default function TermsPage() {
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Terms of{' '}
             <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Service
+              Service;
             </span>
           </h1>
           <p className="text-lg text-gray-300 mb-4">
@@ -142,19 +146,19 @@ export default function TermsPage() {
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                  Access to our services as described
+                  Access to our services as described;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                  Privacy protection as outlined in our Privacy Policy
+                  Privacy protection as outlined in our Privacy Policy;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                  Professional support and customer service
+                  Professional support and customer service;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                  Right to terminate your account at any time
+                  Right to terminate your account at any time;
                 </li>
               </ul>
             </div>
@@ -167,19 +171,19 @@ export default function TermsPage() {
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                  Provide accurate information
+                  Provide accurate information;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                  Use services in compliance with applicable laws
+                  Use services in compliance with applicable laws;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                  Maintain account security
+                  Maintain account security;
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                  Respect intellectual property rights
+                  Respect intellectual property rights;
                 </li>
               </ul>
             </div>
@@ -228,19 +232,19 @@ export default function TermsPage() {
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-gray-300">
-                  <strong>Step 1:</strong> Contact our support team at kleber@ziontechgroup.com
+                  <strong>Step 1:</strong> Contact our support team at kleber@ziontechgroup.com;
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-gray-300">
-                  <strong>Step 2:</strong> We will review your concern and respond within 48 hours
+                  <strong>Step 2:</strong> We will review your concern and respond within 48 hours;
                 </p>
               </div>
               <div className="flex items-start space-x-3">
                 <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                 <p className="text-gray-300">
-                  <strong>Step 3:</strong> If needed, we will work together to find a mutually acceptable solution
+                  <strong>Step 3:</strong> If needed, we will work together to find a mutually acceptable solution;
                 </p>
               </div>
             </div>
@@ -271,27 +275,28 @@ export default function TermsPage() {
         {/* Acknowledgment */}
         <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700 text-center">
           <p className="text-gray-300 mb-4">
-            By using our services, you acknowledge that you have read and understood these Terms of Service 
+            By using our services, you acknowledge that you have read and understood these Terms of Service;
             and agree to be bound by them.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"
             >
-              Contact Us
+              Contact Us;
               <Mail className="w-5 h-5 ml-2" />
             </Link>
-            <Link
+            <Link;
               to="/privacy"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center"
             >
-              Privacy Policy
+              Privacy Policy;
               <Shield className="w-5 h-5 ml-2" />
             </Link>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
+}
 }

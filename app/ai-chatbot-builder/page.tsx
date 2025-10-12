@@ -1,9 +1,13 @@
-import React from 'react';
 
 
+
+
+
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Brain } from 'lucide-react';
-
-export default function AIChatbotBuilderPage() {
+const AIChatbotBuilderPage: React.FC = () => {
   const features = [
     {
       icon: <MessageCircle className="w-8 h-8 text-blue-500" />,
@@ -83,7 +87,7 @@ export default function AIChatbotBuilderPage() {
         'Custom integrations',
         'Analytics dashboard'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -121,25 +125,25 @@ export default function AIChatbotBuilderPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Chatbot Builder
+              AI Chatbot Builder;
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Create intelligent, conversational chatbots that engage your customers and automate support. 
               No coding required - just drag, drop, and deploy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
               >
-                Build Your Bot
+                Build Your Bot;
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
+              <Link;
                 to="/demo"
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                Try Demo
+                Try Demo;
               </Link>
             </div>
           </div>
@@ -151,7 +155,7 @@ export default function AIChatbotBuilderPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Features
+              Powerful Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Everything you need to build and deploy intelligent chatbots.
@@ -175,7 +179,7 @@ export default function AIChatbotBuilderPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Use Cases
+              Use Cases;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover how our AI chatbots can transform your business operations.
@@ -222,7 +226,7 @@ export default function AIChatbotBuilderPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+              Simple, Transparent Pricing;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your business needs.
@@ -235,7 +239,7 @@ export default function AIChatbotBuilderPage() {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -252,15 +256,15 @@ export default function AIChatbotBuilderPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
+                <Link;
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
+                    plan.popular;
                       ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-600 hover:to-blue-700'
                       : 'border border-slate-600 text-white hover:bg-slate-700'
                   }`}
                 >
-                  Get Started
+                  Get Started;
                 </Link>
               </div>
             ))}
@@ -279,22 +283,23 @@ export default function AIChatbotBuilderPage() {
               Join thousands of businesses using our AI chatbot platform to enhance customer engagement and automate support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
-                Start Your Free Trial
+                Start Your Free Trial;
               </Link>
-              <Link
+              <Link;
                 to="/pricing"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                View All Plans
+                View All Plans;
               </Link>
             </div>
           </div>
         </div>
       </section>
     </div>
-  );
+  )
+}
 }

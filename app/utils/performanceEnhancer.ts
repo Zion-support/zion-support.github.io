@@ -1,2 +1,3 @@
-// Utility file: performanceEnhancer
+import React from 'react'
+// Utility file: performanceEnhancer;
 };

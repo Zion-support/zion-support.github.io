@@ -1,6 +1,8 @@
-'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+'use client';
+
+
 
 interface FuturisticButtonProps {
   children: React.ReactNode;
@@ -54,14 +56,14 @@ export default function FuturisticButton({
   };
 
   return (
-    <motion.button
+    <motion.button;
       type={type}
       onClick={onClick}
       disabled={disabled || loading}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={`
-        relative overflow-hidden rounded-lg font-semibold transition-all duration-300
+        relative overflow-hidden rounded-lg font-semibold transition-all duration-300;
         ${getVariantClasses()}
         ${getSizeClasses()}
         ${disabled || loading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
@@ -74,7 +76,7 @@ export default function FuturisticButton({
       transition={{ duration: 0.3 }}
     >
       {/* Animated background sweep */}
-      <motion.div
+      <motion.div;
         className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"
         initial={{ x: '-100%' }}
         animate={{ x: isHovered ? '100%' : '-100%' }}
@@ -82,7 +84,7 @@ export default function FuturisticButton({
       />
 
       {/* Pulsing glow effect */}
-      <motion.div
+      <motion.div;
         className="absolute inset-0 rounded-lg"
         style={{
           boxShadow: variant === 'primary' 
@@ -106,7 +108,7 @@ export default function FuturisticButton({
 
       {/* Scanning line effect */}
       {isHovered && (
-        <motion.div
+        <motion.div;
           className="absolute inset-0 rounded-lg"
           style={{
             background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)',
@@ -131,7 +133,7 @@ export default function FuturisticButton({
       <span className="relative z-10 flex items-center justify-center">
         {loading ? (
           <>
-            <motion.div
+            <motion.div;
               className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full mr-2"
               animate={{ rotate: 360 }}
               transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
@@ -139,7 +141,7 @@ export default function FuturisticButton({
             Loading...
           </>
         ) : (
-          children
+          children;
         )}
       </span>
     </motion.button>

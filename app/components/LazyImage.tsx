@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
 
+
+import React, { useState, useRef, useEffect } from 'react';
 interface LazyImageProps {
   src: string;
   alt: string;
@@ -15,7 +16,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   className = '',
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8vPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjOWNhM2FmIj5Mb2FkaW5nLi4uPC90ZXh0Pjwvc3ZnPg==',
   onLoad,
-  onError
+  onError;
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -53,14 +54,14 @@ const LazyImage: React.FC<LazyImageProps> = ({
   return (
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
       {!isLoaded && !hasError && (
-        <img
+        <img;
           src={placeholder}
           alt=""
           className="absolute inset-0 w-full h-full object-cover blur-sm"
         />
       )}
       {isInView && (
-        <img
+        <img;
           src={src}
           alt={alt}
           onLoad={handleLoad}
@@ -76,7 +77,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
         </div>
       )}
     </div>
-  );
+  )
+}
 };
 
 export default LazyImage;

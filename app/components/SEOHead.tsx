@@ -1,4 +1,6 @@
-import React from 'react';
+
+import React from 'react'
+import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -17,7 +19,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogImage = "https://ziontechgroup.com/og-image.jpg",
   ogType = "website",
   twitterCard = "summary_large_image",
-  structuredData
+  structuredData;
 }) => {
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -147,7 +149,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = 'summary_large_image',
   structuredData,
   noIndex = false,
-  noFollow = false
+  noFollow = false;
 }) => {
   const defaultStructuredData = {
     '@context': 'https://schema.org',
@@ -269,9 +271,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   );
 };
 export default SEOHead;
-export default SEOHead
 export default SEOHead;
-export default SEOHead
+export default SEOHead;
+export default SEOHead;
 export default SEOHead;
 export default SEOHead;
 export default SEOHead;

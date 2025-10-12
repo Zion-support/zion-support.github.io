@@ -1,8 +1,9 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 
 
-export default function PricingPage() {
+const PricingPage: React.FC = () => {
   const plans = [
     {
       name: 'Starter',
@@ -18,7 +19,7 @@ export default function PricingPage() {
         '5GB Cloud Storage',
         'Basic Security Features'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -36,7 +37,7 @@ export default function PricingPage() {
         'API Access',
         'Custom Integrations'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -56,7 +57,7 @@ export default function PricingPage() {
         'On-premise Deployment',
         'SLA Guarantee'
       ],
-      popular: false
+      popular: false;
     }
   ]
 
@@ -97,12 +98,12 @@ export default function PricingPage() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             Simple,{' '}
             <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Transparent
+              Transparent;
             </span>{' '}
-            Pricing
+            Pricing;
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-            Choose the perfect plan for your business. All plans include our core AI and IT services 
+            Choose the perfect plan for your business. All plans include our core AI and IT services;
             with no hidden fees or surprises.
           </p>
         </div>
@@ -110,10 +111,10 @@ export default function PricingPage() {
         {/* Pricing Plans */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {plans.map((plan, index) => (
-            <div
+            <div;
               key={index}
               className={`relative bg-slate-800/50 rounded-2xl p-8 border transition-all duration-300 hover:scale-105 ${
-                plan.popular
+                plan.popular;
                   ? 'border-cyan-500/50 ring-2 ring-cyan-500/20'
                   : 'border-slate-700 hover:border-cyan-500/30'
               }`}
@@ -121,7 +122,7 @@ export default function PricingPage() {
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                    Most Popular
+                    Most Popular;
                   </span>
                 </div>
               )}
@@ -147,9 +148,9 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <button
+              <button;
                 className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular
+                  plan.popular;
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                     : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
                 }`}
@@ -165,7 +166,7 @@ export default function PricingPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Additional Services</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Enhance your plan with these premium add-on services
+              Enhance your plan with these premium add-on services;
             </p>
           </div>
           
@@ -185,7 +186,7 @@ export default function PricingPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Common questions about our pricing and services
+              Common questions about our pricing and services;
             </p>
           </div>
           
@@ -223,10 +224,10 @@ export default function PricingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                Start Free Trial
+                Start Free Trial;
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                Contact Sales
+                Contact Sales;
               </button>
             </div>
           </div>
@@ -234,4 +235,5 @@ export default function PricingPage() {
       </div>
     </div>
   )
+}
 }

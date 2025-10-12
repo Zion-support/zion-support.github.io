@@ -1,7 +1,9 @@
-'use client';
-
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+'use client';
+
+
+
 
 interface Slide {
   id: number;
@@ -44,7 +46,7 @@ const defaultSlides: Slide[] = [
 export default function ContentCarousel({ 
   slides = defaultSlides, 
   autoPlay = true, 
-  interval = 5000 
+  interval = 5000;
 }: ContentCarouselProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
@@ -78,7 +80,7 @@ export default function ContentCarousel({
     <div className="relative w-full max-w-4xl mx-auto">
       {/* Main Carousel */}
       <div className="relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20">
-        <div 
+        <div;
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
@@ -108,14 +110,14 @@ export default function ContentCarousel({
         </div>
 
         {/* Navigation Arrows */}
-        <button
+        <button;
           onClick={prevSlide}
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
-        <button
+        <button;
           onClick={nextSlide}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
           aria-label="Next slide"
@@ -126,7 +128,7 @@ export default function ContentCarousel({
 
       {/* Controls */}
       <div className="flex items-center justify-center mt-6 space-x-4">
-        <button
+        <button;
           onClick={togglePlayPause}
           className="bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors"
           aria-label={isPlaying ? 'Pause' : 'Play'}
@@ -137,7 +139,7 @@ export default function ContentCarousel({
         {/* Slide Indicators */}
         <div className="flex space-x-2">
           {slides.map((_, index) => (
-            <button
+            <button;
               key={index}
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-colors ${
@@ -149,5 +151,6 @@ export default function ContentCarousel({
         </div>
       </div>
     </div>
-  );
+  )
+}
 }

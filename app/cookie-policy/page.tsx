@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../layout'
 const CookiePolicyPage: React.FC = () => {
   return (
-    <Layout
+    <Layout;
       title="Cookie Policy - Zion Tech Group"
       description="Learn about how Zion Tech Group uses cookies and similar technologies on our website."
       keywords="cookie policy, cookies, privacy, data collection, Zion Tech Group"
@@ -11,10 +11,10 @@ const CookiePolicyPage: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Cookie Policy
+              Cookie Policy;
             </h1>
             <p className="text-xl text-gray-300">
-              Last updated: January 2024
+              Last updated: January 2024;
             </p>
           </div>
           <div className="prose prose-invert max-w-none">
@@ -103,7 +103,7 @@ const CookiePolicyPage: React.FC = () => {
     { name: 'language', type: 'Preference', purpose: 'User language preference', duration: '1 year' }
   ]
   return (
-    <Layout
+    <Layout;
       title="Cookie Policy - Zion Tech Group"
       description="Learn about how Zion Tech Group uses cookies on our website. Understand the types of cookies we use and how to manage your preferences."
       keywords="cookie policy, cookies, privacy, data protection, website tracking, user preferences"
@@ -115,10 +115,10 @@ const CookiePolicyPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Cookie
+              Cookie;
               <br />
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Policy
+                Policy;
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -126,18 +126,18 @@ const CookiePolicyPage: React.FC = () => {
               We are committed to transparency and protecting your privacy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <Link;
                 to="/privacy-policy" 
                 className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
               >
-                Privacy Policy
+                Privacy Policy;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <Link 
+              <Link;
                 to="/contact" 
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                Contact Us
+                Contact Us;
               </Link>
             </div>
           </div>
@@ -159,11 +159,11 @@ const CookiePolicyPage: React.FC = () => {
                   <h3 className="text-2xl font-semibold text-white mb-4">How Cookies Work</h3>
                   <p className="text-gray-300 mb-4">
                     When you visit our website, we may place small data files called cookies on your device. 
-                    These cookies help us provide you with a better experience by remembering your preferences 
+                    These cookies help us provide you with a better experience by remembering your preferences;
                     and understanding how you use our website.
                   </p>
                   <p className="text-gray-300">
-                    Cookies can be either "session" cookies (which expire when you close your browser) or 
+                    Cookies can be either "session" cookies (which expire when you close your browser) or;
                     "persistent" cookies (which remain on your device for a set period of time).
                   </p>
                 </div>
@@ -197,7 +197,7 @@ const CookiePolicyPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Types of Cookies We Use
+                Types of Cookies We Use;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We use different types of cookies for various purposes to enhance your experience on our website.
@@ -236,7 +236,7 @@ const CookiePolicyPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Cookies We Use
+                Cookies We Use;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Below is a detailed list of the specific cookies we use on our website.
@@ -280,7 +280,7 @@ const CookiePolicyPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Managing Your Cookie Preferences
+                Managing Your Cookie Preferences;
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 You have control over the cookies we use. Learn how to manage your preferences.
@@ -294,7 +294,8 @@ const CookiePolicyPage: React.FC = () => {
                   You can set your browser to refuse cookies or delete certain cookies.
                 </p>
                 <div className="space-y-2">
-                    <p className="text-gray-300 text-sm">• Chrome: Settings &gt; Privacy and security &gt; Cookies</p>
+                    <p className="text-gray-300 text-sm">• Chrome: Settings &gt;
+ Privacy and security &gt; Cookies</p>
                     <p className="text-gray-300 text-sm">• Firefox: Options &gt; Privacy & Security &gt; Cookies</p>
                     <p className="text-gray-300 text-sm">• Safari: Preferences &gt; Privacy &gt; Cookies</p>
                     <p className="text-gray-300 text-sm">• Edge: Settings &gt; Cookies and site permissions</p>
@@ -303,7 +304,7 @@ const CookiePolicyPage: React.FC = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                 <h3 className="text-2xl font-semibold text-white mb-4">Cookie Consent</h3>
                 <p className="text-gray-300 mb-4">
-                  When you first visit our website, you'll see a cookie consent banner where you can 
+                  When you first visit our website, you'll see a cookie consent banner where you can;
                   choose which types of cookies you want to allow.
                 </p>
                 <div className="space-y-2">
@@ -328,17 +329,17 @@ const CookiePolicyPage: React.FC = () => {
                   If you have any questions about our use of cookies or this cookie policy, please don't hesitate to contact us.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
+                  <Link;
                     to="/contact" 
                     className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                   >
-                    Contact Us
+                    Contact Us;
                   </Link>
-                  <Link 
+                  <Link;
                     to="/privacy-policy" 
                     className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                   >
-                    Privacy Policy
+                    Privacy Policy;
                   </Link>
                 </div>
               </div>
@@ -349,4 +350,4 @@ const CookiePolicyPage: React.FC = () => {
     </Layout>
   )
 }
-export default CookiePolicyPage
+export default CookiePolicyPage;

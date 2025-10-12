@@ -1,9 +1,11 @@
+
+
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Layout from '../layout'
 
 import { ArrowRight } from 'lucide-react';
-
 const AIInvoiceGeneratorPage: React.FC = () => {
   const features = [
     {
@@ -40,7 +42,7 @@ const AIInvoiceGeneratorPage: React.FC = () => {
         "Email reminders",
         "PDF export"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -54,7 +56,7 @@ const AIInvoiceGeneratorPage: React.FC = () => {
         "API access",
         "Priority support"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -68,12 +70,12 @@ const AIInvoiceGeneratorPage: React.FC = () => {
         "White-label solution",
         "Dedicated support"
       ],
-      popular: false
+      popular: false;
     }
   ]
 
   return (
-    <Layout
+    <Layout;
       title="AI Invoice Generator - Zion Tech Group"
       description="Streamline your invoicing with AI-powered invoice generation, payment tracking, and automated billing. Get paid faster with professional invoices."
       keywords="AI invoice generator, invoice automation, billing software, payment tracking, invoice templates, business invoicing"
@@ -83,25 +85,25 @@ const AIInvoiceGeneratorPage: React.FC = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Invoice Generator
+              AI Invoice Generator;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Streamline your invoicing process with AI-powered invoice generation, automated payment tracking, 
               and professional templates. Get paid faster and reduce administrative overhead.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/demo"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                Watch Demo
+                Watch Demo;
               </Link>
             </div>
           </div>
@@ -177,7 +179,7 @@ const AIInvoiceGeneratorPage: React.FC = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -196,15 +198,15 @@ const AIInvoiceGeneratorPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link
+                  <Link;
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
+                      plan.popular;
                         ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
                         : 'border-2 border-white text-white hover:bg-white/10'
                     }`}
                   >
-                    Get Started
+                    Get Started;
                   </Link>
                 </div>
               ))}
@@ -240,18 +242,18 @@ const AIInvoiceGeneratorPage: React.FC = () => {
               Join thousands of businesses who have transformed their invoicing process with our AI-powered solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Your Free Trial
+                Start Your Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/pricing"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                View All Plans
+                View All Plans;
               </Link>
             </div>
           </div>
@@ -261,4 +263,4 @@ const AIInvoiceGeneratorPage: React.FC = () => {
   )
 }
 
-export default AIInvoiceGeneratorPage
+export default AIInvoiceGeneratorPage;

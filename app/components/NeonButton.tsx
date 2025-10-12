@@ -1,7 +1,9 @@
-'use client';
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+'use client';
+
+
+
 
 interface NeonButtonProps {
   children: React.ReactNode;
@@ -22,7 +24,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   size = 'md',
   className = '',
   icon,
-  disabled = false
+  disabled = false;
 }) => {
   const baseClasses = 'relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100';
   
@@ -52,7 +54,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
 
   if (href) {
     return (
-      <a
+      <a;
         href={href}
         className={buttonClasses}
         style={{
@@ -65,7 +67,7 @@ const NeonButton: React.FC<NeonButtonProps> = ({
   }
 
   return (
-    <button
+    <button;
       onClick={onClick}
       disabled={disabled}
       className={buttonClasses}

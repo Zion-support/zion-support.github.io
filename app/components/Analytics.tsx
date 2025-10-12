@@ -1,6 +1,7 @@
+import React, { useEffect } from 'react';
 'use client';
 
-import React, { useEffect } from 'react';
+
 
 interface AnalyticsProps {
   children: React.ReactNode;
@@ -8,9 +9,9 @@ interface AnalyticsProps {
 
 export default function Analytics({ children }: AnalyticsProps) {
   useEffect(() => {
-    // Initialize analytics tracking
+    // Initialize analytics tracking;
     const initAnalytics = () => {
-      // Google Analytics initialization
+      // Google Analytics initialization;
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
@@ -25,7 +26,7 @@ export default function Analytics({ children }: AnalyticsProps) {
   return <>{children}</>;
 }
 
-// Extend Window interface for gtag
+// Extend Window interface for gtag;
 declare global {
   interface Window {
     gtag: (...args: unknown[]) => void;

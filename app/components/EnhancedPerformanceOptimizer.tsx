@@ -1,6 +1,7 @@
-'use client'
 import React from 'react'
 import { Brain, BarChart, ArrowRight } from 'lucide-react';
+'use client'
+
 
 const EnhancedPerformanceOptimizer: React.FC = () => {
   const features = [
@@ -49,11 +50,11 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
-              Get Started
+              Get Started;
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
             <button className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-              Learn More
+              Learn More;
             </button>
           </div>
         </div>
@@ -63,7 +64,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-16">
-            Powerful Features
+            Powerful Features;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -86,7 +87,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+              Key Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our enhanced performance optimizer solutions for your business.
@@ -152,10 +153,10 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="cyber-button px-8 py-4 text-lg font-semibold">
-                Get Free Consultation
+                Get Free Consultation;
               </button>
               <button className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                View Pricing
+                View Pricing;
               </button>
             </div>
           </div>
@@ -164,5 +165,6 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     </div>
   )
 }
+}
 
-export default EnhancedPerformanceOptimizer
+export default EnhancedPerformanceOptimizer;

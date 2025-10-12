@@ -1,7 +1,9 @@
-'use client'
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 import { ArrowRight, Mail, Brain } from 'lucide-react';
+'use client'
+
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -50,7 +52,7 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                FuturisticServiceCard
+                FuturisticServiceCard;
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -61,11 +63,11 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-gray-300 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+                Learn More;
               </button>
             </div>
           </div>
@@ -77,11 +79,11 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Features
+              Our Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover the powerful features that make our futuristic service card solutions stand out.
             </p>
           </div>
-        </div>)};export default FuturisticServiceCardPage
+        </div>)};export default FuturisticServiceCardPage;
 }

@@ -1,11 +1,14 @@
+import React from 'react'
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Mail } from 'lucide-react';
 'use client';
 
-import React from 'react';
 
 
-import { ArrowRight, Mail } from 'lucide-react';
 
-export default function AISmartInvoicePage() {
+
+
+const AISmartInvoicePage: React.FC = () => {
   const features = [
     {
       icon: <Zap className="w-6 h-6 text-blue-500" />,
@@ -53,7 +56,7 @@ export default function AISmartInvoicePage() {
         'Basic analytics',
         'Email support'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -70,7 +73,7 @@ export default function AISmartInvoicePage() {
         'API access',
         'Custom branding'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -87,7 +90,7 @@ export default function AISmartInvoicePage() {
         'SLA guarantee',
         'On-premise deployment'
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -132,10 +135,10 @@ export default function AISmartInvoicePage() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <FileText className="w-4 h-4 mr-2" />
-                AI-Powered Invoice Management
+                AI-Powered Invoice Management;
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Smart Invoice
+                AI Smart Invoice;
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your invoicing process with intelligent automation. Generate professional invoices, 
@@ -143,15 +146,15 @@ export default function AISmartInvoicePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                  Start Free Trial
+                  Start Free Trial;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Watch Demo
+                  Watch Demo;
                 </button>
               </div>
               <p className="text-gray-400 text-sm mt-4">
-                ✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime
+                ✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime;
               </p>
             </div>
 
@@ -182,10 +185,10 @@ export default function AISmartInvoicePage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features for Modern Businesses
+                Powerful Features for Modern Businesses;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Everything you need to streamline your invoicing and boost your cash flow
+                Everything you need to streamline your invoicing and boost your cash flow;
               </p>
             </div>
 
@@ -206,7 +209,7 @@ export default function AISmartInvoicePage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Simple, Transparent Pricing
+                Simple, Transparent Pricing;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Choose the plan that fits your business needs. All plans include our core AI features.
@@ -221,7 +224,7 @@ export default function AISmartInvoicePage() {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                        Most Popular
+                        Most Popular;
                       </div>
                     </div>
                   )}
@@ -245,7 +248,7 @@ export default function AISmartInvoicePage() {
                   </ul>
 
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular 
+                    plan.popular;
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700' 
                       : 'border-2 border-white text-white hover:bg-white/10'
                   }`}>
@@ -262,10 +265,10 @@ export default function AISmartInvoicePage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Loved by Businesses Worldwide
+                Loved by Businesses Worldwide;
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                See what our customers say about AI Smart Invoice
+                See what our customers say about AI Smart Invoice;
               </p>
             </div>
 
@@ -305,14 +308,14 @@ export default function AISmartInvoicePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Start Free Trial
+                  Start Free Trial;
                 </button>
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
-                  Schedule Demo
+                  Schedule Demo;
                 </button>
               </div>
               <p className="text-white/80 text-sm mt-6">
-                ✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 support
+                ✓ 14-day free trial • ✓ No setup fees • ✓ 24/7 support;
               </p>
             </div>
           </div>

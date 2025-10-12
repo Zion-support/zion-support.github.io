@@ -1,2 +1,3 @@
-// Utility file: performanceOptimizations
+import React from 'react'
+// Utility file: performanceOptimizations;
 };

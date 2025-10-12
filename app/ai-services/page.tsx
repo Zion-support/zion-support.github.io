@@ -1,13 +1,18 @@
-'use client';
 import React, { useState } from 'react';
-
-
 import { Brain, MessageSquare, Mail, Camera, Palette, Mic, Database, ArrowRight, EyeOff, Database as DatabaseIcon, Code, Mail as MailIcon, Mail as MailIcon } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
+'use client';
 
-export default function AiServicesPage() {
+
+
+
+
+
+
+
+const AiServicesPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -214,7 +219,7 @@ export default function AiServicesPage() {
             {/* Header */}
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                AI Services
+                AI Services;
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Harness the power of artificial intelligence with our comprehensive suite of AI services designed to transform your business operations.
@@ -223,7 +228,7 @@ export default function AiServicesPage() {
               {/* Search Bar */}
               <div className="max-w-md mx-auto relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+                <input;
                   type="text"
                   placeholder="Search AI services..."
                   value={searchTerm}
@@ -236,11 +241,11 @@ export default function AiServicesPage() {
             {/* Category Tabs */}
             <div className="flex flex-wrap justify-center gap-2 mb-12">
               {categories.map((category) => (
-                <button
+                <button;
                   key={category.id}
                   onClick={() => setActiveTab(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                    activeTab === category.id
+                    activeTab === category.id;
                       ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
                       : 'bg-white/10 text-gray-300 hover:bg-white/20'
                   }`}
@@ -253,7 +258,7 @@ export default function AiServicesPage() {
             {/* Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               {filteredServices.map((service) => (
-                <FuturisticCard
+                <FuturisticCard;
                   key={service.id}
                   variant="service"
                   className="h-full"
@@ -308,15 +313,15 @@ export default function AiServicesPage() {
                   </div>
 
                   <div className="flex space-x-2">
-                    <FuturisticButton
+                    <FuturisticButton;
                       variant="primary"
                       size="sm"
                       className="flex-1"
                       onClick={() => window.open(service.link, '_blank')}
                     >
-                      Try Free
+                      Try Free;
                     </FuturisticButton>
-                    <FuturisticButton
+                    <FuturisticButton;
                       variant="ghost"
                       size="sm"
                       onClick={() => window.open(service.link, '_blank')}
@@ -337,20 +342,20 @@ export default function AiServicesPage() {
                 Join thousands of businesses already using our AI services to automate processes, generate content, and gain intelligent insights.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton
+                <FuturisticButton;
                   variant="primary"
                   size="lg"
                   onClick={() => window.open('/contact', '_blank')}
                 >
-                  Start Free Trial
+                  Start Free Trial;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </FuturisticButton>
-                <FuturisticButton
+                <FuturisticButton;
                   variant="secondary"
                   size="lg"
                   onClick={() => window.open('/contact', '_blank')}
                 >
-                  Schedule Demo
+                  Schedule Demo;
                 </FuturisticButton>
               </div>
             </FuturisticCard>

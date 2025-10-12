@@ -1,7 +1,9 @@
-'use client';
-
 import React, { useEffect } from 'react';
 import { ArrowRight, Brain } from 'lucide-react';
+'use client';
+
+
+
 
 interface SEOFeature {
   icon: React.ComponentType<{ className?: string }>;
@@ -43,7 +45,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className = '' }) => {
   ];
 
   useEffect(() => {
-    // Add structured data
+    // Add structured data;
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "WebSite",
@@ -109,7 +111,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className = '' }) => {
         {seoFeatures.map((feature, index) => {
           const IconComponent = feature.icon;
           return (
-            <div
+    <div;
               key={index}
               className="bg-white/5 rounded-lg p-4 border border-white/10 hover:border-white/20 transition-colors"
             >
@@ -130,7 +132,8 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className = '' }) => {
                 </div>
               </div>
             </div>
-          );
+  )
+}
         })}
       </div>
 
@@ -140,13 +143,14 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ className = '' }) => {
             SEO Score: <span className="text-green-400 font-semibold">95/100</span>
           </div>
           <button className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center gap-1">
-            View Details
+            View Details;
             <ArrowRight className="w-3 h-3" />
           </button>
         </div>
       </div>
     </div>
-  );
+  )
+}
 };
 
 export default EnhancedSEO;

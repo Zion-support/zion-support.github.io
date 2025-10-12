@@ -1,4 +1,3 @@
-'use client'
 import React, { useEffect, useState } from 'react'
 
 
@@ -26,9 +25,9 @@ import React, { useEffect, useState } from 'react'
       setRegistration(registration)
       setIsRegistered(true)
 
-      // Listen for updates
+      // Listen for updates;
       registration.addEventListener('updatefound', () => {
-        const newWorker = registration.installing
+        const newWorker = registration.installing;
         if (newWorker) {
           newWorker.addEventListener('statechange', () => {
             if (newWorker.state === 'installed') {
@@ -48,8 +47,7 @@ import React, { useEffect, useState } from 'react'
   }
 
   const updateServiceWorker = async () => {
-    if (!registration) return
-
+    if (!registration) return;
     setIsUpdating(true)
     try {
       await registration.update()
@@ -62,9 +60,8 @@ import React, { useEffect, useState } from 'react'
   }
 
   const skipWaiting = async () => {
-    if (!registration) return
-
-    const newWorker = registration.waiting
+    if (!registration) return;
+    const newWorker = registration.waiting;
     if (newWorker) {
       newWorker.postMessage({ type: 'SKIP_WAITING' })
       window.location.reload()
@@ -72,7 +69,7 @@ import React, { useEffect, useState } from 'react'
   }
 
   if (!isSupported) {
-    return null
+    return null;
   }
 
   return (
@@ -90,7 +87,7 @@ import React, { useEffect, useState } from 'react'
               </div>
             </div>
             <div className="flex items-center space-x-2">
-              <button
+              <button;
                 onClick={updateServiceWorker}
                 disabled={isUpdating}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
@@ -107,7 +104,7 @@ import React, { useEffect, useState } from 'react'
                   </>
                 )}
               </button>
-              <button
+              <button;
                 onClick={skipWaiting}
                 className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 flex items-center space-x-2"
               >
@@ -146,7 +143,7 @@ import React, { useEffect, useState } from 'react'
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+              Key Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our serviceworkerregistration solutions for your business.
@@ -174,15 +171,17 @@ import React, { useEffect, useState } from 'react'
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now
+                Call Now;
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us
+                Email Us;
               </button>
             </div>
           </div>
         </div>
       </section>
-    </div>)};export default ServiceWorkerRegistrationPage
+    </div>)};
+'use client'
+export default ServiceWorkerRegistrationPage;
 }

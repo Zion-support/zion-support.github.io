@@ -1,6 +1,8 @@
+
+
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug, Mail, ArrowLeft } from 'lucide-react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -23,7 +25,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     super(props);
     this.state = { 
       hasError: false, 
-      retryCount: 0 
+      retryCount: 0
     };
   }
 
@@ -36,7 +38,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Enhanced error logging
+    // Enhanced error logging;
     const errorDetails = {
       message: error.message,
       stack: error.stack,
@@ -52,10 +54,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       window.gtag('event', 'exception', {
         description: error.message,
         fatal: true,
-        custom_map: {
-          error_id: this.state.errorId,
-          retry_count: this.state.retryCount
-        }
+          custom_map: {
+            error_id: this.state.errorId,
+            retry_count: this.state.retryCount
+          }
       });
     }
 
@@ -71,10 +73,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
         hasError: false,
-        error: undefined,
-        errorInfo: undefined,
-        retryCount: prevState.retryCount + 1
-      }));
+          error: undefined,
+          errorInfo: undefined,
+          retryCount: prevState.retryCount + 1
+        }));
     } else {
       // Reset retry count and show error
       this.setState({ retryCount: 0 });
@@ -92,7 +94,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
           <div className="max-w-lg w-full bg-slate-800/50 backdrop-blur-lg rounded-xl p-8 border border-red-500/30 text-center">
             <div className="flex items-center justify-center w-16 h-16 bg-red-500/20 rounded-full mb-6 mx-auto">
               <AlertTriangle className="w-8 h-8 text-red-400" />
@@ -102,11 +104,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               {this.state.retryCount > 0 ? 'Retry Failed' : 'Something went wrong'}
             </h1>
             
-            <p className="text-gray-300 mb-6">
-              {this.state.retryCount > 0 
-                ? `We've tried ${this.state.retryCount} times but couldn't recover. Please try refreshing the page.`
-                : "We're sorry, but something unexpected happened. Please try refreshing the page."
-              }
+              <p className="text-gray-300 mb-6">
+                {this.state.retryCount > 0
+                  ? `We've tried ${this.state.retryCount} times but couldn't recover. Please try refreshing the page.`
+                  : "We're sorry, but something unexpected happened. Please try refreshing the page."
+                }
             </p>
             
             {this.state.errorId && (
@@ -171,7 +173,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <details className="mt-6 text-left">
                 <summary className="text-red-400 cursor-pointer font-medium flex items-center">
                   <Bug className="w-4 h-4 mr-2" />
-                  Error Details
+                  Error Details;
                 </summary>
                 <div className="mt-2 space-y-2">
                   <pre className="text-xs text-gray-400 bg-slate-900/50 p-3 rounded overflow-auto">

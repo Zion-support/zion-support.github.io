@@ -1,9 +1,11 @@
-ursor/analyze-improve-and-deploy-application-edcb
-ursor/analyze-improve-and-deploy-application-edcb
-'use client'
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 import { ArrowRight, Mail, Brain } from 'lucide-react';
+ursor/analyze-improve-and-deploy-application-edcb;
+ursor/analyze-improve-and-deploy-application-edcb;
+'use client'
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -17,7 +19,7 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                OptimizedImage
+                OptimizedImage;
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -28,11 +30,11 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+                Learn More;
   </
             </div>
           </div>
@@ -67,7 +69,7 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+              Key Benefits;
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our optimizedimage solutions for your business.
@@ -96,11 +98,11 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now
+                Call Now;
   </
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us
+                Email Us;
   </
             </div>
           </div>
@@ -108,7 +110,7 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
       </section>
     </div>
   )}
-export default OptimizedImagePage
+export default OptimizedImagePage;
   </button>
   </button>
   </h2>
@@ -116,17 +118,17 @@ export default OptimizedImagePage
   </span>
 
 interface OptimizedImageProps {
-  src: string
-  alt: string
-  className?: string
-  width?: number
-  height?: number
-  quality?: number
-  priority?: boolean
+  src: string;
+  alt: string;
+  className?: string;
+  width?: number;
+  height?: number;
+  quality?: number;
+  priority?: boolean;
   placeholder?: 'blur' | 'empty'
-  blurDataURL?: string
-  onLoad?: () => void
-  onError?: () => void
+  blurDataURL?: string;
+  onLoad?: () => void;
+  onError?: () => void;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -139,7 +141,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   placeholder = 'empty',
   blurDataURL,
   onLoad,
-  onError
+  onError;
 }) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(priority)
@@ -147,8 +149,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const imgRef = useRef<HTMLImageElement>(null)
 
   useEffect(() => {
-    if (priority) return
-
+    if (priority) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -179,7 +180,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const imageStyle = {
     width: width ? `${width}px` : '100%',
     height: height ? `${height}px` : 'auto',
-    objectFit: 'cover' as const
+    objectFit: 'cover' as const;
   }
 
   return (
@@ -187,7 +188,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       {!isLoaded && !hasError && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
           {placeholder === 'blur' && blurDataURL ? (
-            <img
+            <img;
               src={blurDataURL}
               alt=""
               className="w-full h-full object-cover filter blur-sm"
@@ -225,7 +226,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+              Key Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our optimizedimage solutions for your business.
@@ -253,16 +254,16 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now
+                Call Now;
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us
+                Email Us;
               </button>
             </div>
           </div>
         </div>
       </section>
-    </div>)};export default OptimizedImagePage
+    </div>)};export default OptimizedImagePage;
 }
 'use client'

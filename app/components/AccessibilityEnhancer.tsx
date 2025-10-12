@@ -1,10 +1,12 @@
+import React from 'react'
+import { useEffect } from 'react';
 'use client';
 
-import { useEffect } from 'react';
 
-export default function AccessibilityEnhancer() {
+
+const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
-    // Add skip to main content link
+    // Add skip to main content link;
     const addSkipLink = () => {
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
@@ -13,9 +15,9 @@ export default function AccessibilityEnhancer() {
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-    // Enhance focus management
+    // Enhance focus management;
     const enhanceFocusManagement = () => {
-      // Add focus indicators for keyboard navigation
+      // Add focus indicators for keyboard navigation;
       const style = document.createElement('style');
       style.textContent = `
         .focus-visible {
@@ -49,7 +51,7 @@ export default function AccessibilityEnhancer() {
       document.head.appendChild(style);
     };
 
-    // Add ARIA landmarks
+    // Add ARIA landmarks;
     const addAriaLandmarks = () => {
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
@@ -67,7 +69,7 @@ export default function AccessibilityEnhancer() {
       }
     };
 
-    // Enhance form accessibility
+    // Enhance form accessibility;
     const enhanceFormAccessibility = () => {
       const forms = document.querySelectorAll('form');
       forms.forEach(form => {
@@ -83,7 +85,7 @@ export default function AccessibilityEnhancer() {
       });
     };
 
-    // Add high contrast mode support
+    // Add high contrast mode support;
     const addHighContrastSupport = () => {
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
       const handleContrastChange = (e: MediaQueryListEvent) => {
@@ -98,16 +100,16 @@ export default function AccessibilityEnhancer() {
       handleContrastChange(mediaQuery);
     };
 
-    // Initialize accessibility enhancements
+    // Initialize accessibility enhancements;
     addSkipLink();
     enhanceFocusManagement();
     addAriaLandmarks();
     enhanceFormAccessibility();
     addHighContrastSupport();
 
-    // Add keyboard navigation support
+    // Add keyboard navigation support;
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Escape key to close modals/dropdowns
+      // Escape key to close modals/dropdowns;
       if (e.key === 'Escape') {
         const activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.getAttribute('aria-expanded') === 'true') {

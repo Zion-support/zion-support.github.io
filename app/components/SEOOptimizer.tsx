@@ -1,7 +1,10 @@
-'use client';
 import { useEffect } from 'react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+'use client';
+
+
+
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
@@ -16,14 +19,14 @@ export default function SEOOptimizer({
   keywords,
   canonicalUrl,
   ogImage,
-  structuredData
+  structuredData;
 }: SEOOptimizerProps) {
   useEffect(() => {
-    // Update document title
+    // Update document title;
     if (title) {
       document.title = title;
     }
-    // Update meta description
+    // Update meta description;
     if (description) {
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
@@ -35,7 +38,7 @@ export default function SEOOptimizer({
         document.head.appendChild(meta);
       }
     }
-    // Update meta keywords
+    // Update meta keywords;
     if (keywords) {
       const metaKeywords = document.querySelector('meta[name="keywords"]');
       if (metaKeywords) {
@@ -47,7 +50,7 @@ export default function SEOOptimizer({
         document.head.appendChild(meta);
       }
     }
-    // Update canonical URL
+    // Update canonical URL;
     if (canonicalUrl) {
       const canonical = document.querySelector('link[rel="canonical"]');
       if (canonical) {
@@ -59,7 +62,7 @@ export default function SEOOptimizer({
         document.head.appendChild(link);
       }
     }
-    // Update Open Graph image
+    // Update Open Graph image;
     if (ogImage) {
       const ogImageMeta = document.querySelector('meta[property="og:image"]');
       if (ogImageMeta) {
@@ -71,16 +74,16 @@ export default function SEOOptimizer({
         document.head.appendChild(meta);
       }
     }
-    // Add structured data
+    // Add structured data;
     if (structuredData) {
       const script = document.createElement('script');
       script.type = 'application/ld+json';
       script.textContent = JSON.stringify(structuredData);
       document.head.appendChild(script);
     }
-    // Add performance hints
+    // Add performance hints;
     const addPerformanceHints = () => {
-      // Preconnect to external domains
+      // Preconnect to external domains;
       const preconnectDomains = [
         'https://fonts.googleapis.com',
         'https://fonts.gstatic.com',
@@ -104,7 +107,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = 'AI solutions, IT services, digital transformation, cloud computing, 5G implementation, micro SAAS',
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
+  structuredData;
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const defaultStructuredData = {

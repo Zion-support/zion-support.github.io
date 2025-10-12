@@ -1,7 +1,9 @@
-'use client';
-
 import React from 'react';
 import { ArrowRight, Brain } from 'lucide-react';
+'use client';
+
+
+
 
 const Loading: React.FC = () => {
   return (
@@ -11,7 +13,8 @@ const Loading: React.FC = () => {
         <p className="text-white text-lg">Loading...</p>
       </div>
     </div>
-  );
+  )
+}
 };
 
 export default Loading;

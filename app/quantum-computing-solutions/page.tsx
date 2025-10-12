@@ -1,9 +1,11 @@
+
+
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Layout from '../layout'
 
 import { ArrowRight, Atom, Database } from 'lucide-react';
-
 const QuantumComputingSolutionsPage: React.FC = () => {
   const features = [
     {
@@ -40,7 +42,7 @@ const QuantumComputingSolutionsPage: React.FC = () => {
         "Documentation",
         "Email support"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Enterprise",
@@ -54,7 +56,7 @@ const QuantumComputingSolutionsPage: React.FC = () => {
         "API access",
         "Training included"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Custom",
@@ -68,12 +70,12 @@ const QuantumComputingSolutionsPage: React.FC = () => {
         "24/7 support",
         "Custom integrations"
       ],
-      popular: false
+      popular: false;
     }
   ]
 
   return (
-    <Layout
+    <Layout;
       title="Quantum Computing Solutions - Zion Tech Group"
       description="Revolutionary quantum computing solutions for complex problem solving, optimization, and advanced security. Harness the power of quantum technology."
       keywords="quantum computing, quantum algorithms, quantum security, quantum cryptography, quantum optimization, quantum technology"
@@ -83,25 +85,25 @@ const QuantumComputingSolutionsPage: React.FC = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Quantum Computing Solutions
+              Quantum Computing Solutions;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Unlock the power of quantum computing for complex problem solving, optimization, 
               and advanced security. Experience the next generation of computational technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
               >
-                Schedule Consultation
+                Schedule Consultation;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/demo"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                Request Demo
+                Request Demo;
               </Link>
             </div>
           </div>
@@ -149,19 +151,19 @@ const QuantumComputingSolutionsPage: React.FC = () => {
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Portfolio optimization
+                    Portfolio optimization;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Risk analysis
+                    Risk analysis;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Fraud detection
+                    Fraud detection;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Algorithmic trading
+                    Algorithmic trading;
                   </li>
                 </ul>
               </div>
@@ -170,19 +172,19 @@ const QuantumComputingSolutionsPage: React.FC = () => {
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Molecular simulation
+                    Molecular simulation;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Protein folding
+                    Protein folding;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Drug optimization
+                    Drug optimization;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Chemical analysis
+                    Chemical analysis;
                   </li>
                 </ul>
               </div>
@@ -191,19 +193,19 @@ const QuantumComputingSolutionsPage: React.FC = () => {
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Route optimization
+                    Route optimization;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Inventory management
+                    Inventory management;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Supply chain optimization
+                    Supply chain optimization;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Demand forecasting
+                    Demand forecasting;
                   </li>
                 </ul>
               </div>
@@ -219,7 +221,7 @@ const QuantumComputingSolutionsPage: React.FC = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -238,15 +240,15 @@ const QuantumComputingSolutionsPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link
+                  <Link;
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
+                      plan.popular;
                         ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
                         : 'border-2 border-white text-white hover:bg-white/10'
                     }`}
                   >
-                    Get Started
+                    Get Started;
                   </Link>
                 </div>
               ))}
@@ -282,18 +284,18 @@ const QuantumComputingSolutionsPage: React.FC = () => {
               Join the quantum revolution and unlock unprecedented computational capabilities for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
               >
-                Schedule Consultation
+                Schedule Consultation;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/pricing"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                View All Plans
+                View All Plans;
               </Link>
             </div>
           </div>
@@ -303,4 +305,4 @@ const QuantumComputingSolutionsPage: React.FC = () => {
   )
 }
 
-export default QuantumComputingSolutionsPage
+export default QuantumComputingSolutionsPage;

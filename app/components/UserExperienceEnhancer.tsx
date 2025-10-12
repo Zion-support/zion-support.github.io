@@ -1,10 +1,9 @@
-'use client'
 import React, { useEffect, useState } from 'react'
 
 
 interface UserExperienceEnhancerProps {
-  children: React.ReactNode
-  className?: string
+  children: React.ReactNode;
+  className?: string;
 }
 
 const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ 
@@ -13,27 +12,28 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
 }) => {
 
 
-    rating: number
-    comment: string
-    submitted: boolean
+    rating: number;
+    comment: string;
+    submitted: boolean;
   }>({
     rating: 0,
     comment: '',
-    submitted: false
+    submitted: false;
   })
 
   useEffect(() => {
-    // UX enhancement logic
+    // UX enhancement logic;
     const enhanceUX = () => {
-      // Add smooth scrolling
+      // Add smooth scrolling;
       document.documentElement.style.scrollBehavior = 'smooth'
       
-      // Add loading states for interactive elements
-
+      // Add loading states for interactive elements;
 interface UserExperienceEnhancerProps {children: React.ReactNode}
 }
 
-      document.documentElement.style.scrollBehavior = 'smooth';// Add loading states for interactive elements
+      document.documentElement.style.scrollBehavior = 'smooth';
+'use client'
+// Add loading states for interactive elements;
       const interactiveElements = document.querySelectorAll('button, a, input')
       interactiveElements.forEach((element, index) => {
         element.addEventListener('click', () => {
@@ -44,7 +44,7 @@ interface UserExperienceEnhancerProps {children: React.ReactNode}
         })
       })
 
-      // Add focus indicators
+      // Add focus indicators;
       const style = document.createElement('style')
       style.textContent = `
         *:focus {
@@ -57,5 +57,5 @@ interface UserExperienceEnhancerProps {children: React.ReactNode}
       `
       document.head.appendChild(style)
 
-    enhanceUX()}, []);return <>{children}</>};export default UserExperienceEnhancer
+    enhanceUX()}, []);return <>{children}</>};export default UserExperienceEnhancer;
 }

@@ -1,7 +1,9 @@
-'use client';
-
 import React, { useState } from 'react';
 import { Mail, MessageSquare, Send } from 'lucide-react';
+'use client';
+
+
+
 
 interface FormData {
   name: string;
@@ -12,7 +14,7 @@ interface FormData {
   service: string;
 }
 
-export default function ContactForm() {
+const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -28,7 +30,7 @@ export default function ContactForm() {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value;
     }));
   };
 
@@ -36,13 +38,13 @@ export default function ContactForm() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     setIsSubmitting(false);
     setIsSubmitted(true);
     
-    // Reset form after 3 seconds
+    // Reset form after 3 seconds;
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
@@ -58,12 +60,13 @@ export default function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
+    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
         <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
         <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
         <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
       </div>
-    );
+  )
+}
   }
 
   return (
@@ -79,13 +82,13 @@ export default function ContactForm() {
             <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
               Full Name *
             </label>
-            <input
+            <input;
               type="text"
               id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              required
+              required;
               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               placeholder="Your full name"
             />
@@ -95,13 +98,13 @@ export default function ContactForm() {
             <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
               Email Address *
             </label>
-            <input
+            <input;
               type="email"
               id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              required
+              required;
               className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               placeholder="your@email.com"
             />
@@ -111,9 +114,9 @@ export default function ContactForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-              Phone Number
+              Phone Number;
             </label>
-            <input
+            <input;
               type="tel"
               id="phone"
               name="phone"
@@ -126,9 +129,9 @@ export default function ContactForm() {
 
           <div>
             <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-              Company
+              Company;
             </label>
-            <input
+            <input;
               type="text"
               id="company"
               name="company"
@@ -142,9 +145,9 @@ export default function ContactForm() {
 
         <div>
           <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-            Service Interest
+            Service Interest;
           </label>
-          <select
+          <select;
             id="service"
             name="service"
             value={formData.service}
@@ -164,19 +167,19 @@ export default function ContactForm() {
           <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
             Message *
           </label>
-          <textarea
+          <textarea;
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
-            required
+            required;
             rows={5}
             className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none"
             placeholder="Tell us about your project..."
           />
         </div>
 
-        <button
+        <button;
           type="submit"
           disabled={isSubmitting}
           className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
@@ -189,7 +192,7 @@ export default function ContactForm() {
           ) : (
             <>
               <Send className="w-5 h-5 mr-2" />
-              Send Message
+              Send Message;
             </>
           )}
         </button>
@@ -212,5 +215,6 @@ export default function ContactForm() {
         </div>
       </div>
     </div>
-  );
+  )
+}
 }

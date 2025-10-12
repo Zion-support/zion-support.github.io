@@ -1,5 +1,6 @@
-'use client';
 import React, { useEffect, useRef } from 'react';
+'use client';
+
 interface FuturisticBackgroundProps {
   children: React.ReactNode;
   variant?: 'default' | 'hero' | 'services' | 'contact';
@@ -19,7 +20,7 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
     };
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-    // Particle system
+    // Particle system;
     const particles: Array<{
       x: number;
       y: number;
@@ -32,7 +33,7 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
     const colors = [
       '#00ffff', '#ff00ff', '#00ff00', '#ffff00', '#ff0080', '#8000ff'
     ];
-    // Create particles
+    // Create particles;
     for (let i = 0; i < 100; i++) {
       particles.push({
         x: Math.random() * canvas.width,
@@ -41,7 +42,7 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
         vy: (Math.random() - 0.5) * 1.5,
         size: Math.random() * 3 + 1,
         opacity: Math.random() * 0.8 + 0.2,
-    // Create particles - reduced count for better performance
+    // Create particles - reduced count for better performance;
     for (let i = 0; i < 25; i++) {
       particles.push({
         x: Math.random() * canvas.width,
@@ -59,21 +60,21 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
         return;
       }
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      // Update and draw particles
+      // Update and draw particles;
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
-        // Wrap around screen
+        // Wrap around screen;
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height;
         if (particle.y > canvas.height) particle.y = 0;
-        // Draw particle
+        // Draw particle;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
         ctx.fill();
-        // Draw connections
+        // Draw connections;
         particles.forEach((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
             const dx = particle.x - otherParticle.x;
@@ -96,7 +97,7 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
           }
         });
       });
-      // Add grid overlay for hero variant
+      // Add grid overlay for hero variant;
       if (variant === 'hero') {
         ctx.strokeStyle = '#00ffff20';
         ctx.lineWidth = 0.5;
@@ -116,7 +117,7 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
       }
       animationRef.current = requestAnimationFrame(animate);
     };
-    // Intersection Observer for performance
+    // Intersection Observer for performance;
     const observer = new IntersectionObserver(
       (entries) => {
         isVisible = entries[0].isIntersecting;
@@ -147,7 +148,7 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
   };
   return (
     <div className={`relative min-h-screen ${getBackgroundClass()}`}>
-      <canvas
+      <canvas;
         ref={canvasRef}
         className="absolute inset-0 w-full h-full opacity-30"
         style={{ zIndex: 0 }}
@@ -156,5 +157,6 @@ export default function FuturisticBackground({ children, variant = 'default' }: 
         {children}
       </div>
     </div>
-  );
+  )
+}
 }

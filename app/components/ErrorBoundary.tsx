@@ -1,17 +1,18 @@
+
+
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { Home, Bug, Mail } from 'lucide-react';
-
 interface Props {
-  children: ReactNode
-  fallback?: ReactNode
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
-  hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
-  errorId?: string
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -29,14 +30,13 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error to monitoring service instead of console
-    
-    // Call custom error handler if provided
+    // Log error to monitoring service instead of console;
+    // Call custom error handler if provided;
     if (this.props.onError) {
       this.props.onError(error, errorInfo)
     }
 
-    // Store error info for debugging
+    // Store error info for debugging;
     this.setState({ errorInfo })
 
     // Send error to monitoring service (if available)
@@ -45,7 +45,7 @@ class ErrorBoundary extends Component<Props, State> {
         description: error.message,
         fatal: false,
         custom_map: {
-          error_id: this.state.errorId
+          error_id: this.state.errorId;
         }
       })
     }
@@ -54,13 +54,13 @@ class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
           <div className="max-w-md w-full bg-slate-800/50 rounded-xl p-8 border border-red-500/30 text-center">
             <div className="flex items-center justify-center w-16 h-16 bg-red-500/20 rounded-full mb-6 mx-auto">
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
             <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
+              Oops! Something went wrong;
             </h1>
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
@@ -73,29 +73,29 @@ class ErrorBoundary extends Component<Props, State> {
             )}
             
             <div className="space-y-3">
-              <button
+              <button;
                 onClick={() => window.location.reload()}
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
                 aria-label="Refresh the page to try again"
               >
                 <RefreshCw className="w-5 h-5 mr-2" />
-                Refresh Page
+                Refresh Page;
               </button>
-              <button
+              <button;
                 onClick={() => window.location.href = '/'}
                 className="w-full border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-white/50"
                 aria-label="Go back to the homepage"
               >
                 <Home className="w-5 h-5 mr-2" />
-                Go Home
+                Go Home;
               </button>
-              <a
+              <a;
                 href="mailto:kleber@ziontechgroup.com?subject=Error Report&body=Error ID: ${this.state.errorId}"
                 className="w-full border-2 border-gray-500 text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-700/50 transition-colors flex items-center justify-center focus:outline-none focus:ring-4 focus:ring-gray-500/50"
                 aria-label="Report this error via email"
               >
                 <Mail className="w-5 h-5 mr-2" />
-                Report Error
+                Report Error;
               </a>
             </div>
             
@@ -119,11 +119,12 @@ class ErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      )
+  )
+}
     }
 
-    return this.props.children
+    return this.props.children;
   }
 }
 
-export default ErrorBoundary
+export default ErrorBoundary;

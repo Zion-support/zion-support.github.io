@@ -1,6 +1,7 @@
+import React from 'react';
 'use client';
 
-import React from 'react';
+
 
 interface LoadingSkeletonProps {
   className?: string;
@@ -9,12 +10,12 @@ interface LoadingSkeletonProps {
 
 const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
   className = '', 
-  lines = 3 
+  lines = 3;
 }) => {
   return (
     <div className={`animate-pulse ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (
-        <div
+        <div;
           key={index}
           className={`h-4 bg-gray-700 rounded mb-2 ${
             index === lines - 1 ? 'w-3/4' : 'w-full'
@@ -22,7 +23,8 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
         />
       ))}
     </div>
-  );
+  )
+}
 };
 
 export default LoadingSkeleton;

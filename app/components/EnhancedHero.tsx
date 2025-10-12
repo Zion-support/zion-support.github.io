@@ -1,6 +1,7 @@
-'use client'
 import React from 'react'
 import { ArrowRight, Mail, Brain } from 'lucide-react';
+'use client'
+
 
 const EnhancedHero: React.FC = () => {
   const benefits = [
@@ -47,12 +48,12 @@ const EnhancedHero: React.FC = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Transform Your Business with{' '}
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                AI & IT Solutions
+                AI & IT Solutions;
               </span>
             </h1>
             
             <p className="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed">
-              Harness the power of cutting-edge artificial intelligence and information technology 
+              Harness the power of cutting-edge artificial intelligence and information technology;
               to drive innovation, efficiency, and growth in your organization.
             </p>
 
@@ -72,11 +73,11 @@ const EnhancedHero: React.FC = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <button className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                Learn More
+                Learn More;
               </button>
             </div>
 
@@ -128,5 +129,6 @@ const EnhancedHero: React.FC = () => {
     </div>
   )
 }
+}
 
-export default EnhancedHero
+export default EnhancedHero;

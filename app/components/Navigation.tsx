@@ -1,4 +1,3 @@
-'use client';
 import React, { useState, useEffect } from 'react'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -6,7 +5,7 @@ import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartp
 import { Menu, X, ChevronDown, Database, Code, Brain } from 'lucide-react';
 import SearchModal from './SearchModal'
 import ThemeToggle from './ThemeToggle'
-export default function Navigation() {
+const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
@@ -15,15 +14,15 @@ export default function Navigation() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
     }
-    // Throttle scroll events for better performance
-    let ticking = false
+    // Throttle scroll events for better performance;
+    let ticking = false;
     const throttledHandleScroll = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
           handleScroll()
-          ticking = false
+          ticking = false;
         })
-        ticking = true
+        ticking = true;
       }
     }
     window.addEventListener('scroll', throttledHandleScroll, { passive: true })
@@ -126,6 +125,9 @@ export default function Navigation() {
       ]
     }
   ];
+'use client';
+
+
   const simpleLinks = [
     { name: 'About', path: '/about' },
     { name: 'Team', path: '/team' },
@@ -193,7 +195,7 @@ export default function Navigation() {
     { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
   ];
   return (
-    <nav 
+    <nav;
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20' : 'bg-transparent'
       }`}
@@ -203,7 +205,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link 
+          <Link;
             to="/" 
             className="flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 rounded-lg"
             aria-label="Zion Tech Group - Go to homepage"
@@ -223,7 +225,7 @@ export default function Navigation() {
                   <Zap className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:via-purple-300 group-hover:to-pink-300 transition-all duration-300">
-                  Zion Tech Group
+                  Zion Tech Group;
                 </span>
               </div>
             </Link>
@@ -233,7 +235,7 @@ export default function Navigation() {
             <div className="ml-10 flex items-center space-x-1">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
-                  <button
+                  <button;
                     className="flex items-center text-gray-300 hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/10"
                     onMouseEnter={() => setActiveDropdown(item.name)}
                     onMouseLeave={() => setActiveDropdown(null)}
@@ -253,12 +255,12 @@ export default function Navigation() {
                             {item.name}
                           </h3>
                           <div className="text-sm text-gray-400">
-                            {item.dropdown.length} services
+                            {item.dropdown.length} services;
                           </div>
                         </div>
                         <div className="grid grid-cols-1 gap-3 max-h-80 overflow-y-auto">
                           {item.dropdown.map((dropdownItem, index) => (
-                            <Link
+                            <Link;
                               key={index}
                               to={dropdownItem.path}
                               className="group block p-4 bg-white/5 hover:bg-white/10 rounded-xl transition-all duration-300 border border-white/10 hover:border-white/20"
@@ -282,7 +284,7 @@ export default function Navigation() {
                           ))}
                         </div>
                         <div className="mt-6 pt-4 border-t border-white/10">
-                          <Link
+                          <Link;
                             to={item.path}
                             className={`block w-full text-center bg-gradient-to-r ${item.color} text-white py-3 rounded-xl font-bold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
                           >
@@ -295,7 +297,7 @@ export default function Navigation() {
                 </div>
               ))}
               {simpleLinks.map((link) => (
-                <Link
+                <Link;
                   key={link.name}
                   to={link.path}
                   className="group flex items-center space-x-2 text-gray-300 hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:bg-white/10"
@@ -310,40 +312,40 @@ export default function Navigation() {
             {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
+              Home;
             </Link>
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              About
+              About;
             </Link>
             <Link to="/micro-saas" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Micro SAAS
+              Micro SAAS;
             </Link>
             <Link to="/ai-services" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              AI Services
+              AI Services;
             </Link>
             <Link to="/it-services" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              IT Services
+              IT Services;
             </Link>
             {/* AI Services Dropdown */}
             <div className="relative">
-              <button
+              <button;
                 onClick={() => toggleDropdown('ai')}
                 className="flex items-center text-white hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50 rounded-lg px-2 py-1"
                 aria-expanded={activeDropdown === 'ai'}
                 aria-haspopup="true"
                 aria-label="AI Services menu"
               >
-                AI Services
+                AI Services;
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {activeDropdown === 'ai' && (
-                <div 
+                <div;
                   className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2"
                   role="menu"
                   aria-label="AI Services submenu"
                 >
                   {aiServices.map((service, index) => (
-                    <Link
+                    <Link;
                       key={index}
                       to={service.path}
                       onClick={closeDropdown}
@@ -358,17 +360,17 @@ export default function Navigation() {
             </div>
             {/* IT Services Dropdown */}
             <div className="relative">
-              <button
+              <button;
                 onClick={() => toggleDropdown('it')}
                 className="flex items-center text-white hover:text-cyan-400 transition-colors"
               >
-                IT Services
+                IT Services;
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {activeDropdown === 'it' && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
                   {itServices.map((service, index) => (
-                    <Link
+                    <Link;
                       key={index}
                       to={service.path}
                       onClick={closeDropdown}
@@ -383,17 +385,17 @@ export default function Navigation() {
             </div>
             {/* Micro SAAS Dropdown */}
             <div className="relative">
-              <button
+              <button;
                 onClick={() => toggleDropdown('saas')}
                 className="flex items-center text-white hover:text-cyan-400 transition-colors"
               >
-                Micro SAAS
+                Micro SAAS;
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {activeDropdown === 'saas' && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
                   {microSaasServices.map((service, index) => (
-                    <Link
+                    <Link;
                       key={index}
                       to={service.path}
                       onClick={closeDropdown}
@@ -408,17 +410,17 @@ export default function Navigation() {
             </div>
             {/* 5G Services Dropdown */}
             <div className="relative">
-              <button
+              <button;
                 onClick={() => toggleDropdown('5g')}
                 className="flex items-center text-white hover:text-cyan-400 transition-colors"
               >
-                5G Solutions
+                5G Solutions;
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {activeDropdown === '5g' && (
                 <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
                   {fiveGServices.map((service, index) => (
-                    <Link
+                    <Link;
                       key={index}
                       to={service.path}
                       onClick={closeDropdown}
@@ -432,10 +434,10 @@ export default function Navigation() {
               )}
             </div>
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Contact
+              Contact;
             </Link>
             {/* Search Button */}
-            <button
+            <button;
               onClick={() => setIsSearchOpen(true)}
               className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-slate-700/50"
               aria-label="Search services"
@@ -448,16 +450,16 @@ export default function Navigation() {
           {/* Tablet Navigation */}
           <div className="hidden md:flex lg:hidden items-center space-x-6">
             <Link to="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Home
+              Home;
             </Link>
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              About
+              About;
             </Link>
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
-              Contact
+              Contact;
           {/* CTA Button */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link
+            <Link;
               to="/contact"
               className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-xl font-bold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center space-x-2 shadow-lg hover:shadow-cyan-500/25 transform hover:scale-105"
             >
@@ -467,7 +469,7 @@ export default function Navigation() {
           </div>
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button
+            <button;
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-white p-2 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 rounded-lg"
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
@@ -483,23 +485,23 @@ export default function Navigation() {
           <div className="md:hidden" id="mobile-menu">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-md rounded-lg mt-2 border border-cyan-500/20" role="menu" aria-label="Mobile navigation menu">
               <Link to="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
-                Home
+                Home;
               </Link>
               <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
-                About
+                About;
               </Link>
               <Link to="/micro-saas" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
-                Micro SAAS
+                Micro SAAS;
               </Link>
               <Link to="/ai-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
-                AI Services
+                AI Services;
               </Link>
               <Link to="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
-                IT Services
+                IT Services;
               </Link>
               {/* AI Services Mobile */}
               <div>
-                <button
+                <button;
                   onClick={() => toggleDropdown('ai-mobile')}
                   className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
                 >
@@ -521,7 +523,7 @@ export default function Navigation() {
                 {activeDropdown === 'ai-mobile' && (
                   <div className="pl-6 space-y-1">
                     {aiServices.map((service) => (
-                      <Link
+                      <Link;
                         key={service.name}
                         to={service.path}
                         className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm transition-colors"
@@ -538,7 +540,7 @@ export default function Navigation() {
               </div>
               {/* IT Services Mobile */}
               <div>
-                <button
+                <button;
                   onClick={() => toggleDropdown('it-mobile')}
                   className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
                 >
@@ -551,7 +553,7 @@ export default function Navigation() {
                 {activeDropdown === 'it-mobile' && (
                   <div className="pl-6 space-y-1">
                     {itServices.map((service) => (
-                      <Link
+                      <Link;
                         key={service.name}
                         to={service.path}
                         className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm transition-colors"
@@ -568,7 +570,7 @@ export default function Navigation() {
               </div>
               {/* Micro SAAS Mobile */}
               <div>
-                <button
+                <button;
                   onClick={() => toggleDropdown('saas-mobile')}
                   className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
                 >
@@ -581,7 +583,7 @@ export default function Navigation() {
                 {activeDropdown === 'saas-mobile' && (
                   <div className="pl-6 space-y-1">
                     {microSaasServices.map((service) => (
-                      <Link
+                      <Link;
                         key={service.name}
                         to={service.path}
                         className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm transition-colors"
@@ -598,7 +600,7 @@ export default function Navigation() {
               </div>
               {/* 5G Services Mobile */}
               <div>
-                <button
+                <button;
                   onClick={() => toggleDropdown('5g-mobile')}
                   className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
                 >
@@ -611,7 +613,7 @@ export default function Navigation() {
                 {activeDropdown === '5g-mobile' && (
                   <div className="pl-6 space-y-1">
                     {fiveGServices.map((service) => (
-                      <Link
+                      <Link;
                         key={service.name}
                         to={service.path}
                         className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm transition-colors"
@@ -627,9 +629,9 @@ export default function Navigation() {
                 )}
               </div>
               <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors" onClick={() => setIsOpen(false)}>
-                Contact
+                Contact;
               </Link>
-              <Link 
+              <Link;
                 to="/contact" 
                 className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-2 rounded-lg text-base font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center mt-4"
                         key={index}
@@ -646,7 +648,7 @@ export default function Navigation() {
                         </div>
                       </Link>
                     ))}
-                    <Link
+                    <Link;
                       to={item.path}
                       className={`block text-cyan-400 hover:text-cyan-300 px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300 bg-gradient-to-r ${item.color} bg-opacity-10`}
                       onClick={() => setIsOpen(false)}
@@ -657,7 +659,7 @@ export default function Navigation() {
                 </div>
               ))}
               {simpleLinks.map((link) => (
-                <Link
+                <Link;
                   key={link.name}
                   to={link.path}
                   className="group flex items-center space-x-2 text-gray-300 hover:text-white px-3 py-2 rounded-lg text-base font-medium transition-all duration-300"
@@ -667,7 +669,7 @@ export default function Navigation() {
                   <span>{link.name}</span>
                 </Link>
               ))}
-              <Link
+              <Link;
                 to="/contact"
                 className="group block bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-xl font-bold text-center hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 mt-4 flex items-center justify-center space-x-2"
                 onClick={() => setIsOpen(false)}

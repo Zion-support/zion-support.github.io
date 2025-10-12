@@ -1,9 +1,11 @@
-'use client'
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 import { ArrowRight, Mail, Brain } from 'lucide-react';
+'use client'
 
-export default function PWAInstaller() {
+
+const PWAInstaller: React.FC = () => {
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -29,14 +31,14 @@ export default function PWAInstaller() {
             </div>
           </div>
           <div className="flex items-center space-x-2">
-            <button
+            <button;
               onClick={handleInstall}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center space-x-2"
             >
               <Download className="w-4 h-4" />
               <span>Install</span>
             </button>
-            <button
+            <button;
               onClick={handleDismiss}
               className="text-gray-400 hover:text-white transition-colors duration-200"
             >
@@ -56,12 +58,13 @@ export default function PWAInstaller() {
     'Cost-effective pricing plans',
     'Proven track record of success'
 
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+  ];return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>PWAInstaller | Zion Tech Group</title>
         <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
       </Helmet>
         </div>
-      </section>};export default PWAInstallerPage
+      </section>};export default PWAInstallerPage;
 }

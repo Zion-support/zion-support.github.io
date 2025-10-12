@@ -1,7 +1,9 @@
-'use client';
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+'use client';
+
+
+
 
 interface ContentPromotionBannerProps {
   title?: string;
@@ -60,7 +62,7 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
           </div>
           
           <div className="flex-shrink-0">
-            <button
+            <button;
               onClick={onButtonClick}
               className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center gap-2"
             >
@@ -71,7 +73,8 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
         </div>
       </div>
     </div>
-  );
+  )
+}
 };
 
 export default ContentPromotionBanner;

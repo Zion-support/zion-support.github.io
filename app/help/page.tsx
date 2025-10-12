@@ -1,11 +1,13 @@
+import React, { useState } from 'react';
+import { HelpCircle, MessageSquare, Mail, BookOpen, ArrowRight, ChevronDown, ChevronUp, Brain, Code } from 'lucide-react';
 'use client';
 
-import React, { useState } from 'react';
 
 
-import { HelpCircle, MessageSquare, Mail, BookOpen, ArrowRight, ChevronDown, ChevronUp, Brain, Code } from 'lucide-react';
 
-export default function HelpPage() {
+
+
+const HelpPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
@@ -155,11 +157,11 @@ export default function HelpPage() {
           <h1 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Help{' '}
             <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Center
+              Center;
             </span>
           </h1>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
-            Find answers to your questions, access documentation, and get the support you need 
+            Find answers to your questions, access documentation, and get the support you need;
             for our AI and IT solutions.
           </p>
         </div>
@@ -168,7 +170,7 @@ export default function HelpPage() {
         <div className="max-w-2xl mx-auto mb-12">
           <div className="relative">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-            <input
+            <input;
               type="text"
               placeholder="Search for help articles, FAQs, or topics..."
               value={searchQuery}
@@ -213,11 +215,11 @@ export default function HelpPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
+                <Link;
                   to="/contact"
                   className="mt-4 inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1"
                 >
-                  Learn More
+                  Learn More;
                   <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </div>
@@ -231,7 +233,7 @@ export default function HelpPage() {
           <div className="max-w-4xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
               <div key={index} className="bg-slate-800/50 rounded-xl border border-slate-700">
-                <button
+                <button;
                   onClick={() => toggleFaq(index)}
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
                 >
@@ -256,7 +258,7 @@ export default function HelpPage() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Documentation & Resources</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link
+            <Link;
               to="/docs"
               className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group text-center"
             >
@@ -265,7 +267,7 @@ export default function HelpPage() {
               <p className="text-gray-300 text-sm">Complete API reference and integration guides</p>
             </Link>
             
-            <Link
+            <Link;
               to="/docs"
               className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group text-center"
             >
@@ -274,7 +276,7 @@ export default function HelpPage() {
               <p className="text-gray-300 text-sm">Step-by-step video guides for all features</p>
             </Link>
             
-            <Link
+            <Link;
               to="/docs"
               className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group text-center"
             >
@@ -283,7 +285,7 @@ export default function HelpPage() {
               <p className="text-gray-300 text-sm">Comprehensive user manuals and guides</p>
             </Link>
             
-            <Link
+            <Link;
               to="/status"
               className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300 group text-center"
             >
@@ -302,7 +304,7 @@ export default function HelpPage() {
               <div>
                 <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
                   <Clock className="w-5 h-5 text-cyan-400 mr-2" />
-                  Regular Support
+                  Regular Support;
                 </h3>
                 <div className="space-y-2 text-gray-300">
                   <div className="flex justify-between">
@@ -322,7 +324,7 @@ export default function HelpPage() {
               <div>
                 <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
                   <Shield className="w-5 h-5 text-red-400 mr-2" />
-                  Emergency Support
+                  Emergency Support;
                 </h3>
                 <div className="space-y-2 text-gray-300">
                   <div className="flex justify-between">
@@ -353,18 +355,18 @@ export default function HelpPage() {
               Can't find what you're looking for? Our support team is here to help you succeed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"
               >
-                Contact Support
+                Contact Support;
                 <MessageSquare className="w-5 h-5 ml-2" />
               </Link>
-              <a
+              <a;
                 href="tel:+13024640950"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center"
               >
-                Call Now
+                Call Now;
                 <Phone className="w-5 h-5 ml-2" />
               </a>
             </div>
@@ -372,5 +374,6 @@ export default function HelpPage() {
         </div>
       </div>
     </div>
-  );
+  )
+}
 }

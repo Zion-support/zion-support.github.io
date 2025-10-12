@@ -1,11 +1,15 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Database } from 'lucide-react';
 'use client';
 
-import React from 'react';
 
 
-import { ArrowRight, Database } from 'lucide-react';
 
-export default function BusinessIntelligencePage() {
+
+
+const BusinessIntelligencePage: React.FC = () => {
   const features = [
     {
       title: 'Advanced Analytics',
@@ -42,25 +46,25 @@ export default function BusinessIntelligencePage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-                Business Intelligence Solutions
+                Business Intelligence Solutions;
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
                 Transform your data into actionable insights with our comprehensive business intelligence platform. 
                 Make data-driven decisions that drive growth and success.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <Link;
                   to="/contact" 
                   className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
-                  Get Started
+                  Get Started;
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
-                <Link 
+                <Link;
                   to="/about" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Learn More
+                  Learn More;
                 </Link>
               </div>
             </div>
@@ -73,7 +77,7 @@ export default function BusinessIntelligencePage() {
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Key Features</h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-                Powerful business intelligence tools designed for modern enterprises
+                Powerful business intelligence tools designed for modern enterprises;
               </p>
             </div>
             
@@ -99,17 +103,17 @@ export default function BusinessIntelligencePage() {
                   Let's discuss how our business intelligence solutions can help you make better decisions.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
+                  <Link;
                     to="/contact" 
                     className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                   >
-                    Get Started Today
+                    Get Started Today;
                   </Link>
-                  <Link 
+                  <Link;
                     to="/about" 
                     className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                   >
-                    Learn More
+                    Learn More;
                   </Link>
                 </div>
               </div>

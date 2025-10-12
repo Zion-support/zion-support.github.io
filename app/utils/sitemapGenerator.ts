@@ -1,2 +1,3 @@
-// Utility file: sitemapGenerator
+import React from 'react'
+// Utility file: sitemapGenerator;
 };

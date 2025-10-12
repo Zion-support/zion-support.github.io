@@ -1,6 +1,8 @@
-'use client';
 import React, { useState, useEffect, useRef } from 'react';
 import { X, ArrowRight, Brain } from 'lucide-react';
+'use client';
+
+
 
 
 interface SearchResult {
@@ -22,9 +24,9 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
   const [isLoading, setIsLoading] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Mock search data - in a real app, this would come from an API
+  // Mock search data - in a real app, this would come from an API;
   const searchData: SearchResult[] = [
-    // AI Services
+    // AI Services;
     { title: 'AI Content Generator', description: 'Create high-quality content with AI', path: '/ai-content-generator', category: 'AI Services', icon: <Brain className="w-4 h-4" /> },
     { title: 'AI Chatbot Builder', description: 'Build intelligent chatbots for your business', path: '/ai-chatbot-builder', category: 'AI Services', icon: <Brain className="w-4 h-4" /> },
     { title: 'AI Analytics Dashboard', description: 'Advanced analytics powered by AI', path: '/ai-analytics-dashboard', category: 'AI Services', icon: <Brain className="w-4 h-4" /> },
@@ -34,7 +36,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     { title: 'AI 3D Generation', description: 'Create 3D models with AI', path: '/ai-3d-generation', category: 'AI Services', icon: <Brain className="w-4 h-4" /> },
     { title: 'AI Drug Discovery Pro', description: 'Advanced AI for pharmaceutical research', path: '/ai-drug-discovery-pro', category: 'AI Services', icon: <Brain className="w-4 h-4" /> },
     
-    // IT Services
+    // IT Services;
     { title: 'Web Development', description: 'Custom web applications and websites', path: '/web-development', category: 'IT Services', icon: <Shield className="w-4 h-4" /> },
     { title: 'Mobile Development', description: 'iOS and Android app development', path: '/mobile-development', category: 'IT Services', icon: <Shield className="w-4 h-4" /> },
     { title: 'DevOps', description: 'Streamline your development and operations', path: '/devops', category: 'IT Services', icon: <Shield className="w-4 h-4" /> },
@@ -42,13 +44,13 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     { title: 'Cloud Services', description: 'Scalable cloud infrastructure solutions', path: '/cloud-services', category: 'IT Services', icon: <Cloud className="w-4 h-4" /> },
     { title: 'Cybersecurity', description: 'Protect your business from cyber threats', path: '/cybersecurity', category: 'IT Services', icon: <Shield className="w-4 h-4" /> },
     
-    // 5G Services
+    // 5G Services;
     { title: '5G Implementation', description: 'Deploy 5G networks and solutions', path: '/5g-implementation', category: '5G Solutions', icon: <Zap className="w-4 h-4" /> },
     { title: '5G Network Infrastructure', description: 'Build robust 5G network infrastructure', path: '/5g-network-infrastructure', category: '5G Solutions', icon: <Zap className="w-4 h-4" /> },
     { title: '5G IoT Solutions', description: 'Connect devices with 5G IoT', path: '/5g-iot-solutions', category: '5G Solutions', icon: <Zap className="w-4 h-4" /> },
     { title: '5G Edge Computing', description: 'Edge computing powered by 5G', path: '/5g-edge-computing', category: '5G Solutions', icon: <Zap className="w-4 h-4" /> },
     
-    // Micro SAAS
+    // Micro SAAS;
     { title: 'AI Task Manager', description: 'Intelligent task management system', path: '/ai-task-manager', category: 'Micro SAAS', icon: <Cpu className="w-4 h-4" /> },
     { title: 'AI Expense Tracker', description: 'Smart expense tracking and analysis', path: '/ai-expense-tracker', category: 'Micro SAAS', icon: <Cpu className="w-4 h-4" /> },
     { title: 'AI Password Manager', description: 'Secure password management with AI', path: '/ai-password-manager', category: 'Micro SAAS', icon: <Cpu className="w-4 h-4" /> },
@@ -56,7 +58,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     { title: 'AI Health Tracker', description: 'Personal health monitoring with AI', path: '/ai-health-tracker', category: 'Micro SAAS', icon: <Cpu className="w-4 h-4" /> },
     { title: 'AI Smart Calendar', description: 'Intelligent calendar management', path: '/ai-smart-calendar', category: 'Micro SAAS', icon: <Cpu className="w-4 h-4" /> },
     
-    // Company Pages
+    // Company Pages;
     { title: 'About Us', description: 'Learn about Zion Tech Group', path: '/about', category: 'Company', icon: <Shield className="w-4 h-4" /> },
     { title: 'Contact', description: 'Get in touch with our team', path: '/contact', category: 'Company', icon: <Shield className="w-4 h-4" /> },
   ];
@@ -70,7 +72,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (query.length > 0) {
       setIsLoading(true);
-      // Simulate search delay
+      // Simulate search delay;
       const timer = setTimeout(() => {
         const filteredResults = searchData.filter(item =>
           item.title.toLowerCase().includes(query.toLowerCase()) ||
@@ -99,7 +101,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     <div className="fixed inset-0 z-50 overflow-y-auto">
       <div className="flex min-h-screen items-start justify-center px-4 pt-16 pb-20 text-center sm:block sm:p-0">
         {/* Backdrop */}
-        <div 
+        <div;
           className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
           onClick={onClose}
         />
@@ -112,7 +114,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
               <Search className="w-6 h-6 text-cyan-400" />
               <h3 className="text-lg font-semibold text-white">Search Services</h3>
             </div>
-            <button
+            <button;
               onClick={onClose}
               className="text-gray-400 hover:text-white transition-colors p-1"
               aria-label="Close search"
@@ -124,7 +126,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
           {/* Search Input */}
           <div className="p-6">
             <div className="relative">
-              <input
+              <input;
                 ref={inputRef}
                 type="text"
                 value={query}
@@ -156,11 +158,11 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
             ) : (
               <div className="px-6 pb-6">
                 <p className="text-sm text-gray-400 mb-4">
-                  {results.length} result{results.length !== 1 ? 's' : ''} found
+                  {results.length} result{results.length !== 1 ? 's' : ''} found;
                 </p>
                 <div className="space-y-2">
                   {results.map((result, index) => (
-                    <Link
+                    <Link;
                       key={index}
                       to={result.path}
                       onClick={onClose}
@@ -190,7 +192,8 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
         </div>
       </div>
     </div>
-  );
+  )
+}
 };
 
 export default SearchModal;

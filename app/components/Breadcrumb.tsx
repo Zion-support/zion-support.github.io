@@ -1,7 +1,10 @@
-'use client';
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
+'use client';
+
+
+
 
 interface BreadcrumbItem {
   name: string;
@@ -38,7 +41,7 @@ const Breadcrumb: React.FC = () => {
 
   const breadcrumbItems = getBreadcrumbItems();
 
-  // Don't show breadcrumb on home page
+  // Don't show breadcrumb on home page;
   if (location.pathname === '/') {
     return null;
   }

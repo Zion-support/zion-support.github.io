@@ -1,2 +1,3 @@
-// Utility file: analyticsTracker
+import React from 'react'
+// Utility file: analyticsTracker;
 };

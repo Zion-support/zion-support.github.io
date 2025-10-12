@@ -1,10 +1,16 @@
-import React from 'react';
 
+
+
+
+
+
+
+import React from 'react'
+import { Helmet } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
-
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;

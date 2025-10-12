@@ -1,18 +1,21 @@
+
+
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 
 import { ArrowRight } from 'lucide-react';
-
 interface ServicePageProps {
-  title: string
-  description: string
-  icon: React.ReactNode
+  title: string;
+  description: string;
+  icon: React.ReactNode;
   benefits: string[]
   features: string[]
-  pricing: string
-  seoTitle: string
-  seoDescription: string
-  seoKeywords: string
+  pricing: string;
+  seoTitle: string;
+  seoDescription: string;
+  seoKeywords: string;
 }
 
 export default function ServicePageTemplate({
@@ -24,7 +27,7 @@ export default function ServicePageTemplate({
   pricing,
   seoTitle,
   seoDescription,
-  seoKeywords
+  seoKeywords;
 }: ServicePageProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -46,18 +49,18 @@ export default function ServicePageTemplate({
             {description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
-              Get Started
+              Get Started;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link
+            <Link;
               to="/about"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
-              Learn More
+              Learn More;
             </Link>
           </div>
         </div>
@@ -90,14 +93,15 @@ export default function ServicePageTemplate({
         <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Pricing</h2>
           <p className="text-2xl font-bold text-cyan-400 mb-6">{pricing}</p>
-          <Link
+          <Link;
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
           >
-            Contact Us for Details
+            Contact Us for Details;
           </Link>
         </div>
       </div>
     </div>
   )
+}
 }

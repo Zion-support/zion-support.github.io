@@ -1,7 +1,9 @@
-'use client';
-
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+'use client';
+
+
+
 
 interface ContentItem {
   id: string;
@@ -87,7 +89,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
       {/* Controls */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-4">
-          <button
+          <button;
             onClick={prevItem}
             className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
             aria-label="Previous item"
@@ -95,7 +97,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
             <ChevronLeft className="w-5 h-5 text-white" />
           </button>
           
-          <button
+          <button;
             onClick={togglePlayPause}
             className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
             aria-label={isPlaying ? 'Pause' : 'Play'}
@@ -107,7 +109,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
             )}
           </button>
           
-          <button
+          <button;
             onClick={nextItem}
             className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
             aria-label="Next item"
@@ -118,7 +120,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
         
         <div className="flex items-center gap-2">
           {items.map((_, index) => (
-            <button
+            <button;
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-2 h-2 rounded-full transition-colors ${
@@ -169,7 +171,7 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
               )}
               
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center gap-2">
-                Learn More
+                Learn More;
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -177,7 +179,8 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
         </div>
       </div>
     </div>
-  );
+  )
+}
 };
 
 export default DynamicContentShowcase;

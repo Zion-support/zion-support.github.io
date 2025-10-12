@@ -1,6 +1,8 @@
-'use client';
 import React, { useState } from 'react';
 import { Mail, AlertCircle, Send } from 'lucide-react';
+'use client';
+
+
 
 interface NewsletterSignupProps {
   variant?: 'inline' | 'modal';
@@ -30,15 +32,15 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
     setStatus('loading');
     
     try {
-      // Simulate API call
+      // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 1000));
       
-      // In a real app, you would make an API call here
+      // In a real app, you would make an API call here;
       setStatus('success');
       setMessage('Thank you for subscribing! Check your email for confirmation.');
       setEmail('');
       
-      // Close modal after success if it's a modal variant
+      // Close modal after success if it's a modal variant;
       if (variant === 'modal' && onClose) {
         setTimeout(() => {
           onClose();
@@ -62,7 +64,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="flex flex-col sm:flex-row gap-3">
-          <input
+          <input;
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -70,7 +72,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
             className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 focus:border-transparent"
             disabled={status === 'loading'}
           />
-          <button
+          <button;
             type="submit"
             disabled={status === 'loading'}
             className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
@@ -83,7 +85,7 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
             ) : (
               <>
                 <Send className="w-4 h-4 mr-2" />
-                Subscribe
+                Subscribe;
               </>
             )}
           </button>
@@ -107,15 +109,15 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
         <p>
           ✓ No spam, unsubscribe anytime<br />
           ✓ Weekly updates on latest tech trends<br />
-          ✓ Exclusive content and early access
+          ✓ Exclusive content and early access;
         </p>
       </div>
     </div>
-  );
-
+  )
+}
   if (variant === 'modal') {
     return (
-      <div className="fixed inset-0 z-50 overflow-y-auto">
+    <div className="fixed inset-0 z-50 overflow-y-auto">
         <div className="flex min-h-screen items-center justify-center px-4 py-6">
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
           <div className="relative w-full max-w-md">
@@ -123,7 +125,8 @@ const NewsletterSignup: React.FC<NewsletterSignupProps> = ({ variant = 'inline',
           </div>
         </div>
       </div>
-    );
+  )
+}
   }
 
   return content;

@@ -1,4 +1,3 @@
-'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -30,13 +29,19 @@ import {
   Users,
   Heart,
   Eye,
-  ThumbsUp
+  ThumbsUp;
 } from 'lucide-react';
-export default function AISocialMediaManagerPage() {
-  const [selectedPlan, setSelectedPlan] = useState('pro');
 import React from 'react'
 import Layout from '../layout'
 import { ArrowRight, MessageSquare } from 'lucide-react';
+'use client';
+
+
+
+
+const AISocialMediaManagerPage: React.FC = () => {
+  const [selectedPlan, setSelectedPlan] = useState('pro');
+
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -121,7 +126,7 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
         'Email support',
         'Mobile app'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -137,7 +142,7 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
         'Team collaboration',
         'API access'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -153,7 +158,7 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
         'Advanced security',
         'Custom reporting'
       ],
-      popular: false
+      popular: false;
     }
   ];
   const testimonials = [
@@ -198,7 +203,7 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             AI Social Media{' '}
             <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Manager
+              Manager;
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -206,18 +211,18 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
             Automate content creation, scheduling, and analytics to increase engagement by 200%.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link;
               to="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
-              Start Free Trial
+              Start Free Trial;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
+            <Link;
               to="/ai-services" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
-              View All AI Services
+              View All AI Services;
             </Link>
           </div>
         </div>
@@ -242,7 +247,7 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Powerful Social Media Features</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our AI Social Media Manager comes packed with advanced features to automate and optimize 
+              Our AI Social Media Manager comes packed with advanced features to automate and optimize;
               your social media presence across all platforms.
             </p>
           </div>
@@ -304,7 +309,7 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -324,15 +329,15 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
                     </li>
                   ))}
                 </ul>
-                <Link
+                <Link;
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
-                    plan.popular
+                    plan.popular;
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                       : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
                   }`}
                 >
-                  Get Started
+                  Get Started;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -378,22 +383,22 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
               Ready to Transform Your Social Media?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Start using our AI Social Media Manager today and see how intelligent automation 
+              Start using our AI Social Media Manager today and see how intelligent automation;
               can increase your engagement by 200%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"
               >
-                Start Free Trial
+                Start Free Trial;
                 <Share2 className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/about"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center"
               >
-                Learn More
+                Learn More;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
@@ -401,5 +406,6 @@ import { ArrowRight, MessageSquare } from 'lucide-react';
         </section>
       </div>
     </div>
-  );
+  )
+}
 }

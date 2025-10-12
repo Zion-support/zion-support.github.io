@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -34,10 +32,16 @@ import {
   Lightbulb,
   Trash2,
   Droplets,
-  Wind
+  Wind;
 } from 'lucide-react';
+'use client';
 
-export default function AISmartCitySolutionsPage() {
+
+
+
+
+
+const AISmartCitySolutionsPage: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState('pro');
 
   const features = [
@@ -132,7 +136,7 @@ export default function AISmartCitySolutionsPage() {
         'Training included',
         'Basic reporting'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'City Implementation',
@@ -148,7 +152,7 @@ export default function AISmartCitySolutionsPage() {
         'Advanced analytics',
         'API access'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Metropolitan Solution',
@@ -164,7 +168,7 @@ export default function AISmartCitySolutionsPage() {
         'White-label solution',
         'Advanced security'
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -213,7 +217,7 @@ export default function AISmartCitySolutionsPage() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             AI Smart City{' '}
             <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-              Solutions
+              Solutions;
             </span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -221,18 +225,18 @@ export default function AISmartCitySolutionsPage() {
             save 25% energy, and improve citizen satisfaction with intelligent urban infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link;
               to="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
-              Get City Assessment
+              Get City Assessment;
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
+            <Link;
               to="/5g-implementation" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
-              View 5G Services
+              View 5G Services;
             </Link>
           </div>
         </div>
@@ -259,7 +263,7 @@ export default function AISmartCitySolutionsPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Advanced Smart City Features</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our AI Smart City Solutions provide comprehensive urban infrastructure management 
+              Our AI Smart City Solutions provide comprehensive urban infrastructure management;
               with cutting-edge artificial intelligence and IoT technologies.
             </p>
           </div>
@@ -333,7 +337,7 @@ export default function AISmartCitySolutionsPage() {
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -356,15 +360,15 @@ export default function AISmartCitySolutionsPage() {
                   ))}
                 </ul>
                 
-                <Link
+                <Link;
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
-                    plan.popular
+                    plan.popular;
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                       : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
                   }`}
                 >
-                  Get Started
+                  Get Started;
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -413,22 +417,22 @@ export default function AISmartCitySolutionsPage() {
               Ready to Transform Your City?
             </h2>
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get a free city assessment and see how our AI Smart City Solutions 
+              Get a free city assessment and see how our AI Smart City Solutions;
               can revolutionize your urban infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"
               >
-                Get Free Assessment
+                Get Free Assessment;
                 <Building2 className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/about"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center"
               >
-                Learn More
+                Learn More;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
@@ -436,5 +440,6 @@ export default function AISmartCitySolutionsPage() {
         </section>
       </div>
     </div>
-  );
+  )
+}
 }

@@ -1,9 +1,11 @@
+
+
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Layout from '../layout'
 
 import { ArrowRight, Key } from 'lucide-react';
-
 const AIPasswordManagerPage: React.FC = () => {
   const features = [
     {
@@ -40,7 +42,7 @@ const AIPasswordManagerPage: React.FC = () => {
         "Browser extension",
         "Community support"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Premium",
@@ -54,7 +56,7 @@ const AIPasswordManagerPage: React.FC = () => {
         "Priority support",
         "Family plan (6 users)"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Business",
@@ -68,12 +70,12 @@ const AIPasswordManagerPage: React.FC = () => {
         "Advanced reporting",
         "Dedicated support"
       ],
-      popular: false
+      popular: false;
     }
   ]
 
   return (
-    <Layout
+    <Layout;
       title="AI Password Manager - Zion Tech Group"
       description="Secure password management with AI-powered generation, zero-knowledge architecture, and advanced security features. Protect your digital life."
       keywords="AI password manager, password security, password generator, digital security, password vault, cybersecurity"
@@ -83,25 +85,25 @@ const AIPasswordManagerPage: React.FC = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Password Manager
+              AI Password Manager;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Secure your digital life with AI-powered password management. Generate strong passwords, 
               monitor breaches, and protect your accounts with enterprise-grade security.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Free
+                Start Free;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/demo"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                Watch Demo
+                Watch Demo;
               </Link>
             </div>
           </div>
@@ -153,15 +155,15 @@ const AIPasswordManagerPage: React.FC = () => {
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    End-to-end encryption
+                    End-to-end encryption;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Local encryption keys
+                    Local encryption keys;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    No server-side access
+                    No server-side access;
                   </li>
                 </ul>
               </div>
@@ -174,15 +176,15 @@ const AIPasswordManagerPage: React.FC = () => {
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Breach monitoring
+                    Breach monitoring;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Weak password detection
+                    Weak password detection;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Security scoring
+                    Security scoring;
                   </li>
                 </ul>
               </div>
@@ -198,7 +200,7 @@ const AIPasswordManagerPage: React.FC = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -217,15 +219,15 @@ const AIPasswordManagerPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link
+                  <Link;
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
+                      plan.popular;
                         ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
                         : 'border-2 border-white text-white hover:bg-white/10'
                     }`}
                   >
-                    Get Started
+                    Get Started;
                   </Link>
                 </div>
               ))}
@@ -261,18 +263,18 @@ const AIPasswordManagerPage: React.FC = () => {
               Join over 1 million users who trust our AI Password Manager to protect their most sensitive information.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Your Free Account
+                Start Your Free Account;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/pricing"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                View All Plans
+                View All Plans;
               </Link>
             </div>
           </div>
@@ -282,4 +284,4 @@ const AIPasswordManagerPage: React.FC = () => {
   )
 }
 
-export default AIPasswordManagerPage
+export default AIPasswordManagerPage;

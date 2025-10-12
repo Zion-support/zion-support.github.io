@@ -1,9 +1,11 @@
+
+
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Layout from '../layout'
 
 import { ArrowRight, Mic, Brain, MessageSquare } from 'lucide-react';
-
 const AIVoiceAssistantPage: React.FC = () => {
   const features = [
     {
@@ -40,7 +42,7 @@ const AIVoiceAssistantPage: React.FC = () => {
         "News briefings",
         "Email support"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -54,7 +56,7 @@ const AIVoiceAssistantPage: React.FC = () => {
         "Priority support",
         "Multi-language support"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -68,12 +70,12 @@ const AIVoiceAssistantPage: React.FC = () => {
         "Dedicated support",
         "On-premise deployment"
       ],
-      popular: false
+      popular: false;
     }
   ]
 
   return (
-    <Layout
+    <Layout;
       title="AI Voice Assistant - Zion Tech Group"
       description="Advanced AI voice assistant with natural language processing, contextual understanding, and multi-platform integration. Transform how you interact with technology."
       keywords="AI voice assistant, voice AI, speech recognition, virtual assistant, voice commands, conversational AI"
@@ -83,25 +85,25 @@ const AIVoiceAssistantPage: React.FC = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Voice Assistant
+              AI Voice Assistant;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Experience the future of human-computer interaction with our advanced AI voice assistant. 
               Natural conversations, contextual understanding, and seamless integration across all your devices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/demo"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                Watch Demo
+                Watch Demo;
               </Link>
             </div>
           </div>
@@ -149,15 +151,15 @@ const AIVoiceAssistantPage: React.FC = () => {
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Control lights, temperature, and appliances
+                    Control lights, temperature, and appliances;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Security system management
+                    Security system management;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Entertainment system control
+                    Entertainment system control;
                   </li>
                 </ul>
               </div>
@@ -166,15 +168,15 @@ const AIVoiceAssistantPage: React.FC = () => {
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Schedule meetings and appointments
+                    Schedule meetings and appointments;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Email and message management
+                    Email and message management;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Data analysis and reporting
+                    Data analysis and reporting;
                   </li>
                 </ul>
               </div>
@@ -183,15 +185,15 @@ const AIVoiceAssistantPage: React.FC = () => {
                 <ul className="space-y-2 text-gray-300">
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Weather and news updates
+                    Weather and news updates;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Reminder and task management
+                    Reminder and task management;
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Language translation
+                    Language translation;
                   </li>
                 </ul>
               </div>
@@ -207,7 +209,7 @@ const AIVoiceAssistantPage: React.FC = () => {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
+                        Most Popular;
                       </span>
                     </div>
                   )}
@@ -226,15 +228,15 @@ const AIVoiceAssistantPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-                  <Link
+                  <Link;
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                      plan.popular
+                      plan.popular;
                         ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700'
                         : 'border-2 border-white text-white hover:bg-white/10'
                     }`}
                   >
-                    Get Started
+                    Get Started;
                   </Link>
                 </div>
               ))}
@@ -270,18 +272,18 @@ const AIVoiceAssistantPage: React.FC = () => {
               Join over 1 million users who have transformed their daily interactions with our advanced AI voice assistant.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Your Free Trial
+                Start Your Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link
+              <Link;
                 to="/pricing"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                View All Plans
+                View All Plans;
               </Link>
             </div>
           </div>
@@ -291,4 +293,4 @@ const AIVoiceAssistantPage: React.FC = () => {
   )
 }
 
-export default AIVoiceAssistantPage
+export default AIVoiceAssistantPage;

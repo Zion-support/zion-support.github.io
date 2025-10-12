@@ -1,12 +1,17 @@
-'use client';
 import React, { useState } from 'react';
-
 import { Mail, MessageSquare, Send, ArrowRight, Brain, Database, Code, HardDrive, EyeOff, Mail as MailIcon } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
+'use client';
 
-export default function ContactPage() {
+
+
+
+
+
+
+const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,7 +27,7 @@ export default function ContactPage() {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value;
     }));
   };
 
@@ -30,13 +35,13 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubmitting(false);
     setIsSubmitted(true);
     
-    // Reset form after 3 seconds
+    // Reset form after 3 seconds;
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
@@ -129,7 +134,7 @@ export default function ContactPage() {
             {/* Header */}
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                Contact Us
+                Contact Us;
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Ready to transform your business? Get in touch with our experts for a free consultation and discover how our AI and IT solutions can drive your success.
@@ -167,13 +172,13 @@ export default function ContactPage() {
                         <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                           Full Name *
                         </label>
-                        <input
+                        <input;
                           type="text"
                           id="name"
                           name="name"
                           value={formData.name}
                           onChange={handleInputChange}
-                          required
+                          required;
                           className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                           placeholder="Your full name"
                         />
@@ -182,13 +187,13 @@ export default function ContactPage() {
                         <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                           Email Address *
                         </label>
-                        <input
+                        <input;
                           type="email"
                           id="email"
                           name="email"
                           value={formData.email}
                           onChange={handleInputChange}
-                          required
+                          required;
                           className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                           placeholder="your@email.com"
                         />
@@ -198,9 +203,9 @@ export default function ContactPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                          Company
+                          Company;
                         </label>
-                        <input
+                        <input;
                           type="text"
                           id="company"
                           name="company"
@@ -212,9 +217,9 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                          Phone Number
+                          Phone Number;
                         </label>
-                        <input
+                        <input;
                           type="tel"
                           id="phone"
                           name="phone"
@@ -228,9 +233,9 @@ export default function ContactPage() {
 
                     <div>
                       <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                        Service Interest
+                        Service Interest;
                       </label>
-                      <select
+                      <select;
                         id="service"
                         name="service"
                         value={formData.service}
@@ -250,19 +255,19 @@ export default function ContactPage() {
                       <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                         Message *
                       </label>
-                      <textarea
+                      <textarea;
                         id="message"
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
-                        required
+                        required;
                         rows={5}
                         className="w-full px-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
                         placeholder="Tell us about your project and how we can help..."
                       />
                     </div>
 
-                    <FuturisticButton
+                    <FuturisticButton;
                       type="submit"
                       variant="primary"
                       size="lg"

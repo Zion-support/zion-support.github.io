@@ -1,9 +1,11 @@
-'use client'
 import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 import { ArrowRight, Mail, Brain } from 'lucide-react';
+'use client'
 
-export default function PerformanceEnhancer() {
+
+const PerformanceEnhancer: React.FC = () => {
   const features = [
     {
       title: "Feature 1",
@@ -38,7 +40,7 @@ export default function PerformanceEnhancer() {
             <p className="text-gray-300 text-sm">Monitor and optimize your app's performance</p>
           </div>
         </div>
-        <button
+        <button;
           onClick={optimizePerformance}
           disabled={isOptimizing}
           className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
@@ -61,7 +63,7 @@ export default function PerformanceEnhancer() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <div className="text-center">
           <div className="text-2xl font-bold text-white mb-1">
-            {metrics.loadTime.toFixed(0)}ms
+            {metrics.loadTime.toFixed(0)}ms;
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -83,7 +85,7 @@ export default function PerformanceEnhancer() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+              Key Benefits;
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our performanceenhancer solutions for your business.
@@ -102,7 +104,7 @@ export default function PerformanceEnhancer() {
         </div>
       </section>
 }
-export default PerformanceEnhancerPage
+export default PerformanceEnhancerPage;
   </h2>
   </button>
   </span>
@@ -118,7 +120,8 @@ export default PerformanceEnhancerPage
     'Cost-effective pricing plans',
     'Proven track record of success'
 
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+  ];return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>PerformanceEnhancer | Zion Tech Group</title>
         <meta name="description" content="Professional PerformanceEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -130,7 +133,7 @@ export default PerformanceEnhancerPage
           <div className="text-center"></div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                PerformanceEnhancer
+                PerformanceEnhancer;
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -141,11 +144,11 @@ export default PerformanceEnhancerPage
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+                Learn More;
               </button>
             </div>
           </div>
@@ -181,7 +184,7 @@ export default PerformanceEnhancerPage
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+              Key Benefits;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our performanceenhancer solutions for your business.
@@ -197,5 +200,5 @@ export default PerformanceEnhancerPage
               </div>))}
           </div>
         </div>
-      </section>};export default PerformanceEnhancerPage
+      </section>};export default PerformanceEnhancerPage;
 }
