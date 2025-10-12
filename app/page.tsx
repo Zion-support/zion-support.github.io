@@ -1,25 +1,10 @@
 'use client'
-<<<<<<< HEAD
 import React from 'react'
 import SEOHead from './components/SEOHead'
 import Navigation from './components/Navigation'
 import Footer from './components/Footer'
-import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
+import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud, Brain, Smartphone, CheckCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
-=======
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
-=======
-import React, { Suspense, lazy } from 'react'
-import { ArrowRight, Shield, Globe, Database, Code, Cloud, Smartphone, Brain } from 'lucide-react'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
-import SEOHead from './components/SEOHead'
-import OptimizedLoading from './components/OptimizedLoading'
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
 
 export default function HomePage() {
   const stats = [
@@ -39,35 +24,38 @@ export default function HomePage() {
     },
     {
       icon: <Shield className="w-8 h-8 text-green-500" />,
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: 'Cybersecurity',
-      description: 'Protect your digital assets with our advanced security solutions and compliance management.'
-=======
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption, compliance standards, and advanced threat protection.'
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
+      description: 'Bank-level security with encryption, compliance standards, and advanced threat protection.',
+      benefits: ['Cybersecurity Audit - $2,500', 'Penetration Testing - $1,800', 'Security Monitoring - $1,200/month', 'Compliance Management - $2,000/month'],
+      link: '/it-services'
     },
     {
       icon: <Cloud className="w-8 h-8 text-purple-500" />,
       title: 'Cloud Migration',
-      description: 'Seamlessly migrate to the cloud with zero downtime and enhanced performance.'
+      description: 'Seamlessly migrate to the cloud with zero downtime and enhanced performance.',
+      benefits: ['Cloud Migration - Starting at $2,500', 'Cloud Infrastructure - $1,500/month', 'Cloud Security - $1,200/month', 'Multi-Cloud Strategy - $2,000/month'],
+      link: '/cloud-services'
     },
     {
       icon: <Database className="w-8 h-8 text-orange-500" />,
       title: 'Data Analytics',
-      description: 'Unlock insights from your data with our advanced analytics and visualization tools.'
+      description: 'Unlock insights from your data with our advanced analytics and visualization tools.',
+      benefits: ['Data Analytics - $2,000/month', 'Business Intelligence - $1,800/month', 'Data Visualization - $1,500/month', 'Predictive Analytics - $2,500/month'],
+      link: '/it-services'
     },
     {
       icon: <Code className="w-8 h-8 text-red-500" />,
       title: 'DevOps & CI/CD',
-      description: 'Streamline your development process with automated deployment and continuous integration.'
+      description: 'Streamline your development process with automated deployment and continuous integration.',
+      benefits: ['DevOps Setup - $3,000', 'CI/CD Pipeline - $1,500/month', 'Infrastructure as Code - $2,000/month', 'Monitoring & Alerting - $1,200/month'],
+      link: '/it-services'
     },
     {
-<<<<<<< HEAD
       icon: <Globe className="w-8 h-8 text-cyan-500" />,
-      title: 'Global Reach',
-      description: 'Scale your business worldwide with our international deployment and support services.'
+      title: '5G Implementation',
+      description: 'Next-generation connectivity solutions to power your digital transformation with ultra-fast speeds and low latency.',
+      benefits: ['Ultra-Fast Speeds - 10+ Gbps', 'Low Latency - 1ms', 'IoT Integration - 1M+ devices/km²', 'Edge Computing Solutions'],
+      link: '/5g-implementation'
     }
   ]
 
@@ -77,12 +65,6 @@ export default function HomePage() {
       company: 'TechCorp Inc.',
       content: 'Zion Tech Group transformed our entire IT infrastructure. The results exceeded our expectations.',
       rating: 5
-=======
-      title: 'IT Services & Solutions',
-      description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
-      benefits: ['Cloud Migration - Starting at $2,500', 'Cybersecurity - $1,500/month', 'Mobile Development - Starting at $5,000', 'Data Analytics - $2,000/month'],
-      link: '/it-services'
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
     },
     {
       name: 'Michael Chen',
@@ -91,122 +73,25 @@ export default function HomePage() {
       rating: 5
     },
     {
-<<<<<<< HEAD
       name: 'Emily Rodriguez',
       company: 'InnovateTech',
       content: 'Professional, reliable, and innovative. Zion Tech Group is our go-to technology partner.',
       rating: 5
-=======
-      icon: <Cloud className="w-8 h-8 text-orange-500" />,
-=======
-      icon: <Cloud className="w-8 h-8 text-cyan-500" />,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services for modern businesses.'
     }
   ]
 
-  const services = [
-    {
-      title: 'AI Services',
-      description: 'Advanced AI solutions for content generation, chatbots, and automation',
-      href: '/ai-services',
-      icon: Brain
-    },
-    {
-      title: 'IT Services',
-      description: 'Complete IT infrastructure and development services',
-      href: '/it-services',
-      icon: Code
-    },
-    {
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration',
-      href: '/cloud-services',
-      icon: Cloud
-    },
-    {
-<<<<<<< HEAD
-      icon: <Database className="w-8 h-8 text-red-500" />,
-      title: '5G Implementation',
-      description: 'Next-generation connectivity solutions to power your digital transformation with ultra-fast speeds and low latency.',
-      benefits: ['Ultra-Fast Speeds - 10+ Gbps', 'Low Latency - 1ms', 'IoT Integration - 1M+ devices/km²', 'Edge Computing Solutions'],
-      link: '/5g-implementation'
-    },
-    {
-      icon: <Smartphone className="w-8 h-8 text-yellow-500" />,
-      title: 'Digital Transformation',
-      description: 'Transform your business for the digital age with comprehensive digital transformation services.',
-      benefits: ['Process Automation - $2,000/month', 'Digital Workforce - $1,500/month', 'Customer Experience - $1,800/month', 'Data Strategy - $2,500/month'],
-      link: '/digital-transformation'
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
-=======
-      title: 'Micro SaaS',
-      description: 'Specialized micro software solutions',
-      href: '/micro-saas',
-      icon: Smartphone
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
-    }
-  ];
-
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-e118
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-51d9
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-7aba
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your business with cutting-edge technology."
         keywords="AI solutions, IT services, digital transformation, cloud computing, 5G implementation, micro SAAS, artificial intelligence, business automation"
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOHead
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI and IT solutions. Transform your business with our cutting-edge technology and expert services."
-        keywords="AI solutions, IT services, cloud computing, software development, artificial intelligence, machine learning, Zion Tech Group"
         canonical="/"
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
       />
       
       <Navigation />
       
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-              Advanced AI & IT Solutions
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
-              Transform your business with cutting-edge artificial intelligence, 5G implementation, and enterprise-grade IT solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/about" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
-                to="/contact" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                Get Started
-              </Link>
-            </div>
-=======
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -224,20 +109,19 @@ export default function HomePage() {
             We deliver innovative solutions that drive growth and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
             >
               Get Started
               <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-            <a
-              href="/about"
+            </Link>
+            <Link
+              to="/about"
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
             >
               Learn More
-            </a>
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
+            </Link>
           </div>
         </div>
       </section>
