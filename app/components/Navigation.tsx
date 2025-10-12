@@ -15,13 +15,13 @@ const Navigation: React.FC = () => {
         { name: 'AI Content Generator', path: '/ai-content-generator' },
         { name: 'AI Chatbot Enterprise', path: '/ai-chatbot-enterprise' },
         { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
-        { name: 'AI 3D Generation', path: '/ai-3d-generation' },
-        { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
         { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
-        { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
-        { name: 'AI Email Marketing', path: '/ai-email-marketing' },
-        { name: 'AI Document Processing', path: '/ai-document-processing' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' }
+        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics' },
+        { name: 'AI Customer Insights', path: '/ai-customer-insights' },
+        { name: 'AI Translation Services', path: '/ai-translation-services' },
+        { name: 'AI Code Assistant', path: '/ai-code-assistant' },
+        { name: 'AI Talent Acquisition', path: '/ai-talent-acquisition' }
       ]
     },
     {
@@ -29,15 +29,16 @@ const Navigation: React.FC = () => {
       path: '/it-services',
       icon: Cloud,
       dropdown: [
-        { name: 'Cloud Migration', path: '/cloud-migration' },
-        { name: 'DevOps Solutions', path: '/devops-solutions' },
-        { name: 'Cybersecurity', path: '/cybersecurity' },
-        { name: 'Mobile Development', path: '/mobile-development' },
-        { name: 'API Development', path: '/api-development' },
+        { name: 'Cloud Migration & Management', path: '/cloud-migration' },
+        { name: 'Cybersecurity Solutions', path: '/cybersecurity' },
+        { name: 'Custom Software Development', path: '/custom-software-development' },
         { name: 'Database Management', path: '/database-management' },
+        { name: 'Network Infrastructure', path: '/network-infrastructure' },
+        { name: 'Mobile App Development', path: '/mobile-development' },
+        { name: 'DevOps & CI/CD', path: '/devops-solutions' },
         { name: 'System Integration', path: '/system-integration' },
-        { name: 'IT Consulting', path: '/it-consulting' },
-        { name: 'Network Infrastructure', path: '/network-infrastructure' }
+        { name: 'Web Development', path: '/web-development' },
+        { name: 'IT Consulting', path: '/it-consulting' }
       ]
     },
     {
@@ -47,14 +48,14 @@ const Navigation: React.FC = () => {
       dropdown: [
         { name: 'AI-Powered CRM', path: '/ai-crm' },
         { name: 'Smart Analytics', path: '/smart-analytics' },
-        { name: 'Automated Testing', path: '/ai-automated-testing' },
-        { name: 'Content Management', path: '/ai-content-management' },
-        { name: 'Email Marketing', path: '/ai-email-marketing' },
-        { name: 'Social Media Manager', path: '/ai-social-media-manager' },
-        { name: 'Project Management', path: '/ai-project-management' },
-        { name: 'Customer Support', path: '/ai-customer-support' },
-        { name: 'Invoice Generator', path: '/ai-invoice-generator' },
-        { name: 'Task Manager', path: '/ai-task-manager' }
+        { name: 'AI Invoice Generator Pro', path: '/ai-invoice-generator-pro' },
+        { name: 'Smart Inventory Manager', path: '/ai-inventory-manager' },
+        { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant' },
+        { name: 'Smart HR Management', path: '/ai-hr-management' },
+        { name: 'AI Legal Document Analyzer', path: '/ai-legal-analyzer' },
+        { name: 'Smart Property Manager', path: '/ai-property-manager' },
+        { name: 'AI Healthcare Assistant', path: '/ai-healthcare-assistant' },
+        { name: 'Smart Restaurant Manager', path: '/ai-restaurant-manager' }
       ]
     },
     {

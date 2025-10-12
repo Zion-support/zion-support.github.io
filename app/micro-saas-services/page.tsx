@@ -149,6 +149,138 @@ export default function MicroSaasServicesPage() {
       rating: 4.8,
       reviews: 112,
       freeTrial: '30 days'
+    },
+    {
+      name: 'AI Invoice Generator Pro',
+      description: 'Intelligent invoice creation with automated billing, payment tracking, and tax compliance',
+      price: '$69/month',
+      features: ['Auto-invoice generation', 'Payment tracking', 'Tax calculations', 'Multi-currency support', 'Client portal', 'Recurring billing'],
+      icon: FileText,
+      path: '/ai-invoice-generator-pro',
+      category: 'Finance',
+      rating: 4.9,
+      reviews: 189,
+      freeTrial: '14 days'
+    },
+    {
+      name: 'Smart Inventory Manager',
+      description: 'AI-powered inventory optimization with demand forecasting and automated reordering',
+      price: '$139/month',
+      features: ['Demand forecasting', 'Auto reordering', 'Stock optimization', 'Multi-location support', 'Supplier management', 'Cost tracking'],
+      icon: TrendingUp,
+      path: '/ai-inventory-manager',
+      category: 'Operations',
+      rating: 4.7,
+      reviews: 156,
+      freeTrial: '21 days'
+    },
+    {
+      name: 'AI Meeting Assistant',
+      description: 'Intelligent meeting transcription, action items extraction, and follow-up automation',
+      price: '$89/month',
+      features: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Calendar integration', 'Team collaboration', 'Voice recognition'],
+      icon: MessageSquare,
+      path: '/ai-meeting-assistant',
+      category: 'Productivity',
+      rating: 4.8,
+      reviews: 203,
+      freeTrial: '7 days'
+    },
+    {
+      name: 'Smart HR Management',
+      description: 'AI-enhanced HR platform with recruitment, performance tracking, and employee analytics',
+      price: '$199/month',
+      features: ['Resume screening', 'Performance analytics', 'Employee engagement', 'Payroll integration', 'Compliance tracking', 'Training management'],
+      icon: Users,
+      path: '/ai-hr-management',
+      category: 'Human Resources',
+      rating: 4.9,
+      reviews: 167,
+      freeTrial: '30 days'
+    },
+    {
+      name: 'AI Legal Document Analyzer',
+      description: 'Intelligent contract analysis, risk assessment, and compliance monitoring',
+      price: '$299/month',
+      features: ['Contract analysis', 'Risk assessment', 'Compliance monitoring', 'Document comparison', 'Legal research', 'Deadline tracking'],
+      icon: Shield,
+      path: '/ai-legal-analyzer',
+      category: 'Legal',
+      rating: 4.8,
+      reviews: 98,
+      freeTrial: '14 days'
+    },
+    {
+      name: 'Smart Property Manager',
+      description: 'AI-powered property management with tenant screening, maintenance scheduling, and rent optimization',
+      price: '$159/month',
+      features: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Lease management', 'Financial reporting', 'Tenant portal'],
+      icon: Globe,
+      path: '/ai-property-manager',
+      category: 'Real Estate',
+      rating: 4.7,
+      reviews: 134,
+      freeTrial: '21 days'
+    },
+    {
+      name: 'AI Healthcare Assistant',
+      description: 'Medical record management, appointment scheduling, and patient communication automation',
+      price: '$249/month',
+      features: ['Medical records', 'Appointment scheduling', 'Patient communication', 'Prescription tracking', 'Insurance verification', 'Telemedicine support'],
+      icon: Shield,
+      path: '/ai-healthcare-assistant',
+      category: 'Healthcare',
+      rating: 4.9,
+      reviews: 145,
+      freeTrial: '30 days'
+    },
+    {
+      name: 'Smart Restaurant Manager',
+      description: 'AI-powered restaurant operations with menu optimization, staff scheduling, and customer analytics',
+      price: '$179/month',
+      features: ['Menu optimization', 'Staff scheduling', 'Customer analytics', 'Inventory management', 'POS integration', 'Review monitoring'],
+      icon: Globe,
+      path: '/ai-restaurant-manager',
+      category: 'Hospitality',
+      rating: 4.8,
+      reviews: 123,
+      freeTrial: '14 days'
+    },
+    {
+      name: 'AI E-commerce Optimizer',
+      description: 'Intelligent e-commerce optimization with pricing, inventory, and conversion rate optimization',
+      price: '$199/month',
+      features: ['Dynamic pricing', 'Inventory optimization', 'Conversion optimization', 'Customer segmentation', 'A/B testing', 'Revenue forecasting'],
+      icon: TrendingUp,
+      path: '/ai-ecommerce-optimizer-pro',
+      category: 'E-commerce',
+      rating: 4.9,
+      reviews: 187,
+      freeTrial: '21 days'
+    },
+    {
+      name: 'Smart Fleet Manager',
+      description: 'AI-powered fleet management with route optimization, maintenance scheduling, and driver analytics',
+      price: '$229/month',
+      features: ['Route optimization', 'Maintenance scheduling', 'Driver analytics', 'Fuel monitoring', 'GPS tracking', 'Compliance reporting'],
+      icon: Globe,
+      path: '/ai-fleet-manager',
+      category: 'Logistics',
+      rating: 4.8,
+      reviews: 156,
+      freeTrial: '30 days'
+    },
+    {
+      name: 'AI Learning Management System',
+      description: 'Intelligent educational platform with personalized learning paths and progress tracking',
+      price: '$149/month',
+      features: ['Personalized learning', 'Progress tracking', 'Content creation', 'Assessment tools', 'Student analytics', 'Mobile learning'],
+      icon: Users,
+      path: '/ai-learning-management',
+      category: 'Education',
+      rating: 4.9,
+      reviews: 234,
+      freeTrial: '30 days'
     }
   ];
 
@@ -162,7 +294,17 @@ export default function MicroSaasServicesPage() {
     { name: 'Social Media', count: microSaasServices.filter(s => s.category === 'Social Media').length, active: false },
     { name: 'Project Management', count: microSaasServices.filter(s => s.category === 'Project Management').length, active: false },
     { name: 'Customer Support', count: microSaasServices.filter(s => s.category === 'Customer Support').length, active: false },
-    { name: 'Finance', count: microSaasServices.filter(s => s.category === 'Finance').length, active: false }
+    { name: 'Finance', count: microSaasServices.filter(s => s.category === 'Finance').length, active: false },
+    { name: 'Operations', count: microSaasServices.filter(s => s.category === 'Operations').length, active: false },
+    { name: 'Productivity', count: microSaasServices.filter(s => s.category === 'Productivity').length, active: false },
+    { name: 'Human Resources', count: microSaasServices.filter(s => s.category === 'Human Resources').length, active: false },
+    { name: 'Legal', count: microSaasServices.filter(s => s.category === 'Legal').length, active: false },
+    { name: 'Real Estate', count: microSaasServices.filter(s => s.category === 'Real Estate').length, active: false },
+    { name: 'Healthcare', count: microSaasServices.filter(s => s.category === 'Healthcare').length, active: false },
+    { name: 'Hospitality', count: microSaasServices.filter(s => s.category === 'Hospitality').length, active: false },
+    { name: 'E-commerce', count: microSaasServices.filter(s => s.category === 'E-commerce').length, active: false },
+    { name: 'Logistics', count: microSaasServices.filter(s => s.category === 'Logistics').length, active: false },
+    { name: 'Education', count: microSaasServices.filter(s => s.category === 'Education').length, active: false }
   ];
 
   const benefits = [

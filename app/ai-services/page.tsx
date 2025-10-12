@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, MessageSquare, BarChart3, Clock, TrendingUp, Users, Target, Award } from 'lucide-react';
+import { CheckCircle, ArrowRight, Brain, Zap, Shield, Globe, DollarSign, Star, MessageSquare, BarChart3, Clock, TrendingUp, Users, Target, Award, Code } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -34,6 +34,55 @@ const AIServicesPage: React.FC = () => {
       description: 'Streamline business processes with intelligent automation solutions.',
       price: '$149/month',
       features: ['Workflow automation', 'Process optimization', 'Error reduction', 'Cost savings']
+    },
+    {
+      icon: <Brain className="w-8 h-8 text-indigo-500" />,
+      title: 'AI Voice Assistant',
+      description: 'Advanced voice recognition and natural language processing for hands-free operations.',
+      price: '$199/month',
+      features: ['Voice commands', 'Multi-language support', 'Custom wake words', 'Integration APIs']
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'AI Cybersecurity Suite',
+      description: 'Comprehensive AI-powered security solutions with threat detection and prevention.',
+      price: '$399/month',
+      features: ['Threat detection', 'Anomaly detection', 'Automated response', 'Compliance monitoring']
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-teal-500" />,
+      title: 'AI Predictive Analytics',
+      description: 'Advanced machine learning models for forecasting and trend analysis.',
+      price: '$299/month',
+      features: ['Predictive modeling', 'Trend analysis', 'Risk assessment', 'Custom algorithms']
+    },
+    {
+      icon: <MessageSquare className="w-8 h-8 text-pink-500" />,
+      title: 'AI Customer Insights',
+      description: 'Deep customer behavior analysis and personalized engagement strategies.',
+      price: '$249/month',
+      features: ['Behavior analysis', 'Sentiment tracking', 'Personalization', 'Engagement optimization']
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-cyan-500" />,
+      title: 'AI Translation Services',
+      description: 'Real-time translation with context understanding and cultural adaptation.',
+      price: '$179/month',
+      features: ['100+ languages', 'Context awareness', 'Cultural adaptation', 'Real-time processing']
+    },
+    {
+      icon: <Code className="w-8 h-8 text-amber-500" />,
+      title: 'AI Code Assistant',
+      description: 'Intelligent code generation, debugging, and optimization for developers.',
+      price: '$199/month',
+      features: ['Code generation', 'Bug detection', 'Performance optimization', 'Documentation']
+    },
+    {
+      icon: <Users className="w-8 h-8 text-emerald-500" />,
+      title: 'AI Talent Acquisition',
+      description: 'Smart recruitment with candidate matching and interview automation.',
+      price: '$349/month',
+      features: ['Resume screening', 'Skill matching', 'Interview automation', 'Bias reduction']
     }
   ];
 
