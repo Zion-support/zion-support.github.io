@@ -53,15 +53,9 @@ export default function HomePage() {
       features: ['Automated content creation', 'SEO optimization', 'Multi-language support']
     },
     {
-<<<<<<< HEAD
       title: 'IT Services & Solutions',
       description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
       icon: <Shield className="w-8 h-8 text-green-500" />,
-=======
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      title: 'IT Services & Solutions',
-      description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
       link: '/it-services',
       features: ['Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics']
     },
@@ -152,16 +146,31 @@ export default function HomePage() {
         <meta name="twitter:site" content="@ziontechgroup" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+        </div>
+
         {/* Hero Section */}
-        <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
+        <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-                Advanced AI & IT Solutions
+              <div className="inline-block mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent text-sm font-semibold tracking-wider uppercase animate-pulse">
+                  ✨ Next-Generation Technology Solutions
+                </span>
+              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 relative">
+                <span className="bg-gradient-to-r from-white via-cyan-100 to-purple-200 bg-clip-text text-transparent">
+                  Advanced AI & IT Solutions
+                </span>
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 blur-lg opacity-50 animate-pulse"></div>
               </h1>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
-                Transform your business with cutting-edge artificial intelligence, 5G implementation, and enterprise-grade IT solutions.
+              <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
+                Transform your business with cutting-edge artificial intelligence, 5G implementation, and enterprise-grade IT solutions that drive innovation and growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
@@ -193,10 +202,20 @@ export default function HomePage() {
         </section>
 
         {/* Features Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <section className="py-12 sm:py-16 lg:py-20 px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Our Core Services</h2>
+              <div className="inline-block mb-4">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent text-sm font-semibold tracking-wider uppercase">
+                  🚀 Core Services
+                </span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4 relative">
+                <span className="bg-gradient-to-r from-white via-cyan-100 to-purple-200 bg-clip-text text-transparent">
+                  Our Core Services
+                </span>
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-lg opacity-30"></div>
+              </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
                 Comprehensive technology solutions designed to accelerate your digital transformation
               </p>
@@ -204,25 +223,35 @@ export default function HomePage() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20">
               {services.map((service, index) => (
-                <Link key={index} to={service.link} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-                  <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{service.title}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  <ul className="space-y-2 mb-6">
-<<<<<<< HEAD
-                    {service.features.map((feature, featureIndex) => (
-=======
-                    {service.features?.map((feature, featureIndex) => (
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-6 flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Link key={index} to={service.link} className="group relative">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-cyan-500/20 relative overflow-hidden">
+                    {/* Animated border effect */}
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <div className="relative z-10">
+                      <div className="mb-4 group-hover:scale-110 transition-transform duration-300 group-hover:rotate-3">
+                        {service.icon}
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-300 transition-colors">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-300 mb-6 group-hover:text-gray-200 transition-colors">
+                        {service.description}
+                      </p>
+                      <ul className="space-y-2 mb-6">
+                        {service.features?.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center text-sm text-gray-300 group-hover:text-gray-200 transition-colors">
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 group-hover:text-green-300 transition-colors" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-6 flex items-center text-blue-400 group-hover:text-cyan-300 transition-colors group-hover:translate-x-2">
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
                   </div>
                 </Link>
               ))}
@@ -231,10 +260,20 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5">
+        <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">What Our Clients Say</h2>
+              <div className="inline-block mb-4">
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent text-sm font-semibold tracking-wider uppercase">
+                  💬 Client Testimonials
+                </span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4 relative">
+                <span className="bg-gradient-to-r from-white via-cyan-100 to-purple-200 bg-clip-text text-transparent">
+                  What Our Clients Say
+                </span>
+                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-lg opacity-30"></div>
+              </h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
                 Don't just take our word for it - hear from businesses that have transformed with our solutions
               </p>
@@ -242,16 +281,23 @@ export default function HomePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 sm:p-8 border border-white/20">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-yellow-400">★</span>
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                  <div>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                    <p className="text-gray-400 text-sm">{testimonial.company}</p>
+                <div key={index} className="group relative">
+                  <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 sm:p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-purple-500/20 relative overflow-hidden">
+                    {/* Animated border effect */}
+                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    
+                    <div className="relative z-10">
+                      <div className="flex items-center mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <span key={i} className="text-yellow-400 group-hover:text-yellow-300 transition-colors">★</span>
+                        ))}
+                      </div>
+                      <p className="text-gray-300 mb-4 italic group-hover:text-gray-200 transition-colors">"{testimonial.content}"</p>
+                      <div>
+                        <p className="font-semibold text-white group-hover:text-cyan-300 transition-colors">{testimonial.name}</p>
+                        <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">{testimonial.company}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -260,35 +306,51 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4">
+        <section className="py-12 sm:py-16 lg:py-20 px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Transform Your Business?</h2>
-                <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                  Let's discuss how our AI and IT solutions can drive your success.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
-                    to="/contact" 
-                    className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                  >
-<<<<<<< HEAD
-                    Get Started Today
-=======
-                    Start Your Project
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
-                  </Link>
-                  <Link 
-                    to="/about" 
-                    className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                  >
-<<<<<<< HEAD
-                    Learn More
-=======
-                    Learn About Us
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
-                  </Link>
+              <div className="relative group">
+                <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 relative overflow-hidden">
+                  {/* Animated background effects */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/30 via-purple-500/30 to-pink-500/30 blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+                  
+                  <div className="relative z-10">
+                    <div className="inline-block mb-6">
+                      <span className="bg-white/20 text-white text-sm font-semibold tracking-wider uppercase px-4 py-2 rounded-full backdrop-blur-sm">
+                        🚀 Ready to Transform?
+                      </span>
+                    </div>
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4 relative">
+                      <span className="bg-gradient-to-r from-white via-cyan-100 to-purple-200 bg-clip-text text-transparent">
+                        Ready to Transform Your Business?
+                      </span>
+                      <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 blur-lg opacity-50 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </h2>
+                    <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                      Let's discuss how our AI and IT solutions can drive your success and accelerate your digital transformation.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <Link 
+                        to="/contact" 
+                        className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-white/20 group"
+                      >
+                        <span className="flex items-center justify-center">
+                          Get Started Today
+                          <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </Link>
+                      <Link 
+                        to="/about" 
+                        className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-white/20 group"
+                      >
+                        <span className="flex items-center justify-center">
+                          Learn More
+                          <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
