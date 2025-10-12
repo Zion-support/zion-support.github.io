@@ -9,11 +9,12 @@ interface FuturisticCardProps {
   onClick?: () => void;
 }
 
+const FuturisticCard: React.FC<FuturisticCardProps> = ({
   children, 
   variant = 'default', 
   className = '', 
   onClick 
-}: FuturisticCardProps) {
+}) => {
   const getVariantStyles = () => {
     switch (variant) {
       case 'service':
