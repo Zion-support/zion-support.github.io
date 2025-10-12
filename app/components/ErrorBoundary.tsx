@@ -1,5 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
+import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 interface Props {
   children: ReactNode
@@ -8,18 +9,26 @@ interface Props {
 
 interface State {
   hasError: boolean
-  error?: Error
-  errorInfo?: ErrorInfo
+  error: Error | null
+  errorInfo: ErrorInfo | null
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null
+    }
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
+    return {
+      hasError: true,
+      error,
+      errorInfo: null
+    }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -30,31 +39,22 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo)
+      console.error('ErrorBoundary caught an error:', error, errorInfo)
     }
 
-    // Log error to analytics service in production
-    if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
-      // Send error to analytics service
-      if (window.gtag) {
-        window.gtag('event', 'exception', {
-          description: error.message,
-          fatal: false,
-          custom_map: {
-            error_stack: error.stack,
-            component_stack: errorInfo.componentStack
-          }
-        })
-      }
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Here you would typically send the error to a service like Sentry
+      console.error('ErrorBoundary caught an error:', error, errorInfo)
     }
   }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined })
-  }
-
-  handleGoHome = () => {
-    window.location.href = '/'
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null
+    })
   }
 
   render() {
@@ -64,64 +64,74 @@ class ErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-gray-800 rounded-lg p-8 text-center">
-            <div className="flex justify-center mb-6">
-              <AlertTriangle className="w-16 h-16 text-red-400" />
-            </div>
-            
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.
-            </p>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-gray-700 p-4 rounded text-xs text-gray-300 overflow-auto max-h-40">
-                  <div className="font-mono">
-                    <div className="text-red-400 font-bold">Error:</div>
-                    <div className="mb-2">{this.state.error.message}</div>
-                    <div className="text-red-400 font-bold">Stack:</div>
-                    <div className="whitespace-pre-wrap">{this.state.error.stack}</div>
-                  </div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center">
+                  <AlertTriangle className="h-8 w-8 text-red-400" />
                 </div>
-              </details>
-            )}
+              </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center space-x-2 bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                <RefreshCw className="w-4 h-4" />
-                <span>Try Again</span>
-              </button>
+              <h1 className="text-3xl font-bold text-white mb-4">
+                Oops! Something went wrong
+              </h1>
               
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center space-x-2 bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                <Home className="w-4 h-4" />
-                <span>Go Home</span>
-              </button>
-            </div>
-
-            <div className="mt-6 text-sm text-gray-400">
-              <p>If this problem continues, please contact our support team:</p>
-              <p className="mt-2">
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
-                  className="text-cyan-400 hover:text-cyan-300"
-                >
-                  kleber@ziontechgroup.com
-                </a>
+              <p className="text-gray-300 mb-8 text-lg">
+                We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
               </p>
+
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4 mb-6 text-left">
+                  <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                  <pre className="text-red-300 text-sm overflow-auto">
+                    {this.state.error.toString()}
+                  </pre>
+                  {this.state.errorInfo && (
+                    <pre className="text-red-300 text-sm mt-2 overflow-auto">
+                      {this.state.errorInfo.componentStack}
+                    </pre>
+                  )}
+                </div>
+              )}
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={this.handleRetry}
+                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center space-x-2"
+                >
+                  <RefreshCw className="h-4 w-4" />
+                  <span>Try Again</span>
+                </button>
+
+                <Link
+                  to="/"
+                  className="border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
+                >
+                  <Home className="h-4 w-4" />
+                  <span>Go Home</span>
+                </Link>
+
+                <button
+                  onClick={() => window.history.back()}
+                  className="border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2"
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                  <span>Go Back</span>
+                </button>
+              </div>
+
+              <div className="mt-8 text-sm text-gray-400">
+                <p>
+                  If this problem persists, please contact our support team at{' '}
+                  <a 
+                    href="mailto:kleber@ziontechgroup.com" 
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
+                  >
+                    kleber@ziontechgroup.com
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
