@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Zap, Brain, Settings, Globe, Users, Star, Award, CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const AIAutomationPage: React.FC = () => {
   const features = [
@@ -59,15 +60,36 @@ const AIAutomationPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <>
       <Helmet>
         <title>AI Automation Services - Zion Tech Group</title>
         <meta name="description" content="Transform your business with AI-powered automation solutions. Reduce costs, increase efficiency, and eliminate manual processes." />
         <meta name="keywords" content="AI automation, business process automation, workflow automation, intelligent automation, RPA" />
       </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            AI-Powered Automation Solutions
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Transform your business with intelligent automation that reduces costs, increases efficiency, and eliminates manual processes.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+            </Link>
+            <Link
+              to="/services"
+              className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </section>
@@ -123,12 +145,25 @@ const AIAutomationPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Automation Solutions?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Experience the benefits of AI-powered automation
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="h-8 w-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit}</h3>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Optimization</h3>
-              <p className="text-gray-600">
-                Continuously monitor and optimize automation performance
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -159,7 +194,8 @@ const AIAutomationPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

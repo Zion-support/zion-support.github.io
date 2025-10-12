@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Users, Award, Zap, Brain, Cloud, Shield, Code, ArrowRight, Star } from 'lucide-react';
+import { CheckCircle, Users, Award, Brain, Shield, Code, ArrowRight, Star } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
   const stats = [

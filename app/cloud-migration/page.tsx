@@ -1,6 +1,5 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight, HardDrive, Laptop, Tablet, Router } from 'lucide-react'
+import { Link } from 'react-router-dom';
+import { ArrowRight, Cloud, Shield, BarChart3, CheckCircle, Star, Clock, Target, Sparkles, Play, Phone, MapPin, MessageCircle } from 'lucide-react';
 
 export default function CloudMigrationPage() {
 

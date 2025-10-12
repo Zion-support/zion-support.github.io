@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Zap, Shield, BarChart3, Users, Award, MessageSquare, Brain, Settings } from 'lucide-react';
+import { Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings, Mail } from 'lucide-react';
 
 const AIEmailAssistantPage: React.FC = () => {
   const features = [

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShoppingCart, Zap, Brain, CheckCircle, Users, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Heart, Eye, Mic, Workflow, Wifi, Package, TrendingUp, Calendar, Sparkles, Cpu, Globe, Database, Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock, Play } from 'lucide-react';
+import { ArrowRight, ShoppingCart, Zap, Brain, CheckCircle, Users, BarChart, MessageCircle, Target, Globe, Clock } from 'lucide-react';
 
 const AiChatbotBuilderPage: React.FC = () => {
 

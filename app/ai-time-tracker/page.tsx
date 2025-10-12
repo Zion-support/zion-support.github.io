@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react'
+import { ArrowRight, Brain, Zap, Shield, BarChart3, CheckCircle, Star } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const AITimeTrackerPage: React.FC = () => {

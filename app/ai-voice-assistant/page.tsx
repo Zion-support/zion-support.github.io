@@ -1,3 +1,20 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
+const AIVoiceAssistantPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>AI Voice Assistant - Zion Tech Group</title>
+        <meta name="description" content="Professional AI voice assistant services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta name="keywords" content="AI voice assistant, automation, Zion Tech Group" />
+        <meta property="og:title" content="AI Voice Assistant - Zion Tech Group" />
+        <meta property="og:description" content="Professional AI voice assistant services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-voice-assistant" />
+      </Helmet>
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-32 pb-20">
