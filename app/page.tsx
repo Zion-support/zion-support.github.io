@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Brain, Shield, Zap, ArrowRight, Globe } from 'lucide-react';
-=======
 import { Brain, Shield, Zap, Globe, ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0823
 
 const HomePage = () => {
   const features = [
