@@ -1,21 +1,28 @@
 import React from 'react';
-const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function Footer() {
   return (
     <>
-      <footer className="bg-gray-900  text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  py-12">
-        </div></div><div className="text-center">
-          </div></div><h3 className="text-2xl font-bold  mb-4">Zion Tech Group</h3>
-          <p className="text-gray-400  mb-4">
-            Advanced AI & IT Solutions
-          </p>
-          <p className="text-gray-500 text-sm">
-            © {currentYear} Zion Tech Group. All rights reserved.
-          </p>
+      <Helmet>
+        <title>Footer - Zion Tech Group</title>
+        <meta name="description" content="Professional footer by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Footer</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional footer coming soon.</p>
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
         </div>
-    </footer>
+      </div>
     </>
   );
-};
-export default Footer;
+}
