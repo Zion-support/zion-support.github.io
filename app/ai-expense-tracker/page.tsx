@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import {Receipt, Bot} from 'lucide-react';
+import { BarChart3, Bot, Brain, CheckCircle, DollarSign, Receipt, Shield, Star, TrendingUp } from 'lucide-react';
 
 export default function AIExpenseTracker() {
   const features = [

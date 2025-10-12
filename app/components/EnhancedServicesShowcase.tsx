@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Cloud, Shield, BarChart, Zap, Globe, CheckCircle, ArrowRight } from 'lucide-react';
+import { ArrowRight, BarChart, Brain, CheckCircle, Cloud, Globe, Shield, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const EnhancedServicesShowcase: React.FC = () => {

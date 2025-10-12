@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Brain, Shield, Zap, Globe, ArrowRight } from 'lucide-react';
+import { ArrowRight, Brain, Globe, Shield, Zap } from 'lucide-react';
 
 const HomePage = () => {
   const features = [

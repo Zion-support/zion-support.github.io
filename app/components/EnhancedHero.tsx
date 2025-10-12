@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
+import { ArrowRight, CheckCircle, Mail, MapPin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface EnhancedHeroProps {

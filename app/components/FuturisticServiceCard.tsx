@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Zap, Shield, Globe, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Globe, Mail, Phone, Shield, Star, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 interface FuturisticServiceCardProps {
