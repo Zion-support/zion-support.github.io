@@ -1,13 +1,4 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react';
-=======
-import { memo } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, ShoppingCart } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-1443
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
