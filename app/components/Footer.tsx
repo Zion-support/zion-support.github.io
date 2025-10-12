@@ -1,10 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
-
-export default function Footer() {
-=======
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight } from 'lucide-react';
 
 export default function Footer() {
@@ -21,10 +16,11 @@ export default function Footer() {
 
   const itServices = [
     { name: 'Cloud Migration', path: '/cloud-migration' },
-    { name: 'DevOps Solutions', path: '/devops-solutions' },
-    { name: 'Cybersecurity', path: '/cybersecurity' },
+    { name: 'DevOps & CI/CD', path: '/devops-cicd' },
+    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions' },
     { name: 'Data Analytics', path: '/data-analytics' },
     { name: 'Mobile Development', path: '/mobile-development' },
+    { name: 'Web Development', path: '/web-development' },
     { name: 'Blockchain Solutions', path: '/blockchain' },
     { name: 'Quantum Computing', path: '/quantum-computing-solutions' }
   ];
@@ -39,7 +35,6 @@ export default function Footer() {
     { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
   ];
 
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
   const quickLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
@@ -48,19 +43,16 @@ export default function Footer() {
     { name: '5G Solutions', path: '/5g-implementation' },
     { name: 'Contact', path: '/contact' }
   ];
-<<<<<<< HEAD
-=======
 
   const legalPages = [
-    { name: 'Privacy Policy', path: '/privacy' },
-    { name: 'Terms of Service', path: '/terms' }
+    { name: 'Privacy Policy', path: '/privacy-policy' },
+    { name: 'Terms of Service', path: '/terms-of-service' }
   ];
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
 
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
@@ -83,12 +75,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">AI Services</h3>
             <ul className="space-y-2">
-<<<<<<< HEAD
-=======
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link 
@@ -139,11 +129,10 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links & Legal */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 mb-6">
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <Link 
@@ -155,8 +144,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-<<<<<<< HEAD
-=======
             
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
@@ -192,7 +179,6 @@ export default function Footer() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
           </div>
         </div>
 
@@ -203,23 +189,20 @@ export default function Footer() {
               <p className="text-gray-400 text-sm">
                 © 2024 Zion Tech Group. All rights reserved.
               </p>
-<<<<<<< HEAD
-=======
               <div className="flex space-x-6">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   <span className="sr-only">Twitter</span>
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   <span className="sr-only">LinkedIn</span>
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors" target="_blank" rel="noopener noreferrer">
                   <span className="sr-only">GitHub</span>
                   <Github className="w-5 h-5" />
                 </a>
               </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
             </div>
             <div className="mt-4 md:mt-0">
               <p className="text-gray-500 text-xs">
@@ -231,8 +214,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/analyze-improve-and-deploy-application-41ac
