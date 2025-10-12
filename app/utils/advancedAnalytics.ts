@@ -8,7 +8,6 @@
   timestamp?: number;
   userId?: string;
   sessionId?: string;
-}
 
   pageViews: number;
   sessionDuration: number;
@@ -16,7 +15,6 @@
   conversionRate: number;
   topPages: Array<{ page: string; views: number }>;
   userJourney: string[];
-}
 
   pageLoadTime: number;
   firstContentfulPaint: number;
@@ -24,14 +22,12 @@
   firstInputDelay: number;
   cumulativeLayoutShift: number;
   timeToInteractive: number;
-}
 
   trackingId: string;
   enabled: boolean;
   debug: boolean;
   sampleRate: number;
   customDimensions?: Record<string, string>;
-}
 
   private config: AnalyticsConfig;
   private events: AnalyticsEvent[] = [];
@@ -41,7 +37,6 @@
 
     this.config = config;
     this.initializeTracking();
-  }
 
   /**
    * Initialize analytics tracking
@@ -62,7 +57,6 @@
 
     // Track form submissions
     this.trackFormSubmissions();
-  }
 
   /**
    * Track a custom event
@@ -76,11 +70,9 @@
     this.events.push(event);
 
       console.log('Analytics Event:', event);
-    }
 
     // Send to analytics service
     this.sendToAnalytics(event);
-  }
 
   /**
    * Track page view
@@ -91,28 +83,24 @@
     this.userBehavior.userJourney.push(currentPage);
 
     // Update top pages
-    const existingPage = this.userBehavior.topPages.find(p => p.page === currentPage);
+ p.page === currentPage);
       existingPage.views++;
       this.userBehavior.topPages.push({ page: currentPage, views: 1 });
-    }
 
       userAgent: navigator.userAgent
     });
-  }
 
   /**
    * Track user click events
    */
       ...properties
     });
-  }
 
   /**
    * Track form submissions
    */
       ...properties
     });
-  }
 
   /**
    * Track performance metrics
@@ -131,7 +119,6 @@
         this.trackEvent('performance_metrics', this.performanceMetrics);
       }, 0);
     });
-  }
 
   /**
    * Track user interactions
@@ -148,9 +135,7 @@
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
         maxScrollDepth = scrollDepth;
         this.trackEvent('scroll_depth', { depth: scrollDepth });
-      }
     });
-  }
 
   /**
    * Track scroll depth
@@ -162,11 +147,9 @@
       const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
         maxScrollDepth = scrollDepth;
         this.trackEvent('scroll_depth', { depth: scrollDepth });
-      }
     };
 
     window.addEventListener('scroll', trackScrollDepth, { passive: true });
-  }
 
   /**
    * Track form submissions
@@ -176,7 +159,6 @@
       const form = event.target as HTMLFormElement;
       this.trackFormSubmission(form);
     });
-  }
 
   /**
    * Get user ID from storage or generate new one
@@ -184,9 +166,7 @@
     let userId = localStorage.getItem('analytics_user_id');
       userId = 'user_' + Math.random().toString(36).substr(2, 9);
       localStorage.setItem('analytics_user_id', userId);
-    }
     return userId;
-  }
 
   /**
    * Get session ID from storage or generate new one
@@ -194,9 +174,7 @@
     let sessionId = sessionStorage.getItem('analytics_session_id');
       sessionId = 'session_' + Math.random().toString(36).substr(2, 9);
       sessionStorage.setItem('analytics_session_id', sessionId);
-    }
     return sessionId;
-  }
 
   /**
    * Send event to analytics service
@@ -204,8 +182,6 @@
     // In a real implementation, this would send to your analytics service
     // For now, we'll just log it
       console.log('Sending to analytics:', event);
-    }
-  }
 
   /**
    * Get analytics report
@@ -216,13 +192,11 @@
     totalEvents: number;
       totalEvents: this.events.length
     };
-  }
 
   /**
    * Export analytics data
    */
     return JSON.stringify(this.getReport(), null, 2);
-  }
 
   /**
    * Clear analytics data
@@ -231,11 +205,9 @@
       userJourney: []
     };
     this.performanceMetrics = null;
-  }
-}
 
 // Export utility functions
-export const createAnalytics = (config: AnalyticsConfig) => new AdvancedAnalytics(config);
+ new AdvancedAnalytics(config);
 
   console.log('Track event:', eventName, properties);
 };

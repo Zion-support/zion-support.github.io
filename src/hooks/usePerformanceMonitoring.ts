@@ -7,8 +7,7 @@ import { useEffect, useCallback } from 'react';
       // trackPerformance(name, value);
     []
   );
-      return () => {};
-    }
+ {};
       // LCP - Largest Contentful Paint
       
         const entries = list.getEntries();
@@ -22,7 +21,6 @@ import { useEffect, useCallback } from 'react';
             
               (entry.processingStart || entry.startTime) - entry.startTime;
             reportMetric('FID', fid);
-          }
         );
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -32,10 +30,7 @@ import { useEffect, useCallback } from 'react';
         const entries = list.getEntries();
               hadRecentInput?: boolean;
               value?: number;
-            }
               clsValue += entry.value;
-            }
-          }
         );
         reportMetric('CLS', clsValue);
       });
@@ -44,7 +39,6 @@ import { useEffect, useCallback } from 'react';
       
         const entries = list.getEntries();
             reportMetric('FCP', entry.startTime);
-          }
         });
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
@@ -54,7 +48,6 @@ import { useEffect, useCallback } from 'react';
             const navEntry = entry as PerformanceNavigationTiming;
             const ttfb = navEntry.responseStart - navEntry.requestStart;
             reportMetric('TTFB', ttfb);
-          }
         });
       });
       navigationObserver.observe({ entryTypes: ['navigation'] });
@@ -65,8 +58,6 @@ import { useEffect, useCallback } from 'react';
             const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
               // Only track slow resources
               reportMetric('SLOW_RESOURCE', loadTime);
-            }
-          }
         });
       });
       resourceObserver.observe({ entryTypes: ['resource'] });
@@ -79,8 +70,7 @@ import { useEffect, useCallback } from 'react';
         resourceObserver.disconnect();
       };
       console.error('Performance monitoring setup failed:', error);
-      return () => {};
-    }
+ {};
   }, [reportMetric]);
   // Monitor page load performance
     
@@ -91,10 +81,9 @@ import { useEffect, useCallback } from 'react';
         };
           reportMetric(key.toUpperCase(), value);
         });
-      }
     };
     window.addEventListener('load', handleLoad);
-    return () => window.removeEventListener('load', handleLoad);
+ window.removeEventListener('load', handleLoad);
   }, [reportMetric]);
     reportMetric
   };

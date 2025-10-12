@@ -17,7 +17,7 @@
     url: string;
     siteName: string;
     images: Array
-    }>;
+;
     locale: string;
     type: string;
   };
@@ -35,10 +35,8 @@
       'max-snippet': number;
     };
   };
-}
 
   keywords: [
     'technology consulting'
     images: [
-}
 ]]

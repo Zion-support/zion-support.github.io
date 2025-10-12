@@ -7,21 +7,17 @@ const componentsToFix = [
   'PerformanceMonitor', 'EnhancedErrorBoundary', 'Breadcrumb'
 ];
 
-const componentTemplate = (componentName) => `'use client';
+ `'use client';
 import React from 'react';
 
-const ${componentName}: React.FC = () => {
   return (
-    <div className="${componentName.toLowerCase()}">
       {/* ${componentName} component placeholder */}
-    </div>
   );
 };
 
 export default ${componentName};`;
 
 // Fix components
-componentsToFix.forEach(componentName => {
   const componentFile = path.join('/workspace/app/components', `${componentName}.tsx`);
   
   // Check if file exists and doesn't have default export
@@ -38,13 +34,10 @@ componentsToFix.forEach(componentName => {
         lines.push(`export default ${componentName};`);
         fs.writeFileSync(componentFile, lines.join('\n'));
         console.log(`Fixed export for: ${componentFile}`);
-      }
-    }
   } else {
     // Create component if it doesn't exist
     fs.writeFileSync(componentFile, componentTemplate(componentName));
     console.log(`Created: ${componentFile}`);
-  }
 });
 
 console.log('Component fixes completed!');

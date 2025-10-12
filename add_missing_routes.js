@@ -7,16 +7,14 @@ const brokenLinks = fs.readFileSync('/workspace/broken_links.txt', 'utf8').split
 let appContent = fs.readFileSync('/workspace/App.tsx', 'utf8');
 
 // Generate import statements for all missing pages
-const imports = brokenLinks.map(page => {
-  const componentName = page.split('-').map(word => 
+ 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
   return `import ${componentName} from './app/${page}/page'`;
 }).join('\n');
 
 // Generate route statements
-const routes = brokenLinks.map(page => {
-  const componentName = page.split('-').map(word => 
+ 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
   return `                  <Route path="/${page}" element={<${componentName} />} />`;

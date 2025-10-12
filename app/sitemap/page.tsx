@@ -1,50 +1,32 @@
-<<<<<<< HEAD
-import React  from 'react';
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-const SitemapPage: React.FC = () => {
+export default function Sitemap() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-20">
+    <>
       <Helmet>
         <title>Sitemap - Zion Tech Group</title>
-        <meta name="description" content="Professional sitemap services by Zion Tech Group. Transform your business with our expert solutions." / / />
+        <meta name="description" content="Professional sitemap services by Zion Tech Group" />
       </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6"  >Sitemap</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional sitemap services coming soon.</p>
-        <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" >
-          Contact Us
-          
-          <ArrowRight className="w-5h-5ml-2"  />
-=======
-    <>
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900 pt-20">
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">Sitemap</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional sitemap services coming soon.</p>
+            
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Contact Us
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
         </div>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-        <meta name="description" content="Professional 5G data analytics services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-        <title>Sitemap - Zion Tech Group</title>
-        <meta name="description" content="Professional sitemap services by Zion Tech Group. Transform your business with our expert solutions." / / />
-      </Helmet>
-      <div className="max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8py-16text-center">
-        </div>
-        <h1 className="text-4 xl font-boldtext-whitemb-6">Sitemap</h1>
-        <p className="text-lgtext-gray-300mb-8">Professional sitemap services coming soon.</p>
-        <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-centermx-autow-fit" />
-          Contact Us
-    <>
-          <ArrowRight className="w-5h-5ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        </Link>
       </div>
-  );
-};
-
-export default SitemapPage;
     </>
+  );
+}

@@ -8,10 +8,8 @@
   message?: string; // Custom error message
   skipSuccessfulRequests?: boolean;
   skipFailedRequests?: boolean;
-}
   count: number;
   resetTime: number;
-}
 /**
  * Simple in-memory rate limiter
  * For production, use Redis or similar distributed storage
@@ -21,8 +19,7 @@
       ...config
     };
     // Cleanup old entries every minute
-    setInterval(() => this.cleanup(), 60000);
-  }
+ this.cleanup(), 60000);
   /**
    * Check if request is allowed
    * @param identifier - Unique identifier (e.g., IP address)
@@ -34,19 +31,13 @@
       const resetTime = now + this.config.windowMs;
       this.requests.set(identifier, { count: 1, resetTime });
       return { allowed: true, remaining: this.config.max - 1, resetTime };
-    }
     // Increment count
     if (record.count 
         this.requests.delete(key);
-      }
-    }
-  }
   /**
    * Get current stats
    */
     return { totalTracked: this.requests.size };
-  }
-}
 /**
  * Pre-configured rate limiters for common use cases
  */
@@ -66,7 +57,6 @@
   if (forwardedFor) return forwardedFor.split(',')[0].trim();
   // Fallback to a default identifier
   return 'unknown';
-}
 /**
  * Create rate limit middleware
  * @param limiter - Rate limiter instance
@@ -76,12 +66,8 @@
     const { allowed, remaining, resetTime } = limiter.check(identifier);
           retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
             'X-RateLimit-Reset': String(resetTime)
-          }
-        }
       );
-    }
     // Request allowed - headers can be added to response later
     return null;
   };
-}
 export default RateLimiter;

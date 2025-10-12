@@ -34,54 +34,41 @@ export default defineConfig({
     
     rollupOptions: {
       output: {
-        manualChunks: (id) => {
           // Core React libraries
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
-          }
           // Router
           if (id.includes('react-router')) {
             return 'router'
-          }
           // UI libraries
           if (id.includes('framer-motion')) {
             return 'animations'
-          }
           if (id.includes('lucide-react')) {
             return 'icons'
-          }
           // SEO and meta
           if (id.includes('react-helmet')) {
             return 'seo'
-          }
           // Charts and data visualization
           if (id.includes('recharts')) {
             return 'charts'
-          }
           // Utility libraries
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
             return 'utils'
-          }
           // Performance monitoring
           if (id.includes('web-vitals')) {
             return 'performance'
-          }
           // AI service pages
           if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
             return 'ai-pages'
-          }
           // IT service pages
           if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {
             return 'it-pages'
-          }
           // Micro SAAS pages
           if (id.includes('/app/zion-') && id.includes('/page.tsx')) {
             return 'saas-pages'
-          }
           // Other pages
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
-          }
           // Default chunk for other modules
           return 'vendor'
         },

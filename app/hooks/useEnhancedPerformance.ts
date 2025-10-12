@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback } from 'react';
   renderTime: number;
   memoryUsage: number;
   networkLatency: number;
-}
 
   });
 
@@ -38,14 +37,13 @@ import { useState, useEffect, useCallback } from 'react';
         link.as = resource.endsWith('.woff2') ? 'font' : 'image';
         document.head.appendChild(link);
       });
-    }
   }, []);
 
     measurePerformance();
 
     const interval = setInterval(measurePerformance, 5000);
 
-    return () => clearInterval(interval);
+ clearInterval(interval);
   }, [measurePerformance]);
 
     measurePerformance

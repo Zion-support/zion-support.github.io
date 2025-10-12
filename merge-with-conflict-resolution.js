@@ -12,14 +12,12 @@ console.log('🔄 Merging branches with automatic conflict resolution...')
         continue}
       
         resolvedLines.push(line)}
-    }
     
     // Write the resolved content
     writeFileSync(filePath, resolvedLines.join('\n'))
     console.log(`✅ Resolved conflicts in ${filePath}`)
     console.log(`❌ Error resolving ${filePath}: ${error.message}`)
     return false}
-}
 
     console.log(`\n🔄 Attempting to merge ${branchName}...`)
     // Try to merge the branch

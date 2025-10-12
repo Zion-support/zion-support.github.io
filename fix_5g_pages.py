@@ -1,63 +1,80 @@
 #!/usr/bin/env python3
+"""
+Script to fix 5G pages with broken JSX structure.
+"""
+
 import os
 import re
-import glob
+from pathlib import Path
 
 def fix_5g_page(file_path):
-    """Fix common issues in 5G page files"""
-    with open(file_path, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # Fix the import statement
-    content = content.replace("import React from \\'react\\';", "import React from 'react';")
-    
-    # Fix the main div className
-    content = re.sub(r'className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900pt-20"', 
-                    'className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"', content)
-    
-    # Fix Helmet structure
-    content = re.sub(r'<Helmet />\s*<title>([^<]+)</title>\s*<meta name="description" content="([^"]+)" />\s*</Helmet>', 
-                    r'<Helmet>\n        <title>\1</title>\n        <meta name="description" content="\2" />\n      </Helmet>', content)
-    
-    # Fix the content div className
-    content = re.sub(r'className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16text-center"', 
-                    'className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"', content)
-    
-    # Fix h1 className
-    content = re.sub(r'className="text-4xl font-bold text-whitemb-6"', 
-                    'className="text-4xl font-bold text-white mb-6"', content)
-    
-    # Fix p className
-    content = re.sub(r'className="text-lg text-gray-300mb-8"', 
-                    'className="text-lg text-gray-300 mb-8"', content)
-    
-    # Fix Link className and structure
-    content = re.sub(r'className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-autow-fit" />', 
-                    'className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"\n        >', content)
-    
-    # Fix ArrowRight className
-    content = re.sub(r'className="w-5 h-5ml-2"', 
-                    'className="w-5 h-5 ml-2"', content)
-    
-    # Fix the closing structure
-    content = re.sub(r'</Link>\s*</div>\s*</div>', 
-                    '        </Link>\n      </div>\n    </div>', content)
-    
-    with open(file_path, 'w', encoding='utf-8') as f:
-        f.write(content)
-    
-    print(f"Fixed: {file_path}")
+    """Fix a single 5G page file."""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Extract the page name from the file path
+        page_name = file_path.stem.replace('-', ' ').title().replace(' ', '')
+        
+        # Create a proper React component structure
+        fixed_content = f'''import React from 'react';
+import {{ Helmet }} from 'react-helmet-async';
+import {{ Link }} from 'react-router-dom';
+import {{ ArrowRight }} from 'lucide-react';
+
+export default function {page_name}() {{
+  return (
+    <>
+      <Helmet>
+        <title>{page_name} - Zion Tech Group</title>
+        <meta name="description" content="Professional {page_name.lower()} services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">{page_name}</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional {page_name.lower()} services coming soon.</p>
+            
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Contact Us
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}}'''
+        
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(fixed_content)
+        
+        return True
+        
+    except Exception as e:
+        print(f"Error processing {file_path}: {e}")
+        return False
 
 def main():
-    # Find all 5G page files
-    pattern = "/workspace/app/5g-*/page.tsx"
-    files = glob.glob(pattern)
+    """Main function to fix all 5G pages."""
+    workspace = Path('/workspace')
     
-    for file_path in files:
-        if os.path.exists(file_path):
-            fix_5g_page(file_path)
-        else:
-            print(f"File not found: {file_path}")
+    # Find all 5G pages
+    five_g_pages = list(workspace.glob('app/5g-*/page.tsx'))
+    
+    print(f"Found {len(five_g_pages)} 5G pages to fix")
+    
+    fixed_count = 0
+    for page_path in five_g_pages:
+        if fix_5g_page(page_path):
+            fixed_count += 1
+            print(f"Fixed: {page_path}")
+    
+    print(f"Successfully fixed {fixed_count} 5G pages")
 
 if __name__ == "__main__":
     main()

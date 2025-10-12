@@ -4,7 +4,6 @@ import { useEffect } from 'react'
     // Security enhancement logic
 
         'Referrer-Policy': 'strict-origin-when-cross-origin'
-      }
 
       // Add CSP meta tag
       const cspMeta = document.createElement('meta')
@@ -13,35 +12,24 @@ import { useEffect } from 'react'
       document.head.appendChild(cspMeta)
 
       // Add security event listeners
-      const handleSecurityEvent = (event: Event) => {
         console.log('Security event detected:', event.type)
-      }
 
       window.addEventListener('beforeunload', handleSecurityEvent)
       window.addEventListener('unload', handleSecurityEvent)
 
-      return () => {
         window.removeEventListener('beforeunload', handleSecurityEvent)
         window.removeEventListener('unload', handleSecurityEvent)
         document.head.removeChild(cspMeta)
-      }
-    }
 
     const cleanup = enhanceSecurity()
     return cleanup
   }, [])
 
   return (
-<<<<<<< HEAD
-    <div className={`security-enhanced ${className}`}>
-      {children}
-=======
-    <>
+
     <div className="{`security-enhanced" ${className}`}>{children}
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-    </div>
+
   )
-}
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {useEffect(() => {// Security enhancement logic
 
@@ -60,15 +48,10 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {use
     enhanceSecurity()}, [])
   return <React.Fragment>{children}</React.Fragment>}
 export default SecurityEnhancer
-  </SecurityEnhancerProps>
 
       // Disable right-click context menu
-      document.addEventListener('contextmenu', (e) => {e.preventDefault()}
+ {e.preventDefault()}
       });// Disable F12 and other dev tools shortcuts
-      document.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
-        }
-<<<<<<< HEAD
-=======
+ {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
+
 ;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f

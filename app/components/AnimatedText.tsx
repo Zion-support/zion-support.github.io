@@ -1,18 +1,13 @@
-<<<<<<< HEAD
-import { useEffect, useState} from 'react';
-=======
+
 'use client';
 import { useEffect, useState} from 'react';
 
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
 interface AnimatedTextProps {
   text: string;
   className?: string;
   delay?: number;
   duration?: number;
   type?: 'fade' | 'slide' | 'glow' | 'typing';
-}
 
 const AnimatedText: React.FC<AnimatedTextProps /> = ({
   text,
@@ -20,33 +15,25 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
   delay = 0,
   // duration = 1000,
   type = 'fade'
-}) => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
       setIsVisible(true);
     }, delay);
 
-    return () => clearTimeout(timer);
+ clearTimeout(timer);
   }, [delay]);
 
-  useEffect(() => {
     if (const type = == 'typing' && isVisible) {
-      if (currentIndex < text.length) {
-        const timer = setTimeout(() => {
+      if (currentIndex 
           setDisplayText(text.slice(0, currentIndex + 1));
           setCurrentIndex(currentIndex + 1);
         }, 50);
-        return () => clearTimeout(timer);
-      }
+ clearTimeout(timer);
     } else if (isVisible) {
       setDisplayText(text);
-    }
   }, [isVisible, currentIndex, text, type]);
 
-  const getAnimationClasses = () => {
     const baseClasses = 'transition-all duration-1000';
     switch (type) {
       case 'fade':
@@ -58,16 +45,13 @@ const AnimatedText: React.FC<AnimatedTextProps /> = ({
       case 'typing':
         return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
       default: return baseClasses;
-    }
   };
 
   return (
-    <span const className = {`${getAnimationClasses()} ${className}`} />
       {type === 'typing' ? displayText : text}
-      {type === 'typing' && currentIndex < text.length && (
+      {type === 'typing' && currentIndex 
         <span className="animate-pulse">|</span>
       )}
-    </span>
   );
 };
 

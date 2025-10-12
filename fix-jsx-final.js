@@ -39,7 +39,6 @@ function fixJSXSyntax(content) {
   content = content.replace(/\s+$/gm, '');
   
   return content;
-}
 
 // Function to fix a specific file
 function fixFile(filePath) {
@@ -55,13 +54,10 @@ function fixFile(filePath) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed syntax in: ${filePath}`);
       return true;
-    }
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
-  }
-}
 
 // Main execution
 console.log('Starting final JSX syntax fixes...');
@@ -295,9 +291,6 @@ for (const file of criticalFiles) {
   if (fs.existsSync(file)) {
     if (fixFile(file)) {
       fixedCount++;
-    }
-  }
-}
 
 console.log(`Fixed syntax in ${fixedCount} files`);
 console.log('Final JSX syntax fixes completed!');
