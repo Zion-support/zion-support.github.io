@@ -1,8 +1,10 @@
-'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-  ]
+import Layout from '../layout'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import { Link } from 'react-router-dom'
+
+const ServicesAdvertisingPage: React.FC = () => {
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -57,8 +59,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
           </div>
         </div>
       </section>
-      {/* CTA Section */}
-          </div>
-        </div>
-      </section>
-    </div>)};export default PagePage
+    </Layout>
+  )
+}
+
+export default ServicesAdvertisingPage

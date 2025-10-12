@@ -1,49 +1,70 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import Layout from '../layout'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Server, Database, Cpu, Network } from 'lucide-react'
+import { Code, Cloud, Shield, Database, GitBranch, Monitor, Zap, CheckCircle, ArrowRight, Users, Clock, BarChart3 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-const DataCenterPage: React.FC = () => {
+const DevOpsSolutionsPage: React.FC = () => {
   const features = [
     {
-      icon: <Server className="w-8 h-8 text-blue-500" />,
-      title: 'High-Performance Servers',
-      description: 'Enterprise-grade servers with cutting-edge hardware for optimal performance.'
+      icon: <Code className="w-8 h-8 text-blue-500" />,
+      title: 'CI/CD Pipeline Setup',
+      description: 'Automated build, test, and deployment pipelines for faster, more reliable releases.'
     },
     {
-      icon: <Database className="w-8 h-8 text-green-500" />,
-      title: 'Data Storage Solutions',
-      description: 'Scalable and secure data storage solutions for all your business needs.'
+      icon: <Cloud className="w-8 h-8 text-green-500" />,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud infrastructure management with AWS, Azure, and Google Cloud.'
     },
     {
-      icon: <Cpu className="w-8 h-8 text-purple-500" />,
-      title: 'Processing Power',
-      description: 'High-performance computing resources for complex data processing tasks.'
+      icon: <Shield className="w-8 h-8 text-red-500" />,
+      title: 'Security Integration',
+      description: 'Built-in security practices and compliance monitoring throughout the development lifecycle.'
     },
     {
-      icon: <Network className="w-8 h-8 text-orange-500" />,
-      title: 'Network Infrastructure',
-      description: 'Robust network infrastructure with high-speed connectivity and redundancy.'
+      icon: <Database className="w-8 h-8 text-purple-500" />,
+      title: 'Database Management',
+      description: 'Automated database migrations, backups, and performance optimization.'
+    }
+  ]
+
+  const services = [
+    {
+      icon: <GitBranch className="w-6 h-6 text-blue-500" />,
+      title: 'Git Workflow Optimization',
+      description: 'Streamlined Git workflows with branching strategies and code review processes.'
+    },
+    {
+      icon: <Monitor className="w-6 h-6 text-green-500" />,
+      title: 'Monitoring & Alerting',
+      description: 'Comprehensive monitoring solutions with real-time alerts and performance metrics.'
+    },
+    {
+      icon: <Zap className="w-6 h-6 text-yellow-500" />,
+      title: 'Automation Tools',
+      description: 'Custom automation scripts and tools to eliminate manual processes.'
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6 text-purple-500" />,
+      title: 'Performance Analytics',
+      description: 'Detailed analytics and reporting on deployment frequency and success rates.'
     }
   ]
 
   const benefits = [
-    'Enterprise-grade infrastructure',
-    'High availability and uptime',
-    'Scalable and flexible solutions',
-    'Advanced security measures',
-    '24/7 monitoring and support',
-    'Cost-effective data center solutions',
-    'Green energy initiatives',
-    'Compliance and certification'
+    'Faster time to market with automated deployments',
+    'Reduced manual errors and improved reliability',
+    'Enhanced security with automated compliance checks',
+    'Better collaboration between development and operations teams',
+    'Scalable infrastructure that grows with your business',
+    '24/7 monitoring and proactive issue resolution'
   ]
 
   return (
     <Layout
-      title="Data Center Solutions - Zion Tech Group"
-      description="Enterprise-grade data center solutions with high-performance servers, secure storage, and robust network infrastructure for your business needs."
-      keywords="data center, servers, data storage, network infrastructure, enterprise solutions, cloud computing"
+      title="DevOps Solutions - Zion Tech Group"
+      description="Comprehensive DevOps solutions including CI/CD pipelines, cloud infrastructure, monitoring, and automation to accelerate your development lifecycle."
+      keywords="DevOps, CI/CD, cloud infrastructure, automation, monitoring, deployment, AWS, Azure, Google Cloud"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -52,15 +73,15 @@ const DataCenterPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Data Center
+              DevOps
               <br />
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Solutions
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Enterprise-grade data center solutions with high-performance servers, secure storage, 
-              and robust network infrastructure designed for your business success.
+              Accelerate your development lifecycle with our comprehensive DevOps solutions. 
+              From CI/CD pipelines to cloud infrastructure management, we help you deliver faster and more reliably.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -85,10 +106,10 @@ const DataCenterPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Why Choose Our Data Center Solutions?
+                Why Choose Our DevOps Solutions?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We provide comprehensive data center solutions that ensure reliability, security, and performance for your business.
+                We provide end-to-end DevOps services that transform your development and operations processes.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -105,15 +126,40 @@ const DataCenterPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Services Section */}
         <section className="py-20 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Benefits of Our Data Center Solutions
+                Our DevOps Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your infrastructure with enterprise-grade data center solutions.
+                Comprehensive DevOps solutions tailored to your specific needs and infrastructure.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {services.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    {service.icon}
+                    <h3 className="text-lg font-semibold text-white ml-3">{service.title}</h3>
+                  </div>
+                  <p className="text-gray-300 text-sm">{service.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Benefits of Our DevOps Solutions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Transform your development process with measurable improvements in speed, reliability, and efficiency.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -128,8 +174,8 @@ const DataCenterPage: React.FC = () => {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-6">Ready to Get Started?</h3>
                 <p className="text-gray-300 mb-6">
-                  Let our data center experts help you design and implement comprehensive 
-                  infrastructure solutions that will support your business growth.
+                  Let our DevOps experts help you transform your development process. 
+                  We'll assess your current setup and create a customized solution that fits your needs.
                 </p>
                 <Link 
                   to="/contact" 
@@ -149,10 +195,10 @@ const DataCenterPage: React.FC = () => {
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                  Ready to Transform Your Infrastructure?
+                  Ready to Transform Your DevOps?
                 </h2>
                 <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                  Let's discuss how our data center solutions can support your business objectives.
+                  Let's discuss how our DevOps solutions can accelerate your development and improve your deployment process.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
@@ -177,4 +223,4 @@ const DataCenterPage: React.FC = () => {
   )
 }
 
-export default DataCenterPage
+export default DevOpsSolutionsPage

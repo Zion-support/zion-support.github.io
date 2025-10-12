@@ -1,28 +1,24 @@
-'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-const PagePage: React.FC = () => {
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database } from 'lucide-react';
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
+import Layout from '../layout'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database } from 'lucide-react'
+import { Link } from 'react-router-dom'
+
+const SmartCityInfrastructurePage: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
       description: 'Advanced AI technology to transform your city infrastructure and improve efficiency'
     },
     {
       icon: Zap,
       title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
       description: 'Lightning-fast processing and real-time analytics for optimal city management'
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
       description: 'Bank-level security with advanced encryption and compliance standards'
     },
     {
@@ -401,7 +397,8 @@ export default PagePage
           </div>
         </section>
       </div>
-      <Footer />
-    </>
-  )}
+    </Layout>
+  )
+}
+
 export default SmartCityInfrastructurePage

@@ -42,7 +42,7 @@ const Navigation: React.FC = () => {
     },
     {
       name: 'Micro SAAS',
-      path: '/micro-saas-services',
+      path: '/micro-saas',
       icon: Code,
       dropdown: [
         { name: 'AI-Powered CRM', path: '/ai-crm' },
@@ -69,13 +69,29 @@ const Navigation: React.FC = () => {
         { name: '5G Private Networks', path: '/5g-private-networks' },
         { name: '5G Data Analytics', path: '/5g-data-analytics' }
       ]
+    },
+    {
+      name: 'Resources',
+      path: '/resources',
+      icon: Globe,
+      dropdown: [
+        { name: 'Documentation', path: '/docs' },
+        { name: 'API Reference', path: '/api-docs' },
+        { name: 'Help Center', path: '/help' },
+        { name: 'Community', path: '/community' },
+        { name: 'Status Page', path: '/status' },
+        { name: 'Press Kit', path: '/press' }
+      ]
     }
   ];
 
   const simpleLinks = [
     { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
-    { name: 'Pricing', path: '/pricing' }
+    { name: 'Team', path: '/team' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Case Studies', path: '/case-studies' },
+    { name: 'Pricing', path: '/pricing' },
+    { name: 'Contact', path: '/contact' }
   ];
 
   const toggleDropdown = (dropdown: string) => {
