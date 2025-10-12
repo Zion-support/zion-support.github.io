@@ -1,44 +1,38 @@
 #!/bin/bash
 
-# Script to fix merge conflicts in the codebase
-echo "Starting merge conflict resolution..."
-
 # Find all files with merge conflicts
-files_with_conflicts=$(grep -r "<<<<<<< HEAD" app/ --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" -l)
-
-echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
-
-# Function to fix merge conflicts in a file
-fix_merge_conflicts() {
-    local file="$1"
+find /workspace/app -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \; | while read file; do
     echo "Fixing merge conflicts in: $file"
     
     # Create a backup
     cp "$file" "$file.backup"
     
-    # Use git to resolve conflicts by taking the HEAD version
-    # This is a simple approach - in a real scenario you'd want more sophisticated conflict resolution
-    sed -i '/<<<<<<< HEAD/,/>>>>>>> origin\/main/d' "$file"
-    sed -i '/<<<<<<< HEAD/,/>>>>>>> main/d' "$file"
-    sed -i '/=======/d' "$file"
+    # Use git to resolve conflicts by taking HEAD version
+    cd /workspace
+    git checkout --ours "$file" 2>/dev/null || true
     
-    # Clean up any remaining conflict markers
-    sed -i '/^<<<<<<< /d' "$file"
-    sed -i '/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
-    
-    # Remove any syntax errors that might have been introduced
-    sed -i 's/,,/,/g' "$file"
-    sed -i 's/return(\([^)]*\))/return (\1)/g' "$file"
-    sed -i 's/return(<\([^>]*\)>)/return <\1>/g' "$file"
-}
-
-# Fix each file
-for file in $files_with_conflicts; do
-    if [ -f "$file" ]; then
-        fix_merge_conflicts "$file"
+    # If git checkout doesn't work, manually resolve by taking HEAD version
+    if grep -q "<<<<<<< HEAD" "$file"; then
+        # Extract content between <<<<<<< HEAD and =======
+        sed -n '/<<<<<<< HEAD/,/=======/p' "$file" | sed '1d;$d' > "$file.tmp"
+        
+        # If no content between markers, try to extract from HEAD to end
+        if [ ! -s "$file.tmp" ]; then
+            sed -n '/<<<<<<< HEAD/,/>>>>>>>/p' "$file" | sed '1d;$d' > "$file.tmp"
+        fi
+        
+        # Replace the entire file with the HEAD content
+        if [ -s "$file.tmp" ]; then
+            cp "$file.tmp" "$file"
+        fi
+        
+        rm -f "$file.tmp"
     fi
+    
+    # Remove any remaining conflict markers
+    sed -i '/<<<<<<< HEAD/d' "$file"
+    sed -i '/=======/d' "$file"
+    sed -i '/>>>>>>>/d' "$file"
 done
 
-echo "Merge conflict resolution completed!"
-echo "Please review the changes and test the application."
+echo "Merge conflicts fixed!"
