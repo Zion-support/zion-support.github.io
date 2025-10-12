@@ -13,13 +13,13 @@ const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.
 const missingPages = analysisData.missingPagesList;
 
 // Generate import statements for missing pages;
-
+const generateImportStatement = (route) => {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
   return `const ${componentName} = lazy(() => import('.${route}/page'));`;
 };
 
 // Generate route statements;
-
+const generateRouteStatement = (route) => {
   const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page';
   return `            <Route path="${route}" element={<${componentName} />} />`;
 };
@@ -50,6 +50,5 @@ const newAppContent = beforeRoutes + '\n            {/* Missing Pages */}\n' + r
 fs.writeFileSync('/workspace/src/App.tsx', newAppContent);
 
 // Log success for debugging in development
-  console.log(`✅ Added ${missingPages.length} missing routes to App.tsx`);
-  console.log('All navigation links should now work properly!');
-}
+console.log(`✅ Added ${missingPages.length} missing routes to App.tsx`);
+console.log('All navigation links should now work properly!');

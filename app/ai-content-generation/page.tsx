@@ -1,11 +1,8 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { ArrowRight, FileText, CheckCircle, Star, Zap, Brain, Target, Clock, DollarSign, Users, Globe } from 'lucide-react'
-import { Link } from 'react-router-dom'
-
+import { ArrowRight, FileText, CheckCircle, Star, Zap, Brain, Target, Clock, Users, Globe } from 'lucide-react'
 export default function AIContentGenerationPage() {
-  const [activeTab, setActiveTab] = useState('features')
 
   const features = [
     {

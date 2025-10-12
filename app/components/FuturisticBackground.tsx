@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-ursor/enhance-app-with-new-services-and-futuristic-design-00bf
-ursor/website-audit-and-update-with-deployment-a178
-  )
-}
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -90,7 +84,5 @@ const FuturisticBackgroundPage: React.FC = () => {
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-fabc
 
 export default FuturisticBackgroundPage
->>>>>>> cursor/analyze-improve-and-deploy-application-edcb

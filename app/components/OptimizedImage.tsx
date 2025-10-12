@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-ursor/analyze-improve-and-deploy-application-edcb
-=======
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -217,4 +214,3 @@ export default OptimizedImagePage
       </section>
     </div>)};export default OptimizedImagePage
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-fabc
