@@ -1,26 +1,43 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function CasestudiesPage() {
+const CaseStudiesPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+    <>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Professional case studies services by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name="description" content="Case Studies services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name="keywords" content="case-studies, AI solutions, IT services" />
       </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">Case Studies</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional case studies services coming soon.</p>
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Case Studies
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional case studies services by Zion Tech Group.
+            </p>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xl p-8 text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="text-gray-300 mb-6">
+              We're working on bringing you comprehensive case studies solutions. 
+              Contact us to learn more about our services.
+            </p>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+              Contact Us
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default CaseStudiesPage;

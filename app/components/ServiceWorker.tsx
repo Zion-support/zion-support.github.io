@@ -162,3 +162,5 @@ const ServiceWorker: React.FC = () => {
     </div>
   )
 }
+
+export default ServiceWorker;
