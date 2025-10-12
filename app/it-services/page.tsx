@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Cloud, Shield, Server, Database, Smartphone, Globe, MessageCircle, Code, Network, Settings, Users, Clock, DollarSign } from 'lucide-react';
+import { CheckCircle, ArrowRight, Cloud, Shield, Server, Database, Code, Network, Settings, Users, Clock, DollarSign } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
