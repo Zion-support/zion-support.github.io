@@ -1,69 +1,54 @@
 #!/usr/bin/env python3
 """
-Script to fix function names with hyphens
+Script to fix function names that start with numbers
 """
 import os
-import re
 import glob
+import re
 
-def fix_function_names(content):
-    """Fix function names with hyphens"""
-    # Fix function names like "5G-Data-AnalyticsPage" -> "FiveGDataAnalyticsPage"
-    content = re.sub(r'export default function (\d+[Gg])-([A-Za-z-]+)Page\(\)', 
-                     lambda m: f'export default function {m.group(1).replace("5G", "FiveG").replace("5g", "FiveG")}{"".join(word.capitalize() for word in m.group(2).split("-"))}Page()', 
-                     content)
-    
-    # Fix other function names with hyphens
-    content = re.sub(r'export default function ([A-Za-z0-9]+)-([A-Za-z-]+)Page\(\)', 
-                     lambda m: f'export default function {m.group(1)}{"".join(word.capitalize() for word in m.group(2).split("-"))}Page()', 
-                     content)
-    
-    return content
-
-def process_file(file_path):
-    """Process a single file"""
+def fix_function_names_in_file(file_path):
+    """Fix function names in a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        original_content = content
-        content = fix_function_names(content)
+        # Fix function names that start with numbers
+        # Pattern: export default function 5G...() -> export default function FiveG...()
+        content = re.sub(r'export default function 5G(\w+)\(', r'export default function FiveG\1(', content)
         
-        # Only write if content changed
-        if content != original_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(content)
-            print(f"Fixed function names: {file_path}")
-            return True
-        else:
-            return False
-            
+        # Pattern: function 5G...() -> function FiveG...()
+        content = re.sub(r'function 5G(\w+)\(', r'function FiveG\1(', content)
+        
+        # Pattern: const 5G... = -> const FiveG... =
+        content = re.sub(r'const 5G(\w+) =', r'const FiveG\1 =', content)
+        
+        # Pattern: let 5G... = -> let FiveG... =
+        content = re.sub(r'let 5G(\w+) =', r'let FiveG\1 =', content)
+        
+        # Pattern: var 5G... = -> var FiveG... =
+        content = re.sub(r'var 5G(\w+) =', r'var FiveG\1 =', content)
+        
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        print(f"Fixed function names in: {file_path}")
+        return True
+        
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
     """Main function"""
-    # Find all TypeScript/React files
-    patterns = [
-        '/workspace/app/**/*.tsx',
-        '/workspace/app/**/*.ts',
-        '/workspace/*.tsx',
-        '/workspace/*.ts'
-    ]
-    
-    files_to_process = []
-    for pattern in patterns:
-        files_to_process.extend(glob.glob(pattern, recursive=True))
-    
-    print(f"Found {len(files_to_process)} files to process")
+    # Get all TSX files
+    tsx_files = glob.glob('app/**/*.tsx', recursive=True)
     
     fixed_count = 0
-    for file_path in files_to_process:
-        if process_file(file_path):
+    for file_path in tsx_files:
+        if fix_function_names_in_file(file_path):
             fixed_count += 1
     
-    print(f"Fixed {fixed_count} files")
+    print(f"Fixed function names in {fixed_count} files")
 
 if __name__ == "__main__":
     main()

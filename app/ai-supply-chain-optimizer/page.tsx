@@ -1,91 +1,56 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target } from 'lucide-react';
-
-=======
->>>>>>> origin/main
-import FuturisticBackground from '../components/FuturisticBackground';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-export default function AISupplyChainOptimizerPage() {
-'use client';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
 
 export default function AiSupplyChainOptimizerPage() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <>
-      <title>5G Data Analytics - Zion Tech Group</title>
-
-                <p>✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
-
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function AISupplyChainOptimizerPage() {
-  return (
     <>
       <Helmet>
-        <title>A I Supply Chain Optimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional a i supply chain optimizer services by Zion Tech Group. Transform your business with our expert solutions." />
+        <title>Ai Supply Chain Optimizer - Zion Tech Group</title>
+        <meta name="description" content="Professional ai supply chain optimizer services and solutions from Zion Tech Group." />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">AI Supply Chain Optimizer</h1>
-          <p className="text-lg text-gray-300 mb-8">Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
-                and intelligent inventory management. Reduce costs by 35% and improve efficiency by 40%.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-      </>
->>>>>>> origin/main
-  );
-
-=======
-    <></>
-      <Helmet>        <title>AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
-        <meta const name = "description" content="Optimize your supply chain with AI-powered demand forecasting, route optimization, and inventory management. Reduce costs by 35% and improve delivery times by 40%." /  /></meta>
-        <meta name="keywords" content="AI supply chain, logistics optimization, inventory management, demand forecasting, supply chain AI, logistics technology" /></meta>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer"  /></link>
-=======
-    <>
-      <Helmet>
-        <title>AiSupplyChainOptimizer - Zion Tech Group</title>
-        <meta name="description" content="Professional ai supply chain optimizer solutions and services." />
->>>>>>> cursor/fix-errors-and-merge-to-main-3e0a
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">AiSupplyChainOptimizer</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional ai supply chain optimizer solutions coming soon.</p>
-          <Link 
-            to="/contact" 
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Ai Supply Chain Optimizer
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional ai supply chain optimizer services and solutions from Zion Tech Group.
+            </p>
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Advanced Solutions</h3>
+              <p className="text-gray-300">
+                Cutting-edge technology solutions designed to meet your business needs.
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300">
+                Professional support and guidance from our team of experts.
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">Scalable Growth</h3>
+              <p className="text-gray-300">
+                Solutions that grow with your business and adapt to your needs.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </>

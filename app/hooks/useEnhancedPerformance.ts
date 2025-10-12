@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import { useState, useEffect, useCallback } from 'react';
-=======
-import { useState, useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 
-=======
-export const useEnhancedPerformance = () => {
->>>>>>> origin/main
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
