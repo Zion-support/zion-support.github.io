@@ -1,6 +1,7 @@
 import React from 'react'
-import { ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react'
+import { ArrowRight, Brain, BarChart3, Shield, Zap, CheckCircle, Star } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 const AIInventoryManagerPage: React.FC = () => {
   const features = [

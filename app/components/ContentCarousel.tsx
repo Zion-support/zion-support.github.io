@@ -41,6 +41,7 @@ const defaultSlides: Slide[] = [
   }
 ];
 
+export default function ContentCarousel({ 
   slides = defaultSlides, 
   autoPlay = true, 
   interval = 5000 

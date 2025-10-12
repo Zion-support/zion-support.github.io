@@ -2,7 +2,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
+export default function AISocialMediaManagerPage() {
   return (
     <>
       <Helmet>
@@ -73,4 +75,6 @@ import { ArrowRight } from 'lucide-react';
           </div>
         </section>
       </div>
+    </>
+  );
 }

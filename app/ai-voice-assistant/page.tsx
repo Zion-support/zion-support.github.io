@@ -1,3 +1,68 @@
+'use client';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { CheckCircle, Mic, Brain, Zap, Shield, BarChart3, Star, Phone } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+
+export default function AIVoiceAssistantPage() {
+  const features = [
+    {
+      icon: Mic,
+      title: 'Natural Speech Recognition',
+      description: 'Advanced AI understands natural language with 99% accuracy across multiple languages and accents.'
+    },
+    {
+      icon: Brain,
+      title: 'Intelligent Processing',
+      description: 'Context-aware AI that learns from interactions and provides personalized responses.'
+    },
+    {
+      icon: Zap,
+      title: 'Real-time Response',
+      description: 'Lightning-fast processing with sub-second response times for seamless conversations.'
+    },
+    {
+      icon: Shield,
+      title: 'Secure & Private',
+      description: 'Enterprise-grade security with end-to-end encryption and privacy protection.'
+    }
+  ];
+
+  const useCases = [
+    {
+      icon: Phone,
+      title: 'Customer Service',
+      description: 'Automate customer support with intelligent voice assistants that handle common inquiries.'
+    },
+    {
+      icon: Brain,
+      title: 'Smart Home',
+      description: 'Control smart devices and automate home tasks with voice commands.'
+    },
+    {
+      icon: BarChart3,
+      title: 'Business Automation',
+      description: 'Streamline business processes with voice-activated workflows and data entry.'
+    },
+    {
+      icon: Star,
+      title: 'Personal Assistant',
+      description: 'Create personalized AI assistants for scheduling, reminders, and daily tasks.'
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>AI Voice Assistant - Zion Tech Group</title>
+        <meta name="description" content="Professional AI voice assistant services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta name="keywords" content="AI voice assistant, speech recognition, IT services, Zion Tech Group" />
+        <meta property="og:title" content="AI Voice Assistant - Zion Tech Group" />
+        <meta property="og:description" content="Professional AI voice assistant services by Zion Tech Group. Expert solutions tailored to your business needs." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-voice-assistant" />
+      </Helmet>
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-32 pb-20">
@@ -230,6 +295,4 @@
       </div>
     </>
   );
-};
-
-export default AIVoiceAssistantPage;
+}

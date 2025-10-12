@@ -1,6 +1,7 @@
 import React from 'react'
-import { Share2, ArrowRight, Bot, RotateCcw, RotateCw, Receipt } from 'lucide-react'
+import { Share2, ArrowRight, Brain, BarChart3, Zap, CheckCircle, Star } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 const AISocialSchedulerPage: React.FC = () => {
   const features = [
