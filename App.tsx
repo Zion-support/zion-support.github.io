@@ -112,8 +112,8 @@ function App() {
                 <Route path="/case-studies" element={<CaseStudiesPage />} />
                 <Route path="/careers" element={<CareersPage />} />
                 <Route path="/ai-services" element={<AIServicesPage />} />
-                <Route path="/it-services" element={<ITServicesPage />} />
-                <Route path="/micro-saas" element={<MicroSAASPage />} />
+                <Route path="/it-services" element={<ServicesPage />} />
+                <Route path="/micro-saas" element={<ServicesPage />} />
                 <Route path="/tutorials" element={<TutorialsPage />} />
                 <Route path="/consultation" element={<ConsultationPage />} />
                 <Route path="/demo" element={<DemoPage />} />

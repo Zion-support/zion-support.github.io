@@ -283,7 +283,11 @@ export default function CloudMigrationPro() {
                   <div className="text-4xl font-bold text-cyan-400 mb-4">{step.step}</div>
                   <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
                   <p className="text-gray-300">{step.description}</p>
-        </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Features Section */}
         <div className="py-20">
@@ -308,8 +312,9 @@ export default function CloudMigrationPro() {
               ))}
             </div>
           </div>
+        </div>
 
-          {/* Pricing Section */}
+        {/* Pricing Section */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Migration Packages</h2>
             <div className="grid md:grid-cols-3 gap-8">
@@ -331,7 +336,18 @@ export default function CloudMigrationPro() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="text-gray-300 flex items-center">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-        </div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <button className="w-full bg-cyan-500 text-white py-3 px-6 rounded-lg hover:bg-cyan-600 transition-colors">
+                    Get Started
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* Migration Steps */}
         <div className="py-20 bg-gray-900/50">

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { BarChart3, TrendingUp, Users, DollarSign } from 'lucide-react';
 
 declare global {
   interface Window {
@@ -6,7 +7,11 @@ declare global {
   }
 }
 
-const Analytics: React.FC = () => {
+interface AnalyticsProps {
+  className?: string;
+}
+
+const Analytics: React.FC<AnalyticsProps> = ({ className = '' }) => {
   useEffect(() => {
     const initAnalytics = () => {
       if (typeof window !== 'undefined' && window.gtag) {
@@ -19,18 +24,6 @@ const Analytics: React.FC = () => {
     initAnalytics();
   }, []);
 
-  return null; // Analytics component doesn't render anything
-};
-
-export default Analytics;
-import React from 'react';
-import { BarChart3, TrendingUp, Users, DollarSign } from 'lucide-react';
-
-interface AnalyticsProps {
-  className?: string;
-}
-
-export default function Analytics({ className = '' }: AnalyticsProps) {
   const stats = [
     {
       icon: <Users className="w-8 h-8 text-cyan-400" />,
@@ -48,26 +41,27 @@ export default function Analytics({ className = '' }: AnalyticsProps) {
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
-      label: 'Growth Rate',
+      label: 'Growth',
       value: '23.5%',
-      change: '+2.1%',
+      change: '+5%',
       changeType: 'positive' as const
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
-      label: 'Conversion',
-      value: '3.2%',
-      change: '-0.5%',
-      changeType: 'negative' as const
+      icon: <BarChart3 className="w-8 h-8 text-orange-400" />,
+      label: 'Analytics',
+      value: '98.2%',
+      change: '+2%',
+      changeType: 'positive' as const
     }
   ];
 
   return (
-    <div className={`analytics-dashboard ${className}`}>
+    <div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 ${className}`}>
+      <h3 className="text-xl font-semibold text-white mb-6">Analytics Dashboard</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((stat, index) => (
-          <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-400 transition-colors">
-            <div className="flex items-center justify-between mb-4">
+          <div key={index} className="bg-white/5 rounded-lg p-4 border border-white/10">
+            <div className="flex items-center justify-between mb-2">
               {stat.icon}
               <span className={`text-sm font-medium ${
                 stat.changeType === 'positive' ? 'text-green-400' : 'text-red-400'
@@ -76,15 +70,11 @@ export default function Analytics({ className = '' }: AnalyticsProps) {
               </span>
             </div>
             <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-            <div className="text-gray-400 text-sm">{stat.label}</div>
+            <div className="text-sm text-gray-400">{stat.label}</div>
           </div>
         ))}
       </div>
     </div>
-  );
-}
-  return (
-    <div>Analytics Component</div>
   );
 };
 

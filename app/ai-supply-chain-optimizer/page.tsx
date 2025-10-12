@@ -2,10 +2,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Truck, Package, TrendingUp, Shield, Target, Globe, Clock } from 'lucide-react';
-import { Truck, Package, TrendingUp, Shield, CheckCircle } from 'lucide-react';
-
-import { Truck, Package, TrendingUp, Shield } from 'lucide-react';
+import { Truck, Package, TrendingUp, Shield, Target, Globe, Clock, CheckCircle } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -139,8 +136,6 @@ export default function AISupplyChainOptimizerPage() {
       <Helmet>
         <title>AI Supply Chain Optimizer - Zion Tech Group</title>
         <meta name="description" content="Revolutionize your supply chain with AI-powered demand forecasting, route optimization, and intelligent inventory management." />
-        <meta name="description" content="Revolutionize your supply chain with AI-powered optimization, predictive analytics, and automated inventory management." />
-        <meta name="description" content="Revolutionize your supply chain with AI-powered optimization, predictive analytics, and automated inventory management." />
       </Helmet>
       
       <FuturisticBackground>
@@ -385,7 +380,7 @@ export default function AISupplyChainOptimizerPage() {
                 ))}
               </div>
             </div>
-          </div>
+          </section>
 
           {/* Pricing Section */}
           <div className="py-20 px-4">
@@ -480,17 +475,6 @@ export default function AISupplyChainOptimizerPage() {
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Testimonials */}
-          <div className="py-20 px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-4 text-center">
-                Trusted by Industry Leaders
-              </h2>
-              <p className="text-gray-300 text-center mb-12">
-                See how companies are transforming their supply chains
-              </p>
           </section>
 
           {/* Testimonials */}
@@ -510,7 +494,6 @@ export default function AISupplyChainOptimizerPage() {
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <span key={i} className="text-yellow-400">★</span>
-                        <CheckCircle key={i} className="w-5 h-5 text-yellow-400" />
                       ))}
                     </div>
                     <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
@@ -522,10 +505,10 @@ export default function AISupplyChainOptimizerPage() {
                 ))}
               </div>
             </div>
-          </div>
+          </section>
 
           {/* CTA Section */}
-          <div className="py-20 px-4">
+          <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-white mb-4">
                 Ready to Optimize Your Supply Chain?
@@ -539,27 +522,6 @@ export default function AISupplyChainOptimizerPage() {
                 </FuturisticButton>
                 <FuturisticButton variant="secondary" size="lg">
                   Schedule Demo
-                </FuturisticButton>
-              </div>
-            </div>
-          </div>
-          </section>
-
-          {/* CTA Section */}
-          <section className="py-20">
-            <div className="container mx-auto px-4 text-center">
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Ready to Optimize Your Supply Chain?
-              </h2>
-              <p className="text-gray-300 text-lg mb-8">
-                Join industry leaders who are already transforming their supply chains with AI
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <FuturisticButton href="/contact" variant="primary">
-                  Start Your Free Trial
-                </FuturisticButton>
-                <FuturisticButton href="/about" variant="secondary">
-                  Learn More
                 </FuturisticButton>
               </div>
             </div>
