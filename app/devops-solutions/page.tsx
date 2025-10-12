@@ -1,32 +1,32 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Mic, Brain, Zap, Star, Users, Clock, Shield, BarChart3, Target, Globe, Volume2 } from 'lucide-react';
+import { CheckCircle, ArrowRight, Settings, Zap, Star, Users, Clock, BarChart3, Target, Globe, Shield, Code } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function AIVoiceAssistantPage() {
+export default function DevOpsSolutionsPage() {
   const features = [
     {
-      icon: <Mic className="w-8 h-8 text-blue-500" />,
-      title: 'Natural Voice Recognition',
-      description: 'Advanced speech-to-text with 99% accuracy, supporting multiple languages and accents.',
-      features: ['Multi-language support', 'Accent recognition', 'Noise cancellation', 'Real-time transcription', 'Voice commands', 'Custom wake words'],
-      price: 'Starting at $79/month',
+      icon: <Settings className="w-8 h-8 text-blue-500" />,
+      title: 'CI/CD Pipeline Setup',
+      description: 'Automated continuous integration and deployment pipelines for faster, more reliable software delivery.',
+      features: ['Automated testing', 'Code quality checks', 'Deployment automation', 'Rollback capabilities', 'Environment management', 'Performance monitoring'],
+      price: 'Starting at $1,999/month',
       popular: true
     },
     {
-      icon: <Brain className="w-8 h-8 text-green-500" />,
-      title: 'Intelligent Responses',
-      description: 'AI-powered voice responses that understand context and provide helpful, conversational answers.',
-      features: ['Context awareness', 'Natural language processing', 'Conversation memory', 'Intent recognition', 'Emotional intelligence', 'Personalization'],
-      price: 'Starting at $99/month',
+      icon: <Shield className="w-8 h-8 text-green-500" />,
+      title: 'Infrastructure as Code',
+      description: 'Manage and provision infrastructure using code with version control and automated deployments.',
+      features: ['Terraform automation', 'CloudFormation templates', 'Infrastructure monitoring', 'Cost optimization', 'Security compliance', 'Disaster recovery'],
+      price: 'Starting at $2,499/month',
       popular: false
     },
     {
-      icon: <Zap className="w-8 h-8 text-purple-500" />,
-      title: 'Smart Automation',
-      description: 'Automate tasks and workflows through voice commands with intelligent task execution.',
-      features: ['Task automation', 'Workflow integration', 'API connections', 'Smart scheduling', 'Data processing', 'Custom actions'],
-      price: 'Starting at $129/month',
+      icon: <BarChart3 className="w-8 h-8 text-purple-500" />,
+      title: 'Monitoring & Observability',
+      description: 'Comprehensive monitoring, logging, and alerting solutions for optimal system performance.',
+      features: ['Application monitoring', 'Infrastructure metrics', 'Log aggregation', 'Alert management', 'Performance analytics', 'Capacity planning'],
+      price: 'Starting at $1,499/month',
       popular: true
     }
   ];
@@ -34,79 +34,79 @@ export default function AIVoiceAssistantPage() {
   const benefits = [
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Hands-Free Operation',
-      description: 'Control your business operations completely hands-free with voice commands.'
+      title: 'Faster Deployments',
+      description: 'Reduce deployment time by 80% with automated CI/CD pipelines and infrastructure automation.'
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Accessibility',
-      description: 'Make your services accessible to users with disabilities or mobility limitations.'
+      title: 'Higher Reliability',
+      description: 'Achieve 99.9% uptime with robust monitoring, automated testing, and failover systems.'
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Multitasking',
-      description: 'Increase productivity by performing multiple tasks simultaneously through voice.'
+      title: 'Cost Optimization',
+      description: 'Reduce infrastructure costs by 30% with efficient resource management and automation.'
     },
     {
       icon: <CheckCircle className="w-6 h-6 text-green-500" />,
-      title: 'Natural Interaction',
-      description: 'Provide a more natural and intuitive user experience through voice interaction.'
+      title: 'Team Productivity',
+      description: 'Increase development team productivity by 50% with streamlined workflows and automation.'
     }
   ];
 
-  const useCases = [
+  const tools = [
     {
-      title: 'Customer Service',
-      description: 'Handle customer inquiries and support requests through voice interaction',
-      icon: <Users className="w-6 h-6 text-blue-500" />
+      name: 'Docker & Kubernetes',
+      description: 'Container orchestration and microservices management',
+      icon: <Code className="w-6 h-6 text-blue-500" />
     },
     {
-      title: 'Healthcare',
-      description: 'Assist patients with appointment scheduling and medical information',
+      name: 'Jenkins & GitLab CI',
+      description: 'Continuous integration and deployment automation',
+      icon: <Settings className="w-6 h-6 text-orange-500" />
+    },
+    {
+      name: 'Terraform & Ansible',
+      description: 'Infrastructure as code and configuration management',
       icon: <Shield className="w-6 h-6 text-green-500" />
     },
     {
-      title: 'Smart Office',
-      description: 'Control office equipment and manage meetings through voice commands',
-      icon: <Target className="w-6 h-6 text-purple-500" />
-    },
-    {
-      title: 'E-commerce',
-      description: 'Enable voice shopping and product search for online stores',
-      icon: <Globe className="w-6 h-6 text-orange-500" />
+      name: 'Prometheus & Grafana',
+      description: 'Monitoring, alerting, and visualization solutions',
+      icon: <BarChart3 className="w-6 h-6 text-purple-500" />
     }
   ];
 
   const stats = [
-    { number: '500K+', label: 'Voice Commands Processed' },
-    { number: '99%', label: 'Accuracy Rate' },
-    { number: '50+', label: 'Languages Supported' },
-    { number: '24/7', label: 'Voice Processing' }
+    { number: '200+', label: 'Projects Deployed' },
+    { number: '80%', label: 'Faster Deployments' },
+    { number: '99.9%', label: 'Uptime Achieved' },
+    { number: '24/7', label: 'Monitoring' }
   ];
 
   const pricing = [
     {
       plan: 'Starter',
-      price: '$79',
+      price: '$1,999',
       period: '/month',
-      description: 'Perfect for small businesses and startups',
-      features: ['Up to 1,000 voice commands/month', 'Basic voice recognition', 'Email integration', 'Basic analytics', 'Email support', 'Standard voices'],
+      description: 'Perfect for small teams and simple applications',
+      features: ['Basic CI/CD setup', 'Single environment', 'Standard monitoring', 'Email support', 'Monthly reviews', 'Basic automation'],
       popular: false
     },
     {
       plan: 'Professional',
-      price: '$199',
+      price: '$4,999',
       period: '/month',
-      description: 'Ideal for growing businesses and agencies',
-      features: ['Up to 10,000 voice commands/month', 'Advanced AI features', 'Multi-language support', 'Custom voice training', 'Priority support', 'API access'],
+      description: 'Ideal for growing teams and complex applications',
+      features: ['Advanced CI/CD', 'Multi-environment', 'Comprehensive monitoring', 'Priority support', 'Weekly reviews', 'Full automation'],
       popular: true
     },
     {
       plan: 'Enterprise',
-      price: '$499',
+      price: '$9,999',
       period: '/month',
-      description: 'For large organizations and high-volume usage',
-      features: ['Unlimited voice commands', 'Custom voice models', 'White-label options', 'Dedicated support', 'On-premise deployment', 'Advanced security'],
+      description: 'For large organizations and mission-critical systems',
+      features: ['Custom DevOps', 'Unlimited environments', 'Advanced monitoring', 'Dedicated support', 'Daily reviews', 'Custom automation'],
       popular: false
     }
   ];
@@ -114,9 +114,9 @@ export default function AIVoiceAssistantPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>AI Voice Assistant - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered voice assistant. Enable hands-free operations, voice commands, and natural language interaction for your business." />
-        <meta name="keywords" content="AI voice assistant, voice recognition, speech-to-text, voice automation, conversational AI" />
+        <title>DevOps Solutions - Zion Tech Group</title>
+        <meta name="description" content="Professional DevOps solutions and services. Streamline development workflows with CI/CD, infrastructure automation, and monitoring solutions." />
+        <meta name="keywords" content="DevOps solutions, CI/CD, infrastructure automation, monitoring, containerization, cloud DevOps" />
       </Helmet>
       
       {/* Hero Section */}
@@ -124,25 +124,25 @@ export default function AIVoiceAssistantPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-              AI Voice Assistant
+              DevOps Solutions
             </h1>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with AI-powered voice assistants that understand, respond, and automate tasks through natural speech. 
-              Enable hands-free operations and enhance accessibility.
+              Accelerate your software delivery with our comprehensive DevOps solutions. 
+              Streamline workflows, automate deployments, and ensure reliable operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Free Trial
+                Get Free Assessment
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                to="/ai-services"
+                to="/it-services"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
-                View All AI Services
+                View All IT Services
               </Link>
             </div>
           </div>
@@ -164,10 +164,10 @@ export default function AIVoiceAssistantPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Advanced Voice AI Features
+              Comprehensive DevOps Services
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Everything you need to implement voice-powered AI solutions.
+              Everything you need to modernize your development and operations workflows.
             </p>
           </div>
           
@@ -198,7 +198,7 @@ export default function AIVoiceAssistantPage() {
                   to="/contact"
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
-                  Get Started
+                  Learn More
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
@@ -207,24 +207,24 @@ export default function AIVoiceAssistantPage() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Tools Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Perfect For Every Industry
+              DevOps Tools & Technologies
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our AI voice assistant adapts to your industry and business requirements.
+              We work with the latest DevOps tools and technologies to deliver optimal solutions.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {useCases.map((useCase, index) => (
+            {tools.map((tool, index) => (
               <div key={index} className="text-center p-6 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                <div className="flex justify-center mb-4">{useCase.icon}</div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">{useCase.title}</h3>
-                <p className="text-gray-600">{useCase.description}</p>
+                <div className="flex justify-center mb-4">{tool.icon}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">{tool.name}</h3>
+                <p className="text-gray-600">{tool.description}</p>
               </div>
             ))}
           </div>
@@ -236,10 +236,10 @@ export default function AIVoiceAssistantPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our AI Voice Assistant?
+              Why Choose Our DevOps Solutions?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Experience the future of voice-powered business automation.
+              Experience the benefits of modern DevOps practices with our expert team.
             </p>
           </div>
           
@@ -260,10 +260,10 @@ export default function AIVoiceAssistantPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Choose Your Plan
+              DevOps Service Pricing
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Start free and scale as your voice AI needs grow.
+              Flexible pricing options to match your team size and requirements.
             </p>
           </div>
           
@@ -299,7 +299,7 @@ export default function AIVoiceAssistantPage() {
                       : 'border-2 border-gray-300 text-gray-700 hover:border-blue-500 hover:text-blue-600'
                   }`}
                 >
-                  Start Free Trial
+                  Get Started
                 </Link>
               </div>
             ))}
@@ -311,24 +311,24 @@ export default function AIVoiceAssistantPage() {
       <section className="py-12 sm:py-16 lg:py-20 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business with Voice AI?
+            Ready to Transform Your DevOps?
           </h2>
           <p className="text-lg sm:text-xl text-white/90 mb-8">
-            Join thousands of businesses using AI voice assistants to enhance productivity and accessibility.
+            Join leading companies using our DevOps solutions to accelerate development and improve reliability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
             >
-              <Volume2 className="w-5 h-5 mr-2" />
-              Start Free Trial
+              <Settings className="w-5 h-5 mr-2" />
+              Get Free Assessment
             </Link>
             <Link
-              to="/ai-services"
+              to="/it-services"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
             >
-              Explore All AI Services
+              Explore All IT Services
             </Link>
           </div>
         </div>

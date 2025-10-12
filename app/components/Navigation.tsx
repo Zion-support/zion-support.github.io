@@ -21,7 +21,12 @@ const Navigation: React.FC = () => {
         { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
         { name: 'AI Email Marketing', path: '/ai-email-marketing' },
         { name: 'AI Document Processing', path: '/ai-document-processing' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' }
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+        { name: 'AI Blockchain Analytics', path: '/ai-blockchain-analytics' },
+        { name: 'AI Climate Prediction', path: '/ai-climate-prediction-engine' },
+        { name: 'AI Computer Vision', path: '/ai-computer-vision' },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics' },
+        { name: 'AI Automation', path: '/ai-automation' }
       ]
     },
     {
@@ -45,16 +50,16 @@ const Navigation: React.FC = () => {
       path: '/micro-saas-services',
       icon: Code,
       dropdown: [
+        { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
+        { name: 'AI Task Manager', path: '/ai-task-manager' },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+        { name: 'AI Project Management', path: '/ai-project-management' },
+        { name: 'AI Email Marketing Automation', path: '/ai-email-marketing-automation' },
+        { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot' },
         { name: 'AI-Powered CRM', path: '/ai-crm' },
         { name: 'Smart Analytics', path: '/smart-analytics' },
         { name: 'Automated Testing', path: '/ai-automated-testing' },
-        { name: 'Content Management', path: '/ai-content-management' },
-        { name: 'Email Marketing', path: '/ai-email-marketing' },
-        { name: 'Social Media Manager', path: '/ai-social-media-manager' },
-        { name: 'Project Management', path: '/ai-project-management' },
-        { name: 'Customer Support', path: '/ai-customer-support' },
-        { name: 'Invoice Generator', path: '/ai-invoice-generator' },
-        { name: 'Task Manager', path: '/ai-task-manager' }
+        { name: 'Content Management', path: '/ai-content-management' }
       ]
     },
     {
