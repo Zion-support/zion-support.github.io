@@ -1,15 +1,10 @@
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
   }
 }
-
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string) => void;
-import React, { createContext, useContext, useState, useEffect } from 'react';
 
 interface AnalyticsData {
   pageViews: number;
@@ -25,12 +20,6 @@ interface AnalyticsContextType {
   error: string | null;
   trackEvent: (event: string, properties?: Record<string, unknown>) => void;
   trackPageView: (page: string) => void;
-import React, { createContext, useContext, useEffect } from 'react';
-
-interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -45,58 +34,9 @@ export const useAnalytics = () => {
 
 interface AnalyticsProviderProps {
   children: ReactNode;
-  children: React.ReactNode;
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  useEffect(() => {
-    // Initialize analytics
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: document.title,
-        page_location: window.location.href,
-      });
-    if (typeof window !== 'undefined') {
-      // Google Analytics
-      if (process.env.NODE_ENV === 'production') {
-        const script = document.createElement('script');
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.REACT_APP_GA_MEASUREMENT_ID}`;
-        script.async = true;
-        document.head.appendChild(script);
-
-        window.gtag = window.gtag || function(...args: any[]) {
-          (window.gtag as any).q = (window.gtag as any).q || [];
-          (window.gtag as any).q.push(args);
-        };
-        window.gtag('js', new Date());
-        window.gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID || '');
-      }
-    }
-  }, []);
-
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
-    }
-  };
-
-  const trackPageView = (pageName: string) => {
-  const trackPage = (pageName: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID || '', {
-        page_title: pageName,
-        page_location: window.location.href,
-      });
-    }
-  };
-
-  const value: AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-  children: React.ReactNode;
-}
-
-export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   const [data, setData] = useState<AnalyticsData>({
     pageViews: 0,
     uniqueVisitors: 0,
@@ -105,45 +45,38 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
     conversionRate: 0
   });
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    // Simulate loading analytics data
-    const loadAnalytics = async () => {
-      try {
-        setLoading(true);
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        setData({
-          pageViews: 12345,
-          uniqueVisitors: 8765,
-          bounceRate: 0.35,
-          avgSessionDuration: 180,
-          conversionRate: 0.032
-        });
-      } catch {
-        setError('Failed to load analytics data');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadAnalytics();
-  }, []);
+  const [error] = useState<string | null>(null);
 
   const trackEvent = (event: string, properties?: Record<string, unknown>) => {
-    console.log('Analytics Event:', event, properties);
-    // In a real app, this would send data to your analytics service
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', event, properties);
+    }
   };
 
   const trackPageView = (page: string) => {
-    console.log('Page View:', page);
-    setData(prev => ({
-      ...prev,
-      pageViews: prev.pageViews + 1
-    }));
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: page,
+        page_location: window.location.href,
+      });
+    }
   };
+
+  useEffect(() => {
+    // Simulate loading analytics data
+    const timer = setTimeout(() => {
+      setData({
+        pageViews: Math.floor(Math.random() * 10000),
+        uniqueVisitors: Math.floor(Math.random() * 5000),
+        bounceRate: Math.random() * 100,
+        avgSessionDuration: Math.random() * 300,
+        conversionRate: Math.random() * 10
+      });
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const value: AnalyticsContextType = {
     data,
@@ -151,19 +84,6 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
     error,
     trackEvent,
     trackPageView
-  const identifyUser = (userId: string, traits?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID || '', {
-        user_id: userId,
-        custom_map: traits,
-      });
-    }
-  };
-
-  const value: AnalyticsContextType = {
-    track: trackEvent,
-    identify: identifyUser,
-    page: trackPage,
   };
 
   return (
@@ -174,8 +94,3 @@ export default function AnalyticsProvider({ children }: AnalyticsProviderProps) 
 };
 
 export default AnalyticsProvider;
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}
