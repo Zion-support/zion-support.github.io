@@ -2,6 +2,8 @@
     name: '',
     email: '',
     company: '',
+    message: ''
+  });
 
   const contactInfo = [
     {

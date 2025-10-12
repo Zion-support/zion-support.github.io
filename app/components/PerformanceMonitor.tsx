@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
   lcp: number | null;
@@ -15,123 +16,52 @@ const PerformanceMonitor: React.FC = () => {
     fcp: null,
     ttfb: null
   });
-  
-  const analytics = useAnalytics();
 
   useEffect(() => {
+    // Only run in browser environment
+    if (typeof window === 'undefined') return;
+
     // Monitor Core Web Vitals
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-          analytics.trackEvent('performance_metric', { 
-            metric: 'LCP', 
-            value: entry.startTime 
-          });
-        }
-        
-        if (entry.entryType === 'first-input') {
-          const fidEntry = entry as PerformanceEventTiming;
-          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
-          analytics.trackEvent('performance_metric', { 
-            metric: 'FID', 
-            value: fidEntry.processingStart - fidEntry.startTime 
-          });
-        }
-        
-        if (entry.entryType === 'layout-shift') {
-          const clsEntry = entry as PerformanceEntry & { value: number };
-          if (!clsEntry.hadRecentInput) {
+        switch (entry.entryType) {
+          case 'largest-contentful-paint':
+            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+            break;
+          case 'first-input':
+            setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+            break;
+          case 'layout-shift':
+            if (!(entry as any).hadRecentInput) {
+              setMetrics(prev => ({ 
+                ...prev, 
+                cls: (prev.cls || 0) + (entry as any).value 
+              }));
+            }
+            break;
+          case 'paint':
+            if (entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            }
+            break;
+          case 'navigation':
             setMetrics(prev => ({ 
               ...prev, 
-              cls: (prev.cls || 0) + clsEntry.value 
+              ttfb: (entry as any).responseStart - (entry as any).requestStart 
             }));
-          }
+            break;
         }
       }
     });
 
     try {
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint', 'navigation'] });
     } catch (e) {
-      console.warn('Performance Observer not supported');
+      console.warn('Performance Observer not supported:', e);
     }
 
-    // Monitor FCP
-    const fcpObserver = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (entry.name === 'first-contentful-paint') {
-          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-          analytics.trackEvent('performance_metric', { 
-            metric: 'FCP', 
-            value: entry.startTime 
-          });
-        }
-      }
-    });
-
-    try {
-      fcpObserver.observe({ entryTypes: ['paint'] });
-    } catch (e) {
-      console.warn('Paint Timing not supported');
-    }
-
-    // Monitor TTFB
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      setMetrics(prev => ({ ...prev, ttfb }));
-      analytics.trackEvent('performance_metric', { 
-        metric: 'TTFB', 
-        value: ttfb 
-      });
-    }
-
-    }
-
-    // Start measuring after a short delay to ensure page is loaded
-    const timeout = setTimeout(() => {
-      if (typeof window !== 'undefined' && window.performance) {
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        if (navigation) {
-          setMetrics(prev => ({
-            ...prev,
-            ttfb: navigation.responseStart - navigation.requestStart
-          }))
-        }
-      }
-    }, 1000)
-
-    return () => {
-      clearTimeout(timeout)
-      if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-        observer.disconnect()
-      }
-    }
-  }, [])
-
-  // Log metrics for debugging (only in development)
-  useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && Object.keys(metrics).length > 0) {
-      console.log('Performance Metrics:', metrics)
-    }
-  }, [metrics])
-
-  return null
-}
-    // Track page load
-    const handleLoad = () => {
-      analytics.trackPageView(window.location.pathname);
-    };
-
-    window.addEventListener('load', handleLoad);
-
-    return () => {
-      observer.disconnect();
-      fcpObserver.disconnect();
-      window.removeEventListener('load', handleLoad);
-    };
-  }, [analytics]);
+    return () => observer.disconnect();
+  }, []);
 
   // Log performance issues
   useEffect(() => {
