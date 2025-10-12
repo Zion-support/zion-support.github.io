@@ -7,39 +7,40 @@ const brokenLinks = fs.readFileSync('/workspace/broken_links.txt', 'utf8').split
 let appContent = fs.readFileSync('/workspace/App.tsx', 'utf8');
 
 // Generate import statements for all missing pages
- 
+const importStatements = brokenLinks.map(page => {
+  const componentName = page.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
   return `import ${componentName} from './app/${page}/page'`;
 }).join('\n');
 
 // Generate route statements
- 
+const routeStatements = brokenLinks.map(page => {
+  const componentName = page.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
   return `                  <Route path="/${page}" element={<${componentName} />} />`;
 }).join('\n');
 
-// Add imports after the last import
-const lastImportIndex = appContent.lastIndexOf('import');
-const lastImportLineEnd = appContent.indexOf('\n', lastImportIndex) + 1;
-const beforeImports = appContent.substring(0, lastImportLineEnd);
-const afterImports = appContent.substring(lastImportLineEnd);
+// Add import statements after existing imports
+const importInsertionPoint = appContent.indexOf('// AI Service Pages - Only include the ones that are actually used in routes');
+if (importInsertionPoint !== -1) {
+  appContent = appContent.slice(0, importInsertionPoint) + 
+    importStatements + '\n\n' + 
+    appContent.slice(importInsertionPoint);
+}
 
-const newImports = beforeImports + '\n' + imports + '\n';
-
-// Add routes before the 404 route
-const routeInsertionPoint = appContent.indexOf('{/* 404 Page */}');
-const beforeRoutes = appContent.substring(0, routeInsertionPoint);
-const afterRoutes = appContent.substring(routeInsertionPoint);
-
-const newRoutes = beforeRoutes + '\n                  {/* Auto-generated routes for existing pages */}\n' + routes + '\n\n                  ' + afterRoutes;
-
-// Combine everything
-const newAppContent = newImports + afterImports.replace(appContent.substring(lastImportLineEnd, routeInsertionPoint), newRoutes.substring(lastImportLineEnd, routeInsertionPoint));
+// Add route statements in the Routes section
+const routeInsertionPoint = appContent.indexOf('                {/* AI Service Routes - Currently disabled due to page errors */}');
+if (routeInsertionPoint !== -1) {
+  const nextLineIndex = appContent.indexOf('\n', routeInsertionPoint);
+  appContent = appContent.slice(0, nextLineIndex) + 
+    '\n' + routeStatements + 
+    appContent.slice(nextLineIndex);
+}
 
 // Write the updated App.tsx
-fs.writeFileSync('/workspace/App.tsx', newAppContent);
+fs.writeFileSync('/workspace/App.tsx', appContent);
 
-console.log(`Added ${brokenLinks.length} routes to App.tsx`);
-console.log('Routes added for:', brokenLinks.slice(0, 10).join(', '), '... and more');
+console.log('Missing routes added successfully!');
+console.log(`Added ${brokenLinks.length} routes`);

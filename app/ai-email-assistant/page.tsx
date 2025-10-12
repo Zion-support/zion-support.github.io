@@ -1,105 +1,134 @@
-
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings } from 'lucide-react';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Star, Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings} from 'lucide-react';
 'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Mail, MessageSquare, Brain, Settings, Zap, Shield } from 'lucide-react';
 
+export default function AIEmailAssistant() {
   const features = [
-      icon: Mail,
+    {
+      icon: <Mail className="w-6 h-6 text-cyan-400" />,
       title: 'Smart Classification',
       description: 'Automatically categorize and prioritize emails based on content and sender.'
     },
-      icon: MessageSquare,
+    {
+      icon: <MessageSquare className="w-6 h-6 text-purple-400" />,
       title: 'Auto-Responses',
       description: 'Generate intelligent responses using AI to handle common inquiries.'
     },
-      icon: Brain,
+    {
+      icon: <Brain className="w-6 h-6 text-yellow-400" />,
       title: 'Sentiment Analysis',
-      description: 'Analyze email tone and sentiment to provide better customer service.'
+      description: 'Understand the emotional tone of emails to respond appropriately.'
     },
-      icon: Settings,
+    {
+      icon: <Settings className="w-6 h-6 text-green-400" />,
       title: 'Workflow Automation',
-      description: 'Create automated workflows to streamline your email management.'
+      description: 'Set up automated workflows to streamline email management processes.'
+    },
+    {
+      icon: <Zap className="w-6 h-6 text-blue-400" />,
+      title: 'Quick Actions',
+      description: 'One-click actions for common tasks like scheduling, forwarding, and archiving.'
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-red-400" />,
+      title: 'Security Features',
+      description: 'Advanced spam detection and phishing protection to keep your inbox safe.'
+    }
   ];
-  const useCases = [
-      title: 'Customer Support',
-      description: 'Automate responses to common customer inquiries and support tickets.',
-      icon: Users
-    },
-      title: 'Sales Follow-up',
-      description: 'Automatically follow up with leads and prospects based on their behavior.',
-      icon: BarChart3
-    },
-      title: 'Email Marketing',
-      description: 'Personalize and optimize email campaigns for better engagement.',
-      icon: Zap
-    },
-      title: 'Internal Communication',
-      description: 'Streamline internal email workflows and team communication.',
-      icon: Shield
-  ];
-  return (
-    
-        <title />AI Email Assistant - Zion Tech Group</title>
 
+  return (
+    <>
+      <Helmet>
+        <title>AI Email Assistant - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered email assistant that helps you manage, organize, and respond to emails with intelligent automation." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-                AI <span className="w-5 h-5ml-2" />Email Assistant</span>
-              <p className="w-5 h-5ml-2">Transform your email management with intelligent automation, smart classification, 
-                and AI-powered responses that save time and improve productivity.
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building
-                <Link to="/ai-services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All AI Services
+        <div className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                AI Email
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                  Assistant
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your email management with our intelligent AI assistant that 
+                categorizes, prioritizes, and helps you respond to emails efficiently.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact" 
+                  className="inline-flex items-center bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link 
+                  to="/demo" 
+                  className="inline-flex items-center border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-semibold py-4 px-8 rounded-lg transition-colors"
+                >
+                  View Demo
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Features Section */}
-                Powerful <span className="w-5 h-5ml-2" />Features</span>
-              <p className="w-5 h-5ml-2">Everything you need to automate and optimize your email management
-
- (
+        <div className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Powerful Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Everything you need to master your email workflow
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-400 transition-colors">
+                  <div className="mb-4">
                     {feature.icon}
-                  <h3 className="w-5 h-5ml-2" />{feature.title}</h3>
-                  <p className="w-5 h-5ml-2">{feature.description}</p>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {feature.description}
+                  </p>
+                </div>
               ))}
-
-        {/* Use Cases Section */}
-                Use <span className="w-5 h-5ml-2" />Cases</span>
-              <p className="w-5 h-5ml-2">Discover how our AI email assistant can transform your communication workflows
-
- (
-                    {useCase.icon}
-                  <h3 className="w-5 h-5ml-2" />{useCase.title}
-                  <p className="w-5 h-5ml-2">{useCase.description}
-              ))}
+            </div>
+          </div>
+        </div>
 
         {/* CTA Section */}
-              <h2 className="w-5 h-5ml-2" />Ready to Transform Your Email Management?
-              <p className="w-5 h-5ml-2">Start automating your email workflows and boost productivity with AI-powered assistance.
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building Now
-                <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
-
+        <div className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Master Your Email?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of professionals who have transformed their email productivity 
+              with our AI assistant.
+            </p>
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all transform hover:scale-105"
+            >
+              Start Your Free Trial
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
   );
-};
-
-export default AIEmailAssistantPage;
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function AiEmailAssistant() {
-  return (
-    
-        <title>AiEmailAssistant - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">AiEmailAssistant</h1>
-            <p className="text-lg text-gray-300 mb-8">Professional aiemailassistant services coming soon.</p>
-            
-              Contact Us
-
-  );
-
+}
