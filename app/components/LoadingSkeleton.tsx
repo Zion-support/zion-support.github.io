@@ -1,2 +1,2 @@
 'use client'
-import { FC } from 'react'
+import React from 'react'

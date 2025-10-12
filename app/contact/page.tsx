@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { Mail, Phone, MapPin } from 'lucide-react'
 import ContactForm from '../components/ContactForm'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
