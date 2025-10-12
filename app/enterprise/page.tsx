@@ -1,379 +1,285 @@
-'use client'
-import React from 'react'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-import SEOOptimizer from '../components/SEOOptimizer'
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
-const EnterprisePage: React.FC = () => {
+'use client';
+
+import React from 'react';
+import { CheckCircle, ArrowRight, Building, Users, Shield, Zap, Globe, Database, Clock, Star, Target, BarChart3, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+export default function EnterprisePage() {
   const features = [
     {
-      icon: Shield,
+      icon: <Building className="w-8 h-8 text-blue-500" />,
+      title: 'Enterprise Architecture',
+      description: 'Scalable and robust enterprise architecture designed for large-scale operations.',
+      benefits: ['Microservices architecture', 'Cloud-native design', 'High availability', 'Scalability planning']
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-green-500" />,
       title: 'Enterprise Security',
-      description: 'Comprehensive security solutions designed for large-scale enterprise environments.',
-      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control']
+      description: 'Comprehensive security solutions designed for enterprise environments.',
+      benefits: ['Identity management', 'Access controls', 'Data encryption', 'Compliance support']
     },
     {
-      icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions that grow with your business needs.',
-      benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization']
-    },
-    {
-      icon: Brain,
-      title: 'AI Integration',
-      description: 'Enterprise-grade AI solutions for automation and intelligent decision making.',
-      benefits: ['Machine learning', 'Predictive analytics', 'Process automation', 'Intelligent insights']
-    },
-    {
-      icon: Database,
+      icon: <Database className="w-8 h-8 text-purple-500" />,
       title: 'Data Management',
-      description: 'Advanced data management and analytics for enterprise-scale operations.',
-      benefits: ['Big data processing', 'Real-time analytics', 'Data governance', 'Business intelligence']
+      description: 'Advanced data management and analytics solutions for enterprise needs.',
+      benefits: ['Data warehousing', 'Business intelligence', 'Data governance', 'Real-time analytics']
     },
     {
-      icon: Users,
+      icon: <Users className="w-8 h-8 text-orange-500" />,
       title: 'User Management',
-      description: 'Comprehensive user and access management for large organizations.',
+      description: 'Comprehensive user and access management for enterprise environments.',
       benefits: ['Single sign-on', 'Role-based access', 'User provisioning', 'Audit trails']
-    },
-    {
-      icon: Settings,
-      title: 'System Integration',
-      description: 'Seamless integration with existing enterprise systems and workflows.',
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
     }
-  ]
-  const solutions = [
+  ];
+
+  const services = [
     {
-      title: 'Enterprise Resource Planning',
-      description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
-      icon: Building,
-      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management']
+      title: 'Enterprise Integration',
+      description: 'Seamless integration of enterprise systems and applications.',
+      icon: <Globe className="w-6 h-6 text-blue-500" />
     },
     {
-      title: 'Customer Relationship Management',
-      description: 'Advanced CRM systems for managing customer relationships and sales processes.',
-      icon: Users,
-      benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation']
+      title: 'Cloud Migration',
+      description: 'Enterprise-grade cloud migration and management services.',
+      icon: <Zap className="w-6 h-6 text-green-500" />
     },
     {
-      title: 'Business Intelligence',
-      description: 'Powerful BI solutions for data-driven decision making and strategic planning.',
-      icon: BarChart,
-      benefits: ['Data visualization', 'Predictive analytics', 'Reporting', 'Performance monitoring']
+      title: 'Custom Development',
+      description: 'Tailored software solutions for enterprise requirements.',
+      icon: <Target className="w-6 h-6 text-purple-500" />
     },
     {
-      title: 'Workflow Automation',
-      description: 'Automate complex business processes to improve efficiency and reduce errors.',
-      icon: Zap,
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
+      title: 'Support & Maintenance',
+      description: '24/7 enterprise support and maintenance services.',
+      icon: <Clock className="w-6 h-6 text-orange-500" />
     }
-  ]
-  const benefits = [
-    'Reduce operational costs by 30%',
-    'Improve productivity by 50%',
-    'Enhance security and compliance',
-    'Streamline business processes',
-    'Enable data-driven decisions',
-    'Scale with business growth',
-    'Integrate with existing systems',
-    'Provide 24/7 support and monitoring'
-  ]
+  ];
+
   const stats = [
     { number: '500+', label: 'Enterprise Clients', icon: Building },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
     { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
-  ]
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <SEOOptimizer
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOHead 
         title="Enterprise Solutions - Zion Tech Group"
         description="Comprehensive enterprise-grade solutions for large-scale business operations."
         keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
       />
+      
       <Navigation />
+      
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relative max-w-7xl mx-auto text-center"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Enterprise</h1>
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-  </
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive enterprise-grade solutions designed for large-scale business operations. 
-            Transform your organization with cutting-edge technology and expert implementation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-              Get Enterprise Consultation
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Case Studies
-  </
-          </div>
-        </div>
-      </section>
-
-    {icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Comprehensive security solutions designed for large-scale enterprise environments.',
-      benefits: ['Advanced threat protection', 'Compliance management', 'Data encryption', 'Access control']}
-    },
-    {icon: Cloud,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions that grow with your business needs.',
-      benefits: ['Auto-scaling', 'High availability', 'Disaster recovery', 'Cost optimization']}
-    },
-    {icon: Brain,
-      title: 'AI Integration',
-      description: 'Enterprise-grade AI solutions for automation and intelligent decision making.',
-      benefits: ['Machine learning', 'Predictive analytics', 'Process automation', 'Intelligent insights']}
-    },
-    {icon: Database,
-      title: 'Data Management',
-      description: 'Advanced data management and analytics for enterprise-scale operations.',
-      benefits: ['Big data processing', 'Real-time analytics', 'Data governance', 'Business intelligence']}
-    },
-    {icon: Users,
-      title: 'User Management',
-      description: 'Comprehensive user and access management for large organizations.',
-      benefits: ['Single sign-on', 'Role-based access', 'User provisioning', 'Audit trails']}
-    },
-    {icon: Settings,
-      title: 'System Integration',
-      description: 'Seamless integration with existing enterprise systems and workflows.',
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']}
-    }
-  ];const solutions = [
-    {title: 'Enterprise Resource Planning',
-      description: 'Comprehensive ERP solutions that streamline business processes and improve efficiency.',
-      icon: Building,
-      benefits: ['Financial management', 'Supply chain optimization', 'Human resources', 'Project management']}
-    },
-    {title: 'Customer Relationship Management',
-      description: 'Advanced CRM systems for managing customer relationships and sales processes.',
-      icon: Users,
-      benefits: ['Lead management', 'Sales automation', 'Customer analytics', 'Marketing automation']}
-    },
-    {title: 'Business Intelligence',
-      description: 'Powerful BI solutions for data-driven decision making and strategic planning.',
-      icon: BarChart,
-      benefits: ['Data visualization', 'Predictive analytics', 'Reporting', 'Performance monitoring']}
-    },
-    {title: 'Workflow Automation',
-      description: 'Automate complex business processes to improve efficiency and reduce errors.',
-      icon: Zap,
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']}
-    }
-  ];const benefits = [
-    'Reduce operational costs by 30%',
-    'Improve productivity by 50%',
-    'Enhance security and compliance',
-    'Streamline business processes',
-    'Enable data-driven decisions',
-    'Scale with business growth',
-    'Integrate with existing systems',
-    'Provide 24/7 support and monitoring'
-  ];const stats = [
-    { number: '500+', label: 'Enterprise Clients', icon: Building },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
-    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
-    { number: '24/7', label: 'Support Available', icon: Clock }
-  ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <SEOOptimizer
-        title="Enterprise Solutions - Zion Tech Group"
-        description="Comprehensive enterprise-grade solutions for large-scale business operations."
-        keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
-      />
-      <Navigation />
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden"></section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relative max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Enterprise</h1>
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            Enterprise
+            <br />
+            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               Solutions
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive enterprise-grade solutions designed for large-scale business operations.
-            Transform your organization with cutting-edge technology and expert implementation.
+            Comprehensive enterprise-grade solutions designed for large-scale business operations. 
+            Scale your business with confidence using our proven enterprise technologies.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-              Get Enterprise Consultation
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Case Studies
-            </button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link 
+              to="/about" 
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </section>
+
       {/* Stats Section */}
-      <section className="py-20 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-            {stats.map((stat, index) => (}
-              <div key={index} className="text-center"></div>
-                <div className="flex justify-center mb-4"></div>
-                  <stat.icon className="w-12 h-12 text-purple-400" />
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>))}
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
       {/* Features Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Enterprise-Grade Features
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built for scale, security, and performance to meet the demands of large organizations.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
-                </div>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-          </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className="py-20 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Enterprise-Grade Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built for scale, security, and performance to meet the demands of large organizations.
+              Comprehensive enterprise solutions designed to meet the complex needs of large organizations.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  {feature.icon}
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (}
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
-                    </li>))}
-                </ul>
-              </div>))}
-          </div>
-        </div>
-      </section>
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Solutions
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              End-to-end enterprise solutions that address every aspect of your business operations.
-            </p>
-          </div>
                     </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Solutions
+
+      {/* Services Section */}
+      <section className="py-20 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Enterprise Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              End-to-end enterprise solutions that address every aspect of your business operations.
+              Comprehensive enterprise services designed to support your business growth and success.
             </p>
           </div>
-                    </li>))}
-                </ul>
-              </div>))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4 mx-auto">
+                  {service.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
+                <p className="text-gray-300 text-sm">{service.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
       {/* Benefits Section */}
       <section className="py-20 px-4">
-                </button>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Why Choose Our Enterprise Solutions?
+              </h2>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Proven Track Record</h3>
+                    <p className="text-gray-300">Successfully delivered enterprise solutions to Fortune 500 companies.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Scalable Solutions</h3>
+                    <p className="text-gray-300">Architecture designed to scale with your business growth and changing needs.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Enterprise Support</h3>
+                    <p className="text-gray-300">Dedicated enterprise support team with 24/7 availability and SLA guarantees.</p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-2">Security & Compliance</h3>
+                    <p className="text-gray-300">Enterprise-grade security and compliance with industry standards and regulations.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Get Enterprise Consultation</h3>
+              <p className="text-gray-300 mb-6">
+                Ready to transform your enterprise operations? Contact us for a comprehensive 
+                consultation and customized solution plan.
+              </p>
+              <Link
+                to="/contact"
+                className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+              >
+                Schedule Consultation
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Scale Your Enterprise?
+              </h2>
+              <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                Let our enterprise experts help you build scalable, secure, and efficient solutions for your business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact" 
+                  className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Get Enterprise Consultation
+                </Link>
+                <Link 
+                  to="/pricing" 
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+                >
+                  View Pricing
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Enterprise?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Contact Enterprise Sales
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More
-  </
-          </div>
-        </div>
-      </section>
+
       <Footer />
     </div>
-  )}
-export default EnterprisePage
-  </button>
-  </h2>
-  </h2>
-  </span>
-  </SEOOptimizer>
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4"></section>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Enterprise?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Contact Enterprise Sales
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More
-            </button>
-          </div>
-        </div>
-      </section>
-      <Footer />
-    </div>)};export default EnterprisePage
+  );
+}

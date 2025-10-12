@@ -1,9 +1,6 @@
 'use client';
 
 import React from 'react';
-import { Users, Target, Award, Globe, Zap, Shield, Database, Brain, Clock, Star, TrendingUp } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Cloud, 
@@ -21,33 +18,15 @@ import {
   MapPin,
   Github,
   Linkedin,
-  Twitter
+  Twitter,
+  Database
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
-  const values = [
-    {
-      icon: <Brain className="w-8 h-8 text-blue-500" />,
-      title: 'Innovation',
-      description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that give our clients a competitive advantage.'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-green-500" />,
-      title: 'Reliability',
-      description: 'Our solutions are built with enterprise-grade security and reliability to ensure your business operations never stop.'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-purple-500" />,
-      title: 'Collaboration',
-      description: 'We work closely with our clients as partners, understanding their unique needs and delivering tailored solutions.'
-    },
-    {
-      icon: <Database className="w-8 h-8 text-orange-500" />,
-      title: 'Excellence',
-      description: 'We strive for excellence in every project, delivering high-quality solutions that exceed expectations.'
-    }
-  ];
-
   const values = [
     {
       icon: Brain,
@@ -98,81 +77,161 @@ const AboutPage: React.FC = () => {
     }
   ];
 
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '100+', label: 'Happy Clients' },
+    { number: '50+', label: 'Team Members' },
+    { number: '99%', label: 'Client Satisfaction' }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI-powered solutions, cybersecurity, and digital transformation services. Our mission is to help businesses thrive in the digital age." />
-        <meta name="keywords" content="about us, AI solutions, IT services, company, team, Zion Tech Group" />
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team. We're leading the future of AI and IT solutions." />
       </Helmet>
-
+      
+      <Navigation />
+      
       {/* Hero Section */}
-      <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
-              About Zion Tech Group
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4">
-              We are a leading technology company specializing in AI-powered solutions, cybersecurity, and digital transformation services. Our mission is to help businesses thrive in the digital age.
-            </p>
-          </div>
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            About
+            <br />
+            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              Zion Tech Group
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            We are a leading technology company specializing in AI-powered solutions, 
+            cybersecurity, and digital transformation services that help businesses 
+            thrive in the digital age.
+          </p>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
+      <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="mb-4 flex justify-center">{stat.icon}</div>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Our Mission
+              </h2>
+              <p className="text-lg text-gray-300 mb-6">
+                To empower businesses with cutting-edge AI and IT solutions that drive 
+                innovation, enhance security, and accelerate digital transformation. 
+                We believe technology should be accessible, reliable, and transformative.
+              </p>
+              <p className="text-lg text-gray-300 mb-8">
+                Our team of experts works tirelessly to deliver solutions that not only 
+                meet today's challenges but anticipate tomorrow's opportunities.
+              </p>
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
+              >
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="grid grid-cols-2 gap-6">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">AI Innovation</h3>
+                  <p className="text-gray-300 text-sm">Leading AI solutions</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Security First</h3>
+                  <p className="text-gray-300 text-sm">Enterprise-grade protection</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Cloud className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Cloud Solutions</h3>
+                  <p className="text-gray-300 text-sm">Scalable infrastructure</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Database className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Data Analytics</h3>
+                  <p className="text-gray-300 text-sm">Insights that matter</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Values Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
+      <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Our Values</h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              The principles that guide everything we do
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Values
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              The principles that guide everything we do and shape our company culture.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 group">
-                <div className="mb-4 group-hover:scale-110 transition-transform duration-300">{value.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-purple-300 transition-colors">{value.title}</h3>
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <value.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-300">{value.description}</p>
               </div>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Team Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Meet Our Team</h2>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-              The talented individuals behind our success
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Meet Our Team
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              The talented individuals who make Zion Tech Group a leader in technology innovation.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="mb-4">
-                  <img
-                    src={member.image}
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
+                <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden">
+                  <img 
+                    src={member.image} 
                     alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto object-cover border-2 border-purple-500"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-1">{member.name}</h3>
@@ -185,13 +244,15 @@ const AboutPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Ready to Work With Us?</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Work With Us?
+              </h2>
               <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                Let's discuss how we can help transform your business with our innovative solutions.
+                Let's discuss how our team can help transform your business with cutting-edge technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
@@ -201,17 +262,19 @@ const AboutPage: React.FC = () => {
                   Contact Us
                 </Link>
                 <Link 
-                  to="/careers" 
+                  to="/services" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Join Our Team
+                  View Services
                 </Link>
               </div>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
 };
 
