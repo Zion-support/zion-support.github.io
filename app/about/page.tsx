@@ -1,21 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
+>>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  ArrowRight, Users, Award, Target, Lightbulb, Shield, Globe, Zap, Brain, Cpu, 
-  Rocket, CheckCircle, Star, Clock, TrendingUp, MessageCircle, Mail, Phone, MapPin, 
-  Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, 
-  Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, 
-  Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, 
-  Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, 
-  RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, 
-  Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, 
-  Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, 
-  Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, 
-  Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, 
-  Kiss10, Tongue10, FileText, Package, DollarSign, Database, Cloud, Code, 
-  Smartphone, Server, Lock, Eye, Workflow, Settings, BarChart, FileText as FileTextIcon
+  ArrowRight, Users, Shield, Globe, Brain, Cloud
 } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
@@ -25,6 +24,11 @@ const AboutPage: React.FC = () => {
     setIsVisible(true);
   }, []);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -47,10 +51,42 @@ const AboutPage: React.FC = () => {
   ];
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-a44d
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
   const values = [
     {
       icon: <Brain className="w-8 h-8 text-purple-400" />,
       title: 'Innovation First',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
+      description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions to deliver cutting-edge results.'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: 'Security & Trust',
+      description: 'Your data security is our top priority. We implement enterprise-grade security measures to protect your business.'
+    },
+    {
+      icon: <Users className="w-8 h-8 text-purple-400" />,
+      title: 'Client Success',
+      description: 'We measure our success by your success. Our dedicated team ensures every project exceeds expectations.'
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-blue-400" />,
+      title: 'Global Reach',
+      description: 'Serving clients worldwide with localized expertise and 24/7 support across all time zones.'
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
+=======
+=======
+>>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
 >>>>>>> cursor/fix-errors-and-merge-to-main-a44d
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions to solve complex business challenges.'
     },
@@ -71,6 +107,8 @@ const AboutPage: React.FC = () => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
 >>>>>>> cursor/fix-errors-and-merge-to-main-a44d
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
     }
   ];
 
@@ -78,6 +116,23 @@ const AboutPage: React.FC = () => {
     {
       name: 'Alex Johnson',
       role: 'CEO & Founder',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
+      image: '/team/kleber.jpg',
+      bio: 'Visionary leader with 15+ years in AI and IT solutions, passionate about transforming businesses through technology.',
+      expertise: ['AI Strategy', 'Business Development', 'Technology Leadership']
+<<<<<<< HEAD
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
+=======
+>>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
       description: 'Visionary leader with 15+ years in AI and enterprise technology',
       image: '/team/kleber.jpg'
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
@@ -92,10 +147,27 @@ const AboutPage: React.FC = () => {
       expertise: 'AI Strategy & Leadership',
       image: '/team/alex-johnson.jpg'
 >>>>>>> cursor/fix-errors-and-merge-to-main-a44d
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
     },
     {
       name: 'Sarah Chen',
       role: 'CTO',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      image: '/team/sarah.jpg',
+      bio: 'Technical expert specializing in AI architecture and cloud infrastructure, leading our development teams.'
+=======
+      expertise: 'Technology Architecture',
+      image: '/team/sarah-chen.jpg'
+>>>>>>> cursor/fix-errors-and-merge-to-main-a44d
+>>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
     },
     {
       name: 'Michael Rodriguez',
@@ -182,30 +254,149 @@ const AboutPage: React.FC = () => {
         <meta name="keywords" content="about us, company, team, AI solutions, technology company, IT services, cloud computing, cybersecurity" />
       description: 'Expert in cloud architecture and AI system design',
       image: '/team/sarah.jpg'
+=======
+      image: '/team/sarah.jpg',
+      bio: 'Technical visionary with expertise in AI, machine learning, and cloud architecture.',
+      expertise: ['AI/ML', 'Cloud Architecture', 'Technical Strategy']
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
     },
     {
       name: 'Michael Chen',
       role: 'Lead AI Engineer',
-      description: 'Specialist in machine learning and natural language processing',
-      image: '/team/michael.jpg'
+      image: '/team/michael.jpg',
+      bio: 'AI specialist focused on developing cutting-edge machine learning solutions.',
+      expertise: ['Machine Learning', 'Deep Learning', 'AI Research']
     }
   ];
 
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '150+', label: 'Happy Clients' },
+    { number: '50+', label: 'AI Solutions' },
+    { number: '24/7', label: 'Support Available' }
+  ];
+
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission to transform businesses through cutting-edge AI and IT solutions. Meet our expert team and discover our values." />
-        <meta name="keywords" content="about zion tech group, AI company, IT services team, technology leadership" />
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
+        <title>About Us - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission to revolutionize business through AI and IT solutions. Meet our expert team and discover our values." />
+        <meta name="keywords" content="about us, AI company, IT solutions, team, mission, values" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         {/* Hero Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <section className="relative overflow-hidden pt-20 pb-16">
+          <div className="absolute inset-0 opacity-20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className={`text-4xl md:text-6xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                About
+                <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </span>
+              </h1>
+              <p className={`text-xl text-gray-300 mb-8 max-w-3xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                We are a leading technology company dedicated to transforming businesses through 
+                innovative AI solutions, cloud infrastructure, and cybersecurity services.
+              </p>
+            </div>
+=======
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Zion Tech Group</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We are a cutting-edge technology company specializing in AI and IT solutions that transform businesses and drive innovation across industries.
+          </p>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-4">
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+>>>>>>> cursor/fix-errors-and-merge-to-main-a44d
+>>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        {/* Stats Section */}
+        <section className="py-16 bg-gray-900/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+=======
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Zion Tech Group</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and exceptional service.
+            </p>
+            <div className="flex flex-wrap justify-center gap-8 mt-12">
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-4xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                  <div className="text-gray-300">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+<<<<<<< HEAD
+        {/* Mission & Vision */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Mission</h2>
+                <p className="text-xl text-gray-300 mb-6">
+                  To empower businesses worldwide with cutting-edge AI and IT solutions that drive 
+                  innovation, efficiency, and growth. We believe technology should be accessible, 
+                  secure, and transformative.
+                </p>
+                <p className="text-lg text-gray-400">
+                  Our mission is to bridge the gap between complex technology and business needs, 
+                  making advanced AI and IT solutions accessible to companies of all sizes.
+                </p>
+              </div>
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Our Vision</h2>
+                <p className="text-xl text-gray-300 mb-6">
+                  To be the world's leading provider of AI-powered business solutions, recognized 
+                  for our innovation, reliability, and commitment to client success.
+                </p>
+                <p className="text-lg text-gray-400">
+                  We envision a future where every business can leverage the power of AI and 
+                  advanced technology to achieve unprecedented growth and success.
+                </p>
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
+=======
+>>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
         <section className="pt-32 pb-20">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-4xl mx-auto">
@@ -234,32 +425,63 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
         {/* Mission Section */}
-        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-4xl font-bold text-white mb-6">
-                  Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Mission</span>
-                </h2>
-                <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                  To democratize access to advanced AI and IT technologies, enabling businesses of all sizes to compete 
-                  in the digital economy. We believe technology should be a force for good, driving innovation, efficiency, 
-                  and growth while maintaining the highest standards of security and ethics.
+                <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
+                <p className="text-lg text-gray-300 mb-6">
+                  To democratize AI and IT solutions, making cutting-edge technology accessible to businesses of all sizes. 
+                  We believe that every organization deserves access to the tools that will define the future.
                 </p>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  Our vision is a world where every business can leverage the power of artificial intelligence and 
-                  modern IT infrastructure to achieve their goals and serve their customers better.
+                <p className="text-lg text-gray-300 mb-8">
+                  Our mission is to bridge the gap between complex technology and practical business solutions, 
+                  ensuring that our clients not only survive but thrive in the digital age.
                 </p>
+                <Link 
+                  to="/contact" 
+                  className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+                >
+                  Get Started <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
               </div>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Brain className="w-8 h-8 text-cyan-400" />
+              <div className="relative">
+                <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl p-8 backdrop-blur-sm border border-purple-500/30">
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-purple-600/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Brain className="w-8 h-8 text-purple-400" />
+                      </div>
+                      <h3 className="text-white font-semibold mb-2">AI Innovation</h3>
+                      <p className="text-gray-300 text-sm">Cutting-edge AI solutions</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-blue-600/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Cloud className="w-8 h-8 text-blue-400" />
+                      </div>
+                      <h3 className="text-white font-semibold mb-2">Cloud Solutions</h3>
+                      <p className="text-gray-300 text-sm">Scalable cloud infrastructure</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-green-600/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Shield className="w-8 h-8 text-green-400" />
+                      </div>
+                      <h3 className="text-white font-semibold mb-2">Security First</h3>
+                      <p className="text-gray-300 text-sm">Enterprise-grade security</p>
+                    </div>
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-orange-600/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Zap className="w-8 h-8 text-orange-400" />
+                      </div>
+                      <h3 className="text-white font-semibold mb-2">Fast Delivery</h3>
+                      <p className="text-gray-300 text-sm">Rapid implementation</p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">AI Innovation</h3>
-                  <p className="text-gray-400 text-sm">Cutting-edge AI solutions</p>
                 </div>
+<<<<<<< HEAD
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Cloud className="w-8 h-8 text-purple-400" />
@@ -284,25 +506,64 @@ const AboutPage: React.FC = () => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
               </div>
             </div>
           </div>
         </section>
 
         {/* Values Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
+          <div className="container mx-auto px-4">
+=======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-7d13
+=======
+>>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
         <section className="py-20 bg-gray-900/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Our Core Values
+              <h2 className="text-4xl font-bold text-white mb-6">Our Values</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                The principles that guide our work and define our culture
+=======
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Values</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                The principles that guide everything we do and shape our company culture
+>>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
+=======
+                These core values guide everything we do and shape our culture of excellence and innovation.
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
+>>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
+<<<<<<< HEAD
                 <div key={index} className="text-center group">
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
                 The principles that guide everything we do and shape our company culture.
@@ -324,6 +585,12 @@ const AboutPage: React.FC = () => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
+=======
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300">
+                  <div className="mb-4">{value.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
                 </div>
               ))}
             </div>
@@ -331,6 +598,7 @@ const AboutPage: React.FC = () => {
         </section>
 
         {/* Team Section */}
+<<<<<<< HEAD
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -364,22 +632,32 @@ const AboutPage: React.FC = () => {
                     </div>
         <section className="py-20 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
           <div className="container mx-auto px-4">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
+>>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Meet Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Team</span>
-              </h2>
+              <h2 className="text-4xl font-bold text-white mb-6">Meet Our Team</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The experts behind our innovative solutions
+                Our diverse team of experts brings together decades of experience in AI, IT, and business transformation.
               </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               {team.map((member, index) => (
-                <div key={index} className="text-center group">
-                  <div className="w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-300">
-                    <Users className="w-16 h-16 text-cyan-400" />
->>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 text-center">
+                  <div className="w-24 h-24 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl font-bold text-white">{member.name.charAt(0)}</span>
                   </div>
+<<<<<<< HEAD
                   <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
                   <p className="text-cyan-400 font-semibold mb-3">{member.role}</p>
                   <p className="text-gray-300 text-sm leading-relaxed">{member.description}</p>
@@ -389,11 +667,35 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
+=======
+                  <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
+                  <p className="text-purple-400 mb-4">{member.role}</p>
+                  <p className="text-gray-300 mb-4">{member.bio}</p>
+                  <div className="flex flex-wrap justify-center gap-2">
+                    {member.expertise.map((skill, skillIndex) => (
+                      <span key={skillIndex} className="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+>>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
+>>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-12 text-center">
@@ -432,21 +734,30 @@ const AboutPage: React.FC = () => {
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Let's discuss how we can help transform your business with our AI and IT solutions.
+=======
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl p-12 backdrop-blur-sm border border-purple-500/30">
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join hundreds of companies that have already revolutionized their operations with our AI and IT solutions.
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
-                  to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+                  to="/contact" 
+                  className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
                 >
-                  Get In Touch
+                  Start Your Project <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link 
-                  to="/ai-services"
-                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+                  to="/services" 
+                  className="inline-flex items-center border border-purple-500 text-purple-300 px-8 py-3 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300"
                 >
-                  View Our Services
+                  Explore Services
                 </Link>
               </div>
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
@@ -563,12 +874,34 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
       </section>
+=======
+            </div>
+          </div>
+        </section>
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
     </div>
   );
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default AboutPage;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export default AboutPage;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
+=======
+>>>>>>> 1d6d2e99093980ea16846175955d416ea913ddbc
 >>>>>>> cursor/website-audit-and-update-with-deployment-8e2b
 >>>>>>> cursor/website-audit-and-update-with-deployment-7d13
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f614
 export default AboutPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-a44d
+=======
+export default AboutPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-0b2b
