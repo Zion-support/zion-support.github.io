@@ -30,15 +30,15 @@ export default useEnhancedPerformance;
         renderCountRef.current;
       );
   });
-  
+
         });
     [component, trackErrors]
   );
-  
+
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
     [component, trackAnalytics]
   );
-  
+
       const startTime = performance.now();
           const duration = performance.now() - startTime;
  1000 ? 'slow' : 'fast'

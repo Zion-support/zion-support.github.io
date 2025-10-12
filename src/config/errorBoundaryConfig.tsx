@@ -34,9 +34,9 @@ export default getErrorBoundaryConfig;
   /**
    * Fallback UI components;
    */
-    default: React.ComponentType<{ error: Error; resetError: () => void }>;
-    network: React.ComponentType<{ error: Error; resetError: () => void }>;
-    notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
+    default: React.ComponentType<{error: Error; resetError: () => void}>;
+    network: React.ComponentType<{error: Error; resetError: () => void}>;
+    notFound: React.ComponentType<{error: Error; resetError: () => void}>;
   };
 /**
  * Default error messages;
@@ -56,7 +56,7 @@ export default getErrorBoundaryConfig;
           Oops! Something went wrong;
           {error.message || 'An unexpected error occurred'}
           <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
-        )}
+  )}
             Try Again;
  (window.location.href = '/')}
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"

@@ -11,22 +11,22 @@ export default PerformanceDashboard;
     fps: 0;
   });
   const [isVisible, setIsVisible] = useState(false);
-    
+
       )[0] as PerformanceNavigationTiming;
-      
+
         : 0;
       // Measure render time;
       const renderStart = performance.now();
       const renderTime = performance.now() - renderStart;
       // Measure memory usage;
       let memoryUsage = 0;
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
+        const memory = (performance as {memory?: { usedJSHeapSize: number} }).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
       // Measure FPS (simplified)
       let fps = 0;
         let lastTime = performance.now();
         let frameCount = 0;
-        
+
           frameCount++;
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
             frameCount = 0;
@@ -42,7 +42,7 @@ export default PerformanceDashboard;
     const interval = setInterval(updateMetrics, 5000);
  clearInterval(interval);
   }, []);
-      
+
  setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
         Show Performance;

@@ -2,7 +2,7 @@ export default InteractiveAIROICalculator;
   const [currentCost, setCurrentCost] = useState(100000);
   const [efficiencyGain, setEfficiencyGain] = useState(70);
   const [timeframe, setTimeframe] = useState(12);
-  
+
     const annualSavings = (currentCost * efficiencyGain) / 100;
     const totalSavings = annualSavings * (timeframe / 12);
     const roi = ((totalSavings - currentCost) / currentCost) * 100;
@@ -11,18 +11,18 @@ export default InteractiveAIROICalculator;
   const roi = calculateROI();
           AI ROI Calculator;
                   Current Annual Cost ($)
-                
+
  setCurrentCost(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
 
                   Expected Efficiency Gain (%)
-                
+
  setEfficiencyGain(Number(e.target.value))}
                   className='w-full'
 
                   {efficiencyGain}%
                   Implementation Timeframe (months)
-                
+
  setTimeframe(Number(e.target.value))}
                   className='w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                   <option value={6}>6 months</option>

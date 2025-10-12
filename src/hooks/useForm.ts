@@ -44,7 +44,7 @@
     return isFormValid(validationResults);
   }, [values, validationSchema]);
   // Handle input change;
-      const { name, value, type } = e.target;
+      const {name, value, type} = e.target;
       const fieldName = name as keyof T;
       // Handle checkbox inputs;
       let fieldValue: unknown = value;
@@ -75,7 +75,7 @@
         return;
       setIsSubmitting(true);
         await onSubmit(values);
-        console.error('Form submission error:', error);
+        console.error('Form submission error: ', error);
         setIsSubmitting(false);
     [values, validateAllFields, onSubmit]
   );

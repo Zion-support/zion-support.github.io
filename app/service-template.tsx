@@ -1,17 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
 
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main
-interface ServicePageProps {
-  title: string,
+interface ServicePageProps {title: string,
   description: string,
   icon: React.ReactNode,
   benefits: string[],
@@ -19,17 +10,8 @@ interface ServicePageProps {
   pricing: string,
   seoTitle: string,
   seoDescription: string,
-<<<<<<< HEAD
   seoKeywords: string
-<<<<<<< HEAD
-=======
-  seoKeywords: string;
-}
->>>>>>> origin/main
 
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
   title,
   description,
   icon,
@@ -38,76 +20,35 @@ interface ServicePageProps {
   pricing,
   seoTitle,
   seoDescription,
-  seoKeywords;
-}: ServicePageProps) {
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <title>5G Data Analytics - Zion Tech Group</title>
+  seoKeywords;}: ServicePageProps) {return (
+    <title>5G Data Analytics - Zion Tech Group</title>
 
         <title>{seoTitle}</title>
 
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20rounded-fullmb-6">{icon}
           <h1 className="text-4 xl sm:text-5 xl md:text-6 xl font-boldtext-whitemb-6">{title}
             {description}
-    
+
               Get Started
 
             <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10transition-colors">Learn More
 
             <h2 className="text-3 xl font-boldtext-whitemb-6">Key Benefits</h2>
  (
-    
-                  <span className="text-gray-300">{benefit}</span>
 
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <Helmet></Helmet>
-        <title>Service - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
-      </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{icon}
-          </div>
-          <h1 className="w-5h-5ml-2">{title}
-          </h1>
-          <p className="w-5h-5ml-2">{description}
-          </p>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <Link;</Link></Link>
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-        ></Link>
-          Get Started;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
-            <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More;
-            </Link>
-          </div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div /></div>
-            <h2 className="text-3 xl font-bold text-white mb-6"  >Key Benefits</h2>
-            <ul className="w-5h-5ml-2" /></ul>
-              {benefits.map((benefit, index) => (
-                <li key="{index}" className="flexitems-start" /></li>
-                  <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                  <span className="text-gray-300"  >{benefit}</span>
-                </li>
->>>>>>> origin/main
-              ))}
+                  <span className="text-gray-300">{benefit}</span>
+  ))}
             </ul>
           </div>
-          <div /></div>
+          <div   /></div>
             <h2 className="text-3 xl font-bold text-white mb-6"  >Features</h2>
-            <ul className="w-5h-5ml-2" /></ul>
+            <ul className="w-5h-5ml-2"   /></ul>
               {features.map((feature, index) => (
-                <li key="{index}" className="flexitems-start" /></li>
-                  <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                <li key="{index}" className="flexitems-start"   /></li>
+                  <CheckCircle className="w-5h-5ml-2"   /></CheckCircle>
                   <span className="text-gray-300"  >{feature}</span>
                 </li>
-              ))}
+  ))}
             </ul>
           </div>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -118,71 +59,5 @@ interface ServicePageProps {
         </div>
     </div>
   )
-<<<<<<< HEAD
 };
 
-=======
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-      </div><Helmet>
-        <title>Service - Zion Tech Group
-        </title>
-        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          </div></div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{icon}
-          </div></div></div>
-          <h1 className="w-5 h-5 ml-2">{title}
-          </h1>
-          <p className="w-5 h-5 ml-2">{description}
-          </p>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-            </div></div><Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flexitems-center justify-center"
-        >
-          Get Started
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-            <Link to="/about" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More
-            </Link>
-          </div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          </div></div><div />
-            </div></div><h2 className="text-3 xl font-boldtext-white mb-6"  >Key Benefits</h2>
-            <ul className="w-5 h-5 ml-2" />
-              {benefits.map((benefit, index) => (
-                <li key="{index}" className="flexitems-start" />
-                  <CheckCircle className="w-5 h-5 ml-2" />
-                  <span className="text-gray-300"  >{benefit}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div />
-            </div></div><h2 className="text-3 xl font-boldtext-white mb-6"  >Features</h2>
-            <ul className="w-5 h-5 ml-2" />
-              {features.map((feature, index) => (
-                <li key="{index}" className="flexitems-start" />
-                  <CheckCircle className="w-5 h-5 ml-2" />
-                  <span className="text-gray-300"  >{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-          </div></div><h2 className="text-3 xl font-boldtext-white mb-4"  >Pricing</h2>
-          <p className="text-2 xl font-boldtext-cyan-400 mb-6">{pricing}</p>
-          <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700transition-allduration-300">Contact Us for Details
-        </Link>
-      </div>
-    </div>
-  )
-}
-    </>
-);
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-};
->>>>>>> origin/main

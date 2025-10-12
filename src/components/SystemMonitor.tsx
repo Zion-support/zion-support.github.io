@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 export default SystemMonitor;
 /**
  * System Monitor Component;
@@ -74,7 +74,7 @@ export default SystemMonitor;
       };
       setMetrics(newMetrics);
       setLastUpdate(new Date());
-      console.error('Failed to update metrics:', error);
+      console.error('Failed to update metrics: ', error);
   }, []);
   // Initialize monitoring;
       setIsMonitoring(true);
@@ -91,13 +91,13 @@ export default SystemMonitor;
  clearInterval(interval);
   }, [isMonitoring, refreshInterval, updateMetrics]);
   // Get memory information;
-      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      const memory = (performance as Performance & {memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number} }).memory;
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB;
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB;
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB;
       const percentage = (used / limit) * 100;
-      return { used, total, limit, percentage };
-    return { used: 0, total: 0, limit: 0, percentage: 0 };
+      return {used, total, limit, percentage};
+    return {used: 0, total: 0, limit: 0, percentage: 0};
   };
   // Get network information;
       const nav = navigator as NavigatorWithConnection;
@@ -109,9 +109,9 @@ export default SystemMonitor;
   };
   // Export data;
     if (!metrics) return;
-    
+
     };
-    
+
     });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -140,7 +140,7 @@ export default SystemMonitor;
         <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>
             <div className={`w-3 h-3 rounded-full ${isMonitoring ? 'bg-green-500' : 'bg-red-500'}`}></div>
               {isMonitoring ? 'Monitoring' : 'Stopped'}
-            
+
               Export Data;
           )}
           Last updated: {lastUpdate.toLocaleTimeString()}
@@ -181,7 +181,7 @@ export default SystemMonitor;
  80 ? 'bg-red-500' :
  60 ? 'bg-yellow-500' : 'bg-green-500'
                   }`}
-                  style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
+                  style={{ width:`${Math.min(metrics.memory.percentage, 100)}%` }}
                 ></div>
             <h4 className="text-sm font-medium text-gray-600 mb-2">Network</h4>
                 <span>Connection</span>
@@ -198,18 +198,18 @@ export default SystemMonitor;
                     {error.severity}
                   <span>{error.type}</span>
                   <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
-            ))}
+  ))}
       )}
       {/* Error Distribution */}
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Type</h4>
                     <span className="capitalize">{type}</span>
                     <span>{count}</span>
-                ))}
+  ))}
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Category</h4>
                     <span className="capitalize">{category}</span>
                     <span>{count}</span>
-                ))}
+  ))}
       )}
   );
 };

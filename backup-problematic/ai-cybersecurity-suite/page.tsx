@@ -1,10 +1,9 @@
 import React from 'react';
-export default function AICybersecuritySuitePage() {
-  return (
-        <title>AI Cybersecurity Suite - Zion Tech Group</title>
+export default function AICybersecuritySuitePage() {return (
+    <title>AI Cybersecurity Suite - Zion Tech Group</title>
       {/* Hero Section */}
               AI Cybersecurity Suite;
-              Comprehensive AI-powered cybersecurity solutions with advanced threat detection, 
+              Comprehensive AI-powered cybersecurity solutions with advanced threat detection,
               zero trust security, and automated incident response capabilities.
                 Get Started;
                 View Pricing;

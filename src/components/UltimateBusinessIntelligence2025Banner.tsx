@@ -1,10 +1,10 @@
 export default UltimateBusinessIntelligence2025Banner;
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isVisible] = useState(true);
-  
+
   ];
   const currentContent = content[currentSlide];
-    
+
  (prev + 1) % content.length);
     }, 5000);
  clearInterval(timer);
@@ -49,6 +49,6 @@ export default UltimateBusinessIntelligence2025Banner;
           {[
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
-          ))}
+  ))}
   );
 };

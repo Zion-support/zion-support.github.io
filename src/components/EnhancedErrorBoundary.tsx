@@ -19,7 +19,7 @@ export default EnhancedErrorBoundary;
       errorInfo;
     });
     // Log error to console in development;
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary: ', error, errorInfo);
     // Call custom error handler if provided;
       this.props.onError(error, errorInfo);
     // Enhanced error reporting;
@@ -28,17 +28,17 @@ export default EnhancedErrorBoundary;
     };
     // Log to console in development;
       console.group('🚨 Error Boundary Caught Error');
-      console.error('Error Report:', errorReport);
+      console.error('Error Report: ', errorReport);
       console.groupEnd();
     // Send to error reporting service (implement, as, needed)
       // In a real app, you would send this to your error reporting service;
       // For now, we'll just log it;
-      console.log('Error report prepared:', errorReport);
-       
+      console.log('Error report prepared: ', errorReport);
+
       // Example: Send to error reporting service;
-      //   body: JSON.stringify(errorReport)
+      // body: JSON.stringify(errorReport)
       // });
-      console.error('Failed to report error:', reportingError);
+      console.error('Failed to report error: ', reportingError);
   };
     // Get user ID from localStorage, cookies, or context;
     return localStorage.getItem('userId') || null;
@@ -48,13 +48,13 @@ export default EnhancedErrorBoundary;
       sessionStorage.setItem('sessionId', sessionId);
     return sessionId;
   };
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({hasError: false, error: undefined, errorInfo: undefined});
   };
     window.location.reload();
   };
     window.location.href = '/';
   };
-    
+
     };
     navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
         // Show success message;
@@ -64,12 +64,12 @@ export default EnhancedErrorBoundary;
             button.textContent = originalText;
           }, 2000);
       })
-        console.error('Failed to copy error details:', error);
+        console.error('Failed to copy error details: ', error);
       });
   };
       // Custom fallback UI;
         return this.props.fallback;
-      const { retryCount, error } = this.state;
-      
+      const {retryCount, error} = this.state;
+
       );
     return this.props.children;

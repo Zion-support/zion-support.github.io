@@ -1,6 +1,6 @@
 export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
-export type { RequestConfig, APIResponse };
-export { APIError };
+export type {RequestConfig, APIResponse};
+export {APIError};
 /**
  * API Client Utility;
  * Provides a centralized API client with error handling and caching;
@@ -30,20 +30,9 @@ export { APIError };
 }
 
   private baseURL: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-  private defaultHeaders: Record<string, string>;
-  private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
-    <></>
->>>>>>> origin/main
-  private defaultHeaders: Record<string, string />;
-  private cache: Map<string, { data: unknown; timestamp: number; ttl: number } /> = new Map();
-=======
-  private defaultHeaders: Record<string, string>;
-  private cache: Map<string, { data: unknown; timestamp: number; ttl: number }> = new Map();
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
+  private defaultHeaders: Record<string, string   />;
+  private cache: Map<string, {data: unknown; timestamp: number; ttl: number}   /> = new Map();
 
     this.baseURL = baseURL;
       ...defaultHeaders;
@@ -92,31 +81,31 @@ export { APIError };
   /**
    * GET request;
    */
-    return this.request<T>(endpoint, { ...config, method: 'GET' });
+    return this.request<T>(endpoint, {...config, method: 'GET'});
   }
 
   /**
    * POST request;
    */
-    return this.request<T>(endpoint, { ...config, method: 'POST', body });
+    return this.request<T>(endpoint, {...config, method: 'POST', body});
   }
 
   /**
    * PUT request;
    */
-    return this.request<T>(endpoint, { ...config, method: 'PUT', body });
+    return this.request<T>(endpoint, {...config, method: 'PUT', body});
   }
 
   /**
    * DELETE request;
    */
-    return this.request<T>(endpoint, { ...config, method: 'DELETE' });
+    return this.request<T>(endpoint, {...config, method: 'DELETE'});
   }
 
   /**
    * PATCH request;
    */
-    return this.request<T>(endpoint, { ...config, method: 'PATCH', body });
+    return this.request<T>(endpoint, {...config, method: 'PATCH', body});
   }
 
   /**
@@ -172,4 +161,4 @@ export { APIError };
 // Default API client instance;
 
 // Export types and classes;
-    </>
+    <  />

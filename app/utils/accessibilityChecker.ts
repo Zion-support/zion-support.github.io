@@ -143,8 +143,7 @@ export const accessibilityChecker = new AccessibilityChecker();
     const report = this.runAllChecks();
     const score = this.getAccessibilityScore();
 
-    return `
-Accessibility Report;
+    return `Accessibility Report;
 Score: ${score}%
 Total Checks: ${report.totalChecks}
 Passed: ${report.passedChecks}
@@ -153,10 +152,8 @@ Warnings: ${report.warnings}
 
 Issues Found:
 ${report.results;
- !r.passed)
- `- ${r.severity.toUpperCase()}: ${r.message}`)
-  .join('\n')}
-    `.trim();
+ !r.passed)`- ${r.severity.toUpperCase()}: ${r.message}`)
+  .join('\n')}`.trim();
 
 // Export a default instance;
 

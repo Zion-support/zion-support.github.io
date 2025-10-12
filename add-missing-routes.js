@@ -17,7 +17,7 @@ const missingPages = analysisData.missingPagesList;
 
 // Generate route statements;
  l.toUpperCase()) + 'Page';
-  return `            <Route path="${route}" element={<${componentName} />} />`;
+  return`            <Route path="${route}" element={<${componentName}   />} />`;
 };
 
 // Generate all import statements;

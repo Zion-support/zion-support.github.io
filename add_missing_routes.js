@@ -15,7 +15,7 @@ let appContent = fs.readFileSync('/workspace/App.tsx', 'utf8');
 // Generate route statements;
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
-  return `                  <Route path="/${page}" element={<${componentName} />} />`;
+  return `<Route path="/${page}" element={<${componentName}   />} />`;
 }).join('\n');
 
 // Add imports after the last import;
@@ -40,4 +40,4 @@ const newAppContent = newImports + afterImports.replace(appContent.substring(las
 fs.writeFileSync('/workspace/App.tsx', newAppContent);
 
 console.log(`Added ${brokenLinks.length} routes to App.tsx`);
-console.log('Routes added for:', brokenLinks.slice(0, 10).join(', '), '... and more');
+console.log('Routes added for: ', brokenLinks.slice(0, 10).join(', '), '... and more');

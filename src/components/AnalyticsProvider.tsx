@@ -1,15 +1,15 @@
 export default AnalyticsProvider;
   const GA_TRACKING_ID = process.env.REACT_APP_GA_TRACKING_ID || 'G-XXXXXXXXXX';
-  
+
     // Initialize Google Analytics;
       const script = document.createElement('script');
       script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+      script.src = `https:// www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
       document.head.appendChild(script);
       // Initialize gtag;
-      (window as { dataLayer: unknown[] }).dataLayer = (window as { dataLayer: unknown[] }).dataLayer || [];
-        (window as { dataLayer: unknown[] }).dataLayer.push(args);
-      (window as { gtag: typeof gtag }).gtag = gtag;
+      (window as {dataLayer: unknown[]}).dataLayer = (window as {dataLayer: unknown[]}).dataLayer || [];
+        (window as {dataLayer: unknown[]}).dataLayer.push(args);
+      (window as {gtag: typeof gtag}).gtag = gtag;
       gtag('js', new Date());
         send_page_view: true;
       });
@@ -47,5 +47,5 @@ export default AnalyticsProvider;
       window.removeEventListener('popstate', handleRouteChange);
     };
   }, [GA_TRACKING_ID]);
-  return <>{children}</>;
+  return <>{children}<  />;
 };

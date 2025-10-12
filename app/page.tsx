@@ -1,26 +1,21 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
 
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, Users, Award, Shield, Brain, Cloud, Code, Smartphone, FileText, MessageCircle, Link as LinkIcon, Workflow, CheckCircle } from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Award, Shield, Brain, Cloud, Code, Smartphone, FileText, MessageCircle, Link as LinkIcon, Workflow, CheckCircle} from 'lucide-react';
 
   const [isVisible, setIsVisible] = useState(false);
 
     setIsVisible(true);
   }, []);
 
-  const stats = [
-    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
-    { number: '50+', label: 'Happy Clients', icon: Users },
-    { number: '99%', label: 'Client Satisfaction', icon: Star },
-    { number: '24/7', label: 'Support Available', icon: Award },
-  ];
+  const stats = [{number: '500+', label: 'Projects Completed', icon: CheckCircle},
+    {number: '50+', label: 'Happy Clients', icon: Users},
+    {number: '99%', label: 'Client Satisfaction', icon: Star},
+    {number: '24/7', label: 'Support Available', icon: Award},];
 
-  const features = [
-      icon: Brain,
+  const features = [icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Cutting-edge artificial intelligence to transform your business operations',
       color: 'from-purple-500 to-pink-500'
@@ -38,11 +33,9 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Shield, Brain, Cloud, Code
       icon: Code,
       title: 'Custom Development',
       description: 'Tailored software solutions built with modern technologies',
-      color: 'from-green-500 to-emerald-500'
-  ];
+      color: 'from-green-500 to-emerald-500'];
 
-  const aiServices = [
-      title: 'AI Analytics Dashboard',
+  const aiServices = [title: 'AI Analytics Dashboard',
       description: 'Real-time business intelligence with predictive insights',
       price: '$299/month',
       features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],
@@ -71,8 +64,7 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Shield, Brain, Cloud, Code
       color: 'from-orange-500 to-red-500'
   ];
 
-  const itServices = [
-      title: 'Cloud Migration',
+  const itServices = [title: 'Cloud Migration',
       description: 'Seamless migration to AWS, Azure, or Google Cloud',
       price: 'Starting at $5,000',
       features: ['Zero-downtime migration', 'Security compliance', 'Cost optimization', '24/7 support'],
@@ -101,8 +93,7 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Shield, Brain, Cloud, Code
       color: 'from-purple-500 to-pink-500'
   ];
 
-  const microSaasProducts = [
-      title: 'Zion Analytics Pro',
+  const microSaasProducts = [title: 'Zion Analytics Pro',
       description: 'Advanced business intelligence platform with AI insights',
       price: '$99/month',
       features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Team collaboration'],
@@ -132,78 +123,14 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Shield, Brain, Cloud, Code
   ];
 
   return (
-    
-        <title>Zion Tech Group - Advanced AI & IT Solutions | Leading Technology Company</title>
+    <title>Zion Tech Group - Advanced AI & IT Solutions | Leading Technology Company</title>
 
               Advanced AI & IT Solutions
-              Transform your business with cutting-edge artificial intelligence, cloud infrastructure, 
+              Transform your business with cutting-edge artificial intelligence, cloud infrastructure,
               and cybersecurity solutions tailored to your needs.
                 Get Started
                 Learn More
 
-=======
-export default function HomePage() {
-  return (
-    <>
-      <Helmet>
-        <title>Home - Zion Tech Group</title>
-        <meta name="description" content="Professional home by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Home</h1>
-          <p className="text-lg text-gray-300 mb-8">Professional home coming soon.</p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
   );
 }
-=======
-export default HomePage;
-const HomePage: React.FC = () => {
-  return (
-    <></>
-      <Helmet></Helmet>
-        <title>Zion Tech Group - Advanced AI & IT Solutions</title>
-        <meta name="description" content="Zion Tech Group provides cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development." /></meta>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16"></div>
-          <div className="text-center"></div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white  mb-6"></h1>
-              Transform Your Business with;
-              <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"></span>
-                Advanced AI & IT Solutions;
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl  mx-auto"></p>
-              We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth for businesses worldwide.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4  justify-center"></div>
-              <Link;</Link></Link>
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center  justify-center"
-              ></Link>
-                Get Started;
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-              </Link>
-              <Link;</Link></Link>
-                to="/about"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              ></Link>
-                Learn More;
-              </Link>
-            </div>
-        </div>
-    </>
-  );
-};
->>>>>>> origin/main
+

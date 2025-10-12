@@ -24,8 +24,8 @@ export default Footer;
           {/* Micro SAAS Services */}
               Micro SAAS;
                     <span>{service.name}</span>
-              ))}
-            
+  ))}
+
               View All Micro SAAS →
 
           {/* AI & IT Services */}
@@ -36,13 +36,13 @@ export default Footer;
                 <h4 className="text-white font-medium mb-2">IT Services</h4>
                         {service.name}
                   ))}
-            
+
               View All Services →
 
           {/* Additional AI Services */}
               AI Tools;
                     <span>{service.name}</span>
-              ))}
+  ))}
 
           {/* Company & Support */}
             <h3 className="text-cyan-400 font-semibold mb-4">Company</h3>

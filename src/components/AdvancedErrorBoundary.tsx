@@ -88,12 +88,12 @@ class AdvancedErrorBoundary extends Component;
                       Try Again ({this.maxRetries - this.retryCount} attempts;
                       left)
                   )}
-                
+
                   Reload Page;
                   Go to Homepage;
                   If this problem persists, please contact our support team;
                   at&nbsp;
-                  
+
                     kleber@ziontechgroup.com;
   );
     return this.props.children;

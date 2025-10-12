@@ -30,15 +30,15 @@ export default RateLimiter;
     const record = this.requests.get(identifier);
     // No record or expired;
       const resetTime = now + this.config.windowMs;
-      this.requests.set(identifier, { count: 1, resetTime });
-      return { allowed: true, remaining: this.config.max - 1, resetTime };
+      this.requests.set(identifier, {count: 1, resetTime});
+      return {allowed: true, remaining: this.config.max - 1, resetTime};
     // Increment count;
     if (record.count;
         this.requests.delete(key);
   /**
    * Get current stats;
    */
-    return { totalTracked: this.requests.size };
+    return {totalTracked: this.requests.size};
 /**
  * Pre-configured rate limiters for common use cases;
  */
@@ -64,7 +64,7 @@ export default RateLimiter;
  * @returns Middleware function;
  */
     const identifier = getClientIdentifier(request);
-    const { allowed, remaining, resetTime } = limiter.check(identifier);
+    const {allowed, remaining, resetTime} = limiter.check(identifier);
           retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
             'X-RateLimit-Reset': String(resetTime)
       );

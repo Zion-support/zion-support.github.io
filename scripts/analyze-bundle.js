@@ -13,11 +13,9 @@ const DIST_DIR = path.join(__dirname, '..', 'dist');
 const ANALYSIS_DIR = path.join(__dirname, '..', 'analysis');
 
 // Ensure analysis directory exists;
-if (!fs.existsSync(ANALYSIS_DIR)) {
-  fs.mkdirSync(ANALYSIS_DIR, { recursive: true });
+if (!fs.existsSync(ANALYSIS_DIR)) {fs.mkdirSync(ANALYSIS_DIR, { recursive: true});
 
-function analyzeBundle() {
-  console.log('🔍 Analyzing bundle...\n');
+function analyzeBundle() {console.log('🔍 Analyzing bundle...\n');
 
   // Check if dist directory exists;
   if (!fs.existsSync(DIST_DIR)) {
@@ -31,31 +29,24 @@ function analyzeBundle() {
       const filePath = path.join(dir, file);
       const stat = fs.statSync(filePath);
       if (stat.isDirectory()) {
-        findJSFiles(filePath);
-      } else if (file.endsWith('.js')) {
-        jsFiles.push(filePath);
-    });
+        findJSFiles(filePath);} else if (file.endsWith('.js')) {jsFiles.push(filePath);});
 
   findJSFiles(DIST_DIR);
 
   // Analyze each JS file;
-  const analysis = {
-    totalFiles: jsFiles.length,
+  const analysis = {totalFiles: jsFiles.length,
     totalSize: 0,
     files: [],
-    recommendations: []
-  };
+    recommendations: []};
 
     const stats = fs.statSync(filePath);
     const size = stats.size;
     const relativePath = path.relative(DIST_DIR, filePath);
-    
+
     analysis.totalSize += size;
-    analysis.files.push({
-      path: relativePath,
+    analysis.files.push({path: relativePath,
       size: size,
-      sizeFormatted: formatBytes(size)
-    });
+      sizeFormatted: formatBytes(size)});
   });
 
   // Sort files by size;
@@ -74,20 +65,19 @@ function analyzeBundle() {
   console.log('📊 Bundle Analysis Complete!\n');
   console.log(`Total files: ${analysis.totalFiles}`);
   console.log(`Total size: ${formatBytes(analysis.totalSize)}\n`);
-  
+
   console.log('📁 Largest files:');
-    console.log(`  ${file.path}: ${file.sizeFormatted}`);
+    console.log(`${file.path}: ${file.sizeFormatted}`);
   });
 
   console.log('\n💡 Recommendations:');
-    console.log(`  • ${rec}`);
+    console.log(`• ${rec}`);
   });
 
   console.log(`\n📄 Detailed report saved to: ${reportPath}`);
   console.log(`🌐 HTML report saved to: ${path.join(ANALYSIS_DIR, 'bundle-report.html')}`);
 
-function formatBytes(bytes) {
-  if (bytes === 0) return '0 Bytes';
+function formatBytes(bytes) {if (bytes === 0) return '0 Bytes';
   const k = 1024;
   const sizes = ['Bytes', 'KB', 'MB', 'GB'];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
@@ -107,8 +97,7 @@ function generateRecommendations(analysis) {
 
   // Check for vendor files;
  file.path.includes('vendor'));
- 0) {
- sum + file.size, 0);
+ 0) {sum + file.size, 0);
  1024 * 1024) { // 1MB;
       recommendations.push('Vendor bundle is large. Consider tree shaking and removing unused dependencies.');
 
@@ -129,7 +118,7 @@ function generateRecommendations(analysis) {
   analysis.recommendations = recommendations;
 
 function generateHTMLReport(analysis) {
-  const html = `
+  const html =`
     <title>Bundle Analysis Report - Zion Tech Group</title>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -202,10 +191,8 @@ function generateHTMLReport(analysis) {
                 <div class="stat-label">Largest File</div>
                         <th>File Path</th>
                         <th>Size</th>
- `
-                            <td>${file.path}</td>
-                            <td class="size">${file.sizeFormatted}</td>
-                    `).join('')}
+ `<td>${file.path}</td>
+                            <td class="size">${file.sizeFormatted}</td>`).join('')}
 
             <h3>💡 Optimization Recommendations</h3>
                 ${analysis.recommendations.map(rec => `<li>${rec}</li>`).join('')}

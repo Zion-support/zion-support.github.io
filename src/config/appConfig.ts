@@ -25,8 +25,7 @@ export default config;
     enableHSTS: boolean;
     enableXSSProtection: boolean;
   };
-    environment:
-      (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
+    environment: (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development'
     retryAttempts: 3;
     performanceOptimization: true;
     cacheMaxAge: 3600000, // 1 hour in milliseconds;

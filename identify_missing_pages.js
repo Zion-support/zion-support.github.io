@@ -4,10 +4,9 @@ import fs from 'fs';
 const existingPages = fs.readFileSync('/workspace/existing_pages.txt', 'utf8').split('\n').filter(Boolean);
 
 // Navigation links from Navigation.tsx;
-const navigationLinks = [
-  '/ai-services',
+const navigationLinks = ['/ai-services',
   '/ai-content-generator',
-  '/ai-chatbot-enterprise', 
+  '/ai-chatbot-enterprise',
   '/ai-analytics-dashboard',
   '/ai-3d-generation',
   '/ai-drug-discovery-pro',
@@ -46,12 +45,10 @@ const navigationLinks = [
   '/5g-data-analytics',
   '/about',
   '/contact',
-  '/pricing'
-];
+  '/pricing'];
 
 // Footer links from Footer.tsx;
-const footerLinks = [
-  '/ai-content-generator',
+const footerLinks = ['/ai-content-generator',
   '/ai-chatbot-enterprise',
   '/ai-analytics-dashboard',
   '/ai-3d-generation',
@@ -90,12 +87,10 @@ const footerLinks = [
   '/privacy-policy',
   '/terms-of-service',
   '/cookie-policy',
-  '/gdpr-compliance'
-];
+  '/gdpr-compliance'];
 
 // App.tsx routes;
-const appRoutes = [
-  '/',
+const appRoutes = ['/',
   '/about',
   '/contact',
   '/ai-services',
@@ -142,8 +137,7 @@ const appRoutes = [
   '/task-manager-pro',
   '/training',
   '/services-advertising',
-  '/5g-implementation'
-];
+  '/5g-implementation'];
 
 // Combine all links and remove duplicates;
 const allLinks = [...new Set([...navigationLinks, ...footerLinks, ...appRoutes])];
