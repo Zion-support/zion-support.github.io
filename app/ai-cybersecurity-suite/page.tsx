@@ -1,6 +1,5 @@
 'use client';
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -30,13 +29,9 @@ import {
   Settings,
   Database,
   Network,
-  Key
+  Key,
+  Cloud
 } from 'lucide-react';
-=======
-import React from 'react';
-
-import { ArrowRight, Brain, Database } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-b5ac
 
 export default function AICybersecuritySuitePage() {
   const [selectedPlan, setSelectedPlan] = useState('pro');
