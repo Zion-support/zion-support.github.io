@@ -1,7 +1,5 @@
-'use client'
 import { Helmet } from 'react-helmet-async';
-
-import { ArrowRight, Mail, Brain } from 'lucide-react';
+'use client'
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -82,4 +80,3 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
             </p>
           </div>
         </div></div></section>)};export default FuturisticServiceCardPage
-}

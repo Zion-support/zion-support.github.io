@@ -1,49 +1,15 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { X } from 'lucide-react'
-
-interface SidebarProps {
-  isOpen: boolean
-  onClose: () => void
-}
-
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const navigationItems = [
-    { name: 'Home', path: '/' },
-    { name: 'AI Services', path: '/ai-services' },
-    { name: 'IT Services', path: '/it-services' },
-    { name: 'Micro SaaS', path: '/micro-saas-services' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' }
-  ]
-
+export default function Sidebar() {
   return (
-    <div className={`fixed inset-0 z-50 transform transition-transform duration-300 ease-in-out ${
-      isOpen ? 'translate-x-0' : '-translate-x-full'
-    }`}>
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
-      <div className="relative flex flex-col w-64 h-full bg-gray-900 shadow-xl">
-        <div className="flex items-center justify-between p-4">
-          <span className="text-xl font-bold text-white">Menu</span>
-          <button
-            onClick={onClose}
-            className="text-gray-300 hover:text-white transition-colors"
-          >
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-        <nav className="flex-1 px-4 py-6 space-y-2">
-          {navigationItems.map((item, index) => (
-            <Link
-              key={index}
-              to={item.path}
-              className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
-              onClick={onClose}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </nav>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+            Sidebar
+          </span>
+        </h1>
+        <p className="text-xl text-gray-300 mb-8 max-w-3xl">
+          Advanced solutions powered by cutting-edge technology for modern businesses.
+        </p>
       </div>
     </div>
   );

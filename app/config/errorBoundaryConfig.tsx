@@ -1,4 +1,4 @@
-import React from 'react';
+
 /**
  * Error Boundary Configuration
  * Centralized configuration for error handling across the application
@@ -203,17 +203,3 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
  */
   }}
 export default getErrorBoundaryConfig
-  </button>
-  </button>
-  </button>
-  </path>
-  </button>
-  </button>
-  </h2>
-  </path>
-
-/**
- * Format error for logging*/
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown',}
-  }}
-

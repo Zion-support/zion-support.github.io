@@ -1,6 +1,5 @@
-'use client'
 import React, { useEffect, useState } from 'react'
-
+'use client'
 interface UserExperienceEnhancerProps {
   children: React.ReactNode
   className?: string
@@ -29,4 +28,5 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       // Add loading states for interactive elements
 
 interface UserExperienceEnhancerProps {children: React.ReactNode}
+}
 }

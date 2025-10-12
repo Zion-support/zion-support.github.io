@@ -1,10 +1,7 @@
-import React from 'react';
+
 ursor/analyze-improve-and-deploy-application-edcb
 ursor/analyze-improve-and-deploy-application-edcb
 'use client'
-import { Helmet } from 'react-helmet-async';
-
-import { ArrowRight, Mail, Brain } from 'lucide-react';
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -110,64 +107,3 @@ import { ArrowRight, Mail, Brain } from 'lucide-react';
     </div>
   )}
 export default OptimizedImagePage
-  </button>
-  </button>
-  </h2>
-  </button>
-  </span>
-
-interface OptimizedImageProps {
-  src: string
-  alt: string
-  className?: string
-  width?: number
-  height?: number
-  quality?: number
-  priority?: boolean
-  placeholder?: 'blur' | 'empty'
-  blurDataURL?: string
-  onLoad?: () => void
-  onError?: () => void
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  className = '',
-  width,
-  height,
-  priority = false,
-  placeholder = 'empty',
-  blurDataURL,
-  onLoad,
-  onError
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isInView, setIsInView] = useState(priority)
-  const [hasError, setHasError] = useState(false)
-  const imgRef = useRef<HTMLImageElement>(null)
-
-  useEffect(() => {
-    if (priority) return
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current)
-    }
-
-    return () => observer.disconnect()
-  }, [priority])
-
-  const handleLoad = () => {
-    setIsLoaded(true)
-    onLoad?.()
-  }

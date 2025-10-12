@@ -2,13 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
-  BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
-  Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
-  TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
-  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock, Play, Download
-} from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Brain, BarChart, FileText, TrendingUp, Sparkles, Smartphone, Play } from 'lucide-react';
 
 const ZionAnalyticsProPage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

@@ -1,8 +1,5 @@
 'use client'
-import { Helmet } from 'react-helmet-async';
 'use client';import React
-import { Helmet } from 'react-helmet-async', { useState, useCallback } from 'react'
-
   CheckCircle}
 } from 'lucide-react'
     message: ''
@@ -265,45 +262,3 @@ import { Helmet } from 'react-helmet-async', { useState, useCallback } from 'rea
 </div>
   )}
 export default ContactPage
-  </textarea>
-  </label>
-  </label>
-  </label>
-  </span>
-  </HTMLInputElement>
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Mail className="w-6 h-6 text-white" />
-                    </div>
-                    <div></div>
-                      <h3 className="text-lg font-semibold text-white">Email</h3>
-                      <p className="text-gray-300">info@ziontechgroup.com</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <MapPin className="w-6 h-6 text-white" />
-                    </div>
-                    <div></div>
-                      <h3 className="text-lg font-semibold text-white">Address</h3>
-                      <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Clock className="w-6 h-6 text-white" />
-                    </div>
-                    <div></div>
-                      <h3 className="text-lg font-semibold text-white">Business Hours</h3>
-                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>

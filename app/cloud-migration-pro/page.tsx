@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code } from 'lucide-react';
 
+'use client';
 const Page: React.FC = () => {
   return (
     <>
@@ -81,39 +76,3 @@ const Page: React.FC = () => {
 };
 
 export default Page;
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-    },
-    {
-      icon: <Shield className="w-6 h-6 text-purple-400" />,
-      title: 'Security-First Approach',
-    }
-  ]
-
-  const pricingPlans = [
-    {
-      name: 'Small Business',
-      ],
-      popular: false
-    },
-    {
-      name: 'Enterprise',
-      ],
-      popular: true
-    },
-    {
-      ],
-      popular: false
-    }
-  ]
-
-  const testimonials = [
-    {
-<<<<<<< HEAD
-}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-b8e9
-=======
-}
->>>>>>> cursor/website-audit-and-update-with-deployment-6024

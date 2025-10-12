@@ -183,4 +183,3 @@
         </div>
       </section>
     </div>)};export default ServiceWorkerRegistrationPage
-}

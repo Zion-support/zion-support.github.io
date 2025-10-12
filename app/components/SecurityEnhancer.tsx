@@ -1,5 +1,5 @@
-'use client'
 import React, { useEffect } from 'react'
+'use client'
   children: React.ReactNode}
     // Security enhancement logic
 
@@ -55,10 +55,3 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {use
     enhanceSecurity()}, [])
   return <React.Fragment>{children}</React.Fragment>}
 export default SecurityEnhancer
-  </SecurityEnhancerProps>
-
-      // Disable right-click context menu
-      document.addEventListener('contextmenu', (e) => {e.preventDefault()}
-      });// Disable F12 and other dev tools shortcuts
-      document.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
-        }
