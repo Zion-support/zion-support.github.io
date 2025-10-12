@@ -1,75 +1,30 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 import { Helmet } from 'react-helmet-async';
-
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function Accessibility() {
-=======
 export default function AccessibilityPage() {
->>>>>>> origin/main
   return (
-<<<<<<< HEAD
-
-        <>
-      <title>Accessibility - Zion Tech Group</title>
-      
-            <h1 className="text-4xl font-bold text-white mb-6">Accessibility</h1>
-            <p className="text-lg text-gray-300 mb-8">Learn about our commitment to accessibility and inclusive design.</p>
-            
-              Contact Us
-
-<<<<<<< HEAD
-  );
-=======
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Accessibility - Zion Tech Group</title>
-        <meta name="description" content="Professional accessibility by Zion Tech Group. Transform your business with our expert solutions." />
+        <meta name="description" content="Professional accessibility services by Zion Tech Group" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">Accessibility</h1>
           <p className="text-lg text-gray-300 mb-8">Professional accessibility services coming soon.</p>
+          
           <Link
             to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
           >
             Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
       </div>
-    </>
+    </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-=======
-      </>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <Helmet></Helmet>
-        <title>Service - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
-      </Helmet>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div>
-        <h1 className="text-4 xl font-bold text-white mb-6"  >Accessibility</h1>
-        <p className="text-lg text-gray-300 mb-8">Professional accessibility services coming soon.</p>
-        <Link;</Link></Link>
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-centermx-auto w-fit"
-        ></Link>
-          Contact Us;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
-      </div>
-    </div>  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e6d0
->>>>>>> origin/main

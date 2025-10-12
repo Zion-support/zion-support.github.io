@@ -1,216 +1,105 @@
 /**
- * Advanced Analytics Utility;
- * Provides comprehensive analytics tracking and reporting functionality;
+ * Advanced Analytics Utility
+ * Provides comprehensive analytics tracking and reporting functionality
  */
 
+export interface AnalyticsEvent {
   name: string;
   properties?: Record<string, unknown>;
   timestamp?: number;
   userId?: string;
   sessionId?: string;
+}
 
+export interface AnalyticsReport {
   pageViews: number;
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
-  topPages: Array<{ page: string; views: number }>;
-  userJourney: string[];
+  topPages: string[];
+  userEngagement: number;
+}
 
-  pageLoadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number;
-
-  trackingId: string;
-  enabled: boolean;
-  debug: boolean;
-  sampleRate: number;
-  customDimensions?: Record<string, string>;
-
-  private config: AnalyticsConfig;
+export class AdvancedAnalytics {
   private events: AnalyticsEvent[] = [];
-    userJourney: []
-  };
-  private performanceMetrics: PerformanceMetrics | null = null;
+  private sessionStartTime: number = Date.now();
 
-    this.config = config;
-    this.initializeTracking();
-
-  /**
-   * Initialize analytics tracking;
-   */
-    if (typeof window === 'undefined' || !this.config.enabled) return;
-
-    // Track page view;
-    this.trackPageView();
-
-    // Track performance metrics;
-    this.trackPerformanceMetrics();
-
-    // Track user interactions;
-    this.trackUserInteractions();
-
-    // Track scroll depth;
-    this.trackScrollDepth();
-
-    // Track form submissions;
-    this.trackFormSubmissions();
-
-  /**
-   * Track a custom event;
-   */
-    if (!this.config.enabled) return;
-
-        sessionId: this.getSessionId()
+  trackEvent(event: AnalyticsEvent): void {
+    const eventWithTimestamp = {
+      ...event,
+      timestamp: Date.now(),
       sessionId: this.getSessionId()
     };
+    
+    this.events.push(eventWithTimestamp);
+    
+    // Send to analytics service
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', event.name, event.properties);
+    }
+  }
 
-    this.events.push(event);
-
-      console.log('Analytics Event:', event);
-
-    // Send to analytics service;
-    this.sendToAnalytics(event);
-
-  /**
-   * Track page view;
-   */
-    const currentPage = page || window.location.pathname;
-
-    this.userBehavior.pageViews++;
-    this.userBehavior.userJourney.push(currentPage);
-
-    // Update top pages;
- p.page === currentPage);
-      existingPage.views++;
-      this.userBehavior.topPages.push({ page: currentPage, views: 1 });
-
-      userAgent: navigator.userAgent;
+  trackPageView(page: string): void {
+    this.trackEvent({
+      name: 'page_view',
+      properties: { page }
     });
+  }
 
-  /**
-   * Track user click events;
-   */
-      ...properties;
+  trackConversion(conversionType: string, value?: number): void {
+    this.trackEvent({
+      name: 'conversion',
+      properties: { conversionType, value }
     });
+  }
 
-  /**
-   * Track form submissions;
-   */
-      ...properties;
-    });
-
-  /**
-   * Track performance metrics;
-   */
-    if (typeof window === 'undefined') return;
-
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        const paintEntries = performance.getEntriesByType('paint');
-
-          largestContentfulPaint: 0, // Would need to be calculated with LCP API;
-          firstInputDelay: 0, // Would need to be calculated with FID API;
-          cumulativeLayoutShift: 0, // Would need to be calculated with CLS API;
-          timeToInteractive: 0 // Would need to be calculated;
-        };
-
-        this.trackEvent('performance_metrics', this.performanceMetrics);
-      }, 0);
-    });
-
-  /**
-   * Track user interactions;
-   */
-    if (typeof window === 'undefined') return;
-
-    // Track clicks;
-      const target = event.target as HTMLElement;
-      this.trackClick(target);
-    });
-
-    // Track scroll depth;
-    let maxScrollDepth = 0;
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-        maxScrollDepth = scrollDepth;
-        this.trackEvent('scroll_depth', { depth: scrollDepth });
-    });
-
-  /**
-   * Track scroll depth;
-   */
-    if (typeof window === 'undefined') return;
-
-    let maxScrollDepth = 0;
-
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-        maxScrollDepth = scrollDepth;
-        this.trackEvent('scroll_depth', { depth: scrollDepth });
+  generateReport(): AnalyticsReport {
+    const now = Date.now();
+    const sessionDuration = now - this.sessionStartTime;
+    const pageViews = this.events.filter(e => e.name === 'page_view').length;
+    const conversions = this.events.filter(e => e.name === 'conversion').length;
+    
+    return {
+      pageViews,
+      sessionDuration,
+      bounceRate: pageViews === 1 ? 100 : 0,
+      conversionRate: pageViews > 0 ? (conversions / pageViews) * 100 : 0,
+      topPages: this.getTopPages(),
+      userEngagement: this.calculateEngagement()
     };
+  }
 
-    window.addEventListener('scroll', trackScrollDepth, { passive: true });
-
-  /**
-   * Track form submissions;
-   */
-    if (typeof window === 'undefined') return;
-
-      const form = event.target as HTMLFormElement;
-      this.trackFormSubmission(form);
-    });
-
-  /**
-   * Get user ID from storage or generate new one;
-   */
-    let userId = localStorage.getItem('analytics_user_id');
-      userId = 'user_' + Math.random().toString(36).substr(2, 9);
-      localStorage.setItem('analytics_user_id', userId);
-    return userId;
-
-  /**
-   * Get session ID from storage or generate new one;
-   */
+  private getSessionId(): string {
     let sessionId = sessionStorage.getItem('analytics_session_id');
-      sessionId = 'session_' + Math.random().toString(36).substr(2, 9);
+    if (!sessionId) {
+      sessionId = Math.random().toString(36).substring(2, 15);
       sessionStorage.setItem('analytics_session_id', sessionId);
+    }
     return sessionId;
+  }
 
-  /**
-   * Send event to analytics service;
-   */
-    // In a real implementation, this would send to your analytics service;
-    // For now, we'll just log it;
-      console.log('Sending to analytics:', event);
+  private getTopPages(): string[] {
+    const pageViews = this.events
+      .filter(e => e.name === 'page_view')
+      .map(e => e.properties?.page as string)
+      .filter(Boolean);
+    
+    const pageCounts = pageViews.reduce((acc, page) => {
+      acc[page] = (acc[page] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+    
+    return Object.entries(pageCounts)
+      .sort(([, a], [, b]) => b - a)
+      .slice(0, 5)
+      .map(([page]) => page);
+  }
 
-  /**
-   * Get analytics report;
-   */
-    events: AnalyticsEvent[];
-    userBehavior: UserBehavior;
-    performanceMetrics: PerformanceMetrics | null;
-    totalEvents: number;
-      totalEvents: this.events.length;
-    };
+  private calculateEngagement(): number {
+    // Simple engagement calculation based on events per minute
+    const sessionDurationMinutes = (Date.now() - this.sessionStartTime) / 60000;
+    return sessionDurationMinutes > 0 ? this.events.length / sessionDurationMinutes : 0;
+  }
+}
 
-  /**
-   * Export analytics data;
-   */
-    return JSON.stringify(this.getReport(), null, 2);
-
-  /**
-   * Clear analytics data;
-   */
-    this.events = [];
-      userJourney: []
-    };
-    this.performanceMetrics = null;
-
-// Export utility functions;
- new AdvancedAnalytics(config);
-
-  console.log('Track event:', eventName, properties);
-};
-
-  console.log('Track page view:', page);
-};
+export const advancedAnalytics = new AdvancedAnalytics();

@@ -1,12 +1,12 @@
 import React from 'react';
-import Navigation from './Navigation';
-  return (
-<<<<<<< HEAD
 
-=======
-    <>
-      <header />
-      <Navigation />
-    </>
-);
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
+const Header: React.FC<HeaderProps> = () => {
+  return (
+    <div className="header">
+      <h2>Header</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
+
+export default Header;

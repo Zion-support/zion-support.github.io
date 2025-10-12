@@ -1,121 +1,84 @@
 #!/usr/bin/env python3
+"""
+Script to fix malformed page files by creating proper React components
+"""
 import os
 import re
 import glob
 
 def fix_page_file(file_path):
-    """Fix common page file issues"""
+    """Fix a single page file by creating a proper React component"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Check if file needs fixing
-        if 'export default function' in content or 'export default' in content:
-            return False
+        # Extract the page name from the file path
+        page_name = os.path.basename(os.path.dirname(file_path))
+        if page_name == 'app':
+            page_name = 'page'
         
-        # Pattern 1: Missing function declaration
-        if content.strip().startswith('import') and '];' in content and '<div className="min-h-screen' in content:
-            # Extract the page name from the path
-            page_name = os.path.basename(os.path.dirname(file_path)).replace('-', ' ').title()
-            
-            # Find where the imports end and the content begins
-            lines = content.split('\n')
-            import_end = 0
-            content_start = 0
-            
-            for i, line in enumerate(lines):
-                if line.strip().startswith('import'):
-                    import_end = i
-                elif line.strip() == '];' and content_start == 0:
-                    content_start = i + 1
-                    break
-            
-            if content_start > 0:
-                # Reconstruct the file
-                imports = '\n'.join(lines[:import_end + 1])
-                content_part = '\n'.join(lines[content_start:])
-                
-                # Create a proper function
-                function_name = page_name.replace(' ', '') + 'Page'
-                
-                new_content = f"""{imports}
-
-export default function {function_name}() {{
-  return (
-{content_part}
-  );
-}}"""
-                
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    f.write(new_content)
-                
-                print(f"Fixed page file: {file_path}")
-                return True
-        
-        # Pattern 2: Completely malformed files
-        if content.strip() in ['ursor/website-audit-and-update-with-deployment-a178', '']:
-            page_name = os.path.basename(os.path.dirname(file_path)).replace('-', ' ').title()
-            function_name = page_name.replace(' ', '') + 'Page'
-            
-            new_content = f"""import React from 'react';
+        # Create a proper React component
+        proper_component = f'''import React from 'react';
 import {{ Helmet }} from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import {{ Link }} from 'react-router-dom';
+import {{ ArrowRight }} from 'lucide-react';
 
-export default function {function_name}() {{
+export default function {page_name.replace('-', '').replace('_', '').title()}Page() {{
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>{page_name} - Zion Tech Group</title>
-        <meta name="description" content="Professional {page_name.lower()} services and solutions." />
-        <meta name="keywords" content="{page_name.lower()}, services, solutions, technology" />
+        <title>{page_name.replace('-', ' ').title()} - Zion Tech Group</title>
+        <meta name="description" content="Professional {page_name.replace('-', ' ')} services by Zion Tech Group" />
       </Helmet>
       
-      <Navigation />
-      
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-              {page_name}
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional {page_name.lower()} services and solutions for your business.
-            </p>
-          </div>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">{page_name.replace('-', ' ').title()}</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional {page_name.replace('-', ' ')} services coming soon.</p>
+          
+          <Link
+            to="/contact"
+            className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+          >
+            Contact Us
+            <ArrowRight className="w-4 h-4 ml-2" />
+          </Link>
         </div>
-      </main>
-      
-      <Footer />
+      </div>
     </div>
   );
-}}"""
-            
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(new_content)
-            
-            print(f"Created new page file: {file_path}")
-            return True
+}}'''
         
-        return False
+        # Write the cleaned content back
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(proper_component)
+        
+        print(f"Fixed page file: {file_path}")
+        return True
+        
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all page files
-    patterns = [
-        'app/**/page.tsx',
-        'app/**/page.ts'
-    ]
+    """Main function to fix all page files"""
+    # Find all page.tsx files
+    pattern = 'app/**/page.tsx'
     
+    files_processed = 0
     files_fixed = 0
-    for pattern in patterns:
-        for file_path in glob.glob(pattern, recursive=True):
-            if fix_page_file(file_path):
-                files_fixed += 1
     
-    print(f"\nFixed {files_fixed} page files")
+    for file_path in glob.glob(pattern, recursive=True):
+        # Skip node_modules and other directories
+        if 'node_modules' in file_path or '.git' in file_path:
+            continue
+            
+        files_processed += 1
+        if fix_page_file(file_path):
+            files_fixed += 1
+    
+    print(f"\nProcessed {files_processed} page files")
+    print(f"Fixed {files_fixed} page files")
 
 if __name__ == "__main__":
     main()

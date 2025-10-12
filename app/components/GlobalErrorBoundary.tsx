@@ -1,29 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-              
+import React from 'react';
 
-=======
-              </button>
-              <Link
-                const to = "/"
-                className="border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center  justify-center"
-               />
-                <Home className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b918
-                Go Home
+const GlobalErrorBoundary: React.FC<GlobalErrorBoundaryProps> = () => {
+  return (
+    <div className="globalerrorboundary">
+      <h2>GlobalErrorBoundary</h2>
+      <p>Component content coming soon.</p>
+    </div>
+  );
+};
 
-;
-
-=======
-              </button>
-              <Link;</Link></Link>
-                const to = "/"
-                className="border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center  justify-center"
-               /></Link>
-                <Home className="w-5h-5ml-2" /></Home>
-                Go Home;
-              </Link>
-            </div>
-        </div>
-;
->>>>>>> origin/main
+export default GlobalErrorBoundary;
