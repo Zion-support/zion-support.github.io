@@ -26,6 +26,13 @@ export default function Footer() {
 
   const microSaasServices = [
     { name: 'AI E-commerce Optimizer Pro', path: '/ai-ecommerce-optimizer-pro' },
+    { name: 'AI Social Media Manager', path: '/ai-social-media-manager' },
+    { name: 'AI Email Marketing Automation', path: '/ai-email-marketing-automation' },
+    { name: 'AI Project Management Pro', path: '/ai-project-management-pro' },
+    { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot' },
+    { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
+    { name: 'AI Video Editor', path: '/ai-video-editor' },
     { name: 'Advanced Security Suite', path: '/advanced-security-suite' },
     { name: 'AI Smart Scheduler', path: '/ai-smart-scheduler' },
     { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro' },
@@ -63,7 +70,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
@@ -215,8 +222,8 @@ export default function Footer() {
         </div>
 
         {/* Contact Info */}
-        <div className="border-t border-gray-700 mt-12 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="border-t border-gray-700 mt-12 pt-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
             <div className="flex items-center">
               <Mail className="w-5 h-5 text-cyan-400 mr-3" />
               <div>

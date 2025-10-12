@@ -1,96 +1,96 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Video, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Play, Scissors } from 'lucide-react'
+import { FolderKanban, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Calendar, Clock } from 'lucide-react'
 import Layout from '../layout'
 
-export default function AIVideoEditor() {
+export default function AIProjectManagementPro() {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Editing',
-      description: 'Automatically edit videos with intelligent scene detection, color correction, and audio enhancement'
+      title: 'AI Task Optimization',
+      description: 'Intelligent task prioritization and resource allocation based on project goals and team capacity'
     },
     {
-      icon: <Scissors className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Cut Detection',
-      description: 'AI automatically identifies the best moments and creates seamless cuts and transitions'
+      icon: <Users className="w-6 h-6 text-purple-400" />,
+      title: 'Smart Team Management',
+      description: 'AI-powered team matching, workload balancing, and collaboration optimization'
     },
     {
-      icon: <Play className="w-6 h-6 text-yellow-400" />,
-      title: 'Auto-Generated Content',
-      description: 'Create engaging videos from text, images, and audio with AI-generated animations and effects'
+      icon: <TrendingUp className="w-6 h-6 text-yellow-400" />,
+      title: 'Predictive Analytics',
+      description: 'Forecast project outcomes, identify risks, and suggest corrective actions proactively'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-green-400" />,
-      title: 'Performance Analytics',
-      description: 'Track video performance, engagement metrics, and optimize content for better results'
+      icon: <Clock className="w-6 h-6 text-green-400" />,
+      title: 'Automated Workflows',
+      description: 'Streamline project processes with intelligent automation and smart notifications'
     }
   ]
 
-  const editingFeatures = [
+  const managementFeatures = [
     {
-      category: 'AI Editing',
-      items: ['Auto Scene Detection', 'Smart Cuts', 'Color Correction', 'Audio Enhancement', 'Stabilization', 'Background Removal']
+      category: 'Project Planning',
+      items: ['AI Timeline Generation', 'Resource Allocation', 'Risk Assessment', 'Milestone Tracking', 'Budget Forecasting', 'Dependency Mapping']
     },
     {
-      category: 'Content Creation',
-      items: ['Text to Video', 'Image Animation', 'Voice Synthesis', 'Music Generation', 'Template Library', 'Custom Branding']
+      category: 'Task Management',
+      items: ['Smart Task Assignment', 'Priority Optimization', 'Progress Tracking', 'Deadline Alerts', 'Subtask Automation', 'Status Updates']
     },
     {
-      category: 'Export & Sharing',
-      items: ['Multiple Formats', 'Social Media Optimization', 'Cloud Storage', 'Direct Publishing', 'Collaboration Tools', 'Version Control']
+      category: 'Team Collaboration',
+      items: ['Real-time Communication', 'File Sharing', 'Comment System', 'Meeting Scheduler', 'Knowledge Base', 'Team Performance']
     },
     {
-      category: 'Analytics',
-      items: ['View Metrics', 'Engagement Tracking', 'A/B Testing', 'Performance Reports', 'Audience Insights', 'ROI Analysis']
+      category: 'Reporting & Analytics',
+      items: ['Project Dashboards', 'Performance Metrics', 'Time Tracking', 'Budget Analysis', 'ROI Reports', 'Custom Reports']
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Creator',
-      price: '$29',
+      name: 'Starter',
+      price: '$59',
       period: '/month',
-      description: 'Perfect for content creators and influencers',
+      description: 'Perfect for small teams and freelancers',
       features: [
-        'Up to 10 hours of video/month',
+        'Up to 5 team members',
         'Basic AI features',
-        'Standard templates',
+        'Project templates',
+        'Standard reporting',
         'Email support',
-        'Basic analytics',
         'Mobile app access'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$79',
+      price: '$129',
       period: '/month',
-      description: 'Ideal for businesses and agencies',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 50 hours of video/month',
+        'Up to 25 team members',
         'Advanced AI features',
-        'Custom templates',
-        'Priority support',
+        'Custom workflows',
         'Advanced analytics',
-        'Team collaboration',
-        'API access'
+        'Priority support',
+        'API access',
+        'Integrations'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$199',
+      price: '$299',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited video processing',
+        'Unlimited team members',
         'Custom AI training',
         'White-label solution',
+        'Advanced reporting',
         'Dedicated support',
         'Custom integrations',
-        'Advanced analytics',
         'SLA guarantee'
       ],
       popular: false
@@ -99,51 +99,51 @@ export default function AIVideoEditor() {
 
   const testimonials = [
     {
-      name: 'Alex Rodriguez',
-      company: 'YouTube Creator',
-      content: 'AI Video Editor cut my editing time by 70%. The auto-generated content is incredibly engaging.',
+      name: 'Alex Thompson',
+      company: 'Software Development Co.',
+      content: 'AI Project Management Pro increased our project delivery speed by 40% and reduced overhead by 30%.',
       rating: 5
     },
     {
       name: 'Sarah Kim',
       company: 'Marketing Agency',
-      content: 'Creating professional videos for clients is now effortless. The AI quality is outstanding.',
+      content: 'The AI task optimization is incredible. Our team productivity has never been higher.',
       rating: 5
     },
     {
-      name: 'Mike Johnson',
-      company: 'E-learning Platform',
-      content: 'The analytics help us understand what content performs best. Our engagement increased by 150%.',
+      name: 'Michael Davis',
+      company: 'Construction Firm',
+      content: 'Managing complex projects across multiple teams is now effortless. The predictive analytics are spot-on.',
       rating: 5
     }
   ]
 
   return (
     <Layout
-      title="AI Video Editor - Intelligent Video Creation | Zion Tech Group"
-      description="Transform your video creation with AI-powered editing, smart cut detection, and auto-generated content. Create professional videos in minutes. Start your free trial today."
-      keywords="AI video editor, video editing, video creation, automated editing, video analytics, content creation"
+      title="AI Project Management Pro - Intelligent Project Management | Zion Tech Group"
+      description="Transform your project management with AI-powered optimization, smart team management, and predictive analytics. Increase productivity and project success rates. Start your free trial today."
+      keywords="project management, AI project optimization, team management, project analytics, task management, project planning"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-violet-500/20 rounded-full text-violet-400 text-sm font-medium mb-6">
-                <Video className="w-4 h-4 mr-2" />
-                AI-Powered Video Editing
+              <div className="inline-flex items-center px-4 py-2 bg-indigo-500/20 rounded-full text-indigo-400 text-sm font-medium mb-6">
+                <FolderKanban className="w-4 h-4 mr-2" />
+                AI-Powered Project Management
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Video Editor
+                AI Project Management Pro
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your video creation with AI-powered editing, smart cut detection, and auto-generated content. 
-                Create professional videos in minutes, not hours.
+                Transform your project management with AI-powered optimization, smart team management, 
+                and predictive analytics. Increase productivity and project success rates.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                  className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -164,16 +164,16 @@ export default function AIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Intelligent Video Creation
+                Intelligent Project Management
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                AI-powered features that revolutionize video editing and content creation
+                AI-powered features that transform how you manage projects and teams
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-violet-500/20 hover:border-violet-400/40 transition-all duration-300">
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-indigo-500/20 hover:border-indigo-400/40 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     {feature.icon}
                     <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
@@ -185,26 +185,26 @@ export default function AIVideoEditor() {
           </div>
         </section>
 
-        {/* Editing Features */}
+        {/* Management Features */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-purple-900/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Complete Video Solution
+                Complete Project Management Suite
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Everything you need to create, edit, and optimize professional videos
+                Everything you need to plan, execute, and deliver successful projects
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {editingFeatures.map((feature, index) => (
+              {managementFeatures.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.category}</h3>
                   <ul className="space-y-2">
                     {feature.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-violet-400 mr-2" />
+                        <CheckCircle className="w-4 h-4 text-indigo-400 mr-2" />
                         {item}
                       </li>
                     ))}
@@ -223,7 +223,7 @@ export default function AIVideoEditor() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Choose the plan that fits your video creation needs
+                Choose the plan that fits your team size and project needs
               </p>
             </div>
             
@@ -231,11 +231,11 @@ export default function AIVideoEditor() {
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
-                    ? 'border-violet-400/40 scale-105 shadow-2xl shadow-violet-500/20' 
-                    : 'border-violet-500/20 hover:border-violet-400/40'
+                    ? 'border-indigo-400/40 scale-105 shadow-2xl shadow-indigo-500/20' 
+                    : 'border-indigo-500/20 hover:border-indigo-400/40'
                 }`}>
                   {plan.popular && (
-                    <div className="inline-flex items-center px-3 py-1 bg-violet-500/20 rounded-full text-violet-400 text-sm font-medium mb-4">
+                    <div className="inline-flex items-center px-3 py-1 bg-indigo-500/20 rounded-full text-indigo-400 text-sm font-medium mb-4">
                       <Star className="w-4 h-4 mr-1" />
                       Most Popular
                     </div>
@@ -249,7 +249,7 @@ export default function AIVideoEditor() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-violet-400 mr-3" />
+                        <CheckCircle className="w-5 h-5 text-indigo-400 mr-3" />
                         {feature}
                       </li>
                     ))}
@@ -258,8 +258,8 @@ export default function AIVideoEditor() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700'
-                        : 'border-2 border-violet-400 text-violet-400 hover:bg-violet-400/10'
+                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
+                        : 'border-2 border-indigo-400 text-indigo-400 hover:bg-indigo-400/10'
                     }`}
                   >
                     Get Started
@@ -275,10 +275,10 @@ export default function AIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Trusted by Content Creators
+                Trusted by Project Managers Worldwide
               </h2>
               <p className="text-gray-300">
-                See how our AI Video Editor transforms video creation workflows
+                See how our AI Project Management Pro transforms project delivery
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -303,17 +303,17 @@ export default function AIVideoEditor() {
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-violet-500/20 to-purple-500/20 rounded-2xl p-8 border border-violet-500/30">
+            <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-2xl p-8 border border-indigo-500/30">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Create Amazing Videos Today
+                Transform Your Project Management Today
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Join thousands of creators using AI Video Editor to produce professional content
+                Join thousands of teams using AI Project Management Pro to deliver successful projects
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-300"
+                  className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300"
                 >
                   Start Your Free Trial
                 </Link>

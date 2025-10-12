@@ -1,96 +1,96 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Video, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Play, Scissors } from 'lucide-react'
+import { Languages, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Clock, FileText } from 'lucide-react'
 import Layout from '../layout'
 
-export default function AIVideoEditor() {
+export default function AITranslationService() {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Editing',
-      description: 'Automatically edit videos with intelligent scene detection, color correction, and audio enhancement'
+      title: 'Neural Machine Translation',
+      description: 'Advanced AI models provide contextually accurate translations in 100+ languages'
     },
     {
-      icon: <Scissors className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Cut Detection',
-      description: 'AI automatically identifies the best moments and creates seamless cuts and transitions'
+      icon: <FileText className="w-6 h-6 text-purple-400" />,
+      title: 'Document Translation',
+      description: 'Translate entire documents while preserving formatting, layout, and structure'
     },
     {
-      icon: <Play className="w-6 h-6 text-yellow-400" />,
-      title: 'Auto-Generated Content',
-      description: 'Create engaging videos from text, images, and audio with AI-generated animations and effects'
+      icon: <Clock className="w-6 h-6 text-yellow-400" />,
+      title: 'Real-time Translation',
+      description: 'Instant translation for live conversations, meetings, and customer support'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-green-400" />,
-      title: 'Performance Analytics',
-      description: 'Track video performance, engagement metrics, and optimize content for better results'
+      icon: <Target className="w-6 h-6 text-green-400" />,
+      title: 'Industry-Specific Translation',
+      description: 'Specialized translation models for legal, medical, technical, and business content'
     }
   ]
 
-  const editingFeatures = [
+  const translationFeatures = [
     {
-      category: 'AI Editing',
-      items: ['Auto Scene Detection', 'Smart Cuts', 'Color Correction', 'Audio Enhancement', 'Stabilization', 'Background Removal']
+      category: 'Translation Types',
+      items: ['Text Translation', 'Document Translation', 'Website Translation', 'Audio Translation', 'Video Subtitles', 'Live Translation']
     },
     {
-      category: 'Content Creation',
-      items: ['Text to Video', 'Image Animation', 'Voice Synthesis', 'Music Generation', 'Template Library', 'Custom Branding']
+      category: 'Languages',
+      items: ['100+ Languages', 'Regional Dialects', 'Rare Languages', 'Sign Language', 'Technical Jargon', 'Cultural Adaptation']
     },
     {
-      category: 'Export & Sharing',
-      items: ['Multiple Formats', 'Social Media Optimization', 'Cloud Storage', 'Direct Publishing', 'Collaboration Tools', 'Version Control']
+      category: 'Quality Assurance',
+      items: ['Human Review', 'Quality Scoring', 'Consistency Checks', 'Terminology Management', 'Style Guides', 'Proofreading']
     },
     {
-      category: 'Analytics',
-      items: ['View Metrics', 'Engagement Tracking', 'A/B Testing', 'Performance Reports', 'Audience Insights', 'ROI Analysis']
+      category: 'Integration',
+      items: ['API Access', 'CMS Integration', 'Website Widgets', 'Mobile Apps', 'Desktop Software', 'Cloud Storage']
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Creator',
+      name: 'Starter',
       price: '$29',
       period: '/month',
-      description: 'Perfect for content creators and influencers',
+      description: 'Perfect for small businesses and freelancers',
       features: [
-        'Up to 10 hours of video/month',
-        'Basic AI features',
-        'Standard templates',
+        'Up to 10,000 words/month',
+        '50+ languages',
+        'Basic document translation',
         'Email support',
-        'Basic analytics',
-        'Mobile app access'
+        'Standard quality',
+        'API access'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$79',
+      price: '$99',
       period: '/month',
-      description: 'Ideal for businesses and agencies',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 50 hours of video/month',
-        'Advanced AI features',
-        'Custom templates',
+        'Up to 100,000 words/month',
+        '100+ languages',
+        'Advanced document translation',
         'Priority support',
-        'Advanced analytics',
-        'Team collaboration',
-        'API access'
+        'High quality',
+        'Human review',
+        'Custom terminology'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$199',
+      price: '$299',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited video processing',
-        'Custom AI training',
-        'White-label solution',
+        'Unlimited words',
+        'All languages',
+        'Custom translation models',
         'Dedicated support',
-        'Custom integrations',
-        'Advanced analytics',
+        'Premium quality',
+        'White-label solution',
         'SLA guarantee'
       ],
       popular: false
@@ -99,51 +99,51 @@ export default function AIVideoEditor() {
 
   const testimonials = [
     {
-      name: 'Alex Rodriguez',
-      company: 'YouTube Creator',
-      content: 'AI Video Editor cut my editing time by 70%. The auto-generated content is incredibly engaging.',
+      name: 'Maria Santos',
+      company: 'Global Marketing Agency',
+      content: 'AI Translation Service helped us expand to 15 new markets. The quality is exceptional and cost-effective.',
       rating: 5
     },
     {
-      name: 'Sarah Kim',
-      company: 'Marketing Agency',
-      content: 'Creating professional videos for clients is now effortless. The AI quality is outstanding.',
-      rating: 5
-    },
-    {
-      name: 'Mike Johnson',
+      name: 'James Wilson',
       company: 'E-learning Platform',
-      content: 'The analytics help us understand what content performs best. Our engagement increased by 150%.',
+      content: 'Translating our courses into 8 languages was seamless. The educational content translation is spot-on.',
+      rating: 5
+    },
+    {
+      name: 'Lisa Chen',
+      company: 'Legal Firm',
+      content: 'The legal translation accuracy is impressive. Our international clients are very satisfied with the service.',
       rating: 5
     }
   ]
 
   return (
     <Layout
-      title="AI Video Editor - Intelligent Video Creation | Zion Tech Group"
-      description="Transform your video creation with AI-powered editing, smart cut detection, and auto-generated content. Create professional videos in minutes. Start your free trial today."
-      keywords="AI video editor, video editing, video creation, automated editing, video analytics, content creation"
+      title="AI Translation Service - Professional Translation Solutions | Zion Tech Group"
+      description="Transform your global communication with AI-powered translation in 100+ languages. Professional quality, real-time translation, and industry-specific solutions. Start your free trial today."
+      keywords="AI translation, machine translation, document translation, multilingual content, translation API, language services"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-violet-500/20 rounded-full text-violet-400 text-sm font-medium mb-6">
-                <Video className="w-4 h-4 mr-2" />
-                AI-Powered Video Editing
+              <div className="inline-flex items-center px-4 py-2 bg-amber-500/20 rounded-full text-amber-400 text-sm font-medium mb-6">
+                <Languages className="w-4 h-4 mr-2" />
+                AI-Powered Translation
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Video Editor
+                AI Translation Service
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your video creation with AI-powered editing, smart cut detection, and auto-generated content. 
-                Create professional videos in minutes, not hours.
+                Transform your global communication with AI-powered translation in 100+ languages. 
+                Professional quality, real-time translation, and industry-specific solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                  className="bg-gradient-to-r from-amber-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -152,7 +152,7 @@ export default function AIVideoEditor() {
                   to="#demo"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Watch Demo
+                  Try Demo
                 </Link>
               </div>
             </div>
@@ -164,16 +164,16 @@ export default function AIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Intelligent Video Creation
+                Intelligent Translation Solutions
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                AI-powered features that revolutionize video editing and content creation
+                AI-powered features that break down language barriers and enable global communication
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-violet-500/20 hover:border-violet-400/40 transition-all duration-300">
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-amber-500/20 hover:border-amber-400/40 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     {feature.icon}
                     <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
@@ -185,26 +185,26 @@ export default function AIVideoEditor() {
           </div>
         </section>
 
-        {/* Editing Features */}
+        {/* Translation Features */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-purple-900/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Complete Video Solution
+                Complete Translation Platform
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Everything you need to create, edit, and optimize professional videos
+                Everything you need to translate content across languages and cultures
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {editingFeatures.map((feature, index) => (
+              {translationFeatures.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.category}</h3>
                   <ul className="space-y-2">
                     {feature.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-violet-400 mr-2" />
+                        <CheckCircle className="w-4 h-4 text-amber-400 mr-2" />
                         {item}
                       </li>
                     ))}
@@ -223,7 +223,7 @@ export default function AIVideoEditor() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Choose the plan that fits your video creation needs
+                Choose the plan that fits your translation needs
               </p>
             </div>
             
@@ -231,11 +231,11 @@ export default function AIVideoEditor() {
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
-                    ? 'border-violet-400/40 scale-105 shadow-2xl shadow-violet-500/20' 
-                    : 'border-violet-500/20 hover:border-violet-400/40'
+                    ? 'border-amber-400/40 scale-105 shadow-2xl shadow-amber-500/20' 
+                    : 'border-amber-500/20 hover:border-amber-400/40'
                 }`}>
                   {plan.popular && (
-                    <div className="inline-flex items-center px-3 py-1 bg-violet-500/20 rounded-full text-violet-400 text-sm font-medium mb-4">
+                    <div className="inline-flex items-center px-3 py-1 bg-amber-500/20 rounded-full text-amber-400 text-sm font-medium mb-4">
                       <Star className="w-4 h-4 mr-1" />
                       Most Popular
                     </div>
@@ -249,7 +249,7 @@ export default function AIVideoEditor() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-violet-400 mr-3" />
+                        <CheckCircle className="w-5 h-5 text-amber-400 mr-3" />
                         {feature}
                       </li>
                     ))}
@@ -258,8 +258,8 @@ export default function AIVideoEditor() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700'
-                        : 'border-2 border-violet-400 text-violet-400 hover:bg-violet-400/10'
+                        ? 'bg-gradient-to-r from-amber-500 to-purple-600 text-white hover:from-amber-600 hover:to-purple-700'
+                        : 'border-2 border-amber-400 text-amber-400 hover:bg-amber-400/10'
                     }`}
                   >
                     Get Started
@@ -275,10 +275,10 @@ export default function AIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Trusted by Content Creators
+                Trusted by Global Businesses
               </h2>
               <p className="text-gray-300">
-                See how our AI Video Editor transforms video creation workflows
+                See how our AI Translation Service enables global communication
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -303,17 +303,17 @@ export default function AIVideoEditor() {
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-violet-500/20 to-purple-500/20 rounded-2xl p-8 border border-violet-500/30">
+            <div className="bg-gradient-to-r from-amber-500/20 to-purple-500/20 rounded-2xl p-8 border border-amber-500/30">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Create Amazing Videos Today
+                Break Down Language Barriers Today
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Join thousands of creators using AI Video Editor to produce professional content
+                Join thousands of businesses using AI Translation Service to reach global audiences
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-300"
+                  className="bg-gradient-to-r from-amber-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-purple-700 transition-all duration-300"
                 >
                   Start Your Free Trial
                 </Link>

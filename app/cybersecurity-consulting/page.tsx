@@ -1,97 +1,95 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
-import { Video, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Play, Scissors } from 'lucide-react'
+import { Shield, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Lock, Eye } from 'lucide-react'
 import Layout from '../layout'
 
-export default function AIVideoEditor() {
+export default function CybersecurityConsulting() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: 'AI-Powered Editing',
-      description: 'Automatically edit videos with intelligent scene detection, color correction, and audio enhancement'
+      icon: <Shield className="w-6 h-6 text-cyan-400" />,
+      title: 'Security Assessment',
+      description: 'Comprehensive security audits to identify vulnerabilities and assess your current security posture'
     },
     {
-      icon: <Scissors className="w-6 h-6 text-purple-400" />,
-      title: 'Smart Cut Detection',
-      description: 'AI automatically identifies the best moments and creates seamless cuts and transitions'
+      icon: <Lock className="w-6 h-6 text-purple-400" />,
+      title: 'Compliance Management',
+      description: 'Ensure compliance with GDPR, HIPAA, SOX, PCI-DSS, and other regulatory requirements'
     },
     {
-      icon: <Play className="w-6 h-6 text-yellow-400" />,
-      title: 'Auto-Generated Content',
-      description: 'Create engaging videos from text, images, and audio with AI-generated animations and effects'
+      icon: <Eye className="w-6 h-6 text-yellow-400" />,
+      title: 'Threat Intelligence',
+      description: 'Advanced threat detection and response with 24/7 monitoring and incident management'
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-green-400" />,
-      title: 'Performance Analytics',
-      description: 'Track video performance, engagement metrics, and optimize content for better results'
+      icon: <Brain className="w-6 h-6 text-green-400" />,
+      title: 'Security Training',
+      description: 'Comprehensive security awareness training for your team to prevent human error attacks'
     }
   ]
 
-  const editingFeatures = [
+  const consultingFeatures = [
     {
-      category: 'AI Editing',
-      items: ['Auto Scene Detection', 'Smart Cuts', 'Color Correction', 'Audio Enhancement', 'Stabilization', 'Background Removal']
+      category: 'Security Assessment',
+      items: ['Vulnerability Scanning', 'Penetration Testing', 'Risk Assessment', 'Security Audits', 'Compliance Reviews', 'Gap Analysis']
     },
     {
-      category: 'Content Creation',
-      items: ['Text to Video', 'Image Animation', 'Voice Synthesis', 'Music Generation', 'Template Library', 'Custom Branding']
+      category: 'Implementation',
+      items: ['Security Architecture', 'Policy Development', 'Tool Implementation', 'Process Design', 'Training Programs', 'Change Management']
     },
     {
-      category: 'Export & Sharing',
-      items: ['Multiple Formats', 'Social Media Optimization', 'Cloud Storage', 'Direct Publishing', 'Collaboration Tools', 'Version Control']
+      category: 'Monitoring & Response',
+      items: ['24/7 SOC Services', 'Incident Response', 'Threat Hunting', 'Forensic Analysis', 'Security Monitoring', 'Alert Management']
     },
     {
-      category: 'Analytics',
-      items: ['View Metrics', 'Engagement Tracking', 'A/B Testing', 'Performance Reports', 'Audience Insights', 'ROI Analysis']
+      category: 'Compliance',
+      items: ['GDPR Compliance', 'HIPAA Compliance', 'SOX Compliance', 'PCI-DSS Compliance', 'ISO 27001', 'NIST Framework']
     }
   ]
 
   const pricingPlans = [
     {
-      name: 'Creator',
-      price: '$29',
-      period: '/month',
-      description: 'Perfect for content creators and influencers',
+      name: 'Assessment',
+      price: '$2,999',
+      period: '/project',
+      description: 'Comprehensive security assessment',
       features: [
-        'Up to 10 hours of video/month',
-        'Basic AI features',
-        'Standard templates',
-        'Email support',
-        'Basic analytics',
-        'Mobile app access'
+        'Security audit',
+        'Vulnerability assessment',
+        'Risk analysis',
+        'Compliance review',
+        'Detailed report',
+        'Recommendations'
       ],
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$79',
-      period: '/month',
-      description: 'Ideal for businesses and agencies',
+      name: 'Implementation',
+      price: '$9,999',
+      period: '/project',
+      description: 'Complete security implementation',
       features: [
-        'Up to 50 hours of video/month',
-        'Advanced AI features',
-        'Custom templates',
-        'Priority support',
-        'Advanced analytics',
-        'Team collaboration',
-        'API access'
+        'Security assessment',
+        'Tool implementation',
+        'Policy development',
+        'Team training',
+        '3 months support',
+        'Compliance guidance'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$199',
+      name: 'Ongoing',
+      price: '$4,999',
       period: '/month',
-      description: 'For large organizations',
+      description: 'Continuous security management',
       features: [
-        'Unlimited video processing',
-        'Custom AI training',
-        'White-label solution',
-        'Dedicated support',
-        'Custom integrations',
-        'Advanced analytics',
-        'SLA guarantee'
+        '24/7 monitoring',
+        'Incident response',
+        'Regular assessments',
+        'Compliance management',
+        'Security updates',
+        'Dedicated support'
       ],
       popular: false
     }
@@ -99,60 +97,60 @@ export default function AIVideoEditor() {
 
   const testimonials = [
     {
-      name: 'Alex Rodriguez',
-      company: 'YouTube Creator',
-      content: 'AI Video Editor cut my editing time by 70%. The auto-generated content is incredibly engaging.',
+      name: 'Jennifer Lee',
+      company: 'Healthcare Provider',
+      content: 'Cybersecurity Consulting helped us achieve HIPAA compliance and significantly improve our security posture.',
       rating: 5
     },
     {
-      name: 'Sarah Kim',
-      company: 'Marketing Agency',
-      content: 'Creating professional videos for clients is now effortless. The AI quality is outstanding.',
+      name: 'Michael Rodriguez',
+      company: 'Financial Services',
+      content: 'Their threat intelligence and incident response capabilities prevented a major security breach. Highly recommended.',
       rating: 5
     },
     {
-      name: 'Mike Johnson',
-      company: 'E-learning Platform',
-      content: 'The analytics help us understand what content performs best. Our engagement increased by 150%.',
+      name: 'Sarah Johnson',
+      company: 'E-commerce Platform',
+      content: 'The security training program transformed our team\'s awareness. We\'ve seen a 90% reduction in security incidents.',
       rating: 5
     }
   ]
 
   return (
     <Layout
-      title="AI Video Editor - Intelligent Video Creation | Zion Tech Group"
-      description="Transform your video creation with AI-powered editing, smart cut detection, and auto-generated content. Create professional videos in minutes. Start your free trial today."
-      keywords="AI video editor, video editing, video creation, automated editing, video analytics, content creation"
+      title="Cybersecurity Consulting - Expert Security Solutions | Zion Tech Group"
+      description="Protect your business with expert cybersecurity consulting. Security assessments, compliance management, threat intelligence, and 24/7 monitoring. Get your free security audit today."
+      keywords="cybersecurity consulting, security assessment, compliance management, threat intelligence, security training, penetration testing"
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 bg-violet-500/20 rounded-full text-violet-400 text-sm font-medium mb-6">
-                <Video className="w-4 h-4 mr-2" />
-                AI-Powered Video Editing
+              <div className="inline-flex items-center px-4 py-2 bg-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">
+                <Shield className="w-4 h-4 mr-2" />
+                Expert Cybersecurity Consulting
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Video Editor
+                Cybersecurity Consulting
               </h1>
               <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your video creation with AI-powered editing, smart cut detection, and auto-generated content. 
-                Create professional videos in minutes, not hours.
+                Protect your business with expert cybersecurity consulting. Security assessments, compliance management, 
+                threat intelligence, and 24/7 monitoring to keep your data secure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                  className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
-                  Start Free Trial
+                  Get Free Security Audit
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="#demo"
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  Watch Demo
+                  View Case Studies
                 </Link>
               </div>
             </div>
@@ -164,16 +162,16 @@ export default function AIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Intelligent Video Creation
+                Comprehensive Security Solutions
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                AI-powered features that revolutionize video editing and content creation
+                Expert cybersecurity services that protect your business from evolving threats
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-violet-500/20 hover:border-violet-400/40 transition-all duration-300">
+                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-red-500/20 hover:border-red-400/40 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     {feature.icon}
                     <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
@@ -185,26 +183,26 @@ export default function AIVideoEditor() {
           </div>
         </section>
 
-        {/* Editing Features */}
+        {/* Consulting Features */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-purple-900/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Complete Video Solution
+                Complete Security Consulting
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Everything you need to create, edit, and optimize professional videos
+                End-to-end cybersecurity services to protect your organization
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {editingFeatures.map((feature, index) => (
+              {consultingFeatures.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700">
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.category}</h3>
                   <ul className="space-y-2">
                     {feature.items.map((item, itemIndex) => (
                       <li key={itemIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-violet-400 mr-2" />
+                        <CheckCircle className="w-4 h-4 text-red-400 mr-2" />
                         {item}
                       </li>
                     ))}
@@ -220,10 +218,10 @@ export default function AIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
+                Flexible Consulting Packages
               </h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Choose the plan that fits your video creation needs
+                Choose the security consulting package that fits your needs
               </p>
             </div>
             
@@ -231,11 +229,11 @@ export default function AIVideoEditor() {
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
-                    ? 'border-violet-400/40 scale-105 shadow-2xl shadow-violet-500/20' 
-                    : 'border-violet-500/20 hover:border-violet-400/40'
+                    ? 'border-red-400/40 scale-105 shadow-2xl shadow-red-500/20' 
+                    : 'border-red-500/20 hover:border-red-400/40'
                 }`}>
                   {plan.popular && (
-                    <div className="inline-flex items-center px-3 py-1 bg-violet-500/20 rounded-full text-violet-400 text-sm font-medium mb-4">
+                    <div className="inline-flex items-center px-3 py-1 bg-red-500/20 rounded-full text-red-400 text-sm font-medium mb-4">
                       <Star className="w-4 h-4 mr-1" />
                       Most Popular
                     </div>
@@ -249,7 +247,7 @@ export default function AIVideoEditor() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-violet-400 mr-3" />
+                        <CheckCircle className="w-5 h-5 text-red-400 mr-3" />
                         {feature}
                       </li>
                     ))}
@@ -258,8 +256,8 @@ export default function AIVideoEditor() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700'
-                        : 'border-2 border-violet-400 text-violet-400 hover:bg-violet-400/10'
+                        ? 'bg-gradient-to-r from-red-500 to-purple-600 text-white hover:from-red-600 hover:to-purple-700'
+                        : 'border-2 border-red-400 text-red-400 hover:bg-red-400/10'
                     }`}
                   >
                     Get Started
@@ -275,10 +273,10 @@ export default function AIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Trusted by Content Creators
+                Trusted by Industry Leaders
               </h2>
               <p className="text-gray-300">
-                See how our AI Video Editor transforms video creation workflows
+                See how our Cybersecurity Consulting protects organizations worldwide
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -303,19 +301,19 @@ export default function AIVideoEditor() {
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-violet-500/20 to-purple-500/20 rounded-2xl p-8 border border-violet-500/30">
+            <div className="bg-gradient-to-r from-red-500/20 to-purple-500/20 rounded-2xl p-8 border border-red-500/30">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Create Amazing Videos Today
+                Secure Your Business Today
               </h2>
               <p className="text-lg text-gray-300 mb-8">
-                Join thousands of creators using AI Video Editor to produce professional content
+                Don't wait for a security breach. Get expert cybersecurity consulting to protect your organization
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-300"
+                  className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-purple-700 transition-all duration-300"
                 >
-                  Start Your Free Trial
+                  Get Your Free Security Audit
                 </Link>
                 <Link
                   to="/about"

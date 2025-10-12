@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, Users, BarChart3, Settings } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, Users, BarChart3, Settings, Mail, MessageSquare, FileText, Receipt, Video, Mic } from 'lucide-react'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -24,24 +24,27 @@ export default function Navigation() {
   }
 
   const aiServices = [
+    { name: 'AI Social Media Manager', path: '/ai-social-media-manager', icon: <Globe className="w-4 h-4" /> },
+    { name: 'AI Email Marketing Automation', path: '/ai-email-marketing-automation', icon: <Mail className="w-4 h-4" /> },
+    { name: 'AI Project Management Pro', path: '/ai-project-management-pro', icon: <Settings className="w-4 h-4" /> },
+    { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot', icon: <MessageSquare className="w-4 h-4" /> },
+    { name: 'AI Video Editor', path: '/ai-video-editor', icon: <Video className="w-4 h-4" /> },
+    { name: 'AI Translation Service', path: '/ai-translation-service', icon: <Globe className="w-4 h-4" /> },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Mic className="w-4 h-4" /> },
     { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Brain className="w-4 h-4" /> },
-    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', icon: <Code className="w-4 h-4" /> },
     { name: 'AI Analytics Dashboard Pro', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'AI Smart Scheduler', path: '/ai-smart-scheduler', icon: <Settings className="w-4 h-4" /> },
-    { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Computer Vision', path: '/ai-computer-vision', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> },
-    { name: 'AI Automation', path: '/ai-automation', icon: <Settings className="w-4 h-4" /> }
+    { name: 'AI Smart Scheduler', path: '/ai-smart-scheduler', icon: <Settings className="w-4 h-4" /> }
   ]
 
   const itServices = [
+    { name: 'Cloud Infrastructure Management', path: '/cloud-infrastructure-management', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Cybersecurity Consulting', path: '/cybersecurity-consulting', icon: <Shield className="w-4 h-4" /> },
     { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
     { name: 'Mobile Development', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> },
     { name: 'Cloud Migration Pro', path: '/cloud-migration-pro', icon: <Cloud className="w-4 h-4" /> },
     { name: 'DevOps', path: '/devops', icon: <Server className="w-4 h-4" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
-    { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> }
+    { name: 'Cloud Services', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> }
   ]
 
   const fiveGServices = [
@@ -55,6 +58,13 @@ export default function Navigation() {
 
   const microSaasServices = [
     { name: 'AI E-commerce Optimizer Pro', path: '/ai-ecommerce-optimizer-pro', icon: <Smartphone className="w-4 h-4" /> },
+    { name: 'AI Social Media Manager', path: '/ai-social-media-manager', icon: <Globe className="w-4 h-4" /> },
+    { name: 'AI Email Marketing Automation', path: '/ai-email-marketing-automation', icon: <Mail className="w-4 h-4" /> },
+    { name: 'AI Project Management Pro', path: '/ai-project-management-pro', icon: <Settings className="w-4 h-4" /> },
+    { name: 'AI Customer Support Chatbot', path: '/ai-customer-support-chatbot', icon: <MessageSquare className="w-4 h-4" /> },
+    { name: 'AI Invoice Generator', path: '/ai-invoice-generator', icon: <FileText className="w-4 h-4" /> },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker', icon: <Receipt className="w-4 h-4" /> },
+    { name: 'AI Video Editor', path: '/ai-video-editor', icon: <Video className="w-4 h-4" /> },
     { name: 'Advanced Security Suite', path: '/advanced-security-suite', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Smart Scheduler', path: '/ai-smart-scheduler', icon: <Settings className="w-4 h-4" /> },
     { name: 'AI Content Moderation Pro', path: '/ai-content-moderation-pro', icon: <Shield className="w-4 h-4" /> },
@@ -95,7 +105,7 @@ export default function Navigation() {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {activeDropdown === 'ai' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                <div className="absolute top-full left-0 mt-2 w-64 sm:w-72 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2 z-50">
                   {aiServices.map((service, index) => (
                     <Link
                       key={index}
@@ -121,7 +131,7 @@ export default function Navigation() {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {activeDropdown === 'it' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                <div className="absolute top-full left-0 mt-2 w-64 sm:w-72 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2 z-50">
                   {itServices.map((service, index) => (
                     <Link
                       key={index}
@@ -147,7 +157,7 @@ export default function Navigation() {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {activeDropdown === '5g' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                <div className="absolute top-full left-0 mt-2 w-64 sm:w-72 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2 z-50">
                   {fiveGServices.map((service, index) => (
                     <Link
                       key={index}
@@ -173,7 +183,7 @@ export default function Navigation() {
                 <ChevronDown className="w-4 h-4 ml-1" />
               </button>
               {activeDropdown === 'saas' && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2">
+                <div className="absolute top-full left-0 mt-2 w-64 sm:w-72 bg-slate-800 rounded-lg shadow-lg border border-cyan-500/20 py-2 z-50">
                   {microSaasServices.map((service, index) => (
                     <Link
                       key={index}
