@@ -118,10 +118,7 @@ export default function AIEmailMarketingAutomation() {
     }
   ]
 
-<<<<<<< HEAD
 export default function AiemailmarketingautomationPage() {
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
   return (
     <Layout
       title="AI Email Marketing Automation - Smart Email Campaigns | Zion Tech Group"
@@ -332,11 +329,6 @@ export default function AiemailmarketingautomationPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
     </div>
   );
-=======
-    </Layout>
-  )
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-dfc2
 }

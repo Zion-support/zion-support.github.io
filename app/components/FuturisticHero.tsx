@@ -1,14 +1,10 @@
 import React from 'react';
 'use client'
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 
 import { ArrowRight, Brain } from 'lucide-react';
 import { ArrowRight, Mail, Brain } from 'lucide-react';
 import { ArrowRight, Mail, Brain } from 'lucide-react';
-=======
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
 const FuturisticHeroPage: React.FC = () => {
   const features = [

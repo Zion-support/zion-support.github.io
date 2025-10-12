@@ -1,47 +1,6 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Smartphone, Zap, Users, BarChart3, Shield, Code } from 'lucide-react'
-
-export default function MobileDevelopmentPage() {
-  const features = [
-    {
-      icon: <Smartphone className="w-8 h-8 text-blue-500" />,
-      title: 'Native & Cross-Platform',
-      description: 'Build native iOS and Android apps or cross-platform solutions for maximum reach and efficiency.'
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-purple-500" />,
-      title: 'High Performance',
-      description: 'Optimized apps that deliver smooth performance and excellent user experience across all devices.'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-green-500" />,
-      title: 'User-Centered Design',
-      description: 'Intuitive and engaging user interfaces designed with your target audience in mind.'
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-red-500" />,
-      title: 'Analytics Integration',
-      description: 'Built-in analytics and tracking to monitor app performance and user engagement.'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-yellow-500" />,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security with compliance features for regulated industries.'
-    },
-    {
-      icon: <Code className="w-8 h-8 text-indigo-500" />,
-      title: 'Scalable Architecture',
-      description: 'Future-proof architecture that scales with your business growth and user base.'
-    }
-  ]
->>>>>>> cursor/fix-errors-and-merge-to-main-33db
 
 const MobileDevelopmentPage: React.FC = () => {
   return (
