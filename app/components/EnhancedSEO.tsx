@@ -13,23 +13,17 @@ const EnhancedSEOPage: React.FC = () => {
     {
       icon: Zap,
       title: 'Real-time Optimization',
-<<<<<<< HEAD
       description: 'Get instant SEO insights and recommendations for better search performance'
     },
     {
       icon: Shield,
       title: 'Technical SEO',
       description: 'Comprehensive technical SEO audits and optimization for better search visibility'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
     },
     {
       icon: Globe,
       title: 'Global SEO',
-<<<<<<< HEAD
       description: 'Optimize your website for international markets and multiple languages'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
     }
   ]
 
@@ -47,12 +41,9 @@ const EnhancedSEOPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Enhanced SEO | Zion Tech Group</title>
         <meta name="description" content="Professional Enhanced SEO services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEO, search engine optimization, AI solutions, IT services, Zion Tech Group" />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
       </Helmet>
       
       {/* Hero Section */}
@@ -67,11 +58,8 @@ const EnhancedSEOPage: React.FC = () => {
               <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Optimize your website for search engines with our advanced AI-powered SEO solutions. 
               Improve rankings and drive more organic traffic.
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
@@ -94,10 +82,7 @@ const EnhancedSEOPage: React.FC = () => {
               Why Choose Our SEO Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Our SEO solutions deliver unmatched performance, security, and scalability.
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -122,10 +107,7 @@ const EnhancedSEOPage: React.FC = () => {
               Key Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Experience the power of our SEO solutions for your business.
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -139,7 +121,6 @@ const EnhancedSEOPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -158,8 +139,6 @@ const EnhancedSEOPage: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
           </div>
         </div>
       </section>

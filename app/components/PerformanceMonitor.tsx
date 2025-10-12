@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
-<<<<<<< HEAD
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Monitor Largest Contentful Paint (LCP)
       const observer = new PerformanceObserver((list) => {
@@ -60,6 +59,13 @@ const PerformanceMonitor: React.FC = () => {
       
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
+      // Monitor page load time
+      window.addEventListener('load', () => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        console.log('Page Load Time:', navigation.loadEventEnd - navigation.loadEventStart);
+        console.log('DOM Content Loaded:', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
+      });
+
       // Cleanup observers
       return () => {
         observer.disconnect();
@@ -67,32 +73,6 @@ const PerformanceMonitor: React.FC = () => {
         clsObserver.disconnect();
       };
     }
-=======
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        if (entry.entryType === 'largest-contentful-paint') {
-          console.log('LCP:', entry.startTime);
-        } else if (entry.entryType === 'first-input') {
-          console.log('FID:', (entry as any).processingStart - entry.startTime);
-        } else if (entry.entryType === 'layout-shift') {
-          console.log('CLS:', (entry as any).value);
-        }
-      }
-    });
-
-    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
-    // Monitor page load time
-    window.addEventListener('load', () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      console.log('Page Load Time:', navigation.loadEventEnd - navigation.loadEventStart);
-      console.log('DOM Content Loaded:', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart);
-    });
-
-    return () => {
-      observer.disconnect();
-    };
->>>>>>> cursor/fix-errors-and-merge-to-main-cbf2
   }, []);
 
   return null;

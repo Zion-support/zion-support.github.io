@@ -1,149 +1,203 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-const SEOEnhancer: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
+import React, { useState, useEffect } from 'react'
+import { Search, CheckCircle, AlertTriangle, TrendingUp } from 'lucide-react'
+
+interface SEOData {
+  title: string
+  description: string
+  keywords: string[]
+  canonicalUrl: string
+  ogImage: string
+  structuredData?: any
+}
+
+interface SEOEnhancerProps {
+  seoData: SEOData
+  onSEOUpdate?: (data: SEOData) => void
+  className?: string
+}
+
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+  seoData,
+  onSEOUpdate,
+  className = ''
+}) => {
+  const [seoScore, setSeoScore] = useState(0)
+  const [recommendations, setRecommendations] = useState<string[]>([])
+  const [isAnalyzing, setIsAnalyzing] = useState(false)
+
+  const analyzeSEO = () => {
+    setIsAnalyzing(true)
+    const newRecommendations: string[] = []
+    let score = 100
+
+    // Analyze title
+    if (!seoData.title || seoData.title.length < 30) {
+      newRecommendations.push('Title should be at least 30 characters long')
+      score -= 20
     }
-  ]
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
+    if (seoData.title && seoData.title.length > 60) {
+      newRecommendations.push('Title should be under 60 characters')
+      score -= 10
+    }
+
+    // Analyze description
+    if (!seoData.description || seoData.description.length < 120) {
+      newRecommendations.push('Description should be at least 120 characters long')
+      score -= 20
+    }
+    if (seoData.description && seoData.description.length > 160) {
+      newRecommendations.push('Description should be under 160 characters')
+      score -= 10
+    }
+
+    // Analyze keywords
+    if (!seoData.keywords || seoData.keywords.length === 0) {
+      newRecommendations.push('Add relevant keywords')
+      score -= 15
+    }
+
+    // Analyze canonical URL
+    if (!seoData.canonicalUrl) {
+      newRecommendations.push('Add canonical URL')
+      score -= 10
+    }
+
+    // Analyze OG image
+    if (!seoData.ogImage) {
+      newRecommendations.push('Add Open Graph image')
+      score -= 15
+    }
+
+    setSeoScore(Math.max(0, score))
+    setRecommendations(newRecommendations)
+    setIsAnalyzing(false)
+  }
+
+  useEffect(() => {
+    analyzeSEO()
+  }, [seoData])
+
+  const getScoreColor = () => {
+    if (seoScore >= 80) return 'text-green-600'
+    if (seoScore >= 60) return 'text-yellow-600'
+    return 'text-red-600'
+  }
+
+  const getScoreBgColor = () => {
+    if (seoScore >= 80) return 'bg-green-100'
+    if (seoScore >= 60) return 'bg-yellow-100'
+    return 'bg-red-100'
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>SEOEnhancer | Zion Tech Group</title>
-        <meta name="description" content="Professional SEOEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="SEOEnhancer, AI solutions, IT services, Zion Tech Group, seoenhancer" />
-      </Helmet>
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                SEOEnhancer
-  </
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced seoenhancer solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-  </
-            </div>
-          </div>
+    <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-semibold text-gray-900 flex items-center">
+          <Search className="w-5 h-5 mr-2 text-blue-500" />
+          SEO Analyzer
+        </h3>
+        <div className={`px-3 py-1 rounded-full text-sm font-medium ${getScoreBgColor()} ${getScoreColor()}`}>
+          {seoScore}/100
         </div>
-      </section>
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our SEOEnhancer?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our seoenhancer solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
+      </div>
+
+      <div className="space-y-4 mb-6">
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Title</label>
+          <input
+            type="text"
+            value={seoData.title}
+            onChange={(e) => onSEOUpdate?.({ ...seoData, title: e.target.value })}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter page title"
+          />
+          <p className="text-xs text-gray-500 mt-1">
+            {seoData.title.length}/60 characters
+          </p>
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Description</label>
+          <textarea
+            value={seoData.description}
+            onChange={(e) => onSEOUpdate?.({ ...seoData, description: e.target.value })}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            rows={3}
+            placeholder="Enter page description"
+          />
+          <p className="text-xs text-gray-500 mt-1">
+            {seoData.description.length}/160 characters
+          </p>
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Keywords</label>
+          <input
+            type="text"
+            value={seoData.keywords.join(', ')}
+            onChange={(e) => onSEOUpdate?.({ ...seoData, keywords: e.target.value.split(', ').filter(k => k.trim()) })}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Enter keywords separated by commas"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Canonical URL</label>
+          <input
+            type="url"
+            value={seoData.canonicalUrl}
+            onChange={(e) => onSEOUpdate?.({ ...seoData, canonicalUrl: e.target.value })}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="https://example.com/page"
+          />
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">OG Image URL</label>
+          <input
+            type="url"
+            value={seoData.ogImage}
+            onChange={(e) => onSEOUpdate?.({ ...seoData, ogImage: e.target.value })}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="https://example.com/image.jpg"
+          />
+        </div>
+      </div>
+
+      {recommendations.length > 0 && (
+        <div className="mb-4">
+          <h4 className="text-sm font-medium text-gray-700 mb-2">Recommendations:</h4>
+          <ul className="space-y-1">
+            {recommendations.map((recommendation, index) => (
+              <li key={index} className="text-sm text-gray-600 flex items-center">
+                <AlertTriangle className="w-4 h-4 mr-2 text-yellow-500" />
+                {recommendation}
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our seoenhancer solutions for your business.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your seoenhancer needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-  </
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-  </
-            </div>
-          </div>
-        </div>
-      </section>
+      )}
+
+      <button
+        onClick={analyzeSEO}
+        disabled={isAnalyzing}
+        className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-2 px-4 rounded-md hover:from-blue-600 hover:to-purple-600 transition-all duration-200 flex items-center justify-center disabled:opacity-50"
+      >
+        {isAnalyzing ? (
+          <>
+            <div className="w-4 h-4 mr-2 border-2 border-white border-t-transparent rounded-full animate-spin" />
+            Analyzing...
+          </>
+        ) : (
+          <>
+            <TrendingUp className="w-4 h-4 mr-2" />
+            Analyze SEO
+          </>
+        )}
+      </button>
     </div>
-  )}
-export default SEOEnhancerPage
-  </button>
-  </button>
-  </h2>
-  </button>
-  </span>
+  )
+}
 
 export default SEOEnhancer

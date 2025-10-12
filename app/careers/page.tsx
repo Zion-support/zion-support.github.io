@@ -1,44 +1,9 @@
 import React from 'react';
-import { CheckCircle, ArrowRight, Users, Briefcase, MapPin, Clock, Star } from 'lucide-react';
+import { ArrowRight, Users, Briefcase, Clock, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const CareersPage: React.FC = () => {
-  const openPositions = [
-    {
-      title: 'Senior AI Engineer',
-      department: 'AI Research',
-      location: 'Remote / New York',
-      type: 'Full-time',
-      experience: '5+ years',
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
-      requirements: [
-        'PhD in Computer Science or related field',
-        '5+ years experience in AI/ML',
-        'Expertise in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, Azure, GCP)',
-        'Strong problem-solving and communication skills'
-      ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Learning budget']
-    },
-    {
-      title: 'Cloud Solutions Architect',
-      department: 'Cloud Services',
-      location: 'San Francisco, CA',
-      type: 'Full-time',
-      experience: '7+ years',
-      description: 'Design and implement scalable cloud architectures for enterprise clients.',
-      requirements: [
-        'Bachelor\'s degree in Computer Science',
-        '7+ years cloud architecture experience',
-        'AWS/Azure/GCP certifications preferred',
-        'Experience with Kubernetes, Docker',
-        'Strong client-facing skills'
-      ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Learning budget']
-    }
-  ];
-
   const benefits = [
     {
       icon: <Star className="w-8 h-8 text-yellow-500" />,
@@ -93,6 +58,27 @@ const CareersPage: React.FC = () => {
               >
                 Learn About Us
               </Link>
+            </div>
+          </div>
+
+          {/* Benefits Section */}
+          <div className="mb-20">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Work With Us?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We offer competitive benefits and a great work environment for our team members.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="mb-4 flex justify-center">{benefit.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </div>
+              ))}
             </div>
           </div>
 

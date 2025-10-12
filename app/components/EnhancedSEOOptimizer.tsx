@@ -8,7 +8,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI-Powered SEO Optimization',
-<<<<<<< HEAD
       description: 'Advanced AI technology to optimize your website for search engines and improve rankings'
     },
     {
@@ -25,8 +24,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
       icon: Globe,
       title: 'Global SEO',
       description: 'Optimize your website for international markets and multiple languages'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
     }
   ]
 
@@ -45,11 +42,8 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Enhanced SEO Optimizer | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Professional Enhanced SEO Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="SEO optimizer, search engine optimization, AI solutions, IT services, Zion Tech Group" />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
       </Helmet>
       
       {/* Hero Section */}
@@ -58,20 +52,14 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
                 Enhanced SEO Optimizer
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
               </span>
               <br />
-              <span className="text-white">Optimizer</span>
+              <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Optimize your website for search engines with our advanced AI-powered SEO optimization solutions. 
               Improve rankings and drive more organic traffic.
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
@@ -133,7 +121,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -152,8 +139,6 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
                 Schedule Demo
               </button>
             </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-55ae
           </div>
         </div>
       </section>
