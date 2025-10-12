@@ -1,4 +1,4 @@
 // Utility file: performanceUtils
-export const performanceUtils = {
+export const performanceUtils = {}
   // Utility functions will be implemented here
 };

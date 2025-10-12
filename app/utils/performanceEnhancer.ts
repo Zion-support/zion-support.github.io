@@ -1,4 +1,4 @@
 // Utility file: performanceEnhancer
-export const performanceEnhancer = {
+export const performanceEnhancer = {}
   // Utility functions will be implemented here
 };

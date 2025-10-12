@@ -1,144 +1,98 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-  
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
+import { Menu, X, ChevronDown } from 'lucide-react'
 
-  }
+export default function Navigation() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
 
-  const services = [
-    {
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { 
+      name: 'Services', 
+      href: '#',
+      children: [
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Micro SaaS', href: '/micro-saas-services' },
+        { name: 'Cloud Services', href: '/cloud-services' },
+        { name: 'Cybersecurity', href: '/cybersecurity' }
+      ]
     },
-    {
-      title: 'IT Services',
-      href: '/it-services',
-    },
-    {
-      title: 'Cloud Services',
-      href: '/cloud-services',
-    },
-    {
-      title: '5G Implementation',
-      href: '/5g-implementation',
-      name: 'AI Services',
-      icon: <Brain className="w-4 h-4" />,
-      path: '/ai-services',
-      description: 'AI-powered solutions for your business'
-    },
-    {
-      name: 'IT Services',
-      icon: <Cpu className="w-4 h-4" />,
-      path: '/it-services',
-      description: 'Complete IT infrastructure solutions'
-    },
-    {
-      name: 'Micro SAAS',
-      icon: <Smartphone className="w-4 h-4" />,
-      path: '/micro-saas-services',
-      description: 'Affordable micro applications'
-    },
-    {
-      name: 'Cloud Services',
-      icon: <Cloud className="w-4 h-4" />,
-      path: '/cloud-services',
-      description: 'Professional cloud solutions'
-    },
-    {
-      name: '5G Implementation',
-      icon: <Wifi className="w-4 h-4" />,
-      path: '/5g-implementation',
-      description: 'Next-generation connectivity'
-    },
-    {
-      name: 'Digital Transformation',
-      icon: <Zap className="w-4 h-4" />,
-      path: '/digital-transformation',
-      description: 'Transform your business digitally'
-    }
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' }
   ]
 
   return (
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex items-center">
+            <Link to="/" className="flex-shrink-0 flex items-center">
+              <span className="text-2xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-              >
-                Services
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </button>
-              
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <Link
-              to="/contact"
-              className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              {/* Services Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => toggleDropdown('services')}
-                  className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
-                >
-                  Services
-                  <ChevronDown className="w-4 h-4 ml-1" />
-                </button>
-                
-                {activeDropdown === 'services' && (
-                  <div className="absolute left-0 mt-2 w-96 bg-white rounded-md shadow-lg z-50 border">
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-4">Our Services</h3>
-                      <div className="grid grid-cols-2 gap-4">
-                        {services.map((service, index) => (
+          <div className="hidden md:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative">
+                {item.children ? (
+                  <div className="relative group">
+                    <button
+                      className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium flex items-center"
+                      onMouseEnter={() => setIsServicesOpen(true)}
+                      onMouseLeave={() => setIsServicesOpen(false)}
+                    >
+                      {item.name}
+                      <ChevronDown className="ml-1 h-4 w-4" />
+                    </button>
+                    {isServicesOpen && (
+                      <div
+                        className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50"
+                        onMouseEnter={() => setIsServicesOpen(true)}
+                        onMouseLeave={() => setIsServicesOpen(false)}
+                      >
+                        {item.children.map((child) => (
                           <Link
-                            key={index}
-                            to={service.path}
-                            className="flex items-start p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                            onClick={() => setActiveDropdown(null)}
+                            key={child.name}
+                            to={child.href}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                           >
-                            <div className="flex-shrink-0 mr-3 text-purple-600">
-                              {service.icon}
-                            </div>
-                            <div>
-                              <div className="font-medium text-gray-900">{service.name}</div>
-                              <div className="text-sm text-gray-500">{service.description}</div>
-                            </div>
+                            {child.name}
                           </Link>
                         ))}
                       </div>
-                    </div>
+                    )}
                   </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                  >
+                    {item.name}
+                  </Link>
                 )}
               </div>
-
-              <Link
-                to="/contact"
-                className="text-gray-900 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Contact
-              </Link>
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
+            ))}
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
+              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
             >
-              Contact
+              Get Started
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center">
             <button
-              onClick={toggleMenu}
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700 hover:text-blue-600 p-2"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -146,39 +100,50 @@ import { Link } from 'react-router-dom'
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-                onClick={toggleMenu}
-              >
-                Home
-              </Link>
-              <Link
-                to="/about"
-                onClick={toggleMenu}
-              >
-                About
-              </Link>
-              
-              {/* Mobile Services */}
-              <div className="px-3 py-2">
-                <div className="text-gray-900 font-medium mb-2">Services</div>
-                <div className="space-y-1 ml-4">
-                  {services.map((service, index) => (
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50">
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  {item.children ? (
+                    <div>
+                      <button
+                        onClick={() => setIsServicesOpen(!isServicesOpen)}
+                        className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium w-full text-left flex items-center justify-between"
+                      >
+                        {item.name}
+                        <ChevronDown className={`h-4 w-4 transform transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      {isServicesOpen && (
+                        <div className="pl-4 space-y-1">
+                          {item.children.map((child) => (
+                            <Link
+                              key={child.name}
+                              to={child.href}
+                              className="text-gray-600 hover:text-blue-600 block px-3 py-2 text-sm"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {child.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
                     <Link
-                      key={index}
-                      to={service.path}
-                      className="text-gray-600 hover:text-purple-600 block px-3 py-2 rounded-md text-sm"
-                      onClick={toggleMenu}
+                      to={item.href}
+                      className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
+                      onClick={() => setIsOpen(false)}
                     >
-                      {service.name}
+                      {item.name}
                     </Link>
-                  ))}
+                  )}
                 </div>
-              </div>
-
+              ))}
               <Link
                 to="/contact"
-                onClick={toggleMenu}
+                className="bg-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition-colors mt-4"
+                onClick={() => setIsOpen(false)}
               >
-                Contact
+                Get Started
               </Link>
             </div>
           </div>

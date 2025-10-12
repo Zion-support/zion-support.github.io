@@ -1,13 +1,13 @@
 import { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
+    loadTime: number;,
+  renderTime: number;,
+    memoryUsage: number;,
   networkLatency: number;
-}
+  }
 
-export const useEnhancedPerformance = () => {
+export const useEnhancedPerformance = () => {}
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
@@ -17,7 +17,7 @@ export const useEnhancedPerformance = () => {
   
   const [isOptimized, setIsOptimized] = useState(false);
 
-  const measurePerformance = useCallback(() => {
+  const measurePerformance = useCallback(() => {}
     if (typeof window === 'undefined') return;
 
     // Measure load time
@@ -27,30 +27,30 @@ export const useEnhancedPerformance = () => {
     const memoryUsage = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory?.usedJSHeapSize || 0;
     
     // Measure render time
-    requestAnimationFrame(() => {
+    requestAnimationFrame(() => {}
       const renderTime = performance.now() - loadTime;
       
-      setMetrics(prev => ({
+      setMetrics(prev => ({}
         ...prev,
         loadTime,
         renderTime,
         memoryUsage: memoryUsage / 1024 / 1024 // Convert to MB
-      }));
+  }));
     });
   }, []);
 
-  const optimizePerformance = useCallback(() => {
+  const optimizePerformance = useCallback(() => {}
     // Enable performance optimizations
     setIsOptimized(true);
     
     // Preload critical resources
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined') {}
       const criticalResources = [
         '/fonts/inter.woff2',
         '/images/hero-bg.webp'
       ];
       
-      criticalResources.forEach(resource => {
+      criticalResources.forEach(resource => {}
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = resource;
@@ -60,7 +60,7 @@ export const useEnhancedPerformance = () => {
     }
   }, []);
 
-  useEffect(() => {
+  useEffect(() => {}
     measurePerformance();
 
     const interval = setInterval(measurePerformance, 5000);
@@ -68,7 +68,7 @@ export const useEnhancedPerformance = () => {
     return () => clearInterval(interval);
   }, [measurePerformance]);
 
-  return {
+  return {}
     metrics,
     isOptimized,
     optimizePerformance,

@@ -60,24 +60,24 @@ const StatusPage = lazy(() => import('./status/page'));
 const ConsultationPage = lazy(() => import('./consultation/page'));
 
 // Loading component
-const AppLoadingSpinner = () => (
+const AppLoadingSpinner = () => ()
   <LoadingSpinner 
     size="xl" 
     text="Loading Zion Tech Group..." 
     fullScreen 
-  />
+  /></LoadingSpinner>
 );
 
-const App: React.FC = () => {
-  return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <BrowserRouter>
-          <div className="App">
-            <PerformanceMonitor />
-            <AccessibilityEnhancer />
+const App: React.FC = () => {}
+  return ()
+    <ErrorBoundary></ErrorBoundary>
+      <HelmetProvider></HelmetProvider>
+        <BrowserRouter></BrowserRouter>
+          <div className="App"></div>
+            <PerformanceMonitor /></PerformanceMonitor>
+            <AccessibilityEnhancer /></AccessibilityEnhancer>
             <Suspense fallback={<AppLoadingSpinner />}>
-              <Routes>
+              <Routes></Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />

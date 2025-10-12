@@ -1,28 +1,28 @@
 'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
   const features = [
     {
-      icon: Brain,
+    icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
+  },
     {
-      icon: Zap,
+    icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
+  },
     {
-      icon: Shield,
+    icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
-    },
+  },
     {
-      icon: Globe,
+    icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
+  }
   ]
   const benefits = [
     'Advanced AI technology integration',
@@ -34,22 +34,22 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" /></meta>
       </Helmet>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
           </div>
         </div>
       </section>
       {/* Features Section */}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
               </div>
             ))}
           </div>
@@ -83,10 +83,10 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
+      <Helmet></Helmet>
         <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
+        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" /></meta>
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>

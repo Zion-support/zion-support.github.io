@@ -1,127 +1,109 @@
-import React from 'react';
-import { CheckCircle, ArrowRight, Users, Briefcase, MapPin, Clock, Star } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Users, MapPin, Clock, ArrowRight } from 'lucide-react'
 
-const CareersPage: React.FC = () => {
+export default function CareersPage() {
   const openPositions = [
     {
       title: 'Senior AI Engineer',
-      department: 'AI Research',
-      location: 'Remote / New York',
+      location: 'San Francisco, CA',
       type: 'Full-time',
-      experience: '5+ years',
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
-      requirements: [
-        'PhD in Computer Science or related field',
-        '5+ years experience in AI/ML',
-        'Expertise in Python, TensorFlow, PyTorch',
-        'Experience with cloud platforms (AWS, Azure, GCP)',
-        'Strong problem-solving and communication skills'
-      ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Learning budget']
+      description: 'Lead AI development projects and mentor junior engineers.'
     },
     {
       title: 'Cloud Solutions Architect',
-      department: 'Cloud Services',
-      location: 'San Francisco, CA',
+      location: 'Remote',
       type: 'Full-time',
-      experience: '7+ years',
-      description: 'Design and implement scalable cloud architectures for enterprise clients.',
-      requirements: [
-        'Bachelor\'s degree in Computer Science',
-        '7+ years cloud architecture experience',
-        'AWS/Azure/GCP certifications preferred',
-        'Experience with Kubernetes, Docker',
-        'Strong client-facing skills'
-      ],
-      benefits: ['Competitive salary', 'Stock options', 'Health insurance', 'Flexible work hours', 'Learning budget']
+      description: 'Design and implement cloud infrastructure solutions.'
+    },
+    {
+      title: 'Cybersecurity Specialist',
+      location: 'New York, NY',
+      type: 'Full-time',
+      description: 'Protect our clients from cyber threats and ensure compliance.'
     }
-  ];
+  ]
 
   const benefits = [
-    {
-      icon: <Star className="w-8 h-8 text-yellow-500" />,
-      title: 'Competitive Compensation',
-      description: 'Above-market salaries with performance bonuses and stock options.'
-    },
-    {
-      icon: <Users className="w-8 h-8 text-blue-500" />,
-      title: 'Great Team Culture',
-      description: 'Work with talented, passionate professionals in a collaborative environment.'
-    },
-    {
-      icon: <Briefcase className="w-8 h-8 text-green-500" />,
-      title: 'Career Growth',
-      description: 'Clear career paths with opportunities for advancement and skill development.'
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-purple-500" />,
-      title: 'Work-Life Balance',
-      description: 'Flexible work arrangements and generous time off policies.'
-    }
-  ];
+    'Competitive salary and equity',
+    'Health, dental, and vision insurance',
+    'Flexible work arrangements',
+    'Professional development budget',
+    '401(k) with company matching',
+    'Unlimited PTO'
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <>
       <Helmet>
         <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join Zion Tech Group and help shape the future of AI and technology. Explore career opportunities and join our innovative team." />
-        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, DevOps, product manager, technology careers" />
+        <meta name="description" content="Join our team at Zion Tech Group. Explore career opportunities in AI, cloud computing, cybersecurity, and IT services." />
       </Helmet>
       
-      <main className="pt-20 px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="pt-20 pb-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Join Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Team</span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Help us build the future of AI and technology. Join a team of passionate innovators working on cutting-edge solutions.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Build the future of technology with us. We're looking for passionate individuals to join our growing team.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Apply Now
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link 
-                to="/about" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                Learn About Us
-              </Link>
+          </div>
+        </section>
+
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Open Positions</h2>
+            </div>
+            
+            <div className="space-y-6">
+              {openPositions.map((position, index) => (
+                <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow duration-300">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div className="mb-4 md:mb-0">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">{position.title}</h3>
+                      <p className="text-gray-600 mb-2">{position.description}</p>
+                      <div className="flex items-center space-x-4 text-sm text-gray-500">
+                        <div className="flex items-center">
+                          <MapPin className="w-4 h-4 mr-1" />
+                          {position.location}
+                        </div>
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {position.type}
+                        </div>
+                      </div>
+                    </div>
+                    <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center">
+                      Apply Now
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+        </section>
 
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12">
-              <h2 className="text-4xl font-bold text-white mb-4">Don't See Your Role?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                We're always looking for talented individuals. Send us your resume and let us know how you can contribute to our mission.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact" 
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                >
-                  Send Your Resume
-                </Link>
-                <Link 
-                  to="/about" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-                >
-                  Learn About Our Culture
-                </Link>
-              </div>
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Work With Us?</h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white rounded-xl p-6 text-center">
+                  <div className="text-2xl font-bold text-blue-600 mb-2">•</div>
+                  <p className="text-gray-700">{benefit}</p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </main>
-    </div>
-  );
-};
-
-export default CareersPage;
+        </section>
+      </div>
+    </>
+  )
+}

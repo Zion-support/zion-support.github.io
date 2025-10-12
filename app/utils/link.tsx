@@ -1,8 +1,8 @@
 interface LinkProps {
-  href: string,
+    href: string,
     children: React.ReactNode
-interface LinkProps {}
-  href: string,
+interface LinkProps {
+    href: string,
     children: React.ReactNode
   className?: string
   target?: string
@@ -10,15 +10,15 @@ interface LinkProps {}
   onClick?: () => void
   'aria-label'?: string}
 }
-export const Link: React.FC<LinkProps>= ({
+export const Link: React.FC<LinkProps>= ({}
 export const Link: React.FC<LinkProps> = ({}
   href,
   href: string,
 
 interface LinkProps {href: string,
     children: React.ReactNode}
-interface LinkProps {}
-  href: string
+interface LinkProps {
+    href: string,
   children: React.ReactNode
   className?: string
   target?: string
@@ -60,7 +60,7 @@ export const Link: React.FC<LinkProps> = ({,
   }</LinkProps>
   return (<a}
   return(<a
-import React from 'react'
+import React from 'react';
 interface LinkProps {/* TODO: Fix JSX expression */}
 }
 export const,

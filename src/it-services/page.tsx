@@ -4,10 +4,10 @@ import { Cloud, Shield, Settings, Database, Globe, Users, Server, HardDrive, Mon
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ITServicesPage: React.FC = () => {
+const ITServicesPage: React.FC = () => {}
   const itServices = [
     // Infrastructure & Cloud Services
-    {
+    {}
       title: 'Data Center Services',
       description: 'Complete data center solutions including colocation, managed hosting, and disaster recovery services.',
       icon: HardDrive,
@@ -18,7 +18,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['VMware', 'Hyper-V', 'SAN Storage', 'Backup Software', 'Monitoring Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {
+    {}
       title: 'Cloud Infrastructure & Migration',
       description: 'Complete cloud migration and infrastructure setup with AWS, Azure, and Google Cloud platforms.',
       icon: Cloud,
@@ -30,7 +30,7 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // Cybersecurity Services
-    {
+    {}
       title: 'Advanced Threat Protection',
       description: 'Comprehensive cybersecurity solutions with AI-powered threat detection, prevention, and response capabilities.',
       icon: Shield,
@@ -41,7 +41,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['SIEM', 'EDR', 'XDR', 'SOAR', 'AI/ML', 'Threat Intelligence'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {
+    {}
       title: 'Identity & Access Management',
       description: 'Secure identity management with multi-factor authentication, single sign-on, and privileged access management.',
       icon: Lock,
@@ -52,7 +52,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['Azure AD', 'Okta', 'Ping Identity', 'CyberArk', 'SailPoint', 'ForgeRock'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {
+    {}
       title: 'Security Compliance & Audit',
       description: 'Comprehensive security compliance services for SOC 2, ISO 27001, HIPAA, and other regulatory requirements.',
       icon: FileText,
@@ -63,7 +63,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['GRC Tools', 'Risk Management', 'Compliance Frameworks', 'Audit Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {
+    {}
       title: 'Security Operations Center (SOC)',
       description: '24/7 security monitoring and incident response with dedicated security analysts and advanced threat hunting.',
       icon: Activity,
@@ -75,7 +75,7 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // Database & Data Management
-    {
+    {}
       title: 'Database Administration & Optimization',
       description: 'Expert database management with performance tuning, backup strategies, and high availability solutions.',
       icon: Database,
@@ -86,7 +86,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['SQL Server', 'Oracle', 'MySQL', 'PostgreSQL', 'MongoDB', 'Redis'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {
+    {}
       title: 'Data Backup & Disaster Recovery',
       description: 'Comprehensive backup and disaster recovery solutions with automated testing and rapid recovery capabilities.',
       icon: HardDrive,
@@ -97,7 +97,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['Veeam', 'Commvault', 'Rubrik', 'AWS Backup', 'Azure Backup', 'Google Cloud Backup'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {
+    {}
       title: 'Data Migration Services',
       description: 'Seamless data migration with zero downtime, data validation, and comprehensive testing for all platforms.',
       icon: ArrowRight,
@@ -109,7 +109,7 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // DevOps & Development
-    {
+    {}
       title: 'DevOps & CI/CD Implementation',
       description: 'Complete DevOps transformation with automated pipelines, infrastructure as code, and continuous monitoring.',
       icon: Code,
@@ -120,7 +120,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['Jenkins', 'GitLab CI', 'GitHub Actions', 'Kubernetes', 'Docker', 'Terraform'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {
+    {}
       title: 'Microservices Architecture',
       description: 'Modern microservices architecture design and implementation with containerization and service mesh.',
       icon: Cog,
@@ -131,7 +131,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['Kubernetes', 'Istio', 'Docker', 'API Gateway', 'Service Mesh', 'Monitoring Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {
+    {}
       title: 'API Development & Management',
       description: 'Comprehensive API development with design, implementation, security, and lifecycle management.',
       icon: Globe,
@@ -143,7 +143,7 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // IT Support & Management
-    {
+    {}
       title: 'Managed IT Services',
       description: 'Comprehensive IT management including help desk, system administration, and proactive maintenance.',
       icon: Users,
@@ -154,7 +154,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['RMM Tools', 'PSA Software', 'Remote Access', 'Monitoring Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {
+    {}
       title: 'IT Strategy & Consulting',
       description: 'Strategic IT planning and consulting to align technology with business objectives and drive digital transformation.',
       icon: Target,
@@ -165,7 +165,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['Strategy Frameworks', 'Assessment Tools', 'Planning Software'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {
+    {}
       title: 'IT Asset Management',
       description: 'Complete IT asset lifecycle management with tracking, optimization, and compliance reporting.',
       icon: Settings,
@@ -177,7 +177,7 @@ const ITServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     // Specialized Services
-    {
+    {}
       title: 'Microsoft 365 Migration & Management',
       description: 'Complete Microsoft 365 migration with security configuration, user training, and ongoing management.',
       icon: Mail,
@@ -188,7 +188,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['Microsoft 365', 'Azure AD', 'PowerShell', 'Migration Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {
+    {}
       title: 'VoIP & Unified Communications',
       description: 'Modern communication solutions with VoIP, video conferencing, and unified communications platforms.',
       icon: Phone,
@@ -199,7 +199,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['Cisco', 'Microsoft Teams', 'Zoom', '8x8', 'RingCentral', 'Avaya'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {
+    {}
       title: 'IT Training & Certification',
       description: 'Comprehensive IT training programs for staff development and certification preparation.',
       icon: Award,
@@ -210,7 +210,7 @@ const ITServicesPage: React.FC = () => {
       technologies: ['Learning Management Systems', 'Virtual Labs', 'Certification Programs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
-    {
+    {}
       title: 'IT Project Management',
       description: 'Expert IT project management with planning, execution, and delivery of complex technology initiatives.',
       icon: Rocket,
@@ -228,37 +228,37 @@ const ITServicesPage: React.FC = () => {
   // Removed unused benefits array
 
   const additionalServices = [
-    {
+    {}
       icon: Users,
       title: 'IT Consulting',
       description: 'Strategic IT planning and technology roadmap development.',
       price: '$200/hour'
     },
-    {
+    {}
       icon: Server,
       title: 'Server Management',
       description: '24/7 server monitoring, maintenance, and optimization.',
       price: 'Starting at $299/month'
     },
-    {
+    {}
       icon: HardDrive,
       title: 'Data Backup & Recovery',
       description: 'Automated backup solutions and disaster recovery planning.',
       price: 'Starting at $199/month'
     },
-    {
+    {}
       icon: Monitor,
       title: 'System Integration',
       description: 'API development and system integration services.',
       price: 'Starting at $1,500/project'
     },
-    {
+    {}
       icon: Printer,
       title: 'Hardware Support',
       description: 'Computer, printer, and network equipment support.',
       price: 'Starting at $99/month'
     },
-    {
+    {}
       icon: Router,
       title: 'Network Security',
       description: 'Firewall configuration and network security implementation.',
@@ -268,100 +268,99 @@ const ITServicesPage: React.FC = () => {
 
   // Removed unused benefits variable
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      
-      <main className="container mx-auto px-4 py-16 pt-24">
+  return ()
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Navigation /></Navigation>
+      <main className="container mx-auto px-4 py-16 pt-24"></main>
         {/* Hero Section */}
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+        <section className="text-center mb-16"></section>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent"></span>
               IT Services & Infrastructure
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
             Comprehensive IT solutions to support and optimize your business infrastructure. 
             From cloud migration to cybersecurity, we keep your technology running smoothly.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-            >
+            ></a>
               Get Free IT Assessment
             </a>
             <a
               href="tel:+13024640950"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
+            ></a>
               (302) 464-0950
             </a>
           </div>
         </section>
 
         {/* Main Services Grid */}
-        <section className="mb-16">
+        <section className="mb-16"></section>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Core IT Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {itServices.map((service, index) => (
-              <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
-                <div className="text-cyan-400 mb-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+            {itServices.map((service, index) => ()
+              <div key={index} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300"></div>
+                <div className="text-cyan-400 mb-4"></div>
                   {React.createElement(service.icon, { className: "w-8 h-8" })}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                  <ul className="text-sm text-gray-400 space-y-1">
-                    {service.features.slice(0, 4).map((feature, idx) => (
-                      <li key={idx} className="flex items-center">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                  <ul className="text-sm text-gray-400 space-y-1"></ul>
+                    {service.features.slice(0, 4).map((feature, idx) => ()
+                      <li key={idx} className="flex items-center"></li>
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                         {feature}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits:</h4>
-                  <ul className="text-sm text-gray-400 space-y-1">
-                    {service.benefits.slice(0, 3).map((benefit, idx) => (
-                      <li key={idx} className="flex items-center">
-                        <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
+                  <ul className="text-sm text-gray-400 space-y-1"></ul>
+                    {service.benefits.slice(0, 3).map((benefit, idx) => ()
+                      <li key={idx} className="flex items-center"></li>
+                        <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" /></Star>
                         {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4"></div>
                   <h4 className="text-sm font-semibold text-cyan-400 mb-2">Technologies:</h4>
-                  <div className="flex flex-wrap gap-1">
-                    {service.technologies.slice(0, 4).map((tech, idx) => (
-                      <span key={idx} className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded">
+                  <div className="flex flex-wrap gap-1"></div>
+                    {service.technologies.slice(0, 4).map((tech, idx) => ()
+                      <span key={idx} className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded"></span>
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
                 <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                <ul className="space-y-2 mb-6"></ul>
+                  {service.features.map((feature, featureIndex) => ()
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-400"></li>
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <div className="text-center">
+                <div className="text-center"></div>
                   <div className="text-lg font-bold text-cyan-400 mb-2">{service.price}</div>
                   <a
                     href="/contact"
                     className="inline-flex items-center text-sm font-medium text-cyan-400 hover:opacity-80 transition-opacity"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                  ></a>
+                    Learn More <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
                   </a>
                 </div>
               </div>
@@ -370,12 +369,12 @@ const ITServicesPage: React.FC = () => {
         </section>
 
         {/* Additional Services */}
-        <section className="mb-16">
+        <section className="mb-16"></section>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {additionalServices.map((service, index) => (
-              <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300">
-                <div className="flex items-center mb-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            {additionalServices.map((service, index) => ()
+              <div key={index} className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-4 hover:bg-slate-800/50 transition-all duration-300"></div>
+                <div className="flex items-center mb-3"></div>
                   {React.createElement(service.icon, { className: "w-6 h-6 text-cyan-400 mr-3" })}
                   <h3 className="text-lg font-bold text-white">{service.title}</h3>
                 </div>
@@ -387,86 +386,86 @@ const ITServicesPage: React.FC = () => {
         </section>
 
         {/* Support Tiers */}
-        <section className="mb-16">
+        <section className="mb-16"></section>
           <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
               <h3 className="text-xl font-bold text-white mb-4">Basic Support</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">$199/month</div>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+              <ul className="space-y-2 mb-6"></ul>
+                <li className="flex items-center text-sm text-gray-300"></li>
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                   Business hours support
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                <li className="flex items-center text-sm text-gray-300"></li>
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                   Remote assistance
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                <li className="flex items-center text-sm text-gray-300"></li>
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                   Basic monitoring
                 </li>
               </ul>
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
-              >
+              ></a>
                 Get Started
               </a>
             </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border-2 border-cyan-500"></div>
               <h3 className="text-xl font-bold text-white mb-4">Professional Support</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">$499/month</div>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+              <ul className="space-y-2 mb-6"></ul>
+                <li className="flex items-center text-sm text-gray-300"></li>
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                   24/7 support
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                <li className="flex items-center text-sm text-gray-300"></li>
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                   On-site visits
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                <li className="flex items-center text-sm text-gray-300"></li>
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                   Advanced monitoring
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                <li className="flex items-center text-sm text-gray-300"></li>
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                   Priority response
                 </li>
               </ul>
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
-              >
+              ></a>
                 Get Started
               </a>
             </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6"></div>
               <h3 className="text-xl font-bold text-white mb-4">Enterprise Support</h3>
               <div className="text-3xl font-bold text-cyan-400 mb-4">Custom</div>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+              <ul className="space-y-2 mb-6"></ul>
+                <li className="flex items-center text-sm text-gray-300"></li>
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                   Dedicated team
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                <li className="flex items-center text-sm text-gray-300"></li>
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                   Custom SLAs
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                <li className="flex items-center text-sm text-gray-300"></li>
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                   Proactive monitoring
                 </li>
-                <li className="flex items-center text-sm text-gray-300">
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                <li className="flex items-center text-sm text-gray-300"></li>
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" /></CheckCircle>
                   Strategic consulting
                 </li>
               </ul>
               <a
                 href="/contact"
                 className="block w-full text-center bg-cyan-500 text-white py-2 rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
-              >
+              ></a>
                 Contact Sales
               </a>
             </div>
@@ -474,30 +473,30 @@ const ITServicesPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="text-center">
-          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8">
+        <section className="text-center"></section>
+          <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-2xl p-8"></div>
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your IT Infrastructure?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <a
                 href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105"
-              >
+              ></a>
                 Get Free IT Assessment
               </a>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
+              ></a>
                 (302) 464-0950
               </a>
             </div>
           </div>
           </section>
         </main>
-        <Footer />
+        <Footer /></Footer>
       </div>
   );
 };

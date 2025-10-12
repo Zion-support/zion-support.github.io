@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 
-interface SEOOptimizerProps {
+interface SEOOptimizerProps {}
   title?: string;
   description?: string;
   keywords?: string[];
@@ -12,29 +12,29 @@ interface SEOOptimizerProps {
   structuredData?: Record<string, unknown>;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({}
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
   structuredData
-}) => {
+}) => {}
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.';
 
-  useEffect(() => {
+  useEffect(() => {}
     // Add structured data for breadcrumbs
-    const breadcrumbData = {
+    const breadcrumbData = {}
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {
+        {}
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://ziontechgroup.com"
-        }
+          "item": "https: //ziontechgroup.com"
+  }
       ]
     };
 
@@ -45,71 +45,67 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     
     // Remove existing breadcrumb data
     const existing = document.getElementById('breadcrumb-structured-data');
-    if (existing) {
+    if (existing) {}
       existing.remove();
     }
     document.head.appendChild(script);
 
-    return () => {
+    return () => {}
       const scriptToRemove = document.getElementById('breadcrumb-structured-data');
-      if (scriptToRemove) {
+      if (scriptToRemove) {}
         scriptToRemove.remove();
       }
     };
   }, []);
 
-  return (
-    <Head>
+  return ()
+    <Head></Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
+      <meta name="description" content={fullDescription} /></meta>
+      <meta name="keywords" content={keywords.join(', ')} /></meta>
+      <meta name="author" content="Zion Tech Group" /></meta>
+      <meta name="robots" content="index, follow" /></meta>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={fullDescription} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
+      <meta property="og:title" content={fullTitle} /></meta>
+      <meta property="og:description" content={fullDescription} /></meta>
+      <meta property="og:type" content="website" /></meta>
+      <meta property="og:url" content={canonicalUrl} /></meta>
+      <meta property="og:image" content={ogImage} /></meta>
+      <meta property="og:image:width" content="1200" /></meta>
+      <meta property="og:image:height" content="630" /></meta>
+      <meta property="og:site_name" content="Zion Tech Group" /></meta>
+      <meta property="og:locale" content="en_US" /></meta>
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={fullDescription} />
-      <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
+      <meta name="twitter:card" content="summary_large_image" /></meta>
+      <meta name="twitter:title" content={fullTitle} /></meta>
+      <meta name="twitter:description" content={fullDescription} /></meta>
+      <meta name="twitter:image" content={ogImage} /></meta>
+      <meta name="twitter:site" content="@ziontechgroup" /></meta>
+      <meta name="twitter:creator" content="@ziontechgroup" /></meta>
       {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#6366f1" />
-      <meta name="msapplication-TileColor" content="#6366f1" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
+      <meta name="theme-color" content="#6366f1" /></meta>
+      <meta name="msapplication-TileColor" content="#6366f1" /></meta>
+      <meta name="apple-mobile-web-app-capable" content="yes" /></meta>
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" /></meta>
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" /></meta>
       {/* Structured Data */}
-      {structuredData && (
+      {structuredData && ()
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+    __html: JSON.stringify({}
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Zion Tech Group",
               "description": fullDescription,
               "url": canonicalUrl,
               "logo": "https://ziontechgroup.com/logo.png",
-              "contactPoint": {
+              "contactPoint": {}
                 "@type": "ContactPoint",
                 "telephone": "+1-555-123-4567",
                 "contactType": "customer service",
@@ -123,7 +119,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
               ...structuredData
             })
           }}
-        />
+        /></script>
       )}
     </Head>
   );

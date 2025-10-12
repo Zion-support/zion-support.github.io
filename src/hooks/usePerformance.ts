@@ -1,21 +1,21 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { analytics } from '../utils/analytics';
-interface PerformanceMetrics {
-  loadTime: number;
+interface PerformanceMetrics {}
+  loadTime: number;,
   domContentLoaded: number;
-  firstContentfulPaint: number;
+  firstContentfulPaint: number;,
   largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
+  cumulativeLayoutShift: number;,
   firstInputDelay: number;
 }
-export const usePerformance = () => {
+export const usePerformance = () => {}
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
-  useEffect(() => {
+  useEffect(() => {}
     if (typeof window === 'undefined' || !('performance' in window)) return;
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType(
+    const measurePerformance = () => {}
+      const navigation = performance.getEntriesByType()
         'navigation'
       )[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
@@ -25,13 +25,13 @@ export const usePerformance = () => {
         paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
       // Measure CLS (Cumulative Layout Shift)
       let cumulativeLayoutShift = 0;
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver(list => {
-          for (const entry of list.getEntries()) {
-            if (
+      if ('PerformanceObserver' in window) {}
+        const observer = new PerformanceObserver(list => {}
+          for (const entry of list.getEntries()) {}
+            if ()
               entry.entryType === 'layout-shift' &&
               !(entry as unknown as { hadRecentInput: boolean }).hadRecentInput
-            ) {
+            ) {}
               cumulativeLayoutShift += (entry as unknown as { value: number }).value;
             }
           }
@@ -40,10 +40,10 @@ export const usePerformance = () => {
       }
       // Measure FID (First Input Delay)
       let firstInputDelay = 0;
-      if ('PerformanceObserver' in window) {
-        const observer = new PerformanceObserver(list => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'first-input') {
+      if ('PerformanceObserver' in window) {}
+        const observer = new PerformanceObserver(list => {}
+          for (const entry of list.getEntries()) {}
+            if (entry.entryType === 'first-input') {}
               firstInputDelay =
                 (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
             }
@@ -51,8 +51,8 @@ export const usePerformance = () => {
         });
         observer.observe({ entryTypes: ['first-input'] });
       }
-      const performanceData: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.fetchStart,
+      const performanceData: PerformanceMetrics = {,
+  loadTime: navigation.loadEventEnd - navigation.fetchStart,
         domContentLoaded:
           navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
         firstContentfulPaint,
@@ -65,17 +65,17 @@ export const usePerformance = () => {
       // Report to analytics using trackTiming
       analytics.trackTiming('performance', 'load_time', performanceData.loadTime);
       analytics.trackTiming('performance', 'dom_content_loaded', performanceData.domContentLoaded);
-      analytics.trackTiming(
+      analytics.trackTiming()
         'performance',
         'first_contentful_paint',
         performanceData.firstContentfulPaint
       );
-      analytics.trackTiming(
+      analytics.trackTiming()
         'performance',
         'largest_contentful_paint',
         performanceData.largestContentfulPaint
       );
-      analytics.trackTiming(
+      analytics.trackTiming()
         'performance',
         'cumulative_layout_shift',
         performanceData.cumulativeLayoutShift
@@ -85,12 +85,12 @@ export const usePerformance = () => {
     // Start monitoring
     setIsMonitoring(true);
     // Measure performance after page load
-    if (document.readyState === 'complete') {
+    if (document.readyState === 'complete') {}
       measurePerformance();
-    } else {
+    } else {}
       window.addEventListener('load', measurePerformance);
     }
-    return () => {
+    return () => {}
       window.removeEventListener('load', measurePerformance);
     };
   }, []);
