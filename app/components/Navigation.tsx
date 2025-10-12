@@ -1,12 +1,15 @@
 'use client';
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, BarChart3, Settings } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Smartphone, Brain, Cpu, Server, Wifi, BarChart3, Settings, Search } from 'lucide-react'
+import SearchModal from './SearchModal'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -220,6 +223,18 @@ export default function Navigation() {
             <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Contact
             </Link>
+            
+            {/* Search Button */}
+            <button
+              onClick={() => setIsSearchOpen(true)}
+              className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-slate-700/50"
+              aria-label="Search services"
+            >
+              <Search className="w-5 h-5" />
+            </button>
+            
+            {/* Theme Toggle */}
+            <ThemeToggle />
           </div>
 
           {/* Tablet Navigation */}
@@ -403,6 +418,9 @@ export default function Navigation() {
           </div>
         )}
       </div>
+      
+      {/* Search Modal */}
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </nav>
   )
 }

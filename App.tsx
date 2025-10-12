@@ -4,6 +4,8 @@ import { HelmetProvider } from 'react-helmet-async'
 import Header from './app/components/Header'
 import Footer from './app/components/Footer'
 import ErrorBoundary from './app/components/ErrorBoundary'
+import Breadcrumb from './app/components/Breadcrumb'
+import CookieConsent from './app/components/CookieConsent'
 
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./app/page'))
@@ -83,6 +85,7 @@ function App() {
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <Header />
+            <Breadcrumb />
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
@@ -165,6 +168,7 @@ function App() {
               </Routes>
             </Suspense>
             <Footer />
+            <CookieConsent />
           </div>
         </Router>
       </ErrorBoundary>
