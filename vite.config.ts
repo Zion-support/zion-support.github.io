@@ -1,14 +1,15 @@
-import {defineConfig} from 'vite';
+import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import {resolve} from 'path';
+import { resolve } from 'path';
 
 // https://vitejs.dev/config/
-export default define Config({
+export default defineConfig({
   plugins: [
     react({
-      // EnableReact FastRefresh
+      // Enable React Fast Refresh
       fastRefresh: true,
-      // EnableJSX runtimejsxRuntime: 'automatic',
+      // Enable JSX runtime
+      jsxRuntime: 'automatic',
     })
   ],
   resolve: {
@@ -29,7 +30,7 @@ export default define Config({
     sourcemap: false,
     minify: 'esbuild',
     target: 'es2020',
-    css CodeSplit: true,
+    cssCodeSplit: true,
     
     rollupOptions: {
       output: {
@@ -84,23 +85,24 @@ export default define Config({
           // Default chunk for other modules
           return 'vendor'
         },
-        chunk File Names: 'assets/[name]-[hash].js',
-        entry File Names: 'assets/[name]-[hash].js',
-        asset File Names: 'assets/[name]-[hash].[ext]',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
     // Optimize bundle size
-    chunk Size Warning Limit: 1000,
+    chunkSizeWarningLimit: 1000,
     // Enable tree shaking
     treeshake: true,
     // Enable compression
-    report Compressed Size: true,
+    reportCompressedSize: true,
   },
   server: {
     port: 3000,
     open: true,
     host: true,
-    // Enable HMRhmr: {
+    // Enable HMR
+    hmr: {
       overlay: true,
     },
   },
@@ -110,7 +112,7 @@ export default define Config({
     host: true,
   },
   // Optimize dependencies
-  optimize Deps: {
+  optimizeDeps: {
     include: [
       'react',
       'react-dom',
