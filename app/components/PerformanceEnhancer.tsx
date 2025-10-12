@@ -3,7 +3,6 @@ import React from 'react'
 
 import { ArrowRight, Mail, Brain } from 'lucide-react';
 
-export default function PerformanceEnhancer() {
   const features = [
     {
       title: "Feature 1",

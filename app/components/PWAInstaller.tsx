@@ -3,7 +3,6 @@ import React from 'react'
 
 import { ArrowRight, Mail, Brain } from 'lucide-react';
 
-export default function PWAInstaller() {
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
