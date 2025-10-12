@@ -16,7 +16,11 @@ export default function Footer() {
     { name: 'AI Automation Suite', path: '/ai-automation' },
     { name: 'AI Project Manager', path: '/ai-project-manager' },
     { name: 'AI 3D Generation', path: '/ai-3d-generation' },
-    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
+    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' },
+    { name: 'AI Project Management Pro', path: '/ai-project-management-pro' },
+    { name: 'AI Financial Analytics Pro', path: '/ai-financial-analytics-pro' },
+    { name: 'AI Cybersecurity Monitor Pro', path: '/ai-cybersecurity-monitor-pro' },
+    { name: 'AI E-commerce Optimizer Pro', path: '/ai-ecommerce-optimizer-pro' }
   ];
 
   const itServices = [

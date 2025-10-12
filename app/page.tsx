@@ -15,7 +15,8 @@ import {
   Users,
   TrendingUp,
   BarChart3,
-  MessageSquare
+  MessageSquare,
+  ShoppingCart
 } from 'lucide-react';
 import FuturisticBackground from './components/FuturisticBackground';
 import FuturisticCard from './components/FuturisticCard';
@@ -37,12 +38,36 @@ export default function HomePage() {
 
   const services = [
     {
-      title: 'AI Content Generation',
-      description: 'Transform your content strategy with our advanced AI-powered content generation tools.',
+      title: 'AI Project Management Pro',
+      description: 'Transform your project management with AI-powered planning, automated workflows, and advanced analytics.',
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      link: '/ai-content-generation',
-      features: ['Automated content creation', 'SEO optimization', 'Multi-language support'],
-      price: 'Starting at $99/month'
+      link: '/ai-project-management-pro',
+      features: ['AI-powered planning', 'Automated workflows', 'Advanced analytics'],
+      price: 'Starting at $29/month'
+    },
+    {
+      title: 'AI Financial Analytics Pro',
+      description: 'Transform your financial analysis with AI-powered insights, real-time analytics, and predictive modeling.',
+      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
+      link: '/ai-financial-analytics-pro',
+      features: ['Predictive analytics', 'Real-time insights', 'Risk assessment'],
+      price: 'Starting at $199/month'
+    },
+    {
+      title: 'AI Cybersecurity Monitor Pro',
+      description: 'Protect your business with AI-powered threat detection, 24/7 monitoring, and automated response.',
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      link: '/ai-cybersecurity-monitor-pro',
+      features: ['AI threat detection', '24/7 monitoring', 'Automated response'],
+      price: 'Starting at $299/month'
+    },
+    {
+      title: 'AI E-commerce Optimizer Pro',
+      description: 'Transform your e-commerce business with AI-powered personalization and conversion optimization.',
+      icon: <ShoppingCart className="w-8 h-8 text-purple-400" />,
+      link: '/ai-ecommerce-optimizer-pro',
+      features: ['AI personalization', 'Conversion optimization', 'Advanced analytics'],
+      price: 'Starting at $199/month'
     },
     {
       title: 'IT Services & Solutions',
@@ -53,36 +78,12 @@ export default function HomePage() {
       price: 'Starting at $2,500/project'
     },
     {
-      title: 'Cloud Services',
-      description: 'Scalable, secure, and reliable cloud infrastructure solutions for your business.',
-      icon: <Cloud className="w-8 h-8 text-blue-400" />,
-      link: '/cloud-services',
-      features: ['Scalable infrastructure', '99.9% uptime', 'Global CDN'],
-      price: 'Starting at $199/month'
-    },
-    {
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with our comprehensive cybersecurity services and monitoring.',
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      link: '/cybersecurity',
-      features: ['Threat detection', 'Security audits', 'Compliance management'],
-      price: 'Starting at $499/month'
-    },
-    {
       title: '5G Implementation',
       description: 'Leverage the power of 5G technology for ultra-fast connectivity and IoT solutions.',
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
       link: '/5g-implementation',
       features: ['Ultra-fast speeds', 'IoT connectivity', 'Edge computing'],
       price: 'Starting at $5,000/project'
-    },
-    {
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with our advanced analytics platform.',
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      link: '/data-analytics',
-      features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards'],
-      price: 'Starting at $299/month'
     }
   ];
 
