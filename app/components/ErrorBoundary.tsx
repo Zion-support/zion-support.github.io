@@ -19,10 +19,10 @@ class ErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError) {
       return (
-        <div><div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div></div></div>
-          <div className="text-center"><div></div></div></div></div>
-            <h1 className="text-4xl font-bold text-white mb-6">Something went wrong<div></h1>
-            <p className="text-lg text-gray-300 mb-8"><div></p></div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">Something went wrong</h1>
+            <p className="text-lg text-gray-300 mb-8">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
             <button
@@ -30,9 +30,9 @@ class ErrorBoundary extends Component<Props, State> {
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
               Refresh Page
-            <div><div></button>
-          </div></div></div>
-        </div></div>
+            </button>
+          </div>
+        </div>
       );
     }
     return this.props.children;
