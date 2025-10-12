@@ -26,7 +26,6 @@ const AccessibilityenhancerPage: React.FC = () => {
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
           </div>
-        </div>
       </main>
       
       <Footer />

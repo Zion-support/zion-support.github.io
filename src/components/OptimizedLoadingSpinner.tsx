@@ -32,14 +32,14 @@
               
               />
             </div>
-          );
+  );
         case 'bars':
             <div className='flex space-x-1' role='status' aria-label='Loading'>
                 
                 />
               ))}
             </div>
-          );
+  );
         case 'spinner':
         default:
             
@@ -58,8 +58,7 @@
             </p>
           )}
         </div>
-      </div>
-    );
+  );
   }
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';

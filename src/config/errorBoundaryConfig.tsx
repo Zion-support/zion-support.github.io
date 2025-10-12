@@ -1,4 +1,3 @@
-'use client';
 /**
  * Error Boundary Configuration
  * Centralized configuration for error handling across the application
@@ -84,7 +83,6 @@
             Go Home
           </button>
         </div>
-      </div>
     </div>
   );
 }
@@ -110,7 +108,6 @@
             Retry Connection
           </button>
         </div>
-      </div>
     </div>
   );
 }
@@ -138,7 +135,6 @@
             Go Back
           </button>
         </div>
-      </div>
     </div>
   );
 }

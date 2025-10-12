@@ -69,7 +69,6 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                           </a>
                         ))}
                       </div>
-                    </div>
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <Brain className="w-4 h-4 mr-2" />
@@ -83,7 +82,6 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                           </a>
                         ))}
                       </div>
-                    </div>
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <Settings className="w-4 h-4 mr-2" />
@@ -97,7 +95,6 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                           </Link>
                         ))}
                       </div>
-                    </div>
                   </div>
                   <div className="mt-4 pt-4 border-t border-gray-700">
                     <div className="grid grid-cols-2 gap-4">
@@ -112,7 +109,6 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
-                  </div>
                 </div>
               )}
             </div>
@@ -144,7 +140,6 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                 Get Started
               </a>
             </div>
-          </div>
 
           {/* Mobile Menu Button */}
           
@@ -173,7 +168,6 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                           </a>
                         ))}
                       </div>
-                    </div>
                     <div>
                       <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
                       <div className="space-y-2">
@@ -183,7 +177,6 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                           </a>
                         ))}
                       </div>
-                    </div>
                     
                     >
                       View All Services →
@@ -219,7 +212,6 @@ import { ChevronDown, Phone, Menu, X, Brain, Cloud, Code, Users, Zap, ArrowRight
                   Get Started
                 </a>
               </div>
-            </div>
           </div>
         )}
       </div>

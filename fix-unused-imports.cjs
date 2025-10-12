@@ -1,186 +1,188 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
+const { execSync } = require('child_process');
 
-// Common unused imports that appear frequently
-const commonUnusedImports = [
+// Get all TypeScript/JavaScript files in the app directory
+function getAllFiles(dir, fileList = []) {
+  const files = fs.readdirSync(dir);
+  
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      getAllFiles(filePath, fileList);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      fileList.push(filePath);
+    }
+  });
+  
+  return fileList;
+}
+
+// Common unused imports to remove
+const unusedImports = [
   'Helmet',
   'Star',
   'Users',
+  'Award',
+  'Zap',
+  'Shield',
+  'Brain',
+  'Cloud',
+  'Code',
+  'Target',
   'Globe',
+  'Database',
   'Smartphone',
+  'Lock',
+  'TrendingUp',
+  'Settings',
+  'Calendar',
+  'CheckSquare',
   'FileText',
-  'Clock',
-  'Search',
-  'Filter',
+  'MessageCircle',
+  'Heart',
+  'DollarSign',
+  'Box',
+  'Monitor',
+  'LinkIcon',
+  'Server',
+  'Package',
+  'Mic',
+  'Workflow',
+  'Eye',
+  'Wifi',
+  'MessageSquare',
+  'ShoppingCart',
+  'Phone',
+  'Mail',
+  'MapPin',
+  'BarChart3',
+  'Sparkles',
+  'Cpu',
+  'Satellite',
+  'AlertTriangle',
+  'BarChart',
+  'PieChart',
+  'Receipt',
+  'CreditCard',
+  'Banknote',
+  'Camera',
+  'Image',
+  'Video',
+  'RotateCcw',
   'Download',
   'Upload',
-  'Monitor',
-  'Cpu',
-  'Shield',
-  'Lock',
-  'Network',
-  'AlertTriangle',
-  'TrendingUp',
-  'Video',
-  'Music',
-  'DollarSign',
-  'CreditCard',
-  'Calendar',
-  'Bell',
-  'Plus',
-  'Edit3',
-  'Trash2',
-  'Eye',
-  'Zap',
-  'Target',
-  'Play',
-  'Pause',
-  'RefreshCw',
-  'Settings',
-  'Edit',
-  'Share2',
-  'Activity',
-  'PieChart',
-  'Server',
-  'Wifi',
-  'Cloud',
-  'Terminal',
-  'GitBranch',
-  'Layers',
-  'Workflow',
-  'Bot',
-  'Sparkles',
-  'Wand2',
   'Lightbulb',
-  'Rocket',
-  'Award',
-  'Trophy',
-  'Medal',
-  'Crown',
-  'Diamond',
-  'Gem',
-  'Heart',
+  'Clock',
+  'MessageCircle',
+  'Filter',
+  'Share',
+  'Bell',
+  'RefreshCw',
+  'Pause',
+  'SkipForward',
+  'SkipBack',
+  'Repeat',
+  'Shuffle',
   'ThumbsUp',
   'ThumbsDown',
-  'MessageCircle',
-  'Phone',
-  'MapPin',
-  'Github',
-  'Linkedin',
-  'Twitter',
-  'Instagram',
-  'Facebook',
-  'Youtube',
-  'Twitch',
-  'Discord',
-  'Slack',
-  'Figma',
-  'Notion',
-  'Trello',
-  'Asana',
-  'Monday',
-  'Jira',
-  'Confluence',
-  'Airtable',
-  'Miro',
-  'Loom',
-  'Zoom',
-  'Teams',
-  'Google',
-  'Microsoft',
-  'Apple',
-  'Amazon',
-  'Netflix',
-  'Spotify',
-  'Adobe',
-  'Salesforce',
-  'Hubspot',
-  'Shopify',
-  'WooCommerce',
-  'Stripe',
-  'Paypal',
+  'Bookmark',
+  'Flag',
+  'Info',
+  'HelpCircle',
+  'Plus',
+  'Minus',
+  'Edit',
+  'Trash2',
+  'Save',
+  'Copy',
+  'Paste',
+  'Cut',
+  'Undo',
+  'Redo',
+  'Move',
+  'Maximize',
+  'Minimize',
   'Square',
-  'QuickBooks',
-  'Xero',
-  'FreshBooks',
-  'Wave',
-  'Mint',
-  'YNAB',
-  'Link',
-  'BarChart3',
-  'CheckCircle'
+  'Circle',
+  'Triangle',
+  'Hexagon',
+  'Octagon',
+  'Pentagon',
+  'Star2',
+  'Heart2',
+  'Smile',
+  'Frown',
+  'Meh',
+  'Laugh',
+  'Angry',
+  'Surprised',
+  'Confused',
+  'Wink',
+  'Kiss',
+  'Tongue',
+  'Wink2',
+  'Kiss2',
+  'Tongue2',
+  'Wink3',
+  'Kiss3',
+  'Tongue3',
+  'Wink4',
+  'Kiss4',
+  'Tongue4',
+  'Wink5',
+  'Kiss5',
+  'Tongue5',
+  'Wink6',
+  'Kiss6',
+  'Tongue6',
+  'Wink7',
+  'Kiss7',
+  'Tongue7',
+  'Wink8',
+  'Kiss8',
+  'Tongue8'
 ];
 
-function fixUnusedImports(filePath) {
+function removeUnusedImports(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
-    // Find all import statements
-    const importRegex = /import\s+{([^}]+)}\s+from\s+['"][^'"]+['"];?/g;
-    const imports = content.match(importRegex);
-
-    if (imports) {
-      imports.forEach(importStatement => {
-        // Extract the import source
-        const sourceMatch = importStatement.match(/from\s+['"]([^'"]+)['"]/);
-        if (!sourceMatch) return;
-
-        const source = sourceMatch[1];
-        
-        // Extract the imported items
-        const itemsMatch = importStatement.match(/{\s*([^}]+)\s*}/);
-        if (!itemsMatch) return;
-
-        const items = itemsMatch[1]
-          .split(',')
-          .map(item => item.trim())
-          .filter(item => item);
-
-        // Check which items are actually used in the file
-        const usedItems = items.filter(item => {
-          // Remove any type annotations or aliases
-          const cleanItem = item.split(' as ')[0].split(':')[0].trim();
-          return content.includes(cleanItem) && !commonUnusedImports.includes(cleanItem);
-        });
-
-        // If some items are unused, create a new import statement
-        if (usedItems.length !== items.length) {
-          const newImportStatement = usedItems.length > 0 
-            ? `import { ${usedItems.join(', ')} } from '${source}';`
-            : '';
-          
-          content = content.replace(importStatement, newImportStatement);
-          modified = true;
-        }
+    
+    // Remove unused imports from lucide-react
+    const lucideImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
+    
+    content = content.replace(lucideImportRegex, (match, imports) => {
+      const importList = imports.split(',').map(imp => imp.trim());
+      const usedImports = importList.filter(imp => {
+        // Check if the import is actually used in the file
+        const importName = imp.split(' as ')[0].trim();
+        const usageRegex = new RegExp(`\\b${importName}\\b`, 'g');
+        const usageCount = (content.match(usageRegex) || []).length;
+        return usageCount > 1; // More than 1 because the import itself counts as 1
       });
-    }
-
-    // Also fix unused variables
-    const lines = content.split('\n');
-    const newLines = lines.map(line => {
-      // Remove unused variable declarations
-      if (line.includes('const [') && line.includes('] = useState') && line.includes('// eslint-disable')) {
-        return line.replace(/const\s+\[[^]]+\]\s*=\s*useState[^;]+;/, '');
+      
+      if (usedImports.length === 0) {
+        modified = true;
+        return ''; // Remove the entire import line
+      } else if (usedImports.length < importList.length) {
+        modified = true;
+        return `import { ${usedImports.join(', ')} } from 'lucide-react';`;
       }
       
-      // Remove unused variable declarations that are clearly unused
-      if (line.includes('const [') && line.includes('] = useState') && !line.includes('useState(')) {
-        const match = line.match(/const\s+\[([^,]+),\s*set[A-Z][^\]]+\]\s*=\s*useState/);
-        if (match) {
-          const varName = match[1];
-          if (!content.includes(varName) || content.split(varName).length < 3) {
-            return '';
-          }
-        }
-      }
-      
-      return line;
+      return match;
     });
-
-    if (modified || newLines.some((line, index) => line !== lines[index])) {
-      fs.writeFileSync(filePath, newLines.join('\n'));
+    
+    // Remove unused Helmet imports
+    if (content.includes("import { Helmet } from 'react-helmet-async';") && !content.includes('<Helmet>')) {
+      content = content.replace(/import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];?\n?/g, '');
+      modified = true;
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
       console.log(`Fixed unused imports in: ${filePath}`);
     }
   } catch (error) {
@@ -188,14 +190,12 @@ function fixUnusedImports(filePath) {
   }
 }
 
-// Find all TypeScript and JavaScript files
-const files = glob.sync('app/**/*.{ts,tsx,js,jsx}', { cwd: __dirname });
-
-console.log(`Found ${files.length} files to process...`);
+// Get all files and process them
+const files = getAllFiles('./app');
+console.log(`Processing ${files.length} files...`);
 
 files.forEach(file => {
-  const fullPath = path.join(__dirname, file);
-  fixUnusedImports(fullPath);
+  removeUnusedImports(file);
 });
 
 console.log('Unused imports cleanup completed!');

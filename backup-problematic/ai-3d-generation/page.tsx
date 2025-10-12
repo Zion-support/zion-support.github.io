@@ -38,7 +38,6 @@ export default function Ai3dGenerationPage() {
                 Try Demo
               </Link>
             </div>
-          </div>
         </div>
       </section>
 
@@ -63,7 +62,6 @@ export default function Ai3dGenerationPage() {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Use Cases Section */}
@@ -87,7 +85,6 @@ export default function Ai3dGenerationPage() {
                 </div>
               ))}
             </div>
-          </div>
         </div>
       </section>
 
@@ -115,7 +112,6 @@ export default function Ai3dGenerationPage() {
                 View All AI Services
               </Link>
             </div>
-          </div>
         </div>
       </section>    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -150,7 +146,6 @@ export default function Ai3dGenerationPage() {
                 Try Demo
               </Link>
             </div>
-          </div>
         </div>
       </section>
 
@@ -175,7 +170,6 @@ export default function Ai3dGenerationPage() {
               </div>
             ))}
           </div>
-        </div>
       </section>
 
       {/* Use Cases Section */}
@@ -199,7 +193,6 @@ export default function Ai3dGenerationPage() {
                 </div>
               ))}
             </div>
-          </div>
         </div>
       </section>
 
@@ -227,7 +220,6 @@ export default function Ai3dGenerationPage() {
                 View All AI Services
               </Link>
             </div>
-          </div>
         </div>
       </section>
     </div>

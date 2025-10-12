@@ -1,4 +1,3 @@
-'use client';
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
@@ -157,8 +156,7 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
           <span className="ml-2 text-gray-600">Loading system metrics...</span>
         </div>
-      </div>
-    );
+  );
   }
     <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
@@ -176,7 +174,6 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
             </button>
           )}
         </div>
-      </div>
         <p className="text-sm text-gray-500 mb-4">
           Last updated: {lastUpdate.toLocaleTimeString()}
         </p>
@@ -192,7 +189,6 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                 {metrics.performance.score}
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Load Time</span>
@@ -200,7 +196,6 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                 {metrics.performance.loadTime.toFixed(0)}ms
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">FCP</span>
@@ -208,7 +203,6 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                 {metrics.performance.firstContentfulPaint.toFixed(0)}ms
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">LCP</span>
@@ -216,7 +210,6 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                 {metrics.performance.largestContentfulPaint.toFixed(0)}ms
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">FID</span>
@@ -224,7 +217,6 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                 {metrics.performance.firstInputDelay.toFixed(0)}ms
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">CLS</span>
@@ -232,9 +224,7 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                 {metrics.performance.cumulativeLayoutShift.toFixed(3)}
               </span>
             </div>
-          </div>
         </div>
-      </div>
       {/* Error Metrics */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">Errors</h3>
@@ -246,7 +236,6 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                 {metrics.errors.total}
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Critical</span>
@@ -254,7 +243,6 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                 {metrics.errors.bySeverity.critical || 0}
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">High</span>
@@ -262,7 +250,6 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                 {metrics.errors.bySeverity.high || 0}
               </span>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium text-gray-600">Medium</span>
@@ -270,9 +257,7 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                 {metrics.errors.bySeverity.medium || 0}
               </span>
             </div>
-          </div>
         </div>
-      </div>
       {/* Memory and Network */}
       <div className="mb-8">
         <h3 className="text-lg font-semibold text-gray-900 mb-4">System Resources</h3>
@@ -299,9 +284,7 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                   }`}
                   style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
                 ></div>
-              </div>
             </div>
-          </div>
           <div className="bg-gray-50 p-4 rounded-lg">
             <h4 className="text-sm font-medium text-gray-600 mb-2">Network</h4>
             <div className="space-y-2">
@@ -321,9 +304,7 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                 <span>Save Data</span>
                 <span>{metrics.network.saveData ? 'Yes' : 'No'}</span>
               </div>
-            </div>
           </div>
-        </div>
       </div>
       {/* Recent Errors */}
         <div className="mb-8">
@@ -340,10 +321,8 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                   <span>{error.type}</span>
                   <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
                 </div>
-              </div>
             ))}
           </div>
-        </div>
       )}
       {/* Error Distribution */}
         <div className="mb-8">
@@ -358,7 +337,6 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                   </div>
                 ))}
               </div>
-            </div>
             <div className="bg-gray-50 p-4 rounded-lg">
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Category</h4>
               <div className="space-y-1">
@@ -368,9 +346,7 @@ import { errorHandler } from '../utils/enhancedErrorHandler';
                   </div>
                 ))}
               </div>
-            </div>
           </div>
-        </div>
       )}
     </div>
   );

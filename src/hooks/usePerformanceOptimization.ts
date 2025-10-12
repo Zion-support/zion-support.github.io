@@ -1,4 +1,3 @@
-'use client';
 import { useEffect, useCallback } from 'react';
   loadTime: number;
   firstContentfulPaint: number;
