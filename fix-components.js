@@ -14,10 +14,6 @@ const componentsToFix = [
       {/* ${componentName} component placeholder */}
   );
 };
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 // Fix components;
   const componentFile = path.join('/workspace/app/components', `${componentName}.tsx`);
   // Check if file exists and doesn't have default export;

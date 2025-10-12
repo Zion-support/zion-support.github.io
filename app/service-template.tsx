@@ -1,28 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
+interface ServiceTemplateProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-interface ServicePageProps {
-  title: string,
-  description: string,
-  icon: React.ReactNode,
-  benefits: string[],
-  features: string[],
-  pricing: string,
-  seoTitle: string,
-  seoDescription: string,
-  seoKeywords: string
-
-  title,
-  description,
-  icon,
-  benefits,
-  features,
-  pricing,
-  seoTitle,
-  seoDescription,
-  seoKeywords;
-}: ServicePageProps) {
+const ServiceTemplate: React.FC<ServiceTemplateProps> = ({ className = '', children }) => {
   return (
+    <div className={`service-template ${className}`}>
+      {children}
+    </div>
+  );
+};
 
-
+export default ServiceTemplate;

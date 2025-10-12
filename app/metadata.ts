@@ -1,4 +1,6 @@
 // Define metadata type for compatibility
+import { URL } from 'url';
+
 export interface Metadata {
   title: string;
   description: string;
@@ -53,7 +55,7 @@ export interface Metadata {
     address: true,
     telephone: true
   },
-  metadataBase: new URL('https://ziontechgroup.com'),
+  metadataBase: 'https://ziontechgroup.com',
   alternates: {
     canonical: 'https://ziontechgroup.com'
   },

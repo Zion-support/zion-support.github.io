@@ -127,9 +127,4 @@ console.log(`Found ${files.length} files with unused import errors`);
   if (fs.existsSync(fullPath)) {
     fixUnusedImports(fullPath);
 });
-<<<<<<< HEAD
-
 console.log('Finished fixing unused imports');
-=======
-console.log('Finished fixing unused imports');
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b

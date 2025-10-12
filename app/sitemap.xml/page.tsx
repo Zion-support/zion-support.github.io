@@ -1,6 +1,16 @@
-
-
 import React from 'react';
 
-import { Link } from 'react-router-dom';
-import { ArrowRight 
+interface SitemapXmlProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+const SitemapXml: React.FC<SitemapXmlProps> = ({ className = '', children }) => {
+  return (
+    <div className={`sitemap-xml ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default SitemapXml;

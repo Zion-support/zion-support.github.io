@@ -45,10 +45,6 @@ const missingPages = [
               Contact Us;
   );
 };
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 // Create missing pages;
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');

@@ -56,12 +56,7 @@ function isBrokenPage(filePath) {
                 <li>• Benefit 2</li>
                 <li>• Benefit 3</li>
                 <li>• Benefit 4</li>
-<<<<<<< HEAD
-  )
-
-=======
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 // Generate page configuration from file path;
 function generatePageConfig(filePath) {
   const relativePath = filePath.replace('/workspace/app/', '').replace('/page.tsx', '');

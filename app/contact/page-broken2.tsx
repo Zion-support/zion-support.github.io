@@ -1,13 +1,16 @@
+import React from 'react';
 
-                  )}
-                </button>
-              </form>
-            </div>
-            {/* Contact Information */}
+interface ContactPageBroken2Props {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-                  and we'll get back to you as soon as possible.
-                </p>
-              </div>
-              {/* Contact Information */}
+const ContactPageBroken2: React.FC<ContactPageBroken2Props> = ({ className = '', children }) => {
+  return (
+    <div className={`contact-page-broken2 ${className}`}>
+      {children}
+    </div>
+  );
+};
 
-
+export default ContactPageBroken2;

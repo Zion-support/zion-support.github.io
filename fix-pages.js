@@ -20,10 +20,6 @@ const pagesToFix = [
               Contact Us;
   );
 };
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 // Fix pages;
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');

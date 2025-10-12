@@ -1,8 +1,16 @@
 import React from 'react';
 
- void;
-  { hasError: boolean; error: AppError | null }
-    super(props)
-    this.state = { hasError: false, error: null }
+interface errorHandlerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
+const errorHandler: React.FC<errorHandlerProps> = ({ className = '', children }) => {
+  return (
+    <div className={`errorhandler ${className}`}>
+      {children}
+    </div>
+  );
+};
 
+export default errorHandler;

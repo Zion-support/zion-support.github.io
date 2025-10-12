@@ -168,46 +168,11 @@ export default function CloudMigrationProPage() {
               </Link>
             </div>
           </div>
-<<<<<<< HEAD
-
-          {/* Features Section */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-                <div className="flex justify-center mb-4">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Migration Process Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">Our Migration Process</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {migrationSteps.map((step, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center">
-                  <div className="text-4xl font-bold text-cyan-400 mb-4">{step.step}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
-                  <p className="text-gray-300">{step.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-=======
         </section>
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> cursor/fix-errors-and-merge-to-main-9c1a
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">
                 Why Choose Our Migration Service?
