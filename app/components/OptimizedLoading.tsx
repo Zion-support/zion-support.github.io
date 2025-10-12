@@ -1,15 +1,15 @@
-import React from \'react\';
-import { Loader2 } from 'lucide-react';
+import React from 'react';
+import {Loader2} from 'lucide-react';
 
-interface OptimizedLoadingProps {
+interface Optimized Loading Props {
   size?: 'sm' | 'md' | 'lg' | 'xl'
   text?: string
-  fullScreen?: boolean
-  className?: string
+  full Screen?: boolean
+  class Name?: string
 }
 
-const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
-  const size = 'md',
+const Optimized Loading: React.FC<Optimized Loading Props /> = ({
+  constsize = 'md',
   text = 'Loading...',
   fullScreen = false,
   className = ''
@@ -21,16 +21,16 @@ const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
     xl: 'w-12 h-12'
   }
 
-  const containerClasses = fullScreen
+  const containerClasses = full Screen
     ? 'fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50'
     : 'flex items-center justify-center p-4'
 
   return (
-    <div className="{`${containerClasses}" ${className}`} />
-      <div className="flex flex-col items-centerspace-y-4" />
-        <Loader2 className="{`${sizeClasses[size]}" text-cyan-500 animate-spin`} / />
+    <div className ="{`${containerClasses}" ${className}`} />
+      <div className ="flexflex-colitems-centerspace-y-4" />
+        <Loader2class Name ="{`${sizeClasses[size]}" text-cyan-500 animate-spin`} / />
         {text && (
-          <p className="text-gray-300 text-sm font-mediumanimate-pulse" />
+          <pclassName ="text-gray-300 text-smfont-mediumanimate-pulse" />
             {text}
           </p>
         )}
@@ -39,4 +39,4 @@ const OptimizedLoading: React.FC<OptimizedLoadingProps /> = ({
   )
 }
 
-export default OptimizedLoading;
+export default Optimized Loading;

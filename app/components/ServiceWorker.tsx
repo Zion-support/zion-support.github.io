@@ -1,16 +1,16 @@
-import React, { useEffect } from 'react';
-import { useEffect } from 'react';
+import React, {useEffect} from 'react';
+import {useEffect} from 'react';
 'use client';
 
-const ServiceWorker: React.FC = () => {
-  useEffect(() => {
+const Service Worker: React.FC = () => {
+  use Effect(() => {
     if ('serviceWorker' in, navigator) {
-      navigator.serviceWorker.register('/sw.js')
+      navigator.service Worker.register('/sw.js')
         .then((registration) => {
-          console.log('SW registered: ', registration);
+          console.log('SWregistered: ', registration);
         })
         .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError);
+          console.log('SWregistrationfailed: ', registrationError);
         });
     }
   }, []);
@@ -18,4 +18,4 @@ const ServiceWorker: React.FC = () => {
   return null;
 };
 
-export default ServiceWorker;
+export default Service Worker;

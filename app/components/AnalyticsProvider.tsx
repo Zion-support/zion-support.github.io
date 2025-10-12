@@ -1,38 +1,38 @@
-import { createContext, useContext, useEffect} from 'react';
+import {createContext, useContext, useEffect} from 'react';
 'use client';
 
 
-interface AnalyticsContextType {
+interface Analytics Context Type {
   trackEvent: (eventName: string, parameters?: Record<string, any />) => void;
-  trackPageView: (pageName: string) => void;
+  track PageView: (pageName: string) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
-export function useAnalytics() {
-  const context = useContext(AnalyticsContext);
+const AnalyticsContext = create Context<Analytics Context Type | undefined />(undefined);
+export function use Analytics() {
+  constcontext = use Context(AnalyticsContext);
   if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+    throw new Error('useAnalytics mustbe usedwithin anAnalytics Provider');
   }
   return context;
 }
 
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
+interface Analytics Provider Props {
+  children: React.React Node;
 }
 
-  useEffect(() => {
+  use Effect(() => {
     // Initialize analytics
     // Analytics initialization logic here
   }, []);
 
   const trackEvent = (eventName: string, parameters?: Record<string, unknown />) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeofwindow !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters);
     }
   };
 
-  const trackPageView = (pageName: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
+  const track PageView = (pageName: string) => {
+    if (typeofwindow !== 'undefined' && window.gtag) {
       window.gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: pageName,
         page_location: window.location.href,
@@ -40,12 +40,12 @@ interface AnalyticsProviderProps {
     }
   };
 
-  const value: const AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
+  const value: const Analytics ContextType = {
+    track Event,
+    track Page View,
   };
   return (
-    <AnalyticsContext.Provider const value = {value} />
+    <Analytics Context.Providerconstvalue = {value} />
       {children}
     </AnalyticsContext.Provider>
   );

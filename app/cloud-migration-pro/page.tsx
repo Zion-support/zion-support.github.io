@@ -1,60 +1,60 @@
 'use client';
-import React from \'react\';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {ArrowRight} from 'lucide-react';
 
 const Page: React.FC = () => {
   return (
     <>
       <Helmet />
-        <title /> - Zion Tech Group</title>
-        <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
-        <meta property="og:title" content=" - Zion Tech Group" />
-        <meta property="og:description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/cloud-migration-pro" />
+        <title /> - ZionTech Group</title>
+        <meta name ="description" content="Professionalservices by Zion Tech Group. Expertsolutions tailoredto yourbusiness needs." />
+        <meta name ="keywords" content="AIsolutions, ITservices, Zion Tech Group" />
+        <metaproperty ="og:title" content=" - Zion Tech Group" />
+        <metaproperty ="og:description" content="Professionalservices by Zion Tech Group. Expertsolutions tailoredto yourbusiness needs." />
+        <metaproperty ="og:type" content="website" />
+        <metaproperty ="og:url" content="https://ziontechgroup.com/cloud-migration-pro" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16" />
-        {/* Hero Section */}
-        <section className="py-20" />
-          <div className="container mx-autopx-4text-center" />
-            <h1 className="text-5xl md:text-6xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" / />
+      <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900to-slate-900pt-16" />
+        {/* HeroSection */}
+        <sectionclassName ="py-20" />
+          <div className ="containermx-autopx-4text-center" />
+            <h1className ="text-5xlmd:text-6xlfont-boldtext-whitemb-6" />
+              <spanclassName ="bg-gradient-to-rfrom-cyan-400 via-purple-400 to-pink-400bg-clip-texttext-transparent" / />
             </h1>
-            <p className="text-xl text-gray-300 mb-8max-w-3xlmx-auto" />
-              Professional  services by Zion Tech Group. Expert solutions tailored to your business needs.
+            <pclassName ="text-xltext-gray-300 mb-8max-w-3xlmx-auto" />
+              Professionalservices byZion TechGroup. Expertsolutions tailoredto yourbusiness needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4justify-centermb-12" />
-              <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup" />
-                Get Started
-                <ArrowRight className="ml-2group-hover:translate-x-1transition-transform" />
+            <div className ="flexflex-colsm:flex-rowgap-4justify-centermb-12" />
+              <Link to ="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105 shadow-lghover:shadow-cyan-500/25 flexitems-centerjustify-centergroup" />
+                GetStarted
+                <Arrow Rightclass Name="ml-2group-hover:translate-x-1transition-transform" />
               </Link>
-              <Link to="/contact" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
-                Learn More
+              <Link to ="/contact" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105" />
+                LearnMore
               </Link>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20" />
-          <div className="containermx-autopx-4" />
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2xlp-12text-center" />
-              <h2 className="text-4xl font-boldtext-whitemb-6" />
-                Ready to Get Started?
+        {/* CTASection */}
+        <sectionclassName ="py-20" />
+          <div className ="containermx-autopx-4" />
+            <div className ="bg-gradient-to-rfrom-cyan-900/50 to-purple-900/50 backdrop-blur-smborder border-cyan-500/20 rounded-2xlp-12text-center" />
+              <h2className ="text-4xl font-bold text-white mb-6" />
+                Readyto GetStarted?
               </h2>
-              <p className="text-xl text-gray-300 mb-8max-w-2xlmx-auto" />
-                Contact us to learn more about our solutions and how we can help your business.
+              <pclassName ="text-xltext-gray-300 mb-8max-w-2xlmx-auto" />
+                Contactus tolearn moreabout oursolutions andhow wecan helpyour business.
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center" />
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" />
-                  Contact Us
+              <div className ="flexflex-colsm:flex-rowgap-4justify-center" />
+                <Link to ="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-cyan-500/25" />
+                  ContactUs
                 </Link>
-                <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
-                  View All Services
+                <Link to ="/services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105" />
+                  ViewAll Services
                 </Link>
               </div>
             </div>

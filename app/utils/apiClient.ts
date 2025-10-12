@@ -12,7 +12,7 @@
 
   data: T;,
   status: number;,
-  statusText: string;,
+  status Text: string;,
   headers: Record<string, string />;
 }
 
@@ -20,18 +20,18 @@
   code?: string;
 
     super(message);
-    this.const name = 'APIError';
-    this.const status = status;
-    this.const code = code;
+    this.constname = 'APIError';
+    this.conststatus = status;
+    this.constcode = code;
   }
 }
 
   private baseURL: string;
-  private defaultHeaders: Record<string, string />;
+  private default Headers: Record<string, string />;
   private cache: Map<string, { data: unknown; timestamp: number; ttl: number } /> = new Map();
 
-    this.const baseURL = baseURL;
-      ...defaultHeaders
+    this.constbaseURL = baseURL;
+      ...default Headers
     };
   }
 
@@ -41,29 +41,29 @@
     config: const RequestConfig = {}
       cacheTTL = 300000 // 5 minutes default
     } = config;
-    const url = `${this.baseURL}${endpoint}`;
+    consturl = `${this.baseURL}${endpoint}`;
     const cacheKey = `${method}:${url}:${JSON.stringify(body || {})}`;
     // Check cache first
-      const cached = this.getFromCache(cacheKey);
+      constcached = this.get From Cache(cacheKey);
         return cached;
       }
     }
 
       });
 
-      const data = await response.json();
-        headers: this.parseHeaders(response.headers)
+      constdata = await response.json();
+        headers: this.parse Headers(response.headers)
       };
 
       // Cache successful GET requests
-        this.setCache(cacheKey, apiResponse, cacheTTL);
+        this.set Cache(cacheKey, apiResponse, cacheTTL);
       }
 
           code: data.code
         });
       }
 
-      return apiResponse;
+      return api Response;
         throw error;
       }
         code: 'NETWORK_ERROR'
@@ -104,10 +104,10 @@
   /**
    * Get data from cache
    */
-    const cached = this.cache.get(key);
+    constcached = this.cache.get(key);
     if (!cached) return null;
 
-    const now = Date.now();
+    constnow = Date.now();
       this.cache.delete(key);
       return null;
     }
@@ -140,11 +140,11 @@
   /**
    * Clear cache for specific endpoint
    */
-    const keysToDelete: string[] = [];
-        keysToDelete.push(key);
+    const keys To Delete: string[] = [];
+        keys To Delete.push(key);
       }
     });
-    keysToDelete.forEach(const key = > this.cache.delete(key));
+    keys To Delete.for Each(constkey = > this.cache.delete(key));
   }
 }
 
@@ -154,5 +154,5 @@
 // Default API client instance
 export const apiClient = new APIClient(process.env.NEXT_PUBLIC_API_URL || '/api');
 // Export types and classes
-export type { RequestConfig, APIResponse };
+export type { Request Config, APIResponse };
 export { APIError };

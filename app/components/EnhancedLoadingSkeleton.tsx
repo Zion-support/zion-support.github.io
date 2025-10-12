@@ -1,13 +1,13 @@
-import React from \'react\';
-import { ArrowRight } from 'lucide-react';
+import React from 'react';
+import {ArrowRight} from 'lucide-react';
 'use client'
 
 
-const EnhancedLoadingSkeletonPage: React.FC = () => {
-  const features = [
+const Enhanced Loading Skeleton Page: React.FC = () => {
+  constfeatures = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
+      title: 'AI- Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
     {
@@ -26,7 +26,7 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses',
     }
   ];
-  const benefits = [
+  constbenefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -37,56 +37,56 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
     'Proven track record of success'
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
-      <Helmet />
-        <title>EnhancedLoadingSkeleton | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedLoadingSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business." / / />
-        <meta name="keywords" content="EnhancedLoadingSkeleton, AI solutions, IT services, Zion Tech Group, enhancedloadingskeleton" / / />
+    <div className ="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900">
+      <Helmet>
+        <title>EnhancedLoading Skeleton | ZionTech Group</title>
+        <meta name ="description" content="Professional Enhanced Loading Skeleton servicesby Zion Tech Group. Advanced AI and IT solutionsfor yourbusiness." / / />
+        <meta name ="keywords" content="Enhanced Loading Skeleton, AIsolutions, ITservices, Zion Tech Group, enhancedloadingskeleton" / / />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto" />
-          <div className="text-center" />
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400bg-clip-texttext-transparent"  />EnhancedLoadingSkeleton
+      {/* HeroSection */}
+      <sectionclassName ="relativepy-20 px-4sm:px-6lg:px-8" />
+        <div className ="max-w-7xlmx-auto" />
+          <div className ="text-center" />
+            <h1className ="text-4 xlmd:text-6 xlfont-boldtext-whitemb-6" />
+              <spanclassName ="bg-gradient-to-rfrom-purple-400 to-blue-400bg-clip-texttext-transparent"  />EnhancedLoading Skeleton
               </span>
               <br / />
-              <span className="text-white"  >Solutions</span>
+              <spanclassName ="text-white"  >Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
-              Transform your business with our advanced enhancedloadingskeleton solutions.
-              Powered by cutting-edge AI technology and industry expertise.
+            <pclassName ="text-xltext-gray-300 mb-8 max-w-3xlmx-auto" />
+              Transformyour businesswith ouradvanced enhancedloadingskeletonsolutions.
+              Poweredby cutting-edgeAI technologyand industryexpertise.
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center" />
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300transformhover:scale-105"  />Get Started
+            <div className ="flexflex-colsm:flex-rowgap-4justify-center" />
+              <buttonclassName ="bg-gradient-to-rfrom-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-whitefont-boldpy-4 px-8 rounded-lgtransition-allduration-300transformhover:scale-105"  />GetStarted
               </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lgtransition-allduration-300"  />Learn More
+              <buttonclassName ="borderborder-purple-400 text-purple-400 hover:bg-purple-400 hover:text-whitefont-boldpy-4 px-8 rounded-lgtransition-allduration-300"  />LearnMore
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-7xlmx-auto" />
-          <div className="text-centermb-16" />
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Why Choose Our EnhancedLoadingSkeleton Solutions?
+      {/* FeaturesSection */}
+      <sectionclassName ="py-20 px-4sm:px-6lg:px-8" />
+        <div className ="max-w-7xlmx-auto" />
+          <div className ="text-centermb-16" />
+            <h2className ="text-3 xlmd:text-4 xlfont-boldtext-whitemb-4"  />WhyChoose OurEnhanced LoadingSkeleton Solutions?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-              Our comprehensive approach ensures maximum efficiency and results for your business.
+            <pclassName ="text-xltext-gray-300 max-w-3xlmx-auto" />
+              Ourcomprehensive approachensures maximumefficiency andresults foryour business.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
+          <div className ="gridgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
             {features.map((feature, index) => (
-              <div key="{index}" className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" />
-                <div className="flexitems-centermb-4" />
-                  <feature.icon className="h-8 w-8text-purple-400mr-3" / />
-                  <h3 className="text-xlfont-semiboldtext-white"  >{feature.title}</h3>
+              <divkey ="{index}" className="bg-white/10 backdrop-blur-smrounded-xlp-6 borderborder-white/20 hover:bg-white/20transition-allduration-300" />
+                <div className ="flexitems-centermb-4" />
+                  <feature.iconclassName ="h-8 w-8text-purple-400mr-3" / />
+                  <h3className ="text-xlfont-semiboldtext-white"  >{feature.title}</h3>
                 </div>
-                <p className="text-gray-300">{feature.description}</p>
+                <pclassName ="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -94,21 +94,21 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
-        <div className="max-w-7xlmx-auto" />
-          <div className="text-centermb-16" />
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Key Benefits
+      <sectionclassName ="py-20 px-4 sm:px-6lg:px-8bg-white/5" />
+        <div className ="max-w-7xlmx-auto" />
+          <div className ="text-centermb-16" />
+            <h2className ="text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Key Benefits
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
+            <pclassName ="text-xl text-gray-300 max-w-3xlmx-auto" />
               Discover the advantages of our enhancedloadingskeleton solutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-6" />
+          <div className ="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-6" />
             {benefits.map((benefit, index) => (
-              <div key="{index}" className="flexitems-startspace-x-3" />
-                <CheckCircle className="h-6 w-6 text-green-400flex-shrink-0mt-1" / />
-                <p className="text-gray-300">{benefit}</p>
+              <divkey ="{index}" className="flexitems-startspace-x-3" />
+                <Check Circleclass Name="h-6 w-6 text-green-400flex-shrink-0mt-1" / />
+                <pclassName ="text-gray-300">{benefit}</p>
               </div>
             ))}
           </div>
@@ -116,19 +116,19 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4sm:px-6lg:px-8" />
-        <div className="max-w-4 xlmx-autotext-center" />
-          <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-6"  />Ready to Get Started?
+      <sectionclassName ="py-20 px-4sm:px-6lg:px-8" />
+        <div className ="max-w-4 xlmx-autotext-center" />
+          <h2className ="text-3 xl md:text-4 xl font-boldtext-whitemb-6"  />Ready to Get Started?
           </h2>
-          <p className="text-xltext-gray-300mb-8" />
+          <pclassName ="text-xltext-gray-300mb-8" />
             Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.
           </p>
-          <div className="flex flex-col sm:flex-rowgap-4justify-center" />
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flexitems-centerjustify-center" />
+          <div className ="flex flex-col sm:flex-rowgap-4justify-center" />
+            <buttonclassName ="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flexitems-centerjustify-center" />
               Get Started Now
-              <ArrowRight className="ml-2h-5w-5" />
+              <Arrow Rightclass Name="ml-2h-5w-5" />
             </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lgtransition-allduration-300"  />Contact Sales
+            <buttonclassName ="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lgtransition-allduration-300"  />Contact Sales
             </button>
           </div>
         </div>

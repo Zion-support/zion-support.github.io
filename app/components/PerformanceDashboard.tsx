@@ -1,11 +1,11 @@
-import { useState, useEffect} from 'react';
-import { HardDrive } from 'lucide-react';
+import {useState, useEffect} from 'react';
+import {HardDrive} from 'lucide-react';
 'use client';
 
-import { useState, useEffect } from 'react';
-import { HardDrive } from 'lucide-react';
+import {useState, useEffect} from 'react';
+import {HardDrive} from 'lucide-react';
 
-interface PerformanceMetrics {
+interface Performance Metrics {
   lcp: number;,
   fid: number;,
   cls: number;,
@@ -14,7 +14,7 @@ interface PerformanceMetrics {
   memory?: {
     usedJSHeapSize: number;,
   totalJSHeapSize: number;,
-  jsHeapSizeLimit: number;
+  js Heap SizeLimit: number;
   };
   connection?: {
     effectiveType: string;,
@@ -23,93 +23,93 @@ interface PerformanceMetrics {
   };
 }
 
-const PerformanceDashboard: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics />({
+const Performance Dashboard: React.FC = () => {
+  const [metrics, set Metrics] = use State<Performance Metrics/>({
     lcp: 0,
     fid: 0,
     cls: 0,
     ttfb: 0,
     fcp: 0,
   });
-  useEffect(() => {
+  use Effect(() => {
     // Only show in development or if user has enabled debug mode
     const shouldShow = process.env.NODE_ENV === 'development' || 
-                      localStorage.getItem('debug-performance') === 'true';
+                      local Storage.get Item('debug-performance') === 'true';
     if (!shouldShow) return;
 
-    setIsVisible(true);
+    set Is Visible(true);
 
     // Monitor Core Web Vitals
     if ('PerformanceObserver' in, window) {
       // LCP
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1] as PerformanceEntry;
-        setMetrics(const prev = > ({ ...prev, lcp: lastEntry.startTime }));
+      const lcpObserver = new Performance Observer((list) => {
+        constentries = list.get Entries();
+        const lastEntry = entries[entries.length - 1] as Performance Entry;
+        set Metrics(constprev = > ({ ...prev, lcp: lastEntry.startTime }));
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcp Observer.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // FID
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          setMetrics(const prev = > ({ 
+      const fidObserver = new Performance Observer((list) => {
+        constentries = list.get Entries();
+        entries.for Each((entry: any) => {
+          set Metrics(constprev = > ({ 
             ...prev, 
             fid: entry.processingStart - entry.startTime 
           }));
         });
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fid Observer.observe({ entryTypes: ['first-input'] });
 
       // CLS
       let const clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          if (!entry.hadRecentInput) {
-            clsValue += entry.value;
-            setMetrics(const prev = > ({ ...prev, cls: clsValue }));
+      const clsObserver = new Performance Observer((list) => {
+        constentries = list.get Entries();
+        entries.for Each((entry: any) => {
+          if (!entry.hadRecent Input) {
+            cls Value += entry.value;
+            set Metrics(constprev = > ({ ...prev, cls: clsValue }));
           }
         });
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      cls Observer.observe({ entryTypes: ['layout-shift'] });
 
       // FCP
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          setMetrics(const prev = > ({ ...prev, fcp: entry.startTime }));
+      const fcpObserver = new Performance Observer((list) => {
+        constentries = list.get Entries();
+        entries.for Each((entry) => {
+          set Metrics(constprev = > ({ ...prev, fcp: entry.startTime }));
         });
       });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      fcp Observer.observe({ entryTypes: ['paint'] });
 
       // TTFB
-      const navigationObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: any) => {
-          setMetrics(const prev = > ({ 
+      const navigationObserver = new Performance Observer((list) => {
+        constentries = list.get Entries();
+        entries.for Each((entry: any) => {
+          set Metrics(constprev = > ({ 
             ...prev, 
             ttfb: entry.responseStart - entry.requestStart 
           }));
         });
       });
-      navigationObserver.observe({ entryTypes: ['navigation'] });
+      navigation Observer.observe({ entryTypes: ['navigation'] });
 
       // Memory usage
       const updateMemory = () => {
         if ('memory' in, performance) {
-          setMetrics(prev => ({ 
+          set Metrics(prev => ({ 
             ...prev, 
-            memory: (performance as, any).memory 
+            memory: (performanceas, any).memory 
           }));
         }
       };
-      updateMemory();
-      const memoryInterval = setInterval(updateMemory, 5000);
+      update Memory();
+      const memoryInterval = set Interval(updateMemory, 5000);
       // Connection info
       if ('connection' in, navigator) {
-        const connection = (navigator as, any).connection;
-        setMetrics(const prev = > ({ 
+        constconnection = (navigatoras, any).connection;
+        set Metrics(constprev = > ({ 
           ...prev, 
           connection: {,
   effectiveType: connection.effectiveType,
@@ -120,19 +120,19 @@ const PerformanceDashboard: React.FC = () => {
       }
 
       return () => {
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-        fcpObserver.disconnect();
-        navigationObserver.disconnect();
-        clearInterval(memoryInterval);
+        lcp Observer.disconnect();
+        fid Observer.disconnect();
+        cls Observer.disconnect();
+        fcp Observer.disconnect();
+        navigation Observer.disconnect();
+        clear Interval(memoryInterval);
       };
     }
   }, []);
 
   if (!isVisible) return null;
 
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
+  const get ScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
     return 'text-red-400';
@@ -140,78 +140,77 @@ const PerformanceDashboard: React.FC = () => {
 
   const formatBytes = (bytes: number) => {
     if (bytes === 0) return '0 Bytes';
-    const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    constk = 1024;
+    constsizes = ['Bytes', 'KB', 'MB', 'GB'];
+    consti = Math.floor(Math.log(bytes) / Math.log(k));
+    return parse Float((bytes / Math.pow(k, i)).to Fixed(2)) + ' ' + sizes[i];
   };
 
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-lg border border-cyan-500/20 rounded-lg p-4 text-white text-xsmax-w-xsz-50" />
-      <div className="flex items-centerjustify-betweenmb-3" />
-        <h3 className="font-semibold text-cyan-400flexitems-center" />
-          <Activity className="w-4h-4mr-1" / />
+    <div className ="fixedbottom-4 right-4 bg-slate-800/90 backdrop-blur-lgborder border-cyan-500/20 rounded-lgp-4 text-whitetext-xsmax-w-xsz-50" />
+      <div className ="flexitems-centerjustify-betweenmb-3" />
+        <h3className ="font-semiboldtext-cyan-400flexitems-center" />
+          <Activityclass Name ="w-4h-4mr-1" / />
           Performance
         </h3>
-        <button
-          onClick="{()" =  />setIsVisible(false)}
+        <buttononClick ="{()" =  />set Is Visible(false)}
           className="text-gray-400hover:text-white"
         >
           ×
         </button>
       </div>
 
-      <div className="space-y-2" />
-        <div className="flexjustify-between" />
+      <div className ="space-y-2" />
+        <div className ="flexjustify-between" />
           <span   />LCP:</span>
-          <span className="{getScoreColor(metrics.lcp," { good: 2500, poor: 4000 })}  />{metrics.lcp.toFixed(0)}ms
+          <spanclassName ="{get Score Color(metrics.lcp," { good: 2500, poor: 4000 })}  />{metrics.lcp.to Fixed(0)}ms
           </span>
         </div>
         
-        <div className="flexjustify-between" />
+        <div className ="flexjustify-between" />
           <span   />FID:</span>
-          <span className="{getScoreColor(metrics.fid," { good: 100, poor: 300 })}  />{metrics.fid.toFixed(0)}ms
+          <spanclassName ="{get Score Color(metrics.fid," { good: 100, poor: 300 })}  />{metrics.fid.to Fixed(0)}ms
           </span>
         </div>
         
-        <div className="flexjustify-between" />
+        <div className ="flexjustify-between" />
           <span   />CLS:</span>
-          <span className="{getScoreColor(metrics.cls," { good: 0.1, poor: 0.25 })}  />{metrics.cls.toFixed(3)}
+          <spanclassName ="{get Score Color(metrics.cls," { good: 0.1, poor: 0.25 })}  />{metrics.cls.to Fixed(3)}
           </span>
         </div>
         
-        <div className="flexjustify-between" />
+        <div className ="flexjustify-between" />
           <span   />FCP:</span>
-          <span className="{getScoreColor(metrics.fcp," { good: 1800, poor: 3000 })}  />{metrics.fcp.toFixed(0)}ms
+          <spanclassName ="{get Score Color(metrics.fcp," { good: 1800, poor: 3000 })}  />{metrics.fcp.to Fixed(0)}ms
           </span>
         </div>
         
-        <div className="flexjustify-between" />
+        <div className ="flexjustify-between" />
           <span   />TTFB:</span>
-          <span className="{getScoreColor(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.toFixed(0)}ms
+          <spanclassName ="{get Score Color(metrics.ttfb," { good: 800, poor: 1800 })}  />{metrics.ttfb.to Fixed(0)}ms
           </span>
         </div>
 
         {metrics.memory && (
-          <div className="pt-2border-tborder-gray-600" />
-            <div className="flexitems-centermb-1" />
-              <HardDrive className="w-3h-3mr-1" / />
-              <span className="text-gray-300"   />Memory</span>
+          <div className ="pt-2border-tborder-gray-600" />
+            <div className ="flexitems-centermb-1" />
+              <Hard Driveclass Name="w-3h-3mr-1" / />
+              <spanclassName ="text-gray-300"   />Memory</span>
             </div>
-            <div className="text-gray-400pl-4" />
+            <div className ="text-gray-400pl-4" />
               <div   />Used: {formatBytes(metrics.memory.usedJSHeapSize)}</div>
-              <div   />Total: {formatBytes(metrics.memory.totalJSHeapSize)}</div>
+              <div   />Total: {format Bytes(metrics.memory.totalJSHeapSize)}</div>
             </div>
           </div>
         )}
 
         {metrics.connection && (
-          <div className="pt-2border-tborder-gray-600" />
-            <div className="flexitems-centermb-1" />
-              <Wifi className="w-3h-3mr-1" / />
-              <span className="text-gray-300"   />Connection</span>
+          <div className ="pt-2border-tborder-gray-600" />
+            <div className ="flexitems-centermb-1" />
+              <Wificlass Name ="w-3h-3mr-1" / />
+              <spanclassName ="text-gray-300"   />Connection</span>
             </div>
-            <div className="text-gray-400pl-4" />
+            <div className ="text-gray-400pl-4" />
               <div   />Type: {metrics.connection.effectiveType}</div>
               <div   />Speed: {metrics.connection.downlink}Mbps</div>
               <div   />RTT: {metrics.connection.rtt}ms</div>
@@ -223,4 +222,4 @@ const PerformanceDashboard: React.FC = () => {
   );
 };
 
-export default PerformanceDashboard;
+export default Performance Dashboard;

@@ -4,10 +4,10 @@ import React from 'react';
  * Advanced Error Handler
  * Comprehensive error handling utilities for React applications
  */
- resetError: () => void }>
-    onError?: (error: AppError) => void
-  { hasError: boolean; error: AppError | null }
+ reset Error: () => void }>
+    on Error?: (error: AppError) => void
+  { hasError: boolean; error: App Error | null }
     super(props)
-    this.const state = { hasError: false, error: null }
+    this.conststate = { hasError: false, error: null }
   }
 ;

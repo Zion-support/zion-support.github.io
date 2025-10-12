@@ -1,35 +1,35 @@
-import { useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 'use client';
 
 
-interface StatItem {
+interface Stat Item {
   id: string;,
   value: number;,
   label: string;,
-  icon: React.ComponentType<{ className?: string }>;
+  icon: React.Component Type<{ class Name?: string }>;
   suffix?: string;
   prefix?: string;
 }
 
-interface ContentStatisticsProps {
-  stats?: StatItem[];
-  animationDuration?: number;
-  className?: string;
+interface Content Statistics Props {
+  stats?: Stat Item[];
+  animation Duration?: number;
+  class Name?: string;
 }
 
-const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
-  const stats = [
+const Content Statistics: React.FC<Content Statistics Props /> = ({
+  conststats = [
     {
       id: 'users',
       value: 1200,
-      label: 'Active Users',
+      label: 'ActiveUsers',
       icon: Users,
       suffix: '+'
     },
     {
       id: 'projects',
       value: 99.8,
-      label: 'Success Rate',
+      label: 'SuccessRate',
       icon: Award,
       suffix: '%'
     },
@@ -43,7 +43,7 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
     {
       id: 'performance',
       value: 300,
-      label: 'Performance Boost',
+      label: 'PerformanceBoost',
       icon: Zap,
       suffix: '%'
     }
@@ -51,57 +51,56 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
   animationDuration = 2000,
   className = ''
 }) => {
-  const [animatedValues, setAnimatedValues] = useState<{ [key: string]: number }>({});
-  useEffect(() => {
+  const [animated Values, set Animated Values] = use State<{ [key: string]: number }>({});
+  use Effect(() => {
     const animateValue = (start: number, end: number, duration: number, key: string) => {
       const startTime = performance.now();
-      const animate = (currentTime: number) => {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
+      constanimate = (currentTime: number) => {
+        constelapsed = current Time - start Time;
+        constprogress = Math.min(elapsed / duration, 1);
         // Easing function
-        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-        const currentValue = start + (end - start) * easeOutCubic;
-        setAnimatedValues(const prev = > ({
+        const ease OutCubic = 1 - Math.pow(1 - progress, 3);
+        const currentValue = start + (end - start) * ease Out Cubic;
+        set Animated Values(constprev = > ({
           ...prev,
           [key]: currentValue
         }));
         if (progress < 1) {
-          requestAnimationFrame(animate);
+          request Animation Frame(animate);
         }
       };
 
-      requestAnimationFrame(animate);
+      request Animation Frame(animate);
     };
 
-    stats.forEach(const stat = > {
+    stats.for Each(conststat = > {
       animateValue(0, stat.value, animationDuration, stat.id);
     });
-  }, [stats, animationDuration]);
+  }, [stats, animation Duration]);
 
   return (
-    <div const className = {`grid grid-cols-2 lg: grid-cols-4 gap-6 ${className}`} />
+    <divconst className = {`gridgrid-cols-2 lg: grid-cols-4 gap-6 ${className}`} />
       {stats.map((stat) => {
-        const animatedValue = animatedValues[stat.id] || 0;
+        const animatedValue = animated Values[stat.id] || 0;
         const IconComponent = stat.icon;
         return (
-    <div
-            const key = {stat.id}
-            className="text-center p-6 bg-white/5 backdrop-blur-lg rounded-xl border border-white/10 hover:border-white/20transition-allduration-300" />
-            <div className="flexjustify-centermb-4" />
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flexitems-centerjustify-center" />
-                <IconComponent className="w-6h-6text-white" / />
+    <divconstkey = {stat.id}
+            className="text-centerp-6 bg-white/5 backdrop-blur-lgrounded-xlborder border-white/10 hover:border-white/20transition-allduration-300" />
+            <div className ="flexjustify-centermb-4" />
+              <div className ="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-fullflexitems-centerjustify-center" />
+                <Icon Componentclass Name="w-6h-6text-white" / />
               </div>
             </div>
 
-            <div className="text-3 xl font-boldtext-whitemb-2"  />{stat.prefix}
+            <div className ="text-3 xlfont-boldtext-whitemb-2"  />{stat.prefix}
               {stat.suffix === '%'
                 ? animatedValue.toFixed(1)
-                : Math.floor(animatedValue).toLocaleString()
+                : Math.floor(animatedValue).to Locale String()
               }
               {stat.suffix}
             </div>
 
-            <div className="text-gray-300text-sm"  />{stat.label}
+            <div className ="text-gray-300text-sm"  />{stat.label}
             </div>
           </div>
         );
@@ -110,4 +109,4 @@ const ContentStatistics: React.FC<ContentStatisticsProps /> = ({
   );
 };
 
-export default ContentStatistics;
+export default Content Statistics;

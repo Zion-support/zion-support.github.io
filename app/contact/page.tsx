@@ -1,45 +1,41 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet} from 'react-helmet-async';
 
-const ContactPage: React.FC = () => {
+const Contact Page: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Contact - Zion Tech Group</title>
-        <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact us for consultations and support." />
+        <title>Contact - ZionTech Group</title>
+        <meta name ="description" content="Getin touchwith Zion Tech Groupfor AIand ITsolutions. Contactus forconsultations andsupport." />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Contact Us
+      <div className ="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className ="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+          <div className ="text-center">
+            <h1className ="text-4xlmd:text-6xlfont-boldtext-whitemb-6">
+              ContactUs
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Ready to transform your business? Get in touch with our team of experts.
+            <pclassName ="text-xltext-gray-300 mb-8 max-w-3xlmx-auto">
+              Readyto transformyour business? Getin touchwith ourteam ofexperts.
             </p>
-            <div className="max-w-md mx-auto">
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
+            <div className ="max-w-mdmx-auto">
+              <formclassName ="space-y-4">
+                <inputtype ="text"
+                  placeholder="YourName"
+                  className="w-fullpx-4 py-3 rounded-lgbg-gray-800 text-whiteborder border-gray-600 focus:border-cyan-400 focus:outline-none"
                 />
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
+                <inputtype ="email"
+                  placeholder="YourEmail"
+                  className="w-fullpx-4 py-3 rounded-lgbg-gray-800 text-whiteborder border-gray-600 focus:border-cyan-400 focus:outline-none"
                 />
-                <textarea
-                  placeholder="Your Message"
+                <textareaplaceholder ="YourMessage"
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-cyan-400 focus:outline-none"
+                  className="w-fullpx-4 py-3 rounded-lgbg-gray-800 text-whiteborder border-gray-600 focus:border-cyan-400 focus:outline-none"
                 />
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                <buttontype ="submit"
+                  className="w-fullbg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
                 >
-                  Send Message
+                  SendMessage
                 </button>
               </form>
             </div>
@@ -50,4 +46,4 @@ const ContactPage: React.FC = () => {
   );
 };
 
-export default ContactPage;
+export default Contact Page;

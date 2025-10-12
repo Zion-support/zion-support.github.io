@@ -1,23 +1,23 @@
-import { useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import {useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
 import {;
 'use client';
-  ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
-  BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, 
-  Settings, Heart, Eye, Mic, Workflow, Link as LinkIcon, Wifi, Package, 
-  TrendingUp, Calendar, ShoppingCart, Sparkles, Cpu, Globe, Database, 
-  Smartphone, Lock, Monitor, Server, Mail, Phone, MapPin, Clock
+  Arrow Right, Check Circle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, 
+  Bar Chart, File Text, Message Circle, Target, Check Square, Dollar Sign, Box, 
+  Settings, Heart, Eye, Mic, Workflow, Link as Link Icon, Wifi, Package, 
+  Trending Up, Calendar, Shopping Cart, Sparkles, Cpu, Globe, Database, 
+  Smartphone, Lock, Monitor, Server, Mail, Phone, Map Pin, Clock
 } from 'lucide-react';
-import { ArrowRight, ShoppingCart } from 'lucide-react';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, Link as LinkIcon, Package, TrendingUp, Calendar, Globe, Database, Monitor, Mail } from 'lucide-react';
+import {ArrowRight, ShoppingCart} from 'lucide-react';
+import {ArrowRight, CheckCircle, Star, Users, Zap, Shield, Cloud, Code, BarChart, FileText, MessageCircle, Target, CheckSquare, DollarSign, Box, Settings, LinkasLinkIcon, Package, TrendingUp, Calendar, Globe, Database, Monitor, Mail} from 'lucide-react';
 
-const MicroSaasPage: React.FC = () => {
+const Micro Saas Page: React.FC = () => {
 
-  useEffect(() => {
-    setIsVisible(true);
+  use Effect(() => {
+    set Is Visible(true);
   }, []);
 
-  const microSaasProducts = [
+  const micro SaasProducts = [
     {
       id: 'zion-analytics-pro',
       title: 'Zion Analytics Pro',
@@ -34,7 +34,7 @@ const MicroSaasPage: React.FC = () => {
         'Data visualization tools',
         'Export to multiple formats'
       ],
-      icon: BarChart,
+      icon: Bar Chart,
       color: 'from-blue-500 to-purple-500',
       category: 'Analytics',
       rating: 4.9,
@@ -57,7 +57,7 @@ const MicroSaasPage: React.FC = () => {
         'Live chat handoff',
         'Knowledge base management'
       ],
-      icon: MessageCircle,
+      icon: Message Circle,
       color: 'from-green-500 to-teal-500',
       category: 'Customer Support',
       rating: 4.8,
@@ -126,7 +126,7 @@ const MicroSaasPage: React.FC = () => {
         'Video creation tools',
         'Performance tracking'
       ],
-      icon: FileText,
+      icon: File Text,
       color: 'from-purple-500 to-pink-500',
       category: 'Content Creation',
       rating: 4.6,
@@ -218,7 +218,7 @@ const MicroSaasPage: React.FC = () => {
         'Progress reporting',
         'Mobile app'
       ],
-      icon: CheckSquare,
+      icon: Check Square,
       color: 'from-violet-500 to-purple-500',
       category: 'Project Management',
       rating: 4.8,
@@ -287,7 +287,7 @@ const MicroSaasPage: React.FC = () => {
         'Financial reporting',
         'Multi-currency support'
       ],
-      icon: DollarSign,
+      icon: Dollar Sign,
       color: 'from-green-500 to-emerald-500',
       category: 'Finance',
       rating: 4.8,
@@ -448,7 +448,7 @@ const MicroSaasPage: React.FC = () => {
         'Performance tracking',
         'Automated reports'
       ],
-      icon: TrendingUp,
+      icon: Trending Up,
       color: 'from-yellow-500 to-orange-500',
       category: 'Marketing',
       rating: 4.7,
@@ -494,7 +494,7 @@ const MicroSaasPage: React.FC = () => {
         'Legal insights',
         'Document management'
       ],
-      icon: FileText,
+      icon: File Text,
       color: 'from-violet-500 to-purple-500',
       category: 'Legal',
       rating: 4.8,
@@ -517,7 +517,7 @@ const MicroSaasPage: React.FC = () => {
         'Real-time analytics',
         'Export capabilities'
       ],
-      icon: CheckSquare,
+      icon: Check Square,
       color: 'from-pink-500 to-rose-500',
       category: 'Research',
       rating: 4.5,
@@ -540,7 +540,7 @@ const MicroSaasPage: React.FC = () => {
         'Reporting automation',
         'Multi-currency support'
       ],
-      icon: DollarSign,
+      icon: Dollar Sign,
       color: 'from-emerald-500 to-green-500',
       category: 'Finance',
       rating: 4.7,
@@ -701,7 +701,7 @@ const MicroSaasPage: React.FC = () => {
         'Integration capabilities',
         'Custom training'
       ],
-      icon: MessageCircle,
+      icon: Message Circle,
       color: 'from-green-500 to-teal-500',
       category: 'Customer Support',
       rating: 4.7,
@@ -747,7 +747,7 @@ const MicroSaasPage: React.FC = () => {
         'Search capabilities',
         'API integration'
       ],
-      icon: FileText,
+      icon: File Text,
       color: 'from-gray-500 to-slate-500',
       category: 'Document Management',
       rating: 4.7,
@@ -755,43 +755,42 @@ const MicroSaasPage: React.FC = () => {
       popular: false
     }
   ];
-  const categories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance', 'Video Production', 'Translation', 'Development', 'Productivity', 'Research', 'HR', 'IoT', 'Sustainability', 'Supply Chain', 'Legal', 'Document Management'];
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  constcategories = ['All', 'Analytics', 'Customer Support', 'Security', 'Backup & Recovery', 'Content Creation', 'CRM', 'Data Management', 'Marketing', 'Project Management', 'Email Marketing', 'Inventory', 'Finance', 'Video Production', 'Translation', 'Development', 'Productivity', 'Research', 'HR', 'IoT', 'Sustainability', 'Supply Chain', 'Legal', 'Document Management'];
+  const [selected Category, set Selected Category] = use State('All');
 
   const filteredProducts = selectedCategory === 'All' 
-    ? microSaasProducts 
-    : microSaasProducts.filter(product => product.category === selectedCategory);
+    ? micro Saas Products 
+    : micro Saas Products.filter(product => product.category === selectedCategory);
   return (
     <>
       <Helmet />
-        <title   />Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
-        <meta const name = "description" content="Discover our comprehensive suite of micro SAAS products designed to solve specific business challenges. From AI analytics to cybersecurity, we have the tools you need to succeed." / / />
-        <meta name="keywords" content="micro saas, business software, AI tools, analytics, CRM, project management, cybersecurity, automation" / / />
+        <title   />MicroSAAS Products - ZionTech Group | AI- PoweredBusiness Solutions</title>
+        <metaconstname = "description" content="Discoverour comprehensivesuite ofmicro SAASproducts designedto solvespecific businesschallenges. From AI analyticsto cybersecurity, wehave thetools youneed tosucceed." / / />
+        <meta name ="keywords" content="microsaas, businesssoftware, AItools, analytics, CRM, projectmanagement, cybersecurity, automation" / / />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
-        {/* Hero Section */}
-        <section className="relative overflow-hiddenpt-20pb-16" />
-          <div className="absoluteinset-0opacity-20" / />
-          <div className="relative max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
-            <div className="text-center" />
-              <h1 className="{`text-4" xl md: text-6 xl font-bold text-white mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                Micro SAAS
-                <span className="block bg-gradient-to-r from-purple-400 to-pink-400bg-clip-texttext-transparent"  />Business Solutions
+      <div className ="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
+        {/* HeroSection */}
+        <sectionclassName ="relativeoverflow-hiddenpt-20pb-16" />
+          <div className ="absoluteinset-0opacity-20" / />
+          <div className ="relativemax-w-7 xlmx-autopx-4sm:px-6lg:px-8" />
+            <div className ="text-center" />
+              <h1className ="{`text-4" xlmd: text-6 xlfont-boldtext-whitemb-6 transition-allduration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+                MicroSAAS
+                <spanclassName ="blockbg-gradient-to-rfrom-purple-400 to-pink-400bg-clip-texttext-transparent"  />BusinessSolutions
                 </span>
               </h1>
-              <p className="{`text-xl" text-gray-300 mb-8 max-w-3 xl mx-auto transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                Powerful, ready-to-use software solutions designed to solve specific business challenges. 
-                No complex setup, no lengthy implementations - just instant value.
+              <pclassName ="{`text-xl" text-gray-300 mb-8 max-w-3 xlmx-autotransition-allduration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+                Powerful, ready-to-usesoftware solutionsdesigned tosolve specificbusiness challenges. 
+                Nocomplex setup, nolengthy implementations - justinstant value.
               </p>
-              <div className="{`flex" flex-col sm: flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
-                <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
-                  Start Free Trial
-                  <ArrowRight className="ml-2h-5w-5" />
+              <div className ="{`flex" flex-colsm: flex-rowgap-4 justify-centertransition-allduration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} />
+                <Link to ="/contact" className="inline-flexitems-centerpx-8 py-4 bg-gradient-to-rfrom-purple-600 to-pink-600 text-whitefont-semiboldrounded-lghover:from-purple-700 hover:to-pink-700 transition-allduration-300 transformhover:scale-105shadow-lghover:shadow-xl" />
+                  StartFree Trial
+                  <Arrow Rightclass Name="ml-2h-5w-5" />
                 </Link>
-                <a
-                  href="tel:+13024640950"
-                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
+                <ahref ="tel:+13024640950"
+                  className="inline-flexitems-centerpx-8 py-4 border-2 border-purple-400 text-purple-400 font-semiboldrounded-lghover:bg-purple-400 hover:text-whitetransition-allduration-300transformhover:scale-105" />
                   Call +1 302 464 0950
                 </a>
               </div>
@@ -799,14 +798,13 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Category Filter */}
-        <section className="py-8bg-gray-900/50" />
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
-            <div className="flex flex-wrapjustify-centergap-4" />
+        {/* CategoryFilter */}
+        <sectionclassName ="py-8bg-gray-900/50" />
+          <div className ="max-w-7 xlmx-autopx-4sm:px-6lg:px-8" />
+            <div className ="flexflex-wrapjustify-centergap-4" />
               {categories.map((category) => (
-                <button
-                  key="{category}"
-                  onClick="{()" =  />setSelectedCategory(category)}
+                <buttonkey ="{category}"
+                  onClick ="{()" =  />set Selected Category(category)}
                   className="{`px-6" py-3 rounded-lg font-semibold transition-all duration-300 ${
                     selectedCategory === category
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
@@ -821,71 +819,69 @@ const MicroSaasPage: React.FC = () => {
         </section>
 
         {/* Products Grid */}
-        <section className="py-16" />
-          <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8" />
-              {filteredProducts.map((product, index) => (
-                <div
-                  key="{product.id}"
-                  className="{`group" relative bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:scale-105 border border-gray-700 hover:border-purple-500 ${
+        <sectionclassName ="py-16" />
+          <div className ="max-w-7 xl mx-auto px-4sm:px-6lg:px-8" />
+            <div className ="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3xl:grid-cols-4gap-8" />
+              {filtered Products.map((product, index) => (
+                <divkey ="{product.id}"
+                  className="{`group" relativebg-gray-800 rounded-xlp-6 hover:bg-gray-700 transition-allduration-300 transformhover:scale-105 borderborder-gray-700 hover:border-purple-500 ${
                     product.popular ? 'ring-2 ring-purple-500' : ''
                   }`} />
                   {product.popular && (
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2" />
-                      <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
+                    <div className ="absolute -top-3 left-1/2transform-translate-x-1/2" />
+                      <spanclassName ="bg-gradient-to-rfrom-purple-600 to-pink-600 text-whitepx-4 py-1 rounded-fulltext-smfont-semibold"  />MostPopular
                       </span>
                     </div>
                   )}
                   
-                  <div className="text-centermb-6" />
-                    <div className="{`inline-flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl mb-4`} />
-                      <product.icon className="h-8w-8text-white" / />
+                  <div className ="text-centermb-6" />
+                    <div className ="{`inline-flex" items-center justify-center w-16 h-16 bg-gradient-to-r ${product.color} rounded-xl mb-4`} />
+                      <product.iconclassName ="h-8w-8text-white" / />
                     </div>
-                    <h3 className="text-xl font-boldtext-whitemb-2"   />{product.title}</h3>
-                    <p className="text-gray-300text-smmb-4" />{product.description}</p>
-                    <div className="flex items-center justify-centerspace-x-2mb-4" />
-                      <div className="flexitems-center" />
+                    <h3className ="text-xl font-boldtext-whitemb-2"   />{product.title}</h3>
+                    <pclassName ="text-gray-300text-smmb-4" />{product.description}</p>
+                    <div className ="flex items-center justify-centerspace-x-2mb-4" />
+                      <div className ="flexitems-center" />
                         {[...Array(5)].map((_, i) => (
-                          <Star
-                            key="{i}"
+                          <Starkey ="{i}"
                             className="{`h-4" w-4 ${
                               i < Math.floor(product.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'
                             }`}
                           / />
                         ))}
                       </div>
-                      <span className="text-smtext-gray-400"   />({product.reviews} reviews)</span>
+                      <spanclassName ="text-smtext-gray-400"   />({product.reviews} reviews)</span>
                     </div>
                   </div>
 
-                  <div className="text-centermb-6" />
-                    <div className="flex items-center justify-centerspace-x-2mb-2" />
-                      <span className="text-3 xlfont-boldtext-white"   />{product.price}</span>
-                      <span className="text-lgtext-gray-400line-through"   />{product.originalPrice}</span>
+                  <div className ="text-centermb-6" />
+                    <div className ="flex items-center justify-centerspace-x-2mb-2" />
+                      <spanclassName ="text-3 xlfont-boldtext-white"   />{product.price}</span>
+                      <spanclassName ="text-lgtext-gray-400line-through"   />{product.original Price}</span>
                     </div>
-                    <span className="text-smtext-green-400font-semibold"  />Save {Math.round((1 - parseInt(product.price.replace('$', '')) / parseInt(product.originalPrice.replace('$', ''))) * 100)}%
+                    <spanclassName ="text-smtext-green-400font-semibold"  />Save {Math.round((1 - parseInt(product.price.replace('$', '')) / parse Int(product.originalPrice.replace('$', ''))) * 100)}%
                     </span>
                   </div>
 
-                  <div className="space-y-3mb-6" />
+                  <div className ="space-y-3mb-6" />
                     {product.features.slice(0, 4).map((feature, idx) => (
-                      <div key="{idx}" className="flex items-centertext-smtext-gray-300" />
-                        <CheckCircle className="h-4 w-4 text-green-400mr-3flex-shrink-0" / />
+                      <divkey ="{idx}" className="flexitems-centertext-smtext-gray-300" />
+                        <Check Circleclass Name="h-4 w-4 text-green-400mr-3flex-shrink-0" / />
                         <span   />{feature}</span>
                       </div>
                     ))}
                     {product.features.length > 4 && (
-                      <div className="text-smtext-gray-400text-center"  />+{product.features.length - 4} more features
+                      <div className ="text-smtext-gray-400text-center"  />+{product.features.length - 4} morefeatures
                       </div>
                     )}
                   </div>
 
-                  <div className="space-y-3" />
-                    <Link to="{`/${product.id}`}" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
+                  <div className ="space-y-3" />
+                    <Link to ="{`/${product.id}`}" className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300transformhover:scale-105" />
                       View Details
-                      <ArrowRight className="ml-2h-4w-4" />
+                      <Arrow Rightclass Name="ml-2h-4w-4" />
                     </Link>
-                    <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Start Free Trial
+                    <Link to ="/contact" className="w-full inline-flex items-center justify-center px-4 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-whitetransition-allduration-300">Start Free Trial
                     </Link>
                   </div>
                 </div>
@@ -895,26 +891,25 @@ const MicroSaasPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-brfrom-gray-900to-purple-900" />
-          <div className="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center" />
-            <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Ready to Transform Your Business?
+        <sectionclassName ="py-20 bg-gradient-to-brfrom-gray-900to-purple-900" />
+          <div className ="max-w-7 xl mx-auto px-4 sm:px-6lg:px-8text-center" />
+            <h2className ="text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
+            <pclassName ="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
               Join thousands of businesses already using our micro SAAS solutions to streamline operations, 
               increase productivity, and drive growth.
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center" />
-              <Link to="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
+            <div className ="flex flex-col sm:flex-rowgap-4justify-center" />
+              <Link to ="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-xl" />
                 Get Started Today
-                <ArrowRight className="ml-2h-5w-5" />
+                <Arrow Rightclass Name="ml-2h-5w-5" />
               </Link>
-              <a
-                href="tel:+13024640950"
+              <ahref ="tel:+13024640950"
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300transformhover:scale-105" />
                 Call +1 302 464 0950
               </a>
             </div>
-            <div className="mt-8text-gray-400" />
+            <div className ="mt-8text-gray-400" />
               <p />Email: kleber@ziontechgroup.com</p>
               <p />Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
@@ -925,4 +920,4 @@ const MicroSaasPage: React.FC = () => {
   );
 };
 
-export default MicroSaasPage;
+export default Micro Saas Page;

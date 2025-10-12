@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-const MicroSaasServicesPage: React.FC = () => {
-  const services = [
+const Micro Saas Services Page: React.FC = () => {
+  constservices = [
     {
 
   return (

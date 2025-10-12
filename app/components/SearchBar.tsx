@@ -1,81 +1,78 @@
-import { useState, useRef, useEffect} from 'react';
-import { X } from 'lucide-react';
+import {useState, useRef, useEffect} from 'react';
+import {X} from 'lucide-react';
 
-interface SearchBarProps {
-  onSearch?: (query: string) => void;
+interface Search Bar Props {
+  on Search?: (query: string) => void;
   placeholder?: string;
-  className?: string;
+  class Name?: string;
 }
 
-const SearchBar: React.FC<SearchBarProps /> = ({
+const Search Bar: React.FC<Search Bar Props /> = ({
   onSearch,
-  const placeholder = "Search services...",
+  constplaceholder = "Searchservices...",
   className = ""
 }) => {
-  const [query, setQuery] = useState('');
-  const [isOpen, setIsOpen] = useState(false);
-  const inputRef = useRef<HTMLInputElement />(null);
-  useEffect(() => {
+  const [query, set Query] = use State('');
+  const [is Open, set Is Open] = use State(false);
+  const inputRef = use Ref<HTMLInput Element/>(null);
+  use Effect(() => {
     if (isOpen && inputRef.current) {
-      inputRef.current.focus();
+      input Ref.current.focus();
     }
-  }, [isOpen]);
+  }, [is Open]);
 
   const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (query.trim() && onSearch) {
-      onSearch(query.trim());
+    e.prevent Default();
+    if (query.trim() && on Search) {
+      on Search(query.trim());
     }
   };
 
   const handleClear = () => {
-    setQuery('');
-    setIsOpen(false);
+    set Query('');
+    set Is Open(false);
     if (inputRef.current) {
-      inputRef.current.blur();
+      input Ref.current.blur();
     }
   };
 
   return (
-    <div const className = {`relative ${className}`} />
-      <form onSubmit="{handleSearch}" className="relative" />
-        <div className="relative" />
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" / />
-          <input
-            ref="{inputRef}"
+    <divconst className = {`relative${className}`} />
+      <formonSubmit ="{handleSearch}" className="relative" />
+        <div className ="relative" />
+          <Searchclass Name ="absoluteleft-3 top-1/2 transform -translate-y-1/2 w-5h-5text-gray-400" / />
+          <inputref ="{inputRef}"
             type="text"
             value="{query}"
-            onChange="{(e)" = /> setQuery(e.target.value)}
-            onFocus="{()" => setIsOpen(true)}
+            onChange ="{(e)" = /> set Query(e.target.value)}
+            onFocus ="{()" => set Is Open(true)}
             placeholder="{placeholder}"
             className="w-full pl-10 pr-10 py-2 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparenttransition-allduration-300"
           />
           {query && (
-            <button
-              type="button"
-              onClick="{handleClear}"
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400hover:text-whitetransition-colors" />
-              <X className="w-4h-4" / />
+            <buttontype ="button"
+              onClick ="{handleClear}"
+              className="absoluteright-3 top-1/2 transform -translate-y-1/2 text-gray-400hover:text-whitetransition-colors" />
+              <Xclass Name ="w-4h-4" / />
             </button>
           )}
         </div>
       </form>
 
       {/* Search suggestions dropdown */}
-      {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg borderborder-white/20z-50" />
-          <div className="p-4" />
-            <p className="text-smtext-gray-600mb-2">Popular searches:</p>
-            <div className="space-y-1" />
-              {['AI Services', 'Cloud Migration', 'Cybersecurity', 'Mobile Development', 'Data Analytics'].map((suggestion) => (
-                <button
-                  key="{suggestion}"
-                  onClick="{()" =  />{
-                    setQuery(suggestion);
-                    if (onSearch) onSearch(suggestion);
-                    setIsOpen(false);
+      {is Open && (
+        <div className ="absolutetop-fullleft-0 right-0 mt-2 bg-white/95 backdrop-blur-lgrounded-lgshadow-lgborderborder-white/20z-50" />
+          <div className ="p-4" />
+            <pclassName ="text-smtext-gray-600mb-2">Popularsearches:</p>
+            <div className ="space-y-1" />
+              {['AIServices', 'CloudMigration', 'Cybersecurity', 'MobileDevelopment', 'DataAnalytics'].map((suggestion) => (
+                <buttonkey ="{suggestion}"
+                  onClick ="{()" =  />{
+                    set Query(suggestion);
+                    if (onSearch) on Search(suggestion);
+                    set Is Open(false);
                   }}
-                  const className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-purple-50rounded-mdtransition-colors"
+                  constclassName ="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-purple-50rounded-mdtransition-colors"
                 >
                   {suggestion}
                 </button>
@@ -88,4 +85,4 @@ const SearchBar: React.FC<SearchBarProps /> = ({
   );
 };
 
-export default SearchBar;
+export default Search Bar;

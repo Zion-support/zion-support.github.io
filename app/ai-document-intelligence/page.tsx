@@ -1,34 +1,34 @@
-import React from \'react\';
+import React from 'react';
 'use client';
 
-const AiDocumentIntelligencePage: React.FC = () => {
+const Ai Document Intelligence Page: React.FC = () => {
   return (
     <>
       <Helmet />
-        <title>Ai Document Intelligence - Zion Tech Group</title>
-        <meta name="description" content="Ai Document Intelligence services by Zion Tech Group. Professional AI and IT solutions." / / />
-        <meta name="keywords" content="ai-document-intelligence, AI solutions, IT services" / / />
+        <title>AiDocument Intelligence - ZionTech Group</title>
+        <meta name ="description" content="Ai Document Intelligenceservices by Zion Tech Group. Professional AI and IT solutions." / / />
+        <meta name ="keywords" content="ai-document-intelligence, AIsolutions, ITservices" / / />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
-        <div className="container mx-autopx-4py-16" />
-          <div className="text-centermb-16" />
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Ai Document Intelligence
+      <div className ="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
+        <div className ="containermx-autopx-4py-16" />
+          <div className ="text-centermb-16" />
+            <h1className ="text-4 xlmd:text-6 xlfont-boldtext-whitemb-6" />
+              <spanclassName ="bg-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"  />AiDocument Intelligence
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-              Professional ai document intelligence services by Zion Tech Group.
+            <pclassName ="text-xltext-gray-300 max-w-3xlmx-auto" />
+              Professionalai documentintelligence servicesby ZionTech Group.
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center" />
-            <h2 className="text-2 xl font-boldtext-whitemb-4"  >Coming Soon</h2>
-            <p className="text-gray-300mb-6" />
-              We're working on bringing you comprehensive ai document intelligence solutions. 
-              Contact us to learn more about our services.
+          <div className ="bg-gradient-to-brfrom-purple-900/50 to-blue-900/50 backdrop-blur-smborder border-purple-500/20 rounded-xlp-8text-center" />
+            <h2className ="text-2 xlfont-boldtext-whitemb-4"  >ComingSoon</h2>
+            <pclassName ="text-gray-300mb-6" />
+              We'reworking onbringing youcomprehensive aidocument intelligencesolutions. 
+              Contactus tolearn moreabout ourservices.
             </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300"  />Contact Us
+            <buttonclassName ="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-600transition-allduration-300"  />ContactUs
             </button>
           </div>
         </div>
@@ -37,4 +37,4 @@ const AiDocumentIntelligencePage: React.FC = () => {
   );
 };
 
-export default AiDocumentIntelligencePage;
+export default Ai Document Intelligence Page;

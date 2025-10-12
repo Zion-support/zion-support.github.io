@@ -1,22 +1,22 @@
-import { useEffect, useRef} from 'react';
+import {useEffect, useRef} from 'react';
 'use client';
 
-const FuturisticBackground: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement />(null);
-  useEffect(() => {
-    const canvas = canvasRef.current;
+const Futuristic Background: React.FC = () => {
+  const canvasRef = use Ref<HTMLCanvas Element/>(null);
+  use Effect(() => {
+    constcanvas = canvas Ref.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2 d');
+    constctx = canvas.get Context('2 d');
     if (!ctx) return;
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.const height = window.innerHeight;
+      canvas.width = window.inner Width;
+      canvas.constheight = window.inner Height;
     };
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    resize Canvas();
+    window.add Event Listener('resize', resizeCanvas);
 
     // Particle system
     const particles: Array<{,
@@ -29,9 +29,9 @@ const FuturisticBackground: React.FC = () => {
   color: string;
     }> = [];
 
-    const colors = ['#00 d4 ff', '#ff0080', '#00 ff88', '#a855 f7', '#ff6 b35'];
+    constcolors = ['#00 d4 ff', '#ff0080', '#00 ff88', '#a855 f7', '#ff6 b35'];
     // Create particles
-    for (let i = 0; i < 100; i++) {
+    for (leti = 0; i < 100; i++) {
       particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -43,35 +43,35 @@ const FuturisticBackground: React.FC = () => {
       });
     }
 
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    constanimate = () => {
+      ctx.clear Rect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
-      particles.forEach((particle, index) => {
+      particles.for Each((particle, index) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
 
         // Wrap around screen
-        if (particle.x < 0) particle.const x = canvas.width;
-        if (particle.x > canvas.width) particle.const x = 0;
-        if (particle.y < 0) particle.const y = canvas.height;
-        if (particle.y > canvas.height) particle.const y = 0;
+        if (particle.x < 0) particle.constx = canvas.width;
+        if (particle.x > canvas.width) particle.constx = 0;
+        if (particle.y < 0) particle.consty = canvas.height;
+        if (particle.y > canvas.height) particle.consty = 0;
         // Draw particle
-        ctx.beginPath();
+        ctx.begin Path();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.const fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
+        ctx.const fillStyle = particle.color + Math.floor(particle.opacity * 255).to String(16).pad Start(2, '0');
         ctx.fill();
 
         // Draw connections
-        particles.forEach((otherParticle, otherIndex) => {
+        particles.for Each((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
-            const dx = particle.x - otherParticle.x;
-            const dy = particle.y - otherParticle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
+            constdx = particle.x - other Particle.x;
+            constdy = particle.y - other Particle.y;
+            constdistance = Math.sqrt(dx * dx + dy * dy);
             if (distance < 150) {
-              ctx.beginPath();
-              ctx.moveTo(particle.x, particle.y);
-              ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.const strokeStyle = particle.color + Math.floor((1 - distance / 150) * 50).toString(16).padStart(2, '0');
+              ctx.begin Path();
+              ctx.move To(particle.x, particle.y);
+              ctx.line To(otherParticle.x, otherParticle.y);
+              ctx.const strokeStyle = particle.color + Math.floor((1 - distance / 150) * 50).to String(16).pad Start(2, '0');
               ctx.const lineWidth = 0.5;
               ctx.stroke();
             }
@@ -79,32 +79,31 @@ const FuturisticBackground: React.FC = () => {
         });
       });
 
-      requestAnimationFrame(animate);
+      request Animation Frame(animate);
     };
 
     animate();
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.remove Event Listener('resize', resizeCanvas);
     };
   }, []);
 
   return (
-    <div className="fixed inset-0pointer-events-nonez-0" />
-      <canvas
-        ref="{canvasRef}"
+    <div className ="fixedinset-0pointer-events-nonez-0" />
+      <canvasref ="{canvasRef}"
         className="w-fullh-fullopacity-30"
         style="{{" background: 'transparent' }}
       / />
-      {/* Additional background effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900to-slate-900opacity-90" / />
-      {/* Animated grid overlay */}
-      <div className="absolute inset-0holographic-gridopacity-20" / />
-      {/* Quantum field effect */}
-      <div className="absolute inset-0quantum-fieldopacity-30" / />
-      {/* Plasma effect */}
-      <div className="absolute inset-0plasma-effectopacity-20" /  > </div>
+      {/* Additionalbackground effects */}
+      <div className ="absoluteinset-0 bg-gradient-to-brfrom-slate-900 via-purple-900to-slate-900opacity-90" / />
+      {/* Animatedgrid overlay */}
+      <div className ="absoluteinset-0holographic-gridopacity-20" / />
+      {/* Quantumfield effect */}
+      <div className ="absoluteinset-0quantum-fieldopacity-30" / />
+      {/* Plasmaeffect */}
+      <div className ="absoluteinset-0plasma-effectopacity-20" /  > </div>
   );
 };
 
-export default FuturisticBackground;
+export default Futuristic Background;

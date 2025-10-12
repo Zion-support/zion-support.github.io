@@ -1,14 +1,14 @@
-import React from \'react\';
+import React from 'react';
 
-interface LoadingProps {
+interface Loading Props {
   size?: 'sm' | 'md' | 'lg'
   text?: string
-  fullScreen?: boolean
+  full Screen?: boolean
   color?: string
 }
 
-const EnhancedLoading: React.FC<LoadingProps /> = ({
-  const size = 'md',
+const Enhanced Loading: React.FC<Loading Props/> = ({
+  constsize = 'md',
   text = 'Loading...',
   fullScreen = false,
   color = 'cyan'
@@ -27,11 +27,11 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
     green: 'border-green-400'
   }
 
-  const spinner = (
-    <div className="flex flex-col items-center justify-centerspace-y-4" />
-      <div className="{`${sizeClasses[size]}" ${colorClasses[color as keyof typeof, colorClasses]} border-2 border-t-transparent rounded-full animate-spin`} / />
+  constspinner = (
+    <div className ="flexflex-colitems-centerjustify-centerspace-y-4" />
+      <div className ="{`${sizeClasses[size]}" ${colorClasses[coloras keyoftypeof, colorClasses]} border-2 border-t-transparentrounded-fullanimate-spin`} / />
       {text && (
-        <div className="text-sm text-gray-300animate-pulse"  />{text}
+        <div className ="text-smtext-gray-300animate-pulse"  />{text}
         </div>
       )}
     </div>
@@ -39,7 +39,7 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
 
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 bg-gray-900 bg-opacity-90 flex items-center justify-centerz-50"  />{spinner}
+      <div className ="fixedinset-0 bg-gray-900 bg-opacity-90 flexitems-centerjustify-centerz-50"  />{spinner}
       </div>
     )
   }
@@ -47,4 +47,4 @@ const EnhancedLoading: React.FC<LoadingProps /> = ({
   return spinner
 }
 
-export default EnhancedLoading;
+export default Enhanced Loading;

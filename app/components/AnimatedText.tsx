@@ -1,70 +1,70 @@
-import { useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 'use client';
 
 
-interface AnimatedTextProps {
+interface Animated Text Props {
   text: string;
-  className?: string;
+  class Name?: string;
   delay?: number;
   duration?: number;
   type?: 'fade' | 'slide' | 'glow' | 'typing';
 }
 
-const AnimatedText: React.FC<AnimatedTextProps /> = ({
+const Animated Text: React.FC<Animated Text Props /> = ({
   text,
-  const className = '',
+  constclassName = '',
   delay = 0,
   // duration = 1000,
   type = 'fade'
 }) => {
-  const [displayText, setDisplayText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [display Text, set Display Text] = use State('');
+  const [current Index, set Current Index] = use State(0);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
+  use Effect(() => {
+    consttimer = set Timeout(() => {
+      set Is Visible(true);
     }, delay);
 
-    return () => clearTimeout(timer);
+    return () => clear Timeout(timer);
   }, [delay]);
 
-  useEffect(() => {
-    if (const type = == 'typing' && isVisible) {
+  use Effect(() => {
+    if (consttype = == 'typing' && isVisible) {
       if (currentIndex < text.length) {
-        const timer = setTimeout(() => {
-          setDisplayText(text.slice(0, currentIndex + 1));
-          setCurrentIndex(currentIndex + 1);
+        consttimer = set Timeout(() => {
+          set Display Text(text.slice(0, currentIndex + 1));
+          set Current Index(currentIndex + 1);
         }, 50);
-        return () => clearTimeout(timer);
+        return () => clear Timeout(timer);
       }
     } else if (isVisible) {
-      setDisplayText(text);
+      set Display Text(text);
     }
-  }, [isVisible, currentIndex, text, type]);
+  }, [is Visible, current Index, text, type]);
 
-  const getAnimationClasses = () => {
+  const get AnimationClasses = () => {
     const baseClasses = 'transition-all duration-1000';
     switch (type) {
       case 'fade':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
+        return `${base Classes} ${is Visible ? 'opacity-100' : 'opacity-0'}`;
       case 'slide':
-        return `${baseClasses} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`;
+        return `${base Classes} ${is Visible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`;
       case 'glow':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'} ${isVisible ? 'drop-shadow-[0 _0 _10 px_rgba(59,130,246,0.5)]' : ''}`;
+        return `${base Classes} ${is Visible ? 'opacity-100' : 'opacity-0'} ${is Visible ? 'drop-shadow-[0 _0 _10 px_rgba(59,130,246,0.5)]' : ''}`;
       case 'typing':
-        return `${baseClasses} ${isVisible ? 'opacity-100' : 'opacity-0'}`;
-      default: return baseClasses;
+        return `${base Classes} ${is Visible ? 'opacity-100' : 'opacity-0'}`;
+      default: return base Classes;
     }
   };
 
   return (
-    <span const className = {`${getAnimationClasses()} ${className}`} />
-      {type === 'typing' ? displayText : text}
-      {type === 'typing' && currentIndex < text.length && (
-        <span className="animate-pulse"  >|</span>
+    <spanconst className = {`${getAnimation Classes()} ${class Name}`} />
+      {type === 'typing' ? displayText: text}
+      {type === 'typing' && current Index < text.length && (
+        <spanclassName ="animate-pulse"  >|</span>
       )}
     </span>
   );
 };
 
-export default AnimatedText;
+export default Animated Text;

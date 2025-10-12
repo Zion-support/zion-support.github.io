@@ -1,15 +1,14 @@
 import React from 'react';
 'use client';
 
-const SkipLink: React.FC = () => {
+const Skip Link: React.FC = () => {
   return (
-    <a
-      href="#main-content"
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded-lg z-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
+    <ahref ="#main-content"
+      className="sr-onlyfocus:not-sr-onlyfocus:absolutefocus:top-4 focus:left-4 bg-purple-600 text-whitepx-4 py-2 rounded-lgz-50 transition-allduration-200 focus:outline-nonefocus:ring-2 focus:ring-purple-500"
     >
-      Skip to main content
+      Skipto maincontent
     </a>
   );
 };
 
-export default SkipLink;
+export default Skip Link;

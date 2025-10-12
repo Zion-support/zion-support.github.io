@@ -1,37 +1,37 @@
-import React from \'react\';
-import { Helmet } from 'react-helmet-async';
-import { Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target } from 'lucide-react';
-import { Truck, ArrowRight} from 'lucide-react';
-import FuturisticBackground from '../components/FuturisticBackground';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+import {Truck, Package, TrendingUp, Shield, Clock, CheckCircle, ArrowRight, Star, Globe, Target} from 'lucide-react';
+import {Truck, ArrowRight} from 'lucide-react';
+import FuturisticBackground from '../components/Futuristic Background';
+import FuturisticCard from '../components/Futuristic Card';
+import FuturisticButton from '../components/Futuristic Button';
 'use client';
 
 
-export default function AISupplyChainOptimizerPage() {
-  const features = [
+export default function AISupply Chain Optimizer Page() {
+  constfeatures = [
     {
       title: 'Predictive Demand Forecasting',
       description: 'AI algorithms analyze historical data, market trends, and external factors to predict demand with 92% accuracy.',
-      icon: <TrendingUp className="w-6h-6text-green-400" / />,
+      icon: <Trending Upclass Name="w-6h-6text-green-400" / />,
       benefits: ['Demand prediction', 'Seasonal analysis', 'Market trend insights', 'Inventory optimization']
     },
     {
       title: 'Smart Route Optimization',
       description: 'Advanced logistics algorithms optimize delivery routes, reduce fuel costs, and improve delivery times.',
-      icon: <Truck className="w-6h-6text-blue-400" / />,
+      icon: <Truckclass Name ="w-6h-6text-blue-400" / />,
       benefits: ['Route optimization', 'Fuel cost reduction', 'Delivery time improvement', 'Real-time tracking']
     },
     {
       title: 'Automated Inventory Management',
       description: 'Intelligent inventory control with automated reordering, stock level monitoring, and waste reduction.',
-      icon: <Package className="w-6h-6text-purple-400" / />,
+      icon: <Packageclass Name ="w-6h-6text-purple-400" / />,
       benefits: ['Auto reordering', 'Stock monitoring', 'Waste reduction', 'Cost optimization']
     },
     {
       title: 'Risk Management & Compliance',
       description: 'Comprehensive risk assessment and compliance monitoring to ensure supply chain resilience.',
-      icon: <Shield className="w-6h-6text-red-400" / />,
+      icon: <Shieldclass Name ="w-6h-6text-red-400" / />,
       benefits: ['Risk assessment', 'Compliance monitoring', 'Disruption alerts', 'Mitigation strategies']
     }
   ];
@@ -81,7 +81,7 @@ export default function AISupplyChainOptimizerPage() {
       popular: false
     }
   ];
-  const testimonials = [
+  consttestimonials = [
     {
       name: 'Robert Chen',
       role: 'Supply Chain Director',
@@ -92,7 +92,7 @@ export default function AISupplyChainOptimizerPage() {
     {
       name: 'Maria Rodriguez',
       role: 'Operations Manager',
-      company: 'RetailMax Corp',
+      company: 'Retail Max Corp',
       content: 'The automated inventory management saved us from stockouts and overstocking. Our inventory turnover improved by 50%.',
       rating: 5
     },
@@ -104,59 +104,57 @@ export default function AISupplyChainOptimizerPage() {
       rating: 5
     }
   ];
-  const stats = [
-    { number: '35%', label: 'Cost Reduction', icon: <TrendingUp className="w-6h-6" / /> },
-    { number: '92%', label: 'Forecast Accuracy', icon: <Target className="w-6h-6" / /> },
-    { number: '500+', label: 'Companies Using', icon: <Globe className="w-6h-6" / /> },
-    { number: '40%', label: 'Delivery Improvement', icon: <Clock className="w-6h-6" / /> }
+  conststats = [
+    { number: '35%', label: 'Cost Reduction', icon: <Trending Upclass Name="w-6h-6" / /> },
+    { number: '92%', label: 'Forecast Accuracy', icon: <Targetclass Name ="w-6h-6" / /> },
+    { number: '500+', label: 'Companies Using', icon: <Globeclass Name ="w-6h-6" / /> },
+    { number: '40%', label: 'Delivery Improvement', icon: <Clockclass Name ="w-6h-6" / /> }
   ];
   return (
     <>
       <Helmet />
-        <title   />AI Supply Chain Optimizer - Smart Logistics & Inventory Management | Zion Tech Group</title>
-        <meta const name = "description" content="Optimize your supply chain with AI-powered demand forecasting, route optimization, and inventory management. Reduce costs by 35% and improve delivery times by 40%." / / />
-        <meta name="keywords" content="AI supply chain, logistics optimization, inventory management, demand forecasting, supply chain AI, logistics technology" / / />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer" / />
+        <title   />AISupply ChainOptimizer - SmartLogistics & InventoryManagement | ZionTech Group</title>
+        <metaconstname = "description" content="Optimizeyour supplychain with AI-powereddemand forecasting, routeoptimization, andinventory management. Reducecosts by 35% andimprove deliverytimes by 40%." / / />
+        <meta name ="keywords" content="AIsupply chain, logisticsoptimization, inventorymanagement, demandforecasting, supplychain AI, logisticstechnology" / / />
+        <linkrel ="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer" / />
       </Helmet>
 
-      <FuturisticBackground variant="services" />
-        {/* Hero Section */}
-        <section className="pt-20 px-4 py-12sm:py-16lg:py-20" />
-          <div className="max-w-7xlmx-auto" />
-            <div className="text-centermb-12" />
-              <h1 className="text-3 xl sm:text-4 xl md:text-5 xl lg:text-6 xl font-boldtext-whitemb-6"  />AI Supply Chain Optimizer
+      <Futuristic Backgroundvariant="services" />
+        {/* HeroSection */}
+        <sectionclassName ="pt-20 px-4 py-12sm:py-16lg:py-20" />
+          <div className ="max-w-7xlmx-auto" />
+            <div className ="text-centermb-12" />
+              <h1className ="text-3 xlsm:text-4 xlmd:text-5 xllg:text-6 xlfont-boldtext-whitemb-6"  />AISupply ChainOptimizer
               </h1>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-3 xlmx-automb-8" />
-                Revolutionize your supply chain with AI-powered demand forecasting, route optimization, 
-                and intelligent inventory management. Reduce costs by 35% and improve efficiency by 40%.
+              <pclassName ="text-lgsm:text-xltext-gray-300 max-w-3 xlmx-automb-8" />
+                Revolutionizeyour supplychain withAI-powereddemand forecasting, routeoptimization, 
+                andintelligent inventorymanagement. Reducecosts by 35% andimprove efficiencyby 40%.
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center" />
-                <FuturisticButton
-                  variant="primary"
+              <div className ="flexflex-colsm:flex-rowgap-4justify-center" />
+                <Futuristic Buttonvariant="primary"
                   size="lg"
-                  onClick="{()" = /> window.open('/contact', '_blank')}
+                  onClick ="{()" = /> window.open('/contact', '_blank')}
                 >
                   Start Free Trial
-                  <ArrowRight className="w-5h-5ml-2" />
-                </FuturisticButton>
-                <FuturisticButton
-                  variant="ghost"
+                  <Arrow Rightclass Name="w-5h-5ml-2" />
+                </Futuristic Button>
+                <Futuristic Buttonvariant="ghost"
                   size="lg"
-                  onClick="{()" =  />window.open('#demo', '_blank')}
+                  onClick ="{()" =  />window.open('#demo', '_blank')}
                 >
                   Watch Demo
-                </FuturisticButton>
+                </Futuristic Button>
               </div>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4gap-6mb-16" />
+            <div className ="grid grid-cols-2 md:grid-cols-4gap-6mb-16" />
               {stats.map((stat, index) => (
-                <div key="{index}" className="text-center" />
-                  <div className="flex items-centerjustify-centermb-2"  />{stat.icon}
+                <divkey ="{index}" className="text-center" />
+                  <div className ="flexitems-centerjustify-centermb-2"  />{stat.icon}
                   </div>
-                  <div className="text-3 xl font-boldtext-whitemb-2"   />{stat.number}</div>
-                  <div className="text-gray-300"   />{stat.label}</div>
+                  <div className ="text-3 xlfont-boldtext-whitemb-2"   />{stat.number}</div>
+                  <div className ="text-gray-300"   />{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -164,157 +162,153 @@ export default function AISupplyChainOptimizerPage() {
         </section>
 
         {/* Features Section */}
-        <section className="py-12 sm:py-16lg:py-20px-4" />
-          <div className="max-w-7xlmx-auto" />
-            <div className="text-centermb-12" />
-              <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Advanced AI Features
+        <sectionclassName ="py-12 sm:py-16lg:py-20px-4" />
+          <div className ="max-w-7xlmx-auto" />
+            <div className ="text-centermb-12" />
+              <h2className ="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Advanced AI Features
               </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xlmx-auto" />
+              <pclassName ="text-lg sm:text-xl text-gray-300 max-w-2xlmx-auto" />
                 Cutting-edge artificial intelligence meets supply chain expertise to optimize your operations
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2gap-8mb-16" />
+            <div className ="grid grid-cols-1 md:grid-cols-2gap-8mb-16" />
               {features.map((feature, index) => (
-                <FuturisticCard key="{index}" variant="service" className="h-full" />
-                  <div className="flexitems-startmb-4" />
+                <Futuristic Cardkey="{index}" variant="service" className="h-full" />
+                  <div className ="flexitems-startmb-4" />
                     {feature.icon}
-                    <h3 className="text-xl font-semiboldtext-whiteml-3"   />{feature.title}</h3>
+                    <h3className ="text-xlfont-semiboldtext-whiteml-3"   />{feature.title}</h3>
                   </div>
-                  <p className="text-gray-300mb-6" />{feature.description}</p>
-                  <ul className="space-y-2" />
+                  <pclassName ="text-gray-300mb-6" />{feature.description}</p>
+                  <ulclassName ="space-y-2" />
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key="{benefitIndex}" className="flex items-centertext-smtext-gray-300" />
-                        <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" / />
+                      <likey ="{benefitIndex}" className="flexitems-centertext-smtext-gray-300" />
+                        <Check Circleclass Name="w-4 h-4 text-green-400mr-2flex-shrink-0" / />
                         {benefit}
                       </li>
                     ))}
                   </ul>
-                </FuturisticCard>
+                </Futuristic Card>
               ))}
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-12 sm:py-16 lg:py-20px-4bg-white/5" />
-          <div className="max-w-7xlmx-auto" />
-            <div className="text-centermb-12" />
-              <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Choose Your Plan
+        <sectionclassName ="py-12 sm:py-16 lg:py-20px-4bg-white/5" />
+          <div className ="max-w-7xlmx-auto" />
+            <div className ="text-centermb-12" />
+              <h2className ="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Choose Your Plan
               </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xlmx-auto" />
+              <pclassName ="text-lg sm:text-xl text-gray-300 max-w-2xlmx-auto" />
                 Scalable pricing options to match your supply chain needs
               </p>
             </div>
 
-            <div className="grid grid-cols-1md:grid-cols-3gap-8" />
-              {pricingPlans.map((plan, index) => (
-                <FuturisticCard 
-                  key="{index}" 
+            <div className ="grid grid-cols-1md:grid-cols-3gap-8" />
+              {pricing Plans.map((plan, index) => (
+                <Futuristic Cardkey="{index}" 
                   variant="{plan.popular" ? "feature" : "service"} 
                   className="{`h-full" ${plan.popular ? 'ring-2 ring-purple-500' : ''}`} />
                   {plan.popular && (
-                    <div className="absolute -top-3 left-1/2transform-translate-x-1/2" />
-                      <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-fulltext-smfont-semibold"  />Most Popular
+                    <div className ="absolute -top-3 left-1/2transform-translate-x-1/2" />
+                      <spanclassName ="bg-gradient-to-rfrom-purple-500 to-pink-500 text-whitepx-4 py-1 rounded-fulltext-smfont-semibold"  />MostPopular
                       </span>
                     </div>
                   )}
                   
-                  <div className="text-centermb-6" />
-                    <h3 className="text-2 xl font-boldtext-whitemb-2"   />{plan.name}</h3>
-                    <div className="flex items-baselinejustify-centermb-2" />
-                      <span className="text-4 xlfont-boldtext-white"   />{plan.price}</span>
-                      <span className="text-gray-400ml-1"   />{plan.period}</span>
+                  <div className ="text-centermb-6" />
+                    <h3className ="text-2 xl font-boldtext-whitemb-2"   />{plan.name}</h3>
+                    <div className ="flex items-baselinejustify-centermb-2" />
+                      <spanclassName ="text-4 xlfont-boldtext-white"   />{plan.price}</span>
+                      <spanclassName ="text-gray-400ml-1"   />{plan.period}</span>
                     </div>
-                    <p className="text-gray-300text-sm" />{plan.description}</p>
+                    <pclassName ="text-gray-300text-sm" />{plan.description}</p>
                   </div>
 
-                  <ul className="space-y-3mb-8" />
+                  <ulclassName ="space-y-3mb-8" />
                     {plan.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-centertext-smtext-gray-300" />
-                        <CheckCircle className="w-4 h-4 text-green-400mr-3flex-shrink-0" / />
+                      <likey ="{featureIndex}" className="flexitems-centertext-smtext-gray-300" />
+                        <Check Circleclass Name="w-4 h-4 text-green-400mr-3flex-shrink-0" / />
                         {feature}
                       </li>
                     ))}
                   </ul>
 
-                  <FuturisticButton
-                    variant="{plan.popular" ? "primary" : "ghost"}
+                  <Futuristic Buttonvariant="{plan.popular" ? "primary" : "ghost"}
                     className="w-full"
-                    onClick="{()" =  />window.open('/contact', '_blank')}
+                    onClick ="{()" =  />window.open('/contact', '_blank')}
                   >
                     Get Started
-                  </FuturisticButton>
-                </FuturisticCard>
+                  </Futuristic Button>
+                </Futuristic Card>
               ))}
             </div>
           </div>
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-12 sm:py-16lg:py-20px-4" />
-          <div className="max-w-7xlmx-auto" />
-            <div className="text-centermb-12" />
-              <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />What Our Clients Say
+        <sectionclassName ="py-12 sm:py-16lg:py-20px-4" />
+          <div className ="max-w-7xlmx-auto" />
+            <div className ="text-centermb-12" />
+              <h2className ="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />What Our Clients Say
               </h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xlmx-auto" />
+              <pclassName ="text-lg sm:text-xl text-gray-300 max-w-2xlmx-auto" />
                 Join hundreds of companies optimizing their supply chains
               </p>
             </div>
 
-            <div className="grid grid-cols-1md:grid-cols-3gap-8" />
+            <div className ="grid grid-cols-1md:grid-cols-3gap-8" />
               {testimonials.map((testimonial, index) => (
-                <FuturisticCard key="{index}" variant="testimonial" className="h-full" />
-                  <div className="flexitems-centermb-4" />
+                <Futuristic Cardkey="{index}" variant="testimonial" className="h-full" />
+                  <div className ="flexitems-centermb-4" />
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key="{i}" className="w-4 h-4text-yellow-400fill-current" / />
+                      <Starkey ="{i}" className="w-4 h-4text-yellow-400fill-current" / />
                     ))}
                   </div>
-                  <blockquote className="text-gray-300mb-6italic"  />"{testimonial.content}"
+                  <blockquoteclassName ="text-gray-300mb-6italic"  />"{testimonial.content}"
                   </blockquote>
                   <footer />
-                    <p className="font-semiboldtext-white" />{testimonial.name}</p>
-                    <p className="text-gray-400text-sm" />{testimonial.role}</p>
-                    <p className="text-gray-500text-sm" />{testimonial.company}</p>
+                    <pclassName ="font-semiboldtext-white" />{testimonial.name}</p>
+                    <pclassName ="text-gray-400text-sm" />{testimonial.role}</p>
+                    <pclassName ="text-gray-500text-sm" />{testimonial.company}</p>
                   </footer>
-                </FuturisticCard>
+                </Futuristic Card>
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-12 sm:py-16lg:py-20px-4" />
-          <div className="max-w-7xlmx-auto" />
-            <FuturisticCard variant="feature" className="text-center" />
-              <h2 className="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Ready to Optimize Your Supply Chain?
+        <sectionclassName ="py-12 sm:py-16lg:py-20px-4" />
+          <div className ="max-w-7xlmx-auto" />
+            <Futuristic Cardvariant="feature" className="text-center" />
+              <h2className ="text-2 xl sm:text-3 xl md:text-4 xl font-boldtext-whitemb-4"  />Ready to Optimize Your Supply Chain?
               </h2>
-              <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xlmx-auto" />
+              <pclassName ="text-lg sm:text-xl text-white/90 mb-8 max-w-2xlmx-auto" />
                 Start your free 14-day trial today. No credit card required. Join 500+ companies optimizing their supply chains.
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center" />
-                <FuturisticButton
-                  variant="primary"
+              <div className ="flex flex-col sm:flex-rowgap-4justify-center" />
+                <Futuristic Buttonvariant="primary"
                   size="lg"
-                  onClick="{()" =  />window.open('/contact', '_blank')}
+                  onClick ="{()" =  />window.open('/contact', '_blank')}
                 >
                   Start Free Trial
-                </FuturisticButton>
-                <FuturisticButton
-                  variant="secondary"
+                </Futuristic Button>
+                <Futuristic Buttonvariant="secondary"
                   size="lg"
-                  onClick="{()" =  />window.open('/contact', '_blank')}
+                  onClick ="{()" =  />window.open('/contact', '_blank')}
                 >
                   Schedule Demo
-                </FuturisticButton>
+                </Futuristic Button>
               </div>
-              <div className="mt-8text-white/80text-sm" />
+              <div className ="mt-8text-white/80text-sm" />
                 <p />✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
               </div>
-            </FuturisticCard>
+            </Futuristic Card>
           </div>
         </section>
-      </FuturisticBackground>
+      </Futuristic Background>
     </>
   );
 }

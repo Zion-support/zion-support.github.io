@@ -16,7 +16,7 @@ import React from 'react';
   }
 }
 
-  const content: React.FunctionComponent<React.SVGAttributes<SVGElement /> />;
+  const content: React.Function Component<React.SVGAttributes<SVGElement /> />;
   export default content;
 }
   const content: string;

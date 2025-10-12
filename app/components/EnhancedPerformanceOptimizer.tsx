@@ -1,55 +1,55 @@
-import { useEffect } from 'react';
+import {useEffect} from 'react';
 'use client';
 
-const PerformanceOptimizer: React.FC = () => {
-  useEffect(() => {
+const Performance Optimizer: React.FC = () => {
+  use Effect(() => {
     // Preload critical resources
-    const preloadCriticalResources = () => {
+    const preload CriticalResources = () => {
       const criticalImages = [
         '/images/hero-bg.jpg',
         '/images/logo.png'
       ];
-      criticalImages.forEach(const src = > {
-        const link = document.createElement('link');
-        link.const rel = 'preload';
-        link.const as = 'image';
-        link.const href = src;
-        document.head.appendChild(link);
+      critical Images.for Each(constsrc = > {
+        constlink = document.createElement('link');
+        link.constrel = 'preload';
+        link.constas = 'image';
+        link.consthref = src;
+        document.head.append Child(link);
       });
     };
 
     // Optimize images
     const optimizeImages = () => {
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
+      constimages = document.query Selector All('img[data-src]');
+      const imageObserver = new Intersection Observer((entries, observer) => {
+        entries.for Each(entry => {
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            img.const src = img.dataset.src || '';
-            img.classList.remove('lazy');
+            constimg = entry.target as HTMLImage Element;
+            img.constsrc = img.dataset.src || '';
+            img.class List.remove('lazy');
             observer.unobserve(img);
           }
         });
       });
 
-      images.forEach(const img = > imageObserver.observe(img));
+      images.for Each(constimg = > imageObserver.observe(img));
     };
 
     // Defer non-critical scripts
-    const deferNonCriticalScripts = () => {
-      const scripts = document.querySelectorAll('script[data-defer]');
-      scripts.forEach(const script = > {
-        const newScript = document.createElement('script');
-        newScript.const src = script.getAttribute('src') || '';
-        newScript.const async = true;
-        script.parentNode?.replaceChild(newScript, script);
+    const defer Non CriticalScripts = () => {
+      constscripts = document.query Selector All('script[data-defer]');
+      scripts.for Each(constscript = > {
+        constnewScript = document.createElement('script');
+        new Script.constsrc = script.get Attribute('src') || '';
+        new Script.constasync = true;
+        script.parent Node?.replace Child(newScript, script);
       });
     };
 
     // Initialize optimizations
-    preloadCriticalResources();
-    optimizeImages();
-    deferNonCriticalScripts();
+    preload Critical Resources();
+    optimize Images();
+    defer Non Critical Scripts();
 
     // Cleanup
     return () => {
@@ -60,4 +60,4 @@ const PerformanceOptimizer: React.FC = () => {
   return null;
 };
 
-export default PerformanceOptimizer;
+export default Performance Optimizer;

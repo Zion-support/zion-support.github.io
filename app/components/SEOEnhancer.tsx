@@ -1,12 +1,12 @@
 import React from 'react';
 'use client'
 
-import { ArrowRight } from 'lucide-react';
+import {ArrowRight} from 'lucide-react';
 const SEOEnhancer: React.FC = () => {
-  const features = [
+  constfeatures = [
     {
       icon: Brain,
-      title: 'AI-Powered Solutions',
+      title: 'AI- Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
     },
     {
@@ -25,7 +25,7 @@ const SEOEnhancer: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-  const benefits = [
+  constbenefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',

@@ -1,34 +1,34 @@
-import React from \'react\';
+import React from 'react';
 'use client';
 
-const AiSentimentAnalysisPage: React.FC = () => {
+const Ai Sentiment Analysis Page: React.FC = () => {
   return (
     <>
       <Helmet />
-        <title>Ai Sentiment Analysis - Zion Tech Group</title>
-        <meta name="description" content="Ai Sentiment Analysis services by Zion Tech Group. Professional AI and IT solutions." / / />
-        <meta name="keywords" content="ai-sentiment-analysis, AI solutions, IT services" / / />
+        <title>AiSentiment Analysis - ZionTech Group</title>
+        <meta name ="description" content="Ai Sentiment Analysisservices by Zion Tech Group. Professional AI and IT solutions." / / />
+        <meta name ="keywords" content="ai-sentiment-analysis, AIsolutions, ITservices" / / />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
-        <div className="container mx-autopx-4py-16" />
-          <div className="text-centermb-16" />
-            <h1 className="text-4 xl md:text-6 xl font-boldtext-whitemb-6" />
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  />Ai Sentiment Analysis
+      <div className ="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
+        <div className ="containermx-autopx-4py-16" />
+          <div className ="text-centermb-16" />
+            <h1className ="text-4 xlmd:text-6 xlfont-boldtext-whitemb-6" />
+              <spanclassName ="bg-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"  />AiSentiment Analysis
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-              Professional ai sentiment analysis services by Zion Tech Group.
+            <pclassName ="text-xltext-gray-300 max-w-3xlmx-auto" />
+              Professionalai sentimentanalysis servicesby ZionTech Group.
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm border border-purple-500/20 rounded-xlp-8text-center" />
-            <h2 className="text-2 xl font-boldtext-whitemb-4"  >Coming Soon</h2>
-            <p className="text-gray-300mb-6" />
-              We're working on bringing you comprehensive ai sentiment analysis solutions. 
-              Contact us to learn more about our services.
+          <div className ="bg-gradient-to-brfrom-purple-900/50 to-blue-900/50 backdrop-blur-smborder border-purple-500/20 rounded-xlp-8text-center" />
+            <h2className ="text-2 xlfont-boldtext-whitemb-4"  >ComingSoon</h2>
+            <pclassName ="text-gray-300mb-6" />
+              We'reworking onbringing youcomprehensive aisentiment analysissolutions. 
+              Contactus tolearn moreabout ourservices.
             </p>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600transition-allduration-300"  />Contact Us
+            <buttonclassName ="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lgfont-semiboldhover:from-cyan-600 hover:to-purple-600transition-allduration-300"  />ContactUs
             </button>
           </div>
         </div>
@@ -37,4 +37,4 @@ const AiSentimentAnalysisPage: React.FC = () => {
   );
 };
 
-export default AiSentimentAnalysisPage;
+export default Ai Sentiment Analysis Page;

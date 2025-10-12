@@ -1,16 +1,16 @@
-import { useEffect } from 'react';
+import {useEffect} from 'react';
 'use client';
 
 
-interface AnalyticsProps {
-  children: React.ReactNode;
+interface Analytics Props {
+  children: React.React Node;
 }
 
-  useEffect(() => {
+  use Effect(() => {
     // Initialize analytics tracking
     const initAnalytics = () => {
       // Google Analytics initialization
-      if (typeof window !== 'undefined' && window.gtag) {
+      if (typeofwindow !== 'undefined' && window.gtag) {
         window.gtag('config', 'GA_MEASUREMENT_ID', {
           page_title: document.title,
           page_location: window.location.href,
@@ -18,7 +18,7 @@ interface AnalyticsProps {
       }
     };
 
-    initAnalytics();
+    init Analytics();
   }, []);
 
   return <React.Fragment />{children}</React.Fragment>;

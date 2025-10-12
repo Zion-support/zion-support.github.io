@@ -9,13 +9,13 @@
   address: boolean;,
   telephone: boolean;
   };
-  metadataBase: URL;,
+  metadata Base: URL;,
   canonical: string;
   };
     title: string;,
   description: string;,
   url: string;,
-  siteName: string;,
+  site Name: string;,
   images: Array
     }>;
     locale: string;,

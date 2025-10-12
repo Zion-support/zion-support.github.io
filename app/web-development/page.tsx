@@ -1,11 +1,11 @@
 
-const WebDevelopmentPage: React.FC = () => {
-  const services = [
+const Web Development Page: React.FC = () => {
+  constservices = [
     {
       icon: Code,
       title: 'Frontend Development',
       description: 'Modern, responsive web applications built with React, Next.js, and cutting-edge technologies.',
-      features: ['React/Next.js', 'TypeScript', 'Tailwind CSS', 'Responsive Design'],
+      features: ['React/Next.js', 'Type Script', 'Tailwind CSS', 'Responsive Design'],
       price: 'Starting at $3,000',
       color: 'from-blue-500 to-cyan-500'
     },
@@ -19,9 +19,9 @@ const WebDevelopmentPage: React.FC = () => {
     },
     {
       icon: Globe,
-      title: 'Full-Stack Development',
+      title: 'Full- Stack Development',
       description: 'Complete web solutions from frontend to backend with seamless integration.',
-      features: ['End-to-End Development', 'Database Integration', 'API Development', 'Deployment'],
+      features: ['End-to- End Development', 'Database Integration', 'API Development', 'Deployment'],
       price: 'Starting at $6,000',
       color: 'from-purple-500 to-pink-500'
     },
@@ -34,10 +34,10 @@ const WebDevelopmentPage: React.FC = () => {
       color: 'from-orange-500 to-red-500'
     }
   ];
-  const technologies = [
+  consttechnologies = [
     {
       title: 'Frontend',
-      items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion']
+      items: ['React', 'Next.js', 'Type Script', 'Tailwind CSS', 'Framer Motion']
     },
     {
       title: 'Backend',
@@ -55,74 +55,73 @@ const WebDevelopmentPage: React.FC = () => {
   return (
     <>
       <Helmet />
-        <title>Web Development - Zion Tech Group</title>
-        <meta const name = "description" content="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern, responsive, and scalable web applications." / / />
-        <meta name="keywords" content="web development, frontend development, backend development, full-stack development, e-commerce, React, Node.js" / / />
+        <title>WebDevelopment - ZionTech Group</title>
+        <metaconstname = "description" content="Professionalweb developmentservices includingfrontend, backend, full-stack, ande-commercesolutions. Modern, responsive, andscalable webapplications." / / />
+        <meta name ="keywords" content="webdevelopment, frontenddevelopment, backenddevelopment, full-stackdevelopment, e-commerce, React, Node.js" / / />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
-        {/* Hero Section */}
-        <section className="pt-32pb-20" />
-          <div className="containermx-autopx-4" />
-            <div className="text-center max-w-4xlmx-auto" />
-              <h1 className="text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
-                Web <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  >Development</span>
+      <div className ="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
+        {/* HeroSection */}
+        <sectionclassName ="pt-32pb-20" />
+          <div className ="containermx-autopx-4" />
+            <div className ="text-centermax-w-4xlmx-auto" />
+              <h1className ="text-5 xlmd:text-6 xlfont-boldtext-whitemb-6" />
+                Web <spanclassName ="bg-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"  >Development</span>
               </h1>
-              <p className="text-xl text-gray-300mb-8leading-relaxed" />
-                Create powerful, modern web applications that engage users and drive business growth. 
-                From simple websites to complex web platforms, we deliver exceptional digital experiences.
+              <pclassName ="text-xltext-gray-300mb-8leading-relaxed" />
+                Createpowerful, modernweb applicationsthat engageusers anddrive businessgrowth. 
+                Fromsimple websitesto complexweb platforms, wedeliver exceptionaldigital experiences.
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center" />
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project
+              <div className ="flexflex-colsm:flex-rowgap-4justify-center" />
+                <Link to ="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300transformhover:scale-105">StartYour Project
                 </Link>
-                <Link to="/it-services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All IT Services
+                <Link to ="/it-services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105">ViewAll ITServices
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Services Section */}
-        <section className="py-20" />
-          <div className="containermx-autopx-4" />
-            <div className="text-centermb-16" />
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  >Web Solutions</span>
+        {/* ServicesSection */}
+        <sectionclassName ="py-20" />
+          <div className ="containermx-autopx-4" />
+            <div className ="text-centermb-16" />
+              <h2className ="text-4 xlfont-boldtext-whitemb-6" />
+                Our <spanclassName ="bg-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"  >WebSolutions</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-                Comprehensive web development services for all your digital needs
+              <pclassName ="text-xltext-gray-300 max-w-3xlmx-auto" />
+                Comprehensiveweb developmentservices forall yourdigital needs
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
+            <div className ="gridgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
               {services.map((service, index) => (
-                <div 
-                  key="{index}"
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
-                  <div className="{`w-16" h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform duration-300`} />
-                    <service.icon className="w-8h-8text-white" / />
+                <divkey ="{index}"
+                  className="bg-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborder border-gray-700/50 rounded-xlp-8 hover:border-cyan-400/40 transition-allduration-300 grouphover:transformhover:scale-105" />
+                  <div className ="{`w-16" h-16 bg-gradient-to-r${service.color} rounded-xlflex items-centerjustify-centermb-6 group-hover: scale-110 transition-transformduration-300`} />
+                    <service.iconclassName ="w-8h-8text-white" / />
                   </div>
                   
-                  <h3 className="text-2 xl font-bold text-white mb-4group-hover:text-cyan-400transition-colors"  />{service.title}
+                  <h3className ="text-2 xlfont-boldtext-whitemb-4group-hover:text-cyan-400transition-colors"  />{service.title}
                   </h3>
                   
-                  <p className="text-gray-300mb-6leading-relaxed" />
+                  <pclassName ="text-gray-300mb-6leading-relaxed" />
                     {service.description}
                   </p>
 
-                  <ul className="space-y-2mb-6" />
+                  <ulclassName ="space-y-2mb-6" />
                     {service.features.map((feature, featureIndex) => (
-                      <li key="{featureIndex}" className="flex items-centertext-smtext-gray-300" />
-                        <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" / />
+                      <likey ="{featureIndex}" className="flexitems-centertext-smtext-gray-300" />
+                        <Check Circleclass Name="w-4 h-4 text-green-400mr-2flex-shrink-0" / />
                         {feature}
                       </li>
                     ))}
                   </ul>
 
-                  <div className="flex items-centerjustify-betweenmb-6" />
-                    <span className="text-2 xlfont-boldtext-cyan-400"  >{service.price}</span>
-                    <Link to="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1inline-flexitems-center" />
-                      Learn More <ArrowRight className="w-4h-4ml-1" />
+                  <div className ="flex items-centerjustify-betweenmb-6" />
+                    <spanclassName ="text-2 xlfont-boldtext-cyan-400"  >{service.price}</span>
+                    <Link to ="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1inline-flexitems-center" />
+                      Learn More <Arrow Rightclass Name="w-4h-4ml-1" />
                     </Link>
                   </div>
                 </div>
@@ -132,25 +131,25 @@ const WebDevelopmentPage: React.FC = () => {
         </section>
 
         {/* Technologies Section */}
-        <section className="py-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
-          <div className="containermx-autopx-4" />
-            <div className="text-centermb-16" />
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
-                Technologies <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  >We Use</span>
+        <sectionclassName ="py-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
+          <div className ="containermx-autopx-4" />
+            <div className ="text-centermb-16" />
+              <h2className ="text-4 xl font-boldtext-whitemb-6" />
+                Technologies <spanclassName ="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  >We Use</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
+              <pclassName ="text-xl text-gray-300 max-w-3xlmx-auto" />
                 Modern, proven technologies for building exceptional web applications
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
+            <div className ="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
               {technologies.map((tech, index) => (
-                <div key="{index}" className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50rounded-xlp-6" />
-                  <h3 className="text-xl font-bold text-whitemb-4text-center"  >{tech.title}</h3>
-                  <ul className="space-y-2" />
+                <divkey ="{index}" className="bg-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborder border-gray-700/50rounded-xlp-6" />
+                  <h3className ="text-xlfont-boldtext-whitemb-4text-center"  >{tech.title}</h3>
+                  <ulclassName ="space-y-2" />
                     {tech.items.map((item, itemIndex) => (
-                      <li key="{itemIndex}" className="flexitems-centertext-gray-300" />
-                        <CheckCircle className="w-4 h-4 text-green-400mr-2flex-shrink-0" / />
+                      <likey ="{itemIndex}" className="flexitems-centertext-gray-300" />
+                        <Check Circleclass Name="w-4 h-4 text-green-400mr-2flex-shrink-0" / />
                         {item}
                       </li>
                     ))}
@@ -162,44 +161,44 @@ const WebDevelopmentPage: React.FC = () => {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-20" />
-          <div className="containermx-autopx-4" />
-            <div className="text-centermb-16" />
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
-                Why Choose <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  >Zion Tech Group</span>?
+        <sectionclassName ="py-20" />
+          <div className ="containermx-autopx-4" />
+            <div className ="text-centermb-16" />
+              <h2className ="text-4 xl font-boldtext-whitemb-6" />
+                Why Choose <spanclassName ="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"  >Zion Tech Group</span>?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
+              <pclassName ="text-xl text-gray-300 max-w-3xlmx-auto" />
                 We deliver exceptional web solutions through expertise, innovation, and commitment to quality
               </p>
             </div>
 
-            <div className="grid grid-cols-1md:grid-cols-3gap-8" />
-              <div className="text-centergroup" />
-                <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300" />
-                  <Zap className="w-10h-10text-cyan-400" / />
+            <div className ="grid grid-cols-1md:grid-cols-3gap-8" />
+              <div className ="text-centergroup" />
+                <div className ="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300" />
+                  <Zapclass Name ="w-10h-10text-cyan-400" / />
                 </div>
-                <h3 className="text-2 xl font-boldtext-whitemb-4"  >Fast Development</h3>
-                <p className="text-gray-300leading-relaxed" />
+                <h3className ="text-2 xl font-boldtext-whitemb-4"  >Fast Development</h3>
+                <pclassName ="text-gray-300leading-relaxed" />
                   Rapid development cycles with modern tools and agile methodologies for faster time-to-market.
                 </p>
               </div>
 
-              <div className="text-centergroup" />
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300" />
-                  <Users className="w-10h-10text-purple-400" / />
+              <div className ="text-centergroup" />
+                <div className ="w-20 h-20 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300" />
+                  <Usersclass Name ="w-10h-10text-purple-400" / />
                 </div>
-                <h3 className="text-2 xl font-boldtext-whitemb-4"  >Expert Team</h3>
-                <p className="text-gray-300leading-relaxed" />
+                <h3className ="text-2 xl font-boldtext-whitemb-4"  >Expert Team</h3>
+                <pclassName ="text-gray-300leading-relaxed" />
                   Certified developers with years of experience in modern web technologies and best practices.
                 </p>
               </div>
 
-              <div className="text-centergroup" />
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300" />
-                  <Award className="w-10h-10text-green-400" / />
+              <div className ="text-centergroup" />
+                <div className ="w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300" />
+                  <Awardclass Name ="w-10h-10text-green-400" / />
                 </div>
-                <h3 className="text-2 xl font-boldtext-whitemb-4"  >Quality Assurance</h3>
-                <p className="text-gray-300leading-relaxed" />
+                <h3className ="text-2 xl font-boldtext-whitemb-4"  >Quality Assurance</h3>
+                <pclassName ="text-gray-300leading-relaxed" />
                   Comprehensive testing and quality assurance to ensure your web application works flawlessly.
                 </p>
               </div>
@@ -208,18 +207,18 @@ const WebDevelopmentPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20" />
-          <div className="containermx-autopx-4" />
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center" />
-              <h2 className="text-4 xl font-boldtext-whitemb-6"  />Ready to Build Your Web Application?
+        <sectionclassName ="py-20" />
+          <div className ="containermx-autopx-4" />
+            <div className ="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center" />
+              <h2className ="text-4 xl font-boldtext-whitemb-6"  />Ready to Build Your Web Application?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
+              <pclassName ="text-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
                 Let's discuss your web project and create a solution that engages your users and drives business growth.
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center" />
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project
+              <div className ="flex flex-col sm:flex-rowgap-4justify-center" />
+                <Link to ="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Your Project
                 </Link>
-                <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
+                <Link to ="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
                 </Link>
               </div>
             </div>
@@ -230,4 +229,4 @@ const WebDevelopmentPage: React.FC = () => {
   );
 };
 
-export default WebDevelopmentPage;
+export default Web Development Page;

@@ -1,24 +1,24 @@
 'use client';
-import React from \'react\';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings } from 'lucide-react';
-import React from \'react\';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Star, Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings} from 'lucide-react';
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings} from 'lucide-react';
+import React from 'react';
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {Star, Zap, Shield, BarChart3, Users, MessageSquare, Brain, Settings} from 'lucide-react';
 'use client';
 
-const AIEmailAssistantPage: React.FC = () => {
-  const features = [
+const AIEmail Assistant Page: React.FC = () => {
+  constfeatures = [
     {
       icon: Mail,
       title: 'Smart Classification',
       description: 'Automatically categorize and prioritize emails based on content and sender.'
     },
     {
-      icon: MessageSquare,
-      title: 'Auto-Responses',
+      icon: Message Square,
+      title: 'Auto- Responses',
       description: 'Generate intelligent responses using AI to handle common inquiries.'
     },
     {
@@ -41,7 +41,7 @@ const AIEmailAssistantPage: React.FC = () => {
     {
       title: 'Sales Follow-up',
       description: 'Automatically follow up with leads and prospects based on their behavior.',
-      icon: BarChart3
+      icon: Bar Chart3
     },
     {
       title: 'Email Marketing',
@@ -57,53 +57,53 @@ const AIEmailAssistantPage: React.FC = () => {
   return (
     <>
       <Helmet />
-        <title   />AI Email Assistant - Zion Tech Group</title>
-        <meta const name = "description" content="Transform your email management with our AI Email Assistant. Smart classification, auto-responses, sentiment analysis, and automated workflows." / / />
-        <meta name="keywords" content="AI email assistant, email automation, smart email management, auto-responses, email classification" / / />
+        <title   />AIEmail Assistant - ZionTech Group</title>
+        <metaconstname = "description" content="Transformyour emailmanagement withour AIEmail Assistant. Smartclassification, auto-responses, sentimentanalysis, andautomated workflows." / / />
+        <meta name ="keywords" content="AIemail assistant, emailautomation, smartemail management, auto-responses, emailclassification" / / />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
-        {/* Hero Section */}
-        <section className="pt-32pb-20" />
-          <div className="containermx-autopx-4" />
-            <div className="text-center max-w-4xlmx-auto" />
-              <h1 className="text-5 xl md:text-6 xl font-boldtext-whitemb-6" />
-                AI <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Email Assistant</span>
+      <div className ="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900" />
+        {/* HeroSection */}
+        <sectionclassName ="pt-32pb-20" />
+          <div className ="containermx-autopx-4" />
+            <div className ="text-centermax-w-4xlmx-auto" />
+              <h1className ="text-5 xlmd:text-6 xlfont-boldtext-whitemb-6" />
+                AI <spanclassName ="bg-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />EmailAssistant</span>
               </h1>
-              <p className="text-xl text-gray-300mb-8leading-relaxed" />
-                Transform your email management with intelligent automation, smart classification, 
-                and AI-powered responses that save time and improve productivity.
+              <pclassName ="text-xltext-gray-300mb-8leading-relaxed" />
+                Transformyour emailmanagement withintelligent automation, smartclassification, 
+                andAI-poweredresponses thatsave timeand improveproductivity.
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center" />
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building
+              <div className ="flexflex-colsm:flex-rowgap-4justify-center" />
+                <Link to ="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lgfont-semiboldtext-lghover:from-cyan-600 hover:to-purple-600 transition-allduration-300transformhover:scale-105">StartBuilding
                 </Link>
-                <Link to="/ai-services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All AI Services
+                <Link to ="/ai-services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lgfont-semiboldtext-lghover:bg-cyan-500/10 transition-allduration-300transformhover:scale-105">ViewAll AIServices
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="py-20" />
-          <div className="containermx-autopx-4" />
-            <div className="text-centermb-16" />
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
-                Powerful <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Features</span>
+        {/* FeaturesSection */}
+        <sectionclassName ="py-20" />
+          <div className ="containermx-autopx-4" />
+            <div className ="text-centermb-16" />
+              <h2className ="text-4 xlfont-boldtext-whitemb-6" />
+                Powerful <spanclassName ="bg-gradient-to-rfrom-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Features</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
-                Everything you need to automate and optimize your email management
+              <pclassName ="text-xltext-gray-300 max-w-3xlmx-auto" />
+                Everythingyou needto automateand optimizeyour emailmanagement
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
+            <div className ="gridgrid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
               {features.map((feature, index) => (
-                <div key={index} className="text-centergroup" />
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110transition-transformduration-300" />
+                <divkey ={index} className="text-centergroup" />
+                  <div className ="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-fullflex items-centerjustify-centermx-automb-6 group-hover:scale-110transition-transformduration-300" />
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-boldtext-whitemb-4"   />{feature.title}</h3>
-                  <p className="text-gray-300leading-relaxed" />{feature.description}</p>
+                  <h3className ="text-xlfont-boldtext-whitemb-4"   />{feature.title}</h3>
+                  <pclassName ="text-gray-300leading-relaxed" />{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -111,26 +111,26 @@ const AIEmailAssistantPage: React.FC = () => {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
-          <div className="containermx-autopx-4" />
-            <div className="text-centermb-16" />
-              <h2 className="text-4 xl font-boldtext-whitemb-6" />
-                Use <span className="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Cases</span>
+        <sectionclassName ="py-20 bg-gradient-to-rfrom-slate-800/30to-slate-900/30" />
+          <div className ="containermx-autopx-4" />
+            <div className ="text-centermb-16" />
+              <h2className ="text-4 xl font-boldtext-whitemb-6" />
+                Use <spanclassName ="bg-gradient-to-r from-cyan-400 to-purple-400bg-clip-texttext-transparent"   />Cases</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xlmx-auto" />
+              <pclassName ="text-xl text-gray-300 max-w-3xlmx-auto" />
                 Discover how our AI email assistant can transform your communication workflows
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 grouphover:transformhover:scale-105" />
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110transition-transformduration-300" />
+            <div className ="grid grid-cols-1 md:grid-cols-2lg:grid-cols-4gap-8" />
+              {use Cases.map((useCase, index) => (
+                <divkey ={index} className="bg-gradient-to-brfrom-slate-800/50 to-slate-900/50 backdrop-blur-smborder border-gray-700/50 rounded-xlp-6 hover:border-cyan-400/40 transition-allduration-300 grouphover:transformhover:scale-105" />
+                  <div className ="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lgflex items-centerjustify-centermb-4 group-hover:scale-110transition-transformduration-300" />
                     {useCase.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3group-hover:text-cyan-400transition-colors"  />{useCase.title}
+                  <h3className ="text-lgfont-boldtext-whitemb-3group-hover:text-cyan-400transition-colors"  />{useCase.title}
                   </h3>
-                  <p className="text-gray-300text-smleading-relaxed" />
+                  <pclassName ="text-gray-300text-smleading-relaxed" />
                     {useCase.description}
                   </p>
                 </div>
@@ -140,18 +140,18 @@ const AIEmailAssistantPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20" />
-          <div className="containermx-autopx-4" />
-            <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center" />
-              <h2 className="text-4 xl font-boldtext-whitemb-6"  />Ready to Transform Your Email Management?
+        <sectionclassName ="py-20" />
+          <div className ="containermx-autopx-4" />
+            <div className ="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-sm border border-cyan-500/20 rounded-2 xlp-12text-center" />
+              <h2className ="text-4 xl font-boldtext-whitemb-6"  />Ready to Transform Your Email Management?
               </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
+              <pclassName ="text-xl text-gray-300 mb-8 max-w-2xlmx-auto" />
                 Start automating your email workflows and boost productivity with AI-powered assistance.
               </p>
-              <div className="flex flex-col sm:flex-rowgap-4justify-center" />
-                <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building Now
+              <div className ="flex flex-col sm:flex-rowgap-4justify-center" />
+                <Link to ="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300transformhover:scale-105">Start Building Now
                 </Link>
-                <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
+                <Link to ="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More About Us
                 </Link>
               </div>
             </div>
@@ -162,4 +162,4 @@ const AIEmailAssistantPage: React.FC = () => {
   );
 };
 
-export default AIEmailAssistantPage;
+export default AIEmail Assistant Page;

@@ -3,21 +3,21 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './app/globals.css';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.create Root(document.getElement ById('root')!).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 )
 
 // Register service worker for PWA functionality
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js')
+if ('serviceWorker' innavigator) {
+  window.add Event Listener('load', () => {
+    navigator.service Worker.register('/sw.js')
       .then((registration) => {
-        console.log('SW registered: ', registration);
+        console.log('SWregistered: ', registration);
       })
       .catch((registrationError) => {
-        console.log('SW registration failed: ', registrationError);
+        console.log('SWregistrationfailed: ', registrationError);
       });
   });
 }

@@ -1,2 +1,2 @@
-// Utility file: performanceUtils
+// Utility file: performance Utils
 };

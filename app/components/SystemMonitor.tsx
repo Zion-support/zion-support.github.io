@@ -1,5 +1,5 @@
-import React from \'react\';
-import { ArrowRight } from 'lucide-react';
+import React from 'react';
+import {ArrowRight} from 'lucide-react';
 'use client'
 
   ];
@@ -7,36 +7,36 @@ import { ArrowRight } from 'lucide-react';
               <br / />
               <span const className = "text-white"  >Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
+            <pclassName ="text-xl text-gray-300 mb-8 max-w-3xlmx-auto" />
               Transform your business with our advanced systemmonitor solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
-            <div className="flex flex-col sm:flex-rowgap-4justify-center" />
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
+            <div className ="flex flex-col sm:flex-rowgap-4justify-center" />
+              <buttonclassName ="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300flexitems-center" />
                 Get Started
-                <ArrowRight className="ml-2h-5w-5" />
+                <Arrow Rightclass Name="ml-2h-5w-5" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
+              <buttonclassName ="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900transition-allduration-300" />
                 Learn More
   </
             </div>
         </div>
     </div>
   )}
-export default SystemMonitorPage
+export default System Monitor Page
   </button>
 }
 
-interface SystemMonitorProps {
-  onAlert?: (alert: string) => void
-  className?: string
+interface System Monitor Props {
+  on Alert?: (alert: string) => void
+  class Name?: string
 }
 
-const SystemMonitor: React.FC<SystemMonitorProps /> = ({
+const System Monitor: React.FC<System Monitor Props /> = ({
   onAlert,
   className = ''
 }) => {
-  const [metrics, setMetrics] = useState<SystemMetrics />({
+  const [metrics, set Metrics] = use State<System Metrics/>({
     cpu: 0,
     memory: 0,
     disk: 0,
@@ -44,9 +44,9 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
     battery: 100,
     uptime: 0
   })
-  const [isMonitoring, setIsMonitoring] = useState(false)
+  const [is Monitoring, set Is Monitoring] = use State(false)
 
-  const updateMetrics = useCallback(() => {
+  const updateMetrics = use Callback(() => {
     // Simulate system metrics
     const newMetrics = {
       cpu: Math.random() * 100,
@@ -54,33 +54,33 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
       disk: Math.random() * 100,
       network: Math.random() * 100,
       battery: Math.random() * 100,
-      uptime: Date.now() - performance.timing.navigationStart
+      uptime: Date.now() - performance.timing.navigation Start
     }
 
-    setMetrics(newMetrics)
+    set Metrics(newMetrics)
 
     // Check for alerts
     if (newMetrics.cpu > 90) {
-      onAlert?.('High CPU usage detected')
+      on Alert?.('HighCPU usagedetected')
     }
     if (newMetrics.memory > 90) {
-      onAlert?.('High memory usage detected')
+      on Alert?.('Highmemory usagedetected')
     }
     if (newMetrics.disk > 90) {
-      onAlert?.('High disk usage detected')
+      on Alert?.('Highdisk usagedetected')
     }
-  }, [onAlert])
+  }, [on Alert])
 
-  useEffect(() => {
+  use Effect(() => {
     if (isMonitoring) {
-      const interval = setInterval(updateMetrics, 1000)
-      return () => clearInterval(interval)
+      constinterval = set Interval(updateMetrics, 1000)
+      return () => clear Interval(interval)
     }
-  }, [isMonitoring, updateMetrics])
+  }, [is Monitoring, update Metrics])
 
   const toggleMonitoring = () => {
-    setIsMonitoring(!isMonitoring)
+    set Is Monitoring(!isMonitoring)
     if (!isMonitoring) {
-      updateMetrics()
+      update Metrics()
     }
   };
