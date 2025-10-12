@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { Mail, Phone, MapPin } from 'lucide-react'
 
 export default function Footer() {
@@ -105,6 +105,9 @@ export default function Footer() {
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react';
+=======
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Code, Smartphone } from 'lucide-react'
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d
 
 export default function Footer() {
   const aiServices = [
@@ -114,7 +117,7 @@ export default function Footer() {
     { name: 'AI Email Assistant', path: '/ai-email-assistant' },
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
     { name: 'AI Automation Suite', path: '/ai-automation' }
-  ];
+  ]
 
   const itServices = [
     { name: 'Cloud Migration', path: '/cloud-migration' },
@@ -123,7 +126,7 @@ export default function Footer() {
     { name: 'Data Analytics', path: '/data-analytics' },
     { name: 'Mobile Development', path: '/mobile-development' },
     { name: 'Blockchain Solutions', path: '/blockchain' }
-  ];
+  ]
 
   const microSaasServices = [
     { name: 'AI Task Manager', path: '/ai-task-manager' },
@@ -132,27 +135,24 @@ export default function Footer() {
     { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
     { name: 'AI Health Tracker', path: '/ai-health-tracker' },
     { name: 'AI Smart Calendar', path: '/ai-smart-calendar' }
-  ];
+  ]
 
   const quickLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'AI Services', path: '/ai-services' },
-    { name: 'IT Services', path: '/it-services' },
-    { name: 'Micro SAAS', path: '/micro-saas-services' },
-    { name: '5G Solutions', path: '/5g-implementation' },
-    { name: 'Contact', path: '/contact' }
-  ];
+    { name: 'Contact', path: '/contact' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Careers', path: '/careers' }
+  ]
 
   const legal = [
     { name: 'Privacy Policy', path: '/privacy' },
-    { name: 'Terms of Service', path: '/terms' },
-    { name: 'Cookie Policy', path: '/cookies' },
-    { name: 'Compliance', path: '/compliance' }
-  ];
+    { name: 'Terms of Service', path: '/terms' }
+  ]
 
   return (
     <footer className="bg-gray-900 text-white">
+<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
@@ -161,6 +161,15 @@ export default function Footer() {
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
+=======
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div>
+            <div className="flex items-center mb-4">
+              <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mr-2">
+                <span className="text-white font-bold text-sm">Z</span>
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
@@ -175,16 +184,17 @@ export default function Footer() {
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="w-4 h-4 mr-3" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (302) 464-0950</span>
               </div>
               <div className="flex items-center text-gray-300">
                 <MapPin className="w-4 h-4 mr-3" />
-                <span>123 Tech Street, Innovation City, IC 12345</span>
+                <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
           </div>
 
           {/* AI Services */}
+<<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">AI Services</h3>
             <ul className="space-y-2">
@@ -198,6 +208,22 @@ export default function Footer() {
                   <Link to={service.path} className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group">
                     {service.name}
                     <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+=======
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Brain className="h-5 w-5 mr-2 text-purple-400" />
+              AI Services
+            </h3>
+            <ul className="space-y-2">
+              {aiServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.path} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
+                  >
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {service.name}
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d
                   </Link>
                 </li>
               ))}
@@ -205,6 +231,7 @@ export default function Footer() {
           </div>
 
           {/* IT Services */}
+<<<<<<< HEAD
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">IT Services</h3>
             <ul className="space-y-2">
@@ -218,10 +245,27 @@ export default function Footer() {
                   <Link to={service.path} className="text-gray-400 hover:text-white transition-colors text-sm flex items-center group">
                     {service.name}
                     <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+=======
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Code className="h-5 w-5 mr-2 text-blue-400" />
+              IT Services
+            </h3>
+            <ul className="space-y-2">
+              {itServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.path} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
+                  >
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {service.name}
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d
                   </Link>
                 </li>
               ))}
             </ul>
+<<<<<<< HEAD
           </div>
 
           {/* Quick Links */}
@@ -239,9 +283,11 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d
           </div>
-        </div>
 
+<<<<<<< HEAD
         {/* Micro SAAS Services */}
         <div className="mb-12">
           <h3 className="text-lg font-semibold mb-4">Micro SAAS Services</h3>
@@ -313,15 +359,73 @@ export default function Footer() {
                 Built with ❤️ by Zion Tech Group
               </p>
 >>>>>>> cursor/website-audit-and-update-with-deployment-e118
+=======
+          {/* Micro SaaS Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Smartphone className="h-5 w-5 mr-2 text-green-400" />
+              Micro SaaS
+            </h3>
+            <ul className="space-y-2">
+              {microSaasServices.map((service, index) => (
+                <li key={index}>
+                  <Link 
+                    to={service.path} 
+                    className="text-gray-400 hover:text-white transition-colors flex items-center group"
+                  >
+                    <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 mt-8 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © 2024 Zion Tech Group. All rights reserved.
+            </div>
+            
+            {/* Social Links */}
+            <div className="flex space-x-4 mb-4 md:mb-0">
+              <a href="#" className="text-gray-400 hover:text-purple-300 transition-colors">
+                <Github className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-purple-300 transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-purple-300 transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+            </div>
+
+            {/* Legal Links */}
+            <div className="flex flex-wrap gap-4 text-sm">
+              {legal.map((item, index) => (
+                <Link 
+                  key={index}
+                  to={item.path} 
+                  className="text-gray-400 hover:text-purple-300 transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ))}
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d
             </div>
           </div>
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
   )
+<<<<<<< HEAD
 }
 =======
   );
 }
 >>>>>>> cursor/website-audit-and-update-with-deployment-e118
+=======
+}
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d

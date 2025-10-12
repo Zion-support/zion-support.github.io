@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 'use client'
+<<<<<<< HEAD
 import React from 'react'
 import SEOHead from './components/SEOHead'
 import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
@@ -10,6 +10,14 @@ import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphon
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 >>>>>>> cursor/website-audit-and-update-with-deployment-e118
+=======
+import React, { Suspense, lazy } from 'react'
+import { ArrowRight, Shield, Globe, Database, Code, Cloud, Smartphone, Brain } from 'lucide-react'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import SEOHead from './components/SEOHead'
+import OptimizedLoading from './components/OptimizedLoading'
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d
 
 export default function HomePage() {
   const stats = [
@@ -21,7 +29,7 @@ export default function HomePage() {
 
   const features = [
     {
-      icon: <Zap className="w-8 h-8 text-blue-500" />,
+      icon: <Brain className="w-8 h-8 text-blue-500" />,
       title: 'AI-Powered Solutions',
       description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
       benefits: ['AI Content Generator - $29/month', 'AI Chatbot Builder - $49/month', 'AI Analytics Dashboard - $39/month', 'AI Email Assistant - $19/month'],
@@ -30,8 +38,13 @@ export default function HomePage() {
     {
       icon: <Shield className="w-8 h-8 text-green-500" />,
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: 'Cybersecurity',
       description: 'Protect your digital assets with our advanced security solutions and compliance management.'
+=======
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption, compliance standards, and advanced threat protection.'
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d
     },
     {
       icon: <Cloud className="w-8 h-8 text-purple-500" />,
@@ -49,6 +62,7 @@ export default function HomePage() {
       description: 'Streamline your development process with automated deployment and continuous integration.'
     },
     {
+<<<<<<< HEAD
       icon: <Globe className="w-8 h-8 text-cyan-500" />,
       title: 'Global Reach',
       description: 'Scale your business worldwide with our international deployment and support services.'
@@ -82,12 +96,35 @@ export default function HomePage() {
       rating: 5
 =======
       icon: <Cloud className="w-8 h-8 text-orange-500" />,
+=======
+      icon: <Cloud className="w-8 h-8 text-cyan-500" />,
       title: 'Cloud Services',
-      description: 'Professional cloud services including migration, infrastructure setup, security, and optimization.',
-      benefits: ['Cloud Migration - $1,200/month', 'Infrastructure Setup - $3,000', 'Security Solutions - $800/month', 'Cost Optimization - $500/month'],
-      link: '/cloud-services'
+      description: 'Scalable cloud infrastructure and migration services for modern businesses.'
+    }
+  ]
+
+  const services = [
+    {
+      title: 'AI Services',
+      description: 'Advanced AI solutions for content generation, chatbots, and automation',
+      href: '/ai-services',
+      icon: Brain
     },
     {
+      title: 'IT Services',
+      description: 'Complete IT infrastructure and development services',
+      href: '/it-services',
+      icon: Code
+    },
+    {
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d
+      title: 'Cloud Services',
+      description: 'Scalable cloud infrastructure and migration',
+      href: '/cloud-services',
+      icon: Cloud
+    },
+    {
+<<<<<<< HEAD
       icon: <Database className="w-8 h-8 text-red-500" />,
       title: '5G Implementation',
       description: 'Next-generation connectivity solutions to power your digital transformation with ultra-fast speeds and low latency.',
@@ -101,10 +138,17 @@ export default function HomePage() {
       benefits: ['Process Automation - $2,000/month', 'Digital Workforce - $1,500/month', 'Customer Experience - $1,800/month', 'Data Strategy - $2,500/month'],
       link: '/digital-transformation'
 >>>>>>> cursor/website-audit-and-update-with-deployment-e118
+=======
+      title: 'Micro SaaS',
+      description: 'Specialized micro software solutions',
+      href: '/micro-saas',
+      icon: Smartphone
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -121,22 +165,20 @@ export default function HomePage() {
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your business with cutting-edge technology."
         keywords="AI solutions, IT services, digital transformation, cloud computing, 5G implementation, micro SAAS, artificial intelligence, business automation"
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOHead
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of AI and IT solutions. Transform your business with our cutting-edge technology and expert services."
+        keywords="AI solutions, IT services, cloud computing, software development, artificial intelligence, machine learning, Zion Tech Group"
+        canonical="/"
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d
       />
       
-<<<<<<< HEAD
       <Navigation />
       
-      <main>
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Advanced <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">AI & IT Solutions</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with cutting-edge artificial intelligence, cloud computing, and digital transformation services.
-=======
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="pt-20 px-4 py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
@@ -161,23 +203,80 @@ export default function HomePage() {
                 Get Started
               </Link>
             </div>
+=======
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Advanced AI & IT
+            <br />
+            <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+              Solutions
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Transform your business with cutting-edge AI technology and comprehensive IT services. 
+            We deliver innovative solutions that drive growth and efficiency.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+            <a
+              href="/about"
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Learn More
+            </a>
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d
           </div>
+        </div>
+      </section>
 
+<<<<<<< HEAD
           {/* Stats Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16 lg:mb-20">
             {stats.map((stat, index) => (
               <div key={index} className="text-center px-2">
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-1 sm:mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-xs sm:text-sm">{stat.label}</div>
+=======
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We combine cutting-edge technology with industry expertise to deliver exceptional results.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
+      {/* Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Our Core Services</h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
@@ -202,16 +301,41 @@ export default function HomePage() {
                 <div className="mt-6 flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+=======
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive solutions tailored to your business needs.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4 group-hover:scale-110 transition-transform">
+                  <service.icon className="h-6 w-6 text-white" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d
                 </div>
-              </Link>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <a
+                  href={service.href}
+                  className="text-purple-400 hover:text-purple-300 font-medium flex items-center group-hover:translate-x-1 transition-transform"
+                >
+                  Learn More
+                  <ArrowRight className="ml-1 h-4 w-4" />
+                </a>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
           <div className="text-center">
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Transform Your Business?</h2>
@@ -383,3 +507,34 @@ export default function HomePage() {
   );
 }
 >>>>>>> cursor/website-audit-and-update-with-deployment-e118
+=======
+          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-12 border border-white/20 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Let's discuss how our AI and IT solutions can help you achieve your goals.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300"
+              >
+                Get Started Today
+              </a>
+              <a
+                href="/services"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                Schedule Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  )
+}
+>>>>>>> cursor/analyze-improve-and-deploy-application-b46d
