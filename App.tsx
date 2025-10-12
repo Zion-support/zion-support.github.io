@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
-import Navigation from './app/components/Navigation'
-import Footer from './app/components/Footer'
+import FuturisticNavigation from './app/components/FuturisticNavigation'
+import FuturisticFooter from './app/components/FuturisticFooter'
 import ErrorBoundary from './app/components/ErrorBoundary'
 import OptimizedLoading from './app/components/OptimizedLoading'
 import HomePage from './app/page'
@@ -31,11 +31,16 @@ import MicroSaasLeadScoringPage from './app/micro-saas/lead-scoring/page'
 import MicroSaasSeoOptimizerPage from './app/micro-saas/seo-optimizer/page'
 import MicroSaasSocialManagerPage from './app/micro-saas/social-manager/page'
 import MicroSaasSupportBotPage from './app/micro-saas/support-bot/page'
+import MicroSaasAiCustomerInsightsPage from './app/micro-saas/ai-customer-insights/page'
+import MicroSaasAiWorkflowAutomationPage from './app/micro-saas/ai-workflow-automation/page'
+import MicroSaasAiFinancialForecastingPage from './app/micro-saas/ai-financial-forecasting/page'
 import AIAutomatedReportingPage from './app/ai-automated-reporting/page'
 import AIChatbotBuilderPage from './app/ai-chatbot-builder/page'
 import AIExpenseTrackerPage from './app/ai-expense-tracker/page'
 import AIPasswordManagerPage from './app/ai-password-manager/page'
 import AITaskManagerPage from './app/ai-task-manager/page'
+import AiPredictiveMaintenancePage from './app/ai-services/ai-predictive-maintenance/page'
+import AiFraudDetectionPage from './app/ai-services/ai-fraud-detection/page'
 import BusinessIntelligencePage from './app/business-intelligence/page'
 import ITConsultingPage from './app/it-consulting/page'
 import ITServicesPage from './app/it-services/page'
@@ -385,7 +390,7 @@ const App: React.FC = () => {
       <ErrorBoundary>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <Navigation />
+            <FuturisticNavigation />
             <main className="min-h-screen">
               <Suspense fallback={<OptimizedLoading />}>
                 <Routes>
@@ -417,6 +422,9 @@ const App: React.FC = () => {
                   <Route path="/micro-saas/seo-optimizer" element={<MicroSaasSeoOptimizerPage />} />
                   <Route path="/micro-saas/social-manager" element={<MicroSaasSocialManagerPage />} />
                   <Route path="/micro-saas/support-bot" element={<MicroSaasSupportBotPage />} />
+                  <Route path="/micro-saas/ai-customer-insights" element={<MicroSaasAiCustomerInsightsPage />} />
+                  <Route path="/micro-saas/ai-workflow-automation" element={<MicroSaasAiWorkflowAutomationPage />} />
+                  <Route path="/micro-saas/ai-financial-forecasting" element={<MicroSaasAiFinancialForecastingPage />} />
                   
                   {/* AI Services */}
                   <Route path="/ai-automated-reporting" element={<AIAutomatedReportingPage />} />
@@ -424,6 +432,8 @@ const App: React.FC = () => {
                   <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
                   <Route path="/ai-password-manager" element={<AIPasswordManagerPage />} />
                   <Route path="/ai-task-manager" element={<AITaskManagerPage />} />
+                  <Route path="/ai-services/ai-predictive-maintenance" element={<AiPredictiveMaintenancePage />} />
+                  <Route path="/ai-services/ai-fraud-detection" element={<AiFraudDetectionPage />} />
                   <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
                   
                   {/* IT Services */}
@@ -521,7 +531,7 @@ const App: React.FC = () => {
                 </Routes>
               </Suspense>
             </main>
-            <Footer />
+            <FuturisticFooter />
           </div>
         </Router>
       </ErrorBoundary>
