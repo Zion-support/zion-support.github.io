@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Find all files with merge conflicts
-find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read file; do
+find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read file; do
   if grep -q "<<<<<<< HEAD" "$file"; then
     echo "Fixing merge conflicts in: $file"
     
@@ -9,12 +9,11 @@ find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" |
     cp "$file" "$file.backup"
     
     # Remove merge conflict markers and keep the HEAD version
-    sed -i '/<<<<<<< HEAD/,/=======/!d' "$file"
-    sed -i '/>>>>>>> /d' "$file"
-    sed -i '/=======/d' "$file"
+    sed -i '/^<<<<<<< HEAD/,/^=======/!d' "$file"
+    sed -i '/^=======/d' "$file"
+    sed -i '/^>>>>>>> /d' "$file"
     
-    # Clean up any remaining empty lines
-    sed -i '/^$/N;/^\n$/d' "$file"
+    echo "Fixed: $file"
   fi
 done
 
