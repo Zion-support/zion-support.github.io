@@ -73,3 +73,4 @@ async function main() {
   console.log(`\nFixed JSX structure in ${fixedCount} files out of ${files.length} total files.`);
 
 main().catch(console.error);
+}}}}}

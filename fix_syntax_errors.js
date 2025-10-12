@@ -98,3 +98,4 @@ console.log(`Processed ${processedCount} files.`);
 // Also process the root EnhancedFooter.tsx;
 if (processFile('./EnhancedFooter.tsx')) {
   console.log('Fixed: EnhancedFooter.tsx');
+}}}}}}}}

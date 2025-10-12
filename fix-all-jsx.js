@@ -62,3 +62,4 @@ async function main() {
   console.log(`\nFixed all JSX issues in ${fixedCount} files out of ${files.length} total files.`);
 
 main().catch(console.error);
+}}}}}

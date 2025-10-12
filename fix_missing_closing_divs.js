@@ -75,3 +75,4 @@ function processDirectory(dirPath) {
 console.log('Starting missing closing div fixes...');
 const processedCount = processDirectory('./app');
 console.log(`Processed ${processedCount} files.`);
+}}}}}

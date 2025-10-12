@@ -80,3 +80,4 @@ for (const page, of, pagesToRewrite) {
     console.error(`Error rewriting ${page}:`, error.message);
 
 console.log('Page rewriting completed');
+}}}

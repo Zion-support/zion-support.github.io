@@ -67,3 +67,4 @@ async function main() {
   console.log(`\nFixed final parsing issues in ${fixedCount} files out of ${files.length} total files.`);
 
 main().catch(console.error);
+}}}}}

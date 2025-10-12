@@ -44,3 +44,4 @@ for (const file, of, pageFiles) {
     console.error(`Error fixing ${file}:`, error.message);
 
 console.log(`Fixed ${fixedCount} files`);
+}}}}}}}}

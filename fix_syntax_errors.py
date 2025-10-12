@@ -1,99 +1,152 @@
 #!/usr/bin/env python3
 """
-Script to fix syntax errors in TypeScript/JSX files after merge conflict resolution.
+Script to fix common syntax errors in TypeScript/JavaScript files
 """
-
 import os
 import re
-import sys
-from pathlib import Path
+import glob
 
-def fix_syntax_errors(file_path):
-    """Fix syntax errors in a single file."""
+def fix_duplicate_function_declarations(file_path):
+    """Fix duplicate function declarations and misplaced imports"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        original_content = content
-        
-        # Fix broken JSX fragments and tags
-        # Remove incomplete JSX fragments
-        content = re.sub(r'<>\s*$', '', content, flags=re.MULTILINE)
-        content = re.sub(r'^\s*</>\s*$', '', content, flags=re.MULTILINE)
-        
-        # Fix broken JSX tags with incomplete closing
-        content = re.sub(r'<(\w+)[^>]*>\s*$', r'<\1>', content, flags=re.MULTILINE)
-        
-        # Remove lines with only incomplete JSX syntax
-        lines = content.split('\n')
-        cleaned_lines = []
-        
-        for i, line in enumerate(lines):
-            # Skip lines that are just incomplete JSX fragments or broken syntax
-            if (re.match(r'^\s*<>\s*$', line) or 
-                re.match(r'^\s*</>\s*$', line) or
-                re.match(r'^\s*<[^>]*>\s*$', line) and not re.match(r'^\s*<[^>]*>.*</[^>]*>\s*$', line) or
-                re.match(r'^\s*[<>{}]+\s*$', line) or
-                re.match(r'^\s*[<>{}]*[<>{}]+\s*$', line)):
-                continue
+        # Check if file has the common pattern of duplicate function declarations
+        if 'export default function' in content and 'import React' in content:
+            lines = content.split('\n')
+            fixed_lines = []
+            imports = []
+            function_start = None
+            in_function = False
             
-            # Fix lines with broken JSX syntax
-            if re.search(r'[<>{}]+[^<>{}]*$', line) and not re.search(r'<[^>]*>.*</[^>]*>', line):
-                # Try to fix incomplete tags
-                if '<' in line and '>' not in line:
-                    line = re.sub(r'<[^>]*$', '', line)
-                if '>' in line and '<' not in line:
-                    line = re.sub(r'^[^<]*>', '', line)
-            
-            # Skip lines that are just broken characters
-            if re.match(r'^\s*[<>{}]+\s*$', line):
-                continue
+            for i, line in enumerate(lines):
+                stripped = line.strip()
                 
-            cleaned_lines.append(line)
+                # Collect imports
+                if stripped.startswith('import '):
+                    imports.append(line)
+                    continue
+                
+                # Find the first export default function
+                if stripped.startswith('export default function') and function_start is None:
+                    function_start = i
+                    fixed_lines.append(line)
+                    in_function = True
+                    continue
+                
+                # Skip duplicate function declarations
+                if in_function and stripped.startswith('export default function'):
+                    continue
+                
+                # Add all other lines
+                fixed_lines.append(line)
+            
+            # Reconstruct the file with imports first, then function
+            if imports and function_start is not None:
+                new_content = '\n'.join(imports) + '\n\n' + '\n'.join(fixed_lines[function_start:])
+                
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(new_content)
+                
+                print(f"Fixed duplicate function declarations in: {file_path}")
+                return True
         
-        content = '\n'.join(cleaned_lines)
+        return False
         
-        # Clean up multiple empty lines
-        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
+    except Exception as e:
+        print(f"Error fixing {file_path}: {e}")
+        return False
+
+def fix_missing_closing_braces(file_path):
+    """Fix missing closing braces"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
         
-        # Remove any remaining broken JSX fragments at the end
-        content = re.sub(r'<>\s*$', '', content)
-        content = re.sub(r'</>\s*$', '', content)
+        # Count opening and closing braces
+        open_braces = content.count('{')
+        close_braces = content.count('}')
         
-        # Write the cleaned content back if it changed
-        if content != original_content:
+        if open_braces > close_braces:
+            missing_braces = open_braces - close_braces
+            content += '\n' + '}' * missing_braces
+            
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
+            
+            print(f"Fixed missing closing braces in: {file_path}")
             return True
         
         return False
         
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        print(f"Error fixing {file_path}: {e}")
+        return False
+
+def fix_test_files(file_path):
+    """Fix common issues in test files"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Fix common test file issues
+        if 'describe(' in content and 'it(' in content:
+            # Ensure proper test structure
+            if not content.strip().startswith('import'):
+                content = "import { describe, it, expect } from '@jest/globals';\n\n" + content
+            
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            
+            print(f"Fixed test file: {file_path}")
+            return True
+        
+        return False
+        
+    except Exception as e:
+        print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to process all files with syntax errors."""
-    workspace = Path('/workspace')
+    """Main function to fix syntax errors"""
+    # Get all TypeScript and JavaScript files
+    patterns = [
+        'app/**/*.tsx',
+        'app/**/*.ts', 
+        '__tests__/**/*.tsx',
+        '__tests__/**/*.ts',
+        '*.js'
+    ]
     
-    # Find all TypeScript/JavaScript files
-    files_to_check = []
+    files_to_fix = []
+    for pattern in patterns:
+        files_to_fix.extend(glob.glob(pattern, recursive=True))
     
-    for ext in ['*.tsx', '*.ts', '*.jsx', '*.js']:
-        for file_path in workspace.rglob(ext):
-            if 'node_modules' in str(file_path):
-                continue
-            files_to_check.append(file_path)
-    
-    print(f"Checking {len(files_to_check)} files for syntax errors")
+    # Filter out node_modules and other directories we don't want
+    files_to_fix = [f for f in files_to_fix if 'node_modules' not in f and 'dist' not in f]
     
     fixed_count = 0
-    for file_path in files_to_check:
-        if fix_syntax_errors(file_path):
-            fixed_count += 1
-            print(f"Fixed: {file_path}")
+    total_count = len(files_to_fix)
     
-    print(f"Successfully fixed {fixed_count} files")
+    print(f"Found {total_count} files to check for syntax errors...")
+    
+    for file_path in files_to_fix:
+        if os.path.isfile(file_path):
+            fixed = False
+            
+            # Try different fixes
+            if fix_duplicate_function_declarations(file_path):
+                fixed = True
+            if fix_missing_closing_braces(file_path):
+                fixed = True
+            if 'test' in file_path.lower() and fix_test_files(file_path):
+                fixed = True
+            
+            if fixed:
+                fixed_count += 1
+    
+    print(f"\nFixed syntax errors in {fixed_count} files out of {total_count} files checked.")
 
 if __name__ == "__main__":
     main()

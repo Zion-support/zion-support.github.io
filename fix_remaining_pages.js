@@ -128,3 +128,4 @@ for (const page, of, pagesToFix) {
     console.error(`Error fixing ${page}:`, error.message);
 
 console.log('Page fixing completed');
+}}}

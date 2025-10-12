@@ -43,3 +43,4 @@ function fixAppTsx() {
 
 // Run the fix;
 fixAppTsx();
+}}

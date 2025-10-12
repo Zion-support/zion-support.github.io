@@ -86,3 +86,5 @@ async function main() {
   console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`);
 
 main().catch(console.error);
+
+}}}}}
