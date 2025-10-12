@@ -1,4 +1,3 @@
-export default function FiveGPrivateNetworksPage() {
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';

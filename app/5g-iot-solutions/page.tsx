@@ -1,11 +1,10 @@
-export default function FiveGIoTSolutionsPage() {
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function FiveGIotSolutionsPage() {
+export default function FiveGIoTSolutionsPage() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
