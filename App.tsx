@@ -31,6 +31,12 @@ import MicroSaasLeadScoringPage from './app/micro-saas/lead-scoring/page'
 import MicroSaasSeoOptimizerPage from './app/micro-saas/seo-optimizer/page'
 import MicroSaasSocialManagerPage from './app/micro-saas/social-manager/page'
 import MicroSaasSupportBotPage from './app/micro-saas/support-bot/page'
+import AICustomerInsightsPage from './app/micro-saas/ai-customer-insights/page'
+import AIWorkflowAutomationPage from './app/micro-saas/ai-workflow-automation/page'
+import AIFinancialForecastingPage from './app/micro-saas/ai-financial-forecasting/page'
+import AIInventoryOptimizerPage from './app/micro-saas/ai-inventory-optimizer/page'
+import AISocialSchedulerPage from './app/micro-saas/ai-social-scheduler/page'
+import AIVoiceAssistantPage from './app/ai-voice-assistant/page'
 import AIInvoiceGeneratorPage from './app/ai-invoice-generator/page'
 import AISocialMediaManagerPage from './app/ai-social-media-manager/page'
 import CloudMigrationPage from './app/cloud-migration/page'
@@ -96,8 +102,14 @@ const App: React.FC = () => {
                   <Route path="/micro-saas/seo-optimizer" element={<MicroSaasSeoOptimizerPage />} />
                   <Route path="/micro-saas/social-manager" element={<MicroSaasSocialManagerPage />} />
                   <Route path="/micro-saas/support-bot" element={<MicroSaasSupportBotPage />} />
+                  <Route path="/micro-saas/ai-customer-insights" element={<AICustomerInsightsPage />} />
+                  <Route path="/micro-saas/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
+                  <Route path="/micro-saas/ai-financial-forecasting" element={<AIFinancialForecastingPage />} />
+                  <Route path="/micro-saas/ai-inventory-optimizer" element={<AIInventoryOptimizerPage />} />
+                  <Route path="/micro-saas/ai-social-scheduler" element={<AISocialSchedulerPage />} />
                   
                   {/* New AI Services */}
+                  <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
                   <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
                   <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
                   

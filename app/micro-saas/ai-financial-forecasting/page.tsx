@@ -1,133 +1,133 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Mic, Brain, Zap, Shield, Globe, Star, DollarSign, Clock, Users, MessageSquare, Volume2, Headphones, Bot, Settings, BarChart3, Activity } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, TrendingUp, DollarSign, BarChart3, Brain, Target, Shield, Zap, Globe, Star, Clock, PieChart, Activity, Calculator, LineChart, TrendingDown, AlertTriangle } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-const AIVoiceAssistantPage: React.FC = () => {
+const AIFinancialForecastingPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Natural Language Processing',
-      description: 'Advanced AI understands context, intent, and emotions in human speech with 98% accuracy',
+      title: 'AI-Powered Predictions',
+      description: 'Advanced machine learning algorithms analyze historical data and market trends to predict future financial performance with 94% accuracy',
       color: 'from-cyan-500 to-blue-500'
     },
     {
-      icon: Mic,
-      title: 'Multi-Language Support',
-      description: 'Supports 50+ languages with real-time translation and accent adaptation',
+      icon: BarChart3,
+      title: 'Real-time Analytics',
+      description: 'Monitor financial metrics in real-time with interactive dashboards and automated alerts for critical changes',
       color: 'from-emerald-500 to-teal-500'
     },
     {
-      icon: Bot,
-      title: 'Conversational AI',
-      description: 'Engages in natural, context-aware conversations that feel human-like',
+      icon: Target,
+      title: 'Scenario Planning',
+      description: 'Model multiple financial scenarios to prepare for different business conditions and market changes',
       color: 'from-violet-500 to-purple-500'
     },
     {
-      icon: BarChart3,
-      title: 'Analytics & Insights',
-      description: 'Track conversation patterns, user satisfaction, and performance metrics',
+      icon: Shield,
+      title: 'Risk Assessment',
+      description: 'Identify potential financial risks and opportunities with advanced risk modeling and stress testing',
       color: 'from-rose-500 to-pink-500'
     }
   ]
 
   const capabilities = [
-    'Voice recognition and synthesis',
-    'Natural language understanding',
-    'Multi-language support (50+ languages)',
-    'Real-time conversation processing',
-    'Emotion detection and response',
-    'Custom voice training',
-    'Integration with business systems',
-    'API and webhook support',
-    'Conversation analytics',
-    'Custom personality development',
-    'Voice cloning technology',
-    'Multi-channel deployment'
+    'Revenue forecasting and budgeting',
+    'Cash flow prediction and analysis',
+    'Expense optimization recommendations',
+    'Investment opportunity analysis',
+    'Market trend identification',
+    'Risk assessment and mitigation',
+    'Scenario planning and modeling',
+    'Automated financial reporting',
+    'Integration with accounting systems',
+    'Real-time dashboard monitoring',
+    'Custom financial metrics',
+    'Regulatory compliance tracking'
   ]
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$149',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic voice recognition',
+        'Up to $1M revenue tracking',
+        'Basic forecasting models',
         'Email support',
         'Standard integrations',
-        'Basic analytics'
+        'Monthly reports'
       ],
       color: 'from-gray-500 to-gray-600'
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$399',
       period: '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for growing companies',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI features',
+        'Up to $10M revenue tracking',
+        'Advanced AI forecasting',
         'Priority support',
         'Custom integrations',
-        'Advanced analytics',
-        'Multi-language support'
+        'Real-time alerts',
+        'Scenario planning'
       ],
       color: 'from-cyan-500 to-blue-500',
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$999',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
+        'Unlimited revenue tracking',
         'Custom AI models',
         'Dedicated support',
         'White-label solution',
         'Advanced security',
-        'Custom voice training'
+        'Custom reporting'
       ],
       color: 'from-purple-500 to-pink-500'
     }
   ]
 
   const benefits = [
-    'Improve customer satisfaction by 60%',
-    'Reduce support costs by 45%',
-    'Handle 80% of inquiries automatically',
-    'Available 24/7 in multiple languages',
-    'Scale customer support instantly',
-    'Improve response time by 90%',
-    'Enhance brand consistency',
-    'Gather valuable customer insights'
+    'Improve forecast accuracy by 40%',
+    'Reduce financial planning time by 60%',
+    'Identify cost savings of 25%',
+    'Increase revenue by 30%',
+    'Minimize financial risks',
+    'Optimize cash flow management',
+    'Enhance decision making',
+    'Streamline budgeting process'
   ]
 
-  const useCases = [
+  const forecastingTypes = [
     {
-      title: 'Customer Support',
-      description: 'Handle customer inquiries, complaints, and support requests with intelligent responses',
-      icon: Headphones,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Sales Assistant',
-      description: 'Guide customers through product selection and purchasing decisions',
-      icon: DollarSign,
+      title: 'Revenue Forecasting',
+      description: 'Predict future revenue streams based on historical data and market trends',
+      icon: TrendingUp,
       color: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'Virtual Receptionist',
-      description: 'Manage appointments, answer calls, and route inquiries efficiently',
-      icon: Phone,
+      title: 'Cash Flow Analysis',
+      description: 'Monitor and predict cash flow patterns to optimize working capital',
+      icon: DollarSign,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Expense Planning',
+      description: 'Forecast and optimize expenses to improve profitability',
+      icon: Calculator,
       color: 'from-purple-500 to-violet-500'
     },
     {
-      title: 'Training & Education',
-      description: 'Provide interactive learning experiences and answer student questions',
-      icon: Users,
+      title: 'Investment Analysis',
+      description: 'Evaluate investment opportunities and ROI projections',
+      icon: Target,
       color: 'from-orange-500 to-red-500'
     }
   ]
@@ -135,9 +135,9 @@ const AIVoiceAssistantPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Voice Assistant | Zion Tech Group</title>
-        <meta name="description" content="Transform customer interactions with AI voice assistants. Improve satisfaction by 60% and reduce costs by 45% with natural language processing." />
-        <meta name="keywords" content="AI voice assistant, conversational AI, voice recognition, customer support automation, Zion Tech Group" />
+        <title>AI Financial Forecasting | Zion Tech Group</title>
+        <meta name="description" content="Predict your financial future with AI-powered forecasting. Improve accuracy by 40% and optimize cash flow with advanced financial analytics." />
+        <meta name="keywords" content="AI financial forecasting, financial analytics, cash flow prediction, budget planning, Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
@@ -149,22 +149,22 @@ const AIVoiceAssistantPage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="mb-6">
             <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-4">
-              <Mic className="w-4 h-4 mr-2" />
-              AI-Powered Voice Intelligence
+              <TrendingUp className="w-4 h-4 mr-2" />
+              AI-Powered Financial Intelligence
             </span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Voice
+            AI Financial
             <br />
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-              Assistant
+              Forecasting
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform customer interactions with AI voice assistants. Improve satisfaction by 60% and reduce 
-            costs by 45% with natural language processing and conversational AI.
+            Predict your financial future with AI-powered forecasting. Improve accuracy by 40% and optimize 
+            cash flow with advanced machine learning algorithms and real-time analytics.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -186,20 +186,20 @@ const AIVoiceAssistantPage: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">98%</div>
-              <div className="text-gray-300">Accuracy Rate</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">94%</div>
+              <div className="text-gray-300">Forecast Accuracy</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">60%</div>
-              <div className="text-gray-300">Satisfaction Boost</div>
+              <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">40%</div>
+              <div className="text-gray-300">Accuracy Improvement</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-violet-400 mb-2">45%</div>
+              <div className="text-3xl md:text-4xl font-bold text-violet-400 mb-2">60%</div>
+              <div className="text-gray-300">Time Savings</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-rose-400 mb-2">25%</div>
               <div className="text-gray-300">Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-rose-400 mb-2">50+</div>
-              <div className="text-gray-300">Languages Supported</div>
             </div>
           </div>
         </div>
@@ -210,10 +210,10 @@ const AIVoiceAssistantPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Voice AI Technology
+              Advanced Financial Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Cutting-edge AI technology that understands, processes, and responds to human speech naturally.
+              Powerful AI technology that transforms your financial data into actionable insights and accurate predictions.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -230,25 +230,25 @@ const AIVoiceAssistantPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Forecasting Types Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-slate-900/50 via-purple-900/30 to-slate-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Versatile Applications
+              Comprehensive Financial Analysis
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From customer support to sales, our AI voice assistant adapts to your business needs.
+              From revenue forecasting to risk assessment, get complete financial visibility.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {forecastingTypes.map((type, index) => (
               <div key={index} className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/10">
-                <div className={`flex items-center justify-center w-14 h-14 bg-gradient-to-r ${useCase.color} rounded-xl mb-4 group-hover:rotate-12 transition-transform duration-300`}>
-                  <useCase.icon className="w-7 h-7 text-white" />
+                <div className={`flex items-center justify-center w-14 h-14 bg-gradient-to-r ${type.color} rounded-xl mb-4 group-hover:rotate-12 transition-transform duration-300`}>
+                  <type.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">{useCase.title}</h3>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors">{useCase.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">{type.title}</h3>
+                <p className="text-gray-300 group-hover:text-gray-200 transition-colors">{type.description}</p>
               </div>
             ))}
           </div>
@@ -260,10 +260,10 @@ const AIVoiceAssistantPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Complete Voice AI Capabilities
+              Complete Financial Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to implement intelligent voice interactions in your business.
+              Everything you need to make informed financial decisions and optimize your business performance.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -285,7 +285,7 @@ const AIVoiceAssistantPage: React.FC = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your voice AI needs. All plans include our core features.
+              Choose the plan that fits your financial forecasting needs. All plans include our core AI features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -334,7 +334,7 @@ const AIVoiceAssistantPage: React.FC = () => {
               Proven Business Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of businesses that have transformed customer interactions with AI.
+              Join thousands of businesses that have transformed their financial planning with AI.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -358,10 +358,10 @@ const AIVoiceAssistantPage: React.FC = () => {
               
               <div className="relative">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                  Ready to Transform Customer Interactions?
+                  Ready to Predict Your Financial Future?
                 </h2>
                 <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                  Start your free trial today and see how AI voice assistants can revolutionize your customer experience.
+                  Start your free trial today and see how AI forecasting can transform your financial planning.
                 </p>
                 
                 <div className="mb-8 p-4 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
@@ -404,4 +404,4 @@ const AIVoiceAssistantPage: React.FC = () => {
   )
 }
 
-export default AIVoiceAssistantPage
+export default AIFinancialForecastingPage

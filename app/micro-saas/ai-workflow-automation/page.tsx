@@ -1,133 +1,133 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Mic, Brain, Zap, Shield, Globe, Star, DollarSign, Clock, Users, MessageSquare, Volume2, Headphones, Bot, Settings, BarChart3, Activity } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Settings, Bot, Workflow, Clock, Target, Shield, Brain, BarChart3, Users, Globe, Star, DollarSign, Activity, Play, Pause, RotateCcw, TrendingUp } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-const AIVoiceAssistantPage: React.FC = () => {
+const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: 'Natural Language Processing',
-      description: 'Advanced AI understands context, intent, and emotions in human speech with 98% accuracy',
+      icon: Bot,
+      title: 'Intelligent Automation',
+      description: 'AI-powered bots that learn and adapt to your business processes, automating complex workflows with minimal human intervention',
       color: 'from-cyan-500 to-blue-500'
     },
     {
-      icon: Mic,
-      title: 'Multi-Language Support',
-      description: 'Supports 50+ languages with real-time translation and accent adaptation',
+      icon: Workflow,
+      title: 'Visual Workflow Builder',
+      description: 'Drag-and-drop interface to create sophisticated automation workflows without coding knowledge',
       color: 'from-emerald-500 to-teal-500'
     },
     {
-      icon: Bot,
-      title: 'Conversational AI',
-      description: 'Engages in natural, context-aware conversations that feel human-like',
+      icon: Brain,
+      title: 'Smart Decision Making',
+      description: 'AI algorithms that make intelligent decisions based on data patterns, reducing errors and improving efficiency',
       color: 'from-violet-500 to-purple-500'
     },
     {
       icon: BarChart3,
-      title: 'Analytics & Insights',
-      description: 'Track conversation patterns, user satisfaction, and performance metrics',
+      title: 'Performance Analytics',
+      description: 'Real-time monitoring and analytics to track automation performance and identify optimization opportunities',
       color: 'from-rose-500 to-pink-500'
     }
   ]
 
   const capabilities = [
-    'Voice recognition and synthesis',
-    'Natural language understanding',
-    'Multi-language support (50+ languages)',
-    'Real-time conversation processing',
-    'Emotion detection and response',
-    'Custom voice training',
-    'Integration with business systems',
+    'No-code workflow automation',
+    'AI-powered decision making',
+    'Multi-platform integrations',
+    'Real-time monitoring dashboard',
+    'Custom trigger conditions',
+    'Automated error handling',
+    'Scalable process management',
+    'Advanced reporting and analytics',
+    'Team collaboration tools',
     'API and webhook support',
-    'Conversation analytics',
-    'Custom personality development',
-    'Voice cloning technology',
-    'Multi-channel deployment'
+    'Conditional logic branching',
+    'Scheduled automation tasks'
   ]
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$79',
       period: '/month',
-      description: 'Perfect for small businesses',
+      description: 'Perfect for small teams',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic voice recognition',
+        'Up to 5 workflows',
+        'Basic integrations',
         'Email support',
-        'Standard integrations',
-        'Basic analytics'
+        'Standard templates',
+        'Monthly analytics'
       ],
       color: 'from-gray-500 to-gray-600'
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$199',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 conversations/month',
+        'Up to 25 workflows',
         'Advanced AI features',
         'Priority support',
         'Custom integrations',
-        'Advanced analytics',
-        'Multi-language support'
+        'Real-time monitoring',
+        'Team collaboration'
       ],
       color: 'from-cyan-500 to-blue-500',
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$499',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
+        'Unlimited workflows',
         'Custom AI models',
         'Dedicated support',
         'White-label solution',
         'Advanced security',
-        'Custom voice training'
+        'Custom reporting'
       ],
       color: 'from-purple-500 to-pink-500'
     }
   ]
 
   const benefits = [
-    'Improve customer satisfaction by 60%',
-    'Reduce support costs by 45%',
-    'Handle 80% of inquiries automatically',
-    'Available 24/7 in multiple languages',
-    'Scale customer support instantly',
-    'Improve response time by 90%',
-    'Enhance brand consistency',
-    'Gather valuable customer insights'
+    'Reduce manual work by 80%',
+    'Increase process efficiency by 60%',
+    'Eliminate human errors by 95%',
+    'Save 20+ hours per week',
+    'Improve team productivity',
+    'Accelerate business growth',
+    'Enhance data accuracy',
+    'Streamline operations'
   ]
 
-  const useCases = [
+  const automationTypes = [
     {
-      title: 'Customer Support',
-      description: 'Handle customer inquiries, complaints, and support requests with intelligent responses',
-      icon: Headphones,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Sales Assistant',
-      description: 'Guide customers through product selection and purchasing decisions',
-      icon: DollarSign,
+      title: 'Sales Automation',
+      description: 'Automate lead scoring, follow-ups, and pipeline management',
+      icon: Target,
       color: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'Virtual Receptionist',
-      description: 'Manage appointments, answer calls, and route inquiries efficiently',
-      icon: Phone,
+      title: 'Marketing Automation',
+      description: 'Automate email campaigns, social media posting, and content distribution',
+      icon: Users,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Customer Support',
+      description: 'Automate ticket routing, response generation, and escalation processes',
+      icon: Shield,
       color: 'from-purple-500 to-violet-500'
     },
     {
-      title: 'Training & Education',
-      description: 'Provide interactive learning experiences and answer student questions',
-      icon: Users,
+      title: 'Data Processing',
+      description: 'Automate data entry, validation, and reporting across systems',
+      icon: BarChart3,
       color: 'from-orange-500 to-red-500'
     }
   ]
@@ -135,9 +135,9 @@ const AIVoiceAssistantPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Voice Assistant | Zion Tech Group</title>
-        <meta name="description" content="Transform customer interactions with AI voice assistants. Improve satisfaction by 60% and reduce costs by 45% with natural language processing." />
-        <meta name="keywords" content="AI voice assistant, conversational AI, voice recognition, customer support automation, Zion Tech Group" />
+        <title>AI Workflow Automation | Zion Tech Group</title>
+        <meta name="description" content="Automate your business processes with AI-powered workflow automation. Reduce manual work by 80% and boost efficiency with intelligent automation." />
+        <meta name="keywords" content="AI workflow automation, business process automation, workflow management, AI bots, Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
@@ -149,22 +149,22 @@ const AIVoiceAssistantPage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="mb-6">
             <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-4">
-              <Mic className="w-4 h-4 mr-2" />
-              AI-Powered Voice Intelligence
+              <Zap className="w-4 h-4 mr-2" />
+              AI-Powered Automation
             </span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Voice
+            AI Workflow
             <br />
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-              Assistant
+              Automation
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform customer interactions with AI voice assistants. Improve satisfaction by 60% and reduce 
-            costs by 45% with natural language processing and conversational AI.
+            Transform your business with intelligent automation. Reduce manual work by 80% and boost efficiency 
+            with AI-powered workflows that learn and adapt to your processes.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -186,20 +186,20 @@ const AIVoiceAssistantPage: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">98%</div>
-              <div className="text-gray-300">Accuracy Rate</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">80%</div>
+              <div className="text-gray-300">Manual Work Reduction</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">60%</div>
-              <div className="text-gray-300">Satisfaction Boost</div>
+              <div className="text-gray-300">Efficiency Boost</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-violet-400 mb-2">45%</div>
-              <div className="text-gray-300">Cost Reduction</div>
+              <div className="text-3xl md:text-4xl font-bold text-violet-400 mb-2">95%</div>
+              <div className="text-gray-300">Error Reduction</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-rose-400 mb-2">50+</div>
-              <div className="text-gray-300">Languages Supported</div>
+              <div className="text-3xl md:text-4xl font-bold text-rose-400 mb-2">20+</div>
+              <div className="text-gray-300">Hours Saved/Week</div>
             </div>
           </div>
         </div>
@@ -210,10 +210,10 @@ const AIVoiceAssistantPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Voice AI Technology
+              Powerful Automation Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Cutting-edge AI technology that understands, processes, and responds to human speech naturally.
+              Advanced AI technology that transforms your business processes into efficient, automated workflows.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -230,25 +230,25 @@ const AIVoiceAssistantPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Automation Types Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-slate-900/50 via-purple-900/30 to-slate-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Versatile Applications
+              Automation for Every Business Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From customer support to sales, our AI voice assistant adapts to your business needs.
+              From sales to support, automate any business process with our intelligent workflow engine.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {automationTypes.map((type, index) => (
               <div key={index} className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/10">
-                <div className={`flex items-center justify-center w-14 h-14 bg-gradient-to-r ${useCase.color} rounded-xl mb-4 group-hover:rotate-12 transition-transform duration-300`}>
-                  <useCase.icon className="w-7 h-7 text-white" />
+                <div className={`flex items-center justify-center w-14 h-14 bg-gradient-to-r ${type.color} rounded-xl mb-4 group-hover:rotate-12 transition-transform duration-300`}>
+                  <type.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">{useCase.title}</h3>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors">{useCase.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">{type.title}</h3>
+                <p className="text-gray-300 group-hover:text-gray-200 transition-colors">{type.description}</p>
               </div>
             ))}
           </div>
@@ -260,10 +260,10 @@ const AIVoiceAssistantPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Complete Voice AI Capabilities
+              Complete Automation Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to implement intelligent voice interactions in your business.
+              Everything you need to automate your business processes and boost productivity.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -285,7 +285,7 @@ const AIVoiceAssistantPage: React.FC = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your voice AI needs. All plans include our core features.
+              Choose the plan that fits your automation needs. All plans include our core AI features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -334,7 +334,7 @@ const AIVoiceAssistantPage: React.FC = () => {
               Proven Business Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of businesses that have transformed customer interactions with AI.
+              Join thousands of businesses that have transformed their operations with automation.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -358,10 +358,10 @@ const AIVoiceAssistantPage: React.FC = () => {
               
               <div className="relative">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                  Ready to Transform Customer Interactions?
+                  Ready to Automate Your Business?
                 </h2>
                 <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                  Start your free trial today and see how AI voice assistants can revolutionize your customer experience.
+                  Start your free trial today and see how AI automation can transform your business processes.
                 </p>
                 
                 <div className="mb-8 p-4 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
@@ -404,4 +404,4 @@ const AIVoiceAssistantPage: React.FC = () => {
   )
 }
 
-export default AIVoiceAssistantPage
+export default AIWorkflowAutomationPage

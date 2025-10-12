@@ -1,143 +1,116 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Mic, Brain, Zap, Shield, Globe, Star, DollarSign, Clock, Users, MessageSquare, Volume2, Headphones, Bot, Settings, BarChart3, Activity } from 'lucide-react'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Brain, BarChart3, Users, TrendingUp, Shield, Zap, Globe, Star, DollarSign, Clock, Target, PieChart, Activity, Eye, MessageSquare, Heart, ThumbsUp } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
-const AIVoiceAssistantPage: React.FC = () => {
+const AICustomerInsightsPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Natural Language Processing',
-      description: 'Advanced AI understands context, intent, and emotions in human speech with 98% accuracy',
+      title: 'AI-Powered Analytics',
+      description: 'Advanced machine learning algorithms analyze customer behavior patterns and preferences in real-time',
       color: 'from-cyan-500 to-blue-500'
     },
     {
-      icon: Mic,
-      title: 'Multi-Language Support',
-      description: 'Supports 50+ languages with real-time translation and accent adaptation',
+      icon: BarChart3,
+      title: 'Predictive Insights',
+      description: 'Forecast customer lifetime value, churn probability, and purchase likelihood with 95% accuracy',
       color: 'from-emerald-500 to-teal-500'
     },
     {
-      icon: Bot,
-      title: 'Conversational AI',
-      description: 'Engages in natural, context-aware conversations that feel human-like',
+      icon: Users,
+      title: 'Customer Segmentation',
+      description: 'Automatically segment customers into meaningful groups based on behavior, demographics, and preferences',
       color: 'from-violet-500 to-purple-500'
     },
     {
-      icon: BarChart3,
-      title: 'Analytics & Insights',
-      description: 'Track conversation patterns, user satisfaction, and performance metrics',
+      icon: TrendingUp,
+      title: 'Real-time Monitoring',
+      description: 'Monitor customer satisfaction, engagement metrics, and sentiment analysis across all touchpoints',
       color: 'from-rose-500 to-pink-500'
     }
   ]
 
   const capabilities = [
-    'Voice recognition and synthesis',
-    'Natural language understanding',
-    'Multi-language support (50+ languages)',
-    'Real-time conversation processing',
-    'Emotion detection and response',
-    'Custom voice training',
-    'Integration with business systems',
-    'API and webhook support',
-    'Conversation analytics',
-    'Custom personality development',
-    'Voice cloning technology',
-    'Multi-channel deployment'
+    'Advanced customer behavior analysis',
+    'Predictive churn modeling',
+    'Sentiment analysis across channels',
+    'Customer lifetime value prediction',
+    'Automated segmentation',
+    'Real-time dashboard updates',
+    'Integration with 50+ platforms',
+    'Custom reporting and alerts',
+    'A/B testing insights',
+    'Competitive analysis',
+    'Market trend identification',
+    'ROI optimization recommendations'
   ]
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$199',
+      price: '$99',
       period: '/month',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 1,000 conversations/month',
-        'Basic voice recognition',
+        'Up to 1,000 customers',
+        'Basic analytics dashboard',
         'Email support',
         'Standard integrations',
-        'Basic analytics'
+        'Monthly reports'
       ],
       color: 'from-gray-500 to-gray-600'
     },
     {
       name: 'Professional',
-      price: '$499',
+      price: '$299',
       period: '/month',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 conversations/month',
-        'Advanced AI features',
+        'Up to 10,000 customers',
+        'Advanced AI insights',
         'Priority support',
         'Custom integrations',
-        'Advanced analytics',
-        'Multi-language support'
+        'Real-time alerts',
+        'API access'
       ],
       color: 'from-cyan-500 to-blue-500',
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$799',
       period: '/month',
       description: 'For large organizations',
       features: [
-        'Unlimited conversations',
+        'Unlimited customers',
         'Custom AI models',
         'Dedicated support',
         'White-label solution',
         'Advanced security',
-        'Custom voice training'
+        'Custom reporting'
       ],
       color: 'from-purple-500 to-pink-500'
     }
   ]
 
   const benefits = [
-    'Improve customer satisfaction by 60%',
-    'Reduce support costs by 45%',
-    'Handle 80% of inquiries automatically',
-    'Available 24/7 in multiple languages',
-    'Scale customer support instantly',
-    'Improve response time by 90%',
-    'Enhance brand consistency',
-    'Gather valuable customer insights'
-  ]
-
-  const useCases = [
-    {
-      title: 'Customer Support',
-      description: 'Handle customer inquiries, complaints, and support requests with intelligent responses',
-      icon: Headphones,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Sales Assistant',
-      description: 'Guide customers through product selection and purchasing decisions',
-      icon: DollarSign,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Virtual Receptionist',
-      description: 'Manage appointments, answer calls, and route inquiries efficiently',
-      icon: Phone,
-      color: 'from-purple-500 to-violet-500'
-    },
-    {
-      title: 'Training & Education',
-      description: 'Provide interactive learning experiences and answer student questions',
-      icon: Users,
-      color: 'from-orange-500 to-red-500'
-    }
+    'Increase customer retention by 40%',
+    'Reduce churn rate by 35%',
+    'Boost customer lifetime value by 60%',
+    'Improve marketing ROI by 50%',
+    'Enhance customer satisfaction scores',
+    'Optimize pricing strategies',
+    'Identify upsell opportunities',
+    'Streamline customer support'
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Voice Assistant | Zion Tech Group</title>
-        <meta name="description" content="Transform customer interactions with AI voice assistants. Improve satisfaction by 60% and reduce costs by 45% with natural language processing." />
-        <meta name="keywords" content="AI voice assistant, conversational AI, voice recognition, customer support automation, Zion Tech Group" />
+        <title>AI Customer Insights | Zion Tech Group</title>
+        <meta name="description" content="Transform customer data into actionable insights with our AI-powered analytics platform. Predict churn, segment customers, and boost retention." />
+        <meta name="keywords" content="AI customer insights, customer analytics, churn prediction, customer segmentation, Zion Tech Group" />
       </Helmet>
 
       {/* Hero Section */}
@@ -149,22 +122,22 @@ const AIVoiceAssistantPage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="mb-6">
             <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-4">
-              <Mic className="w-4 h-4 mr-2" />
-              AI-Powered Voice Intelligence
+              <Brain className="w-4 h-4 mr-2" />
+              AI-Powered Customer Analytics
             </span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Voice
+            AI Customer
             <br />
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-              Assistant
+              Insights
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform customer interactions with AI voice assistants. Improve satisfaction by 60% and reduce 
-            costs by 45% with natural language processing and conversational AI.
+            Transform your customer data into actionable insights with our advanced AI platform. 
+            Predict churn, segment customers, and boost retention with 95% accuracy.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -186,20 +159,20 @@ const AIVoiceAssistantPage: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">98%</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">95%</div>
               <div className="text-gray-300">Accuracy Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">60%</div>
-              <div className="text-gray-300">Satisfaction Boost</div>
+              <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">40%</div>
+              <div className="text-gray-300">Retention Boost</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-violet-400 mb-2">45%</div>
-              <div className="text-gray-300">Cost Reduction</div>
+              <div className="text-3xl md:text-4xl font-bold text-violet-400 mb-2">35%</div>
+              <div className="text-gray-300">Churn Reduction</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-rose-400 mb-2">50+</div>
-              <div className="text-gray-300">Languages Supported</div>
+              <div className="text-3xl md:text-4xl font-bold text-rose-400 mb-2">60%</div>
+              <div className="text-gray-300">LTV Increase</div>
             </div>
           </div>
         </div>
@@ -210,10 +183,10 @@ const AIVoiceAssistantPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Voice AI Technology
+              Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Cutting-edge AI technology that understands, processes, and responds to human speech naturally.
+              Advanced machine learning algorithms that transform your customer data into actionable business insights.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -230,40 +203,15 @@ const AIVoiceAssistantPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Capabilities Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-slate-900/50 via-purple-900/30 to-slate-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Versatile Applications
+              Complete Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From customer support to sales, our AI voice assistant adapts to your business needs.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="group bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/10">
-                <div className={`flex items-center justify-center w-14 h-14 bg-gradient-to-r ${useCase.color} rounded-xl mb-4 group-hover:rotate-12 transition-transform duration-300`}>
-                  <useCase.icon className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">{useCase.title}</h3>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors">{useCase.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Capabilities Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Complete Voice AI Capabilities
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to implement intelligent voice interactions in your business.
+              Everything you need to understand and engage your customers better.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -278,14 +226,14 @@ const AIVoiceAssistantPage: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-slate-900/50 via-purple-900/30 to-slate-900/50">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your voice AI needs. All plans include our core features.
+              Choose the plan that fits your business needs. All plans include our core AI features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -327,14 +275,14 @@ const AIVoiceAssistantPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gradient-to-br from-slate-900/50 via-purple-900/30 to-slate-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Proven Business Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of businesses that have transformed customer interactions with AI.
+              Join thousands of businesses that have transformed their customer relationships.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -358,10 +306,10 @@ const AIVoiceAssistantPage: React.FC = () => {
               
               <div className="relative">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
-                  Ready to Transform Customer Interactions?
+                  Ready to Transform Your Customer Insights?
                 </h2>
                 <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                  Start your free trial today and see how AI voice assistants can revolutionize your customer experience.
+                  Start your free trial today and see how AI can revolutionize your customer understanding.
                 </p>
                 
                 <div className="mb-8 p-4 bg-white/10 rounded-xl backdrop-blur-sm border border-white/20">
@@ -404,4 +352,4 @@ const AIVoiceAssistantPage: React.FC = () => {
   )
 }
 
-export default AIVoiceAssistantPage
+export default AICustomerInsightsPage

@@ -48,6 +48,11 @@ const Navigation: React.FC = () => {
       icon: Code,
       color: 'from-violet-500 to-purple-500',
       dropdown: [
+        { name: 'AI Customer Insights', path: '/micro-saas/ai-customer-insights', price: '$299/month' },
+        { name: 'AI Workflow Automation', path: '/micro-saas/ai-workflow-automation', price: '$199/month' },
+        { name: 'AI Financial Forecasting', path: '/micro-saas/ai-financial-forecasting', price: '$399/month' },
+        { name: 'AI Inventory Optimizer', path: '/micro-saas/ai-inventory-optimizer', price: '$249/month' },
+        { name: 'AI Social Scheduler', path: '/micro-saas/ai-social-scheduler', price: '$129/month' },
         { name: 'AI-Powered CRM', path: '/ai-crm', price: '$99/month' },
         { name: 'Smart Analytics', path: '/smart-analytics', price: '$79/month' },
         { name: 'Automated Testing', path: '/ai-automated-testing', price: '$129/month' },

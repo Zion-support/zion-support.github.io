@@ -26,6 +26,11 @@ const Footer: React.FC = () => {
   ];
 
   const microSaasServices = [
+    { name: 'AI Customer Insights', path: '/micro-saas/ai-customer-insights' },
+    { name: 'AI Workflow Automation', path: '/micro-saas/ai-workflow-automation' },
+    { name: 'AI Financial Forecasting', path: '/micro-saas/ai-financial-forecasting' },
+    { name: 'AI Inventory Optimizer', path: '/micro-saas/ai-inventory-optimizer' },
+    { name: 'AI Social Scheduler', path: '/micro-saas/ai-social-scheduler' },
     { name: 'AI-Powered CRM', path: '/ai-crm' },
     { name: 'Smart Analytics', path: '/smart-analytics' },
     { name: 'Automated Testing', path: '/ai-automated-testing' },
