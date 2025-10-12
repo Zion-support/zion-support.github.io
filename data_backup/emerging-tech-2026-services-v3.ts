@@ -1,1 +1,0 @@
-export: interface EmergingTech2026ServiceV3 {id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string, features[ 'Third: generation tech'',;' 'Enhanced: capabilities'',;' 'Advanced: features'',;' 'Improved: platform'',}' 'Better: performance'']} '

@@ -1,1 +1,0 @@
-import React {useState} useEffect } from 'react.ts'' import Link from 'next/link.ts' '

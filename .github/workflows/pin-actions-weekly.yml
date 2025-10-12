@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run pin actions weekly
-        run: 
+        run: npm run pin-actions
       - name: Upload results
         uses: actions/upload-artifact@v4
         if: always()
@@ -33,4 +33,3 @@ jobs:
           path: |
             .github/workflows/
           retention-days: 7
-    runs_on: ubuntu-latest

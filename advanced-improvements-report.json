@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-06T04:49:10.508Z",
+  "timestamp": "2025-10-08T15:29:24.152Z",
   "improvements": {
     "advancedPerformance": {
       "nextjsOptimizations": {
@@ -112,19 +112,7 @@
       },
       "inputValidation": {
         "html": {
-          "allowedTags": [
-            "p",
-            "br",
-            "strong",
-            "em",
-            "u",
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6"
-          ],
+          "allowedTags": ["p", "br", "strong", "em", "u", "h1", "h2", "h3", "h4", "h5", "h6"],
           "allowedAttributes": {}
         },
         "sql": {
@@ -332,11 +320,7 @@
         }
       },
       "eslintConfig": {
-        "extends": [
-          "next/core-web-vitals",
-          "@typescript-eslint/recommended",
-          "prettier"
-        ],
+        "extends": ["next/core-web-vitals", "@typescript-eslint/recommended", "prettier"],
         "plugins": ["@typescript-eslint", "prettier"],
         "rules": {
           "prettier/prettier": "error",

@@ -1,3 +1,10 @@
+# ==============================================================================
+# IMPORTANT: This is a VITE project, NOT a Next.js project!
+# ==============================================================================
+# Next.js has been removed from dependencies to prevent Netlify auto-detection
+# This project uses Vite for building and React Router for routing
+# ==============================================================================
+
 [build]
   publish = "dist"
   command = "npm run build"
@@ -5,6 +12,12 @@
 [build.environment]
   NODE_VERSION = "20"
   NPM_VERSION = "10"
+  # Explicitly disable Next.js features
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  # Optimize Node.js for build performance
+  NODE_OPTIONS = "--max-old-space-size=4096"
+  # Reduce memory leak warnings
+  NODE_NO_WARNINGS = "1"
 
 [[headers]]
   for = "/*"
@@ -91,6 +104,25 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+
+# Build optimizations
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
 
 [dev]
   command = "npm run dev"

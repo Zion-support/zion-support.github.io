@@ -1,0 +1,33 @@
+{
+  "environments": {
+    "development": {
+      "apiUrl": "http://localhost:3000",
+      "enableDebug": true,
+      "enableSourceMaps": true
+    },
+    "staging": {
+      "apiUrl": "https://staging.ziontechgroup.com",
+      "enableDebug": false,
+      "enableSourceMaps": true
+    },
+    "production": {
+      "apiUrl": "https://ziontechgroup.com",
+      "enableDebug": false,
+      "enableSourceMaps": false,
+      "enableCompression": true,
+      "enableCaching": true
+    }
+  },
+  "build": {
+    "minify": true,
+    "sourceMaps": false,
+    "compression": true,
+    "bundleAnalyzer": false
+  },
+  "deployment": {
+    "platform": "netlify",
+    "branch": "main",
+    "buildCommand": "npm run build",
+    "publishDirectory": "dist"
+  }
+}

@@ -19,12 +19,7 @@
     "targetExponentialFactor": 10,
     "autonomousEnabled": true
   },
-  "specializations": [
-    "ai-research",
-    "innovation",
-    "future-prediction",
-    "trend-analysis"
-  ],
+  "specializations": ["ai-research", "innovation", "future-prediction", "trend-analysis"],
   "autonomousCapabilities": {
     "selfReplication": true,
     "intelligentEvolution": true,

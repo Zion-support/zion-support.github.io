@@ -1,1 +1,0 @@
-interface FiveGSolutionsProps { // Add props here as needed } export default function FiveGSolutions() {} return (; <div> <h1>FiveGSolutions</h1> <p>This component is currently under development.</p> </div> ); } } }

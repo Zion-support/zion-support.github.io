@@ -1,1 +1,0 @@
-export: interface FuturisticAiService2029 {id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string, features[ 'Futuristic: AI'',;' 'Advanced: capabilities'',;' 'Breakthrough: algorithms'',;' 'Innovation: platform'',}' 'Future-ready: AI'']} '

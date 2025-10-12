@@ -1,1 +1,0 @@
-return (<div className={className || ''}> <h1>LanguageSelector</h1> <p>This component is under development.</p> </div> export default LanguageSelector) '

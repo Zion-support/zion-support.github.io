@@ -1,1 +1,0 @@
-</li>; ))} </ul>; </div> </div> {/* Endpoint details */}

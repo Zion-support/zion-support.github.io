@@ -1,221 +1,220 @@
-# Zion Tech Group - Advanced AI and IT Solutions Website
+# Zion Tech Group - Advanced AI and IT Solutions
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue)
-![Next.js](https://img.shields.io/badge/Next.js-15.5.4-black)
-![License](https://img.shields.io/badge/license-MIT-green)
+A modern, high-performance website built with React + Vite, featuring cutting-edge AI and IT solutions. This website showcases our comprehensive range of services including AI solutions, cybersecurity, cloud computing, and digital transformation services.
 
-A cutting-edge website showcasing Zion Tech Group's AI-powered enterprise solutions, cloud automation services, and digital transformation expertise.
+## 🚀 Features
 
-## ✨ Features
+### Core Technologies
+- **React 18** - Latest React with modern hooks and concurrent features
+- **Vite** - Lightning-fast build tool and development server
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first CSS framework
+- **Framer Motion** - Smooth animations and transitions
+- **Lucide React** - Beautiful, customizable icons
 
-- 🤖 **AI-Powered Solutions** - Custom AI integrations and automation tools
-- ☁️ **Cloud Automation** - Infrastructure as code and CI/CD pipelines
-- 🏢 **Enterprise Solutions** - Scalable digital transformation services
-- ⚡ **High Performance** - Optimized for speed with lazy loading and code splitting
-- ♿ **Accessible** - WCAG 2.1 AA compliant with full keyboard navigation
-- 📱 **Responsive** - Mobile-first design that works on all devices
-- 🔍 **SEO Optimized** - Meta tags, structured data, and semantic HTML
-- 🧪 **Well Tested** - Comprehensive test suite with 27+ passing tests
+### Performance Optimizations
+- **Code Splitting** - Dynamic imports for better performance
+- **Bundle Analysis** - Vite bundle analyzer integration
+- **Performance Monitoring** - Real-time Core Web Vitals tracking
+- **SEO Optimization** - Comprehensive meta tags and structured data
+- **PWA Support** - Progressive Web App capabilities
 
-## 🚀 Quick Start
+### Accessibility Features
+- **WCAG 2.1 AA Compliance** - Full accessibility support
+- **Keyboard Navigation** - Complete keyboard accessibility
+- **Screen Reader Support** - ARIA landmarks and labels
+- **High Contrast Mode** - Support for high contrast displays
+- **Focus Management** - Proper focus indicators and management
+
+### SEO & Marketing
+- **Structured Data** - Rich snippets for search engines
+- **Sitemap** - XML sitemap for better crawling
+- **Robots.txt** - Search engine crawling instructions
+- **PWA Support** - Progressive Web App capabilities
+- **Open Graph** - Social media sharing optimization
+
+## 🛠️ Development
 
 ### Prerequisites
-- Node.js >= 18.0.0
-- pnpm >= 8.0.0
+- Node.js 18.0.0 or higher
+- pnpm 8.0.0 or higher (recommended) or npm
 
 ### Installation
 
+1. Clone the repository:
 ```bash
-# Clone the repository
-git clone https://github.com/Zion-Holdings/zion.app.git
-cd zion.app
+git clone https://github.com/ziontechgroup/website.git
+cd website
+```
 
-# Install dependencies
+2. Install dependencies:
+```bash
 pnpm install
+# or
+npm install
+```
 
-# Run development server
+3. Start the development server:
+```bash
 pnpm dev
+# or
+npm run dev
 ```
 
-Visit [http://localhost:3000](http://localhost:3000) to see the website.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📦 Available Scripts
+### Available Scripts
 
-### Development
-```bash
-pnpm dev              # Start development server
-pnpm dev:optimized    # Start optimized development server
-pnpm dev:enhanced     # Start enhanced development server
-```
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm lint` - Run ESLint
+- `pnpm lint:fix` - Fix ESLint issues
+- `pnpm type-check` - Run TypeScript type checking
+- `pnpm test` - Run tests
+- `pnpm build:analyze` - Analyze bundle size
 
-### Building
-```bash
-pnpm build            # Build for production
-pnpm build:optimized  # Build with optimizations
-pnpm build:analyze    # Build and analyze bundle size
-```
-
-### Testing & Quality
-```bash
-pnpm test             # Run tests
-pnpm test:watch       # Run tests in watch mode
-pnpm test:coverage    # Run tests with coverage report
-pnpm lint             # Run ESLint
-pnpm lint:fix         # Fix linting issues
-pnpm type-check       # Run TypeScript type checking
-pnpm health-check     # Run all checks (type, lint, build)
-```
-
-### Performance & Optimization
-```bash
-pnpm optimize:all     # Run all optimizations
-pnpm perf:audit       # Run Lighthouse performance audit
-pnpm analyze          # Analyze bundle size
-```
-
-### Preview & Deploy
-```bash
-pnpm preview          # Preview production build
-pnpm build:netlify    # Build for Netlify deployment
-```
-
-## 🏗️ Project Structure
+## 📁 Project Structure
 
 ```
-zion.app/
-├── app/                    # Next.js app directory
-│   ├── components/         # React components
-│   │   ├── SEOOptimizer.tsx
-│   │   ├── AccessibilityEnhancer.tsx
-│   │   └── ContentShowcase.tsx
-│   ├── utils/             # Utility functions
-│   │   ├── cacheManager.ts
-│   │   ├── performanceMonitoring.ts
-│   │   └── errorHandler.tsx
-│   ├── hooks/             # Custom React hooks
-│   │   ├── usePerformanceMonitoring.ts
-│   │   └── useErrorMonitoring.ts
-│   └── page.tsx           # Homepage
-├── src/                   # Source code
-│   ├── components/        # Shared components
-│   └── utils/             # Shared utilities
-├── __tests__/             # Test files
-│   ├── App.test.tsx
-│   ├── components.test.tsx
-│   └── hooks.test.ts
+├── app/                    # React application
+│   ├── components/         # Reusable components
+│   ├── globals.css        # Global styles
+│   ├── page.tsx           # Home page
+│   ├── about/             # About page
+│   ├── contact/           # Contact page
+│   └── ai-services/       # AI services pages
 ├── public/                # Static assets
-├── package.json           # Dependencies and scripts
+│   ├── manifest.json      # PWA manifest
+│   ├── robots.txt         # Robots.txt
+│   └── favicon.svg        # Favicon
+├── vite.config.ts         # Vite configuration
+├── tailwind.config.js     # Tailwind CSS configuration
 ├── tsconfig.json          # TypeScript configuration
-├── next.config.js         # Next.js configuration
-└── tailwind.config.js     # Tailwind CSS configuration
+└── package.json           # Dependencies and scripts
 ```
 
-## 🎨 Tech Stack
+## 🎨 Design System
 
-- **Framework**: Next.js 15.5.4
-- **Language**: TypeScript 5.9.3
-- **Styling**: Tailwind CSS 4.1.14
-- **Animation**: Framer Motion 12.23.22
-- **Testing**: Jest 30.2.0 + React Testing Library
-- **Package Manager**: pnpm 10.17.1
-- **Build Tool**: Vite 7.1.9
-- **Linting**: ESLint 9.37.0
-- **Type Checking**: TypeScript strict mode
+### Color Palette
+- **Primary**: Cyan (#00ffff) - Tech and innovation
+- **Secondary**: Purple (#8b5cf6) - Creativity and AI
+- **Accent**: Pink (#ec4899) - Energy and growth
+- **Background**: Dark slate gradient for modern look
 
-## 📊 Recent Improvements
+### Typography
+- **Headings**: Bold, large sizes with neon effects
+- **Body**: Clean, readable text with proper contrast
+- **Code**: Monospace font for technical content
 
-### Performance Optimizations ⚡
-- ✅ Bundle size reduced by 40%
-- ✅ Image optimization with lazy loading
-- ✅ CSS optimization and code splitting
-- ✅ Dynamic imports for heavy components
-- ✅ Performance monitoring and reporting
-- ✅ Advanced caching with LRU eviction
-
-### Accessibility Improvements ♿
-- ✅ ARIA labels and roles throughout
-- ✅ Full keyboard navigation support
-- ✅ Screen reader compatibility
-- ✅ Color contrast WCAG AA compliant
-- ✅ Focus management and indicators
-- ✅ Semantic HTML structure
-
-### SEO Enhancements 🔍
-- ✅ Meta tags optimization
-- ✅ Structured data implementation
-- ✅ XML sitemap generation
-- ✅ Open Graph tags for social sharing
-- ✅ Canonical URLs
-- ✅ robots.txt configuration
-
-### Testing & Quality 🧪
-- ✅ 27+ passing tests (8 test suites)
-- ✅ TypeScript strict mode enabled
-- ✅ ESLint with custom rules
-- ✅ Error boundary implementation
-- ✅ Performance monitoring hooks
-- ✅ CI/CD integration ready
+### Components
+- **Cyber Cards**: Glassmorphism design with neon borders
+- **Hologram Cards**: Animated cards with scanning effects
+- **Quantum Cards**: Energy pulse animations
+- **Buttons**: Gradient backgrounds with hover effects
 
 ## 🔧 Configuration
 
 ### Environment Variables
-
 Create a `.env.local` file in the root directory:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://zion.app
+NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
 NEXT_PUBLIC_GA_ID=your-google-analytics-id
+NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
 ```
 
-### TypeScript Configuration
+### Performance Monitoring
+The application includes built-in performance monitoring that tracks:
+- **LCP** (Largest Contentful Paint)
+- **FID** (First Input Delay)
+- **CLS** (Cumulative Layout Shift)
+- **FCP** (First Contentful Paint)
+- **TTFB** (Time to First Byte)
 
-The project uses strict TypeScript configuration with:
-- Strict null checks
-- No implicit any
-- No unused locals/parameters checking
-- Comprehensive type safety
+## 🚀 Deployment
 
-### Linting Configuration
+### Vercel (Recommended)
+1. Connect your GitHub repository to Vercel
+2. Configure environment variables
+3. Deploy automatically on push to main branch
 
-ESLint is configured with:
-- TypeScript support
-- React best practices
-- Next.js recommended rules
-- Custom accessibility rules
+### Other Platforms
+The application can be deployed to any platform that supports Next.js:
+- Netlify
+- AWS Amplify
+- Railway
+- DigitalOcean App Platform
 
-## 📈 Performance Metrics
+## 📊 Analytics & Monitoring
 
-Current performance scores:
-- **Lighthouse Performance**: 95+
-- **First Contentful Paint**: < 1.8s
-- **Largest Contentful Paint**: < 2.5s
-- **Time to Interactive**: < 3.5s
-- **Cumulative Layout Shift**: < 0.1
+### Google Analytics
+- Page views and user interactions
+- Performance metrics
+- Error tracking
+- Custom events for service clicks
+
+### Performance Monitoring
+- Real-time Core Web Vitals
+- Bundle size analysis
+- Image optimization tracking
+- Loading performance metrics
+
+## 🔒 Security
+
+### Security Headers
+- Content Security Policy (CSP)
+- X-Frame-Options
+- X-Content-Type-Options
+- Referrer-Policy
+- Permissions-Policy
+
+### Best Practices
+- Input sanitization
+- XSS protection
+- CSRF protection
+- Secure cookie settings
+
+## 📱 Mobile Optimization
+
+- **Responsive Design** - Mobile-first approach
+- **Touch Optimization** - Touch-friendly interactions
+- **Performance** - Optimized for mobile networks
+- **PWA Features** - Installable and offline-capable
+
+## 🌐 Internationalization
+
+The website is prepared for internationalization with:
+- Language detection
+- RTL support
+- Localized content structure
+- SEO-friendly URLs
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on:
-- Development setup
-- Code quality standards
-- Testing guidelines
-- Pull request process
-- Commit message format
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
 
-## 📝 License
+## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 📞 Contact
+## 📞 Support
 
-- **Website**: [https://zion.app](https://zion.app)
-- **Email**: info@zion.app
-- **Phone**: +1 302 464 0950
+For support and questions:
+- **Phone**: +1 (302) 464-0950
+- **Email**: kleber@ziontechgroup.com
+- **Address**: 364 E Main St STE 1008, Middletown, DE 19709
 
-## 🙏 Acknowledgments
+## 🔗 Links
 
-Built with cutting-edge technologies and best practices to deliver exceptional performance, accessibility, and user experience.
+- **Website**: [https://ziontechgroup.com](https://ziontechgroup.com)
+- **Twitter**: [@ziontechgroup](https://twitter.com/ziontechgroup)
+- **LinkedIn**: [Zion Tech Group](https://linkedin.com/company/ziontechgroup)
 
 ---
 
-© 2025 Zion Tech Group. All rights reserved.
+Built with ❤️ by the Zion Tech Group team

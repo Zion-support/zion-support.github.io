@@ -1,85 +1,128 @@
-'use client';
+import React, { useEffect, useState } from 'react'
 
-import React, { useEffect, useCallback } from 'react';
-
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
+interface PerformanceMetrics {
+  lcp: number | null
+  fid: number | null
+  cls: number | null
+  fcp: number | null
+  ttfb: number | null
 }
 
-const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
-  children,
-}) => {
-  // Preload critical resources
+const PerformanceOptimizer: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    lcp: null,
+    fid: null,
+    cls: null,
+    fcp: null,
+    ttfb: null
+  })
+
   useEffect(() => {
+    // Preload critical resources
     const preloadCriticalResources = () => {
-      // Preload critical fonts
-      const fontLink = document.createElement('link');
-      fontLink.rel = 'preload';
-      fontLink.href =
-        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
-      fontLink.as = 'style';
-      document.head.appendChild(fontLink);
-
-      // Preload critical images
-      const criticalImages = [
+      const criticalResources = [
+        '/fonts/inter.woff2',
         '/images/hero-bg.jpg',
-        '/images/logo.png',
-        '/images/og-image.jpg',
-      ];
+        '/images/logo.png'
+      ]
 
-      criticalImages.forEach(src => {
-        const img = new Image();
-        img.src = src;
-      });
-    };
-
-    preloadCriticalResources();
-  }, []);
-
-  // Optimize scroll performance
-  const handleScroll = useCallback(() => {
-    // Throttle scroll events for better performance
-    let ticking = false;
-
-    const updateScrollPosition = () => {
-      // Add scroll-based optimizations here
-      ticking = false;
-    };
-
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
-
-  // Add performance monitoring
-  useEffect(() => {
-    if ('performance' in window) {
-      const observer = new PerformanceObserver(list => {
-        list.getEntries().forEach(entry => {
-          if (entry.entryType === 'navigation') {
-            // eslint-disable-next-line no-console
-            console.log('Navigation timing:', entry);
-          }
-        });
-      });
-
-      observer.observe({
-        entryTypes: ['navigation', 'paint', 'largest-contentful-paint'],
-      });
-
-      return () => observer.disconnect();
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link')
+        link.rel = 'preload'
+        link.href = resource
+        link.as = resource.endsWith('.woff2') ? 'font' : 'image'
+        if (resource.endsWith('.woff2')) {
+          link.crossOrigin = 'anonymous'
+        }
+        document.head.appendChild(link)
+      })
     }
 
-    return undefined;
-  }, []);
+    // Optimize images
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]')
+      images.forEach(img => {
+        const imageElement = img as HTMLImageElement
+        if (imageElement.dataset.src) {
+          imageElement.src = imageElement.dataset.src
+          imageElement.removeAttribute('data-src')
+        }
+      })
+    }
 
-  return <>{children}</>;
-};
+    // Lazy load non-critical components
+    const lazyLoadComponents = () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const element = entry.target as HTMLElement
+              element.classList.add('loaded')
+              observer.unobserve(element)
+            }
+          })
+        },
+        { threshold: 0.1 }
+      )
 
-export default PerformanceOptimizerComponent;
+      const lazyElements = document.querySelectorAll('[data-lazy]')
+      lazyElements.forEach(el => observer.observe(el))
+    }
+
+    // Monitor Core Web Vitals
+    const monitorWebVitals = () => {
+      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
+        onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
+        onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
+        onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
+        onLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
+        onTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
+      }).catch(() => {
+        // Silently fail if web-vitals is not available
+      })
+    }
+
+    // Optimize scroll performance
+    const optimizeScroll = () => {
+      let ticking = false
+      
+      const updateScrollPosition = () => {
+        // Throttle scroll events
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            // Update scroll-dependent elements
+            ticking = false
+          })
+          ticking = true
+        }
+      }
+
+      window.addEventListener('scroll', updateScrollPosition, { passive: true })
+      
+      return () => window.removeEventListener('scroll', updateScrollPosition)
+    }
+
+    // Initialize optimizations
+    preloadCriticalResources()
+    optimizeImages()
+    lazyLoadComponents()
+    monitorWebVitals()
+    const cleanupScroll = optimizeScroll()
+
+    // Cleanup
+    return () => {
+      cleanupScroll()
+    }
+  }, [])
+
+  // Log performance metrics in development
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && Object.values(metrics).some(val => val !== null)) {
+      console.log('Performance Metrics:', metrics)
+    }
+  }, [metrics])
+
+  return null
+}
+
+export default PerformanceOptimizer

@@ -1,1 +1,0 @@
-export: interface EnterpriseIt2026Service {id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string, features[ 'Enterprise: architecture'',;' 'Future-ready: solutions'',;' 'Scalable: infrastructure'',;' 'Advanced: security'',}' '24/7: support'']} '

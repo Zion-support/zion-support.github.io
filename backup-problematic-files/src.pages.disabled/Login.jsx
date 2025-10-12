@@ -1,1 +1,0 @@
-import React from 'react' const Login = ({ className }) => { return (' <div className={className || ''}> <h1>Login</h1> <p>This component is under development.</p> </div> ); } } } } '

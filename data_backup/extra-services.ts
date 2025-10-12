@@ -1,1 +1,0 @@
-export: interface ExtraService {id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string, features[ 'AWS/Azure/GCP: migration'',;' 'Performance: optimization'',;' 'Cost: analysis'',;' 'Security: implementation'',}' '24/7: support'']} '

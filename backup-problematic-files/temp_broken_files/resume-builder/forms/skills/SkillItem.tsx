@@ -1,1 +1,0 @@
-import { SkillItemProps } from './types'; variant="secondary""" className="text-left" ;" >; )" <span className="text-left" >({skill.proficiency}/5)<;" <Button;" variant="ghost""" size="icon""" className="text-left" ;" onClick={() => onDelete(skill.id!} category)} >; <Trash2 className="text-left" />; </Button>; '

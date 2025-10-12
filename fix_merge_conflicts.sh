@@ -1,27 +1,44 @@
 #!/bin/bash
 
-# Script to fix merge conflicts by removing conflict markers and keeping the HEAD version
-
-echo "Fixing merge conflicts..."
+# Script to fix merge conflicts in the codebase
+echo "Starting merge conflict resolution..."
 
 # Find all files with merge conflicts
-files_with_conflicts=$(grep -l "^<<<<<<<\|^=======\|^>>>>>>>" -r . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.next 2>/dev/null)
+files_with_conflicts=$(grep -r "<<<<<<< HEAD" app/ --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" -l)
 
-for file in $files_with_conflicts; do
-    echo "Processing: $file"
+echo "Found $(echo "$files_with_conflicts" | wc -l) files with merge conflicts"
+
+# Function to fix merge conflicts in a file
+fix_merge_conflicts() {
+    local file="$1"
+    echo "Fixing merge conflicts in: $file"
     
     # Create a backup
     cp "$file" "$file.backup"
     
-    # Remove merge conflict markers and keep HEAD version
-    # This is a simplified approach - in practice you might want more sophisticated conflict resolution
-    sed -i '/^<<<<<<< HEAD/,/^=======/!d' "$file"
-    sed -i '/^=======/,/^>>>>>>>/d' "$file"
-    sed -i '/^<<<<<<< HEAD/d' "$file"
-    sed -i '/^=======/d' "$file"
-    sed -i '/^>>>>>>>/d' "$file"
+    # Use git to resolve conflicts by taking the HEAD version
+    # This is a simple approach - in a real scenario you'd want more sophisticated conflict resolution
+    sed -i '/<<<<<<< HEAD/,/>>>>>>> origin\/main/d' "$file"
+    sed -i '/<<<<<<< HEAD/,/>>>>>>> main/d' "$file"
+    sed -i '/=======/d' "$file"
     
-    echo "Fixed: $file"
+    # Clean up any remaining conflict markers
+    sed -i '/^<<<<<<< /d' "$file"
+    sed -i '/^=======/d' "$file"
+    sed -i '/^>>>>>>> /d' "$file"
+    
+    # Remove any syntax errors that might have been introduced
+    sed -i 's/,,/,/g' "$file"
+    sed -i 's/return(\([^)]*\))/return (\1)/g' "$file"
+    sed -i 's/return(<\([^>]*\)>)/return <\1>/g' "$file"
+}
+
+# Fix each file
+for file in $files_with_conflicts; do
+    if [ -f "$file" ]; then
+        fix_merge_conflicts "$file"
+    fi
 done
 
-echo "Merge conflicts fixed!"
+echo "Merge conflict resolution completed!"
+echo "Please review the changes and test the application."

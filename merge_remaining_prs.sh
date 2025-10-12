@@ -1,71 +1,81 @@
 #!/bin/bash
 
-TOKEN="ghs_iI0OzYYFiL6Tvp2m7AFAFAAtnbwrsz2D51F3"
-REPO="Zion-Holdings/zion.app"
+# Merge remaining PRs
+echo "Merging remaining open PRs..."
 
-echo "===== Continuing PR Merge Process ====="
-echo ""
+# List of remaining PR branches to merge
+REMAINING_PR_BRANCHES=(
+    "cursor/fix-errors-and-merge-to-main-4987"
+    "cursor/fix-errors-and-merge-to-main-ece3"
+    "cursor/fix-errors-and-merge-to-main-0e67"
+    "cursor/fix-errors-and-merge-to-main-e9ed"
+    "cursor/fix-errors-and-merge-to-main-65e3"
+    "cursor/fix-errors-and-merge-to-main-2efe"
+    "cursor/fix-errors-and-merge-to-main-1ce9"
+    "cursor/fix-errors-and-merge-to-main-fdda"
+    "cursor/fix-errors-and-merge-to-main-1839"
+    "cursor/fix-errors-and-merge-to-main-0218"
+    "cursor/fix-errors-and-merge-to-main-4ae3"
+    "cursor/fix-broken-links-bd16"
+    "cursor/fix-errors-and-merge-to-main-3135"
+    "cursor/bc-55068a87-b241-4eb0-be98-1760f86759b6-550b"
+    "cursor/bc-f02feaa1-11f4-4075-8e68-f1f9dc768e1b-4f5f"
+    "cursor/fix-errors-and-merge-to-main-fd29"
+    "cursor/fix-errors-and-merge-to-main-faf1"
+    "cursor/fix-errors-and-merge-to-main-f5eb"
+    "cursor/fix-errors-and-merge-to-main-dfae"
+    "cursor/fix-errors-and-merge-to-main-f9be"
+)
 
-# Update main branch first
-git pull origin main
+success_count=0
+fail_count=0
 
-# Get list of still-open PRs
-PR_NUMBERS=$(curl -s -H "Authorization: token $TOKEN" \
-  "https://api.github.com/repos/$REPO/pulls?state=open&per_page=100" | \
-  python3 -c "import sys, json; data = json.load(sys.stdin); print(' '.join(str(pr['number']) for pr in data))")
-
-echo "Remaining open PRs: $PR_NUMBERS"
-echo ""
-
-for PR_NUM in $PR_NUMBERS; do
-  echo "========================================"
-  echo "Processing PR #$PR_NUM..."
-  
-  # Get PR details
-  PR_DATA=$(curl -s -H "Authorization: token $TOKEN" \
-    "https://api.github.com/repos/$REPO/pulls/$PR_NUM")
-  
-  BRANCH=$(echo "$PR_DATA" | python3 -c "import sys, json; pr = json.load(sys.stdin); print(pr['head']['ref'])")
-  
-  echo "  Branch: $BRANCH"
-  
-  # Fetch the branch
-  git fetch origin "$BRANCH"
-  
-  # Try to merge
-  echo "  Attempting merge..."
-  git merge "origin/$BRANCH" --no-edit -X theirs
-  
-  if [ $? -eq 0 ]; then
-    echo "  ✓ Merge successful!"
+for branch in "${REMAINING_PR_BRANCHES[@]}"; do
+    echo ""
+    echo "Processing branch: $branch"
+    echo "=================================="
     
-    # Push to main
-    git push origin main
-    
-    if [ $? -eq 0 ]; then
-      echo "  ✓ Pushed to main"
-      
-      # Close the PR
-      CLOSE_RESULT=$(curl -s -X PATCH -H "Authorization: token $TOKEN" \
-        -H "Content-Type: application/json" \
-        -d '{"state":"closed"}' \
-        "https://api.github.com/repos/$REPO/pulls/$PR_NUM")
-      
-      echo "  ✓ Closed PR #$PR_NUM"
+    # Fetch the branch
+    echo "Fetching branch $branch..."
+    if git fetch origin "$branch" 2>/dev/null; then
+        echo "✅ Successfully fetched $branch"
     else
-      echo "  ✗ Failed to push to main"
+        echo "❌ Failed to fetch $branch (branch may not exist)"
+        ((fail_count++))
+        continue
     fi
-  else
-    echo "  ✗ Merge failed, skipping..."
-    git merge --abort
-  fi
-  
-  echo ""
+    
+    # Attempt to merge
+    echo "Attempting to merge $branch..."
+    if git merge "origin/$branch" --no-ff -m "Merge branch $branch" 2>/dev/null; then
+        echo "✅ Successfully merged $branch"
+        ((success_count++))
+    else
+        echo "⚠️  Merge failed for $branch, attempting conflict resolution..."
+        
+        # Try to resolve conflicts
+        if python3 fix_merge_conflicts.py 2>/dev/null; then
+            echo "✅ Conflicts resolved for $branch"
+            if git add . && git commit -m "Merge branch $branch (conflicts resolved)" 2>/dev/null; then
+                echo "✅ Successfully merged $branch with conflicts resolved"
+                ((success_count++))
+            else
+                echo "❌ Failed to commit resolved conflicts for $branch"
+                ((fail_count++))
+            fi
+        else
+            echo "❌ Failed to resolve conflicts for $branch"
+            ((fail_count++))
+        fi
+    fi
+    
+    echo "Waiting 1 second before next merge..."
+    sleep 1
 done
 
-echo "===== Merge process completed ====="
 echo ""
-echo "Checking remaining open PRs..."
-curl -s -H "Authorization: token $TOKEN" \
-  "https://api.github.com/repos/$REPO/pulls?state=open&per_page=10" | \
-  python3 -c "import sys, json; data = json.load(sys.stdin); print(f\"Remaining open PRs: {len(data)}\"); [print(f\"  - PR #{pr['number']}: {pr['title']}\") for pr in data[:5]]"
+echo "=================================="
+echo "Remaining PRs merge completed!"
+echo "✅ Successfully merged: $success_count"
+echo "❌ Failed to merge: $fail_count"
+echo "📊 Total processed: $((success_count + fail_count))"

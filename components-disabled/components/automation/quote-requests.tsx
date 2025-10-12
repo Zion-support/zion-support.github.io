@@ -1,1 +1,0 @@
-:backup-problematic-files/components/automation/quote-requests.tsx <div className="text-left" > <h1 className="text-left" >Quote Requests Log</h1> <p className="text-left" >Recent quote requests are synced to <code className="text-left" >data/quote-requests/log.json</code>.</p> <p className="text-left" >This runs hourly and auto-PRs updates.</p> </div> ) } </div>)"

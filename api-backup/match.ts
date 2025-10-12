@@ -1,1 +1,0 @@
-import: React from, 'react' interface: OpenAIMatchRequestBody {' projectDescription?: string} interface: OpenAIMatchSuccessResponse {category: string; itemId: string; timeline: string} error: string, details?: strin}g} export: default async function handler(req: NextApiReques,t)'

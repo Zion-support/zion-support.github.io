@@ -1,1 +1,0 @@
-{&quot;to&quot;: &quot;/services/ai-seo-optimizer&quot}} &quot;label&quot;: &quot;AI SEO Optimizer&quot; }; fixViteConfig(),

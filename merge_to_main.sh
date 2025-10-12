@@ -1,21 +1,18 @@
 #!/bin/bash
 
-echo "🚀 Starting merge to main process..."
+# Merge error fixes to main branch
+echo "Merging error fixes to main branch..."
 
-# Checkout main branch
-echo "📥 Checking out main branch..."
+# Switch to main branch
 git checkout main
 
 # Pull latest changes
-echo "📥 Pulling latest changes from main..."
 git pull origin main
 
-# Merge our branch
-echo "🔄 Merging cursor/fix-errors-and-merge-to-main-276d into main..."
-git merge cursor/fix-errors-and-merge-to-main-276d
+# Merge the fix branch
+git merge cursor/fix-errors-and-merge-to-main-35c1 --no-ff -m "Merge error fixes: resolve merge conflicts, syntax errors, and unused imports"
 
 # Push to main
-echo "📤 Pushing merged changes to main..."
 git push origin main
 
-echo "✅ Merge to main completed successfully!"
+echo "Successfully merged error fixes to main branch!"

@@ -6,9 +6,7 @@
       "type": "linting",
       "status": "failure",
       "message": "ESLint found issues",
-      "issues": [
-        "> eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
-      ],
+      "issues": ["> eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"],
       "timestamp": "2025-08-29T15:30:30.550Z"
     },
     {

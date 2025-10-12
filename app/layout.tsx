@@ -1,113 +1,129 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import AnalyticsProvider from './components/AnalyticsProvider';
-import ErrorBoundary from './components/ErrorBoundary';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import React from 'react';
 
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - AI & IT Solutions',
-  description:
-    'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-  keywords: [
-    'AI solutions',
-    'enterprise AI',
-    'digital transformation',
-    'automation',
-    'cloud services',
-  ],
-  authors: [{ name: 'Zion Tech Group' }],
-  creator: 'Zion Tech Group',
-  publisher: 'Zion Tech Group',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL('https://ziontechgroup.com'),
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: 'Zion Tech Group - AI & IT Solutions',
-    description:
-      'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    images: [
-      {
-        url: 'https://ziontechgroup.com/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Zion Tech Group - AI & IT Solutions',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Zion Tech Group - AI & IT Solutions',
-    description:
-      'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    images: ['https://ziontechgroup.com/og-image.jpg'],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+import ErrorBoundary from './components/ErrorBoundary';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import ThemeToggle from './components/ThemeToggle';
+
+interface LayoutProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
+
+const Layout: React.FC<LayoutProps> = ({ 
+  children, 
+  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  description = "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
+  keywords = "AI solutions, IT services, cloud computing, digital transformation, 5G implementation"
+}) => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
     },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-  },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://github.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup"
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "AI Services",
+        "description": "Comprehensive AI solutions including content generation, chatbots, and automation",
+        "price": "500",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "500",
+          "priceCurrency": "USD",
+          "unitText": "MONTH"
+        }
+      },
+      {
+        "@type": "Offer",
+        "name": "IT Services",
+        "description": "Complete IT infrastructure services including cloud migration, cybersecurity, and mobile development",
+        "price": "2500",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "price": "2500",
+          "priceCurrency": "USD",
+          "unitText": "PROJECT"
+        }
+      }
+    ];
+  };
+
+  return (
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Helmet>
+          <title>{title}</title>
+          <meta name="description" content={description} />
+          <meta name="keywords" content={keywords} />
+          
+          {/* Open Graph Meta Tags */}
+          <meta property="og:title" content={title} />
+          <meta property="og:description" content={description} />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://ziontechgroup.com" />
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+          <meta property="og:site_name" content="Zion Tech Group" />
+          
+          {/* Twitter Card Meta Tags */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={title} />
+          <meta name="twitter:description" content={description} />
+          <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
+          <meta name="twitter:site" content="@ziontechgroup" />
+          
+          {/* Additional SEO Meta Tags */}
+          <meta name="robots" content="index, follow" />
+          <meta name="author" content="Zion Tech Group" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="theme-color" content="#8b5cf6" />
+          
+          {/* Structured Data */}
+          <script type="application/ld+json">
+            {JSON.stringify(structuredData)}
+          </script>
+        </Helmet>
+        
+        <Navigation />
+        
+        <main className="pt-20">
+          {children}
+        </main>
+        
+        <Footer />
+        
+        {/* Theme Toggle - Fixed Position */}
+        <div className="fixed bottom-6 right-6 z-50">
+          <ThemeToggle />
+        </div>
+      </div>
+    </ErrorBoundary>
+  );
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang='en'>
-      <head>
-        <link rel='icon' href='/favicon.ico' />
-        <link
-          rel='apple-touch-icon'
-          sizes='180x180'
-          href='/apple-touch-icon.png'
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='32x32'
-          href='/favicon-32x32.png'
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='16x16'
-          href='/favicon-16x16.png'
-        />
-        <link rel='manifest' href='/site.webmanifest' />
-        <meta name='theme-color' content='#4f46e5' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-      </head>
-      <body className='antialiased'>
-        <AnalyticsProvider>
-          <ErrorBoundary>
-            <AccessibilityEnhancer>
-              <PerformanceMonitor />
-              {children}
-            </AccessibilityEnhancer>
-          </ErrorBoundary>
-        </AnalyticsProvider>
-      </body>
-    </html>
-  );
-}
+export default Layout;

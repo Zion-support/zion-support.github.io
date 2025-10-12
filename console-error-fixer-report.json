@@ -108,13 +108,7 @@
     },
     {
       "file": "src/components/MachineLearningDashboard.jsx",
-      "matches": [
-        "console.error",
-        "console.log",
-        "console.error",
-        "console.error",
-        "console.error"
-      ]
+      "matches": ["console.error", "console.log", "console.error", "console.error", "console.error"]
     },
     {
       "file": "src/components/MarketplaceErrorBoundary.jsx",
@@ -134,12 +128,7 @@
     },
     {
       "file": "src/components/PerformanceMonitor.jsx",
-      "matches": [
-        "console.warn",
-        "console.warn",
-        "console.warn",
-        "console.warn"
-      ]
+      "matches": ["console.warn", "console.warn", "console.warn", "console.warn"]
     },
     {
       "file": "src/components/PerformanceOptimizations.jsx",
@@ -215,30 +204,15 @@
     },
     {
       "file": "src/components/profile/ServiceProviderRegistrationForm.jsx",
-      "matches": [
-        "console.error",
-        "console.error",
-        "console.error",
-        "console.error"
-      ]
+      "matches": ["console.error", "console.error", "console.error", "console.error"]
     },
     {
       "file": "src/components/profile/TalentRegistrationForm.jsx",
-      "matches": [
-        "console.error",
-        "console.error",
-        "console.error",
-        "console.error"
-      ]
+      "matches": ["console.error", "console.error", "console.error", "console.error"]
     },
     {
       "file": "src/components/support/ChatBotPanel.jsx",
-      "matches": [
-        "console.error",
-        "console.error",
-        "console.log",
-        "console.error"
-      ]
+      "matches": ["console.error", "console.error", "console.log", "console.error"]
     },
     {
       "file": "src/components/talent/TalentGrid.jsx",
@@ -341,13 +315,7 @@
     },
     {
       "file": "src/hooks/usePerformance.ts",
-      "matches": [
-        "console.warn",
-        "console.warn",
-        "console.warn",
-        "console.warn",
-        "console.warn"
-      ]
+      "matches": ["console.warn", "console.warn", "console.warn", "console.warn", "console.warn"]
     },
     {
       "file": "src/hooks/useRealTimeCollaboration.js.jsx",
@@ -375,21 +343,11 @@
     },
     {
       "file": "src/pages/AccountSettings.js.jsx",
-      "matches": [
-        "console.error",
-        "console.log",
-        "console.error",
-        "console.error"
-      ]
+      "matches": ["console.error", "console.log", "console.error", "console.error"]
     },
     {
       "file": "src/pages/AccountSettings.jsx",
-      "matches": [
-        "console.error",
-        "console.log",
-        "console.error",
-        "console.error"
-      ]
+      "matches": ["console.error", "console.log", "console.error", "console.error"]
     },
     {
       "file": "src/pages/Cart.js.jsx",
@@ -550,21 +508,11 @@
     },
     {
       "file": "src/pages/launch/index.js.jsx",
-      "matches": [
-        "console.error",
-        "console.error",
-        "console.error",
-        "console.error"
-      ]
+      "matches": ["console.error", "console.error", "console.error", "console.error"]
     },
     {
       "file": "src/pages/launch/index.jsx",
-      "matches": [
-        "console.error",
-        "console.error",
-        "console.error",
-        "console.error"
-      ]
+      "matches": ["console.error", "console.error", "console.error", "console.error"]
     },
     {
       "file": "src/utils/apiErrorHandler.ts",
@@ -572,12 +520,7 @@
     },
     {
       "file": "src/utils/authUtils.ts",
-      "matches": [
-        "console.error",
-        "console.error",
-        "console.error",
-        "console.error"
-      ]
+      "matches": ["console.error", "console.error", "console.error", "console.error"]
     },
     {
       "file": "src/utils/cartUtils.js",

@@ -1,1 +1,0 @@
-import React from 'react' export default function UltraFuturisticFooter2034() {' return (' <footer className="text-left" > <span>© {new Date().getFullYear()} Zion Tech Group< </footer> :components.disabled/components/layout/UltraFuturisticFooter2034.tsx } :components.disabled/components/layout/UltraFuturisticFooter2034.tsx '

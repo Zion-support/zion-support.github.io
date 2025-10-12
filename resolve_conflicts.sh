@@ -1,47 +1,47 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the cleaner version
-# This removes conflict markers and keeps the cleaner formatting
+# Script to resolve merge conflicts by keeping the newer version (after =======)
 
-echo "Resolving merge conflicts..."
+echo "Resolving merge conflicts in all files..."
 
-# List of files with conflicts
-files=(
-  "api/onsite-request.js"
-  "api/shipping-rates.js" 
-  "api/subscribe.js"
-  "lib/error-handler.ts"
-  "lib/integrations/connectors.ts"
-  "lib/integrations/fileStore.ts"
-  "lib/integrations/registry.ts"
-  "lib/integrations/types.ts"
-  "lib/performance.ts"
-  "lib/security.js"
-  "utils/accessibilityUtils.ts"
-  "utils/bannerLazyLoader.ts"
-  "utils/bannerPrioritization.ts"
-  "utils/bannerRegistry.ts"
-  "utils/bannerRotationSystem.ts"
-  "utils/comprehensiveOptimizer.ts"
-)
+# Find all files with merge conflicts
+files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
-for file in "${files[@]}"; do
-  if [ -f "$file" ]; then
-    echo "Processing $file..."
+for file in $files; do
+    echo "Processing: $file"
     
-    # Remove conflict markers and choose the cleaner version
-    # This removes lines with <<<<<<< HEAD, =======, and >>>>>>> main
-    # and keeps the content that's not just whitespace
-    sed -i '/^<<<<<<< HEAD$/,/^>>>>>>> main$/{
-      /^<<<<<<< HEAD$/d
-      /^=======$/d
-      /^>>>>>>> main$/d
-      /^[[:space:]]*$/d
-    }' "$file"
+    # Create a temporary file
+    temp_file="${file}.tmp"
     
-    # Clean up any remaining empty lines
-    sed -i '/^[[:space:]]*$/N;/^\n$/d' "$file"
-  fi
+    # Process the file to resolve conflicts
+    awk '
+    /<<<<<<< HEAD/ {
+        in_conflict = 1
+        next
+    }
+    /=======/ {
+        if (in_conflict) {
+            in_conflict = 2
+            next
+        }
+    }
+    />>>>>>> / {
+        if (in_conflict == 2) {
+            in_conflict = 0
+            next
+        }
+    }
+    {
+        if (in_conflict == 0) {
+            print
+        } else if (in_conflict == 2) {
+            print
+        }
+    }
+    ' "$file" > "$temp_file"
+    
+    # Replace original file with processed version
+    mv "$temp_file" "$file"
 done
 
-echo "Conflict resolution complete!"
+echo "Merge conflicts resolved in all files."

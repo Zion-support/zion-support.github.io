@@ -1,114 +1,26 @@
-import React from 'react';
-import { Metadata } from 'next';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 
-const metadata: Metadata = {
-  title: 'Privacy Policy - Zion Tech Group',
-  description:
-    'Privacy policy and data protection information for Zion Tech Group services and website.',
-};
-
-export { metadata };
-
-const PrivacyPage: React.FC = () => {
+export default function PrivacyPage() {
   return (
-    <>
-      <div className='min-h-screen bg-slate-50 py-16'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-4xl mx-auto'>
-            <div className='bg-white rounded-lg shadow-lg p-8'>
-              <h1 className='text-4xl font-bold text-gray-900 mb-8'>
-                Privacy Policy
-              </h1>
-
-              <div className='prose prose-lg max-w-none'>
-                <p className='text-gray-600 mb-6'>
-                  <strong>Last updated:</strong>{' '}
-                  {new Date().toLocaleDateString()}
-                </p>
-
-                <section className='mb-8'>
-                  <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                    Information We Collect
-                  </h2>
-                  <p className='text-gray-600 mb-4'>
-                    We collect information you provide directly to us, such as
-                    when you create an account, contact us, or use our services.
-                  </p>
-                  <ul className='list-disc list-inside text-gray-600 space-y-2'>
-                    <li>
-                      Contact information (name, email address, phone number)
-                    </li>
-                    <li>Account information (username, password)</li>
-                    <li>Business information (company name, job title)</li>
-                    <li>Communication preferences</li>
-                  </ul>
-                </section>
-
-                <section className='mb-8'>
-                  <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                    How We Use Your Information
-                  </h2>
-                  <p className='text-gray-600 mb-4'>
-                    We use the information we collect to provide, maintain, and
-                    improve our services.
-                  </p>
-                  <ul className='list-disc list-inside text-gray-600 space-y-2'>
-                    <li>Provide and maintain our services</li>
-                    <li>Process transactions and send related information</li>
-                    <li>Send technical notices and support messages</li>
-                    <li>Respond to your comments and questions</li>
-                    <li>Improve our services and develop new features</li>
-                  </ul>
-                </section>
-
-                <section className='mb-8'>
-                  <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                    Information Sharing
-                  </h2>
-                  <p className='text-gray-600 mb-4'>
-                    We do not sell, trade, or otherwise transfer your personal
-                    information to third parties without your consent, except as
-                    described in this policy.
-                  </p>
-                </section>
-
-                <section className='mb-8'>
-                  <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                    Data Security
-                  </h2>
-                  <p className='text-gray-600 mb-4'>
-                    We implement appropriate security measures to protect your
-                    personal information against unauthorized access,
-                    alteration, disclosure, or destruction.
-                  </p>
-                </section>
-
-                <section className='mb-8'>
-                  <h2 className='text-2xl font-bold text-gray-900 mb-4'>
-                    Contact Us
-                  </h2>
-                  <p className='text-gray-600'>
-                    If you have any questions about this Privacy Policy, please
-                    contact us at:
-                  </p>
-                  <div className='mt-4 p-4 bg-gray-50 rounded-lg'>
-                    <p className='text-gray-600'>
-                      <strong>Email:</strong> privacy@ziontechgroup.com
-                      <br />
-                      <strong>Phone:</strong> +1 (555) 123-4567
-                      <br />
-                      <strong>Address:</strong> 123 Tech Street, San Francisco,
-                      CA 94105
-                    </p>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet>
+        <title>Privacy - Zion Tech Group</title>
+        <meta name="description" content="Professional privacy services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6">Privacy</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional privacy services coming soon.</p>
+        <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+        >
+          Contact Us
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </Link>
       </div>
-    </>
+    </div>
   );
-};
-
-export default PrivacyPage;
+}

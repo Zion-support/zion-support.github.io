@@ -1,1 +1,0 @@
-/workspace/zion-film/script_30min.md

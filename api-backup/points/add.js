@@ -1,1 +1,0 @@
-const { error } = await supabase.from('points_ledger)' ').insert({user_id: userId, delta) reason} order_id: orderId || null}); if (error) {' .eq('id}' '} userId); .single();' const current = profile?.points ?? 0'' await supabase'' .from('profiles) '

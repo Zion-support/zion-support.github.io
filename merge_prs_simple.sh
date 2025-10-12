@@ -1,30 +1,70 @@
 #!/bin/bash
 
-# Script to merge all open PRs (without jq dependency)
-echo "Starting PR merge process..."
+# Simple script to merge PRs without jq dependency
+set -e
 
-# Get all open PRs (simplified approach)
-echo "Attempting to merge known PRs..."
+echo "Starting to merge open PRs..."
 
-# List of PRs to try merging
-PRS="25319 25318 25317 25316 25315 25314 25313 25312 25311 25310 25309 25308 25307 25306 25305 25304 25303 25302 25301 25300 25299"
+# Get the most recent PRs (first 10)
+echo "Fetching recent PRs..."
+PR_DATA=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=10")
 
-for pr in $PRS; do
-    echo "Processing PR #$pr..."
+# Extract PR numbers and branch names using grep and sed
+PR_NUMBERS=$(echo "$PR_DATA" | grep -o '"number":[0-9]*' | grep -o '[0-9]*')
+BRANCH_NAMES=$(echo "$PR_DATA" | grep -o '"ref":"[^"]*"' | grep -o 'cursor/fix-errors-and-merge-to-main-[^"]*')
+
+echo "Found PRs to process:"
+echo "$PR_NUMBERS"
+
+# Convert to arrays
+PR_ARRAY=($PR_NUMBERS)
+BRANCH_ARRAY=($BRANCH_NAMES)
+
+count=0
+success_count=0
+error_count=0
+
+# Process each PR
+for i in "${!PR_ARRAY[@]}"; do
+    pr_number="${PR_ARRAY[$i]}"
+    branch_name="${BRANCH_ARRAY[$i]}"
     
-    # Try to merge the PR
-    echo "Attempting to merge PR #$pr..."
-    MERGE_RESULT=$(curl -s -X PUT -H "Accept: application/vnd.github.v3+json" -H "Authorization: token ghs_mELtrkg28rAihhbBZj2mtaSKH5kbGv1BBVt1" "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr/merge" -d '{"commit_title":"Auto-merge PR #'$pr': Fix errors and merge to main","merge_method":"merge"}' 2>/dev/null)
+    echo ""
+    echo "Processing PR #$pr_number (branch: $branch_name)..."
     
-    if echo "$MERGE_RESULT" | grep -q '"merged":true'; then
-        echo "Successfully merged PR #$pr"
-    elif echo "$MERGE_RESULT" | grep -q '"message"'; then
-        echo "PR #$pr status: $(echo "$MERGE_RESULT" | grep -o '"message":"[^"]*"' | cut -d'"' -f4)"
+    # Check if branch exists
+    if git show-ref --verify --quiet "refs/remotes/origin/$branch_name"; then
+        echo "  ✓ Branch $branch_name exists"
+        
+        # Try to merge the branch
+        if git merge "origin/$branch_name" --no-edit; then
+            echo "  ✓ Successfully merged $branch_name"
+            success_count=$((success_count + 1))
+        else
+            echo "  ✗ Failed to merge $branch_name (conflicts or other issues)"
+            error_count=$((error_count + 1))
+            
+            # Reset merge state
+            git merge --abort 2>/dev/null || true
+        fi
     else
-        echo "Unknown response for PR #$pr: $MERGE_RESULT"
+        echo "  ✗ Branch $branch_name does not exist locally"
+        error_count=$((error_count + 1))
     fi
     
-    echo "---"
+    count=$((count + 1))
 done
 
-echo "PR merge process completed!"
+echo ""
+echo "Summary:"
+echo "  Total processed: $count"
+echo "  Successful merges: $success_count"
+echo "  Errors: $error_count"
+
+# Push changes if any were made
+if [ $success_count -gt 0 ]; then
+    echo ""
+    echo "Pushing merged changes to main..."
+    git push origin main
+    echo "✓ Changes pushed to main"
+fi

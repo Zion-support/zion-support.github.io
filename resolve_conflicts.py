@@ -4,7 +4,7 @@ import re
 import glob
 
 def resolve_merge_conflicts(file_path):
-    """Resolve merge conflicts by choosing HEAD version"""
+    """Resolve merge conflicts by keeping the newer version (after =======)"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -12,52 +12,53 @@ def resolve_merge_conflicts(file_path):
         # Check if file has merge conflicts
         if '<<<<<<< HEAD' not in content:
             return False
-            
-        print(f"Resolving conflicts in {file_path}")
         
-        # Pattern to match merge conflict blocks
-        pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n'
+        # Split by conflict markers and keep the newer version
+        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
         
-        def replace_conflict(match):
-            head_content = match.group(1)
-            return head_content + '\n'
+        if len(parts) < 3:
+            return False
         
-        # Replace all merge conflicts with HEAD version
-        resolved_content = re.sub(pattern, replace_conflict, content, flags=re.DOTALL)
+        # Reconstruct content by keeping the newer version (after =======)
+        resolved_content = parts[0]  # Content before first conflict
+        for i in range(1, len(parts), 3):
+            if i + 2 < len(parts):
+                resolved_content += parts[i + 1]  # Keep the newer version
+                if i + 3 < len(parts):
+                    resolved_content += parts[i + 3]  # Content after conflict
         
-        # Write back the resolved content
+        # Write resolved content back
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(resolved_content)
-            
+        
+        print(f"Resolved conflicts in: {file_path}")
         return True
+        
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/JavaScript files
-    patterns = [
+    # Find all files with merge conflicts
+    file_patterns = [
         '**/*.tsx',
         '**/*.ts', 
         '**/*.js',
-        '**/*.jsx'
+        '**/*.jsx',
+        '**/*.json',
+        '**/*.md'
     ]
     
-    files_processed = 0
-    conflicts_resolved = 0
+    resolved_count = 0
+    total_files = 0
     
-    for pattern in patterns:
+    for pattern in file_patterns:
         for file_path in glob.glob(pattern, recursive=True):
-            # Skip node_modules and other directories
-            if any(skip in file_path for skip in ['node_modules', '.git', '.next', 'dist', 'build']):
-                continue
-                
-            files_processed += 1
+            total_files += 1
             if resolve_merge_conflicts(file_path):
-                conflicts_resolved += 1
+                resolved_count += 1
     
-    print(f"Processed {files_processed} files")
-    print(f"Resolved conflicts in {conflicts_resolved} files")
+    print(f"\nResolved conflicts in {resolved_count} out of {total_files} files processed")
 
 if __name__ == "__main__":
     main()
