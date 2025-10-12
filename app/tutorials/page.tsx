@@ -3,21 +3,21 @@ import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
-export default function ConsultationPage() {
+export default function TutorialsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
-        <title>Free Consultation - Zion Tech Group</title>
-        <meta name="description" content="Get a free consultation with our AI and IT experts. Transform your business with our cutting-edge solutions." />
+        <title>Tutorials - Zion Tech Group</title>
+        <meta name="description" content="Learn how to use our AI and IT solutions with our comprehensive tutorials and guides." />
       </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">Free Consultation</h1>
-        <p className="text-lg text-gray-300 mb-8">Schedule your free consultation with our experts.</p>
+        <h1 className="text-4xl font-bold text-white mb-6">Tutorials</h1>
+        <p className="text-lg text-gray-300 mb-8">Comprehensive tutorials and guides coming soon.</p>
         <Link
           to="/contact"
           className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
         >
-          Schedule Now
+          Contact Us
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
       </div>

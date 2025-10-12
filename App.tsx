@@ -254,6 +254,7 @@ const App: React.FC = () => {
                             <Route path="/ai-document-intelligence" element={<AiDocumentIntelligencePage />} />
                             <Route path="/ai-conversation-analytics" element={<AiConversationAnalyticsPage />} />
                             <Route path="/ai-supply-chain-ai" element={<AiSupplyChainAiPage />} />
+                            <Route path="/ai-supply-chain-optimizer" element={<AiSupplyChainAiPage />} />
                             <Route path="/ai-healthcare-diagnostics" element={<AiHealthcareDiagnosticsPage />} />
                             <Route path="/ai-financial-forecasting" element={<AiFinancialForecastingPage />} />
                             <Route path="/ai-iot-analytics" element={<AiIotAnalyticsPage />} />
