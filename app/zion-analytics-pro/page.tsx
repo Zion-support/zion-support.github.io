@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShoppingCart } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Brain, BarChart, FileText, Link as LinkIcon, TrendingUp, Sparkles, Smartphone, Monitor, Play } from 'lucide-react';
 
 const ZionAnalyticsProPage: React.FC = () => {
 

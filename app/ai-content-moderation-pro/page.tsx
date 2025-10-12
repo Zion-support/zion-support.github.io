@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { Shield, Eye, CheckCircle, ArrowRight, Brain, Globe, Star } from 'lucide-react'
 import Layout from '../layout'
 
 export default function AIContentModerationPro() {

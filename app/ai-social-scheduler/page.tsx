@@ -1,5 +1,10 @@
 import React from 'react'
+<<<<<<< HEAD
 import { Share2, ArrowRight, Brain, BarChart3, Zap, CheckCircle, Star } from 'lucide-react'
+=======
+import { Helmet } from 'react-helmet-async'
+import { Calendar, Share2, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Clock, Globe, Brain } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-3824
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 

@@ -1,7 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { ArrowRight, Cloud, Shield, BarChart3, Zap, Database, Network, Search, Target, Settings, Server, CheckCircle, Sparkles, Play, Star, Clock, MessageCircle, Phone, Mail, MapPin } from 'lucide-react'
 import { Helmet } from 'react-helmet-async'
+=======
+import { ArrowRight, Zap, Cloud, CheckCircle, Star, Clock, BarChart3, Sparkles, Target, Shield, MessageCircle, Mail, Phone, MapPin, Play, Settings, Database, Search, Server, Network, Database as DatabaseIcon } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-3824
 
 export default function CloudMigrationPage() {
 

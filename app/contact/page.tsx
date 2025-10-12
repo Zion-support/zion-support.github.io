@@ -13,7 +13,7 @@ const ContactPage: React.FC = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -30,11 +30,12 @@ const ContactPage: React.FC = () => {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     
-    setSubmitStatus('success');
     setIsSubmitting(false);
+    setIsSubmitted(true);
     
     // Reset form after success
     setTimeout(() => {
+      setIsSubmitted(false);
       setFormData({
         name: '',
         email: '',
@@ -43,7 +44,6 @@ const ContactPage: React.FC = () => {
         service: '',
         message: ''
       });
-      setSubmitStatus('idle');
     }, 3000);
   };
 
@@ -63,27 +63,6 @@ const ContactPage: React.FC = () => {
     'Cloud Migration',
     'IT Consulting',
     'Other'
-  ];
-
-  const contactInfo = [
-    {
-      icon: <Mail className="w-6 h-6 text-blue-400" />,
-      title: 'Email',
-      details: ['info@ziontechgroup.com', 'support@ziontechgroup.com'],
-      description: 'Send us an email anytime'
-    },
-    {
-      icon: <Phone className="w-6 h-6 text-green-400" />,
-      title: 'Phone',
-      details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
-      description: 'Call us during business hours'
-    },
-    {
-      icon: <MapPin className="w-6 h-6 text-red-400" />,
-      title: 'Office',
-      details: ['123 Tech Street', 'San Francisco, CA 94105'],
-      description: 'Visit our headquarters'
-    }
   ];
 
   return (
@@ -114,7 +93,7 @@ const ContactPage: React.FC = () => {
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
             <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
             
-            {submitStatus === 'success' && (
+            {isSubmitted && (
               <div className="bg-green-500/20 border border-green-500/50 rounded-lg p-4 mb-6 flex items-center gap-3">
                 <CheckCircle className="w-6 h-6 text-green-400" />
                 <span className="text-green-300">Thank you! Your message has been sent successfully.</span>
@@ -150,7 +129,7 @@ const ContactPage: React.FC = () => {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="john@company.com"
+                    placeholder="your@email.com"
                   />
                 </div>
               </div>
@@ -167,7 +146,7 @@ const ContactPage: React.FC = () => {
                     value={formData.company}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your Company"
+                    placeholder="Your company name"
                   />
                 </div>
                 <div>
@@ -251,32 +230,71 @@ const ContactPage: React.FC = () => {
             </div>
 
             <div className="space-y-6">
-              {contactInfo.map((info, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0">
-                      {info.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
-                      <div className="space-y-1">
-                        {info.details.map((detail, detailIndex) => (
-                          <p key={detailIndex} className="text-gray-300">{detail}</p>
-                        ))}
-                      </div>
-                      <p className="text-sm text-gray-400 mt-2">{info.description}</p>
-                    </div>
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-white" />
                   </div>
                 </div>
-              ))}
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+                  <p className="text-gray-300 mb-1">+1 (302) 464-0950</p>
+                  <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-white" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                  <p className="text-gray-300 mb-1">kleber@ziontechgroup.com</p>
+                  <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-white" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">Office</h3>
+                  <p className="text-gray-300 mb-1">364 E Main St STE 1008</p>
+                  <p className="text-gray-300 mb-1">Middletown, DE 19709</p>
+                  <p className="text-sm text-gray-400">United States</p>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-500/30">
-              <h3 className="text-lg font-semibold text-white mb-3">Business Hours</h3>
-              <div className="space-y-2 text-gray-300">
-                <p>Monday - Friday: 9:00 AM - 6:00 PM PST</p>
-                <p>Saturday: 10:00 AM - 4:00 PM PST</p>
-                <p>Sunday: Closed</p>
+            {/* Why Choose Us */}
+            <div className="mt-12">
+              <h3 className="text-xl font-semibold text-white mb-6">Why Choose Zion Tech Group?</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-400" />
+                  <span className="text-gray-300">15+ years of technology expertise</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-400" />
+                  <span className="text-gray-300">500+ successful projects delivered</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-400" />
+                  <span className="text-gray-300">24/7 support and maintenance</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-400" />
+                  <span className="text-gray-300">Cutting-edge AI and cloud solutions</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-green-400" />
+                  <span className="text-gray-300">Free consultation and project planning</span>
+                </div>
               </div>
               <p className="text-sm text-blue-300 mt-3">
                 Emergency support available 24/7 for enterprise clients

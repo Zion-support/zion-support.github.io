@@ -1,5 +1,6 @@
 import React from 'react'
-import { ArrowRight } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import { FileText, Clock, Shield, Users, CheckCircle, ArrowRight, BarChart3, Calendar } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const ContractManagerPage: React.FC = () => {

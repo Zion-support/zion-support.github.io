@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Bot, Truck, ShoppingCart } from 'lucide-react'
+import { ArrowRight, Package, BarChart3, Zap, CheckCircle, Target, Shield, Bot, Star, DollarSign, Activity } from 'lucide-react'
 
 export default function AIInventoryManagerPage() {
   const features = [

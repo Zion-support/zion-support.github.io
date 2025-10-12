@@ -22,7 +22,7 @@ const AboutPage: React.FC = () => {
 
   const values = [
     {
-      icon: <Brain className="w-8 h-8 text-purple-400" />,
+      icon: Brain,
       title: 'Innovation First',
       description: 'We stay at the forefront of technology, constantly exploring new AI and IT solutions to solve complex business challenges.'
     },
@@ -34,7 +34,12 @@ const AboutPage: React.FC = () => {
     {
       icon: <Shield className="w-8 h-8 text-red-400" />,
       title: 'Security & Trust',
-      description: 'We implement enterprise-grade security measures and maintain the highest standards of data protection and compliance.'
+      description: 'Your data and systems are protected with enterprise-grade security measures and compliance standards.'
+    },
+    {
+      icon: Users,
+      title: 'Client-Centric',
+      description: 'We build lasting partnerships by understanding your business goals and delivering solutions that drive real value.'
     },
     {
       icon: <Zap className="w-8 h-8 text-yellow-400" />,

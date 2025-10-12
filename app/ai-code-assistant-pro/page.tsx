@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Bot } from 'lucide-react'
+import { ArrowRight, Code, CheckCircle, Clock, Target, TrendingUp, Shield, Bot, Star, Database, GitBranch, Search } from 'lucide-react'
 
 export default function AICodeAssistantProPage() {
   const features = [

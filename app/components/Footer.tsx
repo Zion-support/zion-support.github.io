@@ -75,24 +75,28 @@ const Footer: React.FC = () => {
               <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
-            <p className="text-gray-400 mb-6 max-w-sm">
-              Leading provider of AI and IT solutions, helping businesses transform through innovative technology and expert consulting.
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading provider of AI solutions, cloud infrastructure, and cutting-edge technology services 
+              that transform businesses and drive innovation.
             </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                  aria-label={social.name}
-                >
-                  {social.icon}
+            <div className="space-y-2">
+              <div className="flex items-center text-gray-300">
+                <Phone className="h-4 w-4 mr-2" />
+                <a href="tel:+13024640950" className="hover:text-purple-400 transition-colors">
+                  +1 (302) 464-0950
                 </a>
-              ))}
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Mail className="h-4 w-4 mr-2" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-400 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <MapPin className="h-4 w-4 mr-2" />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
             </div>
           </div>
 
@@ -171,21 +175,36 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Company & Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <Database className="w-5 h-5 text-yellow-400" />
-              Resources
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Globe className="h-5 w-5 mr-2 text-blue-400" />
+              Company
             </h3>
-            <ul className="space-y-3">
-              {resources.map((item, index) => (
+            <ul className="space-y-2 mb-6">
+              {company.map((item, index) => (
                 <li key={index}>
                   <Link
                     to={item.url}
-                    className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
+                    className="text-gray-300 hover:text-blue-400 transition-colors text-sm"
                   >
-                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <span className="text-sm">{item.name}</span>
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Shield className="h-5 w-5 mr-2 text-red-400" />
+              Support
+            </h3>
+            <ul className="space-y-2">
+              {support.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.url}
+                    className="text-gray-300 hover:text-red-400 transition-colors text-sm"
+                  >
+                    {item.name}
                   </Link>
                 </li>
               ))}

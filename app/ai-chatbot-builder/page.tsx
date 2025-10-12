@@ -44,6 +44,33 @@ const AiChatbotBuilderPage: React.FC = () => {
     }
   ];
 
+  const useCases = [
+    {
+      title: 'Customer Support',
+      description: '24/7 automated customer support with instant responses and issue resolution',
+      icon: Users,
+      benefits: ['Reduce support tickets by 60%', 'Instant response time', 'Multilingual support']
+    },
+    {
+      title: 'Lead Generation',
+      description: 'Qualify and nurture leads automatically with intelligent conversation flows',
+      icon: Target,
+      benefits: ['Increase lead conversion by 40%', 'Automated follow-ups', 'Lead scoring']
+    },
+    {
+      title: 'E-commerce Assistant',
+      description: 'Help customers find products, process orders, and handle returns seamlessly',
+      icon: ShoppingCart,
+      benefits: ['Boost sales by 25%', 'Reduce cart abandonment', 'Personalized recommendations']
+    },
+    {
+      title: 'HR Assistant',
+      description: 'Handle employee queries, schedule interviews, and provide company information',
+      icon: Users,
+      benefits: ['Reduce HR workload by 50%', 'Faster response times', 'Consistent information']
+    }
+  ];
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -145,6 +172,23 @@ const AiChatbotBuilderPage: React.FC = () => {
             >
               View All AI Services
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-4">
+                  <stat.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

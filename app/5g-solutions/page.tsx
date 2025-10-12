@@ -1,5 +1,6 @@
 import React from 'react'
-import { ArrowRight } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import { Network, Zap, Shield, Globe, BarChart3, CheckCircle, ArrowRight, Cpu, Smartphone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const FiveGSolutionsPage: React.FC = () => {

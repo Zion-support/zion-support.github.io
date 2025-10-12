@@ -1,5 +1,6 @@
 import React from 'react'
-import { ArrowRight } from 'lucide-react'
+import { Helmet } from 'react-helmet-async'
+import { Server, Shield, Zap, BarChart3, CheckCircle, ArrowRight, Clock, Users, Database } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 const ServerManagementPage: React.FC = () => {

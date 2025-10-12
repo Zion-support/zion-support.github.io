@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { CheckCircle, Zap, Cloud, Brain, DollarSign, Settings } from 'lucide-react';
 
 const PricingPage: React.FC = () => {
   const [billingCycle, setBillingCycle] = useState('monthly');

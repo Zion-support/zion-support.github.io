@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import { BarChart3, ArrowRight, CheckCircle, Brain, Globe, Star, Target } from 'lucide-react'
 import Layout from '../layout'
 
 export default function AIAnalyticsDashboardPro() {

@@ -28,6 +28,7 @@ const AiEcommerceOptimizerProPage: React.FC = () => {
     }
   ];
 
+const Page: React.FC = () => {
   const pricingPlans = [
     {
       name: 'Starter',

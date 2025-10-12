@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function AIInvoiceGeneratorPage() {
+=======
+const Page: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-3824
   return (
     <>
       <Helmet>
@@ -77,4 +81,10 @@ export default function AIInvoiceGeneratorPage() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default Page;
+>>>>>>> cursor/fix-errors-and-merge-to-main-3824

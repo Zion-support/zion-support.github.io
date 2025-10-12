@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Bot, Key } from 'lucide-react'
+import { ArrowRight, Shield, CheckCircle, Clock, Target, Lock, Bot, Star, Key, Lock as LockIcon, Activity, Network } from 'lucide-react'
 
 export default function AICybersecuritySuiteProPage() {
   const features = [

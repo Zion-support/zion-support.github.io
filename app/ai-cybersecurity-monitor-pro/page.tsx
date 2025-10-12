@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, AlertCircle, Building2, Bug } from 'lucide-react';
+import { Brain, Shield, Zap, CheckCircle, ArrowRight, Star, AlertTriangle, Eye, Lock, Target, Activity, Globe, Smartphone, Monitor, AlertCircle, Sparkles, Database, Users, Building2, Network, Bug, Search, BarChart3 } from 'lucide-react';
 
 export default function AiCybersecurityMonitorProPage() {
 

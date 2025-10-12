@@ -44,10 +44,10 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-gray-900/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
@@ -213,10 +213,24 @@ const Navigation: React.FC = () => {
 
               <Link
                 to="/contact"
-                className="block px-3 py-2 text-gray-300 hover:text-white transition-colors duration-300"
+                className="block px-3 py-2 text-white hover:text-purple-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Contact
+              </Link>
+              <Link
+                to="/blog"
+                className="block px-3 py-2 text-white hover:text-purple-400 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Blog
+              </Link>
+              <Link
+                to="/contact"
+                className="block px-3 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold text-center"
+                onClick={() => setIsOpen(false)}
+              >
+                Get Started
               </Link>
               <Link
                 to="/news"
