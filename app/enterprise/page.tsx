@@ -1,74 +1,26 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import Layout from '../layout'
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 
-const EnterprisePage: React.FC = () => {
+export default function EnterprisePage() {
   return (
-    <Layout
-      title="Enterprise Solutions - Zion Tech Group"
-      description="Comprehensive enterprise-grade solutions for large-scale business operations including AI, cloud, and digital transformation."
-      keywords="enterprise solutions, enterprise software, large-scale solutions, enterprise integration, business solutions"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Enterprise
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your enterprise with our comprehensive solutions. 
-              Powered by cutting-edge technology and industry expertise.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Enterprise AI</h3>
-              <p className="text-gray-300 mb-4">
-                Advanced AI solutions designed for large-scale enterprise operations and decision-making.
-              </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Machine learning platforms</li>
-                <li>• Predictive analytics</li>
-                <li>• Process automation</li>
-                <li>• Data intelligence</li>
-              </ul>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Cloud Infrastructure</h3>
-              <p className="text-gray-300 mb-4">
-                Scalable cloud solutions for enterprise-grade performance and reliability.
-              </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Multi-cloud strategies</li>
-                <li>• Hybrid cloud solutions</li>
-                <li>• Disaster recovery</li>
-                <li>• Security compliance</li>
-              </ul>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Digital Transformation</h3>
-              <p className="text-gray-300 mb-4">
-                Complete digital transformation services to modernize your enterprise operations.
-              </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Legacy system modernization</li>
-                <li>• Process optimization</li>
-                <li>• Change management</li>
-                <li>• Training and support</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet>
+        <title>Enterprise - Zion Tech Group</title>
+        <meta name="description" content="Professional enterprise services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6">Enterprise</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional enterprise services coming soon.</p>
+        <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+        >
+          Contact Us
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </Link>
       </div>
-    </Layout>
+    </div>
   )
 }
-
-export default EnterprisePage

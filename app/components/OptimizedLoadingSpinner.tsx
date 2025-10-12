@@ -59,7 +59,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
             <div className="flex space-x-1">
               {[0, 1, 2].map((i) => (
                 <div
-<<<<<<< HEAD
 
     variant = 'spinner',
     text = 'Loading...',
@@ -88,8 +87,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
           return (<div className='flex space-x-1' role='status' aria-label='Loading'></div>
               {[0, 1, 2].map(i => (</div>
                 <div}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
                   key={i}
                   className={`${sizeClasses[size]} rounded-full bg-current animate-pulse`}
                   style={{ animationDelay: `${i * 0.2}s` }}
@@ -139,22 +136,11 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
       ? 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center'
       : 'flex items-center justify-center p-8'
 
-<<<<<<< HEAD
       <div className={containerClasses}></div>
         <div className='text-center'></div>
           {renderSpinner}
           {text && (</div>}
             <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
-=======
-    return (
-      <div className={`${containerClasses} ${className}`}>
-        <div className="text-center">
-          <div className={`${colorClasses[color]} mb-4`}>
-            {renderSpinner()}
-          </div>
-          {text && (
-            <p className={`${textSizeClasses[size]} ${colorClasses[color]} font-medium`}>
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
               {text}
             </p>
           )}
@@ -164,11 +150,5 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   }
 )
 
-<<<<<<< HEAD
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner
 }
-=======
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'
-
-export default OptimizedLoadingSpinner
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07

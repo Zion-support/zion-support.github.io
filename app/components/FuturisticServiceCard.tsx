@@ -1,13 +1,7 @@
 'use client'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
-
-const FuturisticServiceCardPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -56,13 +50,8 @@ const FuturisticServiceCardPage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
                 FuturisticServiceCard
               </h1>
-=======
-                Futuristic Service Card
-              </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
               <br />
               <span className="text-white">Solutions</span>
             </h1>
@@ -94,78 +83,5 @@ const FuturisticServiceCardPage: React.FC = () => {
               Discover the powerful features that make our futuristic service card solutions stand out.
             </p>
           </div>
-<<<<<<< HEAD
         </div>)};export default FuturisticServiceCardPage
 }
-=======
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20">
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of working with our cutting-edge futuristic service card solutions.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-4">
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <CheckCircle className="w-5 h-5 text-white" />
-                </div>
-                <p className="text-gray-300 text-lg">
-                  {benefit}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Get started with our futuristic service card solutions today and experience the future of business technology.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
-              Start Your Journey
-            </button>
-            <button className="border border-gray-300 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-              Contact Us
-            </button>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-
-export default FuturisticServiceCardPage
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07

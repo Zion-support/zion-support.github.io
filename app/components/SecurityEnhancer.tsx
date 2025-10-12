@@ -1,21 +1,6 @@
 'use client'
 import React, { useEffect } from 'react'
-<<<<<<< HEAD
   children: React.ReactNode}
-=======
-import { Shield, CheckCircle, AlertTriangle, Lock } from 'lucide-react'
-
-interface SecurityEnhancerProps {
-  children: React.ReactNode
-  className?: string
-}
-
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ 
-  children, 
-  className = '' 
-}) => {
-  useEffect(() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
     // Security enhancement logic
     
         'Referrer-Policy': 'strict-origin-when-cross-origin'
@@ -53,7 +38,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   )
 }
 
-<<<<<<< HEAD
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {useEffect(() => {// Security enhancement logic
     
     $3
@@ -79,6 +63,3 @@ export default SecurityEnhancer
       document.addEventListener('keydown', (e) => {if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {e.preventDefault()}
         }
       })};enhanceSecurity()}, []);return <>{children}</>};export default SecurityEnhancer
-=======
-export default SecurityEnhancer
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07

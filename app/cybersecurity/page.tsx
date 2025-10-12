@@ -1,71 +1,35 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import Layout from '../layout'
+import { Link } from 'react-router-dom'
+import { ArrowRight, CheckCircle, Shield, Lock, Eye, AlertTriangle, Star, Zap, Globe, Database, Cpu, Network } from 'lucide-react'
+import ServicePageTemplate from '../service-template'
 
-const CybersecurityPage: React.FC = () => {
+export default function CybersecurityPage() {
   return (
-    <Layout
-      title="Cybersecurity - Zion Tech Group"
-      description="Professional cybersecurity services and solutions by Zion Tech Group."
-      keywords="cybersecurity, services, solutions, technology, Zion Tech Group"
-    >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Cybersecurity
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional cybersecurity services and solutions by Zion Tech Group.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 1</h3>
-              <p className="text-gray-300 mb-4">
-                Description of the first key feature or service.
-              </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
-              </ul>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
-              <p className="text-gray-300 mb-4">
-                Description of the second key feature or service.
-              </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
-              </ul>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
-              <p className="text-gray-300 mb-4">
-                Description of the third key feature or service.
-              </p>
-              <ul className="text-gray-300 space-y-2">
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Layout>
+    <ServicePageTemplate
+      title="Cybersecurity Solutions"
+      description="Protect your business with our comprehensive cybersecurity services. Advanced threat detection, data protection, and 24/7 monitoring to keep your systems secure."
+      icon={<Shield className="w-10 h-10 text-red-400" />}
+      benefits={[
+        'Advanced threat detection and response',
+        'Enterprise-grade data encryption',
+        '24/7 security monitoring and support',
+        'Compliance with industry standards',
+        'Automated incident response',
+        'Custom security solutions'
+      ]}
+      features={[
+        'AI-powered threat detection',
+        'Real-time security monitoring',
+        'End-to-end data encryption',
+        'Vulnerability assessments',
+        'Security awareness training',
+        'Incident response planning'
+      ]}
+      pricing="Starting at $299/month"
+      seoTitle="Cybersecurity Solutions - Zion Tech Group"
+      seoDescription="Comprehensive cybersecurity services including threat detection, data protection, and 24/7 monitoring. Protect your business with enterprise-grade security solutions."
+      seoKeywords="cybersecurity, threat detection, data protection, security monitoring, compliance, incident response"
+    />
   )
 }
-
-export default CybersecurityPage

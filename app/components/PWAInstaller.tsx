@@ -1,5 +1,4 @@
 'use client'
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
@@ -15,78 +14,6 @@ export default function PWAInstaller() {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-=======
-import React, { useState, useEffect } from 'react'
-import { Download, X, Check } from 'lucide-react'
-
-interface PWAInstallerProps {
-  onInstall?: () => void
-  onDismiss?: () => void
-  className?: string
-}
-
-const PWAInstaller: React.FC<PWAInstallerProps> = ({
-  onInstall,
-  onDismiss,
-  className = ''
-}) => {
-  const [deferredPrompt, setDeferredPrompt] = useState<any>(null)
-  const [showInstallPrompt, setShowInstallPrompt] = useState(false)
-  const [isInstalled, setIsInstalled] = useState(false)
-
-  useEffect(() => {
-    // Check if app is already installed
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-      setIsInstalled(true)
-      return
-    }
-
-    // Listen for the beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: Event) => {
-      e.preventDefault()
-      setDeferredPrompt(e)
-      setShowInstallPrompt(true)
-    }
-
-    // Listen for the appinstalled event
-    const handleAppInstalled = () => {
-      setIsInstalled(true)
-      setShowInstallPrompt(false)
-      setDeferredPrompt(null)
-    }
-
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
-    window.addEventListener('appinstalled', handleAppInstalled)
-
-    return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
-      window.removeEventListener('appinstalled', handleAppInstalled)
-    }
-  }, [])
-
-  const handleInstall = async () => {
-    if (!deferredPrompt) return
-
-    deferredPrompt.prompt()
-    const { outcome } = await deferredPrompt.userChoice
-    
-    if (outcome === 'accepted') {
-      onInstall?.()
-    }
-    
-    setDeferredPrompt(null)
-    setShowInstallPrompt(false)
-  }
-
-  const handleDismiss = () => {
-    setShowInstallPrompt(false)
-    onDismiss?.()
-  }
-
-  if (isInstalled || !showInstallPrompt) {
-    return null
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
 
   return (
     <div className={`fixed bottom-4 left-4 right-4 z-50 ${className}`}>
@@ -117,7 +44,6 @@ const PWAInstaller: React.FC<PWAInstallerProps> = ({
             </button>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
 }}
   ];const benefits = [
@@ -139,11 +65,3 @@ const PWAInstaller: React.FC<PWAInstallerProps> = ({
         </div>
       </section>};export default PWAInstallerPage
 }
-=======
-      </div>
-    </div>
-  )
-}
-
-export default PWAInstaller
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07

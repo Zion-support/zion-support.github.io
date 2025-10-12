@@ -1,65 +1,66 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Zap, Brain, Cpu, Rocket, Shield, Network, BarChart3, Bot, ArrowRight } from 'lucide-react'
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Cpu } from 'lucide-react'
 
-const Footer: React.FC = () => {
+export default function Footer() {
   const aiServices = [
     { name: 'AI Content Generator', path: '/ai-content-generator' },
-    { name: 'AI Chatbot Enterprise', path: '/ai-chatbot-enterprise' },
+    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
+    { name: 'AI Email Assistant', path: '/ai-email-assistant' },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+    { name: 'AI Automation Suite', path: '/ai-automation' },
+    { name: 'AI Meeting Assistant', path: '/ai-meeting-assistant' },
+    { name: 'AI Project Manager', path: '/ai-project-manager' },
     { name: 'AI 3D Generation', path: '/ai-3d-generation' },
-    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' },
-    { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite' },
-    { name: 'AI CRM Assistant', path: '/ai-crm-assistant' },
-    { name: 'AI Email Marketing', path: '/ai-email-marketing' }
+    { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro' }
   ];
 
   const itServices = [
-    { name: 'Cloud Migration', path: '/cloud-migration' },
-    { name: 'DevOps Solutions', path: '/devops-solutions' },
-    { name: 'Cybersecurity', path: '/cybersecurity' },
+    { name: 'Web Development', path: '/web-development' },
     { name: 'Mobile Development', path: '/mobile-development' },
-    { name: 'API Development', path: '/api-development' },
-    { name: 'Database Management', path: '/database-management' },
-    { name: 'System Integration', path: '/system-integration' },
-    { name: 'IT Consulting', path: '/it-consulting' }
+    { name: 'DevOps', path: '/devops' },
+    { name: 'Data Analytics', path: '/data-analytics' },
+    { name: 'Cloud Services', path: '/cloud-services' },
+    { name: 'Cybersecurity', path: '/cybersecurity' },
+    { name: 'Blockchain Solutions', path: '/blockchain' },
+    { name: 'Quantum Computing', path: '/quantum-computing-solutions' }
   ];
 
   const microSaasServices = [
-    { name: 'AI-Powered CRM', path: '/ai-crm' },
-    { name: 'Smart Analytics', path: '/smart-analytics' },
-    { name: 'Automated Testing', path: '/ai-automated-testing' },
-    { name: 'Content Management', path: '/ai-content-management' },
-    { name: 'Email Marketing', path: '/ai-email-marketing' },
-    { name: 'Social Media Manager', path: '/ai-social-media-manager' },
-    { name: 'Project Management', path: '/ai-project-management' },
-    { name: 'Customer Support', path: '/ai-customer-support' }
+    { name: 'AI Task Manager', path: '/ai-task-manager' },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
+    { name: 'AI Password Manager', path: '/ai-password-manager' },
+    { name: 'AI Invoice Generator', path: '/ai-invoice-generator' },
+    { name: 'AI Health Tracker', path: '/ai-health-tracker' },
+    { name: 'AI Smart Calendar', path: '/ai-smart-calendar' },
+    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro' }
+  ];
+
+  const fiveGServices = [
+    { name: '5G Implementation', path: '/5g-implementation' },
+    { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
+    { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
+    { name: '5G Edge Computing', path: '/5g-edge-computing' },
+    { name: '5G Private Networks', path: '/5g-private-networks' },
+    { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
+    { name: '5G Data Analytics', path: '/5g-data-analytics' }
   ];
 
   const companyLinks = [
-    { name: 'About Us', path: '/about' },
-    { name: 'Our Team', path: '/team' },
-    { name: 'Careers', path: '/careers' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Case Studies', path: '/case-studies' },
-    { name: 'Press Kit', path: '/press' },
-    { name: 'Partners', path: '/partners' }
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' }
   ];
 
   const supportLinks = [
     { name: 'Help Center', path: '/help' },
     { name: 'Documentation', path: '/docs' },
-    { name: 'API Reference', path: '/api-docs' },
-    { name: 'Status Page', path: '/status' },
-    { name: 'Contact Support', path: '/contact' },
-    { name: 'Community', path: '/community' }
-  ];
-
-  const legalPages = [
-    { name: 'Privacy Policy', path: '/privacy-policy' },
-    { name: 'Terms of Service', path: '/terms-of-service' },
-    { name: 'Cookie Policy', path: '/cookie-policy' },
-    { name: 'GDPR Compliance', path: '/gdpr-compliance' }
+    { name: 'Support', path: '/support' },
+    { name: 'Status', path: '/status' },
+    { name: 'SLA', path: '/sla' }
   ];
 
   return (
@@ -67,39 +68,44 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
+          <div className="lg:col-span-1">
+            <div className="flex items-center mb-6">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-white" />
+                </div>
+                <span className="text-xl font-bold">Zion Tech Group</span>
               </div>
-              <h3 className="text-2xl font-bold">Zion Tech Group</h3>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Leading provider of AI-powered solutions, cybersecurity, and digital transformation services. 
-              Empowering businesses to thrive in the digital age with cutting-edge technology.
+            <p className="text-gray-300 mb-6 max-w-sm">
+              Leading provider of AI, cloud services, cybersecurity, and 5G solutions. 
+              Transform your business with cutting-edge technology.
             </p>
             <div className="flex space-x-4">
-              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors duration-200">
-                <Twitter className="w-5 h-5" />
+              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <Github className="w-5 h-5" />
               </a>
-              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-white transition-colors duration-200">
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://github.com/ziontechgroup" className="text-gray-400 hover:text-white transition-colors duration-200">
-                <Github className="w-5 h-5" />
+              <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                <Twitter className="w-5 h-5" />
               </a>
             </div>
           </div>
 
           {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">AI Services</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Brain className="w-5 h-5 mr-2 text-cyan-400" />
+              AI Services
+            </h3>
+            <ul className="space-y-3">
               {aiServices.map((service, index) => (
                 <li key={index}>
-                  <Link 
-                    to={service.path} 
-                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
@@ -111,13 +117,16 @@ const Footer: React.FC = () => {
 
           {/* IT Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">IT Services</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Shield className="w-5 h-5 mr-2 text-green-400" />
+              IT Services
+            </h3>
+            <ul className="space-y-3">
               {itServices.map((service, index) => (
                 <li key={index}>
-                  <Link 
-                    to={service.path} 
-                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-green-400 transition-colors flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
@@ -129,13 +138,16 @@ const Footer: React.FC = () => {
 
           {/* Micro SAAS Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Micro SAAS</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Cpu className="w-5 h-5 mr-2 text-purple-400" />
+              Micro SAAS
+            </h3>
+            <ul className="space-y-3">
               {microSaasServices.map((service, index) => (
                 <li key={index}>
-                  <Link 
-                    to={service.path} 
-                    className="text-gray-400 hover:text-white transition-colors flex items-center"
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-purple-400 transition-colors flex items-center"
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
@@ -143,6 +155,48 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* 5G Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center">
+              <Wifi className="w-5 h-5 mr-2 text-yellow-400" />
+              5G Solutions
+            </h3>
+            <ul className="space-y-3">
+              {fiveGServices.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-yellow-400 transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Newsletter Signup */}
+        <div className="border-t border-white/10 mt-12 pt-8">
+          <div className="max-w-md mx-auto text-center">
+            <h3 className="text-lg font-semibold mb-4">Stay Updated</h3>
+            <p className="text-gray-300 mb-4">
+              Get the latest updates on AI technology and IT solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              />
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
+                Subscribe
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </button>
+            </div>
           </div>
         </div>
 
@@ -187,38 +241,47 @@ const Footer: React.FC = () => {
         <div className="border-t border-white/10 mt-12 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center">
-              <Mail className="w-5 h-5 text-purple-400 mr-3" />
-              <span className="text-gray-300">kleber@ziontechgroup.com</span>
+              <Mail className="w-5 h-5 text-cyan-400 mr-3" />
+              <div>
+                <p className="text-sm text-gray-400">Email</p>
+                <p className="text-white">kleber@ziontechgroup.com</p>
+              </div>
             </div>
             <div className="flex items-center">
-              <Phone className="w-5 h-5 text-blue-400 mr-3" />
-              <span className="text-gray-300">+1 302 464 0950</span>
+              <Phone className="w-5 h-5 text-purple-400 mr-3" />
+              <div>
+                <p className="text-sm text-gray-400">Phone</p>
+                <p className="text-white">+1 (302) 464-0950</p>
+              </div>
             </div>
             <div className="flex items-center">
               <MapPin className="w-5 h-5 text-green-400 mr-3" />
-              <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
+              <div>
+                <p className="text-sm text-gray-400">Location</p>
+                <p className="text-white">364 E Main St STE 1008, Middletown DE 19709</p>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="border-t border-white/10 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              {legalPages.map((page, index) => (
-                <Link key={index} to={page.path} className="text-gray-400 hover:text-white text-sm transition-colors">
-                  {page.name}
-                </Link>
-              ))}
-            </div>
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400 text-sm">
+            © 2024 Zion Tech Group. All rights reserved.
+          </p>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Terms of Service
+            </Link>
+            <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Cookie Policy
+            </Link>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
-
-export default Footer

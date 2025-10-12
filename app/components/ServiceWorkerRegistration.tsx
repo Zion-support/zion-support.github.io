@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react'
 import { Download, CheckCircle, AlertTriangle, RefreshCw } from 'lucide-react'
 
-<<<<<<< HEAD
     {icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'}
@@ -18,30 +17,6 @@ import { Download, CheckCircle, AlertTriangle, RefreshCw } from 'lucide-react'
     {icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'}
-=======
-interface ServiceWorkerRegistrationProps {
-  onUpdateAvailable?: () => void
-  onUpdateInstalled?: () => void
-  className?: string
-}
-
-const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
-  onUpdateAvailable,
-  onUpdateInstalled,
-  className = ''
-}) => {
-  const [isSupported, setIsSupported] = useState(false)
-  const [isRegistered, setIsRegistered] = useState(false)
-  const [isUpdating, setIsUpdating] = useState(false)
-  const [updateAvailable, setUpdateAvailable] = useState(false)
-  const [registration, setRegistration] = useState<ServiceWorkerRegistration | null>(null)
-
-  useEffect(() => {
-    // Check if service workers are supported
-    if ('serviceWorker' in navigator) {
-      setIsSupported(true)
-      registerServiceWorker()
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
     }
   }, [])
 
@@ -142,7 +117,6 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </section>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
@@ -212,11 +186,3 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
       </section>
     </div>)};export default ServiceWorkerRegistrationPage
 }
-=======
-      )}
-    </div>
-  )
-}
-
-export default ServiceWorkerRegistration
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07

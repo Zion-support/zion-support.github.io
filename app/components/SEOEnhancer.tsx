@@ -1,8 +1,7 @@
 'use client'
-<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Shield, Brain } from 'lucide-react';
 const SEOEnhancer: React.FC = () => {
   const features = [
     {
@@ -36,66 +35,6 @@ const SEOEnhancer: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ]
-=======
-import React, { useState, useEffect } from 'react'
-import { Search, CheckCircle, BarChart3, Target, Zap, Globe } from 'lucide-react'
-
-interface SEOEnhancerProps {
-  onOptimize?: (seoScore: number) => void
-  className?: string
-}
-
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  onOptimize,
-  className = ''
-}) => {
-  const [seoScore, setSeoScore] = useState(0)
-  const [isAnalyzing, setIsAnalyzing] = useState(false)
-  const [recommendations, setRecommendations] = useState<string[]>([])
-
-  const analyzeSEO = async () => {
-    setIsAnalyzing(true)
-    
-    // Simulate SEO analysis
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
-    const newScore = Math.floor(Math.random() * 40) + 60 // Score between 60-100
-    setSeoScore(newScore)
-    
-    const newRecommendations = [
-      'Add meta descriptions to all pages',
-      'Optimize images with alt text',
-      'Improve page loading speed',
-      'Add structured data markup',
-      'Create XML sitemap',
-      'Optimize internal linking',
-      'Improve mobile responsiveness',
-      'Add social media meta tags'
-    ]
-    
-    setRecommendations(newRecommendations)
-    onOptimize?.(newScore)
-    setIsAnalyzing(false)
-  }
-
-  useEffect(() => {
-    // Initial SEO analysis
-    analyzeSEO()
-  }, [])
-
-  const getScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-500'
-    if (score >= 70) return 'text-yellow-500'
-    return 'text-red-500'
-  }
-
-  const getScoreBg = (score: number) => {
-    if (score >= 90) return 'bg-green-500'
-    if (score >= 70) return 'bg-yellow-500'
-    return 'bg-red-500'
-  }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-4e07
   return (
     <div className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 ${className}`}>
       <div className="flex items-center justify-between mb-6">
