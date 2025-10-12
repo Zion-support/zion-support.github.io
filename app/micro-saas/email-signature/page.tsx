@@ -84,6 +84,7 @@ const EmailSignaturePage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title />AI Email Signature Manager - Professional Email Signatures | Zion Tech Group</title>
@@ -101,6 +102,14 @@ const EmailSignaturePage: React.FC = () => {
               <Mail className="w-5h-5ml-2" />
               <span />Email Signature Management</span>
             </div>
+=======
+    
+        <>
+      <title>EmailSignature - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">EmailSignature</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional emailsignature services coming soon.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
             
             <h1 className="w-5h-5ml-2" />
               Professional <span className="w-5h-5ml-2" />Email Signatures</span>
@@ -122,6 +131,7 @@ const EmailSignaturePage: React.FC = () => {
             </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="w-5h-5ml-2" />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -234,3 +244,8 @@ const EmailSignaturePage: React.FC = () => {
 }
 
 export default EmailSignaturePage;
+=======
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

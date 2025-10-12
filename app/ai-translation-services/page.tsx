@@ -107,6 +107,7 @@ const AITranslationServicesPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Translation Services - Multilingual Communication | Zion Tech Group</title>
@@ -124,6 +125,14 @@ const AITranslationServicesPage: React.FC = () => {
               <Globe className="w-5h-5ml-2" />
               <span />AI Translation Services</span>
             </div>
+=======
+    
+        <>
+      <title>AiTranslationServices - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">AiTranslationServices</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional aitranslationservices services coming soon.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
             
             <h1 className="w-5h-5ml-2" />
               Break Language <span className="w-5h-5ml-2" />Barriers</span>
@@ -145,6 +154,7 @@ const AITranslationServicesPage: React.FC = () => {
             </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="w-5h-5ml-2" />
           <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -284,3 +294,8 @@ const AITranslationServicesPage: React.FC = () => {
 }
 
 export default AITranslationServicesPage;
+=======
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

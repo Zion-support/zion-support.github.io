@@ -158,6 +158,7 @@ const AICustomerInsightsPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Customer Insights - Advanced Analytics & Personalization | Zion Tech Group</title>
@@ -426,3 +427,17 @@ const AICustomerInsightsPage: React.FC = () => {
 };
 
 export default AICustomerInsightsPage;
+=======
+    
+        <>
+      <title>AiCustomerInsights - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">AiCustomerInsights</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional aicustomerinsights services coming soon.</p>
+            
+              Contact Us
+
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

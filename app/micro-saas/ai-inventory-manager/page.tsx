@@ -150,6 +150,7 @@ export default function AIInventoryManagerPage() {
   ]
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title />AI Inventory Manager - Zion Tech Group | Smart Inventory Management</title>
@@ -158,6 +159,12 @@ export default function AIInventoryManagerPage() {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-inventory-manager"  />
       </Helmet>
+=======
+
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+        <title>AI Inventory Manager - Zion Tech Group | Smart Inventory Management</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
 
       {/* Hero Section */}
       <section className="w-5h-5ml-2" />
@@ -382,6 +389,7 @@ export default function AIInventoryManagerPage() {
                 
                 <p className="w-5h-5ml-2">Join thousands of businesses already reducing costs by 25% with our AI-powered inventory manager. 
                   Start your free trial today and experience the future of inventory management.
+<<<<<<< HEAD
                 </p>
                 
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -404,3 +412,13 @@ export default function AIInventoryManagerPage() {
     </div>
   );
 }
+=======
+
+                    <span>Start Free Trial</span>
+                    <span>View All Plans</span>
+
+                  <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
+
+      </>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

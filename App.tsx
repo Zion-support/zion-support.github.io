@@ -1,6 +1,6 @@
 'use client';
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './app/styles/futuristic.css';
 import './app/styles/futuristic-enhanced.css';
@@ -165,6 +165,7 @@ function App() {
   const { performanceData } = usePerformanceMonitor();
 
   return (
+<<<<<<< HEAD
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
@@ -174,6 +175,11 @@ function App() {
             <Breadcrumb />
             <Suspense fallback={<PageLoader />}>
               <Routes>
+=======
+    <BrowserRouter>
+      <Suspense fallback={<PageLoader />}>
+        <Routes>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
                 <Route path="/" element={<HomePage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
@@ -308,12 +314,13 @@ function App() {
                 <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
                 <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
                 <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
+                <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
                 <Route path="/5g-mobile-applications" element={<FiveGMobileApplicationsPage />} />
                 <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
                 <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                 <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+<<<<<<< HEAD
               </Routes>
             </Suspense>
             <Footer />
@@ -326,6 +333,11 @@ function App() {
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
+=======
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
   );
 }
 

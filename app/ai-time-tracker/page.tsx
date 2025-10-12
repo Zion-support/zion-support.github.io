@@ -124,6 +124,7 @@ const AITimeTrackerPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Time Tracker - Smart Productivity Management | Zion Tech Group</title>
@@ -331,3 +332,17 @@ const AITimeTrackerPage: React.FC = () => {
 }
 
 export default AITimeTrackerPage;
+=======
+    
+        <>
+      <title>AiTimeTracker - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">AiTimeTracker</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional aitimetracker services coming soon.</p>
+            
+              Contact Us
+
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

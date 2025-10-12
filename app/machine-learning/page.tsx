@@ -3,12 +3,18 @@ import React from 'react';
 
 const MachineLearningPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Machine Learning - Zion Tech Group</title>
         <meta name="description" content="Machine Learning services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="machine-learning, AI solutions, IT services" />
       </Helmet>
+=======
+    
+        <>
+      <title>MachineLearning - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -21,6 +27,7 @@ const MachineLearningPage: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
             <p className="w-5h-5ml-2">We're working on bringing you comprehensive machine learning solutions. 
@@ -35,3 +42,8 @@ const MachineLearningPage: React.FC = () => {
 };
 
 export default MachineLearningPage;
+=======
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

@@ -203,6 +203,7 @@ export default function CloudMigrationPage() {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Cloud Migration Services - Expert Cloud Transformation | Zion Tech Group</title>
@@ -497,5 +498,17 @@ export default function CloudMigrationPage() {
         </section>
       </div>
     </>
+=======
+    
+        <>
+      <title>CloudMigration - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">CloudMigration</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional cloudmigration services coming soon.</p>
+            
+              Contact Us
+
+      </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
   );
 }

@@ -6,8 +6,14 @@ import { ArrowRight } from 'lucide-react';
 
 const Page: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
+=======
+
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
         <title> - Zion Tech Group</title>
         <meta name="description" content="Professional  services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta name="keywords" content="AI solutions, IT services, Zion Tech Group" />
@@ -66,3 +72,21 @@ const Page: React.FC = () => {
 };
 
 export default Page;
+<<<<<<< HEAD
+=======
+
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
+
+export default function CloudMigrationProPage() {
+  return (
+        <title>Cloud Migration Pro - Zion Tech Group</title>
+        <h1 className="text-4xl font-bold text-white mb-6">Cloud Migration Pro</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional cloud migration services coming soon.</p>
+          Contact Us
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

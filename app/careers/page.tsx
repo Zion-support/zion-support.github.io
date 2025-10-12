@@ -3,6 +3,7 @@ import React from 'react';
 
 const CareersPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Careers - Zion Tech Group</title>
@@ -35,3 +36,17 @@ const CareersPage: React.FC = () => {
 };
 
 export default CareersPage;
+=======
+    
+        <>
+      <title>Careers - Zion Tech Group</title>
+
+            <h1 className="text-4xl font-bold text-white mb-6">Careers</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional careers services coming soon.</p>
+            
+              Contact Us
+
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

@@ -3,6 +3,7 @@ import React from 'react';
 
 const TutorialsPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Tutorials - Zion Tech Group</title>
@@ -20,6 +21,11 @@ const TutorialsPage: React.FC = () => {
             <p className="w-5h-5ml-2">Master AI and IT technologies with our comprehensive tutorials, guides, and hands-on learning resources.
             </p>
           </div>
+=======
+    
+        <>
+      <title>Tutorials - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
 
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             {/* AI Tutorials */}
@@ -35,6 +41,7 @@ const TutorialsPage: React.FC = () => {
               </ul>
             </div>
 
+<<<<<<< HEAD
             {/* IT Infrastructure */}
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <h3 className="text-2 xl font-bold text-white mb-4"  >IT Infrastructure</h3>
@@ -116,3 +123,8 @@ const TutorialsPage: React.FC = () => {
 };
 
 export default TutorialsPage;
+=======
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

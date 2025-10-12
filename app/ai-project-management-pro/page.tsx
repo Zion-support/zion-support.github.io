@@ -47,12 +47,18 @@ const Page: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Project Management Pro - Zion Tech Group</title>
         <meta name="description" content="Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs." />
         <meta name="keywords" content="AI project management, productivity, Zion Tech Group" />
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3 } from 'lucide-react';
+=======
+    
+        <>
+      <title>AI Project Management Pro - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
 
 export default function AIProjectManagementPro() {
   const features = [
@@ -252,6 +258,7 @@ export default function AIProjectManagementPro() {
                 </Link>
                 <Link to="/services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
                   View Services
+<<<<<<< HEAD
                 </Link>
               </div>
         <section className="py-20">
@@ -281,3 +288,8 @@ export default Page;
 }
 
 }
+=======
+
+      </>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

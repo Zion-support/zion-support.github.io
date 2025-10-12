@@ -762,6 +762,7 @@ const MicroSaasPage: React.FC = () => {
     ? microSaasProducts 
     : microSaasProducts.filter(product => product.category === selectedCategory);
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title />Micro SAAS Products - Zion Tech Group | AI-Powered Business Solutions</title>
@@ -931,3 +932,17 @@ const MicroSaasPage: React.FC = () => {
 };
 
 export default MicroSaasPage;
+=======
+    
+        <>
+      <title>MicroSaas - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">MicroSaas</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional microsaas services coming soon.</p>
+            
+              Contact Us
+
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

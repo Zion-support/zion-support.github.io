@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>Service - Zion Tech Group</title>
@@ -22,3 +23,20 @@ import { ArrowRight } from 'lucide-react';
     </div>
   );
 }
+=======
+
+        <>
+      <title>Page - Zion Tech Group</title>
+        <h1 className="text-4xl font-bold text-white mb-6">Page</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional page services coming soon.</p>
+          Contact Us
+          
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <title>News - Zion Tech Group</title>
+        <h1 className="text-4 xl font-boldtext-whitemb-6">News</h1>
+        <p className="text-lgtext-gray-300mb-8">Professional news services coming soon.</p>
+          Contact Us
+    
+      </>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

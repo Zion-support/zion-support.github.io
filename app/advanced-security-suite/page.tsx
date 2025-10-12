@@ -4,6 +4,7 @@ import { Shield, ArrowRight, Brain, Lock, Eye } from 'lucide-react';
 
 export default function AdvancedSecuritySuite() {
   return (
+<<<<<<< HEAD
     <Layout
       title="Advanced Security Suite - Enterprise Cybersecurity | Zion Tech Group"
       description="Comprehensive cybersecurity solution with AI threat detection, 24/7 monitoring, and compliance tools. Protect your business from advanced cyber threats. Get your free security assessment today."
@@ -46,6 +47,14 @@ export default function AdvancedSecuritySuite() {
               <h2 className="text-3xlfont-bold text-white mb-4">Comprehensive Security Features</h2>
               <p className="text-lgtext-gray-300">Advanced protection against the latest cyber threats</p>
             </div>
+=======
+    
+        <>
+      <title>Advanced Security Suite - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">Advanced Security Suite</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional advanced security suite services coming soon.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
             
             <div className="gridmd:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-red-500/20 hover:border-red-400/40 transition-all duration-300">
@@ -75,6 +84,7 @@ export default function AdvancedSecuritySuite() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-16">
           <div className="max-w-7xlmx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -98,5 +108,8 @@ export default function AdvancedSecuritySuite() {
         </section>
       </div>
     </Layout>
+=======
+      </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
   );
 }

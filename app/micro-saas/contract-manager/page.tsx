@@ -84,6 +84,7 @@ const ContractManagerPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title />AI Contract Manager - Smart Contract Management | Zion Tech Group</title>
@@ -101,6 +102,14 @@ const ContractManagerPage: React.FC = () => {
               <FileText className="w-5h-5ml-2" />
               <span />AI Contract Management</span>
             </div>
+=======
+    
+        <>
+      <title>ContractManager - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">ContractManager</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional contractmanager services coming soon.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
             
             <h1 className="w-5h-5ml-2" />
               Smart <span className="w-5h-5ml-2" />Contract Manager</span>
@@ -122,6 +131,7 @@ const ContractManagerPage: React.FC = () => {
             </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="w-5h-5ml-2" />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -234,3 +244,8 @@ const ContractManagerPage: React.FC = () => {
 }
 
 export default ContractManagerPage;
+=======
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

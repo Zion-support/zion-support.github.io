@@ -3,12 +3,18 @@ import React from 'react';
 
 const ZionInvoiceGeniusPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Zion Invoice Genius - Zion Tech Group</title>
         <meta name="description" content="Zion Invoice Genius services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="zion-invoice-genius, AI solutions, IT services" />
       </Helmet>
+=======
+    
+        <>
+      <title>ZionInvoiceGenius - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -21,6 +27,7 @@ const ZionInvoiceGeniusPage: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
             <p className="w-5h-5ml-2">We're working on bringing you comprehensive zion invoice genius solutions. 
@@ -35,3 +42,8 @@ const ZionInvoiceGeniusPage: React.FC = () => {
 };
 
 export default ZionInvoiceGeniusPage;
+=======
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

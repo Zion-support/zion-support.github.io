@@ -155,6 +155,7 @@ const AiServicesPage: React.FC = () => {
     ? aiServices 
     : aiServices.filter(service => service.category === activeTab);
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
@@ -209,6 +210,14 @@ const AiServicesPage: React.FC = () => {
               <Brain className="w-5h-5ml-2" />
               <span />Advanced AI Solutions</span>
             </div>
+=======
+    
+        <>
+      <title>AiServices - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">AiServices</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional aiservices services coming soon.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
             
             <h1 className="w-5h-5ml-2" />
               Transform Your Business with{' '}
@@ -233,6 +242,7 @@ const AiServicesPage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
         <meta name="description" content="Transform your business with cutting-edge AI services including machine learning, natural language processing, computer vision, and automation. Expert AI solutions for enterprises." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, AI automation, business intelligence, AI consulting" />
         <meta property="og:title" content="AI Services - Zion Tech Group" /  />
@@ -571,4 +581,8 @@ const AiServicesPage: React.FC = () => {
 };
 
 export default AiServicesPage;
+=======
+      </>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
 }

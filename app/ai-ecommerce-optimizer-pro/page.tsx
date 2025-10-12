@@ -127,6 +127,7 @@ export default function AIEcommerceOptimizerPro() {
   ];
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
@@ -137,6 +138,11 @@ export default function AIEcommerceOptimizerPro() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-ecommerce-optimizer-pro" />
       </Helmet>
+=======
+    
+        <>
+      <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         {/* Hero Section */}
@@ -282,6 +288,7 @@ export default function AIEcommerceOptimizerPro() {
                 </Link>
                 <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" />
                   View Services
+<<<<<<< HEAD
                 </Link>
               </div>
         <section className="py-20">
@@ -310,3 +317,8 @@ export default Page;
 }
 
 }}
+=======
+
+      </>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

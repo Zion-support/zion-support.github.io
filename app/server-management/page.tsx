@@ -111,6 +111,7 @@ const ServerManagementPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title />Server Management - Professional Server Administration | Zion Tech Group</title>
@@ -128,6 +129,14 @@ const ServerManagementPage: React.FC = () => {
               <Server className="w-5h-5ml-2" />
               <span />Server Management</span>
             </div>
+=======
+    
+        <>
+      <title>ServerManagement - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">ServerManagement</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional servermanagement services coming soon.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
             
             <h1 className="w-5h-5ml-2" />
               Professional <span className="w-5h-5ml-2" />Server Management</span>
@@ -149,6 +158,7 @@ const ServerManagementPage: React.FC = () => {
             </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="w-5h-5ml-2" />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -295,3 +305,8 @@ const ServerManagementPage: React.FC = () => {
 }
 
 export default ServerManagementPage;
+=======
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

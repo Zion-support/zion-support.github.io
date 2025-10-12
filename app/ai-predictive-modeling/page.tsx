@@ -3,12 +3,18 @@ import React from 'react';
 
 const AiPredictiveModelingPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Ai Predictive Modeling - Zion Tech Group</title>
         <meta name="description" content="Ai Predictive Modeling services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="ai-predictive-modeling, AI solutions, IT services" />
       </Helmet>
+=======
+    
+        <>
+      <title>AiPredictiveModeling - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -21,6 +27,7 @@ const AiPredictiveModelingPage: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
             <p className="w-5h-5ml-2">We're working on bringing you comprehensive ai predictive modeling solutions. 
@@ -35,3 +42,8 @@ const AiPredictiveModelingPage: React.FC = () => {
 };
 
 export default AiPredictiveModelingPage;
+=======
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

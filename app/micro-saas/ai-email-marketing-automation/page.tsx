@@ -146,6 +146,7 @@ export default function AIEmailMarketingAutomationPage() {
   ]
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title />AI Email Marketing Automation - Zion Tech Group | Smart Email Campaigns</title>
@@ -154,6 +155,12 @@ export default function AIEmailMarketingAutomationPage() {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-email-marketing-automation"  />
       </Helmet>
+=======
+
+        <>
+      <title>5G Data Analytics - Zion Tech Group</title>
+        <title>AI Email Marketing Automation - Zion Tech Group | Smart Email Campaigns</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
 
       {/* Hero Section */}
       <section className="w-5h-5ml-2" />
@@ -381,6 +388,7 @@ export default function AIEmailMarketingAutomationPage() {
                 
                 <p className="w-5h-5ml-2">Join thousands of marketers already increasing open rates by 150% with our AI-powered email automation. 
                   Start your free trial today and experience the future of email marketing.
+<<<<<<< HEAD
                 </p>
                 
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -403,3 +411,13 @@ export default function AIEmailMarketingAutomationPage() {
     </div>
   );
 }
+=======
+
+                    <span>Start Free Trial</span>
+                    <span>View All Plans</span>
+
+                  <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
+
+      </>
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

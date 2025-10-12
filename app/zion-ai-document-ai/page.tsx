@@ -3,12 +3,18 @@ import React from 'react';
 
 const ZionAiDocumentAiPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Zion Ai Document Ai - Zion Tech Group</title>
         <meta name="description" content="Zion Ai Document Ai services by Zion Tech Group. Professional AI and IT solutions." />
         <meta name="keywords" content="zion-ai-document-ai, AI solutions, IT services" />
       </Helmet>
+=======
+    
+        <>
+      <title>ZionAiDocumentAi - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -21,6 +27,7 @@ const ZionAiDocumentAiPage: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
             <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
             <p className="w-5h-5ml-2">We're working on bringing you comprehensive zion ai document ai solutions. 
@@ -35,3 +42,8 @@ const ZionAiDocumentAiPage: React.FC = () => {
 };
 
 export default ZionAiDocumentAiPage;
+=======
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

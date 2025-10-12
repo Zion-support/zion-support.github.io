@@ -110,6 +110,7 @@ export default function AIDevOpsAutomationPage() {
     { number: '40%', label: 'Cost Reduction', icon: <TrendingUp className="w-5h-5ml-2" /> }
   ];
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI DevOps Automation - Smart CI/CD & Infrastructure Management | Zion Tech Group</title>
@@ -304,5 +305,17 @@ export default function AIDevOpsAutomationPage() {
         </section>
       </FuturisticBackground>
     </>
+=======
+    
+        <>
+      <title>AI DevOps Automation - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">AI DevOps Automation</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional AI DevOps automation services coming soon.</p>
+            
+              Contact Us
+
+      </>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
   );
 }

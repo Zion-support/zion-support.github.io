@@ -124,6 +124,7 @@ const AISocialSchedulerPage: React.FC = () => {
   ]
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Social Scheduler - Smart Social Media Management | Zion Tech Group</title>
@@ -331,3 +332,17 @@ const AISocialSchedulerPage: React.FC = () => {
 }
 
 export default AISocialSchedulerPage;
+=======
+    
+        <>
+      <title>AiSocialScheduler - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">AiSocialScheduler</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional aisocialscheduler services coming soon.</p>
+            
+              Contact Us
+
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd

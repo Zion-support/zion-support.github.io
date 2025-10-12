@@ -216,6 +216,7 @@ const PricingPage: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title />Pricing - Zion Tech Group | Transparent AI & IT Solutions Pricing</title>
@@ -234,6 +235,14 @@ const PricingPage: React.FC = () => {
               <DollarSign className="w-5h-5ml-2" />
               <span />Transparent Pricing</span>
             </div>
+=======
+    
+        <>
+      <title>Pricing - Zion Tech Group</title>
+      
+            <h1 className="text-4xl font-bold text-white mb-6">Pricing</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional pricing services coming soon.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
             
             <h1 className="w-5h-5ml-2" />
               Simple, Transparent{' '}
@@ -244,6 +253,7 @@ const PricingPage: React.FC = () => {
             <p className="w-5h-5ml-2">Choose the plan that fits your business needs. All plans include 14-day free trials and no setup fees.
             </p>
 
+<<<<<<< HEAD
             {/* Billing Toggle */}
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
               <span className="{`text-lg" ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}  />Monthly
@@ -527,3 +537,8 @@ const PricingPage: React.FC = () => {
 };
 
 export default PricingPage;
+=======
+      </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-48fd
