@@ -2,11 +2,7 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-=======
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, MessageCircle } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -17,11 +13,8 @@ export default function ContactPage() {
     service: '',
     message: ''
   });
-<<<<<<< HEAD
-=======
 
   const [isSubmitting, setIsSubmitting] = useState(false);
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -34,17 +27,12 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-<<<<<<< HEAD
-    // Here you would typically send the data to your backend
-    console.log('Form submitted:', formData);
-=======
     setIsSubmitting(true);
     
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     setIsSubmitting(false);
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
     setIsSubmitted(true);
     
     // Reset form after 3 seconds
@@ -61,12 +49,17 @@ export default function ContactPage() {
     }, 3000);
   };
 
-<<<<<<< HEAD
   const services = [
     'AI Content Generation',
     'AI Chatbot Builder',
     'AI Analytics Dashboard',
-=======
+    'AI Email Assistant',
+    'AI Voice Assistant',
+    'AI Automation',
+    'AI 3D Generation',
+    'AI Drug Discovery Pro'
+  ];
+
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6 text-cyan-400" />,
@@ -96,12 +89,10 @@ export default function ContactPage() {
 
   const services = [
     'AI Solutions',
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
     'Cloud Migration',
     'Cybersecurity Solutions',
     'Mobile Development',
     'Web Development',
-<<<<<<< HEAD
     'DevOps Solutions',
     '5G Implementation',
     'Data Analytics',
@@ -116,7 +107,7 @@ export default function ContactPage() {
       description: 'Send us an email anytime'
     },
     {
-      icon: <Phone className="w-6 h-6 text-purple-400" />,
+      icon: <Phone className="w-6 h-6 text-cyan-400" />,
       title: 'Phone',
       details: '+1 (302) 464-0950',
       description: 'Call us during business hours'
@@ -270,18 +261,12 @@ export default function ContactPage() {
                       required
 <<<<<<< HEAD
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
                       placeholder="Your full name"
                     />
                   </div>
                   <div>
-<<<<<<< HEAD
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-=======
                     <label htmlFor="email" className="block text-white font-medium mb-2">
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
                       Email Address *
                     </label>
                     <input
@@ -291,11 +276,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-<<<<<<< HEAD
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
                       placeholder="your@email.com"
                     />
                   </div>
@@ -305,11 +286,9 @@ export default function ContactPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-=======
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label htmlFor="company" className="block text-white font-medium mb-2">
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
                       Company
                     </label>
                     <input
@@ -318,20 +297,12 @@ export default function ContactPage() {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-<<<<<<< HEAD
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
                       placeholder="Your company name"
                     />
                   </div>
                   <div>
-<<<<<<< HEAD
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-=======
                     <label htmlFor="phone" className="block text-white font-medium mb-2">
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
                       Phone Number
                     </label>
                     <input
@@ -340,20 +311,12 @@ export default function ContactPage() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-<<<<<<< HEAD
-                      className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-=======
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
                 </div>
 
-<<<<<<< HEAD
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-=======
                 <div className="mb-6">
                   <label htmlFor="service" className="block text-white font-medium mb-2">
 >>>>>>> cursor/analyze-improve-and-deploy-application-e212
@@ -364,32 +327,19 @@ export default function ContactPage() {
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-<<<<<<< HEAD
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    {services.map((service) => (
-                      <option key={service} value={service}>
-=======
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
                     {services.map((service, index) => (
                       <option key={index} value={service} className="bg-slate-800">
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
                         {service}
                       </option>
                     ))}
                   </select>
                 </div>
 
-<<<<<<< HEAD
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-=======
                 <div className="mb-6">
                   <label htmlFor="message" className="block text-white font-medium mb-2">
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
                     Message *
                   </label>
                   <textarea
@@ -399,24 +349,13 @@ export default function ContactPage() {
                     onChange={handleInputChange}
                     required
                     rows={6}
-<<<<<<< HEAD
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-                    placeholder="Tell us about your project or requirements..."
-=======
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                     placeholder="Tell us about your project or how we can help you..."
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
                   />
                 </div>
 
                 <button
                   type="submit"
-<<<<<<< HEAD
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
-                >
-                  <Send className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform" />
-                  Send Message
-=======
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                 >
@@ -499,14 +438,6 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-=======
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Ready to Get Started?</h2>
                 <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
                   Let's discuss your project and see how we can help transform your business with cutting-edge technology.

@@ -27,34 +27,6 @@ function App() {
       <ErrorBoundary>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-            <Navigation />
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/ai-services" element={<AIServicesPage />} />
-                <Route path="/it-services" element={<ITServicesPage />} />
-                <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                {/* 404 Route */}
-                <Route path="*" element={
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-                    <div className="text-center">
-                      <h1 className="text-6xl font-bold text-white mb-4">404</h1>
-                      <p className="text-xl text-gray-300 mb-8">Page not found</p>
-                      <a 
-                        href="/" 
-                        className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                      >
-                        Go Home
-                      </a>
-                    </div>
-                  </div>
-                } />
-              </Routes>
-            </Suspense>
-=======
             <a href="#main-content" className="skip-link">Skip to main content</a>
             <Navigation />
             <main id="main-content" className="min-h-screen">
@@ -64,15 +36,9 @@ function App() {
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/ai-services" element={<AIServicesPage />} />
                   <Route path="/it-services" element={<ITServicesPage />} />
-                  <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
-                  <Route path="/cloud-services" element={<CloudServicesPage />} />
-                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
                   <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                  <Route path="/careers" element={<CareersPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-                  <Route path="/terms-of-service" element={<TermsOfServicePage />} />
                   
                   {/* 404 Page */}
                   <Route path="*" element={
@@ -92,7 +58,6 @@ function App() {
                 </Routes>
               </Suspense>
             </main>
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
             <Footer />
           </div>
         </Router>

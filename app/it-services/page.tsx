@@ -42,13 +42,6 @@ export default function ITServicesPage() {
     },
     {
       name: 'Cybersecurity Services',
-<<<<<<< HEAD
-      description: 'Comprehensive security assessment and implementation',
-      price: 'Starting at $2,500',
-      features: ['Security audit', 'Penetration testing', 'Compliance certification', 'Ongoing monitoring'],
-      icon: Shield,
-      path: '/cybersecurity'
-=======
       description: 'Comprehensive security assessment, implementation, and ongoing monitoring for your business',
       price: 'Starting at $2,500',
       features: ['Security audit', 'Penetration testing', 'Compliance certification', 'Ongoing monitoring', 'Incident response', 'Staff training'],
@@ -58,23 +51,17 @@ export default function ITServicesPage() {
       rating: 4.9,
       reviews: 189,
       duration: '2-3 weeks'
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
     },
     {
       name: 'Mobile App Development',
       description: 'Native and cross-platform mobile applications',
       price: 'Starting at $8,000',
-<<<<<<< HEAD
-      features: ['iOS & Android', 'Cross-platform', 'App store optimization', 'Maintenance support'],
-=======
       features: ['iOS & Android development', 'Cross-platform solutions', 'App store optimization', 'Maintenance support', 'UI/UX design', 'Backend integration'],
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
       icon: Smartphone,
       path: '/mobile-development'
     },
     {
       name: 'API Development',
-<<<<<<< HEAD
       description: 'RESTful and GraphQL APIs with comprehensive documentation',
       price: 'Starting at $4,000',
       features: ['REST & GraphQL', 'API documentation', 'Rate limiting', 'Analytics dashboard'],
@@ -130,7 +117,6 @@ export default function ITServicesPage() {
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
     { number: '50+', label: 'Enterprise Clients', icon: Users },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
-<<<<<<< HEAD
     { number: '24/7', label: 'Support Available', icon: Zap }
   ];
 

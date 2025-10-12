@@ -56,11 +56,7 @@ export default function AboutPage() {
       description: 'We believe in the power of collaboration. We work closely with our clients as partners, not just service providers.'
     },
     {
-<<<<<<< HEAD
       icon: <Award className="w-8 h-8 text-orange-500" />,
-=======
-      icon: <Target className="w-8 h-8 text-purple-400" />,
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
       title: 'Excellence',
       description: 'We strive for excellence in every project, delivering solutions that exceed expectations and drive real business value.'
     }
@@ -81,7 +77,6 @@ export default function AboutPage() {
     },
     {
       name: 'Michael Chen',
-<<<<<<< HEAD
       position: 'Head of AI Research',
       description: 'Expert in machine learning and neural networks with a focus on practical applications.',
       image: '/team/michael-chen.jpg'
@@ -126,13 +121,6 @@ export default function AboutPage() {
     { name: 'DevOps', icon: Target, description: 'CI/CD, Infrastructure as Code, Monitoring, Automation' }
   ];
 
-=======
-      role: 'Head of Security',
-      description: 'Cybersecurity expert with extensive experience in enterprise security solutions.',
-      image: '/team/michael-chen.jpg'
-    }
-  ];
-
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -154,7 +142,6 @@ export default function AboutPage() {
     }
   ];
 
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
   return (
     <>
       <Helmet>
@@ -184,7 +171,6 @@ export default function AboutPage() {
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         {/* Hero Section */}
-<<<<<<< HEAD
         <div className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             About{' '}
@@ -234,9 +220,6 @@ export default function AboutPage() {
 
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xl mb-16">
-=======
-        <section className="px-4 py-12 sm:py-16 lg:py-20">
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
@@ -274,7 +257,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Values Section */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -282,12 +264,6 @@ export default function AboutPage() {
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               These core values guide everything we do and shape our company culture.
             </p>
-=======
-        {/* Mission Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Our Mission</h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto px-4">
                 To empower businesses with cutting-edge technology solutions that drive innovation, efficiency, and growth. 
                 We believe in the transformative power of AI, cloud computing, and digital technologies to solve complex 
@@ -316,12 +292,10 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
           </div>
         </section>
 
         {/* Team Section */}
-<<<<<<< HEAD
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">Meet Our Team</h2>
@@ -358,7 +332,6 @@ export default function AboutPage() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">Meet Our Team</h2>
               <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
                 The experts behind our innovative solutions
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
               </p>
             </div>
             
@@ -377,7 +350,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Achievements */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm rounded-2xl mb-16">
           <div className="max-w-7xl mx-auto">
@@ -385,15 +357,6 @@ export default function AboutPage() {
               <h2 className="text-3xl font-bold text-white mb-4">Our Achievements</h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
                 Recognition from industry leaders and clients for our innovation and excellence.
-=======
-        {/* Testimonials Section */}
-        <section className="py-12 sm:py-16 lg:py-20 px-4 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 px-4">What Our Clients Say</h2>
-              <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto px-4">
-                Don't just take our word for it - hear from businesses that have transformed with our solutions
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
               </p>
             </div>
 
@@ -416,7 +379,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Contact CTA */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -485,10 +447,6 @@ export default function AboutPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-    </div>
-=======
     </>
->>>>>>> cursor/analyze-improve-and-deploy-application-e212
   );
 }
