@@ -1,9 +1,11 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+<<<<<<< HEAD
 =======
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 >>>>>>> cursor/analyze-improve-and-deploy-application-b46d
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
 
 interface Props {
   children: ReactNode;
@@ -65,8 +67,11 @@ class ErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-b46d
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -75,6 +80,9 @@ class ErrorBoundary extends Component<Props, State> {
 
       return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
           <div className="max-w-md w-full">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center">
@@ -131,6 +139,7 @@ class ErrorBoundary extends Component<Props, State> {
                 </a>
               </div>
             </div>
+<<<<<<< HEAD
 =======
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
@@ -175,6 +184,8 @@ class ErrorBoundary extends Component<Props, State> {
               </details>
             )}
 >>>>>>> cursor/analyze-improve-and-deploy-application-b46d
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
           </div>
         </div>
       );
@@ -185,7 +196,11 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ErrorBoundary;
 =======
 export default ErrorBoundary;
 >>>>>>> cursor/analyze-improve-and-deploy-application-b46d
+=======
+export default ErrorBoundary;
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 <<<<<<< HEAD
@@ -52,17 +53,37 @@ export default function Footer() {
     { name: 'Data Analytics', path: '/ai-data-analytics' },
     { name: '5G Implementation', path: '/5g-implementation' },
     { name: 'Digital Transformation', path: '/digital-transformation' }
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone } from 'lucide-react';
+
+export default function Footer() {
+  const aiServices = [
+    { name: 'AI Content Generator', path: '/ai-content-generation' },
+    { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder' },
+    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard' },
+    { name: 'AI Email Assistant', path: '/ai-email-assistant' }
+  ]
+
+  const itServices = [
+    { name: 'Cloud Migration', path: '/cloud-services' },
+    { name: 'Cybersecurity', path: '/ai-cybersecurity' },
+    { name: 'Mobile Development', path: '/it-services' },
+    { name: 'Data Analytics', path: '/ai-data-analytics' }
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
   ]
 
   const microSaasServices = [
     { name: 'AI Task Manager', path: '/micro-saas-services' },
-    { name: 'AI Expense Tracker', path: '/micro-saas-services' },
+    { name: 'AI Expense Tracker', path: '/ai-expense-tracker' },
     { name: 'AI Password Manager', path: '/micro-saas-services' },
     { name: 'AI Invoice Generator', path: '/micro-saas-services' },
     { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot' },
     { name: 'AI Website Builder', path: '/micro-saas-services' }
   ]
 
+<<<<<<< HEAD
   const companyLinks = [
     { name: 'About Us', path: '/about' },
     { name: 'Our Team', path: '/about' },
@@ -94,6 +115,20 @@ export default function Footer() {
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
+=======
+  const quickLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' }
+  ];
+
+  return (
+    <footer className="bg-gray-900/50 backdrop-blur-lg border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
@@ -152,7 +187,14 @@ export default function Footer() {
           {/* AI Services */}
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
+=======
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Brain className="w-5 h-5 mr-2 text-blue-400" />
+              AI Services
+            </h3>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
             <ul className="space-y-2">
               {aiServices.map((service) => (
                 <li key={service.name}>
@@ -172,10 +214,16 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     to={service.path}
+<<<<<<< HEAD
                     className="text-gray-300 hover:text-purple-300 transition-colors flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
+=======
+                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
                     {service.name}
                   </Link>
                 </li>
@@ -186,7 +234,14 @@ export default function Footer() {
           {/* IT Services */}
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">IT Services</h3>
+=======
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Database className="w-5 h-5 mr-2 text-green-400" />
+              IT Services
+            </h3>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
             <ul className="space-y-2">
               {itServices.map((service) => (
                 <li key={service.name}>
@@ -206,10 +261,16 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     to={service.path}
+<<<<<<< HEAD
                     className="text-gray-300 hover:text-blue-300 transition-colors flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3379
+=======
+                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
                     {service.name}
                   </Link>
                 </li>
@@ -220,7 +281,14 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+=======
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Smartphone className="w-5 h-5 mr-2 text-purple-400" />
+              Micro SAAS
+            </h3>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -236,15 +304,22 @@ export default function Footer() {
                 <li key={index}>
                   <Link
                     to={service.path}
+<<<<<<< HEAD
                     className="text-gray-300 hover:text-emerald-300 transition-colors flex items-center group"
                   >
                     <ArrowRight className="w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
+=======
+                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
                     {service.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
         </div>
 
         {/* Additional Links */}
@@ -262,17 +337,53 @@ export default function Footer() {
                     to={link.path}
                     className="text-gray-300 hover:text-white transition-colors"
                   >
+=======
+
+          {/* Quick Links & Contact */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+            <ul className="space-y-2 mb-6">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.path}
+                    className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
+                  >
+                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
+<<<<<<< HEAD
           </div>
 <<<<<<< HEAD
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8">
+=======
+
+            <div className="space-y-3">
+              <div className="flex items-center text-gray-300 text-sm">
+                <Phone className="w-4 h-4 mr-3 text-green-400" />
+                <span>+1 (302) 464-0950</span>
+              </div>
+              <div className="flex items-center text-gray-300 text-sm">
+                <Mail className="w-4 h-4 mr-3 text-blue-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-start text-gray-300 text-sm">
+                <MapPin className="w-4 h-4 mr-3 text-red-400 mt-0.5" />
+                <span>364 E Main St STE 1008<br />Middletown, DE 19709</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-700 mt-12 pt-8">
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © 2024 Zion Tech Group. All rights reserved.
@@ -362,5 +473,9 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-386b
 }
