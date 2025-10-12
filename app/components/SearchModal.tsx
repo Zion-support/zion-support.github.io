@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { X, ArrowRight} from 'lucide-react';
 'use client';
-
 interface SearchResult {
   title: string;,
   description: string;,
@@ -11,12 +10,10 @@ interface SearchResult {
   category: string;,
   icon: React.ReactNode;
 }
-
 interface SearchModalProps {
   isOpen: boolean;,
   onClose: () => void;
 }
-
 const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[] /&gt;([]);</SearchResult></SearchResult>
@@ -61,7 +58,6 @@ const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
       inputRef.current.focus();
     }
   }, [isOpen]);
-
   useEffect(() => {
     if (query.length > 0) {
       setIsLoading(true);
@@ -75,48 +71,42 @@ const SearchModal: React.FC<SearchModalProps /> = ({ isOpen, onClose }) => {
         setResults(filteredResults);
         setIsLoading(false);
       }, 150);
-
       return () => clearTimeout(timer);
     } else {
       setResults([]);
     }
   }, [query]);
-
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       onClose();
     }
   };
-
   if (!isOpen) return null;
 import { ArrowRight } from 'lucide-react';
-
 export default function SearchModal() {
   return (
-
         {/* Backdrop */}
         <div;
           className="fixed inset-0 bg-black/50backdrop-blur-smtransition-opacity"
-          onClick="{onClose}"
-         /></div>
+          onClick="{onClose}"></div>
         {/* Modal */}
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
           {/* Header */}
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <Search className="w-5h-5ml-2" /></Search>
-              <h3 className="text-lgfont-semiboldtext-white"  >Search Services</h3>
-            </div>
+          <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+              <Search className="w-5h-5ml-2"></Search></div></div>
+              <h3 className="text-lgfont-semiboldtext-white"  >Search Services<div></h3>
+            </div></div>
             <button;
               onClick="{onClose}"
               className="text-gray-400 hover:text-whitetransition-colorsp-1"
-              aria-label="Close search" /></button>
-              <X className="w-5h-5ml-2" /></X>
+              aria-label="Close search"></div><div></button></div>
+              <X className="w-5h-5ml-2"></X></div></div>
             </button>
           </div>
           {/* Search Input */}
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <input;
                 ref="{inputRef}"
                 type="text"
@@ -126,29 +116,29 @@ export default function SearchModal() {
                 placeholder="Search for services, solutions, or pages..."
                 className="w-full px-4 py-3 pl-12 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-cyan-500focus:border-transparent"
               />
-              <Search className="w-5h-5ml-2" /></Search>
-            </div>
+              <div><Search className="w-5h-5ml-2"></Search></div>
+            </div></div>
           {/* Results */}
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
             {isLoading ? (
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                 <span className="ml-3text-gray-400"  >Searching...</span>
               </div>
             ) : query.length === 0 ? (
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Search className="w-5h-5ml-2" /></Search>
+              <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                <Search className="w-5h-5ml-2"></div></Search></div>
                 <p className="text-gray-400">Start typing to search for services</p>
               </div>
             ) : results.length === 0 ? (
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <p className="text-gray-400">No results found for "{query}"</p>
+              <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                <p className="text-gray-400"></div>No results found for "{query}"</p>
               </div>
             ) : (
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <p className="w-5h-5ml-2">{results.length} result{results.length !== 1 ? 's' : ''} found;
-                </p>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                <p className="w-5h-5ml-2"></div>{results.length} result{results.length !== 1 ? 's' : ''} found;
+                <div></p>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                   {results.map((result, index) => (
                     <Link;</Link></Link>
                       key="{index}"
@@ -156,24 +146,22 @@ export default function SearchModal() {
                       onClick="{onClose}"
                       className="flex items-center p-4 bg-slate-700/50 hover:bg-slate-700 rounded-lgtransition-colorsgroup" /></Link>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{result.icon}
-                      </div>
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                      <div></div>
+                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                         <h4 className="w-5h-5ml-2" />{result.title}
                         </h4>
                         <p className="w-5h-5ml-2">{result.description}
                         </p>
                         <span className="w-5h-5ml-2" />{result.category}
-                        </span>
-                      </div>
-                      <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+                        <div></span>
+                      </div></div>
+                      <ArrowRight className="w-5h-5ml-2"></div></ArrowRight></div>
                     </Link>
                   ))}
                 </div>
             )}
-          </div>
-      </div>
-  </div>);
+          <div></div>
+      </div></div>
+  </div></div>);
 };
-
 export default SearchModal;
-

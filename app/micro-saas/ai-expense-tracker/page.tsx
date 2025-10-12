@@ -1,13 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+;
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 import { ArrowRight, DollarSign, BarChart3, Receipt, CheckCircle, Clock, Target, TrendingUp, Shield, Zap, Bot, CheckSquare } from 'lucide-react';
-
 export default function AIExpenseTrackerPage() {
   const features = [
     {
@@ -41,7 +38,6 @@ export default function AIExpenseTrackerPage() {
       description: 'Set up rules for automatic expense approval, reimbursement, and reporting'
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Personal',
@@ -93,7 +89,6 @@ export default function AIExpenseTrackerPage() {
       popular: false;
     }
   ]
-
   const testimonials = [
     {
       name: 'David Kim',
@@ -117,7 +112,6 @@ export default function AIExpenseTrackerPage() {
       avatar: 'JW'
     }
   ]
-
   const benefits = [
     {
       icon: <Clock className="w-5h-5ml-2" />,
@@ -140,88 +134,82 @@ export default function AIExpenseTrackerPage() {
       description: 'Instant updates across all devices and team members'
     }
   ]
-
   return (
-
         <>
       <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Expense Tracker - Zion Tech Group | Smart Financial Management</title>
-
                     <span>Start Free Trial</span>
                     <span>View All Plans</span>
-
                   <p>✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-
       </>
   );
-
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <Helmet></Helmet>
-        <title />AI Expense Tracker - Zion Tech Group | Smart Financial Management</title>
-        <meta name="description" content="Revolutionary AI-powered expense tracker with smart receipt scanning, automated categorization, and real-time analytics. Save 5+ hours weekly. Starting at $9/month." /></meta>
-        <meta name="keywords" content="AI expense tracker, receipt scanning, expense management, financial analytics, budget tracking, automated categorization" /></meta>
-        <meta name="robots" content="index, follow" /></meta>
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-expense-tracker"  /></link>
+    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+      <Helmet></div></Helmet></div>
+        <title />AI Expense Tracker - Zion Tech Group | Smart Financial Management<div></title>
+        <meta name="description" content="Revolutionary AI-powered expense tracker with smart receipt scanning, automated categorization, and real-time analytics. Save 5+ hours weekly. Starting at $9/month."></meta></div></div>
+        <div><meta name="keywords" content="AI expense tracker, receipt scanning, expense management, financial analytics, budget tracking, automated categorization"></meta></div>
+        <meta name="robots" content="index, follow"></div><div></meta></div>
+        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/ai-expense-tracker"></link></div></div>
       </Helmet>
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <DollarSign className="w-5h-5ml-2" /></DollarSign>
-            <span />AI-Powered Financial Management</span>
-          </div>
-          <h1 className="w-5h-5ml-2" /></h1>
+      <div><section className="w-5h-5ml-2"></section></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+        <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <DollarSign className="w-5h-5ml-2"></DollarSign></div></div>
+            <span />AI-Powered Financial Management<div></span>
+          </div></div>
+          <h1 className="w-5h-5ml-2"></div></h1></div>
             AI Expense;
-            <br /></br>
-            <span className="w-5h-5ml-2" />Tracker;
-            </span>
-          </h1>
-          <p className="w-5h-5ml-2">Transform your financial management with AI-powered expense tracking, smart receipt scanning, 
+            <div><br></br></div>
+            <span className="w-5h-5ml-2" /></div>Tracker;
+            <div></span>
+          </h1></div>
+          <p className="w-5h-5ml-2"></div>Transform your financial management with AI-powered expense tracking, smart receipt scanning,
             and automated categorization. Save time and gain insights like never before.
-          </p>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" /></Link>
-              <span />Start Free Trial</span>
-              <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-            </Link>
-            <Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" /></Link>
-              <span />View Pricing</span>
-              <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
+          <div></p>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><Link to="/contact" className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105"></Link></div>
+              <span /></div>Start Free Trial<div></span>
+              <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
+            <div></Link>
+            <Link to="#pricing" className="group border-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm"></Link></div></div>
+              <span />View Pricing<div></span>
+              <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
             </Link>
           </div>
           {/* Key Stats */}
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">5+</div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Hours Saved Weekly</div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Hours Saved Weekly<div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">15%</div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Average Cost Reduction</div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Average Cost Reduction<div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">99.9%</div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Accuracy Rate</div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Accuracy Rate<div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">25 K+</div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Active Users</div>
-          </div>
-      </section>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Active Users<div></div>
+          </div></div>
+      </section></div>
       {/* Benefits Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" /></h2>
-              Why Choose Our <span className="w-5h-5ml-2" />AI Expense Tracker?</span>
-            </h2>
-            <p className="w-5h-5ml-2">Experience the future of financial management with cutting-edge AI technology that works for you.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div><section className="w-5h-5ml-2"></section></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+            <h2 className="w-5h-5ml-2"></div></h2></div>
+              Why Choose Our <span className="w-5h-5ml-2" />AI Expense Tracker?<div></span>
+            </h2></div>
+            <p className="w-5h-5ml-2"></div>Experience the future of financial management with cutting-edge AI technology that works for you.
+            <div></p>
+          </div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-centergroup" /></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{benefit.icon}
+              <div><div key={index} className="text-centergroup"></div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>{benefit.icon}
                 </div>
                 <h3 className="w-5h-5ml-2" />{benefit.title}
                 </h3>
@@ -232,19 +220,19 @@ export default function AIExpenseTrackerPage() {
           </div>
       </section>
       {/* Features Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" /></h2>
-              Powerful Features for <span className="w-5h-5ml-2" />Smart Finance</span>
-            </h2>
-            <p className="w-5h-5ml-2">Everything you need to manage your finances efficiently with AI-powered intelligence and automation.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div><section className="w-5h-5ml-2"></section></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <h2 className="w-5h-5ml-2"></h2>
+              Powerful Features for <span className="w-5h-5ml-2" />Smart Finance<div></span>
+            </h2></div>
+            <p className="w-5h-5ml-2"></div>Everything you need to manage your finances efficiently with AI-powered intelligence and automation.
+            <div></p>
+          </div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             {features.map((feature, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" /></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
+              <div><div key={index} className="group bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10"></div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>{feature.icon}
                 </div>
                 <h3 className="w-5h-5ml-2" />{feature.title}
                 </h3>
@@ -255,44 +243,43 @@ export default function AIExpenseTrackerPage() {
           </div>
       </section>
       {/* Pricing Section */}
-      <section id="pricing" className="py-20px-4 b g-gradient-to-br from-slate-800/50 to-purple-900/50relative" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" /></h2>
-              Simple, Transparent <span className="w-5h-5ml-2" />Pricing</span>
-            </h2>
-            <p className="w-5h-5ml-2">Choose the plan that fits your needs. All plans include our core AI features and secure cloud storage.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div><section id="pricing" className="py-20px-4 b g-gradient-to-br from-slate-800/50 to-purple-900/50relative"></section></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <h2 className="w-5h-5ml-2"></h2>
+              Simple, Transparent <span className="w-5h-5ml-2" />Pricing<div></span>
+            </h2></div>
+            <p className="w-5h-5ml-2"></div>Choose the plan that fits your needs. All plans include our core AI features and secure cloud storage.
+            <div></p>
+          </div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             {pricingPlans.map((plan, index) => (
               <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2 xl ${
                 plan.popular;
-                  ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
+                  ? 'border-cyan-400/50 shadow-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10'
                   : 'border-white/20 hover: border-cyan-400/30'
-              }`} /></div>
+              }`}></div>
                 {plan.popular && (
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular;
+                  <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>Most Popular;
                     </div>
                 )}
-                
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                  <p className="w-5h-5ml-2">{plan.description}</p>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                  <h3 className="w-5h-5ml-2" /></div>{plan.name}</h3>
+                  <p className="w-5h-5ml-2">{plan.description}<div></p>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     <span className="w-5h-5ml-2" />{plan.price}</span>
-                    <span className="w-5h-5ml-2" />{plan.period}</span>
-                  </div>
-                <ul className="w-5h-5ml-2" /></ul>
+                    <span className="w-5h-5ml-2" />{plan.period}<div></span>
+                  </div></div>
+                <ul className="w-5h-5ml-2"></div></ul></div>
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-centerspace-x-3" /></li>
-                      <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                    <div><li key={featureIndex} className="flex items-centerspace-x-3"></li></div>
+                      <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
                       <span className="w-5h-5ml-2" />{feature}</span>
                     </li>
                   ))}
-                </ul>
-                <Link;</Link></Link>
+                <div></ul>
+                <Link;</Link></Link></div></div>
                   to="/contact"
                   className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular;
@@ -306,28 +293,28 @@ export default function AIExpenseTrackerPage() {
           </div>
       </section>
       {/* Testimonials Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h2 className="w-5h-5ml-2" /></h2>
+      <div><section className="w-5h-5ml-2"></section></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <h2 className="w-5h-5ml-2"></h2>
               Trusted by <span className="w-5h-5ml-2" />25,000+</span> Users;
             </h2>
             <p className="w-5h-5ml-2">See what our customers are saying about their success with our AI expense tracker.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div></p>
+          </div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-all duration-300" /></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div><div key={index} className="bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20transition-all duration-300"></div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
-                  </div>
-                  <div /></div>
+                  <div></div>
+                  <div></div></div></div>
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
-                </div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}<div></div>
+                </div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <CheckSquare key="{i}" className="w-5h-5te x t-yellow-400fill-current"  /></CheckSquare>
+                    <CheckSquare key="{i}" className="w-5h-5te x t-yellow-400fill-current"></CheckSquare>
                   ))}
                 </div>
                 <p className="w-5h-5ml-2">"{testimonial.content}"</p>
@@ -336,34 +323,34 @@ export default function AIExpenseTrackerPage() {
           </div>
       </section>
       {/* CTA Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <h2 className="w-5h-5ml-2" /></h2>
-                  Ready to Transform Your <span className="w-5h-5ml-2" />Financial Management?</span>
-                </h2>
-                <p className="w-5h-5ml-2">Join thousands of users already saving time and money with our AI-powered expense tracker. 
+      <div><section className="w-5h-5ml-2"></section></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+          <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                <h2 className="w-5h-5ml-2"></h2>
+                  Ready to Transform Your <span className="w-5h-5ml-2" />Financial Management?<div></span>
+                </h2></div>
+                <p className="w-5h-5ml-2"></div>Join thousands of users already saving time and money with our AI-powered expense tracker.
                   Start your free trial today and experience the future of financial management.
-                </p>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" /></Link>
-                    <span />Start Free Trial</span>
-                    <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-                  </Link>
-                  <Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" /></Link>
-                    <span />View All Plans</span>
-                    <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-                  </Link>
-                </div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime</p>
-                </div>
-            </div>
-        </div>
+                <div></p>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                  <div><Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105"></Link></div>
+                    <span /></div>Start Free Trial<div></span>
+                    <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
+                  <div></Link>
+                  <Link to="#pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm"></Link></div></div>
+                    <span />View All Plans<div></span>
+                    <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
+                  <div></Link>
+                </div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                  <p />✓ 14-day free trial • ✓ No credit card required • ✓ Cancel anytime<div></p>
+                </div></div>
+            </div></div>
+        <div></div></div>
       </section>
-    </div>
+    </div></div></div>
   );
 }

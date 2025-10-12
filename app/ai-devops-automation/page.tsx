@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function AIDevOpsAutomationPage() {
   const features = [
     {
@@ -104,44 +103,40 @@ export default function AIDevOpsAutomationPage() {
     { number: '40%', label: 'Cost Reduction', icon: <TrendingUp className="w-5h-5ml-2" /&gt; }</TrendingUp></TrendingUp>
   ];
   return (
-
         <>
       <title>AI DevOps Automation - Zion Tech Group</title>
-      
             <h1 className="text-4xl font-bold text-white mb-6">AI DevOps Automation</h1>
             <p className="text-lg text-gray-300 mb-8">Professional AI DevOps automation services coming soon.</p>
-            
               Contact Us
-
   );
       </>
-    <></>
-      <Helmet></Helmet>
-        <title>AI DevOps Automation - Smart CI/CD & Infrastructure Management | Zion Tech Group</title>
-        <meta const name = "description" content="Automate your DevOps with AI-powered CI/CD pipelines, predictive monitoring, and intelligent resource management. Deploy 80% faster with 95% fewer issues." /  /></meta>
-        <meta name="keywords" content="AI DevOps, CI/CD automation, infrastructure monitoring, DevOps AI, deployment automation, cloud management" /></meta>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-devops-automation"  /></link>
+    <><div></>
+      <Helmet></Helmet></div></div>
+        <title>AI DevOps Automation - Smart CI/CD & Infrastructure Management | Zion Tech Group<div></title>
+        <meta const name = "description" content="Automate your DevOps with AI-powered CI/CD pipelines, predictive monitoring, and intelligent resource management. Deploy 80% faster with 95% fewer issues." /></meta></div></div>
+        <div><meta name="keywords" content="AI DevOps, CI/CD automation, infrastructure monitoring, DevOps AI, deployment automation, cloud management"></meta></div>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-devops-automation"></div><div></link></div>
       </Helmet>
-      <FuturisticBackground variant="services" /></FuturisticBackground>
+      <FuturisticBackground variant="services"></div></FuturisticBackground></div>
         {/* Hero Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <h1 className="w-5h-5ml-2">AI DevOps Automation;
               </h1>
-              <p className="w-5h-5ml-2">Revolutionize your DevOps with AI-powered CI/CD pipelines, predictive monitoring, 
+              <p className="w-5h-5ml-2">Revolutionize your DevOps with AI-powered CI/CD pipelines, predictive monitoring,
                 and intelligent resource management. Deploy 80% faster with 95% fewer issues.
-              </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                 <FuturisticButton;</FuturisticButton></FuturisticButton>
                   variant="primary"
                   size="lg"
                   onClick="{()" = /> window.open('/contact', '_blank')}
                 >
                   Start Free Trial;
-                  <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-                </FuturisticButton>
-                <FuturisticButton;</FuturisticButton></FuturisticButton>
+                  <div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div>
+                </FuturisticButton></div>
+                <FuturisticButton;</FuturisticButton></FuturisticButton></div>
                   variant="ghost"
                   size="lg"
                   onClick="{()" =  />window.open('#demo', '_blank')}
@@ -152,8 +147,8 @@ export default function AIDevOpsAutomationPage() {
             {/* Stats */}
             <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
               {stats.map((stat, index) => (
-                <div key={index} className="text-center" /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.icon}
+                <div><div key={index} className="text-center"></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>{stat.icon}
                   </div>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}</div>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}</div>
@@ -161,26 +156,26 @@ export default function AIDevOpsAutomationPage() {
             </div>
         </section>
         {/* Features Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <h2 className="w-5h-5ml-2" />Advanced AI Features;
               </h2>
               <p className="w-5h-5ml-2">Cutting-edge artificial intelligence meets DevOps expertise to automate your operations;
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {features.map((feature, index) => (
-                <FuturisticCard key="{index}" variant="service" className="h-full" /></FuturisticCard>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div><FuturisticCard key="{index}" variant="service" className="h-full"></FuturisticCard></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     {feature.icon}
-                    <h3 className="w-5h-5ml-2" />{feature.title}</h3>
-                  </div>
-                  <p className="w-5h-5ml-2">{feature.description}</p>
-                  <ul className="w-5h-5ml-2" /></ul>
+                    <h3 className="w-5h-5ml-2" />{feature.title}<div></h3>
+                  </div></div>
+                  <p className="w-5h-5ml-2"></div>{feature.description}<div></p>
+                  <ul className="w-5h-5ml-2"></ul></div></div>
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-centertext-sm text-gray-300" /></li>
-                        <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                      <div><li key={benefitIndex} className="flex items-centertext-sm text-gray-300"></li></div>
+                        <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
                         {benefit}
                       </li>
                     ))}
@@ -190,44 +185,43 @@ export default function AIDevOpsAutomationPage() {
             </div>
         </section>
         {/* Pricing Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <h2 className="w-5h-5ml-2" />Choose Your Plan;
               </h2>
               <p className="w-5h-5ml-2">Scalable pricing options to match your DevOps needs;
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {pricingPlans.map((plan, index) => (
                 <FuturisticCard;</FuturisticCard></FuturisticCard>
-                  key="{index}" 
-                  variant="{plan.popular" ? "feature" : "service"} 
+                  key="{index}"
+                  variant="{plan.popular" ? "feature" : "service"}
                   className="{`h-full" ${plan.popular ? 'ring-2 ring-purple-500' : ''}`} /></FuturisticCard>
                   {plan.popular && (
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                      <span className="w-5h-5ml-2" />Most Popular;
+                    <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                      <span className="w-5h-5ml-2" /></div>Most Popular;
                       </span>
                     </div>
                   )}
-                  
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                    <h3 className="w-5h-5ml-2" /></div>{plan.name}<div></h3>
+                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                       <span className="w-5h-5ml-2" />{plan.price}</span>
-                      <span className="w-5h-5ml-2" />{plan.period}</span>
-                    </div>
-                    <p className="w-5h-5ml-2">{plan.description}</p>
-                  </div>
-                  <ul className="w-5h-5ml-2" /></ul>
+                      <span className="w-5h-5ml-2" />{plan.period}<div></span>
+                    </div></div>
+                    <p className="w-5h-5ml-2"></div>{plan.description}<div></p>
+                  </div></div>
+                  <ul className="w-5h-5ml-2"></div></ul></div>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-centertext-sm text-gray-300" /></li>
-                        <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                      <div><li key={featureIndex} className="flex items-centertext-sm text-gray-300"></li></div>
+                        <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
                         {feature}
                       </li>
                     ))}
-                  </ul>
-                  <FuturisticButton;</FuturisticButton></FuturisticButton>
+                  <div></ul>
+                  <FuturisticButton;</FuturisticButton></FuturisticButton></div></div>
                     variant="{plan.popular" ? "primary" : "ghost"}
                     className="w-full"
                     onClick="{()" =  />window.open('/contact', '_blank')}
@@ -239,63 +233,63 @@ export default function AIDevOpsAutomationPage() {
             </div>
         </section>
         {/* Testimonials Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <h2 className="w-5h-5ml-2" />What Our Clients Say;
               </h2>
               <p className="w-5h-5ml-2">Join hundreds of companies automating their DevOps;
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {testimonials.map((testimonial, index) => (
-                <FuturisticCard key="{index}" variant="testimonial" className="h-full" /></FuturisticCard>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div><FuturisticCard key="{index}" variant="testimonial" className="h-full"></FuturisticCard></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4h-4text-yellow-400fill-current"  /></Star>
+                      <Star key={i} className="w-4h-4text-yellow-400fill-current"></Star>
                     ))}
                   </div>
                   <blockquote className="w-5h-5ml-2" />"{testimonial.content}"
-                  </blockquote>
-                  <footer /></footer>
+                  <div></blockquote>
+                  <footer></footer></div></div>
                     <p className="w-5h-5ml-2">{testimonial.name}</p>
                     <p className="w-5h-5ml-2">{testimonial.role}</p>
-                    <p className="w-5h-5ml-2">{testimonial.company}</p>
-                  </footer>
-                </FuturisticCard>
+                    <p className="w-5h-5ml-2">{testimonial.company}<div></p>
+                  </footer></div>
+                </FuturisticCard></div>
               ))}
             </div>
         </section>
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <FuturisticCard variant="feature" className="text-center" /></FuturisticCard>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <FuturisticCard variant="feature" className="text-center"></FuturisticCard></div></div>
               <h2 className="w-5h-5ml-2" />Ready to Automate Your DevOps?
               </h2>
               <p className="w-5h-5ml-2">Start your free 14-day trial today. No credit card required. Join 300+ companies automating their DevOps.
-              </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                 <FuturisticButton;</FuturisticButton></FuturisticButton>
                   variant="primary"
                   size="lg"
                   onClick="{()" =  />window.open('/contact', '_blank')}
                 >
                   Start Free Trial;
-                </FuturisticButton>
-                <FuturisticButton;</FuturisticButton></FuturisticButton>
+                <div></FuturisticButton>
+                <FuturisticButton;</FuturisticButton></FuturisticButton></div></div>
                   variant="secondary"
                   size="lg"
                   onClick="{()" =  />window.open('/contact', '_blank')}
                 >
                   Schedule Demo;
-                </FuturisticButton>
-              </div>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <p />✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime</p>
-              </div>
-            </FuturisticCard>
-          </div>
+                <div></FuturisticButton>
+              </div></div>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                <p />✓ 14-day free trial • ✓ No setup fees • ✓ Cancel anytime<div></p>
+              </div></div>
+            </FuturisticCard></div>
+          <div></div></div>
         </section>
-          </FuturisticBackground>
+          </FuturisticBackground></div></div>
 </>  );
 }

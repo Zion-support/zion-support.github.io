@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 'use client'
-
 interface ContentNewsletterSignupProps {
   title?: string;
   subtitle?: string;
@@ -15,7 +14,6 @@ interface ContentNewsletterSignupProps {
   }>
   onSubscribe?: (email: string) => void;
 }
-
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
   const title = "Stay Updated with Our Latest Insights",
   subtitle = "Get exclusive content, industry insights, and early access to new features delivered to your inbox.",
@@ -32,7 +30,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubscribed, setIsSubscribed] = useState(false)
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email) return;
@@ -51,16 +48,15 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
       setIsSubmitting(false)
     }
   }
-
   if (isSubscribed) {
     return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+              <CheckCircle className="w-5h-5ml-2"></div><div></CheckCircle></div>
             </div>
-            <h2 className="w-5h-5ml-2" />Thank You for Subscribing!
+            <h2 className="w-5h-5ml-2" /></div>Thank You for Subscribing!
             </h2>
             <p className="w-5h-5ml-2">You'll receive our latest insights and updates soon.
             </p>
@@ -69,19 +65,15 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps /> = ({
               className="text-blue-400hover:text-blue-300 transition-colors"
             >
               Subscribe another email;
-            </button>
-          </div>
-      </div>
+            <div></button>
+          </div></div>
+      </div></div>
     )
   }
-
 export default function ContentNewsletterSignup() {
   return (
-
             <h2 className="text-3 xl md:text-4 xl font-boldtext-whitemb-4">{title}
-
               {subtitle}
-
                   type="email"
                   value="{email}"
                   onChange="{(e)" = /> setEmail(e.target.value)}
@@ -89,31 +81,30 @@ export default function ContentNewsletterSignup() {
                   required;
                   className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2focus:ring-blue-500focus:border-transparent"
                 />
-              </div>
+              <div></div>
               <button;
                 type="submit"
                 disabled="{isSubmitting}"
-                className="bg-gradient-to-rfrom-blue-600to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]" /></button>
+                className="bg-gradient-to-rfrom-blue-600to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-700 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2min-w-[140,px]"></button></div></div>
                 {isSubmitting ? (
-                  <></>
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <><div></>
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     <span  >Subscribing...</span>
                   </>
                 ) : (
                   <></>
-                    <span  >{buttonText}</span>
-                    <ArrowRight className="w-5h-5ml-2" />    </ArrowRight>
+                    <span  >{buttonText}<div></span>
+                    <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
 </>
                 )}
-              </button>
-            </div>
-          </form>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></button>
+            </div></div>
+          </form></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
             {features.map((feature, index) => (
-
-                <div key={index} className="text-center" /></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <feature.icon className="h-6w-6text-white"  /></feature>
+                <div><div key={index} className="text-center"></div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+                  <feature.icon className="h-6w-6text-white"></feature></div></div>
                 </div>
                 <p className="text-gray-300text-sm">{feature.text}</p>
               </div>
@@ -121,7 +112,5 @@ export default function ContentNewsletterSignup() {
           </div>
       </div>
   )
-
 export default ContentNewsletterSignup;
-
 }

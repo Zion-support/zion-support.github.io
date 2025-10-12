@@ -2,11 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shield, Database, Workflow, Link as LinkIcon, Linkedin, Twitter, Github } from 'lucide-react';
-
   const currentYear = new Date().getFullYear();
-  
   const aiServices = [
     { name: 'AI Analytics & BI', url: '/ai-analytics', description: 'Business intelligence' },
     { name: 'AI Automation', url: '/ai-automation', description: 'Process automation' },
@@ -21,7 +18,6 @@ import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shiel
     { name: 'AI Financial Services', url: '/ai-financial-services', description: 'Fintech AI' },
     { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce AI' }
   ];
-
   const itServices = [
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Cloud solutions' },
     { name: 'DevOps & CI/CD', url: '/devops', description: 'Development operations' },
@@ -36,7 +32,6 @@ import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shiel
     { name: 'Network Security', url: '/network-security', description: 'Network protection' },
     { name: 'IT Support', url: '/it-support', description: 'Technical support' }
   ];
-
   const company = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
@@ -47,7 +42,6 @@ import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shiel
     { name: 'Investors', url: '/investors' },
     { name: 'Contact', url: '/contact' }
   ];
-
   const resources = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
@@ -58,32 +52,27 @@ import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Users, ArrowRight, Shiel
     { name: 'Community', url: '/community' },
     { name: 'Status Page', url: '/status' }
   ];
-
   const socialLinks = [
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /&gt; },</Twitter></Twitter>
     { name: 'LinkedIn', url: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /&gt; },</Linkedin></Linkedin>
     { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /&gt; }</Github></Github>
   ];
-
   return (
           <h3 className="text-2-xl font-bold mb-4">Zion Tech Group</h3>
   const currentYear = new Date().getFullYear();
-
   return (
-
           <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
             Advanced AI & IT Solutions;
             © {currentYear} Zion Tech Group. All rights reserved.
-
 export default function Footer() {
   return (
     <>
       <Helmet>
-        <title>Footer - Zion Tech Group</title>
-        <meta name="description" content="Professional footer by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <title>Footer - Zion Tech Group<div></title>
+        <meta name="description" content="Professional footer by Zion Tech Group. Transform your business with our expert solutions." /></div>
+      </Helmet></div>
+      <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div></div></div>
           <h1 className="text-4xl font-bold text-white mb-6">Footer</h1>
           <p className="text-lg text-gray-300 mb-8">Professional footer coming soon.</p>
           <Link
@@ -91,10 +80,10 @@ export default function Footer() {
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           >
             Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
+            <div><ArrowRight className="w-5 h-5 ml-2" />
+          </Link></div>
+        </div></div>
+      </div></div>
     </>
   );
 }

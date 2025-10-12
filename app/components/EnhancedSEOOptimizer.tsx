@@ -32,55 +32,53 @@ ursor/
     'Proven track record of success'
   ];
   return (
-
         <title>5G Data Analytics - Zion Tech Group</title>
-
-        <title>Enhanced SEO Optimizer | Zion Tech Group</title>
-        <meta name="description" content="Professional SEO optimization services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
-        <meta name="keywords" content="SEO optimizer, AI solutions, IT services, Zion Tech Group, search engine optimization" /></meta>
-        <meta name="description" content="Professional Enhanced SEO Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
-        <meta name="keywords" content="SEO optimizer, search engine optimization, AI solutions, IT services, Zion Tech Group" /></meta>
+        <title>Enhanced SEO Optimizer | Zion Tech Group<div></title>
+        <meta name="description" content="Professional SEO optimization services by Zion Tech Group. Advanced AI and IT solutions for your business."></meta></div></div>
+        <div><meta name="keywords" content="SEO optimizer, AI solutions, IT services, Zion Tech Group, search engine optimization"></meta></div>
+        <meta name="description" content="Professional Enhanced SEO Optimizer services by Zion Tech Group. Advanced AI and IT solutions for your business."></div><div></meta></div>
+        <meta name="keywords" content="SEO optimizer, search engine optimization, AI solutions, IT services, Zion Tech Group"></meta></div></div>
       </Helmet>
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
-              <span className="w-5h-5ml-2" />Enhanced SEO;
+      <div><section className="w-5h-5ml-2"></section></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><h1 className="w-5h-5ml-2"></h1></div>
+              <span className="w-5h-5ml-2" /></div>Enhanced SEO;
                 Enhanced SEO Optimizer;
-              </span>
-              <br /></br>
-              <span className="text-white"  >Optimizer</span>
-            </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced SEO optimization solutions.
+              <div></span>
+              <br></br></div></div>
+              <span className="text-white"  >Optimizer<div></span>
+            </h1></div>
+            <p className="w-5h-5ml-2"></div>Transform your business with our advanced SEO optimization solutions.
               Powered by cutting-edge AI technology and industry expertise.
               Optimize your website for search engines with our advanced AI-powered SEO optimization solutions.
               Improve rankings and drive more organic traffic.
-            </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" /></button>
+            <div></p>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <button className="w-5h-5ml-2"></button>
                 Get Started;
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-              </button>
+                <div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div>
+              </button></div>
               <button className="w-5h-5ml-2">Learn More;
-              </button>
-            </div>
-        </div>
-      </section>
+              <div></button>
+            </div></div>
+        </div></div>
+      </section></div>
       {/* Features Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div><section className="w-5h-5ml-2"></section></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="w-5h-5ml-2" />Our Features;
             </h2>
             <p className="w-5h-5ml-2">Discover the powerful features that make our enhanced SEO optimizer solutions stand out.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div></p>
+          </div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300borderborder-white/20" /></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <feature.icon className="w-6 h-6text-white"  /></feature>
+              <div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300borderborder-white/20"></div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+                  <feature.icon className="w-6 h-6text-white"></feature></div></div>
                 </div>
                 <h3 className="w-5h-5ml-2" />{feature.title}
                 </h3>
@@ -91,19 +89,19 @@ ursor/
           </div>
       </section>
       {/* Benefits Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div><section className="w-5h-5ml-2"></section></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="w-5h-5ml-2" />Why Choose Our Solutions?
             </h2>
             <p className="w-5h-5ml-2">Experience the benefits of working with our cutting-edge enhanced SEO optimizer solutions.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div></p>
+          </div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flexitems-start space-x-4" /></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+              <div><div key={index} className="flexitems-start space-x-4"></div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+                  <CheckCircle className="w-5h-5ml-2"></CheckCircle></div></div>
                 </div>
                 <p className="w-5h-5ml-2">{benefit}
                 </p>
@@ -112,27 +110,24 @@ ursor/
           </div>
       </section>
       {/* Contact Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div><section className="w-5h-5ml-2"></section></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="w-5h-5ml-2" />Ready to Get Started?
             </h2>
             <p className="w-5h-5ml-2">Contact us today to learn more about our SEO optimization solutions and how they can benefit your business.
-            </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div></p>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <button className="w-5h-5ml-2">Contact Us;
               </button>
               <button className="w-5h-5ml-2">Schedule Demo;
-              </button>
-            </div>
-        </div>
-      </section>
+              <div></button>
+            </div></div>
+        </div></div>
+      </section></div>
     </div>
   )
 }
-
 export default EnhancedSEOOptimizerPage
-
 ;
-
 ;

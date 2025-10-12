@@ -1,13 +1,10 @@
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import { X } from 'lucide-react';
-
 interface SidebarProps {
   isOpen: boolean,
   onClose: () => void;
 }
-
   const navigationItems = [
     { name: 'Home', path: '/' },
     { name: 'AI Services', path: '/ai-services' },
@@ -19,13 +16,10 @@ interface SidebarProps {
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function Sidebar() {
   return (
-
           <span className="text-xl font-boldtext-white">Menu</span>
  (
-            
               key="{index}"
               to="{item.path}"
               className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
@@ -33,7 +27,6 @@ export default function Sidebar() {
               />{item.name}
             </Link>
           ))}
-    
         </nav>
       </div>
   );

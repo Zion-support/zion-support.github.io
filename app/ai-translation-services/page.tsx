@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
 import { Globe, Zap, Shield, Users, CheckCircle, ArrowRight, BarChart3, Brain, FileText, Mic } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 export default AITranslationServicesPage;
 const AITranslationServicesPage: React.FC = () => {
   const features = [
@@ -37,7 +37,6 @@ const AITranslationServicesPage: React.FC = () => {
       description: 'Bank-level security with end-to-end encryption for sensitive business communications.'
     }
   ]
-
   const useCases = [
     {
       title: 'Global Customer Support',
@@ -60,7 +59,6 @@ const AITranslationServicesPage: React.FC = () => {
       icon: <BarChart3 className="w-5h-5ml-2" /&gt;</BarChart3&gt;
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -104,67 +102,62 @@ const AITranslationServicesPage: React.FC = () => {
       popular: false;
     }
   ]
-
   return (
-
         <>
       <title>AiTranslationServices - Zion Tech Group</title>
-      
             <h1 className="text-4xl font-bold text-white mb-6">AiTranslationServices</h1>
             <p className="text-lg text-gray-300 mb-8">Professional aitranslationservices services coming soon.</p>
-
       </>
   );
 }
-
-    <></>
-      <Helmet></Helmet>
-        <title>AI Translation Services - Multilingual Communication | Zion Tech Group</title>
-        <meta name="description" content="Break language barriers with AI-powered translation services. Real-time translation, document processing, and multilingual support for global businesses." /></meta>
-        <meta name="keywords" content="AI translation, multilingual, language services, real-time translation, document translation, global communication" /></meta>
-        <link rel="canonical" href="https://ziontechgroup.com/ai-translation-services"  /></link>
+    <><div></>
+      <Helmet></Helmet></div></div>
+        <title>AI Translation Services - Multilingual Communication | Zion Tech Group<div></title>
+        <meta name="description" content="Break language barriers with AI-powered translation services. Real-time translation, document processing, and multilingual support for global businesses."></meta></div></div>
+        <div><meta name="keywords" content="AI translation, multilingual, language services, real-time translation, document translation, global communication"></meta></div>
+        <link rel="canonical" href="https://ziontechgroup.com/ai-translation-services"></div><div></link></div>
       </Helmet>
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
         {/* Hero Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <Globe className="w-5h-5ml-2" /></Globe>
-              <span />AI Translation Services</span>
-            </div>
-            <h1 className="w-5h-5ml-2" /></h1>
-              Break Language <span className="w-5h-5ml-2" />Barriers</span>
-            </h1>
-            <p className="w-5h-5ml-2">Connect with global audiences using AI-powered translation services. 
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+              <Globe className="w-5h-5ml-2"></div></Globe></div>
+              <span />AI Translation Services<div></span>
+            </div></div>
+            <h1 className="w-5h-5ml-2"></div></h1></div>
+              Break Language <span className="w-5h-5ml-2" />Barriers<div></span>
+            </h1></div>
+            <p className="w-5h-5ml-2"></div>Connect with global audiences using AI-powered translation services.
               Real-time translation, document processing, and multilingual support for businesses worldwide.
-            </p>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <Link to="/contact" className="groupbg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105" /></Link>
-                <span />Start Free Trial</span>
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-              </Link>
-              <Link to="/demo" className="groupborder-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" /></Link>
-                <span />View Demo</span>
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-              </Link>
-            </div>
-        </section>
+            <div></p>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <div><Link to="/contact" className="groupbg-gradient-to-r from-cyan-500 to-purple-600 text-white px-10 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40transformhover:scale-105"></Link></div>
+                <span /></div>Start Free Trial<div></span>
+                <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
+              <div></Link>
+              <Link to="/demo" className="groupborder-2 border-cyan-400 text-cyan-400 px-10 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm"></Link></div></div>
+                <span />View Demo<div></span>
+                <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
+              <div></Link>
+            </div></div>
+        </section></div>
         {/* Features Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
-                Powerful <span className="w-5h-5ml-2" />Translation Features</span>
-              </h2>
-              <p className="w-5h-5ml-2">Everything you need to communicate effectively across languages and cultures.
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+              <h2 className="w-5h-5ml-2"></div></h2></div>
+                Powerful <span className="w-5h-5ml-2" />Translation Features<div></span>
+              </h2></div>
+              <p className="w-5h-5ml-2"></div>Everything you need to communicate effectively across languages and cultures.
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {features.map((feature, index) => (
-                <div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10" /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
+                <div><div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xlhover:shadow-cyan-500/10"></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>{feature.icon}
                   </div>
                   <h3 className="w-5h-5ml-2" />{feature.title}
                   </h3>
@@ -175,70 +168,69 @@ const AITranslationServicesPage: React.FC = () => {
             </div>
         </section>
         {/* Use Cases Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
-                Perfect for <span className="w-5h-5ml-2" />Every Business</span>
-              </h2>
-              <p className="w-5h-5ml-2">Discover how AI translation can transform your business operations and global reach.
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <h2 className="w-5h-5ml-2"></h2>
+                Perfect for <span className="w-5h-5ml-2" />Every Business<div></span>
+              </h2></div>
+              <p className="w-5h-5ml-2"></div>Discover how AI translation can transform your business operations and global reach.
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {useCases.map((useCase, index) => (
-                <div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105" /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div><div key={index} className="groupbg-white/10 backdrop-blur-lg rounded-2 xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300hover:scale-105"></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{useCase.icon}
                     </div>
                     <h3 className="w-5h-5ml-2" />{useCase.title}
-                    </h3>
-                  </div>
-                  <p className="w-5h-5ml-2">{useCase.description}
+                    <div></h3>
+                  </div></div>
+                  <p className="w-5h-5ml-2"></div>{useCase.description}
                   </p>
                 </div>
               ))}
             </div>
         </section>
         {/* Pricing Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
-                Simple <span className="w-5h-5ml-2" />Pricing</span>
-              </h2>
-              <p className="w-5h-5ml-2">Choose the plan that fits your translation needs. All plans include a 14-day free trial.
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <h2 className="w-5h-5ml-2"></h2>
+                Simple <span className="w-5h-5ml-2" />Pricing<div></span>
+              </h2></div>
+              <p className="w-5h-5ml-2"></div>Choose the plan that fits your translation needs. All plans include a 14-day free trial.
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {pricingPlans.map((plan, index) => (
                 <div key={index} className="{`relative" bg-white/10 backdrop-blur-lg rounded-2 xl p-8 border transition-all duration-300 hover:scale-105 ${
                   plan.popular;
-                    ? 'border-cyan-400/50 shadow-2 xl shadow-cyan-500/20' 
+                    ? 'border-cyan-400/50 shadow-2 xl shadow-cyan-500/20'
                     : 'border-white/20 hover: border-cyan-400/30'
-                }`} /></div>
+                }`}></div>
                   {plan.popular && (
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Most Popular;
+                    <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>Most Popular;
                       </div>
                   )}
-                  
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                    <p className="w-5h-5ml-2">{plan.description}</p>
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                    <h3 className="w-5h-5ml-2" /></div>{plan.name}</h3>
+                    <p className="w-5h-5ml-2">{plan.description}<div></p>
+                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                       <span className="w-5h-5ml-2" />{plan.price}</span>
-                      <span className="w-5h-5ml-2" />{plan.period}</span>
-                    </div>
-                  <ul className="w-5h-5ml-2" /></ul>
+                      <span className="w-5h-5ml-2" />{plan.period}<div></span>
+                    </div></div>
+                  <ul className="w-5h-5ml-2"></div></ul></div>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-centerspace-x-3" /></li>
-                        <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                      <div><li key={featureIndex} className="flex items-centerspace-x-3"></li></div>
+                        <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
                         <span className="w-5h-5ml-2" />{feature}</span>
                       </li>
                     ))}
-                  </ul>
-                  <Link;</Link></Link>
-                    to="/contact" 
+                  <div></ul>
+                  <Link;</Link></Link></div></div>
+                    to="/contact"
                     className="{`block" w-full text-center py-3 rounded-xl font-semibold transition-all duration-300 ${
                       plan.popular;
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
@@ -251,29 +243,29 @@ const AITranslationServicesPage: React.FC = () => {
             </div>
         </section>
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
-                Ready to Go <span className="w-5h-5ml-2" />Global?</span>
-              </h2>
-              <p className="w-5h-5ml-2">Break down language barriers and connect with global audiences. 
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+              <h2 className="w-5h-5ml-2"></div></h2></div>
+                Ready to Go <span className="w-5h-5ml-2" />Global?<div></span>
+              </h2></div>
+              <p className="w-5h-5ml-2"></div>Break down language barriers and connect with global audiences.
                 Start your free trial today and experience the power of AI translation.
-              </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Link to="/contact" className="groupbg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" /></Link>
-                  <span />Start Free Trial</span>
-                  <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-                </Link>
-                <Link to="/pricing" className="groupborder-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" /></Link>
-                  <span />View All Plans</span>
-                  <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-                </Link>
-              </div>
-          </div>
-        </section>
+              <div></p>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                <div><Link to="/contact" className="groupbg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105"></Link></div>
+                  <span /></div>Start Free Trial<div></span>
+                  <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
+                <div></Link>
+                <Link to="/pricing" className="groupborder-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm"></Link></div></div>
+                  <span />View All Plans<div></span>
+                  <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
+                <div></Link>
+              </div></div>
+          </div></div>
+        <div></section></div>
       </div>
-    </>
+    </></div></div>
   )
 }

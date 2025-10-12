@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-
 const PerformanceMonitor = () => {
   useEffect(() => {
     // Monitor performance metrics
@@ -11,16 +10,12 @@ const PerformanceMonitor = () => {
           }
         }
       });
-
       observer.observe({ entryTypes: ['navigation'] });
-
       return () => {
         observer.disconnect();
       };
     }
   }, []);
-
   return null;
 };
-
 export default PerformanceMonitor;

@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function AICustomerSupportChatbot() {
   const features = [
     {
@@ -26,7 +25,6 @@ export default function AICustomerSupportChatbot() {
       description: 'Track customer satisfaction, response times, and identify improvement opportunities'
     }
   ]
-
   const chatbotFeatures = [
     {
       category: 'Conversation Management',
@@ -45,7 +43,6 @@ export default function AICustomerSupportChatbot() {
       items: ['Response Metrics', 'Customer Satisfaction', 'Resolution Rates', 'Popular Queries', 'Performance Reports', 'ROI Tracking']
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -95,7 +92,6 @@ export default function AICustomerSupportChatbot() {
       popular: false;
     }
   ]
-
   const testimonials = [
     {
       name: 'Lisa Chen',
@@ -116,80 +112,71 @@ export default function AICustomerSupportChatbot() {
       rating: 5;
     }
   ]
-
   return (
-    <></>
-      <Helmet></Helmet>
-        <title>AI Customer Support Chatbot - Zion Tech Group</title>
-        <meta name="description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." /></meta>
-        <meta name="keywords" content="AI chatbot, customer support, AI solutions, IT services, Zion Tech Group" /></meta>
-        <meta property="og:title" content="AI Customer Support Chatbot - Zion Tech Group" /  /></meta>
-        <meta property="og:description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." /  /></meta>
-        <meta property="og:type" content="website" /  /></meta>
-        <meta property="og:url" content="https://ziontechgroup.com/ai-customer-support-chatbot" /  /></meta>
+    <><div></>
+      <Helmet></Helmet></div></div>
+        <title>AI Customer Support Chatbot - Zion Tech Group<div></title>
+        <meta name="description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs."></meta></div></div>
+        <div><meta name="keywords" content="AI chatbot, customer support, AI solutions, IT services, Zion Tech Group"></meta></div>
+        <meta property="og:title" content="AI Customer Support Chatbot - Zion Tech Group" /></div><div></meta></div>
+        <meta property="og:description" content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs." /></meta></div></div>
+        <div><meta property="og:type" content="website" /></meta></div>
+        <meta property="og:url" content="https://ziontechgroup.com/ai-customer-support-chatbot" /></div><div></meta></div>
       </Helmet>
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
         {/* Hero Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <h1 className="w-5h-5ml-2"></h1></div></div>
               <span className="w-5h-5ml-2" />AI Customer Support Chatbot;
-              </span>
-            </h1>
-            <p className="w-5h-5ml-2">Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs.
-            </p>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></span>
+            </h1></div>
+            <p className="w-5h-5ml-2"></div>Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs.
+            <div></p>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <Link;</Link></Link>
           to="/contact"
           className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
         ></Link>
           Get Started;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
+          <div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div>
+        </Link></div>
               <Link to="/contact" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">Learn More;
-              </Link>
-            </div>
-        </section>
+              <div></Link>
+            </div></div>
+        </section></div>
         {/* CTA Section */}
-
               <h2 className="w-5 h-5ml-2" />Ready to Get Started?
               <p className="w-5 h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Contact Us
                 <Link to="/services" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All Services
-
 export default function AiCustomerSupportChatbot() {
   return (
-    
         <>
       <title>AiCustomerSupportChatbot - Zion Tech Group</title>
-      
             <h1 className="text-4xl font-bold text-white mb-6">AiCustomerSupportChatbot</h1>
             <p className="text-lg text-gray-300 mb-8">Professional aicustomersupportchatbot services coming soon.</p>
-            
               Contact Us
-
       </>
   );
 }
-
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <h2 className="w-5h-5ml-2" />Ready to Get Started?
               </h2>
               <p className="w-5h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
-              </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                 <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25">Contact Us;
                 </Link>
                 <Link to="/services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105">View All Services;
-                </Link>
-              </div>
-          </div>
-        </section>
+                <div></Link>
+              </div></div>
+          </div></div>
+        <div></section></div>
       </div>
-    </>
+    </></div></div>
   );
 };
-
 }

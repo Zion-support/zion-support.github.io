@@ -1,40 +1,36 @@
 import React from 'react';
-
 const ZionInventorySmartPage: React.FC = () => {
   return (
-
         <>
       <title>ZionInventorySmart - Zion Tech Group</title>
-
       </>
   );
 }
-
-    <></>
-      <Helmet></Helmet>
-        <title>Zion Inventory Smart - Zion Tech Group</title>
-        <meta name="description" content="Zion Inventory Smart services by Zion Tech Group. Professional AI and IT solutions." /></meta>
-        <meta name="keywords" content="zion-inventory-smart, AI solutions, IT services" /></meta>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
-              <span className="w-5h-5ml-2" />Zion Inventory Smart;
-              </span>
-            </h1>
-            <p className="w-5h-5ml-2">Professional zion inventory smart services by Zion Tech Group.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <><div></>
+      <Helmet></Helmet></div></div>
+        <title>Zion Inventory Smart - Zion Tech Group<div></title>
+        <meta name="description" content="Zion Inventory Smart services by Zion Tech Group. Professional AI and IT solutions."></meta></div></div>
+        <div><meta name="keywords" content="zion-inventory-smart, AI solutions, IT services"></meta></div>
+      </Helmet></div>
+      <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><h1 className="w-5h-5ml-2"></h1></div>
+              <span className="w-5h-5ml-2" /></div>Zion Inventory Smart;
+              <div></span>
+            </h1></div>
+            <p className="w-5h-5ml-2"></div>Professional zion inventory smart services by Zion Tech Group.
+            <div></p>
+          </div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
-            <p className="w-5h-5ml-2">We're working on bringing you comprehensive zion inventory smart solutions. 
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensive zion inventory smart solutions.
               Contact us to learn more about our services.
             </p>
             <button className="w-5h-5ml-2">Contact Us;
-            </button>
-          </div>
-      </div>
-    </>
+            <div></button>
+          </div></div>
+      </div></div>
+    </></div>
   );
 };

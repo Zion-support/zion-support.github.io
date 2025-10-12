@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react';
 export default ServiceWorker;
 'use client';
-
 const ServiceWorker: React.FC = () => {
   useEffect(() => {
     if ('serviceWorker' in, navigator) {
@@ -16,8 +15,6 @@ const ServiceWorker: React.FC = () => {
         });
     }
   }, []);
-
   return null;
 };
-
 export default ServiceWorker;

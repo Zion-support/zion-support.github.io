@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 interface OptimizedLoadingSpinnerProps {
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars'
@@ -11,7 +10,6 @@ interface OptimizedLoadingSpinnerProps {
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple'
   fullScreen?: boolean;
 }
-
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
   ({
     const size = 'md',
@@ -31,7 +29,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       }),
       []
     )
-
     const textSizeClasses = useMemo(
       () => ({
         xs: 'text-xs',
@@ -42,7 +39,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       }),
       []
     )
-
     const colorClasses = useMemo(
       () => ({
         blue: 'text-blue-500',
@@ -53,7 +49,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
       }),
       []
     )
-
     const renderSpinner = () => {
       switch (variant) {
         case 'dots':
@@ -85,11 +80,11 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
         purple: 'border-purple-600 bg-purple-600',}
       }),;
       []);const renderSpinner = useMemo(() => {switch (variant) {case 'dots':
-          return (<div className="'flex" space-x-1' role="'status'" aria-label="'Loading'" /></div>
+          return (<div className="'flex" space-x-1' role="'status'" aria-label="'Loading'"></div>
               {[0, 1, 2].map(i => (</div>
                 <div}
                   key="{i}"
-                  className="{`${sizeClasses[size]}" rounded-full bg-current animate-pulse`}
+                  className="{`${size classes[size]}" rounded-full bg-current animate-pulse`}
                   style="{{" animationDelay: `${i * 0.2}s` }}
                  />))}
             </div>
@@ -97,14 +92,13 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
         case 'pulse':
           return (
     <div;
-              className="{`${sizeClasses[size]}" rounded-full bg-current animate-pulse`}
-             /></div>
+              className="{`${size classes[size]}" rounded-full bg-current animate-pulse`}></div>
           )
         case 'skeleton':
           return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"> </div>
           )
         case 'bars':
@@ -124,21 +118,18 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
         default:
           return (
     <div;
-              className="{`${sizeClasses[size]}" border-2 border-current border-t-transparent rounded-full animate-spin`}
-             /></div>
+              className="{`${size classes[size]}" border-2 border-current border-t-transparent rounded-full animate-spin`}></div>
           )
       }
     }
-
     const containerClasses = fullScreen;
       ? 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center'
       : 'flex items-center justify-center p-8'
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
           {renderSpinner}
           {text && (</div&gt;}
-            <p className="{`mt-2" text-gray-600 ${textSizeClasses[size]}`} /></p>
+            <p className="{`mt-2" text-gray-600 ${textSizeClasses[size]}`}></p>
               {text}
             </p>
           )}
@@ -148,6 +139,5 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps /> = memo(
 </div></div>)
 ;
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner
-
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';export default OptimizedLoadingSpinner;
 }

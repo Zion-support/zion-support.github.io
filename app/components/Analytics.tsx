@@ -1,10 +1,8 @@
 
 'use client';
-
 interface AnalyticsProps {
   children: React.ReactNode;
 }
-
     // Initialize analytics tracking
       // Google Analytics initialization
   useEffect(() => {
@@ -23,9 +21,7 @@ interface AnalyticsProps {
   return (
     <>
       }
-
   return <React.Fragment />{children}</React.Fragment>;
-
 // Extend Window interface for gtag;
 declare global {
   interface Window {

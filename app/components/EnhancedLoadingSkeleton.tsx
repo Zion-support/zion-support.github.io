@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { ArrowRight } from 'lucide-react';
-
   const features = [
     {
       icon: Brain,
@@ -35,90 +33,89 @@ import { ArrowRight } from 'lucide-react';
     'Proven track record of success'
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <Helmet></Helmet>
-        <title>EnhancedLoadingSkeleton | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedLoadingSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business." /></meta>
-        <meta name="keywords" content="EnhancedLoadingSkeleton, AI solutions, IT services, Zion Tech Group, enhancedloadingskeleton" /></meta>
-      </Helmet>
+    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+      <Helmet></div></Helmet></div>
+        <title>EnhancedLoadingSkeleton | Zion Tech Group<div></title>
+        <meta name="description" content="Professional EnhancedLoadingSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business."></meta></div></div>
+        <div><meta name="keywords" content="EnhancedLoadingSkeleton, AI solutions, IT services, Zion Tech Group, enhancedloadingskeleton"></meta></div>
+      </Helmet></div>
       {/* Hero Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
-              <span className="w-5h-5ml-2" />EnhancedLoadingSkeleton;
-              </span>
-              <br /></br>
-              <span className="text-white"  >Solutions</span>
-            </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced enhancedloadingskeleton solutions.
+      <div><section className="w-5h-5ml-2"></section></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><h1 className="w-5h-5ml-2"></h1></div>
+              <span className="w-5h-5ml-2" /></div>EnhancedLoadingSkeleton;
+              <div></span>
+              <br></br></div></div>
+              <span className="text-white"  >Solutions<div></span>
+            </h1></div>
+            <p className="w-5h-5ml-2"></div>Transform your business with our advanced enhancedloadingskeleton solutions.
               Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div></p>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <button className="w-5h-5ml-2">Get Started;
               </button>
               <button className="w-5h-5ml-2">Learn More;
-              </button>
-            </div>
-        </div>
-      </section>
+              <div></button>
+            </div></div>
+        </div></div>
+      </section></div>
       {/* Features Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div><section className="w-5h-5ml-2"></section></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="w-5h-5ml-2" />Why Choose Our EnhancedLoadingSkeleton Solutions?
             </h2>
             <p className="w-5h-5ml-2">Our comprehensive approach ensures maximum efficiency and results for your business.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div></p>
+          </div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-all duration-300" /></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <feature.icon className="h-8w-8tex t-purple-400mr-3"  /></feature>
-                  <h3 className="text-xlfont-semibold text-white"  >{feature.title}</h3>
-                </div>
-                <p className="text-gray-300">{feature.description}</p>
+              <div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-all duration-300"></div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+                  <feature.icon className="h-8w-8tex t-purple-400mr-3"></feature></div></div>
+                  <h3 className="text-xlfont-semibold text-white"  >{feature.title}<div></h3>
+                </div></div>
+                <p className="text-gray-300"></div>{feature.description}</p>
               </div>
             ))}
           </div>
       </section>
       {/* Benefits Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div><section className="w-5h-5ml-2"></section></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="w-5h-5ml-2" />Key Benefits;
             </h2>
             <p className="w-5h-5ml-2">Discover the advantages of our enhancedloadingskeleton solutions.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div></p>
+          </div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flexitems-startspace-x-3" /></div>
-                <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+              <div><div key={index} className="flexitems-startspace-x-3"></div></div>
+                <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
                 <p className="text-gray-300">{benefit}</p>
               </div>
             ))}
           </div>
       </section>
       {/* CTA Section */}
-      <section className="w-5h-5ml-2" /></section>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div><section className="w-5h-5ml-2"></section></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
           <h2 className="w-5h-5ml-2" />Ready to Get Started?
           </h2>
           <p className="w-5h-5ml-2">Join thousands of satisfied customers who trust our enhancedloadingskeleton solutions.
-          </p>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <button className="w-5h-5ml-2" /></button>
+          <div></p>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <button className="w-5h-5ml-2"></button>
               Get Started Now;
-              <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-            </button>
+              <div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div>
+            </button></div>
             <button className="w-5h-5ml-2">Contact Sales;
-            </button>
-          </div>
-      </section>
-    </div>
+            <div></button>
+          </div></div>
+      </section></div>
+    </div></div>
   )
 };
-
 };

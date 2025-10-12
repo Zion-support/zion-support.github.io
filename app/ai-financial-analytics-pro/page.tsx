@@ -1,15 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-
 import React from 'react';
-
 import { Link } from 'react-router-dom';
-
 import { Brain, TrendingUp, Zap, CheckCircle, ArrowRight, Star, BarChart3, DollarSign, Shield, Target, PieChart, Activity, Globe, Monitor, Sparkles, Calculator, FileText, Database, Lock, Building2, CreditCard, Wallet } from 'lucide-react';
-
 export default function AiFinancialAnalyticsProPage() {
-
   const features = [
     {
       icon: <Brain className="w-5h-5ml-2" />,
@@ -216,15 +211,11 @@ export default function AiFinancialAnalyticsProPage() {
     { name: 'PayPal', icon: <Wallet className="w-5h-5ml-2" />, category: 'Payments' }
   ];
   return (
-
         <>
       <title>5G Data Analytics - Zion Tech Group</title>
         <title>AI Financial Analytics Pro - Zion Tech Group | Advanced Financial Intelligence Platform</title>
-
         {/* Open Graph Meta Tags */}
-    
         {/* Twitter Card Meta Tags */}
-    
         {/* Structured Data */}
         <script type="application/ld+json"  />{JSON.stringify({
             "@context": "https: //schema.org",
@@ -249,48 +240,45 @@ export default function AiFinancialAnalyticsProPage() {
               "name": "Zion Tech Group",
               "url": "https: //ziontechgroup.com"
           })}
-
               <p>✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
-
       </>
   );
-
-    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <Helmet></Helmet>
-        <title>Service - Zion Tech Group</title>
-        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions." /></meta>
+    <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+      <Helmet></div></Helmet></div>
+        <title>Service - Zion Tech Group<div></title>
+        <meta name="description" content="Professional services by Zion Tech Group. Transform your business with our expert solutions."></meta></div></div>
       </Helmet>
       <div className="max-w-7xlmx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">        {/* Hero Section */}
-        <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <h1 className="w-5h-5ml-2" /></h1>
+        <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+          <h1 className="w-5h-5ml-2"></div></h1></div>
             AI Financial Analytics{' '}
             <span className="w-5h-5ml-2" />Pro;
-            </span>
-          </h1>
-          <p className="w-5h-5ml-2">Transform your financial analysis with AI-powered insights, real-time analytics, 
+            <div></span>
+          </h1></div>
+          <p className="w-5h-5ml-2"></div>Transform your financial analysis with AI-powered insights, real-time analytics,
             and predictive modeling. Make smarter financial decisions with advanced intelligence.
-          </p>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div></p>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <Link;</Link></Link>
           to="/contact"
           className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
         ></Link>
           Start Free Trial;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
+          <div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div>
+        </Link></div>
             <Link to="/ai-services" className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center">View All AI Services;
-            </Link>
-          </div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">✓ 14-day free trial • ✓ No credit card required • ✓ Bank-grade security;
+            <div></Link>
+          </div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>✓ 14-day free trial • ✓ No credit card required • ✓ Bank-grade security;
           </div>
         {/* Stats Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {stats.map((stat, index) => (
-                <div key={index} className="text-center" /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <stat.icon className="h-8w-8text-white"  /></stat>
+                <div><div key={index} className="text-center"></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+                    <stat.icon className="h-8w-8text-white"></stat></div></div>
                   </div>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.number}</div>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{stat.label}</div>
@@ -298,25 +286,25 @@ export default function AiFinancialAnalyticsProPage() {
             </div>
         </section>
         {/* Features Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="w-5h-5ml-2" />Advanced AI Features</h2>
             <p className="w-5h-5ml-2">Our AI Financial Analytics Pro leverages cutting-edge machine learning;
               to provide unprecedented insights into your financial data.
-            </p>
-          </div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div></p>
+          </div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50rounded-2 xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300group" /></div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div><div key={index} className="bg-slate-800/50rounded-2 xl p-8 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300group"></div></div>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                   <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{feature.icon}
                   </div>
                   <h3 className="w-5h-5ml-2" />{feature.title}</h3>
-                  <p className="w-5h-5ml-2">{feature.description}</p>
-                  <ul className="w-5h-5ml-2" /></ul>
+                  <p className="w-5h-5ml-2">{feature.description}<div></p>
+                  <ul className="w-5h-5ml-2"></ul></div></div>
                     {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-centertext-sm text-gray-300" /></li>
-                        <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                      <div><li key={benefitIndex} className="flex items-centertext-sm text-gray-300"></li></div>
+                        <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
                         {benefit}
                       </li>
                     ))}
@@ -326,23 +314,23 @@ export default function AiFinancialAnalyticsProPage() {
           </div>
         </section>
         {/* Analytics Types Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="w-5h-5ml-2" />Comprehensive Analytics</h2>
             <p className="w-5h-5ml-2">Cover every aspect of your financial operations with our comprehensive analytics suite.
-            </p>
-          </div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div></p>
+          </div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             {analyticsTypes.map((type, index) => (
-              <div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30transition-all duration-300" /></div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div><div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30transition-all duration-300"></div></div>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                   {type.icon}
-                  <h3 className="w-5h-5ml-2" />{type.category}</h3>
-                </div>
-                <ul className="w-5h-5ml-2" /></ul>
+                  <h3 className="w-5h-5ml-2" />{type.category}<div></h3>
+                </div></div>
+                <ul className="w-5h-5ml-2"></div></ul></div>
                   {type.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-centertext-sm text-gray-300" /></li>
-                      <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                    <div><li key={itemIndex} className="flex items-centertext-sm text-gray-300"></li></div>
+                      <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
                       {item}
                     </li>
                   ))}
@@ -352,16 +340,16 @@ export default function AiFinancialAnalyticsProPage() {
           </div>
         </section>
         {/* Integrations Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="w-5h-5ml-2" />Seamless Integrations</h2>
             <p className="w-5h-5ml-2">Connect with your existing financial systems and tools for a unified analytics experience.
-            </p>
-          </div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div></p>
+          </div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             {integrations.map((integration, index) => (
-              <div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300text-centergroup" /></div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{integration.icon}
+              <div><div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700 hover:border-cyan-500/30 transition-all duration-300text-centergroup"></div></div>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>{integration.icon}
                 </div>
                 <h3 className="w-5h-5ml-2" />{integration.name}</h3>
                 <p className="w-5h-5ml-2">{integration.category}</p>
@@ -370,41 +358,40 @@ export default function AiFinancialAnalyticsProPage() {
           </div>
         </section>
         {/* Pricing Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="w-5h-5ml-2" />Choose Your Plan</h2>
             <p className="w-5h-5ml-2">Flexible pricing plans designed to meet your financial analytics needs at any scale.
-            </p>
-          </div>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div></p>
+          </div></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             {pricingPlans.map((plan, index) => (
               <div key={index} className="{`bg-slate-800/50" rounded-2 xl p-8 border transition-all duration-300 relative ${
                 plan.popular ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' : 'border-slate-700 hover: border-cyan-500/30'
-              }`} /></div>
+              }`}></div>
                 {plan.popular && (
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <span className="w-5h-5ml-2" />Most Popular;
+                  <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                    <span className="w-5h-5ml-2" /></div>Most Popular;
                     </span>
                   </div>
                 )}
-                
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                  <h3 className="w-5h-5ml-2" /></div>{plan.name}<div></h3>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     <span className="w-5h-5ml-2" />{plan.price}</span>
-                    <span className="w-5h-5ml-2" />{plan.period}</span>
-                  </div>
-                  <p className="w-5h-5ml-2">{plan.description}</p>
-                </div>
-                <ul className="w-5h-5ml-2" /></ul>
+                    <span className="w-5h-5ml-2" />{plan.period}<div></span>
+                  </div></div>
+                  <p className="w-5h-5ml-2"></div>{plan.description}<div></p>
+                </div></div>
+                <ul className="w-5h-5ml-2"></div></ul></div>
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300" /></li>
-                      <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                    <div><li key={featureIndex} className="flex items-center text-gray-300"></li></div>
+                      <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
                       {feature}
                     </li>
                   ))}
-                </ul>
-                <Link;</Link></Link>
+                <div></ul>
+                <Link;</Link></Link></div></div>
                   to="/contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
                     plan.popular;
@@ -412,34 +399,34 @@ export default function AiFinancialAnalyticsProPage() {
                       : 'border-2 border-cyan-500 text-cyan-400 hover: bg-cyan-500 hover:text-white'
                   }`} /></Link>
                   {plan.cta}
-                  <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-                </Link>
-              </div>
+                  <div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div>
+                </Link></div>
+              </div></div>
             ))}
           </div>
         </section>
         {/* Testimonials */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <h2 className="w-5h-5ml-2" />What Our Customers Say</h2>
               <p className="w-5h-5ml-2">Join hundreds of finance professionals who trust AI Financial Analytics Pro.
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700" /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div><div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700"></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.avatar}
-                    </div>
-                    <div /></div>
+                    <div></div>
+                    <div></div></div></div>
                       <h4 className="w-5h-5ml-2" />{testimonial.name}</h4>
                       <p className="w-5h-5ml-2">{testimonial.role}</p>
-                      <p className="w-5h-5ml-2">{testimonial.company}</p>
-                    </div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                      <p className="w-5h-5ml-2">{testimonial.company}<div></p>
+                    </div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4h-4text-yellow-400fill-current"  /></Star>
+                      <Star key={i} className="w-4h-4text-yellow-400fill-current"></Star>
                     ))}
                   </div>
                   <p className="w-5h-5ml-2">"{testimonial.content}"</p>
@@ -449,27 +436,27 @@ export default function AiFinancialAnalyticsProPage() {
             </div>
         </section>
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="w-5h-5ml-2" />Ready to Transform Your Financial Analysis?
             </h2>
-            <p className="w-5h-5ml-2">Start your free trial today and experience the power of AI-driven financial analytics. 
+            <p className="w-5h-5ml-2">Start your free trial today and experience the power of AI-driven financial analytics.
               Join hundreds of finance professionals making smarter decisions with data.
-            </p>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center" /></Link>
+            <div></p>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"></Link>
                 Start Free Trial;
-                <Sparkles className="w-5h-5ml-2" /></Sparkles>
-              </Link>
-              <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center" /></Link>
+                <div><Sparkles className="w-5h-5ml-2"></Sparkles></div>
+              </Link></div>
+              <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors inline-flex items-center justify-center"></Link></div>
                 Learn More;
-                <PieChart className="w-5h-5ml-2" /></PieChart>
-              </Link>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <p />✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime</p>
-            </div>
-        </section>
-      </div>
+                <div><PieChart className="w-5h-5ml-2"></PieChart></div>
+              </Link></div>
+            <div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <p />✓ 14-day free trial • ✓ Bank-grade security • ✓ 24/7 support • ✓ Cancel anytime<div></p>
+            </div></div>
+        </section></div>
+      </div></div>
   );
 }

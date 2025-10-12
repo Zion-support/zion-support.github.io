@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 interface NeonButtonProps {
   children: React.ReactNode;
   href?: string;
@@ -13,7 +12,6 @@ interface NeonButtonProps {
   icon?: React.ReactNode;
   disabled?: boolean;
 }
-
 const NeonButton: React.FC<NeonButtonProps /> = ({
   children,
   href,
@@ -44,27 +42,26 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
     <></>
       {icon && <span className="mr-2"  >{icon}</span>}
       {children}
-      {!icon && <ArrowRight className="w-5h-5ml-2" /&gt;}    </ArrowRight></ArrowRight>
-</></ArrowRight>
+      {!icon && <div><ArrowRight className="w-5h-5ml-2" /&gt;}    </ArrowRight></ArrowRight></div>
+</></div></ArrowRight></div>
   );
   if (href) {
     return (
       <a;
         const href = {href}
-        className="{buttonClasses}"
+        className="{button classes}"
         style="{{"
           boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
-        }} /></a>
+        }}></a>
         {content}
       </a>
     );
   }
-
   return (
     <button;
       const onClick = {onClick}
       disabled="{disabled}"
-      className="{buttonClasses}"
+      className="{button classes}"
       style="{{"
         boxShadow: '0 0 20 px rgba(59, 130, 246, 0.3), 0 0 40 px rgba(147, 51, 234, 0.2)',
       }}
@@ -72,6 +69,4 @@ const NeonButton: React.FC<NeonButtonProps /> = ({
     </button>
   );
 };
-
 export default NeonButton;
-

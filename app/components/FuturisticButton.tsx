@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-
 'use client';
 interface FuturisticButtonProps {
   children: React.ReactNode;
@@ -11,7 +10,6 @@ interface FuturisticButtonProps {
   loading?: boolean;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
-
 }
   children,
   onClick,
@@ -36,7 +34,6 @@ interface FuturisticButtonProps {
   default: return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
     }
   };
-
   const getSizeClasses = () => {
     switch (size) {
       case 'sm':
@@ -73,8 +70,7 @@ interface FuturisticButtonProps {
         className="absolute inset-0 bg-gradient-to-r from-white/20to-transparent"
         initial="{{" x: '-100%' }}
         animate="{{" x: isHovered ? '100%' : '-100%' }}
-        transition="{{" duration: 0.6 }}
-       /></motion>
+        transition="{{" duration: 0.6 }}></motion>
       {/* Pulsing glow effect */}
       <motion.div;
         className="absolute inset-0rounded-lg"
@@ -95,8 +91,7 @@ interface FuturisticButtonProps {
           duration: 1.5,
           repeat: isHovered ? Infinity : 0,
           ease: 'easeInOut'
-        }}
-       /></motion>
+        }}></motion>
       {/* Scanning line effect */}
       {isHovered && (
         <motion.div;
@@ -112,27 +107,23 @@ interface FuturisticButtonProps {
             duration: 1.5,
             repeat: Infinity,
             ease: 'linear',
-          }}
-         /></motion>
+          }}></motion>
       )}
       {/* Corner accents */}
-
       {/* Content */}
-      <span className="w-5h-5ml-2" /></span>
+      <span className="w-5h-5ml-2"></span>
         {loading ? (
-
-          <></>
+          <><div></>
             <motion.div;
               className="w-4h-4bor d er-2 border-white/30 border-t-white rounded-full mr-2"
               animate="{{" rotate: 360 }}
-              transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}
-             /></motion>
+              transition="{{" duration: 1, repeat: Infinity, ease: 'linear' }}></motion></div></div>
             Loading...
           </>
         ) : (
           children;
         )}
-      </span>
-    </motion.button>
-  </div>);
+      <div></span>
+    </motion.button></div>
+  </div></div>);
 }

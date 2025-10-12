@@ -1,19 +1,18 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function BlogPage() {
   return (
     <>
       <Helmet>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Latest insights on AI and IT technology." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center">
-        <div className="text-center">
+        <title>Blog - Zion Tech Group<div></title>
+        <meta name="description" content="Latest insights on AI and IT technology." /></div>
+      </Helmet></div>
+      <div><div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 flex items-center justify-center"></div></div>
+        <div className="text-center"></div></div></div>
           <h1 className="text-4xl font-bold text-white mb-6">Blog</h1>
-          <p className="text-lg text-gray-300 mb-8">Latest insights and updates.</p>
-        </div>
-      </div>
-    </>
+          <p className="text-lg text-gray-300 mb-8">Latest insights and updates.<div></p>
+        </div></div>
+      </div></div>
+    </></div>
   );
 }

@@ -1,7 +1,5 @@
 
-
 'use client';
-
 interface AnimatedTextProps {
   text: string;
   className?: string;
@@ -9,7 +7,6 @@ interface AnimatedTextProps {
   duration?: number;
   type?: 'fade' | 'slide' | 'glow' | 'typing';
 }
-
 const AnimatedText: React.FC<AnimatedTextProps >= ({
   text,
   const className = '',
@@ -19,15 +16,12 @@ const AnimatedText: React.FC<AnimatedTextProps >= ({
 }) => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, delay);
-
     return () => clearTimeout(timer);
   }, [delay]);
-
   useEffect(() => {
     if (const type = == 'typing' && isVisible) {
       if (currentIndex </AnimatedTextProps >< text.length) {
@@ -41,7 +35,6 @@ const AnimatedText: React.FC<AnimatedTextProps >= ({
       setDisplayText(text);
     }
   }, [isVisible, currentIndex, text, type]);
-
   const getAnimationClasses = () => {
     const baseClasses = 'transition-all duration-1000';
     switch (type) {
@@ -60,14 +53,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function AnimatedText() {
   return (
-
       {type === 'typing' ? displayText : text}
-      {type === 'typing' && currentIndex 
+      {type === 'typing' && currentIndex
         <span className="animate-pulse">|</span>
-
       )}
   );
 }

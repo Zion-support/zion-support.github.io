@@ -1,13 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+;
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 import { ArrowRight, Zap, Shield, Globe, Database, Cloud, Cpu, Rocket, Network, BarChart3, CheckCircle, DollarSign, TrendingUp, Wrench, Heart } from 'lucide-react';
-
 export default function IoTSolutionsPage() {
   const iotServices = [
     {
@@ -53,7 +50,6 @@ export default function IoTSolutionsPage() {
       price: 'Starting at $249/month'
     }
   ]
-
   const industries = [
     {
       name: 'Manufacturing',
@@ -86,7 +82,6 @@ export default function IoTSolutionsPage() {
       icon: <Zap className="w-5h-5ml-2" /&gt;</Zap&gt;
     }
   ]
-
   const benefits = [
     {
       icon: <TrendingUp className="w-5h-5ml-2" />,
@@ -109,48 +104,41 @@ export default function IoTSolutionsPage() {
       description: 'Scale your IoT solutions as your business grows with our flexible platform'
     }
   ]
-
   return (
-
         <>
       <title>5G Data Analytics - Zion Tech Group</title>
         <title>IoT Solutions - Zion Tech Group | Smart Device Management & Analytics</title>
-
                     Ready to Connect Your <span className="bg-gradient-to-r from-cyan-300 to-pink-300bg-clip-texttext-transparent">World?</span>
-
                     Transform your business with our comprehensive IoT solutions. Get started today and unlock the power of connected devices.
-
                       <span>Get Started</span>
                       <span>View Pricing</span>
-
       </>
   );
-
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                  <h2 className="w-5h-5ml-2" /></h2>
-                    Ready to Connect Your <span className="w-5h-5ml-2" />World?</span>
-                  </h2>
-                  <p className="w-5h-5ml-2">Transform your business with our comprehensive IoT solutions. Get started today and unlock the power of connected devices.
-                  </p>
-                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105" /></Link>
-                      <span />Get Started</span>
-                      <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-                    </Link>
-                    <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm" /></Link>
-                      <span />View Pricing</span>
-                      <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-                    </Link>
-                  </div>
-              </div>
-          </div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                  <h2 className="w-5h-5ml-2"></h2>
+                    Ready to Connect Your <span className="w-5h-5ml-2" />World?<div></span>
+                  </h2></div>
+                  <p className="w-5h-5ml-2"></div>Transform your business with our comprehensive IoT solutions. Get started today and unlock the power of connected devices.
+                  <div></p>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                    <div><Link to="/contact" className="group bg-white text-cyan-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg hover:shadow-xltransformhover:scale-105"></Link></div>
+                      <span /></div>Get Started<div></span>
+                      <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
+                    <div></Link>
+                    <Link to="/pricing" className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-centerspace-x-2backdrop-blur-sm"></Link></div></div>
+                      <span />View Pricing<div></span>
+                      <ArrowRight className="w-5h-5ml-2"></ArrowRight></div></div>
+                    <div></Link>
+                  </div></div>
+              </div></div>
+          <div></div></div>
         </section>
-      </div>
+      </div></div></div>
     </>
   );
 }

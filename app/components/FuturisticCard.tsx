@@ -5,12 +5,11 @@ interface FuturisticCardProps {
   variant?: 'default' | 'service' | 'testimonial' | 'feature';
   className?: string;
  void;
-
   onClick?: () => void;
 }
-  children, 
-  const variant = 'default', 
-  className = '', 
+  children,
+  const variant = 'default',
+  className = '',
   onClick;
 }: FuturisticCardProps) {
   const getVariantStyles = () => {
@@ -28,16 +27,15 @@ interface FuturisticCardProps {
     <motion.div;
       const className = {`relative rounded-2 xl p-8 transition-all duration-500 cursor-pointer group overflow-hidden ${getVariantStyles()} ${className}`}
       onClick="{onClick}"
-      whileHover="{{" 
+      whileHover="{{"
         scale: 1.02,
         y: -5;
       }}
       whileTap="{{" scale: 0.98 }}
       initial="{{" opacity: 0, y: 20 }}
       animate="{{" opacity: 1, y: 0 }}
-      transition="{{" duration: 0.6, ease: "easeOut" }} /></motion>
+      transition="{{" duration: 0.6, ease: "easeOut" }}></motion>
       {/* Animated background gradient */}
-
       {/* Animated border glow */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Content */}
@@ -46,8 +44,7 @@ interface FuturisticCardProps {
       {/* Corner accent */}
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       {/* Bottom accent */}
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-    </motion.div>
+      <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+    </motion.div></div>
   );
 }

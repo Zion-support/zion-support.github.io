@@ -1,6 +1,5 @@
 import { useState, useEffect} from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight} from 'lucide-react';
-
 interface ContentItem {
   id: string;,
   title: string;,
@@ -10,14 +9,12 @@ interface ContentItem {
   price?: string;
   category: string;
 }
-
 interface DynamicContentShowcaseProps {
   items?: ContentItem[];
   autoPlay?: boolean;
   autoPlayInterval?: number;
   className?: string;
 }
-
 const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
   const items = [
     {
@@ -54,60 +51,53 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
-
   useEffect(() => {
     if (!isPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % items.length);
     }, autoPlayInterval);
-
     return () => clearInterval(interval);
   }, [isPlaying, autoPlayInterval, items.length]);
-
   const nextItem = () => {
     setCurrentIndex((prev) => (prev + 1) % items.length);
   };
-
   const prevItem = () => {
     setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
   };
-
   const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
-
   const currentItem = items[currentIndex];
   const IconComponent = currentItem.icon;
   return (
-    <div const className = {`relative ${className}`} /></div>
+    <div const className = {`relative ${className}`}></div>
       {/* Controls */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
           <button;
             onClick="{prevItem}"
             className="p-2rou nded-full bg-white/10hover:bg-white/20 transition-colors"
-            aria-label="Previous item" /></button>
-            <ChevronLeft className="w-5h-5ml-2" /></ChevronLeft>
-          </button>
+            aria-label="Previous item"></button></div></div>
+            <div><ChevronLeft className="w-5h-5ml-2"></ChevronLeft></div>
+          </button></div>
           <button;
             onClick="{togglePlayPause}"
             className="p-2rou nded-full bg-white/10hover:bg-white/20 transition-colors"
-            aria-label="{isPlaying" ? 'Pause' : 'Play'} /></button>
+            aria-label="{isPlaying" ? 'Pause' : 'Play'}></button></div>
             {isPlaying ? (
-              <Pause className="w-5h-5ml-2" /></Pause>
+              <Pause className="w-5h-5ml-2"></Pause>
             ) : (
-              <Play className="w-5h-5ml-2" /></Play>
+              <Play className="w-5h-5ml-2"></Play>
             )}
-          </button>
+          <div></button>
           <button;
             onClick="{nextItem}"
             className="p-2rou nded-full bg-white/10hover:bg-white/20 transition-colors"
-            aria-label="Next item" /></button>
-            <ChevronRight className="w-5h-5ml-2" /></ChevronRight>
-          </button>
-        </div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            aria-label="Next item"></button></div></div>
+            <div><ChevronRight className="w-5h-5ml-2"></ChevronRight></div>
+          </button></div>
+        <div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
           {items.map((_, index) => (
             <button;
               key="{index}"
@@ -120,45 +110,42 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps /> = ({
           ))}
         </div>
       {/* Content Card */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <IconComponent className="w-5h-5ml-2" /></IconComponent>
+      <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+              <IconComponent className="w-5h-5ml-2"></div><div></IconComponent></div>
             </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <span className="text-smtext-cyan-400font-medium"  >{currentItem.category}</span>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <span className="text-smtext-cyan-400font-medium"  >{currentItem.category}<div></span>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4h-4tex t-yellow-400fill-current"  /></Star>
+                  <Star key={i} className="w-4h-4tex t-yellow-400fill-current"></Star>
                 ))}
               </div>
             <h3 className="text-2 xl font-bold text-whitemb-3"  >{currentItem.title}</h3>
-            <p className="text-gray-300 mb-4">{currentItem.description}</p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <p className="text-gray-300 mb-4">{currentItem.description}<div></p>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {currentItem.features.map((feature, index) => (
-                <div key={index} className="flex items-centertext-sm text-gray-300" /></div>
-                  <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                <div><div key={index} className="flex items-centertext-sm text-gray-300"></div></div>
+                  <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
                   <span  >{feature}</span>
                 </div>
               ))}
-            </div>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+            <div></div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {currentItem.price && (
                 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{currentItem.price}
                 </div>
               )}
-
-              <button className="w-5h-5ml-2" /></button>
+              <button className="w-5h-5ml-2"></button>
                 Learn More;
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-              </button>
-            </div>
+                <div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div>
+              </button></div>
+            <div></div></div>
         </div>
-    </div>
+    </div></div></div>
   );
 };
-
 export default DynamicContentShowcase;
-

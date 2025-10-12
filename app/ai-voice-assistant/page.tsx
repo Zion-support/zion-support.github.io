@@ -2,13 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Mic, Brain, CheckCircle, ArrowRight, Zap, Settings, Globe, Clock, Link as LinkIcon, Workflow } from 'lucide-react';
-
 export default function AIVoiceAssistant() {
   const features = [
     {
@@ -32,7 +30,6 @@ export default function AIVoiceAssistant() {
       description: 'Seamlessly integrate with mobile apps, websites, smart devices, and IoT systems'
     }
   ]
-
   const assistantFeatures = [
     {
       category: 'Voice Capabilities',
@@ -51,7 +48,6 @@ export default function AIVoiceAssistant() {
       items: ['Custom Voice Training', 'Personality Settings', 'Command Customization', 'Brand Voice', 'Response Templates', 'Workflow Automation']
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Personal',
@@ -101,7 +97,6 @@ export default function AIVoiceAssistant() {
       popular: false;
     }
   ]
-
   const testimonials = [
     {
       name: 'David Park',
@@ -122,46 +117,45 @@ export default function AIVoiceAssistant() {
       rating: 5;
     }
   ]
-
   return (
     <Layout;</Layout></Layout>
       title="AI Voice Assistant - Intelligent Voice Solutions | Zion Tech Group"
       description="Transform user interaction with AI-powered voice assistants. Natural language processing, human-like voice synthesis, and seamless integration. Start your free trial today."
-      keywords="AI voice assistant, voice AI, speech recognition, voice synthesis, conversational AI, voice automation" /></Layout>
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      keywords="AI voice assistant, voice AI, speech recognition, voice synthesis, conversational AI, voice automation" /><div></Layout>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
         {/* Hero Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h1 className="w-5h-5ml-2" /></h1>
-                AI <span className="w-5h-5ml-2" />Voice Assistant</span>
-              </h1>
-              <p className="w-5h-5ml-2">Create intelligent voice assistants that understand natural speech, execute commands, 
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <h1 className="w-5h-5ml-2"></h1>
+                AI <span className="w-5h-5ml-2" />Voice Assistant<div></span>
+              </h1></div>
+              <p className="w-5h-5ml-2"></div>Create intelligent voice assistants that understand natural speech, execute commands,
                 and provide hands-free automation for your business and personal needs.
-              </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                 <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transformhover:scale-105">Start Building;
                 </Link>
                 <Link to="/ai-services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transformhover:scale-105">View All AI Services;
-                </Link>
-              </div>
-          </div>
-        </section>
+                <div></Link>
+              </div></div>
+          </div></div>
+        </section></div>
         {/* Features Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
-                Powerful <span className="w-5h-5ml-2" />Features</span>
-              </h2>
-              <p className="w-5h-5ml-2">Everything you need to build, deploy, and manage intelligent voice assistants;
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <h2 className="w-5h-5ml-2"></h2>
+                Powerful <span className="w-5h-5ml-2" />Features<div></span>
+              </h2></div>
+              <p className="w-5h-5ml-2"></div>Everything you need to build, deploy, and manage intelligent voice assistants;
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {features.map((feature, index) => (
-                <div key={index} className="text-centergroup" /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <feature.icon className="w-10h-10text-cyan-400"  /></feature>
+                <div><div key={index} className="text-centergroup"></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+                    <feature.icon className="w-10h-10text-cyan-400"></feature></div></div>
                   </div>
                   <h3 className="w-5h-5ml-2" />{feature.title}</h3>
                   <p className="w-5h-5ml-2">{feature.description}</p>
@@ -170,21 +164,21 @@ export default function AIVoiceAssistant() {
             </div>
         </section>
         {/* Use Cases Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
-                Use <span className="w-5h-5ml-2" />Cases</span>
-              </h2>
-              <p className="w-5h-5ml-2">Discover how our AI voice assistants can transform your business operations;
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <h2 className="w-5h-5ml-2"></h2>
+                Use <span className="w-5h-5ml-2" />Cases<div></span>
+              </h2></div>
+              <p className="w-5h-5ml-2"></div>Discover how our AI voice assistants can transform your business operations;
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {useCases.map((useCase, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover: transformhove,
-  r:scale-105" /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <useCase.icon className="w-6 h-6tex t-cyan-400"  /></useCase>
+                <div><div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover: transformhove,
+  r:scale-105"></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+                    <useCase.icon className="w-6 h-6tex t-cyan-400"></useCase></div></div>
                   </div>
                   <h3 className="w-5h-5ml-2" />{useCase.title}
                   </h3>
@@ -195,129 +189,125 @@ export default function AIVoiceAssistant() {
             </div>
         </section>
         {/* Pricing Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
-                Simple <span className="w-5h-5ml-2" />Pricing</span>
-              </h2>
-              <p className="w-5h-5ml-2">Choose the plan that fits your voice assistant needs;
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <h2 className="w-5h-5ml-2"></h2>
+                Simple <span className="w-5h-5ml-2" />Pricing<div></span>
+              </h2></div>
+              <p className="w-5h-5ml-2"></div>Choose the plan that fits your voice assistant needs;
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                 <h3 className="w-5h-5ml-2" />Starter</h3>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">$99<span className="w-5h-5ml-2" />/month</span></div>
-                <ul className="w-5h-5ml-2" /></ul>
-                  <li className="w-5h-5ml-2" /></li>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">$99<span className="w-5h-5ml-2" />/month<div></span></div></div>
+                <ul className="w-5h-5ml-2"></div><div></ul></div>
+                  <li className="w-5h-5ml-2"></li></div></div>
+                    <CheckCircle className="w-5h-5ml-2"></CheckCircle>
                     Up to 1,000 voice commands/month;
-                  </li>
-                  <li className="w-5h-5ml-2" /></li>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                  <div></li>
+                  <li className="w-5h-5ml-2"></li></div></div>
+                    <CheckCircle className="w-5h-5ml-2"></CheckCircle>
                     Basic speech recognition;
-                  </li>
-                  <li className="w-5h-5ml-2" /></li>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                  <div></li>
+                  <li className="w-5h-5ml-2"></li></div></div>
+                    <CheckCircle className="w-5h-5ml-2"></CheckCircle>
                     Email support;
-                  </li>
-                  <li className="w-5h-5ml-2" /></li>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                  <div></li>
+                  <li className="w-5h-5ml-2"></li></div></div>
+                    <CheckCircle className="w-5h-5ml-2"></CheckCircle>
                     Standard integrations;
-                  </li>
-                </ul>
-                <Link to="/contact" className="w-fullbg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300block">Get Started;
-                </Link>
-              </div>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div></li>
+                </ul></div>
+                <Link to="/contact" className="w-fullbg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300block"></div>Get Started;
+                <div></Link>
+              </div></div>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                   <span className="w-5h-5ml-2" />Most Popular;
-                  </span>
-                </div>
-                <h3 className="w-5h-5ml-2" />Professional</h3>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">$199<span className="w-5h-5ml-2" />/month</span></div>
-                <ul className="w-5h-5ml-2" /></ul>
-                  <li className="w-5h-5ml-2" /></li>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                  <div></span>
+                </div></div>
+                <h3 className="w-5h-5ml-2" /></div>Professional</h3>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">$199<span className="w-5h-5ml-2" />/month<div></span></div></div>
+                <ul className="w-5h-5ml-2"></div><div></ul></div>
+                  <li className="w-5h-5ml-2"></li></div></div>
+                    <CheckCircle className="w-5h-5ml-2"></CheckCircle>
                     Up to 10,000 voice commands/month;
-                  </li>
-                  <li className="w-5h-5ml-2" /></li>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                  <div></li>
+                  <li className="w-5h-5ml-2"></li></div></div>
+                    <CheckCircle className="w-5h-5ml-2"></CheckCircle>
                     Advanced speech recognition;
-                  </li>
-                  <li className="w-5h-5ml-2" /></li>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                  <div></li>
+                  <li className="w-5h-5ml-2"></li></div></div>
+                    <CheckCircle className="w-5h-5ml-2"></CheckCircle>
                     Priority support;
-                  </li>
-                  <li className="w-5h-5ml-2" /></li>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                  <div></li>
+                  <li className="w-5h-5ml-2"></li></div></div>
+                    <CheckCircle className="w-5h-5ml-2"></CheckCircle>
                     Custom wake words;
-                  </li>
-                  <li className="w-5h-5ml-2" /></li>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                  <div></li>
+                  <li className="w-5h-5ml-2"></li></div></div>
+                    <CheckCircle className="w-5h-5ml-2"></CheckCircle>
                     Analytics dashboard;
-                  </li>
-                </ul>
-                <Link to="/contact" className="w-fullbg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300block">Get Started;
-                </Link>
-              </div>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <div></li>
+                </ul></div>
+                <Link to="/contact" className="w-fullbg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-600 transition-all duration-300block"></div>Get Started;
+                <div></Link>
+              </div></div>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                 <h3 className="w-5h-5ml-2" />Enterprise</h3>
-                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Custom</div>
-                <ul className="w-5h-5ml-2" /></ul>
-                  <li className="w-5h-5ml-2" /></li>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">Custom<div></div>
+                <ul className="w-5h-5ml-2"></ul></div></div>
+                  <div><li className="w-5h-5ml-2"></li></div>
+                    <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
                     Unlimited voice commands;
-                  </li>
-                  <li className="w-5h-5ml-2" /></li>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                  <div></li>
+                  <li className="w-5h-5ml-2"></li></div></div>
+                    <CheckCircle className="w-5h-5ml-2"></CheckCircle>
                     Custom AI training;
-                  </li>
-                  <li className="w-5h-5ml-2" /></li>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                  <div></li>
+                  <li className="w-5h-5ml-2"></li></div></div>
+                    <CheckCircle className="w-5h-5ml-2"></CheckCircle>
                     24/7 dedicated support;
-                  </li>
-                  <li className="w-5h-5ml-2" /></li>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                  <div></li>
+                  <li className="w-5h-5ml-2"></li></div></div>
+                    <CheckCircle className="w-5h-5ml-2"></CheckCircle>
                     White-label solution;
-                  </li>
-                  <li className="w-5h-5ml-2" /></li>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                  <div></li>
+                  <li className="w-5h-5ml-2"></li></div></div>
+                    <CheckCircle className="w-5h-5ml-2"></CheckCircle>
                     Custom development;
-                  </li>
-                </ul>
-                <Link to="/contact" className="w-fullborder border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-semibold text-center hover:bg-cyan-500/10 transition-all duration-300block">Contact Sales;
-                </Link>
-              </div>
-          </div>
-        </section>
+                  <div></li>
+                </ul></div>
+                <Link to="/contact" className="w-fullborder border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-semibold text-center hover:bg-cyan-500/10 transition-all duration-300block"></div>Contact Sales;
+                <div></Link>
+              </div></div>
+          </div></div>
+        </section></div>
         {/* CTA Section */}
-
               <h2 className="text-4 xl font-bold text-whitemb-6">Ready to Build Your AI Voice Assistant?
                 Start creating intelligent voice assistants that understand and respond to natural speech.
-
                 <Link to="/contact" className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transformhover:scale-105">Start Building Now
                 <Link to="/about" className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transformhover:scale-105">Learn More About Us
-
   );
 }
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <h2 className="w-5h-5ml-2" />Ready to Build Your AI Voice Assistant?
               </h2>
               <p className="w-5h-5ml-2">Start creating intelligent voice assistants that understand and respond to natural speech.
-              </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                 <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transformhover:scale-105">Start Building Now;
                 </Link>
                 <Link to="/about" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transformhover:scale-105">Learn More About Us;
-                </Link>
-              </div>
-          </div>
-        </section>
+                <div></Link>
+              </div></div>
+          </div></div>
+        <div></section></div>
       </div>
-    </>
+    </></div></div>
   );
 };
-

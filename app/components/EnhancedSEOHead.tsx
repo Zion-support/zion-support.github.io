@@ -1,13 +1,10 @@
 import React from 'react';
 export default SEOHead;
-
 'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -17,7 +14,6 @@ interface SEOHeadProps {
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
-
 const SEOHead: React.FC<SEOHeadProps /> = ({
   const title = 'Zion Tech Group - Advanced AI & IT Solutions',
   description = 'Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.',
@@ -66,28 +62,18 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
   };
   const finalStructuredData = structuredData || defaultStructuredData;
   return (
-
         <title>5G Data Analytics - Zion Tech Group</title>
       {/* Basic Meta Tags */}
-    
       <title>{title}</title>
       {/* Canonical URL */}
       {/* Open Graph Meta Tags */}
-    
       {/* Twitter Card Meta Tags */}
-    
       {/* Additional Meta Tags */}
-    
       {/* Favicon and Icons */}
-
       {/* Preconnect to external domains */}
-    
       {/* DNS Prefetch */}
-    
       {/* Structured Data */}
-    
       <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
-
       {/* Additional SEO Scripts */}
       <script type="application/ld+json"  />{JSON.stringify({
           "@context": "https: //schema.org",
@@ -99,12 +85,8 @@ const SEOHead: React.FC<SEOHeadProps /> = ({
             "target": "https: //ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
         })}
-      
       {/* Performance Hints */}
-
       {/* Security Headers */}
-    
       <meta httpEquiv="X-Frame-Options" content="DENY" / / />;
   );
 };
-

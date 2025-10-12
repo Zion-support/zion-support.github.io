@@ -1,32 +1,26 @@
 import React from 'react';
-
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, PenTool, FileText, Image, Video, Mic, Globe, Zap, Brain, BarChart, Users, Shield, Star } from 'lucide-react';
-
 const AiContentGenerationProPage: React.FC = () => {
   return (
-
         <>
       <title>AiContentGenerationPro - Zion Tech Group</title>
-
       </>
   );
 }
-
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function AiContentGenerationProPage() {
   return (
     <>
       <Helmet>
-        <title>Ai Content Generation Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional ai content generation pro by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <title>Ai Content Generation Pro - Zion Tech Group<div></title>
+        <meta name="description" content="Professional ai content generation pro by Zion Tech Group. Transform your business with our expert solutions." /></div>
+      </Helmet></div>
+      <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div></div></div>
           <h1 className="text-4xl font-bold text-white mb-6">Ai Content Generation Pro</h1>
           <p className="text-lg text-gray-300 mb-8">Professional ai content generation pro coming soon.</p>
           <Link
@@ -34,10 +28,10 @@ export default function AiContentGenerationProPage() {
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           >
             Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
+            <div><ArrowRight className="w-5 h-5 ml-2" />
+          </Link></div>
+        </div></div>
+      </div></div>
     </>
   );
 }

@@ -1,15 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+;
 import { Cloud, ArrowRight, CheckCircle, Star, TrendingUp, Server, Shield } from 'lucide-react';
-
 import Layout from '../layout'
-
+;
 import React from 'react';
-
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function CloudInfrastructureManagement() {
   const features = [
     {
@@ -33,7 +30,6 @@ export default function CloudInfrastructureManagement() {
       description: 'Proactive monitoring with automated scaling, performance optimization, and incident response'
     }
   ]
-
   const managementFeatures = [
     {
       category: 'Infrastructure Management',
@@ -52,7 +48,6 @@ export default function CloudInfrastructureManagement() {
       items: ['24/7 Support', 'Proactive Monitoring', 'Incident Response', 'Performance Tuning', 'Capacity Planning', 'Health Checks']
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -102,7 +97,6 @@ export default function CloudInfrastructureManagement() {
       popular: false;
     }
   ]
-
   const testimonials = [
     {
       name: 'Robert Kim',
@@ -123,77 +117,76 @@ export default function CloudInfrastructureManagement() {
       rating: 5;
     }
   ]
-
   return (
     <Layout;</Layout></Layout>
       title="Cloud Infrastructure Management - Enterprise Cloud Solutions | Zion Tech Group"
       description="Optimize your cloud infrastructure with comprehensive management, security, and cost optimization. Multi-cloud support, 24/7 monitoring, and enterprise-grade security. Get your free assessment today."
-      keywords="cloud infrastructure management, cloud optimization, multi-cloud, cloud security, cloud monitoring, cloud cost optimization" /></Layout>
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      keywords="cloud infrastructure management, cloud optimization, multi-cloud, cloud security, cloud monitoring, cloud cost optimization" /><div></Layout>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
         {/* Hero Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Cloud className="w-5h-5ml-2" /></Cloud>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                <Cloud className="w-5h-5ml-2"></div></Cloud></div>
                 Enterprise Cloud Management;
               </div>
               <h1 className="w-5h-5ml-2">Cloud Infrastructure Management;
               </h1>
-              <p className="w-5h-5ml-2">Optimize your cloud infrastructure with comprehensive management, security, and cost optimization. 
+              <p className="w-5h-5ml-2">Optimize your cloud infrastructure with comprehensive management, security, and cost optimization.
                 Multi-cloud support, 24/7 monitoring, and enterprise-grade security.
-              </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                 <Link;</Link></Link>
           to="/contact"
           className="bg-gradient-to-rfrom-sky-500to-purple-600text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
         ></Link>
           Get Free Assessment;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
+          <div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div>
+        </Link></div>
                 <Link to="#demo" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">View Demo;
-                </Link>
-              </div>
-          </div>
-        </section>
+                <div></Link>
+              </div></div>
+          </div></div>
+        </section></div>
         {/* Features Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <h2 className="w-5h-5ml-2" />Comprehensive Cloud Management;
               </h2>
               <p className="w-5h-5ml-2">Enterprise-grade features that optimize your cloud infrastructure performance and costs;
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-sky-500/20 hover:border-sky-400/40transition-all duration-300" /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div><div key={index} className="bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-6 border border-sky-500/20 hover:border-sky-400/40transition-all duration-300"></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     {feature.icon}
-                    <h3 className="w-5h-5ml-2" />{feature.title}</h3>
-                  </div>
-                  <p className="w-5h-5ml-2">{feature.description}</p>
+                    <h3 className="w-5h-5ml-2" />{feature.title}<div></h3>
+                  </div></div>
+                  <p className="w-5h-5ml-2"></div>{feature.description}</p>
                 </div>
               ))}
             </div>
         </section>
         {/* Management Features */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <h2 className="w-5h-5ml-2" />Complete Infrastructure Solution;
               </h2>
               <p className="w-5h-5ml-2">Everything you need to manage, secure, and optimize your cloud infrastructure;
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {managementFeatures.map((feature, index) => (
-                <div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700" /></div>
-                  <h3 className="w-5h-5ml-2" />{feature.category}</h3>
-                  <ul className="w-5h-5ml-2" /></ul>
+                <div><div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700"></div></div>
+                  <h3 className="w-5h-5ml-2" /></div>{feature.category}<div></h3>
+                  <ul className="w-5h-5ml-2"></ul></div></div>
                     {feature.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-gray-300" /></li>
-                        <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                      <div><li key={itemIndex} className="flex items-center text-gray-300"></li></div>
+                        <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
                         {item}
                       </li>
                     ))}
@@ -203,42 +196,42 @@ export default function CloudInfrastructureManagement() {
             </div>
         </section>
         {/* Pricing Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <h2 className="w-5h-5ml-2" />Transparent Pricing Plans;
               </h2>
               <p className="w-5h-5ml-2">Choose the plan that fits your infrastructure needs;
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`bg-gradient-to-br from-slate-800/50 to-purple-900/30 rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular;
-                    ? 'border-sky-400/40 scale-105 shadow-2 xl shadow-sky-500/20' 
+                    ? 'border-sky-400/40 scale-105 shadow-2 xl shadow-sky-500/20'
                     : 'border-sky-500/20 hover: border-sky-400/40'
-                }`} /></div>
+                }`}></div>
                   {plan.popular && (
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                      <Star className="w-5h-5ml-2" /></Star>
+                    <div><div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+                      <Star className="w-5h-5ml-2"></div></Star></div>
                       Most Popular;
                     </div>
                   )}
                   <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                  <p className="w-5h-5ml-2">{plan.description}</p>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                  <p className="w-5h-5ml-2">{plan.description}<div></p>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     <span className="w-5h-5ml-2" />{plan.price}</span>
-                    <span className="w-5h-5ml-2" />{plan.period}</span>
-                  </div>
-                  <ul className="w-5h-5ml-2" /></ul>
+                    <span className="w-5h-5ml-2" />{plan.period}<div></span>
+                  </div></div>
+                  <ul className="w-5h-5ml-2"></div></ul></div>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300" /></li>
-                        <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                      <div><li key={featureIndex} className="flex items-center text-gray-300"></li></div>
+                        <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
                         {feature}
                       </li>
                     ))}
-                  </ul>
-                  <Link;</Link></Link>
+                  <div></ul>
+                  <Link;</Link></Link></div></div>
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular;
@@ -252,24 +245,24 @@ export default function CloudInfrastructureManagement() {
             </div>
         </section>
         {/* Testimonials */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <h2 className="w-5h-5ml-2" />Trusted by Industry Leaders;
               </h2>
               <p className="w-5h-5ml-2">See how our Cloud Infrastructure Management transforms businesses;
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700" /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div><div key={index} className="bg-slate-800/50rounded-xl p-6 border border-slate-700"></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5h-5tex t-yellow-400fill-current"  /></Star>
+                      <Star key={i} className="w-5h-5tex t-yellow-400fill-current"></Star>
                     ))}
                   </div>
-                  <p className="w-5h-5ml-2">"{testimonial.content}"</p>
-                  <div /></div>
+                  <p className="w-5h-5ml-2">"{testimonial.content}"<div></p>
+                  <div></div></div></div>
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.name}</div>
                     <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">{testimonial.company}</div>
                 </div>
@@ -277,24 +270,23 @@ export default function CloudInfrastructureManagement() {
             </div>
         </section>
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <h2 className="w-5h-5ml-2" />Optimize Your Cloud Infrastructure Today;
               </h2>
               <p className="w-5h-5ml-2">Join thousands of businesses using our Cloud Infrastructure Management to reduce costs and improve performance;
-              </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                 <Link to="/contact" className="bg-gradient-to-rfrom-sky-500to-purple-600text-white px-8 py-4 rounded-lg font-semibold hover:from-sky-600 hover:to-purple-700transition-all duration-300">Get Your Free Assessment;
                 </Link>
                 <Link to="/about" className="border-2border-white text-white px-8 py-4 rounded-lg font-semiboldhover:bg-white/10 transition-colors">Learn More;
-                </Link>
-              </div>
-          </div>
-        </section>
+                <div></Link>
+              </div></div>
+          </div></div>
+        <div></section></div>
       </div>
-    </Layout>
+    </Layout></div></div>
   )
 };
-
 };

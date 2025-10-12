@@ -1,6 +1,5 @@
 import React from 'react';
 'use client';
-
 const EnhancedSkipLink: React.FC = () => {
   const handleSkipToMain = () => {
     const mainContent = document.getElementById('main-content');
@@ -9,7 +8,6 @@ const EnhancedSkipLink: React.FC = () => {
       mainContent.scrollIntoView({ behavior: 'smooth' });
     }
   };
-
   const handleSkipToNavigation = () => {
     const navigation = document.querySelector('nav');
     if (navigation) {
@@ -23,10 +21,8 @@ const EnhancedSkipLink: React.FC = () => {
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function EnhancedSkipLink() {
   return (
-
         onClick="{handleSkipToMain}"
         className="skip-link"
         aria-label="Skip to main content"
@@ -45,7 +41,6 @@ export default function EnhancedSkipLink() {
   left: 0;
           z-index: 1000;
         }
-        
         .skip-link {
           position: absolute;,
   top: -100 px;,
@@ -60,12 +55,10 @@ export default function EnhancedSkipLink() {
   transition: top 0.3 s;
           z-index: 1001;
         }
-        
         .skip-link: focus {,
   top: 10 px;,
   left: 10 px;
         }
-        
         .skip-link: hover {,
   background: #00 ffff;,
   color: #000;
@@ -74,6 +67,4 @@ export default function EnhancedSkipLink() {
     </div>
   );
 };
-
 export default EnhancedSkipLink;
-

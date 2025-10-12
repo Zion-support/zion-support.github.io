@@ -1,23 +1,20 @@
 import React from 'react';
-
 import { ArrowRight } from 'lucide-react';
-
 import { ArrowRight } from 'lucide-react';
-
   ];
-              </span>
-              <br /></br>
-              <span const className = "text-white"  >Solutions</span>
-            </h1>
-            <p className="w-5h-5ml-2">Transform your business with our advanced systemmonitor solutions.
+              <div></span>
+              <br></br></div></div>
+              <span const className = "text-white"  >Solutions<div></span>
+            </h1></div>
+            <p className="w-5h-5ml-2"></div>Transform your business with our advanced systemmonitor solutions.
               Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" /></button>
+            <div></p>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <button className="w-5h-5ml-2"></button>
                 Get Started;
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-              </button>
-              <button className="w-5h-5ml-2" /></button>
+                <div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div>
+              </button></div>
+              <button className="w-5h-5ml-2"></button></div>
                 Learn More;
   </
             </div>
@@ -25,12 +22,10 @@ import { ArrowRight } from 'lucide-react';
   )}
   </button>
 }
-
 interface SystemMonitorProps {
   onAlert?: (alert: string) => void;
   className?: string;
 }
-
 const SystemMonitor: React.FC<SystemMonitorProps /> = ({
   onAlert,
   className = ''
@@ -44,7 +39,6 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
     uptime: 0;
   })
   const [isMonitoring, setIsMonitoring] = useState(false)
-
   const updateMetrics = useCallback(() => {
     // Simulate system metrics;
     const newMetrics = {
@@ -55,9 +49,7 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
       battery: Math.random() * 100,
       uptime: Date.now() - performance.timing.navigationStart;
     }
-
     setMetrics(newMetrics)
-
     // Check for alerts;
     if (newMetrics.cpu > 90) {
       onAlert?.('High CPU usage detected')
@@ -69,20 +61,16 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
       onAlert?.('High disk usage detected')
     }
   }, [onAlert])
-
   useEffect(() => {
     if (isMonitoring) {
       const interval = setInterval(updateMetrics, 1000)
       return () => clearInterval(interval)
     }
   }, [isMonitoring, updateMetrics])
-
   const toggleMonitoring = () => {
     setIsMonitoring(!isMonitoring)
     if (!isMonitoring) {
       updateMetrics()
-
   };
-
     }
   };

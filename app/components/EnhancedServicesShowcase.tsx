@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { ArrowRight } from 'lucide-react';
-
   const services = [
     {
       icon: Brain,
@@ -41,46 +39,43 @@ import { ArrowRight } from 'lucide-react';
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
           <h2 className="w-5h-5ml-2" />Our Core Services;
           </h2>
           <p className="w-5h-5ml-2">Comprehensive AI and IT solutions designed to transform your business and drive innovation;
-          </p>
-        </div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+          <div></p>
+        </div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
           {services.map((service, index) => (
-
-              <div key={index} className="cyber-card p-8 grouphover:scale-105transition-transform" /></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <service.icon className="h-12w-12tex t-cyan-400mr-4"  /></service>
+              <div><div key={index} className="cyber-card p-8 grouphover:scale-105transition-transform"></div></div>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+                <service.icon className="h-12w-12tex t-cyan-400mr-4"></service></div></div>
                 <h3 className="w-5h-5ml-2" />{service.title}
-                </h3>
-              </div>
-              <p className="w-5h-5ml-2">{service.description}
-              </p>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <h4 className="text-sm font-semiboldtext-cyan-400mb-3"  >Key Features</h4>
-                <ul className="w-5h-5ml-2" /></ul>
+                <div></h3>
+              </div></div>
+              <p className="w-5h-5ml-2"></div>{service.description}
+              <div></p>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                <h4 className="text-sm font-semiboldtext-cyan-400mb-3"  >Key Features<div></h4>
+                <ul className="w-5h-5ml-2"></ul></div></div>
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-centertext-sm text-gray-300" /></li>
-                      <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                    <div><li key={featureIndex} className="flex items-centertext-sm text-gray-300"></li></div>
+                      <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
                       {feature}
                     </li>
                   ))}
-                </ul>
-              </div>
-              <button className="w-5h-5ml-2" /></button>
+                <div></ul>
+              </div></div>
+              <button className="w-5h-5ml-2"></div></button></div>
                 Learn More;
-                <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-              </button>
-            </div>
+                <div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div>
+              </button></div>
+            </div></div>
           ))}
         </div>
     </div>
   )
-
 };
-
 };

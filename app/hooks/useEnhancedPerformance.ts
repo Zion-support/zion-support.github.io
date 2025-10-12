@@ -1,6 +1,5 @@
 
 import { useState, useEffect, useCallback } from 'react';
-
 export const useEnhancedPerformance = () => {
 interface PerformanceMetrics {
   loadTime: number;
@@ -8,25 +7,20 @@ interface PerformanceMetrics {
   memoryUsage: number;
   networkLatency: number;
 }
-
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     networkLatency: 0,
   });
-
   const [isOptimized, setIsOptimized] = useState(false);
-
   useEffect(() => {
     if (typeof window === 'undefined') return;
-
     // Measure load time;
     const measureLoadTime = () => {
       const loadTime = performance.now();
       setMetrics(prev => ({ ...prev, loadTime }));
     };
-
     // Measure render time;
     const measureRenderTime = () => {
       const renderStart = performance.now();
@@ -35,7 +29,6 @@ interface PerformanceMetrics {
         setMetrics(prev => ({ ...prev, renderTime }));
       });
     };
-
     // Measure memory usage;
     const measureMemoryUsage = () => {
       if ('memory' in performance) {
@@ -44,7 +37,6 @@ interface PerformanceMetrics {
         setMetrics(prev => ({ ...prev, memoryUsage }));
       }
     };
-
     // Measure network latency;
     const measureNetworkLatency = () => {
       const start = performance.now();
@@ -58,29 +50,24 @@ interface PerformanceMetrics {
           setMetrics(prev => ({ ...prev, networkLatency: 0 }));
         });
     };
-
     // Run measurements;
     measureLoadTime();
     measureRenderTime();
     measureMemoryUsage();
     measureNetworkLatency();
-
     // Check if performance is optimized;
     const checkOptimization = () => {
-      const isOptimized = 
+      const isOptimized =
         metrics.loadTime < 1000 && // Load time under 1 second;
         metrics.renderTime < 16 && // Render time under 16ms (60fps)
         metrics.memoryUsage < 100 && // Memory usage under 100MB;
         metrics.networkLatency < 200; // Network latency under 200ms;
       setIsOptimized(isOptimized);
     };
-
     // Check optimization after metrics are updated;
     const timeoutId = setTimeout(checkOptimization, 1000);
-
     return () => clearTimeout(timeoutId);
   }, [metrics.loadTime, metrics.renderTime, metrics.memoryUsage, metrics.networkLatency]);
-
   const optimizePerformance = () => {
     // Preload critical resources;
     const criticalResources = [
@@ -88,7 +75,6 @@ interface PerformanceMetrics {
       '/images/hero-bg.jpg',
       '/images/logo.png',
     ];
-
     criticalResources.forEach((resource) => {
       const link = document.createElement('link');
       link.rel = 'preload';
@@ -99,7 +85,6 @@ interface PerformanceMetrics {
       }
       document.head.appendChild(link);
     });
-
     // Optimize images;
     const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver((entries) => {
@@ -112,12 +97,9 @@ interface PerformanceMetrics {
         }
       });
     });
-
     images.forEach((img) => imageObserver.observe(img));
-
     // Add performance optimizations;
     document.documentElement.style.scrollBehavior = 'smooth';
-    
     // Optimize scroll performance;
     let ticking = false;
     const updateScrollPosition = () => {
@@ -129,12 +111,9 @@ interface PerformanceMetrics {
         ticking = true;
       }
     };
-
     window.addEventListener('scroll', updateScrollPosition, { passive: true });
-
     return () => window.removeEventListener('scroll', updateScrollPosition);
   };
-
   return {
     metrics,
     isOptimized,

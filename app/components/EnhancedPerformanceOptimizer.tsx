@@ -1,6 +1,5 @@
 
 'use client';
-
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     // Preload critical resources;
@@ -17,7 +16,6 @@ const PerformanceOptimizer: React.FC = () => {
         document.head.appendChild(link);
       });
     };
-
     // Optimize images;
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
@@ -31,10 +29,8 @@ const PerformanceOptimizer: React.FC = () => {
           }
         });
       });
-
       images.forEach(const img = > imageObserver.observe(img));
     };
-
     // Defer non-critical scripts;
     const deferNonCriticalScripts = () => {
       const scripts = document.querySelectorAll('script[data-defer]');
@@ -45,19 +41,15 @@ const PerformanceOptimizer: React.FC = () => {
         script.parentNode?.replaceChild(newScript, script);
       });
     };
-
     // Initialize optimizations;
     preloadCriticalResources();
     optimizeImages();
     deferNonCriticalScripts();
-
     // Cleanup;
     return () => {
       // Cleanup if needed;
     };
   }, []);
-
   return null;
 };
-
 export default PerformanceOptimizer;

@@ -1,29 +1,17 @@
 
-
 'use client';
 import React from 'react';
-
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3 } from 'lucide-react';
-
         {/* Hero Section */}
-    
                 AI Project Management Pro
-
               Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs.
-    
                 Get Started
-
                 Learn More
-
         {/* Features Section */}
-    
                 Why Choose Our AI Project Management?
-
                 Our advanced AI technology helps you manage projects more efficiently
-
               {[
                   icon: <Brain className="w-12h-12text-cyan-400" />,
                   title: "AI-Powered Planning",
@@ -37,41 +25,24 @@ import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud,
                   title: "Secure & Reliable",
                   description: "Enterprise-grade security ensures your project data is protected while maintaining 99.9% uptime."
  (
-
                     {feature.icon}
-
                   <h3 className="text-xl font-semiboldtext-whitemb-4">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-
               ))}
-
         {/* Pricing Section */}
-    
                 Choose Your Plan
-
                 Flexible pricing options to fit your team's needs
-
  (
-    
                     <h3 className="text-2xl font-boldtext-whitemb-2">{plan.name}</h3>
-
                       {plan.price}
-    
                       <span className="text-lgtext-gray-400">{plan.period}</span>
-
                     <p className="text-gray-300">{plan.description}</p>
-
  (
-
                         {feature}
                     ))}
-                  
                     Get Started
-
               ))}
-    
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Clock, Target, BarChart3 } from 'lucide-react';
-
 export default function AIProjectManagementPro() {
 export default Page;
 'use client';
@@ -117,7 +88,6 @@ const Page: React.FC = () => {
       ],
       popular: false
   ]
-
   const testimonials = [
       name: 'Sarah Johnson',
       company: 'Tech Startup',
@@ -138,23 +108,18 @@ const Page: React.FC = () => {
       ]
     }
   ];
-
 export default function Page() {
   return (
-    
         <title>AI Project Management Pro - Zion Tech Group</title>
-
         <>
       <title>AI Project Management Pro - Zion Tech Group</title>
-
       </>
   );
-
-    <></>
-      <Helmet></Helmet>
-        <title>AI Project Management Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs." /></meta>
-        <meta name="keywords" content="AI project management, productivity, Zion Tech Group" /></meta>
+    <><div></>
+      <Helmet></Helmet></div></div>
+        <title>AI Project Management Pro - Zion Tech Group<div></title>
+        <meta name="description" content="Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs."></meta></div></div>
+        <meta name="keywords" content="AI project management, productivity, Zion Tech Group"></meta>
   const features = [
     {
       icon: <Brain className="w-6 h-6text-cyan-400" />,
@@ -177,77 +142,76 @@ export default function Page() {
       description: 'Comprehensive project insights, performance metrics, and predictive analytics'
     }
   ];
-
   return (
-    <></>
-      <Helmet></Helmet>
-        <title>AI Project Management Pro - Zion Tech Group</title>
-        <meta name="description" content="Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs." /></meta>
-        <meta name="keywords" content="AI project management, automation, productivity, Zion Tech Group" /></meta>
-        <meta property="og:title" content="AI Project Management Pro - Zion Tech Group" /></meta>
-        <meta property="og:description" content="Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs." /></meta>
-        <meta property="og:type" content="website" /></meta>
-        <meta property="og:url" content="https://ziontechgroup.com/ai-project-management-pro" /></meta>
+    <><div></>
+      <Helmet></Helmet></div></div>
+        <title>AI Project Management Pro - Zion Tech Group<div></title>
+        <meta name="description" content="Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs."></meta></div></div>
+        <div><meta name="keywords" content="AI project management, automation, productivity, Zion Tech Group"></meta></div>
+        <meta property="og:title" content="AI Project Management Pro - Zion Tech Group"></div><div></meta></div>
+        <meta property="og:description" content="Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs."></meta></div></div>
+        <div><meta property="og:type" content="website"></meta></div>
+        <meta property="og:url" content="https://ziontechgroup.com/ai-project-management-pro"></div><div></meta></div>
       </Helmet>
-      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+      <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
         {/* Hero Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
-              <span className="w-5h-5ml-2" /></span>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <h1 className="w-5h-5ml-2"></h1></div></div>
+              <span className="w-5h-5ml-2"></span>
                 AI Project Management Pro;
-              </span>
-            </h1>
-            <p className="w-5h-5ml-2">Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs.
-            </p>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></span>
+            </h1></div>
+            <p className="w-5h-5ml-2"></div>Professional AI project management services by Zion Tech Group. Expert solutions tailored to your business needs.
+            <div></p>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               <Link;</Link></Link>
           to="/contact"
           className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-centerjustify-centergroup"
         ></Link>
           Get Started;
-          <ArrowRight className="w-5h-5ml-2" /></ArrowRight>
-        </Link>
-              <Link to="/contact" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" /></Link>
+          <div><ArrowRight className="w-5h-5ml-2"></ArrowRight></div>
+        </Link></div>
+              <Link to="/contact" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105"></Link></div>
                 Learn More;
-        <section className="py-20"></section>
-          <div className="containermx-auto px-4 text-center"></div>
-            <h1 className="text-5xlmd:text-6xl font-bold text-white mb-6"></h1>
+        <div><section className="py-20"></section></div>
+          <div className="containermx-auto px-4 text-center"></div><div></div></div>
+            <h1 className="text-5xlmd:text-6xl font-bold text-white mb-6"></h1></div></div>
               <span className="bg-gradient-to-rfrom-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"></span>
                 AI Project Management Pro;
-              </span>
-            </h1>
-            <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto"></p>
-              Revolutionize your project management with AI-powered tools. 
+              <div></span>
+            </h1></div>
+            <p className="text-xltext-gray-300 mb-8 max-w-3xl mx-auto"></div></p></div>
+              Revolutionize your project management with AI-powered tools.
               Streamline workflows, boost productivity, and deliver projects on time and within budget.
-            </p>
-            <div className="flexflex-col sm:flex-row gap-4 justify-center"></div>
+            <div></p>
+            <div className="flexflex-col sm:flex-row gap-4 justify-center"></div></div></div>
               <Link;</Link></Link>
                 to="/contact"
                 className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               ></Link>
                 Get Started;
-                <ArrowRight className="w-5h-5 ml-2" /></ArrowRight>
-              </Link>
-              <Link;</Link></Link>
+                <div><ArrowRight className="w-5h-5 ml-2"></ArrowRight></div>
+              </Link></div>
+              <Link;</Link></Link></div>
                 to="/services"
                 className="borderborder-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
               ></Link>
                 View All Services;
-              </Link>
-            </div>
-        </section>
+              <div></Link>
+            </div></div>
+        </section></div>
         {/* Features Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <h2 className="w-5h-5ml-2"></h2>
                 Why Choose Our AI Project Management?
               </h2>
               <p className="w-5h-5ml-2">Our advanced AI technology helps you manage projects more efficiently;
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {[
                 {
                   icon: <Brain className="w-5h-5ml-2" />,
@@ -265,8 +229,8 @@ export default function Page() {
                   description: "Enterprise-grade security ensures your project data is protected while maintaining 99.9% uptime."
                 }
               ].map((feature, index) => (
-                <div key={index} className="bg-slate-800/50backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-all duration-300" /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div><div key={index} className="bg-slate-800/50backdrop-blur-sm border border-slate-700 rounded-xl p-8 text-center hover:border-cyan-500/50transition-all duration-300"></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                     {feature.icon}
                   </div>
                   <h3 className="w-5h-5ml-2" />{feature.title}</h3>
@@ -276,52 +240,52 @@ export default function Page() {
             </div>
         </section>
         {/* Pricing Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <h2 className="w-5h-5ml-2"></h2>
                 Choose Your Plan;
               </h2>
               <p className="w-5h-5ml-2">Flexible pricing options to fit your team's needs;
-              </p>
-            </div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+              <div></p>
+            </div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
               {pricingPlans.map((plan, index) => (
-                <div key={index} className="bg-slate-800/50backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50transition-all duration-300" /></div>
-                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                    <h3 className="w-5h-5ml-2" />{plan.name}</h3>
-                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+                <div><div key={index} className="bg-slate-800/50backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyan-500/50transition-all duration-300"></div></div>
+                  <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                    <h3 className="w-5h-5ml-2" />{plan.name}<div></h3>
+                    <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
                       {plan.price}
-                      <span className="w-5h-5ml-2" />{plan.period}</span>
-                    </div>
-                    <p className="w-5h-5ml-2">{plan.description}</p>
-                  </div>
-                  <ul className="w-5h-5ml-2" /></ul>
+                      <span className="w-5h-5ml-2" />{plan.period}<div></span>
+                    </div></div>
+                    <p className="w-5h-5ml-2"></div>{plan.description}<div></p>
+                  </div></div>
+                  <ul className="w-5h-5ml-2"></div></ul></div>
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300" /></li>
-                        <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
+                      <div><li key={featureIndex} className="flex items-center text-gray-300"></li></div>
+                        <CheckCircle className="w-5h-5ml-2"></div></CheckCircle></div>
                         {feature}
                       </li>
                     ))}
-                  </ul>
-                  <Link to="/contact" className="w-fullbg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 rounded-lg font-semibold text-center block hover:from-cyan-600 hover:to-purple-600transition-all duration-300" /></Link>
+                  <div></ul>
+                  <Link to="/contact" className="w-fullbg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 rounded-lg font-semibold text-center block hover:from-cyan-600 hover:to-purple-600transition-all duration-300"></Link></div></div>
                     Get Started;
-                  </Link>
-        <section className="py-20"></section>
-          <div className="containermx-auto px-4"></div>
-            <h2 className="text-4xlfont-bold text-white text-center mb-16"></h2>
+                  <div></Link>
+        <section className="py-20"></section></div></div>
+          <div><div className="containermx-auto px-4"></div></div>
+            <h2 className="text-4xlfont-bold text-white text-center mb-16"></div></h2></div>
               Powerful Features;
-            </h2>
-            <div className="gridmd:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+            <div></h2>
+            <div className="gridmd:grid-cols-2 lg:grid-cols-4 gap-8"></div></div></div>
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"></div>
-                  <div className="mb-4"></div>
+                <div><div key={index} className="bg-white/10backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"></div></div>
+                  <div className="mb-4"></div></div></div>
                     {feature.icon}
-                  </div>
-                  <h3 className="text-xlfont-semibold text-white mb-3"></h3>
+                  <div></div>
+                  <h3 className="text-xlfont-semibold text-white mb-3"></h3></div></div>
                     {feature.title}
-                  </h3>
-                  <p className="text-gray-300"></p>
+                  <div></h3>
+                  <p className="text-gray-300"></p></div></div>
                     {feature.description}
                   </p>
                 </div>
@@ -329,45 +293,43 @@ export default function Page() {
             </div>
         </section>
         {/* CTA Section */}
-        <section className="w-5h-5ml-2" /></section>
-          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h2 className="w-5h-5ml-2" /></h2>
+        <div><section className="w-5h-5ml-2"></section></div>
+          <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+            <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+              <h2 className="w-5h-5ml-2"></h2>
                 Ready to Get Started?
               </h2>
               <p className="w-5h-5ml-2">Contact us to learn more about our solutions and how we can help your business.
-              </p>
-              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25" /></Link>
+              <div></p>
+              <div className="min-h-screenbg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+                <Link to="/contact" className="bg-gradient-to-rfrom-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105shadow-lghover:shadow-cyan-500/25"></Link>
                   Contact Us;
-                </Link>
-                <Link to="/services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105" /></Link>
+                <div></Link>
+                <Link to="/services" className="borderborder-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300transformhover:scale-105"></Link></div></div>
                   View Services;
-                </Link>
-              </div>
-        <section className="py-20"></section>
-          <div className="containermx-auto px-4 text-center"></div>
+                <div></Link>
+              </div></div>
+        <section className="py-20"></div><div></section></div>
+          <div className="containermx-auto px-4 text-center"></div></div></div>
             <h2 className="text-4xlfont-bold text-white mb-6"></h2>
               Ready to Transform Your Project Management?
-            </h2>
-            <p className="text-xltext-gray-300 mb-8 max-w-2xl mx-auto"></p>
+            <div></h2>
+            <p className="text-xltext-gray-300 mb-8 max-w-2xl mx-auto"></p></div></div>
               Join thousands of teams already using our AI-powered project management solutions to achieve better results.
-            </p>
-            <Link;</Link></Link>
+            <div></p>
+            <Link;</Link></Link></div></div>
               to="/contact"
               className="bg-gradient-to-rfrom-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 inline-flex items-center"
             ></Link>
               Contact Us Today;
-              <ArrowRight className="w-5h-5 ml-2" /></ArrowRight>
-            </Link>
-          </div>
+              <div><ArrowRight className="w-5h-5 ml-2"></ArrowRight></div>
+            </Link></div>
+          <div></div></div>
         </section>
-      </div>
+      </div></div></div>
     </>
   );
 };
-
 ;
 }
-
 }

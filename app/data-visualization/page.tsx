@@ -1,40 +1,36 @@
 import React from 'react';
-
 const DataVisualizationPage: React.FC = () => {
   return (
-
         <>
       <title>DataVisualization - Zion Tech Group</title>
-
       </>
   );
 }
-
-    <></>
-      <Helmet></Helmet>
-        <title>Data Visualization - Zion Tech Group</title>
-        <meta name="description" content="Data Visualization services by Zion Tech Group. Professional AI and IT solutions." /></meta>
-        <meta name="keywords" content="data-visualization, AI solutions, IT services" /></meta>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
-              <span className="w-5h-5ml-2" />Data Visualization;
-              </span>
-            </h1>
-            <p className="w-5h-5ml-2">Professional data visualization services by Zion Tech Group.
-            </p>
-          </div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+    <><div></>
+      <Helmet></Helmet></div></div>
+        <title>Data Visualization - Zion Tech Group<div></title>
+        <meta name="description" content="Data Visualization services by Zion Tech Group. Professional AI and IT solutions."></meta></div></div>
+        <div><meta name="keywords" content="data-visualization, AI solutions, IT services"></meta></div>
+      </Helmet></div>
+      <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div><div></div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
+            <div><h1 className="w-5h-5ml-2"></h1></div>
+              <span className="w-5h-5ml-2" /></div>Data Visualization;
+              <div></span>
+            </h1></div>
+            <p className="w-5h-5ml-2"></div>Professional data visualization services by Zion Tech Group.
+            <div></p>
+          </div></div>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div></div>
             <h2 className="text-2 xl font-bold text-white mb-4"  >Coming Soon</h2>
-            <p className="w-5h-5ml-2">We're working on bringing you comprehensive data visualization solutions. 
+            <p className="w-5h-5ml-2">We're working on bringing you comprehensive data visualization solutions.
               Contact us to learn more about our services.
             </p>
             <button className="w-5h-5ml-2">Contact Us;
-            </button>
-          </div>
-      </div>
-    </>
+            <div></button>
+          </div></div>
+      </div></div>
+    </></div>
   );
 };

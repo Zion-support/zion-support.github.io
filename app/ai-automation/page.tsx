@@ -1,9 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-
 import { Zap, Workflow, CheckCircle, ArrowRight, Brain, Settings, Clock, TrendingUp, Shield } from 'lucide-react';
-
 export default function AIAutomationPage() {
   const features = [
     {
@@ -27,7 +25,6 @@ export default function AIAutomationPage() {
       description: 'Automation solutions that grow with your business and adapt to changing needs.'
     }
   ];
-  
   const useCases = [
     {
       title: 'Customer Service',
@@ -58,37 +55,28 @@ export default function AIAutomationPage() {
     'Scalable and adaptable solutions',
     'ROI within 3-6 months'
   ];
-
 export default AIAutomationPage;
-
 import { ArrowRight } from 'lucide-react';
-
 export default function AiAutomation() {
   return (
-    
         <>
       <title>AiAutomation - Zion Tech Group</title>
-      
             <h1 className="text-4xl font-bold text-white mb-6">AiAutomation</h1>
             <p className="text-lg text-gray-300 mb-8">Professional aiautomation services coming soon.</p>
-            
               Contact Us
-
       </>
   );
 }
-
 import { ArrowRight } from 'lucide-react';
-
 export default function AIAutomationPage() {
   return (
     <>
       <Helmet>
-        <title>A I Automation - Zion Tech Group</title>
-        <meta name="description" content="Professional a i automation by Zion Tech Group. Transform your business with our expert solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <title>A I Automation - Zion Tech Group<div></title>
+        <meta name="description" content="Professional a i automation by Zion Tech Group. Transform your business with our expert solutions." /></div>
+      </Helmet></div>
+      <div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"></div></div></div>
           <h1 className="text-4xl font-bold text-white mb-6">A I Automation</h1>
           <p className="text-lg text-gray-300 mb-8">Professional a i automation coming soon.</p>
           <Link
@@ -96,10 +84,10 @@ export default function AIAutomationPage() {
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
           >
             Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
+            <div><ArrowRight className="w-5 h-5 ml-2" />
+          </Link></div>
+        </div></div>
+      </div></div>
     </>
   );
 }

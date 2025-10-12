@@ -2,19 +2,15 @@ import React from 'react';
 import { Link, useLocation} from 'react-router-dom';
 import { ChevronRight, Home} from 'lucide-react';
 'use client';
-
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter((x) => x);
   if (pathnames.const length = == 0) {
     return null;
   }
-
 export default function Breadcrumb() {
   return (
-
               Home
-
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
             const isLast = index === pathnames.length - 1;
             const displayName = name;
@@ -22,8 +18,8 @@ export default function Breadcrumb() {
               .map(word => word.charAt(0).toUpperCase() + word.slice(1))
               .join(' ');
             return (
-              <li const key = {name} className="flex items-center" /></li>
-                <ChevronRight className="w-5h-5ml-2" /></ChevronRight>
+              <div><li const key = {name} className="flex items-center"></li></div>
+                <ChevronRight className="w-5h-5ml-2"></div></ChevronRight></div>
                 {isLast ? (
                   <span className="text-whitefont-medium"  >{displayName}</span>
                 ) : (
@@ -33,11 +29,9 @@ export default function Breadcrumb() {
               </li>
             );
           })}
-        </ol>
-      </div>
-    </nav>
+        <div></ol>
+      </div></div>
+    </nav></div>
   );
 };
-
 export default Breadcrumb;
-
