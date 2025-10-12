@@ -12,7 +12,6 @@ function fixFileContent(content) {
   fixed = fixed.replace(/import\s+([^']+)from\s+\\'([^']+)\\'/g, "import $1 from '$2'");
   
   // Fix className spacing issues (missing spaces between classes)
-  fixed = fixed.replace(/(\w+)([A-Z][a-z]+)(\w+)/g, (match, p1, p2, p3) => {
     // Only fix if it looks like a className issue (contains common Tailwind patterns)
     if (match.includes('from-') || match.includes('to-') || match.includes('bg-') || 
         match.includes('text-') || match.includes('border-') || match.includes('px-') || 
@@ -23,7 +22,6 @@ function fixFileContent(content) {
         match.includes('md:') || match.includes('lg:') || match.includes('sm:') ||
         match.includes('xl:') || match.includes('2xl:')) {
       return p1 + ' ' + p2 + p3;
-    }
     return match;
   });
   
@@ -56,7 +54,6 @@ function fixFileContent(content) {
   fixed = fixed.replace(/<\/meta>\s*<\/Helmet>/g, '</meta>\n      </Helmet>');
   
   return fixed;
-}
 
 // Function to process a single file
 function processFile(filePath) {
@@ -68,13 +65,10 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
-    }
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
 
 // Main function
 async function main() {
@@ -87,14 +81,11 @@ async function main() {
   
   let fixedCount = 0;
   
-  files.forEach(file => {
     if (processFile(file)) {
       fixedCount++;
-    }
   });
   
   console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`);
-}
 
 main().catch(console.error);
 

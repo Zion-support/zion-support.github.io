@@ -6,9 +6,8 @@ interface LazyImageProps {
   alt: string
   className?: string
   placeholder?: string
-  onLoad?: () => void
-  onError?: () => void
-}
+ void
+ void
 
 const LazyImage: React.FC<LazyImageProps /> = ({
   src,
@@ -17,43 +16,34 @@ const LazyImage: React.FC<LazyImageProps /> = ({
   placeholder,
   onLoad,
   onError
-}) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
   const [hasError, setHasError] = useState(false)
   const imgRef = useRef<HTMLImageElement />(null)
 
-  useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true)
           observer.disconnect()
-        }
       },
       { threshold: 0.1 }
     )
 
     if (imgRef.current) {
       observer.observe(imgRef.current)
-    }
 
-    return () => observer.disconnect()
+ observer.disconnect()
   }, [])
 
-  const handleLoad = () => {
     setIsLoaded(true)
     onLoad?.()
-  }
 
-  const handleError = () => {
     setHasError(true)
     onError?.()
-  }
 
   return (
-    <div ref="{imgRef}" className="{`relative" overflow-hidden ${className}`} />
       {!isInView && (
+<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           <Loader2 className="w-5 h-5ml-2" />
         </div>
@@ -82,11 +72,28 @@ const LazyImage: React.FC<LazyImageProps /> = ({
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
             <div className="w-8h-8mx-a utomb-2"  >📷</div>
-            <p className="text-sm">Image failed to load</p>
-          </div>
-      )}
-    </div>
-  )
-}
+=======
 
+      )}
+      
+      {isInView && !isLoaded && !hasError && (
+
+      )}
+      
+      {isInView && (
+      )}
+      
+      {hasError && (
+
+            <div className="w-8 h-8mx-automb-2">📷</div>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
+            <p className="text-sm">Image failed to load</p>
+      )}
+  )
+
+<<<<<<< HEAD
 export default LazyImage;
+=======
+export default LazyImage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882

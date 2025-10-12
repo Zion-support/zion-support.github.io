@@ -11,7 +11,6 @@ import { useState, useCallback, ChangeEvent } from 'react';
   onSubmit: (values: T) => void | Promise<void>;
   validateOnChange?: boolean;
   validateOnBlur?: boolean;
-}
   values: T;
   errors: Record<keyof T, string[]>;
   touched: Record<keyof T, boolean>;
@@ -20,13 +19,12 @@ import { useState, useCallback, ChangeEvent } from 'react';
   handleChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
   handleBlur: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-  setFieldValue: (field: keyof T, value: T[keyof T]) => void;
-  setFieldError: (field: keyof T, errors: string[]) => void;
-  setFieldTouched: (field: keyof T, touched: boolean) => void;
-  resetForm: () => void;
-  validateField: (field: keyof T) => void;
-  validateAllFields: () => boolean;
-}
+ void;
+ void;
+ void;
+ void;
+ void;
+ boolean;
   initialValues, validationSchema = {}, onSubmit, validateOnChange = true, validateOnBlur = true
   const [values, setValues] = useState<T>(initialValues);
   const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);
@@ -57,12 +55,10 @@ import { useState, useCallback, ChangeEvent } from 'react';
       // Handle checkbox inputs
       let fieldValue: unknown = value;
         fieldValue = (e.target as HTMLInputElement).checked;
-      }
         [fieldName]: fieldValue
       }));
       // Validate on change if enabled
-        setTimeout(() => validateSingleField(fieldName), 0);
-      }
+ validateSingleField(fieldName), 0);
     [validateOnChange, touched, validateSingleField]
   );
   // Handle input blur
@@ -72,7 +68,6 @@ import { useState, useCallback, ChangeEvent } from 'react';
       }));
       // Validate on blur if enabled
         validateSingleField(fieldName);
-      }
     [validateOnBlur, validateSingleField]
   );
   // Handle form submission
@@ -87,19 +82,16 @@ import { useState, useCallback, ChangeEvent } from 'react';
       // Validate all fields
       const isValid = validateAllFields();
         return;
-      }
       setIsSubmitting(true);
         await onSubmit(values);
         console.error('Form submission error:', error);
         setIsSubmitting(false);
-      }
     [values, validateAllFields, onSubmit]
   );
   // Set field value programmatically
   
     }));
-      setTimeout(() => validateSingleField(field), 0);
-    }
+ validateSingleField(field), 0);
   }, [validateOnChange, touched, validateSingleField]);
   // Set field error programmatically
   
@@ -118,7 +110,6 @@ import { useState, useCallback, ChangeEvent } from 'react';
   }, [initialValues]);
   // Check if form is valid
   
-    Object.values(errors).every(errorArray => errorArray.length === 0);
+ errorArray.length === 0);
     validateAllFields
   };
-}

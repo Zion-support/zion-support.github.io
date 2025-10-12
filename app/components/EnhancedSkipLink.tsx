@@ -1,27 +1,32 @@
+<<<<<<< HEAD
+=======
+
+'use client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import React from 'react';
 'use client';
 
+<<<<<<< HEAD
 const EnhancedSkipLink: React.FC = () => {
   const handleSkipToMain = () => {
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
     const mainContent = document.getElementById('main-content');
     if (mainContent) {
       mainContent.focus();
       mainContent.scrollIntoView({ behavior: 'smooth' });
-    }
   };
 
-  const handleSkipToNavigation = () => {
     const navigation = document.querySelector('nav');
     if (navigation) {
       const firstLink = navigation.querySelector('a');
       if (firstLink) {
         firstLink.focus();
         firstLink.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <button
         onClick="{handleSkipToMain}"
@@ -35,13 +40,24 @@ const EnhancedSkipLink: React.FC = () => {
         aria-label="Skip to navigation"
         />Skip to navigation
       </button>
+=======
+      
+        onClick="{handleSkipToMain}"
+        className="skip-link"
+Skip to main content
+      
+        onClick="{handleSkipToNavigation}"
+        className="skip-link"
+        aria-label="Skip to navigation"
+Skip to navigation
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
       <style jsx  />{`
         .skip-links {;
           position: absolute;,
   top: -100 px;,
   left: 0;
           z-index: 1000;
-        }
         
         .skip-link {
           position: absolute;,
@@ -56,20 +72,25 @@ const EnhancedSkipLink: React.FC = () => {
           font-weight: bold;,
   transition: top 0.3 s;
           z-index: 1001;
-        }
         
         .skip-link: focus {,
   top: 10 px;,
   left: 10 px;
-        }
         
         .skip-link: hover {,
   background: #00 ffff;,
   color: #000;
+<<<<<<< HEAD
         }
+=======
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
       `}</style>
-    </div>
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedSkipLink;
+=======
+export default EnhancedSkipLink;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882

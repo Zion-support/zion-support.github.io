@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+import React from 'react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import { Link } from 'react-router-dom';
 import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
 
-const EnhancedFooter: React.FC = () => {
   return (
+<<<<<<< HEAD
     <footer className="b g-s late-900 border-t border-slate-800">
       <div className="m a x-w-7xl mx-auto px-4 sm:px-6 lg:px-8  py-12">
         <div className="g r id grid-cols-1 md:grid-cols-4  gap-8">
@@ -59,6 +65,27 @@ const EnhancedFooter: React.FC = () => {
         </div>
       </div>
     </footer>
+=======
+
+            <h3 className="text-2xl font-bold text-whitemb-4">Zion Tech Group</h3>
+              Leading provider of AI and IT solutions for businesses worldwide.
+
+                Get Started
+
+            <h4 className="text-lg font-semibold text-whitemb-4">Services</h4>
+              <li /><Link to="/ai-solutions" className="text-gray-300 hover:text-cyan-400transition-colors">AI Solutions</Link></li>
+              <li /><Link to="/it-services" className="text-gray-300 hover:text-cyan-400transition-colors">IT Services</Link></li>
+              <li /><Link to="/cloud-solutions" className="text-gray-300 hover:text-cyan-400transition-colors">Cloud Solutions</Link></li>
+              <li /><Link to="/cybersecurity" className="text-gray-300 hover:text-cyan-400transition-colors">Cybersecurity</Link></li>
+
+            <h4 className="text-lg font-semibold text-whitemb-4">Contact</h4>
+                <span>contact@ziontechgroup.com</span>
+                <span>+1 (555) 123-4567</span>
+                <span>New York, NY</span>
+
+            © 2024 Zion Tech Group. All rights reserved.
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
   );
 };
 

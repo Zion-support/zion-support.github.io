@@ -32,7 +32,6 @@ function fixAllJSX(content) {
   fixed = fixed.replace(/(\s*)<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/footer>/g, '$1</div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </footer>');
   
   return fixed;
-}
 
 // Function to process a single file
 function processFile(filePath) {
@@ -44,13 +43,10 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed all JSX: ${filePath}`);
       return true;
-    }
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
 
 // Main function
 async function main() {
@@ -63,13 +59,10 @@ async function main() {
   
   let fixedCount = 0;
   
-  files.forEach(file => {
     if (processFile(file)) {
       fixedCount++;
-    }
   });
   
   console.log(`\nFixed all JSX issues in ${fixedCount} files out of ${files.length} total files.`);
-}
 
 main().catch(console.error);

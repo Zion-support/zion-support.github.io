@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 
 // Get all TypeScript/TSX files
-const getFiles = (dir, extensions = ['.ts', '.tsx']) => {
   let files = [];
   const items = fs.readdirSync(dir);
   
@@ -12,16 +11,13 @@ const getFiles = (dir, extensions = ['.ts', '.tsx']) => {
     
     if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
       files = files.concat(getFiles(fullPath, extensions));
-    } else if (extensions.some(ext => item.endsWith(ext))) {
+ item.endsWith(ext))) {
       files.push(fullPath);
-    }
-  }
   
   return files;
 };
 
 // Fix unused imports in a file
-const fixUnusedImports = (filePath) => {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
@@ -33,7 +29,7 @@ const fixUnusedImports = (filePath) => {
     
     while ((match = importRegex.exec(content)) !== null) {
       const importStatement = match[0];
-      const importedItems = match[1].split(',').map(item => item.trim());
+ item.trim());
       const source = match[2];
       
       imports.push({
@@ -43,7 +39,6 @@ const fixUnusedImports = (filePath) => {
         importedItems,
         source
       });
-    }
     
     // Check which imports are actually used
     for (const importInfo of imports) {
@@ -61,8 +56,6 @@ const fixUnusedImports = (filePath) => {
         
         if (usageRegex.test(contentWithoutImport)) {
           usedItems.push(item);
-        }
-      }
       
       // If some items are used but not all, replace the import
       if (usedItems.length > 0 && usedItems.length < importInfo.importedItems.length) {
@@ -73,27 +66,22 @@ const fixUnusedImports = (filePath) => {
         // If no items are used, remove the entire import
         content = content.replace(importInfo.fullMatch + '\n', '');
         modified = true;
-      }
-    }
     
     // Remove unused Helmet imports specifically
     if (content.includes("import { Helmet } from 'react-helmet-async'") && !content.includes('<Helmet>')) {
       content = content.replace(/import { Helmet } from 'react-helmet-async'\n?/g, '');
       modified = true;
-    }
     
     if (modified) {
       fs.writeFileSync(filePath, content);
       console.log(`Fixed unused imports in: ${filePath}`);
       return true;
-    }
     
     return false;
     
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
 };
 
 // Main execution
@@ -107,10 +95,7 @@ for (const file of files) {
   try {
     if (fixUnusedImports(file)) {
       fixedCount++;
-    }
   } catch (error) {
     console.error(`Error processing ${file}:`, error.message);
-  }
-}
 
 console.log(`Fixed unused imports in ${fixedCount} files`);

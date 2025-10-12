@@ -1,44 +1,42 @@
 import { useState, useEffect} from 'react';
 import { ChevronLeft, ChevronRight} from 'lucide-react';
+<<<<<<< HEAD
 'use client';
 
 
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
 interface Slide {
   id: number;,
   title: string;,
   description: string;,
   image: string;,
   features: string[];
-}
 
 interface ContentCarouselProps {
   slides?: Slide[];
   autoPlay?: boolean;
   interval?: number;
-}
 
 const defaultSlides: Slide[] = [
-  {
     id: 1,
     title: 'AI-Powered Solutions',
     description: 'Transform your business with cutting-edge artificial intelligence technologies.',
     image: '/api/placeholder/600/400',
     features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision']
   },
-  {
     id: 2,
     title: 'Cloud Infrastructure',
     description: 'Scalable and secure cloud solutions for modern businesses.',
     image: '/api/placeholder/600/400',
     features: ['Scalable Architecture', '99.9% Uptime', 'Global CDN']
   },
-  {
     id: 3,
     title: 'Cybersecurity',
     description: 'Protect your business with comprehensive security solutions.',
     image: '/api/placeholder/600/400',
     features: ['Threat Detection', 'Security Audits', 'Compliance Management']
-  }
 ];
 
   const slides = defaultSlides, 
@@ -48,32 +46,26 @@ const defaultSlides: Slide[] = [
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
 
-  useEffect(() => {
     if (isPlaying) {
-      const timer = setInterval(() => {
-        setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+ (prevSlide + 1) % slides.length);
       }, interval);
-      return () => clearInterval(timer);
-    }
+ clearInterval(timer);
   }, [isPlaying, slides.length, interval]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+ (prevSlide + 1) % slides.length);
   };
 
-  const prevSlide = () => {
-    setCurrentSlide((prevSlide) => (prevSlide - 1 + slides.length) % slides.length);
+ (prevSlide - 1 + slides.length) % slides.length);
   };
 
-  const togglePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
 
-  const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       {/* Main Carousel */}
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -90,9 +82,19 @@ const defaultSlides: Slide[] = [
                     {slide.features.map((feature, index) => (
                       <li key="{index}" className="flex items-center text-gray-300" />
                         <CheckCircle className="w-5 h-5ml-2" />
+=======
+      {/* Main Carousel */}
+
+ (
+    
+                  <h3 className="text-3 xlfont-boldtext-white">{slide.title}</h3>
+                  <p className="text-lgtext-gray-300">{slide.description}</p>
+ (
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
                         {feature}
-                      </li>
                     ))}
+<<<<<<< HEAD
                   </ul>
                 </div>
                 <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -100,10 +102,13 @@ const defaultSlides: Slide[] = [
                     <Cloud className="w-5 h-5ml-2" />
                   </div>
               </div>
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
           ))}
-        </div>
 
         {/* Navigation Arrows */}
+<<<<<<< HEAD
         <button
           onClick="{prevSlide}"
           className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2rounded-full transition-colors"
@@ -131,15 +136,31 @@ const defaultSlides: Slide[] = [
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           {slides.map((_, index) => (
             <button
+=======
+
+      {/* Controls */}
+
+          {isPlaying ? <Pause className="w-5h-5" / /> : <Play className="w-5h-5" / />}
+
+        {/* Slide Indicators */}
+
+ (
+            
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
               key="{index}"
-              onClick="{()" = /> goToSlide(index)}
+ goToSlide(index)}
               className="{`w-3" h-3 rounded-full transition-colors ${
                 index === currentSlide ? 'bg-white' : 'bg-white/30'
               }`}
               aria-label="{`Go" to slide ${index + 1}`}
-            />
+
           ))}
+<<<<<<< HEAD
         </div>
     </div>
   );
 }
+=======
+    
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882

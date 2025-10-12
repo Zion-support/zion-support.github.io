@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
@@ -162,10 +163,18 @@ export default function AIContentGeneratorPage() {
       examples: ['Google Ads', 'Facebook Ads', 'LinkedIn Ads', 'Display banners']
     }
   ]
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
+export default function AIContentGenerator() {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title />AI Content Generator - Advanced AI Writing Assistant | Zion Tech Group</title>
         <meta name="description" content="Transform your content creation with our AI Content Generator. Generate high-quality, SEO-optimized content in 50+ languages. Starting at $29/month. Free trial available." />
         <meta name="keywords" content="AI content generator, content writing, SEO content, blog writing, social media content, email marketing, content automation, AI writing assistant" />
@@ -427,6 +436,27 @@ export default function AIContentGeneratorPage() {
                 </div>
             </div>
         </section>
+=======
+        <title>AI Content Generator - Zion Tech Group</title>
+        <meta name="description" content="Professional AI content generator services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">AI Content Generator</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional AI content generator services coming soon.</p>
+            
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Contact Us
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
       </div>
     </>
   );

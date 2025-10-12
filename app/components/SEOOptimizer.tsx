@@ -7,7 +7,6 @@ interface SEOOptimizerProps {
   canonical?: string
   ogImage?: string
   structuredData?: object
-}
 
 const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
   const title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -16,8 +15,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
   canonical,
   ogImage = 'https: //ziontechgroup.com/og-image.jpg',
   structuredData
-}) => {
-  useEffect(() => {
     // Add structured data to page
     if (structuredData) {
       const script = document.createElement('script')
@@ -25,16 +22,12 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       script.text = JSON.stringify(structuredData)
       document.head.appendChild(script)
       
-      return () => {
         document.head.removeChild(script)
-      }
-    }
   }, [structuredData])
 
   // Generate breadcrumb structured data
-  const generateBreadcrumbStructuredData = () => {
     const pathSegments = window.location.pathname.split('/').filter(Boolean)
-    const breadcrumbItems = pathSegments.map((segment, index) => ({
+ ({
       '@type': 'ListItem',
       position: index + 2,
       name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
@@ -45,7 +38,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       '@context': 'https: //schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
-        {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
@@ -53,48 +45,37 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
         },
         ...breadcrumbItems
       ]
-    }
-  }
 
   // Generate FAQ structured data
-  const generateFAQStructuredData = () => {
     return {
       '@context': 'https: //schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
           '@type': 'Question',
           name': 'What services does Zion Tech Group offer?',
           acceptedAnswer: {
             '@type': 'Answer',
             text': 'Zion Tech Group offers comprehensive AI solutions, IT services, 5 G implementation, cloud migration, cybersecurity, mobile development, and micro SAAS platforms for businesses of all sizes.'
-          }
         },
-        {
           '@type': 'Question',
           name': 'How can I contact Zion Tech Group?',
           acceptedAnswer: {
             '@type': 'Answer',
             text': 'You can contact us at +1 (302) 464-0950, email us at kleber@ziontechgroup.com, or visit our office at 364 E Main St STE 1008, Middletown, DE 19709.'
-          }
         },
-        {
           '@type': 'Question',
           name': 'What is the typical response time for support?',
           acceptedAnswer: {
             '@type': 'Answer',
             text': 'We provide 24/7 support with an average response time of 48 hours for general inquiries and immediate response for critical issues.'
-          }
-        }
       ]
-    }
-  }
 
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
   const breadcrumbData = generateBreadcrumbStructuredData()
   const faqData = generateFAQStructuredData()
 
   return (
+<<<<<<< HEAD
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -149,9 +130,33 @@ const SEOOptimizer: React.FC<SEOOptimizerProps /> = ({
       {structuredData && (
         <script type="application/ld+json"  />{JSON.stringify(structuredData)}
         </script>
-      )}
-    </Helmet>
-  )
-}
+=======
+        <title>5G Data Analytics - Zion Tech Group</title>
+      {/* Basic Meta Tags */}
+    
+      <title>{title}</title>
+      {/* Canonical URL */}
+      {/* Open Graph Meta Tags */}
+    
+      {/* Twitter Card Meta Tags */}
+    
+      {/* Additional SEO Meta Tags */}
+    
+      {/* Performance Hints */}
 
+      {/* Structured Data */}
+    
+      <script type="application/ld+json">{JSON.stringify(breadcrumbData)}
+      <script type="application/ld+json">{JSON.stringify(faqData)}
+      {structuredData && (
+    
+        <script type="application/ld+json">{JSON.stringify(structuredData)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
+      )}
+  )
+
+<<<<<<< HEAD
 export default SEOOptimizer;
+=======
+export default SEOOptimizer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882

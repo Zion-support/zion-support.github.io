@@ -14,11 +14,8 @@ function findPageFiles(dir) {
       files.push(...findPageFiles(fullPath));
     } else if (item === 'page.tsx') {
       files.push(fullPath);
-    }
-  }
   
   return files;
-}
 
 // Fix layout import paths
 function fixLayoutImports(filePath) {
@@ -29,13 +26,10 @@ function fixLayoutImports(filePath) {
   if (content.includes("import Layout from '../../layout'")) {
     content = content.replace(/import Layout from '\.\.\/\.\.\/layout'/g, "import Layout from '../layout'");
     modified = true;
-  }
   
   if (modified) {
     fs.writeFileSync(filePath, content);
     console.log(`Fixed layout import in: ${filePath}`);
-  }
-}
 
 // Find and fix all page files
 const pageFiles = findPageFiles('/workspace/app');
@@ -48,7 +42,5 @@ for (const file of pageFiles) {
     fixedCount++;
   } catch (error) {
     console.error(`Error fixing ${file}:`, error.message);
-  }
-}
 
 console.log(`Fixed ${fixedCount} files`);

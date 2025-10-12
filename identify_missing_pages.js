@@ -149,22 +149,20 @@ const appRoutes = [
 const allLinks = [...new Set([...navigationLinks, ...footerLinks, ...appRoutes])];
 
 // Find missing pages
-const missingPages = allLinks.filter(link => {
   const path = link.replace('/', '');
   return !existingPages.includes(path);
 });
 
 // Find broken links (pages that exist but have no route)
-const brokenLinks = existingPages.filter(page => {
   const link = `/${page}`;
   return !allLinks.includes(link) && page !== 'page.tsx';
 });
 
 console.log('=== MISSING PAGES ===');
-missingPages.forEach(page => console.log(page));
+ console.log(page));
 
 console.log('\n=== BROKEN LINKS (Pages exist but no route) ===');
-brokenLinks.forEach(page => console.log(page));
+ console.log(page));
 
 console.log('\n=== SUMMARY ===');
 console.log(`Total links referenced: ${allLinks.length}`);

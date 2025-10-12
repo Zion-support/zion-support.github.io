@@ -1,23 +1,26 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+import React from 'react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import ErrorBoundary from './components/ErrorBoundary';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
-
 
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
-}
 
 const Layout: React.FC<LayoutProps /> = ({
   children,
   const title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
   keywords = "AI solutions, IT services, cloud computing, digital transformation, 5 G implementation"
-}) => {
   const structuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
@@ -45,7 +48,6 @@ const Layout: React.FC<LayoutProps /> = ({
       "https://twitter.com/ziontechgroup"
     ],
     "offers": [
-      {
         "@type": "Offer",
         "name": "AI Services",
         "description": "Comprehensive AI solutions including content generation, chatbots, and automation",
@@ -56,9 +58,7 @@ const Layout: React.FC<LayoutProps /> = ({
           "price": "500",
           "priceCurrency": "USD",
           "unitText": "MONTH"
-        }
       },
-      {
         "@type": "Offer",
         "name": "IT Services",
         "description": "Complete IT infrastructure services including cloud migration, cybersecurity, and mobile development",
@@ -69,12 +69,11 @@ const Layout: React.FC<LayoutProps /> = ({
           "price": "2500",
           "priceCurrency": "USD",
           "unitText": "PROJECT"
-        }
-      }
     ];
   };
 
   return (
+<<<<<<< HEAD
     <ErrorBoundary />
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         <Helmet>
@@ -118,3 +117,26 @@ const Layout: React.FC<LayoutProps /> = ({
 };
 
 export default Layout;
+=======
+    
+        <title>5G Data Analytics - Zion Tech Group</title>
+          <title>{title}</title>
+          {/* Open Graph Meta Tags */}
+    
+          {/* Twitter Card Meta Tags */}
+    
+          {/* Additional SEO Meta Tags */}
+    
+          {/* Structured Data */}
+    
+          <script type="application/ld+json">{JSON.stringify(structuredData)}
+
+        <main className=" pt-20">{children}
+
+        {/* Theme Toggle - Fixed Position */}
+
+  );
+};
+
+export default Layout;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882

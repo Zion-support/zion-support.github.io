@@ -42,7 +42,6 @@ function fixJSXStructure(content) {
   fixed = fixed.replace(/(\s*)<\/div>\s*<\/>/g, '$1</div>\n      </div>\n    </>');
   
   return fixed;
-}
 
 // Function to process a single file
 function processFile(filePath) {
@@ -54,13 +53,10 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed JSX structure: ${filePath}`);
       return true;
-    }
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
 
 // Main function
 async function main() {
@@ -73,13 +69,10 @@ async function main() {
   
   let fixedCount = 0;
   
-  files.forEach(file => {
     if (processFile(file)) {
       fixedCount++;
-    }
   });
   
   console.log(`\nFixed JSX structure in ${fixedCount} files out of ${files.length} total files.`);
-}
 
 main().catch(console.error);

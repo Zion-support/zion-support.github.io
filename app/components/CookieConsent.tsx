@@ -1,31 +1,30 @@
 import { useState, useEffect} from 'react';
 import { X, Cookie} from 'lucide-react';
+<<<<<<< HEAD
 'use client';
 
 const CookieConsent: React.FC = () => {
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
   const [showDetails, setShowDetails] = useState(false);
-  useEffect(() => {
     const consent = localStorage.getItem('cookie-consent');
     if (!consent) {
       setIsVisible(true);
-    }
   }, []);
 
-  const acceptAll = () => {
     localStorage.setItem('cookie-consent', 'accepted');
     localStorage.setItem('analytics-consent', 'accepted');
     localStorage.setItem('marketing-consent', 'accepted');
     setIsVisible(false);
   };
 
-  const acceptNecessary = () => {
     localStorage.setItem('cookie-consent', 'necessary');
     localStorage.setItem('analytics-consent', 'declined');
     localStorage.setItem('marketing-consent', 'declined');
     setIsVisible(false);
   };
 
-  const acceptCustom = () => {
     localStorage.setItem('cookie-consent', 'custom');
     setIsVisible(false);
   };
@@ -33,6 +32,7 @@ const CookieConsent: React.FC = () => {
   if (!isVisible) return null;
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -156,3 +156,67 @@ const CookieConsent: React.FC = () => {
 };
 
 export default CookieConsent;
+=======
+
+          {!showDetails ? (
+            // Simple view
+    
+                  <h3 className="text-lg font-semiboldtext-whitemb-2">We use cookies
+
+              We use cookies to enhance your browsing experience, serve personalized content,
+                    and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+
+                      onClick="{acceptAll}"
+Accept All
+                    
+                      onClick="{acceptNecessary}"
+Necessary Only
+                    
+setShowDetails(true)}
+                      className="text-cyan-400 hover:text-cyan-300 px-6 py-2font-semiboldtransition-colors"
+                      Customize
+    
+          ) : (
+            // Detailed view
+
+                <h3 className="text-xlfont-semiboldtext-white">Cookie Preferences</h3>
+
+ setShowDetails(false)}
+                  className="text-gray-400hover:text-whitetransition-colors"
+                  aria-label="Close details"
+
+                {/* Necessary Cookies */}
+    
+                      <h4 className="font-semiboldtext-white">Necessary Cookies</h4>
+                      <span className="text-smtext-green-400font-medium">Always Active</span>
+                      These cookies are essential for the website to function properly. They cannot be disabled.
+
+                {/* Analytics Cookies */}
+
+                      <h4 className="font-semiboldtext-white">Analytics Cookies</h4>
+        </div></div>
+                      These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.
+
+                {/* Marketing Cookies */}
+
+                      <h4 className="font-semiboldtext-white">Marketing Cookies</h4>
+        </div></div>
+                      These cookies are used to track visitors across websites to display relevant and engaging advertisements.
+
+                  onClick="{acceptAll}"
+Accept All
+                
+                  onClick="{acceptCustom}"
+Save Preferences
+                
+                  onClick="{acceptNecessary}"
+                  className="border border-slate-600 text-gray-300 px-6 py-2 rounded-lg font-semiboldhover:bg-slate-700transition-colors"
+Reject All
+    
+          )}
+    
+  );
+};
+
+export default CookieConsent;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882

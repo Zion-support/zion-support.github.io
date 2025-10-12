@@ -1,7 +1,11 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import React from 'react';
 
-const SEOHead: React.FC = () => {
   return (
+<<<<<<< HEAD
     <Helmet>
       <title>Zion Tech Group - Advanced AI and IT Solutions</title>
       <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
@@ -24,6 +28,17 @@ const SEOHead: React.FC = () => {
       {/* Additional SEO Meta Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
+=======
+    
+        <title>5G Data Analytics - Zion Tech Group</title>
+      <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+      {/* Open Graph Meta Tags */}
+    
+      {/* Twitter Card Meta Tags */}
+    
+      {/* Additional SEO Meta Tags */}
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
       {/* Structured Data */}
       <script type="application/ld+json"  />{JSON.stringify({
           "@context": "https: //schema.org",
@@ -52,8 +67,12 @@ const SEOHead: React.FC = () => {
             "https://twitter.com/ziontechgroup"
           ]
         })}
+<<<<<<< HEAD
       </script>
     </Helmet>
+=======
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
   );
 };
 

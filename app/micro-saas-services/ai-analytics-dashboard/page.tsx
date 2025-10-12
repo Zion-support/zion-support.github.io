@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react'
 
 export default function AianalyticsdashboardPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>Service - Zion Tech Group</title>
@@ -24,3 +25,13 @@ export default function AianalyticsdashboardPage() {
     </div>
   );
 }
+=======
+
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <title>Ai Analytics Dashboard - Zion Tech Group</title>
+        <h1 className="text-4xl font-boldtext-whitemb-6">Ai Analytics Dashboard</h1>
+        <p className="text-lgtext-gray-300mb-8">Professional ai analytics dashboard services coming soon.</p>
+          Contact Us
+    
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882

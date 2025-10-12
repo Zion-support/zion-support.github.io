@@ -41,8 +41,6 @@ function fixAppTsx() {
   } catch (error) {
     console.error('Error fixing app/App.tsx:', error.message);
     return false;
-  }
-}
 
 // Run the fix
 fixAppTsx();

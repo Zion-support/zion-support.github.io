@@ -6,7 +6,6 @@ import { analytics } from '../utils/analytics';
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-}
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
     if (typeof window === 'undefined' || !('performance' in window)) return;
@@ -14,27 +13,21 @@ import { analytics } from '../utils/analytics';
       )[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
       
-        paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
+ entry.name === 'first-contentful-paint')?.startTime || 0;
       
-        paintEntries.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0;
+ entry.name === 'largest-contentful-paint')?.startTime || 0;
       // Measure CLS (Cumulative Layout Shift)
       let cumulativeLayoutShift = 0;
         
               cumulativeLayoutShift += (entry as unknown as { value: number }).value;
-            }
-          }
         });
         observer.observe({ entryTypes: ['layout-shift'] });
-      }
       // Measure FID (First Input Delay)
       let firstInputDelay = 0;
         
                 (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
-            }
-          }
         });
         observer.observe({ entryTypes: ['first-input'] });
-      }
         domContentLoaded:
         firstInputDelay
       };
@@ -56,7 +49,6 @@ import { analytics } from '../utils/analytics';
     // Measure performance after page load
       measurePerformance();
       window.addEventListener('load', measurePerformance);
-    }
       window.removeEventListener('load', measurePerformance);
     };
   }, []);

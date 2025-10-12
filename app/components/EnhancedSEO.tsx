@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import React from 'react';
 
 interface SEOProps {
@@ -11,7 +15,6 @@ interface SEOProps {
   structuredData?: object
   noindex?: boolean
   nofollow?: boolean
-}
 
 const EnhancedSEO: React.FC<SEOProps /> = ({
   const title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -24,7 +27,6 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
   structuredData,
   noindex = false,
   nofollow = false
-}) => {
   const defaultStructuredData = {
     "@context": "https: //schema.org",
     "@type": "Organization",
@@ -62,13 +64,12 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       "lowPrice": "99",
       "highPrice": "2999",
       "priceCurrency": "USD"
-    }
-  }
 
   const finalStructuredData = structuredData || defaultStructuredData
   const canonicalUrl = canonical || `https: //ziontechgroup.com${window.location.pathname}`
 
   return (
+<<<<<<< HEAD
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -119,7 +120,28 @@ const EnhancedSEO: React.FC<SEOProps /> = ({
       <script type="application/ld+json"  />{JSON.stringify(finalStructuredData)}
       </script>
     </Helmet>
-  )
-}
+=======
+        <title>5G Data Analytics - Zion Tech Group</title>
+      {/* Basic Meta Tags */}
+    
+      <title>{title}</title>
+      {/* Canonical URL */}
+      {/* Open Graph Meta Tags */}
+    
+      {/* Twitter Card Meta Tags */}
+    
+      {/* Additional SEO Meta Tags */}
+    
+      {/* Performance Hints */}
 
+      {/* Structured Data */}
+    
+      <script type="application/ld+json">{JSON.stringify(finalStructuredData)}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
+  )
+
+<<<<<<< HEAD
 export default EnhancedSEO;
+=======
+export default EnhancedSEO;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882

@@ -9,7 +9,6 @@ import { fileURLToPath } from 'url'
           continue}
         
           result.push(line)}
-      }
       
       content = result.join('\n')
       modified = true}
@@ -23,7 +22,7 @@ import { fileURLToPath } from 'url'
         } else if (line.startsWith(']*>\s*$/gm, '<div>')
     content = content.replace(/<\/div>\s*$/gm, '</div>')
     // Fix function declarations
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*};/g, 'const $1 = () => {};')
+ {};')
     // Fix missing semicolons
     content = content.replace(/(\w+)\s*$/gm, '$1;')
     // Fix specific patterns
@@ -33,14 +32,12 @@ import { fileURLToPath } from 'url'
   r:", error)}')}
     
     if (filePath.includes('middleware')) {/* TODO: Fix JSX expression */}
-    }
     
     // Write the cleaned content back
     fs.writeFileSync(filePath, content, 'utf8')
     return modified} catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message)
     return false}
-}
 
 // Function to find all files that need fixing
   

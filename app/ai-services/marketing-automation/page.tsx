@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+import React from 'react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function MarketingautomationPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
         <title>Service - Zion Tech Group</title>
@@ -23,3 +30,13 @@ export default function MarketingautomationPage() {
     </div>
   );
 }
+=======
+
+        <title>5G Data Analytics - Zion Tech Group</title>
+        <title>Marketing Automation - Zion Tech Group</title>
+        <h1 className="text-4 xl font-boldtext-whitemb-6">Marketing Automation</h1>
+        <p className="text-lgtext-gray-300mb-8">Professional marketing automation services coming soon.</p>
+          Contact Us
+    
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882

@@ -17,8 +17,8 @@ function fixFinalParsing(content) {
   fixed = fixed.replace(/justify-centermx-auto/g, 'justify-center mx-auto');
   
   // Fix malformed JSX attributes
-  fixed = fixed.replace(/" \/ \/>/g, '" />');
-  fixed = fixed.replace(/" \/>/g, '" />');
+');
+');
   
   // Fix malformed function names
   fixed = fixed.replace(/const Ai3 dGenerationPage/g, 'const Ai3dGenerationPage');
@@ -36,7 +36,6 @@ function fixFinalParsing(content) {
     '<Helmet>\n        <title>$1</title>\n        <meta name="description" content="$2" />');
   
   return fixed;
-}
 
 // Function to process a single file
 function processFile(filePath) {
@@ -48,13 +47,10 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, fixed, 'utf8');
       console.log(`Fixed final parsing: ${filePath}`);
       return true;
-    }
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
 
 // Main function
 async function main() {
@@ -67,13 +63,10 @@ async function main() {
   
   let fixedCount = 0;
   
-  files.forEach(file => {
     if (processFile(file)) {
       fixedCount++;
-    }
   });
   
   console.log(`\nFixed final parsing issues in ${fixedCount} files out of ${files.length} total files.`);
-}
 
 main().catch(console.error);

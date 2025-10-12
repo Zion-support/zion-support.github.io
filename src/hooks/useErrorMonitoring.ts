@@ -2,9 +2,7 @@ import { useEffect, useCallback } from 'react';
 // import { useAnalytics } from '../components/AnalyticsProvider';
 // ErrorInfo interface removed as it's not used in this hook
 // Global type definitions for browser events
-    __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
-  }
-}
+ void;
   // const { trackError } = useAnalytics();
   
       console.error('Error reported:', error, context);
@@ -34,8 +32,7 @@ import { useEffect, useCallback } from 'react';
     window.addEventListener('error', handleError);
     window.addEventListener('unhandledrejection', handleUnhandledRejection);
     // Expose React error handler globally for error boundaries
-        __REACT_ERROR_HANDLER__?: (error: Error, errorInfo: unknown) => void;
-      }
+ void;
     ).__REACT_ERROR_HANDLER__ = handleReactError;
     // Cleanup
       window.removeEventListener('error', handleError);

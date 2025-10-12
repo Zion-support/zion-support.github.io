@@ -1,30 +1,30 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+import React from 'react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
 'use client'
 import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, Mail, Brain } from 'lucide-react';
-const ServicesPage: React.FC = () => {
   const features = [
-    {
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
     },
-    {
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results',
     },
-    {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards',
     },
-    {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses',
-    }
   ];
   const benefits = [
     'Advanced AI technology integration',
@@ -37,13 +37,17 @@ const ServicesPage: React.FC = () => {
     'Proven track record of success'
   ];
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <Helmet>
+=======
+
+        <title>5G Data Analytics - Zion Tech Group</title>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
         <title>Services | Zion Tech Group</title>
-        <meta name="description" content="Professional Services services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="services, AI solutions, IT services, Zion Tech Group, services" />
-      </Helmet>
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="w-5 h-5ml-2" />
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
@@ -84,9 +88,31 @@ const ServicesPage: React.FC = () => {
                   <feature.icon className="h-6w-6text-white" />
                 </div>
                 <h3 className="text-xl font-semiboldtext-whitemb-3">{feature.title}</h3>
+=======
+    
+                Services
+
+              <span className="text-white">Solutions</span>
+              Transform your business with our advanced services solutions.
+              Powered by cutting-edge AI technology and industry expertise.
+    
+                Get Started
+    
+                Learn More
+
+      {/* Features Section */}
+    
+              Why Choose Our Services?
+    
+              Our services solutions deliver unmatched performance, security, and scalability.
+
+ (
+
+                <h3 className="text-xl font-semiboldtext-white mb-3">{feature.title}</h3>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
             ))}
+<<<<<<< HEAD
           </div>
       </section>
       {/* Benefits Section */}
@@ -103,9 +129,20 @@ const ServicesPage: React.FC = () => {
             {benefits.map((benefit, index) => (
               <div key={index} className="flexitems-startspace-x-3" />
                 <CheckCircle className="w-5 h-5ml-2" />
+=======
+    
+      {/* Benefits Section */}
+    
+              Key Benefits
+  
+              Experience the power of our services solutions for your business.
+    
+ (
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
                 <p className="text-gray-300text-lg">{benefit}</p>
-              </div>
             ))}
+<<<<<<< HEAD
           </div>
       </section>
       {/* CTA Section */}
@@ -137,6 +174,21 @@ export default ServicesPage
   </h2>
   </button>
   </span>
+=======
+    
+      {/* CTA Section */}
+    
+              Ready to Get Started?
+    
+              Contact our experts to discuss your services needs and get a customized solution.
+    
+                Call Now
+
+                Email Us
+
+  )}
+export default ServicesPage
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
 
     {icon: Brain,
       title: 'AI-Powered Solutions',
@@ -153,7 +205,6 @@ export default ServicesPage
     {icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'}
-    }
   ];const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -163,13 +214,19 @@ export default ServicesPage
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
+<<<<<<< HEAD
   ];return (<div className="min-h-screen bg-gradient-to-br from-slate-900via-purple-900to-slate-900"></div>
       <Helmet>
+=======
+
+  ];return (<div>
+        </div></div>
+        <title>5G Data Analytics - Zion Tech Group</title>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
         <title>Services | Zion Tech Group</title>
-        <meta name="description" content="Professional Services services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="services, AI solutions, IT services, Zion Tech Group, services" />
-      </Helmet>
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="relative py-20 px-4sm:px-6lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
@@ -210,11 +267,42 @@ export default ServicesPage
                   <feature.icon className="h-6w-6text-white" />
                 </div>
                 <h3 className="text-xl font-semiboldtext-whitemb-3">{feature.title}</h3>
+=======
+
+      <section className="relative py-20 px-4sm:px-6lg:px-8" /></section>
+        </div></div>
+          <div className="text-center" /></div>
+                Services
+    
+              <span className="text-white">Solutions</span>
+              Transform your business with our advanced services solutions.
+              Powered by cutting-edge AI technology and industry expertise.
+
+        </div></div>
+                Get Started
+    
+                Learn More
+    
+      {/* Features Section */}
+
+      <section className="py-20 px-4sm:px-6lg:px-8" /></section>
+        </div></div>
+        </div></div>
+              Why Choose Our Services?
+    
+              Our services solutions deliver unmatched performance, security, and scalability.
+    
+        </div></div>
+ (}
+    
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20transition-allduration-300" /></div>
+        </div></div>
+                <h3 className="text-xl font-semiboldtext-white mb-3">{feature.title}</h3>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
                 <p className="text-gray-300">{feature.description}</p>
               </div>))}
-          </div>
-      </section>
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20p x-4 sm:px-6lg:px-8bg-white/5"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-centermb-16"></div>
@@ -228,11 +316,25 @@ export default ServicesPage
             {benefits.map((benefit, index) => (}
               <div key={index} className="flexitems-startspace-x-3"></div>
                 <CheckCircle className="w-5 h-5ml-2" />
+=======
+
+      <section className="py-20 px-4 sm:px-6lg:px-8bg-white/5" /></section>
+        </div></div>
+        </div></div>
+              Key Benefits
+    
+              Experience the power of our services solutions for your business.
+    
+        </div></div>
+ (}
+
+              <div key={index} className="flexitems-startspace-x-3" /></div>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
                 <p className="text-gray-300text-lg">{benefit}</p>
               </div>))}
-          </div>
-      </section>
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20p x-4sm:px-6lg:px-8"></section>
         <div className="max-w-4xlmx-auto text-center"></div>
           <div className="bg-gradient-to-rfrom-purple-600to-blue-600 rounded-2xlp-8md:p-12"></div>
@@ -253,3 +355,18 @@ export default ServicesPage
             </div>
         </div>
       </section>
+=======
+
+      <section className="py-20 px-4sm:px-6lg:px-8" /></section>
+        </div></div>
+        </div></div>
+              Ready to Get Started?
+    
+              Contact our experts to discuss your services needs and get a customized solution.
+
+        </div></div>
+                Call Now
+    
+                Email Us
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882

@@ -19,8 +19,6 @@ import path from 'path';
     return true;
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
-  }
-}
 
 // Function to find all files with merge conflicts
   const files = [];
@@ -33,16 +31,10 @@ import path from 'path';
         walkDir(fullPath);
           const content = fs.readFileSync(fullPath, 'utf8');
             files.push(fullPath);
-          }
           // Skip files that can't be read
-        }
-      }
-    }
-  }
   
   walkDir(dir);
   return files;
-}
 
 // Main execution
 console.log('Starting merge conflict resolution...');
@@ -52,8 +44,6 @@ console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
 
 let fixedCount = 0;
     fixedCount++;
-  }
-}
 
 console.log(`Fixed merge conflicts in ${fixedCount} files`);
 console.log('Merge conflict resolution completed!');

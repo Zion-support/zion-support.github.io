@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+'use client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import React from 'react';
 'use client';
 
@@ -5,13 +10,11 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   color?: 'primary' | 'secondary' | 'white';
   text?: string;
-}
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({ 
   const size = 'md', 
   color = 'primary', 
   text 
-}) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -23,6 +26,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({
     white: 'text-white'
   };
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <div className="{`${sizeClasses[size]}" ${colorClasses[color]} animate-spin`} />
         <svg
@@ -45,11 +49,17 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({
            />
         </svg>
       </div>
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
       {text && (
         <p className="text-gray-400text-smanimate-pulse">{text}</p>
       )}
-    </div>
   );
 };
 
+<<<<<<< HEAD
 export default LoadingSpinner;
+=======
+export default LoadingSpinner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882

@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { Calendar, Share2, TrendingUp, BarChart3, Zap, CheckCircle, ArrowRight, Star, Clock, Globe, Brain } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import React from 'react';
 import { Share2, ArrowRight} from 'lucide-react';
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 const AISocialSchedulerPage: React.FC = () => {
   const features = [
     {
@@ -331,3 +338,32 @@ const AISocialSchedulerPage: React.FC = () => {
 }
 
 export default AISocialSchedulerPage;
+=======
+export default function AiSocialScheduler() {
+  return (
+    <>
+      <Helmet>
+        <title>AiSocialScheduler - Zion Tech Group</title>
+        <meta name="description" content="Professional aisocialscheduler services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-6">AiSocialScheduler</h1>
+            <p className="text-lg text-gray-300 mb-8">Professional aisocialscheduler services coming soon.</p>
+            
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Contact Us
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882

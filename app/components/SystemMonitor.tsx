@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 'use client'
@@ -20,20 +21,36 @@ import { ArrowRight } from 'lucide-react';
   </
             </div>
     </div>
+=======
+
+import React from 'react';
+
+import { ArrowRight } from 'lucide-react';
+'use client'
+
+import { ArrowRight } from 'lucide-react';
+
+  ];
+    
+              <span const className = "text-white">Solutions</span>
+              Transform your business with our advanced systemmonitor solutions.
+              Powered by cutting-edge AI technology and industry expertise.
+    
+                Get Started
+    
+                Learn More
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
   )}
 export default SystemMonitorPage
-  </button>
-}
 
 interface SystemMonitorProps {
-  onAlert?: (alert: string) => void
+ void
   className?: string
-}
 
 const SystemMonitor: React.FC<SystemMonitorProps /> = ({
   onAlert,
   className = ''
-}) => {
   const [metrics, setMetrics] = useState<SystemMetrics />({
     cpu: 0,
     memory: 0,
@@ -44,7 +61,6 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
   })
   const [isMonitoring, setIsMonitoring] = useState(false)
 
-  const updateMetrics = useCallback(() => {
     // Simulate system metrics
     const newMetrics = {
       cpu: Math.random() * 100,
@@ -53,32 +69,29 @@ const SystemMonitor: React.FC<SystemMonitorProps /> = ({
       network: Math.random() * 100,
       battery: Math.random() * 100,
       uptime: Date.now() - performance.timing.navigationStart
-    }
 
     setMetrics(newMetrics)
 
     // Check for alerts
-    if (newMetrics.cpu > 90) {
+ 90) {
       onAlert?.('High CPU usage detected')
-    }
-    if (newMetrics.memory > 90) {
+ 90) {
       onAlert?.('High memory usage detected')
-    }
-    if (newMetrics.disk > 90) {
+ 90) {
       onAlert?.('High disk usage detected')
-    }
   }, [onAlert])
 
-  useEffect(() => {
     if (isMonitoring) {
       const interval = setInterval(updateMetrics, 1000)
-      return () => clearInterval(interval)
-    }
+ clearInterval(interval)
   }, [isMonitoring, updateMetrics])
 
-  const toggleMonitoring = () => {
     setIsMonitoring(!isMonitoring)
     if (!isMonitoring) {
       updateMetrics()
+<<<<<<< HEAD
     }
   };
+=======
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882

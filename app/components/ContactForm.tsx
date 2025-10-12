@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import { MessageSquare } from 'lucide-react';
+<<<<<<< HEAD
 'use client';
 
 
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
 interface FormData {
   name: string;,
   email: string;,
@@ -10,7 +14,6 @@ interface FormData {
   company: string;,
   message: string;,
   service: string;
-}
 
   const [formData, setFormData] = useState<FormData />({
     name: '',
@@ -25,23 +28,21 @@ interface FormData {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement />) => {
     const { name, value } = e.target;
-    setFormData(const prev = > ({
+ ({
       ...prev,
       [name]: value
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise(const resolve = > setTimeout(resolve, 1000));
+ setTimeout(resolve, 1000));
     setIsSubmitting(false);
     setIsSubmitted(true);
 
     // Reset form after 3 seconds
-    setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
         name: '',
@@ -56,6 +57,7 @@ interface FormData {
 
   if (isSubmitted) {
     return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         <CheckCircle className="w-5 h-5ml-2" />
         <h3 className="text-2 xl font-boldtext-whitemb-2"  >Message Sent!</h3>
@@ -68,9 +70,21 @@ interface FormData {
     <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         <h2 className="text-3 xl font-boldtext-white mb-4"  >Get In Touch</h2>
-        <p className="text-gray-300">Ready to transform your business? Let's discuss your project.</p>
-      </div>
+=======
 
+        <h3 className="text-2 xl font-boldtext-whitemb-2">Message Sent!</h3>
+
+        <p className="text-gray-300">Thank you for your message. We'll get back to you soon.</p>
+  );
+
+  return (
+
+        <h2 className="text-3 xl font-boldtext-whitemb-4">Get In Touch</h2>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
+        <p className="text-gray-300">Ready to transform your business? Let's discuss your project.</p>
+
+<<<<<<< HEAD
       <form onSubmit="{handleSubmit}" className="space-y-6" />
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
           <div />
@@ -164,22 +178,49 @@ interface FormData {
             placeholder="Tell us about your project..."
            />
         </div>
+=======
+            <label htmlFor="name" className="block text-sm font-mediumtext-gray-300mb-2">Full Name *
 
-        <button
-          type="submit"
-          disabled="{isSubmitting}"
-          className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-centerdisabled:opacity-50disabled:cursor-not-allowed" />
+            <label htmlFor="email" className="block text-sm font-mediumtext-gray-300mb-2">Email Address *
+
+            <label htmlFor="phone" className="block text-sm font-mediumtext-gray-300mb-2">Phone Number
+
+            <label htmlFor="company" className="block text-sm font-mediumtext-gray-300mb-2">Company
+
+          <label htmlFor="service" className="block text-sm font-mediumtext-gray-300mb-2">Service Interest
+
+            <option value="">Select a service</option>
+            <option value="ai-services">AI Services</option>
+            <option value="it-services">IT Services</option>
+            <option value="5 g-solutions">5 G Solutions</option>
+            <option value="micro-saas">Micro SAAS</option>
+            <option value="consulting">Consulting</option>
+
+          <label htmlFor="message" className="block text-sm font-mediumtext-gray-300mb-2">Message *
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
+
           {isSubmitting ? (
+<<<<<<< HEAD
             <>
               <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
+=======
+
+        </div></div>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
               Sending...
             </>
           ) : (
+<<<<<<< HEAD
             <>
               <Send className="w-5 h-5ml-2" />
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
               Send Message
             </>
           )}
+<<<<<<< HEAD
         </button>
       </form>
 
@@ -200,3 +241,11 @@ interface FormData {
       </div>
   );
 }
+=======
+
+            <span className="text-gray-300">kleber@ziontechgroup.com</span>
+            <span className="text-gray-300">+1 (302) 464-0950</span>
+            <span className="text-gray-300">24/7 Support</span>
+
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882

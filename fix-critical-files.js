@@ -16,7 +16,6 @@ import { execSync } from 'child_process';
     
       content = content.replace(conflictRegex, '');
       modified = true;
-    }
 
     // Fix common JSX issues
     // Fix unclosed tags by ensuring proper structure
@@ -31,10 +30,8 @@ import { execSync } from 'child_process';
         
         // Skip self-closing tags
           openTags.push({ tag: tagName, line: i });
-        }
         fixedLines.push(line);
         continue;
-      }
       
       // Check for closing tags
       const closeTagMatch = trimmedLine.match(/<\/(\w+)>/);
@@ -45,10 +42,8 @@ import { execSync } from 'child_process';
           // This might be an extra closing tag, skip it
           console.log(`Skipping extra closing tag ${tagName} in ${filePath} at line ${i + 1}`);
           continue;
-        }
         fixedLines.push(line);
         continue;
-      }
       
       // Check for JSX expressions
         // Ensure proper JSX syntax
@@ -59,20 +54,16 @@ import { execSync } from 'child_process';
         
         // Fix missing semicolons in JSX
           fixedLine = fixedLine.replace(/;\s*$/, '');
-        }
         
         fixedLines.push(fixedLine);
         continue;
-      }
       
       fixedLines.push(line);
-    }
     
     // Add missing closing tags
       const { tag } = openTags.pop();
       fixedLines.push(`</${tag}>`);
       modified = true;
-    }
     
     const newContent = fixedLines.join('\n');
     
@@ -83,13 +74,10 @@ import { execSync } from 'child_process';
       fs.writeFileSync(filePath, cleanedContent);
       console.log(`Fixed: ${filePath}`);
       return true;
-    }
     
     return false;
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
-  }
-}
 
 // Main function
   console.log('Fixing critical files...');
@@ -98,10 +86,7 @@ import { execSync } from 'child_process';
   
     const fullPath = path.join(process.cwd(), file);
         fixedCount++;
-      }
       console.log(`File not found: ${file}`);
-    }
-  }
   
   console.log(`\nFixed ${fixedCount} critical files.`);
   
@@ -110,7 +95,5 @@ import { execSync } from 'child_process';
     execSync('pnpm run type-check', { stdio: 'inherit' });
     console.log('Type check passed!');
     console.log('Type check still has errors, but critical files have been processed.');
-  }
-}
 
 main();

@@ -1,16 +1,23 @@
+<<<<<<< HEAD
+=======
+
+'use client';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 'use client';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882
 interface ContentPromotionBannerProps {
   title?: string;
   subtitle?: string;
   features?: string[];
   buttonText?: string;
-  onButtonClick?: () => void;
+ void;
   variant?: 'default' | 'premium' | 'limited';
-}
 
 const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
   const title = "Unlock Premium Features",
@@ -24,20 +31,17 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
   buttonText = "Upgrade Now",
   onButtonClick,
   variant = 'default'
-}) => {
-  const getVariantStyles = () => {
     switch (variant) {
       case 'premium':
         return 'bg-gradient-to-r from-purple-600 to-pink-600';
       case 'limited':
         return 'bg-gradient-to-r from-red-600 to-orange-600';
       default: return 'bg-gradient-to-r from-blue-600 to-purple-600';
-    }
   };
 
   return (
-    <div const className = {`relative overflow-hidden rounded-2 xl ${getVariantStyles()} p-8 text-white`} />
       {/* Background Pattern */}
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="min-h-screen bg-gradient-to-brfrom-slate-900 via-purple-900 to-slate-900 pt-20"></div>
 
@@ -69,3 +73,23 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps /> = ({
 };
 
 export default ContentPromotionBanner;
+=======
+
+        </div></div>
+
+            <h3 className="text-2 xl lg: text-3 xlfont-boldmb-2">{title}</h3>
+            <p className="text-lgtext-white/90mb-4">{subtitle}</p>
+
+ (
+    
+                  <span>{feature}</span>
+
+              ))}
+
+              {buttonText}
+
+  );
+};
+
+export default ContentPromotionBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b882

@@ -9,7 +9,6 @@
       // Initialize gtag
       (window as { dataLayer: unknown[] }).dataLayer = (window as { dataLayer: unknown[] }).dataLayer || [];
         (window as { dataLayer: unknown[] }).dataLayer.push(args);
-      }
       (window as { gtag: typeof gtag }).gtag = gtag;
       gtag('js', new Date());
         send_page_view: true
@@ -18,13 +17,11 @@
     // Track page views
     
         });
-      }
     };
 
     // Handle route changes
     
         });
-      }
     };
     // Track user interactions
     
@@ -33,21 +30,16 @@
           const href = target.getAttribute('href') || '';
               value: href
             });
-          }
-        }
       });
       // Track form submissions
         const form = e.target as HTMLFormElement;
             event_label: form.id || 'contact_form'
           });
-        }
       });
       // Track phone number clicks
         const target = e.target as HTMLElement;
               value: target.getAttribute('href')
             });
-          }
-        }
       });
     };
     // Initialize analytics

@@ -10,7 +10,6 @@ import path from 'path';
     // Fix JSX fragment issues
         modified = true;
         return `<div>${inner}</div>`;
-      }
       return match;
     });
 
@@ -26,14 +25,11 @@ import path from 'path';
         // Just ensure proper closing for common patterns
         content = content.replace(new RegExp(`<${tag}([^>]*)>\\s*$`, 'gm'), `<${tag}$1></${tag}>`);
         modified = true;
-      }
-    }
 
     // Fix missing closing tags for self-closing elements
     const selfClosingElements = ['img', 'br', 'hr', 'input', 'meta', 'link'];
       content = content.replace(new RegExp(`<${element}([^>]*?)(?<!/)>`, 'g'), `<${element}$1 />`);
       modified = true;
-    }
 
     // Fix JSX expressions that need wrapping
     content = content.replace(/\{([^}]*?)\s*\}\s*\{([^}]*?)\s*\}/g, '{$1}{$2}');
