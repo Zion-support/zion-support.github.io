@@ -57,17 +57,16 @@ const AIAnalyticsDashboardPage: React.FC = () => {
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas/analytics-dashboard" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}</div>
+        {/* Hero Section */}
         <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <BarChart className="w-4 h-4" />
                 <span>AI Analytics Dashboard</span>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">
-                Real-time Business </h1>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Intelligence</span>
+                Real-time Business <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400">Intelligence</span>
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your data into actionable insights with our AI-powered analytics dashboard. 
@@ -353,9 +352,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-16 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"></div>
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30">
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Analytics?
               </h2>
@@ -363,7 +362,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
                 Join thousands of businesses already using our AI analytics dashboard
                 to make smarter, data-driven decisions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
                   <span>Start Free Trial</span>
                   <ArrowRight className="w-5 h-5" />
@@ -376,4 +375,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {const features = [
           </div>
         </section>
       </div>
-    </>)};export default AIAnalyticsDashboardPage
+    </React.Fragment>
+  )
+}
+
+export default AIAnalyticsDashboardPage
