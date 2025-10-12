@@ -29,20 +29,8 @@ const ContactForm: React.FC = () => {
     type: 'idle',
     message: ''
   })
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9603
-
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
@@ -50,20 +38,8 @@ const ContactForm: React.FC = () => {
       [name]: value
     }))
   }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9603
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e951
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setStatus({ type: 'loading', message: 'Sending message...' })
@@ -71,9 +47,6 @@ const ContactForm: React.FC = () => {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000))
-<<<<<<< HEAD
-      setStatus({ type: 'success', message: 'Message sent successfully! We\'ll get back to you soon.' })
-=======
       
       setStatus({
         type: 'success',
@@ -81,7 +54,6 @@ const ContactForm: React.FC = () => {
       })
 
       // Reset form
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
       setFormData({
         name: '',
         email: '',
@@ -91,15 +63,6 @@ const ContactForm: React.FC = () => {
         message: ''
       })
     } catch (error) {
-<<<<<<< HEAD
-      setStatus({ type: 'error', message: 'Failed to send message. Please try again.' })
-    }
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
       setStatus({
         type: 'error',
         message: 'Sorry, there was an error sending your message. Please try again later.'
@@ -202,7 +165,6 @@ const ContactForm: React.FC = () => {
           </div>
         </div>
 
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
             Full Name *
@@ -219,22 +181,6 @@ const ContactForm: React.FC = () => {
           />
         </div>
 
-<<<<<<< HEAD
-        <div>
-          <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
-            Email Address *
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder="your.email@example.com"
-          />
-=======
         <button
           type="submit"
           disabled={status.type === 'loading'}
@@ -259,7 +205,6 @@ const ContactForm: React.FC = () => {
             <MapPin className="w-4 h-4 mr-2" />
             <span className="text-sm">Innovation City, IC</span>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-b46d
         </div>
       </div>
 
