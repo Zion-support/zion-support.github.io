@@ -1,5 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
 import { Wifi, ArrowRight, CheckCircle, Building, Users } from 'lucide-react'
 import Layout from '../layout'

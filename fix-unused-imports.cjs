@@ -1,201 +1,89 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
+const { execSync } = require('child_process');
 
-// Common unused imports that appear frequently
-const commonUnusedImports = [
-  'Helmet',
-  'Star',
-  'Users',
-  'Globe',
-  'Smartphone',
-  'FileText',
-  'Clock',
-  'Search',
-  'Filter',
-  'Download',
-  'Upload',
-  'Monitor',
-  'Cpu',
-  'Shield',
-  'Lock',
-  'Network',
-  'AlertTriangle',
-  'TrendingUp',
-  'Video',
-  'Music',
-  'DollarSign',
-  'CreditCard',
-  'Calendar',
-  'Bell',
-  'Plus',
-  'Edit3',
-  'Trash2',
-  'Eye',
-  'Zap',
-  'Target',
-  'Play',
-  'Pause',
-  'RefreshCw',
-  'Settings',
-  'Edit',
-  'Share2',
-  'Activity',
-  'PieChart',
-  'Server',
-  'Wifi',
-  'Cloud',
-  'Terminal',
-  'GitBranch',
-  'Layers',
-  'Workflow',
-  'Bot',
-  'Sparkles',
-  'Wand2',
-  'Lightbulb',
-  'Rocket',
-  'Award',
-  'Trophy',
-  'Medal',
-  'Crown',
-  'Diamond',
-  'Gem',
-  'Heart',
-  'ThumbsUp',
-  'ThumbsDown',
-  'MessageCircle',
-  'Phone',
-  'MapPin',
-  'Github',
-  'Linkedin',
-  'Twitter',
-  'Instagram',
-  'Facebook',
-  'Youtube',
-  'Twitch',
-  'Discord',
-  'Slack',
-  'Figma',
-  'Notion',
-  'Trello',
-  'Asana',
-  'Monday',
-  'Jira',
-  'Confluence',
-  'Airtable',
-  'Miro',
-  'Loom',
-  'Zoom',
-  'Teams',
-  'Google',
-  'Microsoft',
-  'Apple',
-  'Amazon',
-  'Netflix',
-  'Spotify',
-  'Adobe',
-  'Salesforce',
-  'Hubspot',
-  'Shopify',
-  'WooCommerce',
-  'Stripe',
-  'Paypal',
-  'Square',
-  'QuickBooks',
-  'Xero',
-  'FreshBooks',
-  'Wave',
-  'Mint',
-  'YNAB',
-  'Link',
-  'BarChart3',
-  'CheckCircle'
-];
-
-function fixUnusedImports(filePath) {
+// Get list of files with unused imports
+function getFilesWithUnusedImports() {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Find all import statements
-    const importRegex = /import\s+{([^}]+)}\s+from\s+['"][^'"]+['"];?/g;
-    const imports = content.match(importRegex);
-
-    if (imports) {
-      imports.forEach(importStatement => {
-        // Extract the import source
-        const sourceMatch = importStatement.match(/from\s+['"]([^'"]+)['"]/);
-        if (!sourceMatch) return;
-
-        const source = sourceMatch[1];
-        
-        // Extract the imported items
-        const itemsMatch = importStatement.match(/{\s*([^}]+)\s*}/);
-        if (!itemsMatch) return;
-
-        const items = itemsMatch[1]
-          .split(',')
-          .map(item => item.trim())
-          .filter(item => item);
-
-        // Check which items are actually used in the file
-        const usedItems = items.filter(item => {
-          // Remove any type annotations or aliases
-          const cleanItem = item.split(' as ')[0].split(':')[0].trim();
-          return content.includes(cleanItem) && !commonUnusedImports.includes(cleanItem);
-        });
-
-        // If some items are unused, create a new import statement
-        if (usedItems.length !== items.length) {
-          const newImportStatement = usedItems.length > 0 
-            ? `import { ${usedItems.join(', ')} } from '${source}';`
-            : '';
-          
-          content = content.replace(importStatement, newImportStatement);
-          modified = true;
-        }
-      });
-    }
-
-    // Also fix unused variables
-    const lines = content.split('\n');
-    const newLines = lines.map(line => {
-      // Remove unused variable declarations
-      if (line.includes('const [') && line.includes('] = useState') && line.includes('// eslint-disable')) {
-        return line.replace(/const\s+\[[^]]+\]\s*=\s*useState[^;]+;/, '');
-      }
-      
-      // Remove unused variable declarations that are clearly unused
-      if (line.includes('const [') && line.includes('] = useState') && !line.includes('useState(')) {
-        const match = line.match(/const\s+\[([^,]+),\s*set[A-Z][^\]]+\]\s*=\s*useState/);
+    const output = execSync('pnpm run lint 2>&1', { encoding: 'utf8' });
+    const lines = output.split('\n');
+    const files = new Set();
+    
+    lines.forEach(line => {
+      if (line.includes('error') && line.includes('is defined but never used')) {
+        const match = line.match(/^\/workspace\/([^:]+)/);
         if (match) {
-          const varName = match[1];
-          if (!content.includes(varName) || content.split(varName).length < 3) {
-            return '';
-          }
+          files.add(match[1]);
         }
       }
-      
-      return line;
     });
-
-    if (modified || newLines.some((line, index) => line !== lines[index])) {
-      fs.writeFileSync(filePath, newLines.join('\n'));
-      console.log(`Fixed unused imports in: ${filePath}`);
-    }
+    
+    return Array.from(files);
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error('Error getting files with unused imports:', error.message);
+    return [];
   }
 }
 
-// Find all TypeScript and JavaScript files
-const files = glob.sync('app/**/*.{ts,tsx,js,jsx}', { cwd: __dirname });
+// Fix unused imports in a file
+function fixUnusedImports(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const lines = content.split('\n');
+    const fixedLines = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Check if this line has unused imports
+      if (line.includes('import') && line.includes('from')) {
+        // Extract the import statement
+        const importMatch = line.match(/import\s+{([^}]+)}\s+from\s+['"]([^'"]+)['"]/);
+        if (importMatch) {
+          const imports = importMatch[1].split(',').map(imp => imp.trim());
+          const source = importMatch[2];
+          
+          // Check which imports are actually used in the file
+          const usedImports = imports.filter(imp => {
+            const importName = imp.replace(/\s+as\s+\w+/, '').trim();
+            return content.includes(importName) && content.indexOf(importName) > content.indexOf(line);
+          });
+          
+          if (usedImports.length > 0) {
+            const newImportLine = `import { ${usedImports.join(', ')} } from '${source}';`;
+            fixedLines.push(newImportLine);
+          } else {
+            // Remove the entire import line if no imports are used
+            continue;
+          }
+        } else {
+          fixedLines.push(line);
+        }
+      } else {
+        fixedLines.push(line);
+      }
+    }
+    
+    fs.writeFileSync(filePath, fixedLines.join('\n'));
+    console.log(`Fixed unused imports in ${filePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+}
 
-console.log(`Found ${files.length} files to process...`);
+// Main execution
+function main() {
+  const files = getFilesWithUnusedImports();
+  console.log(`Found ${files.length} files with unused imports`);
+  
+  files.forEach(file => {
+    const fullPath = path.join('/workspace', file);
+    if (fs.existsSync(fullPath)) {
+      fixUnusedImports(fullPath);
+    }
+  });
+  
+  console.log('Finished fixing unused imports');
+}
 
-files.forEach(file => {
-  const fullPath = path.join(__dirname, file);
-  fixUnusedImports(fullPath);
-});
-
-console.log('Unused imports cleanup completed!');
+main();
