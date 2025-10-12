@@ -110,6 +110,9 @@ export {
   Tongue,
   FileText,
   Package,
+  Smartphone,
+  Building,
+  Car,
   Menu,
   X,
   ChevronDown,
@@ -237,7 +240,10 @@ export const IconRegistry = {
   Kiss,
   Tongue,
   FileText,
-  Package
+  Package,
+  Smartphone,
+  Building,
+  Car
 } as const
 
 export type IconName = keyof typeof IconRegistry
