@@ -1,22 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-2460
 'use client';
 import React, { useState, useEffect } from 'react';
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart, Workflow, MessageCircle, Link as LinkIcon, Monitor } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-2460
+import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart, Workflow, MessageCircle, Link as LinkIcon, Monitor, FileText, Eye, Mic, Smartphone, Settings, Database, CheckSquare, Mail, Box, DollarSign, Wifi, Cpu, Globe } from 'lucide-react';
 
 const HomePage: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -281,8 +269,6 @@ const HomePage: React.FC = () => {
       link: '/zion-invoice-genius'
     }
   ];
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
   return (
     <>
       <Helmet>
@@ -305,12 +291,6 @@ const HomePage: React.FC = () => {
                 Leading technology company providing cutting-edge artificial intelligence, cloud infrastructure, 
                 cybersecurity, and custom software development services to businesses worldwide.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-=======
               <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 <Link 
                   to="/ai-services"
@@ -320,29 +300,22 @@ const HomePage: React.FC = () => {
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link 
-=======
-              <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2460
                   to="/contact"
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Get Started Today
-                </a>
-                <a
-                  href="/about"
+                </Link>
+                <Link 
+                  to="/about"
                   className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300 transform hover:scale-105"
                 >
                   Learn More
-                </a>
+                </Link>
               </div>
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
         {/* Stats Section */}
         <section className="py-16 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -360,7 +333,6 @@ const HomePage: React.FC = () => {
           </div>
         </section>
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
         {/* Features Section */}
         <section className="py-20 bg-gradient-to-br from-slate-900 to-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -373,32 +345,14 @@ const HomePage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mb-4">
-                  <div className="h-6 w-6 text-white">🧠</div>
+              {features.map((feature, index) => (
+                <div key={index} className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
+                  <div className={`inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
+                    <feature.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
                 </div>
-<<<<<<< HEAD
-                <h3 className="text-xl font-semibold text-white mb-3">AI-Powered Solutions</h3>
-                <p className="text-gray-300">Cutting-edge artificial intelligence to transform your business operations</p>
-              </div>
-              <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg mb-4">
-                  <div className="h-6 w-6 text-white">☁️</div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Cloud Infrastructure</h3>
-                <p className="text-gray-300">Scalable cloud solutions with AWS, Azure, and Google Cloud expertise</p>
-              </div>
-              <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg mb-4">
-                  <div className="h-6 w-6 text-white">🛡️</div>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
-                <p className="text-gray-300">Comprehensive security solutions to protect your digital assets</p>
-              </div>
-              <div className="bg-gray-800 rounded-xl p-6 h-full hover:bg-gray-700 transition-all duration-300 transform hover:scale-105">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg mb-4">
-                  <div className="h-6 w-6 text-white">💻</div>
-=======
               ))}
             </div>
           </div>
@@ -607,11 +561,8 @@ const HomePage: React.FC = () => {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-e082
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">Custom Development</h3>
-                <p className="text-gray-300">Tailored software solutions built with modern technologies</p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
