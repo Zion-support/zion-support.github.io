@@ -1,164 +1,100 @@
 #!/usr/bin/env python3
-"""
-Script to fix specific errors found in the linting output.
-"""
-
 import os
 import re
 import glob
 
-def fix_unused_imports_in_file(file_path):
-    """Remove unused imports from specific files."""
+def fix_class_name_spacing(content):
+    """Fix missing spaces in class names"""
+    # Fix common patterns
+    content = re.sub(r'min-h-screenbg-gradient', 'min-h-screen bg-gradient', content)
+    content = re.sub(r'max-w-7xlmx-auto', 'max-w-7xl mx-auto', content)
+    content = re.sub(r'text-4xlfont-boldtext-white', 'text-4xl font-bold text-white', content)
+    content = re.sub(r'text-lgtext-gray-300mb-8', 'text-lg text-gray-300 mb-8', content)
+    content = re.sub(r'bg-gradient-to-rfrom-cyan-500', 'bg-gradient-to-r from-cyan-500', content)
+    content = re.sub(r'text-whitepx-8', 'text-white px-8', content)
+    content = re.sub(r'w-5h-5', 'w-5 h-5', content)
+    content = re.sub(r'py-16text-center', 'py-16 text-center', content)
+    content = re.sub(r'text-whitemb-6', 'text-white mb-6', content)
+    content = re.sub(r'text-gray-300mb-8', 'text-gray-300 mb-8', content)
+    return content
+
+def fix_jsx_structure(content):
+    """Fix JSX structure issues"""
+    # Fix missing closing div tags
+    if 'return (' in content and '<div' in content and '</div>' not in content:
+        # Find the last opening div and add closing tag
+        lines = content.split('\n')
+        for i in range(len(lines) - 1, -1, -1):
+            if '<div' in lines[i] and not lines[i].strip().endswith('/>'):
+                # Add closing div before the closing parenthesis
+                if ');' in lines[i+1] if i+1 < len(lines) else False:
+                    lines.insert(i+1, '    </div>')
+                    break
+        content = '\n'.join(lines)
+    
+    # Fix broken return statements
+    content = re.sub(r'return\s*\(\s*<>\s*<div', 'return (\n    <div', content)
+    content = re.sub(r'}\s*</>\s*$', '}\n  );\n}', content)
+    
+    return content
+
+def fix_file(file_path):
+    """Fix a single file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
-        lines = content.split('\n')
-        new_lines = []
         
-        for line in lines:
-            # Check if this is an import line
-            if 'import' in line and 'from' in line and 'lucide-react' in line:
-                # Extract the import statement
-                import_match = re.match(r'import\s*\{([^}]+)\}\s*from\s*[\'"]([^\'"]+)[\'"]', line)
-                if import_match:
-                    imports_str = import_match.group(1)
-                    source = import_match.group(2)
-                    
-                    # Parse individual imports
-                    imports = [imp.strip() for imp in imports_str.split(',')]
-                    
-                    # Check which imports are actually used in the file
-                    used_imports = []
-                    for imp in imports:
-                        # Remove any type annotations or aliases
-                        clean_imp = imp.split(' as ')[0].strip()
-                        if clean_imp and clean_imp in content:
-                            used_imports.append(imp)
-                    
-                    # Reconstruct the import line
-                    if used_imports:
-                        new_line = f"import {{ {', '.join(used_imports)} }} from '{source}';"
-                        new_lines.append(new_line)
-                    else:
-                        # If no imports are used, remove the line
-                        continue
-                else:
-                    new_lines.append(line)
-            else:
-                new_lines.append(line)
+        # Apply fixes
+        content = fix_class_name_spacing(content)
+        content = fix_jsx_structure(content)
         
-        new_content = '\n'.join(new_lines)
+        # Clean up extra whitespace
+        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
         
-        # Only write if content changed
-        if new_content != original_content:
+        if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(new_content)
-            print(f"Fixed unused imports in: {file_path}")
+                f.write(content)
+            print(f"Fixed {file_path}")
             return True
         
         return False
         
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        print(f"Error fixing {file_path}: {e}")
         return False
 
-def fix_specific_syntax_errors():
-    """Fix specific syntax errors in known problematic files."""
-    
-    # Fix app/ai-automated-reporting/page.tsx
-    try:
-        file_path = 'app/ai-automated-reporting/page.tsx'
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Remove the problematic line at the end
-        lines = content.split('\n')
-        # Remove empty lines and fix the structure
-        new_lines = []
-        for line in lines:
-            if line.strip() and not line.strip().startswith('//') and 'Declaration or statement expected' not in line:
-                new_lines.append(line)
-        
-        # Ensure proper closing
-        if new_lines and not new_lines[-1].strip().endswith('}'):
-            new_lines.append('}')
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write('\n'.join(new_lines))
-        print(f"Fixed syntax errors in: {file_path}")
-    except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
-    
-    # Fix app/components/EnhancedAccessibilityEnhancer.tsx
-    try:
-        file_path = 'app/components/EnhancedAccessibilityEnhancer.tsx'
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Fix the parsing error around line 162
-        content = re.sub(r'}\s*$', '}', content, flags=re.MULTILINE)
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        print(f"Fixed syntax errors in: {file_path}")
-    except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
-    
-    # Fix app/components/FuturisticBackground.tsx
-    try:
-        file_path = 'app/components/FuturisticBackground.tsx'
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
-        # Fix the parsing error around line 136
-        content = re.sub(r'}\s*$', '}', content, flags=re.MULTILINE)
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        print(f"Fixed syntax errors in: {file_path}")
-    except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
-
 def main():
-    """Main function to fix specific errors."""
-    print("Fixing unused imports...")
-    
-    # Files with unused import errors
-    files_to_fix = [
+    # Target specific problematic files
+    target_files = [
         'app/5g-data-analytics/page.tsx',
         'app/5g-edge-computing/page.tsx',
+        'app/5g-implementation/page.tsx',
         'app/5g-iot-solutions/page.tsx',
         'app/5g-mobile-applications/page.tsx',
         'app/5g-network-infrastructure/page.tsx',
         'app/5g-private-networks/page.tsx',
+        'app/5g-smart-city-solutions/page.tsx',
+        'app/5g-solutions/page.tsx',
         'app/about/page.tsx',
-        'app/ai-chatbot-builder/page.tsx',
-        'app/ai-expense-tracker/page.tsx',
-        'app/ai-password-manager/page.tsx',
-        'app/ai-task-manager/page.tsx',
-        'app/blog/page.tsx',
-        'app/careers/page.tsx',
-        'app/components/EnhancedSEOOptimizer.tsx',
-        'app/components/FuturisticHero.tsx',
-        'app/pricing/page.tsx',
-        'app/support/page.tsx',
-        'app/page.tsx'
+        'app/accessibility-page/page.tsx',
+        'app/accessibility/page.tsx',
+        'app/ai-3d-generation/page.tsx',
+        'app/ai-accounting-assistant/page.tsx',
+        'app/ai-agricultural-intelligence-pro/page.tsx',
+        'app/ai-analytics-dashboard-pro/page.tsx',
+        'app/ai-analytics-dashboard/page.tsx',
+        'app/ai-analytics/page.tsx'
     ]
     
-    files_fixed = 0
-    for file_path in files_to_fix:
+    fixed_count = 0
+    for file_path in target_files:
         if os.path.exists(file_path):
-            if fix_unused_imports_in_file(file_path):
-                files_fixed += 1
+            if fix_file(file_path):
+                fixed_count += 1
     
-    print(f"Fixed unused imports in {files_fixed} files")
-    
-    print("Fixing specific syntax errors...")
-    fix_specific_syntax_errors()
-    
-    print("Done!")
+    print(f"Fixed {fixed_count} files")
 
 if __name__ == "__main__":
     main()

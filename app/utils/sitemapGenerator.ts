@@ -1,2 +1,4 @@
-// Utility file: sitemapGenerator
+// Sitemapgenerator utilities
+export const sitemapGenerator = {
+  // Implementation coming soon
 };

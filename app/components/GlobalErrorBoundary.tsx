@@ -1,89 +1,26 @@
-<<<<<<< HEAD
-import React, { Component, ReactNode } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Home, RefreshCw } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
-interface Props {
-  children: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
-
-class GlobalErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Global Error Boundary caught an error:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-          <div className="max-w-md w-full text-center">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <h1 className="text-4xl font-bold text-white mb-4">
-                Oops! Something went wrong
-              </h1>
-              <p className="text-gray-300 mb-6">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
-                  onClick={() => window.location.reload()}
-                  className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-                >
-                  <RefreshCw className="w-4 h-4 mr-2" />
-                  Refresh Page
-                </button>
-                
-                <Link
-                  to="/"
-                  className="border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
-                >
-                  <Home className="w-4 h-4 mr-2" />
-                  Go Home
-                </Link>
-              </div>
-=======
-              </button>
-              
-              <Link const to = "/"
-                className="border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
-               >
-           
-          <Home className="w-4 h-4 mr-2" /  />
+export default function GlobalErrorBoundaryPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet>
+        <title>Globalerrorboundary - Zion Tech Group</title>
+        <meta name="description" content="Professional Globalerrorboundary services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6">Globalerrorboundary</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional Globalerrorboundary services coming soon.</p>
+        <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+        >
+          Contact Us
+          <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
-                Go Home
-    <>
-              </Link>
->>>>>>> origin/main
-            </div>
-        </div>
-<<<<<<< HEAD
-      );
-    }
-
-    return this.props.children;
-  }
+      </div>
+    </div>
+  );
 }
-
-export default GlobalErrorBoundary;
-=======
-<<<<<<< HEAD
-;
-=======
-;
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
->>>>>>> origin/main

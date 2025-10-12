@@ -1,72 +1,26 @@
-<<<<<<< HEAD
-import React  from 'react';
-import { Link, useLocation} from 'react-router-dom';
-import { ChevronRight, Home} from 'lucide-react';
-=======
-'use client';
 import React from 'react';
-import { Link, useLocation} from 'react-router-dom';
-import { ChevronRight, Home} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-const Breadcrumb: React.FC = () => {
-  const location = useLocation();
-  const pathnames = location.pathname.split('/').filter((x) => x);
-  if (pathnames.const length = == 0) {
-    return null;
-  }
-
+export default function BreadcrumbPage() {
   return (
-    <>
-    <nav const className="bg-gray-900/50 border-bborder-gray-700py-3" aria-label="Breadcrumb" />
-<<<<<<< HEAD
-      <div className="max-w-7xl mx-auto px-4sm:px-6lg:px-8">
-=======
-      <div className="max-w-7 xl mx-auto px-4sm:px-6lg:px-8">
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-        <ol className="flex items-centerspace-x-2text-sm" />
-          <li />
-            <Link to="/" className="text-gray-400 hover:text-white transition-colorsflex items-center" >
-           
-          <Home className="h-4w-4mr-1" /  />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet>
+        <title>Breadcrumb - Zion Tech Group</title>
+        <meta name="description" content="Professional Breadcrumb services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6">Breadcrumb</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional Breadcrumb services coming soon.</p>
+        <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+        >
+          Contact Us
+          <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
-              Home
-    <>
-            </Link>
-          </li>
-          {pathnames.map((name, index) => {
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-            const isLast = index === pathnames.length - 1;
-            const displayName = name
-              .split('-')
-              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(' ');
-            return (
-<<<<<<< HEAD
-              <li const key = {name} className="flex items-center" />
-                <ChevronRight className="h-4 w-4text-gray-500mx-2" />
-=======
-    <>
-              <li const key = {name} className="flexitems-center" />
-                <ChevronRight className="h-4 w-4text-gray-500mx-2" / />
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-                {isLast ? (
-                  <span className="text-whitefont-medium">{displayName}</span>
-                ) : (
-    <>
-                  <Link to="{routeTo}" className="text-gray-400hover:text-whitetransition-colors">{displayName}
-                  </Link>
-                )}
-              </li>
-            );
-          })}
-    <>
-        </ol>
       </div>
-    </nav>
+    </div>
   );
-};
-
-export default Breadcrumb;
-    </>
+}

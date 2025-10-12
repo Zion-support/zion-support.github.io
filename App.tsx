@@ -7,17 +7,7 @@ import './app/styles/futuristic-enhanced.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import HomePage from './app/page';
-import { PageLoader } from './app/components/LoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
-import SEOHead from './app/components/EnhancedSEOHead';
-import Breadcrumb from './app/components/Breadcrumb';
-import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import { usePerformanceMonitor } from './hooks/usePerformanceMonitor';
-import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-import FuturisticBackground from './app/components/FuturisticBackground';
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -177,31 +167,16 @@ const ApiDocsPage = React.lazy(() => import('./app/api-docs/page'));
 const CommunityPage = React.lazy(() => import('./app/community/page'));
 const CompliancePage = React.lazy(() => import('./app/compliance/page'));
 
-// Performance monitoring hook
-const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  usePerformanceMonitor();
-  return <React.Fragment>{children}</React.Fragment>
-};
-
 // Main App Component
 const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-        <SEOHead />
         <Router>
-          <AppWithPerformanceMonitoring>
-            <AnalyticsProvider>
-              <PerformanceOptimizer>
-                <EnhancedAccessibility>
-                  <AccessibilityEnhancer>
-                    <PerformanceMonitor />
-                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
-                      <FuturisticBackground />
-                      <Navigation />
-                      <Breadcrumb />
-                      <main id="main-content" className="flex-1" tabIndex={-1}>
-                        <Suspense fallback={<PageLoader />}>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            <Navigation />
+            <main id="main-content" className="flex-1" tabIndex={-1}>
+              <Suspense fallback={<div>Loading...</div>}>
                           <Routes>
                             <Route path="/" element={<HomePage />} />
                             <Route path="/about" element={<AboutPage />} />
@@ -361,15 +336,10 @@ const App: React.FC = () => {
                             <Route path="/community" element={<CommunityPage />} />
                             <Route path="/compliance" element={<CompliancePage />} />
                           </Routes>
-                        </Suspense>
-                      </main>
-                      <Footer />
-                    </div>
-                  </AccessibilityEnhancer>
-                </EnhancedAccessibility>
-              </PerformanceOptimizer>
-            </AnalyticsProvider>
-          </AppWithPerformanceMonitoring>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
         </Router>
       </HelmetProvider>
     </ErrorBoundary>

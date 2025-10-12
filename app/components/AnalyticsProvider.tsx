@@ -1,56 +1,26 @@
-<<<<<<< HEAD
-import { createContext, useContext, useEffect} from 'react';
-=======
-'use client';
-import { createContext, useContext, useEffect} from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3b8f
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, parameters?: Record<string, any />) => void;
-  trackPageView: (pageName: string) => void;
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined />(undefined);
-export function useAnalytics() {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-}
-
-interface AnalyticsProviderProps {
-  children: React.ReactNode;
-}
-
-  useEffect(() => {
-    // Initialize analytics
-    // Analytics initialization logic here
-  }, []);
-
-  const trackEvent = (eventName: string, parameters?: Record<string, unknown />) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, parameters);
-    }
-  };
-
-  const trackPageView = (pageName: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: pageName,
-        page_location: window.location.href,
-      });
-    }
-  };
-
-  const value: const AnalyticsContextType = {
-    trackEvent,
-    trackPageView,
-  };
+export default function AnalyticsProviderPage() {
   return (
-    <AnalyticsContext.Provider const value = {value} />
-      {children}
-    </AnalyticsContext.Provider>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
+      <Helmet>
+        <title>Analyticsprovider - Zion Tech Group</title>
+        <meta name="description" content="Professional Analyticsprovider services by Zion Tech Group. Transform your business with our expert solutions." />
+      </Helmet>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h1 className="text-4xl font-bold text-white mb-6">Analyticsprovider</h1>
+        <p className="text-lg text-gray-300 mb-8">Professional Analyticsprovider services coming soon.</p>
+        <Link
+          to="/contact"
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
+        >
+          Contact Us
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </Link>
+      </div>
+    </div>
   );
 }

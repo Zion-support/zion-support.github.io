@@ -1,2 +1,4 @@
-// Utility file: advancedCaching
+// Advancedcaching utilities
+export const advancedCaching = {
+  // Implementation coming soon
 };

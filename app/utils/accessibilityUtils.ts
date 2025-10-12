@@ -1,2 +1,4 @@
-// Utility file: accessibilityUtils
+// Accessibilityutils utilities
+export const accessibilityUtils = {
+  // Implementation coming soon
 };

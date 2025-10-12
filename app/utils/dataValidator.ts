@@ -1,2 +1,4 @@
-// Utility file: dataValidator
+// Datavalidator utilities
+export const dataValidator = {
+  // Implementation coming soon
 };
